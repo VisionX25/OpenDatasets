@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "iris",
+  "slug": "iris",
+  "name": "Iris Plants Database",
+  "description": "Perhaps the best known database in pattern recognition literature, created by R.A. Fisher in 1936. Contains 150 instances (3 classes of 50 instances each) across 4 measurements: sepal length, sepal width, petal length, and petal width for three iris plant species (Iris setosa, Iris versicolour, and Iris virginica).",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/53/iris",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification"
+  ],
+  "tags": [
+    "tabular",
+    "biology",
+    "botany",
+    "classification",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Officially licensed under Creative Commons Attribution 4.0 International (CC BY 4.0) via the UCI Machine Learning Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI Machine Learning Repository: Iris Dataset Record",
+      "url": "https://archive.ics.uci.edu/dataset/53/iris",
+      "type": "official_website",
+      "notes": "Canonical landing page on the current UCI ML Repository platform."
+    },
+    {
+      "title": "The Use of Multiple Measurements in Taxonomic Problems",
+      "url": "https://archive.ics.uci.edu/dataset/53/iris",
+      "type": "original_paper",
+      "notes": "Published by R.A. Fisher in Annals of Eugenics, 7(2):179-188, 1936."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-26",
+    "notes": "Verified against the UCI Machine Learning Repository dataset documentation and metadata record."
+  },
+  "size": {
+    "amount": 4.5,
+    "unit": "KB",
+    "file_formats": [
+      "csv",
+      "data"
+    ],
+    "status": "verified",
+    "notes": "Raw CSV / tabular data text format size."
+  },
+  "sample_count": {
+    "total": 150,
+    "splits": {
+      "total": 150
+    },
+    "unit": "rows",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1936",
+    "last_updated": "1988-07-01"
+  },
+  "citation": {
+    "paper_title": "The Use of Multiple Measurements in Taxonomic Problems",
+    "paper_url": "https://archive.ics.uci.edu/dataset/53/iris",
+    "authors": [
+      "R. A. Fisher"
+    ],
+    "doi": "10.1111/j.1469-1809.1936.tb02137.x",
+    "bibtex": "@article{fisher1936use,\n  title={The use of multiple measurements in taxonomic problems},\n  author={Fisher, Ronald A},\n  journal={Annals of eugenics},\n  volume={7},\n  number={2},\n  pages={179--188},\n  year={1936},\n  publisher={Wiley Online Library}\n}"
+  },
+  "provenance": {
+    "collection_method": "Specimens collected by Dr. Edgar Anderson from two neighboring colonies in Gaspé Peninsula, Quebec, Canada.",
+    "curation_notes": "One class (Setosa) is linearly separable from the other two; Versicolour and Virginica have slight statistical overlap."
+  }
+}

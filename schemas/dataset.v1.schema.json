@@ -1,0 +1,351 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://opendatasets.org/schemas/dataset.v1.schema.json",
+  "title": "OpenDatasets Dataset Metadata Schema v1",
+  "description": "Standardized, versioned JSON Schema for public Machine Learning dataset metadata within OpenDatasets.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "slug",
+    "name",
+    "description",
+    "homepage_url",
+    "publisher",
+    "modalities",
+    "tasks",
+    "tags",
+    "license",
+    "source_references",
+    "verification"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semantic version of this metadata schema definition.",
+      "pattern": "^1\\.[0-9]+(\\.[0-9]+)?$"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique, immutable machine identifier for the dataset (lowercase alphanumeric with hyphens or underscores).",
+      "pattern": "^[a-z0-9][a-z0-9_-]{1,62}[a-z0-9]$"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly slug for routing and web paths (kebab-case).",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Official human-readable name of the dataset.",
+      "minLength": 2,
+      "maxLength": 150
+    },
+    "description": {
+      "type": "string",
+      "description": "Comprehensive summary describing the dataset, its purpose, and contents.",
+      "minLength": 10,
+      "maxLength": 5000
+    },
+    "homepage_url": {
+      "type": "string",
+      "description": "Official website or canonical landing page for the dataset.",
+      "pattern": "^https?://.+"
+    },
+    "publisher": {
+      "type": "object",
+      "description": "Organization, research lab, or individual that published or created the dataset.",
+      "required": ["name", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 150
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "academic",
+            "industry",
+            "government",
+            "community",
+            "individual",
+            "unknown"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https?://.+"
+        }
+      }
+    },
+    "modalities": {
+      "type": "array",
+      "description": "Data modalities contained in the dataset.",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "vision",
+          "nlp",
+          "audio",
+          "tabular",
+          "multimodal",
+          "reinforcement-learning",
+          "graph",
+          "time-series",
+          "sensor",
+          "3d",
+          "other"
+        ]
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "description": "Standard Machine Learning tasks supported by this dataset.",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+        "maxLength": 60
+      }
+    },
+    "tags": {
+      "type": "array",
+      "description": "Descriptive keywords for discovery and classification.",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 40
+      }
+    },
+    "license": {
+      "type": "object",
+      "description": "Legal licensing terms and usage status for the dataset.",
+      "required": ["status", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "type": "string",
+          "description": "Verification status of the licensing information.",
+          "enum": [
+            "verified_open",
+            "verified_non_commercial",
+            "custom_permissive",
+            "unspecified_by_source",
+            "proprietary",
+            "public_domain",
+            "unknown"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "License name or canonical summary.",
+          "minLength": 2,
+          "maxLength": 100
+        },
+        "spdx_id": {
+          "type": ["string", "null"],
+          "description": "Standard SPDX license identifier if applicable."
+        },
+        "url": {
+          "type": "string",
+          "description": "URL to full license text or declaration.",
+          "pattern": "^https?://.+"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Explanatory notes regarding dataset licensing or permissions."
+        },
+        "commercial_use": {
+          "type": "string",
+          "description": "Explicit status of commercial usability.",
+          "enum": ["allowed", "forbidden", "unknown"]
+        }
+      }
+    },
+    "source_references": {
+      "type": "array",
+      "description": "Primary and secondary source documentation links.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["title", "url", "type"],
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 200
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https?://.+"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "official_website",
+              "original_paper",
+              "repository",
+              "dataset_card",
+              "documentation",
+              "archive",
+              "other"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "description": "Metadata curation and verification audit trail.",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["verified", "provisional", "unverified"]
+        },
+        "verified_by": {
+          "type": ["string", "null"]
+        },
+        "verified_date": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "size": {
+      "type": "object",
+      "description": "Physical size on disk or download payload.",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["B", "KB", "MB", "GB", "TB", "PB"]
+        },
+        "file_formats": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "status": {
+          "type": "string",
+          "enum": ["verified", "estimated", "unknown"]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "sample_count": {
+      "type": "object",
+      "description": "Record, sample, or item count breakdown.",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "splits": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "unit": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["verified", "estimated", "unknown"]
+        }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "description": "Language codes (ISO 639-1 / BCP 47) represented in textual/audio content.",
+      "items": { "type": "string" }
+    },
+    "dates": {
+      "type": "object",
+      "description": "Key milestone dates in the dataset lifecycle.",
+      "additionalProperties": false,
+      "properties": {
+        "published": {
+          "type": "string",
+          "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
+        },
+        "last_updated": {
+          "type": "string",
+          "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
+        }
+      }
+    },
+    "citation": {
+      "type": "object",
+      "description": "Academic citation details.",
+      "additionalProperties": false,
+      "properties": {
+        "paper_title": {
+          "type": "string"
+        },
+        "paper_url": {
+          "type": "string",
+          "pattern": "^https?://.+"
+        },
+        "authors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "bibtex": {
+          "type": "string"
+        },
+        "doi": {
+          "type": "string"
+        }
+      }
+    },
+    "geographic_coverage": {
+      "type": "array",
+      "description": "Geographical scope or regions represented.",
+      "items": { "type": "string" }
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Detailed provenance, collection methods, and data lineage notes.",
+      "additionalProperties": false,
+      "properties": {
+        "collection_method": {
+          "type": "string"
+        },
+        "curation_notes": {
+          "type": "string"
+        },
+        "data_sources": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

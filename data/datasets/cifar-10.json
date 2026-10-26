@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cifar-10",
+  "slug": "cifar-10",
+  "name": "CIFAR-10",
+  "description": "The CIFAR-10 dataset consists of 60,000 32x32 colour images across 10 mutually exclusive classes, with 6,000 images per class. Subdivided into 50,000 training images and 10,000 test images, collected by Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton.",
+  "homepage_url": "https://www.cs.toronto.edu/~kriz/cifar.html",
+  "publisher": {
+    "name": "University of Toronto",
+    "type": "academic",
+    "url": "https://www.cs.toronto.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification"
+  ],
+  "tags": [
+    "computer-vision",
+    "image-classification",
+    "benchmark",
+    "tiny-images"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified (Public for Research and Educational Use)",
+    "spdx_id": null,
+    "url": "https://www.cs.toronto.edu/~kriz/cifar.html",
+    "commercial_use": "unknown",
+    "notes": "The official University of Toronto page does not specify a standardized open-source or creative commons license. It is distributed freely for non-commercial research and education."
+  },
+  "source_references": [
+    {
+      "title": "CIFAR-10 and CIFAR-100 Dataset Homepage",
+      "url": "https://www.cs.toronto.edu/~kriz/cifar.html",
+      "type": "official_website",
+      "notes": "Canonical dataset distribution page maintained by Alex Krizhevsky."
+    },
+    {
+      "title": "Learning Multiple Layers of Features from Tiny Images (Tech Report)",
+      "url": "https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf",
+      "type": "original_paper",
+      "notes": "Original 2009 technical report detailing dataset construction and baseline benchmarks."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-26",
+    "notes": "Metadata verified directly against the University of Toronto website and technical report."
+  },
+  "size": {
+    "amount": 163,
+    "unit": "MB",
+    "file_formats": [
+      "tar.gz",
+      "binary",
+      "python-pickle"
+    ],
+    "status": "verified",
+    "notes": "Compressed Python pickle archive size on official distribution site."
+  },
+  "sample_count": {
+    "total": 60000,
+    "splits": {
+      "train": 50000,
+      "test": 10000
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2009-04-08"
+  },
+  "citation": {
+    "paper_title": "Learning Multiple Layers of Features from Tiny Images",
+    "paper_url": "https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf",
+    "authors": [
+      "Alex Krizhevsky",
+      "Vinod Nair",
+      "Geoffrey Hinton"
+    ],
+    "bibtex": "@techreport{krizhevsky2009learning,\n  title={Learning Multiple Layers of Features from Tiny Images},\n  author={Krizhevsky, Alex and Nair, Vinod and Hinton, Geoffrey},\n  year={2009},\n  institution={University of Toronto}\n}"
+  },
+  "provenance": {
+    "collection_method": "Subset of the 80 Million Tiny Images dataset, labeled by hired human workers.",
+    "curation_notes": "Classes are completely mutually exclusive (e.g., no overlap between automobiles and trucks)."
+  }
+}

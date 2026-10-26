@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mnist",
+  "slug": "mnist",
+  "name": "MNIST Database of Handwritten Digits",
+  "description": "The MNIST database of handwritten digits has a training set of 60,000 examples and a test set of 10,000 examples. It is a subset of a larger set available from NIST, with digits size-normalized and centered in fixed-size 28x28 grayscale images.",
+  "homepage_url": "http://yann.lecun.com/exdb/mnist/",
+  "publisher": {
+    "name": "Yann LeCun & Corinna Cortes (Courant Institute / Google Labs)",
+    "type": "academic",
+    "url": "http://yann.lecun.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification"
+  ],
+  "tags": [
+    "computer-vision",
+    "handwritten-digits",
+    "benchmark",
+    "digit-recognition"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Public Research Archive (Author Copyright)",
+    "spdx_id": null,
+    "url": "http://yann.lecun.com/exdb/mnist/",
+    "commercial_use": "unknown",
+    "notes": "Original distribution page does not declare a standard SPDX license; authors hold copyright and allow free public download for academic benchmarking. CC BY-SA 3.0 is commonly applied in secondary distributions."
+  },
+  "source_references": [
+    {
+      "title": "THE MNIST DATABASE of handwritten digits",
+      "url": "http://yann.lecun.com/exdb/mnist/",
+      "type": "official_website",
+      "notes": "Canonical hosting page maintained by Yann LeCun."
+    },
+    {
+      "title": "Gradient-Based Learning Applied to Document Recognition",
+      "url": "http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf",
+      "type": "original_paper",
+      "notes": "Foundational 1998 paper introducing LeNet-5 and benchmark results on MNIST."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-26",
+    "notes": "Verified against Yann LeCun's official distribution archive and Proceedings of the IEEE paper."
+  },
+  "size": {
+    "amount": 11.6,
+    "unit": "MB",
+    "file_formats": [
+      "idx-ubyte",
+      "gzip"
+    ],
+    "status": "verified",
+    "notes": "Sum of four compressed IDX gzip archive files."
+  },
+  "sample_count": {
+    "total": 70000,
+    "splits": {
+      "train": 60000,
+      "test": 10000
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1998-11"
+  },
+  "citation": {
+    "paper_title": "Gradient-Based Learning Applied to Document Recognition",
+    "paper_url": "http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf",
+    "authors": [
+      "Yann LeCun",
+      "Léon Bottou",
+      "Yoshua Bengio",
+      "Patrick Haffner"
+    ],
+    "bibtex": "@article{lecun1998gradient,\n  title={Gradient-based learning applied to document recognition},\n  author={LeCun, Yann and Bottou, Léon and Bengio, Yoshua and Haffner, Patrick},\n  journal={Proceedings of the IEEE},\n  volume={86},\n  number={11},\n  pages={2278--2324},\n  year={1998},\n  publisher={Ieee}\n}"
+  },
+  "provenance": {
+    "collection_method": "Constructed from NIST Special Database 3 (high school students) and Special Database 1 (Census Bureau employees).",
+    "curation_notes": "Normalized to fit in a 20x20 pixel box while preserving aspect ratio, centered in a 28x28 field by computing the center of mass."
+  }
+}
