@@ -1,5 +1,7 @@
 # OpenDatasets
 
+[![CI](https://github.com/VisionX25/OpenDatasets/actions/workflows/ci.yml/badge.svg)](https://github.com/VisionX25/OpenDatasets/actions/workflows/ci.yml)
+
 An open-source platform for discovering, exploring, and validating machine learning datasets.
 
 ## Project Overview
@@ -10,11 +12,11 @@ OpenDatasets is an independent open-source platform by **VisionX25** built to he
 
 - **Task 01 (Frontend Shell)**: Completed — React 19 + TypeScript + Vite responsive application shell with client-side routing, Tailwind CSS, and Lucide React.
 - **Task 02 (Dataset Metadata Foundation)**: Completed — Versioned JSON Schema (`v1`), structured catalog in `data/datasets/`, strict offline validator (`scripts/validate_datasets.py`), and automated pytest suite.
-- **Task 03 (Functional Dataset Explorer)**: Completed — Automated atomic catalog generator (`scripts/generate_catalog.py`), interactive category-based discovery, multi-field search and filters, dataset details route (`/datasets/:slug`), and frontend test suite.
+- **Task 03 (Functional Dataset Explorer & Reliability)**: Completed — Automated atomic catalog generator (`scripts/generate_catalog.py`), interactive category-based discovery, multi-field search and filters, dataset details route (`/datasets/:slug`), runtime catalog validation, and reliable clipboard copying.
+- **Task 04 (GitHub Actions CI/CD)**: Completed — Professional, lightweight CI workflow (`.github/workflows/ci.yml`) automatically validating metadata, testing schemas, enforcing catalog sync, and running frontend unit tests, lints, and builds on push and pull requests.
 - **Planned Milestones**:
   - Python + FastAPI backend service (REST API endpoints, dataset ingestion pipeline).
   - Automated dataset schema & distribution profiling pipelines.
-  - CI/CD via GitHub Actions.
 
 ## Tech Stack
 
@@ -39,6 +41,9 @@ OpenDatasets is an independent open-source platform by **VisionX25** built to he
 
 ```text
 OpenDatasets/
+├── .github/
+│   └── workflows/
+│       └── ci.yml           # GitHub Actions CI workflow (metadata validation & frontend checks)
 ├── data/
 │   └── datasets/            # Source-of-truth metadata records (one JSON per dataset)
 │       ├── cifar-10.json
@@ -55,7 +60,7 @@ OpenDatasets/
 │   │   ├── pages/           # Page routes (HomePage, ExplorePage, DatasetDetailPage, AboutPage)
 │   │   ├── services/        # Catalog data loader (catalogService.ts)
 │   │   ├── types/           # TypeScript schema definitions (dataset.ts)
-│   │   ├── utils/           # Centralized category & filter utilities (datasetFilters.ts)
+│   │   ├── utils/           # Centralized category, filter, and clipboard utilities
 │   │   ├── App.tsx          # Client-side router configuration
 │   │   ├── index.css        # Tailwind CSS styles
 │   │   └── main.tsx         # Application entry point
@@ -72,6 +77,7 @@ OpenDatasets/
 │   └── test_metadata_validation.py # Pytest suite covering schema, URLs, edge cases, and catalog generation
 ├── .gitignore               # Repository ignore rules
 ├── LICENSE                  # MIT License
+├── pytest.ini               # Pytest configuration
 ├── README.md                # Project documentation
 └── requirements-dev.txt     # Python development and validation dependencies
 ```
@@ -130,7 +136,7 @@ All dataset metadata files conform to JSON Schema Draft-7 (`dataset.v1.schema.js
    ```
 7. Run the test suites:
    ```bash
-   python3 -m pytest tests/ -v
+   pytest
    cd frontend && npm test
    ```
 
@@ -163,7 +169,7 @@ All dataset metadata files conform to JSON Schema Draft-7 (`dataset.v1.schema.js
 
 4. **Run Python automated tests**:
    ```bash
-   python3 -m pytest tests/ -v
+   pytest
    ```
 
 ### Frontend Setup
@@ -187,11 +193,82 @@ All dataset metadata files conform to JSON Schema Draft-7 (`dataset.v1.schema.js
 
 4. **Frontend quality & test checks**:
    ```bash
-   npm test           # Run Vitest unit tests (search, filter, category logic)
+   npm test           # Run Vitest unit tests (search, filter, category logic, clipboard, catalogService)
    npm run lint       # Run ESLint quality checks
    npx tsc --noEmit   # Run TypeScript compiler checks
    npm run build      # Run production build (includes prebuild catalog generation)
    ```
+
+---
+
+## Continuous Integration (CI/CD)
+
+OpenDatasets uses a lightweight, secure GitHub Actions workflow defined in [`.github/workflows/ci.yml`](.github/workflows/ci.yml) to validate every contribution automatically.
+
+### Workflow Purpose & Triggers
+
+The CI pipeline runs on:
+- Every **push** to the `main` branch.
+- Every **pull request** targeting the `main` branch.
+- Manual triggers via **`workflow_dispatch`**.
+
+### Checks Performed
+
+The pipeline executes two independent jobs concurrently:
+
+1. **Python Metadata Validation (`python-validation`)**:
+   - **Environment**: Python 3.11 on `ubuntu-latest`.
+   - **Schema & Semantic Validation**: Executes `python3 scripts/validate_datasets.py` to ensure all dataset records in `data/datasets/*.json` adhere to `schemas/dataset.v1.schema.json`, contain valid HTTP/HTTPS URL formats without whitespace, and contain unique dataset IDs and slugs.
+   - **Automated Test Suite**: Executes `pytest` to run all unit tests covering schema compliance, duplicate detection, and atomic catalog generation.
+   - **Catalog Consistency Check**: Generates a temporary catalog and compares it against the committed `frontend/public/data/catalog.json` using `diff -u`. If a metadata change was made without regenerating and committing the catalog, the job fails.
+
+2. **Frontend Quality & Build (`frontend-quality`)**:
+   - **Environment**: Node.js 20 (LTS) and Python 3.11 on `ubuntu-latest`.
+   - **Dependency Installation**: Uses `npm ci` with automated package caching based on `frontend/package-lock.json`.
+   - **Unit Tests**: Executes Vitest suite (`npm test`) covering search filtering, category mapping, runtime catalog validation, and clipboard utilities.
+   - **Static Analysis (Linting)**: Executes ESLint (`npm run lint`) to maintain strict code quality standards.
+   - **Production Build**: Compiles TypeScript and builds the production bundle with Vite (`npm run build`).
+
+### Running Checks Locally
+
+Contributors can run the exact same checks locally before committing or opening a pull request:
+
+```bash
+# 1. Run Python metadata validation and tests
+python3 scripts/validate_datasets.py
+pytest
+
+# 2. Verify catalog consistency (regenerate if needed)
+python3 scripts/generate_catalog.py --output /tmp/catalog.test.json
+diff -u frontend/public/data/catalog.json /tmp/catalog.test.json
+
+# 3. Run frontend quality checks and production build
+cd frontend
+npm test
+npm run lint
+npm run build
+```
+
+### Regenerating the Catalog
+
+If you add, modify, or remove any dataset in `data/datasets/`, regenerate the catalog and commit the result:
+
+```bash
+python3 scripts/generate_catalog.py
+```
+
+### Pre-PR Contribution Checklist
+
+Before opening a pull request, ensure all verification steps pass cleanly:
+
+- [ ] All new or modified dataset files conform to `schemas/dataset.v1.schema.json` (`python3 scripts/validate_datasets.py`).
+- [ ] Pytest passes with zero failures (`pytest`).
+- [ ] Catalog has been regenerated and synchronized (`python3 scripts/generate_catalog.py`).
+- [ ] Frontend Vitest passes (`cd frontend && npm test`).
+- [ ] ESLint passes without errors or warnings (`cd frontend && npm run lint`).
+- [ ] Production build completes successfully (`cd frontend && npm run build`).
+
+---
 
 ## License
 
