@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fashion-mnist",
+  "slug": "fashion-mnist",
+  "name": "Fashion-MNIST",
+  "description": "Fashion-MNIST is a dataset of Zalando's article images consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes (T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle boot), serving as a direct drop-in replacement for the original MNIST dataset for benchmarking machine learning algorithms.",
+  "homepage_url": "https://github.com/zalandoresearch/fashion-mnist",
+  "publisher": {
+    "name": "Zalando Research",
+    "type": "industry",
+    "url": "https://research.zalando.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification"
+  ],
+  "tags": [
+    "computer-vision",
+    "clothing",
+    "benchmark",
+    "image-classification",
+    "fashion"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://github.com/zalandoresearch/fashion-mnist/blob/master/LICENSE",
+    "commercial_use": "allowed",
+    "notes": "Licensed under the MIT License by Zalando SE."
+  },
+  "source_references": [
+    {
+      "title": "Fashion-MNIST GitHub Repository",
+      "url": "https://github.com/zalandoresearch/fashion-mnist",
+      "type": "repository",
+      "notes": "Official repository with benchmark data files and documentation."
+    },
+    {
+      "title": "Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms",
+      "url": "https://arxiv.org/abs/1708.07747",
+      "type": "original_paper",
+      "notes": "Preprint introducing the dataset by Han Xiao, Kashif Rasul, and Roland Vollgraf."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-27",
+    "notes": "Verified against official Zalando Research GitHub repository and arXiv paper."
+  },
+  "size": {
+    "amount": 30.8,
+    "unit": "MB",
+    "file_formats": [
+      "idx-ubyte",
+      "gzip"
+    ],
+    "status": "verified",
+    "notes": "Compressed IDX gzip byte archive files."
+  },
+  "sample_count": {
+    "total": 70000,
+    "splits": {
+      "train": 60000,
+      "test": 10000
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2017-08-25"
+  },
+  "citation": {
+    "paper_title": "Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms",
+    "paper_url": "https://arxiv.org/abs/1708.07747",
+    "authors": [
+      "Han Xiao",
+      "Kashif Rasul",
+      "Roland Vollgraf"
+    ],
+    "bibtex": "@article{xiao2017fashion,\n  title={Fashion-mnist: a novel image dataset for benchmarking machine learning algorithms},\n  author={Xiao, Han and Rasul, Kashif and Vollgraf, Roland},\n  journal={arXiv preprint arXiv:1708.07747},\n  year={2017}\n}"
+  },
+  "provenance": {
+    "collection_method": "Converted directly from Zalando SE product photography, centered and grayscale downsampled to 28x28.",
+    "curation_notes": "Maintains exact same image dimensions and split sizes as original MNIST."
+  }
+}

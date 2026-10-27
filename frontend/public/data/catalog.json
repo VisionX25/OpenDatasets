@@ -1,6 +1,186 @@
 [
   {
     "schema_version": "1.0.0",
+    "id": "adult-census-income",
+    "slug": "adult-census-income",
+    "name": "Adult Census Income Database",
+    "description": "The Adult dataset, also known as the Census Income dataset, was extracted by Ronny Kohavi and Barry Becker from the 1994 United States Census Bureau database. The task is to predict whether an individual's annual income exceeds $50,000 based on 14 demographic and employment attributes such as age, education, marital status, occupation, and race.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/2/adult",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification"
+    ],
+    "tags": [
+      "tabular",
+      "census",
+      "economics",
+      "demographics",
+      "benchmark",
+      "fairness"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0) via the UCI Machine Learning Repository."
+    },
+    "source_references": [
+      {
+        "title": "UCI Machine Learning Repository: Adult Dataset Record",
+        "url": "https://archive.ics.uci.edu/dataset/2/adult",
+        "type": "official_website",
+        "notes": "Official dataset landing page on UCI ML Repository."
+      },
+      {
+        "title": "Scaling Up the Accuracy of Naive-Bayes Classifiers: a Decision-Tree Hybrid",
+        "url": "https://dl.acm.org/doi/10.5555/3001460.3001507",
+        "type": "original_paper",
+        "notes": "Published in KDD 1996 by Ronny Kohavi."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-27",
+      "notes": "Verified against UCI ML Repository record and KDD 1996 paper."
+    },
+    "size": {
+      "amount": 5.6,
+      "unit": "MB",
+      "file_formats": [
+        "csv",
+        "data",
+        "test"
+      ],
+      "status": "verified",
+      "notes": "Uncompressed raw CSV and text data formats."
+    },
+    "sample_count": {
+      "total": 48842,
+      "splits": {
+        "train": 32561,
+        "test": 16281
+      },
+      "unit": "rows",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1996-05-01"
+    },
+    "citation": {
+      "paper_title": "Scaling Up the Accuracy of Naive-Bayes Classifiers: a Decision-Tree Hybrid",
+      "paper_url": "https://dl.acm.org/doi/10.5555/3001460.3001507",
+      "authors": [
+        "Ronny Kohavi"
+      ],
+      "bibtex": "@inproceedings{kohavi1996scaling,\n  title={Scaling up the accuracy of Naive-Bayes classifiers: a decision-tree hybrid},\n  author={Kohavi, Ronny},\n  booktitle={Proceedings of the Second International Conference on Knowledge Discovery and Data Mining},\n  pages={202--207},\n  year={1996}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted from the US Census Bureau 1994 Current Population Survey using extraction conditions AAGE>16, AHRSPW>0, and FNLWGT>0.",
+      "curation_notes": "Standard benchmark in machine learning classification, bias mitigation, and algorithmic fairness research."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "california-housing",
+    "slug": "california-housing",
+    "name": "California Housing Prices Database",
+    "description": "The California Housing dataset contains metrics derived from the 1990 U.S. Census for 20,640 census block groups in California. Originally developed by R. Kelley Pace and Ronald Barry, the regression target is the median house value for California districts, predicted using features such as median income, housing median age, total rooms, total bedrooms, population, households, latitude, and longitude.",
+    "homepage_url": "https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html",
+    "publisher": {
+      "name": "StatLib / Carnegie Mellon University",
+      "type": "academic",
+      "url": "https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-regression"
+    ],
+    "tags": [
+      "tabular",
+      "housing",
+      "real-estate",
+      "economics",
+      "regression",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified (Public Research Archive / 1990 US Census Derivative)",
+      "spdx_id": null,
+      "url": "https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html",
+      "commercial_use": "unknown",
+      "notes": "The original StatLib archive and Pace & Barry (1997) publication do not specify an explicit license or formal public domain waiver. While underlying 1990 US Census data is generally not subject to US copyright, the compiled regression dataset lacks a formal authoritative public domain or open source license declaration."
+    },
+    "source_references": [
+      {
+        "title": "StatLib: California Housing Dataset Archive",
+        "url": "https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html",
+        "type": "official_website",
+        "notes": "Archive maintained by Luís Torgo hosting the canonical Pace & Barry dataset."
+      },
+      {
+        "title": "Sparse Spatial Autoregressions",
+        "url": "https://doi.org/10.1016/S0167-7152(96)00140-X",
+        "type": "original_paper",
+        "notes": "Published in Statistics & Probability Letters (1997) by R. Kelley Pace and Ronald Barry."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-27",
+      "notes": "Metadata verified against StatLib repository archive and Statistics & Probability Letters paper; license is unspecified by the original academic distributors."
+    },
+    "size": {
+      "amount": 1.4,
+      "unit": "MB",
+      "file_formats": [
+        "csv",
+        "data"
+      ],
+      "status": "verified",
+      "notes": "Raw tabular text and CSV format size."
+    },
+    "sample_count": {
+      "total": 20640,
+      "splits": {
+        "total": 20640
+      },
+      "unit": "rows",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1997-04-01"
+    },
+    "citation": {
+      "paper_title": "Sparse spatial autoregressions",
+      "paper_url": "https://doi.org/10.1016/S0167-7152(96)00140-X",
+      "authors": [
+        "R. Kelley Pace",
+        "Ronald Barry"
+      ],
+      "doi": "10.1016/S0167-7152(96)00140-X",
+      "bibtex": "@article{pace1997sparse,\n  title={Sparse spatial autoregressions},\n  author={Pace, R Kelley and Barry, Ronald},\n  journal={Statistics \\& Probability Letters},\n  volume={33},\n  number={3},\n  pages={291--297},\n  year={1997},\n  publisher={Elsevier}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted from the 1990 US Census, aggregated at the census block group level.",
+      "curation_notes": "Standard regression benchmark frequently replacing the deprecated Boston Housing dataset due to ethical considerations."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "cifar-10",
     "slug": "cifar-10",
     "name": "CIFAR-10",
@@ -87,6 +267,512 @@
     "provenance": {
       "collection_method": "Subset of the 80 Million Tiny Images dataset, labeled by hired human workers.",
       "curation_notes": "Classes are completely mutually exclusive (e.g., no overlap between automobiles and trucks)."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "common-voice",
+    "slug": "common-voice",
+    "name": "Mozilla Common Voice",
+    "description": "Mozilla Common Voice is a massive, publicly available multilingual dataset of human voices designed to train speech applications. It relies on worldwide volunteer contributors who read sentences aloud and validate recordings made by others across over 100 languages, making speech technology accessible in low-resource languages.",
+    "homepage_url": "https://commonvoice.mozilla.org/",
+    "publisher": {
+      "name": "Mozilla Foundation",
+      "type": "community",
+      "url": "https://www.mozilla.org"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-recognition"
+    ],
+    "tags": [
+      "audio",
+      "speech-recognition",
+      "asr",
+      "multilingual",
+      "crowdsourced"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Audio clips and text sentences are dedicated to the public domain under Creative Commons CC0 1.0 Universal (CC0-1.0). Downloading and using dataset releases requires agreeing to the Mozilla Common Voice Terms of Use, which strictly prohibit attempting to determine the identity of speakers or re-identifying contributors."
+    },
+    "source_references": [
+      {
+        "title": "Mozilla Common Voice Platform",
+        "url": "https://commonvoice.mozilla.org/",
+        "type": "official_website",
+        "notes": "Official project platform for voice donation and dataset downloads across corpus versions."
+      },
+      {
+        "title": "Mozilla Common Voice Terms of Use",
+        "url": "https://commonvoice.mozilla.org/terms",
+        "type": "documentation",
+        "notes": "Specifies acceptable use policy and strictly forbids speaker identification and deanonymization."
+      },
+      {
+        "title": "Common Voice: A Massively-Multilingual Speech Corpus",
+        "url": "https://arxiv.org/abs/1912.06670",
+        "type": "original_paper",
+        "notes": "Published in LREC 2020 by Rosana Ardila et al."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-27",
+      "notes": "Metadata verified against official Mozilla Common Voice platform, Terms of Use, and LREC 2020 paper."
+    },
+    "size": {
+      "amount": 80,
+      "unit": "GB",
+      "file_formats": [
+        "mp3",
+        "tsv",
+        "tar.gz"
+      ],
+      "status": "estimated",
+      "notes": "English corpus audio archives; multi-terabyte size across all 100+ languages."
+    },
+    "sample_count": {
+      "total": 3000000,
+      "unit": "audio-clips",
+      "status": "estimated"
+    },
+    "languages": [
+      "en",
+      "multilingual"
+    ],
+    "dates": {
+      "published": "2017-07-01",
+      "last_updated": "2024-06-01"
+    },
+    "citation": {
+      "paper_title": "Common Voice: A Massively-Multilingual Speech Corpus",
+      "paper_url": "https://arxiv.org/abs/1912.06670",
+      "authors": [
+        "Rosana Ardila",
+        "Megan Branson",
+        "Kelly Davis",
+        "Michael Henretty",
+        "Michael Kohler",
+        "Josh Meyer",
+        "Reuben Morais",
+        "Lindsay Saunders",
+        "Francis M. Tyers",
+        "Gregor Weber"
+      ],
+      "bibtex": "@inproceedings{ardila2020common,\n  title={Common Voice: A Massively-Multilingual Speech Corpus},\n  author={Ardila, Rosana and Branson, Megan and Davis, Kelly and Henretty, Michael and Kohler, Michael and Meyer, Josh and Morais, Reuben and Saunders, Lindsay and Tyers, Francis M. and Weber, Gregor},\n  booktitle={Proceedings of the 12th Language Resources and Evaluation Conference},\n  pages={4218--4222},\n  year={2020}\n}"
+    },
+    "provenance": {
+      "collection_method": "Crowdsourced through web and mobile browsers where volunteers read public domain sentences into their microphones.",
+      "curation_notes": "Each audio clip must be upvoted by at least two distinct peer reviewers to be marked as validated. Re-identifying individual speakers or deanonymizing contributors is strictly prohibited by Mozilla's platform terms of use."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "fashion-mnist",
+    "slug": "fashion-mnist",
+    "name": "Fashion-MNIST",
+    "description": "Fashion-MNIST is a dataset of Zalando's article images consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes (T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle boot), serving as a direct drop-in replacement for the original MNIST dataset for benchmarking machine learning algorithms.",
+    "homepage_url": "https://github.com/zalandoresearch/fashion-mnist",
+    "publisher": {
+      "name": "Zalando Research",
+      "type": "industry",
+      "url": "https://research.zalando.com"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification"
+    ],
+    "tags": [
+      "computer-vision",
+      "clothing",
+      "benchmark",
+      "image-classification",
+      "fashion"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://github.com/zalandoresearch/fashion-mnist/blob/master/LICENSE",
+      "commercial_use": "allowed",
+      "notes": "Licensed under the MIT License by Zalando SE."
+    },
+    "source_references": [
+      {
+        "title": "Fashion-MNIST GitHub Repository",
+        "url": "https://github.com/zalandoresearch/fashion-mnist",
+        "type": "repository",
+        "notes": "Official repository with benchmark data files and documentation."
+      },
+      {
+        "title": "Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms",
+        "url": "https://arxiv.org/abs/1708.07747",
+        "type": "original_paper",
+        "notes": "Preprint introducing the dataset by Han Xiao, Kashif Rasul, and Roland Vollgraf."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-27",
+      "notes": "Verified against official Zalando Research GitHub repository and arXiv paper."
+    },
+    "size": {
+      "amount": 30.8,
+      "unit": "MB",
+      "file_formats": [
+        "idx-ubyte",
+        "gzip"
+      ],
+      "status": "verified",
+      "notes": "Compressed IDX gzip byte archive files."
+    },
+    "sample_count": {
+      "total": 70000,
+      "splits": {
+        "train": 60000,
+        "test": 10000
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2017-08-25"
+    },
+    "citation": {
+      "paper_title": "Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms",
+      "paper_url": "https://arxiv.org/abs/1708.07747",
+      "authors": [
+        "Han Xiao",
+        "Kashif Rasul",
+        "Roland Vollgraf"
+      ],
+      "bibtex": "@article{xiao2017fashion,\n  title={Fashion-mnist: a novel image dataset for benchmarking machine learning algorithms},\n  author={Xiao, Han and Rasul, Kashif and Vollgraf, Roland},\n  journal={arXiv preprint arXiv:1708.07747},\n  year={2017}\n}"
+    },
+    "provenance": {
+      "collection_method": "Converted directly from Zalando SE product photography, centered and grayscale downsampled to 28x28.",
+      "curation_notes": "Maintains exact same image dimensions and split sizes as original MNIST."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "glue-benchmark",
+    "slug": "glue-benchmark",
+    "name": "General Language Understanding Evaluation (GLUE) Benchmark",
+    "description": "The General Language Understanding Evaluation (GLUE) benchmark is a collection of nine sentence- or sentence-pair language understanding tasks, including question answering, sentiment analysis, textual entailment, and linguistic acceptability, evaluated via a centralized public leaderboard.",
+    "homepage_url": "https://gluebenchmark.com/",
+    "publisher": {
+      "name": "New York University, University of Washington & DeepMind",
+      "type": "academic",
+      "url": "https://gluebenchmark.com"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "natural-language-inference",
+      "text-classification",
+      "semantic-similarity"
+    ],
+    "tags": [
+      "nlp",
+      "benchmark",
+      "evaluation",
+      "language-understanding",
+      "multi-task"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Multiple / Upstream Task-Specific Licenses",
+      "spdx_id": null,
+      "url": "https://gluebenchmark.com/faq",
+      "commercial_use": "unknown",
+      "notes": "The GLUE benchmark as an aggregate does not grant a unified license. Each of the 9 constituent tasks is governed by its respective upstream license (e.g., Microsoft Research license for MRPC, CC BY-SA 4.0 for MNLI). Users must review individual component task terms."
+    },
+    "source_references": [
+      {
+        "title": "GLUE Benchmark Official Leaderboard",
+        "url": "https://gluebenchmark.com/",
+        "type": "official_website",
+        "notes": "Official benchmark website, dataset documentation, and leaderboard."
+      },
+      {
+        "title": "GLUE Benchmark FAQ",
+        "url": "https://gluebenchmark.com/faq",
+        "type": "documentation",
+        "notes": "Clarifies dataset provenance and specifies that users must check original licenses for each component task."
+      },
+      {
+        "title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding",
+        "url": "https://arxiv.org/abs/1804.07461",
+        "type": "original_paper",
+        "notes": "Published in EMNLP 2018 BlackboxNLP Workshop by Alex Wang et al."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-27",
+      "notes": "Metadata verified against GLUE benchmark portal, FAQ licensing guidance, and EMNLP workshop proceedings."
+    },
+    "size": {
+      "amount": 379,
+      "unit": "MB",
+      "file_formats": [
+        "tsv",
+        "zip"
+      ],
+      "status": "verified",
+      "notes": "Total compressed archive of all 9 tasks."
+    },
+    "sample_count": {
+      "total": 1100000,
+      "unit": "sentence-pairs",
+      "status": "estimated"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-04-20"
+    },
+    "citation": {
+      "paper_title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding",
+      "paper_url": "https://arxiv.org/abs/1804.07461",
+      "authors": [
+        "Alex Wang",
+        "Amanpreet Singh",
+        "Julian Michael",
+        "Felix Hill",
+        "Omer Levy",
+        "Samuel R. Bowman"
+      ],
+      "doi": "10.18653/v1/W18-5446",
+      "bibtex": "@inproceedings{wang2018glue,\n  title={{GLUE}: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding},\n  author={Wang, Alex and Singh, Amanpreet and Michael, Julian and Hill, Felix and Levy, Omer and Bowman, Samuel R.},\n  booktitle={Proceedings of the Workshop: Analyzing and Interpreting Neural Networks for NLP},\n  pages={353--355},\n  year={2018}\n}"
+    },
+    "provenance": {
+      "collection_method": "Aggregated from established NLP datasets including CoLA, SST-2, MRPC, STS-B, QQP, MNLI, QNLI, RTE, and WNLI.",
+      "curation_notes": "Converted to standard tab-delimited formats with private test sets hosted on evaluation servers."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "imagenet-1k",
+    "slug": "imagenet-1k",
+    "name": "ImageNet (ILSVRC 2012)",
+    "description": "The ImageNet Large Scale Visual Recognition Challenge 2012 (ILSVRC2012) dataset is one of the most widely used benchmarks in computer vision. It contains 1,000 object categories with over 1.28 million training images, 50,000 validation images, and 100,000 test images, organized according to the WordNet hierarchy.",
+    "homepage_url": "https://www.image-net.org/",
+    "publisher": {
+      "name": "Stanford Vision Lab & Princeton University",
+      "type": "academic",
+      "url": "https://www.image-net.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification"
+    ],
+    "tags": [
+      "computer-vision",
+      "image-classification",
+      "benchmark",
+      "object-recognition",
+      "imagenet"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "ImageNet Terms of Access (Non-Commercial Research and Educational Use)",
+      "spdx_id": null,
+      "url": "https://www.image-net.org/download.php",
+      "commercial_use": "forbidden",
+      "notes": "Access requires account registration with a verified institutional email address and agreement to the ImageNet Terms of Access. The dataset is restricted strictly to non-commercial research and educational use. ImageNet does not own the copyright of individual images."
+    },
+    "source_references": [
+      {
+        "title": "ImageNet Official Homepage",
+        "url": "https://www.image-net.org/",
+        "type": "official_website",
+        "notes": "Official Stanford/Princeton landing page and portal."
+      },
+      {
+        "title": "ImageNet Terms of Access",
+        "url": "https://www.image-net.org/download.php",
+        "type": "documentation",
+        "notes": "Specifies institutional registration requirement and non-commercial research restrictions."
+      },
+      {
+        "title": "ImageNet: A Large-Scale Hierarchical Image Database",
+        "url": "https://doi.org/10.1109/CVPR.2009.5206848",
+        "type": "original_paper",
+        "notes": "Published in CVPR 2009 by Jia Deng et al."
+      },
+      {
+        "title": "ImageNet Large Scale Visual Recognition Challenge",
+        "url": "https://doi.org/10.1007/s11263-015-0816-y",
+        "type": "original_paper",
+        "notes": "Published in IJCV 2015 by Olga Russakovsky et al."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-27",
+      "notes": "Metadata verified against official ImageNet portal, Terms of Access, and IJCV publication."
+    },
+    "size": {
+      "amount": 150,
+      "unit": "GB",
+      "file_formats": [
+        "tar",
+        "jpeg"
+      ],
+      "status": "estimated",
+      "notes": "Uncompressed JPEG image tar archives for ILSVRC 2012."
+    },
+    "sample_count": {
+      "total": 1431167,
+      "splits": {
+        "train": 1281167,
+        "validation": 50000,
+        "test": 100000
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2012-05-22"
+    },
+    "citation": {
+      "paper_title": "ImageNet Large Scale Visual Recognition Challenge",
+      "paper_url": "https://doi.org/10.1007/s11263-015-0816-y",
+      "authors": [
+        "Olga Russakovsky",
+        "Jia Deng",
+        "Hao Su",
+        "Jonathan Krause",
+        "Sanjeev Satheesh",
+        "Sean Ma",
+        "Zhiheng Huang",
+        "Andrej Karpathy",
+        "Aditya Khosla",
+        "Michael Bernstein",
+        "Alexander C. Berg",
+        "Li Fei-Fei"
+      ],
+      "doi": "10.1007/s11263-015-0816-y",
+      "bibtex": "@article{russakovsky2015imagenet,\n  title={ImageNet Large Scale Visual Recognition Challenge},\n  author={Russakovsky, Olga and Deng, Jia and Su, Hao and Krause, Jonathan and Satheesh, Sanjeev and Ma, Sean and Huang, Zhiheng and Karpathy, Andrej and Khosla, Aditya and Bernstein, Michael and Berg, Alexander C. and Fei-Fei, Li},\n  journal={International Journal of Computer Vision},\n  volume={115},\n  number={3},\n  pages={211--252},\n  year={2015},\n  publisher={Springer}\n}"
+    },
+    "provenance": {
+      "collection_method": "Images harvested from online image search engines queried with synset words from WordNet and verified via Amazon Mechanical Turk.",
+      "curation_notes": "Quality controlled through multi-annotator voting consensus to ensure high label accuracy."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "imdb-reviews",
+    "slug": "imdb-reviews",
+    "name": "Large Movie Review Dataset (IMDb)",
+    "description": "The Large Movie Review Dataset is a benchmark for binary sentiment classification containing 50,000 highly polar movie reviews from the Internet Movie Database (IMDb). It provides an even split of 25,000 reviews for training and 25,000 reviews for testing, with no more than 30 reviews per movie, alongside an additional 50,000 unlabeled reviews for unsupervised learning.",
+    "homepage_url": "https://ai.stanford.edu/~amaas/data/sentiment/",
+    "publisher": {
+      "name": "Stanford University (Andrew Maas)",
+      "type": "academic",
+      "url": "https://ai.stanford.edu"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "sentiment-analysis",
+      "text-classification"
+    ],
+    "tags": [
+      "nlp",
+      "sentiment-analysis",
+      "text-classification",
+      "benchmark",
+      "movie-reviews"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Public Research Archive (Free for Academic / Educational Use)",
+      "spdx_id": null,
+      "url": "https://ai.stanford.edu/~amaas/data/sentiment/",
+      "commercial_use": "unknown",
+      "notes": "Authors provide the dataset freely for research purposes. Official page does not attach a standard SPDX license."
+    },
+    "source_references": [
+      {
+        "title": "Learning Word Vectors for Sentiment Analysis Dataset Page",
+        "url": "https://ai.stanford.edu/~amaas/data/sentiment/",
+        "type": "official_website",
+        "notes": "Official Stanford AI lab dataset download archive."
+      },
+      {
+        "title": "Learning Word Vectors for Sentiment Analysis",
+        "url": "https://aclanthology.org/P11-1015/",
+        "type": "original_paper",
+        "notes": "Published in ACL 2011 by Andrew L. Maas et al."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-27",
+      "notes": "Verified against official Stanford AI lab distribution and ACL anthology record."
+    },
+    "size": {
+      "amount": 84.1,
+      "unit": "MB",
+      "file_formats": [
+        "tar.gz",
+        "text"
+      ],
+      "status": "verified",
+      "notes": "Compressed tar archive of individual review text files."
+    },
+    "sample_count": {
+      "total": 50000,
+      "splits": {
+        "train": 25000,
+        "test": 25000
+      },
+      "unit": "reviews",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2011-06-19"
+    },
+    "citation": {
+      "paper_title": "Learning Word Vectors for Sentiment Analysis",
+      "paper_url": "https://aclanthology.org/P11-1015/",
+      "authors": [
+        "Andrew L. Maas",
+        "Raymond E. Daly",
+        "Peter T. Pham",
+        "Dan Huang",
+        "Andrew Y. Ng",
+        "Christopher Potts"
+      ],
+      "bibtex": "@inproceedings{maas2011learning,\n  title={Learning Word Vectors for Sentiment Analysis},\n  author={Maas, Andrew L. and Daly, Raymond E. and Pham, Peter T. and Huang, Dan and Ng, Andrew Y. and Potts, Christopher},\n  booktitle={Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies},\n  pages={142--150},\n  year={2011}\n}"
+    },
+    "provenance": {
+      "collection_method": "Scraped from IMDb reviews with ratings <= 4/10 (negative) and >= 7/10 (positive), excluding neutral reviews.",
+      "curation_notes": "Balanced class distributions across both train and test splits."
     }
   },
   {
@@ -180,6 +866,107 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "librispeech",
+    "slug": "librispeech",
+    "name": "LibriSpeech ASR Corpus",
+    "description": "LibriSpeech is a corpus of approximately 1,000 hours of 16kHz read English speech derived from read audiobooks from the LibriVox project. Prepared by Vassil Panayotov with assistance from Daniel Povey, it features carefully segmented and aligned acoustic audio and normalized text transcripts, divided into clean and other subsets.",
+    "homepage_url": "https://www.openslr.org/12",
+    "publisher": {
+      "name": "OpenSLR",
+      "type": "community",
+      "url": "https://www.openslr.org"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-recognition"
+    ],
+    "tags": [
+      "audio",
+      "speech-recognition",
+      "asr",
+      "audiobooks",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Corpus distributed under Creative Commons Attribution 4.0 International (CC BY 4.0); source LibriVox audiobooks are public domain."
+    },
+    "source_references": [
+      {
+        "title": "OpenSLR 12: LibriSpeech ASR Corpus",
+        "url": "https://www.openslr.org/12",
+        "type": "official_website",
+        "notes": "Canonical distribution archive on OpenSLR."
+      },
+      {
+        "title": "Librispeech: An ASR Corpus Based on Public Domain Audio Books",
+        "url": "https://doi.org/10.1109/ICASSP.2015.7178964",
+        "type": "original_paper",
+        "notes": "Published in IEEE ICASSP 2015."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-27",
+      "notes": "Verified against OpenSLR repository record and ICASSP 2015 publication."
+    },
+    "size": {
+      "amount": 60,
+      "unit": "GB",
+      "file_formats": [
+        "flac",
+        "txt",
+        "tar.gz"
+      ],
+      "status": "verified",
+      "notes": "Combined compressed FLAC audio archives across all splits."
+    },
+    "sample_count": {
+      "total": 292367,
+      "splits": {
+        "train-clean-100": 28539,
+        "train-clean-360": 104014,
+        "train-other-500": 148688,
+        "dev-clean": 2703,
+        "dev-other": 2864,
+        "test-clean": 2620,
+        "test-other": 2939
+      },
+      "unit": "audio-utterances",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2015-04-19"
+    },
+    "citation": {
+      "paper_title": "Librispeech: An ASR corpus based on public domain audio books",
+      "paper_url": "https://doi.org/10.1109/ICASSP.2015.7178964",
+      "authors": [
+        "Vassil Panayotov",
+        "Guoguo Chen",
+        "Daniel Povey",
+        "Sanjeev Khudanpur"
+      ],
+      "doi": "10.1109/ICASSP.2015.7178964",
+      "bibtex": "@inproceedings{panayotov2015librispeech,\n  title={Librispeech: an {ASR} corpus based on public domain audio books},\n  author={Panayotov, Vassil and Chen, Guoguo and Povey, Daniel and Khudanpur, Sanjeev},\n  booktitle={2015 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages={5206--5210},\n  year={2015},\n  organization={IEEE}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted from LibriVox public domain audio recordings and aligned to Project Gutenberg texts using Kaldi speech recognition toolkit.",
+      "curation_notes": "Audio files filtered based on acoustic model score alignments and split into clean and noisy/accented subsets."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "mnist",
     "slug": "mnist",
     "name": "MNIST Database of Handwritten Digits",
@@ -266,6 +1053,194 @@
     "provenance": {
       "collection_method": "Constructed from NIST Special Database 3 (high school students) and Special Database 1 (Census Bureau employees).",
       "curation_notes": "Normalized to fit in a 20x20 pixel box while preserving aspect ratio, centered in a 28x28 field by computing the center of mass."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "squad-2",
+    "slug": "squad-2",
+    "name": "Stanford Question Answering Dataset 2.0 (SQuAD 2.0)",
+    "description": "Stanford Question Answering Dataset (SQuAD) 2.0 combines the 100,000 questions in SQuAD 1.1 with over 50,000 unanswerable questions written adversarially by crowdworkers to look similar to answerable ones. To do well on SQuAD 2.0, systems must not only answer questions when possible, but also determine when no answer is supported by the paragraph and abstain from answering.",
+    "homepage_url": "https://rajpurkar.github.io/SQuAD-explorer/",
+    "publisher": {
+      "name": "Stanford NLP Group",
+      "type": "academic",
+      "url": "https://nlp.stanford.edu"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "reading-comprehension"
+    ],
+    "tags": [
+      "nlp",
+      "question-answering",
+      "reading-comprehension",
+      "benchmark",
+      "stanford"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Dataset text is licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "SQuAD Official Explorer & Benchmark",
+        "url": "https://rajpurkar.github.io/SQuAD-explorer/",
+        "type": "official_website",
+        "notes": "Official Stanford explorer, leaderboard, and download distribution page."
+      },
+      {
+        "title": "Know What You Don't Know: Unanswerable Questions for SQuAD",
+        "url": "https://arxiv.org/abs/1806.03822",
+        "type": "original_paper",
+        "notes": "ACL 2018 paper introducing SQuAD 2.0 by Pranav Rajpurkar, Robin Jia, and Percy Liang."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-27",
+      "notes": "Verified against SQuAD Explorer landing page and ACL 2018 proceedings."
+    },
+    "size": {
+      "amount": 46.5,
+      "unit": "MB",
+      "file_formats": [
+        "json"
+      ],
+      "status": "verified",
+      "notes": "Combined JSON file size of train-v2.0.json and dev-v2.0.json."
+    },
+    "sample_count": {
+      "total": 142192,
+      "splits": {
+        "train": 130319,
+        "dev": 11873
+      },
+      "unit": "questions",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-06-11"
+    },
+    "citation": {
+      "paper_title": "Know What You Don't Know: Unanswerable Questions for SQuAD",
+      "paper_url": "https://arxiv.org/abs/1806.03822",
+      "authors": [
+        "Pranav Rajpurkar",
+        "Robin Jia",
+        "Percy Liang"
+      ],
+      "doi": "10.18653/v1/P18-2124",
+      "bibtex": "@inproceedings{rajpurkar2018know,\n  title={Know What You Don't Know: Unanswerable Questions for {SQuAD}},\n  author={Rajpurkar, Pranav and Jia, Robin and Liang, Percy},\n  booktitle={Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)},\n  pages={784--789},\n  year={2018}\n}"
+    },
+    "provenance": {
+      "collection_method": "Passages selected from English Wikipedia articles; questions and plausible answers or unanswerable distractors created by Amazon Mechanical Turk workers.",
+      "curation_notes": "Contains roughly one-third unanswerable questions to challenge comprehension models."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "wine-quality",
+    "slug": "wine-quality",
+    "name": "Wine Quality Dataset",
+    "description": "The Wine Quality dataset includes physicochemical tests of red and white variants of the Portuguese 'Vinho Verde' wine. It contains 11 input variables describing chemical properties (such as fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, and alcohol) and an output sensory score evaluated by wine experts between 0 and 10.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/186/wine+quality",
+    "publisher": {
+      "name": "UCI Machine Learning Repository / University of Minho",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-regression",
+      "tabular-classification"
+    ],
+    "tags": [
+      "tabular",
+      "wine",
+      "chemistry",
+      "regression",
+      "benchmark",
+      "quality-control"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0) via the UCI Machine Learning Repository."
+    },
+    "source_references": [
+      {
+        "title": "UCI Machine Learning Repository: Wine Quality Record",
+        "url": "https://archive.ics.uci.edu/dataset/186/wine+quality",
+        "type": "official_website",
+        "notes": "Official dataset landing page on UCI ML Repository."
+      },
+      {
+        "title": "Modeling Wine Preferences by Data Mining from Physicochemical Properties",
+        "url": "https://doi.org/10.1016/j.dss.2009.05.016",
+        "type": "original_paper",
+        "notes": "Published in Decision Support Systems (Elsevier) 2009 by Paulo Cortez et al."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-27",
+      "notes": "Verified against UCI Machine Learning Repository metadata and Elsevier journal publication."
+    },
+    "size": {
+      "amount": 375,
+      "unit": "KB",
+      "file_formats": [
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "Raw CSV text format for red and white wine tables."
+    },
+    "sample_count": {
+      "total": 6497,
+      "splits": {
+        "red": 1599,
+        "white": 4898
+      },
+      "unit": "instances",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2009-10-07"
+    },
+    "citation": {
+      "paper_title": "Modeling wine preferences by data mining from physicochemical properties",
+      "paper_url": "https://doi.org/10.1016/j.dss.2009.05.016",
+      "authors": [
+        "Paulo Cortez",
+        "António Cerdeira",
+        "Fernando Almeida",
+        "Telmo Matos",
+        "José Reis"
+      ],
+      "doi": "10.1016/j.dss.2009.05.016",
+      "bibtex": "@article{cortez2009modeling,\n  title={Modeling wine preferences by data mining from physicochemical properties},\n  author={Cortez, Paulo and Cerdeira, Ant{\\'o}nio and Almeida, Fernando and Matos, Telmo and Reis, Jos{\\'e}},\n  journal={Decision Support Systems},\n  volume={47},\n  number={4},\n  pages={547--553},\n  year={2009},\n  publisher={Elsevier}\n}"
+    },
+    "provenance": {
+      "collection_method": "Certified laboratory measurements collected at the official Viticulture Commission of the Vinho Verde Region (CVRVV) in Portugal.",
+      "curation_notes": "Each sample was evaluated by blind sensory testing conducted by a panel of at least three wine experts."
     }
   }
 ]

@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "adult-census-income",
+  "slug": "adult-census-income",
+  "name": "Adult Census Income Database",
+  "description": "The Adult dataset, also known as the Census Income dataset, was extracted by Ronny Kohavi and Barry Becker from the 1994 United States Census Bureau database. The task is to predict whether an individual's annual income exceeds $50,000 based on 14 demographic and employment attributes such as age, education, marital status, occupation, and race.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/2/adult",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification"
+  ],
+  "tags": [
+    "tabular",
+    "census",
+    "economics",
+    "demographics",
+    "benchmark",
+    "fairness"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0) via the UCI Machine Learning Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI Machine Learning Repository: Adult Dataset Record",
+      "url": "https://archive.ics.uci.edu/dataset/2/adult",
+      "type": "official_website",
+      "notes": "Official dataset landing page on UCI ML Repository."
+    },
+    {
+      "title": "Scaling Up the Accuracy of Naive-Bayes Classifiers: a Decision-Tree Hybrid",
+      "url": "https://dl.acm.org/doi/10.5555/3001460.3001507",
+      "type": "original_paper",
+      "notes": "Published in KDD 1996 by Ronny Kohavi."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-27",
+    "notes": "Verified against UCI ML Repository record and KDD 1996 paper."
+  },
+  "size": {
+    "amount": 5.6,
+    "unit": "MB",
+    "file_formats": [
+      "csv",
+      "data",
+      "test"
+    ],
+    "status": "verified",
+    "notes": "Uncompressed raw CSV and text data formats."
+  },
+  "sample_count": {
+    "total": 48842,
+    "splits": {
+      "train": 32561,
+      "test": 16281
+    },
+    "unit": "rows",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1996-05-01"
+  },
+  "citation": {
+    "paper_title": "Scaling Up the Accuracy of Naive-Bayes Classifiers: a Decision-Tree Hybrid",
+    "paper_url": "https://dl.acm.org/doi/10.5555/3001460.3001507",
+    "authors": [
+      "Ronny Kohavi"
+    ],
+    "bibtex": "@inproceedings{kohavi1996scaling,\n  title={Scaling up the accuracy of Naive-Bayes classifiers: a decision-tree hybrid},\n  author={Kohavi, Ronny},\n  booktitle={Proceedings of the Second International Conference on Knowledge Discovery and Data Mining},\n  pages={202--207},\n  year={1996}\n}"
+  },
+  "provenance": {
+    "collection_method": "Extracted from the US Census Bureau 1994 Current Population Survey using extraction conditions AAGE>16, AHRSPW>0, and FNLWGT>0.",
+    "curation_notes": "Standard benchmark in machine learning classification, bias mitigation, and algorithmic fairness research."
+  }
+}

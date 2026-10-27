@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "california-housing",
+  "slug": "california-housing",
+  "name": "California Housing Prices Database",
+  "description": "The California Housing dataset contains metrics derived from the 1990 U.S. Census for 20,640 census block groups in California. Originally developed by R. Kelley Pace and Ronald Barry, the regression target is the median house value for California districts, predicted using features such as median income, housing median age, total rooms, total bedrooms, population, households, latitude, and longitude.",
+  "homepage_url": "https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html",
+  "publisher": {
+    "name": "StatLib / Carnegie Mellon University",
+    "type": "academic",
+    "url": "https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-regression"
+  ],
+  "tags": [
+    "tabular",
+    "housing",
+    "real-estate",
+    "economics",
+    "regression",
+    "benchmark"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified (Public Research Archive / 1990 US Census Derivative)",
+    "spdx_id": null,
+    "url": "https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html",
+    "commercial_use": "unknown",
+    "notes": "The original StatLib archive and Pace & Barry (1997) publication do not specify an explicit license or formal public domain waiver. While underlying 1990 US Census data is generally not subject to US copyright, the compiled regression dataset lacks a formal authoritative public domain or open source license declaration."
+  },
+  "source_references": [
+    {
+      "title": "StatLib: California Housing Dataset Archive",
+      "url": "https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html",
+      "type": "official_website",
+      "notes": "Archive maintained by Luís Torgo hosting the canonical Pace & Barry dataset."
+    },
+    {
+      "title": "Sparse Spatial Autoregressions",
+      "url": "https://doi.org/10.1016/S0167-7152(96)00140-X",
+      "type": "original_paper",
+      "notes": "Published in Statistics & Probability Letters (1997) by R. Kelley Pace and Ronald Barry."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-27",
+    "notes": "Metadata verified against StatLib repository archive and Statistics & Probability Letters paper; license is unspecified by the original academic distributors."
+  },
+  "size": {
+    "amount": 1.4,
+    "unit": "MB",
+    "file_formats": [
+      "csv",
+      "data"
+    ],
+    "status": "verified",
+    "notes": "Raw tabular text and CSV format size."
+  },
+  "sample_count": {
+    "total": 20640,
+    "splits": {
+      "total": 20640
+    },
+    "unit": "rows",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1997-04-01"
+  },
+  "citation": {
+    "paper_title": "Sparse spatial autoregressions",
+    "paper_url": "https://doi.org/10.1016/S0167-7152(96)00140-X",
+    "authors": [
+      "R. Kelley Pace",
+      "Ronald Barry"
+    ],
+    "doi": "10.1016/S0167-7152(96)00140-X",
+    "bibtex": "@article{pace1997sparse,\n  title={Sparse spatial autoregressions},\n  author={Pace, R Kelley and Barry, Ronald},\n  journal={Statistics \\& Probability Letters},\n  volume={33},\n  number={3},\n  pages={291--297},\n  year={1997},\n  publisher={Elsevier}\n}"
+  },
+  "provenance": {
+    "collection_method": "Extracted from the 1990 US Census, aggregated at the census block group level.",
+    "curation_notes": "Standard regression benchmark frequently replacing the deprecated Boston Housing dataset due to ethical considerations."
+  }
+}

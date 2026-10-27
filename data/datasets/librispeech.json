@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "librispeech",
+  "slug": "librispeech",
+  "name": "LibriSpeech ASR Corpus",
+  "description": "LibriSpeech is a corpus of approximately 1,000 hours of 16kHz read English speech derived from read audiobooks from the LibriVox project. Prepared by Vassil Panayotov with assistance from Daniel Povey, it features carefully segmented and aligned acoustic audio and normalized text transcripts, divided into clean and other subsets.",
+  "homepage_url": "https://www.openslr.org/12",
+  "publisher": {
+    "name": "OpenSLR",
+    "type": "community",
+    "url": "https://www.openslr.org"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-recognition"
+  ],
+  "tags": [
+    "audio",
+    "speech-recognition",
+    "asr",
+    "audiobooks",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Corpus distributed under Creative Commons Attribution 4.0 International (CC BY 4.0); source LibriVox audiobooks are public domain."
+  },
+  "source_references": [
+    {
+      "title": "OpenSLR 12: LibriSpeech ASR Corpus",
+      "url": "https://www.openslr.org/12",
+      "type": "official_website",
+      "notes": "Canonical distribution archive on OpenSLR."
+    },
+    {
+      "title": "Librispeech: An ASR Corpus Based on Public Domain Audio Books",
+      "url": "https://doi.org/10.1109/ICASSP.2015.7178964",
+      "type": "original_paper",
+      "notes": "Published in IEEE ICASSP 2015."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-27",
+    "notes": "Verified against OpenSLR repository record and ICASSP 2015 publication."
+  },
+  "size": {
+    "amount": 60,
+    "unit": "GB",
+    "file_formats": [
+      "flac",
+      "txt",
+      "tar.gz"
+    ],
+    "status": "verified",
+    "notes": "Combined compressed FLAC audio archives across all splits."
+  },
+  "sample_count": {
+    "total": 292367,
+    "splits": {
+      "train-clean-100": 28539,
+      "train-clean-360": 104014,
+      "train-other-500": 148688,
+      "dev-clean": 2703,
+      "dev-other": 2864,
+      "test-clean": 2620,
+      "test-other": 2939
+    },
+    "unit": "audio-utterances",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2015-04-19"
+  },
+  "citation": {
+    "paper_title": "Librispeech: An ASR corpus based on public domain audio books",
+    "paper_url": "https://doi.org/10.1109/ICASSP.2015.7178964",
+    "authors": [
+      "Vassil Panayotov",
+      "Guoguo Chen",
+      "Daniel Povey",
+      "Sanjeev Khudanpur"
+    ],
+    "doi": "10.1109/ICASSP.2015.7178964",
+    "bibtex": "@inproceedings{panayotov2015librispeech,\n  title={Librispeech: an {ASR} corpus based on public domain audio books},\n  author={Panayotov, Vassil and Chen, Guoguo and Povey, Daniel and Khudanpur, Sanjeev},\n  booktitle={2015 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages={5206--5210},\n  year={2015},\n  organization={IEEE}\n}"
+  },
+  "provenance": {
+    "collection_method": "Extracted from LibriVox public domain audio recordings and aligned to Project Gutenberg texts using Kaldi speech recognition toolkit.",
+    "curation_notes": "Audio files filtered based on acoustic model score alignments and split into clean and noisy/accented subsets."
+  }
+}

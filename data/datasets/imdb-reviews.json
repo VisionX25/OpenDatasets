@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "imdb-reviews",
+  "slug": "imdb-reviews",
+  "name": "Large Movie Review Dataset (IMDb)",
+  "description": "The Large Movie Review Dataset is a benchmark for binary sentiment classification containing 50,000 highly polar movie reviews from the Internet Movie Database (IMDb). It provides an even split of 25,000 reviews for training and 25,000 reviews for testing, with no more than 30 reviews per movie, alongside an additional 50,000 unlabeled reviews for unsupervised learning.",
+  "homepage_url": "https://ai.stanford.edu/~amaas/data/sentiment/",
+  "publisher": {
+    "name": "Stanford University (Andrew Maas)",
+    "type": "academic",
+    "url": "https://ai.stanford.edu"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "sentiment-analysis",
+    "text-classification"
+  ],
+  "tags": [
+    "nlp",
+    "sentiment-analysis",
+    "text-classification",
+    "benchmark",
+    "movie-reviews"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Public Research Archive (Free for Academic / Educational Use)",
+    "spdx_id": null,
+    "url": "https://ai.stanford.edu/~amaas/data/sentiment/",
+    "commercial_use": "unknown",
+    "notes": "Authors provide the dataset freely for research purposes. Official page does not attach a standard SPDX license."
+  },
+  "source_references": [
+    {
+      "title": "Learning Word Vectors for Sentiment Analysis Dataset Page",
+      "url": "https://ai.stanford.edu/~amaas/data/sentiment/",
+      "type": "official_website",
+      "notes": "Official Stanford AI lab dataset download archive."
+    },
+    {
+      "title": "Learning Word Vectors for Sentiment Analysis",
+      "url": "https://aclanthology.org/P11-1015/",
+      "type": "original_paper",
+      "notes": "Published in ACL 2011 by Andrew L. Maas et al."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-27",
+    "notes": "Verified against official Stanford AI lab distribution and ACL anthology record."
+  },
+  "size": {
+    "amount": 84.1,
+    "unit": "MB",
+    "file_formats": [
+      "tar.gz",
+      "text"
+    ],
+    "status": "verified",
+    "notes": "Compressed tar archive of individual review text files."
+  },
+  "sample_count": {
+    "total": 50000,
+    "splits": {
+      "train": 25000,
+      "test": 25000
+    },
+    "unit": "reviews",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2011-06-19"
+  },
+  "citation": {
+    "paper_title": "Learning Word Vectors for Sentiment Analysis",
+    "paper_url": "https://aclanthology.org/P11-1015/",
+    "authors": [
+      "Andrew L. Maas",
+      "Raymond E. Daly",
+      "Peter T. Pham",
+      "Dan Huang",
+      "Andrew Y. Ng",
+      "Christopher Potts"
+    ],
+    "bibtex": "@inproceedings{maas2011learning,\n  title={Learning Word Vectors for Sentiment Analysis},\n  author={Maas, Andrew L. and Daly, Raymond E. and Pham, Peter T. and Huang, Dan and Ng, Andrew Y. and Potts, Christopher},\n  booktitle={Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies},\n  pages={142--150},\n  year={2011}\n}"
+  },
+  "provenance": {
+    "collection_method": "Scraped from IMDb reviews with ratings <= 4/10 (negative) and >= 7/10 (positive), excluding neutral reviews.",
+    "curation_notes": "Balanced class distributions across both train and test splits."
+  }
+}

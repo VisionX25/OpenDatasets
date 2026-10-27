@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "glue-benchmark",
+  "slug": "glue-benchmark",
+  "name": "General Language Understanding Evaluation (GLUE) Benchmark",
+  "description": "The General Language Understanding Evaluation (GLUE) benchmark is a collection of nine sentence- or sentence-pair language understanding tasks, including question answering, sentiment analysis, textual entailment, and linguistic acceptability, evaluated via a centralized public leaderboard.",
+  "homepage_url": "https://gluebenchmark.com/",
+  "publisher": {
+    "name": "New York University, University of Washington & DeepMind",
+    "type": "academic",
+    "url": "https://gluebenchmark.com"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "natural-language-inference",
+    "text-classification",
+    "semantic-similarity"
+  ],
+  "tags": [
+    "nlp",
+    "benchmark",
+    "evaluation",
+    "language-understanding",
+    "multi-task"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Multiple / Upstream Task-Specific Licenses",
+    "spdx_id": null,
+    "url": "https://gluebenchmark.com/faq",
+    "commercial_use": "unknown",
+    "notes": "The GLUE benchmark as an aggregate does not grant a unified license. Each of the 9 constituent tasks is governed by its respective upstream license (e.g., Microsoft Research license for MRPC, CC BY-SA 4.0 for MNLI). Users must review individual component task terms."
+  },
+  "source_references": [
+    {
+      "title": "GLUE Benchmark Official Leaderboard",
+      "url": "https://gluebenchmark.com/",
+      "type": "official_website",
+      "notes": "Official benchmark website, dataset documentation, and leaderboard."
+    },
+    {
+      "title": "GLUE Benchmark FAQ",
+      "url": "https://gluebenchmark.com/faq",
+      "type": "documentation",
+      "notes": "Clarifies dataset provenance and specifies that users must check original licenses for each component task."
+    },
+    {
+      "title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding",
+      "url": "https://arxiv.org/abs/1804.07461",
+      "type": "original_paper",
+      "notes": "Published in EMNLP 2018 BlackboxNLP Workshop by Alex Wang et al."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-27",
+    "notes": "Metadata verified against GLUE benchmark portal, FAQ licensing guidance, and EMNLP workshop proceedings."
+  },
+  "size": {
+    "amount": 379,
+    "unit": "MB",
+    "file_formats": [
+      "tsv",
+      "zip"
+    ],
+    "status": "verified",
+    "notes": "Total compressed archive of all 9 tasks."
+  },
+  "sample_count": {
+    "total": 1100000,
+    "unit": "sentence-pairs",
+    "status": "estimated"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-04-20"
+  },
+  "citation": {
+    "paper_title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding",
+    "paper_url": "https://arxiv.org/abs/1804.07461",
+    "authors": [
+      "Alex Wang",
+      "Amanpreet Singh",
+      "Julian Michael",
+      "Felix Hill",
+      "Omer Levy",
+      "Samuel R. Bowman"
+    ],
+    "doi": "10.18653/v1/W18-5446",
+    "bibtex": "@inproceedings{wang2018glue,\n  title={{GLUE}: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding},\n  author={Wang, Alex and Singh, Amanpreet and Michael, Julian and Hill, Felix and Levy, Omer and Bowman, Samuel R.},\n  booktitle={Proceedings of the Workshop: Analyzing and Interpreting Neural Networks for NLP},\n  pages={353--355},\n  year={2018}\n}"
+  },
+  "provenance": {
+    "collection_method": "Aggregated from established NLP datasets including CoLA, SST-2, MRPC, STS-B, QQP, MNLI, QNLI, RTE, and WNLI.",
+    "curation_notes": "Converted to standard tab-delimited formats with private test sets hosted on evaluation servers."
+  }
+}

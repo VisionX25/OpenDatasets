@@ -14,6 +14,7 @@ OpenDatasets is an independent open-source platform by **VisionX25** built to he
 - **Task 02 (Dataset Metadata Foundation)**: Completed — Versioned JSON Schema (`v1`), structured catalog in `data/datasets/`, strict offline validator (`scripts/validate_datasets.py`), and automated pytest suite.
 - **Task 03 (Functional Dataset Explorer & Reliability)**: Completed — Automated atomic catalog generator (`scripts/generate_catalog.py`), interactive category-based discovery, multi-field search and filters, dataset details route (`/datasets/:slug`), runtime catalog validation, and reliable clipboard copying.
 - **Task 04 (GitHub Actions CI/CD)**: Completed — Professional, lightweight CI workflow (`.github/workflows/ci.yml`) automatically validating metadata, testing schemas, enforcing catalog sync, and running frontend unit tests, lints, and builds on push and pull requests.
+- **Task 05 (Verified Dataset Catalog Expansion)**: Completed — Expanded catalog to 13 verified dataset metadata records across Computer Vision, NLP, Audio, and Tabular ML with authoritative source documentation.
 - **Planned Milestones**:
   - Python + FastAPI backend service (REST API endpoints, dataset ingestion pipeline).
   - Automated dataset schema & distribution profiling pipelines.
@@ -46,9 +47,19 @@ OpenDatasets/
 │       └── ci.yml           # GitHub Actions CI workflow (metadata validation & frontend checks)
 ├── data/
 │   └── datasets/            # Source-of-truth metadata records (one JSON per dataset)
+│       ├── adult-census-income.json
+│       ├── california-housing.json
 │       ├── cifar-10.json
+│       ├── common-voice.json
+│       ├── fashion-mnist.json
+│       ├── glue-benchmark.json
+│       ├── imagenet-1k.json
+│       ├── imdb-reviews.json
 │       ├── iris.json
-│       └── mnist.json
+│       ├── librispeech.json
+│       ├── mnist.json
+│       ├── squad-2.json
+│       └── wine-quality.json
 ├── frontend/                # React + TypeScript + Vite frontend application
 │   ├── public/
 │   │   ├── data/

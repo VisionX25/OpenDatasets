@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "common-voice",
+  "slug": "common-voice",
+  "name": "Mozilla Common Voice",
+  "description": "Mozilla Common Voice is a massive, publicly available multilingual dataset of human voices designed to train speech applications. It relies on worldwide volunteer contributors who read sentences aloud and validate recordings made by others across over 100 languages, making speech technology accessible in low-resource languages.",
+  "homepage_url": "https://commonvoice.mozilla.org/",
+  "publisher": {
+    "name": "Mozilla Foundation",
+    "type": "community",
+    "url": "https://www.mozilla.org"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-recognition"
+  ],
+  "tags": [
+    "audio",
+    "speech-recognition",
+    "asr",
+    "multilingual",
+    "crowdsourced"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Creative Commons Zero v1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Audio clips and text sentences are dedicated to the public domain under Creative Commons CC0 1.0 Universal (CC0-1.0). Downloading and using dataset releases requires agreeing to the Mozilla Common Voice Terms of Use, which strictly prohibit attempting to determine the identity of speakers or re-identifying contributors."
+  },
+  "source_references": [
+    {
+      "title": "Mozilla Common Voice Platform",
+      "url": "https://commonvoice.mozilla.org/",
+      "type": "official_website",
+      "notes": "Official project platform for voice donation and dataset downloads across corpus versions."
+    },
+    {
+      "title": "Mozilla Common Voice Terms of Use",
+      "url": "https://commonvoice.mozilla.org/terms",
+      "type": "documentation",
+      "notes": "Specifies acceptable use policy and strictly forbids speaker identification and deanonymization."
+    },
+    {
+      "title": "Common Voice: A Massively-Multilingual Speech Corpus",
+      "url": "https://arxiv.org/abs/1912.06670",
+      "type": "original_paper",
+      "notes": "Published in LREC 2020 by Rosana Ardila et al."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-27",
+    "notes": "Metadata verified against official Mozilla Common Voice platform, Terms of Use, and LREC 2020 paper."
+  },
+  "size": {
+    "amount": 80,
+    "unit": "GB",
+    "file_formats": [
+      "mp3",
+      "tsv",
+      "tar.gz"
+    ],
+    "status": "estimated",
+    "notes": "English corpus audio archives; multi-terabyte size across all 100+ languages."
+  },
+  "sample_count": {
+    "total": 3000000,
+    "unit": "audio-clips",
+    "status": "estimated"
+  },
+  "languages": [
+    "en",
+    "multilingual"
+  ],
+  "dates": {
+    "published": "2017-07-01",
+    "last_updated": "2024-06-01"
+  },
+  "citation": {
+    "paper_title": "Common Voice: A Massively-Multilingual Speech Corpus",
+    "paper_url": "https://arxiv.org/abs/1912.06670",
+    "authors": [
+      "Rosana Ardila",
+      "Megan Branson",
+      "Kelly Davis",
+      "Michael Henretty",
+      "Michael Kohler",
+      "Josh Meyer",
+      "Reuben Morais",
+      "Lindsay Saunders",
+      "Francis M. Tyers",
+      "Gregor Weber"
+    ],
+    "bibtex": "@inproceedings{ardila2020common,\n  title={Common Voice: A Massively-Multilingual Speech Corpus},\n  author={Ardila, Rosana and Branson, Megan and Davis, Kelly and Henretty, Michael and Kohler, Michael and Meyer, Josh and Morais, Reuben and Saunders, Lindsay and Tyers, Francis M. and Weber, Gregor},\n  booktitle={Proceedings of the 12th Language Resources and Evaluation Conference},\n  pages={4218--4222},\n  year={2020}\n}"
+  },
+  "provenance": {
+    "collection_method": "Crowdsourced through web and mobile browsers where volunteers read public domain sentences into their microphones.",
+    "curation_notes": "Each audio clip must be upvoted by at least two distinct peer reviewers to be marked as validated. Re-identifying individual speakers or deanonymizing contributors is strictly prohibited by Mozilla's platform terms of use."
+  }
+}

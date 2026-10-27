@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "id": "imagenet-1k",
+  "slug": "imagenet-1k",
+  "name": "ImageNet (ILSVRC 2012)",
+  "description": "The ImageNet Large Scale Visual Recognition Challenge 2012 (ILSVRC2012) dataset is one of the most widely used benchmarks in computer vision. It contains 1,000 object categories with over 1.28 million training images, 50,000 validation images, and 100,000 test images, organized according to the WordNet hierarchy.",
+  "homepage_url": "https://www.image-net.org/",
+  "publisher": {
+    "name": "Stanford Vision Lab & Princeton University",
+    "type": "academic",
+    "url": "https://www.image-net.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification"
+  ],
+  "tags": [
+    "computer-vision",
+    "image-classification",
+    "benchmark",
+    "object-recognition",
+    "imagenet"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "ImageNet Terms of Access (Non-Commercial Research and Educational Use)",
+    "spdx_id": null,
+    "url": "https://www.image-net.org/download.php",
+    "commercial_use": "forbidden",
+    "notes": "Access requires account registration with a verified institutional email address and agreement to the ImageNet Terms of Access. The dataset is restricted strictly to non-commercial research and educational use. ImageNet does not own the copyright of individual images."
+  },
+  "source_references": [
+    {
+      "title": "ImageNet Official Homepage",
+      "url": "https://www.image-net.org/",
+      "type": "official_website",
+      "notes": "Official Stanford/Princeton landing page and portal."
+    },
+    {
+      "title": "ImageNet Terms of Access",
+      "url": "https://www.image-net.org/download.php",
+      "type": "documentation",
+      "notes": "Specifies institutional registration requirement and non-commercial research restrictions."
+    },
+    {
+      "title": "ImageNet: A Large-Scale Hierarchical Image Database",
+      "url": "https://doi.org/10.1109/CVPR.2009.5206848",
+      "type": "original_paper",
+      "notes": "Published in CVPR 2009 by Jia Deng et al."
+    },
+    {
+      "title": "ImageNet Large Scale Visual Recognition Challenge",
+      "url": "https://doi.org/10.1007/s11263-015-0816-y",
+      "type": "original_paper",
+      "notes": "Published in IJCV 2015 by Olga Russakovsky et al."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-27",
+    "notes": "Metadata verified against official ImageNet portal, Terms of Access, and IJCV publication."
+  },
+  "size": {
+    "amount": 150,
+    "unit": "GB",
+    "file_formats": [
+      "tar",
+      "jpeg"
+    ],
+    "status": "estimated",
+    "notes": "Uncompressed JPEG image tar archives for ILSVRC 2012."
+  },
+  "sample_count": {
+    "total": 1431167,
+    "splits": {
+      "train": 1281167,
+      "validation": 50000,
+      "test": 100000
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2012-05-22"
+  },
+  "citation": {
+    "paper_title": "ImageNet Large Scale Visual Recognition Challenge",
+    "paper_url": "https://doi.org/10.1007/s11263-015-0816-y",
+    "authors": [
+      "Olga Russakovsky",
+      "Jia Deng",
+      "Hao Su",
+      "Jonathan Krause",
+      "Sanjeev Satheesh",
+      "Sean Ma",
+      "Zhiheng Huang",
+      "Andrej Karpathy",
+      "Aditya Khosla",
+      "Michael Bernstein",
+      "Alexander C. Berg",
+      "Li Fei-Fei"
+    ],
+    "doi": "10.1007/s11263-015-0816-y",
+    "bibtex": "@article{russakovsky2015imagenet,\n  title={ImageNet Large Scale Visual Recognition Challenge},\n  author={Russakovsky, Olga and Deng, Jia and Su, Hao and Krause, Jonathan and Satheesh, Sanjeev and Ma, Sean and Huang, Zhiheng and Karpathy, Andrej and Khosla, Aditya and Bernstein, Michael and Berg, Alexander C. and Fei-Fei, Li},\n  journal={International Journal of Computer Vision},\n  volume={115},\n  number={3},\n  pages={211--252},\n  year={2015},\n  publisher={Springer}\n}"
+  },
+  "provenance": {
+    "collection_method": "Images harvested from online image search engines queried with synset words from WordNet and verified via Amazon Mechanical Turk.",
+    "curation_notes": "Quality controlled through multi-annotator voting consensus to ensure high label accuracy."
+  }
+}

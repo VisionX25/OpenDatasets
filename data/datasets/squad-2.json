@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "squad-2",
+  "slug": "squad-2",
+  "name": "Stanford Question Answering Dataset 2.0 (SQuAD 2.0)",
+  "description": "Stanford Question Answering Dataset (SQuAD) 2.0 combines the 100,000 questions in SQuAD 1.1 with over 50,000 unanswerable questions written adversarially by crowdworkers to look similar to answerable ones. To do well on SQuAD 2.0, systems must not only answer questions when possible, but also determine when no answer is supported by the paragraph and abstain from answering.",
+  "homepage_url": "https://rajpurkar.github.io/SQuAD-explorer/",
+  "publisher": {
+    "name": "Stanford NLP Group",
+    "type": "academic",
+    "url": "https://nlp.stanford.edu"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "reading-comprehension"
+  ],
+  "tags": [
+    "nlp",
+    "question-answering",
+    "reading-comprehension",
+    "benchmark",
+    "stanford"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Dataset text is licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "SQuAD Official Explorer & Benchmark",
+      "url": "https://rajpurkar.github.io/SQuAD-explorer/",
+      "type": "official_website",
+      "notes": "Official Stanford explorer, leaderboard, and download distribution page."
+    },
+    {
+      "title": "Know What You Don't Know: Unanswerable Questions for SQuAD",
+      "url": "https://arxiv.org/abs/1806.03822",
+      "type": "original_paper",
+      "notes": "ACL 2018 paper introducing SQuAD 2.0 by Pranav Rajpurkar, Robin Jia, and Percy Liang."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-27",
+    "notes": "Verified against SQuAD Explorer landing page and ACL 2018 proceedings."
+  },
+  "size": {
+    "amount": 46.5,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Combined JSON file size of train-v2.0.json and dev-v2.0.json."
+  },
+  "sample_count": {
+    "total": 142192,
+    "splits": {
+      "train": 130319,
+      "dev": 11873
+    },
+    "unit": "questions",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-06-11"
+  },
+  "citation": {
+    "paper_title": "Know What You Don't Know: Unanswerable Questions for SQuAD",
+    "paper_url": "https://arxiv.org/abs/1806.03822",
+    "authors": [
+      "Pranav Rajpurkar",
+      "Robin Jia",
+      "Percy Liang"
+    ],
+    "doi": "10.18653/v1/P18-2124",
+    "bibtex": "@inproceedings{rajpurkar2018know,\n  title={Know What You Don't Know: Unanswerable Questions for {SQuAD}},\n  author={Rajpurkar, Pranav and Jia, Robin and Liang, Percy},\n  booktitle={Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)},\n  pages={784--789},\n  year={2018}\n}"
+  },
+  "provenance": {
+    "collection_method": "Passages selected from English Wikipedia articles; questions and plausible answers or unanswerable distractors created by Amazon Mechanical Turk workers.",
+    "curation_notes": "Contains roughly one-third unanswerable questions to challenge comprehension models."
+  }
+}

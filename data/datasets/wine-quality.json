@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wine-quality",
+  "slug": "wine-quality",
+  "name": "Wine Quality Dataset",
+  "description": "The Wine Quality dataset includes physicochemical tests of red and white variants of the Portuguese 'Vinho Verde' wine. It contains 11 input variables describing chemical properties (such as fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, and alcohol) and an output sensory score evaluated by wine experts between 0 and 10.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/186/wine+quality",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / University of Minho",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-regression",
+    "tabular-classification"
+  ],
+  "tags": [
+    "tabular",
+    "wine",
+    "chemistry",
+    "regression",
+    "benchmark",
+    "quality-control"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0) via the UCI Machine Learning Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI Machine Learning Repository: Wine Quality Record",
+      "url": "https://archive.ics.uci.edu/dataset/186/wine+quality",
+      "type": "official_website",
+      "notes": "Official dataset landing page on UCI ML Repository."
+    },
+    {
+      "title": "Modeling Wine Preferences by Data Mining from Physicochemical Properties",
+      "url": "https://doi.org/10.1016/j.dss.2009.05.016",
+      "type": "original_paper",
+      "notes": "Published in Decision Support Systems (Elsevier) 2009 by Paulo Cortez et al."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-27",
+    "notes": "Verified against UCI Machine Learning Repository metadata and Elsevier journal publication."
+  },
+  "size": {
+    "amount": 375,
+    "unit": "KB",
+    "file_formats": [
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "Raw CSV text format for red and white wine tables."
+  },
+  "sample_count": {
+    "total": 6497,
+    "splits": {
+      "red": 1599,
+      "white": 4898
+    },
+    "unit": "instances",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2009-10-07"
+  },
+  "citation": {
+    "paper_title": "Modeling wine preferences by data mining from physicochemical properties",
+    "paper_url": "https://doi.org/10.1016/j.dss.2009.05.016",
+    "authors": [
+      "Paulo Cortez",
+      "António Cerdeira",
+      "Fernando Almeida",
+      "Telmo Matos",
+      "José Reis"
+    ],
+    "doi": "10.1016/j.dss.2009.05.016",
+    "bibtex": "@article{cortez2009modeling,\n  title={Modeling wine preferences by data mining from physicochemical properties},\n  author={Cortez, Paulo and Cerdeira, Ant{\\'o}nio and Almeida, Fernando and Matos, Telmo and Reis, Jos{\\'e}},\n  journal={Decision Support Systems},\n  volume={47},\n  number={4},\n  pages={547--553},\n  year={2009},\n  publisher={Elsevier}\n}"
+  },
+  "provenance": {
+    "collection_method": "Certified laboratory measurements collected at the official Viticulture Commission of the Vinho Verde Region (CVRVV) in Portugal.",
+    "curation_notes": "Each sample was evaluated by blind sensory testing conducted by a panel of at least three wine experts."
+  }
+}
