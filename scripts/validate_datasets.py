@@ -29,8 +29,19 @@ except ImportError:
     sys.exit(1)
 
 
-DEFAULT_SCHEMA_PATH = Path("schemas/dataset.v1.schema.json")
-DEFAULT_DATA_DIR = Path("data/datasets")
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parent
+
+DEFAULT_SCHEMA_PATH = (
+    Path("schemas/dataset.v1.schema.json")
+    if Path("schemas/dataset.v1.schema.json").exists()
+    else REPO_ROOT / "schemas" / "dataset.v1.schema.json"
+)
+DEFAULT_DATA_DIR = (
+    Path("data/datasets")
+    if Path("data/datasets").exists()
+    else REPO_ROOT / "data" / "datasets"
+)
 
 
 def is_valid_http_url(url: Any) -> tuple[bool, str]:

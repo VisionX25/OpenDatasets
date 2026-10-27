@@ -9,11 +9,11 @@ OpenDatasets is an independent open-source platform by **VisionX25** built to he
 ### Current Implementation Status
 
 - **Task 01 (Frontend Shell)**: Completed — React 19 + TypeScript + Vite responsive application shell with client-side routing, Tailwind CSS, and Lucide React.
-- **Task 02 (Dataset Metadata Foundation)**: Completed — Versioned JSON Schema (`v1`), structured catalog in `data/datasets/`, strict offline validator (`scripts/validate_datasets.py`), and 43 automated pytest checks.
+- **Task 02 (Dataset Metadata Foundation)**: Completed — Versioned JSON Schema (`v1`), structured catalog in `data/datasets/`, strict offline validator (`scripts/validate_datasets.py`), and automated pytest suite.
+- **Task 03 (Functional Dataset Explorer)**: Completed — Automated atomic catalog generator (`scripts/generate_catalog.py`), interactive category-based discovery, multi-field search and filters, dataset details route (`/datasets/:slug`), and frontend test suite.
 - **Planned Milestones**:
-  - Python + FastAPI backend service (endpoints, search, dataset ingestion).
+  - Python + FastAPI backend service (REST API endpoints, dataset ingestion pipeline).
   - Automated dataset schema & distribution profiling pipelines.
-  - Interactive web explorer with faceted filtering.
   - CI/CD via GitHub Actions.
 
 ## Tech Stack
@@ -25,6 +25,7 @@ OpenDatasets is an independent open-source platform by **VisionX25** built to he
   - Tailwind CSS
   - React Router
   - Lucide React
+  - Vitest
 - **Data Engineering & Backend Foundation**:
   - Python 3.10+
   - JSON Schema (Draft-7)
@@ -39,37 +40,52 @@ OpenDatasets is an independent open-source platform by **VisionX25** built to he
 ```text
 OpenDatasets/
 ├── data/
-│   └── datasets/            # Validated JSON metadata records for ML datasets
+│   └── datasets/            # Source-of-truth metadata records (one JSON per dataset)
 │       ├── cifar-10.json
 │       ├── iris.json
 │       └── mnist.json
 ├── frontend/                # React + TypeScript + Vite frontend application
-│   ├── public/              # Static assets
-│   ├── src/                 # Application source code
-│   │   ├── components/      # UI components (Header, Footer, Layout, Icons)
-│   │   ├── pages/           # Page routes (HomePage, ExplorePage, AboutPage)
+│   ├── public/
+│   │   ├── data/
+│   │   │   └── catalog.json # Generated catalog for client-side discovery
+│   │   ├── favicon.svg
+│   │   └── icons.svg
+│   ├── src/
+│   │   ├── components/      # UI components (Header, Footer, Layout, DatasetCard, CategoryGrid)
+│   │   ├── pages/           # Page routes (HomePage, ExplorePage, DatasetDetailPage, AboutPage)
+│   │   ├── services/        # Catalog data loader (catalogService.ts)
+│   │   ├── types/           # TypeScript schema definitions (dataset.ts)
+│   │   ├── utils/           # Centralized category & filter utilities (datasetFilters.ts)
 │   │   ├── App.tsx          # Client-side router configuration
 │   │   ├── index.css        # Tailwind CSS styles
 │   │   └── main.tsx         # Application entry point
 │   ├── eslint.config.js     # ESLint configuration
-│   ├── package.json         # Frontend dependencies and scripts
+│   ├── package.json         # Frontend dependencies and scripts (with predev/prebuild hooks)
 │   ├── tsconfig.json        # TypeScript configuration
 │   └── vite.config.ts       # Vite build & Tailwind configuration
 ├── schemas/
 │   └── dataset.v1.schema.json # JSON Schema definition for dataset metadata
 ├── scripts/
+│   ├── generate_catalog.py  # Generates frontend/public/data/catalog.json with atomic replacement
 │   └── validate_datasets.py # Strict offline CLI validator for dataset metadata
 ├── tests/
-│   └── test_metadata_validation.py # Pytest suite covering schema, URLs, and edge cases
+│   └── test_metadata_validation.py # Pytest suite covering schema, URLs, edge cases, and catalog generation
 ├── .gitignore               # Repository ignore rules
 ├── LICENSE                  # MIT License
 ├── README.md                # Project documentation
 └── requirements-dev.txt     # Python development and validation dependencies
 ```
 
-## Dataset Metadata Foundation
+## Dataset Metadata Architecture
 
-OpenDatasets maintains dataset metadata as structured, versioned JSON records located in `data/datasets/`. Original dataset binary payloads are never downloaded or checked into Git.
+OpenDatasets adheres to a modular, file-per-dataset metadata pattern:
+
+1. **Source of Truth (`data/datasets/*.json`)**:
+   Each dataset is stored as an independent JSON record conforming to `schemas/dataset.v1.schema.json`.
+2. **Deterministic Catalog (`frontend/public/data/catalog.json`)**:
+   `scripts/generate_catalog.py` validates all dataset JSON files, enforces unique IDs and slugs, sorts them deterministically by dataset ID, and atomically writes the unified catalog.
+3. **Build & Dev Integration**:
+   `frontend/package.json` includes `predev` and `prebuild` hooks that automatically invoke `generate_catalog.py`, ensuring the web UI always serves fresh, validated dataset metadata.
 
 ### Schema Overview (`schemas/dataset.v1.schema.json`)
 
@@ -104,13 +120,18 @@ All dataset metadata files conform to JSON Schema Draft-7 (`dataset.v1.schema.js
 2. Populate the required metadata fields using authoritative sources (official website, documentation, or original paper).
 3. Ensure all URLs start with `http://` or `https://` and do not contain whitespace.
 4. Verify that the `id` and `slug` do not collide with any existing catalog entry.
-5. Run the validator:
+5. Validate the dataset:
    ```bash
    python3 scripts/validate_datasets.py data/datasets/<slug>.json
    ```
-6. Run the test suite:
+6. Regenerate the catalog:
+   ```bash
+   python3 scripts/generate_catalog.py
+   ```
+7. Run the test suites:
    ```bash
    python3 -m pytest tests/ -v
+   cd frontend && npm test
    ```
 
 ---
@@ -134,12 +155,13 @@ All dataset metadata files conform to JSON Schema Draft-7 (`dataset.v1.schema.js
    ```bash
    python3 scripts/validate_datasets.py
    ```
-   *Options:*
-   - `--schema <path>`: Specify custom schema file (default: `schemas/dataset.v1.schema.json`).
-   - `--data-dir <path>`: Specify custom dataset directory (default: `data/datasets`).
-   - `--quiet`: Suppress verbose success logs.
 
-3. **Run automated tests**:
+3. **Regenerate dataset catalog**:
+   ```bash
+   python3 scripts/generate_catalog.py
+   ```
+
+4. **Run Python automated tests**:
    ```bash
    python3 -m pytest tests/ -v
    ```
@@ -160,13 +182,15 @@ All dataset metadata files conform to JSON Schema Draft-7 (`dataset.v1.schema.js
    ```bash
    npm run dev
    ```
+   *Note: `npm run dev` automatically runs the `predev` hook to regenerate `catalog.json` before booting Vite.*
    The application will be accessible at `http://localhost:5173/`.
 
-4. **Frontend quality checks**:
+4. **Frontend quality & test checks**:
    ```bash
-   npx tsc --noEmit   # TypeScript type check
-   npm run lint       # ESLint quality check
-   npm run build      # Production build
+   npm test           # Run Vitest unit tests (search, filter, category logic)
+   npm run lint       # Run ESLint quality checks
+   npx tsc --noEmit   # Run TypeScript compiler checks
+   npm run build      # Run production build (includes prebuild catalog generation)
    ```
 
 ## License

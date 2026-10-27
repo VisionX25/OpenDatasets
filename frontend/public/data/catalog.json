@@ -1,0 +1,271 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "cifar-10",
+    "slug": "cifar-10",
+    "name": "CIFAR-10",
+    "description": "The CIFAR-10 dataset consists of 60,000 32x32 colour images across 10 mutually exclusive classes, with 6,000 images per class. Subdivided into 50,000 training images and 10,000 test images, collected by Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton.",
+    "homepage_url": "https://www.cs.toronto.edu/~kriz/cifar.html",
+    "publisher": {
+      "name": "University of Toronto",
+      "type": "academic",
+      "url": "https://www.cs.toronto.edu"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification"
+    ],
+    "tags": [
+      "computer-vision",
+      "image-classification",
+      "benchmark",
+      "tiny-images"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified (Public for Research and Educational Use)",
+      "spdx_id": null,
+      "url": "https://www.cs.toronto.edu/~kriz/cifar.html",
+      "commercial_use": "unknown",
+      "notes": "The official University of Toronto page does not specify a standardized open-source or creative commons license. It is distributed freely for non-commercial research and education."
+    },
+    "source_references": [
+      {
+        "title": "CIFAR-10 and CIFAR-100 Dataset Homepage",
+        "url": "https://www.cs.toronto.edu/~kriz/cifar.html",
+        "type": "official_website",
+        "notes": "Canonical dataset distribution page maintained by Alex Krizhevsky."
+      },
+      {
+        "title": "Learning Multiple Layers of Features from Tiny Images (Tech Report)",
+        "url": "https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf",
+        "type": "original_paper",
+        "notes": "Original 2009 technical report detailing dataset construction and baseline benchmarks."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-26",
+      "notes": "Metadata verified directly against the University of Toronto website and technical report."
+    },
+    "size": {
+      "amount": 163,
+      "unit": "MB",
+      "file_formats": [
+        "tar.gz",
+        "binary",
+        "python-pickle"
+      ],
+      "status": "verified",
+      "notes": "Compressed Python pickle archive size on official distribution site."
+    },
+    "sample_count": {
+      "total": 60000,
+      "splits": {
+        "train": 50000,
+        "test": 10000
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2009-04-08"
+    },
+    "citation": {
+      "paper_title": "Learning Multiple Layers of Features from Tiny Images",
+      "paper_url": "https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf",
+      "authors": [
+        "Alex Krizhevsky",
+        "Vinod Nair",
+        "Geoffrey Hinton"
+      ],
+      "bibtex": "@techreport{krizhevsky2009learning,\n  title={Learning Multiple Layers of Features from Tiny Images},\n  author={Krizhevsky, Alex and Nair, Vinod and Hinton, Geoffrey},\n  year={2009},\n  institution={University of Toronto}\n}"
+    },
+    "provenance": {
+      "collection_method": "Subset of the 80 Million Tiny Images dataset, labeled by hired human workers.",
+      "curation_notes": "Classes are completely mutually exclusive (e.g., no overlap between automobiles and trucks)."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "iris",
+    "slug": "iris",
+    "name": "Iris Plants Database",
+    "description": "Perhaps the best known database in pattern recognition literature, created by R.A. Fisher in 1936. Contains 150 instances (3 classes of 50 instances each) across 4 measurements: sepal length, sepal width, petal length, and petal width for three iris plant species (Iris setosa, Iris versicolour, and Iris virginica).",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/53/iris",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification"
+    ],
+    "tags": [
+      "tabular",
+      "biology",
+      "botany",
+      "classification",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Officially licensed under Creative Commons Attribution 4.0 International (CC BY 4.0) via the UCI Machine Learning Repository."
+    },
+    "source_references": [
+      {
+        "title": "UCI Machine Learning Repository: Iris Dataset Record",
+        "url": "https://archive.ics.uci.edu/dataset/53/iris",
+        "type": "official_website",
+        "notes": "Canonical landing page on the current UCI ML Repository platform."
+      },
+      {
+        "title": "The Use of Multiple Measurements in Taxonomic Problems",
+        "url": "https://archive.ics.uci.edu/dataset/53/iris",
+        "type": "original_paper",
+        "notes": "Published by R.A. Fisher in Annals of Eugenics, 7(2):179-188, 1936."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-26",
+      "notes": "Verified against the UCI Machine Learning Repository dataset documentation and metadata record."
+    },
+    "size": {
+      "amount": 4.5,
+      "unit": "KB",
+      "file_formats": [
+        "csv",
+        "data"
+      ],
+      "status": "verified",
+      "notes": "Raw CSV / tabular data text format size."
+    },
+    "sample_count": {
+      "total": 150,
+      "splits": {
+        "total": 150
+      },
+      "unit": "rows",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1936",
+      "last_updated": "1988-07-01"
+    },
+    "citation": {
+      "paper_title": "The Use of Multiple Measurements in Taxonomic Problems",
+      "paper_url": "https://archive.ics.uci.edu/dataset/53/iris",
+      "authors": [
+        "R. A. Fisher"
+      ],
+      "doi": "10.1111/j.1469-1809.1936.tb02137.x",
+      "bibtex": "@article{fisher1936use,\n  title={The use of multiple measurements in taxonomic problems},\n  author={Fisher, Ronald A},\n  journal={Annals of eugenics},\n  volume={7},\n  number={2},\n  pages={179--188},\n  year={1936},\n  publisher={Wiley Online Library}\n}"
+    },
+    "provenance": {
+      "collection_method": "Specimens collected by Dr. Edgar Anderson from two neighboring colonies in Gaspé Peninsula, Quebec, Canada.",
+      "curation_notes": "One class (Setosa) is linearly separable from the other two; Versicolour and Virginica have slight statistical overlap."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mnist",
+    "slug": "mnist",
+    "name": "MNIST Database of Handwritten Digits",
+    "description": "The MNIST database of handwritten digits has a training set of 60,000 examples and a test set of 10,000 examples. It is a subset of a larger set available from NIST, with digits size-normalized and centered in fixed-size 28x28 grayscale images.",
+    "homepage_url": "http://yann.lecun.com/exdb/mnist/",
+    "publisher": {
+      "name": "Yann LeCun & Corinna Cortes (Courant Institute / Google Labs)",
+      "type": "academic",
+      "url": "http://yann.lecun.com"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification"
+    ],
+    "tags": [
+      "computer-vision",
+      "handwritten-digits",
+      "benchmark",
+      "digit-recognition"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Public Research Archive (Author Copyright)",
+      "spdx_id": null,
+      "url": "http://yann.lecun.com/exdb/mnist/",
+      "commercial_use": "unknown",
+      "notes": "Original distribution page does not declare a standard SPDX license; authors hold copyright and allow free public download for academic benchmarking. CC BY-SA 3.0 is commonly applied in secondary distributions."
+    },
+    "source_references": [
+      {
+        "title": "THE MNIST DATABASE of handwritten digits",
+        "url": "http://yann.lecun.com/exdb/mnist/",
+        "type": "official_website",
+        "notes": "Canonical hosting page maintained by Yann LeCun."
+      },
+      {
+        "title": "Gradient-Based Learning Applied to Document Recognition",
+        "url": "http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf",
+        "type": "original_paper",
+        "notes": "Foundational 1998 paper introducing LeNet-5 and benchmark results on MNIST."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-26",
+      "notes": "Verified against Yann LeCun's official distribution archive and Proceedings of the IEEE paper."
+    },
+    "size": {
+      "amount": 11.6,
+      "unit": "MB",
+      "file_formats": [
+        "idx-ubyte",
+        "gzip"
+      ],
+      "status": "verified",
+      "notes": "Sum of four compressed IDX gzip archive files."
+    },
+    "sample_count": {
+      "total": 70000,
+      "splits": {
+        "train": 60000,
+        "test": 10000
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1998-11"
+    },
+    "citation": {
+      "paper_title": "Gradient-Based Learning Applied to Document Recognition",
+      "paper_url": "http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf",
+      "authors": [
+        "Yann LeCun",
+        "Léon Bottou",
+        "Yoshua Bengio",
+        "Patrick Haffner"
+      ],
+      "bibtex": "@article{lecun1998gradient,\n  title={Gradient-based learning applied to document recognition},\n  author={LeCun, Yann and Bottou, Léon and Bengio, Yoshua and Haffner, Patrick},\n  journal={Proceedings of the IEEE},\n  volume={86},\n  number={11},\n  pages={2278--2324},\n  year={1998},\n  publisher={Ieee}\n}"
+    },
+    "provenance": {
+      "collection_method": "Constructed from NIST Special Database 3 (high school students) and Special Database 1 (Census Bureau employees).",
+      "curation_notes": "Normalized to fit in a 20x20 pixel box while preserving aspect ratio, centered in a 28x28 field by computing the center of mass."
+    }
+  }
+]

@@ -24,6 +24,12 @@ from scripts.validate_datasets import (
     validate_dataset_data,
     validate_dataset_file,
 )
+from scripts.generate_catalog import (
+    DEFAULT_OUTPUT_PATH,
+    generate_catalog_data,
+    main as generate_catalog_main,
+    write_catalog_atomic,
+)
 
 
 @pytest.fixture(scope="session")
@@ -361,3 +367,99 @@ def test_cli_subprocess_execution() -> None:
     )
     assert result.returncode == 0, f"Validator CLI failed: {result.stderr}"
     assert "[PASS] OpenDatasets Metadata Validation" in result.stdout
+
+
+# ==============================================================================
+# 8. Catalog Generation Tests
+# ==============================================================================
+
+
+def test_generate_catalog_data_produces_sorted_list() -> None:
+    """Ensure catalog generator produces a deterministically sorted list of valid datasets."""
+    catalog, errors = generate_catalog_data(
+        data_dir=DEFAULT_DATA_DIR,
+        schema_path=DEFAULT_SCHEMA_PATH,
+    )
+    assert not errors
+    assert catalog is not None
+    assert len(catalog) >= 3
+
+    # Check deterministic ascending order by ID
+    ids = [item["id"] for item in catalog]
+    assert ids == sorted(ids)
+
+
+def test_generate_catalog_data_rejects_invalid_metadata(
+    tmp_path: Path,
+    sample_dataset: dict[str, Any],
+) -> None:
+    """Ensure catalog generator rejects datasets with schema violations and returns errors."""
+    valid_file = tmp_path / "valid.json"
+    valid_file.write_text(json.dumps(sample_dataset), encoding="utf-8")
+
+    broken_data = copy.deepcopy(sample_dataset)
+    del broken_data["homepage_url"]
+    broken_file = tmp_path / "broken.json"
+    broken_file.write_text(json.dumps(broken_data), encoding="utf-8")
+
+    catalog, errors = generate_catalog_data(
+        data_dir=tmp_path,
+        schema_path=DEFAULT_SCHEMA_PATH,
+    )
+    assert catalog is None
+    assert any("homepage_url" in err and "required" in err.lower() for err in errors)
+
+
+def test_generate_catalog_data_rejects_duplicate_ids(
+    tmp_path: Path,
+    sample_dataset: dict[str, Any],
+) -> None:
+    """Ensure catalog generator rejects collections with colliding dataset IDs."""
+    ds1 = copy.deepcopy(sample_dataset)
+    ds1["id"] = "duplicate-id"
+    ds1["slug"] = "slug-a"
+
+    ds2 = copy.deepcopy(sample_dataset)
+    ds2["id"] = "duplicate-id"
+    ds2["slug"] = "slug-b"
+
+    (tmp_path / "a.json").write_text(json.dumps(ds1), encoding="utf-8")
+    (tmp_path / "b.json").write_text(json.dumps(ds2), encoding="utf-8")
+
+    catalog, errors = generate_catalog_data(
+        data_dir=tmp_path,
+        schema_path=DEFAULT_SCHEMA_PATH,
+    )
+    assert catalog is None
+    assert any("Duplicate dataset ID 'duplicate-id'" in err for err in errors)
+
+
+def test_write_catalog_atomic(tmp_path: Path) -> None:
+    """Ensure atomic catalog writer creates directory and writes valid JSON without temp files left."""
+    target = tmp_path / "nested" / "catalog.json"
+    records = [{"id": "a", "name": "A"}, {"id": "b", "name": "B"}]
+
+    write_catalog_atomic(records, target)
+    assert target.exists()
+
+    with open(target, "r", encoding="utf-8") as f:
+        loaded = json.load(f)
+    assert loaded == records
+
+    # Confirm no lingering .tmp files
+    tmp_files = list(target.parent.glob("*.tmp"))
+    assert len(tmp_files) == 0
+
+
+def test_generate_catalog_cli_main(tmp_path: Path) -> None:
+    """Ensure catalog generator CLI returns exit code 0 and creates the file."""
+    output_file = tmp_path / "catalog.json"
+    exit_code = generate_catalog_main([
+        "--data-dir", str(DEFAULT_DATA_DIR),
+        "--schema", str(DEFAULT_SCHEMA_PATH),
+        "--output", str(output_file),
+        "--quiet",
+    ])
+    assert exit_code == 0
+    assert output_file.exists()
+
