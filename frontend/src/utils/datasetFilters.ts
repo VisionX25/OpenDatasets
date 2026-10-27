@@ -3,6 +3,7 @@ import type {
   CategoryDefinition,
   DatasetMetadata,
   DatasetModality,
+  LicenseStatus,
 } from '../types/dataset'
 
 export const CATEGORIES: CategoryDefinition[] = [
@@ -46,6 +47,36 @@ const BENCHMARK_TAGS = new Set([
   'gold-standard',
   'leaderboard',
 ])
+
+export const VALID_LICENSE_STATUSES: readonly LicenseStatus[] = [
+  'verified_open',
+  'public_domain',
+  'verified_non_commercial',
+  'custom_permissive',
+  'unspecified_by_source',
+  'proprietary',
+  'unknown',
+] as const
+
+export const LICENSE_LABELS: Record<LicenseStatus, string> = {
+  verified_open: 'Verified Open',
+  public_domain: 'Public Domain',
+  verified_non_commercial: 'Non-Commercial',
+  custom_permissive: 'Custom Permissive',
+  unspecified_by_source: 'Unspecified by Source',
+  proprietary: 'Proprietary',
+  unknown: 'Unknown License',
+}
+
+export function formatLicenseLabel(status: LicenseStatus | string): string {
+  if (status in LICENSE_LABELS) {
+    return LICENSE_LABELS[status as LicenseStatus]
+  }
+  return status
+    .split('_')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ')
+}
 
 /**
  * Determine if a dataset belongs to a specific discovery category.
@@ -164,21 +195,47 @@ export function matchesTask(dataset: DatasetMetadata, task: string | null): bool
   return tasks.includes(task)
 }
 
+/**
+ * Determine if a dataset matches a selected license status filter.
+ * Accurately differentiates between open, non-commercial, public domain,
+ * custom permissive, proprietary, and unspecified/unknown statuses.
+ */
+export function matchesLicense(
+  dataset: DatasetMetadata,
+  licenseStatus: LicenseStatus | string | null,
+): boolean {
+  if (!licenseStatus) {
+    return true
+  }
+  const status = dataset.license?.status
+  if (!status) {
+    return licenseStatus === 'unknown' || licenseStatus === 'unspecified_by_source'
+  }
+  return status === licenseStatus
+}
+
 export interface DatasetFilterCriteria {
   searchQuery?: string
   category?: CategoryId | null
   modality?: string | null
   task?: string | null
+  license?: LicenseStatus | string | null
 }
 
 /**
- * Filter a list of datasets applying search, category, modality, and task constraints together.
+ * Filter a list of datasets applying search, category, modality, task, and license constraints together.
  */
 export function filterDatasets(
   datasets: DatasetMetadata[],
   criteria: DatasetFilterCriteria,
 ): DatasetMetadata[] {
-  const { searchQuery = '', category = null, modality = null, task = null } = criteria
+  const {
+    searchQuery = '',
+    category = null,
+    modality = null,
+    task = null,
+    license = null,
+  } = criteria
 
   return datasets.filter((dataset) => {
     if (!matchesSearch(dataset, searchQuery)) {
@@ -191,6 +248,9 @@ export function filterDatasets(
       return false
     }
     if (!matchesTask(dataset, task)) {
+      return false
+    }
+    if (!matchesLicense(dataset, license)) {
       return false
     }
     return true
@@ -245,4 +305,168 @@ export function getAvailableTasks(datasets: DatasetMetadata[]): string[] {
     }
   }
   return Array.from(set).sort()
+}
+
+/**
+ * Derive available license statuses directly from the catalog metadata.
+ */
+export function getAvailableLicenseStatuses(datasets: DatasetMetadata[]): LicenseStatus[] {
+  const set = new Set<LicenseStatus>()
+  for (const ds of datasets) {
+    if (ds.license?.status) {
+      set.add(ds.license.status)
+    } else {
+      set.add('unknown')
+    }
+  }
+
+  const preferredOrder: LicenseStatus[] = [
+    'verified_open',
+    'public_domain',
+    'verified_non_commercial',
+    'custom_permissive',
+    'unspecified_by_source',
+    'proprietary',
+    'unknown',
+  ]
+
+  const result: LicenseStatus[] = []
+  for (const status of preferredOrder) {
+    if (set.has(status)) {
+      result.push(status)
+      set.delete(status)
+    }
+  }
+  const remaining = Array.from(set).sort()
+  return [...result, ...remaining]
+}
+
+export interface FilterState {
+  searchQuery: string
+  category: CategoryId | null
+  modality: string
+  task: string
+  license: LicenseStatus | ''
+}
+
+export const DEFAULT_FILTER_STATE: FilterState = {
+  searchQuery: '',
+  category: null,
+  modality: '',
+  task: '',
+  license: '',
+}
+
+/**
+ * Safely parse and sanitize URL search parameters into a valid FilterState.
+ * Invalid or unknown parameter values are ignored or sanitized to their defaults.
+ */
+export function parseFilterParams(
+  searchParams: URLSearchParams | string,
+): FilterState {
+  const params =
+    typeof searchParams === 'string'
+      ? new URLSearchParams(searchParams)
+      : searchParams
+
+  // 1. Search Query
+  const rawQ = params.get('q')
+  const searchQuery = rawQ && rawQ.trim().length > 0 ? rawQ : ''
+
+  // 2. Category
+  const rawCategory = params.get('category')?.trim().toLowerCase()
+  const category =
+    rawCategory && CATEGORIES.some((c) => c.id === rawCategory)
+      ? (rawCategory as CategoryId)
+      : null
+
+  // 3. Modality (lowercase alphanumeric and hyphens)
+  const rawModality = params.get('modality')?.trim().toLowerCase()
+  const modality =
+    rawModality && /^[a-z0-9-]+$/.test(rawModality) ? rawModality : ''
+
+  // 4. Task (lowercase alphanumeric and hyphens)
+  const rawTask = params.get('task')?.trim().toLowerCase()
+  const task =
+    rawTask && /^[a-z0-9-]+$/.test(rawTask) ? rawTask : ''
+
+  // 5. License (must be a recognized LicenseStatus)
+  const rawLicense = params.get('license')?.trim().toLowerCase()
+  const license =
+    rawLicense && (VALID_LICENSE_STATUSES as readonly string[]).includes(rawLicense)
+      ? (rawLicense as LicenseStatus)
+      : ''
+
+  return {
+    searchQuery,
+    category,
+    modality,
+    task,
+    license,
+  }
+}
+
+/**
+ * Serialize FilterState into URLSearchParams, preserving unrelated query parameters
+ * and removing empty/default parameters.
+ */
+export function serializeFilterParams(
+  filters: Partial<FilterState>,
+  existingParams?: URLSearchParams | string,
+): URLSearchParams {
+  const params = new URLSearchParams(
+    typeof existingParams === 'string'
+      ? existingParams
+      : existingParams?.toString() || '',
+  )
+
+  // 1. Search Query
+  if (filters.searchQuery !== undefined) {
+    if (filters.searchQuery.trim().length > 0) {
+      params.set('q', filters.searchQuery)
+    } else {
+      params.delete('q')
+    }
+  }
+
+  // 2. Category
+  if (filters.category !== undefined) {
+    if (filters.category && CATEGORIES.some((c) => c.id === filters.category)) {
+      params.set('category', filters.category)
+    } else {
+      params.delete('category')
+    }
+  }
+
+  // 3. Modality
+  if (filters.modality !== undefined) {
+    if (filters.modality && filters.modality.trim().length > 0) {
+      params.set('modality', filters.modality.trim().toLowerCase())
+    } else {
+      params.delete('modality')
+    }
+  }
+
+  // 4. Task
+  if (filters.task !== undefined) {
+    if (filters.task && filters.task.trim().length > 0) {
+      params.set('task', filters.task.trim().toLowerCase())
+    } else {
+      params.delete('task')
+    }
+  }
+
+  // 5. License
+  if (filters.license !== undefined) {
+    if (
+      filters.license &&
+      (VALID_LICENSE_STATUSES as readonly string[]).includes(filters.license)
+    ) {
+      params.set('license', filters.license)
+    } else {
+      params.delete('license')
+    }
+  }
+
+  return params
 }

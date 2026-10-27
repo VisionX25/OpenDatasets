@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useMemo } from 'react'
+import React, { useEffect, useState, useMemo, useCallback } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import {
   Search,
   Filter,
@@ -8,15 +9,20 @@ import {
   Loader2,
   AlertTriangle,
 } from 'lucide-react'
-import type { CategoryId, DatasetMetadata } from '../types/dataset'
+import type { DatasetMetadata, LicenseStatus } from '../types/dataset'
 import { fetchCatalog } from '../services/catalogService'
 import {
   countDatasetsPerCategory,
   filterDatasets,
   getAvailableModalities,
   getAvailableTasks,
+  getAvailableLicenseStatuses,
+  formatLicenseLabel,
+  parseFilterParams,
+  serializeFilterParams,
   CATEGORIES,
 } from '../utils/datasetFilters'
+import type { FilterState } from '../utils/datasetFilters'
 import { CategoryGrid } from '../components/CategoryGrid'
 import { DatasetCard } from '../components/DatasetCard'
 
@@ -24,12 +30,7 @@ export const ExplorePage: React.FC = () => {
   const [datasets, setDatasets] = useState<DatasetMetadata[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-
-  // Filters state
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState<CategoryId | null>(null)
-  const [selectedModality, setSelectedModality] = useState<string>('')
-  const [selectedTask, setSelectedTask] = useState<string>('')
+  const [searchParams, setSearchParams] = useSearchParams()
 
   useEffect(() => {
     let ignore = false
@@ -65,34 +66,61 @@ export const ExplorePage: React.FC = () => {
       })
   }
 
+  // Active filter state derived directly from URL search parameters
+  const activeFilters = useMemo(() => parseFilterParams(searchParams), [searchParams])
+
+  const updateFilters = useCallback(
+    (updates: Partial<FilterState>, replace = false) => {
+      setSearchParams(
+        (prev) => serializeFilterParams({ ...parseFilterParams(prev), ...updates }, prev),
+        { replace },
+      )
+    },
+    [setSearchParams],
+  )
+
   // Derived available filter options based on full catalog
   const availableModalities = useMemo(() => getAvailableModalities(datasets), [datasets])
   const availableTasks = useMemo(() => getAvailableTasks(datasets), [datasets])
+  const availableLicenses = useMemo(() => getAvailableLicenseStatuses(datasets), [datasets])
   const categoryCounts = useMemo(() => countDatasetsPerCategory(datasets), [datasets])
 
   // Filtered dataset result
   const filteredDatasets = useMemo(() => {
     return filterDatasets(datasets, {
-      searchQuery,
-      category: selectedCategory,
-      modality: selectedModality || null,
-      task: selectedTask || null,
+      searchQuery: activeFilters.searchQuery,
+      category: activeFilters.category,
+      modality: activeFilters.modality || null,
+      task: activeFilters.task || null,
+      license: activeFilters.license || null,
     })
-  }, [datasets, searchQuery, selectedCategory, selectedModality, selectedTask])
+  }, [datasets, activeFilters])
 
   const hasActiveFilters = Boolean(
-    searchQuery.trim() || selectedCategory || selectedModality || selectedTask,
+    activeFilters.searchQuery.trim() ||
+      activeFilters.category ||
+      activeFilters.modality ||
+      activeFilters.task ||
+      activeFilters.license,
   )
 
-  const handleResetFilters = () => {
-    setSearchQuery('')
-    setSelectedCategory(null)
-    setSelectedModality('')
-    setSelectedTask('')
-  }
+  const handleResetFilters = useCallback(() => {
+    setSearchParams((prev) =>
+      serializeFilterParams(
+        {
+          searchQuery: '',
+          category: null,
+          modality: '',
+          task: '',
+          license: '',
+        },
+        prev,
+      ),
+    )
+  }, [setSearchParams])
 
-  const activeCategoryName = selectedCategory
-    ? CATEGORIES.find((c) => c.id === selectedCategory)?.name
+  const activeCategoryName = activeFilters.category
+    ? CATEGORIES.find((c) => c.id === activeFilters.category)?.name
     : null
 
   return (
@@ -148,29 +176,29 @@ export const ExplorePage: React.FC = () => {
           <>
             {/* Category Cards Section */}
             <CategoryGrid
-              activeCategory={selectedCategory}
-              onSelectCategory={setSelectedCategory}
+              activeCategory={activeFilters.category}
+              onSelectCategory={(catId) => updateFilters({ category: catId })}
               categoryCounts={categoryCounts}
             />
 
             {/* Search and Filters Controls */}
             <div className="bg-white dark:bg-slate-900/80 rounded-xl border border-slate-200 dark:border-slate-800 p-4 sm:p-5 mb-6 shadow-xs">
-              <div className="flex flex-col md:flex-row gap-3">
+              <div className="flex flex-col md:flex-row gap-3 flex-wrap">
                 {/* Search Input */}
-                <div className="relative flex-1">
+                <div className="relative flex-1 min-w-[200px]">
                   <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                   <input
                     type="text"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    value={activeFilters.searchQuery}
+                    onChange={(e) => updateFilters({ searchQuery: e.target.value }, true)}
                     placeholder="Search by dataset name, description, publisher, task, or tag..."
                     aria-label="Search datasets"
                     className="w-full pl-10 pr-9 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 transition-colors"
                   />
-                  {searchQuery && (
+                  {activeFilters.searchQuery && (
                     <button
                       type="button"
-                      onClick={() => setSearchQuery('')}
+                      onClick={() => updateFilters({ searchQuery: '' }, true)}
                       aria-label="Clear search input"
                       className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded"
                     >
@@ -183,8 +211,8 @@ export const ExplorePage: React.FC = () => {
                 <div className="w-full md:w-48">
                   <div className="relative">
                     <select
-                      value={selectedModality}
-                      onChange={(e) => setSelectedModality(e.target.value)}
+                      value={activeFilters.modality}
+                      onChange={(e) => updateFilters({ modality: e.target.value })}
                       aria-label="Filter by modality"
                       className="w-full px-3 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm text-slate-700 dark:text-slate-200 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 appearance-none pr-8 cursor-pointer"
                     >
@@ -203,8 +231,8 @@ export const ExplorePage: React.FC = () => {
                 <div className="w-full md:w-48">
                   <div className="relative">
                     <select
-                      value={selectedTask}
-                      onChange={(e) => setSelectedTask(e.target.value)}
+                      value={activeFilters.task}
+                      onChange={(e) => updateFilters({ task: e.target.value })}
                       aria-label="Filter by ML task"
                       className="w-full px-3 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm text-slate-700 dark:text-slate-200 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 appearance-none pr-8 cursor-pointer"
                     >
@@ -212,6 +240,26 @@ export const ExplorePage: React.FC = () => {
                       {availableTasks.map((t) => (
                         <option key={t} value={t}>
                           {t}
+                        </option>
+                      ))}
+                    </select>
+                    <Filter className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400 pointer-events-none" />
+                  </div>
+                </div>
+
+                {/* License Filter */}
+                <div className="w-full md:w-48">
+                  <div className="relative">
+                    <select
+                      value={activeFilters.license}
+                      onChange={(e) => updateFilters({ license: e.target.value as LicenseStatus | '' })}
+                      aria-label="Filter by license"
+                      className="w-full px-3 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm text-slate-700 dark:text-slate-200 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 appearance-none pr-8 cursor-pointer"
+                    >
+                      <option value="">All Licenses</option>
+                      {availableLicenses.map((lic) => (
+                        <option key={lic} value={lic}>
+                          {formatLicenseLabel(lic)}
                         </option>
                       ))}
                     </select>
@@ -241,7 +289,7 @@ export const ExplorePage: React.FC = () => {
                       Category: {activeCategoryName}
                       <button
                         type="button"
-                        onClick={() => setSelectedCategory(null)}
+                        onClick={() => updateFilters({ category: null })}
                         aria-label={`Remove ${activeCategoryName} category filter`}
                         className="hover:text-indigo-950 dark:hover:text-white"
                       >
@@ -249,12 +297,12 @@ export const ExplorePage: React.FC = () => {
                       </button>
                     </span>
                   )}
-                  {searchQuery && (
+                  {activeFilters.searchQuery && (
                     <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
-                      Search: &ldquo;{searchQuery}&rdquo;
+                      Search: &ldquo;{activeFilters.searchQuery}&rdquo;
                       <button
                         type="button"
-                        onClick={() => setSearchQuery('')}
+                        onClick={() => updateFilters({ searchQuery: '' }, true)}
                         aria-label="Remove search query filter"
                         className="hover:text-slate-950 dark:hover:text-white"
                       >
@@ -262,12 +310,12 @@ export const ExplorePage: React.FC = () => {
                       </button>
                     </span>
                   )}
-                  {selectedModality && (
+                  {activeFilters.modality && (
                     <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-950/70 dark:text-indigo-300">
-                      Modality: {selectedModality}
+                      Modality: {activeFilters.modality}
                       <button
                         type="button"
-                        onClick={() => setSelectedModality('')}
+                        onClick={() => updateFilters({ modality: '' })}
                         aria-label="Remove modality filter"
                         className="hover:text-indigo-950 dark:hover:text-white"
                       >
@@ -275,13 +323,26 @@ export const ExplorePage: React.FC = () => {
                       </button>
                     </span>
                   )}
-                  {selectedTask && (
+                  {activeFilters.task && (
                     <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-950/70 dark:text-indigo-300">
-                      Task: {selectedTask}
+                      Task: {activeFilters.task}
                       <button
                         type="button"
-                        onClick={() => setSelectedTask('')}
+                        onClick={() => updateFilters({ task: '' })}
                         aria-label="Remove task filter"
+                        className="hover:text-indigo-950 dark:hover:text-white"
+                      >
+                        <X className="w-3 h-3" />
+                      </button>
+                    </span>
+                  )}
+                  {activeFilters.license && (
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-950/70 dark:text-indigo-300">
+                      License: {formatLicenseLabel(activeFilters.license)}
+                      <button
+                        type="button"
+                        onClick={() => updateFilters({ license: '' })}
+                        aria-label="Remove license filter"
                         className="hover:text-indigo-950 dark:hover:text-white"
                       >
                         <X className="w-3 h-3" />
