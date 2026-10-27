@@ -59,31 +59,36 @@ export function matchesCategory(
     return true
   }
 
+  const modalities = Array.isArray(dataset.modalities) ? dataset.modalities : []
+  const tags = Array.isArray(dataset.tags) ? dataset.tags : []
+  const tasks = Array.isArray(dataset.tasks) ? dataset.tasks : []
+
   switch (category) {
     case 'computer-vision':
-      return dataset.modalities.includes('vision')
+      return modalities.includes('vision')
 
     case 'natural-language-processing':
-      return dataset.modalities.includes('nlp')
+      return modalities.includes('nlp')
 
     case 'audio-speech':
-      return dataset.modalities.includes('audio')
+      return modalities.includes('audio')
 
     case 'tabular-time-series':
       return (
-        dataset.modalities.includes('tabular') ||
-        dataset.modalities.includes('time-series')
+        modalities.includes('tabular') ||
+        modalities.includes('time-series')
       )
 
     case 'multimodal-generative':
-      return dataset.modalities.includes('multimodal')
+      return modalities.includes('multimodal')
 
     case 'evaluation-benchmarks': {
       // Documented purpose-based criteria using tags and tasks
-      const hasBenchmarkTag = dataset.tags.some((tag) =>
-        BENCHMARK_TAGS.has(tag.toLowerCase()),
+      const hasBenchmarkTag = tags.some((tag) =>
+        typeof tag === 'string' && BENCHMARK_TAGS.has(tag.toLowerCase()),
       )
-      const hasBenchmarkTask = dataset.tasks.some((task) => {
+      const hasBenchmarkTask = tasks.some((task) => {
+        if (typeof task !== 'string') return false
         const lower = task.toLowerCase()
         return (
           lower === 'benchmark' ||
@@ -109,23 +114,31 @@ export function matchesSearch(dataset: DatasetMetadata, query: string): boolean 
     return true
   }
 
-  if (dataset.name.toLowerCase().includes(cleanQuery)) {
+  const name = typeof dataset.name === 'string' ? dataset.name : ''
+  if (name.toLowerCase().includes(cleanQuery)) {
     return true
   }
 
-  if (dataset.description.toLowerCase().includes(cleanQuery)) {
+  const description = typeof dataset.description === 'string' ? dataset.description : ''
+  if (description.toLowerCase().includes(cleanQuery)) {
     return true
   }
 
-  if (dataset.publisher.name.toLowerCase().includes(cleanQuery)) {
+  const publisherName =
+    dataset.publisher && typeof dataset.publisher.name === 'string'
+      ? dataset.publisher.name
+      : ''
+  if (publisherName.toLowerCase().includes(cleanQuery)) {
     return true
   }
 
-  if (dataset.tasks.some((task) => task.toLowerCase().includes(cleanQuery))) {
+  const tasks = Array.isArray(dataset.tasks) ? dataset.tasks : []
+  if (tasks.some((task) => typeof task === 'string' && task.toLowerCase().includes(cleanQuery))) {
     return true
   }
 
-  if (dataset.tags.some((tag) => tag.toLowerCase().includes(cleanQuery))) {
+  const tags = Array.isArray(dataset.tags) ? dataset.tags : []
+  if (tags.some((tag) => typeof tag === 'string' && tag.toLowerCase().includes(cleanQuery))) {
     return true
   }
 
@@ -139,14 +152,16 @@ export function matchesModality(
   if (!modality) {
     return true
   }
-  return dataset.modalities.includes(modality as DatasetModality)
+  const modalities = Array.isArray(dataset.modalities) ? dataset.modalities : []
+  return modalities.includes(modality as DatasetModality)
 }
 
 export function matchesTask(dataset: DatasetMetadata, task: string | null): boolean {
   if (!task) {
     return true
   }
-  return dataset.tasks.includes(task)
+  const tasks = Array.isArray(dataset.tasks) ? dataset.tasks : []
+  return tasks.includes(task)
 }
 
 export interface DatasetFilterCriteria {
@@ -211,8 +226,10 @@ export function countDatasetsPerCategory(
 export function getAvailableModalities(datasets: DatasetMetadata[]): string[] {
   const set = new Set<string>()
   for (const ds of datasets) {
-    for (const m of ds.modalities) {
-      set.add(m)
+    if (Array.isArray(ds.modalities)) {
+      for (const m of ds.modalities) {
+        if (m) set.add(m)
+      }
     }
   }
   return Array.from(set).sort()
@@ -221,8 +238,10 @@ export function getAvailableModalities(datasets: DatasetMetadata[]): string[] {
 export function getAvailableTasks(datasets: DatasetMetadata[]): string[] {
   const set = new Set<string>()
   for (const ds of datasets) {
-    for (const t of ds.tasks) {
-      set.add(t)
+    if (Array.isArray(ds.tasks)) {
+      for (const t of ds.tasks) {
+        if (t) set.add(t)
+      }
     }
   }
   return Array.from(set).sort()

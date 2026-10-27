@@ -54,7 +54,7 @@ export const ExplorePage: React.FC = () => {
   const handleRetry = () => {
     setLoading(true)
     setError(null)
-    fetchCatalog()
+    fetchCatalog({ forceReload: true })
       .then((data) => {
         setDatasets(data)
         setLoading(false)

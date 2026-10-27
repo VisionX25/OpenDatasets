@@ -15,25 +15,38 @@ interface DatasetCardProps {
 }
 
 export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset }) => {
-  const renderVerificationBadge = (status: string) => {
+  if (!dataset || !dataset.id || !dataset.slug) {
+    return null
+  }
+
+  const renderVerificationBadge = (status?: string) => {
     switch (status) {
       case 'verified':
         return (
-          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+          <span
+            title="Metadata verified against documentation"
+            className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800"
+          >
             <ShieldCheck className="w-3 h-3 text-emerald-500" />
             Verified
           </span>
         )
       case 'provisional':
         return (
-          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <span
+            title="Metadata is provisional and pending review"
+            className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300 border border-amber-200 dark:border-amber-800"
+          >
             <AlertCircle className="w-3 h-3 text-amber-500" />
             Provisional
           </span>
         )
       default:
         return (
-          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+          <span
+            title="Metadata has not been verified"
+            className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700"
+          >
             <HelpCircle className="w-3 h-3 text-slate-400" />
             Unverified
           </span>
@@ -41,26 +54,49 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset }) => {
     }
   }
 
-  const renderLicenseBadge = (license: DatasetMetadata['license']) => {
+  const renderLicenseBadge = (license?: DatasetMetadata['license']) => {
+    if (!license) {
+      return (
+        <span
+          title="License unspecified"
+          className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium border bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border-slate-200 dark:border-slate-700"
+        >
+          <Scale className="w-3 h-3 opacity-70" />
+          <span className="truncate max-w-[140px]">Unspecified</span>
+        </span>
+      )
+    }
+
     const isVerifiedOpen = license.status === 'verified_open'
-    const isUnspecified = license.status === 'unspecified_by_source'
+    const isUnspecifiedOrUnknown =
+      license.status === 'unspecified_by_source' || license.status === 'unknown'
+    const badgeLabel =
+      license.spdx_id ||
+      license.name ||
+      (license.status === 'unspecified_by_source' ? 'Unspecified' : 'Unknown')
 
     return (
       <span
-        title={license.notes || license.name}
+        title={license.notes || license.name || (isUnspecifiedOrUnknown ? 'License unspecified' : 'License details')}
         className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium border ${
           isVerifiedOpen
             ? 'bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300 border-blue-200 dark:border-blue-800'
-            : isUnspecified
+            : isUnspecifiedOrUnknown
               ? 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border-slate-200 dark:border-slate-700'
               : 'bg-purple-50 text-purple-700 dark:bg-purple-950/60 dark:text-purple-300 border-purple-200 dark:border-purple-800'
         }`}
       >
         <Scale className="w-3 h-3 opacity-70" />
-        <span className="truncate max-w-[140px]">{license.spdx_id || license.name}</span>
+        <span className="truncate max-w-[140px]">{badgeLabel}</span>
       </span>
     )
   }
+
+  const modalities = Array.isArray(dataset.modalities) ? dataset.modalities : []
+  const tasks = Array.isArray(dataset.tasks) ? dataset.tasks : []
+  const tags = Array.isArray(dataset.tags) ? dataset.tags : []
+  const publisherName = dataset.publisher?.name || 'Unknown Publisher'
+  const verificationStatus = dataset.verification?.status || 'unverified'
 
   return (
     <article className="group flex flex-col justify-between p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-indigo-400 dark:hover:border-indigo-600 transition-all hover:shadow-md">
@@ -68,7 +104,7 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset }) => {
         {/* Top Badges */}
         <div className="flex items-center justify-between gap-2 mb-3">
           <div className="flex items-center gap-1.5 flex-wrap">
-            {dataset.modalities.map((modality) => (
+            {modalities.map((modality) => (
               <span
                 key={modality}
                 className="px-2 py-0.5 rounded text-xs font-semibold uppercase tracking-wider bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800"
@@ -78,7 +114,7 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset }) => {
             ))}
             {renderLicenseBadge(dataset.license)}
           </div>
-          {renderVerificationBadge(dataset.verification.status)}
+          {renderVerificationBadge(verificationStatus)}
         </div>
 
         {/* Dataset Title & Publisher */}
@@ -90,7 +126,7 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset }) => {
 
         <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 mt-1 mb-3">
           <Building2 className="w-3.5 h-3.5 shrink-0" />
-          <span className="truncate">{dataset.publisher.name}</span>
+          <span className="truncate">{publisherName}</span>
         </div>
 
         {/* Short Description */}
@@ -100,7 +136,7 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset }) => {
 
         {/* Tasks and Tags */}
         <div className="flex flex-wrap gap-1.5 mb-5">
-          {dataset.tasks.map((task) => (
+          {tasks.map((task) => (
             <span
               key={task}
               className="px-2 py-0.5 rounded text-xs bg-slate-100 text-slate-700 dark:bg-slate-800/80 dark:text-slate-300"
@@ -108,7 +144,7 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset }) => {
               #{task}
             </span>
           ))}
-          {dataset.tags.slice(0, 3).map((tag) => (
+          {tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
               className="px-2 py-0.5 rounded text-xs bg-slate-50 text-slate-500 dark:bg-slate-800/40 dark:text-slate-400 border border-slate-200 dark:border-slate-800"
