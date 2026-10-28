@@ -91,6 +91,280 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ai2-arc",
+    "slug": "ai2-arc",
+    "name": "AI2 Reasoning Challenge (ARC)",
+    "description": "The AI2 Reasoning Challenge (ARC) is a benchmark dataset of 7,787 genuine grade-school science multiple-choice questions (Grades 3 through 9). Developed by the Allen Institute for AI (Ai2), the dataset is split into an Easy Set (5,197 questions) and a Challenge Set (2,590 questions). The Challenge Set contains questions that both search-based retrieval models and word co-occurrence algorithms answer incorrectly, requiring genuine reasoning and common-sense knowledge.",
+    "homepage_url": "https://allenai.org/data/arc",
+    "publisher": {
+      "name": "Allen Institute for AI",
+      "type": "academic",
+      "url": "https://allenai.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "benchmark"
+    ],
+    "tags": [
+      "natural-language-processing",
+      "question-answering",
+      "benchmark",
+      "reasoning",
+      "science-qa"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset released under the Creative Commons Attribution-ShareAlike 4.0 International License by the Allen Institute for AI."
+    },
+    "source_references": [
+      {
+        "title": "Ai2 ARC Project Portal",
+        "url": "https://allenai.org/data/arc",
+        "type": "official_website",
+        "notes": "Official Allen Institute for AI ARC webpage and download bundles."
+      },
+      {
+        "title": "Hugging Face AI2 ARC Dataset Hub",
+        "url": "https://huggingface.co/datasets/allenai/ai2_arc",
+        "type": "repository",
+        "notes": "Hugging Face dataset viewer for ARC-Challenge and ARC-Easy subsets."
+      },
+      {
+        "title": "Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge",
+        "url": "https://arxiv.org/abs/1803.05457",
+        "type": "original_paper",
+        "notes": "Original publication detailing question curation, solver baselines, and corpus construction."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-29",
+      "notes": "Verified against Allen Institute for AI ARC portal, CC BY-SA 4.0 license, and arXiv:1803.05457."
+    },
+    "size": {
+      "amount": 6.8,
+      "unit": "MB",
+      "file_formats": [
+        "jsonl",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "Uncompressed dataset JSONL and CSV files for Challenge and Easy partitions."
+    },
+    "sample_count": {
+      "total": 7787,
+      "splits": {
+        "easy": 5197,
+        "challenge": 2590
+      },
+      "unit": "questions",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-03-14",
+      "last_updated": "2018-10-10"
+    },
+    "citation": {
+      "paper_title": "Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge",
+      "paper_url": "https://arxiv.org/abs/1803.05457",
+      "authors": [
+        "Peter Clark",
+        "Isaac Cowhey",
+        "Oren Etzioni",
+        "Tushar Khot",
+        "Ashish Sabharwal",
+        "Carissa Schoenick",
+        "Oyvind Tafjord"
+      ],
+      "bibtex": "@article{clark2018arc,\n  title={Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge},\n  author={Clark, Peter and Cowhey, Isaac and Etzioni, Oren and Khot, Tushar and Sabharwal, Ashish and Schoenick, Carissa and Tafjord, Oyvind},\n  journal={arXiv preprint arXiv:1803.05457},\n  year={2018}\n}"
+    },
+    "provenance": {
+      "collection_method": "Aggregated from official US grade-school science standardized exams across multiple states from 2000 to 2016.",
+      "curation_notes": "Split into Easy and Challenge partitions using retrieval algorithms and pointwise mutual information solvers as filters."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "bangladeshi-banknote-serial",
+    "slug": "bangladeshi-banknote-serial",
+    "name": "Bangladeshi Banknote (Serial Number Recognition)",
+    "description": "A computer vision benchmark dataset of 450 Bangladeshi banknote images captured under diverse real-world conditions for banknote serial number detection and optical character recognition. Images were photographed with an 8-megapixel smartphone camera across 100, 200, 500, and 1000 Taka notes collected from personal circulation, banks, and retail vendors, incorporating variations in lighting, folds, stains, and perspective.",
+    "homepage_url": "https://data.mendeley.com/datasets/pw22dn2mmy/1",
+    "publisher": {
+      "name": "Khulna University",
+      "type": "academic",
+      "url": "https://ku.ac.bd"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection",
+      "optical-character-recognition"
+    ],
+    "tags": [
+      "computer-vision",
+      "ocr",
+      "serial-number-recognition",
+      "banknotes"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC BY 4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published on Mendeley Data under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "Mendeley Data Repository (Version 1)",
+        "url": "https://data.mendeley.com/datasets/pw22dn2mmy/1",
+        "type": "repository",
+        "notes": "Official Mendeley Data deposit containing the 450 banknote images."
+      },
+      {
+        "title": "Bangladeshi Banknote DOI",
+        "url": "https://doi.org/10.17632/pw22dn2mmy.1",
+        "type": "documentation",
+        "notes": "Canonical DOI citation link."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-29",
+      "notes": "Metadata verified directly against Mendeley Data v1 DOI 10.17632/pw22dn2mmy.1."
+    },
+    "sample_count": {
+      "total": 450,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2026-06-30"
+    },
+    "citation": {
+      "paper_title": "Bangladeshi Banknote",
+      "paper_url": "https://doi.org/10.17632/pw22dn2mmy.1",
+      "authors": [
+        "Abu Bin Fahd"
+      ],
+      "doi": "10.17632/pw22dn2mmy.1",
+      "bibtex": "@misc{binfahd2026banknote,\n  title={Bangladeshi Banknote},\n  author={Bin Fahd, Abu},\n  year={2026},\n  publisher={Mendeley Data},\n  version={1},\n  doi={10.17632/pw22dn2mmy.1}\n}"
+    },
+    "geographic_coverage": [
+      "Bangladesh"
+    ],
+    "provenance": {
+      "collection_method": "Banknotes collected from personal contacts, retail stores, and banking institutions. Captured using an 8-megapixel smartphone camera.",
+      "curation_notes": "Focused specifically on banknote serial number detection and alphanumeric character recognition across multiple denominations. Does not contain counterfeit authentication labels."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "bangladeshi-currency-recognition",
+    "slug": "bangladeshi-currency-recognition",
+    "name": "A Diverse Image Dataset for Bangladeshi Currency Recognition",
+    "description": "A diverse computer vision dataset consisting of 5,073 background-free images of Bangladeshi Taka banknotes across nine different denominations (2, 5, 10, 20, 50, 100, 200, 500, and 1000 Taka). Images were collected with various mobile phone cameras and preprocessed with background extraction to support automated currency recognition, financial technology solutions, and denomination classification research.",
+    "homepage_url": "https://data.mendeley.com/datasets/3cv2sypkkh/1",
+    "publisher": {
+      "name": "Daffodil International University",
+      "type": "academic",
+      "url": "https://daffodilvarsity.edu.bd"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "currency-recognition",
+      "image-classification"
+    ],
+    "tags": [
+      "computer-vision",
+      "currency-recognition",
+      "image-classification",
+      "banknotes"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC BY 4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published on Mendeley Data under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "Mendeley Data Repository (Version 1)",
+        "url": "https://data.mendeley.com/datasets/3cv2sypkkh/1",
+        "type": "repository",
+        "notes": "Official repository containing the 5,073 banknote images and breakdown across 9 denominations."
+      },
+      {
+        "title": "Bangladeshi Currency Recognition DOI",
+        "url": "https://doi.org/10.17632/3cv2sypkkh.1",
+        "type": "documentation",
+        "notes": "Canonical DOI citation link."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-29",
+      "notes": "Metadata verified directly against Mendeley Data v1 DOI 10.17632/3cv2sypkkh.1."
+    },
+    "sample_count": {
+      "total": 5073,
+      "splits": {
+        "taka_2": 445,
+        "taka_5": 660,
+        "taka_10": 419,
+        "taka_20": 480,
+        "taka_50": 416,
+        "taka_100": 565,
+        "taka_200": 423,
+        "taka_500": 1243,
+        "taka_1000": 422
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2024-11-13"
+    },
+    "citation": {
+      "paper_title": "A Diverse Image Dataset for Bangladeshi Currency Recognition",
+      "paper_url": "https://doi.org/10.17632/3cv2sypkkh.1",
+      "authors": [
+        "Md Naimul Islam Nuhash",
+        "Sadia Akter",
+        "Mayen Uddin Mojumdar"
+      ],
+      "doi": "10.17632/3cv2sypkkh.1",
+      "bibtex": "@misc{nuhash2024bangladeshi,\n  title={A Diverse Image Dataset for Bangladeshi Currency Recognition},\n  author={Nuhash, Md Naimul Islam and Akter, Sadia and Mojumdar, Mayen Uddin},\n  year={2024},\n  publisher={Mendeley Data},\n  version={1},\n  doi={10.17632/3cv2sypkkh.1}\n}"
+    },
+    "geographic_coverage": [
+      "Bangladesh"
+    ],
+    "provenance": {
+      "collection_method": "Captured using multiple mobile phone cameras and preprocessed with background extraction and contrast enhancement.",
+      "curation_notes": "Contains denomination-level classification across nine official Bangladeshi Taka banknotes. Does not contain counterfeit labels."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "california-housing",
     "slug": "california-housing",
     "name": "California Housing Prices Database",
@@ -177,6 +451,100 @@
     "provenance": {
       "collection_method": "Extracted from the 1990 US Census, aggregated at the census block group level.",
       "curation_notes": "Standard regression benchmark frequently replacing the deprecated Boston Housing dataset due to ethical considerations."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "celeba",
+    "slug": "celeba",
+    "name": "CelebFaces Attributes Dataset (CelebA)",
+    "description": "CelebFaces Attributes Dataset (CelebA) is a widely recognized face attribute dataset containing 202,599 aligned and cropped face images of 10,177 celebrity identities. Each image is annotated with 40 binary facial attribute labels (including eyeglasses, smiling, hair color, and facial hair) and 5 facial landmark locations, supporting face attribute recognition, landmark localization, and generative modeling research.",
+    "homepage_url": "https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html",
+    "publisher": {
+      "name": "Multimedia Laboratory, The Chinese University of Hong Kong",
+      "type": "academic",
+      "url": "https://mmlab.ie.cuhk.edu.hk"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "face-recognition"
+    ],
+    "tags": [
+      "computer-vision",
+      "face-recognition",
+      "attribute-recognition",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "CelebA Terms of Use (Non-Commercial Research Only)",
+      "spdx_id": null,
+      "url": "https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html",
+      "commercial_use": "forbidden",
+      "notes": "Available strictly for non-commercial research purposes only. All images are gathered from the internet and are not owned by CUHK MMLab. Commercial use and redistribution are strictly prohibited."
+    },
+    "source_references": [
+      {
+        "title": "CelebA Official Project Page",
+        "url": "https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html",
+        "type": "official_website",
+        "notes": "Official CUHK MMLab portal providing download links and attribute documentation."
+      },
+      {
+        "title": "Deep Learning Face Attributes in the Wild",
+        "url": "https://doi.org/10.1109/ICCV.2015.425",
+        "type": "original_paper",
+        "notes": "Published in IEEE International Conference on Computer Vision (ICCV 2015)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-29",
+      "notes": "Verified against CUHK MMLab project page and ICCV 2015 paper."
+    },
+    "size": {
+      "amount": 1.4,
+      "unit": "GB",
+      "file_formats": [
+        "zip",
+        "jpeg",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "Aligned and cropped face image zip archive with bounding boxes and landmark text files."
+    },
+    "sample_count": {
+      "total": 202599,
+      "splits": {
+        "train": 162770,
+        "validation": 19867,
+        "test": 19962
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2015-12-11"
+    },
+    "citation": {
+      "paper_title": "Deep Learning Face Attributes in the Wild",
+      "paper_url": "https://doi.org/10.1109/ICCV.2015.425",
+      "authors": [
+        "Ziwei Liu",
+        "Ping Luo",
+        "Xiaogang Wang",
+        "Xiaoou Tang"
+      ],
+      "doi": "10.1109/ICCV.2015.425",
+      "bibtex": "@inproceedings{liu2015faceattributes,\n  title={Deep Learning Face Attributes in the Wild},\n  author={Liu, Ziwei and Luo, Ping and Wang, Xiaogang and Tang, Xiaoou},\n  booktitle={Proceedings of International Conference on Computer Vision (ICCV)},\n  pages={3730--3738},\n  year={2015}\n}"
+    },
+    "provenance": {
+      "collection_method": "Faces retrieved from internet searches of celebrity names, detected using face detectors, and annotated by human raters for 40 binary attributes.",
+      "curation_notes": "All images are for non-commercial research use only."
     }
   },
   {
@@ -376,6 +744,227 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "dolma",
+    "slug": "dolma",
+    "name": "Dolma: 3-Trillion Token Open Corpus for Pretraining",
+    "description": "Dolma is an open-source, 3-trillion-token English text dataset designed for language model pretraining, developed by the Allen Institute for AI (Ai2). Created to accompany the fully open OLMo model family, Dolma is assembled from diverse sources including Common Crawl web pages, Semantic Scholar academic papers, open-source GitHub code, Project Gutenberg books, Wikipedia, and Reddit discussions. The dataset is produced via an open-source, high-performance processing toolkit featuring language identification, toxic content filtering, PII removal, and MinHash deduplication.",
+    "homepage_url": "https://github.com/allenai/dolma",
+    "publisher": {
+      "name": "Allen Institute for AI",
+      "type": "academic",
+      "url": "https://allenai.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "language-modeling",
+      "pretraining"
+    ],
+    "tags": [
+      "natural-language-processing",
+      "pretraining",
+      "language-modeling",
+      "corpus",
+      "open-science"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License (ODC-By v1.0)",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset compilation and pipeline released under ODC-By v1.0 (migrated from AI2 ImpACT in April 2024 to support open research and commercial use). Individual underlying documents remain subject to source licensing and fair-use provisions."
+    },
+    "source_references": [
+      {
+        "title": "Allen Institute for AI Dolma GitHub Repository",
+        "url": "https://github.com/allenai/dolma",
+        "type": "repository",
+        "notes": "Official repository for the high-performance Rust/Python data curation toolkit and dataset recipes."
+      },
+      {
+        "title": "Hugging Face Dolma Dataset Hub",
+        "url": "https://huggingface.co/datasets/allenai/dolma",
+        "type": "repository",
+        "notes": "Public distribution hub for compressed Dolma v1.6 and v1.7 token splits."
+      },
+      {
+        "title": "Dolma: an Open Corpus of Three Trillion Tokens for Language Model Pretraining Research",
+        "url": "https://arxiv.org/abs/2402.00159",
+        "type": "original_paper",
+        "notes": "Comprehensive research paper documenting data sources, curation pipeline, and decontamination studies."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-29",
+      "notes": "Verified against Allen Institute for AI Dolma repository, Hugging Face release, and ACL 2024 publication."
+    },
+    "size": {
+      "amount": 2.1,
+      "unit": "TB",
+      "file_formats": [
+        "json.gz"
+      ],
+      "status": "verified",
+      "notes": "Compressed gzip JSON archives across all 7 source subsets (~5.4 TB uncompressed)."
+    },
+    "sample_count": {
+      "total": 3000000000000,
+      "unit": "tokens",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2023-08-15",
+      "last_updated": "2024-04-16"
+    },
+    "citation": {
+      "paper_title": "Dolma: an Open Corpus of Three Trillion Tokens for Language Model Pretraining Research",
+      "paper_url": "https://arxiv.org/abs/2402.00159",
+      "authors": [
+        "Luca Soldaini",
+        "Rodney Kinney",
+        "Akshita Bhagia",
+        "Dustin Schwenk",
+        "David Atkinson",
+        "Russell Authur",
+        "Ben Bogin",
+        "Khyathi Chandu",
+        "Jennifer Dumas",
+        "Yanai Elazar",
+        "Valentin Hofmann",
+        "Ananya Harsh Jha",
+        "Sachin Kumar",
+        "Li Lucy",
+        "Xinxi Lyu",
+        "Nathan Lambert",
+        "Ian Magnusson",
+        "Jacob Morrison",
+        "Niklas Muennighoff",
+        "Aakanksha Naik",
+        "Crystal Nam",
+        "Matthew E. Peters",
+        "Abhilasha Ravichander",
+        "Kyle Richardson",
+        "Zejiang Shen",
+        "Emma Strubell",
+        "Nishant Subramani",
+        "Oyvind Tafjord",
+        "Pete Walsh",
+        "Luke Zettlemoyer",
+        "Noah A. Smith",
+        "Hannaneh Hajishirzi",
+        "Iz Beltagy",
+        "Dirk Groeneveld",
+        "Jesse Dodge"
+      ],
+      "bibtex": "@article{soldaini2024dolma,\n  title={Dolma: an Open Corpus of Three Trillion Tokens for Language Model Pretraining Research},\n  author={Soldaini, Luca and Kinney, Rodney and Bhagia, Akshita and Schwenk, Dustin and Atkinson, David and Authur, Russell and Bogin, Ben and Chandu, Khyathi and Dumas, Jennifer and Elazar, Yanai and Hofmann, Valentin and Jha, Ananya Harsh and Kumar, Sachin and Lucy, Li and Lyu, Xinxi and Lambert, Nathan and Magnusson, Ian and Morrison, Jacob and Muennighoff, Niklas and Naik, Aakanksha and Nam, Crystal and Peters, Matthew E and Ravichander, Abhilasha and Richardson, Kyle and Shen, Zejiang and Strubell, Emma and Subramani, Nishant and Tafjord, Oyvind and Walsh, Pete and Zettlemoyer, Luke and Smith, Noah A and Hajishirzi, Hannaneh and Beltagy, Iz and Groeneveld, Dirk and Dodge, Jesse},\n  journal={arXiv preprint arXiv:2402.00159},\n  year={2024}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted from 7 distinct sources: Common Crawl web pages, Semantic Scholar papers, GitHub open-source code repositories, Project Gutenberg texts, Wikipedia, and Reddit discussions.",
+      "curation_notes": "Filtered using language classification, PII redaction, heuristic rule-based quality filtering, toxicity blocklists, and MinHash deduplication."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "esc-50",
+    "slug": "esc-50",
+    "name": "ESC-50: Dataset for Environmental Sound Classification",
+    "description": "ESC-50 is a labeled collection of 2,000 environmental audio recordings suitable for benchmarking methods of environmental sound classification. It contains 50 semantically distinct categories grouped into 5 major domains: animals, natural soundscapes and water sounds, human non-speech sounds, interior/domestic sounds, and exterior/urban noises. Each class contains 40 five-second audio clips sampled at 44.1 kHz, organized into 5 predefined folds for cross-validation.",
+    "homepage_url": "https://github.com/karolpiczak/ESC-50",
+    "publisher": {
+      "name": "Karol J. Piczak",
+      "type": "individual",
+      "url": "https://github.com/karolpiczak/ESC-50"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "audio-classification",
+      "sound-event-detection"
+    ],
+    "tags": [
+      "audio-speech",
+      "audio-classification",
+      "sound-events",
+      "benchmark",
+      "environmental-audio"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 3.0 (CC BY-NC 3.0)",
+      "spdx_id": "CC-BY-NC-3.0",
+      "url": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "commercial_use": "forbidden",
+      "notes": "Dataset audio clips and annotations are licensed under CC BY-NC 3.0. Individual recordings were harvested from Freesound.org and are restricted to non-commercial research use."
+    },
+    "source_references": [
+      {
+        "title": "ESC-50 Official GitHub Repository",
+        "url": "https://github.com/karolpiczak/ESC-50",
+        "type": "repository",
+        "notes": "Canonical repository containing audio files, fold assignments, and metadata CSV."
+      },
+      {
+        "title": "ESC: Dataset for Environmental Sound Classification",
+        "url": "https://doi.org/10.1145/2733373.2806390",
+        "type": "original_paper",
+        "notes": "Original ACM Multimedia 2015 publication describing dataset collection and baseline classifier performance."
+      },
+      {
+        "title": "Hugging Face ESC-50 Dataset Viewer",
+        "url": "https://huggingface.co/datasets/ashraq/esc50",
+        "type": "repository",
+        "notes": "Community distribution of ESC-50 audio files with online audio player and spectrogram previews."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-29",
+      "notes": "Verified against official GitHub repository, CC BY-NC 3.0 license file, and ACM MM 2015 paper."
+    },
+    "size": {
+      "amount": 845,
+      "unit": "MB",
+      "file_formats": [
+        "wav",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "2,000 uncompressed 5-second WAV audio recordings and metadata CSV."
+    },
+    "sample_count": {
+      "total": 2000,
+      "unit": "clips",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2015-10-13",
+      "last_updated": "2020-03-02"
+    },
+    "citation": {
+      "paper_title": "ESC: Dataset for Environmental Sound Classification",
+      "paper_url": "https://doi.org/10.1145/2733373.2806390",
+      "authors": [
+        "Karol J. Piczak"
+      ],
+      "doi": "10.1145/2733373.2806390",
+      "bibtex": "@inproceedings{piczak2015esc,\n  title={ESC: Dataset for Environmental Sound Classification},\n  author={Piczak, Karol J.},\n  booktitle={Proceedings of the 23rd ACM International Conference on Multimedia},\n  pages={1015--1018},\n  year={2015}\n}"
+    },
+    "provenance": {
+      "collection_method": "Sourced from public audio uploads on Freesound.org using targeted tag queries, followed by manual quality review to isolate clean 5-second recordings.",
+      "curation_notes": "Balanced across 50 categories with exactly 40 clips per category, structured into 5 balanced cross-validation folds."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "fashion-mnist",
     "slug": "fashion-mnist",
     "name": "Fashion-MNIST",
@@ -462,6 +1051,107 @@
     "provenance": {
       "collection_method": "Converted directly from Zalando SE product photography, centered and grayscale downsampled to 28x28.",
       "curation_notes": "Maintains exact same image dimensions and split sizes as original MNIST."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "fineweb-2",
+    "slug": "fineweb-2",
+    "name": "FineWeb-2: Multilingual Pretraining Dataset",
+    "description": "FineWeb-2 is a massive, high-quality multilingual web corpus developed by Hugging Face for pretraining large language models. Spanning over 1,000 languages across 1,800+ language-script pairs, it contains approximately 5 billion cleaned and deduplicated web documents (roughly 3 trillion words). Curated from Common Crawl through rigorous language identification, quality filtering, and deduplication heuristics.",
+    "homepage_url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2",
+    "publisher": {
+      "name": "Hugging Face",
+      "type": "industry",
+      "url": "https://huggingface.co"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "language-modeling",
+      "text-generation"
+    ],
+    "tags": [
+      "natural-language-processing",
+      "pretraining",
+      "language-modeling",
+      "multilingual"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License (ODC-By v1.0)",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset compilation and curation released under ODC-By 1.0. As a Common Crawl derivative, individual web documents remain subject to original source copyrights; Hugging Face does not claim copyright ownership of web crawl content."
+    },
+    "source_references": [
+      {
+        "title": "Hugging Face FineWeb-2 Dataset Hub",
+        "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2",
+        "type": "repository",
+        "notes": "Official dataset card, documentation, and partitioned Parquet file distribution."
+      },
+      {
+        "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+        "url": "https://arxiv.org/abs/2406.17557",
+        "type": "original_paper",
+        "notes": "Foundational research paper detailing the FineWeb curation pipeline and methodology."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-29",
+      "notes": "Verified against official Hugging Face dataset card and ODC-By 1.0 declaration."
+    },
+    "size": {
+      "amount": 8,
+      "unit": "TB",
+      "file_formats": [
+        "parquet"
+      ],
+      "status": "estimated",
+      "notes": "Compressed disk footprint across all multilingual Parquet partitions."
+    },
+    "sample_count": {
+      "total": 5000000000,
+      "unit": "documents",
+      "status": "estimated"
+    },
+    "languages": [
+      "en",
+      "bn",
+      "es",
+      "fr",
+      "de",
+      "zh",
+      "ar",
+      "hi"
+    ],
+    "dates": {
+      "published": "2024-12-05",
+      "last_updated": "2025-10-27"
+    },
+    "citation": {
+      "paper_title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+      "paper_url": "https://arxiv.org/abs/2406.17557",
+      "authors": [
+        "Guilherme Penedo",
+        "Hynek Kydlíček",
+        "Loubna Ben Allal",
+        "Anton Lozhkov",
+        "Margaret Mitchell",
+        "Colin Raffel",
+        "Leandro von Werra",
+        "Thomas Wolf"
+      ],
+      "bibtex": "@article{penedo2024fineweb,\n  title={The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale},\n  author={Penedo, Guilherme and Kydl{\\'\\i}{\\v{c}}ek, Hynek and Ben Allal, Loubna and Lozhkov, Anton and Mitchell, Margaret and Raffel, Colin and von Werra, Leandro and Wolf, Thomas},\n  journal={arXiv preprint arXiv:2406.17557},\n  year={2024}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted from Common Crawl dumps using automated language filtering, text extraction, URL filtering, deduplication, and quality scoring.",
+      "curation_notes": "Encompasses over 1,000 languages, significantly increasing low-resource language representation."
     }
   },
   {
@@ -563,6 +1253,225 @@
     "provenance": {
       "collection_method": "Aggregated from established NLP datasets including CoLA, SST-2, MRPC, STS-B, QQP, MNLI, QNLI, RTE, and WNLI.",
       "curation_notes": "Converted to standard tab-delimited formats with private test sets hosted on evaluation servers."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "gsm8k",
+    "slug": "gsm8k",
+    "name": "Grade School Math 8K (GSM8K)",
+    "description": "GSM8K (Grade School Math 8K) is a dataset of 8,500 high-quality, linguistically diverse grade school math word problems crafted by human problem writers. The problems take between 2 and 8 steps to solve, using basic arithmetic operations (addition, subtraction, multiplication, division). Solutions are provided in natural language with step-by-step calculations rather than raw equations, making it the benchmark standard for multi-step mathematical reasoning in language models.",
+    "homepage_url": "https://github.com/openai/grade-school-math",
+    "publisher": {
+      "name": "OpenAI",
+      "type": "industry",
+      "url": "https://openai.com"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "mathematical-reasoning",
+      "question-answering"
+    ],
+    "tags": [
+      "natural-language-processing",
+      "math-reasoning",
+      "benchmark",
+      "question-answering",
+      "chain-of-thought"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://github.com/openai/grade-school-math/blob/master/LICENSE",
+      "commercial_use": "allowed",
+      "notes": "Dataset and evaluation scripts released under the MIT License."
+    },
+    "source_references": [
+      {
+        "title": "OpenAI Grade School Math GitHub Repository",
+        "url": "https://github.com/openai/grade-school-math",
+        "type": "repository",
+        "notes": "Official repository containing train and test JSONL files."
+      },
+      {
+        "title": "Training Verifiers to Solve Math Word Problems",
+        "url": "https://arxiv.org/abs/2110.14168",
+        "type": "original_paper",
+        "notes": "Original research paper introducing GSM8K and verifier training."
+      },
+      {
+        "title": "Hugging Face GSM8K Dataset Card",
+        "url": "https://huggingface.co/datasets/openai/gsm8k",
+        "type": "dataset_card",
+        "notes": "Community hub distribution of GSM8K splits (main and socratic configurations)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-29",
+      "notes": "Verified against OpenAI official repository and arXiv:2110.14168 publication."
+    },
+    "size": {
+      "amount": 4.5,
+      "unit": "MB",
+      "file_formats": [
+        "jsonl"
+      ],
+      "status": "verified",
+      "notes": "Uncompressed JSONL text files for train and test splits."
+    },
+    "sample_count": {
+      "total": 8792,
+      "splits": {
+        "train": 7473,
+        "test": 1319
+      },
+      "unit": "problems",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2021-10-27",
+      "last_updated": "2021-11-18"
+    },
+    "citation": {
+      "paper_title": "Training Verifiers to Solve Math Word Problems",
+      "paper_url": "https://arxiv.org/abs/2110.14168",
+      "authors": [
+        "Karl Cobbe",
+        "Vineet Kosaraju",
+        "Mohammad Bavarian",
+        "Mark Chen",
+        "Heewoo Jun",
+        "Lukasz Kaiser",
+        "Matthias Plappert",
+        "Jerry Tworek",
+        "Jacob Hilton",
+        "Reiichiro Nakano",
+        "Christopher Hesse",
+        "John Schulman"
+      ],
+      "bibtex": "@article{cobbe2021gsm8k,\n  title={Training Verifiers to Solve Math Word Problems},\n  author={Cobbe, Karl and Kosaraju, Vineet and Bavarian, Mohammad and Chen, Mark and Jun, Heewoo and Kaiser, Lukasz and Plappert, Matthias and Tworek, Jerry and Hilton, Jacob and Nakano, Reiichiro and Hesse, Christopher and Schulman, John},\n  journal={arXiv preprint arXiv:2110.14168},\n  year={2021}\n}"
+    },
+    "provenance": {
+      "collection_method": "Authored by freelance human problem writers recruited via Surge AI, instructed to write grade-school level math problems without requiring algebra beyond elementary concepts.",
+      "curation_notes": "Solutions are authored with step-by-step natural language explanations with inline calculation annotations to support automated verification."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "humanitys-last-exam",
+    "slug": "humanitys-last-exam",
+    "name": "Humanity's Last Exam (HLE)",
+    "description": "Humanity's Last Exam (HLE) is a multidisciplinary, multimodal evaluation benchmark consisting of 2,500 expert-crafted questions spanning mathematics, humanities, natural sciences, engineering, and computer science. Developed by the Center for AI Safety (CAIS) and Scale AI with contributions from researchers across global academic institutions, HLE addresses the saturation of previous benchmarks like MMLU. It features multiple-choice and short-answer questions accompanied by multimodal figures and diagrams, designed to resist internet retrieval shortcuts and surface heuristics.",
+    "homepage_url": "https://lastexam.ai",
+    "publisher": {
+      "name": "Center for AI Safety",
+      "type": "academic",
+      "url": "https://safe.ai"
+    },
+    "modalities": [
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "benchmark"
+    ],
+    "tags": [
+      "evaluation-benchmarks",
+      "benchmark",
+      "multimodal",
+      "reasoning",
+      "expert-eval"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://huggingface.co/datasets/cais/hle",
+      "commercial_use": "allowed",
+      "notes": "Dataset and evaluation harness are officially released under the MIT License. Distribution on Hugging Face utilizes standard gated access requiring user confirmation to prevent benchmark data contamination; users agree not to include test items in public web crawls or training corpora."
+    },
+    "source_references": [
+      {
+        "title": "Humanity's Last Exam Canonical Website",
+        "url": "https://lastexam.ai",
+        "type": "official_website",
+        "notes": "Official benchmark project landing page, paper link, and evaluation portal."
+      },
+      {
+        "title": "Hugging Face CAIS HLE Dataset Hub",
+        "url": "https://huggingface.co/datasets/cais/hle",
+        "type": "repository",
+        "notes": "Gated benchmark repository hosting test parquet tables and associated multimodal imagery."
+      },
+      {
+        "title": "Humanity's Last Exam",
+        "url": "https://arxiv.org/abs/2501.14249",
+        "type": "original_paper",
+        "notes": "Technical research report describing question curation, peer verification, and frontier model evaluations."
+      },
+      {
+        "title": "Center for AI Safety Research Announcement",
+        "url": "https://safe.ai/research/hle",
+        "type": "documentation",
+        "notes": "CAIS organization announcement and research context."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-29",
+      "notes": "Verified against arXiv:2501.14249 publication and Hugging Face cais/hle repository card and metadata."
+    },
+    "size": {
+      "amount": 274,
+      "unit": "MB",
+      "file_formats": [
+        "parquet",
+        "png"
+      ],
+      "status": "verified",
+      "notes": "Download size of Parquet question tables and embedded multimodal diagram images."
+    },
+    "sample_count": {
+      "total": 2500,
+      "splits": {
+        "test": 2500
+      },
+      "unit": "questions",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2025-01-23"
+    },
+    "citation": {
+      "paper_title": "Humanity's Last Exam",
+      "paper_url": "https://arxiv.org/abs/2501.14249",
+      "authors": [
+        "Dan Hendrycks",
+        "Collin Burns",
+        "Steven Basart",
+        "Andrew Critch",
+        "Jerry Li",
+        "Dawn Song",
+        "Jacob Steinhardt"
+      ],
+      "bibtex": "@article{hendrycks2025hle,\n  title={Humanity's Last Exam},\n  author={Hendrycks, Dan and Burns, Collin and Basart, Steven and Critch, Andrew and Li, Jerry and Song, Dawn and Steinhardt, Jacob},\n  journal={arXiv preprint arXiv:2501.14249},\n  year={2025}\n}"
+    },
+    "provenance": {
+      "collection_method": "Authored and submitted by subject matter experts across hundreds of global academic institutions, targeting graduate- and research-level problem difficulty.",
+      "curation_notes": "Adversarially screened against frontier LLM baselines and multi-turn human verification to eliminate questions vulnerable to simple web search or memorization."
     }
   },
   {
@@ -866,6 +1775,107 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "jaaltaka",
+    "slug": "jaaltaka",
+    "name": "JaalTaka: A Benchmark Dataset for Detecting Counterfeit Bangladeshi Banknotes",
+    "description": "JaalTaka is a specialized computer vision benchmark dataset for distinguishing genuine from counterfeit Bangladeshi banknotes. Version 2 consists of 1,390 physical banknotes (802 genuine notes sourced from Sonali Bank, Agrani Bank, and Rupali Bank, and 588 counterfeit notes obtained in collaboration with the Rapid Action Battalion). Each banknote sample is captured across 6 high-resolution smartphone camera views focusing on key security features under diverse physical conditions (wear, stains, graffiti, tape/staple artifacts), yielding a total of 8,340 segment images.",
+    "homepage_url": "https://data.mendeley.com/datasets/2m7wk5cy4c/2",
+    "publisher": {
+      "name": "Daffodil International University",
+      "type": "academic",
+      "url": "https://daffodilvarsity.edu.bd"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "counterfeit-detection",
+      "image-classification"
+    ],
+    "tags": [
+      "computer-vision",
+      "counterfeit-detection",
+      "currency",
+      "benchmark",
+      "banknotes"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC BY 4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published on Mendeley Data under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "Mendeley Data Repository (Version 2)",
+        "url": "https://data.mendeley.com/datasets/2m7wk5cy4c/2",
+        "type": "repository",
+        "notes": "Official repository for version 2 published on 2025-09-11."
+      },
+      {
+        "title": "JaalTaka: A benchmark dataset for detecting counterfeit Bangladeshi banknotes (Data in Brief)",
+        "url": "https://doi.org/10.1016/j.dib.2025.112377",
+        "type": "original_paper",
+        "notes": "Peer-reviewed Data in Brief article (ScienceDirect PII: S235234092501090X)."
+      },
+      {
+        "title": "JaalTaka Digital Object Identifier (DOI)",
+        "url": "https://doi.org/10.17632/2m7wk5cy4c.2",
+        "type": "documentation",
+        "notes": "Canonical Mendeley Data DOI citation link."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-29",
+      "notes": "Verified against Mendeley Data v2 DOI 10.17632/2m7wk5cy4c.2 and Data in Brief publication DOI 10.1016/j.dib.2025.112377."
+    },
+    "size": {
+      "file_formats": [
+        "jpg",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Dataset comprises 8,340 segment images in total, representing 6 view segments captured for each of the 1,390 physical banknote samples."
+    },
+    "sample_count": {
+      "total": 1390,
+      "splits": {
+        "genuine": 802,
+        "counterfeit": 588
+      },
+      "unit": "banknotes",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2025-09-11"
+    },
+    "citation": {
+      "paper_title": "JaalTaka: A benchmark dataset for detecting counterfeit Bangladeshi banknotes",
+      "paper_url": "https://doi.org/10.1016/j.dib.2025.112377",
+      "authors": [
+        "Bibhas Roy Chowdhury Piyas",
+        "Fatama Jannat Tisha",
+        "Sadia Rahman",
+        "Shahrin Islam",
+        "Bijoy Roy Chowdhury Preenon"
+      ],
+      "doi": "10.1016/j.dib.2025.112377",
+      "bibtex": "@article{piyas2025jaaltaka,\n  title={JaalTaka: A benchmark dataset for detecting counterfeit Bangladeshi banknotes},\n  author={Piyas, Bibhas Roy Chowdhury and Tisha, Fatama Jannat and Rahman, Sadia and Islam, Shahrin and Preenon, Bijoy Roy Chowdhury},\n  journal={Data in Brief},\n  volume={64},\n  pages={112377},\n  year={2025},\n  doi={10.1016/j.dib.2025.112377}\n}"
+    },
+    "geographic_coverage": [
+      "Bangladesh"
+    ],
+    "provenance": {
+      "collection_method": "Genuine banknotes sourced from Sonali Bank, Agrani Bank, and Rupali Bank; counterfeit notes obtained via formal collaboration with Rapid Action Battalion (RAB). Captured with smartphone cameras.",
+      "curation_notes": "Version 2 contains 1,390 physical banknote samples (802 genuine, 588 counterfeit). Six view segments are captured per banknote sample, yielding 8,340 segment images. The dataset is structured for classification without bounding box object detection annotations."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "librispeech",
     "slug": "librispeech",
     "name": "LibriSpeech ASR Corpus",
@@ -1057,6 +2067,204 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ms-coco",
+    "slug": "ms-coco",
+    "name": "Microsoft COCO (Common Objects in Context)",
+    "description": "Microsoft Common Objects in Context (MS COCO) is a foundational large-scale computer vision dataset designed for object detection, instance segmentation, keypoint detection, and image captioning. It contains over 330,000 images (more than 200,000 labeled) featuring 1.5 million object instances across 80 common object categories, 91 stuff categories, and 5 independent human-written captions per image.",
+    "homepage_url": "https://cocodataset.org/",
+    "publisher": {
+      "name": "COCO Consortium",
+      "type": "academic",
+      "url": "https://cocodataset.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection",
+      "instance-segmentation",
+      "image-captioning"
+    ],
+    "tags": [
+      "computer-vision",
+      "object-detection",
+      "instance-segmentation",
+      "benchmark",
+      "image-captioning"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC BY 4.0 (Annotations) / Flickr Terms of Use (Images)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Annotations are licensed by the COCO Consortium under Creative Commons Attribution 4.0 International (CC BY 4.0). The underlying images were collected from Flickr and remain subject to their respective creators' Flickr licenses and Terms of Use."
+    },
+    "source_references": [
+      {
+        "title": "COCO Official Homepage",
+        "url": "https://cocodataset.org/",
+        "type": "official_website",
+        "notes": "Official portal providing dataset downloads, evaluations, and exploration tools."
+      },
+      {
+        "title": "Microsoft COCO: Common Objects in Context",
+        "url": "https://doi.org/10.1007/978-3-319-10602-1_48",
+        "type": "original_paper",
+        "notes": "Published in European Conference on Computer Vision (ECCV 2014)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-29",
+      "notes": "Verified against official cocodataset.org documentation and ECCV 2014 paper."
+    },
+    "size": {
+      "amount": 25,
+      "unit": "GB",
+      "file_formats": [
+        "jpeg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Total compressed download size for 2017 train, val, and test image sets."
+    },
+    "sample_count": {
+      "total": 330000,
+      "splits": {
+        "train": 118287,
+        "validation": 5000,
+        "test": 40670
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2014-05-01"
+    },
+    "citation": {
+      "paper_title": "Microsoft COCO: Common Objects in Context",
+      "paper_url": "https://doi.org/10.1007/978-3-319-10602-1_48",
+      "authors": [
+        "Tsung-Yi Lin",
+        "Michael Maire",
+        "Serge Belongie",
+        "James Hays",
+        "Pietro Perona",
+        "Deva Ramanan",
+        "Piotr Dollár",
+        "C. Lawrence Zitnick"
+      ],
+      "doi": "10.1007/978-3-319-10602-1_48",
+      "bibtex": "@inproceedings{lin2014microsoft,\n  title={Microsoft COCO: Common Objects in Context},\n  author={Lin, Tsung-Yi and Maire, Michael and Belongie, Serge and Hays, James and Perona, Pietro and Ramanan, Deva and Doll{\\'a}r, Piotr and Zitnick, C Lawrence},\n  booktitle={European Conference on Computer Vision (ECCV)},\n  pages={740--755},\n  year={2014},\n  publisher={Springer}\n}"
+    },
+    "provenance": {
+      "collection_method": "Images gathered from Flickr using keyword searches representing non-iconic object scenarios, segmented and annotated using Amazon Mechanical Turk.",
+      "curation_notes": "Annotations licensed under CC BY 4.0; constituent images governed by Flickr terms."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "open-images-v7",
+    "slug": "open-images-v7",
+    "name": "Open Images V7",
+    "description": "Open Images V7 is a massive computer vision dataset of approximately 9 million images annotated with image-level labels, object bounding boxes, object segmentation masks, visual relationships, and localized narratives. Version 7 expands the corpus with 66.4 million point labels on 1.4 million images across 5,827 categories, providing rich supervision for object detection, instance segmentation, and point-level localization.",
+    "homepage_url": "https://storage.googleapis.com/openimages/web/index.html",
+    "publisher": {
+      "name": "Google LLC",
+      "type": "industry",
+      "url": "https://research.google"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection",
+      "image-segmentation",
+      "image-classification"
+    ],
+    "tags": [
+      "computer-vision",
+      "object-detection",
+      "image-segmentation",
+      "benchmark",
+      "point-labels"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC BY 4.0 (Annotations) / CC BY 2.0 (Images)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Annotations are licensed by Google LLC under Creative Commons Attribution 4.0 International (CC BY 4.0). The underlying images have Creative Commons Attribution licenses (predominantly CC BY 2.0) from Flickr."
+    },
+    "source_references": [
+      {
+        "title": "Open Images Dataset Web Portal",
+        "url": "https://storage.googleapis.com/openimages/web/index.html",
+        "type": "official_website",
+        "notes": "Official Google Research portal for Open Images exploration and downloads."
+      },
+      {
+        "title": "The Open Images Dataset V4 (IJCV Paper)",
+        "url": "https://doi.org/10.1007/s11263-020-01316-z",
+        "type": "original_paper",
+        "notes": "Published in International Journal of Computer Vision (IJCV 2020)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-29",
+      "notes": "Verified against official Open Images V7 documentation and Google Research portal."
+    },
+    "size": {
+      "amount": 560,
+      "unit": "GB",
+      "file_formats": [
+        "jpeg",
+        "csv",
+        "parquet"
+      ],
+      "status": "estimated",
+      "notes": "Estimated size of compressed image archives and annotation metadata tables."
+    },
+    "sample_count": {
+      "total": 9011219,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022-10-18"
+    },
+    "citation": {
+      "paper_title": "The Open Images Dataset V4: Unified image classification, object detection, and visual relationship detection at scale",
+      "paper_url": "https://doi.org/10.1007/s11263-020-01316-z",
+      "authors": [
+        "Alina Kuznetsova",
+        "Hassan Rom",
+        "Neil Alldrin",
+        "Jasper Uijlings",
+        "Ivan Krasin",
+        "Jordi Pont-Tuset",
+        "Shahab Kamali",
+        "Stefan Popov",
+        "Matteo Malloci",
+        "Alexander Kolesnikov",
+        "Tom Duerig",
+        "Vittorio Ferrari"
+      ],
+      "doi": "10.1007/s11263-020-01316-z",
+      "bibtex": "@article{kuznetsova2020open,\n  title={The Open Images Dataset V4},\n  author={Kuznetsova, Alina and Rom, Hassan and Alldrin, Neil and Uijlings, Jasper and Krasin, Ivan and Pont-Tuset, Jordi and Kamali, Shahab and Popov, Stefan and Malloci, Matteo and Kolesnikov, Alexander and Duerig, Tom and Ferrari, Vittorio},\n  journal={International Journal of Computer Vision},\n  volume={128},\n  pages={1956--1981},\n  year={2020},\n  publisher={Springer}\n}"
+    },
+    "provenance": {
+      "collection_method": "Sourced from Flickr Creative Commons images and annotated through automatic classification, expert verification, and crowd-sourcing pipelines.",
+      "curation_notes": "Annotations are owned by Google LLC under CC BY 4.0; individual images are subject to original CC BY licenses."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "squad-2",
     "slug": "squad-2",
     "name": "Stanford Question Answering Dataset 2.0 (SQuAD 2.0)",
@@ -1147,6 +2355,206 @@
     "provenance": {
       "collection_method": "Passages selected from English Wikipedia articles; questions and plausible answers or unanswerable distractors created by Amazon Mechanical Turk workers.",
       "curation_notes": "Contains roughly one-third unanswerable questions to challenge comprehension models."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ultrachat-200k",
+    "slug": "ultrachat-200k",
+    "name": "UltraChat 200k (Filtered Dialogue Dataset)",
+    "description": "UltraChat 200k is a heavily filtered and curated subset of UltraChat, an open-source multi-turn instruction dataset designed for supervised fine-tuning (SFT) of conversational language models. Created by Hugging Face H4, it refines the original 1.4 million dialogues down to approximately 208k high-quality multi-turn conversations across questions about the world, creative writing, problem solving, and programming. It served as a foundational alignment dataset for models such as Zephyr-7B.",
+    "homepage_url": "https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k",
+    "publisher": {
+      "name": "Hugging Face H4",
+      "type": "community",
+      "url": "https://huggingface.co/HuggingFaceH4"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "instruction-tuning",
+      "conversation"
+    ],
+    "tags": [
+      "natural-language-processing",
+      "instruction-tuning",
+      "conversation",
+      "chat",
+      "synthetic-data"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k",
+      "commercial_use": "allowed",
+      "notes": "Dataset released under the MIT License by Hugging Face H4. Synthetic dialogues were generated via OpenAI API prompts; users must comply with OpenAI Terms of Service regarding model training."
+    },
+    "source_references": [
+      {
+        "title": "Hugging Face H4 UltraChat 200k Repository",
+        "url": "https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k",
+        "type": "repository",
+        "notes": "Official repository containing train and test SFT/generation Parquet splits."
+      },
+      {
+        "title": "Enhancing Chat Language Models by Scaling High-quality Instructional Conversations",
+        "url": "https://arxiv.org/abs/2305.14233",
+        "type": "original_paper",
+        "notes": "Original research publication on the UltraChat dataset generation methodology."
+      },
+      {
+        "title": "THUNLP UltraChat GitHub Repository",
+        "url": "https://github.com/thunlp/UltraChat",
+        "type": "repository",
+        "notes": "Upstream source codebase and prompt generation framework from Tsinghua University."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-29",
+      "notes": "Verified against Hugging Face H4 repository card, license declarations, and Tsinghua UltraChat publications."
+    },
+    "size": {
+      "amount": 480,
+      "unit": "MB",
+      "file_formats": [
+        "parquet"
+      ],
+      "status": "verified",
+      "notes": "Compressed Parquet files across train_sft and test_sft splits."
+    },
+    "sample_count": {
+      "total": 230975,
+      "splits": {
+        "train_sft": 207865,
+        "test_sft": 23110
+      },
+      "unit": "conversations",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2023-10-18",
+      "last_updated": "2023-11-20"
+    },
+    "citation": {
+      "paper_title": "Enhancing Chat Language Models by Scaling High-quality Instructional Conversations",
+      "paper_url": "https://arxiv.org/abs/2305.14233",
+      "authors": [
+        "Ning Ding",
+        "Yulin Chen",
+        "Bokai Xu",
+        "Yujia Qin",
+        "Zhi Zheng",
+        "Shengding Hu",
+        "Zhiyuan Liu",
+        "Maosong Sun",
+        "Bowen Zhou"
+      ],
+      "bibtex": "@article{ding2023ultrachat,\n  title={Enhancing Chat Language Models by Scaling High-quality Instructional Conversations},\n  author={Ding, Ning and Chen, Yulin and Xu, Bokai and Qin, Yujia and Zheng, Zhi and Hu, Shengding and Liu, Zhiyuan and Sun, Maosong and Zhou, Bowen},\n  journal={arXiv preprint arXiv:2305.14233},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Generated synthetically using OpenAI GPT-3.5-Turbo driven by systematic multi-turn prompt templates spanning knowledge, creation, and problem solving.",
+      "curation_notes": "Hugging Face H4 cleaned and filtered the upstream UltraChat dataset, pruning low-quality turns, single-turn prompts, and toxic completions."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "wider-face",
+    "slug": "wider-face",
+    "name": "WIDER FACE: A Face Detection Benchmark",
+    "description": "WIDER FACE is a standard face detection benchmark dataset containing 32,203 images and 393,703 labeled face bounding boxes exhibiting extreme variability in scale, pose, occlusion, expression, makeup, and illumination. Selected from 61 event categories from the WIDER dataset, it is organized into Easy, Medium, and Hard validation subsets to evaluate face detector robustness.",
+    "homepage_url": "https://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/index.html",
+    "publisher": {
+      "name": "Multimedia Laboratory, The Chinese University of Hong Kong",
+      "type": "academic",
+      "url": "https://mmlab.ie.cuhk.edu.hk"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "face-detection",
+      "object-detection"
+    ],
+    "tags": [
+      "computer-vision",
+      "face-detection",
+      "benchmark",
+      "object-detection"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "CC BY-NC-ND 4.0",
+      "spdx_id": "CC-BY-NC-ND-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Restricted strictly to non-commercial research use."
+    },
+    "source_references": [
+      {
+        "title": "WIDER FACE Project Page",
+        "url": "https://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/index.html",
+        "type": "official_website",
+        "notes": "Official CUHK MMLab project page with benchmark evaluations and downloads."
+      },
+      {
+        "title": "WIDER FACE: A Face Detection Benchmark",
+        "url": "https://doi.org/10.1109/CVPR.2016.596",
+        "type": "original_paper",
+        "notes": "Published in IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2016)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-10-29",
+      "notes": "Verified against CUHK MMLab project page and CVPR 2016 publication."
+    },
+    "size": {
+      "amount": 3.5,
+      "unit": "GB",
+      "file_formats": [
+        "zip",
+        "jpeg",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "Compressed zip archives containing images and ground-truth bounding box text annotations."
+    },
+    "sample_count": {
+      "total": 32203,
+      "splits": {
+        "train": 12880,
+        "validation": 3226,
+        "test": 16097
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2016-06-27"
+    },
+    "citation": {
+      "paper_title": "WIDER FACE: A Face Detection Benchmark",
+      "paper_url": "https://doi.org/10.1109/CVPR.2016.596",
+      "authors": [
+        "Shuo Yang",
+        "Ping Luo",
+        "Chen Change Loy",
+        "Xiaoou Tang"
+      ],
+      "doi": "10.1109/CVPR.2016.596",
+      "bibtex": "@inproceedings{yang2016wider,\n  title={WIDER FACE: A Face Detection Benchmark},\n  author={Yang, Shuo and Luo, Ping and Loy, Chen Change and Tang, Xiaoou},\n  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={5525--5533},\n  year={2016}\n}"
+    },
+    "provenance": {
+      "collection_method": "Selected from 61 event categories in the WIDER dataset, annotated by expert human annotators with bounding boxes and attribute tags (blur, expression, illumination, occlusion, pose).",
+      "curation_notes": "Contains 393,703 labeled faces with dense annotations."
     }
   },
   {

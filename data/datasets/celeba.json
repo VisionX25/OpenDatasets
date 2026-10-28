@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "celeba",
+  "slug": "celeba",
+  "name": "CelebFaces Attributes Dataset (CelebA)",
+  "description": "CelebFaces Attributes Dataset (CelebA) is a widely recognized face attribute dataset containing 202,599 aligned and cropped face images of 10,177 celebrity identities. Each image is annotated with 40 binary facial attribute labels (including eyeglasses, smiling, hair color, and facial hair) and 5 facial landmark locations, supporting face attribute recognition, landmark localization, and generative modeling research.",
+  "homepage_url": "https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html",
+  "publisher": {
+    "name": "Multimedia Laboratory, The Chinese University of Hong Kong",
+    "type": "academic",
+    "url": "https://mmlab.ie.cuhk.edu.hk"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "face-recognition"
+  ],
+  "tags": [
+    "computer-vision",
+    "face-recognition",
+    "attribute-recognition",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "CelebA Terms of Use (Non-Commercial Research Only)",
+    "spdx_id": null,
+    "url": "https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html",
+    "commercial_use": "forbidden",
+    "notes": "Available strictly for non-commercial research purposes only. All images are gathered from the internet and are not owned by CUHK MMLab. Commercial use and redistribution are strictly prohibited."
+  },
+  "source_references": [
+    {
+      "title": "CelebA Official Project Page",
+      "url": "https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html",
+      "type": "official_website",
+      "notes": "Official CUHK MMLab portal providing download links and attribute documentation."
+    },
+    {
+      "title": "Deep Learning Face Attributes in the Wild",
+      "url": "https://doi.org/10.1109/ICCV.2015.425",
+      "type": "original_paper",
+      "notes": "Published in IEEE International Conference on Computer Vision (ICCV 2015)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against CUHK MMLab project page and ICCV 2015 paper."
+  },
+  "size": {
+    "amount": 1.4,
+    "unit": "GB",
+    "file_formats": [
+      "zip",
+      "jpeg",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "Aligned and cropped face image zip archive with bounding boxes and landmark text files."
+  },
+  "sample_count": {
+    "total": 202599,
+    "splits": {
+      "train": 162770,
+      "validation": 19867,
+      "test": 19962
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2015-12-11"
+  },
+  "citation": {
+    "paper_title": "Deep Learning Face Attributes in the Wild",
+    "paper_url": "https://doi.org/10.1109/ICCV.2015.425",
+    "authors": [
+      "Ziwei Liu",
+      "Ping Luo",
+      "Xiaogang Wang",
+      "Xiaoou Tang"
+    ],
+    "doi": "10.1109/ICCV.2015.425",
+    "bibtex": "@inproceedings{liu2015faceattributes,\n  title={Deep Learning Face Attributes in the Wild},\n  author={Liu, Ziwei and Luo, Ping and Wang, Xiaogang and Tang, Xiaoou},\n  booktitle={Proceedings of International Conference on Computer Vision (ICCV)},\n  pages={3730--3738},\n  year={2015}\n}"
+  },
+  "provenance": {
+    "collection_method": "Faces retrieved from internet searches of celebrity names, detected using face detectors, and annotated by human raters for 40 binary attributes.",
+    "curation_notes": "All images are for non-commercial research use only."
+  }
+}

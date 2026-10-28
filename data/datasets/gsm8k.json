@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gsm8k",
+  "slug": "gsm8k",
+  "name": "Grade School Math 8K (GSM8K)",
+  "description": "GSM8K (Grade School Math 8K) is a dataset of 8,500 high-quality, linguistically diverse grade school math word problems crafted by human problem writers. The problems take between 2 and 8 steps to solve, using basic arithmetic operations (addition, subtraction, multiplication, division). Solutions are provided in natural language with step-by-step calculations rather than raw equations, making it the benchmark standard for multi-step mathematical reasoning in language models.",
+  "homepage_url": "https://github.com/openai/grade-school-math",
+  "publisher": {
+    "name": "OpenAI",
+    "type": "industry",
+    "url": "https://openai.com"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "mathematical-reasoning",
+    "question-answering"
+  ],
+  "tags": [
+    "natural-language-processing",
+    "math-reasoning",
+    "benchmark",
+    "question-answering",
+    "chain-of-thought"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://github.com/openai/grade-school-math/blob/master/LICENSE",
+    "commercial_use": "allowed",
+    "notes": "Dataset and evaluation scripts released under the MIT License."
+  },
+  "source_references": [
+    {
+      "title": "OpenAI Grade School Math GitHub Repository",
+      "url": "https://github.com/openai/grade-school-math",
+      "type": "repository",
+      "notes": "Official repository containing train and test JSONL files."
+    },
+    {
+      "title": "Training Verifiers to Solve Math Word Problems",
+      "url": "https://arxiv.org/abs/2110.14168",
+      "type": "original_paper",
+      "notes": "Original research paper introducing GSM8K and verifier training."
+    },
+    {
+      "title": "Hugging Face GSM8K Dataset Card",
+      "url": "https://huggingface.co/datasets/openai/gsm8k",
+      "type": "dataset_card",
+      "notes": "Community hub distribution of GSM8K splits (main and socratic configurations)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against OpenAI official repository and arXiv:2110.14168 publication."
+  },
+  "size": {
+    "amount": 4.5,
+    "unit": "MB",
+    "file_formats": [
+      "jsonl"
+    ],
+    "status": "verified",
+    "notes": "Uncompressed JSONL text files for train and test splits."
+  },
+  "sample_count": {
+    "total": 8792,
+    "splits": {
+      "train": 7473,
+      "test": 1319
+    },
+    "unit": "problems",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2021-10-27",
+    "last_updated": "2021-11-18"
+  },
+  "citation": {
+    "paper_title": "Training Verifiers to Solve Math Word Problems",
+    "paper_url": "https://arxiv.org/abs/2110.14168",
+    "authors": [
+      "Karl Cobbe",
+      "Vineet Kosaraju",
+      "Mohammad Bavarian",
+      "Mark Chen",
+      "Heewoo Jun",
+      "Lukasz Kaiser",
+      "Matthias Plappert",
+      "Jerry Tworek",
+      "Jacob Hilton",
+      "Reiichiro Nakano",
+      "Christopher Hesse",
+      "John Schulman"
+    ],
+    "bibtex": "@article{cobbe2021gsm8k,\n  title={Training Verifiers to Solve Math Word Problems},\n  author={Cobbe, Karl and Kosaraju, Vineet and Bavarian, Mohammad and Chen, Mark and Jun, Heewoo and Kaiser, Lukasz and Plappert, Matthias and Tworek, Jerry and Hilton, Jacob and Nakano, Reiichiro and Hesse, Christopher and Schulman, John},\n  journal={arXiv preprint arXiv:2110.14168},\n  year={2021}\n}"
+  },
+  "provenance": {
+    "collection_method": "Authored by freelance human problem writers recruited via Surge AI, instructed to write grade-school level math problems without requiring algebra beyond elementary concepts.",
+    "curation_notes": "Solutions are authored with step-by-step natural language explanations with inline calculation annotations to support automated verification."
+  }
+}

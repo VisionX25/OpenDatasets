@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "id": "open-images-v7",
+  "slug": "open-images-v7",
+  "name": "Open Images V7",
+  "description": "Open Images V7 is a massive computer vision dataset of approximately 9 million images annotated with image-level labels, object bounding boxes, object segmentation masks, visual relationships, and localized narratives. Version 7 expands the corpus with 66.4 million point labels on 1.4 million images across 5,827 categories, providing rich supervision for object detection, instance segmentation, and point-level localization.",
+  "homepage_url": "https://storage.googleapis.com/openimages/web/index.html",
+  "publisher": {
+    "name": "Google LLC",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "image-segmentation",
+    "image-classification"
+  ],
+  "tags": [
+    "computer-vision",
+    "object-detection",
+    "image-segmentation",
+    "benchmark",
+    "point-labels"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0 (Annotations) / CC BY 2.0 (Images)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Annotations are licensed by Google LLC under Creative Commons Attribution 4.0 International (CC BY 4.0). The underlying images have Creative Commons Attribution licenses (predominantly CC BY 2.0) from Flickr."
+  },
+  "source_references": [
+    {
+      "title": "Open Images Dataset Web Portal",
+      "url": "https://storage.googleapis.com/openimages/web/index.html",
+      "type": "official_website",
+      "notes": "Official Google Research portal for Open Images exploration and downloads."
+    },
+    {
+      "title": "The Open Images Dataset V4 (IJCV Paper)",
+      "url": "https://doi.org/10.1007/s11263-020-01316-z",
+      "type": "original_paper",
+      "notes": "Published in International Journal of Computer Vision (IJCV 2020)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against official Open Images V7 documentation and Google Research portal."
+  },
+  "size": {
+    "amount": 560,
+    "unit": "GB",
+    "file_formats": [
+      "jpeg",
+      "csv",
+      "parquet"
+    ],
+    "status": "estimated",
+    "notes": "Estimated size of compressed image archives and annotation metadata tables."
+  },
+  "sample_count": {
+    "total": 9011219,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022-10-18"
+  },
+  "citation": {
+    "paper_title": "The Open Images Dataset V4: Unified image classification, object detection, and visual relationship detection at scale",
+    "paper_url": "https://doi.org/10.1007/s11263-020-01316-z",
+    "authors": [
+      "Alina Kuznetsova",
+      "Hassan Rom",
+      "Neil Alldrin",
+      "Jasper Uijlings",
+      "Ivan Krasin",
+      "Jordi Pont-Tuset",
+      "Shahab Kamali",
+      "Stefan Popov",
+      "Matteo Malloci",
+      "Alexander Kolesnikov",
+      "Tom Duerig",
+      "Vittorio Ferrari"
+    ],
+    "doi": "10.1007/s11263-020-01316-z",
+    "bibtex": "@article{kuznetsova2020open,\n  title={The Open Images Dataset V4},\n  author={Kuznetsova, Alina and Rom, Hassan and Alldrin, Neil and Uijlings, Jasper and Krasin, Ivan and Pont-Tuset, Jordi and Kamali, Shahab and Popov, Stefan and Malloci, Matteo and Kolesnikov, Alexander and Duerig, Tom and Ferrari, Vittorio},\n  journal={International Journal of Computer Vision},\n  volume={128},\n  pages={1956--1981},\n  year={2020},\n  publisher={Springer}\n}"
+  },
+  "provenance": {
+    "collection_method": "Sourced from Flickr Creative Commons images and annotated through automatic classification, expert verification, and crowd-sourcing pipelines.",
+    "curation_notes": "Annotations are owned by Google LLC under CC BY 4.0; individual images are subject to original CC BY licenses."
+  }
+}

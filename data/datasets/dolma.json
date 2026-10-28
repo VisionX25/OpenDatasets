@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "id": "dolma",
+  "slug": "dolma",
+  "name": "Dolma: 3-Trillion Token Open Corpus for Pretraining",
+  "description": "Dolma is an open-source, 3-trillion-token English text dataset designed for language model pretraining, developed by the Allen Institute for AI (Ai2). Created to accompany the fully open OLMo model family, Dolma is assembled from diverse sources including Common Crawl web pages, Semantic Scholar academic papers, open-source GitHub code, Project Gutenberg books, Wikipedia, and Reddit discussions. The dataset is produced via an open-source, high-performance processing toolkit featuring language identification, toxic content filtering, PII removal, and MinHash deduplication.",
+  "homepage_url": "https://github.com/allenai/dolma",
+  "publisher": {
+    "name": "Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "language-modeling",
+    "pretraining"
+  ],
+  "tags": [
+    "natural-language-processing",
+    "pretraining",
+    "language-modeling",
+    "corpus",
+    "open-science"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License (ODC-By v1.0)",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset compilation and pipeline released under ODC-By v1.0 (migrated from AI2 ImpACT in April 2024 to support open research and commercial use). Individual underlying documents remain subject to source licensing and fair-use provisions."
+  },
+  "source_references": [
+    {
+      "title": "Allen Institute for AI Dolma GitHub Repository",
+      "url": "https://github.com/allenai/dolma",
+      "type": "repository",
+      "notes": "Official repository for the high-performance Rust/Python data curation toolkit and dataset recipes."
+    },
+    {
+      "title": "Hugging Face Dolma Dataset Hub",
+      "url": "https://huggingface.co/datasets/allenai/dolma",
+      "type": "repository",
+      "notes": "Public distribution hub for compressed Dolma v1.6 and v1.7 token splits."
+    },
+    {
+      "title": "Dolma: an Open Corpus of Three Trillion Tokens for Language Model Pretraining Research",
+      "url": "https://arxiv.org/abs/2402.00159",
+      "type": "original_paper",
+      "notes": "Comprehensive research paper documenting data sources, curation pipeline, and decontamination studies."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against Allen Institute for AI Dolma repository, Hugging Face release, and ACL 2024 publication."
+  },
+  "size": {
+    "amount": 2.1,
+    "unit": "TB",
+    "file_formats": [
+      "json.gz"
+    ],
+    "status": "verified",
+    "notes": "Compressed gzip JSON archives across all 7 source subsets (~5.4 TB uncompressed)."
+  },
+  "sample_count": {
+    "total": 3000000000000,
+    "unit": "tokens",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2023-08-15",
+    "last_updated": "2024-04-16"
+  },
+  "citation": {
+    "paper_title": "Dolma: an Open Corpus of Three Trillion Tokens for Language Model Pretraining Research",
+    "paper_url": "https://arxiv.org/abs/2402.00159",
+    "authors": [
+      "Luca Soldaini",
+      "Rodney Kinney",
+      "Akshita Bhagia",
+      "Dustin Schwenk",
+      "David Atkinson",
+      "Russell Authur",
+      "Ben Bogin",
+      "Khyathi Chandu",
+      "Jennifer Dumas",
+      "Yanai Elazar",
+      "Valentin Hofmann",
+      "Ananya Harsh Jha",
+      "Sachin Kumar",
+      "Li Lucy",
+      "Xinxi Lyu",
+      "Nathan Lambert",
+      "Ian Magnusson",
+      "Jacob Morrison",
+      "Niklas Muennighoff",
+      "Aakanksha Naik",
+      "Crystal Nam",
+      "Matthew E. Peters",
+      "Abhilasha Ravichander",
+      "Kyle Richardson",
+      "Zejiang Shen",
+      "Emma Strubell",
+      "Nishant Subramani",
+      "Oyvind Tafjord",
+      "Pete Walsh",
+      "Luke Zettlemoyer",
+      "Noah A. Smith",
+      "Hannaneh Hajishirzi",
+      "Iz Beltagy",
+      "Dirk Groeneveld",
+      "Jesse Dodge"
+    ],
+    "bibtex": "@article{soldaini2024dolma,\n  title={Dolma: an Open Corpus of Three Trillion Tokens for Language Model Pretraining Research},\n  author={Soldaini, Luca and Kinney, Rodney and Bhagia, Akshita and Schwenk, Dustin and Atkinson, David and Authur, Russell and Bogin, Ben and Chandu, Khyathi and Dumas, Jennifer and Elazar, Yanai and Hofmann, Valentin and Jha, Ananya Harsh and Kumar, Sachin and Lucy, Li and Lyu, Xinxi and Lambert, Nathan and Magnusson, Ian and Morrison, Jacob and Muennighoff, Niklas and Naik, Aakanksha and Nam, Crystal and Peters, Matthew E and Ravichander, Abhilasha and Richardson, Kyle and Shen, Zejiang and Strubell, Emma and Subramani, Nishant and Tafjord, Oyvind and Walsh, Pete and Zettlemoyer, Luke and Smith, Noah A and Hajishirzi, Hannaneh and Beltagy, Iz and Groeneveld, Dirk and Dodge, Jesse},\n  journal={arXiv preprint arXiv:2402.00159},\n  year={2024}\n}"
+  },
+  "provenance": {
+    "collection_method": "Extracted from 7 distinct sources: Common Crawl web pages, Semantic Scholar papers, GitHub open-source code repositories, Project Gutenberg texts, Wikipedia, and Reddit discussions.",
+    "curation_notes": "Filtered using language classification, PII redaction, heuristic rule-based quality filtering, toxicity blocklists, and MinHash deduplication."
+  }
+}

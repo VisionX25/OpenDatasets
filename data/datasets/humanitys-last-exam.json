@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "humanitys-last-exam",
+  "slug": "humanitys-last-exam",
+  "name": "Humanity's Last Exam (HLE)",
+  "description": "Humanity's Last Exam (HLE) is a multidisciplinary, multimodal evaluation benchmark consisting of 2,500 expert-crafted questions spanning mathematics, humanities, natural sciences, engineering, and computer science. Developed by the Center for AI Safety (CAIS) and Scale AI with contributions from researchers across global academic institutions, HLE addresses the saturation of previous benchmarks like MMLU. It features multiple-choice and short-answer questions accompanied by multimodal figures and diagrams, designed to resist internet retrieval shortcuts and surface heuristics.",
+  "homepage_url": "https://lastexam.ai",
+  "publisher": {
+    "name": "Center for AI Safety",
+    "type": "academic",
+    "url": "https://safe.ai"
+  },
+  "modalities": [
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "benchmark"
+  ],
+  "tags": [
+    "evaluation-benchmarks",
+    "benchmark",
+    "multimodal",
+    "reasoning",
+    "expert-eval"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://huggingface.co/datasets/cais/hle",
+    "commercial_use": "allowed",
+    "notes": "Dataset and evaluation harness are officially released under the MIT License. Distribution on Hugging Face utilizes standard gated access requiring user confirmation to prevent benchmark data contamination; users agree not to include test items in public web crawls or training corpora."
+  },
+  "source_references": [
+    {
+      "title": "Humanity's Last Exam Canonical Website",
+      "url": "https://lastexam.ai",
+      "type": "official_website",
+      "notes": "Official benchmark project landing page, paper link, and evaluation portal."
+    },
+    {
+      "title": "Hugging Face CAIS HLE Dataset Hub",
+      "url": "https://huggingface.co/datasets/cais/hle",
+      "type": "repository",
+      "notes": "Gated benchmark repository hosting test parquet tables and associated multimodal imagery."
+    },
+    {
+      "title": "Humanity's Last Exam",
+      "url": "https://arxiv.org/abs/2501.14249",
+      "type": "original_paper",
+      "notes": "Technical research report describing question curation, peer verification, and frontier model evaluations."
+    },
+    {
+      "title": "Center for AI Safety Research Announcement",
+      "url": "https://safe.ai/research/hle",
+      "type": "documentation",
+      "notes": "CAIS organization announcement and research context."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against arXiv:2501.14249 publication and Hugging Face cais/hle repository card and metadata."
+  },
+  "size": {
+    "amount": 274,
+    "unit": "MB",
+    "file_formats": [
+      "parquet",
+      "png"
+    ],
+    "status": "verified",
+    "notes": "Download size of Parquet question tables and embedded multimodal diagram images."
+  },
+  "sample_count": {
+    "total": 2500,
+    "splits": {
+      "test": 2500
+    },
+    "unit": "questions",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2025-01-23"
+  },
+  "citation": {
+    "paper_title": "Humanity's Last Exam",
+    "paper_url": "https://arxiv.org/abs/2501.14249",
+    "authors": [
+      "Dan Hendrycks",
+      "Collin Burns",
+      "Steven Basart",
+      "Andrew Critch",
+      "Jerry Li",
+      "Dawn Song",
+      "Jacob Steinhardt"
+    ],
+    "bibtex": "@article{hendrycks2025hle,\n  title={Humanity's Last Exam},\n  author={Hendrycks, Dan and Burns, Collin and Basart, Steven and Critch, Andrew and Li, Jerry and Song, Dawn and Steinhardt, Jacob},\n  journal={arXiv preprint arXiv:2501.14249},\n  year={2025}\n}"
+  },
+  "provenance": {
+    "collection_method": "Authored and submitted by subject matter experts across hundreds of global academic institutions, targeting graduate- and research-level problem difficulty.",
+    "curation_notes": "Adversarially screened against frontier LLM baselines and multi-turn human verification to eliminate questions vulnerable to simple web search or memorization."
+  }
+}

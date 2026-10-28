@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "esc-50",
+  "slug": "esc-50",
+  "name": "ESC-50: Dataset for Environmental Sound Classification",
+  "description": "ESC-50 is a labeled collection of 2,000 environmental audio recordings suitable for benchmarking methods of environmental sound classification. It contains 50 semantically distinct categories grouped into 5 major domains: animals, natural soundscapes and water sounds, human non-speech sounds, interior/domestic sounds, and exterior/urban noises. Each class contains 40 five-second audio clips sampled at 44.1 kHz, organized into 5 predefined folds for cross-validation.",
+  "homepage_url": "https://github.com/karolpiczak/ESC-50",
+  "publisher": {
+    "name": "Karol J. Piczak",
+    "type": "individual",
+    "url": "https://github.com/karolpiczak/ESC-50"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "audio-classification",
+    "sound-event-detection"
+  ],
+  "tags": [
+    "audio-speech",
+    "audio-classification",
+    "sound-events",
+    "benchmark",
+    "environmental-audio"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 3.0 (CC BY-NC 3.0)",
+    "spdx_id": "CC-BY-NC-3.0",
+    "url": "https://creativecommons.org/licenses/by-nc/3.0/",
+    "commercial_use": "forbidden",
+    "notes": "Dataset audio clips and annotations are licensed under CC BY-NC 3.0. Individual recordings were harvested from Freesound.org and are restricted to non-commercial research use."
+  },
+  "source_references": [
+    {
+      "title": "ESC-50 Official GitHub Repository",
+      "url": "https://github.com/karolpiczak/ESC-50",
+      "type": "repository",
+      "notes": "Canonical repository containing audio files, fold assignments, and metadata CSV."
+    },
+    {
+      "title": "ESC: Dataset for Environmental Sound Classification",
+      "url": "https://doi.org/10.1145/2733373.2806390",
+      "type": "original_paper",
+      "notes": "Original ACM Multimedia 2015 publication describing dataset collection and baseline classifier performance."
+    },
+    {
+      "title": "Hugging Face ESC-50 Dataset Viewer",
+      "url": "https://huggingface.co/datasets/ashraq/esc50",
+      "type": "repository",
+      "notes": "Community distribution of ESC-50 audio files with online audio player and spectrogram previews."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against official GitHub repository, CC BY-NC 3.0 license file, and ACM MM 2015 paper."
+  },
+  "size": {
+    "amount": 845,
+    "unit": "MB",
+    "file_formats": [
+      "wav",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "2,000 uncompressed 5-second WAV audio recordings and metadata CSV."
+  },
+  "sample_count": {
+    "total": 2000,
+    "unit": "clips",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2015-10-13",
+    "last_updated": "2020-03-02"
+  },
+  "citation": {
+    "paper_title": "ESC: Dataset for Environmental Sound Classification",
+    "paper_url": "https://doi.org/10.1145/2733373.2806390",
+    "authors": [
+      "Karol J. Piczak"
+    ],
+    "doi": "10.1145/2733373.2806390",
+    "bibtex": "@inproceedings{piczak2015esc,\n  title={ESC: Dataset for Environmental Sound Classification},\n  author={Piczak, Karol J.},\n  booktitle={Proceedings of the 23rd ACM International Conference on Multimedia},\n  pages={1015--1018},\n  year={2015}\n}"
+  },
+  "provenance": {
+    "collection_method": "Sourced from public audio uploads on Freesound.org using targeted tag queries, followed by manual quality review to isolate clean 5-second recordings.",
+    "curation_notes": "Balanced across 50 categories with exactly 40 clips per category, structured into 5 balanced cross-validation folds."
+  }
+}

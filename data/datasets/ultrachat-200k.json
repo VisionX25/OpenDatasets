@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ultrachat-200k",
+  "slug": "ultrachat-200k",
+  "name": "UltraChat 200k (Filtered Dialogue Dataset)",
+  "description": "UltraChat 200k is a heavily filtered and curated subset of UltraChat, an open-source multi-turn instruction dataset designed for supervised fine-tuning (SFT) of conversational language models. Created by Hugging Face H4, it refines the original 1.4 million dialogues down to approximately 208k high-quality multi-turn conversations across questions about the world, creative writing, problem solving, and programming. It served as a foundational alignment dataset for models such as Zephyr-7B.",
+  "homepage_url": "https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k",
+  "publisher": {
+    "name": "Hugging Face H4",
+    "type": "community",
+    "url": "https://huggingface.co/HuggingFaceH4"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "instruction-tuning",
+    "conversation"
+  ],
+  "tags": [
+    "natural-language-processing",
+    "instruction-tuning",
+    "conversation",
+    "chat",
+    "synthetic-data"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under the MIT License by Hugging Face H4. Synthetic dialogues were generated via OpenAI API prompts; users must comply with OpenAI Terms of Service regarding model training."
+  },
+  "source_references": [
+    {
+      "title": "Hugging Face H4 UltraChat 200k Repository",
+      "url": "https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k",
+      "type": "repository",
+      "notes": "Official repository containing train and test SFT/generation Parquet splits."
+    },
+    {
+      "title": "Enhancing Chat Language Models by Scaling High-quality Instructional Conversations",
+      "url": "https://arxiv.org/abs/2305.14233",
+      "type": "original_paper",
+      "notes": "Original research publication on the UltraChat dataset generation methodology."
+    },
+    {
+      "title": "THUNLP UltraChat GitHub Repository",
+      "url": "https://github.com/thunlp/UltraChat",
+      "type": "repository",
+      "notes": "Upstream source codebase and prompt generation framework from Tsinghua University."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against Hugging Face H4 repository card, license declarations, and Tsinghua UltraChat publications."
+  },
+  "size": {
+    "amount": 480,
+    "unit": "MB",
+    "file_formats": [
+      "parquet"
+    ],
+    "status": "verified",
+    "notes": "Compressed Parquet files across train_sft and test_sft splits."
+  },
+  "sample_count": {
+    "total": 230975,
+    "splits": {
+      "train_sft": 207865,
+      "test_sft": 23110
+    },
+    "unit": "conversations",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2023-10-18",
+    "last_updated": "2023-11-20"
+  },
+  "citation": {
+    "paper_title": "Enhancing Chat Language Models by Scaling High-quality Instructional Conversations",
+    "paper_url": "https://arxiv.org/abs/2305.14233",
+    "authors": [
+      "Ning Ding",
+      "Yulin Chen",
+      "Bokai Xu",
+      "Yujia Qin",
+      "Zhi Zheng",
+      "Shengding Hu",
+      "Zhiyuan Liu",
+      "Maosong Sun",
+      "Bowen Zhou"
+    ],
+    "bibtex": "@article{ding2023ultrachat,\n  title={Enhancing Chat Language Models by Scaling High-quality Instructional Conversations},\n  author={Ding, Ning and Chen, Yulin and Xu, Bokai and Qin, Yujia and Zheng, Zhi and Hu, Shengding and Liu, Zhiyuan and Sun, Maosong and Zhou, Bowen},\n  journal={arXiv preprint arXiv:2305.14233},\n  year={2023}\n}"
+  },
+  "provenance": {
+    "collection_method": "Generated synthetically using OpenAI GPT-3.5-Turbo driven by systematic multi-turn prompt templates spanning knowledge, creation, and problem solving.",
+    "curation_notes": "Hugging Face H4 cleaned and filtered the upstream UltraChat dataset, pruning low-quality turns, single-turn prompts, and toxic completions."
+  }
+}

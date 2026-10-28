@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wider-face",
+  "slug": "wider-face",
+  "name": "WIDER FACE: A Face Detection Benchmark",
+  "description": "WIDER FACE is a standard face detection benchmark dataset containing 32,203 images and 393,703 labeled face bounding boxes exhibiting extreme variability in scale, pose, occlusion, expression, makeup, and illumination. Selected from 61 event categories from the WIDER dataset, it is organized into Easy, Medium, and Hard validation subsets to evaluate face detector robustness.",
+  "homepage_url": "https://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/index.html",
+  "publisher": {
+    "name": "Multimedia Laboratory, The Chinese University of Hong Kong",
+    "type": "academic",
+    "url": "https://mmlab.ie.cuhk.edu.hk"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "face-detection",
+    "object-detection"
+  ],
+  "tags": [
+    "computer-vision",
+    "face-detection",
+    "benchmark",
+    "object-detection"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "CC BY-NC-ND 4.0",
+    "spdx_id": "CC-BY-NC-ND-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Restricted strictly to non-commercial research use."
+  },
+  "source_references": [
+    {
+      "title": "WIDER FACE Project Page",
+      "url": "https://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/index.html",
+      "type": "official_website",
+      "notes": "Official CUHK MMLab project page with benchmark evaluations and downloads."
+    },
+    {
+      "title": "WIDER FACE: A Face Detection Benchmark",
+      "url": "https://doi.org/10.1109/CVPR.2016.596",
+      "type": "original_paper",
+      "notes": "Published in IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2016)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against CUHK MMLab project page and CVPR 2016 publication."
+  },
+  "size": {
+    "amount": 3.5,
+    "unit": "GB",
+    "file_formats": [
+      "zip",
+      "jpeg",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "Compressed zip archives containing images and ground-truth bounding box text annotations."
+  },
+  "sample_count": {
+    "total": 32203,
+    "splits": {
+      "train": 12880,
+      "validation": 3226,
+      "test": 16097
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2016-06-27"
+  },
+  "citation": {
+    "paper_title": "WIDER FACE: A Face Detection Benchmark",
+    "paper_url": "https://doi.org/10.1109/CVPR.2016.596",
+    "authors": [
+      "Shuo Yang",
+      "Ping Luo",
+      "Chen Change Loy",
+      "Xiaoou Tang"
+    ],
+    "doi": "10.1109/CVPR.2016.596",
+    "bibtex": "@inproceedings{yang2016wider,\n  title={WIDER FACE: A Face Detection Benchmark},\n  author={Yang, Shuo and Luo, Ping and Loy, Chen Change and Tang, Xiaoou},\n  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={5525--5533},\n  year={2016}\n}"
+  },
+  "provenance": {
+    "collection_method": "Selected from 61 event categories in the WIDER dataset, annotated by expert human annotators with bounding boxes and attribute tags (blur, expression, illumination, occlusion, pose).",
+    "curation_notes": "Contains 393,703 labeled faces with dense annotations."
+  }
+}

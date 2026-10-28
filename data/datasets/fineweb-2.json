@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fineweb-2",
+  "slug": "fineweb-2",
+  "name": "FineWeb-2: Multilingual Pretraining Dataset",
+  "description": "FineWeb-2 is a massive, high-quality multilingual web corpus developed by Hugging Face for pretraining large language models. Spanning over 1,000 languages across 1,800+ language-script pairs, it contains approximately 5 billion cleaned and deduplicated web documents (roughly 3 trillion words). Curated from Common Crawl through rigorous language identification, quality filtering, and deduplication heuristics.",
+  "homepage_url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2",
+  "publisher": {
+    "name": "Hugging Face",
+    "type": "industry",
+    "url": "https://huggingface.co"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "language-modeling",
+    "text-generation"
+  ],
+  "tags": [
+    "natural-language-processing",
+    "pretraining",
+    "language-modeling",
+    "multilingual"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License (ODC-By v1.0)",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset compilation and curation released under ODC-By 1.0. As a Common Crawl derivative, individual web documents remain subject to original source copyrights; Hugging Face does not claim copyright ownership of web crawl content."
+  },
+  "source_references": [
+    {
+      "title": "Hugging Face FineWeb-2 Dataset Hub",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2",
+      "type": "repository",
+      "notes": "Official dataset card, documentation, and partitioned Parquet file distribution."
+    },
+    {
+      "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+      "url": "https://arxiv.org/abs/2406.17557",
+      "type": "original_paper",
+      "notes": "Foundational research paper detailing the FineWeb curation pipeline and methodology."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against official Hugging Face dataset card and ODC-By 1.0 declaration."
+  },
+  "size": {
+    "amount": 8,
+    "unit": "TB",
+    "file_formats": [
+      "parquet"
+    ],
+    "status": "estimated",
+    "notes": "Compressed disk footprint across all multilingual Parquet partitions."
+  },
+  "sample_count": {
+    "total": 5000000000,
+    "unit": "documents",
+    "status": "estimated"
+  },
+  "languages": [
+    "en",
+    "bn",
+    "es",
+    "fr",
+    "de",
+    "zh",
+    "ar",
+    "hi"
+  ],
+  "dates": {
+    "published": "2024-12-05",
+    "last_updated": "2025-10-27"
+  },
+  "citation": {
+    "paper_title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+    "paper_url": "https://arxiv.org/abs/2406.17557",
+    "authors": [
+      "Guilherme Penedo",
+      "Hynek Kydlíček",
+      "Loubna Ben Allal",
+      "Anton Lozhkov",
+      "Margaret Mitchell",
+      "Colin Raffel",
+      "Leandro von Werra",
+      "Thomas Wolf"
+    ],
+    "bibtex": "@article{penedo2024fineweb,\n  title={The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale},\n  author={Penedo, Guilherme and Kydl{\\'\\i}{\\v{c}}ek, Hynek and Ben Allal, Loubna and Lozhkov, Anton and Mitchell, Margaret and Raffel, Colin and von Werra, Leandro and Wolf, Thomas},\n  journal={arXiv preprint arXiv:2406.17557},\n  year={2024}\n}"
+  },
+  "provenance": {
+    "collection_method": "Extracted from Common Crawl dumps using automated language filtering, text extraction, URL filtering, deduplication, and quality scoring.",
+    "curation_notes": "Encompasses over 1,000 languages, significantly increasing low-resource language representation."
+  }
+}

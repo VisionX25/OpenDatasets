@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ms-coco",
+  "slug": "ms-coco",
+  "name": "Microsoft COCO (Common Objects in Context)",
+  "description": "Microsoft Common Objects in Context (MS COCO) is a foundational large-scale computer vision dataset designed for object detection, instance segmentation, keypoint detection, and image captioning. It contains over 330,000 images (more than 200,000 labeled) featuring 1.5 million object instances across 80 common object categories, 91 stuff categories, and 5 independent human-written captions per image.",
+  "homepage_url": "https://cocodataset.org/",
+  "publisher": {
+    "name": "COCO Consortium",
+    "type": "academic",
+    "url": "https://cocodataset.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "instance-segmentation",
+    "image-captioning"
+  ],
+  "tags": [
+    "computer-vision",
+    "object-detection",
+    "instance-segmentation",
+    "benchmark",
+    "image-captioning"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0 (Annotations) / Flickr Terms of Use (Images)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Annotations are licensed by the COCO Consortium under Creative Commons Attribution 4.0 International (CC BY 4.0). The underlying images were collected from Flickr and remain subject to their respective creators' Flickr licenses and Terms of Use."
+  },
+  "source_references": [
+    {
+      "title": "COCO Official Homepage",
+      "url": "https://cocodataset.org/",
+      "type": "official_website",
+      "notes": "Official portal providing dataset downloads, evaluations, and exploration tools."
+    },
+    {
+      "title": "Microsoft COCO: Common Objects in Context",
+      "url": "https://doi.org/10.1007/978-3-319-10602-1_48",
+      "type": "original_paper",
+      "notes": "Published in European Conference on Computer Vision (ECCV 2014)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against official cocodataset.org documentation and ECCV 2014 paper."
+  },
+  "size": {
+    "amount": 25,
+    "unit": "GB",
+    "file_formats": [
+      "jpeg",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Total compressed download size for 2017 train, val, and test image sets."
+  },
+  "sample_count": {
+    "total": 330000,
+    "splits": {
+      "train": 118287,
+      "validation": 5000,
+      "test": 40670
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2014-05-01"
+  },
+  "citation": {
+    "paper_title": "Microsoft COCO: Common Objects in Context",
+    "paper_url": "https://doi.org/10.1007/978-3-319-10602-1_48",
+    "authors": [
+      "Tsung-Yi Lin",
+      "Michael Maire",
+      "Serge Belongie",
+      "James Hays",
+      "Pietro Perona",
+      "Deva Ramanan",
+      "Piotr Dollár",
+      "C. Lawrence Zitnick"
+    ],
+    "doi": "10.1007/978-3-319-10602-1_48",
+    "bibtex": "@inproceedings{lin2014microsoft,\n  title={Microsoft COCO: Common Objects in Context},\n  author={Lin, Tsung-Yi and Maire, Michael and Belongie, Serge and Hays, James and Perona, Pietro and Ramanan, Deva and Doll{\\'a}r, Piotr and Zitnick, C Lawrence},\n  booktitle={European Conference on Computer Vision (ECCV)},\n  pages={740--755},\n  year={2014},\n  publisher={Springer}\n}"
+  },
+  "provenance": {
+    "collection_method": "Images gathered from Flickr using keyword searches representing non-iconic object scenarios, segmented and annotated using Amazon Mechanical Turk.",
+    "curation_notes": "Annotations licensed under CC BY 4.0; constituent images governed by Flickr terms."
+  }
+}

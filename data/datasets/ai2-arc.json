@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ai2-arc",
+  "slug": "ai2-arc",
+  "name": "AI2 Reasoning Challenge (ARC)",
+  "description": "The AI2 Reasoning Challenge (ARC) is a benchmark dataset of 7,787 genuine grade-school science multiple-choice questions (Grades 3 through 9). Developed by the Allen Institute for AI (Ai2), the dataset is split into an Easy Set (5,197 questions) and a Challenge Set (2,590 questions). The Challenge Set contains questions that both search-based retrieval models and word co-occurrence algorithms answer incorrectly, requiring genuine reasoning and common-sense knowledge.",
+  "homepage_url": "https://allenai.org/data/arc",
+  "publisher": {
+    "name": "Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "benchmark"
+  ],
+  "tags": [
+    "natural-language-processing",
+    "question-answering",
+    "benchmark",
+    "reasoning",
+    "science-qa"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under the Creative Commons Attribution-ShareAlike 4.0 International License by the Allen Institute for AI."
+  },
+  "source_references": [
+    {
+      "title": "Ai2 ARC Project Portal",
+      "url": "https://allenai.org/data/arc",
+      "type": "official_website",
+      "notes": "Official Allen Institute for AI ARC webpage and download bundles."
+    },
+    {
+      "title": "Hugging Face AI2 ARC Dataset Hub",
+      "url": "https://huggingface.co/datasets/allenai/ai2_arc",
+      "type": "repository",
+      "notes": "Hugging Face dataset viewer for ARC-Challenge and ARC-Easy subsets."
+    },
+    {
+      "title": "Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge",
+      "url": "https://arxiv.org/abs/1803.05457",
+      "type": "original_paper",
+      "notes": "Original publication detailing question curation, solver baselines, and corpus construction."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against Allen Institute for AI ARC portal, CC BY-SA 4.0 license, and arXiv:1803.05457."
+  },
+  "size": {
+    "amount": 6.8,
+    "unit": "MB",
+    "file_formats": [
+      "jsonl",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "Uncompressed dataset JSONL and CSV files for Challenge and Easy partitions."
+  },
+  "sample_count": {
+    "total": 7787,
+    "splits": {
+      "easy": 5197,
+      "challenge": 2590
+    },
+    "unit": "questions",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-03-14",
+    "last_updated": "2018-10-10"
+  },
+  "citation": {
+    "paper_title": "Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge",
+    "paper_url": "https://arxiv.org/abs/1803.05457",
+    "authors": [
+      "Peter Clark",
+      "Isaac Cowhey",
+      "Oren Etzioni",
+      "Tushar Khot",
+      "Ashish Sabharwal",
+      "Carissa Schoenick",
+      "Oyvind Tafjord"
+    ],
+    "bibtex": "@article{clark2018arc,\n  title={Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge},\n  author={Clark, Peter and Cowhey, Isaac and Etzioni, Oren and Khot, Tushar and Sabharwal, Ashish and Schoenick, Carissa and Tafjord, Oyvind},\n  journal={arXiv preprint arXiv:1803.05457},\n  year={2018}\n}"
+  },
+  "provenance": {
+    "collection_method": "Aggregated from official US grade-school science standardized exams across multiple states from 2000 to 2016.",
+    "curation_notes": "Split into Easy and Challenge partitions using retrieval algorithms and pointwise mutual information solvers as filters."
+  }
+}
