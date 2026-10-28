@@ -1,43 +1,48 @@
-import React, { useEffect, useState, useMemo, useCallback } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import React, { useEffect, useState, useMemo } from 'react'
+import { useNavigate, Link } from 'react-router-dom'
 import {
   Search,
   Filter,
   Layers,
   X,
-  RotateCcw,
   Loader2,
   AlertTriangle,
+  RotateCcw,
+  ArrowRight,
+  Calendar,
 } from 'lucide-react'
-import type { DatasetMetadata, LicenseStatus } from '../types/dataset'
+import type { DatasetMetadata, LicenseStatus, CategoryId } from '../types/dataset'
 import { fetchCatalog } from '../services/catalogService'
 import {
   countDatasetsPerCategory,
-  filterDatasets,
   getAvailableModalities,
   getAvailableTasks,
   getAvailableLicenseStatuses,
+  getAvailablePublicationYears,
   formatLicenseLabel,
-  parseFilterParams,
   serializeFilterParams,
-  CATEGORIES,
 } from '../utils/datasetFilters'
-import type { FilterState } from '../utils/datasetFilters'
 import { CategoryGrid } from '../components/CategoryGrid'
-import { DatasetCard } from '../components/DatasetCard'
 
 export const ExplorePage: React.FC = () => {
-  const [datasets, setDatasets] = useState<DatasetMetadata[]>([])
+  const navigate = useNavigate()
+  const [catalog, setCatalog] = useState<DatasetMetadata[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [searchParams, setSearchParams] = useSearchParams()
+
+  // Local filter form state on Explore landing page (does NOT navigate on every keystroke)
+  const [searchQuery, setSearchQuery] = useState('')
+  const [modality, setModality] = useState('')
+  const [task, setTask] = useState('')
+  const [license, setLicense] = useState<LicenseStatus | ''>('')
+  const [year, setYear] = useState('')
 
   useEffect(() => {
     let ignore = false
     fetchCatalog()
       .then((data) => {
         if (!ignore) {
-          setDatasets(data)
+          setCatalog(data)
           setLoading(false)
         }
       })
@@ -57,7 +62,7 @@ export const ExplorePage: React.FC = () => {
     setError(null)
     fetchCatalog({ forceReload: true })
       .then((data) => {
-        setDatasets(data)
+        setCatalog(data)
         setLoading(false)
       })
       .catch((err) => {
@@ -66,78 +71,82 @@ export const ExplorePage: React.FC = () => {
       })
   }
 
-  // Active filter state derived directly from URL search parameters
-  const activeFilters = useMemo(() => parseFilterParams(searchParams), [searchParams])
+  // Available filter options based on catalog
+  const availableModalities = useMemo(() => getAvailableModalities(catalog), [catalog])
+  const availableTasks = useMemo(() => getAvailableTasks(catalog), [catalog])
+  const availableLicenses = useMemo(() => getAvailableLicenseStatuses(catalog), [catalog])
+  const availableYears = useMemo(() => getAvailablePublicationYears(catalog), [catalog])
+  const categoryCounts = useMemo(() => countDatasetsPerCategory(catalog), [catalog])
 
-  const updateFilters = useCallback(
-    (updates: Partial<FilterState>, replace = false) => {
-      setSearchParams(
-        (prev) => serializeFilterParams({ ...parseFilterParams(prev), ...updates }, prev),
-        { replace },
-      )
-    },
-    [setSearchParams],
-  )
-
-  // Derived available filter options based on full catalog
-  const availableModalities = useMemo(() => getAvailableModalities(datasets), [datasets])
-  const availableTasks = useMemo(() => getAvailableTasks(datasets), [datasets])
-  const availableLicenses = useMemo(() => getAvailableLicenseStatuses(datasets), [datasets])
-  const categoryCounts = useMemo(() => countDatasetsPerCategory(datasets), [datasets])
-
-  // Filtered dataset result
-  const filteredDatasets = useMemo(() => {
-    return filterDatasets(datasets, {
-      searchQuery: activeFilters.searchQuery,
-      category: activeFilters.category,
-      modality: activeFilters.modality || null,
-      task: activeFilters.task || null,
-      license: activeFilters.license || null,
+  // Submitting search navigates to /datasets?q=...
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    const params = serializeFilterParams({
+      searchQuery,
+      modality,
+      task,
+      license,
+      year,
     })
-  }, [datasets, activeFilters])
+    navigate(`/datasets${params.toString() ? `?${params.toString()}` : ''}`)
+  }
 
-  const hasActiveFilters = Boolean(
-    activeFilters.searchQuery.trim() ||
-      activeFilters.category ||
-      activeFilters.modality ||
-      activeFilters.task ||
-      activeFilters.license,
-  )
+  // Selecting a filter navigates to /datasets with relevant query params
+  const handleFilterChange = (
+    field: 'modality' | 'task' | 'license' | 'year',
+    value: string,
+  ) => {
+    const nextState = {
+      searchQuery,
+      modality,
+      task,
+      license,
+      year,
+      [field]: value,
+    }
 
-  const handleResetFilters = useCallback(() => {
-    setSearchParams((prev) =>
-      serializeFilterParams(
-        {
-          searchQuery: '',
-          category: null,
-          modality: '',
-          task: '',
-          license: '',
-        },
-        prev,
-      ),
-    )
-  }, [setSearchParams])
+    if (field === 'modality') setModality(value)
+    if (field === 'task') setTask(value)
+    if (field === 'license') setLicense(value as LicenseStatus | '')
+    if (field === 'year') setYear(value)
 
-  const activeCategoryName = activeFilters.category
-    ? CATEGORIES.find((c) => c.id === activeFilters.category)?.name
-    : null
+    const params = serializeFilterParams(nextState)
+    navigate(`/datasets${params.toString() ? `?${params.toString()}` : ''}`)
+  }
+
+  // Clicking a category navigates directly to /datasets/:categorySlug
+  const handleCategorySelect = (catId: CategoryId | null) => {
+    if (catId) {
+      navigate(`/datasets/${catId}`)
+    }
+  }
 
   return (
     <div className="flex-1 py-8 md:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Page Header */}
+        {/* 1. Explore Datasets heading */}
         <div className="border-b border-slate-200 dark:border-slate-800 pb-6 mb-8">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-2">
             <Layers className="w-4 h-4" />
             <span>Dataset Catalog</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Explore Datasets
-          </h1>
-          <p className="mt-2 text-base text-slate-600 dark:text-slate-400 max-w-3xl">
-            Discover verified Machine Learning datasets across computer vision, NLP, tabular data, and evaluation benchmarks.
-          </p>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                Explore Datasets
+              </h1>
+              <p className="mt-2 text-base text-slate-600 dark:text-slate-400 max-w-3xl">
+                Discover verified Machine Learning datasets across computer vision, NLP, tabular data, and evaluation benchmarks.
+              </p>
+            </div>
+            <Link
+              to="/datasets"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 text-xs font-semibold shrink-0 shadow-2xs transition-colors"
+            >
+              <span>Browse All Datasets</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
 
         {/* Loading state */}
@@ -163,7 +172,7 @@ export const ExplorePage: React.FC = () => {
             <button
               type="button"
               onClick={handleRetry}
-              className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold transition-colors"
+              className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold transition-colors cursor-pointer"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>Retry</span>
@@ -171,36 +180,32 @@ export const ExplorePage: React.FC = () => {
           </div>
         )}
 
-        {/* Main Content when loaded */}
+        {/* 2. Search and Filters section & 3. Six category cards */}
         {!loading && !error && (
           <>
-            {/* Category Cards Section */}
-            <CategoryGrid
-              activeCategory={activeFilters.category}
-              onSelectCategory={(catId) => updateFilters({ category: catId })}
-              categoryCounts={categoryCounts}
-            />
-
-            {/* Search and Filters Controls */}
-            <div className="bg-white dark:bg-slate-900/80 rounded-xl border border-slate-200 dark:border-slate-800 p-4 sm:p-5 mb-6 shadow-xs">
+            {/* Search and Filters Controls Card */}
+            <form
+              onSubmit={handleSearchSubmit}
+              className="bg-white dark:bg-slate-900/80 rounded-xl border border-slate-200 dark:border-slate-800 p-4 sm:p-5 mb-8 shadow-xs"
+            >
               <div className="flex flex-col md:flex-row gap-3 flex-wrap">
                 {/* Search Input */}
                 <div className="relative flex-1 min-w-[200px]">
                   <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                   <input
                     type="text"
-                    value={activeFilters.searchQuery}
-                    onChange={(e) => updateFilters({ searchQuery: e.target.value }, true)}
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search by dataset name, description, publisher, task, or tag..."
                     aria-label="Search datasets"
                     className="w-full pl-10 pr-9 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 transition-colors"
                   />
-                  {activeFilters.searchQuery && (
+                  {searchQuery && (
                     <button
                       type="button"
-                      onClick={() => updateFilters({ searchQuery: '' }, true)}
+                      onClick={() => setSearchQuery('')}
                       aria-label="Clear search input"
-                      className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded cursor-pointer"
                     >
                       <X className="w-3.5 h-3.5" />
                     </button>
@@ -208,11 +213,11 @@ export const ExplorePage: React.FC = () => {
                 </div>
 
                 {/* Modality Filter */}
-                <div className="w-full md:w-48">
+                <div className="w-full md:w-44">
                   <div className="relative">
                     <select
-                      value={activeFilters.modality}
-                      onChange={(e) => updateFilters({ modality: e.target.value })}
+                      value={modality}
+                      onChange={(e) => handleFilterChange('modality', e.target.value)}
                       aria-label="Filter by modality"
                       className="w-full px-3 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm text-slate-700 dark:text-slate-200 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 appearance-none pr-8 cursor-pointer"
                     >
@@ -228,11 +233,11 @@ export const ExplorePage: React.FC = () => {
                 </div>
 
                 {/* Task Filter */}
-                <div className="w-full md:w-48">
+                <div className="w-full md:w-44">
                   <div className="relative">
                     <select
-                      value={activeFilters.task}
-                      onChange={(e) => updateFilters({ task: e.target.value })}
+                      value={task}
+                      onChange={(e) => handleFilterChange('task', e.target.value)}
                       aria-label="Filter by ML task"
                       className="w-full px-3 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm text-slate-700 dark:text-slate-200 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 appearance-none pr-8 cursor-pointer"
                     >
@@ -248,11 +253,11 @@ export const ExplorePage: React.FC = () => {
                 </div>
 
                 {/* License Filter */}
-                <div className="w-full md:w-48">
+                <div className="w-full md:w-44">
                   <div className="relative">
                     <select
-                      value={activeFilters.license}
-                      onChange={(e) => updateFilters({ license: e.target.value as LicenseStatus | '' })}
+                      value={license}
+                      onChange={(e) => handleFilterChange('license', e.target.value)}
                       aria-label="Filter by license"
                       className="w-full px-3 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm text-slate-700 dark:text-slate-200 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 appearance-none pr-8 cursor-pointer"
                     >
@@ -267,136 +272,62 @@ export const ExplorePage: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Reset Filters Button */}
-                {hasActiveFilters && (
-                  <button
-                    type="button"
-                    onClick={handleResetFilters}
-                    className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shrink-0"
-                  >
-                    <RotateCcw className="w-3.5 h-3.5" />
-                    <span>Reset</span>
-                  </button>
-                )}
-              </div>
-
-              {/* Active Filter Pills Indicator */}
-              {hasActiveFilters && (
-                <div className="flex items-center gap-2 flex-wrap pt-3 mt-3 border-t border-slate-100 dark:border-slate-800/80 text-xs">
-                  <span className="text-slate-500 font-medium">Active filters:</span>
-                  {activeCategoryName && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-950/70 dark:text-indigo-300">
-                      Category: {activeCategoryName}
-                      <button
-                        type="button"
-                        onClick={() => updateFilters({ category: null })}
-                        aria-label={`Remove ${activeCategoryName} category filter`}
-                        className="hover:text-indigo-950 dark:hover:text-white"
-                      >
-                        <X className="w-3 h-3" />
-                      </button>
-                    </span>
-                  )}
-                  {activeFilters.searchQuery && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
-                      Search: &ldquo;{activeFilters.searchQuery}&rdquo;
-                      <button
-                        type="button"
-                        onClick={() => updateFilters({ searchQuery: '' }, true)}
-                        aria-label="Remove search query filter"
-                        className="hover:text-slate-950 dark:hover:text-white"
-                      >
-                        <X className="w-3 h-3" />
-                      </button>
-                    </span>
-                  )}
-                  {activeFilters.modality && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-950/70 dark:text-indigo-300">
-                      Modality: {activeFilters.modality}
-                      <button
-                        type="button"
-                        onClick={() => updateFilters({ modality: '' })}
-                        aria-label="Remove modality filter"
-                        className="hover:text-indigo-950 dark:hover:text-white"
-                      >
-                        <X className="w-3 h-3" />
-                      </button>
-                    </span>
-                  )}
-                  {activeFilters.task && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-950/70 dark:text-indigo-300">
-                      Task: {activeFilters.task}
-                      <button
-                        type="button"
-                        onClick={() => updateFilters({ task: '' })}
-                        aria-label="Remove task filter"
-                        className="hover:text-indigo-950 dark:hover:text-white"
-                      >
-                        <X className="w-3 h-3" />
-                      </button>
-                    </span>
-                  )}
-                  {activeFilters.license && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-950/70 dark:text-indigo-300">
-                      License: {formatLicenseLabel(activeFilters.license)}
-                      <button
-                        type="button"
-                        onClick={() => updateFilters({ license: '' })}
-                        aria-label="Remove license filter"
-                        className="hover:text-indigo-950 dark:hover:text-white"
-                      >
-                        <X className="w-3 h-3" />
-                      </button>
-                    </span>
-                  )}
+                {/* Published Year Filter */}
+                <div className="w-full md:w-36">
+                  <div className="relative">
+                    <select
+                      value={year}
+                      onChange={(e) => handleFilterChange('year', e.target.value)}
+                      aria-label="Filter by publication year"
+                      className="w-full px-3 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm text-slate-700 dark:text-slate-200 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 appearance-none pr-8 cursor-pointer"
+                    >
+                      <option value="">All Years</option>
+                      {availableYears.map((yr) => (
+                        <option key={yr} value={yr}>
+                          {yr}
+                        </option>
+                      ))}
+                    </select>
+                    <Calendar className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400 pointer-events-none" />
+                  </div>
                 </div>
-              )}
-            </div>
 
-            {/* Results Count Header */}
-            <div className="flex items-center justify-between mb-4">
-              <p className="text-sm text-slate-600 dark:text-slate-400">
-                Showing{' '}
-                <span className="font-bold text-slate-900 dark:text-white">
-                  {filteredDatasets.length}
-                </span>{' '}
-                of{' '}
-                <span className="font-bold text-slate-900 dark:text-white">
-                  {datasets.length}
-                </span>{' '}
-                datasets
-              </p>
-            </div>
-
-            {/* Empty State */}
-            {filteredDatasets.length === 0 && (
-              <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 p-12 text-center my-6">
-                <Search className="w-10 h-10 text-slate-400 mx-auto mb-3 opacity-60" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">
-                  No Datasets Found
-                </h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 max-w-md mx-auto leading-relaxed">
-                  No datasets match your active search and filter settings. Try adjusting your query or resetting all filters.
-                </p>
+                {/* Submit Search Button */}
                 <button
-                  type="button"
-                  onClick={handleResetFilters}
-                  className="mt-5 inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-xs transition-colors"
+                  type="submit"
+                  className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold transition-colors cursor-pointer shadow-xs shrink-0"
                 >
-                  <RotateCcw className="w-3.5 h-3.5" />
-                  <span>Reset All Filters</span>
+                  <Search className="w-4 h-4" />
+                  <span>Search</span>
                 </button>
               </div>
-            )}
+            </form>
 
-            {/* Dataset Cards Grid */}
-            {filteredDatasets.length > 0 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredDatasets.map((dataset) => (
-                  <DatasetCard key={dataset.id} dataset={dataset} />
-                ))}
+            {/* 3. Six category cards */}
+            <CategoryGrid
+              activeCategory={null}
+              onSelectCategory={handleCategorySelect}
+              categoryCounts={categoryCounts}
+            />
+
+            {/* Subtle Browse All Datasets Footer Banner */}
+            <div className="p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 flex flex-col sm:flex-row items-center justify-between gap-4 mt-2 shadow-2xs">
+              <div>
+                <h2 className="text-sm font-bold text-slate-900 dark:text-white">
+                  Looking for all available machine learning data?
+                </h2>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                  Explore the full catalog of {catalog.length} verified datasets with comprehensive facet filtering and live search.
+                </p>
               </div>
-            )}
+              <Link
+                to="/datasets"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shrink-0 transition-colors cursor-pointer shadow-xs"
+              >
+                <span>Browse All Datasets</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </>
         )}
       </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ShieldCheck,
@@ -12,9 +12,54 @@ import type { DatasetMetadata } from '../types/dataset'
 
 interface DatasetCardProps {
   dataset: DatasetMetadata
+  animateOnScroll?: boolean
 }
 
-export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset }) => {
+export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset, animateOnScroll = true }) => {
+  // Initialize visibility state: if animateOnScroll is disabled, in non-browser/SSR
+  // environments, or if reduced-motion is requested, render immediately visible.
+  const [isVisible, setIsVisible] = useState(() => {
+    if (!animateOnScroll) return true
+    if (typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') {
+      return true
+    }
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+      return true
+    }
+    return false
+  })
+
+  const cardRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    if (isVisible || !animateOnScroll) return
+    if (typeof IntersectionObserver === 'undefined') return
+
+    const node = cardRef.current
+    if (!node) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setIsVisible(true)
+            observer.unobserve(entry.target)
+          }
+        }
+      },
+      {
+        rootMargin: '40px 0px',
+        threshold: 0.05,
+      },
+    )
+
+    observer.observe(node)
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [isVisible, animateOnScroll])
+
   if (!dataset || !dataset.id || !dataset.slug) {
     return null
   }
@@ -99,7 +144,16 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset }) => {
   const verificationStatus = dataset.verification?.status || 'unverified'
 
   return (
-    <article className="group flex flex-col justify-between p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-indigo-400 dark:hover:border-indigo-600 transition-all hover:shadow-md">
+    <article
+      ref={cardRef}
+      data-testid={`dataset-card-${dataset.id}`}
+      data-revealed={isVisible ? 'true' : 'false'}
+      className={`group flex flex-col justify-between p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-indigo-400 dark:hover:border-indigo-600 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100 ${
+        isVisible
+          ? 'opacity-100 translate-y-0'
+          : 'opacity-0 translate-y-2.5'
+      }`}
+    >
       <div>
         {/* Top Badges */}
         <div className="flex items-center justify-between gap-2 mb-3">

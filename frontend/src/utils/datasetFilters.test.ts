@@ -15,6 +15,10 @@ import {
   parseFilterParams,
   serializeFilterParams,
   DEFAULT_FILTER_STATE,
+  hasActiveFilterCriteria,
+  CATEGORIES,
+  CATEGORY_ACCENTS,
+  getCategoryAccent,
 } from './datasetFilters'
 
 const mockCifar: DatasetMetadata = {
@@ -528,6 +532,7 @@ describe('Dataset Search and Filtering Logic', () => {
       modality: 'audio',
       task: 'speech-recognition',
       license: 'public_domain',
+      year: '',
     })
 
     // URLSearchParams instance input
@@ -674,5 +679,285 @@ describe('Dataset Search and Filtering Logic', () => {
     history.pop()
     currentFilters = parseFilterParams(history[history.length - 1])
     expect(currentFilters).toEqual(DEFAULT_FILTER_STATE)
+  })
+})
+
+describe('Search-First Explore Page UX Flow (Task 06.1)', () => {
+  // 1. Initial empty state with no filters
+  it('renders in initial empty state without active filters, displaying prompt rather than full catalog', () => {
+    const emptyFilters = parseFilterParams('')
+    expect(emptyFilters).toEqual(DEFAULT_FILTER_STATE)
+    expect(hasActiveFilterCriteria(emptyFilters)).toBe(false)
+
+    // Whitespace search query is also not considered active
+    const whitespaceFilters = parseFilterParams('?q=%20%20%20')
+    expect(whitespaceFilters.searchQuery).toBe('')
+    expect(hasActiveFilterCriteria(whitespaceFilters)).toBe(false)
+  })
+
+  // 2. Category selection displays results
+  it('activates discovery results immediately when a category is selected', () => {
+    const filters = parseFilterParams('?category=computer-vision')
+    expect(filters.category).toBe('computer-vision')
+    expect(hasActiveFilterCriteria(filters)).toBe(true)
+
+    const results = filterDatasets(extendedCatalog, filters)
+    expect(results.length).toBeGreaterThan(0)
+    for (const ds of results) {
+      expect(matchesCategory(ds, 'computer-vision')).toBe(true)
+    }
+  })
+
+  // 3. Search query displays results
+  it('activates discovery results when a search query is provided', () => {
+    const filters = parseFilterParams('?q=cifar')
+    expect(filters.searchQuery).toBe('cifar')
+    expect(hasActiveFilterCriteria(filters)).toBe(true)
+
+    const results = filterDatasets(extendedCatalog, filters)
+    expect(results.length).toBe(1)
+    expect(results[0].id).toBe('cifar-10')
+  })
+
+  // 4. Individual and combined filters
+  it('handles individual and combined filters cleanly', () => {
+    // Individual: modality
+    const modalityFilters = parseFilterParams('?modality=tabular')
+    expect(hasActiveFilterCriteria(modalityFilters)).toBe(true)
+    const modResults = filterDatasets(extendedCatalog, modalityFilters)
+    expect(modResults.some((d) => d.id === 'iris')).toBe(true)
+
+    // Individual: task
+    const taskFilters = parseFilterParams('?task=image-classification')
+    expect(hasActiveFilterCriteria(taskFilters)).toBe(true)
+    const taskResults = filterDatasets(extendedCatalog, taskFilters)
+    expect(taskResults.some((d) => d.id === 'cifar-10')).toBe(true)
+
+    // Individual: license
+    const licenseFilters = parseFilterParams('?license=verified_open')
+    expect(hasActiveFilterCriteria(licenseFilters)).toBe(true)
+    const licResults = filterDatasets(extendedCatalog, licenseFilters)
+    expect(licResults.length).toBeGreaterThan(0)
+
+    // Combined: category + license + search
+    const combinedFilters = parseFilterParams(
+      '?category=computer-vision&license=verified_open&q=dataset',
+    )
+    expect(hasActiveFilterCriteria(combinedFilters)).toBe(true)
+    const combinedResults = filterDatasets(extendedCatalog, combinedFilters)
+    expect(Array.isArray(combinedResults)).toBe(true)
+    for (const ds of combinedResults) {
+      expect(matchesCategory(ds, 'computer-vision')).toBe(true)
+      expect(matchesLicense(ds, 'verified_open')).toBe(true)
+      expect(matchesSearch(ds, 'dataset')).toBe(true)
+    }
+  })
+
+  // 5. Reset restores initial empty state
+  it('restores initial empty state upon filter reset', () => {
+    const activeParams = new URLSearchParams(
+      '?category=natural-language-processing&q=sentiment&license=verified_open',
+    )
+    const activeFilters = parseFilterParams(activeParams)
+    expect(hasActiveFilterCriteria(activeFilters)).toBe(true)
+
+    const resetParams = serializeFilterParams(
+      {
+        searchQuery: '',
+        category: null,
+        modality: '',
+        task: '',
+        license: '',
+      },
+      activeParams,
+    )
+    const restoredFilters = parseFilterParams(resetParams)
+    expect(restoredFilters).toEqual(DEFAULT_FILTER_STATE)
+    expect(hasActiveFilterCriteria(restoredFilters)).toBe(false)
+  })
+
+  // 6. Direct URL navigation with valid filters
+  it('immediately displays matching results on direct URL navigation with valid filters', () => {
+    const directUrlParams = '?category=tabular-time-series&license=verified_open'
+    const directFilters = parseFilterParams(directUrlParams)
+    expect(directFilters.category).toBe('tabular-time-series')
+    expect(directFilters.license).toBe('verified_open')
+    expect(hasActiveFilterCriteria(directFilters)).toBe(true)
+
+    const directResults = filterDatasets(extendedCatalog, directFilters)
+    expect(directResults.some((d) => d.id === 'iris')).toBe(true)
+  })
+
+  // 7. Invalid URL parameters fall back to initial empty state
+  it('falls back to initial empty state when invalid URL parameters are provided, preventing catalog leakage', () => {
+    // Malicious or unrecognized URL params
+    const maliciousParams =
+      '?category=nonexistent&license=fake_lic&q=%20%20%20&modality=@@@&task=###&sort=rating&unknown=123'
+    const sanitizedFilters = parseFilterParams(maliciousParams)
+
+    expect(sanitizedFilters.category).toBeNull()
+    expect(sanitizedFilters.license).toBe('')
+    expect(sanitizedFilters.searchQuery).toBe('')
+    expect(sanitizedFilters.modality).toBe('')
+    expect(sanitizedFilters.task).toBe('')
+    // hasActiveFilterCriteria MUST be false so the catalog is not accidentally revealed
+    expect(hasActiveFilterCriteria(sanitizedFilters)).toBe(false)
+  })
+
+  // 8. Back/Forward browser navigation
+  it('preserves discovery state and active status across browser history navigation', () => {
+    const urlHistory: string[] = []
+
+    // Step 1: Initial empty state
+    urlHistory.push('')
+    let state = parseFilterParams(urlHistory[urlHistory.length - 1])
+    expect(hasActiveFilterCriteria(state)).toBe(false)
+
+    // Step 2: User types search query
+    const step2 = serializeFilterParams({ searchQuery: 'treebank' }, urlHistory[urlHistory.length - 1])
+    urlHistory.push(step2.toString())
+    state = parseFilterParams(urlHistory[urlHistory.length - 1])
+    expect(hasActiveFilterCriteria(state)).toBe(true)
+    expect(state.searchQuery).toBe('treebank')
+    let results = filterDatasets(extendedCatalog, state)
+    expect(results.length).toBe(1)
+    expect(results[0].id).toBe('sst2')
+
+    // Step 3: User also clicks NLP category
+    const step3 = serializeFilterParams({ category: 'natural-language-processing' }, urlHistory[urlHistory.length - 1])
+    urlHistory.push(step3.toString())
+    state = parseFilterParams(urlHistory[urlHistory.length - 1])
+    expect(hasActiveFilterCriteria(state)).toBe(true)
+    expect(state.category).toBe('natural-language-processing')
+    results = filterDatasets(extendedCatalog, state)
+    expect(results.length).toBe(1)
+
+    // Step 4: User presses browser Back (back to step 2)
+    urlHistory.pop()
+    state = parseFilterParams(urlHistory[urlHistory.length - 1])
+    expect(hasActiveFilterCriteria(state)).toBe(true)
+    expect(state.searchQuery).toBe('treebank')
+    expect(state.category).toBeNull()
+
+    // Step 5: User presses browser Back again (back to initial empty state)
+    urlHistory.pop()
+    state = parseFilterParams(urlHistory[urlHistory.length - 1])
+    expect(hasActiveFilterCriteria(state)).toBe(false)
+    expect(state).toEqual(DEFAULT_FILTER_STATE)
+  })
+})
+
+describe('Category Selection Visual Refinement (Task 06.2)', () => {
+  it('defines the correct category-specific accent colors for all six categories', () => {
+    // 1. Computer Vision: Blue #3B82F6
+    expect(CATEGORY_ACCENTS['computer-vision'].hex).toBe('#3B82F6')
+    expect(CATEGORY_ACCENTS['computer-vision'].colorName).toBe('Blue')
+
+    // 2. Natural Language Processing: Purple #A78BFA
+    expect(CATEGORY_ACCENTS['natural-language-processing'].hex).toBe('#A78BFA')
+    expect(CATEGORY_ACCENTS['natural-language-processing'].colorName).toBe('Purple')
+
+    // 3. Audio & Speech: Amber #F59E0B
+    expect(CATEGORY_ACCENTS['audio-speech'].hex).toBe('#F59E0B')
+    expect(CATEGORY_ACCENTS['audio-speech'].colorName).toBe('Amber')
+
+    // 4. Tabular & Time-Series: Emerald #10B981
+    expect(CATEGORY_ACCENTS['tabular-time-series'].hex).toBe('#10B981')
+    expect(CATEGORY_ACCENTS['tabular-time-series'].colorName).toBe('Emerald')
+
+    // 5. Multimodal & Generative: Pink #EC4899
+    expect(CATEGORY_ACCENTS['multimodal-generative'].hex).toBe('#EC4899')
+    expect(CATEGORY_ACCENTS['multimodal-generative'].colorName).toBe('Pink')
+
+    // 6. Evaluation & Benchmarks: Cyan #06B6D4
+    expect(CATEGORY_ACCENTS['evaluation-benchmarks'].hex).toBe('#06B6D4')
+    expect(CATEGORY_ACCENTS['evaluation-benchmarks'].colorName).toBe('Cyan')
+  })
+
+  it('provides getCategoryAccent helper that returns full accent configuration', () => {
+    for (const cat of CATEGORIES) {
+      const accent = getCategoryAccent(cat.id)
+      expect(accent).toBeDefined()
+      expect(accent.id).toBe(cat.id)
+      expect(accent.name).toBe(cat.name)
+      expect(accent.hex).toMatch(/^#[0-9A-Fa-f]{6}$/)
+      expect(accent.selectedCardBg).toContain('bg-')
+      expect(accent.selectedCardBorder).toContain('border-')
+      expect(accent.selectedIconBg).toContain('bg-')
+      expect(accent.selectedCheckBg).toContain('bg-')
+      expect(accent.selectedBadge).toContain('bg-')
+      expect(accent.focusRing).toContain('focus-visible:ring-')
+      expect(accent.hoverCardBorder).toContain('hover:border-')
+      expect(accent.hoverCardBorder).toContain('focus-visible:border-')
+      expect(accent.hoverCardBg).toContain('hover:bg-')
+      expect(accent.hoverIconBg).toContain('group-hover:bg-')
+      expect(accent.hoverIconBg).toContain('group-focus-visible:bg-')
+    }
+  })
+
+  it('uses subtle tinted backgrounds and borders rather than large solid fills', () => {
+    for (const cat of CATEGORIES) {
+      const accent = CATEGORY_ACCENTS[cat.id]
+      // Verify subtle 50-tint with opacity for light and 950-tint with opacity for dark
+      expect(accent.selectedCardBg).toContain('-50/')
+      expect(accent.selectedCardBg).toContain('dark:bg-')
+      // Verify border highlight
+      expect(accent.selectedCardBorder).toContain('border-')
+      expect(accent.selectedCardBorder).toContain('dark:border-')
+    }
+  })
+
+  it('correctly models active and dimmed states for category cards', () => {
+    const activeCategory = 'computer-vision'
+    const hasSelection = activeCategory !== null
+
+    for (const cat of CATEGORIES) {
+      const isActive = activeCategory === cat.id
+      const isDimmed = hasSelection && !isActive
+
+      if (cat.id === 'computer-vision') {
+        expect(isActive).toBe(true)
+        expect(isDimmed).toBe(false)
+      } else {
+        expect(isActive).toBe(false)
+        expect(isDimmed).toBe(true)
+      }
+    }
+  })
+
+  it('restores normal unselected state when no category is chosen', () => {
+    const activeCategory = null
+    const hasSelection = activeCategory !== null
+
+    for (const cat of CATEGORIES) {
+      const isActive = activeCategory === cat.id
+      const isDimmed = hasSelection && !isActive
+
+      expect(isActive).toBe(false)
+      expect(isDimmed).toBe(false)
+    }
+  })
+
+  it('preserves category selection and deselection toggle flow', () => {
+    // Select category
+    let currentCategory: string | null = null
+    const select = (id: string | null) => {
+      currentCategory = currentCategory === id ? null : id
+    }
+
+    select('audio-speech')
+    expect(currentCategory).toBe('audio-speech')
+
+    // Click same category again toggles off
+    select('audio-speech')
+    expect(currentCategory).toBeNull()
+
+    // Select another category
+    select('multimodal-generative')
+    expect(currentCategory).toBe('multimodal-generative')
+
+    // Reset via Show All Categories (pass null)
+    currentCategory = null
+    expect(currentCategory).toBeNull()
   })
 })

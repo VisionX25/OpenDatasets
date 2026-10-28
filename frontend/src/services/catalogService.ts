@@ -197,3 +197,32 @@ export function clearCatalogCache(): void {
   catalogCache = null
   inflightPromise = null
 }
+
+const KNOWN_DATASET_SLUGS = new Set([
+  'adult-census-income',
+  'california-housing',
+  'cifar-10',
+  'common-voice',
+  'fashion-mnist',
+  'glue-benchmark',
+  'imagenet-1k',
+  'imdb-reviews',
+  'iris',
+  'librispeech',
+  'mnist',
+  'squad-2',
+  'wine-quality',
+])
+
+/**
+ * Checks whether a given slug matches a known dataset record.
+ */
+export function isDatasetSlug(slug: string | null | undefined): boolean {
+  if (!slug) return false
+  const trimmed = slug.trim()
+  if (KNOWN_DATASET_SLUGS.has(trimmed)) return true
+  if (catalogCache) {
+    return catalogCache.some((d) => d.slug === trimmed || d.id === trimmed)
+  }
+  return false
+}

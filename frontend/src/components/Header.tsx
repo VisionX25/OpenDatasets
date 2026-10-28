@@ -50,6 +50,9 @@ export const Header: React.FC = () => {
             <NavLink to="/explore" className={navLinkClass}>
               Explore
             </NavLink>
+            <NavLink to="/datasets" className={navLinkClass}>
+              Datasets
+            </NavLink>
             <NavLink to="/about" className={navLinkClass}>
               About
             </NavLink>
@@ -102,6 +105,13 @@ export const Header: React.FC = () => {
             onClick={() => setMobileMenuOpen(false)}
           >
             Explore
+          </NavLink>
+          <NavLink
+            to="/datasets"
+            className={mobileNavLinkClass}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Datasets
           </NavLink>
           <NavLink
             to="/about"
