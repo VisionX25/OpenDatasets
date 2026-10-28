@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useLocation, useNavigate } from 'react-router-dom'
 import {
   ArrowLeft,
   ExternalLink,
@@ -25,7 +25,10 @@ import { getDatasetBySlug } from '../services/catalogService'
 import { copyTextToClipboard } from '../utils/clipboard'
 
 export const DatasetDetailPage: React.FC = () => {
-  const { slug } = useParams<{ slug: string }>()
+  const { slug, param } = useParams<{ slug?: string; param?: string }>()
+  const effectiveSlug = (slug || param || '').trim()
+  const location = useLocation()
+  const navigate = useNavigate()
   const [dataset, setDataset] = useState<DatasetMetadata | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -33,9 +36,18 @@ export const DatasetDetailPage: React.FC = () => {
   const [copyError, setCopyError] = useState(false)
 
   useEffect(() => {
+    // If accessed via legacy /datasets/:slug, smoothly canonicalize URL to /dataset/:slug
+    if (location.pathname.startsWith('/datasets/') && effectiveSlug) {
+      navigate(`/dataset/${encodeURIComponent(effectiveSlug)}${location.search}`, {
+        replace: true,
+      })
+    }
+  }, [location.pathname, location.search, effectiveSlug, navigate])
+
+  useEffect(() => {
     let ignore = false
 
-    getDatasetBySlug(slug)
+    getDatasetBySlug(effectiveSlug)
       .then((found) => {
         if (!ignore) {
           setDataset(found)
@@ -54,15 +66,15 @@ export const DatasetDetailPage: React.FC = () => {
     return () => {
       ignore = true
     }
-  }, [slug])
+  }, [effectiveSlug])
 
   const handleRetry = () => {
-    if (!slug || !slug.trim()) {
+    if (!effectiveSlug) {
       return
     }
     setLoading(true)
     setError(null)
-    getDatasetBySlug(slug, { forceReload: true })
+    getDatasetBySlug(effectiveSlug, { forceReload: true })
       .then((found) => {
         setDataset(found)
         setError(null)
@@ -142,7 +154,7 @@ export const DatasetDetailPage: React.FC = () => {
           Dataset Not Found
         </h1>
         <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto">
-          No dataset matching the identifier &ldquo;{slug || ''}&rdquo; was found in the OpenDatasets catalog.
+          No dataset matching the identifier &ldquo;{effectiveSlug}&rdquo; was found in the OpenDatasets catalog.
         </p>
         <div className="mt-6">
           <Link

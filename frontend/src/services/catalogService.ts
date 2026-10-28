@@ -230,13 +230,23 @@ const KNOWN_DATASET_SLUGS = new Set([
 
 /**
  * Checks whether a given slug matches a known dataset record.
+ * Checks in-memory catalogCache first, falling back to KNOWN_DATASET_SLUGS.
  */
 export function isDatasetSlug(slug: string | null | undefined): boolean {
   if (!slug) return false
   const trimmed = slug.trim()
-  if (KNOWN_DATASET_SLUGS.has(trimmed)) return true
   if (catalogCache) {
     return catalogCache.some((d) => d.slug === trimmed || d.id === trimmed)
   }
-  return false
+  return KNOWN_DATASET_SLUGS.has(trimmed)
+}
+
+/**
+ * Data-driven check whether a given slug matches an actual dataset in the catalog.
+ * Dynamically queries the catalog data rather than relying on a static hardcoded list.
+ */
+export async function isDatasetSlugAsync(slug: string | null | undefined): Promise<boolean> {
+  if (!slug || !slug.trim()) return false
+  const dataset = await getDatasetBySlug(slug)
+  return dataset !== null
 }

@@ -6,19 +6,28 @@ import { ExplorePage } from './pages/ExplorePage'
 import { DatasetsPage } from './pages/DatasetsPage'
 import { DatasetDetailPage } from './pages/DatasetDetailPage'
 import { AboutPage } from './pages/AboutPage'
-import { isDatasetSlug } from './services/catalogService'
+import { isCategoryId } from './utils/datasetFilters'
 
 /**
- * Route dispatcher for /datasets/:param:
- * - If :param matches a known dataset record, renders DatasetDetailPage.
- * - Otherwise renders DatasetsPage (which validates categorySlug and handles category results or invalid category state).
+ * Route dispatcher for legacy /datasets/:param URLs:
+ * - If :param matches a known category ID (e.g. /datasets/computer-vision), renders DatasetsPage.
+ * - Otherwise redirects to the canonical /dataset/:slug detail page, preserving existing
+ *   /datasets/:slug deep links and query parameters without depending on a hardcoded slug list.
  */
-const DatasetsRouteDispatcher: React.FC = () => {
+export const DatasetsRouteDispatcher: React.FC = () => {
   const { param } = useParams<{ param: string }>()
-  if (isDatasetSlug(param)) {
-    return <DatasetDetailPage />
+
+  if (!param) {
+    return <Navigate to="/datasets" replace />
   }
-  return <DatasetsPage />
+
+  if (isCategoryId(param)) {
+    return <DatasetsPage />
+  }
+
+  // Compatible routing for legacy /datasets/:slug deep links:
+  // Renders DatasetDetailPage directly (effectiveSlug binds to :param).
+  return <DatasetDetailPage />
 }
 
 export const App: React.FC = () => {

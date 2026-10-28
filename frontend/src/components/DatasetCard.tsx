@@ -173,7 +173,7 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset, animateOnScro
 
         {/* Dataset Title & Publisher */}
         <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-          <Link to={`/datasets/${dataset.slug}`} className="focus:outline-hidden focus:underline">
+          <Link to={`/dataset/${dataset.slug}`} className="focus:outline-hidden focus:underline">
             {dataset.name}
           </Link>
         </h3>
@@ -213,7 +213,7 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset, animateOnScro
       <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs">
         <span className="text-slate-400 font-mono">id: {dataset.id}</span>
         <Link
-          to={`/datasets/${dataset.slug}`}
+          to={`/dataset/${dataset.slug}`}
           className="inline-flex items-center gap-1 font-semibold text-indigo-600 dark:text-indigo-400 hover:gap-1.5 transition-all"
         >
           <span>View Details</span>
