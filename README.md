@@ -2,19 +2,29 @@
 
 [![CI](https://github.com/VisionX25/OpenDatasets/actions/workflows/ci.yml/badge.svg)](https://github.com/VisionX25/OpenDatasets/actions/workflows/ci.yml)
 
-An open-source platform for discovering, exploring, and validating machine learning datasets.
+An open-source catalog for discovering machine learning datasets and validating their metadata.
 
 ## Project Overview
 
-OpenDatasets is an independent open-source platform by **VisionX25** built to help researchers, data scientists, and ML engineers discover verified datasets, inspect data quality metrics, and collaborate transparently.
+OpenDatasets is a project by [VisionX25](https://github.com/VisionX25) for researchers, students, data scientists, and ML engineers who need clear dataset descriptions, source references, and license information.
+
+The current catalog contains **27 dataset metadata records** (29 October 2026). Browse by category, search the catalog, and inspect individual dataset details. This repository catalogs metadata and links to original publishers; it does not host the underlying datasets.
+
+**Start here:** [Contribute](CONTRIBUTING.md) · [Suggest a dataset](https://github.com/VisionX25/OpenDatasets/issues/new?template=dataset_suggestion.yml) · [Report a problem](https://github.com/VisionX25/OpenDatasets/issues/new/choose) · [Roadmap](ROADMAP.md) · [LinkedIn](https://www.linkedin.com/company/visionx25/)
+
+### What verification means
+
+Metadata is curated against the cited sources. Automated checks validate the JSON schema, URL syntax, unique IDs/slugs, and generated catalog consistency. These offline checks do **not** establish live link availability, inspect every underlying data file, measure label accuracy or bias, or guarantee fitness for a particular use. License and access conditions belong to each original publisher; consult its terms before using a dataset.
+
+Data profiling, quality metrics from actual data, and a FastAPI service are planned work, not current features.
 
 ### Current Implementation Status
 
 - **Task 01 (Frontend Shell)**: Completed — React 19 + TypeScript + Vite responsive application shell with client-side routing, Tailwind CSS, and Lucide React.
 - **Task 02 (Dataset Metadata Foundation)**: Completed — Versioned JSON Schema (`v1`), structured catalog in `data/datasets/`, strict offline validator (`scripts/validate_datasets.py`), and automated pytest suite.
-- **Task 03 (Functional Dataset Explorer & Reliability)**: Completed — Automated atomic catalog generator (`scripts/generate_catalog.py`), interactive category-based discovery, multi-field search and filters, dataset details route (`/datasets/:slug`), runtime catalog validation, and reliable clipboard copying.
+- **Task 03 (Functional Dataset Explorer & Reliability)**: Completed — Automated atomic catalog generator (`scripts/generate_catalog.py`), interactive category-based discovery, multi-field search and filters, canonical dataset details route (`/dataset/:slug`) with legacy `/datasets/:slug` compatibility, runtime catalog validation, and reliable clipboard copying.
 - **Task 04 (GitHub Actions CI/CD)**: Completed — Professional, lightweight CI workflow (`.github/workflows/ci.yml`) automatically validating metadata, testing schemas, enforcing catalog sync, and running frontend unit tests, lints, and builds on push and pull requests.
-- **Task 05 (Verified Dataset Catalog Expansion)**: Completed — Expanded catalog to 13 verified dataset metadata records across Computer Vision, NLP, Audio, and Tabular ML with authoritative source documentation.
+- **Task 05 (Dataset Catalog Expansion)**: Completed — Expanded catalog to 27 curated dataset metadata records across Computer Vision, NLP, Audio, and Tabular ML with authoritative source documentation.
 - **Planned Milestones**:
   - Python + FastAPI backend service (REST API endpoints, dataset ingestion pipeline).
   - Automated dataset schema & distribution profiling pipelines.
@@ -40,58 +50,17 @@ OpenDatasets is an independent open-source platform by **VisionX25** built to he
 
 ## Project Structure
 
-```text
-OpenDatasets/
-├── .github/
-│   └── workflows/
-│       └── ci.yml           # GitHub Actions CI workflow (metadata validation & frontend checks)
-├── data/
-│   └── datasets/            # Source-of-truth metadata records (one JSON per dataset)
-│       ├── adult-census-income.json
-│       ├── california-housing.json
-│       ├── cifar-10.json
-│       ├── common-voice.json
-│       ├── fashion-mnist.json
-│       ├── glue-benchmark.json
-│       ├── imagenet-1k.json
-│       ├── imdb-reviews.json
-│       ├── iris.json
-│       ├── librispeech.json
-│       ├── mnist.json
-│       ├── squad-2.json
-│       └── wine-quality.json
-├── frontend/                # React + TypeScript + Vite frontend application
-│   ├── public/
-│   │   ├── data/
-│   │   │   └── catalog.json # Generated catalog for client-side discovery
-│   │   ├── favicon.svg
-│   │   └── icons.svg
-│   ├── src/
-│   │   ├── components/      # UI components (Header, Footer, Layout, DatasetCard, CategoryGrid)
-│   │   ├── pages/           # Page routes (HomePage, ExplorePage, DatasetDetailPage, AboutPage)
-│   │   ├── services/        # Catalog data loader (catalogService.ts)
-│   │   ├── types/           # TypeScript schema definitions (dataset.ts)
-│   │   ├── utils/           # Centralized category, filter, and clipboard utilities
-│   │   ├── App.tsx          # Client-side router configuration
-│   │   ├── index.css        # Tailwind CSS styles
-│   │   └── main.tsx         # Application entry point
-│   ├── eslint.config.js     # ESLint configuration
-│   ├── package.json         # Frontend dependencies and scripts (with predev/prebuild hooks)
-│   ├── tsconfig.json        # TypeScript configuration
-│   └── vite.config.ts       # Vite build & Tailwind configuration
-├── schemas/
-│   └── dataset.v1.schema.json # JSON Schema definition for dataset metadata
-├── scripts/
-│   ├── generate_catalog.py  # Generates frontend/public/data/catalog.json with atomic replacement
-│   └── validate_datasets.py # Strict offline CLI validator for dataset metadata
-├── tests/
-│   └── test_metadata_validation.py # Pytest suite covering schema, URLs, edge cases, and catalog generation
-├── .gitignore               # Repository ignore rules
-├── LICENSE                  # MIT License
-├── pytest.ini               # Pytest configuration
-├── README.md                # Project documentation
-└── requirements-dev.txt     # Python development and validation dependencies
-```
+| Path | Purpose |
+| --- | --- |
+| `frontend/` | React application, pages, and frontend tests |
+| `data/datasets/` | Individual dataset metadata records |
+| `frontend/public/data/catalog.json` | Generated catalog consumed by the UI |
+| `schemas/` | Versioned metadata schema |
+| `scripts/` | Metadata validation and catalog generation |
+| `tests/` | Python tests |
+| `.github/` | CI, issue forms, and pull request template |
+| `CONTRIBUTING.md` | Contribution and source-verification workflow |
+| `ROADMAP.md` | Current capabilities and planned work |
 
 ## Dataset Metadata Architecture
 
@@ -158,7 +127,7 @@ All dataset metadata files conform to JSON Schema Draft-7 (`dataset.v1.schema.js
 ### Prerequisites
 
 - **Python**: v3.10 or later
-- **Node.js**: v18.0.0 or later (v20+ / v24+ recommended)
+- **Node.js**: use a current supported version compatible with the locked Vite toolchain (Node 22.12+ or Node 24 recommended)
 - **npm**: v9.0.0 or later
 
 ### Python Environment & Validation
@@ -192,7 +161,7 @@ All dataset metadata files conform to JSON Schema Draft-7 (`dataset.v1.schema.js
 
 2. **Install dependencies**:
    ```bash
-   npm install
+   npm ci
    ```
 
 3. **Start the local development server**:
@@ -283,4 +252,5 @@ Before opening a pull request, ensure all verification steps pass cleanly:
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+The application source code is licensed under the [MIT License](LICENSE). Cataloged datasets retain their publishers' respective licenses and access conditions; inclusion in this catalog does not relicense them.
+
