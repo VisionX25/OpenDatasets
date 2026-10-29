@@ -1,0 +1,34 @@
+name: Suggest a dataset
+description: Propose a dataset with original sources and access information.
+title: "[Dataset]: "
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Dataset name
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Original publisher or official dataset URL
+    validations:
+      required: true
+  - type: textarea
+    id: usefulness
+    attributes:
+      label: Modality, task, and usefulness
+    validations:
+      required: true
+  - type: textarea
+    id: license
+    attributes:
+      label: License and access conditions
+      description: Link to the source. Write unknown if the terms are not established.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Additional evidence and limitations
+      description: Include sources for counts, splits, and citations. Do not upload raw data.
