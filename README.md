@@ -12,6 +12,16 @@ The current catalog contains **27 dataset metadata records** (29 October 2026). 
 
 **Start here:** [Contribute](CONTRIBUTING.md) · [Suggest a dataset](https://github.com/VisionX25/OpenDatasets/issues/new?template=dataset_suggestion.yml) · [Report a problem](https://github.com/VisionX25/OpenDatasets/issues/new/choose) · [Roadmap](ROADMAP.md) · [LinkedIn](https://www.linkedin.com/company/visionx25/)
 
+## Walkthrough and review notes
+
+![OpenDatasets home](docs/images/home.jpg)
+
+1. Open **Explore** and choose a category, or open **Datasets** to search all records.
+2. Search for a name such as MNIST, then open its named details link.
+3. Review source references, license/access conditions and the metadata audit scope before using a dataset.
+
+See the [deployment guide](docs/deployment.md), [keyboard/mobile review](docs/accessibility-review.md), and [source metadata audit](docs/metadata-audit.md). The review covers 27 records and documents source checks for eight records with missing metadata. Unknown values remain explicit.
+
 ### What verification means
 
 Metadata is curated against the cited sources. Automated checks validate the JSON schema, URL syntax, unique IDs/slugs, and generated catalog consistency. These offline checks do **not** establish live link availability, inspect every underlying data file, measure label accuracy or bias, or guarantee fitness for a particular use. License and access conditions belong to each original publisher; consult its terms before using a dataset.
@@ -203,7 +213,7 @@ The pipeline executes two independent jobs concurrently:
    - **Catalog Consistency Check**: Generates a temporary catalog and compares it against the committed `frontend/public/data/catalog.json` using `diff -u`. If a metadata change was made without regenerating and committing the catalog, the job fails.
 
 2. **Frontend Quality & Build (`frontend-quality`)**:
-   - **Environment**: Node.js 20 (LTS) and Python 3.11 on `ubuntu-latest`.
+   - **Environment**: Node.js 24 and Python 3.11 on `ubuntu-latest`.
    - **Dependency Installation**: Uses `npm ci` with automated package caching based on `frontend/package-lock.json`.
    - **Unit Tests**: Executes Vitest suite (`npm test`) covering search filtering, category mapping, runtime catalog validation, and clipboard utilities.
    - **Static Analysis (Linting)**: Executes ESLint (`npm run lint`) to maintain strict code quality standards.
