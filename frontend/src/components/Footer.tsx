@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
               </span>
             </div>
             <p className="text-sm text-slate-500 dark:text-slate-400 max-w-sm">
-              An independent open-source platform for discovering, exploring, and validating Machine Learning datasets.
+              An independent open-source catalog for discovering machine learning datasets and inspecting their metadata.
             </p>
           </div>
 
@@ -82,7 +82,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-4">
-          <p>© 2026 VisionX25. Released under the MIT License.</p>
+          <p>© 2026 VisionX25. Application code: MIT. Dataset licenses vary.</p>
           <p className="inline-flex items-center gap-1">
             Built with <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" /> for the Machine Learning community
           </p>
