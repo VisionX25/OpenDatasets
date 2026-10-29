@@ -24,7 +24,7 @@ export const AboutPage: React.FC = () => {
             About OpenDatasets
           </h1>
           <p className="mt-2 text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-            An open-source initiative by <span className="font-semibold text-slate-900 dark:text-slate-200">VisionX25</span> to make Machine Learning datasets reliable, transparent, and accessible.
+            An open-source initiative by <span className="font-semibold text-slate-900 dark:text-slate-200">VisionX25</span> to make machine learning dataset information easier to discover and inspect.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export const AboutPage: React.FC = () => {
             High-quality datasets are the bedrock of reliable Machine Learning and Artificial Intelligence models. However, discovering trustworthy datasets, understanding their licensing nuances, and evaluating their internal quality often requires navigating disjointed repositories and manual inspection.
           </p>
           <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-            OpenDatasets is built to solve this by providing a unified, open-source platform where practitioners can discover curated datasets, inspect data sheets and distribution statistics, and validate dataset integrity before training.
+            OpenDatasets brings dataset descriptions, source references, license information, and documented counts into one searchable catalog. It catalogs metadata and links to publishers; it does not host the underlying datasets, calculate distribution statistics, or audit label accuracy.
           </p>
         </div>
 
@@ -48,10 +48,10 @@ export const AboutPage: React.FC = () => {
               <Shield className="w-5 h-5" />
             </div>
             <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">
-              Data Integrity & Validation
+              Metadata Checks
             </h3>
             <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-              Every dataset profile aims to provide verifiable metadata, schema checks, and clear provenance records.
+              Metadata is reviewed against cited sources. Automated checks validate structure and URL syntax without downloading data or testing source availability.
             </p>
           </div>
 
@@ -63,7 +63,7 @@ export const AboutPage: React.FC = () => {
               Open & Reproducible
             </h3>
             <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-              Fully open-source under the MIT license, encouraging community verification, additions, and integrations.
+              The application code uses the MIT license. Each external dataset retains its own license and access conditions.
             </p>
           </div>
 
@@ -75,7 +75,7 @@ export const AboutPage: React.FC = () => {
               Community First
             </h3>
             <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-              Built for researchers, engineers, and educators with open governance and collaborative dataset curation.
+              Researchers, engineers, and educators can suggest datasets, correct metadata, and contribute through GitHub issues and pull requests.
             </p>
           </div>
         </div>
@@ -115,7 +115,7 @@ export const AboutPage: React.FC = () => {
               </ul>
             </div>
             <div className="space-y-2">
-              <span className="font-semibold text-slate-900 dark:text-white">Planned Backend</span>
+              <span className="font-semibold text-slate-900 dark:text-white">Current Checks & Planned Work</span>
               <ul className="space-y-1.5 text-xs text-slate-600 dark:text-slate-400">
                 <li className="flex items-center gap-2">
                   <span className="w-3.5 h-3.5 rounded-full bg-slate-300 dark:bg-slate-700 flex items-center justify-center text-[9px] text-slate-600">●</span>
@@ -123,11 +123,11 @@ export const AboutPage: React.FC = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-3.5 h-3.5 rounded-full bg-slate-300 dark:bg-slate-700 flex items-center justify-center text-[9px] text-slate-600">●</span>
-                  <span>Dataset metadata validation engine</span>
+                  <span>Python metadata validation (available)</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-3.5 h-3.5 rounded-full bg-slate-300 dark:bg-slate-700 flex items-center justify-center text-[9px] text-slate-600">●</span>
-                  <span>GitHub Actions CI/CD (future task)</span>
+                  <span>GitHub Actions CI (available)</span>
                 </li>
               </ul>
             </div>

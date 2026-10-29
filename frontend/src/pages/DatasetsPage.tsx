@@ -278,7 +278,7 @@ export const DatasetsPage: React.FC = () => {
                 All Datasets
               </h1>
               <p className="mt-2 text-base text-slate-600 dark:text-slate-400 max-w-3xl">
-                Browse the complete catalog of verified machine learning datasets across computer vision, NLP, audio, tabular, and benchmark domains.
+                Browse dataset metadata across computer vision, NLP, audio, tabular, and benchmark domains. Check each record’s sources and access conditions.
               </p>
             </div>
           )}
@@ -558,7 +558,7 @@ export const DatasetsPage: React.FC = () => {
 
             {/* Results Count Header */}
             <div className="flex items-center justify-between mb-4">
-              <p className="text-sm text-slate-600 dark:text-slate-400">
+              <p role="status" aria-live="polite" aria-atomic="true" className="text-sm text-slate-600 dark:text-slate-400">
                 Showing{' '}
                 <span className="font-bold text-slate-900 dark:text-white">
                   {displayedDatasets.length}

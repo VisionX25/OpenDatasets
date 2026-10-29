@@ -174,11 +174,11 @@ export const DatasetDetailPage: React.FC = () => {
       case 'verified':
         return (
           <span
-            title="Metadata verified against authoritative documentation"
+            title="Metadata checked against cited documentation; underlying data has not been audited"
             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/70 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800"
           >
             <ShieldCheck className="w-4 h-4 text-emerald-500" />
-            Verified Metadata
+            Metadata checked
           </span>
         )
       case 'provisional':
@@ -188,7 +188,7 @@ export const DatasetDetailPage: React.FC = () => {
             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 dark:bg-amber-950/70 dark:text-amber-300 border border-amber-200 dark:border-amber-800"
           >
             <AlertCircle className="w-4 h-4 text-amber-500" />
-            Provisional Metadata
+            Metadata review pending
           </span>
         )
       default:
@@ -198,7 +198,7 @@ export const DatasetDetailPage: React.FC = () => {
             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700"
           >
             <HelpCircle className="w-4 h-4 text-slate-400" />
-            Unverified Metadata
+            Metadata not reviewed
           </span>
         )
     }
@@ -217,7 +217,7 @@ export const DatasetDetailPage: React.FC = () => {
             Explore
           </Link>
           <span>/</span>
-          <span className="text-slate-800 dark:text-slate-200 font-medium truncate max-w-xs">
+          <span className="text-slate-800 dark:text-slate-200 font-medium truncate min-w-0 max-w-xs">
             {dataset.name}
           </span>
         </nav>
@@ -284,9 +284,9 @@ export const DatasetDetailPage: React.FC = () => {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 break-words">
           {/* Left Column: Description & Citations */}
-          <div className="md:col-span-2 space-y-8">
+          <div className="md:col-span-2 min-w-0 space-y-8">
             {/* Description */}
             <section className="bg-white dark:bg-slate-900/60 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
               <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-3">
@@ -480,7 +480,7 @@ export const DatasetDetailPage: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline"
                     >
-                      <span>Read Full License</span>
+                      <span>Review license / access source</span>
                       <ExternalLink className="w-3 h-3" />
                     </a>
                   </div>
@@ -498,7 +498,7 @@ export const DatasetDetailPage: React.FC = () => {
               <div className="space-y-4 text-sm">
                 {/* Sample count */}
                 <div>
-                  <span className="text-xs text-slate-500">Sample Count</span>
+                  <span className="text-xs text-slate-500">Sample Count {dataset.sample_count?.status === 'estimated' ? '(estimated)' : ''}</span>
                   {dataset.sample_count ? (
                     <div>
                       <p className="text-xl font-extrabold text-slate-900 dark:text-white">
@@ -542,6 +542,7 @@ export const DatasetDetailPage: React.FC = () => {
                   ) : (
                     <p className="text-xs text-slate-500 italic">Unspecified</p>
                   )}
+                  {dataset.size?.notes && <p className="mt-2 text-xs text-slate-500 leading-relaxed">{dataset.size.notes}</p>}
                 </div>
               </div>
             </div>
@@ -555,11 +556,11 @@ export const DatasetDetailPage: React.FC = () => {
               <div className="space-y-2 text-xs text-slate-600 dark:text-slate-400">
                 <p>
                   <span className="font-semibold text-slate-700 dark:text-slate-300">Status:</span>{' '}
-                  <span className="capitalize">{dataset.verification.status}</span>
+                  <span>{dataset.verification.status === 'verified' ? 'Metadata checked' : dataset.verification.status === 'provisional' ? 'Review pending' : 'Not reviewed'}</span>
                 </p>
                 {dataset.verification.verified_by && (
                   <p>
-                    <span className="font-semibold text-slate-700 dark:text-slate-300">Verified By:</span>{' '}
+                    <span className="font-semibold text-slate-700 dark:text-slate-300">Reviewed By:</span>{' '}
                     {dataset.verification.verified_by}
                   </p>
                 )}
@@ -584,7 +585,7 @@ export const DatasetDetailPage: React.FC = () => {
                 <span>OpenDatasets Disclaimer</span>
               </div>
               <p>
-                Metadata verification confirms that metadata attributes were checked against authoritative documentation. It does not imply a legal guarantee of dataset quality, model safety, or commercial rights.
+                Metadata checks refer to cited documentation. Automated validation checks schema, URL syntax, and catalog consistency offline; it does not test live source availability or inspect underlying data quality, labels, bias, or suitability. Access and reuse depend on each publisher’s terms.
               </p>
             </div>
           </div>
