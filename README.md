@@ -12,6 +12,8 @@ The current catalog contains **27 dataset metadata records** (29 October 2026). 
 
 **Start here:** [Contribute](CONTRIBUTING.md) · [Suggest a dataset](https://github.com/VisionX25/OpenDatasets/issues/new?template=dataset_suggestion.yml) · [Report a problem](https://github.com/VisionX25/OpenDatasets/issues/new/choose) · [Roadmap](ROADMAP.md) · [LinkedIn](https://www.linkedin.com/company/visionx25/)
 
+**[Open the live demo](https://visionx25.github.io/OpenDatasets/)**
+
 ## Walkthrough and review notes
 
 ![OpenDatasets home](docs/images/home.jpg)
