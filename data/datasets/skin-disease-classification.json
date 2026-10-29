@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "skin-disease-classification",
+  "slug": "skin-disease-classification",
+  "name": "Skin Disease Classification Dataset (9,548 Dermatoscopic Images)",
+  "description": "A self-collected clinical dermatoscopic image dataset comprising 9,548 images across five dermatological conditions: Acne (1,148 images), Vitiligo (2,016 images), Hyperpigmentation (700 images), Nail Psoriasis (2,520 images), and SJS-TEN (3,164 images). Collected from hospitals and clinical resources to train deep learning models on less common non-melanoma skin conditions. Safeguard notice: For machine learning research only; not validated for clinical diagnosis.",
+  "homepage_url": "https://data.mendeley.com/datasets/3hckgznc67/1",
+  "publisher": {
+    "name": "Daffodil International University",
+    "type": "academic",
+    "url": "https://daffodilvarsity.edu.bd"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "skin-disease-classification"
+  ],
+  "tags": [
+    "medical-imaging",
+    "dermatology",
+    "skin-disease",
+    "vitiligo",
+    "nail-psoriasis"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published on Mendeley Data under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Mendeley Data Repository (Version 1)",
+      "url": "https://data.mendeley.com/datasets/3hckgznc67/1",
+      "type": "repository",
+      "notes": "Official repository for version 1 published on 2024-07-30."
+    },
+    {
+      "title": "Mendeley Data DOI Citation Link",
+      "url": "https://doi.org/10.17632/3hckgznc67.1",
+      "type": "documentation",
+      "notes": "Canonical DOI citation link."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against Mendeley Data v1 and DataCite DOI 10.17632/3hckgznc67.1."
+  },
+  "size": {
+    "file_formats": [
+      "jpg",
+      "png"
+    ],
+    "status": "unknown",
+    "notes": "9,548 dermatoscopic images across 5 conditions."
+  },
+  "sample_count": {
+    "total": 9548,
+    "splits": {
+      "sjs_ten": 3164,
+      "nail_psoriasis": 2520,
+      "vitiligo": 2016,
+      "acne": 1148,
+      "hyperpigmentation": 700
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2024-07-30"
+  },
+  "citation": {
+    "paper_title": "Skin Disease Classification Dataset",
+    "paper_url": "https://doi.org/10.17632/3hckgznc67.1",
+    "authors": [
+      "sharun akter khushbu"
+    ],
+    "doi": "10.17632/3hckgznc67.1",
+    "bibtex": "@misc{khushbu2024skindisease,\n  title={Skin Disease Classification Dataset},\n  author={khushbu, sharun akter},\n  year={2024},\n  publisher={Mendeley Data},\n  doi={10.17632/3hckgznc67.1}\n}"
+  },
+  "geographic_coverage": [
+    "Bangladesh"
+  ],
+  "provenance": {
+    "collection_method": "Dermatoscopic and clinical photography collected from hospital resources.",
+    "curation_notes": "De-identified records across 5 classes: acne, vitiligo, hyperpigmentation, nail psoriasis, and SJS-TEN."
+  }
+}

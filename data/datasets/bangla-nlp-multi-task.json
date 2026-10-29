@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bangla-nlp-multi-task",
+  "slug": "bangla-nlp-multi-task",
+  "name": "Bangla NLP Multi-Task Dataset (Sentiment, Topic, Hate Speech)",
+  "description": "A curated multi-task benchmark of 9,000 sentence-level Bengali text instances sourced from national news portals (Prothom Alo, Jugantor, Kaler Kantho, Bangladesh Pratidin), annotated across three key NLP tasks: sentiment analysis (3,000 samples), topic classification (4,000 samples), and hate speech detection (2,000 samples).",
+  "homepage_url": "https://data.mendeley.com/datasets/pv3mr44472/1",
+  "publisher": {
+    "name": "Independent Academic Researcher (Sajnus Saharear Hojayfa)",
+    "type": "individual"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "sentiment-analysis",
+    "topic-classification",
+    "hate-speech-detection"
+  ],
+  "tags": [
+    "nlp",
+    "bangla",
+    "sentiment-analysis",
+    "topic-classification",
+    "hate-speech"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published on Mendeley Data under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Mendeley Data Repository (Version 1)",
+      "url": "https://data.mendeley.com/datasets/pv3mr44472/1",
+      "type": "repository",
+      "notes": "Official repository for version 1 published on 2026-01-05."
+    },
+    {
+      "title": "Mendeley Data DOI Citation Link",
+      "url": "https://doi.org/10.17632/pv3mr44472.1",
+      "type": "documentation",
+      "notes": "Canonical DOI citation link."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against Mendeley Data v1 and DataCite DOI 10.17632/pv3mr44472.1."
+  },
+  "size": {
+    "file_formats": [
+      "csv"
+    ],
+    "status": "unknown",
+    "notes": "9,000 total multi-task instances across 3 subtasks."
+  },
+  "sample_count": {
+    "total": 9000,
+    "splits": {
+      "sentiment_analysis": 3000,
+      "topic_classification": 4000,
+      "hate_speech_detection": 2000
+    },
+    "unit": "instances",
+    "status": "verified"
+  },
+  "languages": [
+    "bn"
+  ],
+  "dates": {
+    "published": "2026-01-05"
+  },
+  "citation": {
+    "paper_title": "Bangla NLP Dataset for Sentiment Analysis, Topic Classification, and Hate Speech Detection",
+    "paper_url": "https://doi.org/10.17632/pv3mr44472.1",
+    "authors": [
+      "Sajnus Saharear Hojayfa"
+    ],
+    "doi": "10.17632/pv3mr44472.1",
+    "bibtex": "@misc{hojayfa2026banglamultitask,\n  title={Bangla NLP Dataset for Sentiment Analysis, Topic Classification, and Hate Speech Detection},\n  author={Hojayfa, Sajnus Saharear},\n  year={2026},\n  publisher={Mendeley Data},\n  doi={10.17632/pv3mr44472.1}\n}"
+  },
+  "geographic_coverage": [
+    "Bangladesh"
+  ],
+  "provenance": {
+    "collection_method": "Extracted from major Bangladeshi news portals including Prothom Alo, Jugantor, Kaler Kantho, and Bangladesh Pratidin.",
+    "curation_notes": "Sentence-level manual annotations with balanced classes for sentiment, topic, and hate speech tasks."
+  }
+}

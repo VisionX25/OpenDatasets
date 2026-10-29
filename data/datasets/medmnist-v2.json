@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "medmnist-v2",
+  "slug": "medmnist-v2",
+  "name": "MedMNIST v2: Large-Scale Lightweight Benchmark for Biomedical Image Classification",
+  "description": "MedMNIST v2 is a standardized collection of 18 lightweight biomedical benchmarks (12 2D and 6 3D datasets) comprising 708,069 pre-processed biomedical images across modalities including X-ray, CT, MRI, ultrasound, and pathology. Pre-processed into 28x28 (and 28x28x28) formats for rapid ML prototyping and educational benchmarking. Safeguard notice: Standardized educational and algorithmic benchmark; strictly not approved for clinical diagnostic utility or patient triage.",
+  "homepage_url": "https://medmnist.com/",
+  "publisher": {
+    "name": "MedMNIST Team (Shanghai Jiao Tong University)",
+    "type": "academic",
+    "url": "https://medmnist.com"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "image-classification",
+    "benchmark"
+  ],
+  "tags": [
+    "biomedical-imaging",
+    "benchmark",
+    "multi-task",
+    "ct",
+    "mri",
+    "x-ray",
+    "pathology"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution 4.0 / CC BY-NC 4.0 (subset-specific)",
+    "commercial_use": "allowed",
+    "notes": "Code and 17 of 18 dataset subsets are licensed under CC BY 4.0. The DermaMNIST subset inherits CC BY-NC 4.0 from HAM10000; users intending commercial use must exclude DermaMNIST."
+  },
+  "source_references": [
+    {
+      "title": "MedMNIST Official Website",
+      "url": "https://medmnist.com/",
+      "type": "official_website",
+      "notes": "Official benchmark portal and dataset documentation."
+    },
+    {
+      "title": "MedMNIST GitHub Repository",
+      "url": "https://github.com/MedMNIST/MedMNIST",
+      "type": "repository",
+      "notes": "Code and standardized benchmark data access."
+    },
+    {
+      "title": "MedMNIST v2 - A large-scale lightweight benchmark (Scientific Data)",
+      "url": "https://doi.org/10.1038/s41597-022-01721-8",
+      "type": "original_paper",
+      "notes": "Reference publication in Nature Scientific Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against MedMNIST official portal and Nature Scientific Data publication (DOI: 10.1038/s41597-022-01721-8)."
+  },
+  "size": {
+    "file_formats": [
+      "npz"
+    ],
+    "status": "unknown",
+    "notes": "708,069 biomedical images standardized to 28x28 (and 28x28x28) pixel arrays."
+  },
+  "sample_count": {
+    "total": 708069,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-10-28",
+    "last_updated": "2023-01-16"
+  },
+  "citation": {
+    "paper_title": "MedMNIST v2 - A large-scale lightweight benchmark for 2D and 3D biomedical image classification",
+    "paper_url": "https://doi.org/10.1038/s41597-022-01721-8",
+    "authors": [
+      "Jiancheng Yang",
+      "Rui Shi",
+      "Donglai Wei",
+      "Zequan Liu",
+      "Lin Zhao",
+      "Bilic Ke",
+      "Pfalzer Andrea",
+      "Christian Freyschlag",
+      "Hermann Brenner",
+      "Bingbing Ni"
+    ],
+    "doi": "10.1038/s41597-022-01721-8",
+    "bibtex": "@article{yang2023medmnist,\n  title={MedMNIST v2 - A large-scale lightweight benchmark for 2D and 3D biomedical image classification},\n  author={Yang, Jiancheng and Shi, Rui and Wei, Donglai and Liu, Zequan and Zhao, Lin and Ke, Bilic and Andrea, Pfalzer and Freyschlag, Christian and Brenner, Hermann and Ni, Bingbing},\n  journal={Scientific Data},\n  volume={10},\n  number={1},\n  pages={41},\n  year={2023},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-022-01721-8}\n}"
+  },
+  "provenance": {
+    "collection_method": "Aggregated and standardized from established biomedical datasets across multiple imaging modalities.",
+    "curation_notes": "Comprises 12 2D and 6 3D biomedical subsets downsampled and standardized for benchmarking."
+  }
+}

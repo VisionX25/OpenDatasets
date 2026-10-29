@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "human-vs-ai-rewritten-bengali-text",
+  "slug": "human-vs-ai-rewritten-bengali-text",
+  "name": "Human vs. AI-Rewritten Bengali Text Detection Benchmark",
+  "description": "A benchmark dataset of 4,008 labeled Bengali text samples (2,004 authentic human-written texts from NCTB textbooks, literature, and news portals, paired with 2,004 AI-rewritten texts generated using LLMs). Structured for binary classification and synthetic text detection.",
+  "homepage_url": "https://data.mendeley.com/datasets/9gffsw9mjy/5",
+  "publisher": {
+    "name": "R. P. Shaha University",
+    "type": "academic",
+    "url": "https://rpsu.edu.bd"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "ai-generated-text-detection"
+  ],
+  "tags": [
+    "nlp",
+    "bangla",
+    "ai-detection",
+    "llm-evaluation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published on Mendeley Data under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Mendeley Data Repository (Version 5)",
+      "url": "https://data.mendeley.com/datasets/9gffsw9mjy/5",
+      "type": "repository",
+      "notes": "Official repository for version 5 published on 2026-09-17."
+    },
+    {
+      "title": "Mendeley Data DOI Citation Link",
+      "url": "https://doi.org/10.17632/9gffsw9mjy.5",
+      "type": "documentation",
+      "notes": "Canonical DOI citation link."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against Mendeley Data v5 and DataCite DOI 10.17632/9gffsw9mjy.5."
+  },
+  "size": {
+    "file_formats": [
+      "csv",
+      "xlsx"
+    ],
+    "status": "unknown",
+    "notes": "4,008 labeled samples in balanced binary classes."
+  },
+  "sample_count": {
+    "total": 4008,
+    "splits": {
+      "human": 2004,
+      "ai_rewritten": 2004
+    },
+    "unit": "samples",
+    "status": "verified"
+  },
+  "languages": [
+    "bn"
+  ],
+  "dates": {
+    "published": "2026-09-17"
+  },
+  "citation": {
+    "paper_title": "A Benchmark Dataset for Human Vs. AI-Rewritten Bengali Text Detection",
+    "paper_url": "https://doi.org/10.17632/9gffsw9mjy.5",
+    "authors": [
+      "Koushik Roy",
+      "Sayma Akter Rupa"
+    ],
+    "doi": "10.17632/9gffsw9mjy.5",
+    "bibtex": "@misc{roy2026humanaibengali,\n  title={A Benchmark Dataset for Human Vs. AI-Rewritten Bengali Text Detection},\n  author={Roy, Koushik and Rupa, Sayma Akter},\n  year={2026},\n  publisher={Mendeley Data},\n  doi={10.17632/9gffsw9mjy.5}\n}"
+  },
+  "geographic_coverage": [
+    "Bangladesh"
+  ],
+  "provenance": {
+    "collection_method": "Human texts collected from NCTB textbooks, literature, and news portals; AI counterparts generated via prompt-based LLM rewriting.",
+    "curation_notes": "Balanced 50/50 split across human and AI-rewritten classes with text length and stylistic parity."
+  }
+}

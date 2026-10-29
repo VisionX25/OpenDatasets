@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bangladigit",
+  "slug": "bangladigit",
+  "name": "BanglaDigit: Research Benchmark for Handwritten Bengali Digit Recognition",
+  "description": "A high-quality handwritten Bengali (Bangla) digit dataset consisting of 80,000 total samples across two structurally consistent variants: BanglaDigit-20k (20,000 samples) and BanglaDigit-60k (60,000 samples). Collected on a capacitive touchscreen tablet from native Bengali writers to avoid optical compression artifacts.",
+  "homepage_url": "https://data.mendeley.com/datasets/s2nr768mhr/2",
+  "publisher": {
+    "name": "Daffodil International University",
+    "type": "academic",
+    "url": "https://daffodilvarsity.edu.bd"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "digit-recognition"
+  ],
+  "tags": [
+    "computer-vision",
+    "bangla",
+    "handwriting",
+    "digits",
+    "ocr"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published on Mendeley Data under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Mendeley Data Repository (Version 2)",
+      "url": "https://data.mendeley.com/datasets/s2nr768mhr/2",
+      "type": "repository",
+      "notes": "Official repository for version 2 published on 2026-06-11."
+    },
+    {
+      "title": "Mendeley Data DOI Citation Link",
+      "url": "https://doi.org/10.17632/s2nr768mhr.2",
+      "type": "documentation",
+      "notes": "Canonical DOI citation link."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against Mendeley Data v2 and DataCite DOI 10.17632/s2nr768mhr.2."
+  },
+  "size": {
+    "file_formats": [
+      "png",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "80,000 lossless digit images."
+  },
+  "sample_count": {
+    "total": 80000,
+    "splits": {
+      "bangladigit_20k": 20000,
+      "bangladigit_60k": 60000
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2026-06-11"
+  },
+  "citation": {
+    "paper_title": "BanglaDigit",
+    "paper_url": "https://doi.org/10.17632/s2nr768mhr.2",
+    "authors": [
+      "Rittik Chandra Das Turjy",
+      "Sarbajit Paul Bappy",
+      "Md. Sadekur Rahman",
+      "Amir Sohel",
+      "Md. Fokhray Hossain",
+      "Masud Rana Rashel"
+    ],
+    "doi": "10.17632/s2nr768mhr.2",
+    "bibtex": "@misc{turjy2026bangladigit,\n  title={BanglaDigit},\n  author={Turjy, Rittik Chandra Das and Bappy, Sarbajit Paul and Rahman, Md. Sadekur and Sohel, Amir and Hossain, Md. Fokhray and Rashel, Masud Rana},\n  year={2026},\n  publisher={Mendeley Data},\n  doi={10.17632/s2nr768mhr.2}\n}"
+  },
+  "geographic_coverage": [
+    "Bangladesh"
+  ],
+  "provenance": {
+    "collection_method": "Direct tablet interface drawing sessions from native Bengali writers to avoid compression artifacts.",
+    "curation_notes": "Split into 20k and 60k benchmark variants across Bengali numerals (0 to 9)."
+  }
+}

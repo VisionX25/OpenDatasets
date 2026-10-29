@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "isic-2020",
+  "slug": "isic-2020",
+  "name": "ISIC 2020 Challenge Dataset (SIIM-ISIC Melanoma Classification)",
+  "description": "The official ISIC 2020 Challenge dataset comprising 44,108 dermoscopic images from 2,056 patients across three continents, paired with patient-level clinical metadata (age, sex, anatomical site) for melanoma classification. Safeguard notice: Designed for research and algorithmic benchmarking in skin lesion classification; non-commercial research use only; not for direct clinical patient management without specialist diagnosis.",
+  "homepage_url": "https://challenge.isic-archive.com/landing/2020/",
+  "publisher": {
+    "name": "International Skin Imaging Collaboration (ISIC)",
+    "type": "academic",
+    "url": "https://www.isic-archive.com"
+  },
+  "modalities": [
+    "vision",
+    "tabular"
+  ],
+  "tasks": [
+    "image-classification",
+    "melanoma-detection"
+  ],
+  "tags": [
+    "dermatology",
+    "melanoma",
+    "skin-lesion",
+    "medical-imaging",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "CC BY-NC 4.0",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "ISIC 2020 Challenge Landing Page",
+      "url": "https://challenge.isic-archive.com/landing/2020/",
+      "type": "official_website",
+      "notes": "Official challenge landing page and archive portal."
+    },
+    {
+      "title": "A patient-centric dataset of images and metadata for identifying melanomas (Scientific Data)",
+      "url": "https://doi.org/10.1038/s41597-021-00815-z",
+      "type": "original_paper",
+      "notes": "Primary reference paper published in Nature Scientific Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against ISIC Challenge archive and Nature Scientific Data publication (DOI: 10.1038/s41597-021-00815-z)."
+  },
+  "size": {
+    "file_formats": [
+      "jpg",
+      "csv"
+    ],
+    "status": "unknown",
+    "notes": "44,108 high-resolution dermoscopic images and accompanying metadata table."
+  },
+  "sample_count": {
+    "total": 44108,
+    "splits": {
+      "train": 33126,
+      "test": 10982
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-05-28"
+  },
+  "citation": {
+    "paper_title": "A patient-centric dataset of images and metadata for identifying melanomas using clinical context",
+    "paper_url": "https://doi.org/10.1038/s41597-021-00815-z",
+    "authors": [
+      "Veronica Rotemberg",
+      "Nicholas Kurtansky",
+      "Brigid Betz-Stablein",
+      "Liam Caffery",
+      "Emmanouil Chousakos",
+      "Philipp Codella",
+      "Marc Combalia",
+      "Stephen Dusza",
+      "Pascale Guitera",
+      "David Gutman",
+      "Allan Halpern",
+      "Harald Kittler",
+      "Kalliopi Kouspou",
+      "Stefan Lioprys",
+      "David Moreno",
+      "H. Peter Soyer",
+      "Alon Scope",
+      "Michael Marchetti"
+    ],
+    "doi": "10.1038/s41597-021-00815-z",
+    "bibtex": "@article{rotemberg2021patient,\n  title={A patient-centric dataset of images and metadata for identifying melanomas using clinical context},\n  author={Rotemberg, Veronica and Kurtansky, Nicholas and Betz-Stablein, Brigid and Caffery, Liam and Chousakos, Emmanouil and Codella, Philipp and Combalia, Marc and Dusza, Stephen and Guitera, Pascale and Gutman, David and others},\n  journal={Scientific Data},\n  volume={8},\n  number={1},\n  pages={34},\n  year={2021},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-021-00815-z}\n}"
+  },
+  "provenance": {
+    "collection_method": "Multi-center clinical dermoscopy collection spanning Memorial Sloan Kettering Cancer Center, Hospital Clinic de Barcelona, University of Queensland, and Medical University of Vienna.",
+    "curation_notes": "Patient-centric aggregation with biopsy-confirmed ground truth and clinical context."
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bengali-ner",
+  "slug": "bengali-ner",
+  "name": "Bengali Named Entity Recognition (NER) Dataset",
+  "description": "A token-level Bengali named entity recognition dataset of 10,000 sentences comprising 146,327 word tokens collected from online news portals. Annotated across 8 entity classes: B-PER, I-PER, B-LOC, I-LOC, B-ORG, I-ORG, TIM, and O for token classification and sequence labeling.",
+  "homepage_url": "https://data.mendeley.com/datasets/xrvvtdr2t7/1",
+  "publisher": {
+    "name": "American International University-Bangladesh",
+    "type": "academic",
+    "url": "https://www.aiub.edu"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "named-entity-recognition",
+    "token-classification"
+  ],
+  "tags": [
+    "nlp",
+    "bangla",
+    "ner",
+    "token-classification",
+    "information-extraction"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published on Mendeley Data under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Mendeley Data Repository (Version 1)",
+      "url": "https://data.mendeley.com/datasets/xrvvtdr2t7/1",
+      "type": "repository",
+      "notes": "Official repository for version 1 published on 2024-11-11."
+    },
+    {
+      "title": "Mendeley Data DOI Citation Link",
+      "url": "https://doi.org/10.17632/xrvvtdr2t7.1",
+      "type": "documentation",
+      "notes": "Canonical DOI citation link."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-29",
+    "notes": "Verified against Mendeley Data v1 and DataCite DOI 10.17632/xrvvtdr2t7.1."
+  },
+  "size": {
+    "file_formats": [
+      "csv"
+    ],
+    "status": "unknown",
+    "notes": "10,000 sentences and 146,327 word tokens."
+  },
+  "sample_count": {
+    "total": 10000,
+    "unit": "sentences",
+    "status": "verified"
+  },
+  "languages": [
+    "bn"
+  ],
+  "dates": {
+    "published": "2024-11-11"
+  },
+  "citation": {
+    "paper_title": "Bengali NER dataset",
+    "paper_url": "https://doi.org/10.17632/xrvvtdr2t7.1",
+    "authors": [
+      "Ashraf Uddin",
+      "Firoz Mridha",
+      "Noboranjan Dey"
+    ],
+    "doi": "10.17632/xrvvtdr2t7.1",
+    "bibtex": "@misc{uddin2024bengaliner,\n  title={Bengali NER dataset},\n  author={Uddin, Ashraf and Mridha, Firoz and Dey, Noboranjan},\n  year={2024},\n  publisher={Mendeley Data},\n  doi={10.17632/xrvvtdr2t7.1}\n}"
+  },
+  "geographic_coverage": [
+    "Bangladesh"
+  ],
+  "provenance": {
+    "collection_method": "Scraped from leading online Bengali news publications.",
+    "curation_notes": "Annotated with CoNLL-style BIO tags across person, location, organization, and temporal entities."
+  }
+}
