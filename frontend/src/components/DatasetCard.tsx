@@ -69,11 +69,11 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset, animateOnScro
       case 'verified':
         return (
           <span
-            title="Metadata verified against documentation"
+            title="Metadata checked against cited documentation; underlying data has not been audited"
             className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800"
           >
             <ShieldCheck className="w-3 h-3 text-emerald-500" />
-            Verified
+            Metadata checked
           </span>
         )
       case 'provisional':
@@ -83,7 +83,7 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset, animateOnScro
             className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300 border border-amber-200 dark:border-amber-800"
           >
             <AlertCircle className="w-3 h-3 text-amber-500" />
-            Provisional
+            Review pending
           </span>
         )
       default:
@@ -93,7 +93,7 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset, animateOnScro
             className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700"
           >
             <HelpCircle className="w-3 h-3 text-slate-400" />
-            Unverified
+            Not reviewed
           </span>
         )
     }
@@ -146,9 +146,10 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset, animateOnScro
   return (
     <article
       ref={cardRef}
+      onFocusCapture={() => setIsVisible(true)}
       data-testid={`dataset-card-${dataset.id}`}
       data-revealed={isVisible ? 'true' : 'false'}
-      className={`group flex flex-col justify-between p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-indigo-400 dark:hover:border-indigo-600 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100 ${
+      className={`group min-w-0 flex flex-col justify-between p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-indigo-400 dark:hover:border-indigo-600 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100 ${
         isVisible
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-y-2.5'
@@ -156,7 +157,7 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset, animateOnScro
     >
       <div>
         {/* Top Badges */}
-        <div className="flex items-center justify-between gap-2 mb-3">
+        <div className="flex items-center justify-between gap-2 mb-3 flex-wrap">
           <div className="flex items-center gap-1.5 flex-wrap">
             {modalities.map((modality) => (
               <span
@@ -210,10 +211,11 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset, animateOnScro
       </div>
 
       {/* Card Action Link */}
-      <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs">
-        <span className="text-slate-400 font-mono">id: {dataset.id}</span>
+      <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap gap-3 items-center justify-between text-xs">
+        <span className="text-slate-400 font-mono break-all">id: {dataset.id}</span>
         <Link
           to={`/dataset/${dataset.slug}`}
+          aria-label={`View details for ${dataset.name}`}
           className="inline-flex items-center gap-1 font-semibold text-indigo-600 dark:text-indigo-400 hover:gap-1.5 transition-all"
         >
           <span>View Details</span>

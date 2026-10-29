@@ -21,12 +21,12 @@ export const HomePage: React.FC = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-indigo-50 dark:bg-indigo-950/70 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 mb-6 shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-indigo-500" />
-            <span>OpenDatasets Milestone 01 — Project Initialization</span>
+            <span>Open-source dataset metadata catalog</span>
           </div>
 
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight max-w-4xl mx-auto leading-tight">
-            Discover, Explore & Validate{' '}
+            Discover & Explore{' '}
             <span className="bg-gradient-to-r from-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-400 bg-clip-text text-transparent">
               Machine Learning Datasets
             </span>
@@ -34,7 +34,7 @@ export const HomePage: React.FC = () => {
 
           {/* Subtitle */}
           <p className="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            An open-source platform designed to make finding, inspecting, and trusting ML datasets transparent, reproducible, and community-driven.
+            Find machine learning datasets with structured metadata, source references, and documented license information.
           </p>
 
           {/* CTA Buttons */}
@@ -64,7 +64,7 @@ export const HomePage: React.FC = () => {
               Built for Modern Machine Learning Workflows
             </h2>
             <p className="mt-3 text-slate-600 dark:text-slate-400 text-sm sm:text-base">
-              Moving beyond unverified archives towards structured, validated, and reproducible dataset exploration.
+              Explore documented dataset information and follow the cited sources to evaluate suitability for your work.
             </p>
           </div>
 
@@ -78,7 +78,7 @@ export const HomePage: React.FC = () => {
                 Curated Discovery
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                Quickly locate public and domain-specific datasets across vision, NLP, audio, and multimodal domains with clear licenses.
+                Locate datasets across vision, NLP, audio, and other domains. Review license and access information, including explicitly unknown terms.
               </p>
             </div>
 
@@ -88,10 +88,10 @@ export const HomePage: React.FC = () => {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-                Automated Validation
+                Metadata Validation
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                Audit schema consistency, missing values, distribution shifts, and potential dataset anomalies before pipeline integration.
+                Offline checks validate metadata structure, URL syntax, unique identifiers, and catalog consistency. They do not inspect the underlying data or test live links.
               </p>
             </div>
 
@@ -104,7 +104,7 @@ export const HomePage: React.FC = () => {
                 Interactive Exploration
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                Examine data sheets, feature distributions, and sample records directly in your browser without downloading gigabytes of data.
+                Browse categories, search descriptions and tasks, and inspect publisher references and documented counts without downloading the datasets.
               </p>
             </div>
           </div>
@@ -123,7 +123,7 @@ export const HomePage: React.FC = () => {
                 Incremental, Open Development
               </h2>
               <p className="mt-3 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-                Task 01 establishes the foundational frontend workspace using React, TypeScript, Vite, Tailwind CSS, and React Router. Future tasks will introduce dataset schemas, the FastAPI backend, and automated validation pipelines.
+                The current app provides search, category browsing, dataset details, and automated metadata checks in CI. Data profiling, distribution metrics, and a FastAPI service remain planned work.
               </p>
 
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">

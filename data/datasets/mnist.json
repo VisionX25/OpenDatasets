@@ -23,12 +23,12 @@
     "digit-recognition"
   ],
   "license": {
-    "status": "unspecified_by_source",
-    "name": "Public Research Archive (Author Copyright)",
+    "status": "unknown",
+    "name": "License not established from original source",
     "spdx_id": null,
     "url": "http://yann.lecun.com/exdb/mnist/",
     "commercial_use": "unknown",
-    "notes": "Original distribution page does not declare a standard SPDX license; authors hold copyright and allow free public download for academic benchmarking. CC BY-SA 3.0 is commonly applied in secondary distributions."
+    "notes": "The original publisher page was unavailable during this review. A standard license or commercial-use grant was not established. Terms from mirrors are not assumed to cover the original distribution."
   },
   "source_references": [
     {
@@ -42,13 +42,19 @@
       "url": "http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf",
       "type": "original_paper",
       "notes": "Foundational 1998 paper introducing LeNet-5 and benchmark results on MNIST."
+    },
+    {
+      "title": "NIST Biometric Database Catalog: MNIST",
+      "url": "https://tsapps.nist.gov/BDbC/Search/Details/387",
+      "type": "documentation",
+      "notes": "Corroborates 60,000 training and 10,000 test examples; does not establish a dataset license."
     }
   ],
   "verification": {
-    "status": "verified",
-    "verified_by": "OpenDatasets Core Team",
-    "verified_date": "2026-10-26",
-    "notes": "Verified against Yann LeCun's official distribution archive and Proceedings of the IEEE paper."
+    "status": "provisional",
+    "verified_by": "VisionX25 source metadata audit",
+    "verified_date": "2026-10-29",
+    "notes": "2026-10-29 scoped review: NIST corroborates the training/test counts, but the original MNIST source could not be retrieved. Original license evidence remains unresolved. Raw data files were not downloaded or inspected."
   },
   "size": {
     "amount": 11.6,

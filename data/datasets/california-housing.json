@@ -30,7 +30,7 @@
     "spdx_id": null,
     "url": "https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html",
     "commercial_use": "unknown",
-    "notes": "The original StatLib archive and Pace & Barry (1997) publication do not specify an explicit license or formal public domain waiver. While underlying 1990 US Census data is generally not subject to US copyright, the compiled regression dataset lacks a formal authoritative public domain or open source license declaration."
+    "notes": "The original distribution page was unavailable during this review. No authoritative license or commercial-use grant was established. Reuse rights are not inferred from the underlying census data or the license of a loader library."
   },
   "source_references": [
     {
@@ -44,23 +44,23 @@
       "url": "https://doi.org/10.1016/S0167-7152(96)00140-X",
       "type": "original_paper",
       "notes": "Published in Statistics & Probability Letters (1997) by R. Kelley Pace and Ronald Barry."
+    },
+    {
+      "title": "scikit-learn: California Housing distribution documentation",
+      "url": "https://scikit-learn.org/stable/datasets/real_world.html#california-housing-dataset",
+      "type": "documentation",
+      "notes": "Maintainer documentation corroborates 20,640 rows and the 1990 census provenance; not used to infer an upstream dataset license."
     }
   ],
   "verification": {
-    "status": "verified",
-    "verified_by": "OpenDatasets Core Team",
-    "verified_date": "2026-10-27",
-    "notes": "Metadata verified against StatLib repository archive and Statistics & Probability Letters paper; license is unspecified by the original academic distributors."
+    "status": "provisional",
+    "verified_by": "VisionX25 source metadata audit",
+    "verified_date": "2026-10-29",
+    "notes": "2026-10-29 scoped review: Maintainer distribution documentation corroborates 20,640 rows and census provenance. Original archive/licensing evidence could not be retrieved; size is explicitly unknown. Raw data files were not downloaded or inspected."
   },
   "size": {
-    "amount": 1.4,
-    "unit": "MB",
-    "file_formats": [
-      "csv",
-      "data"
-    ],
-    "status": "verified",
-    "notes": "Raw tabular text and CSV format size."
+    "status": "unknown",
+    "notes": "The prior 1.4 MB value was not established as an archive/download size. An in-memory table footprint is not interchangeable with a distribution size."
   },
   "sample_count": {
     "total": 20640,

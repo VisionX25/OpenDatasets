@@ -3,7 +3,7 @@
   "id": "jaaltaka",
   "slug": "jaaltaka",
   "name": "JaalTaka: A Benchmark Dataset for Detecting Counterfeit Bangladeshi Banknotes",
-  "description": "JaalTaka is a specialized computer vision benchmark dataset for distinguishing genuine from counterfeit Bangladeshi banknotes. Version 2 consists of 1,390 physical banknotes (802 genuine notes sourced from Sonali Bank, Agrani Bank, and Rupali Bank, and 588 counterfeit notes obtained in collaboration with the Rapid Action Battalion). Each banknote sample is captured across 6 high-resolution smartphone camera views focusing on key security features under diverse physical conditions (wear, stains, graffiti, tape/staple artifacts), yielding a total of 8,340 segment images.",
+  "description": "JaalTaka is a specialized computer vision benchmark dataset for distinguishing genuine from counterfeit Bangladeshi banknotes. Version 2 consists of 1,390 physical banknotes (802 genuine notes sourced from Sonali Bank, Agrani Bank, and Rupali Bank, and 588 counterfeit notes obtained in collaboration with the Rapid Action Battalion). Each banknote sample is captured across 6 high-resolution smartphone camera views focusing on key security features under diverse physical conditions (wear, stains, graffiti, tape/staple artifacts), corresponding to 8,340 views if all six views are present for every banknote; this is a derived count, not a file-manifest audit.",
   "homepage_url": "https://data.mendeley.com/datasets/2m7wk5cy4c/2",
   "publisher": {
     "name": "Daffodil International University",
@@ -54,9 +54,9 @@
   ],
   "verification": {
     "status": "verified",
-    "verified_by": "OpenDatasets Core Team",
+    "verified_by": "VisionX25 source metadata audit",
     "verified_date": "2026-10-29",
-    "notes": "Verified against Mendeley Data v2 DOI 10.17632/2m7wk5cy4c.2 and Data in Brief publication DOI 10.1016/j.dib.2025.112377."
+    "notes": "2026-10-29 scoped review: Rechecked the versioned Mendeley publisher page for its publication date, sample counts, collection description, and CC BY 4.0 declaration. Download size remains unknown. Raw data files were not downloaded or inspected."
   },
   "size": {
     "file_formats": [
@@ -64,7 +64,7 @@
       "zip"
     ],
     "status": "unknown",
-    "notes": "Dataset comprises 8,340 segment images in total, representing 6 view segments captured for each of the 1,390 physical banknote samples."
+    "notes": "A total download size was not established from the publisher landing page during this review. Image/sample counts are not converted into an estimated byte size."
   },
   "sample_count": {
     "total": 1390,
@@ -96,6 +96,6 @@
   ],
   "provenance": {
     "collection_method": "Genuine banknotes sourced from Sonali Bank, Agrani Bank, and Rupali Bank; counterfeit notes obtained via formal collaboration with Rapid Action Battalion (RAB). Captured with smartphone cameras.",
-    "curation_notes": "Version 2 contains 1,390 physical banknote samples (802 genuine, 588 counterfeit). Six view segments are captured per banknote sample, yielding 8,340 segment images. The dataset is structured for classification without bounding box object detection annotations."
+    "curation_notes": "Publisher describes 1,390 banknotes (802 genuine, 588 counterfeit) and six views per note. The implied 8,340 views are arithmetic, not an independently counted file inventory. Raw files and annotation completeness were not audited."
   }
 }

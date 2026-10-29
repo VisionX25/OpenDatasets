@@ -136,7 +136,7 @@ export const ExplorePage: React.FC = () => {
                 Explore Datasets
               </h1>
               <p className="mt-2 text-base text-slate-600 dark:text-slate-400 max-w-3xl">
-                Discover verified Machine Learning datasets across computer vision, NLP, tabular data, and evaluation benchmarks.
+                Discover machine learning datasets and their documented metadata across computer vision, NLP, tabular data, and evaluation benchmarks.
               </p>
             </div>
             <Link
@@ -317,7 +317,7 @@ export const ExplorePage: React.FC = () => {
                   Looking for all available machine learning data?
                 </h2>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                  Explore the full catalog of {catalog.length} verified datasets with comprehensive facet filtering and live search.
+                  Explore the full catalog of {catalog.length} dataset records with filters and search.
                 </p>
               </div>
               <Link

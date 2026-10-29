@@ -26,11 +26,11 @@
   ],
   "license": {
     "status": "unspecified_by_source",
-    "name": "Public Research Archive (Free for Academic / Educational Use)",
+    "name": "License not specified by publisher",
     "spdx_id": null,
     "url": "https://ai.stanford.edu/~amaas/data/sentiment/",
     "commercial_use": "unknown",
-    "notes": "Authors provide the dataset freely for research purposes. Official page does not attach a standard SPDX license."
+    "notes": "A standard dataset license and commercial-use permission were not established from the publisher documentation reviewed. No academic-only permission or restriction is inferred."
   },
   "source_references": [
     {
@@ -44,13 +44,19 @@
       "url": "https://aclanthology.org/P11-1015/",
       "type": "original_paper",
       "notes": "Published in ACL 2011 by Andrew L. Maas et al."
+    },
+    {
+      "title": "Andrew Maas: Large Movie Review Dataset (Stanford NLP)",
+      "url": "https://nlp.stanford.edu/~amaas/data/sentiment/index.html",
+      "type": "official_website",
+      "notes": "Publisher documentation distinguishes 50,000 labeled reviews from an additional 50,000 unlabeled reviews."
     }
   ],
   "verification": {
-    "status": "verified",
-    "verified_by": "OpenDatasets Core Team",
-    "verified_date": "2026-10-27",
-    "notes": "Verified against official Stanford AI lab distribution and ACL anthology record."
+    "status": "provisional",
+    "verified_by": "VisionX25 source metadata audit",
+    "verified_date": "2026-10-29",
+    "notes": "2026-10-29 scoped review: Publisher documentation confirms 25,000 training, 25,000 test, and 50,000 unlabeled reviews. Total now includes all three splits. License remains unspecified; full-page retrieval was unavailable, so the record remains provisional. Raw data files were not downloaded or inspected."
   },
   "size": {
     "amount": 84.1,
@@ -63,10 +69,11 @@
     "notes": "Compressed tar archive of individual review text files."
   },
   "sample_count": {
-    "total": 50000,
+    "total": 100000,
     "splits": {
       "train": 25000,
-      "test": 25000
+      "test": 25000,
+      "unsupervised": 50000
     },
     "unit": "reviews",
     "status": "verified"

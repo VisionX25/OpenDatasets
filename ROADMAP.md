@@ -9,9 +9,9 @@ This roadmap separates available functionality from proposed work. It is not a d
 - Offline schema validation, URL syntax checks, and duplicate ID/slug checks.
 - Generated catalog and automated Python/frontend CI checks.
 
-## Next priorities
+## Implemented in the demo update
 
-- Public demo with working direct links and refresh behavior.
+- GitHub Pages deployment workflow and static entry points for direct links and refresh.
 - Clear metadata-verification wording throughout the UI.
 - Audit missing metadata against original sources and retain explicit unknown values.
 - Keyboard navigation, focus visibility, and mobile usability review.
