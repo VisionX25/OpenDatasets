@@ -46,3 +46,13 @@ After deployment, verify home, a category, search, a canonical detail link,
 legacy detail links (with a query), reloads, unknown slugs, catalog loading,
 keyboard navigation, and a 360px layout. See the linked GitHub issue and Actions
 run for the actual deployed result; build success alone is insufficient.
+
+## Verified deployment
+
+Live demo: https://visionx25.github.io/OpenDatasets/
+
+First successful run: https://github.com/VisionX25/OpenDatasets/actions/runs/40918880920
+
+Verified home, category, MNIST search (two results), keyboard detail activation,
+canonical direct entry and reload, legacy entry with query preservation, and the
+unknown-slug “Dataset Not Found” view on the public deployment.

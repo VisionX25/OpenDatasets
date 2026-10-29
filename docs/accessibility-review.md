@@ -39,3 +39,9 @@ one. Verified focus moves to main on detail navigation. These are targeted manua
 checks, not a WCAG conformance certification or a full screen-reader audit.
 
 ![Long dataset details at mobile width](images/mobile-detail.jpg)
+
+## Hosted follow-up
+
+Repeated JaalTaka search, pointer detail navigation, no-horizontal-overflow
+measurement (360px layout and scroll width), and mobile menu Escape/focus return
+against the public GitHub Pages application embedded in the 360px QA frame.
