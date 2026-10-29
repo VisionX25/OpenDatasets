@@ -243,9 +243,9 @@
     ],
     "verification": {
       "status": "verified",
-      "verified_by": "OpenDatasets Core Team",
+      "verified_by": "VisionX25 source metadata audit",
       "verified_date": "2026-10-29",
-      "notes": "Metadata verified directly against Mendeley Data v1 DOI 10.17632/pw22dn2mmy.1."
+      "notes": "2026-10-29 scoped review: Rechecked the versioned Mendeley publisher page for its publication date, sample counts, collection description, and CC BY 4.0 declaration. Download size remains unknown. Raw data files were not downloaded or inspected."
     },
     "sample_count": {
       "total": 450,
@@ -270,6 +270,10 @@
     "provenance": {
       "collection_method": "Banknotes collected from personal contacts, retail stores, and banking institutions. Captured using an 8-megapixel smartphone camera.",
       "curation_notes": "Focused specifically on banknote serial number detection and alphanumeric character recognition across multiple denominations. Does not contain counterfeit authentication labels."
+    },
+    "size": {
+      "status": "unknown",
+      "notes": "A total download size was not established from the publisher landing page during this review. Image/sample counts are not converted into an estimated byte size."
     }
   },
   {
@@ -321,9 +325,9 @@
     ],
     "verification": {
       "status": "verified",
-      "verified_by": "OpenDatasets Core Team",
+      "verified_by": "VisionX25 source metadata audit",
       "verified_date": "2026-10-29",
-      "notes": "Metadata verified directly against Mendeley Data v1 DOI 10.17632/3cv2sypkkh.1."
+      "notes": "2026-10-29 scoped review: Rechecked the versioned Mendeley publisher page for its publication date, sample counts, collection description, and CC BY 4.0 declaration. Download size remains unknown. Raw data files were not downloaded or inspected."
     },
     "sample_count": {
       "total": 5073,
@@ -361,6 +365,10 @@
     "provenance": {
       "collection_method": "Captured using multiple mobile phone cameras and preprocessed with background extraction and contrast enhancement.",
       "curation_notes": "Contains denomination-level classification across nine official Bangladeshi Taka banknotes. Does not contain counterfeit labels."
+    },
+    "size": {
+      "status": "unknown",
+      "notes": "A total download size was not established from the publisher landing page during this review. Image/sample counts are not converted into an estimated byte size."
     }
   },
   {
@@ -395,7 +403,7 @@
       "spdx_id": null,
       "url": "https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html",
       "commercial_use": "unknown",
-      "notes": "The original StatLib archive and Pace & Barry (1997) publication do not specify an explicit license or formal public domain waiver. While underlying 1990 US Census data is generally not subject to US copyright, the compiled regression dataset lacks a formal authoritative public domain or open source license declaration."
+      "notes": "The original distribution page was unavailable during this review. No authoritative license or commercial-use grant was established. Reuse rights are not inferred from the underlying census data or the license of a loader library."
     },
     "source_references": [
       {
@@ -409,23 +417,23 @@
         "url": "https://doi.org/10.1016/S0167-7152(96)00140-X",
         "type": "original_paper",
         "notes": "Published in Statistics & Probability Letters (1997) by R. Kelley Pace and Ronald Barry."
+      },
+      {
+        "title": "scikit-learn: California Housing distribution documentation",
+        "url": "https://scikit-learn.org/stable/datasets/real_world.html#california-housing-dataset",
+        "type": "documentation",
+        "notes": "Maintainer documentation corroborates 20,640 rows and the 1990 census provenance; not used to infer an upstream dataset license."
       }
     ],
     "verification": {
-      "status": "verified",
-      "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-10-27",
-      "notes": "Metadata verified against StatLib repository archive and Statistics & Probability Letters paper; license is unspecified by the original academic distributors."
+      "status": "provisional",
+      "verified_by": "VisionX25 source metadata audit",
+      "verified_date": "2026-10-29",
+      "notes": "2026-10-29 scoped review: Maintainer distribution documentation corroborates 20,640 rows and census provenance. Original archive/licensing evidence could not be retrieved; size is explicitly unknown. Raw data files were not downloaded or inspected."
     },
     "size": {
-      "amount": 1.4,
-      "unit": "MB",
-      "file_formats": [
-        "csv",
-        "data"
-      ],
-      "status": "verified",
-      "notes": "Raw tabular text and CSV format size."
+      "status": "unknown",
+      "notes": "The prior 1.4 MB value was not established as an archive/download size. An in-memory table footprint is not interchangeable with a distribution size."
     },
     "sample_count": {
       "total": 20640,
@@ -573,11 +581,11 @@
     ],
     "license": {
       "status": "unspecified_by_source",
-      "name": "Unspecified (Public for Research and Educational Use)",
+      "name": "License not specified by publisher",
       "spdx_id": null,
       "url": "https://www.cs.toronto.edu/~kriz/cifar.html",
       "commercial_use": "unknown",
-      "notes": "The official University of Toronto page does not specify a standardized open-source or creative commons license. It is distributed freely for non-commercial research and education."
+      "notes": "The cited publisher page provides downloads and requests citation, but no standard dataset license or commercial-use grant was established in this review. Commercial use remains unknown; public download availability is not a license."
     },
     "source_references": [
       {
@@ -595,9 +603,9 @@
     ],
     "verification": {
       "status": "verified",
-      "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-10-26",
-      "notes": "Metadata verified directly against the University of Toronto website and technical report."
+      "verified_by": "VisionX25 source metadata audit",
+      "verified_date": "2026-10-29",
+      "notes": "2026-10-29 scoped review: Rechecked 60,000 images, the 50,000/10,000 split, and the 163 MB Python archive on the Toronto publisher page. License remains unspecified. Raw data files were not downloaded or inspected."
     },
     "size": {
       "amount": 163,
@@ -1187,7 +1195,7 @@
       "spdx_id": null,
       "url": "https://gluebenchmark.com/faq",
       "commercial_use": "unknown",
-      "notes": "The GLUE benchmark as an aggregate does not grant a unified license. Each of the 9 constituent tasks is governed by its respective upstream license (e.g., Microsoft Research license for MRPC, CC BY-SA 4.0 for MNLI). Users must review individual component task terms."
+      "notes": "The official GLUE FAQ directs users to the original licenses of the component datasets. No unified reuse or commercial-use permission is inferred for the aggregate."
     },
     "source_references": [
       {
@@ -1210,10 +1218,10 @@
       }
     ],
     "verification": {
-      "status": "verified",
-      "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-10-27",
-      "notes": "Metadata verified against GLUE benchmark portal, FAQ licensing guidance, and EMNLP workshop proceedings."
+      "status": "provisional",
+      "verified_by": "VisionX25 source metadata audit",
+      "verified_date": "2026-10-29",
+      "notes": "2026-10-29 scoped review: Rechecked the original-license guidance in the publisher FAQ. The JavaScript site did not expose full task metadata to the text fetcher; historical aggregate counts and size were not reverified. Review remains provisional. Raw data files were not downloaded or inspected."
     },
     "size": {
       "amount": 379,
@@ -1615,11 +1623,11 @@
     ],
     "license": {
       "status": "unspecified_by_source",
-      "name": "Public Research Archive (Free for Academic / Educational Use)",
+      "name": "License not specified by publisher",
       "spdx_id": null,
       "url": "https://ai.stanford.edu/~amaas/data/sentiment/",
       "commercial_use": "unknown",
-      "notes": "Authors provide the dataset freely for research purposes. Official page does not attach a standard SPDX license."
+      "notes": "A standard dataset license and commercial-use permission were not established from the publisher documentation reviewed. No academic-only permission or restriction is inferred."
     },
     "source_references": [
       {
@@ -1633,13 +1641,19 @@
         "url": "https://aclanthology.org/P11-1015/",
         "type": "original_paper",
         "notes": "Published in ACL 2011 by Andrew L. Maas et al."
+      },
+      {
+        "title": "Andrew Maas: Large Movie Review Dataset (Stanford NLP)",
+        "url": "https://nlp.stanford.edu/~amaas/data/sentiment/index.html",
+        "type": "official_website",
+        "notes": "Publisher documentation distinguishes 50,000 labeled reviews from an additional 50,000 unlabeled reviews."
       }
     ],
     "verification": {
-      "status": "verified",
-      "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-10-27",
-      "notes": "Verified against official Stanford AI lab distribution and ACL anthology record."
+      "status": "provisional",
+      "verified_by": "VisionX25 source metadata audit",
+      "verified_date": "2026-10-29",
+      "notes": "2026-10-29 scoped review: Publisher documentation confirms 25,000 training, 25,000 test, and 50,000 unlabeled reviews. Total now includes all three splits. License remains unspecified; full-page retrieval was unavailable, so the record remains provisional. Raw data files were not downloaded or inspected."
     },
     "size": {
       "amount": 84.1,
@@ -1652,10 +1666,11 @@
       "notes": "Compressed tar archive of individual review text files."
     },
     "sample_count": {
-      "total": 50000,
+      "total": 100000,
       "splits": {
         "train": 25000,
-        "test": 25000
+        "test": 25000,
+        "unsupervised": 50000
       },
       "unit": "reviews",
       "status": "verified"
@@ -1778,7 +1793,7 @@
     "id": "jaaltaka",
     "slug": "jaaltaka",
     "name": "JaalTaka: A Benchmark Dataset for Detecting Counterfeit Bangladeshi Banknotes",
-    "description": "JaalTaka is a specialized computer vision benchmark dataset for distinguishing genuine from counterfeit Bangladeshi banknotes. Version 2 consists of 1,390 physical banknotes (802 genuine notes sourced from Sonali Bank, Agrani Bank, and Rupali Bank, and 588 counterfeit notes obtained in collaboration with the Rapid Action Battalion). Each banknote sample is captured across 6 high-resolution smartphone camera views focusing on key security features under diverse physical conditions (wear, stains, graffiti, tape/staple artifacts), yielding a total of 8,340 segment images.",
+    "description": "JaalTaka is a specialized computer vision benchmark dataset for distinguishing genuine from counterfeit Bangladeshi banknotes. Version 2 consists of 1,390 physical banknotes (802 genuine notes sourced from Sonali Bank, Agrani Bank, and Rupali Bank, and 588 counterfeit notes obtained in collaboration with the Rapid Action Battalion). Each banknote sample is captured across 6 high-resolution smartphone camera views focusing on key security features under diverse physical conditions (wear, stains, graffiti, tape/staple artifacts), corresponding to 8,340 views if all six views are present for every banknote; this is a derived count, not a file-manifest audit.",
     "homepage_url": "https://data.mendeley.com/datasets/2m7wk5cy4c/2",
     "publisher": {
       "name": "Daffodil International University",
@@ -1829,9 +1844,9 @@
     ],
     "verification": {
       "status": "verified",
-      "verified_by": "OpenDatasets Core Team",
+      "verified_by": "VisionX25 source metadata audit",
       "verified_date": "2026-10-29",
-      "notes": "Verified against Mendeley Data v2 DOI 10.17632/2m7wk5cy4c.2 and Data in Brief publication DOI 10.1016/j.dib.2025.112377."
+      "notes": "2026-10-29 scoped review: Rechecked the versioned Mendeley publisher page for its publication date, sample counts, collection description, and CC BY 4.0 declaration. Download size remains unknown. Raw data files were not downloaded or inspected."
     },
     "size": {
       "file_formats": [
@@ -1839,7 +1854,7 @@
         "zip"
       ],
       "status": "unknown",
-      "notes": "Dataset comprises 8,340 segment images in total, representing 6 view segments captured for each of the 1,390 physical banknote samples."
+      "notes": "A total download size was not established from the publisher landing page during this review. Image/sample counts are not converted into an estimated byte size."
     },
     "sample_count": {
       "total": 1390,
@@ -1871,7 +1886,7 @@
     ],
     "provenance": {
       "collection_method": "Genuine banknotes sourced from Sonali Bank, Agrani Bank, and Rupali Bank; counterfeit notes obtained via formal collaboration with Rapid Action Battalion (RAB). Captured with smartphone cameras.",
-      "curation_notes": "Version 2 contains 1,390 physical banknote samples (802 genuine, 588 counterfeit). Six view segments are captured per banknote sample, yielding 8,340 segment images. The dataset is structured for classification without bounding box object detection annotations."
+      "curation_notes": "Publisher describes 1,390 banknotes (802 genuine, 588 counterfeit) and six views per note. The implied 8,340 views are arithmetic, not an independently counted file inventory. Raw files and annotation completeness were not audited."
     }
   },
   {
@@ -2000,12 +2015,12 @@
       "digit-recognition"
     ],
     "license": {
-      "status": "unspecified_by_source",
-      "name": "Public Research Archive (Author Copyright)",
+      "status": "unknown",
+      "name": "License not established from original source",
       "spdx_id": null,
       "url": "http://yann.lecun.com/exdb/mnist/",
       "commercial_use": "unknown",
-      "notes": "Original distribution page does not declare a standard SPDX license; authors hold copyright and allow free public download for academic benchmarking. CC BY-SA 3.0 is commonly applied in secondary distributions."
+      "notes": "The original publisher page was unavailable during this review. A standard license or commercial-use grant was not established. Terms from mirrors are not assumed to cover the original distribution."
     },
     "source_references": [
       {
@@ -2019,13 +2034,19 @@
         "url": "http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf",
         "type": "original_paper",
         "notes": "Foundational 1998 paper introducing LeNet-5 and benchmark results on MNIST."
+      },
+      {
+        "title": "NIST Biometric Database Catalog: MNIST",
+        "url": "https://tsapps.nist.gov/BDbC/Search/Details/387",
+        "type": "documentation",
+        "notes": "Corroborates 60,000 training and 10,000 test examples; does not establish a dataset license."
       }
     ],
     "verification": {
-      "status": "verified",
-      "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-10-26",
-      "notes": "Verified against Yann LeCun's official distribution archive and Proceedings of the IEEE paper."
+      "status": "provisional",
+      "verified_by": "VisionX25 source metadata audit",
+      "verified_date": "2026-10-29",
+      "notes": "2026-10-29 scoped review: NIST corroborates the training/test counts, but the original MNIST source could not be retrieved. Original license evidence remains unresolved. Raw data files were not downloaded or inspected."
     },
     "size": {
       "amount": 11.6,
