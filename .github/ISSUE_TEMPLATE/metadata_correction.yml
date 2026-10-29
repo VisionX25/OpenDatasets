@@ -1,0 +1,24 @@
+name: Correct dataset metadata
+description: Report an inaccurate value, missing source, or outdated link.
+title: "[Metadata]: "
+body:
+  - type: input
+    id: dataset
+    attributes:
+      label: Dataset name, slug, or page URL
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Current value and proposed correction
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Supporting source
+      description: Link the authoritative evidence, or explain why the current value should be marked unknown.
+    validations:
+      required: true
+

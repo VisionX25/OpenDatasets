@@ -1,0 +1,27 @@
+name: Report a bug
+description: Report a reproducible problem in browsing, search, or dataset details.
+title: "[Bug]: "
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the page URL and search/filter values.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser, operating system, and screen size
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or error messages
+      description: Remove private information before attaching anything.
+
