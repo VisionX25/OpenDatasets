@@ -384,6 +384,20 @@ def validate_draft_dict(
         return [f"Failed to validate draft against schema: {exc}"]
 
 
+def format_unsupported_issue_report(issue_number: int | None = None) -> str:
+    """Format a diagnostic Markdown report for non-dataset suggestion issues."""
+    lines: list[str] = []
+    lines.append("# Community Dataset Suggestion Triage Report\n")
+    lines.append("> [!NOTE]")
+    num_str = f"Issue #{issue_number}" if issue_number else "This issue"
+    lines.append(f"> **Non-Dataset Suggestion:** {num_str} does not match the dataset suggestion form template structure.\n")
+    lines.append("## Triage Outcome\n")
+    lines.append("- **Status:** Skipped automated dataset triage.")
+    lines.append("- **Reason:** Issue body does not contain required dataset suggestion form headings (`Dataset name`, `Official dataset URL`, `Modality, task, and usefulness`).")
+    lines.append("- **Action:** No metadata draft generated. Issue remains available for standard repository discussions or bug triage.\n")
+    return "\n".join(lines)
+
+
 def format_maintainer_report(
     suggestion: ParsedSuggestion,
     duplicate_result: DuplicateCheckResult,
@@ -412,6 +426,8 @@ def format_maintainer_report(
 
     # Submission Overview Table
     lines.append("## Submission Overview\n")
+    if issue_number:
+        lines.append(f"- **GitHub Issue:** #{issue_number}")
     lines.append(f"- **Dataset Name:** {suggestion.name or '*(missing)*'}")
     lines.append(f"- **Source URL:** {suggestion.source_url or '*(missing)*'}")
     lines.append(f"- **Category / Modality:** {suggestion.category or '*(unspecified)*'}")
@@ -421,8 +437,6 @@ def format_maintainer_report(
         lines.append(f"- **DOI:** {suggestion.doi}")
     if suggestion.paper_url:
         lines.append(f"- **Supporting Paper:** {suggestion.paper_url}")
-    if issue_number:
-        lines.append(f"- **GitHub Issue:** #{issue_number}")
     lines.append("")
 
     # Validation Results
@@ -465,6 +479,31 @@ def format_maintainer_report(
         if draft_file_path:
             lines.append(f"- **Draft File Saved:** `{draft_file_path}`")
         lines.append("")
+
+    # Unknown or Unverified Claims Section
+    lines.append("## Unknown or Unverified Claims\n")
+    if draft_data:
+        lic = draft_data.get("license", {})
+        lines.append(f"- **License Terms:** `{lic.get('name')}` (Verification status: `{lic.get('status')}`, Commercial use: `{lic.get('commercial_use')}`). Contributor claims have not been legally audited.")
+        pub = draft_data.get("publisher", {})
+        lines.append(f"- **Publisher Identity:** Inferred as `{pub.get('name')}` ({pub.get('type')}) from source domain. Verification required.")
+        lines.append("- **Sample Counts & Download Payload:** Omitted from draft. Must be determined from official distribution archives.")
+        prov = draft_data.get("provenance", {})
+        if prov.get("curation_notes"):
+            lines.append(f"- **Contributor Notes & Limitations:** {prov.get('curation_notes')}")
+    else:
+        lines.append("- Submission is incomplete or invalid; no unverified claims structured into draft metadata.")
+    lines.append("")
+
+    # Required Manual Verification Steps Section
+    lines.append("## Required Manual Verification Steps\n")
+    lines.append("Maintainers must complete the following checks before approving this dataset into the catalog:")
+    lines.append("1. [ ] **Source Verification:** Navigate to the official URL, confirm page resolves, and verify data accessibility.")
+    lines.append("2. [ ] **Academic Citation & DOI:** Verify DOI resolves to the specific publication and authors match claimed dataset.")
+    lines.append("3. [ ] **License Audit:** Inspect repository/data distribution terms directly; distinguish software code licenses from dataset annotation terms.")
+    lines.append("4. [ ] **Sample Distribution & Splits:** Audit instance counts, splits, and file formats against authoritative source documents.")
+    lines.append("5. [ ] **Catalog Integration:** Move verified draft from `drafts/` to `data/datasets/<slug>.json`, update verification block, and run catalog generation.")
+    lines.append("")
 
     # Recommended Next Steps
     lines.append("## Recommended Next Steps\n")

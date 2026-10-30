@@ -140,87 +140,83 @@ Because GitHub Issues are publicly open to any user, all contributions must be t
 
 ---
 
-## 6. GitHub Actions Workflow Design (Task 14.2 Reference)
+## 6. GitHub Actions Workflow Design (`dataset-suggestion.yml`)
 
-Below is the verified template for `.github/workflows/suggestion_triage.yml`:
+The automated triage workflow runs under strictly isolated permissions (`contents: read`). It does not comment on issues, modify labels, or open pull requests automatically. Triage results are surfaced via GitHub Actions Job Summaries (`$GITHUB_STEP_SUMMARY`) and downloadable artifacts:
 
 ```yaml
-name: Triage Community Dataset Suggestion
+name: Dataset Suggestion Triage
 
 on:
   issues:
-    types: [opened, edited]
+    types: [opened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dataset-suggestion-${{ github.event.issue.number }}
+  cancel-in-progress: false
 
 jobs:
   triage:
-    if: contains(github.event.issue.labels.*.name, 'dataset-suggestion') || startsWith(github.event.issue.title, 'Dataset:')
+    name: Triage Dataset Suggestion
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      issues: write
+    timeout-minutes: 5
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
-          pip install jsonschema pytest
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
 
-      - name: Process Suggestion
+      - name: Process dataset suggestion
         id: triage_step
         run: |
-          mkdir -p drafts/
+          mkdir -p triage_output drafts
           python3 scripts/process_suggestion.py \
             --event-path "$GITHUB_EVENT_PATH" \
-            --output-dir drafts/ \
-            --report-file report.md \
-            --json > triage_result.json || true
+            --output-dir drafts \
+            --report-file triage_output/report.md \
+            --summary-file "$GITHUB_STEP_SUMMARY" \
+            --json > triage_output/result.json || true
 
-          echo "STATUS=$(jq -r .status triage_result.json)" >> $GITHUB_OUTPUT
-          echo "LABEL=$(jq -r .recommended_label triage_result.json)" >> $GITHUB_OUTPUT
-          echo "SLUG=$(jq -r .slug triage_result.json)" >> $GITHUB_OUTPUT
+          python3 -c "
+          import json, os
+          with open('triage_output/result.json', 'r', encoding='utf-8') as f:
+              data = json.load(f)
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
+              out.write(f'status={data.get(\"status\", \"\")}\n')
+              out.write(f'is_valid={str(data.get(\"is_valid\", False)).lower()}\n')
+              out.write(f'slug={data.get(\"slug\", \"\")}\n')
+              out.write(f'draft_path={data.get(\"draft_path\", \"\") or \"\"}\n')
+          "
 
-      - name: Post Triage Comment
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const fs = require('fs');
-            const report = fs.readFileSync('report.md', 'utf8');
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              body: report
-            });
-
-      - name: Apply Issue Label
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const label = '${{ steps.triage_step.outputs.LABEL }}';
-            if (label) {
-              await github.rest.issues.addLabels({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.issue.number,
-                labels: [label]
-              });
-            }
-
-      - name: Upload Draft Artifact
-        if: steps.triage_step.outputs.STATUS == 'valid'
+      - name: Upload maintainer review report
+        if: always() && hashFiles('triage_output/report.md') != ''
         uses: actions/upload-artifact@v4
         with:
-          name: draft-${{ steps.triage_step.outputs.SLUG }}
-          path: drafts/*.draft.json
-          retention-days: 14
+          name: triage-report-issue-${{ github.event.issue.number }}
+          path: triage_output/report.md
+          retention-days: 30
+
+      - name: Upload provisional draft metadata
+        if: steps.triage_step.outputs.status == 'valid' && steps.triage_step.outputs.draft_path != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: draft-metadata-issue-${{ github.event.issue.number }}
+          path: ${{ steps.triage_step.outputs.draft_path }}
+          retention-days: 30
 ```
 
 ---

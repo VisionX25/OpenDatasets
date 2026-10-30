@@ -27,6 +27,7 @@ class ParsedSuggestion:
     doi: str = ""
     paper_url: str = ""
     notes: str = ""
+    is_template_match: bool = True
     raw_sections: dict[str, str] = field(default_factory=dict)
     errors: list[str] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
@@ -198,6 +199,23 @@ def parse_evidence_section(text: str) -> tuple[str, str, str]:
     return doi, paper_url, notes
 
 
+def is_dataset_suggestion_template(issue_body: str) -> bool:
+    """Check whether an issue body adheres to the dataset suggestion template structure.
+
+    Requires at least the dataset name section and at least one other standard section
+    (source URL, modality/usefulness, or license terms).
+    """
+    sections = split_issue_form_sections(issue_body)
+    if not sections:
+        return False
+    has_name = any("dataset name" in k or k == "name" for k in sections)
+    has_source = any("source" in k or "url" in k or "publisher" in k for k in sections)
+    has_usefulness = any("usefulness" in k or "modality" in k or "task" in k for k in sections)
+    has_license = any("license" in k for k in sections)
+
+    return has_name and (has_source or has_usefulness or has_license)
+
+
 def parse_dataset_suggestion(issue_body: str) -> ParsedSuggestion:
     """Parse and validate a GitHub issue body into a ParsedSuggestion.
 
@@ -209,6 +227,12 @@ def parse_dataset_suggestion(issue_body: str) -> ParsedSuggestion:
     suggestion = ParsedSuggestion()
     sections = split_issue_form_sections(issue_body)
     suggestion.raw_sections = sections
+
+    # Verify that this issue matches the dataset suggestion template structure
+    if not is_dataset_suggestion_template(issue_body):
+        suggestion.is_template_match = False
+        suggestion.errors.append("Issue body does not match the dataset suggestion template format.")
+        return suggestion
 
     # Match section keys flexibly
     name_content = ""

@@ -617,3 +617,271 @@ MIT
     assert "issue11" in res2["draft_path"]
     assert Path(res1["draft_path"]).exists()
     assert Path(res2["draft_path"]).exists()
+
+
+# ==============================================================================
+# Task 14.2 Specific Tests (Unsupported Issue Types, Workflow, Summary File)
+# ==============================================================================
+def test_task_14_2_unsupported_issue_types():
+    """Verify that bug reports and non-suggestion issues are safely identified and skipped."""
+    from scripts.suggestion_parser import is_dataset_suggestion_template
+
+    # 1. Bug report template body
+    bug_body = """### Describe the bug
+The dataset filter for 'vision' returns 0 results on mobile devices.
+
+### Steps to Reproduce
+1. Open mobile browser
+2. Tap vision filter
+
+### Expected behavior
+Should show vision datasets.
+"""
+    assert not is_dataset_suggestion_template(bug_body)
+    exit_code, res, report = process_suggestion(raw_body=bug_body, issue_number=123)
+    assert exit_code == 0
+    assert res["status"] == "unsupported"
+    assert res["draft_path"] is None
+    assert res["draft_metadata"] is None
+    assert "Non-Dataset Suggestion" in report
+    assert "Skipped automated dataset triage" in report
+
+    # 2. General freeform question
+    question_body = "Hello! Where can I find the raw images for CIFAR-10?"
+    assert not is_dataset_suggestion_template(question_body)
+    exit_q, res_q, report_q = process_suggestion(raw_body=question_body, issue_number=124)
+    assert exit_q == 0
+    assert res_q["status"] == "unsupported"
+    assert "Non-Dataset Suggestion" in report_q
+
+    # 3. Empty issue body
+    assert not is_dataset_suggestion_template("")
+    exit_e, res_e, _ = process_suggestion(raw_body="", issue_number=125)
+    assert exit_e == 0
+    assert res_e["status"] == "unsupported"
+
+
+def test_task_14_2_summary_file_and_event_integration(tmp_path: Path):
+    """Verify GitHub event payload parsing and summary file output generation."""
+    event_payload = {
+        "action": "opened",
+        "issue": {
+            "number": 200,
+            "title": "[Dataset]: BioAcoustic Avian Vocalizations",
+            "body": """### Dataset name
+BioAcoustic Avian Vocalizations
+
+### Official dataset URL
+https://avian-bioacoustics.org/data
+
+### Modality, task, and usefulness
+**Category:** Audio
+**Primary Task:** Audio Classification
+**Description:** A curated collection of 10,000 avian audio recordings with species-level annotations.
+
+### License information
+Creative Commons Attribution 4.0 International
+
+### Additional evidence and limitations
+- **DOI:** 10.1234/avian.2026.01
+- **Additional Notes / Limitations:**
+Field recordings across 5 distinct forest habitats.
+""",
+        },
+    }
+    event_file = tmp_path / "github_event.json"
+    event_file.write_text(json.dumps(event_payload), encoding="utf-8")
+
+    report_file = tmp_path / "triage_output" / "report.md"
+    summary_file = tmp_path / "step_summary.md"
+    drafts_dir = tmp_path / "drafts"
+
+    import subprocess
+    import sys
+
+    cmd = [
+        sys.executable,
+        str(REPO_ROOT / "scripts" / "process_suggestion.py"),
+        "--event-path",
+        str(event_file),
+        "--output-dir",
+        str(drafts_dir),
+        "--report-file",
+        str(report_file),
+        "--summary-file",
+        str(summary_file),
+        "--json",
+    ]
+    proc = subprocess.run(cmd, capture_output=True, text=True, check=False)
+    assert proc.returncode == 0
+    data = json.loads(proc.stdout)
+
+    assert data["status"] == "valid"
+    assert data["is_valid"] is True
+    assert data["slug"] == "bioacoustic-avian-vocalizations"
+    assert Path(data["draft_path"]).exists()
+
+    # Check that report_file and summary_file were written with all required sections
+    assert report_file.exists()
+    assert summary_file.exists()
+    summary_content = summary_file.read_text(encoding="utf-8")
+    assert "# Community Dataset Suggestion Triage Report" in summary_content
+    assert "Issue #200" in summary_content
+    assert "BioAcoustic Avian Vocalizations" in summary_content
+    assert "## Parsing & Validation" in summary_content
+    assert "## Duplicate Check" in summary_content
+    assert "## Schema Compliance (Draft)" in summary_content
+    assert "## Unknown or Unverified Claims" in summary_content
+    assert "## Required Manual Verification Steps" in summary_content
+    assert "## Recommended Next Steps" in summary_content
+
+
+def test_task_14_2_workflow_file_security_and_structure():
+    """Verify that dataset-suggestion.yml conforms to strict security requirements."""
+    import re
+
+    workflow_path = REPO_ROOT / ".github" / "workflows" / "dataset-suggestion.yml"
+    assert workflow_path.exists(), "Workflow file .github/workflows/dataset-suggestion.yml is missing"
+
+    raw_yaml_text = workflow_path.read_text(encoding="utf-8")
+
+    # 1. Triggered on issues: [opened]
+    assert re.search(r"['\"]?on['\"]?:\s*\n\s+issues:\s*\n\s+types:\s*\[\s*opened\s*\]", raw_yaml_text), (
+        "Workflow must trigger on issues: [opened]"
+    )
+
+    # 2. Minimal permissions: contents: read only
+    assert re.search(r"permissions:\s*\n\s+contents:\s*read", raw_yaml_text), (
+        "Workflow permissions must be strictly contents: read"
+    )
+
+    # 3. Concurrency configured
+    assert re.search(
+        r"concurrency:\s*\n\s+group:\s*dataset-suggestion-\$\{\{\s*github\.event\.issue\.number\s*\}\}",
+        raw_yaml_text,
+    ), "Workflow must configure concurrency grouped by issue number"
+    assert re.search(r"cancel-in-progress:\s*false", raw_yaml_text)
+
+    # 4. Triage job configuration
+    assert re.search(r"jobs:\s*\n\s+triage:", raw_yaml_text)
+    assert re.search(r"timeout-minutes:\s*5", raw_yaml_text), (
+        "Triage job must specify a 5-minute timeout"
+    )
+
+    # If PyYAML is available, verify full parsed dictionary structure as well
+    try:
+        import yaml
+        wf = yaml.safe_load(raw_yaml_text)
+        assert isinstance(wf, dict)
+        on_trigger = wf.get("on") or wf.get(True) or wf.get("'on'")
+        assert on_trigger is not None
+        assert "issues" in on_trigger
+        assert on_trigger["issues"]["types"] == ["opened"]
+        assert wf.get("permissions") == {"contents": "read"}
+        assert "dataset-suggestion" in wf.get("concurrency", {}).get("group", "")
+        job = wf.get("jobs", {}).get("triage", {})
+        assert job.get("timeout-minutes") == 5
+    except ImportError:
+        pass
+
+    # 5. Verify security: no raw issue interpolation in steps
+    assert "${{ github.event.issue.body }}" not in raw_yaml_text, "Remote script injection risk detected!"
+    assert "${{ github.event.issue.title }}" not in raw_yaml_text, "Remote script injection risk detected!"
+    assert "$GITHUB_EVENT_PATH" in raw_yaml_text, "Must pass event payload via file path!"
+
+
+def test_task_14_2_nine_scenario_checklist(catalog_datasets: list[dict[str, Any]]):
+    """Explicitly verify all 9 scenarios specified in Task 14.2 requirements."""
+    # 1. New valid dataset issue
+    valid_body = """### Dataset name
+Marine Debris Optical Benchmark
+
+### Official dataset URL
+https://marinedebris.org/benchmark
+
+### Modality, task, and usefulness
+**Category:** Vision
+**Primary Task:** Object Detection
+**Description:** A comprehensive benchmark of underwater floating marine plastic debris annotated for object detection.
+
+### License information
+Creative Commons Attribution 4.0 International
+
+### Additional evidence and limitations
+- **DOI:** 10.1234/marine.debris.2026
+"""
+    code_v, res_v, rep_v = process_suggestion(raw_body=valid_body, issue_number=10)
+    assert code_v == 0
+    assert res_v["status"] == "valid"
+    assert res_v["is_valid"] is True
+
+    # 2. Missing required fields
+    code_m, res_m, _ = process_suggestion(raw_body="### Dataset name\n_No response_\n### Official dataset URL\nhttps://example.org\n")
+    assert code_m == 1
+    assert res_m["status"] == "invalid"
+    assert res_m["is_valid"] is False
+
+    # 3. Exact duplicate
+    code_d, res_d, _ = process_suggestion(raw_body="### Dataset name\nBanknote Authentication\n### Official dataset URL\nhttps://archive.ics.uci.edu/dataset/267/banknote+authentication\n### Modality, task, and usefulness\n**Description:** A valid description of at least ten characters.\n")
+    assert code_d == 2
+    assert res_d["status"] == "duplicate"
+    assert res_d["is_duplicate"] is True
+
+    # 4. Fuzzy duplicate warning (must NOT auto-reject)
+    fuzzy_sug = ParsedSuggestion(
+        name="Banknote Authentication Benchmark Dataset",
+        source_url="https://example.org/different-url",
+        category="Tabular",
+        task="Classification",
+        description="A different extension of banknote classification records.",
+        license_text="MIT",
+    )
+    fuzzy_res = check_suggestion_for_duplicates(fuzzy_sug, catalog_datasets)
+    assert fuzzy_res.has_potential_matches
+    assert not fuzzy_res.is_duplicate, "Fuzzy match must be a warning, not automatic rejection"
+
+    # 5. Malicious issue content (containment check)
+    dirty_body = "### Dataset name\n$(whoami) <script>alert(1)</script>; rm -rf /\n### Official dataset URL\nhttps://safe.org\n### Modality, task, and usefulness\n**Description:** Valid description of at least ten characters."
+    code_mal, res_mal, _ = process_suggestion(raw_body=dirty_body)
+    assert code_mal == 0
+    assert "/" not in res_mal["slug"]
+    assert ";" not in res_mal["slug"]
+
+    # 6. Unsupported issue types
+    code_u, res_u, rep_u = process_suggestion(raw_body="### Describe the bug\nBug in website\n", issue_number=50)
+    assert code_u == 0
+    assert res_u["status"] == "unsupported"
+    assert "Non-Dataset Suggestion" in rep_u
+
+    # 7. Provisional verification status
+    draft = generate_draft_metadata(ParsedSuggestion(
+        name="Provisional Check Dataset",
+        source_url="https://prov.org/data",
+        category="Vision",
+        task="Classification",
+        description="A valid benchmark dataset description for testing provisional status rules.",
+    ))
+    assert draft["verification"]["status"] == "provisional"
+    assert draft["verification"]["verified_by"] is None
+
+    # 8. Unknown licenses
+    assert draft["license"]["status"] == "unknown"
+    assert draft["license"]["commercial_use"] == "unknown"
+
+    # 9. GitHub event payload handling
+    event_payload = {
+        "action": "opened",
+        "issue": {
+            "number": 300,
+            "title": "[Dataset]: Check Event",
+            "body": valid_body,
+        },
+    }
+    from scripts.process_suggestion import extract_issue_data_from_event
+    import tempfile
+    with tempfile.NamedTemporaryFile("w+", encoding="utf-8", suffix=".json") as f:
+        json.dump(event_payload, f)
+        f.flush()
+        body_ev, num_ev, _ = extract_issue_data_from_event(Path(f.name))
+        assert num_ev == 300
+        assert "Marine Debris Optical Benchmark" in body_ev

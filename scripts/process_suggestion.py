@@ -33,6 +33,7 @@ if str(REPO_ROOT) not in sys.path:
 from scripts.draft_generator import (
     DEFAULT_SCHEMA_PATH,
     format_maintainer_report,
+    format_unsupported_issue_report,
     generate_draft_metadata,
     generate_slug,
     validate_draft_dict,
@@ -82,6 +83,26 @@ def process_suggestion(
     """
     # 1. Parse and sanitize suggestion
     suggestion = parse_dataset_suggestion(raw_body)
+
+    # 1a. Handle unsupported issue types (not matching dataset suggestion template)
+    if not suggestion.is_template_match:
+        report_markdown = format_unsupported_issue_report(issue_number=issue_number)
+        result_dict: dict[str, Any] = {
+            "status": "unsupported",
+            "exit_code": 0,
+            "is_template_match": False,
+            "is_valid": False,
+            "is_duplicate": False,
+            "has_potential_matches": False,
+            "errors": suggestion.errors,
+            "warnings": suggestion.warnings,
+            "slug": "",
+            "draft_path": None,
+            "recommended_label": "unsupported",
+            "duplicate_check": None,
+            "draft_metadata": None,
+        }
+        return 0, result_dict, report_markdown
 
     # 2. Duplicate detection
     existing_datasets = load_catalog_datasets(data_dir)
@@ -219,6 +240,12 @@ def main() -> int:
         default=None,
         help="Optional path to write the markdown report to.",
     )
+    parser.add_argument(
+        "--summary-file",
+        type=Path,
+        default=None,
+        help="Optional path to append the markdown report to (e.g. $GITHUB_STEP_SUMMARY).",
+    )
 
     args = parser.parse_args()
 
@@ -255,6 +282,12 @@ def main() -> int:
         args.report_file.parent.mkdir(parents=True, exist_ok=True)
         with open(args.report_file, "w", encoding="utf-8") as f:
             f.write(report_markdown)
+
+    if args.summary_file:
+        args.summary_file.parent.mkdir(parents=True, exist_ok=True)
+        with open(args.summary_file, "a", encoding="utf-8") as f:
+            f.write(report_markdown)
+            f.write("\n")
 
     if args.json_output:
         print(json.dumps(result_dict, indent=2, ensure_ascii=False))
