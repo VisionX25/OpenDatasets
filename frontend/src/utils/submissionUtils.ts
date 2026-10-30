@@ -86,8 +86,11 @@ export function buildGitHubIssueUrl(
   const categoryDef = CATEGORIES.find((c) => c.id === data.category)
   const categoryName = categoryDef ? categoryDef.name : data.category || 'Unspecified'
 
-  const title = `[Dataset]: ${data.name.trim() || 'New Dataset Suggestion'}`
-  const name = data.name.trim()
+  const cleanName = data.name.trim()
+  const title = cleanName.startsWith('[Dataset]:')
+    ? cleanName
+    : `[Dataset]: ${cleanName || 'New Dataset Suggestion'}`
+  const name = cleanName
   const source = data.sourceUrl.trim()
 
   const usefulness = [

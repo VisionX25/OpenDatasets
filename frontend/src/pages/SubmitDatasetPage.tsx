@@ -138,7 +138,7 @@ export const SubmitDatasetPage: React.FC = () => {
     }
   }
 
-  const handleGenerateAndCopy = async (e: React.FormEvent) => {
+  const handleSubmitAndContinue = async (e: React.FormEvent) => {
     e.preventDefault()
     setHasAttemptedSubmit(true)
 
@@ -152,7 +152,40 @@ export const SubmitDatasetPage: React.FC = () => {
     const success = await copyTextToClipboard(md)
     if (success) {
       setCopied(true)
+      setTimeout(() => setCopied(false), 3000)
     }
+
+    const issueResult = buildGitHubIssueUrl(formData)
+
+    // Attempt to open GitHub in a new tab if supported
+    if (typeof window !== 'undefined' && typeof window.open === 'function') {
+      window.open(issueResult.url, '_blank', 'noopener,noreferrer')
+    }
+
+    setTimeout(() => {
+      document.getElementById('submission-handoff')?.scrollIntoView({ behavior: 'smooth' })
+    }, 100)
+  }
+
+  const handleCopyOnly = async () => {
+    setHasAttemptedSubmit(true)
+
+    if (!validateAll()) {
+      return
+    }
+
+    const md = formatSubmissionMarkdown(formData)
+    setGeneratedMarkdown(md)
+
+    const success = await copyTextToClipboard(md)
+    if (success) {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 3000)
+    }
+
+    setTimeout(() => {
+      document.getElementById('submission-handoff')?.scrollIntoView({ behavior: 'smooth' })
+    }, 100)
   }
 
   const handleCopyAgain = async () => {
@@ -285,7 +318,7 @@ export const SubmitDatasetPage: React.FC = () => {
         )}
 
         {/* Main Submission Form */}
-        <form onSubmit={handleGenerateAndCopy} noValidate className="space-y-6">
+        <form onSubmit={handleSubmitAndContinue} noValidate className="space-y-6">
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 sm:p-8 space-y-6 shadow-xs">
             <h2 className="text-lg font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-3">
               Dataset Metadata
@@ -585,8 +618,17 @@ export const SubmitDatasetPage: React.FC = () => {
               type="submit"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-sm transition-colors cursor-pointer focus:ring-2 focus:ring-indigo-500 focus:outline-hidden"
             >
-              <Copy className="w-4 h-4" />
-              <span>Generate & Copy Submission Details</span>
+              <GithubIcon className="w-4 h-4" />
+              <span>Continue to GitHub</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={handleCopyOnly}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-sm transition-colors cursor-pointer"
+            >
+              <Copy className="w-4 h-4 text-slate-500" />
+              <span>Copy Submission Details</span>
             </button>
 
             <a
@@ -614,12 +656,24 @@ export const SubmitDatasetPage: React.FC = () => {
               <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
               <div>
                 <h3 className="font-bold text-sm sm:text-base text-emerald-900 dark:text-emerald-100">
-                  {copied ? 'Details Copied to Clipboard!' : 'Submission Details Ready'}
+                  {copied ? 'Details Copied & Ready for GitHub' : 'Submission Details Ready'}
                 </h3>
                 <p className="text-xs sm:text-sm text-emerald-800 dark:text-emerald-300 mt-0.5">
-                  Your dataset details have been formatted. Follow the transparent steps below to
-                  create the official GitHub issue.
+                  Your dataset details have been formatted and copied to your clipboard. Review the next steps below to complete submission on GitHub.
                 </p>
+              </div>
+            </div>
+
+            {/* Critical Action Notice: Do not claim submission before GitHub issue is created */}
+            <div className="p-3.5 rounded-xl bg-amber-50/80 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700/80 text-amber-900 dark:text-amber-200 text-xs sm:text-sm flex items-start gap-2.5">
+              <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+              <div>
+                <span className="font-bold text-amber-950 dark:text-amber-100">
+                  Action Required on GitHub:
+                </span>{' '}
+                <span>
+                  OpenDatasets is a static site and cannot create GitHub issues automatically. To complete your proposal, review the prefilled fields in GitHub and click <strong>Submit new issue</strong>.
+                </span>
               </div>
             </div>
 
@@ -634,7 +688,7 @@ export const SubmitDatasetPage: React.FC = () => {
                   <span>Submission Exceeds Safe URL Limit ({githubIssueResult.urlLength} characters)</span>
                 </div>
                 <p className="text-amber-800 dark:text-amber-300">
-                  To prevent browser or server URL truncation errors (HTTP 414), GitHub form fields cannot be prefilled via the URL. Your full formatted proposal has been copied to your clipboard. Click &ldquo;Continue to GitHub&rdquo; and paste your submission into the issue form.
+                  To prevent browser or server URL truncation errors (HTTP 414), GitHub form fields cannot be prefilled via the URL. Your full formatted proposal has been copied to your clipboard. Click &ldquo;Open GitHub Issue Form&rdquo; below and paste your submission into the issue form.
                 </p>
               </div>
             ) : (
@@ -645,7 +699,7 @@ export const SubmitDatasetPage: React.FC = () => {
                     Auto-Prefill Configured
                   </p>
                   <p className="mt-0.5 text-slate-600 dark:text-slate-300">
-                    Form fields will be automatically prefilled in GitHub&apos;s issue form. When you click &ldquo;Continue to GitHub&rdquo;, review the prefilled values and click <strong>Submit new issue</strong> on GitHub.
+                    Form fields are prefilled in GitHub&apos;s issue form. Review the prefilled values in the opened tab (or click &ldquo;Open GitHub Issue Form&rdquo; below) and click <strong>Submit new issue</strong> on GitHub.
                   </p>
                 </div>
               </div>
@@ -680,8 +734,8 @@ export const SubmitDatasetPage: React.FC = () => {
                   <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Open GitHub Issue</h4>
                   <p className="text-slate-600 dark:text-slate-400 text-xs">
                     {githubIssueResult.isFallback
-                      ? 'Click &ldquo;Continue to GitHub&rdquo; to open the issue template.'
-                      : 'Click &ldquo;Continue to GitHub&rdquo; to open the prefilled issue form.'}
+                      ? 'Click &ldquo;Open GitHub Issue Form&rdquo; to open the issue template.'
+                      : 'Switch to the opened tab, or click &ldquo;Open GitHub Issue Form&rdquo; below.'}
                   </p>
                 </div>
 
@@ -711,8 +765,8 @@ export const SubmitDatasetPage: React.FC = () => {
                   <GithubIcon className="w-4 h-4" />
                   <span>
                     {githubIssueResult.isFallback
-                      ? 'Continue to GitHub (Manual Paste)'
-                      : 'Continue to GitHub Issue Form'}
+                      ? 'Open GitHub Issue (Manual Paste)'
+                      : 'Open GitHub Issue Form'}
                   </span>
                   <ExternalLink className="w-3.5 h-3.5 opacity-70" />
                 </a>
@@ -731,7 +785,7 @@ export const SubmitDatasetPage: React.FC = () => {
               <p className="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
                 <Info className="w-3.5 h-3.5 shrink-0 text-indigo-500" />
                 <span>
-                  GitHub issues require explicit submission. Clicking &ldquo;Continue to GitHub&rdquo; opens the issue form in your browser for your final review before submitting.
+                  GitHub issues require explicit submission. Clicking &ldquo;Open GitHub Issue Form&rdquo; opens the issue form in your browser for your final review before submitting.
                 </span>
               </p>
 
