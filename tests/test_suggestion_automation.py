@@ -738,36 +738,53 @@ Field recordings across 5 distinct forest habitats.
 
 def test_task_14_2_workflow_file_security_and_structure():
     """Verify that dataset-suggestion.yml conforms to strict security requirements."""
-    import yaml
+    import re
 
     workflow_path = REPO_ROOT / ".github" / "workflows" / "dataset-suggestion.yml"
     assert workflow_path.exists(), "Workflow file .github/workflows/dataset-suggestion.yml is missing"
 
-    with open(workflow_path, "r", encoding="utf-8") as f:
-        wf = yaml.safe_load(f)
+    raw_yaml_text = workflow_path.read_text(encoding="utf-8")
 
     # 1. Triggered on issues: [opened]
-    on_trigger = wf.get("on") or wf.get(True)
-    assert on_trigger is not None
-    assert "issues" in on_trigger
-    assert on_trigger["issues"]["types"] == ["opened"]
+    assert re.search(r"['\"]?on['\"]?:\s*\n\s+issues:\s*\n\s+types:\s*\[\s*opened\s*\]", raw_yaml_text), (
+        "Workflow must trigger on issues: [opened]"
+    )
 
     # 2. Minimal permissions: contents: read only
-    assert "permissions" in wf
-    assert wf["permissions"] == {"contents": "read"}
+    assert re.search(r"permissions:\s*\n\s+contents:\s*read", raw_yaml_text), (
+        "Workflow permissions must be strictly contents: read"
+    )
 
     # 3. Concurrency configured
-    assert "concurrency" in wf
-    assert "dataset-suggestion" in wf["concurrency"]["group"]
+    assert re.search(
+        r"concurrency:\s*\n\s+group:\s*dataset-suggestion-\$\{\{\s*github\.event\.issue\.number\s*\}\}",
+        raw_yaml_text,
+    ), "Workflow must configure concurrency grouped by issue number"
+    assert re.search(r"cancel-in-progress:\s*false", raw_yaml_text)
 
     # 4. Triage job configuration
-    assert "jobs" in wf
-    assert "triage" in wf["jobs"]
-    job = wf["jobs"]["triage"]
-    assert job.get("timeout-minutes") == 5
+    assert re.search(r"jobs:\s*\n\s+triage:", raw_yaml_text)
+    assert re.search(r"timeout-minutes:\s*5", raw_yaml_text), (
+        "Triage job must specify a 5-minute timeout"
+    )
+
+    # If PyYAML is available, verify full parsed dictionary structure as well
+    try:
+        import yaml
+        wf = yaml.safe_load(raw_yaml_text)
+        assert isinstance(wf, dict)
+        on_trigger = wf.get("on") or wf.get(True) or wf.get("'on'")
+        assert on_trigger is not None
+        assert "issues" in on_trigger
+        assert on_trigger["issues"]["types"] == ["opened"]
+        assert wf.get("permissions") == {"contents": "read"}
+        assert "dataset-suggestion" in wf.get("concurrency", {}).get("group", "")
+        job = wf.get("jobs", {}).get("triage", {})
+        assert job.get("timeout-minutes") == 5
+    except ImportError:
+        pass
 
     # 5. Verify security: no raw issue interpolation in steps
-    raw_yaml_text = workflow_path.read_text(encoding="utf-8")
     assert "${{ github.event.issue.body }}" not in raw_yaml_text, "Remote script injection risk detected!"
     assert "${{ github.event.issue.title }}" not in raw_yaml_text, "Remote script injection risk detected!"
     assert "$GITHUB_EVENT_PATH" in raw_yaml_text, "Must pass event payload via file path!"
