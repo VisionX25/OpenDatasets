@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "id": "chexpert",
+  "slug": "chexpert",
+  "name": "CheXpert: A Large Chest Radiograph Dataset",
+  "description": "A large chest radiograph benchmark dataset comprising 224,316 chest radiographs from 65,240 patients collected from Stanford Hospital between October 2002 and July 2017. Radiographs were labeled for the presence of 14 common chest observations using an automated rule-based labeler that extracts labels from free-text radiology reports with explicit uncertainty handling. Safeguard notice: Intended exclusively for research and algorithm development; not approved as a medical device for direct clinical patient diagnosis or care.",
+  "homepage_url": "https://aimi.stanford.edu/datasets/chexpert-chest-x-rays",
+  "publisher": {
+    "name": "Stanford AIMI (Center for Artificial Intelligence in Medicine & Imaging)",
+    "type": "academic",
+    "url": "https://aimi.stanford.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "multi-label-classification",
+    "chest-xray-classification"
+  ],
+  "tags": [
+    "medical-imaging",
+    "radiology",
+    "chest-xray",
+    "chexpert",
+    "benchmark",
+    "uncertainty"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Stanford AIMI Research Data Use Agreement",
+    "url": "https://aimi.stanford.edu/datasets/chexpert-chest-x-rays",
+    "commercial_use": "forbidden",
+    "notes": "Available free of charge exclusively for non-commercial academic and research use under the Stanford AIMI Research Data Use Agreement."
+  },
+  "source_references": [
+    {
+      "title": "Stanford AIMI CheXpert Dataset Page",
+      "url": "https://aimi.stanford.edu/datasets/chexpert-chest-x-rays",
+      "type": "official_website",
+      "notes": "Official Stanford Center for Artificial Intelligence in Medicine and Imaging dataset repository."
+    },
+    {
+      "title": "CheXpert Competition Landing Page",
+      "url": "https://stanfordmlgroup.github.io/competitions/chexpert/",
+      "type": "documentation",
+      "notes": "Stanford ML Group official benchmark and evaluation portal."
+    },
+    {
+      "title": "CheXpert: A Large Chest Radiograph Dataset with Uncertainty Labels and Expert Comparison",
+      "url": "https://doi.org/10.1609/aaai.v33i01.3301590",
+      "type": "original_paper",
+      "notes": "Primary publication in Proceedings of the AAAI Conference on Artificial Intelligence."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against official Stanford AIMI portal and AAAI 2019 conference publication (DOI: 10.1609/aaai.v33i01.3301590)."
+  },
+  "size": {
+    "amount": 439.0,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "csv"
+    ],
+    "status": "estimated",
+    "notes": "Full-resolution dataset occupies approximately 439 GB; downsampled CheXpert-v1.0-small package is approximately 11 GB. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 224316,
+    "splits": {
+      "train": 223414,
+      "validation": 200,
+      "test": 500
+    },
+    "unit": "radiographs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-01-22"
+  },
+  "citation": {
+    "paper_title": "CheXpert: A Large Chest Radiograph Dataset with Uncertainty Labels and Expert Comparison",
+    "paper_url": "https://doi.org/10.1609/aaai.v33i01.3301590",
+    "authors": [
+      "Jeremy Irvin",
+      "Pranav Rajpurkar",
+      "Michael Ko",
+      "Yifan Yu",
+      "Silviana Ciurea-Ilcus",
+      "Chris Chute",
+      "Henrik Marklund",
+      "Behzad Haghgoo",
+      "Robbie Ball",
+      "Katie Shpanskaya",
+      "Jayne Seekins",
+      "David A. Mong",
+      "Safwan S. Halabi",
+      "Jesse K. Sandberg",
+      "Ricky Sulistyo",
+      "Alvin M. Le",
+      "Kaylie Chen",
+      "Darvin Tellez",
+      "Anisza Rohatgi",
+      "Andrew Y. Ng",
+      "Matthew P. Lungren"
+    ],
+    "doi": "10.1609/aaai.v33i01.3301590",
+    "bibtex": "@inproceedings{irvin2019chexpert,\n  title={CheXpert: A Large Chest Radiograph Dataset with Uncertainty Labels and Expert Comparison},\n  author={Irvin, Jeremy and Rajpurkar, Pranav and Ko, Michael and Yu, Yifan and Ciurea-Ilcus, Silviana and Chute, Chris and Marklund, Henrik and Haghgoo, Behzad and Ball, Robbie and Shpanskaya, Katie and others},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume={33},\n  number={01},\n  pages={590--597},\n  year={2019},\n  doi={10.1609/aaai.v33i01.3301590}\n}"
+  }
+}

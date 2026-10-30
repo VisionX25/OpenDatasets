@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "human36m",
+  "slug": "human36m",
+  "name": "Human3.6M: Large Scale Dataset for 3D Human Sensing",
+  "description": "One of the largest and most widely cited motion capture datasets for 3D human sensing and articulated posture recovery. Captured in a synchronized multi-modal optical environment consisting of 4 calibrated high-resolution 50Hz digital video cameras, a 10-camera Vicon motion capture system, and Time-of-Flight sensors. Features 11 professional actors performing 17 varied motion scenarios such as discussion, smoking, taking photos, walking, and greeting.",
+  "homepage_url": "http://vision.imar.ro/human3.6m/description.php",
+  "publisher": {
+    "name": "Institute of Mathematics of the Romanian Academy",
+    "type": "academic",
+    "url": "http://vision.imar.ro"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor"
+  ],
+  "tasks": [
+    "pose-estimation",
+    "3d-reconstruction",
+    "action-recognition"
+  ],
+  "tags": [
+    "3d-pose",
+    "human36m",
+    "motion-capture",
+    "pose-estimation",
+    "vicon",
+    "rgb-video"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "IMAR Human3.6M End User License Agreement",
+    "spdx_id": null,
+    "url": "http://vision.imar.ro/human3.6m/license.php",
+    "commercial_use": "forbidden",
+    "notes": "Dataset access is restricted to verified academic and educational researchers under a signed End User License Agreement."
+  },
+  "source_references": [
+    {
+      "title": "Human3.6M Official Project Portal",
+      "url": "http://vision.imar.ro/human3.6m/description.php",
+      "type": "official_website",
+      "notes": "Project descriptions, dataset structure specifications, and user authorization portal."
+    },
+    {
+      "title": "Human3.6M: Large Scale Dataset and Models for 3D Human Sensing in Natural Environments",
+      "url": "https://doi.org/10.1109/TPAMI.2013.248",
+      "type": "original_paper",
+      "notes": "Published in IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI 2014)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against IMAR project specification and IEEE TPAMI journal paper (DOI: 10.1109/TPAMI.2013.248)."
+  },
+  "size": {
+    "amount": 250.0,
+    "unit": "GB",
+    "file_formats": [
+      "mp4",
+      "mat",
+      "cdf"
+    ],
+    "status": "estimated",
+    "notes": "High-definition video streams, 3D laser body scans, and calibrated 3D skeletal joint trajectories. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 3600000,
+    "splits": {
+      "train": 2400000,
+      "test": 1200000
+    },
+    "unit": "frames",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2014-07-01"
+  },
+  "citation": {
+    "paper_title": "Human3.6M: Large Scale Dataset and Models for 3D Human Sensing in Natural Environments",
+    "paper_url": "https://doi.org/10.1109/TPAMI.2013.248",
+    "authors": [
+      "Catalin Ionescu",
+      "Daniela Papava",
+      "Vlad Olaru",
+      "Cristian Sminchisescu"
+    ],
+    "doi": "10.1109/TPAMI.2013.248",
+    "bibtex": "@article{ionescu2014human36m,\n  title={Human3.6M: Large scale dataset and models for 3D human sensing in natural environments},\n  author={Ionescu, Catalin and Papava, Daniela and Olaru, Vlad and Sminchisescu, Cristian},\n  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  volume={36},\n  number={7},\n  pages={1325--1339},\n  year={2014},\n  publisher={IEEE},\n  doi={10.1109/TPAMI.2013.248}\n}"
+  }
+}

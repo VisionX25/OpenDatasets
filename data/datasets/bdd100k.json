@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bdd100k",
+  "slug": "bdd100k",
+  "name": "BDD100K: A Diverse Driving Video Dataset",
+  "description": "A diverse, large-scale driving video dataset collected by Berkeley AI Research (BAIR) at the University of California, Berkeley. Comprises 100,000 high-definition dashcam video clips (40 seconds each at 30 fps) capturing geographic, environmental, weather, and time-of-day diversity across New York, San Francisco Bay Area, and other major US regions. Supports heterogeneous multi-task learning with ground truth for 2D bounding boxes, instance segmentation, drivable area segmentation, lane markings, multiple-object tracking, and pose estimation.",
+  "homepage_url": "https://bdd-data.berkeley.edu/",
+  "publisher": {
+    "name": "Berkeley AI Research (BAIR), UC Berkeley",
+    "type": "academic",
+    "url": "https://bair.berkeley.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "semantic-segmentation",
+    "instance-segmentation",
+    "lane-detection",
+    "multiple-object-tracking"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "video",
+    "multi-task",
+    "bair",
+    "bdd100k",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Berkeley DeepDrive (BDD) Data License Agreement",
+    "url": "https://doc.bdd100k.com/license.html",
+    "commercial_use": "forbidden",
+    "notes": "Dataset images, videos, and labels are governed by the Berkeley DeepDrive (BDD) Data License Agreement, permitting educational, non-profit, and academic research purposes only. Commercial use is forbidden without explicit commercial licensing from the UC Berkeley Office of Technology Licensing (OTL) or active membership in the BDD Industry Consortium. The companion software devkit is licensed separately under BSD 3-Clause.",
+    "spdx_id": null
+  },
+  "source_references": [
+    {
+      "title": "BDD100K Official Data Portal",
+      "url": "https://bdd-data.berkeley.edu/",
+      "type": "official_website",
+      "notes": "Official Berkeley DeepDrive data repository and account download gateway."
+    },
+    {
+      "title": "BDD100K Documentation and Devkit",
+      "url": "https://doc.bdd100k.com/",
+      "type": "documentation",
+      "notes": "Official documentation, schema specifications, and evaluation protocols."
+    },
+    {
+      "title": "BDD100K: A Diverse Driving Dataset for Heterogeneous Multitask Learning",
+      "url": "https://doi.org/10.1109/CVPR42600.2020.00271",
+      "type": "original_paper",
+      "notes": "Original CVPR 2020 conference publication detailing multi-task annotations."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against BAIR project documentation, BDD100K repository, and CVPR 2020 paper (DOI: 10.1109/CVPR42600.2020.00271)."
+  },
+  "size": {
+    "amount": 1000.0,
+    "unit": "GB",
+    "file_formats": [
+      "mov",
+      "jpg",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "100,000 raw 720p 30fps videos (approx. 1.8 TB raw); 100,000 keyframe image package is approximately 10 GB."
+  },
+  "sample_count": {
+    "total": 100000,
+    "splits": {
+      "train": 70000,
+      "val": 10000,
+      "test": 20000
+    },
+    "unit": "videos",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-06-16"
+  },
+  "citation": {
+    "paper_title": "BDD100K: A Diverse Driving Dataset for Heterogeneous Multitask Learning",
+    "paper_url": "https://doi.org/10.1109/CVPR42600.2020.00271",
+    "authors": [
+      "Fisher Yu",
+      "Haofeng Chen",
+      "Xin Wang",
+      "Wenqi Xian",
+      "Yingying Chen",
+      "Fangchen Liu",
+      "Vashisht Madhavan",
+      "Trevor Darrell"
+    ],
+    "doi": "10.1109/CVPR42600.2020.00271",
+    "bibtex": "@inproceedings{yu2020bdd100k,\n  title={BDD100K: A Diverse Driving Dataset for Heterogeneous Multitask Learning},\n  author={Yu, Fisher and Chen, Haofeng and Wang, Xin and Xian, Wenqi and Chen, Yingying and Liu, Fangchen and Madhavan, Vashisht and Darrell, Trevor},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={2636--2645},\n  year={2020},\n  doi={10.1109/CVPR42600.2020.00271}\n}"
+  }
+}

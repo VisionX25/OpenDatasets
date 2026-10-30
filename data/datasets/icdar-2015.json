@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "icdar-2015",
+  "slug": "icdar-2015",
+  "name": "ICDAR 2015 Incidental Scene Text Benchmark",
+  "description": "A classic scene text reading benchmark organized by the Computer Vision Center (CVC) at Universitat Autònoma de Barcelona for ICDAR 2015 Challenge 4. Features 1,500 images captured incidentally without explicit focus, centering, or orientation using Google Glass wearable devices. Includes 1,000 training and 500 test images annotated with word-level quadrilateral bounding boxes and character transcriptions across extreme viewpoints and motion blur.",
+  "homepage_url": "https://rrc.cvc.uab.es/?ch=4",
+  "publisher": {
+    "name": "Computer Vision Center (CVC) UAB",
+    "type": "academic",
+    "url": "https://rrc.cvc.uab.es"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "scene-text-detection",
+    "scene-text-recognition",
+    "optical-character-recognition"
+  ],
+  "tags": [
+    "scene-text",
+    "incidental-text",
+    "icdar-2015",
+    "cvc",
+    "text-detection",
+    "robust-reading"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "ICDAR Robust Reading Competition Dataset License",
+    "spdx_id": null,
+    "url": "https://rrc.cvc.uab.es/?ch=4",
+    "commercial_use": "forbidden",
+    "notes": "Available for non-commercial academic research and competition evaluation."
+  },
+  "source_references": [
+    {
+      "title": "ICDAR 2015 Robust Reading Challenge 4 (Incidental Scene Text)",
+      "url": "https://rrc.cvc.uab.es/?ch=4",
+      "type": "official_website",
+      "notes": "Official competition challenge portal, download archives, and evaluation tasks."
+    },
+    {
+      "title": "ICDAR 2015 Competition on Robust Reading",
+      "url": "https://doi.org/10.1109/ICDAR.2015.7333942",
+      "type": "original_paper",
+      "notes": "Published in 2015 International Conference on Document Analysis and Recognition (ICDAR 2015)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against CVC UAB Robust Reading Competition portal and IEEE ICDAR 2015 proceedings (DOI: 10.1109/ICDAR.2015.7333942)."
+  },
+  "size": {
+    "amount": 160.0,
+    "unit": "MB",
+    "file_formats": [
+      "jpg",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "Natural scene JPEG images with quadrilateral 4-point coordinate ground truth text files. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 1500,
+    "splits": {
+      "train": 1000,
+      "test": 500
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2015-08-23"
+  },
+  "citation": {
+    "paper_title": "ICDAR 2015 Competition on Robust Reading",
+    "paper_url": "https://doi.org/10.1109/ICDAR.2015.7333942",
+    "authors": [
+      "Dimosthenis Karatzas",
+      "Lluis Gomez-Bigorda",
+      "Angellos Nicolaou",
+      "Suman Ghosh",
+      "Andrew Bagdanov",
+      "Masakazu Iwamura",
+      "Jiri Matas",
+      "Lukas Neumann",
+      "Vijay Ramaseshan Chandrasekhar",
+      "Shijian Lu",
+      "Faisal Shafait",
+      "Seiichi Uchida",
+      "Ernest Valveny"
+    ],
+    "doi": "10.1109/ICDAR.2015.7333942",
+    "bibtex": "@inproceedings{karatzas2015icdar,\n  title={ICDAR 2015 competition on robust reading},\n  author={Karatzas, Dimosthenis and Gomez-Bigorda, Lluis and Nicolaou, Angellos and Ghosh, Suman and Bagdanov, Andrew and Iwamura, Masakazu and Matas, Jiri and Neumann, Lukas and Chandrasekhar, Vijay Ramaseshan and Lu, Shijian and others},\n  booktitle={2015 13th International Conference on Document Analysis and Recognition (ICDAR)},\n  pages={1156--1160},\n  year={2015},\n  organization={IEEE},\n  doi={10.1109/ICDAR.2015.7333942}\n}"
+  }
+}

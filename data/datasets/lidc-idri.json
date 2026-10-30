@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "lidc-idri",
+  "slug": "lidc-idri",
+  "name": "LIDC-IDRI: Lung Image Database Consortium CT Imaging Dataset",
+  "description": "A landmark thoracic medical imaging resource created by the Lung Image Database Consortium (LIDC) and Image Database Resource Initiative (IDRI). Contains 1,018 helical thoracic computed tomography (CT) screening scans from 1,010 patients, with lesion markups, nodule outlines, and subjective radiological nodule characteristics documented by four experienced thoracic radiologists. Safeguard notice: Open scientific data for computer-aided diagnosis research; not for autonomous clinical decision-making without board-certified radiologist evaluation.",
+  "homepage_url": "https://www.cancerimagingarchive.net/collection/lidc-idri/",
+  "publisher": {
+    "name": "The Cancer Imaging Archive (TCIA) & National Cancer Institute (NCI)",
+    "type": "government",
+    "url": "https://www.cancerimagingarchive.net"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "object-detection",
+    "nodule-detection",
+    "ct-segmentation"
+  ],
+  "tags": [
+    "medical-imaging",
+    "thoracic-ct",
+    "lung-cancer",
+    "pulmonology",
+    "nodule-detection",
+    "tcia",
+    "lidc"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 3.0",
+    "spdx_id": "CC-BY-3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/",
+    "commercial_use": "allowed",
+    "notes": "Available under Creative Commons Attribution 3.0 Unported (CC BY 3.0) and the TCIA Data Usage Policy."
+  },
+  "source_references": [
+    {
+      "title": "The Cancer Imaging Archive (TCIA) LIDC-IDRI Collection",
+      "url": "https://www.cancerimagingarchive.net/collection/lidc-idri/",
+      "type": "official_website",
+      "notes": "Primary TCIA archive containing DICOM images, XML annotations, and patient metadata."
+    },
+    {
+      "title": "The Lung Image Database Consortium (LIDC) and Image Database Resource Initiative (IDRI): A Completed Reference Database of Lung Nodules on CT Scans",
+      "url": "https://doi.org/10.1118/1.3528204",
+      "type": "original_paper",
+      "notes": "Foundational publication in Medical Physics describing the completed reference database."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against TCIA archive records and Medical Physics journal article (DOI: 10.1118/1.3528204)."
+  },
+  "size": {
+    "amount": 124.0,
+    "unit": "GB",
+    "file_formats": [
+      "dcm",
+      "xml"
+    ],
+    "status": "estimated",
+    "notes": "Full volumetric DICOM image series and accompanying XML radiologist annotation files. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 1018,
+    "unit": "ct_scans",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2011-02-01",
+    "last_updated": "2015-06-23"
+  },
+  "citation": {
+    "paper_title": "The Lung Image Database Consortium (LIDC) and Image Database Resource Initiative (IDRI): A Completed Reference Database of Lung Nodules on CT Scans",
+    "paper_url": "https://doi.org/10.1118/1.3528204",
+    "authors": [
+      "Samuel G. Armato",
+      "Geoffrey McLennan",
+      "Luc Bidaut",
+      "Michael F. McNitt-Gray",
+      "Charles R. Meyer",
+      "Anthony P. Reeves",
+      "Binsheng Zhao",
+      "Denise R. Aberle",
+      "Claudia I. Henschke",
+      "Eric A. Hoffman",
+      "Ella A. Kazerooni",
+      "Heber MacMahon",
+      "Edwin J. R. van Beek",
+      "David Yankelevitz",
+      "others"
+    ],
+    "doi": "10.1118/1.3528204",
+    "bibtex": "@article{armato2011lung,\n  title={The Lung Image Database Consortium (LIDC) and Image Database Resource Initiative (IDRI): A Completed Reference Database of Lung Nodules on CT Scans},\n  author={Armato, Samuel G and McLennan, Geoffrey and Bidaut, Luc and McNitt-Gray, Michael F and Meyer, Charles R and Reeves, Anthony P and Zhao, Binsheng and Aberle, Denise R and Henschke, Claudia I and Hoffman, Eric A and others},\n  journal={Medical Physics},\n  volume={38},\n  number={2},\n  pages={915--931},\n  year={2011},\n  publisher={Wiley Online Library},\n  doi={10.1118/1.3528204}\n}"
+  }
+}

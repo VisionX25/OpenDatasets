@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fastmri",
+  "slug": "fastmri",
+  "name": "fastMRI: Raw k-Space and DICOM Magnetic Resonance Imaging Dataset",
+  "description": "A large-scale open research benchmark of raw MRI k-space measurements and reconstructed clinical DICOM images from knee and brain examinations, developed by NYU Grossman School of Medicine and Meta AI Research to pioneer deep learning algorithms for accelerated MRI acquisitions. Contains raw multi-coil and single-coil k-space pulse sequences. Safeguard notice: Open solely for non-commercial research and academic advancement; users must agree to the fastMRI Data Use Agreement; redistributing raw or processed tensors is prohibited.",
+  "homepage_url": "https://fastmri.med.nyu.edu/",
+  "publisher": {
+    "name": "NYU Grossman School of Medicine & Meta AI Research",
+    "type": "academic",
+    "url": "https://fastmri.med.nyu.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "mri-reconstruction",
+    "image-reconstruction",
+    "compressed-sensing"
+  ],
+  "tags": [
+    "medical-imaging",
+    "mri",
+    "raw-kspace",
+    "fastmri",
+    "reconstruction",
+    "benchmark",
+    "deep-learning"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "fastMRI Research Data Use Agreement",
+    "url": "https://fastmri.med.nyu.edu/",
+    "commercial_use": "forbidden",
+    "notes": "Granted exclusively for non-commercial scientific research under the fastMRI Data Use Agreement; commercial deployment or third-party redistribution is strictly prohibited."
+  },
+  "source_references": [
+    {
+      "title": "NYU fastMRI Official Portal",
+      "url": "https://fastmri.med.nyu.edu/",
+      "type": "official_website",
+      "notes": "Official NYU Langone Health research portal for dataset access registration and challenge leaderboards."
+    },
+    {
+      "title": "fastMRI: A Publicly Available Raw k-Space and DICOM Dataset of Knee Images for Accelerated MR Image Reconstruction Using Machine Learning",
+      "url": "https://doi.org/10.1148/ryai.2020190007",
+      "type": "original_paper",
+      "notes": "Primary peer-reviewed publication in Radiology: Artificial Intelligence."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against NYU Langone fastMRI web platform and Radiology: AI paper (DOI: 10.1148/ryai.2020190007)."
+  },
+  "size": {
+    "amount": 1500.0,
+    "unit": "GB",
+    "file_formats": [
+      "h5",
+      "csv"
+    ],
+    "status": "estimated",
+    "notes": "Multi-coil and single-coil k-space data distributed in compressed HDF5 (H5) format. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 8466,
+    "unit": "scans",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-11-26",
+    "last_updated": "2020-01-29"
+  },
+  "citation": {
+    "paper_title": "fastMRI: A Publicly Available Raw k-Space and DICOM Dataset of Knee Images for Accelerated MR Image Reconstruction Using Machine Learning",
+    "paper_url": "https://doi.org/10.1148/ryai.2020190007",
+    "authors": [
+      "Florian Knoll",
+      "Jure Zbontar",
+      "Amis Sriram",
+      "Matthew J. Muckley",
+      "Mary Bruno",
+      "Aaron Defazio",
+      "Marc Parente",
+      "Krzysztof J. Geras",
+      "Joe Katsnelson",
+      "Hersh Chandarana",
+      "Zizhao Zhang",
+      "Michal Drozdzal",
+      "Adriana Romero",
+      "Michael Rabbat",
+      "Rachel Fung",
+      "William F. Charikar",
+      "Leonor B. Stern",
+      "C. Michael Phillips",
+      "Daniel K. Sodickson",
+      "Yvonne W. Lui"
+    ],
+    "doi": "10.1148/ryai.2020190007",
+    "bibtex": "@article{knoll2020fastmri,\n  title={fastMRI: A Publicly Available Raw k-Space and DICOM Dataset of Knee Images for Accelerated MR Image Reconstruction Using Machine Learning},\n  author={Knoll, Florian and Zbontar, Jure and Sriram, Amis and Muckley, Matthew J and Bruno, Mary and Defazio, Aaron and Parente, Marc and Geras, Krzysztof J and Katsnelson, Joe and Chandarana, Hersh and others},\n  journal={Radiology: Artificial Intelligence},\n  volume={2},\n  number={1},\n  pages={e190007},\n  year={2020},\n  publisher={Radiological Society of North America},\n  doi={10.1148/ryai.2020190007}\n}"
+  }
+}

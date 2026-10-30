@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "rvl-cdip",
+  "slug": "rvl-cdip",
+  "name": "RVL-CDIP: Complex Document Information Processing Benchmark",
+  "description": "A canonical benchmark dataset for document image classification and visual document layout analysis. Curated by the Ryerson Vision Lab and Carnegie Mellon University. Consists of 400,000 grayscale document images sampled from the public Truth Tobacco Industry Documents archive. Divided into 16 distinct document categories (letter, form, email, handwritten, memo, invoice, budget, resume, advertisement, etc.) with exactly 25,000 images per category.",
+  "homepage_url": "https://adamharley.com/rvl-cdip/",
+  "publisher": {
+    "name": "Ryerson Vision Lab & Carnegie Mellon University",
+    "type": "academic",
+    "url": "https://adamharley.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "document-classification",
+    "document-layout-analysis"
+  ],
+  "tags": [
+    "document-classification",
+    "scanned-documents",
+    "rvl-cdip",
+    "ryerson",
+    "cmu",
+    "benchmark"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Public Domain / Open Access Legacy Tobacco Documents",
+    "spdx_id": null,
+    "url": "https://adamharley.com/rvl-cdip/",
+    "commercial_use": "allowed",
+    "notes": "Document scans derived from the public Truth Tobacco Industry Documents collection via UCSF."
+  },
+  "source_references": [
+    {
+      "title": "RVL-CDIP Dataset Official Page",
+      "url": "https://adamharley.com/rvl-cdip/",
+      "type": "official_website",
+      "notes": "Official repository homepage, download tar archives, and class split files."
+    },
+    {
+      "title": "Evaluation of Deep Convolutional Nets for Document Image Classification and Retrieval",
+      "url": "https://doi.org/10.1109/ICDAR.2015.7333910",
+      "type": "original_paper",
+      "notes": "Published in 2015 International Conference on Document Analysis and Recognition (ICDAR 2015)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against author official homepage (Adam Harley) and IEEE ICDAR 2015 proceedings (DOI: 10.1109/ICDAR.2015.7333910)."
+  },
+  "size": {
+    "amount": 37.7,
+    "unit": "GB",
+    "file_formats": [
+      "tif",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "TIFF image archives with text lists specifying train, validation, and test splits. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 400000,
+    "splits": {
+      "train": 320000,
+      "val": 40000,
+      "test": 40000
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2015-08-23"
+  },
+  "citation": {
+    "paper_title": "Evaluation of Deep Convolutional Nets for Document Image Classification and Retrieval",
+    "paper_url": "https://doi.org/10.1109/ICDAR.2015.7333910",
+    "authors": [
+      "Adam W. Harley",
+      "Alex Ufkes",
+      "Konstantinos G. Derpanis"
+    ],
+    "doi": "10.1109/ICDAR.2015.7333910",
+    "bibtex": "@inproceedings{harley2015evaluation,\n  title={Evaluation of deep convolutional nets for document image classification and retrieval},\n  author={Harley, Adam W and Ufkes, Alex and Derpanis, Konstantinos G},\n  booktitle={2015 13th International Conference on Document Analysis and Recognition (ICDAR)},\n  pages={991--995},\n  year={2015},\n  organization={IEEE},\n  doi={10.1109/ICDAR.2015.7333910}\n}"
+  }
+}

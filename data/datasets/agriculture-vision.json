@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "agriculture-vision",
+  "slug": "agriculture-vision",
+  "name": "Agriculture-Vision: Aerial Farmland Pattern Analysis Benchmark",
+  "description": "A pioneering large-scale aerial image database curated by the University of Illinois Urbana-Champaign (UIUC) and Syngenta. Contains 94,986 multi-spectral aerial image patches (512x512 pixels in RGB and near-infrared) harvested from high-resolution agricultural surveys across farmland throughout the United States. Densely annotated with pixel-level semantic masks across 9 distinct agricultural anomaly patterns including nutrient deficiency, waterlogging, weed cluster, and endrow.",
+  "homepage_url": "https://www.agriculture-vision.com/",
+  "publisher": {
+    "name": "University of Illinois Urbana-Champaign & Syngenta",
+    "type": "academic",
+    "url": "https://www.agriculture-vision.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "pattern-analysis",
+    "anomaly-detection"
+  ],
+  "tags": [
+    "aerial-imagery",
+    "agriculture",
+    "remote-sensing",
+    "segmentation",
+    "farmland",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Agriculture-Vision Challenge Research Agreement",
+    "spdx_id": null,
+    "url": "https://www.agriculture-vision.com/dataset",
+    "commercial_use": "forbidden",
+    "notes": "Available for academic research and educational competition use under the Agriculture-Vision DUA."
+  },
+  "source_references": [
+    {
+      "title": "Agriculture-Vision Challenge Official Portal",
+      "url": "https://www.agriculture-vision.com/",
+      "type": "official_website",
+      "notes": "Official challenge leaderboards, multi-spectral image downloads, and class definitions."
+    },
+    {
+      "title": "Agriculture-Vision: A Large Aerial Image Database for Agricultural Pattern Analysis",
+      "url": "https://doi.org/10.1109/CVPR42600.2020.00290",
+      "type": "original_paper",
+      "notes": "Published in IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2020)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against IEEE CVPR 2020 proceedings (DOI: 10.1109/CVPR42600.2020.00290) and official Agriculture-Vision platform."
+  },
+  "size": {
+    "amount": 35.0,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "jpg"
+    ],
+    "status": "estimated",
+    "notes": "512x512 RGB and NIR imagery accompanied by PNG binary mask channels per pattern class. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 94986,
+    "splits": {
+      "train": 56944,
+      "val": 18334,
+      "test": 19708
+    },
+    "unit": "patches",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-06-14"
+  },
+  "citation": {
+    "paper_title": "Agriculture-Vision: A Large Aerial Image Database for Agricultural Pattern Analysis",
+    "paper_url": "https://doi.org/10.1109/CVPR42600.2020.00290",
+    "authors": [
+      "Mang Tik Chiu",
+      "Xingqian Xu",
+      "Yunchao Wei",
+      "Zilong Huang",
+      "Alexander Schwing",
+      "Robert Brunner",
+      "Hrant Khachatrian",
+      "Hovnatan Karapetyan",
+      "Ivan Dozier",
+      "Greg Rose",
+      "David Wilson",
+      "Adrian Tudor",
+      "Naira Hovakimyan",
+      "Thomas S. Huang",
+      "Honghui Shi"
+    ],
+    "doi": "10.1109/CVPR42600.2020.00290",
+    "bibtex": "@inproceedings{chiu2020agriculture,\n  title={Agriculture-Vision: A Large Aerial Image Database for Agricultural Pattern Analysis},\n  author={Chiu, Mang Tik and Xu, Xingqian and Wei, Yunchao and Huang, Zilong and Schwing, Alexander and Brunner, Robert and Khachatrian, Hrant and Karapetyan, Hovnatan and Dozier, Ivan and Rose, Greg and Wilson, David and Tudor, Adrian and Hovakimyan, Naira and Huang, Thomas S. and Shi, Honghui},\n  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={2828--2838},\n  year={2020},\n  doi={10.1109/CVPR42600.2020.00290}\n}"
+  }
+}

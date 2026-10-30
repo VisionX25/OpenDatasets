@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "plantdoc",
+  "slug": "plantdoc",
+  "name": "PlantDoc: Plant Disease Detection in Natural Field Conditions",
+  "description": "A field-condition computer vision dataset for plant disease detection developed by researchers at the Indian Institute of Technology (IIT) Kharagpur. Unlike laboratory leaf collections, PlantDoc contains 2,598 high-resolution images captured in natural, unconstrained field environments with complex backgrounds, multiple overlapping leaves, and realistic agricultural lighting conditions. Features 8,851 manual bounding box annotations across 27 classes representing 13 plant species.",
+  "homepage_url": "https://github.com/pratikkayal/PlantDoc-Dataset",
+  "publisher": {
+    "name": "Indian Institute of Technology (IIT) Kharagpur",
+    "type": "academic",
+    "url": "https://www.iitkgp.ac.in"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "image-classification",
+    "disease-detection"
+  ],
+  "tags": [
+    "agriculture",
+    "in-field-vision",
+    "plantdoc",
+    "crop-disease",
+    "bounding-box",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released for research under CC BY 4.0; companion code licensed under MIT."
+  },
+  "source_references": [
+    {
+      "title": "PlantDoc Dataset GitHub Repository",
+      "url": "https://github.com/pratikkayal/PlantDoc-Dataset",
+      "type": "repository",
+      "notes": "Official repository with image archives, PASCAL VOC bounding box XML annotations, and evaluation splits."
+    },
+    {
+      "title": "PlantDoc: A Dataset for Visual Plant Disease Detection",
+      "url": "https://doi.org/10.1145/3371158.3371196",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the 7th ACM IKDD CoDS and 25th COMAD (CoDS-COMAD 2020)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against official ACM Digital Library proceedings (DOI: 10.1145/3371158.3371196) and author GitHub repository."
+  },
+  "size": {
+    "amount": 1.2,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "csv",
+      "xml"
+    ],
+    "status": "estimated",
+    "notes": "Field photographs paired with bounding box XML annotations and CSV summary metadata. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 2598,
+    "splits": {
+      "bounding_boxes": 8851,
+      "classes": 27
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-01-05"
+  },
+  "citation": {
+    "paper_title": "PlantDoc: A Dataset for Visual Plant Disease Detection",
+    "paper_url": "https://doi.org/10.1145/3371158.3371196",
+    "authors": [
+      "Davinder Singh",
+      "Naman Jain",
+      "Pranjali Jain",
+      "Pratik Kayal",
+      "Sudhakar Kumawat",
+      "Nipun Batra"
+    ],
+    "doi": "10.1145/3371158.3371196",
+    "bibtex": "@inproceedings{singh2020plantdoc,\n  title={PlantDoc: A Dataset for Visual Plant Disease Detection},\n  author={Singh, Davinder and Jain, Naman and Jain, Pranjali and Kayal, Pratik and Kumawat, Sudhakar and Batra, Nipun},\n  booktitle={Proceedings of the 7th ACM IKDD CoDS and 25th COMAD},\n  pages={249--253},\n  year={2020},\n  doi={10.1145/3371158.3371196}\n}"
+  }
+}

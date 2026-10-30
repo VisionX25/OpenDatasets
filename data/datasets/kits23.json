@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "kits23",
+  "slug": "kits23",
+  "name": "KiTS23: Kidney and Kidney Tumor Segmentation Challenge Dataset",
+  "description": "The Kidney Tumor Segmentation 2023 (KiTS23) dataset provides 489 contrast-enhanced abdominal computed tomography (CT) scans of patients undergoing nephrectomy for suspected renal malignancy. Voxel-level ground truth delineations cover normal kidney parenchyma, renal tumors, and non-neoplastic renal cysts, rigorously reviewed and verified by expert surgical and radiology teams. Safeguard notice: Designed for algorithmic research on abdominal oncology segmentation; non-diagnostic tool; clinical deployment requires validated regulatory clearance.",
+  "homepage_url": "https://kits-challenge.org/kits23/",
+  "publisher": {
+    "name": "University of Minnesota & KiTS Challenge Consortium",
+    "type": "academic",
+    "url": "https://kits-challenge.org"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "medical-image-segmentation",
+    "ct-segmentation"
+  ],
+  "tags": [
+    "medical-imaging",
+    "ct",
+    "kidney",
+    "tumor-segmentation",
+    "kits23",
+    "oncology",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "CC BY-NC-SA 4.0",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license."
+  },
+  "source_references": [
+    {
+      "title": "KiTS23 Official Challenge Homepage",
+      "url": "https://kits-challenge.org/kits23/",
+      "type": "official_website",
+      "notes": "Official Kidney Tumor Segmentation 2023 challenge portal and data hub."
+    },
+    {
+      "title": "2023 Kidney and Kidney Tumor Segmentation Challenge (Zenodo Archive)",
+      "url": "https://doi.org/10.5281/zenodo.7840134",
+      "type": "repository",
+      "notes": "Primary KiTS23 dataset release and volumetric CT segmentation masks."
+    },
+    {
+      "title": "Kidney and Kidney Tumor Segmentation - MICCAI 2023 Challenge Proceedings",
+      "url": "https://doi.org/10.1007/978-3-031-54806-2",
+      "type": "documentation",
+      "notes": "Official MICCAI 2023 Challenge proceedings volume published in Springer LNCS Vol 14540."
+    },
+    {
+      "title": "The state of the art in kidney and kidney tumor segmentation in contrast-enhanced CT imaging: Results of the KiTS19 challenge",
+      "url": "https://doi.org/10.1016/j.media.2020.101821",
+      "type": "original_paper",
+      "notes": "Foundational methodology and baseline cohort paper in Medical Image Analysis detailing initial protocol and annotation guidelines."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against KiTS23 Zenodo data release (DOI: 10.5281/zenodo.7840134), MICCAI 2023 proceedings (DOI: 10.1007/978-3-031-54806-2), and foundational KiTS19 publication."
+  },
+  "size": {
+    "amount": 30.0,
+    "unit": "GB",
+    "file_formats": [
+      "nii.gz",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Volumetric contrast-enhanced CT scans and multi-label segmentation masks formatted in NIfTI format."
+  },
+  "sample_count": {
+    "total": 489,
+    "splits": {
+      "train": 399,
+      "test": 90
+    },
+    "unit": "ct_scans",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023-04-15",
+    "last_updated": "2023-09-01"
+  },
+  "citation": {
+    "paper_title": "2023 Kidney and Kidney Tumor Segmentation Challenge",
+    "paper_url": "https://doi.org/10.5281/zenodo.7840134",
+    "authors": [
+      "Nicholas Heller",
+      "Fabian Isensee",
+      "Resha Tejpaul",
+      "Andrew Wood",
+      "Nikolaos Papanikolopoulos",
+      "Christopher Weight"
+    ],
+    "doi": "10.5281/zenodo.7840134",
+    "bibtex": "@dataset{heller2023kits23,\n  title={2023 Kidney and Kidney Tumor Segmentation Challenge},\n  author={Heller, Nicholas and Isensee, Fabian and Tejpaul, Resha and Wood, Andrew and Papanikolopoulos, Nikolaos and Weight, Christopher},\n  year={2023},\n  publisher={Zenodo},\n  doi={10.5281/zenodo.7840134}\n}"
+  }
+}

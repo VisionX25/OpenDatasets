@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "iam-handwriting",
+  "slug": "iam-handwriting",
+  "name": "The IAM Handwriting Database",
+  "description": "A foundational benchmark database for offline handwriting recognition constructed by the Research Group on Computer Vision and Artificial Intelligence (FKI) at the University of Bern. Contains 1,539 scanned pages of unconstrained handwritten English text written by 657 individuals, based on the Lancaster-Oslo/Bergen (LOB) corpus. Provided with complete annotations at sentence (5,685), text line (13,353), and word levels (115,320 words).",
+  "homepage_url": "https://fki.tic.heia-fr.ch/databases/iam-handwriting-database",
+  "publisher": {
+    "name": "University of Bern (FKI Research Group)",
+    "type": "academic",
+    "url": "https://fki.tic.heia-fr.ch"
+  },
+  "modalities": [
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "handwriting-recognition",
+    "optical-character-recognition",
+    "text-recognition"
+  ],
+  "tags": [
+    "handwriting",
+    "ocr",
+    "iam",
+    "university-of-bern",
+    "fki",
+    "offline-handwriting"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "University of Bern FKI Academic License",
+    "spdx_id": null,
+    "url": "https://fki.tic.heia-fr.ch/databases/iam-handwriting-database",
+    "commercial_use": "forbidden",
+    "notes": "Available for non-commercial academic research upon free registration on the FKI portal."
+  },
+  "source_references": [
+    {
+      "title": "FKI IAM Handwriting Database Official Portal",
+      "url": "https://fki.tic.heia-fr.ch/databases/iam-handwriting-database",
+      "type": "official_website",
+      "notes": "Official repository homepage, download instructions, and sentence/line/word annotations."
+    },
+    {
+      "title": "The IAM-database: an English sentence database for offline handwriting recognition",
+      "url": "https://doi.org/10.1007/s100320200071",
+      "type": "original_paper",
+      "notes": "Published in International Journal on Document Analysis and Recognition (IJDAR 2002)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against University of Bern FKI portal and IJDAR journal publication (DOI: 10.1007/s100320200071)."
+  },
+  "size": {
+    "amount": 1.2,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "xml",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "Scanned document pages, line-segmented PNG images, and XML annotation files. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 115320,
+    "splits": {
+      "pages": 1539,
+      "sentences": 5685,
+      "lines": 13353,
+      "words": 115320,
+      "writers": 657
+    },
+    "unit": "words",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2002-11-01"
+  },
+  "citation": {
+    "paper_title": "The IAM-database: An English Sentence Database for Offline Handwriting Recognition",
+    "paper_url": "https://doi.org/10.1007/s100320200071",
+    "authors": [
+      "Urs-Viktor Marti",
+      "Horst Bunke"
+    ],
+    "doi": "10.1007/s100320200071",
+    "bibtex": "@article{marti2002iam,\n  title={The IAM-database: an English sentence database for offline handwriting recognition},\n  author={Marti, Urs-Viktor and Bunke, Horst},\n  journal={International Journal on Document Analysis and Recognition},\n  volume={5},\n  number={1},\n  pages={39--46},\n  year={2002},\n  publisher={Springer},\n  doi={10.1007/s100320200071}\n}"
+  }
+}

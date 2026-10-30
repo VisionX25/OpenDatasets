@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "docvqa",
+  "slug": "docvqa",
+  "name": "DocVQA: Visual Question Answering on Document Images",
+  "description": "A pioneering Visual Question Answering (VQA) benchmark designed to evaluate multimodal reasoning over complex document images. Curated by the Computer Vision Center (CVC) at Universitat Autònoma de Barcelona. Contains 50,000 questions formulated over 12,707 document images sourced from the UCSF Industry Documents Library. Answering requires understanding typography, tables, multi-column layouts, diagrams, handwritten marginalia, and document structure.",
+  "homepage_url": "https://www.docvqa.org/",
+  "publisher": {
+    "name": "Computer Vision Center (CVC) UAB",
+    "type": "academic",
+    "url": "https://www.cvc.uab.es"
+  },
+  "modalities": [
+    "vision",
+    "nlp",
+    "multimodal"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "document-understanding",
+    "information-extraction"
+  ],
+  "tags": [
+    "vqa",
+    "document-ai",
+    "docvqa",
+    "visual-question-answering",
+    "cvc",
+    "multimodal"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset and annotations released under the Creative Commons Attribution 4.0 International license."
+  },
+  "source_references": [
+    {
+      "title": "DocVQA Official Project Portal",
+      "url": "https://www.docvqa.org/",
+      "type": "official_website",
+      "notes": "Official portal, challenge leaderboards, and evaluation server."
+    },
+    {
+      "title": "DocVQA: A Dataset for VQA on Document Images",
+      "url": "https://doi.org/10.1109/WACV48630.2021.00225",
+      "type": "original_paper",
+      "notes": "Published in IEEE Winter Conference on Applications of Computer Vision (WACV 2021)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against CVC UAB DocVQA project portal and IEEE WACV 2021 proceedings (DOI: 10.1109/WACV48630.2021.00225)."
+  },
+  "size": {
+    "amount": 1.4,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Document image scans paired with question-answer JSON ground truth structures. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 50000,
+    "splits": {
+      "train_questions": 39463,
+      "val_questions": 5349,
+      "test_questions": 5188,
+      "documents": 12707
+    },
+    "unit": "questions",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-01-05"
+  },
+  "citation": {
+    "paper_title": "DocVQA: A Dataset for VQA on Document Images",
+    "paper_url": "https://doi.org/10.1109/WACV48630.2021.00225",
+    "authors": [
+      "Minesh Mathew",
+      "Dimosthenis Karatzas",
+      "C.V. Jawahar"
+    ],
+    "doi": "10.1109/WACV48630.2021.00225",
+    "bibtex": "@inproceedings{mathew2021docvqa,\n  title={DocVQA: A dataset for VQA on document images},\n  author={Mathew, Minesh and Karatzas, Dimosthenis and Jawahar, CV},\n  booktitle={IEEE Winter Conference on Applications of Computer Vision (WACV)},\n  pages={2200--2209},\n  year={2021},\n  doi={10.1109/WACV48630.2021.00225}\n}"
+  }
+}

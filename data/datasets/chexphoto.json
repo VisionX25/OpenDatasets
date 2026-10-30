@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "chexphoto",
+  "slug": "chexphoto",
+  "name": "CheXphoto: Chest X-ray Smartphone and Synthetic Photography Dataset",
+  "description": "A benchmark dataset of 10,507 photos and transformed versions of chest X-rays designed to evaluate and enhance deep learning algorithm robustness against photographic artifacts, smartphone camera distortions, and variable environmental lighting. Generated from the CheXpert validation and test sets by capturing real smartphone photos and applying synthetic optical transformations. Safeguard notice: Designed for algorithmic robustness benchmarking; not intended as a stand-alone diagnostic tool for autonomous patient care.",
+  "homepage_url": "https://aimi.stanford.edu/datasets/chexphoto-chest-x-rays",
+  "publisher": {
+    "name": "Stanford AIMI & Stanford Machine Learning Group",
+    "type": "academic",
+    "url": "https://aimi.stanford.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "robustness-benchmark",
+    "chest-xray-classification"
+  ],
+  "tags": [
+    "medical-imaging",
+    "radiology",
+    "chest-xray",
+    "smartphone-photos",
+    "robustness",
+    "chexphoto"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Stanford AIMI Research Data Use Agreement",
+    "url": "https://aimi.stanford.edu/datasets/chexphoto-chest-x-rays",
+    "commercial_use": "forbidden",
+    "notes": "Permitted strictly for non-commercial academic and research evaluation under the Stanford AIMI Research Data Use Agreement."
+  },
+  "source_references": [
+    {
+      "title": "Stanford AIMI CheXphoto Dataset Page",
+      "url": "https://aimi.stanford.edu/datasets/chexphoto-chest-x-rays",
+      "type": "official_website",
+      "notes": "Official Stanford Center for Artificial Intelligence in Medicine and Imaging dataset distribution repository."
+    },
+    {
+      "title": "CheXphoto Competition Portal",
+      "url": "https://stanfordmlgroup.github.io/competitions/chexphoto/",
+      "type": "documentation",
+      "notes": "Stanford ML Group benchmark specifications and test evaluation guidelines."
+    },
+    {
+      "title": "CheXphoto: 10,000+ Photos and Transformations of Chest X-rays for Benchmarking Deep Learning Robustness",
+      "url": "https://arxiv.org/abs/2007.06199",
+      "type": "original_paper",
+      "notes": "Foundational publication on arXiv describing smartphone photography artifacts and synthetic augmentation pipelines."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against Stanford AIMI repository and arXiv research preprint (arXiv:2007.06199)."
+  },
+  "size": {
+    "amount": 16.0,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "csv"
+    ],
+    "status": "estimated",
+    "notes": "Compressed archive containing captured photos, synthetic transforms, and label tables. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 10507,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-07-13"
+  },
+  "citation": {
+    "paper_title": "CheXphoto: 10,000+ Photos and Transformations of Chest X-rays for Benchmarking Deep Learning Robustness",
+    "paper_url": "https://arxiv.org/abs/2007.06199",
+    "authors": [
+      "Nick A. Phillips",
+      "Pranav Rajpurkar",
+      "Mark Sabini",
+      "Sharon Zhou",
+      "Michael Zhou",
+      "Sergey Burnyshev",
+      "Gopal R. Kotecha",
+      "Adriel Saporta",
+      "Katie Shpanskaya",
+      "Eleni M. Tcheurekdjian",
+      "Jayne Seekins",
+      "Matthew P. Lungren",
+      "Andrew Y. Ng"
+    ],
+    "doi": "10.48550/arXiv.2007.06199",
+    "bibtex": "@article{phillips2020chexphoto,\n  title={CheXphoto: 10,000+ Photos and Transformations of Chest X-rays for Benchmarking Deep Learning Robustness},\n  author={Phillips, Nick A. and Rajpurkar, Pranav and Sabini, Mark and Zhou, Sharon and Zhou, Michael and Burnyshev, Sergey and Kotecha, Gopal R. and Saporta, Adriel and Shpanskaya, Katie and Tcheurekdjian, Eleni M. and others},\n  journal={arXiv preprint arXiv:2007.06199},\n  year={2020},\n  doi={10.48550/arXiv.2007.06199}\n}"
+  }
+}

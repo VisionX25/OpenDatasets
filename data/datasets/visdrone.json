@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "visdrone",
+  "slug": "visdrone",
+  "name": "VisDrone: Visual Object Detection and Tracking from Drone Imagery",
+  "description": "A benchmark dataset collected by the AISKYEYE team at Tianjin University to advance drone-based computer vision. Captured by various drone-mounted cameras across 14 cities in China under varying weather, illumination, and altitude conditions. Contains 10,209 static images and 288 video clips consisting of 261,908 frames annotated with 2.6 million bounding boxes across pedestrians, cars, bicycles, vans, and buses. Supports object detection, single/multiple-object tracking, and crowd density estimation.",
+  "homepage_url": "https://github.com/VisDrone/VisDrone-Dataset",
+  "publisher": {
+    "name": "Lab of Machine Learning and Data Mining, Tianjin University",
+    "type": "academic",
+    "url": "https://github.com/VisDrone"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "multiple-object-tracking",
+    "crowd-counting",
+    "drone-surveillance"
+  ],
+  "tags": [
+    "drone-imagery",
+    "uav",
+    "object-detection",
+    "multi-object-tracking",
+    "visdrone",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "VisDrone Academic Research Terms",
+    "url": "https://github.com/VisDrone/VisDrone-Dataset",
+    "commercial_use": "forbidden",
+    "notes": "Freely accessible for non-commercial academic research; commercial deployment or distribution requires prior consent."
+  },
+  "source_references": [
+    {
+      "title": "VisDrone Dataset GitHub Repository",
+      "url": "https://github.com/VisDrone/VisDrone-Dataset",
+      "type": "official_website",
+      "notes": "Official repository containing download links, toolkit utilities, and challenge instructions."
+    },
+    {
+      "title": "Detection and Tracking Meet Drones Challenge",
+      "url": "https://doi.org/10.1109/TPAMI.2021.3119563",
+      "type": "original_paper",
+      "notes": "Comprehensive retrospective publication in IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against VisDrone GitHub repository and IEEE TPAMI journal publication (DOI: 10.1109/TPAMI.2021.3119563)."
+  },
+  "size": {
+    "amount": 25.0,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "mp4",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "High-resolution video sequences, extracted image sets, and bounding box ground truth text files. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 10209,
+    "splits": {
+      "train": 6471,
+      "val": 548,
+      "test": 3190
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-09-08",
+    "last_updated": "2021-10-12"
+  },
+  "citation": {
+    "paper_title": "Detection and Tracking Meet Drones Challenge",
+    "paper_url": "https://doi.org/10.1109/TPAMI.2021.3119563",
+    "authors": [
+      "Pengfei Zhu",
+      "Longyin Wen",
+      "Dawei Du",
+      "Xiao Bian",
+      "Heng Fan",
+      "Qinghua Hu",
+      "Haibin Ling"
+    ],
+    "doi": "10.1109/TPAMI.2021.3119563",
+    "bibtex": "@article{zhu2021detection,\n  title={Detection and Tracking Meet Drones Challenge},\n  author={Zhu, Pengfei and Wen, Longyin and Du, Dawei and Bian, Xiao and Fan, Heng and Hu, Qinghua and Ling, Haibin},\n  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  volume={44},\n  number={11},\n  pages={7380--7399},\n  year={2021},\n  publisher={IEEE},\n  doi={10.1109/TPAMI.2021.3119563}\n}"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "total-text",
+  "slug": "total-text",
+  "name": "Total-Text: Arbitrary-Shaped Curved Scene Text Dataset",
+  "description": "A comprehensive benchmark designed to push text detection beyond traditional horizontal and multi-oriented rectangular assumptions toward arbitrary shapes and curved textlines. Curated by the University of Malaya. Comprises 1,555 natural images containing 11,459 text instances categorized into horizontal, multi-oriented, and curved orientations. Each instance is delineated with word-level polygonal annotations (up to 10 vertices) and corresponding character transcriptions.",
+  "homepage_url": "https://github.com/cs-chan/Total-Text-Dataset",
+  "publisher": {
+    "name": "University of Malaya (CISIP)",
+    "type": "academic",
+    "url": "https://www.um.edu.my"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "curved-text-detection",
+    "scene-text-recognition",
+    "optical-character-recognition"
+  ],
+  "tags": [
+    "curved-text",
+    "arbitrary-shaped-text",
+    "scene-text",
+    "total-text",
+    "ocr",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "University of Malaya Research Use Agreement",
+    "spdx_id": null,
+    "url": "https://github.com/cs-chan/Total-Text-Dataset",
+    "commercial_use": "forbidden",
+    "notes": "Available exclusively for non-commercial academic research."
+  },
+  "source_references": [
+    {
+      "title": "Total-Text GitHub Repository",
+      "url": "https://github.com/cs-chan/Total-Text-Dataset",
+      "type": "repository",
+      "notes": "Official repository with polygon annotations, image downloads, and evaluation scripts."
+    },
+    {
+      "title": "Total-Text: A Comprehensive Dataset for Scene Text with Arbitrary Shapes",
+      "url": "https://doi.org/10.1109/ICDAR.2017.157",
+      "type": "original_paper",
+      "notes": "Published in 2017 International Conference on Document Analysis and Recognition (ICDAR 2017)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against University of Malaya CISIP repository and IEEE ICDAR 2017 proceedings (DOI: 10.1109/ICDAR.2017.157)."
+  },
+  "size": {
+    "amount": 440.0,
+    "unit": "MB",
+    "file_formats": [
+      "jpg",
+      "txt",
+      "mat"
+    ],
+    "status": "estimated",
+    "notes": "JPEG scene photographs accompanied by polygon coordinate text annotations. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 1555,
+    "splits": {
+      "train": 1255,
+      "test": 300,
+      "text_instances": 11459
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2017-11-13"
+  },
+  "citation": {
+    "paper_title": "Total-Text: A Comprehensive Dataset for Scene Text with Arbitrary Shapes",
+    "paper_url": "https://doi.org/10.1109/ICDAR.2017.157",
+    "authors": [
+      "Chee-Kheng Ch'ng",
+      "Chee-Seng Chan"
+    ],
+    "doi": "10.1109/ICDAR.2017.157",
+    "bibtex": "@inproceedings{chng2017total,\n  title={Total-Text: A comprehensive dataset for scene text with arbitrary shapes},\n  author={Ch'ng, Chee-Kheng and Chan, Chee-Seng},\n  booktitle={2017 14th IAPR International Conference on Document Analysis and Recognition (ICDAR)},\n  volume={1},\n  pages={935--940},\n  year={2017},\n  organization={IEEE},\n  doi={10.1109/ICDAR.2017.157}\n}"
+  }
+}

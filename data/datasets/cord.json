@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cord",
+  "slug": "cord",
+  "name": "CORD: Consolidated Receipt Dataset for Post-OCR Parsing",
+  "description": "A consolidated receipt dataset for post-OCR parsing and information extraction introduced by NAVER Clova AI. Consists of 1,000 real-world receipts in Indonesian with extreme layout, font, distortion, and lighting variations. Annotations define 30 fine-grained semantic category labels organized across a 4-tier hierarchy (menu, total, subtotal, void) for bounding boxes, text transcriptions, and key-value pairings.",
+  "homepage_url": "https://github.com/clovaai/cord",
+  "publisher": {
+    "name": "NAVER Clova AI",
+    "type": "industry",
+    "url": "https://clova.ai"
+  },
+  "modalities": [
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "document-parsing",
+    "information-extraction",
+    "optical-character-recognition"
+  ],
+  "tags": [
+    "receipt-parsing",
+    "post-ocr",
+    "cord",
+    "naver-clova",
+    "document-ai",
+    "information-extraction"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed under CC BY-SA 4.0 for research and commercial exploration."
+  },
+  "source_references": [
+    {
+      "title": "NAVER Clova CORD Repository",
+      "url": "https://github.com/clovaai/cord",
+      "type": "repository",
+      "notes": "Official repository with receipt images, JSON annotations, and evaluation code."
+    },
+    {
+      "title": "CORD: A Consolidated Receipt Dataset for Post-OCR Parsing",
+      "url": "https://openreview.net/forum?id=SJl3z659UH",
+      "type": "original_paper",
+      "notes": "Presented at the NeurIPS 2019 Workshop on Document Intelligence (OpenReview forum: SJl3z659UH)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against NeurIPS 2019 Workshop on Document Intelligence proceedings on OpenReview (forum ID: SJl3z659UH)."
+  },
+  "size": {
+    "amount": 1.1,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "High-resolution scanned receipt images and JSON semantic annotations. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 1000,
+    "splits": {
+      "train": 800,
+      "val": 100,
+      "test": 100
+    },
+    "unit": "receipts",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-11-25"
+  },
+  "citation": {
+    "paper_title": "CORD: A Consolidated Receipt Dataset for Post-OCR Parsing",
+    "paper_url": "https://openreview.net/forum?id=SJl3z659UH",
+    "authors": [
+      "Seunghyun Park",
+      "Seung Shin",
+      "Bado Lee",
+      "Junyeop Lee",
+      "Jaeheung Surh",
+      "Minjoon Seo",
+      "Hwalsuk Lee"
+    ],
+    "bibtex": "@inproceedings{park2019cord,\n  title={CORD: A Consolidated Receipt Dataset for Post-OCR Parsing},\n  author={Park, Seunghyun and Shin, Seung and Lee, Bado and Lee, Junyeop and Surh, Jaeheung and Seo, Minjoon and Lee, Hwalsuk},\n  booktitle={NeurIPS 2019 Workshop on Document Intelligence},\n  year={2019},\n  url={https://openreview.net/forum?id=SJl3z659UH}\n}"
+  }
+}

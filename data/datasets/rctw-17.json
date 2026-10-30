@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "rctw-17",
+  "slug": "rctw-17",
+  "name": "ICDAR 2017 RCTW-17: Reading Chinese Text in the Wild",
+  "description": "A large-scale benchmark for text detection and recognition in Chinese natural scenes, organized by CASIA and CVC UAB for the ICDAR 2017 Robust Reading Competition. Contains 12,263 natural scene and web images (8,034 train and 4,229 test) displaying street views, shop signs, billboards, menu boards, and indoor displays. Most images contain predominantly Chinese text, with polygon bounding box coordinates and character-level transcriptions for complex multi-oriented script.",
+  "homepage_url": "https://rrc.cvc.uab.es/?ch=10",
+  "publisher": {
+    "name": "Institute of Automation CAS (CASIA) & CVC UAB",
+    "type": "academic",
+    "url": "https://rrc.cvc.uab.es"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "scene-text-detection",
+    "scene-text-recognition",
+    "chinese-ocr"
+  ],
+  "tags": [
+    "chinese-text",
+    "scene-text",
+    "rctw-17",
+    "icdar-2017",
+    "robust-reading",
+    "casia"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "ICDAR Robust Reading Competition Dataset License",
+    "spdx_id": null,
+    "url": "https://rrc.cvc.uab.es/?ch=10",
+    "commercial_use": "forbidden",
+    "notes": "Available for non-commercial academic research and competition evaluation."
+  },
+  "source_references": [
+    {
+      "title": "ICDAR 2017 Robust Reading Challenge on Reading Chinese Text in the Wild (RCTW-17)",
+      "url": "https://rrc.cvc.uab.es/?ch=10",
+      "type": "official_website",
+      "notes": "Official competition portal, evaluation benchmarks, and task splits."
+    },
+    {
+      "title": "ICDAR2017 Competition on Reading Chinese Text in the Wild (RCTW-17)",
+      "url": "https://doi.org/10.1109/ICDAR.2017.233",
+      "type": "original_paper",
+      "notes": "Published in 2017 International Conference on Document Analysis and Recognition (ICDAR 2017)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against IEEE ICDAR 2017 proceedings (DOI: 10.1109/ICDAR.2017.233) and CVC UAB Robust Reading Competition platform."
+  },
+  "size": {
+    "amount": 19.5,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "High-resolution JPEG scene images paired with polygon bounding box and UTF-8 text annotations. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 12263,
+    "splits": {
+      "train": 8034,
+      "test": 4229
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2017-11-13"
+  },
+  "citation": {
+    "paper_title": "ICDAR2017 Competition on Reading Chinese Text in the Wild (RCTW-17)",
+    "paper_url": "https://doi.org/10.1109/ICDAR.2017.233",
+    "authors": [
+      "Baoguang Shi",
+      "Cong Yao",
+      "Minghui Liao",
+      "Mingkun Yang",
+      "Pei Xu",
+      "Linyan Cui",
+      "Serge Belongie",
+      "Shijian Lu",
+      "Xiang Bai"
+    ],
+    "doi": "10.1109/ICDAR.2017.233",
+    "bibtex": "@inproceedings{shi2017icdar2017,\n  title={ICDAR2017 Competition on Reading Chinese Text in the Wild (RCTW-17)},\n  author={Shi, Baoguang and Yao, Cong and Liao, Minghui and Yang, Mingkun and Xu, Pei and Cui, Linyan and Belongie, Serge and Lu, Shijian and Bai, Xiang},\n  booktitle={2017 14th IAPR International Conference on Document Analysis and Recognition (ICDAR)},\n  volume={1},\n  pages={1429--1434},\n  year={2017},\n  doi={10.1109/ICDAR.2017.233}\n}"
+  }
+}

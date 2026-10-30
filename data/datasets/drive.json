@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "id": "drive",
+  "slug": "drive",
+  "name": "DRIVE: Digital Retinal Images for Vessel Extraction",
+  "description": "A widely established biomedical benchmark dataset for evaluating retinal blood vessel segmentation algorithms in color fundus photography. Captured during a diabetic retinopathy screening programme in the Netherlands using a Canon CR5 non-mydriatic 3CCD camera. Comprises 40 eye photographs (33 non-diabetic retinopathy, 7 early diabetic retinopathy), each accompanied by manual vessel segmentations by two independent human observers. Safeguard notice: Intended strictly for non-commercial research and educational algorithm evaluation; not certified for direct diagnostic clinical use.",
+  "homepage_url": "https://drive.grand-challenge.org/",
+  "publisher": {
+    "name": "Image Sciences Institute, University Medical Center Utrecht",
+    "type": "academic",
+    "url": "https://drive.grand-challenge.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "vessel-segmentation",
+    "edge-detection"
+  ],
+  "tags": [
+    "medical-imaging",
+    "ophthalmology",
+    "retina",
+    "vessel-segmentation",
+    "fundus-imaging",
+    "benchmark",
+    "drive"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "DRIVE Research & Educational License",
+    "url": "https://drive.grand-challenge.org/",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for non-commercial scientific research and education upon registration; commercial use is forbidden without permission; citation of the IEEE TMI paper is required."
+  },
+  "source_references": [
+    {
+      "title": "DRIVE Challenge Portal",
+      "url": "https://drive.grand-challenge.org/",
+      "type": "official_website",
+      "notes": "Official Grand Challenge distribution portal and benchmark instructions."
+    },
+    {
+      "title": "Ridge-Based Vessel Segmentation in Color Images of the Retina",
+      "url": "https://doi.org/10.1109/TMI.2004.825627",
+      "type": "original_paper",
+      "notes": "Foundational publication in IEEE Transactions on Medical Imaging."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against DRIVE Grand Challenge repository and IEEE Transactions on Medical Imaging paper (DOI: 10.1109/TMI.2004.825627)."
+  },
+  "size": {
+    "amount": 30.0,
+    "unit": "MB",
+    "file_formats": [
+      "tif",
+      "gif"
+    ],
+    "status": "estimated",
+    "notes": "Color fundus images provided in TIFF format alongside binary vessel segmentations in GIF format. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 40,
+    "splits": {
+      "train": 20,
+      "test": 20
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2004-04-01"
+  },
+  "citation": {
+    "paper_title": "Ridge-Based Vessel Segmentation in Color Images of the Retina",
+    "paper_url": "https://doi.org/10.1109/TMI.2004.825627",
+    "authors": [
+      "J. Staal",
+      "Michael D. Abràmoff",
+      "Meindert Niemeijer",
+      "Max A. Viergever",
+      "Bram van Ginneken"
+    ],
+    "doi": "10.1109/TMI.2004.825627",
+    "bibtex": "@article{staal2004ridge,\n  title={Ridge-based vessel segmentation in color images of the retina},\n  author={Staal, Joes and Abr{\\`a}moff, Michael D and Niemeijer, Meindert and Viergever, Max A and van Ginneken, Bram},\n  journal={IEEE Transactions on Medical Imaging},\n  volume={23},\n  number={4},\n  pages={501--509},\n  year={2004},\n  publisher={IEEE},\n  doi={10.1109/TMI.2004.825627}\n}"
+  }
+}

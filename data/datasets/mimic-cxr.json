@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mimic-cxr",
+  "slug": "mimic-cxr",
+  "name": "MIMIC-CXR: Chest Radiographs and Radiology Reports Database",
+  "description": "A large, freely available clinical database of 377,110 chest radiographs associated with 227,835 de-identified free-text radiology reports from 65,379 unique patients who attended the Beth Israel Deaconess Medical Center emergency department between 2011 and 2016. Radiographs are provided in DICOM and high-resolution JPEG formats with 14 clinical labels extracted by automated labelers. Safeguard notice: Access requires PhysioNet credentialing, CITI human research training certification, and a signed data use agreement prohibiting re-identification; non-diagnostic research and educational use only.",
+  "homepage_url": "https://physionet.org/content/mimic-cxr/2.1.0/",
+  "publisher": {
+    "name": "MIT Laboratory for Computational Physiology & BIDMC",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "vision",
+    "nlp",
+    "multimodal"
+  ],
+  "tasks": [
+    "image-classification",
+    "report-generation",
+    "chest-xray-classification",
+    "visual-question-answering"
+  ],
+  "tags": [
+    "medical-imaging",
+    "radiology",
+    "chest-xray",
+    "mimic",
+    "clinical-reports",
+    "dicom",
+    "multimodal"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "PhysioNet Credentialed Data Use Agreement v1.5.0",
+    "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
+    "commercial_use": "forbidden",
+    "notes": "Access requires credentialed PhysioNet account, completion of CITI Human Subjects Training, agreement to maintain patient confidentiality, and strict prohibition on re-identification or redistribution."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet MIMIC-CXR Project Page",
+      "url": "https://physionet.org/content/mimic-cxr/2.1.0/",
+      "type": "official_website",
+      "notes": "Official repository hosting DICOM archives, radiology reports, and metadata index files."
+    },
+    {
+      "title": "MIMIC-CXR, a de-identified publicly available database of chest radiographs with free-text reports",
+      "url": "https://doi.org/10.1038/s41597-019-0322-0",
+      "type": "original_paper",
+      "notes": "Primary peer-reviewed publication in Nature Scientific Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against PhysioNet database landing page and Nature Scientific Data paper (DOI: 10.1038/s41597-019-0322-0)."
+  },
+  "size": {
+    "amount": 4700.0,
+    "unit": "GB",
+    "file_formats": [
+      "dcm",
+      "txt",
+      "csv",
+      "gz"
+    ],
+    "status": "estimated",
+    "notes": "Complete DICOM payload is approximately 4.7 TB; the pre-processed JPEG derivative (MIMIC-CXR-JPG) is approximately 500 GB. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 377110,
+    "unit": "radiographs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-12-12",
+    "last_updated": "2021-01-20"
+  },
+  "citation": {
+    "paper_title": "MIMIC-CXR, a de-identified publicly available database of chest radiographs with free-text reports",
+    "paper_url": "https://doi.org/10.1038/s41597-019-0322-0",
+    "authors": [
+      "Alistair E. W. Johnson",
+      "Tom J. Pollard",
+      "Seth J. Berkowitz",
+      "Nathaniel R. Greenbaum",
+      "Matthew P. Lungren",
+      "Chih-ying Deng",
+      "Roger G. Mark",
+      "Steven Horng"
+    ],
+    "doi": "10.1038/s41597-019-0322-0",
+    "bibtex": "@article{johnson2019mimic,\n  title={MIMIC-CXR, a de-identified publicly available database of chest radiographs with free-text reports},\n  author={Johnson, Alistair EW and Pollard, Tom J and Berkowitz, Seth J and Greenbaum, Nathaniel R and Lungren, Matthew P and Deng, Chih-ying and Mark, Roger G and Horng, Steven},\n  journal={Scientific Data},\n  volume={6},\n  number={1},\n  pages={317},\n  year={2019},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-019-0322-0}\n}"
+  }
+}

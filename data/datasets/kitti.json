@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "kitti",
+  "slug": "kitti",
+  "name": "KITTI Vision Benchmark Suite",
+  "description": "A pioneering mobile robotics and autonomous driving vision benchmark suite captured by the Karlsruhe Institute of Technology and Toyota Technological Institute at Chicago. Recorded from a Volkswagen Passat station wagon equipped with two high-resolution color and grayscale video cameras, a Velodyne HDL-64E rotating 3D laser scanner, and an RTK GPS/IMU navigation system. Provides challenging real-world benchmarks for stereo matching, optical flow, visual odometry, 3D object detection, and road segmentation in urban, rural, and highway traffic.",
+  "homepage_url": "https://www.cvlibs.net/datasets/kitti/",
+  "publisher": {
+    "name": "Karlsruhe Institute of Technology & TTI Chicago",
+    "type": "academic",
+    "url": "https://www.cvlibs.net"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor"
+  ],
+  "tasks": [
+    "object-detection",
+    "3d-object-detection",
+    "optical-flow",
+    "depth-estimation",
+    "visual-odometry"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "stereo-vision",
+    "lidar",
+    "kitti",
+    "benchmark",
+    "robotics"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0",
+    "spdx_id": "CC-BY-NC-SA-3.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for non-commercial research and educational purposes under CC BY-NC-SA 3.0; commercial use requires explicit licensing from the authors."
+  },
+  "source_references": [
+    {
+      "title": "KITTI Vision Benchmark Suite Official Portal",
+      "url": "https://www.cvlibs.net/datasets/kitti/",
+      "type": "official_website",
+      "notes": "Primary repository, benchmark leaderboards, and raw sensor data distribution portal."
+    },
+    {
+      "title": "Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite",
+      "url": "https://doi.org/10.1109/CVPR.2012.6248074",
+      "type": "original_paper",
+      "notes": "Foundational conference paper published in the 2012 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against Karlsruhe Institute of Technology cvlibs benchmark portal and CVPR 2012 proceedings (DOI: 10.1109/CVPR.2012.6248074)."
+  },
+  "size": {
+    "amount": 180.0,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "bin",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "Synchronized camera images (PNG), Velodyne binary 3D point cloud scans (BIN), and calibration/tracklet text files. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 14999,
+    "splits": {
+      "train": 7481,
+      "test": 7518
+    },
+    "unit": "frames",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2012-06-16"
+  },
+  "citation": {
+    "paper_title": "Are we ready for autonomous driving? The KITTI vision benchmark suite",
+    "paper_url": "https://doi.org/10.1109/CVPR.2012.6248074",
+    "authors": [
+      "Andreas Geiger",
+      "Philip Lenz",
+      "Raquel Urtasun"
+    ],
+    "doi": "10.1109/CVPR.2012.6248074",
+    "bibtex": "@inproceedings{geiger2012are,\n  title={Are we ready for autonomous driving? The KITTI vision benchmark suite},\n  author={Geiger, Andreas and Lenz, Philip and Urtasun, Raquel},\n  booktitle={2012 IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={3354--3361},\n  year={2012},\n  organization={IEEE},\n  doi={10.1109/CVPR.2012.6248074}\n}"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "funsd",
+  "slug": "funsd",
+  "name": "FUNSD: Form Understanding in Noisy Scanned Documents",
+  "description": "A specialized benchmark dataset for form understanding and document intelligence developed by the Computer Vision Laboratory at EPFL. Comprises 199 fully annotated scanned forms selected from the RVL-CDIP and Tobacco3482 document collections. Contains 31,485 individual words, 9,707 semantic entities categorized into header, question, answer, and other, and 5,304 directed relation links between questions and corresponding answers.",
+  "homepage_url": "https://guillaumejaume.github.io/FUNSD/",
+  "publisher": {
+    "name": "EPFL Computer Vision Laboratory",
+    "type": "academic",
+    "url": "https://www.epfl.ch"
+  },
+  "modalities": [
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "form-understanding",
+    "information-extraction",
+    "optical-character-recognition"
+  ],
+  "tags": [
+    "document-ai",
+    "form-understanding",
+    "funsd",
+    "ocr",
+    "layout-analysis",
+    "key-value-extraction"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Academic Non-Commercial Research License",
+    "spdx_id": null,
+    "url": "https://guillaumejaume.github.io/FUNSD/",
+    "commercial_use": "forbidden",
+    "notes": "Available for non-commercial academic research and evaluation."
+  },
+  "source_references": [
+    {
+      "title": "FUNSD Official Project Homepage",
+      "url": "https://guillaumejaume.github.io/FUNSD/",
+      "type": "official_website",
+      "notes": "Official dataset landing page, documentation, and download links."
+    },
+    {
+      "title": "FUNSD: A Dataset for Form Understanding in Noisy Scanned Documents",
+      "url": "https://doi.org/10.1109/ICDARW.2019.10029",
+      "type": "original_paper",
+      "notes": "Published in ICDAR 2019 Workshops (ICDARW 2019)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against IEEE ICDARW 2019 proceedings (DOI: 10.1109/ICDARW.2019.10029) and EPFL project repository."
+  },
+  "size": {
+    "amount": 16.5,
+    "unit": "MB",
+    "file_formats": [
+      "png",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "PNG document images and JSON annotations containing entity words, bounding boxes, and linking relations. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 199,
+    "splits": {
+      "train": 149,
+      "test": 50
+    },
+    "unit": "documents",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-09-20"
+  },
+  "citation": {
+    "paper_title": "FUNSD: A Dataset for Form Understanding in Noisy Scanned Documents",
+    "paper_url": "https://doi.org/10.1109/ICDARW.2019.10029",
+    "authors": [
+      "Guillaume Jaume",
+      "Hazim Kemal Ekenel",
+      "Jean-Philippe Thiran"
+    ],
+    "doi": "10.1109/ICDARW.2019.10029",
+    "bibtex": "@inproceedings{jaume2019funsd,\n  title={FUNSD: A Dataset for Form Understanding in Noisy Scanned Documents},\n  author={Jaume, Guillaume and Ekenel, Hazim Kemal and Thiran, Jean-Philippe},\n  booktitle={2019 International Conference on Document Analysis and Recognition Workshops (ICDARW)},\n  volume={5},\n  pages={1--6},\n  year={2019},\n  organization={IEEE},\n  doi={10.1109/ICDARW.2019.10029}\n}"
+  }
+}

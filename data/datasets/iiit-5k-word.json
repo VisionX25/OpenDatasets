@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "iiit-5k-word",
+  "slug": "iiit-5k-word",
+  "name": "IIIT 5K-Word Dataset for Scene Text Recognition",
+  "description": "A widely used cropped word dataset for evaluating natural scene text recognition algorithms, created by the Center for Visual Information Technology (CVIT) at IIIT Hyderabad. Contains 5,000 cropped word images harvested from Google image search queries (signboards, billboards, posters, house numbers). Each image is accompanied by ground truth character transcriptions and paired with 50-word and 1,000-word lexicon sets.",
+  "homepage_url": "https://cvit.iiit.ac.in/research/projects/cvit-projects/the-iiit-5k-word-dataset",
+  "publisher": {
+    "name": "Center for Visual Information Technology (CVIT), IIIT Hyderabad",
+    "type": "academic",
+    "url": "https://cvit.iiit.ac.in"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "scene-text-recognition",
+    "optical-character-recognition"
+  ],
+  "tags": [
+    "scene-text",
+    "ocr",
+    "iiit-5k",
+    "cvit",
+    "word-recognition",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "CVIT Academic Research License",
+    "spdx_id": null,
+    "url": "https://cvit.iiit.ac.in/research/projects/cvit-projects/the-iiit-5k-word-dataset",
+    "commercial_use": "forbidden",
+    "notes": "Available for non-commercial academic research and evaluation."
+  },
+  "source_references": [
+    {
+      "title": "CVIT IIIT 5K-Word Official Project Page",
+      "url": "https://cvit.iiit.ac.in/research/projects/cvit-projects/the-iiit-5k-word-dataset",
+      "type": "official_website",
+      "notes": "Official repository homepage, download archives, and lexicon files."
+    },
+    {
+      "title": "Scene Text Recognition using Higher Order Language Priors",
+      "url": "https://doi.org/10.5244/C.26.127",
+      "type": "original_paper",
+      "notes": "Published in British Machine Vision Conference (BMVC 2012)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against British Machine Vision Association BMVC 2012 proceedings (DOI: 10.5244/C.26.127) and IIIT Hyderabad CVIT repository."
+  },
+  "size": {
+    "amount": 85.0,
+    "unit": "MB",
+    "file_formats": [
+      "png",
+      "mat"
+    ],
+    "status": "estimated",
+    "notes": "Cropped PNG word images and MATLAB ground truth structures with small/medium lexicons. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 5000,
+    "splits": {
+      "train": 2000,
+      "test": 3000
+    },
+    "unit": "words",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2012-09-03"
+  },
+  "citation": {
+    "paper_title": "Scene Text Recognition using Higher Order Language Priors",
+    "paper_url": "https://doi.org/10.5244/C.26.127",
+    "authors": [
+      "Anand Mishra",
+      "Karteek Alahari",
+      "C. V. Jawahar"
+    ],
+    "doi": "10.5244/C.26.127",
+    "bibtex": "@inproceedings{mishra2012scene,\n  title={Scene Text Recognition using Higher Order Language Priors},\n  author={Mishra, Anand and Alahari, Karteek and Jawahar, C. V.},\n  booktitle={British Machine Vision Conference (BMVC)},\n  pages={127.1--127.11},\n  year={2012},\n  doi={10.5244/C.26.127}\n}"
+  }
+}

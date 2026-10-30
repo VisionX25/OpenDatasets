@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cropharvest",
+  "slug": "cropharvest",
+  "name": "CropHarvest: Global Dataset for Agricultural Land Cover Classification",
+  "description": "A diverse, globally distributed dataset for agricultural land cover classification and crop-type mapping curated by NASA Harvest and the University of Maryland. Spans 93,607 globally distributed crop and non-crop geographic points across 2,279 distinct 0.10° x 0.10° tiles and 35 countries. Combines multi-temporal satellite imagery from Sentinel-2, Sentinel-1, Landsat 8, and ERA5 weather reanalysis to enable robust multi-modal machine learning for food security.",
+  "homepage_url": "https://github.com/nasaharvest/cropharvest",
+  "publisher": {
+    "name": "NASA Harvest & University of Maryland",
+    "type": "government",
+    "url": "https://nasaharvest.org"
+  },
+  "modalities": [
+    "vision",
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "land-cover-classification",
+    "crop-mapping",
+    "remote-sensing"
+  ],
+  "tags": [
+    "agriculture",
+    "remote-sensing",
+    "earth-observation",
+    "nasa-harvest",
+    "sentinel-2",
+    "landsat"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset licensed under CC BY 4.0; software toolkit licensed under Apache 2.0."
+  },
+  "source_references": [
+    {
+      "title": "NASA Harvest CropHarvest Repository",
+      "url": "https://github.com/nasaharvest/cropharvest",
+      "type": "repository",
+      "notes": "Official repository, Python package, data access APIs, and evaluation benchmarks."
+    },
+    {
+      "title": "CropHarvest: A global dataset for crop-type classification",
+      "url": "https://openreview.net/forum?id=JtjzUXPEaCu",
+      "type": "original_paper",
+      "notes": "Published in NeurIPS 2021 Datasets and Benchmarks Track (OpenReview forum: JtjzUXPEaCu)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against NeurIPS 2021 Datasets and Benchmarks Track proceedings on OpenReview (forum ID: JtjzUXPEaCu)."
+  },
+  "size": {
+    "amount": 14.5,
+    "unit": "GB",
+    "file_formats": [
+      "nc",
+      "h5",
+      "geojson"
+    ],
+    "status": "estimated",
+    "notes": "NetCDF and HDF5 time series satellite arrays with GeoJSON point ground truth. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 93607,
+    "splits": {
+      "geographical_tiles": 2279,
+      "countries": 35
+    },
+    "unit": "points",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-04-19"
+  },
+  "citation": {
+    "paper_title": "CropHarvest: A Global Dataset for Crop-Type Classification",
+    "paper_url": "https://openreview.net/forum?id=JtjzUXPEaCu",
+    "authors": [
+      "Gabriel Tseng",
+      "Ivan Zvonkov",
+      "Catherine Nakalembe",
+      "Hannah Kerner"
+    ],
+    "bibtex": "@inproceedings{tseng2021cropharvest,\n  title={CropHarvest: A Global Dataset for Crop-Type Classification},\n  author={Tseng, Gabriel and Zvonkov, Ivan and Nakalembe, Catherine and Kerner, Hannah},\n  booktitle={Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 2)},\n  year={2021},\n  url={https://openreview.net/forum?id=JtjzUXPEaCu}\n}"
+  }
+}

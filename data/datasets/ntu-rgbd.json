@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ntu-rgbd",
+  "slug": "ntu-rgbd",
+  "name": "NTU RGB+D: 3D Action Recognition Dataset",
+  "description": "A comprehensive benchmark for 3D human activity analysis captured by the ROSE Lab at Nanyang Technological University (NTU Singapore). Recorded concurrently from 3 Microsoft Kinect v2 sensors across 80 camera viewpoints. Contains 56,880 video samples across 60 action classes performed by 40 distinct human subjects. Provides synchronized RGB video, depth maps, 3D skeletal joint trajectories (25 joints per body), and infrared sequences.",
+  "homepage_url": "https://rose1.ntu.edu.sg/dataset/actionRecognition/",
+  "publisher": {
+    "name": "Nanyang Technological University (ROSE Lab)",
+    "type": "academic",
+    "url": "https://rose1.ntu.edu.sg"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor"
+  ],
+  "tasks": [
+    "action-recognition",
+    "pose-estimation",
+    "3d-reconstruction"
+  ],
+  "tags": [
+    "3d-action-recognition",
+    "rgb-d",
+    "kinect",
+    "skeletal-pose",
+    "ntu",
+    "rose-lab"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "NTU ROSE Lab Academic Research Agreement",
+    "spdx_id": null,
+    "url": "https://rose1.ntu.edu.sg/dataset/actionRecognition/",
+    "commercial_use": "forbidden",
+    "notes": "Available exclusively to registered academic and research institutions for non-commercial research purposes."
+  },
+  "source_references": [
+    {
+      "title": "NTU ROSE Lab Action Recognition Portal",
+      "url": "https://rose1.ntu.edu.sg/dataset/actionRecognition/",
+      "type": "official_website",
+      "notes": "Official dataset distribution, evaluation splits (cross-subject and cross-view), and download request portal."
+    },
+    {
+      "title": "NTU RGB+D: A Large Scale Dataset for 3D Human Activity Analysis",
+      "url": "https://doi.org/10.1109/CVPR.2016.115",
+      "type": "original_paper",
+      "notes": "Published in IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2016)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against NTU ROSE Lab portal and IEEE CVPR 2016 proceedings (DOI: 10.1109/CVPR.2016.115)."
+  },
+  "size": {
+    "amount": 1300.0,
+    "unit": "GB",
+    "file_formats": [
+      "avi",
+      "png",
+      "skeleton"
+    ],
+    "status": "estimated",
+    "notes": "Full multi-modal dataset including RGB video clips, infrared images, depth maps, and 3D skeleton text files. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 56880,
+    "splits": {
+      "action_classes": 60,
+      "subjects": 40,
+      "camera_views": 80
+    },
+    "unit": "sequences",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2016-06-27"
+  },
+  "citation": {
+    "paper_title": "NTU RGB+D: A Large Scale Dataset for 3D Human Activity Analysis",
+    "paper_url": "https://doi.org/10.1109/CVPR.2016.115",
+    "authors": [
+      "Amir Shahroudy",
+      "Jun Liu",
+      "Tian-Tsong Ng",
+      "Gang Wang"
+    ],
+    "doi": "10.1109/CVPR.2016.115",
+    "bibtex": "@inproceedings{shahroudy2016ntu,\n  title={NTU RGB+D: A large scale dataset for 3D human activity analysis},\n  author={Shahroudy, Amir and Liu, Jun and Ng, Tian-Tsong and Wang, Gang},\n  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={1010--1019},\n  year={2016},\n  doi={10.1109/CVPR.2016.115}\n}"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "brats",
+  "slug": "brats",
+  "name": "BraTS: Brain Tumor MRI Segmentation Benchmark",
+  "description": "The Brain Tumor Segmentation (BraTS) benchmark provides multi-institutional, multi-parametric magnetic resonance imaging (mpMRI) scans of patients with diffuse gliomas, paired with expert neuroradiologist consensus delineations of enhancing tumor, peritumoral edema, and necrotic tumor core. Scans encompass four aligned structural modalities: pre- and post-contrast T1, T2, and T2-FLAIR. Safeguard notice: Curation and distribution restricted to medical algorithmic benchmarking and academic research; not approved for clinical diagnostic surgery or neuro-oncological treatment planning without certified clinician review.",
+  "homepage_url": "https://www.med.upenn.edu/cbica/brats/",
+  "publisher": {
+    "name": "Center for Biomedical Image Computing and Analytics (CBICA), University of Pennsylvania",
+    "type": "academic",
+    "url": "https://www.med.upenn.edu/cbica/"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "medical-image-segmentation",
+    "tumor-segmentation"
+  ],
+  "tags": [
+    "medical-imaging",
+    "mri",
+    "brain-tumor",
+    "glioma",
+    "segmentation",
+    "neuroimaging",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "CC BY-NC-SA 4.0",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International; commercial use and non-academic clinical exploitation prohibited."
+  },
+  "source_references": [
+    {
+      "title": "UPenn CBICA BraTS Official Portal",
+      "url": "https://www.med.upenn.edu/cbica/brats/",
+      "type": "official_website",
+      "notes": "Center for Biomedical Image Computing and Analytics official project home."
+    },
+    {
+      "title": "Synapse BraTS Challenge Platform",
+      "url": "https://www.synapse.org/#!Synapse:syn51156910",
+      "type": "repository",
+      "notes": "Official Synapse platform for challenge registration, benchmark access, and submission evaluation."
+    },
+    {
+      "title": "Advancing The Cancer Genome Atlas glioma MRI collections with expert segmentation labels and radiomic features",
+      "url": "https://doi.org/10.1038/sdata.2017.117",
+      "type": "original_paper",
+      "notes": "Foundational publication in Nature Scientific Data detailing expert annotations and cohort protocols."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against UPenn CBICA documentation, Synapse Challenge repository, and Nature Scientific Data publication (DOI: 10.1038/sdata.2017.117)."
+  },
+  "size": {
+    "amount": 25.0,
+    "unit": "GB",
+    "file_formats": [
+      "nii.gz",
+      "csv"
+    ],
+    "status": "estimated",
+    "notes": "Co-registered and skull-stripped volumetric NIfTI archives across T1, T1ce, T2, and FLAIR modalities."
+  },
+  "sample_count": {
+    "total": 2040,
+    "unit": "subjects",
+    "status": "estimated"
+  },
+  "dates": {
+    "published": "2017-09-05",
+    "last_updated": "2023-09-01"
+  },
+  "citation": {
+    "paper_title": "Advancing The Cancer Genome Atlas glioma MRI collections with expert segmentation labels and radiomic features",
+    "paper_url": "https://doi.org/10.1038/sdata.2017.117",
+    "authors": [
+      "Spyridon Bakas",
+      "Hamed Akbari",
+      "Aristeidis Sotiras",
+      "Michel Bilello",
+      "Martin Rozycki",
+      "Justin S. Kirby",
+      "John B. Freymann",
+      "Keyvan Farahani",
+      "Christos Davatzikos"
+    ],
+    "doi": "10.1038/sdata.2017.117",
+    "bibtex": "@article{bakas2017advancing,\n  title={Advancing The Cancer Genome Atlas glioma MRI collections with expert segmentation labels and radiomic features},\n  author={Bakas, Spyridon and Akbari, Hamed and Sotiras, Aristeidis and Bilello, Michel and Rozycki, Martin and Kirby, Justin S and Freymann, John B and Farahani, Keyvan and Davatzikos, Christos},\n  journal={Scientific Data},\n  volume={4},\n  number={1},\n  pages={170117},\n  year={2017},\n  publisher={Nature Publishing Group},\n  doi={10.1038/sdata.2017.117}\n}"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "plantvillage",
+  "slug": "plantvillage",
+  "name": "PlantVillage: Plant Disease Classification Dataset",
+  "description": "An open-access repository of plant leaf images created by Penn State University and EPFL to foster research in computer vision-based plant disease diagnosis. Consists of 54,306 curated photographs of healthy and diseased leaves across 14 major agricultural crop species (including apple, blueberry, cherry, corn, grape, peach, pepper, potato, raspberry, soybean, squash, strawberry, and tomato), categorized into 38 disease and health classes under controlled photographic settings.",
+  "homepage_url": "https://github.com/spMohanty/PlantVillage-Dataset",
+  "publisher": {
+    "name": "Penn State University & EPFL",
+    "type": "academic",
+    "url": "https://plantvillage.psu.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "disease-detection",
+    "plant-phenotyping"
+  ],
+  "tags": [
+    "agriculture",
+    "plant-pathology",
+    "crop-disease",
+    "leaves",
+    "plantvillage",
+    "benchmark"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Creative Commons Zero v1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Released under the CC0 1.0 Universal Public Domain Dedication."
+  },
+  "source_references": [
+    {
+      "title": "PlantVillage Open Access Repository",
+      "url": "https://github.com/spMohanty/PlantVillage-Dataset",
+      "type": "repository",
+      "notes": "Official repository distributing color, grayscale, and segmented leaf photographs across 38 classes."
+    },
+    {
+      "title": "Using Deep Learning for Image-Based Plant Disease Detection",
+      "url": "https://doi.org/10.3389/fpls.2016.01419",
+      "type": "original_paper",
+      "notes": "Published in Frontiers in Plant Science (2016)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against PlantVillage repository and Frontiers in Plant Science publication (DOI: 10.3389/fpls.2016.01419)."
+  },
+  "size": {
+    "amount": 820.0,
+    "unit": "MB",
+    "file_formats": [
+      "jpg"
+    ],
+    "status": "estimated",
+    "notes": "Curated color, grayscale, and segmented leaf images organized in category folders. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 54306,
+    "splits": {
+      "classes": 38,
+      "crop_species": 14
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2016-09-22"
+  },
+  "citation": {
+    "paper_title": "Using Deep Learning for Image-Based Plant Disease Detection",
+    "paper_url": "https://doi.org/10.3389/fpls.2016.01419",
+    "authors": [
+      "Sharada Prasanna Mohanty",
+      "David P. Hughes",
+      "Marcel Salathé"
+    ],
+    "doi": "10.3389/fpls.2016.01419",
+    "bibtex": "@article{mohanty2016using,\n  title={Using deep learning for image-based plant disease detection},\n  author={Mohanty, Sharada P and Hughes, David P and Salath{\\'e}, Marcel},\n  journal={Frontiers in Plant Science},\n  volume={7},\n  pages={1419},\n  year={2016},\n  publisher={Frontiers},\n  doi={10.3389/fpls.2016.01419}\n}"
+  }
+}

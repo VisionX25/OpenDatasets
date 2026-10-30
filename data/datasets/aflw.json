@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "id": "aflw",
+  "slug": "aflw",
+  "name": "AFLW: Annotated Facial Landmarks in the Wild",
+  "description": "A pioneering large-scale real-world facial image database curated by Graz University of Technology (TU Graz). Contains 25,993 annotated face instances in 21,997 natural images gathered from Flickr, exhibiting extreme head pose variations, occlusions, age, gender, and illumination diversity. Each face is annotated with up to 21 facial landmarks using a SQLite database backend, accompanied by face bounding rectangles, face ellipses, and 3D head pose angles.",
+  "homepage_url": "https://lrs.icg.tugraz.at/research/aflw/",
+  "publisher": {
+    "name": "Graz University of Technology (TU Graz)",
+    "type": "academic",
+    "url": "https://www.tugraz.at"
+  },
+  "modalities": [
+    "vision",
+    "tabular"
+  ],
+  "tasks": [
+    "facial-landmark-detection",
+    "face-alignment",
+    "head-pose-estimation"
+  ],
+  "tags": [
+    "facial-landmarks",
+    "head-pose",
+    "aflw",
+    "face-detection",
+    "tu-graz",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "ICG TU Graz Academic Research License",
+    "spdx_id": null,
+    "url": "https://lrs.icg.tugraz.at/research/aflw/",
+    "commercial_use": "forbidden",
+    "notes": "Available for non-commercial academic research purposes."
+  },
+  "source_references": [
+    {
+      "title": "TU Graz LRS AFLW Project Portal",
+      "url": "https://lrs.icg.tugraz.at/research/aflw/",
+      "type": "official_website",
+      "notes": "Official repository homepage, annotation schema, and SQLite database downloads."
+    },
+    {
+      "title": "Annotated Facial Landmarks in the Wild: A Large-scale, Real-world Database for Facial Landmark Localization",
+      "url": "https://doi.org/10.1109/ICCVW.2011.6130513",
+      "type": "original_paper",
+      "notes": "Published in IEEE International Conference on Computer Vision Workshops (ICCVW 2011)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against TU Graz Institute for Computer Graphics and Vision (ICG) and IEEE ICCV 2011 BEFIT workshop proceedings (DOI: 10.1109/ICCVW.2011.6130513)."
+  },
+  "size": {
+    "amount": 3.2,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "sqlite"
+    ],
+    "status": "estimated",
+    "notes": "RGB image archives paired with aflw.sqlite relational database containing face landmarks and metadata. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 25993,
+    "splits": {
+      "total_faces": 25993,
+      "images": 21997
+    },
+    "unit": "faces",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2011-11-06"
+  },
+  "citation": {
+    "paper_title": "Annotated Facial Landmarks in the Wild: A Large-scale, Real-world Database for Facial Landmark Localization",
+    "paper_url": "https://doi.org/10.1109/ICCVW.2011.6130513",
+    "authors": [
+      "Martin Köstinger",
+      "Paul Wohlhart",
+      "Peter M. Roth",
+      "Horst Bischof"
+    ],
+    "doi": "10.1109/ICCVW.2011.6130513",
+    "bibtex": "@inproceedings{kostinger2011annotated,\n  title={Annotated facial landmarks in the wild: A large-scale, real-world database for facial landmark localization},\n  author={K{\\\"o}stinger, Martin and Wohlhart, Paul and Roth, Peter M and Bischof, Horst},\n  booktitle={2011 IEEE International Conference on Computer Vision Workshops (ICCV Workshops)},\n  pages={2144--2151},\n  year={2011},\n  organization={IEEE},\n  doi={10.1109/ICCVW.2011.6130513}\n}"
+  }
+}

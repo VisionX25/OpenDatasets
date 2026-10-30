@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "hmdb51",
+  "slug": "hmdb51",
+  "name": "HMDB51: Human Motion Database",
+  "description": "A foundational action recognition database curated by the Serre Lab at Brown University. Extracted primarily from commercial movies and web video repositories (YouTube, Prelinger Archive). Contains 6,766 video clips across 51 distinct action categories spanning general facial actions, body movements with object interactions, and human body movements. Each clip is annotated with camera viewpoint, motion quality, and lighting conditions.",
+  "homepage_url": "https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/",
+  "publisher": {
+    "name": "Brown University (Serre Lab)",
+    "type": "academic",
+    "url": "https://serre-lab.clps.brown.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "action-recognition",
+    "video-classification"
+  ],
+  "tags": [
+    "action-recognition",
+    "video-understanding",
+    "hmdb51",
+    "brown-university",
+    "human-motion",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Brown University Academic Research License",
+    "spdx_id": null,
+    "url": "https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for academic, non-commercial research and educational purposes."
+  },
+  "source_references": [
+    {
+      "title": "HMDB51 Official Portal",
+      "url": "https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/",
+      "type": "official_website",
+      "notes": "Official repository homepage, download links, and 3 standard train/test evaluation splits."
+    },
+    {
+      "title": "HMDB: A large video database for human motion recognition",
+      "url": "https://doi.org/10.1109/ICCV.2011.6126543",
+      "type": "original_paper",
+      "notes": "Published in IEEE International Conference on Computer Vision (ICCV 2011)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against Brown University Serre Lab official portal and IEEE ICCV 2011 proceedings (DOI: 10.1109/ICCV.2011.6126543)."
+  },
+  "size": {
+    "amount": 2.1,
+    "unit": "GB",
+    "file_formats": [
+      "avi",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "RAR-compressed video archives organized in 51 action categories with 3 evaluation split definitions. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 6766,
+    "splits": {
+      "action_classes": 51,
+      "minimum_per_class": 101
+    },
+    "unit": "videos",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2011-11-06"
+  },
+  "citation": {
+    "paper_title": "HMDB: A large video database for human motion recognition",
+    "paper_url": "https://doi.org/10.1109/ICCV.2011.6126543",
+    "authors": [
+      "Hildegard Kuehne",
+      "Hueihan Jhuang",
+      "Estíbaliz Garrote",
+      "Tomaso Poggio",
+      "Thomas Serre"
+    ],
+    "doi": "10.1109/ICCV.2011.6126543",
+    "bibtex": "@inproceedings{kuehne2011hmdb,\n  title={HMDB: a large video database for human motion recognition},\n  author={Kuehne, Hildegard and Jhuang, Hueihan and Garrote, Est{\\'\\i}baliz and Poggio, Tomaso and Serre, Thomas},\n  booktitle={2011 International Conference on Computer Vision},\n  pages={2556--2563},\n  year={2011},\n  organization={IEEE},\n  doi={10.1109/ICCV.2011.6126543}\n}"
+  }
+}

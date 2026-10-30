@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "300-w",
+  "slug": "300-w",
+  "name": "300-W: 300 Faces in-the-Wild Challenge Dataset",
+  "description": "A premier benchmark created by the Intelligent Behaviour Understanding Group (iBUG) at Imperial College London for 2D facial landmark localization across challenging unconstrained real-world imagery. Standardized a consistent 68-point markup scheme across existing databases (LFPW, Helen, AFW, XM2VTS) and added an entirely new 600-image test set divided into challenging indoor and outdoor scenes with severe facial expressions, lighting variations, and head poses.",
+  "homepage_url": "https://ibug.doc.ic.ac.uk/resources/300-W/",
+  "publisher": {
+    "name": "Imperial College London (iBUG)",
+    "type": "academic",
+    "url": "https://ibug.doc.ic.ac.uk"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "facial-landmark-detection",
+    "face-alignment"
+  ],
+  "tags": [
+    "facial-landmarks",
+    "face-alignment",
+    "300w",
+    "ibug",
+    "face-recognition",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "iBUG Academic Research License",
+    "spdx_id": null,
+    "url": "https://ibug.doc.ic.ac.uk/resources/300-W/",
+    "commercial_use": "forbidden",
+    "notes": "Available strictly for non-commercial academic research and educational evaluation."
+  },
+  "source_references": [
+    {
+      "title": "300-W Challenge Official Portal",
+      "url": "https://ibug.doc.ic.ac.uk/resources/300-W/",
+      "type": "official_website",
+      "notes": "Official challenge specifications, 68-point landmark definitions, and evaluation tools."
+    },
+    {
+      "title": "300 Faces in-the-wild challenge: Database and results",
+      "url": "https://doi.org/10.1016/j.imavis.2016.01.002",
+      "type": "original_paper",
+      "notes": "Published in Image and Vision Computing (IMAVIS 2016)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against Imperial College London iBUG laboratory portal and Image and Vision Computing publication."
+  },
+  "size": {
+    "amount": 2.8,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "pts"
+    ],
+    "status": "estimated",
+    "notes": "High-resolution face crops and standardized 68-point PTS landmark coordinate files. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 4437,
+    "splits": {
+      "train": 3837,
+      "test": 600
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2016-03-01"
+  },
+  "citation": {
+    "paper_title": "300 Faces in-the-wild challenge: Database and results",
+    "paper_url": "https://doi.org/10.1016/j.imavis.2016.01.002",
+    "authors": [
+      "Christos Sagonas",
+      "Georgios Tzimiropoulos",
+      "Stefanos Zafeiriou",
+      "Maja Pantic"
+    ],
+    "doi": "10.1016/j.imavis.2016.01.002",
+    "bibtex": "@article{sagonas2016300,\n  title={300 Faces in-the-wild challenge: Database and results},\n  author={Sagonas, Christos and Tzimiropoulos, Georgios and Zafeiriou, Stefanos and Pantic, Maja},\n  journal={Image and Vision Computing},\n  volume={47},\n  pages={3--18},\n  year={2016},\n  publisher={Elsevier},\n  doi={10.1016/j.imavis.2016.01.002}\n}"
+  }
+}

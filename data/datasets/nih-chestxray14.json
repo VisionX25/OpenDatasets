@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nih-chestxray14",
+  "slug": "nih-chestxray14",
+  "name": "NIH ChestX-ray14 Database",
+  "description": "A national hospital-scale medical imaging benchmark consisting of 112,120 frontal-view chest radiographs from 30,805 unique patients treated at the National Institutes of Health Clinical Center between 1992 and 2015. Text-mining tools extracted 14 common thoracic disease categories from associated radiological reports. Safeguard notice: Released as public domain government research data for computer vision benchmarking; not certified or FDA-approved for clinical screening or autonomous diagnostic decisions without physician validation.",
+  "homepage_url": "https://nihcc.app.box.com/v/ChestXray-NIHCC",
+  "publisher": {
+    "name": "National Institutes of Health (NIH) Clinical Center",
+    "type": "government",
+    "url": "https://clinicalcenter.nih.gov"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "weakly-supervised-localization",
+    "chest-xray-classification"
+  ],
+  "tags": [
+    "medical-imaging",
+    "radiology",
+    "chest-xray",
+    "nih",
+    "thorax-disease",
+    "benchmark",
+    "public-domain"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "CC0 1.0 Universal (U.S. Government Work)",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Authored by United States Federal Government employees at the NIH Clinical Center; dedicated to the public domain without copyright restrictions worldwide."
+  },
+  "source_references": [
+    {
+      "title": "NIH Clinical Center Box Distribution Portal",
+      "url": "https://nihcc.app.box.com/v/ChestXray-NIHCC",
+      "type": "official_website",
+      "notes": "Official file repository and download distribution mirror hosted by the NIH Clinical Center."
+    },
+    {
+      "title": "NIH Clinical Center Department of Radiology and Imaging Sciences",
+      "url": "https://clinicalcenter.nih.gov/drd/",
+      "type": "documentation",
+      "notes": "Clinical Center radiology research overview and data sharing statement."
+    },
+    {
+      "title": "ChestX-Ray8: Hospital-Scale Chest X-Ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases",
+      "url": "https://doi.org/10.1109/CVPR.2017.369",
+      "type": "original_paper",
+      "notes": "Original paper published in the 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against NIH Clinical Center repository and CVPR 2017 conference proceedings (DOI: 10.1109/CVPR.2017.369)."
+  },
+  "size": {
+    "amount": 45.0,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "csv"
+    ],
+    "status": "estimated",
+    "notes": "Distributed across 12 compressed tar archives containing 1024x1024 grayscale PNG images and accompanying metadata CSV tables. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 112120,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2017-07-21"
+  },
+  "citation": {
+    "paper_title": "ChestX-Ray8: Hospital-Scale Chest X-Ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases",
+    "paper_url": "https://doi.org/10.1109/CVPR.2017.369",
+    "authors": [
+      "Xiaosong Wang",
+      "Yifan Peng",
+      "Le Lu",
+      "Zhiyong Lu",
+      "Mohammadhadi Bagheri",
+      "Ronald M. Summers"
+    ],
+    "doi": "10.1109/CVPR.2017.369",
+    "bibtex": "@inproceedings{wang2017chestx,\n  title={ChestX-Ray8: Hospital-Scale Chest X-Ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases},\n  author={Wang, Xiaosong and Peng, Yifan and Lu, Le and Lu, Zhiyong and Bagheri, Mohammadhadi and Summers, Ronald M},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={2097--2106},\n  year={2017},\n  doi={10.1109/CVPR.2017.369}\n}"
+  }
+}

@@ -23,6 +23,7 @@ import {
   INITIAL_SUBMISSION_FORM,
   isValidHttpUrl,
   formatSubmissionMarkdown,
+  buildGitHubIssueUrl,
 } from '../utils/submissionUtils'
 
 export const SubmitDatasetPage: React.FC = () => {
@@ -163,9 +164,9 @@ export const SubmitDatasetPage: React.FC = () => {
     }
   }
 
-  const githubIssueUrl = `https://github.com/VisionX25/OpenDatasets/issues/new?template=dataset_suggestion.yml&title=${encodeURIComponent(
-    `[Dataset]: ${formData.name.trim() || 'New Dataset Suggestion'}`,
-  )}`
+  const githubIssueResult = useMemo(() => {
+    return buildGitHubIssueUrl(formData)
+  }, [formData])
 
   return (
     <div className="flex-1 py-10 md:py-16">
@@ -622,6 +623,34 @@ export const SubmitDatasetPage: React.FC = () => {
               </div>
             </div>
 
+            {/* Auto-Prefill status or Fallback notification */}
+            {githubIssueResult.isFallback ? (
+              <div
+                role="alert"
+                className="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700/80 text-amber-900 dark:text-amber-200 text-xs sm:text-sm space-y-1"
+              >
+                <div className="flex items-center gap-2 font-semibold text-amber-950 dark:text-amber-100">
+                  <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                  <span>Submission Exceeds Safe URL Limit ({githubIssueResult.urlLength} characters)</span>
+                </div>
+                <p className="text-amber-800 dark:text-amber-300">
+                  To prevent browser or server URL truncation errors (HTTP 414), GitHub form fields cannot be prefilled via the URL. Your full formatted proposal has been copied to your clipboard. Click &ldquo;Continue to GitHub&rdquo; and paste your submission into the issue form.
+                </p>
+              </div>
+            ) : (
+              <div className="p-3.5 rounded-xl bg-indigo-50/70 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800/80 text-xs text-indigo-900 dark:text-indigo-200 flex items-start gap-2.5">
+                <CheckCircle2 className="w-4 h-4 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-slate-900 dark:text-white">
+                    Auto-Prefill Configured
+                  </p>
+                  <p className="mt-0.5 text-slate-600 dark:text-slate-300">
+                    Form fields will be automatically prefilled in GitHub&apos;s issue form. When you click &ldquo;Continue to GitHub&rdquo;, review the prefilled values and click <strong>Submit new issue</strong> on GitHub.
+                  </p>
+                </div>
+              </div>
+            )}
+
             {/* Step-by-step handoff */}
             <div className="space-y-4">
               <h3 className="font-bold text-slate-900 dark:text-white text-base flex items-center gap-2">
@@ -634,9 +663,13 @@ export const SubmitDatasetPage: React.FC = () => {
                   <span className="inline-block w-6 h-6 rounded-full bg-indigo-600 text-white font-bold text-center leading-6 text-xs mb-2">
                     1
                   </span>
-                  <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Details Copied</h4>
+                  <h4 className="font-semibold text-slate-900 dark:text-white mb-1">
+                    {githubIssueResult.isFallback ? 'Details Copied' : 'Details Copied & Prefilled'}
+                  </h4>
                   <p className="text-slate-600 dark:text-slate-400 text-xs">
-                    The formatted markdown below is in your clipboard. You can also re-copy it at any time.
+                    {githubIssueResult.isFallback
+                      ? 'The formatted markdown is in your clipboard ready to paste into GitHub.'
+                      : 'Fields are encoded in the URL to prefill GitHub, and copied to clipboard as a backup.'}
                   </p>
                 </div>
 
@@ -646,7 +679,9 @@ export const SubmitDatasetPage: React.FC = () => {
                   </span>
                   <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Open GitHub Issue</h4>
                   <p className="text-slate-600 dark:text-slate-400 text-xs">
-                    Click &ldquo;Continue to GitHub&rdquo; below to open our pre-configured issue template.
+                    {githubIssueResult.isFallback
+                      ? 'Click &ldquo;Continue to GitHub&rdquo; to open the issue template.'
+                      : 'Click &ldquo;Continue to GitHub&rdquo; to open the prefilled issue form.'}
                   </p>
                 </div>
 
@@ -654,9 +689,13 @@ export const SubmitDatasetPage: React.FC = () => {
                   <span className="inline-block w-6 h-6 rounded-full bg-indigo-600 text-white font-bold text-center leading-6 text-xs mb-2">
                     3
                   </span>
-                  <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Review & Submit</h4>
+                  <h4 className="font-semibold text-slate-900 dark:text-white mb-1">
+                    {githubIssueResult.isFallback ? 'Paste & Submit' : 'Review & Submit'}
+                  </h4>
                   <p className="text-slate-600 dark:text-slate-400 text-xs">
-                    Paste details into the form and submit. Maintainers will review and validate metadata.
+                    {githubIssueResult.isFallback
+                      ? 'Paste details into the form and click &ldquo;Submit new issue&rdquo; on GitHub.'
+                      : 'Review the prefilled fields, edit if needed, and click &ldquo;Submit new issue&rdquo;.'}
                   </p>
                 </div>
               </div>
@@ -664,13 +703,17 @@ export const SubmitDatasetPage: React.FC = () => {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
                 <a
-                  href={githubIssueUrl}
+                  href={githubIssueResult.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-900 font-bold text-sm shadow-sm transition-colors"
                 >
                   <GithubIcon className="w-4 h-4" />
-                  <span>Continue to GitHub Issue Form</span>
+                  <span>
+                    {githubIssueResult.isFallback
+                      ? 'Continue to GitHub (Manual Paste)'
+                      : 'Continue to GitHub Issue Form'}
+                  </span>
                   <ExternalLink className="w-3.5 h-3.5 opacity-70" />
                 </a>
 
@@ -683,6 +726,14 @@ export const SubmitDatasetPage: React.FC = () => {
                   <span>{copied ? 'Copied!' : 'Copy Formatted Text Again'}</span>
                 </button>
               </div>
+
+              {/* Submission Transparency Reminder */}
+              <p className="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                <Info className="w-3.5 h-3.5 shrink-0 text-indigo-500" />
+                <span>
+                  GitHub issues require explicit submission. Clicking &ldquo;Continue to GitHub&rdquo; opens the issue form in your browser for your final review before submitting.
+                </span>
+              </p>
 
               {/* Formatted Markdown Preview */}
               <div className="space-y-2 pt-2">

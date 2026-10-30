@@ -5,6 +5,8 @@ import { SubmitDatasetPage } from './SubmitDatasetPage'
 import {
   isValidHttpUrl,
   formatSubmissionMarkdown,
+  buildGitHubIssueUrl,
+  DEFAULT_MAX_URL_LENGTH,
   type SubmissionFormData,
 } from '../utils/submissionUtils'
 import { findPotentialDuplicates } from '../utils/duplicateDetector'
@@ -219,6 +221,131 @@ describe('SubmitDatasetPage: Unit & Integration Tests', () => {
 
       // Form has noValidate for custom accessible validation
       expect(html.toLowerCase()).toContain('novalidate')
+    })
+  })
+
+  // 5. Task 11.2: GitHub Issue Form Auto-Prefill URL Generation
+  describe('5. GitHub Issue Form Auto-Prefill URL Generation', () => {
+    const sampleData: SubmissionFormData = {
+      name: 'Bangla Regional Dialect Corpus',
+      sourceUrl: 'https://data.mendeley.com/datasets/92r62h4k5k/4',
+      category: 'natural-language-processing',
+      task: 'dialect-identification',
+      description: 'A curated dataset of 4,653 sentences across regional dialects.',
+      doi: '10.17632/92r62h4k5k.4',
+      license: 'CC BY 4.0',
+      paperUrl: 'https://doi.org/10.17632/92r62h4k5k.4',
+      notes: 'Covers Rangpur, Barisal, Narail, and Khulna dialects.',
+    }
+
+    it('maps form fields to correct GitHub issue form IDs (name, source, usefulness, license, evidence)', () => {
+      const result = buildGitHubIssueUrl(sampleData)
+      expect(result.isFallback).toBe(false)
+
+      const parsedUrl = new URL(result.url)
+      expect(parsedUrl.origin).toBe('https://github.com')
+      expect(parsedUrl.pathname).toBe('/VisionX25/OpenDatasets/issues/new')
+
+      // Template & Title preservation
+      expect(parsedUrl.searchParams.get('template')).toBe('dataset_suggestion.yml')
+      expect(parsedUrl.searchParams.get('title')).toBe('[Dataset]: Bangla Regional Dialect Corpus')
+
+      // Direct field mappings
+      expect(parsedUrl.searchParams.get('name')).toBe('Bangla Regional Dialect Corpus')
+      expect(parsedUrl.searchParams.get('source')).toBe('https://data.mendeley.com/datasets/92r62h4k5k/4')
+
+      // usefulness field contains category, task, and description
+      const usefulness = parsedUrl.searchParams.get('usefulness') || ''
+      expect(usefulness).toContain('**Category:** Natural Language Processing')
+      expect(usefulness).toContain('**Primary Task:** dialect-identification')
+      expect(usefulness).toContain('A curated dataset of 4,653 sentences across regional dialects.')
+
+      // license field contains documented license
+      expect(parsedUrl.searchParams.get('license')).toBe('CC BY 4.0')
+
+      // evidence field contains DOI, paper URL, and notes
+      const evidence = parsedUrl.searchParams.get('evidence') || ''
+      expect(evidence).toContain('- **DOI:** 10.17632/92r62h4k5k.4')
+      expect(evidence).toContain('- **Supporting Paper URL:** https://doi.org/10.17632/92r62h4k5k.4')
+      expect(evidence).toContain('Covers Rangpur, Barisal, Narail, and Khulna dialects.')
+    })
+
+    it('handles optional fields gracefully without discarding information', () => {
+      const minimalData: SubmissionFormData = {
+        name: 'MNIST Handwritten Digits',
+        sourceUrl: 'http://yann.lecun.com/exdb/mnist/',
+        category: 'computer-vision',
+        task: 'digit-classification',
+        description: '70,000 28x28 grayscale images of handwritten digits 0-9.',
+        doi: '',
+        license: '',
+        paperUrl: '',
+        notes: '',
+      }
+
+      const result = buildGitHubIssueUrl(minimalData)
+      expect(result.isFallback).toBe(false)
+
+      const parsedUrl = new URL(result.url)
+      expect(parsedUrl.searchParams.get('name')).toBe('MNIST Handwritten Digits')
+      expect(parsedUrl.searchParams.get('license')).toBe('Unknown / Not specified by publisher')
+
+      const evidence = parsedUrl.searchParams.get('evidence') || ''
+      expect(evidence).toContain('- **DOI:** N/A')
+      expect(evidence).toContain('- **Supporting Paper URL:** N/A')
+      expect(evidence).toContain('None provided')
+    })
+
+    it('properly URL-encodes special characters, newlines, and markdown tokens', () => {
+      const specialData: SubmissionFormData = {
+        name: 'Dataset & More / With Special @ Characters!',
+        sourceUrl: 'https://example.com/data?query=1&sort=desc#anchor',
+        category: 'tabular-time-series',
+        task: 'time-series-forecasting',
+        description: 'Multi-line\ndescription\nwith "quotes" & ampersands.',
+        doi: '10.1234/test&special',
+        license: 'Custom (Non-Commercial & Academic Only)',
+        paperUrl: 'https://example.com/paper?id=123',
+        notes: 'Notes with\nnewlines & symbols.',
+      }
+
+      const result = buildGitHubIssueUrl(specialData)
+      const parsedUrl = new URL(result.url)
+
+      expect(parsedUrl.searchParams.get('name')).toBe('Dataset & More / With Special @ Characters!')
+      expect(parsedUrl.searchParams.get('source')).toBe('https://example.com/data?query=1&sort=desc#anchor')
+      expect(parsedUrl.searchParams.get('usefulness')).toContain('Multi-line\ndescription\nwith "quotes" & ampersands.')
+    })
+
+    it('activates fallback gracefully when URL length exceeds safe limit', () => {
+      // Create data with very long description that exceeds DEFAULT_MAX_URL_LENGTH (2000)
+      const longData: SubmissionFormData = {
+        ...sampleData,
+        description: 'A'.repeat(2500),
+      }
+
+      const result = buildGitHubIssueUrl(longData)
+      expect(result.isFallback).toBe(true)
+      expect(result.urlLength).toBeGreaterThan(DEFAULT_MAX_URL_LENGTH)
+
+      const parsedUrl = new URL(result.url)
+      // Fallback retains template and title so contributor lands on correct issue form
+      expect(parsedUrl.searchParams.get('template')).toBe('dataset_suggestion.yml')
+      expect(parsedUrl.searchParams.get('title')).toBe('[Dataset]: Bangla Regional Dialect Corpus')
+
+      // Excludes body field parameters to prevent 414 error
+      expect(parsedUrl.searchParams.get('usefulness')).toBeNull()
+      expect(parsedUrl.searchParams.get('name')).toBeNull()
+
+      // Full field values are still retained for clipboard copy
+      expect(result.fieldValues.name).toBe('Bangla Regional Dialect Corpus')
+      expect(result.fieldValues.usefulness).toContain('A'.repeat(2500))
+    })
+
+    it('supports custom max URL length threshold for testing', () => {
+      const result = buildGitHubIssueUrl(sampleData, 150)
+      expect(result.isFallback).toBe(true)
+      expect(result.urlLength).toBeGreaterThan(150)
     })
   })
 })

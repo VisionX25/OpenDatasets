@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sroie",
+  "slug": "sroie",
+  "name": "ICDAR 2019 SROIE: Scanned Receipts Information Extraction & OCR",
+  "description": "A benchmark dataset established for the ICDAR 2019 Robust Reading Challenge on Scanned Receipts Information Extraction and Optical Character Recognition. Organized by CVC UAB and CASIA. Contains 1,000 scanned paper receipt images featuring diverse print quality, receipt geometries, fonts, and artifacts. Evaluates three core tasks: text localization, text recognition, and key information extraction (identifying company name, date, address, and total amount).",
+  "homepage_url": "https://rrc.cvc.uab.es/?ch=13",
+  "publisher": {
+    "name": "Computer Vision Center (CVC) UAB",
+    "type": "academic",
+    "url": "https://rrc.cvc.uab.es"
+  },
+  "modalities": [
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "text-detection",
+    "text-recognition",
+    "information-extraction"
+  ],
+  "tags": [
+    "receipt-ocr",
+    "information-extraction",
+    "sroie",
+    "icdar-2019",
+    "key-information-extraction",
+    "cvc"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "ICDAR Robust Reading Competition Dataset License",
+    "spdx_id": null,
+    "url": "https://rrc.cvc.uab.es/?ch=13",
+    "commercial_use": "forbidden",
+    "notes": "Provided for non-commercial academic research and benchmark evaluation."
+  },
+  "source_references": [
+    {
+      "title": "ICDAR 2019 Robust Reading Challenge on Scanned Receipts (SROIE)",
+      "url": "https://rrc.cvc.uab.es/?ch=13",
+      "type": "official_website",
+      "notes": "Official competition portal, evaluation benchmarks, and task splits."
+    },
+    {
+      "title": "ICDAR2019 Competition on Scanned Receipts Information Extraction and OCR",
+      "url": "https://doi.org/10.1109/ICDAR.2019.00244",
+      "type": "original_paper",
+      "notes": "Published in 2019 International Conference on Document Analysis and Recognition (ICDAR 2019)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against CVC UAB Robust Reading Competition portal and IEEE ICDAR 2019 proceedings (DOI: 10.1109/ICDAR.2019.00244)."
+  },
+  "size": {
+    "amount": 120.0,
+    "unit": "MB",
+    "file_formats": [
+      "jpg",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "JPEG scanned receipt images accompanied by ground truth bounding box and entity text files. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 1000,
+    "splits": {
+      "train": 626,
+      "test": 361
+    },
+    "unit": "receipts",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-09-20"
+  },
+  "citation": {
+    "paper_title": "ICDAR2019 Competition on Scanned Receipts Information Extraction and Optical Character Recognition",
+    "paper_url": "https://doi.org/10.1109/ICDAR.2019.00244",
+    "authors": [
+      "Zheng Huang",
+      "Kai Chen",
+      "Jianhua He",
+      "Xiang Bai",
+      "Dimosthenis Karatzas",
+      "Shiguang Shan",
+      "Michael R. Lyu"
+    ],
+    "doi": "10.1109/ICDAR.2019.00244",
+    "bibtex": "@inproceedings{huang2019icdar2019,\n  title={ICDAR2019 competition on scanned receipts information extraction and optical character recognition (SROIE)},\n  author={Huang, Zheng and Chen, Kai and He, Jianhua and Bai, Xiang and Karatzas, Dimosthenis and Shan, Shiguang and Lyu, Michael R},\n  booktitle={2019 International Conference on Document Analysis and Recognition (ICDAR)},\n  pages={1516--1520},\n  year={2019},\n  organization={IEEE},\n  doi={10.1109/ICDAR.2019.00244}\n}"
+  }
+}

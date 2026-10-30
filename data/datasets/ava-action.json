@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ava-action",
+  "slug": "ava-action",
+  "name": "AVA: Atomic Visual Actions Benchmark",
+  "description": "A video dataset introduced by Google Research that densely annotates atomic visual actions in space and time. Contains 430 15-minute movie segments densely annotated at 1 Hz intervals, yielding over 1.6 million action labels across 80 atomic action classes (e.g. pose actions, person-person interactions, and person-object interactions). Provides person bounding boxes and multi-label action annotations to evaluate spatio-temporal action localization.",
+  "homepage_url": "https://research.google.com/ava/",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "action-detection",
+    "action-recognition",
+    "spatio-temporal-action-localization"
+  ],
+  "tags": [
+    "action-detection",
+    "spatio-temporal",
+    "ava",
+    "google-research",
+    "video-benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Annotations released under CC BY 4.0; underlying movie clips subject to fair use research and educational guidelines."
+  },
+  "source_references": [
+    {
+      "title": "Google Research AVA Project Portal",
+      "url": "https://research.google.com/ava/",
+      "type": "official_website",
+      "notes": "Official repository homepage, annotation CSV files, and evaluation code."
+    },
+    {
+      "title": "AVA: A Video Dataset of Spatio-temporally Segmented Atomic Visual Actions",
+      "url": "https://doi.org/10.1109/CVPR.2018.00633",
+      "type": "original_paper",
+      "notes": "Published in IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2018)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against Google Research AVA project portal and CVPR 2018 proceedings (DOI: 10.1109/CVPR.2018.00633)."
+  },
+  "size": {
+    "amount": 35.0,
+    "unit": "GB",
+    "file_formats": [
+      "mkv",
+      "mp4",
+      "csv"
+    ],
+    "status": "estimated",
+    "notes": "Dense CSV action bounding box labels and downloaded 15-minute movie video segments. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 1620000,
+    "splits": {
+      "train_clips": 235,
+      "val_clips": 64,
+      "test_clips": 131
+    },
+    "unit": "labels",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-06-18"
+  },
+  "citation": {
+    "paper_title": "AVA: A Video Dataset of Spatio-temporally Segmented Atomic Visual Actions",
+    "paper_url": "https://doi.org/10.1109/CVPR.2018.00633",
+    "authors": [
+      "Chunhui Gu",
+      "Chen Sun",
+      "David A. Ross",
+      "Carl Vondrick",
+      "Caroline Pantofaru",
+      "Yeqing Li",
+      "Sudheendra Vijayanarasimhan",
+      "George Toderici",
+      "David A. Ross",
+      "Cordelia Schmid"
+    ],
+    "doi": "10.1109/CVPR.2018.00633",
+    "bibtex": "@inproceedings{gu2018ava,\n  title={AVA: A video dataset of spatio-temporally segmented atomic visual actions},\n  author={Gu, Chunhui and Sun, Chen and Ross, David A and Vondrick, Carl and Pantofaru, Caroline and Li, Yeqing and Vijayanarasimhan, Sudheendra and Toderici, George and Ross, David A and Schmid, Cordelia},\n  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={6047--6056},\n  year={2018},\n  doi={10.1109/CVPR.2018.00633}\n}"
+  }
+}

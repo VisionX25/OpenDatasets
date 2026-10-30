@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mpii-human-pose",
+  "slug": "mpii-human-pose",
+  "name": "MPII Human Pose Dataset",
+  "description": "A standard state-of-the-art benchmark for articulated human pose estimation evaluation. Comprises roughly 25,000 images containing over 40,000 annotated people, collected from everyday human activities extracted from YouTube videos. Features high variation in body orientation, scale, occlusion, and background clutter, with manual annotations of 16 body joint locations, head orientation, 3D torso direction, and activity labels covering 410 distinct human actions.",
+  "homepage_url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/software-and-datasets/mpii-human-pose-dataset",
+  "publisher": {
+    "name": "Max Planck Institute for Informatics",
+    "type": "academic",
+    "url": "https://www.mpi-inf.mpg.de"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "pose-estimation",
+    "keypoint-detection",
+    "action-recognition"
+  ],
+  "tags": [
+    "human-pose",
+    "keypoints",
+    "mpii",
+    "articulated-pose",
+    "computer-vision",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Custom Academic Research Use Agreement",
+    "spdx_id": null,
+    "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/software-and-datasets/mpii-human-pose-dataset",
+    "commercial_use": "forbidden",
+    "notes": "Available exclusively for non-commercial academic research purposes from the Max Planck Institute for Informatics."
+  },
+  "source_references": [
+    {
+      "title": "MPII Human Pose Official Portal",
+      "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/software-and-datasets/mpii-human-pose-dataset",
+      "type": "official_website",
+      "notes": "Official dataset distribution, annotation downloads, and evaluation benchmark leaderboards."
+    },
+    {
+      "title": "2D Human Pose Estimation: New Benchmark and State of the Art",
+      "url": "https://doi.org/10.1109/CVPR.2014.471",
+      "type": "original_paper",
+      "notes": "Published in IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2014)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against MPI-INF project portal and CVPR 2014 proceedings (DOI: 10.1109/CVPR.2014.471)."
+  },
+  "size": {
+    "amount": 12.5,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "mat"
+    ],
+    "status": "estimated",
+    "notes": "Full image archive and MATLAB annotation structure files. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 24920,
+    "splits": {
+      "train": 18079,
+      "test": 6841
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2014-06-23"
+  },
+  "citation": {
+    "paper_title": "2D Human Pose Estimation: New Benchmark and State of the Art",
+    "paper_url": "https://doi.org/10.1109/CVPR.2014.471",
+    "authors": [
+      "Mykhaylo Andriluka",
+      "Leonid Pishchulin",
+      "Peter Gehler",
+      "Bernt Schiele"
+    ],
+    "doi": "10.1109/CVPR.2014.471",
+    "bibtex": "@inproceedings{andriluka20142d,\n  title={2D human pose estimation: New benchmark and state of the art},\n  author={Andriluka, Mykhaylo and Pishchulin, Leonid and Gehler, Peter and Schiele, Bernt},\n  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={3686--3693},\n  year={2014},\n  doi={10.1109/CVPR.2014.471}\n}"
+  }
+}

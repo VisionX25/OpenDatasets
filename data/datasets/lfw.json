@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "lfw",
+  "slug": "lfw",
+  "name": "Labeled Faces in the Wild (LFW)",
+  "description": "A landmark benchmark database for studying the problem of unconstrained face recognition and face verification. Developed by the Computer Vision Laboratory at the University of Massachusetts Amherst. Contains 13,233 web-collected face images of 5,749 distinct individuals, of which 1,680 people have two or more images. Serves as the quintessential academic evaluation benchmark for pair-matching face verification in natural environments.",
+  "homepage_url": "http://vis-www.cs.umass.edu/lfw/",
+  "publisher": {
+    "name": "University of Massachusetts Amherst (CICS)",
+    "type": "academic",
+    "url": "https://www.cics.umass.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "face-recognition",
+    "face-verification"
+  ],
+  "tags": [
+    "face-verification",
+    "face-recognition",
+    "lfw",
+    "umass",
+    "biometrics",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "UMass Amherst Research Use Agreement",
+    "spdx_id": null,
+    "url": "http://vis-www.cs.umass.edu/lfw/",
+    "commercial_use": "unknown",
+    "notes": "Images collected from public web sources for non-commercial educational and research evaluation."
+  },
+  "source_references": [
+    {
+      "title": "UMass Amherst LFW Official Landing Page",
+      "url": "http://vis-www.cs.umass.edu/lfw/",
+      "type": "official_website",
+      "notes": "Historical canonical project website with standard evaluation protocols and pair splits."
+    },
+    {
+      "title": "Labeled Faces in the Wild: A Database for Studying Face Recognition in Unconstrained Environments",
+      "url": "https://people.cs.umass.edu/~elm/papers/lfw.pdf",
+      "type": "original_paper",
+      "notes": "Technical Report 07-49, Computer Science Department, University of Massachusetts, Amherst."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against University of Massachusetts Amherst Computer Vision Lab Technical Report 07-49."
+  },
+  "size": {
+    "amount": 200.0,
+    "unit": "MB",
+    "file_formats": [
+      "jpg",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "JPEG face image archives and 10-fold verification pair splits. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 13233,
+    "splits": {
+      "unique_people": 5749,
+      "people_with_2plus_images": 1680
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2007-10-01"
+  },
+  "citation": {
+    "paper_title": "Labeled Faces in the Wild: A Database for Studying Face Recognition in Unconstrained Environments",
+    "paper_url": "https://people.cs.umass.edu/~elm/papers/lfw.pdf",
+    "authors": [
+      "Gary B. Huang",
+      "Manu Ramesh",
+      "Tamara Berg",
+      "Erik Learned-Miller"
+    ],
+    "bibtex": "@techreport{huang2007labeled,\n  title={Labeled Faces in the Wild: A Database for Studying Face Recognition in Unconstrained Environments},\n  author={Huang, Gary B. and Ramesh, Manu and Berg, Tamara and Learned-Miller, Erik},\n  institution={University of Massachusetts, Amherst},\n  number={07-49},\n  year={2007}\n}"
+  }
+}

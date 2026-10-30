@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ip102",
+  "slug": "ip102",
+  "name": "IP102: Large-Scale Benchmark for Insect Pest Recognition",
+  "description": "A comprehensive large-scale benchmark dataset for insect pest recognition in agriculture. Curated by the Institute of Automation, Chinese Academy of Sciences (CASIA) and Nankai University. Comprises 75,222 images covering 102 insect pest categories organized hierarchically under 8 major economic agricultural crops (rice, corn, wheat, beet, alfalfa, millet, citrus, and mango). Includes nearly 19,000 images with bounding box annotations for simultaneous pest localization and classification.",
+  "homepage_url": "https://github.com/xpwu95/IP102",
+  "publisher": {
+    "name": "Chinese Academy of Sciences & Nankai University",
+    "type": "academic",
+    "url": "https://github.com/xpwu95/IP102"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "object-detection",
+    "fine-grained-classification"
+  ],
+  "tags": [
+    "pest-recognition",
+    "agriculture",
+    "fine-grained",
+    "insects",
+    "ip102",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Academic Research Use Agreement",
+    "spdx_id": null,
+    "url": "https://github.com/xpwu95/IP102",
+    "commercial_use": "forbidden",
+    "notes": "Available exclusively for non-commercial academic research and educational evaluation."
+  },
+  "source_references": [
+    {
+      "title": "IP102 Benchmark Repository",
+      "url": "https://github.com/xpwu95/IP102",
+      "type": "repository",
+      "notes": "Official dataset distribution, classification splits, and bounding box annotations."
+    },
+    {
+      "title": "IP102: A Large-Scale Benchmark Dataset for Insect Pest Recognition",
+      "url": "https://doi.org/10.1109/CVPR.2019.00899",
+      "type": "original_paper",
+      "notes": "Published in IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2019)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against CASIA / Nankai University project repository and CVPR 2019 proceedings (DOI: 10.1109/CVPR.2019.00899)."
+  },
+  "size": {
+    "amount": 16.8,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "txt",
+      "xml"
+    ],
+    "status": "estimated",
+    "notes": "Color images paired with train/val/test splits and PASCAL VOC-style XML bounding box files. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 75222,
+    "splits": {
+      "train": 45095,
+      "val": 7508,
+      "test": 22619
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-06-16"
+  },
+  "citation": {
+    "paper_title": "IP102: A Large-Scale Benchmark Dataset for Insect Pest Recognition",
+    "paper_url": "https://doi.org/10.1109/CVPR.2019.00899",
+    "authors": [
+      "Xiaoping Wu",
+      "Chi Zhan",
+      "Yukun Lai",
+      "Ming-Ming Cheng",
+      "Jufeng Yang"
+    ],
+    "doi": "10.1109/CVPR.2019.00899",
+    "bibtex": "@inproceedings{wu2019ip102,\n  title={IP102: A large-scale benchmark dataset for insect pest recognition},\n  author={Wu, Xiaoping and Zhan, Chi and Lai, Yukun and Cheng, Ming-Ming and Yang, Jufeng},\n  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={8787--8796},\n  year={2019},\n  doi={10.1109/CVPR.2019.00899}\n}"
+  }
+}

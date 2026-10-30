@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ade20k",
+  "slug": "ade20k",
+  "name": "ADE20K: Scene Parsing and Segmentation Benchmark",
+  "description": "A comprehensive scene parsing and semantic segmentation benchmark dataset created by the Computer Science and Artificial Intelligence Laboratory (CSAIL) at MIT. Contains 22,210 complex natural images densely annotated down to individual pixel-level segmentations across 365 scene categories and 150 semantic object/stuff classes, with additional object parts and hierarchical segmentations. Serves as the standard benchmark for semantic scene parsing and image synthesis evaluation.",
+  "homepage_url": "https://ade20k.csail.mit.edu/",
+  "publisher": {
+    "name": "MIT CSAIL (Computer Science and Artificial Intelligence Laboratory)",
+    "type": "academic",
+    "url": "https://ade20k.csail.mit.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "scene-parsing",
+    "instance-segmentation"
+  ],
+  "tags": [
+    "scene-parsing",
+    "indoor-scenes",
+    "outdoor-scenes",
+    "ade20k",
+    "benchmark",
+    "dense-segmentation"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "MIT CSAIL Research License (Images) / BSD 3-Clause (Annotations)",
+    "spdx_id": "BSD-3-Clause",
+    "url": "https://ade20k.csail.mit.edu/",
+    "commercial_use": "forbidden",
+    "notes": "Dataset images originate from third-party sources (SUN/Places databases) and are strictly limited to non-commercial academic research and educational use. Annotations, segmentation masks, and development code are released by MIT CSAIL under the BSD 3-Clause License."
+  },
+  "source_references": [
+    {
+      "title": "MIT ADE20K Dataset Portal",
+      "url": "https://ade20k.csail.mit.edu/",
+      "type": "official_website",
+      "notes": "Official MIT CSAIL project site, interactive browser, and challenge evaluation portal."
+    },
+    {
+      "title": "Semantic Understanding of Scenes Through the ADE20K Dataset",
+      "url": "https://doi.org/10.1007/s11263-018-1140-0",
+      "type": "original_paper",
+      "notes": "Comprehensive retrospective journal publication in the International Journal of Computer Vision (IJCV)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against MIT CSAIL ADE20K portal and IJCV journal article (DOI: 10.1007/s11263-018-1140-0)."
+  },
+  "size": {
+    "amount": 3.8,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "png",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Full resolution images, object masks, and hierarchical object-part annotation segmentations. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 22210,
+    "splits": {
+      "train": 20210,
+      "val": 2000
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2017-07-21",
+    "last_updated": "2019-03-15"
+  },
+  "citation": {
+    "paper_title": "Semantic Understanding of Scenes Through the ADE20K Dataset",
+    "paper_url": "https://doi.org/10.1007/s11263-018-1140-0",
+    "authors": [
+      "Bolei Zhou",
+      "Hang Zhao",
+      "Xavier Puig",
+      "Tete Xiao",
+      "Sanjiv Sanja",
+      "Antonio Torralba",
+      "Adnan Oliva"
+    ],
+    "doi": "10.1007/s11263-018-1140-0",
+    "bibtex": "@article{zhou2019semantic,\n  title={Semantic Understanding of Scenes Through the ADE20K Dataset},\n  author={Zhou, Bolei and Zhao, Hang and Puig, Xavier and Xiao, Tete and Sanja, Sanjiv and Torralba, Antonio and Oliva, Adnan},\n  journal={International Journal of Computer Vision},\n  volume={127},\n  number={3},\n  pages={302--321},\n  year={2019},\n  publisher={Springer},\n  doi={10.1007/s11263-018-1140-0}\n}"
+  }
+}

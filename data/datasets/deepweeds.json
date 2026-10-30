@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "deepweeds",
+  "slug": "deepweeds",
+  "name": "DeepWeeds: Weed Species Image Dataset for Deep Learning",
+  "description": "An open multiclass weed species image dataset created by James Cook University in Queensland, Australia. Designed to accelerate computer vision and autonomous robotics applications in precision agriculture. Consists of 17,509 high-resolution images (256x256 RGB) capturing 8 nationally significant weed species native to northern Australia's rangelands, along with a negative flora class, photographed in situ under variable natural sunlight.",
+  "homepage_url": "https://github.com/AlexOlsen/DeepWeeds",
+  "publisher": {
+    "name": "James Cook University",
+    "type": "academic",
+    "url": "https://www.jcu.edu.au"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "fine-grained-classification",
+    "weed-detection"
+  ],
+  "tags": [
+    "weed-detection",
+    "agriculture",
+    "robotics",
+    "deepweeds",
+    "field-robotics",
+    "australia"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset imagery and annotations released under CC BY 4.0; companion code repository licensed under Apache 2.0."
+  },
+  "source_references": [
+    {
+      "title": "DeepWeeds GitHub Repository",
+      "url": "https://github.com/AlexOlsen/DeepWeeds",
+      "type": "repository",
+      "notes": "Official repository containing image metadata, download links, and benchmark evaluation splits."
+    },
+    {
+      "title": "DeepWeeds: A Multiclass Weed Species Image Dataset for Deep Learning",
+      "url": "https://doi.org/10.1038/s41598-018-38343-3",
+      "type": "original_paper",
+      "notes": "Published in Nature Scientific Reports (2019)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against James Cook University project portal and Nature Scientific Reports publication (DOI: 10.1038/s41598-018-38343-3)."
+  },
+  "size": {
+    "amount": 470.0,
+    "unit": "MB",
+    "file_formats": [
+      "jpg",
+      "csv"
+    ],
+    "status": "estimated",
+    "notes": "Standardized 256x256 JPEG image archive and CSV labels specifying 5-fold cross-validation splits. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 17509,
+    "splits": {
+      "weed_classes": 8,
+      "negative_flora": 1
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-02-14"
+  },
+  "citation": {
+    "paper_title": "DeepWeeds: A Multiclass Weed Species Image Dataset for Deep Learning",
+    "paper_url": "https://doi.org/10.1038/s41598-018-38343-3",
+    "authors": [
+      "Alex Olsen",
+      "Dmitry A. Konovalov",
+      "Bronson Philippa",
+      "Peter Ridd",
+      "Jake C. Wood",
+      "Jamie Calvert",
+      "Mostafa Rahimi Azghadi",
+      "Ronald D. Banks"
+    ],
+    "doi": "10.1038/s41598-018-38343-3",
+    "bibtex": "@article{olsen2019deepweeds,\n  title={DeepWeeds: A multiclass weed species image dataset for deep learning},\n  author={Olsen, Alex and Konovalov, Dmitry A and Philippa, Bronson and Ridd, Peter and Wood, Jake C and Calvert, Jamie and Azghadi, Mostafa Rahimi and Banks, Ronald D},\n  journal={Scientific Reports},\n  volume={9},\n  number={1},\n  pages={2058},\n  year={2019},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41598-018-38343-3}\n}"
+  }
+}

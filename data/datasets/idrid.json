@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "idrid",
+  "slug": "idrid",
+  "name": "IDRiD: Indian Diabetic Retinopathy Image Dataset",
+  "description": "A clinical ophthalmology benchmark dataset representative of an Indian diabetic population, consisting of 516 fundus images acquired using a digital retinal camera. Provides ground truth disease severity grading for diabetic retinopathy (5 classes) and diabetic macular edema (3 classes), as well as pixel-level manual segmentations of four primary retinal lesions: microaneurysms, hemorrhages, hard exudates, and soft exudates. Safeguard notice: Curated for research and diagnostic algorithm development; not certified as an autonomous screening device for patient management without ophthalmologist confirmation.",
+  "homepage_url": "https://idrid.grand-challenge.org/",
+  "publisher": {
+    "name": "IIT Kharagpur & SGGSIET Nanded",
+    "type": "academic",
+    "url": "https://idrid.grand-challenge.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "semantic-segmentation",
+    "diabetic-retinopathy-grading"
+  ],
+  "tags": [
+    "medical-imaging",
+    "ophthalmology",
+    "retinal-fundus",
+    "diabetic-retinopathy",
+    "macular-edema",
+    "idrid"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Openly licensed under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Grand Challenge IDRiD Homepage",
+      "url": "https://idrid.grand-challenge.org/",
+      "type": "official_website",
+      "notes": "Official challenge and competition portal for the IDRiD dataset."
+    },
+    {
+      "title": "Indian Diabetic Retinopathy Image Dataset (IDRiD): A Database for Diabetic Retinopathy Screening Research",
+      "url": "https://doi.org/10.3390/data3030025",
+      "type": "original_paper",
+      "notes": "Peer-reviewed publication in MDPI Data journal describing dataset acquisition and annotation protocols."
+    },
+    {
+      "title": "IEEE Dataport IDRiD Repository",
+      "url": "https://doi.org/10.21227/H25W98",
+      "type": "repository",
+      "notes": "Official IEEE Dataport digital repository record for IDRiD files."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-10-30",
+    "notes": "Verified against Grand Challenge repository, MDPI Data journal paper (DOI: 10.3390/data3030025), and IEEE Dataport (DOI: 10.21227/H25W98)."
+  },
+  "size": {
+    "amount": 12.0,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "tif",
+      "csv"
+    ],
+    "status": "estimated",
+    "notes": "High-resolution 4288x2848 fundus photographs in JPEG format with binary pixel lesion masks in TIFF format. (Estimated distribution payload size based on publisher documentation; independent byte-level archive download verification was not performed in catalog curation.)"
+  },
+  "sample_count": {
+    "total": 516,
+    "splits": {
+      "train": 413,
+      "test": 103
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-07-06"
+  },
+  "citation": {
+    "paper_title": "Indian Diabetic Retinopathy Image Dataset (IDRiD): A Database for Diabetic Retinopathy Screening Research",
+    "paper_url": "https://doi.org/10.3390/data3030025",
+    "authors": [
+      "Prasanna Porwal",
+      "Samiksha Pachade",
+      "Ravi Kamble",
+      "Manesh Kokare",
+      "Girish Deshmukh",
+      "Vivek Sahasrabuddhe",
+      "Fabrice Meriaudeau"
+    ],
+    "doi": "10.3390/data3030025",
+    "bibtex": "@article{porwal2018idrid,\n  title={Indian Diabetic Retinopathy Image Dataset (IDRiD): A Database for Diabetic Retinopathy Screening Research},\n  author={Porwal, Prasanna and Pachade, Samiksha and Kamble, Ravi and Kokare, Manesh and Deshmukh, Girish and Sahasrabuddhe, Vivek and Meriaudeau, Fabrice},\n  journal={Data},\n  volume={3},\n  number={3},\n  pages={25},\n  year={2018},\n  publisher={MDPI},\n  doi={10.3390/data3030025}\n}"
+  }
+}
