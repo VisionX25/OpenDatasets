@@ -25,15 +25,15 @@ flowchart TD
     Contributor[Contributor submits GitHub Issue Form] --> IssueTrigger[GitHub Actions Workflow Triggers on issues: opened/edited]
     IssueTrigger --> ReadEvent[Read Event Payload from GITHUB_EVENT_PATH]
     ReadEvent --> Parse[scripts/suggestion_parser.py: Sanitize & Validate Fields]
-    
+
     Parse -- Missing Required Fields --> ReportInvalid[Generate Triage Report: Exit 1]
     ReportInvalid --> LabelInvalid[Apply label: needs-info & Post Comment]
-    
+
     Parse -- Valid Input --> DupDetect[scripts/duplicate_detector.py: Compare against data/datasets/]
-    
+
     DupDetect -- High Confidence Duplicate --> ReportDup[Generate Triage Report: Exit 2]
     ReportDup --> LabelDup[Apply label: duplicate & Post Comment]
-    
+
     DupDetect -- Novel or Potential Duplicate --> GenerateDraft[scripts/draft_generator.py: Build Schema-Compliant Draft]
     GenerateDraft --> ValidateDraft[Validate with Draft7Validator]
     ValidateDraft --> SaveDraft[Save to drafts/slug.draft.json]
@@ -182,7 +182,7 @@ jobs:
             --output-dir drafts/ \
             --report-file report.md \
             --json > triage_result.json || true
-          
+
           echo "STATUS=$(jq -r .status triage_result.json)" >> $GITHUB_OUTPUT
           echo "LABEL=$(jq -r .recommended_label triage_result.json)" >> $GITHUB_OUTPUT
           echo "SLUG=$(jq -r .slug triage_result.json)" >> $GITHUB_OUTPUT
