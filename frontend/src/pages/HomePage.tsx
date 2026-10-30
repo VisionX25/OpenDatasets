@@ -153,6 +153,32 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Contribute to OpenDatasets Section */}
+      <section className="pb-16 md:pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/50 p-6 sm:p-8 md:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-xs">
+            <div className="max-w-2xl">
+              <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+                Community
+              </span>
+              <h2 className="mt-1 text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                Contribute to OpenDatasets
+              </h2>
+              <p className="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                Know of an open machine learning dataset with clear documentation and licensing? Suggest it to help expand our verified metadata catalog.
+              </p>
+            </div>
+            <Link
+              to="/submit"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm transition-colors shrink-0"
+            >
+              <span>Submit Dataset</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

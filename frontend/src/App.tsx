@@ -6,6 +6,7 @@ import { ExplorePage } from './pages/ExplorePage'
 import { DatasetsPage } from './pages/DatasetsPage'
 import { DatasetDetailPage } from './pages/DatasetDetailPage'
 import { AboutPage } from './pages/AboutPage'
+import { SubmitDatasetPage } from './pages/SubmitDatasetPage'
 import { isCategoryId } from './utils/datasetFilters'
 
 /**
@@ -40,6 +41,7 @@ export const App: React.FC = () => {
           <Route path="datasets" element={<DatasetsPage />} />
           <Route path="datasets/:param" element={<DatasetsRouteDispatcher />} />
           <Route path="dataset/:slug" element={<DatasetDetailPage />} />
+          <Route path="submit" element={<SubmitDatasetPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>

@@ -16,7 +16,7 @@ def test_static_host_gets_canonical_legacy_and_category_entries(tmp_path):
     shell = b'<html><script src="/OpenDatasets/assets/app.js"></script></html>'
     (tmp_path / "index.html").write_bytes(shell)
     pages.prepare_pages(tmp_path, ["mnist", "cifar-10"])
-    for route in ("explore", "about", "datasets", "dataset/mnist", "datasets/mnist",
+    for route in ("explore", "about", "datasets", "submit", "dataset/mnist", "datasets/mnist",
                   "dataset/cifar-10", "datasets/computer-vision"):
         assert (tmp_path / route / "index.html").read_bytes() == shell
     assert (tmp_path / "404.html").read_bytes() == shell

@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Info */}
           <div className="space-y-3">
             <div className="flex items-center gap-2">
@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
                 OpenDatasets
               </span>
             </div>
-            <p className="text-sm text-slate-500 dark:text-slate-400 max-w-sm">
+            <p className="text-sm text-slate-500 dark:text-slate-400">
               An independent open-source catalog for discovering machine learning datasets and inspecting their metadata.
             </p>
           </div>
@@ -47,6 +47,40 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
+          {/* Contribute */}
+          <div className="space-y-3">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-900 dark:text-white">
+              Contribute
+            </h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/submit" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                  Submit a Dataset
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/VisionX25/OpenDatasets/blob/main/CONTRIBUTING.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                >
+                  Contribution Guide
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/VisionX25/OpenDatasets/issues"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                >
+                  Report an Issue
+                </a>
+              </li>
+            </ul>
+          </div>
+
           {/* Community & Open Source */}
           <div className="space-y-3">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-900 dark:text-white">
@@ -62,16 +96,6 @@ export const Footer: React.FC = () => {
                 >
                   <GithubIcon className="w-4 h-4" />
                   GitHub Repository
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/VisionX25/OpenDatasets/issues"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                >
-                  Report an Issue
                 </a>
               </li>
               <li className="text-xs text-slate-500">

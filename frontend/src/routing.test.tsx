@@ -4,6 +4,10 @@ import { MemoryRouter, Routes, Route } from 'react-router-dom'
 import { DatasetCard } from './components/DatasetCard'
 import { DatasetsRouteDispatcher } from './App'
 import { DatasetDetailPage } from './pages/DatasetDetailPage'
+import { SubmitDatasetPage } from './pages/SubmitDatasetPage'
+import { Header } from './components/Header'
+import { Footer } from './components/Footer'
+import { HomePage } from './pages/HomePage'
 import type { DatasetMetadata } from './types/dataset'
 import { clearCatalogCache, isDatasetSlug, isDatasetSlugAsync } from './services/catalogService'
 import { isCategoryId, CATEGORIES } from './utils/datasetFilters'
@@ -182,5 +186,63 @@ describe('Task 08.2: Dataset Details Routing and Regression Tests', () => {
 
     const isFakeValid = await isDatasetSlugAsync('fake-dataset-xyz')
     expect(isFakeValid).toBe(false)
+  })
+
+  // 7. Direct /submit route renders SubmitDatasetPage
+  it('7. Direct /submit route renders SubmitDatasetPage properly', () => {
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/submit']}>
+        <Routes>
+          <Route path="/submit" element={<SubmitDatasetPage />} />
+        </Routes>
+      </MemoryRouter>,
+    )
+    expect(html).toContain('Propose a Dataset')
+    expect(html).toContain('Dataset Contribution Guidelines')
+    expect(html).toContain('Dataset Name')
+    expect(html).toContain('Generate &amp; Copy Submission Details')
+  })
+
+  // 8. Task 11.1: Header navigation does not include Submit Dataset
+  it('8. Header navigation excludes Submit Dataset from header nav while retaining core links', () => {
+    const html = renderToString(
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>,
+    )
+    expect(html).toContain('href="/"')
+    expect(html).toContain('href="/explore"')
+    expect(html).toContain('href="/datasets"')
+    expect(html).toContain('href="/about"')
+    expect(html).not.toContain('Submit Dataset')
+    expect(html).not.toContain('href="/submit"')
+  })
+
+  // 9. Task 11.1: Footer provides a dedicated Contribute section
+  it('9. Footer organizes a dedicated Contribute section with submit, guide, and issue links', () => {
+    const html = renderToString(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>,
+    )
+    expect(html).toContain('Contribute</h3>')
+    expect(html).toContain('href="/submit"')
+    expect(html).toContain('Submit a Dataset')
+    expect(html).toContain('href="https://github.com/VisionX25/OpenDatasets/blob/main/CONTRIBUTING.md"')
+    expect(html).toContain('Contribution Guide')
+    expect(html).toContain('href="https://github.com/VisionX25/OpenDatasets/issues"')
+    expect(html).toContain('Report an Issue')
+  })
+
+  // 10. Task 11.1: HomePage provides a subtle Contribute section near the bottom
+  it('10. HomePage includes Contribute to OpenDatasets section with submit link', () => {
+    const html = renderToString(
+      <MemoryRouter>
+        <HomePage />
+      </MemoryRouter>,
+    )
+    expect(html).toContain('Contribute to OpenDatasets')
+    expect(html).toContain('href="/submit"')
+    expect(html).toContain('Submit Dataset')
   })
 })

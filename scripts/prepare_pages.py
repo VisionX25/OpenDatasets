@@ -16,7 +16,7 @@ def prepare_pages(output: Path, slugs: list[str]) -> int:
     if not index.is_file():
         raise ValueError(f"Build output is missing: {index}")
     shell = index.read_bytes()
-    routes = {"explore", "datasets", "about"}
+    routes = {"explore", "datasets", "about", "submit"}
     routes.update(f"datasets/{category}" for category in CATEGORIES)
     for slug in slugs:
         # Catalog validation normally guarantees this; keep file writes bounded too.
