@@ -201,8 +201,9 @@ describe('SubmitDatasetPage: Unit & Integration Tests', () => {
       expect(html).toContain('Read full CONTRIBUTING.md guide')
       expect(html).toContain('https://github.com/VisionX25/OpenDatasets/blob/main/CONTRIBUTING.md')
 
-      // Form action button
-      expect(html).toContain('Generate &amp; Copy Submission Details')
+      // Form action buttons
+      expect(html).toContain('Continue to GitHub')
+      expect(html).toContain('Copy Submission Details')
     })
 
     it('includes accessibility attributes on form controls', () => {
@@ -346,6 +347,16 @@ describe('SubmitDatasetPage: Unit & Integration Tests', () => {
       const result = buildGitHubIssueUrl(sampleData, 150)
       expect(result.isFallback).toBe(true)
       expect(result.urlLength).toBeGreaterThan(150)
+    })
+
+    it('avoids duplicating [Dataset]: prefix if contributor already entered it in name', () => {
+      const dataWithPrefix: SubmissionFormData = {
+        ...sampleData,
+        name: '[Dataset]: Pre-prefixed Name',
+      }
+      const result = buildGitHubIssueUrl(dataWithPrefix)
+      const parsedUrl = new URL(result.url)
+      expect(parsedUrl.searchParams.get('title')).toBe('[Dataset]: Pre-prefixed Name')
     })
   })
 })

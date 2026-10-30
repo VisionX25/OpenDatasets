@@ -1787,6 +1787,98 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "banknote-authentication",
+    "slug": "banknote-authentication",
+    "name": "Banknote Authentication",
+    "description": "The Banknote Authentication dataset from the UCI Machine Learning Repository consists of 1,372 instances with 4 continuous numerical features extracted from genuine and counterfeit banknote-like specimens using wavelet transforms. Images of 400x400 pixels at approximately 660 dpi were captured using an industrial print-inspection camera. Features comprise the variance, skewness, and curtosis of the Wavelet Transformed image, along with the image entropy, paired with a binary class label indicating authenticity (0 for genuine, 1 for forged).",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/267/banknote+authentication",
+    "publisher": {
+      "name": "UCI Machine Learning Repository / Ostwestfalen-Lippe University of Applied Sciences",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification"
+    ],
+    "tags": [
+      "tabular",
+      "banknote",
+      "authentication",
+      "counterfeit-detection",
+      "classification",
+      "wavelet-transform",
+      "security",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Officially licensed under Creative Commons Attribution 4.0 International (CC BY 4.0) via the UCI Machine Learning Repository."
+    },
+    "source_references": [
+      {
+        "title": "UCI Machine Learning Repository: Banknote Authentication Record",
+        "url": "https://archive.ics.uci.edu/dataset/267/banknote+authentication",
+        "type": "official_website",
+        "notes": "Canonical landing page for dataset ID 267 on the UCI ML Repository platform."
+      },
+      {
+        "title": "DataCite DOI Landing Page: Banknote Authentication",
+        "url": "https://doi.org/10.24432/C55P57",
+        "type": "repository",
+        "notes": "Official DataCite permanent DOI record (10.24432/C55P57) registered by UCI Machine Learning Repository."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-10-30",
+      "notes": "Reviewed and verified from community suggestion in GitHub Issue #6 against the official UCI Machine Learning Repository record and DataCite DOI 10.24432/C55P57."
+    },
+    "size": {
+      "amount": 46.4,
+      "unit": "KB",
+      "file_formats": [
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "Raw CSV file payload (46,442 bytes) containing 1,372 records with column headers."
+    },
+    "sample_count": {
+      "total": 1372,
+      "splits": {
+        "genuine": 762,
+        "forged": 610
+      },
+      "unit": "instances",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2012",
+      "last_updated": "2024-02-16"
+    },
+    "citation": {
+      "paper_title": "Banknote Authentication",
+      "paper_url": "https://doi.org/10.24432/C55P57",
+      "authors": [
+        "Volker Lohweg"
+      ],
+      "doi": "10.24432/C55P57",
+      "bibtex": "@misc{lohweg2012banknote,\n  author = {Lohweg, Volker},\n  title = {Banknote Authentication},\n  year = {2012},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C55P57}\n}"
+    },
+    "provenance": {
+      "collection_method": "Digitized from genuine and forged banknote-like specimens using an industrial print-inspection camera. Features were extracted using Wavelet Transform tools from 400x400 pixel grayscale images with ~660 dpi resolution.",
+      "curation_notes": "Donated to UCI in 2012 by Volker Lohweg of University of Applied Sciences Ostwestfalen-Lippe (Hochschule Ostwestfalen-Lippe). The dataset does not define official train/test splits; the sample counts denote class distribution: 762 genuine (class 0) and 610 counterfeit (class 1) instances."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bayanno-handwriting",
     "slug": "bayanno-handwriting",
     "name": "Bayanno: Multi-Purpose Handwritten Dataset for Bengali Language Processing",

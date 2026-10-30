@@ -200,7 +200,8 @@ describe('Task 08.2: Dataset Details Routing and Regression Tests', () => {
     expect(html).toContain('Propose a Dataset')
     expect(html).toContain('Dataset Contribution Guidelines')
     expect(html).toContain('Dataset Name')
-    expect(html).toContain('Generate &amp; Copy Submission Details')
+    expect(html).toContain('Continue to GitHub')
+    expect(html).toContain('Copy Submission Details')
   })
 
   // 8. Task 11.1: Header navigation does not include Submit Dataset
