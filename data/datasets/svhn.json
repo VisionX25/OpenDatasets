@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "id": "svhn",
+  "slug": "svhn",
+  "name": "Street View House Numbers (SVHN)",
+  "description": "The Street View House Numbers (SVHN) dataset is a real-world image benchmark obtained from house numbers in Google Street View images. It contains over 600,000 labeled character digits formatted in both full-resolution images with bounding boxes and cropped 32x32 pixel images.",
+  "homepage_url": "http://ufldl.stanford.edu/housenumbers/",
+  "publisher": {
+    "name": "Stanford University",
+    "type": "academic",
+    "url": "http://ufldl.stanford.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "optical-character-recognition",
+    "object-detection"
+  ],
+  "tags": [
+    "house-numbers",
+    "street-view",
+    "digit-recognition",
+    "ocr",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Non-Commercial Academic Research Use",
+    "url": "http://ufldl.stanford.edu/housenumbers/",
+    "commercial_use": "forbidden",
+    "notes": "Dataset is freely available for non-commercial research purposes."
+  },
+  "source_references": [
+    {
+      "title": "The Street View House Numbers (SVHN) Dataset Homepage",
+      "url": "http://ufldl.stanford.edu/housenumbers/",
+      "type": "official_website",
+      "notes": "Canonical landing page hosted by Stanford University."
+    },
+    {
+      "title": "Reading Digits in Natural Images with Unsupervised Feature Learning (NIPS 2011 Workshop)",
+      "url": "http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf",
+      "type": "original_paper",
+      "notes": "Workshop on Deep Learning and Unsupervised Feature Learning."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against Stanford UFLDL documentation and NIPS 2011 workshop publication."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 630420,
+    "splits": {
+      "train": 73257,
+      "test": 26032,
+      "extra": 531131
+    },
+    "unit": "digits"
+  },
+  "dates": {
+    "published": "2011-12",
+    "last_updated": "2011-12"
+  },
+  "citation": {
+    "paper_title": "Reading Digits in Natural Images with Unsupervised Feature Learning",
+    "paper_url": "http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf",
+    "authors": [
+      "Yuval Netzer",
+      "Tao Wang",
+      "Adam Coates",
+      "Alessandro Bissacco",
+      "Bo Wu",
+      "Andrew Y. Ng"
+    ],
+    "bibtex": "@inproceedings{netzer2011reading,\n  title = {Reading Digits in Natural Images with Unsupervised Feature Learning},\n  author = {Netzer, Yuval and Wang, Tao and Coates, Adam and Bissacco, Alessandro and Wu, Bo and Ng, Andrew Y.},\n  booktitle = {NIPS Workshop on Deep Learning and Unsupervised Feature Learning},\n  year = {2011}\n}"
+  }
+}

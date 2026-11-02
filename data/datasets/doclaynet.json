@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "doclaynet",
+  "slug": "doclaynet",
+  "name": "DocLayNet: Human-Annotated Dataset for Document-Layout Analysis",
+  "description": "DocLayNet is a large human-annotated dataset for document layout analysis. It contains 80,863 document pages across six core document categories (Financial Reports, Manuals, Scientific Papers, Laws & Regulations, Patents, and Government Documents) with bounding-box annotations across 11 layout classes.",
+  "homepage_url": "https://github.com/DS4SD/DocLayNet",
+  "publisher": {
+    "name": "IBM Research Europe",
+    "type": "industry",
+    "url": "https://research.ibm.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "document-layout-analysis",
+    "object-detection"
+  ],
+  "tags": [
+    "document-ai",
+    "document-layout-analysis",
+    "ocr",
+    "layout-parsing",
+    "ibm-research"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Community Data License Agreement - Permissive (CDLA-Permissive-1.0)",
+    "spdx_id": "CDLA-Permissive-1.0",
+    "url": "https://cdla.dev/permissive-1-0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CDLA-Permissive-1.0 license in repository."
+  },
+  "source_references": [
+    {
+      "title": "DocLayNet GitHub Repository",
+      "url": "https://github.com/DS4SD/DocLayNet",
+      "type": "repository",
+      "notes": "Official repository with dataset links and evaluation code."
+    },
+    {
+      "title": "DocLayNet: A Large Human-Annotated Dataset for Document-Layout Analysis (KDD 2022)",
+      "url": "https://doi.org/10.1145/3534678.3539043",
+      "type": "original_paper",
+      "notes": "Proceedings of ACM SIGKDD 2022."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against ACM KDD 2022 proceedings and IBM Research repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 80863,
+    "splits": {
+      "train": 69103,
+      "val": 6480,
+      "test": 4994
+    },
+    "unit": "pages"
+  },
+  "dates": {
+    "published": "2022-08",
+    "last_updated": "2022-08"
+  },
+  "citation": {
+    "paper_title": "DocLayNet: A Large Human-Annotated Dataset for Document-Layout Analysis",
+    "paper_url": "https://doi.org/10.1145/3534678.3539043",
+    "authors": [
+      "Christoph Auer",
+      "Michele Dolfi",
+      "Ahmed Nassar",
+      "Peter Staar"
+    ],
+    "doi": "10.1145/3534678.3539043",
+    "bibtex": "@inproceedings{auer2022doclaynet,\n  title = {DocLayNet: A Large Human-Annotated Dataset for Document-Layout Analysis},\n  author = {Auer, Christoph and Dolfi, Michele and Nassar, Ahmed and Staar, Peter},\n  booktitle = {Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},\n  pages = {3029--3039},\n  year = {2022}\n}"
+  }
+}

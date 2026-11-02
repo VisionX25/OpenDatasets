@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "banth",
+  "slug": "banth",
+  "name": "BanTH: Multi-label Hate Speech Detection Dataset for Transliterated Bangla",
+  "description": "BanTH is a multi-label hate speech detection dataset for transliterated Bangla (Banglish) comprising 37,300 comments collected from 26 YouTube channels across News, Blogs, and Entertainment. It includes binary hate detection and multi-label categorization across 7 target groups: Political, Religious, Gender, Personal Offense, Abusive/Violence, Origin, and Body Shaming.",
+  "homepage_url": "https://huggingface.co/datasets/aplycaebous/BanTH",
+  "publisher": {
+    "name": "BRAC University & Research Collaborators",
+    "type": "academic",
+    "url": "https://github.com/farhanishmam/BanTH"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "hate-speech-detection",
+    "multi-label-classification"
+  ],
+  "tags": [
+    "bangla",
+    "banglish",
+    "transliteration",
+    "hate-speech",
+    "nlp",
+    "social-media"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Dataset repository and Hugging Face card specify the MIT license."
+  },
+  "source_references": [
+    {
+      "title": "BanTH Hugging Face Dataset Repository",
+      "url": "https://huggingface.co/datasets/aplycaebous/BanTH",
+      "type": "repository",
+      "notes": "Hugging Face dataset distribution."
+    },
+    {
+      "title": "BanTH Official GitHub Repository",
+      "url": "https://github.com/farhanishmam/BanTH",
+      "type": "repository",
+      "notes": "Source code and dataset reference repository."
+    },
+    {
+      "title": "BanTH: A Multi-label Hate Speech Detection Dataset for Transliterated Bangla (Findings of NAACL 2025)",
+      "url": "https://aclanthology.org/2025.findings-naacl.403/",
+      "type": "original_paper",
+      "notes": "Published peer-reviewed research paper in Findings of NAACL 2025."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against NAACL 2025 paper and official Hugging Face / GitHub release."
+  },
+  "size": {
+    "status": "estimated",
+    "amount": 15,
+    "unit": "MB",
+    "file_formats": [
+      "csv",
+      "parquet"
+    ],
+    "notes": "Raw CSV and parquet distributions."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 37300,
+    "unit": "comments"
+  },
+  "languages": [
+    "bn",
+    "en"
+  ],
+  "dates": {
+    "published": "2025",
+    "last_updated": "2025"
+  },
+  "citation": {
+    "paper_title": "BanTH: A Multi-label Hate Speech Detection Dataset for Transliterated Bangla",
+    "paper_url": "https://aclanthology.org/2025.findings-naacl.403/",
+    "authors": [
+      "Fabiha Haider",
+      "Fariha Tanjim Shifat",
+      "Md Farhan Ishmam",
+      "Md Sakib Ul Rahman Sourove",
+      "Deeparghya Dutta Barua",
+      "Md Fahim",
+      "Md Farhad Alam Bhuiyan"
+    ],
+    "doi": "10.18653/v1/2025.findings-naacl.403",
+    "bibtex": "@inproceedings{haider-etal-2025-banth,\n  title = {BanTH: A Multi-label Hate Speech Detection Dataset for Transliterated Bangla},\n  author = {Haider, Fabiha and Shifat, Fariha Tanjim and Ishmam, Md Farhan and Sourove, Md Sakib Ul Rahman and Barua, Deeparghya Dutta and Fahim, Md and Bhuiyan, Md Farhad Alam},\n  booktitle = {Findings of NAACL 2025},\n  pages = {7217--7236},\n  year = {2025}\n}"
+  }
+}

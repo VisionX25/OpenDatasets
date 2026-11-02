@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "omniglot",
+  "slug": "omniglot",
+  "name": "Omniglot",
+  "description": "Omniglot is a benchmark dataset for one-shot learning and human-level concept learning. It contains 1,623 different handwritten characters from 50 alphabets, each drawn by 20 different individuals, yielding 32,460 total character strokes and images.",
+  "homepage_url": "https://github.com/brendenlake/omniglot",
+  "publisher": {
+    "name": "New York University & MIT",
+    "type": "academic",
+    "url": "https://cims.nyu.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "few-shot-learning",
+    "one-shot-learning",
+    "image-classification"
+  ],
+  "tags": [
+    "few-shot",
+    "one-shot",
+    "character-recognition",
+    "meta-learning",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Verified MIT license declared in GitHub repository."
+  },
+  "source_references": [
+    {
+      "title": "Omniglot GitHub Repository",
+      "url": "https://github.com/brendenlake/omniglot",
+      "type": "repository",
+      "notes": "Official data and evaluation repository."
+    },
+    {
+      "title": "Human-level concept learning through probabilistic program induction (Science 2015)",
+      "url": "https://doi.org/10.1126/science.aab3050",
+      "type": "original_paper",
+      "notes": "Published in Science 2015."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against Science 2015 publication and official repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 32460,
+    "unit": "character-drawings"
+  },
+  "dates": {
+    "published": "2015-12",
+    "last_updated": "2015-12"
+  },
+  "citation": {
+    "paper_title": "Human-level concept learning through probabilistic program induction",
+    "paper_url": "https://doi.org/10.1126/science.aab3050",
+    "authors": [
+      "Brenden M. Lake",
+      "Ruslan Salakhutdinov",
+      "Joshua B. Tenenbaum"
+    ],
+    "doi": "10.1126/science.aab3050",
+    "bibtex": "@article{lake2015human,\n  title = {Human-level concept learning through probabilistic program induction},\n  author = {Lake, Brenden M. and Salakhutdinov, Ruslan and Tenenbaum, Joshua B.},\n  journal = {Science},\n  volume = {350},\n  number = {6266},\n  pages = {1332--1338},\n  year = {2015}\n}"
+  }
+}

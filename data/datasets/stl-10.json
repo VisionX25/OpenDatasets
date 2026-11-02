@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "stl-10",
+  "slug": "stl-10",
+  "name": "STL-10",
+  "description": "The STL-10 dataset is an image recognition benchmark designed for developing unsupervised feature learning and self-supervised learning algorithms. Inspired by CIFAR-10, images are higher resolution (96x96 pixels), comprising 5,000 labeled training images, 8,000 test images, and 100,000 unlabeled images from a broader distribution.",
+  "homepage_url": "https://cs.stanford.edu/~acoates/stl10/",
+  "publisher": {
+    "name": "Stanford University",
+    "type": "academic",
+    "url": "https://cs.stanford.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "unsupervised-learning",
+    "self-supervised-learning"
+  ],
+  "tags": [
+    "computer-vision",
+    "self-supervised-learning",
+    "unsupervised-learning",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Open Academic Research Use",
+    "url": "https://cs.stanford.edu/~acoates/stl10/",
+    "commercial_use": "unknown",
+    "notes": "Publicly distributed for research and algorithmic evaluation."
+  },
+  "source_references": [
+    {
+      "title": "STL-10 Dataset Homepage",
+      "url": "https://cs.stanford.edu/~acoates/stl10/",
+      "type": "official_website",
+      "notes": "Canonical dataset homepage at Stanford University."
+    },
+    {
+      "title": "An Analysis of Single-Layer Networks in Unsupervised Feature Learning (AISTATS 2011)",
+      "url": "http://proceedings.mlr.press/v15/coates11a.html",
+      "type": "original_paper",
+      "notes": "Proceedings of AISTATS 2011."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against AISTATS 2011 paper and Stanford portal."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 113000,
+    "splits": {
+      "train": 5000,
+      "test": 8000,
+      "unlabeled": 100000
+    },
+    "unit": "images"
+  },
+  "dates": {
+    "published": "2011",
+    "last_updated": "2011"
+  },
+  "citation": {
+    "paper_title": "An Analysis of Single-Layer Networks in Unsupervised Feature Learning",
+    "paper_url": "http://proceedings.mlr.press/v15/coates11a.html",
+    "authors": [
+      "Adam Coates",
+      "Andrew Ng",
+      "Honglak Lee"
+    ],
+    "bibtex": "@inproceedings{coates2011analysis,\n  title = {An Analysis of Single-Layer Networks in Unsupervised Feature Learning},\n  author = {Coates, Adam and Ng, Andrew and Lee, Honglak},\n  booktitle = {Proceedings of the Fourteenth International Conference on Artificial Intelligence and Statistics},\n  pages = {215--223},\n  year = {2011}\n}"
+  }
+}

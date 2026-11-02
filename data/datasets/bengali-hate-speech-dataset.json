@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bengali-hate-speech-dataset",
+  "slug": "bengali-hate-speech-dataset",
+  "name": "Bengali Hate Speech Dataset",
+  "description": "A fine-grained Bengali hate speech dataset created for detecting hate and offensive language across social media platforms like Facebook and YouTube. It categorizes statements into political, personal, religious, geopolitical, and gender-abusive hate with expert linguist and native-speaker validation.",
+  "homepage_url": "https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset",
+  "publisher": {
+    "name": "Fraunhofer FIT, University of Galway, and Collaborators",
+    "type": "academic",
+    "url": "https://github.com/rezacsedu"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "hate-speech-detection"
+  ],
+  "tags": [
+    "bengali",
+    "bangla",
+    "hate-speech",
+    "nlp",
+    "social-media"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Research Use Only License",
+    "url": "https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset",
+    "commercial_use": "forbidden",
+    "notes": "Publisher specifies dataset is publicly available for academic and non-commercial research purposes."
+  },
+  "source_references": [
+    {
+      "title": "Bengali Hate Speech Dataset GitHub Repository",
+      "url": "https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset",
+      "type": "repository",
+      "notes": "Official repository containing subset CSV and documentation."
+    },
+    {
+      "title": "DeepHateExplainer: Explainable Hate Speech Detection in Under-resourced Bengali Language (IEEE DSAA 2021)",
+      "url": "https://doi.org/10.1109/DSAA52396.2021.00045",
+      "type": "original_paper",
+      "notes": "Published peer-reviewed paper in IEEE DSAA 2021."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against IEEE DSAA publication and official GitHub repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 6418,
+    "unit": "statements"
+  },
+  "languages": [
+    "bn"
+  ],
+  "dates": {
+    "published": "2020",
+    "last_updated": "2021"
+  },
+  "citation": {
+    "paper_title": "DeepHateExplainer: Explainable Hate Speech Detection in Under-resourced Bengali Language",
+    "paper_url": "https://doi.org/10.1109/DSAA52396.2021.00045",
+    "authors": [
+      "Md Rezaul Karim",
+      "Sumon Kanti Dey",
+      "Tanhim Islam",
+      "Sagor Sarker",
+      "Mehadi Hasan Menon",
+      "Kabir Hossain",
+      "Md Azam Hossain",
+      "Stefan Decker"
+    ],
+    "doi": "10.1109/DSAA52396.2021.00045",
+    "bibtex": "@inproceedings{karim2021deephateexplainer,\n  title = {DeepHateExplainer: Explainable Hate Speech Detection in Under-resourced Bengali Language},\n  author = {Karim, Md Rezaul and Dey, Sumon Kanti and Islam, Tanhim and Sarker, Sagor and Menon, Mehadi Hasan and Hossain, Kabir and Hossain, Md Azam and Decker, Stefan},\n  booktitle = {2021 IEEE 8th International Conference on Data Science and Advanced Analytics (DSAA)},\n  pages = {1--10},\n  year = {2021}\n}"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "spider",
+  "slug": "spider",
+  "name": "Spider: Complex and Cross-Domain Text-to-SQL Benchmark",
+  "description": "Spider is a large-scale human-labeled dataset for complex and cross-domain semantic parsing and text-to-SQL. It contains 10,181 natural language questions and 5,693 unique complex SQL queries covering 200 databases with multiple tables across 138 domains.",
+  "homepage_url": "https://yale-lily.github.io/spider",
+  "publisher": {
+    "name": "Yale University LILY Lab",
+    "type": "academic",
+    "url": "https://yale-lily.github.io"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-to-sql",
+    "semantic-parsing"
+  ],
+  "tags": [
+    "text-to-sql",
+    "semantic-parsing",
+    "relational-databases",
+    "nlp",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY-SA-4.0 license stated on project homepage."
+  },
+  "source_references": [
+    {
+      "title": "Spider Project Homepage",
+      "url": "https://yale-lily.github.io/spider",
+      "type": "official_website",
+      "notes": "Canonical project portal with leaderboard and data files."
+    },
+    {
+      "title": "Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task (EMNLP 2018)",
+      "url": "https://aclanthology.org/D18-1425/",
+      "type": "original_paper",
+      "notes": "Proceedings of EMNLP 2018."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against EMNLP 2018 paper and Yale LILY website."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 10181,
+    "unit": "questions"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-10",
+    "last_updated": "2018-10"
+  },
+  "citation": {
+    "paper_title": "Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task",
+    "paper_url": "https://aclanthology.org/D18-1425/",
+    "authors": [
+      "Tao Yu",
+      "Rui Zhang",
+      "Kai Yang",
+      "Michihiro Yasunaga",
+      "Dongxu Wang",
+      "Zifan Li",
+      "James Ma",
+      "Irene Li",
+      "Qingning Yao",
+      "Shanelle Roman",
+      "Zilin Zhang",
+      "Tao Chen",
+      "Peter Yin",
+      "Hao Peng",
+      "Shiyan Yan",
+      "Noah Smith",
+      "Jason Phang",
+      "Xiangru Tang",
+      "Luke Zettlemoyer",
+      "Dragomir Radev"
+    ],
+    "doi": "10.18653/v1/D18-1425",
+    "bibtex": "@inproceedings{yu-etal-2018-spider,\n  title = {Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task},\n  author = {Yu, Tao and Zhang, Rui and Yang, Kai and Yasunaga, Michihiro and Wang, Dongxu and Li, Zifan and Ma, James and Li, Irene and Yao, Qingning and Roman, Shanelle and Zhang, Zilin and Chen, Tao and Yin, Peter and Peng, Hao and Yan, Shiyan and Smith, Noah and Phang, Jason and Tang, Xiangru and Zettlemoyer, Luke and Radev, Dragomir},\n  booktitle = {Proceedings of EMNLP 2018},\n  pages = {3911--3921},\n  year = {2018}\n}"
+  }
+}

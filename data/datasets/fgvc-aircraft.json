@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fgvc-aircraft",
+  "slug": "fgvc-aircraft",
+  "name": "FGVC Aircraft",
+  "description": "FGVC Aircraft (Fine-Grained Visual Classification of Aircraft) is a benchmark dataset of 10,200 aircraft images across 100 model variants (102 images per variant). Aircraft categories are organized in a four-level hierarchy: Model, Variant, Family, and Manufacturer.",
+  "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/",
+  "publisher": {
+    "name": "Visual Geometry Group (VGG), University of Oxford",
+    "type": "academic",
+    "url": "https://www.robots.ox.ac.uk/~vgg/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "fine-grained-classification",
+    "hierarchical-classification"
+  ],
+  "tags": [
+    "fine-grained",
+    "aircraft",
+    "transportation",
+    "benchmark",
+    "vgg"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Open Academic Research Use",
+    "url": "https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/",
+    "commercial_use": "unknown",
+    "notes": "Freely available for academic research and evaluation."
+  },
+  "source_references": [
+    {
+      "title": "FGVC Aircraft Dataset Homepage",
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/",
+      "type": "official_website",
+      "notes": "Canonical dataset distribution page."
+    },
+    {
+      "title": "Fine-Grained Visual Classification of Aircraft (arXiv 2013)",
+      "url": "https://arxiv.org/abs/1306.5151",
+      "type": "original_paper",
+      "notes": "Original technical report on FGVC aircraft dataset."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against arXiv publication and Oxford VGG distribution."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 10200,
+    "splits": {
+      "train": 3334,
+      "val": 3333,
+      "test": 3333
+    },
+    "unit": "images"
+  },
+  "dates": {
+    "published": "2013-06",
+    "last_updated": "2013-06"
+  },
+  "citation": {
+    "paper_title": "Fine-Grained Visual Classification of Aircraft",
+    "paper_url": "https://arxiv.org/abs/1306.5151",
+    "authors": [
+      "Subhransu Maji",
+      "Esa Rahtu",
+      "Juho Kannala",
+      "Matthew Blaschko",
+      "Andrea Vedaldi"
+    ],
+    "bibtex": "@article{maji2013aircraft,\n  title = {Fine-Grained Visual Classification of Aircraft},\n  author = {Maji, Subhransu and Rahtu, Esa and Kannala, Juho and Blaschko, Matthew and Vedaldi, Andrea},\n  journal = {arXiv preprint arXiv:1306.5151},\n  year = {2013}\n}"
+  }
+}

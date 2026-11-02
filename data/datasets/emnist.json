@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "emnist",
+  "slug": "emnist",
+  "name": "EMNIST: Extended MNIST",
+  "description": "The EMNIST (Extended MNIST) dataset is an extension of MNIST to handwritten letters and digits. Derived from the NIST Special Database 19, it matches the 28x28 pixel format of MNIST and provides several standardized splits including By_Class (814,255 samples, 62 classes), Balanced (131,600 samples, 47 classes), and Letters (145,600 samples, 26 classes).",
+  "homepage_url": "https://www.nist.gov/itl/products-and-services/emnist-dataset",
+  "publisher": {
+    "name": "National Institute of Standards and Technology (NIST) & Western Sydney University",
+    "type": "government",
+    "url": "https://www.nist.gov"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "optical-character-recognition"
+  ],
+  "tags": [
+    "ocr",
+    "handwritten-characters",
+    "mnist-extension",
+    "benchmark",
+    "nist"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "NIST Public Domain / Open Access",
+    "url": "https://www.nist.gov/itl/products-and-services/emnist-dataset",
+    "commercial_use": "allowed",
+    "notes": "Derived from NIST Special Database 19; provided openly without copyright restrictions."
+  },
+  "source_references": [
+    {
+      "title": "NIST EMNIST Dataset Page",
+      "url": "https://www.nist.gov/itl/products-and-services/emnist-dataset",
+      "type": "official_website",
+      "notes": "Official NIST product page."
+    },
+    {
+      "title": "EMNIST: an extension of MNIST to handwritten letters (IJCNN 2017)",
+      "url": "https://doi.org/10.1109/IJCNN.2017.7966217",
+      "type": "original_paper",
+      "notes": "Published in 2017 International Joint Conference on Neural Networks (IJCNN)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against NIST documentation and IJCNN 2017 paper."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 814255,
+    "unit": "images"
+  },
+  "dates": {
+    "published": "2017-05",
+    "last_updated": "2017-05"
+  },
+  "citation": {
+    "paper_title": "EMNIST: Extending MNIST to handwritten letters",
+    "paper_url": "https://doi.org/10.1109/IJCNN.2017.7966217",
+    "authors": [
+      "Gregory Cohen",
+      "Saeed Afshar",
+      "Jonathan Tapson",
+      "André van Schaik"
+    ],
+    "doi": "10.1109/IJCNN.2017.7966217",
+    "bibtex": "@inproceedings{cohen2017emnist,\n  title = {EMNIST: Extending MNIST to handwritten letters},\n  author = {Cohen, Gregory and Afshar, Saeed and Tapson, Jonathan and van Schaik, Andr{\\'e}},\n  booktitle = {2017 International Joint Conference on Neural Networks (IJCNN)},\n  pages = {2921--2926},\n  year = {2017}\n}"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "musan",
+  "slug": "musan",
+  "name": "MUSAN: A Music, Speech, and Noise Corpus",
+  "description": "MUSAN is a corpus of music, speech, and noise designed for training robust speech recognition, speaker identification, and audio augmentation systems. It contains approximately 109 hours of audio files comprising 60 hours of speech in 12 languages, 42 hours of diverse musical genres, and 6 hours of technical and natural background noise.",
+  "homepage_url": "https://www.openslr.org/17/",
+  "publisher": {
+    "name": "Johns Hopkins University",
+    "type": "academic",
+    "url": "https://www.clsp.jhu.edu"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "audio-classification",
+    "data-augmentation",
+    "noise-robust-asr"
+  ],
+  "tags": [
+    "audio",
+    "noise",
+    "music",
+    "speech",
+    "openslr",
+    "jhu",
+    "augmentation"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in official OpenSLR distribution."
+  },
+  "source_references": [
+    {
+      "title": "MUSAN on OpenSLR",
+      "url": "https://www.openslr.org/17/",
+      "type": "official_website",
+      "notes": "Official OpenSLR dataset distribution page."
+    },
+    {
+      "title": "MUSAN: A Music, Speech, and Noise Corpus (arXiv 2015)",
+      "url": "https://arxiv.org/abs/1510.08484",
+      "type": "original_paper",
+      "notes": "Technical report on the MUSAN corpus."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against arXiv publication and OpenSLR 17 portal."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 109,
+    "unit": "hours"
+  },
+  "dates": {
+    "published": "2015-10",
+    "last_updated": "2015-10"
+  },
+  "citation": {
+    "paper_title": "MUSAN: A Music, Speech, and Noise Corpus",
+    "paper_url": "https://arxiv.org/abs/1510.08484",
+    "authors": [
+      "David Snyder",
+      "Guoguo Chen",
+      "Daniel Povey"
+    ],
+    "bibtex": "@article{snyder2015musan,\n  title = {MUSAN: A Music, Speech, and Noise Corpus},\n  author = {Snyder, David and Chen, Guoguo and Povey, Daniel},\n  journal = {arXiv preprint arXiv:1510.08484},\n  year = {2015}\n}"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "hotpotqa",
+  "slug": "hotpotqa",
+  "name": "HotpotQA",
+  "description": "HotpotQA is a question answering dataset featuring diverse, multi-hop questions with supporting facts to enable more explainable question answering systems. Models must find and reason over multiple Wikipedia documents to answer questions, rather than relying on single-sentence retrieval.",
+  "homepage_url": "https://hotpotqa.github.io/",
+  "publisher": {
+    "name": "Carnegie Mellon University, Stanford University, Université de Montréal",
+    "type": "academic",
+    "url": "https://hotpotqa.github.io/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "multi-hop-reasoning",
+    "information-retrieval"
+  ],
+  "tags": [
+    "question-answering",
+    "multi-hop",
+    "nlp",
+    "explainable-ai",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY-SA-4.0 license stated on project homepage."
+  },
+  "source_references": [
+    {
+      "title": "HotpotQA Official Benchmark Homepage",
+      "url": "https://hotpotqa.github.io/",
+      "type": "official_website",
+      "notes": "Canonical site hosting data, leaderboard, and evaluation script."
+    },
+    {
+      "title": "HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering (EMNLP 2018)",
+      "url": "https://aclanthology.org/D18-1259/",
+      "type": "original_paper",
+      "notes": "Proceedings of EMNLP 2018."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against EMNLP 2018 paper and official HotpotQA distribution."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 112779,
+    "splits": {
+      "train": 90447,
+      "dev_distractor": 7405,
+      "dev_fullwiki": 7405,
+      "test": 7405
+    },
+    "unit": "qa-pairs"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-10",
+    "last_updated": "2018-10"
+  },
+  "citation": {
+    "paper_title": "HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering",
+    "paper_url": "https://aclanthology.org/D18-1259/",
+    "authors": [
+      "Zhilin Yang",
+      "Peng Qi",
+      "Saizheng Zhang",
+      "Yoshua Bengio",
+      "William W. Cohen",
+      "Ruslan Salakhutdinov",
+      "Christopher D. Manning"
+    ],
+    "doi": "10.18653/v1/D18-1259",
+    "bibtex": "@inproceedings{yang-etal-2018-hotpotqa,\n  title = {HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering},\n  author = {Yang, Zhilin and Qi, Peng and Zhang, Saizheng and Bengio, Yoshua and Cohen, William W. and Salakhutdinov, Ruslan and Manning, Christopher D.},\n  booktitle = {Proceedings of EMNLP 2018},\n  pages = {2369--2380},\n  year = {2018}\n}"
+  }
+}

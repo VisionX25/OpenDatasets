@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "id": "voxpopuli",
+  "slug": "voxpopuli",
+  "name": "VoxPopuli: Large-Scale Multilingual Speech Corpus",
+  "description": "VoxPopuli is a large-scale multilingual speech corpus for representation learning, semi-supervised learning, and speech translation. Extracted from European Parliament plenary session recordings (2009-2020), it provides 400,000 hours of unlabeled speech across 23 languages and 1,800 hours of transcribed audio.",
+  "homepage_url": "https://github.com/facebookresearch/voxpopuli",
+  "publisher": {
+    "name": "Meta AI Research",
+    "type": "industry",
+    "url": "https://ai.meta.com"
+  },
+  "modalities": [
+    "audio",
+    "nlp"
+  ],
+  "tasks": [
+    "automatic-speech-recognition",
+    "speech-translation",
+    "representation-learning"
+  ],
+  "tags": [
+    "audio",
+    "speech",
+    "multilingual",
+    "european-parliament",
+    "self-supervised-learning",
+    "meta-ai"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons CC0 / CC BY-NC 4.0",
+    "url": "https://github.com/facebookresearch/voxpopuli#license",
+    "commercial_use": "forbidden",
+    "notes": "Audio is sourced from European Parliament under non-commercial reuse guidelines; code is MIT licensed."
+  },
+  "source_references": [
+    {
+      "title": "VoxPopuli Official GitHub Repository",
+      "url": "https://github.com/facebookresearch/voxpopuli",
+      "type": "repository",
+      "notes": "Official data processing and download scripts."
+    },
+    {
+      "title": "VoxPopuli: A Large-Scale Multilingual Speech Corpus for Representation Learning, Semi-Supervised Learning and Interpretation (ACL 2021)",
+      "url": "https://aclanthology.org/2021.acl-long.80/",
+      "type": "original_paper",
+      "notes": "Proceedings of ACL 2021."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against ACL 2021 publication and Meta AI repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 400000,
+    "unit": "hours"
+  },
+  "dates": {
+    "published": "2021-08",
+    "last_updated": "2021-08"
+  },
+  "citation": {
+    "paper_title": "VoxPopuli: A Large-Scale Multilingual Speech Corpus for Representation Learning, Semi-Supervised Learning and Interpretation",
+    "paper_url": "https://aclanthology.org/2021.acl-long.80/",
+    "authors": [
+      "Changhan Wang",
+      "Morgane Riviere",
+      "Ann Lee",
+      "Anne Wu",
+      "Chaitanya Talnikar",
+      "Daniel Haziza",
+      "Mary Williamson",
+      "Juan Pino",
+      "Emmanuel Dupoux"
+    ],
+    "doi": "10.18653/v1/2021.acl-long.80",
+    "bibtex": "@inproceedings{wang-etal-2021-voxpopuli,\n  title = {VoxPopuli: A Large-Scale Multilingual Speech Corpus for Representation Learning, Semi-Supervised Learning and Interpretation},\n  author = {Wang, Changhan and Riviere, Morgane and Lee, Ann and Wu, Anne and Talnikar, Chaitanya and Haziza, Daniel and Williamson, Mary and Pino, Juan and Dupoux, Emmanuel},\n  booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics},\n  pages = {993--1003},\n  year = {2021}\n}"
+  }
+}

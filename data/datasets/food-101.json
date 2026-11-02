@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "food-101",
+  "slug": "food-101",
+  "name": "Food-101",
+  "description": "Food-101 is an image classification dataset consisting of 101 food categories with 1,000 images per category (total 101,000 images). For each class, 250 manually reviewed test images and 750 uncleaned training images are provided.",
+  "homepage_url": "https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/",
+  "publisher": {
+    "name": "Computer Vision Laboratory, ETH Zurich",
+    "type": "academic",
+    "url": "https://vision.ee.ethz.ch"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "fine-grained-classification",
+    "image-classification"
+  ],
+  "tags": [
+    "food",
+    "fine-grained",
+    "computer-vision",
+    "eth-zurich",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0",
+    "spdx_id": "CC-BY-NC-SA-3.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+    "commercial_use": "forbidden",
+    "notes": "Verified non-commercial academic license stated on ETH Zurich CVL portal."
+  },
+  "source_references": [
+    {
+      "title": "Food-101 Dataset Homepage",
+      "url": "https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/",
+      "type": "official_website",
+      "notes": "Official ETH Zurich Computer Vision Laboratory portal."
+    },
+    {
+      "title": "Food-101 – Mining Discriminative Components with Random Forests (ECCV 2014)",
+      "url": "https://doi.org/10.1007/978-3-319-10599-4_29",
+      "type": "original_paper",
+      "notes": "Published in European Conference on Computer Vision (ECCV 2014)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against ECCV 2014 publication and ETH Zurich dataset page."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 101000,
+    "splits": {
+      "train": 75750,
+      "test": 25250
+    },
+    "unit": "images"
+  },
+  "dates": {
+    "published": "2014-09",
+    "last_updated": "2014-09"
+  },
+  "citation": {
+    "paper_title": "Food-101 – Mining Discriminative Components with Random Forests",
+    "paper_url": "https://doi.org/10.1007/978-3-319-10599-4_29",
+    "authors": [
+      "Lukas Bossard",
+      "Matthieu Guillaumin",
+      "Luc Van Gool"
+    ],
+    "doi": "10.1007/978-3-319-10599-4_29",
+    "bibtex": "@inproceedings{bossard2014food,\n  title = {Food-101 -- Mining Discriminative Components with Random Forests},\n  author = {Bossard, Lukas and Guillaumin, Matthieu and Van Gool, Luc},\n  booktitle = {European Conference on Computer Vision (ECCV)},\n  pages = {446--461},\n  year = {2014}\n}"
+  }
+}
