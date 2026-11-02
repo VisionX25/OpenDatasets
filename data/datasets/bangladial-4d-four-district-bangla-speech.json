@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bangladial-4d-four-district-bangla-speech",
+  "slug": "bangladial-4d-four-district-bangla-speech",
+  "name": "BanglaDial-4D: A Four-District Bangla Speech Corpus for Dialect Identification and Recording-Channel Robustness Research",
+  "description": "BanglaDial-4D is a Bangla speech corpus developed for research on regional dialect identification, acoustic analysis, and the robustness of speech classification systems to speaker and recording-channel variations. The dataset contains 2,557 cleaned audio recordings collected from native Bangla speakers associated with four districts of Bangladesh: Dhaka, Chittagong, Noakhali, and Bogura. These locations represent central, south-eastern, and northern regional varieties of Bangla. The corpus was collected in 2025 by students of the DIU NLP and ML Research Lab. It initially contained 2,696 audio files, from which 139 files were removed during cleaning, including duplicate recordings. The final corpus comprises approximately 4.82 hours of total audio and 4.05 hours of speech. Twenty-four native speakers participated in the collection, including 8 speakers from Dhaka, 8 from Chittagong, 6 from Noakhali, and 2 from Bogura. Participants were aged 18–23; 15 were male and 9 were female. Speakers read scripted material and recorded themselves at home using their own mobile phones. The recordings retain variation in file formats, codecs, sample rates, recording applications, and acoustic conditions. These characteristics make the corpus useful not only for dialect classification but also for investigating potential confounding factors in speech machine learning. In particular, researchers can examine whether a model learns regional linguistic characteristics or instead relies on speaker identity, recording devices, file metadata, compression artifacts, or background noise. Each recording is associated with a district-level label and available file-level metadata. The dataset is intended for research involving acoustic and prosodic feature extraction, classical machine learning, deep neural networks, self-supervised speech representations, robustness testing, and confound-aware evaluation. It may also support investigations into data leakage and the reliability of reported performance in regional speech classification. Important limitations: The corpus contains relatively few speakers, with only two speakers represented for Bogura. The original file-to-speaker mapping was not recorded; estimated speaker-and-device clusters were therefore used in the associated study. These clusters should not be treated as verified speaker identities. Recording sources also differ across districts, so the corpus does not support an assumption that dialect and recording conditions are independent. Results obtained from this dataset should be interpreted with these limitations in mind. All participants provided informed consent before recording. Public redistribution of the audio should be undertaken only in accordance with the scope of that consent and any applicable institutional requirements.",
+  "homepage_url": "https://data.mendeley.com/datasets/4dvg4tdtrj/1",
+  "publisher": {
+    "name": "Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-recognition",
+    "audio-classification"
+  ],
+  "tags": [
+    "nlp",
+    "bangla",
+    "bengali",
+    "language-model",
+    "text-classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "BanglaDial-4D: A Four-District Bangla Speech Corpus for Dialect Identification and Recording-Channel — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/4dvg4tdtrj/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Mendeley Data."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/4dvg4tdtrj.1",
+      "url": "https://doi.org/10.17632/4dvg4tdtrj.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/4dvg4tdtrj.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "BanglaDial-4D: A Four-District Bangla Speech Corpus for Dialect Identification and Recording-Channel Robustness Research",
+    "paper_url": "https://doi.org/10.17632/4dvg4tdtrj.1",
+    "authors": [
+      "Sadik Khan, Sadman",
+      "Arman, Md Ainul Ahsan"
+    ],
+    "doi": "10.17632/4dvg4tdtrj.1"
+  },
+  "languages": [
+    "bn"
+  ],
+  "sample_count": {
+    "total": 2696,
+    "unit": "audio",
+    "status": "verified"
+  }
+}

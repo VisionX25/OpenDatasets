@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bnpostduo",
+  "slug": "bnpostduo",
+  "name": "BnPostDuo",
+  "description": "BnPostDuo is a paired-text dataset of 4,800 Bengali social media image posts for multi-class content classification. Each post has two text views: the caption the publisher wrote with the image, and the text embedded in the image, extracted by optical character recognition (OCR). The original images are not released because of copyright restrictions. Instead, each record keeps a 64-bit perceptual hash (pHash) and the image's original width and height, so records can be traced and checked for duplicates without sharing the images. The dataset has eight balanced categories with 600 posts each: Educational, Entertainment, Marketing, Motivational, News, Political, Religious and Social Awareness. Files: - Bengali_Multimodal_Dataset.csv: all 4,800 records (8 columns). - class_csvs/: eight per-category CSV files (600 records each), the same records without the label column. All files are UTF-8 encoded and have no missing values. Columns: - image_id: unique identifier (/.jpg) - caption: the caption that accompanied the post - raw_ocr: unedited OCR output, including watermarks, logos, dates and recognition noise - main_ocr: cleaned OCR text keeping the main message of the image - phash: 16-character hexadecimal perceptual hash of the source image - image_width, image_height: original image size in pixels - label: content category The text is mostly Bengali with some English mixed in, and includes emoji, URLs, hashtags and deliberately broken-up words, as they appeared in the original posts. Median length is 11 tokens for captions, 11 for cleaned OCR and 27 for raw OCR. Captions and image text are often different from each other, especially in the Marketing and Social Awareness categories, so the two views carry complementary information. The dataset can be used for Bengali text classification, caption-only vs. image-text vs. fused-input modelling, OCR post-correction (raw_ocr to main_ocr), noisy-text robustness studies, and benchmarking Bengali language models on social media content.",
+  "homepage_url": "https://data.mendeley.com/datasets/6678wc3bs7/1",
+  "publisher": {
+    "name": "Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "natural-language-processing"
+  ],
+  "tags": [
+    "nlp",
+    "bangla",
+    "bengali",
+    "language-model",
+    "text-classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "BnPostDuo — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/6678wc3bs7/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Mendeley Data."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/6678wc3bs7.1",
+      "url": "https://doi.org/10.17632/6678wc3bs7.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/6678wc3bs7.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "BnPostDuo",
+    "paper_url": "https://doi.org/10.17632/6678wc3bs7.1",
+    "authors": [
+      "Zubaer, Imam Abu ",
+      "Azwad, Tafhimul ",
+      "Rup, Fatema Jannat ",
+      "Das, Poushi "
+    ],
+    "doi": "10.17632/6678wc3bs7.1"
+  },
+  "languages": [
+    "bn"
+  ],
+  "sample_count": {
+    "total": 4800,
+    "unit": "records",
+    "status": "verified"
+  }
+}

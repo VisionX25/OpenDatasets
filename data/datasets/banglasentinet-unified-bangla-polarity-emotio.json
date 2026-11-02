@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "banglasentinet-unified-bangla-polarity-emotio",
+  "slug": "banglasentinet-unified-bangla-polarity-emotio",
+  "name": "BanglaSentiNet: A Unified Bangla Dataset for Polarity and Emotion Classification",
+  "description": "BanglaSentiNet is a corpus of 28,000 Bangla text records jointly annotated for fine-grained sentiment polarity and emotion. Each record contains a five-class polarity label, a continuous polarity score (−1 to +1), seven continuous emotion scores, and a categorical emotion label. Dataset Schema | Field | Type | Description | | --- | --- | --- | | `sl_no` | Integer | Unique record identifier. | | `Bengali` | Text | Annotated Bangla text. | | `polarity_label` | Categorical | Five-class polarity label. | | `polarity_score` | Numeric | Polarity score from −1 to +1 | | `neutral` | Numeric | Neutral emotion score. | | `happy` | Numeric | Happy emotion score. | | `anger` | Numeric | Anger emotion score. | | `disgust` | Numeric | Disgust emotion score. | | `sadness` | Numeric | Sadness emotion score. | | `surprise` | Numeric | Surprise emotion score. | | `fear` | Numeric | Fear emotion score. | | `emotion_label` | Categorical | Dominant emotion label. | Dataset Summary | Characteristic | Description | | --- | --- | | Records | 28,000 | | Language | Bangla | | Polarity classes | 5 | | Emotion categories | 7 | | Polarity representation | Categorical and continuous | | Emotion representation | Continuous scores and categorical label | | Polarity range | −1 to +1 | | Emotion score range | 0 to 1 | | Format | CSV | Annotation Three human annotators independently labelled all records using a common annotation scheme. Final categorical labels were determined by majority vote, with a fourth annotator adjudicating complete disagreements. Continuous polarity and emotion scores were calculated as the mean of the three human annotations.",
+  "homepage_url": "https://data.mendeley.com/datasets/5xcn9tb97k/2",
+  "publisher": {
+    "name": "Khulna Khan Bahadur Ahsanullah University",
+    "type": "academic"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "natural-language-processing"
+  ],
+  "tags": [
+    "nlp",
+    "bangla",
+    "bengali",
+    "language-model",
+    "text-classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "BanglaSentiNet: A Unified Bangla Dataset for Polarity and Emotion Classification — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/5xcn9tb97k/2",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Khulna Khan Bahadur Ahsanullah University."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/5xcn9tb97k.2",
+      "url": "https://doi.org/10.17632/5xcn9tb97k.2",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/5xcn9tb97k.2."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "BanglaSentiNet: A Unified Bangla Dataset for Polarity and Emotion Classification",
+    "paper_url": "https://doi.org/10.17632/5xcn9tb97k.2",
+    "authors": [
+      "Ifty, Imran",
+      "Shanto, Mehedi Hasan ",
+      "Sakib, Sadman ",
+      "Mohalder, Rathindra Nath ",
+      "Shafi, Mushfiq Shahrier "
+    ],
+    "doi": "10.17632/5xcn9tb97k.2"
+  },
+  "languages": [
+    "bn"
+  ]
+}

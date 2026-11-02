@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "id": "small-fast-falling-object-lidar-rgb",
+  "slug": "small-fast-falling-object-lidar-rgb",
+  "name": "Small and Fast Falling object LiDAR and RGB Dataset",
+  "description": "This dataset supports the Feature-Fused Three-Frame (FF3F) framework for detecting and tracking small, fast-moving objects using LiDAR. It contains 480 Intel RealSense L515 recordings, divided into training, validation and test sets of 160 recordings each. Each set includes 40 recordings of vertical free fall, rolling-to-edge fall, bounce/rebound and cluttered-background free fall. The release includes depth recordings, timestamps, camera parameters, background measurements, manually annotated bounding boxes and visibility states, source code, trained models, calibration mappings and evaluation results. It supports reproduction of tracking, motion-estimation, component-ablation and confidence-calibration results, together with validation-recording alert replay. Three-dimensional reference positions are derived from the annotations and the same LiDAR measurements, rather than independent motion measurements. Alert timing represents timestamp-paced replay, not live warning delivery. RGB recordings were recorded but not used in these experiments and are excluded from this release.",
+  "homepage_url": "https://data.mendeley.com/datasets/4mkryg8db3/1",
+  "publisher": {
+    "name": "Baylor University",
+    "type": "academic"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "image-classification"
+  ],
+  "tags": [
+    "computer-vision",
+    "object-detection",
+    "image-dataset"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Small and Fast Falling object LiDAR and RGB Dataset — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/4mkryg8db3/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Baylor University."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/4mkryg8db3.1",
+      "url": "https://doi.org/10.17632/4mkryg8db3.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/4mkryg8db3.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "Small and Fast Falling object LiDAR and RGB Dataset",
+    "paper_url": "https://doi.org/10.17632/4mkryg8db3.1",
+    "authors": [
+      "Yan, Yanghe",
+      "Ro, Paul"
+    ],
+    "doi": "10.17632/4mkryg8db3.1"
+  },
+  "sample_count": {
+    "total": 515,
+    "unit": "recordings",
+    "status": "verified"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "id": "veghealth14-multi-crop-leaf-disease-image",
+  "slug": "veghealth14-multi-crop-leaf-disease-image",
+  "name": "VegHealth14: A Multi-Crop Leaf Disease Image Dataset of 14 Commonly Cultivated Vegetables in Bangladesh",
+  "description": "VegHealth14 is a leaf image dataset for classifying the health condition of 14 vegetables that are widely grown in Bangladesh: bean, bitter gourd, bottle gourd, cabbage, cauliflower, chilli, cucumber, eggplant, okra, potato, radish, ridge gourd, snake gourd and tomato. It contains 53 classes. Each crop has one healthy class and between two and six classes of disease or pest damage. The conditions include fungal diseases (downy mildew, anthracnose, Alternaria spot, leaf mold, late blight), bacterial diseases (bacterial spot, bacterial wilt, black rot), viral diseases (mosaic virus, leaf curl virus, yellow leaf curl virus) and damage from jassids, leaf-eating insects, insect egg masses and mites. The images were gathered from several publicly available open-source datasets and combined into a single collection with a consistent class structure. The source images came in many sizes, from 128×128 to 6000×4000 pixels, and in JPEG, PNG, and WebP formats. Preprocessing 1. Files in each class folder were renamed to sequential numbers (1.jpg, 2.jpg, 3.jpg and so on). 2. Every image was resized to two standard resolutions, 224×224 and 512×512 pixels. Images were scaled directly to a square without cropping or padding, so the whole leaf stays in the frame, but non-square photos are slightly stretched. 3. All images were converted to RGB JPEG (8-bit, quality 95). PNG and WebP files were converted to JPEG. 4. Exact duplicate images were identified by MD5 hash. Some source datasets already contained oversampled copies, so the combined collection includes 11,421 files that duplicate another image in the same class and 157 images that appear in two classes. Some source images were smaller than the target size and had to be enlarged: Cabbage (150×150), Snake Gourd (128×128 to 224×224), Potato and some Tomato and Cauliflower images (256×256). These look softer than the rest, especially at 512×512. Augmentation The augmented versions balance the dataset to exactly 1,000 images per class. Only unique images were used as the base for augmentation: exact duplicates within a class were removed first, and images found in more than one class were excluded. Two classes had more than 1,000 unique images (Eggplant Healthy and Eggplant Mosaic Virus Disease), so 1,000 were randomly selected (seed 42). The two Potato blight classes already had exactly 1,000 and were not augmented. For every other class, augmented images were added until the class reached 1,000. The following techniques were used, alone or in combination: Rotation: 90°, 180° or 270° clockwise Flipping: horizontal or vertical Centre zoom crop: the central 90% or 80% of the image, resized back to full size Corner zoom crop: the top-left, top-right, bottom-left or bottom-right 85% of the image, resized back to full size Total image before augmentation: 27,282 Total image after augmentation: 53000",
+  "homepage_url": "https://data.mendeley.com/datasets/c93cpkfb5p/1",
+  "publisher": {
+    "name": "Daffodil International University",
+    "type": "academic"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "plant-pathology",
+    "crop-monitoring",
+    "environment"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "VegHealth14: A Multi-Crop Leaf Disease Image Dataset of 14 Commonly Cultivated Vegetables in Banglad — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/c93cpkfb5p/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Daffodil International University."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/c93cpkfb5p.1",
+      "url": "https://doi.org/10.17632/c93cpkfb5p.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/c93cpkfb5p.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "VegHealth14: A Multi-Crop Leaf Disease Image Dataset of 14 Commonly Cultivated Vegetables in Bangladesh",
+    "paper_url": "https://doi.org/10.17632/c93cpkfb5p.1",
+    "authors": [
+      "Paul, Shrikanta",
+      "Sadik Khan, Sadman"
+    ],
+    "doi": "10.17632/c93cpkfb5p.1"
+  },
+  "sample_count": {
+    "total": 157,
+    "unit": "images",
+    "status": "verified"
+  }
+}

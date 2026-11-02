@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "id": "grapevine-bunch-images-with-powdery-mildew",
+  "slug": "grapevine-bunch-images-with-powdery-mildew",
+  "name": "Grapevine Bunch Images with Powdery Mildew Severity Labels Collected under Field Conditions",
+  "description": "This dataset comprises 2,068 field images of grapevine (Vitis vinifera L.) bunches with image-level labels describing four ordinal grades of visible powdery mildew severity: Healthy, Mild, Moderate, and Severe. It was developed to support computer vision research on plant disease severity classification under field conditions. Images were acquired during the 2023 fruiting season in a commercial vineyard in Bouarg, Nador Province, northeastern Morocco. Photographs were captured using a Sony α230 digital single-lens reflex camera equipped with an 18–55 mm lens. Images were recorded in JPEG format at a native resolution of 3872 × 2592 pixels. Bunches were photographed in situ under natural illumination, preserving the vineyard background and variations in lighting, viewing angle, berry appearance, and partial occlusion. Severity labels characterise the visible symptoms on the photographed bunch. Healthy denotes the absence of visible powdery mildew symptoms; Mild indicates limited, localised symptoms; Moderate represents more extensive but partial involvement; and Severe denotes widespread symptoms with pronounced visual alteration. These labels describe visible disease severity in the image rather than a laboratory-confirmed measure of infection. The annotation table links each image filename to its severity code through the image_id and global_degree fields, with codes 0, 1, 2, and 3 corresponding to Healthy, Mild, Moderate, and Severe, respectively. Additional fields provide a descriptive annotation comment and an exclusion indicator. Labels are assigned at the source-image level; they do not constitute pixel-level segmentation masks or independent annotations of individual image patches. Potential applications include supervised image classification, ordinal severity modelling, transfer learning, and the comparative evaluation of convolutional and Transformer-based models. When generating patches or augmented samples, users should partition the original images before deriving these samples, ensuring that samples originating from the same image remain within a single partition to prevent data leakage. As the dataset originates from one vineyard and one growing season, performance on other locations, cultivars, and acquisition conditions requires independent validation.",
+  "homepage_url": "https://data.mendeley.com/datasets/z2f3vdc6nh/1",
+  "publisher": {
+    "name": "Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "plant-pathology",
+    "crop-monitoring",
+    "environment"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Grapevine Bunch Images with Powdery Mildew Severity Labels Collected under Field Conditions — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/z2f3vdc6nh/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Mendeley Data."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/z2f3vdc6nh.1",
+      "url": "https://doi.org/10.17632/z2f3vdc6nh.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/z2f3vdc6nh.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "Grapevine Bunch Images with Powdery Mildew Severity Labels Collected under Field Conditions",
+    "paper_url": "https://doi.org/10.17632/z2f3vdc6nh.1",
+    "authors": [
+      "Slimani, Hicham"
+    ],
+    "doi": "10.17632/z2f3vdc6nh.1"
+  }
+}

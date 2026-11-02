@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "id": "raw-preprocessed-eeg-ils-screened-verbal",
+  "slug": "raw-preprocessed-eeg-ils-screened-verbal",
+  "name": "Raw and Preprocessed EEG of ILS-Screened Verbal–Visual and Active–Reflective Learners during the Short Hagen Matrices Test (HMT-S)",
+  "description": "This dataset contains 8-channel electroencephalography (EEG) recordings of 28 Indonesian undergraduate students labelled on two Felder–Silverman learning-style dimensions: Verbal–Visual (7 Verbal, 7 Visual) and Active–Reflective (7 Active, 7 Reflective). Participants were screened with an Indonesian translation of the Index of Learning Styles (ILS), and only those with a moderate-to-strong preference (score ≥ 5) on the target dimension were recorded. During recording, participants solved the six items of the short form of the Hagen Matrices Test (HMT-S). Each item was shown for 15 s without and then for 15 s with its answer options (12 stimuli, about 3 min of task EEG). EEG was acquired at 250 Hz with an OpenBCI Cyton board from Fp1, Fp2, F3, F4, C3, C4, O1 and O2 (10–20 system). The data are organized in two tiers: (1) Raw EEG (OpenBCI GUI export, CSV) with the answer log of each participant (XLSX), recording the selected option, the correct option and the time of each answer; (2) Band-pass filtered (8–30 Hz) EEG segmented into non-overlapping 1-s, 250-sample windows aligned to the task phases (CSV; 180 windows × 8 channels per participant). The data can be used for subject-independent classification of learning-style preferences, comparison of filtering, artifact-handling and feature-extraction methods, deep learning on EEG, and analyses relating EEG to task performance. The README file describes every folder, file and column, as well as the known limitations of the data. The files contain no names or other direct personal identifiers.",
+  "homepage_url": "https://data.mendeley.com/datasets/vt65n2ydpm/1",
+  "publisher": {
+    "name": "Universitas Gadjah Mada",
+    "type": "academic"
+  },
+  "modalities": [
+    "sensor"
+  ],
+  "tasks": [
+    "signal-processing",
+    "classification"
+  ],
+  "tags": [
+    "multimodal",
+    "scientific-ml",
+    "sensor-data",
+    "interdisciplinary"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Raw and Preprocessed EEG of ILS-Screened Verbal–Visual and Active–Reflective Learners during the Sho — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/vt65n2ydpm/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Universitas Gadjah Mada."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/vt65n2ydpm.1",
+      "url": "https://doi.org/10.17632/vt65n2ydpm.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/vt65n2ydpm.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "Raw and Preprocessed EEG of ILS-Screened Verbal–Visual and Active–Reflective Learners during the Short Hagen Matrices Test (HMT-S)",
+    "paper_url": "https://doi.org/10.17632/vt65n2ydpm.1",
+    "authors": [
+      "Baihaqi, Wiga Maulana",
+      "Hidayah, Indriana",
+      "Kusrohmaniah, Sri",
+      "Wijaya, Adi",
+      "Setiawan, Noor Akhmad"
+    ],
+    "doi": "10.17632/vt65n2ydpm.1"
+  }
+}

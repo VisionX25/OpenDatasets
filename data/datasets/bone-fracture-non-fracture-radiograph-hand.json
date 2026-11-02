@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bone-fracture-non-fracture-radiograph-hand",
+  "slug": "bone-fracture-non-fracture-radiograph-hand",
+  "name": "Bone Fracture and Non-Fracture Radiograph Dataset of Hand, Hip Joint and Leg from Bangladesh",
+  "description": "This dataset contains 864 plain radiograph (X-ray) images labelled for bone fracture detection across three anatomical regions: the upper limb (hand and arm), the hip joint, and the lower limb (leg, ankle and foot). The images were collected between February and April 2025 from Satkhira, Bangladesh. Students of the DIU NLP &amp; ML Research Lab, Daffodil International University, collected and labelled the data under the supervision of the lab's supervisors. The images are organised into six folders, one per class: Hand Fracture: 325 images Hand Non Fracture: 294 images Hip Joint Fracture: 240 images Hip Joint Non Fracture: 288 images Leg Fracture: 352 images Leg Non Fracture: 430 images Images are in JPG and PNG format, with resolutions from about 159 to 1,873 pixels per side. They were exported from the hospital imaging viewer and cropped to the region of interest, so some images keep a thin viewer border and side markers (LT/RT). All patient-identifying information was removed before release. The classes are imbalanced, especially in the hip joint category. Users should apply augmentation or class weighting inside the training split only, after splitting the data, to avoid data leakage. The dataset can be used for binary fracture detection, region-specific fracture classification, six-class classification, transfer learning, and testing deep learning models on radiographs from a low-resource clinical setting in South Asia.",
+  "homepage_url": "https://data.mendeley.com/datasets/7b2f3hdh8c/1",
+  "publisher": {
+    "name": "Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "medical-imaging",
+    "disease-detection"
+  ],
+  "tags": [
+    "medical-imaging",
+    "healthcare",
+    "clinical-data",
+    "diagnostic-ai"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Bone Fracture and Non-Fracture Radiograph Dataset of Hand, Hip Joint and Leg from Bangladesh — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/7b2f3hdh8c/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Mendeley Data."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/7b2f3hdh8c.1",
+      "url": "https://doi.org/10.17632/7b2f3hdh8c.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/7b2f3hdh8c.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "Bone Fracture and Non-Fracture Radiograph Dataset of Hand, Hip Joint and Leg from Bangladesh",
+    "paper_url": "https://doi.org/10.17632/7b2f3hdh8c.1",
+    "authors": [
+      "Sadik Khan, Sadman"
+    ],
+    "doi": "10.17632/7b2f3hdh8c.1"
+  },
+  "sample_count": {
+    "total": 325,
+    "unit": "images",
+    "status": "verified"
+  }
+}

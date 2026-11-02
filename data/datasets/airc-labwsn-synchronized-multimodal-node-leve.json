@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "id": "airc-labwsn-synchronized-multimodal-node-leve",
+  "slug": "airc-labwsn-synchronized-multimodal-node-leve",
+  "name": "AIRC-LABWSN: A synchronized multimodal node-level time-series dataset for cross-layer anomaly detection in wireless sensor networks",
+  "description": "AIRC-LABWSN is a multi-modal time series dataset at the node level, created to facilitate research on anomaly detection and inter-layer analysis in wireless sensor networks for smart agricultural applications. The dataset integrates environmental data from the Artichoke farming region in Da Lat, together with temporally and spatially expanded environmental data, topological information, and network data produced by packet-level ns-3 simulation. The data generation method has two phases: Phase 1 processes environmental measurements, including air temperature, air humidity, soil temperature, soil humidity, pH, electrical conductivity, and light intensity. The data augmentation model incorporates seasonal elements, diurnal variations, short-term meteorological changes, node discrepancies, and sensor interference. This step concurrently establishes a simulated topology including 40 sensor nodes and one sink/base station within a 100 m × 100 m region. Phase 2 uses the environmental data, network topology, and predefined event configuration as inputs for packet-level simulation in ns-3. The nodes are configured using IEEE 802.15.4 Low Rate Wireless Personal Area Network (LR-WPAN), 6LoWPAN, Internet Protocol version 6 (IPv6), and User Datagram Protocol (UDP). In normal operational settings, each sensor node produces a UDP packet every five minutes when environmental input is available and relays it to the sink across a multi-hop pathway. Routing is implemented using an RPL-inspired parent-selection mechanism, with the resulting parent-child structure used to support multi-hop packet forwarding toward the sink. Throughout the simulation procedure, network measurements are consolidated in five-minute intervals and exported into network tables. Packet-generation, forwarding, link, queue, routing, sink-reception, and energy information is retained through intermediate records to support verification of the aggregated outputs. Node-level dynamic tables are linked using the key `(run_id, interval_id, node_id)`, while the link table additionally incorporates `neighbor_id`. The corresponding timestamp is retained as the human-readable UTC time coordinate. Rows impacted by network events are designated using the fields `is_anomaly`, `anomaly_type`, `anomaly_label`, and `primary_scenario_event_id`. The latter links affected observations to the corresponding event recorded in `scenario_events.csv`, while `observation_event_map.csv` provides additional event-to-observation provenance. The network data in AIRC-LABWSN represents inter-layer data produced via packet-level multi-hop ns-3 simulations, rather than data obtained directly from a physical network, including 41 nodes. The released dataset therefore combines real-world environmental observations with augmented environmental data and simulation-derived network measurements, while preserving supporting records for routing, packet delivery, and event provenance.",
+  "homepage_url": "https://data.mendeley.com/datasets/zvkwpsw84d/5",
+  "publisher": {
+    "name": "Vietnam National University",
+    "type": "academic"
+  },
+  "modalities": [
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "time-series-forecasting"
+  ],
+  "tags": [
+    "multimodal",
+    "scientific-ml",
+    "sensor-data",
+    "interdisciplinary"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "AIRC-LABWSN: A synchronized multimodal node-level time-series dataset for cross-layer anomaly detect — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/zvkwpsw84d/5",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Vietnam National University."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/zvkwpsw84d.5",
+      "url": "https://doi.org/10.17632/zvkwpsw84d.5",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Audited and verified in Task 15.1 against DataCite persistent DOI 10.17632/zvkwpsw84d.5. Independent academic provenance, license, and ML suitability confirmed."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "AIRC-LABWSN: A synchronized multimodal node-level time-series dataset for cross-layer anomaly detection in wireless sensor networks",
+    "paper_url": "https://doi.org/10.17632/zvkwpsw84d.5",
+    "authors": [
+      "Tran Tuan, Toan",
+      "Le Hoang, SON"
+    ],
+    "doi": "10.17632/zvkwpsw84d.5"
+  }
+}
