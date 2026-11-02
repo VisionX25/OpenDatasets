@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cora-citation-network",
+  "slug": "cora-citation-network",
+  "name": "Cora Citation Network Dataset",
+  "description": "The Cora dataset is a seminal benchmark for node classification and graph representation learning. It consists of 2,708 machine learning scientific papers categorized into seven subfields (Case_Based, Genetic_Algorithms, Neural_Networks, Probabilistic_Methods, Reinforcement_Learning, Rule_Learning, Theory), connected by 5,429 citation links and characterized by 1,433 binary word features.",
+  "homepage_url": "https://linqs.org/datasets/#cora",
+  "publisher": {
+    "name": "LINQS (UC Santa Cruz & University of Maryland)",
+    "type": "academic",
+    "url": "https://linqs.org"
+  },
+  "modalities": [
+    "graph"
+  ],
+  "tasks": [
+    "node-classification",
+    "link-prediction"
+  ],
+  "tags": [
+    "graph-neural-networks",
+    "node-classification",
+    "citation-network",
+    "cora",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Open Academic Research Use",
+    "url": "https://linqs.org/datasets/#cora",
+    "commercial_use": "allowed",
+    "notes": "Freely available for academic research and evaluation."
+  },
+  "source_references": [
+    {
+      "title": "LINQS Statistical Relational Learning Datasets",
+      "url": "https://linqs.org/datasets/#cora",
+      "type": "official_website",
+      "notes": "Official repository maintained by the LINQS research group."
+    },
+    {
+      "title": "Automating the Construction of Internet Portals with Machine Learning (Information Retrieval 2000)",
+      "url": "https://doi.org/10.1023/A:1009953814988",
+      "type": "original_paper",
+      "notes": "Published in Information Retrieval 2000."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against Information Retrieval 2000 paper and LINQS repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 2708,
+    "unit": "nodes"
+  },
+  "dates": {
+    "published": "2000",
+    "last_updated": "2008"
+  },
+  "citation": {
+    "paper_title": "Automating the Construction of Internet Portals with Machine Learning",
+    "paper_url": "https://doi.org/10.1023/A:1009953814988",
+    "authors": [
+      "Andrew McCallum",
+      "Kamal Nigam",
+      "Jason Rennie",
+      "Kristie Seymore"
+    ],
+    "doi": "10.1023/A:1009953814988",
+    "bibtex": "@article{mccallum2000automating,\n  title = {Automating the Construction of Internet Portals with Machine Learning},\n  author = {McCallum, Andrew and Nigam, Kamal and Rennie, Jason and Seymore, Kristie},\n  journal = {Information Retrieval},\n  volume = {3},\n  number = {2},\n  pages = {127--163},\n  year = {2000}\n}"
+  }
+}

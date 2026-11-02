@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "m4-forecasting-competition",
+  "slug": "m4-forecasting-competition",
+  "name": "M4 Forecasting Competition Dataset",
+  "description": "The M4 dataset comprises 100,000 real-world time series used in the 4th Makridakis International Forecasting Competition. The dataset spans diverse domains (demographic, finance, industry, macro, micro, and other) across six sampling frequencies (yearly, quarterly, monthly, weekly, daily, and hourly), serving as a benchmark for time-series forecasting algorithms.",
+  "homepage_url": "https://github.com/Mcompetitions/M4-methods",
+  "publisher": {
+    "name": "University of Nicosia (Makridakis Open Forecasting Center)",
+    "type": "academic",
+    "url": "https://mofc.unic.ac.cy/"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "time-series-forecasting"
+  ],
+  "tags": [
+    "time-series",
+    "forecasting",
+    "m-competitions",
+    "benchmark",
+    "macroeconomics",
+    "finance"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Verified MIT license declared in M4 competition repository."
+  },
+  "source_references": [
+    {
+      "title": "M4 Forecasting Competition GitHub Repository",
+      "url": "https://github.com/Mcompetitions/M4-methods",
+      "type": "repository",
+      "notes": "Official repository containing datasets and benchmark methods."
+    },
+    {
+      "title": "The M4 Competition: 100,000 time series and 61 forecasting methods (IJF 2020)",
+      "url": "https://doi.org/10.1016/j.ijforecast.2019.04.144",
+      "type": "original_paper",
+      "notes": "Published in International Journal of Forecasting 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against International Journal of Forecasting paper and MOFC repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 100000,
+    "unit": "time-series"
+  },
+  "dates": {
+    "published": "2018",
+    "last_updated": "2020"
+  },
+  "citation": {
+    "paper_title": "The M4 Competition: 100,000 time series and 61 forecasting methods",
+    "paper_url": "https://doi.org/10.1016/j.ijforecast.2019.04.144",
+    "authors": [
+      "Spyros Makridakis",
+      "Evangelos Spiliotis",
+      "Vassilios Assimakopoulos"
+    ],
+    "doi": "10.1016/j.ijforecast.2019.04.144",
+    "bibtex": "@article{makridakis2020m4,\n  title = {The M4 Competition: 100,000 time series and 61 forecasting methods},\n  author = {Makridakis, Spyros and Spiliotis, Evangelos and Assimakopoulos, Vassilios},\n  journal = {International Journal of Forecasting},\n  volume = {36},\n  number = {1},\n  pages = {54--74},\n  year = {2020}\n}"
+  }
+}

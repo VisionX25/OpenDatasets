@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "m5-forecasting-accuracy",
+  "slug": "m5-forecasting-accuracy",
+  "name": "M5 Forecasting Accuracy Dataset",
+  "description": "The M5 competition dataset contains hierarchical retail sales data donated by Walmart. It includes daily unit sales for 3,049 products categorized into 3 product categories and 7 departments across 10 stores in California, Texas, and Wisconsin over 1,941 days (2011-2016), accompanied by pricing, promotional, calendar, and SNAP benefit features.",
+  "homepage_url": "https://www.kaggle.com/competitions/m5-forecasting-accuracy/data",
+  "publisher": {
+    "name": "Walmart & University of Nicosia",
+    "type": "industry",
+    "url": "https://mofc.unic.ac.cy/"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "hierarchical-forecasting"
+  ],
+  "tags": [
+    "time-series",
+    "retail",
+    "hierarchical-forecasting",
+    "walmart",
+    "sales-forecasting",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "M5 Competition Research Use Terms",
+    "url": "https://www.kaggle.com/competitions/m5-forecasting-accuracy/rules",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for academic, scientific, and educational research purposes under M5 competition terms."
+  },
+  "source_references": [
+    {
+      "title": "M5 Forecasting - Accuracy Kaggle Competition Data",
+      "url": "https://www.kaggle.com/competitions/m5-forecasting-accuracy/data",
+      "type": "official_website",
+      "notes": "Official competition data download and specification page."
+    },
+    {
+      "title": "The M5 competition: Background, organization, and implementation (IJF 2022)",
+      "url": "https://doi.org/10.1016/j.ijforecast.2021.11.013",
+      "type": "original_paper",
+      "notes": "Published in International Journal of Forecasting 2022."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against International Journal of Forecasting paper and Kaggle M5 data distribution."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 30490,
+    "unit": "time-series"
+  },
+  "dates": {
+    "published": "2020-03",
+    "last_updated": "2022"
+  },
+  "citation": {
+    "paper_title": "The M5 competition: Background, organization, and implementation",
+    "paper_url": "https://doi.org/10.1016/j.ijforecast.2021.11.013",
+    "authors": [
+      "Spyros Makridakis",
+      "Evangelos Spiliotis",
+      "Vassilios Assimakopoulos"
+    ],
+    "doi": "10.1016/j.ijforecast.2021.11.013",
+    "bibtex": "@article{makridakis2022m5,\n  title = {The M5 competition: Background, organization, and implementation},\n  author = {Makridakis, Spyros and Spiliotis, Evangelos and Assimakopoulos, Vassilios},\n  journal = {International Journal of Forecasting},\n  volume = {38},\n  number = {4},\n  pages = {1483--1499},\n  year = {2022}\n}"
+  }
+}

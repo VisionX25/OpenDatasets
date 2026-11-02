@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "twitch-social-networks",
+  "slug": "twitch-social-networks",
+  "name": "Twitch Social Networks Dataset",
+  "description": "The Twitch Social Networks dataset contains user-user friendship and follower networks of gamers on Twitch across six distinct language subgraphs (DE, EN, ES, FR, PT, RU). Nodes represent Twitch users and links represent mutual follower relationships, with node features capturing gameplay preferences, account age, and stream flags for binary classification of mature content.",
+  "homepage_url": "https://snap.stanford.edu/data/twitch-social-networks.html",
+  "publisher": {
+    "name": "Stanford Network Analysis Project (SNAP)",
+    "type": "academic",
+    "url": "https://snap.stanford.edu"
+  },
+  "modalities": [
+    "graph"
+  ],
+  "tasks": [
+    "node-classification",
+    "graph-representation-learning"
+  ],
+  "tags": [
+    "graph-neural-networks",
+    "social-networks",
+    "node-classification",
+    "twitch",
+    "snap",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated on SNAP dataset resource page."
+  },
+  "source_references": [
+    {
+      "title": "Twitch Social Networks on Stanford SNAP",
+      "url": "https://snap.stanford.edu/data/twitch-social-networks.html",
+      "type": "official_website",
+      "notes": "Official Stanford SNAP dataset distribution page."
+    },
+    {
+      "title": "Multi-scale Attributed Node Embedding (Journal of Complex Networks 2021)",
+      "url": "https://doi.org/10.1093/comnet/cnab014",
+      "type": "original_paper",
+      "notes": "Published in Journal of Complex Networks 2021."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against Journal of Complex Networks paper and Stanford SNAP repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 168114,
+    "unit": "nodes"
+  },
+  "dates": {
+    "published": "2021-04",
+    "last_updated": "2021-04"
+  },
+  "citation": {
+    "paper_title": "Multi-scale attributed node embedding",
+    "paper_url": "https://doi.org/10.1093/comnet/cnab014",
+    "authors": [
+      "Benedek Rozemberczki",
+      "Carl Allen",
+      "Rik Sarkar"
+    ],
+    "doi": "10.1093/comnet/cnab014",
+    "bibtex": "@article{rozemberczki2021multiscale,\n  title = {Multi-scale attributed node embedding},\n  author = {Rozemberczki, Benedek and Allen, Carl and Sarkar, Rik},\n  journal = {Journal of Complex Networks},\n  volume = {9},\n  number = {2},\n  pages = {cnab014},\n  year = {2021}\n}"
+  }
+}

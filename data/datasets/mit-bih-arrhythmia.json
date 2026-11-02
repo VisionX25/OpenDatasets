@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mit-bih-arrhythmia",
+  "slug": "mit-bih-arrhythmia",
+  "name": "MIT-BIH Arrhythmia Database",
+  "description": "The MIT-BIH Arrhythmia Database contains 48 half-hour excerpts of two-channel ambulatory ECG recordings, obtained from 47 subjects studied by the BIH Arrhythmia Laboratory between 1975 and 1979. The database was the first generally available set of standard test material for evaluation of arrhythmia detectors, with over 109,000 annotated heartbeats validated by cardiologist consensus.",
+  "homepage_url": "https://physionet.org/content/mitdb/1.0.0/",
+  "publisher": {
+    "name": "PhysioNet & Massachusetts Institute of Technology",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "arrhythmia-detection",
+    "ecg-classification"
+  ],
+  "tags": [
+    "ecg",
+    "cardiology",
+    "arrhythmia",
+    "physionet",
+    "mit",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License (ODC-By) v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Verified ODC-By 1.0 license declared on PhysioNet resource page."
+  },
+  "source_references": [
+    {
+      "title": "MIT-BIH Arrhythmia Database on PhysioNet",
+      "url": "https://physionet.org/content/mitdb/1.0.0/",
+      "type": "official_website",
+      "notes": "Official PhysioNet database distribution page."
+    },
+    {
+      "title": "The impact of the MIT-BIH Arrhythmia Database (IEEE EMBS 2001)",
+      "url": "https://doi.org/10.1109/51.932724",
+      "type": "original_paper",
+      "notes": "Published in IEEE Engineering in Medicine and Biology Magazine 2001."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against IEEE EMB Magazine publication and PhysioNet portal."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 48,
+    "unit": "recordings"
+  },
+  "dates": {
+    "published": "1999-05",
+    "last_updated": "2005"
+  },
+  "citation": {
+    "paper_title": "The impact of the MIT-BIH Arrhythmia Database",
+    "paper_url": "https://doi.org/10.1109/51.932724",
+    "authors": [
+      "George B. Moody",
+      "Roger G. Mark"
+    ],
+    "doi": "10.1109/51.932724",
+    "bibtex": "@article{moody2001impact,\n  title = {The impact of the MIT-BIH Arrhythmia Database},\n  author = {Moody, George B. and Mark, Roger G.},\n  journal = {IEEE Engineering in Medicine and Biology Magazine},\n  volume = {20},\n  number = {3},\n  pages = {45--50},\n  year = {2001}\n}"
+  }
+}

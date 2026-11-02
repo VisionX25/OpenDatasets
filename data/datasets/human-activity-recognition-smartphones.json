@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "id": "human-activity-recognition-smartphones",
+  "slug": "human-activity-recognition-smartphones",
+  "name": "Human Activity Recognition Using Smartphones",
+  "description": "The Human Activity Recognition database was built from the recordings of 30 volunteers performing six daily activities (Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, Laying) carrying a waist-mounted Samsung Galaxy S II smartphone with embedded 3-axial accelerometer and gyroscope sensors at 50Hz.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones",
+  "publisher": {
+    "name": "UCI Machine Learning Repository (University of Genoa)",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "sensor",
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "human-activity-recognition",
+    "tabular-classification"
+  ],
+  "tags": [
+    "activity-recognition",
+    "smartphones",
+    "sensors",
+    "accelerometer",
+    "gyroscope",
+    "uci-ml-repository"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+  },
+  "source_references": [
+    {
+      "title": "Human Activity Recognition Using Smartphones on UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones",
+      "type": "official_website",
+      "notes": "Official UCI ML Repository dataset entry."
+    },
+    {
+      "title": "A Public Domain Dataset for Human Activity Recognition Using Smartphones (ESANN 2013)",
+      "url": "https://www.esann.org/proceedings/2013/es2013-11.pdf",
+      "type": "original_paper",
+      "notes": "Proceedings of the 21st European Symposium on Artificial Neural Networks (ESANN 2013)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against ESANN 2013 paper and UCI ML Repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 10299,
+    "splits": {
+      "train": 7352,
+      "test": 2947
+    },
+    "unit": "instances"
+  },
+  "dates": {
+    "published": "2012-12",
+    "last_updated": "2013"
+  },
+  "citation": {
+    "paper_title": "A Public Domain Dataset for Human Activity Recognition Using Smartphones",
+    "paper_url": "https://www.esann.org/proceedings/2013/es2013-11.pdf",
+    "authors": [
+      "Davide Anguita",
+      "Alessandro Ghio",
+      "Luca Oneto",
+      "Xavier Parra",
+      "Jorge L. Reyes-Ortiz"
+    ],
+    "bibtex": "@inproceedings{anguita2013public,\n  title = {A Public Domain Dataset for Human Activity Recognition Using Smartphones},\n  author = {Anguita, Davide and Ghio, Alessandro and Oneto, Luca and Parra, Xavier and Reyes-Ortiz, Jorge L.},\n  booktitle = {European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning (ESANN)},\n  year = {2013}\n}"
+  }
+}

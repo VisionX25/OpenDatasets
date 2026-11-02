@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ogbg-molhiv",
+  "slug": "ogbg-molhiv",
+  "name": "ogbg-molhiv: Molecular Property Prediction",
+  "description": "ogbg-molhiv is a molecular property prediction benchmark from the Open Graph Benchmark (OGB) adopted from MoleculeNet. It contains 41,127 small molecules represented as graphs where nodes are atoms and edges are chemical bonds, with the task of predicting whether a compound inhibits HIV replication using scaffold-based splits.",
+  "homepage_url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-molhiv",
+  "publisher": {
+    "name": "Stanford Network Analysis Project (SNAP)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu"
+  },
+  "modalities": [
+    "graph"
+  ],
+  "tasks": [
+    "graph-classification"
+  ],
+  "tags": [
+    "graph-neural-networks",
+    "graph-classification",
+    "molecular-graphs",
+    "cheminformatics",
+    "ogb",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Verified MIT license declared in official OGB repository."
+  },
+  "source_references": [
+    {
+      "title": "Open Graph Benchmark Graph Property Prediction Documentation",
+      "url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-molhiv",
+      "type": "official_website",
+      "notes": "Official Stanford OGB documentation and leaderboard."
+    },
+    {
+      "title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs (NeurIPS 2020)",
+      "url": "https://doi.org/10.5555/3495724.3497576",
+      "type": "original_paper",
+      "notes": "Published in Advances in Neural Information Processing Systems (NeurIPS 2020)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against NeurIPS 2020 OGB paper and Stanford SNAP repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 41127,
+    "unit": "graphs"
+  },
+  "dates": {
+    "published": "2020-05",
+    "last_updated": "2020-12"
+  },
+  "citation": {
+    "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "paper_url": "https://doi.org/10.5555/3495724.3497576",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Marinka Zitnik",
+      "Yuxiao Dong",
+      "Hongyu Ren",
+      "Bowen Liu",
+      "Michele Catasta",
+      "Jure Leskovec"
+    ],
+    "bibtex": "@article{hu2020ogb,\n  title = {Open Graph Benchmark: Datasets for Machine Learning on Graphs},\n  author = {Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},\n  journal = {Advances in Neural Information Processing Systems},\n  volume = {33},\n  pages = {22118--22133},\n  year = {2020}\n}"
+  }
+}

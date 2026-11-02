@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "unsw-nb15",
+  "slug": "unsw-nb15",
+  "name": "UNSW-NB15: Network Intrusion Detection Dataset",
+  "description": "The UNSW-NB15 dataset is a comprehensive network security benchmark created in the Cyber Range Lab of UNSW Canberra using the IXIA PerfectStorm tool. It contains realistic contemporary normal network traffic and 9 modern attack families (Fuzzers, Analysis, Backdoors, DoS, Exploits, Generic, Reconnaissance, Shellcode, and Worms) described by 49 network flow features.",
+  "homepage_url": "https://research.unsw.edu.au/projects/unsw-nb15-dataset",
+  "publisher": {
+    "name": "UNSW Canberra Cyber, University of New South Wales",
+    "type": "academic",
+    "url": "https://www.unsw.edu.au"
+  },
+  "modalities": [
+    "tabular",
+    "sensor"
+  ],
+  "tasks": [
+    "network-intrusion-detection",
+    "anomaly-detection"
+  ],
+  "tags": [
+    "cybersecurity",
+    "intrusion-detection",
+    "network-traffic",
+    "unsw",
+    "flow-features",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "UNSW Canberra Cyber Research License",
+    "url": "https://research.unsw.edu.au/projects/unsw-nb15-dataset",
+    "commercial_use": "allowed",
+    "notes": "Freely accessible for academic, industrial, and government cybersecurity research."
+  },
+  "source_references": [
+    {
+      "title": "UNSW-NB15 Project Portal",
+      "url": "https://research.unsw.edu.au/projects/unsw-nb15-dataset",
+      "type": "official_website",
+      "notes": "Official UNSW research repository and dataset distribution."
+    },
+    {
+      "title": "UNSW-NB15: a comprehensive data set for network intrusion detection systems (MilCIS 2015)",
+      "url": "https://doi.org/10.1109/MilCIS.2015.7348942",
+      "type": "original_paper",
+      "notes": "Published in Military Communications and Information Systems Conference (MilCIS 2015)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against IEEE MilCIS 2015 paper and UNSW Canberra Cyber project page."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 2540044,
+    "splits": {
+      "train": 175341,
+      "test": 82332
+    },
+    "unit": "network-flows"
+  },
+  "dates": {
+    "published": "2015-11",
+    "last_updated": "2016"
+  },
+  "citation": {
+    "paper_title": "UNSW-NB15: A comprehensive data set for network intrusion detection systems (UNSW-NB15 network data set)",
+    "paper_url": "https://doi.org/10.1109/MilCIS.2015.7348942",
+    "authors": [
+      "Nour Moustafa",
+      "Jill Slay"
+    ],
+    "doi": "10.1109/MilCIS.2015.7348942",
+    "bibtex": "@inproceedings{moustafa2015unsw,\n  title = {UNSW-NB15: A comprehensive data set for network intrusion detection systems (UNSW-NB15 network data set)},\n  author = {Moustafa, Nour and Slay, Jill},\n  booktitle = {2015 Military Communications and Information Systems Conference (MilCIS)},\n  pages = {1--6},\n  year = {2015}\n}"
+  }
+}

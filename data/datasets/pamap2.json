@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pamap2",
+  "slug": "pamap2",
+  "name": "PAMAP2: Physical Activity Monitoring Dataset",
+  "description": "The PAMAP2 Physical Activity Monitoring dataset contains sensor data of 18 different physical activities (such as walking, cycling, Nordic walking, running, and climbing stairs) performed by 9 subjects wearing 3 inertial measurement units (IMUs) over chest, wrist, and ankle, alongside a heart rate monitor.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/231/pamap2+physical+activity+monitoring",
+  "publisher": {
+    "name": "UCI Machine Learning Repository (DFKI)",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "human-activity-recognition"
+  ],
+  "tags": [
+    "activity-recognition",
+    "imu",
+    "wearables",
+    "sensor-data",
+    "accelerometer",
+    "uci-ml-repository"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+  },
+  "source_references": [
+    {
+      "title": "PAMAP2 on UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/dataset/231/pamap2+physical+activity+monitoring",
+      "type": "official_website",
+      "notes": "Official UCI ML Repository dataset entry."
+    },
+    {
+      "title": "A Public Domain Dataset for Human Activity Recognition Using Smartphones and IMUs (PerCom 2012)",
+      "url": "https://doi.org/10.1109/PerComW.2012.6197483",
+      "type": "original_paper",
+      "notes": "Published in IEEE International Conference on Pervasive Computing and Communications Workshops 2012."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against IEEE PerCom 2012 paper and UCI ML Repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 3850505,
+    "unit": "sensor-readings"
+  },
+  "dates": {
+    "published": "2012-08",
+    "last_updated": "2012-08"
+  },
+  "citation": {
+    "paper_title": "A Public Domain Dataset for Human Activity Recognition Using Smartphones and IMUs",
+    "paper_url": "https://doi.org/10.1109/PerComW.2012.6197483",
+    "authors": [
+      "Attila Reiss",
+      "Didier Stricker"
+    ],
+    "doi": "10.1109/PerComW.2012.6197483",
+    "bibtex": "@inproceedings{reiss2012pamap2,\n  title = {A Public Domain Dataset for Human Activity Recognition Using Smartphones and IMUs},\n  author = {Reiss, Attila and Stricker, Didier},\n  booktitle = {2012 IEEE International Conference on Pervasive Computing and Communications Workshops},\n  pages = {431--438},\n  year = {2012}\n}"
+  }
+}

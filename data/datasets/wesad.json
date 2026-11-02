@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wesad",
+  "slug": "wesad",
+  "name": "WESAD: Wearable Stress and Affect Detection",
+  "description": "WESAD is a publicly available multimodal dataset for wearable stress and affect detection. It includes physiological signals from 15 subjects during a controlled laboratory protocol with baseline, stress (Trier Social Stress Test), and amusement conditions recorded using both chest-worn (RespiBAN) and wrist-worn (Empatica E4) sensors.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/465/wesad+wearable+stress+and+affect+detection",
+  "publisher": {
+    "name": "UCI Machine Learning Repository (University of Siegen)",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "sensor",
+    "time-series",
+    "multimodal"
+  ],
+  "tasks": [
+    "affect-recognition",
+    "stress-detection"
+  ],
+  "tags": [
+    "wearables",
+    "stress-detection",
+    "affect-recognition",
+    "biosignals",
+    "eda",
+    "ecg",
+    "uci-ml-repository"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+  },
+  "source_references": [
+    {
+      "title": "WESAD on UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/dataset/465/wesad+wearable+stress+and+affect+detection",
+      "type": "official_website",
+      "notes": "Official UCI ML Repository dataset entry."
+    },
+    {
+      "title": "Introducing WESAD, a Multimodal Dataset for Wearable Stress and Affect Detection (ACM ICMI 2018)",
+      "url": "https://doi.org/10.1145/3242969.3242985",
+      "type": "original_paper",
+      "notes": "Proceedings of the 20th ACM International Conference on Multimodal Interaction (ICMI 2018)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against ACM ICMI 2018 paper and UCI ML Repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 15,
+    "unit": "subjects"
+  },
+  "dates": {
+    "published": "2018-09",
+    "last_updated": "2018-09"
+  },
+  "citation": {
+    "paper_title": "Introducing WESAD, a Multimodal Dataset for Wearable Stress and Affect Detection",
+    "paper_url": "https://doi.org/10.1145/3242969.3242985",
+    "authors": [
+      "Philip Schmidt",
+      "Attila Reiss",
+      "Robert Duerichen",
+      "Claus Stockhardt",
+      "Kristof Van Laerhoven"
+    ],
+    "doi": "10.1145/3242969.3242985",
+    "bibtex": "@inproceedings{schmidt2018wesad,\n  title = {Introducing WESAD, a Multimodal Dataset for Wearable Stress and Affect Detection},\n  author = {Schmidt, Philip and Reiss, Attila and Duerichen, Robert and Stockhardt, Claus and Van Laerhoven, Kristof},\n  booktitle = {Proceedings of the 20th ACM International Conference on Multimodal Interaction},\n  pages = {400--408},\n  year = {2018}\n}"
+  }
+}
