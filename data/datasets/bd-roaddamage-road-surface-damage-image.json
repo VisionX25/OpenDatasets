@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bd-roaddamage-road-surface-damage-image",
+  "slug": "bd-roaddamage-road-surface-damage-image",
+  "name": "BD-RoadDamage: A Road Surface Damage Image Dataset of Cracks and Potholes from Bangladesh",
+  "description": "This dataset contains [904] images of road surface damage in four classes: alligator cracks, longitudinal cracks, transverse cracks and potholes. The images were captured with smartphone cameras on roads in Bangladesh, between June 2025 and August 2025. They show typical urban and semi-urban asphalt roads under different lighting, wetness and traffic conditions. A student of the DIU NLP &amp; ML Research Lab, Daffodil International University, collected and labelled the dataset under the supervision of the lab's supervisors. The images are organised into four folders, one per class: Alligator_Crack: interconnected cracks forming a mesh-like pattern (115 images) Longitudinal_Crack: cracks parallel to the road centreline (404 images) Transverse_Crack: cracks running across the road (162 images) Pothole: bowl-shaped depressions where the road surface material is lost (345 images) All images are 640×640 pixels in JPG format. [State whether any augmentation, such as greyscale conversion or noise, was applied, and with which tool.] Exact duplicate images were removed. No faces or vehicle number plates are identifiable in the images [confirm]. Road damage in Bangladesh is usually found through manual inspection, which is slow and inconsistent. This dataset supports automated pavement inspection, including multi-class road damage classification, transfer learning with CNN and Vision Transformer models, lightweight models for mobile or vehicle-mounted cameras, and prioritising road maintenance in developing countries.",
+  "homepage_url": "https://data.mendeley.com/datasets/rdmgxzcfsz/1",
+  "publisher": {
+    "name": "Daffodil International University",
+    "type": "academic"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "image-classification"
+  ],
+  "tags": [
+    "computer-vision",
+    "object-detection",
+    "image-dataset"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "BD-RoadDamage: A Road Surface Damage Image Dataset of Cracks and Potholes from Bangladesh — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/rdmgxzcfsz/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Daffodil International University."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/rdmgxzcfsz.1",
+      "url": "https://doi.org/10.17632/rdmgxzcfsz.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/rdmgxzcfsz.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "BD-RoadDamage: A Road Surface Damage Image Dataset of Cracks and Potholes from Bangladesh",
+    "paper_url": "https://doi.org/10.17632/rdmgxzcfsz.1",
+    "authors": [
+      "Sadik Khan, Sadman",
+      "Hasan, Md Mahmudul"
+    ],
+    "doi": "10.17632/rdmgxzcfsz.1"
+  },
+  "sample_count": {
+    "total": 115,
+    "unit": "images",
+    "status": "verified"
+  }
+}

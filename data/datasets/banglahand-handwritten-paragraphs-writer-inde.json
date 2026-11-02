@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "banglahand-handwritten-paragraphs-writer-inde",
+  "slug": "banglahand-handwritten-paragraphs-writer-inde",
+  "name": "BanglaHand: A Dataset of Handwritten Paragraphs for Writer-Independent Handedness Recognition",
+  "description": "BanglaHand is a benchmark dataset of 42 writers (21 naturally left-handed and 21 right-handed) designed for offline handwriting analysis and handedness recognition in Bangla script. It contains 336 high-resolution smartphone photographs of complete handwritten paragraphs captured under rigorously controlled conditions. Key Highlights: • Balanced Demographic Benchmark: 21 confirmed left-handed and 21 right-handed writers, providing a 1:1 balanced distribution in a population where left-handed writing is exceptionally rare (approx. 1–2%). • Dual-Condition Text Design: Each writer contributed 8 paragraphs: - 6 shared prompts (S01–S06, 49–54 words each) identical across all writers for content-controlled benchmarking. - 2 writer-specific paragraphs on self-chosen topics to test generalization to unseen text. • Controlled Materials &amp; Capture: All participants wrote using pens and paper from a single common supply in mixed writing sessions. All pages were photographed in one session with a Samsung Galaxy A17 smartphone (4080 × 2296 pixels) in mixed order. • Geometric Audit &amp; Quality Control: A SIFT + RANSAC homography screening across all writer pairs confirmed writer uniqueness and prevented page duplicates. Images were rotated upright (lossless 4:4:4 JPEG, quality 98) without cropping, resizing, or photometric filtering. Archive Structure: • Left-Handed/ : 168 paragraph images across 21 writers (P1–P21) • Right-Handed/ : 168 paragraph images across 21 writers (P1–P21) • metadata/images.csv : Image-level records (capture timestamps, SHA-256 hashes, camera EXIF, and quality flags) • metadata/prompts.csv : Ground-truth Bangla text, English translations, and word counts for S01–S06 • metadata/writers.csv &amp; excluded_writers.csv : Writer profiles and exclusion provenance • SHA256SUMS.txt &amp; README.md : Byte-level integrity checksums and full data documentation Research Applications: • Writer-Independent Handedness Identification (Soft Biometrics) • Forensic Document Examination &amp; Questioned Handwriting Profiling • Candidate Search-Space Pruning in Automated Writer Identification • Clinical Neuromotor Lateralization &amp; Motor Control Studies • Indic Script Offline Handwritten Text Recognition (HTR) • Audits of Acquisition Bias &amp; Shortcut Learning in Deep Learning Companion Publications: 1. Data Descriptor: \"BanglaHand: A Dataset of Handwritten Paragraphs for Writer-Independent Handedness Recognition\", Data in Brief (submitted). 2. Methodology: \"Handedness identification from Bangla handwriting: A writer-independent evaluation across text conditions\", Pattern Recognition Letters (submitted).",
+  "homepage_url": "https://data.mendeley.com/datasets/n4sjstdzfy/1",
+  "publisher": {
+    "name": "Shahjalal University of Science and Technology",
+    "type": "academic"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "handwriting-recognition",
+    "image-classification"
+  ],
+  "tags": [
+    "nlp",
+    "bangla",
+    "bengali",
+    "language-model",
+    "text-classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "BanglaHand: A Dataset of Handwritten Paragraphs for Writer-Independent Handedness Recognition — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/n4sjstdzfy/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Shahjalal University of Science and Technology."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/n4sjstdzfy.1",
+      "url": "https://doi.org/10.17632/n4sjstdzfy.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Audited and verified in Task 15.1 against DataCite persistent DOI 10.17632/n4sjstdzfy.1. Independent academic provenance, license, and ML suitability confirmed."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "BanglaHand: A Dataset of Handwritten Paragraphs for Writer-Independent Handedness Recognition",
+    "paper_url": "https://doi.org/10.17632/n4sjstdzfy.1",
+    "authors": [
+      "Prappo, Tanzim Hasan",
+      "Hassan, Sayeed ",
+      "Ali, Sayem",
+      "Dhar, Sukhendra Nath",
+      "Rahman, M Shahidur"
+    ],
+    "doi": "10.17632/n4sjstdzfy.1"
+  },
+  "languages": [
+    "bn"
+  ]
+}

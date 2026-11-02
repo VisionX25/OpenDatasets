@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "id": "inmad-indonesia-madurese-sentences",
+  "slug": "inmad-indonesia-madurese-sentences",
+  "name": "INMAD (Indonesia - Madurese) Sentences Dataset",
+  "description": "The INMAD (Indonesia-Madurese) Sentence Dataset is a trilingual parallel corpus containing sentences in English, Indonesian, and Madurese, designed to support the development of natural language processing (NLP) technology for low-resource languages. This dataset integrates three primary sources from the IndoNLP repository: Korpus Nusantara (1,100 sentences), NusaX MT (994 sentences), and Nusa Paragraf (9,449 sentences), yielding a combined total of 11,543 parallel sentence pairs consolidated into a single raw CSV file. To increase the variety and volume of the dataset, data augmentation was performed via back-translation using the MarianMT model in Python with translating Indonesian sentences into English and then back into Indonesian, effectively doubling the corpus to 23,086 parallel sentence pairs. All Madurese translations were produced manually at the engghi-enten speech register by expert translators to ensure linguistic quality and naturalness. The English translations, derived from the back-translation process, were retained as an additional language column to support multilingual NLP tasks. This version presents a revised and cleaned edition of the dataset. A multi-stage data cleaning process was applied to improve overall data quality. Sentences containing the following types of noise were identified and removed: (1) word abbreviations and informal shorthand that do not reflect natural language structure; (2) hyperlinks and URLs embedded within sentence text; (3) emoticons and emoji characters; (4) social media artifacts such as hashtags (#) and mentions (@); and (5) other non-linguistic elements that may negatively affect model training. This cleaning process was applied to both the Indonesian and Madurese columns to ensure consistency across language pairs. The final dataset consists of 23,086 parallel sentence entries stored in CSV format with UTF-8 encoding, organized into three columns: english, indonesia, and madurese (Madurese translation at the engghi-enten register). This dataset is intended for use in machine translation development, cross-lingual NLP research, language preservation efforts, and digital lexicography for the Madurese language.",
+  "homepage_url": "https://data.mendeley.com/datasets/dt7d8dmfgs/3",
+  "publisher": {
+    "name": "Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-recognition",
+    "audio-classification"
+  ],
+  "tags": [
+    "audio",
+    "speech",
+    "acoustic",
+    "sound-classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "INMAD (Indonesia - Madurese) Sentences Dataset — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/dt7d8dmfgs/3",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Mendeley Data."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/dt7d8dmfgs.3",
+      "url": "https://doi.org/10.17632/dt7d8dmfgs.3",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/dt7d8dmfgs.3."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "INMAD (Indonesia - Madurese) Sentences Dataset",
+    "paper_url": "https://doi.org/10.17632/dt7d8dmfgs.3",
+    "authors": [
+      "Maulana, Fairuz Iqbal"
+    ],
+    "doi": "10.17632/dt7d8dmfgs.3"
+  },
+  "sample_count": {
+    "total": 1100,
+    "unit": "sentences",
+    "status": "verified"
+  }
+}

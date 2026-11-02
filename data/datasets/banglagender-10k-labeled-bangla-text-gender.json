@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "id": "banglagender-10k-labeled-bangla-text-gender",
+  "slug": "banglagender-10k-labeled-bangla-text-gender",
+  "name": "BanglaGender-10K: A Labeled Bangla Text Dataset for Gender Classification and Gender-Conditioned Text Generation",
+  "description": "BanglaGender-10K is a Bangla-language text dataset designed to support research in natural language processing (NLP), text classification, and gender-conditioned text generation. The dataset was collected in 2025 as an extension of an earlier Bangla literary text collection developed in 2024. The dataset contains 10,100 Bangla text samples organized into two gender-associated categories: Male and Female. It is provided in CSV format with two columns: `Text`, which contains the Bangla textual content, and `Gender`, which provides the corresponding class label. The dataset includes 5,100 Male-labeled samples and 5,000 Female-labeled samples, providing a near-balanced distribution for binary classification experiments. Total 20 authors used in this dataset: 10 Male &amp; 10 Female. The primary objective of the dataset is to facilitate the development and evaluation of computational methods for distinguishing between the two provided text-label categories. Potential applications include supervised text classification, linguistic feature analysis, text representation learning, gender-conditioned text generation, and exploratory research on gender-associated patterns in Bangla text. The dataset may also serve as a starting point for investigating text-style transformation between Male and Female target categories. However, direct Male-to-Female or Female-to-Male transformation requires an appropriate generation framework and evaluation methodology; the dataset does not itself establish that corresponding texts are parallel or provide paired transformation examples. Researchers can use the dataset to investigate traditional machine-learning classifiers, deep-learning architectures, and transformer-based language models for Bangla text processing. Recommended evaluation procedures include stratified train-validation-test splits, macro-averaged F1-score, precision, recall, and confusion-matrix analysis. Duplicate-text checks and leakage-aware splitting should be considered before model training. The dataset is intended to support reproducible research in Bangla NLP and gender-associated text analysis. The Male and Female labels should be interpreted as the categories provided in the dataset rather than as definitive evidence of an author's gender or of universal linguistic characteristics associated with gender. Researchers should review the dataset's collection and labeling procedures before drawing broader conclusions. Dataset format: CSV Number of records: 10,100 Number of classes: 2 Language: Bangla (Bengali) Collection year: 2025",
+  "homepage_url": "https://data.mendeley.com/datasets/77fsny3wz4/1",
+  "publisher": {
+    "name": "Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "natural-language-processing",
+    "text-classification"
+  ],
+  "tags": [
+    "nlp",
+    "bangla",
+    "bengali",
+    "language-model",
+    "text-classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "BanglaGender-10K: A Labeled Bangla Text Dataset for Gender Classification and Gender-Conditioned Tex — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/77fsny3wz4/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Mendeley Data."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/77fsny3wz4.1",
+      "url": "https://doi.org/10.17632/77fsny3wz4.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/77fsny3wz4.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "BanglaGender-10K: A Labeled Bangla Text Dataset for Gender Classification and Gender-Conditioned Text Generation",
+    "paper_url": "https://doi.org/10.17632/77fsny3wz4.1",
+    "authors": [
+      "Sadik Khan, Sadman"
+    ],
+    "doi": "10.17632/77fsny3wz4.1"
+  },
+  "languages": [
+    "bn"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "id": "multi-class-vehicle-detection-dense-heterogen",
+  "slug": "multi-class-vehicle-detection-dense-heterogen",
+  "name": "Multi-Class Vehicle Detection Dataset for Dense and Heterogeneous Urban Traffic in Bangladesh",
+  "description": "This dataset addresses a gap in vehicle detection research by providing a street-level image corpus of heterogeneous urban traffic with regional vehicle types absent from established driving benchmarks. It contains 6,989 manually annotated images captured by the authors at various points in Sylhet, Bangladesh, between August and December 2025, enabling researchers to develop and benchmark multi-class vehicle detection models using deep learning and computer vision under real-world traffic and imaging variability. Data Collection Sources and Scope Data was collected at street level under real road conditions: Sources: Smartphone photography by the authors using high-resolution mobile devices in Sylhet, Bangladesh. Collection period: August 2025 to December 2025. Final released volume: 6,989 images. Frames without a target vehicle class were removed during collection, so every image contains at least one annotated instance. Illumination coverage: Each image carries one illumination label assigned by visual inspection: 3,350 day and 3,639 night, a near-balanced split across lighting conditions. Processing: No augmentation, resizing, or colour correction was applied, so the images retain natural variability in brightness, contrast, sharpness, and overall quality from real-world imaging environments. Ethics: No personal information was accessed, recorded, or disclosed at any stage of the study; all images were fully anonymised prior to dataset creation to ensure confidentiality and ethical compliance. Class Definitions: The dataset includes eleven vehicle classes: i. Bicycle ii. Bike iii. Bus iv. CNGRickshaw v. Car vi. CycleRickshaw vii. Leguna viii. Microbus ix. Pickup x. Truck xi. VanRickshaw The taxonomy includes regional types — motorised three-wheeler CNG rickshaws, cycle rickshaws, van rickshaws, and Legunas — absent from benchmarks such as KITTI, Cityscapes, BDD100K, and COCO. Key Features: Regional vehicle types absent from established driving benchmarks Near-balanced split across day and night lighting conditions Exhaustive, non-overlapping manual annotation across all eleven classes Unedited images retaining natural real-world imaging variability Visually similar three-wheeler body types within a single taxonomy Use Cases: i. Multi-class vehicle detection with deep learning and computer vision ii. Traffic image analysis iii. Detection under low illumination iv. Long-tailed and few-shot detection v. Fine-grained discrimination between visually similar three-wheeler body types vi. Evaluating detector robustness and generalisation under real-world conditions File Format JPG images at 1280 × 720, with one plain-text annotation file per image in the Ultralytics YOLO convention. Annotations are axis-aligned bounding boxes produced manually in Roboflow, with coordinates normalised to the image dimensions so they remain valid after rescaling. Each image also carries one illumination label (day or night).",
+  "homepage_url": "https://data.mendeley.com/datasets/tx6699m24b/2",
+  "publisher": {
+    "name": "Leading University",
+    "type": "academic"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "image-classification"
+  ],
+  "tags": [
+    "computer-vision",
+    "object-detection",
+    "image-dataset"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Multi-Class Vehicle Detection Dataset for Dense and Heterogeneous Urban Traffic in Bangladesh — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/tx6699m24b/2",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Leading University."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/tx6699m24b.2",
+      "url": "https://doi.org/10.17632/tx6699m24b.2",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/tx6699m24b.2."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "Multi-Class Vehicle Detection Dataset for Dense and Heterogeneous Urban Traffic in Bangladesh",
+    "paper_url": "https://doi.org/10.17632/tx6699m24b.2",
+    "authors": [
+      "Rahman, Abidur ",
+      "Munim Shahriar, Sayed",
+      "Awsaf, Syed Ali",
+      "Jahan, Israt",
+      "Ferdous, Jannatul ",
+      "Chowdhury, Md Jalal Uddin"
+    ],
+    "doi": "10.17632/tx6699m24b.2"
+  },
+  "sample_count": {
+    "total": 6989,
+    "unit": "images",
+    "status": "verified"
+  }
+}

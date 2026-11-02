@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "soybean-yield-prediction-machine-learning-app",
+  "slug": "soybean-yield-prediction-machine-learning-app",
+  "name": "A dataset for soybean yield prediction (Machine Learning applications)",
+  "description": "The dataset combines meteorological, soil and soybean yield data collected from three publicly available sources: the Brazilian National Institute of Meteorology (Instituto Nacional de Meteorologia - INMET), the Brazilian Institute of Geography and Statistics (Instituto Brasileiro de Geografia e Estatística - IBGE), and the International Soil Reference and Information Centre (ISRIC). The final dataset consists of 765 observations and 37 variables. Each observation corresponds to a municipality-harvest instance and is associated with the soybean yield observed at the end of the growing season. Meteorological variables were derived from hourly measurements collected by INMET and aggregated using simple averages over the period from October 10 to December 31, lacking two-months for the harvest in February (the growing cycle of soybean was assumed as approximately 125 days). This two-month forecasting horizon has been adopted in previous crop yield prediction studies using Machine Learning applications. Soil variables were collected at the municipality level and used as static features, while additional engineered variables were extracted from the raw meteorological data.",
+  "homepage_url": "https://data.mendeley.com/datasets/hz75rs73yt/4",
+  "publisher": {
+    "name": "Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-regression",
+    "yield-prediction"
+  ],
+  "tags": [
+    "agriculture",
+    "plant-pathology",
+    "crop-monitoring",
+    "environment"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "A dataset for soybean yield prediction (Machine Learning applications) — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/hz75rs73yt/4",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Mendeley Data."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/hz75rs73yt.4",
+      "url": "https://doi.org/10.17632/hz75rs73yt.4",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Audited and verified in Task 15.1 against DataCite persistent DOI 10.17632/hz75rs73yt.4. Independent academic provenance, license, and ML suitability confirmed."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "A dataset for soybean yield prediction (Machine Learning applications)",
+    "paper_url": "https://doi.org/10.17632/hz75rs73yt.4",
+    "authors": [
+      "Filho, Elvio",
+      "Marcelloni, Francesco",
+      "Zanon, Lucas"
+    ],
+    "doi": "10.17632/hz75rs73yt.4"
+  },
+  "sample_count": {
+    "total": 765,
+    "unit": "records",
+    "status": "verified"
+  }
+}

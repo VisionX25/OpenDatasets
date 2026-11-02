@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "banglacineaspect-aspect-based-sentiment-analy",
+  "slug": "banglacineaspect-aspect-based-sentiment-analy",
+  "name": "BanglaCineAspect: A dataset for aspect-based sentiment analysis of Bangla movie reviews",
+  "description": "BanglaCineAspect is a dataset of 1,421 Bangla movie reviews annotated for aspect-based sentiment analysis (ABSA). Each review is labelled for nine aspects of a film: Direction, Acting, Songs &amp; Music, Screenplay, Story, Cinematography, Background Music, Editing and Dialogue. An aspect is coded 1 if the review expresses a positive opinion about it, 0 if the opinion is negative, and left blank if the review does not mention it. The dataset contains 3,786 aspect labels (2,696 positive and 1,090 negative), with 2.66 aspects per review on average. Reviews were collected from five sources: a Google Form shared with Bangla-speaking viewers, reviews gathered in person, YouTube comments, and user reviews on IMDb and Letterboxd. Every review comes with English text. Two annotators labelled the reviews, and 100 reviews were labelled by both to measure agreement (Cohen's kappa = 0.775; observed agreement = 88.56%). The repository contains two archives: 1. RawDataset.zip: the reviews and labels as originally collected and annotated (1,428 rows), before any cleaning. 2. BanglaCineAspect_preprocessed_dataset.zip: the cleaned dataset used for modelling, containing: - Bangla_Movie_Reviews_ABSA_preprocessed.csv and .xlsx: 1,421 reviews with 14 columns (review_id, review_bn_clean, review_bn_original, review_en, source_excel_row and the nine aspect columns). The CSV is UTF-8 with BOM so Bangla displays correctly in Excel. - data_dictionary.csv: description of every column and of the label coding. - dropped_rows.csv: the 7 exact-duplicate rows removed during cleaning, with their original row numbers. - README.txt: a short summary of the dataset and cleaning steps. The data can be used to train and evaluate aspect-level sentiment classifiers for Bangla, to compare deep learning and transformer models on a low-resource language, and to study cross-lingual sentiment analysis using the parallel English text.",
+  "homepage_url": "https://data.mendeley.com/datasets/zv6mms5vfh/1",
+  "publisher": {
+    "name": "Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "natural-language-processing"
+  ],
+  "tags": [
+    "nlp",
+    "bangla",
+    "bengali",
+    "language-model",
+    "text-classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "BanglaCineAspect: A dataset for aspect-based sentiment analysis of Bangla movie reviews — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/zv6mms5vfh/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Mendeley Data."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/zv6mms5vfh.1",
+      "url": "https://doi.org/10.17632/zv6mms5vfh.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/zv6mms5vfh.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "BanglaCineAspect: A dataset for aspect-based sentiment analysis of Bangla movie reviews",
+    "paper_url": "https://doi.org/10.17632/zv6mms5vfh.1",
+    "authors": [
+      "Zubaer, Imam Abu ",
+      "Majumder , Anindya ",
+      "Azwad, Tafhimul ",
+      "Chowdhury, Mahfuzulhoq"
+    ],
+    "doi": "10.17632/zv6mms5vfh.1"
+  },
+  "languages": [
+    "bn"
+  ]
+}

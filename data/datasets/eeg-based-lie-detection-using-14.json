@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "id": "eeg-based-lie-detection-using-14",
+  "slug": "eeg-based-lie-detection-using-14",
+  "name": "EEG-Based Lie Detection Dataset using 14-Channel Emotiv EPOC+: Instructed-Response and Free-Response Protocols",
+  "description": "This dataset contains EEG recordings from 54 participants collected with a 14-channel Emotiv EPOC+ headset (128 Hz, EmotivPRO software) during a question-and-answer deception task. Two protocols are included: an instructed-response protocol (32 participants), where participants were told in advance whether to answer each question truthfully or deceptively, giving unambiguous experimenter-assigned labels; and a free-response protocol (22 participants), where participants freely chose and self-reported whether they lied or told the truth. Both protocols use the same 32-question set, split into four categories — Personal Information, General Knowledge, Control, and Situation-Based. Data is organized as Instructed_Response and Free_Response, each with one folder per de-identified participant (Subject1–Subject32, Subject1–Subject22), and within each participant folder, recordings are split into true and false subfolders per EmotivPRO's trial label. Each trial is stored as three files: a .json metadata file, a .md.mc.pm.fe.bp.csv file with the raw 14-channel EEG plus Emotiv's motion, facial-expression, mental-command, and band-power outputs, and an _intervalMarker.csv file. The instructed-response protocol has an even 512/512 truth/lie split; the free-response protocol's split varies by participant since labeling was self-reported. This study was reviewed and approved by the Institutional Review Board (IRB) of Independent University, Bangladesh (IUB) — Research Project Number 2025-SETS-NSR:04, \"Design and Development of a Lie Detection System Using EEG Signals,\" approved September 4, 2025, under Principal Investigator Dr. Md. Kafiul Islam. Informed consent was obtained from all participants, who are identified in the dataset only by de-identified study IDs.",
+  "homepage_url": "https://data.mendeley.com/datasets/3d5frp7rnv/1",
+  "publisher": {
+    "name": "Independent University",
+    "type": "academic"
+  },
+  "modalities": [
+    "sensor"
+  ],
+  "tasks": [
+    "signal-processing",
+    "classification"
+  ],
+  "tags": [
+    "multimodal",
+    "scientific-ml",
+    "sensor-data",
+    "interdisciplinary"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "EEG-Based Lie Detection Dataset using 14-Channel Emotiv EPOC+: Instructed-Response and Free-Response — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/3d5frp7rnv/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Independent University."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/3d5frp7rnv.1",
+      "url": "https://doi.org/10.17632/3d5frp7rnv.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/3d5frp7rnv.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "EEG-Based Lie Detection Dataset using 14-Channel Emotiv EPOC+: Instructed-Response and Free-Response Protocols",
+    "paper_url": "https://doi.org/10.17632/3d5frp7rnv.1",
+    "authors": [
+      "RAHMAN, MD ASHIKUR",
+      "NOMUN, MD AL",
+      "AHMED, RIZU",
+      "MD SEAM, ABU SALEH",
+      "SAKIB, NAZMUS",
+      "Islam, Md Kafiul"
+    ],
+    "doi": "10.17632/3d5frp7rnv.1"
+  }
+}

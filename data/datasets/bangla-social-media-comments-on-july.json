@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bangla-social-media-comments-on-july",
+  "slug": "bangla-social-media-comments-on-july",
+  "name": "Bangla Social Media Comments on the July 2024 Uprising in Bangladesh",
+  "description": "This dataset contains 10,432 Bangla comments from public Facebook posts and YouTube videos about the July 2024 uprising in Bangladesh, each labelled Positive (6,076; 58.2%), Neutral (2,321; 22.2%) or Negative (2,035; 19.5%). The comments were scraped in 2025 from highly viewed posts and videos (about 20,000 collected), filtered for spam, bots and off-topic content, and then annotated by two final-year CSE students from the DIU NLP &amp; ML Research Lab. A professor from the CSE department checked and corrected the labels. The labels reflect stance toward the movement as well as tone, and inter-annotator agreement was not computed. The CSV has two columns, `Text` (raw Bangla with emoji and punctuation preserved) and `Label`, with a median length of 9 words. It includes no usernames, links, timestamps or other metadata. Because slogans recur often, users should deduplicate and keep near-duplicate comments in one split before training. Oversampling before splitting inflated TF-IDF accuracy from 0.854 to 0.946 in our experiments. Under a leakage-controlled protocol, BanglaBERT (BUET) reaches a macro-F1 of 0.867, while a few-shot Qwen2.5-7B-Instruct reaches 0.616. The dataset is intended for Bangla sentiment analysis, political discourse research and leakage-aware benchmarking. The comments come from popular public posts on two platforms and are dominated by Positive sentiment, so results describe this corpus and not Bangladeshi public opinion. Comments deleted before 2025 are missing. Only public comments are included, but short ones can still be found by searching the platforms, so users must not attempt to re-identify authors or use the data for profiling.",
+  "homepage_url": "https://data.mendeley.com/datasets/f45b4r3gmb/1",
+  "publisher": {
+    "name": "Daffodil International University",
+    "type": "academic"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "natural-language-processing"
+  ],
+  "tags": [
+    "nlp",
+    "bangla",
+    "bengali",
+    "language-model",
+    "text-classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Bangla Social Media Comments on the July 2024 Uprising in Bangladesh — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/f45b4r3gmb/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Daffodil International University."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/f45b4r3gmb.1",
+      "url": "https://doi.org/10.17632/f45b4r3gmb.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/f45b4r3gmb.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "Bangla Social Media Comments on the July 2024 Uprising in Bangladesh",
+    "paper_url": "https://doi.org/10.17632/f45b4r3gmb.1",
+    "authors": [
+      "Sadik Khan, Sadman",
+      "Parvez, Rasel "
+    ],
+    "doi": "10.17632/f45b4r3gmb.1"
+  },
+  "languages": [
+    "bn"
+  ]
+}

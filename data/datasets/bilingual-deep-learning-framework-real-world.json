@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bilingual-deep-learning-framework-real-world",
+  "slug": "bilingual-deep-learning-framework-real-world",
+  "name": "A Bilingual Deep Learning Framework for Real-World Afghan License Plate Detection and Persian–English Recognition",
+  "description": "This dataset contains approximately 8,500 annotated images of vehicles and license plates from Afghanistan and was prepared for the development and evaluation of an automatic license plate detection system. The dataset focuses on the detection stage of an Automatic License Plate Recognition (ALPR) pipeline, where the objective is to identify and localize the license plate region within a full vehicle or scene image. Each image contains a vehicle or scene in which a license plate is visible. The license plate regions are annotated using bounding boxes that define the location of the plate within the image. These annotations enable object detection models to learn how to locate Afghan license plates within complete images before the recognition stage is performed. The dataset includes variations in vehicle type, license plate appearance, viewing angle, distance, background, illumination, and image quality. These variations provide realistic conditions for developing and evaluating license plate detection models. The dataset is organized into training, validation, and testing subsets to support model training and performance evaluation. The annotations are provided in COCO JSON format, which stores image information, object categories, and bounding-box coordinates in a structured format. This makes the dataset suitable for different object detection frameworks and allows the annotations to be converted into other formats when necessary. In our research, this dataset was used for the detection component of an end-to-end Afghan License Plate Recognition pipeline. A YOLO-based object detection model was trained to locate license plates within full images. Once a license plate is detected, its region can be cropped from the original image and passed to a separate Optical Character Recognition (OCR) model for character recognition. Therefore, this published dataset specifically represents the license plate detection component of the system and does not include the separate augmented dataset used for training the recognition model. The dataset can support research in automatic license plate detection, Automatic License Plate Recognition (ALPR), computer vision, intelligent transportation systems, traffic monitoring, and object detection. By making the dataset publicly available, it can support the reproducibility of the detection experiments and provide a resource for researchers interested in developing and evaluating computer vision approaches for Afghan license plates.",
+  "homepage_url": "https://data.mendeley.com/datasets/7vzmbpg296/2",
+  "publisher": {
+    "name": "Asian University for Women",
+    "type": "academic"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "image-classification"
+  ],
+  "tags": [
+    "computer-vision",
+    "object-detection",
+    "image-dataset"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "A Bilingual Deep Learning Framework for Real-World Afghan License Plate Detection and Persian–Englis — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/7vzmbpg296/2",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Asian University for Women."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/7vzmbpg296.2",
+      "url": "https://doi.org/10.17632/7vzmbpg296.2",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/7vzmbpg296.2."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "A Bilingual Deep Learning Framework for Real-World Afghan License Plate Detection and Persian–English Recognition",
+    "paper_url": "https://doi.org/10.17632/7vzmbpg296.2",
+    "authors": [
+      "Ahmadi, Majabeen",
+      "Fazel, Tamana",
+      "Algaradi, Khawlah"
+    ],
+    "doi": "10.17632/7vzmbpg296.2"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "banglaauth-12-bangla-literary-text-authorship",
+  "slug": "banglaauth-12-bangla-literary-text-authorship",
+  "name": "BanglaAuth-12: A Bangla Literary Text Dataset for Authorship Identification and Attribution",
+  "description": "BanglaAuth-12 is a Bangla literary text dataset developed to support research on authorship identification, authorship attribution, natural language processing (NLP), and text classification. The dataset was collected from September to December 2024 by students of the DIU NLP &amp; ML Research Lab at Daffodil International University (DIU), Bangladesh, under the supervision of the Lab Supervisor. The dataset contains 4,105 records, primarily comprising Bangla literary text passages associated with author names and book titles. The source material includes literary works by notable Bangla-language writers, including Jibanananda Das, Rabindranath Tagore, Kazi Nazrul Islam, Humayun Ahmed, Satyajit Ray, Manik Bandopadhyay, Muhammad Zafar Iqbal, Abul Asad, and Sukumar Ray. The current CSV contains 12 distinct author-label strings before normalization; whitespace normalization reduces this to 10 distinct labels, with a remaining spelling variation for Sukumar Ray that requires standardization. Each record primarily contains three fields: the text passage (`Para`), the corresponding author label (`Author Name`), and the associated book title (`Book`). The dataset includes both prose and poetry passages, making it potentially useful for studying stylistic differences across authors and literary texts. Potential applications include supervised authorship classification, stylometric analysis, Bangla text representation learning, feature engineering, machine-learning and deep-learning model evaluation, and comparative experiments involving traditional text-classification methods and transformer-based language models. The dataset is distributed in CSV format for convenient use with Python, pandas, and common NLP and machine-learning frameworks. Researchers should inspect missing values, standardize author-name variants, verify text-to-author mappings, and establish appropriate training and testing splits before conducting experiments. Where multiple passages originate from the same book or source, evaluation should account for potential source leakage. This dataset is intended to facilitate research on Bangla-language computational linguistics and authorship analysis. Researchers should verify the provenance, licensing, and applicable reuse permissions of the underlying literary texts before redistribution or commercial use.",
+  "homepage_url": "https://data.mendeley.com/datasets/5mkdyy5xwb/1",
+  "publisher": {
+    "name": "Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "natural-language-processing",
+    "text-classification"
+  ],
+  "tags": [
+    "nlp",
+    "bangla",
+    "bengali",
+    "language-model",
+    "text-classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "BanglaAuth-12: A Bangla Literary Text Dataset for Authorship Identification and Attribution — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/5mkdyy5xwb/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Mendeley Data."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/5mkdyy5xwb.1",
+      "url": "https://doi.org/10.17632/5mkdyy5xwb.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/5mkdyy5xwb.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "BanglaAuth-12: A Bangla Literary Text Dataset for Authorship Identification and Attribution",
+    "paper_url": "https://doi.org/10.17632/5mkdyy5xwb.1",
+    "authors": [
+      "Sadik Khan, Sadman"
+    ],
+    "doi": "10.17632/5mkdyy5xwb.1"
+  },
+  "languages": [
+    "bn"
+  ],
+  "sample_count": {
+    "total": 4105,
+    "unit": "records",
+    "status": "verified"
+  }
+}

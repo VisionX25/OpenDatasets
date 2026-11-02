@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "id": "hijaiyah-letter-pronunciation-audio-articulat",
+  "slug": "hijaiyah-letter-pronunciation-audio-articulat",
+  "name": "Hijaiyah Letter Pronunciation Audio Dataset for Articulation Characteristic Classification",
+  "description": "This dataset contains audio recordings of Arabic (hijaiyah) letters pronounced correctly and incorrectly, collected to support research on automatic classification of letter pronunciation characteristics (sifat huruf) in Quranic recitation learning. Content - 21,600 WAV recordings, balanced between two classes: \"Data Benar\" (correct pronunciation, 10,800 files) and \"Data Salah\" (incorrect pronunciation, 10,800 files). - Each class has 20 numbered sub-folders; each sub-folder holds the recordings of one respondent (540 files per sub-folder). - Each respondent pronounced 36 items (the 28 hijaiyah letters plus letter variants), each with 3 vowel marks (harakat: 1 = fathah, 2 = kasrah, 3 = dhammah), repeated 5 times. - Recordings are mono, mostly 44.1 kHz (a few at 48 kHz), and about 0.7-1.0 seconds long. - File naming: --.wav, e.g. 21-1-1.wav = item 21, fathah, repetition 1. Annotation Each letter is annotated with 12 binary/ternary label variables covering 18 articulation characteristics (sifat huruf), following Al-Hafiz (2014). Five variables encode opposing pairs (S) and seven encode characteristics without an opposite (T): S1: jahr = 0 / hams = 1 S2: rakhawah = 0 / bayniyyah = 1 / syiddah = 2 S3: istifal = 0 / isti'la = 1 S4: infitah = 0 / ithbaq = 1 S5: ishmat = 0 / idzlaq = 1 T1 shafir, T2 qalqalah, T3 liin, T4 inhirah, T5 takrir, T6 tafasysyi, T7 istithaalah (1 = present, 0 = absent). Labels follow the letter and, for some letters, the vowel mark (e.g. tafkhim of some letters depends on the vowel). In the accompanying article, three properties are modelled: S1 (jahr-hams), S3 (tarqiq-tafkhim) and T2 (qalqalah). For the incorrect class, the label of these three properties is the inverse of the correct label of the same item. [Fill in: label convention for the incorrect class for the other nine properties, or state that they are given for the correct class only.] The documentation lists the exact rules, the 9 recordings with non-standard file names excluded from experiments (21,591 recordings used), and respondent sub-folders that contain identical recordings. Additional files - Label and index tables (one row per recording, with respondent and cross-validation group). - Respondent-level train/test split (seed 42) and 5-fold cross-validation assignment. - Source code for preprocessing (resampling, voice activity detection, noise reduction, trimming, normalisation), augmentation (time stretching, pitch shifting, additive noise, time shifting), feature extraction (MFCC, Mel spectrogram, LPC) and model training. Intended use Training and evaluating classifiers for letter pronunciation characteristics. Because several recordings per respondent exist, splits must be made at respondent level to avoid data leakage; augmented copies must follow the split of their source recording.",
+  "homepage_url": "https://data.mendeley.com/datasets/r5fy2dd98g/1",
+  "publisher": {
+    "name": "Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-recognition",
+    "audio-classification"
+  ],
+  "tags": [
+    "audio",
+    "speech",
+    "acoustic",
+    "sound-classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Hijaiyah Letter Pronunciation Audio Dataset for Articulation Characteristic Classification — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/r5fy2dd98g/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Mendeley Data."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/r5fy2dd98g.1",
+      "url": "https://doi.org/10.17632/r5fy2dd98g.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/r5fy2dd98g.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "Hijaiyah Letter Pronunciation Audio Dataset for Articulation Characteristic Classification",
+    "paper_url": "https://doi.org/10.17632/r5fy2dd98g.1",
+    "authors": [
+      "Azis, Aaz M Hafidz"
+    ],
+    "doi": "10.17632/r5fy2dd98g.1"
+  },
+  "sample_count": {
+    "total": 21591,
+    "unit": "recordings",
+    "status": "verified"
+  }
+}

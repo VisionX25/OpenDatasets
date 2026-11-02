@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "banglaclausebench-clause-level-annotated-bang",
+  "slug": "banglaclausebench-clause-level-annotated-bang",
+  "name": "BanglaClauseBench: A clause-level annotated dataset of Bangla sentences",
+  "description": "BanglaClauseBench is a hand-annotated dataset for clause-level analysis of Bangla (Bengali). It contains 9,062 sentences, 24,475 clauses and 132,242 tokens. We collected the text from public Facebook posts, online Bangla news portals, blogs and YouTube comments. We removed usernames, profile links, URLs, timestamps and anything else that could identify a person. Every token has a Universal POS tag. For every clause we record: clause_text: the clause as it appears in the sentence clause_type: MAIN, COORDINATE, COMPLEMENT, SUBORDINATE, CONDITIONAL, RELATIVE or TEMPORAL head_verb: the predicate head, including multi-word complex predicates subject and object: if the subject is dropped, the annotators wrote the subject they understood from context connector: the word or suffix that links the clause, e.g. যদি, যে, এবং, -লে dependency_relation: root, conj, advcl, ccomp, relcl, xcomp or acl parent_clause: the clause it depends on Together, these fields turn each sentence into a small clause tree. Three annotators labelled every sentence on their own. We kept a label when at least two agreed, and a fourth expert decided when all three differed. Mean pairwise Cohen's kappa is 0.87.",
+  "homepage_url": "https://data.mendeley.com/datasets/bb9rhhzz77/2",
+  "publisher": {
+    "name": "Khulna Khan Bahadur Ahsanullah University",
+    "type": "academic"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "natural-language-processing"
+  ],
+  "tags": [
+    "nlp",
+    "bangla",
+    "bengali",
+    "language-model",
+    "text-classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "BanglaClauseBench: A clause-level annotated dataset of Bangla sentences — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/bb9rhhzz77/2",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Khulna Khan Bahadur Ahsanullah University."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/bb9rhhzz77.2",
+      "url": "https://doi.org/10.17632/bb9rhhzz77.2",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/bb9rhhzz77.2."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "BanglaClauseBench: A clause-level annotated dataset of Bangla sentences",
+    "paper_url": "https://doi.org/10.17632/bb9rhhzz77.2",
+    "authors": [
+      "Ifty, Imran",
+      " Shafi, Mushfiq Shahrier ",
+      "Mohalder, Rathindra Nath",
+      "Sakib, Sadman",
+      "Biswas, Susmita "
+    ],
+    "doi": "10.17632/bb9rhhzz77.2"
+  },
+  "languages": [
+    "bn"
+  ],
+  "sample_count": {
+    "total": 9062,
+    "unit": "sentences",
+    "status": "verified"
+  }
+}

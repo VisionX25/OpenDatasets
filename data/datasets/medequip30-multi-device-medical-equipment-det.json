@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "medequip30-multi-device-medical-equipment-det",
+  "slug": "medequip30-multi-device-medical-equipment-det",
+  "name": "MedEquip30: A Multi-Device Dataset for Medical Equipment Detection",
+  "description": "MedEquip30 is a real-world image dataset of 30 types of commonly used medical and first-aid equipment, such as blood pressure monitors, thermometers, glucometers, pulse oximeters, surgical instruments, and everyday consumables like gauze, bandages, and saline. The images were taken from several places using four smartphones: Apple iPhone 15 Pro, OnePlus 9R, Samsung Galaxy A56, and Samsung Galaxy A05s. Photos were captured under different lighting, backgrounds, and viewing angles to reflect real clinical settings. The dataset contains 4,504 images and 13,492 polygon annotations. All images are resized to 640 × 640 pixels and split into training (70%), validation (20%), and test (10%) sets. Annotations are provided in COCO JSON format, and a metadata file lists the subset, object classes, and capture device for each image. The dataset can be used for object detection, instance segmentation, and cross-device evaluation, and supports applications such as equipment inventory monitoring and readiness checking in healthcare facilities. Details of the collection process and benchmark results with YOLOv11 and RF-DETR are given in the related article.",
+  "homepage_url": "https://data.mendeley.com/datasets/6skm7ngr8k/1",
+  "publisher": {
+    "name": "United International University",
+    "type": "academic"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "image-classification"
+  ],
+  "tags": [
+    "computer-vision",
+    "object-detection",
+    "image-dataset"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "MedEquip30: A Multi-Device Dataset for Medical Equipment Detection — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/6skm7ngr8k/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on United International University."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/6skm7ngr8k.1",
+      "url": "https://doi.org/10.17632/6skm7ngr8k.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/6skm7ngr8k.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "MedEquip30: A Multi-Device Dataset for Medical Equipment Detection",
+    "paper_url": "https://doi.org/10.17632/6skm7ngr8k.1",
+    "authors": [
+      "Hossain, Md Sakhawat",
+      "Haque, Md Sadman",
+      "Rahman, Md Mostafizur ",
+      "Mousum, Md Mosaddik Mashrafi ",
+      "-, Ohidujjaman"
+    ],
+    "doi": "10.17632/6skm7ngr8k.1"
+  },
+  "sample_count": {
+    "total": 4504,
+    "unit": "images",
+    "status": "verified"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "id": "medsynthdetect-real-vs-ai-generated-medical",
+  "slug": "medsynthdetect-real-vs-ai-generated-medical",
+  "name": "MedSynthDetect: A Real vs AI-Generated Medical Image Dataset of X-ray, CT and MRI",
+  "description": "This dataset is designed for detecting AI-generated (synthetic) medical images. It contains real and AI-generated images from three imaging modalities: X-ray, computed tomography (CT) and magnetic resonance imaging (MRI). The real images were collected between February and April 2025 from publically available data source. The AI-generated images were created with ChatGPT using text prompts that ask for realistic medical scans of each modality. A student of the DIU NLP &amp; ML Research Lab, Daffodil International University, prepared the dataset under the supervision of the lab's supervisors. The dataset is organised into six folders: X-ray: real X-ray images (500) AI_X-ray: ChatGPT-generated X-ray images (500) CT Scan: real CT images (500) AI_CT Scan: ChatGPT-generated CT images (500) MRI: real MRI images ([496]) AI_MRI: ChatGPT-generated MRI images ([385]) Images in each folder are numbered sequentially (1, 2, 3, …). All images were resized to 512×512 pixels and saved in PNG format, so that file format and resolution do not reveal whether an image is real or synthetic. Exact duplicate images were removed. All patient-identifying information was removed from the real images. The dataset supports binary real-vs-fake classification, six-class classification (modality × authenticity), cross-modality generalisation studies (for example, training on X-ray and testing on MRI), and benchmarking of deepfake and synthetic-image detectors in medical imaging. With generative AI tools now widely available, fabricated medical images are a risk to clinical trust, insurance and research integrity. This dataset gives researchers a starting point for building detectors against this kind of misuse. The synthetic images are not clinically valid and must not be used for diagnosis.",
+  "homepage_url": "https://data.mendeley.com/datasets/3vjbk4rw2x/1",
+  "publisher": {
+    "name": "Daffodil International University",
+    "type": "academic"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "medical-imaging",
+    "disease-detection"
+  ],
+  "tags": [
+    "medical-imaging",
+    "healthcare",
+    "clinical-data",
+    "diagnostic-ai"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "MedSynthDetect: A Real vs AI-Generated Medical Image Dataset of X-ray, CT and MRI — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/3vjbk4rw2x/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Daffodil International University."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/3vjbk4rw2x.1",
+      "url": "https://doi.org/10.17632/3vjbk4rw2x.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/3vjbk4rw2x.1."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "MedSynthDetect: A Real vs AI-Generated Medical Image Dataset of X-ray, CT and MRI",
+    "paper_url": "https://doi.org/10.17632/3vjbk4rw2x.1",
+    "authors": [
+      "Sadik Khan, Sadman",
+      "Islam, Md Muhetul"
+    ],
+    "doi": "10.17632/3vjbk4rw2x.1"
+  }
+}

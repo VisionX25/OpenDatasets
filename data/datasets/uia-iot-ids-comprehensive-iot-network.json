@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uia-iot-ids-comprehensive-iot-network",
+  "slug": "uia-iot-ids-comprehensive-iot-network",
+  "name": "UIA-IOT-IDS dataset: Comprehensive IoT network intrusion detection and sensor-anomaly",
+  "description": "This record contains two complementary, fully labelled datasets for machine-learning-based IoT security, together with the complete acquisition and analysis code. All data were collected from a single physical smart-home testbed at the University of Agder (Grimstad, Norway), built around a resource-constrained Raspberry Pi 3 gateway, five ESP8266 + DHT22 temperature/humidity nodes in distinct rooms, a PySense board, a Flask IoT server with InfluxDB storage, and three Kali Linux attacker VMs. Network flows were computed on-device in real time by a custom tcpdump-based extractor, so no raw PCAP is stored. The deposit is organised into two datasets that serve two tasks: (1) IDS_Dataset - network-flow INTRUSION DETECTION. The \"Original\" folder holds the raw, as-collected flows: 3,637,408 labelled bidirectional records across 54 classes, each described by 75 columns (6 identifier/metadata fields + 69 statistical features) plus a label. Of the 69 features, 46 are schema-compatible with CIC-IoT-2023 and 23 are additional bidirectional descriptors (per-direction packet counts, packet-length and inter-arrival-time statistics, and flow rates). The \"Balanced\" folder holds a cleaned, SMOTE-balanced version: 1,415,074 records, one CSV per class, with identifier and zero-variance columns removed (64 features + label). The taxonomy spans 51 attack sub-types in nine categories - Reconnaissance, DoS, DDoS, Brute Force, Web-based, Mirai, Spoofing, False Data Injection and Backdoor/C2 - plus three benign traffic types (sensor, SSH, Grafana). It reproduces the eight CIC-IoT-2023 categories and adds families absent from common benchmarks: False Data Injection (direct injection and man-in-the-middle sensor replay) and Backdoor/command-and-control beaconing. (2) AD_Dataset - sensor ANOMALY DETECTION. The \"Benign\" folder holds timestamped temperature and humidity readings from the five DHT22 nodes (one CSV per node); the \"Abnormal\" folder holds readings from three anomaly sources: a heat-biased PySense board (hardware fault), direct false-data injection, and ARP-spoofing replay. 4,253,024 readings fall within the 1 March - 13 April 2026 window analysed in the article; earlier readings are also included. Each reading is stored as one row carrying either a temperature or a humidity value (InfluxDB export format). All tabular data are UTF-8 CSV files with a header row; every network-flow record carries an explicit label. The deposit also includes the full code: the real-time flow extractor, the Flask server with intentionally vulnerable endpoints, the attack and injection scripts, the SMOTE preprocessing, and the model code (XGBoost benchmark, LSTM-autoencoder, MAML, Prototypical Networks). A disjoint base/novel class split supports supervised, unsupervised and few-shot detection research.",
+  "homepage_url": "https://data.mendeley.com/datasets/h23z8f9h3y/2",
+  "publisher": {
+    "name": "University of Agder",
+    "type": "academic"
+  },
+  "modalities": [
+    "sensor",
+    "tabular"
+  ],
+  "tasks": [
+    "intrusion-detection",
+    "anomaly-detection"
+  ],
+  "tags": [
+    "computer-vision",
+    "object-detection",
+    "image-dataset"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UIA-IOT-IDS dataset: Comprehensive IoT network intrusion detection and sensor-anomaly — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/h23z8f9h3y/2",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on University of Agder."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/h23z8f9h3y.2",
+      "url": "https://doi.org/10.17632/h23z8f9h3y.2",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Audited and verified in Task 15.1 against DataCite persistent DOI 10.17632/h23z8f9h3y.2. Independent academic provenance, license, and ML suitability confirmed."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "UIA-IOT-IDS dataset: Comprehensive IoT network intrusion detection and sensor-anomaly",
+    "paper_url": "https://doi.org/10.17632/h23z8f9h3y.2",
+    "authors": [
+      "Zhang, Shiyi",
+      "Sechi, Fabien",
+      "Noori, Nadia Saad"
+    ],
+    "doi": "10.17632/h23z8f9h3y.2"
+  },
+  "sample_count": {
+    "total": 1415074,
+    "unit": "records",
+    "status": "verified"
+  }
+}

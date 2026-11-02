@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uzser-mfcc",
+  "slug": "uzser-mfcc",
+  "name": "UzSER-MFCC",
+  "description": "This dataset provides acoustic features for speech emotion recognition (SER) in Uzbek, a low-resource Turkic language. It is derived from 598 emotional speech utterances (26.5 min in total; 0.41–4.99 s, mean 2.66 s) segmented from the dialogue of three Uzbek-language feature films (Novda, Tinchlik ortida, Vasiyat) publicly available on YouTube. The utterances were spoken by approximately 12–13 speakers (about 4 female and 8–9 male) and were labelled by four annotators into six emotion classes: anger (ANG, 101), disgust (DIS, 108), fear (FEA, 106), happiness (HAP, 73), neutral (NEU, 106) and sadness (SAD, 104). Source audio was decoded with FFmpeg and standardised to 16 kHz, 16-bit, mono PCM before feature extraction. Because the source films are protected by copyright, raw audio is not distributed. Instead, the dataset contains: (1) metadata.csv – one row per utterance with emotion label, source film, duration and signal-quality measures; (2) features/utterance_mfcc40_stats.csv – 400 utterance-level statistics computed from 40 MFCCs and their first- and second-order derivatives; (3) features/frame_mfcc13/ – frame-level 13-dimensional MFCC matrices (NumPy .npy, 25 ms Hamming window, 10 ms hop) for every utterance; (4) tables/ and figures/ – descriptive statistics, class distributions and baseline results; (5) scripts/ – the complete Python code for feature extraction, statistics, figures and baseline classification. Baseline stratified 5-fold cross-validation on the utterance-level features gives 45.8% accuracy (UAR 0.449) for an SVM and 47.0% accuracy (UAR 0.462) for a random forest, against a chance level of 16.7%. The emotions are unevenly distributed across the three films, so film-aware evaluation is recommended (see README.md). The dataset can be used for benchmarking SER methods, cross-lingual and transfer-learning experiments, and feature-level research for Uzbek.",
+  "homepage_url": "https://data.mendeley.com/datasets/5wtn8rwfnc/1",
+  "publisher": {
+    "name": "Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "audio",
+    "tabular"
+  ],
+  "tasks": [
+    "speech-emotion-recognition",
+    "audio-classification"
+  ],
+  "tags": [
+    "audio",
+    "speech",
+    "acoustic",
+    "sound-classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UzSER-MFCC — Repository Landing Page",
+      "url": "https://data.mendeley.com/datasets/5wtn8rwfnc/1",
+      "type": "repository",
+      "notes": "Deposited research dataset hosted on Mendeley Data."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/5wtn8rwfnc.1",
+      "url": "https://doi.org/10.17632/5wtn8rwfnc.1",
+      "type": "documentation",
+      "notes": "Canonical persistent DOI reference."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-01",
+    "notes": "Audited and verified in Task 15.1 against DataCite persistent DOI 10.17632/5wtn8rwfnc.1. Independent academic provenance, license, and ML suitability confirmed."
+  },
+  "dates": {
+    "published": "2026-01-01"
+  },
+  "citation": {
+    "paper_title": "UzSER-MFCC",
+    "paper_url": "https://doi.org/10.17632/5wtn8rwfnc.1",
+    "authors": [
+      "Madaminjonov, Akbarjon"
+    ],
+    "doi": "10.17632/5wtn8rwfnc.1"
+  }
+}
