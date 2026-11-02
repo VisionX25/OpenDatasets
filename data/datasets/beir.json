@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "beir",
+  "slug": "beir",
+  "name": "BEIR: Benchmarking Information Retrieval",
+  "description": "BEIR is a heterogeneous benchmark for evaluating information retrieval models in a zero-shot setting across 17 diverse datasets covering 9 tasks (fact checking, bio-medical retrieval, question answering, argument retrieval, tweet retrieval, duplicate question retrieval, news retrieval, entity retrieval, and citation prediction).",
+  "homepage_url": "https://github.com/beir-cellar/beir",
+  "publisher": {
+    "name": "UKP Lab, Technical University of Darmstadt",
+    "type": "academic",
+    "url": "https://www.ukp.tu-darmstadt.de/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "information-retrieval",
+    "semantic-search"
+  ],
+  "tags": [
+    "information-retrieval",
+    "zero-shot",
+    "search",
+    "dense-retrieval",
+    "benchmark",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Verified Apache 2.0 license declared in official GitHub repository."
+  },
+  "source_references": [
+    {
+      "title": "BEIR Official GitHub Repository",
+      "url": "https://github.com/beir-cellar/beir",
+      "type": "repository",
+      "notes": "Official benchmark codebase and dataset distribution."
+    },
+    {
+      "title": "BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models (NeurIPS 2021)",
+      "url": "https://openreview.net/forum?id=wCu6T5FlyW5",
+      "type": "original_paper",
+      "notes": "Published in NeurIPS 2021 Datasets and Benchmarks Track."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against NeurIPS 2021 paper and TU Darmstadt UKP repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 17,
+    "unit": "evaluation-benchmarks"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2021-09",
+    "last_updated": "2022"
+  },
+  "citation": {
+    "paper_title": "BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+    "paper_url": "https://openreview.net/forum?id=wCu6T5FlyW5",
+    "authors": [
+      "Nandan Thakur",
+      "Nils Reimers",
+      "Andreas Rücklé",
+      "Abhishek Srivastava",
+      "Iryna Gurevych"
+    ],
+    "bibtex": "@inproceedings{thakur2021beir,\n  title = {BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models},\n  author = {Thakur, Nandan and Reimers, Nils and R{\\\"u}ckl{\\'e}, Andreas and Srivastava, Abhishek and Gurevych, Iryna},\n  booktitle = {Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year = {2021}\n}"
+  }
+}

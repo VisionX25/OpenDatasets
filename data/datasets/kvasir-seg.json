@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "kvasir-seg",
+  "slug": "kvasir-seg",
+  "name": "Kvasir-SEG: Gastrointestinal Polyp Segmentation Dataset",
+  "description": "Kvasir-SEG is an open-access medical image segmentation dataset consisting of 1,000 gastrointestinal polyp images collected during real colonoscopy procedures at Vestre Viken Health Trust in Norway. Each image is paired with a verified pixel-level ground truth binary segmentation mask and bounding box verified by experienced gastroenterologists.",
+  "homepage_url": "https://datasets.simula.no/kvasir-seg/",
+  "publisher": {
+    "name": "Simula Research Laboratory & UiT The Arctic University of Norway",
+    "type": "academic",
+    "url": "https://www.simula.no/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "medical-imaging"
+  ],
+  "tags": [
+    "endoscopy",
+    "polyp-segmentation",
+    "medical-imaging",
+    "gastroenterology",
+    "simula",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in Simula dataset repository."
+  },
+  "source_references": [
+    {
+      "title": "Kvasir-SEG Dataset at Simula Research Laboratory",
+      "url": "https://datasets.simula.no/kvasir-seg/",
+      "type": "official_website",
+      "notes": "Official Simula dataset distribution page."
+    },
+    {
+      "title": "Kvasir-SEG: A Segmented Polyp Dataset (MMM 2020)",
+      "url": "https://doi.org/10.1007/978-3-030-37734-2_37",
+      "type": "original_paper",
+      "notes": "Published in International Conference on MultiMedia Modeling (MMM 2020)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against MMM 2020 paper and Simula Research Laboratory portal."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 1000,
+    "unit": "images"
+  },
+  "dates": {
+    "published": "2020-01",
+    "last_updated": "2020-01"
+  },
+  "citation": {
+    "paper_title": "Kvasir-SEG: A Segmented Polyp Dataset",
+    "paper_url": "https://doi.org/10.1007/978-3-030-37734-2_37",
+    "authors": [
+      "Debesh Jha",
+      "Sharib Ali",
+      "Kamin Pogorelov",
+      "Michael A. Riegler",
+      "Pål Halvorsen",
+      "Dag Johansen"
+    ],
+    "doi": "10.1007/978-3-030-37734-2_37",
+    "bibtex": "@inproceedings{jha2020kvasir,\n  title = {Kvasir-SEG: A Segmented Polyp Dataset},\n  author = {Jha, Debesh and Ali, Sharib and Pogorelov, Kamin and Riegler, Michael A. and Halvorsen, P{\\aa}l and Johansen, Dag},\n  booktitle = {International Conference on Multimedia Modeling},\n  pages = {451--462},\n  year = {2020}\n}"
+  }
+}

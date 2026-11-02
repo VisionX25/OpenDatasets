@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mura",
+  "slug": "mura",
+  "name": "MURA: Musculoskeletal Radiographs",
+  "description": "MURA is a large dataset of musculoskeletal radiographs consisting of 40,561 multi-view X-ray images from 14,863 studies across 12,173 patients. Each study focuses on one of seven upper extremity body parts (elbow, finger, forearm, hand, humerus, shoulder, wrist) and is labeled by board-certified radiologists as normal or abnormal.",
+  "homepage_url": "https://stanfordmlgroup.github.io/competitions/mura/",
+  "publisher": {
+    "name": "Stanford ML Group, Stanford University",
+    "type": "academic",
+    "url": "https://stanfordmlgroup.github.io/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "medical-imaging"
+  ],
+  "tags": [
+    "medical-imaging",
+    "x-ray",
+    "radiology",
+    "musculoskeletal",
+    "stanford",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Stanford MURA Research Use Agreement",
+    "url": "https://stanfordmlgroup.github.io/competitions/mura/",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for non-commercial academic research upon accepting the Stanford MURA agreement."
+  },
+  "source_references": [
+    {
+      "title": "MURA Competition and Project Page",
+      "url": "https://stanfordmlgroup.github.io/competitions/mura/",
+      "type": "official_website",
+      "notes": "Official Stanford ML Group competition portal."
+    },
+    {
+      "title": "MURA: Large Dataset for Abnormality Detection in Musculoskeletal Radiographs (MIDL 2018)",
+      "url": "https://arxiv.org/abs/1712.06957",
+      "type": "original_paper",
+      "notes": "Published in Medical Imaging with Deep Learning (MIDL 2018)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against MIDL 2018 paper and Stanford ML Group website."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 40561,
+    "splits": {
+      "train": 36808,
+      "valid": 3197
+    },
+    "unit": "radiographs"
+  },
+  "dates": {
+    "published": "2017-12",
+    "last_updated": "2018"
+  },
+  "citation": {
+    "paper_title": "MURA: Large Dataset for Abnormality Detection in Musculoskeletal Radiographs",
+    "paper_url": "https://arxiv.org/abs/1712.06957",
+    "authors": [
+      "Pranav Rajpurkar",
+      "Jeremy Irvin",
+      "Aarti Bagul",
+      "Daisy Ding",
+      "Tony Duan",
+      "Hershel Mehta",
+      "Brandon Yang",
+      "Kaylie Zhu",
+      "Dillon Canto",
+      "Curtis Langlotz",
+      "Katie Shpanskaya",
+      "Matthew P. Lungren",
+      "Andrew Y. Ng"
+    ],
+    "bibtex": "@article{rajpurkar2017mura,\n  title = {MURA: Large Dataset for Abnormality Detection in Musculoskeletal Radiographs},\n  author = {Rajpurkar, Pranav and Irvin, Jeremy and Bagul, Aarti and Ding, Daisy and Duan, Tony and Mehta, Hershel and Yang, Brandon and Zhu, Kaylie and Canto, Dillon and Langlotz, Curtis and others},\n  journal = {arXiv preprint arXiv:1712.06957},\n  year = {2017}\n}"
+  }
+}

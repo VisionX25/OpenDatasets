@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "id": "paws-x",
+  "slug": "paws-x",
+  "name": "PAWS-X: Cross-Lingual Paraphrase Adversaries from Word Scrambling",
+  "description": "PAWS-X is an adversarial multilingual paraphrase identification dataset covering seven languages: English, French, Spanish, German, Chinese, Japanese, and Korean. It consists of sentence pairs with high lexical overlap and word scrambling that test a model's sensitivity to word order and syntactic structure.",
+  "homepage_url": "https://github.com/google-research-datasets/paws/tree/master/pawsx",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "paraphrase-identification",
+    "cross-lingual-transfer"
+  ],
+  "tags": [
+    "paraphrase",
+    "adversarial",
+    "cross-lingual",
+    "multilingual",
+    "google-research",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY-SA 4.0 license stated in Google Research PAWS repository."
+  },
+  "source_references": [
+    {
+      "title": "PAWS-X Official Google Research GitHub Repository",
+      "url": "https://github.com/google-research-datasets/paws/tree/master/pawsx",
+      "type": "repository",
+      "notes": "Official repository with dataset TSV files."
+    },
+    {
+      "title": "PAWS-X: A Cross-lingual Adversarial Dataset for Paraphrase Identification (EMNLP 2019)",
+      "url": "https://doi.org/10.18653/v1/D19-1382",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of EMNLP 2019."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against EMNLP 2019 proceedings and Google Research repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 320485,
+    "unit": "sentence-pairs"
+  },
+  "languages": [
+    "de",
+    "en",
+    "es",
+    "fr",
+    "ja",
+    "ko",
+    "zh"
+  ],
+  "dates": {
+    "published": "2019-11",
+    "last_updated": "2019-11"
+  },
+  "citation": {
+    "paper_title": "PAWS-X: A Cross-lingual Adversarial Dataset for Paraphrase Identification",
+    "paper_url": "https://doi.org/10.18653/v1/D19-1382",
+    "authors": [
+      "Yinfei Yang",
+      "Yuan Zhang",
+      "Chris Tar",
+      "Jason Baldridge"
+    ],
+    "doi": "10.18653/v1/D19-1382",
+    "bibtex": "@inproceedings{yang-etal-2019-paws,\n  title = {PAWS-X: A Cross-lingual Adversarial Dataset for Paraphrase Identification},\n  author = {Yang, Yinfei and Zhang, Yuan and Tar, Chris and Baldridge, Jason},\n  booktitle = {Proceedings of EMNLP 2019},\n  pages = {3687--3692},\n  year = {2019}\n}"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nasa-battery-aging",
+  "slug": "nasa-battery-aging",
+  "name": "NASA Li-ion Battery Aging Dataset",
+  "description": "The NASA Li-ion Battery Aging dataset consists of battery charge, discharge, and electrochemical impedance spectroscopy (EIS) measurements from 34 commercially available 18650 lithium-ion cells cycled through different operational profiles (temperature, discharge currents, cut-off voltages) until end-of-life (EOL).",
+  "homepage_url": "https://data.nasa.gov/dataset/li-ion-battery-aging-datasets",
+  "publisher": {
+    "name": "NASA Ames Prognostics Center of Excellence (PCoE)",
+    "type": "government",
+    "url": "https://data.nasa.gov"
+  },
+  "modalities": [
+    "time-series",
+    "sensor",
+    "tabular"
+  ],
+  "tasks": [
+    "remaining-useful-life-prediction",
+    "predictive-maintenance"
+  ],
+  "tags": [
+    "battery-aging",
+    "lithium-ion",
+    "prognostics",
+    "state-of-health",
+    "nasa",
+    "benchmark"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "NASA Open Data Policy / Public Domain",
+    "url": "https://data.nasa.gov/",
+    "commercial_use": "allowed",
+    "notes": "Distributed as public domain US government data under NASA Open Data Policy."
+  },
+  "source_references": [
+    {
+      "title": "Li-ion Battery Aging Datasets on NASA Open Data",
+      "url": "https://data.nasa.gov/dataset/li-ion-battery-aging-datasets",
+      "type": "official_website",
+      "notes": "Official NASA Open Data entry."
+    },
+    {
+      "title": "Prognostics in Battery Health Management Using Kalman Filter (IEEE IMM 2009)",
+      "url": "https://doi.org/10.1109/MIM.2009.5167960",
+      "type": "original_paper",
+      "notes": "Published in IEEE Instrumentation & Measurement Magazine 2009."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against IEEE IMM 2009 paper and NASA Ames PCoE portal."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 34,
+    "unit": "battery-cells"
+  },
+  "dates": {
+    "published": "2008",
+    "last_updated": "2014"
+  },
+  "citation": {
+    "paper_title": "Prognostics in Battery Health Management Using Kalman Filter",
+    "paper_url": "https://doi.org/10.1109/MIM.2009.5167960",
+    "authors": [
+      "Bhaskar Saha",
+      "Kai Goebel",
+      "Scott Poll",
+      "Jon Christophersen"
+    ],
+    "doi": "10.1109/MIM.2009.5167960",
+    "bibtex": "@article{saha2009prognostics,\n  title = {Prognostics in Battery Health Management Using Kalman Filter},\n  author = {Saha, Bhaskar and Goebel, Kai and Poll, Scott and Christophersen, Jon},\n  journal = {IEEE Instrumentation & Measurement Magazine},\n  volume = {12},\n  number = {2},\n  pages = {21--26},\n  year = {2009}\n}"
+  }
+}

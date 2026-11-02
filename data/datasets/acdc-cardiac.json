@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "id": "acdc-cardiac",
+  "slug": "acdc-cardiac",
+  "name": "ACDC: Automated Cardiac Diagnosis Challenge Dataset",
+  "description": "The ACDC dataset contains cardiac cine-MRI examinations collected from 150 patients categorized into five evenly distributed groups (normal, previous myocardial infarction, dilated cardiomyopathy, hypertrophic cardiomyopathy, and abnormal right ventricle). Examinations include manual segmentations for left ventricular endocardium, myocardium, and right ventricular endocardium at end-diastole and end-systole.",
+  "homepage_url": "https://www.creatis.insa-lyon.fr/Challenge/acdc/",
+  "publisher": {
+    "name": "CREATIS Laboratory, INSA Lyon & University Hospital of Dijon",
+    "type": "academic",
+    "url": "https://www.creatis.insa-lyon.fr/"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "medical-image-segmentation",
+    "cardiac-mri-segmentation"
+  ],
+  "tags": [
+    "cardiac-mri",
+    "mri-segmentation",
+    "cardiology",
+    "creatis",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Verified CC-BY-NC 4.0 license stated in official challenge documentation."
+  },
+  "source_references": [
+    {
+      "title": "ACDC Challenge Official Portal",
+      "url": "https://www.creatis.insa-lyon.fr/Challenge/acdc/",
+      "type": "official_website",
+      "notes": "Official challenge and benchmark portal."
+    },
+    {
+      "title": "Deep Learning Techniques for Automatic MRI Cardiac Multi-structures Segmentation and Diagnosis (IEEE TMI 2018)",
+      "url": "https://doi.org/10.1109/TMI.2018.2837502",
+      "type": "original_paper",
+      "notes": "Published in IEEE Transactions on Medical Imaging 2018."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against IEEE TMI 2018 paper and CREATIS challenge portal."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 150,
+    "splits": {
+      "train": 100,
+      "test": 50
+    },
+    "unit": "examinations"
+  },
+  "dates": {
+    "published": "2017-05",
+    "last_updated": "2018"
+  },
+  "citation": {
+    "paper_title": "Deep Learning Techniques for Automatic MRI Cardiac Multi-Structures Segmentation and Diagnosis: Is the Problem Solved?",
+    "paper_url": "https://doi.org/10.1109/TMI.2018.2837502",
+    "authors": [
+      "Olivier Bernard",
+      "Alain Lalande",
+      "Clement Zotti",
+      "Frederick Cervenansky",
+      "Pheng-Ann Heng",
+      "et al."
+    ],
+    "doi": "10.1109/TMI.2018.2837502",
+    "bibtex": "@article{bernard2018deep,\n  title = {Deep Learning Techniques for Automatic MRI Cardiac Multi-Structures Segmentation and Diagnosis: Is the Problem Solved?},\n  author = {Bernard, Olivier and Lalande, Alain and Zotti, Clement and Cervenansky, Frederick and others},\n  journal = {IEEE Transactions on Medical Imaging},\n  volume = {37},\n  number = {11},\n  pages = {2514--2525},\n  year = {2018}\n}"
+  }
+}

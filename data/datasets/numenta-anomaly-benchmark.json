@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "id": "numenta-anomaly-benchmark",
+  "slug": "numenta-anomaly-benchmark",
+  "name": "Numenta Anomaly Benchmark (NAB)",
+  "description": "The Numenta Anomaly Benchmark (NAB) is a standardized benchmark for evaluating streaming, real-time anomaly detection algorithms on time-series data. It comprises 58 labeled time-series data files containing 365,558 data points across diverse real-world domains (AWS server metrics, Twitter traffic, web click-rates, traffic sensors, temperature telemetry) with strict anomaly window scoring.",
+  "homepage_url": "https://github.com/numenta/NAB",
+  "publisher": {
+    "name": "Numenta",
+    "type": "industry",
+    "url": "https://numenta.com"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "anomaly-detection"
+  ],
+  "tags": [
+    "anomaly-detection",
+    "time-series",
+    "streaming-data",
+    "numenta",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "GNU General Public License v3.0",
+    "spdx_id": "GPL-3.0-or-later",
+    "url": "https://www.gnu.org/licenses/gpl-3.0.html",
+    "commercial_use": "allowed",
+    "notes": "Verified GPL-3.0 license stated in official Numenta repository."
+  },
+  "source_references": [
+    {
+      "title": "NAB Official GitHub Repository",
+      "url": "https://github.com/numenta/NAB",
+      "type": "repository",
+      "notes": "Official repository containing data files, scorer, and baselines."
+    },
+    {
+      "title": "Evaluating Real-time Anomaly Detection Algorithms – the Numenta Anomaly Benchmark (IEEE ICMLA 2015)",
+      "url": "https://doi.org/10.1109/ICMLA.2015.141",
+      "type": "original_paper",
+      "notes": "Published in IEEE ICMLA 2015."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against IEEE ICMLA 2015 paper and official Numenta repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 365558,
+    "unit": "observations"
+  },
+  "dates": {
+    "published": "2015-12",
+    "last_updated": "2020"
+  },
+  "citation": {
+    "paper_title": "Evaluating Real-Time Anomaly Detection Algorithms -- The Numenta Anomaly Benchmark",
+    "paper_url": "https://doi.org/10.1109/ICMLA.2015.141",
+    "authors": [
+      "Subutai Ahmad",
+      "Scott Purdy"
+    ],
+    "doi": "10.1109/ICMLA.2015.141",
+    "bibtex": "@inproceedings{ahmad2015evaluating,\n  title = {Evaluating Real-Time Anomaly Detection Algorithms -- The Numenta Anomaly Benchmark},\n  author = {Ahmad, Subutai and Purdy, Scott},\n  booktitle = {2015 IEEE 14th International Conference on Machine Learning and Applications (ICMLA)},\n  pages = {141--146},\n  year = {2015}\n}"
+  }
+}

@@ -91,6 +91,89 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "acdc-cardiac",
+    "slug": "acdc-cardiac",
+    "name": "ACDC: Automated Cardiac Diagnosis Challenge Dataset",
+    "description": "The ACDC dataset contains cardiac cine-MRI examinations collected from 150 patients categorized into five evenly distributed groups (normal, previous myocardial infarction, dilated cardiomyopathy, hypertrophic cardiomyopathy, and abnormal right ventricle). Examinations include manual segmentations for left ventricular endocardium, myocardium, and right ventricular endocardium at end-diastole and end-systole.",
+    "homepage_url": "https://www.creatis.insa-lyon.fr/Challenge/acdc/",
+    "publisher": {
+      "name": "CREATIS Laboratory, INSA Lyon & University Hospital of Dijon",
+      "type": "academic",
+      "url": "https://www.creatis.insa-lyon.fr/"
+    },
+    "modalities": [
+      "vision",
+      "3d"
+    ],
+    "tasks": [
+      "medical-image-segmentation",
+      "cardiac-mri-segmentation"
+    ],
+    "tags": [
+      "cardiac-mri",
+      "mri-segmentation",
+      "cardiology",
+      "creatis",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Verified CC-BY-NC 4.0 license stated in official challenge documentation."
+    },
+    "source_references": [
+      {
+        "title": "ACDC Challenge Official Portal",
+        "url": "https://www.creatis.insa-lyon.fr/Challenge/acdc/",
+        "type": "official_website",
+        "notes": "Official challenge and benchmark portal."
+      },
+      {
+        "title": "Deep Learning Techniques for Automatic MRI Cardiac Multi-structures Segmentation and Diagnosis (IEEE TMI 2018)",
+        "url": "https://doi.org/10.1109/TMI.2018.2837502",
+        "type": "original_paper",
+        "notes": "Published in IEEE Transactions on Medical Imaging 2018."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against IEEE TMI 2018 paper and CREATIS challenge portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 150,
+      "splits": {
+        "train": 100,
+        "test": 50
+      },
+      "unit": "examinations"
+    },
+    "dates": {
+      "published": "2017-05",
+      "last_updated": "2018"
+    },
+    "citation": {
+      "paper_title": "Deep Learning Techniques for Automatic MRI Cardiac Multi-Structures Segmentation and Diagnosis: Is the Problem Solved?",
+      "paper_url": "https://doi.org/10.1109/TMI.2018.2837502",
+      "authors": [
+        "Olivier Bernard",
+        "Alain Lalande",
+        "Clement Zotti",
+        "Frederick Cervenansky",
+        "Pheng-Ann Heng",
+        "et al."
+      ],
+      "doi": "10.1109/TMI.2018.2837502",
+      "bibtex": "@article{bernard2018deep,\n  title = {Deep Learning Techniques for Automatic MRI Cardiac Multi-Structures Segmentation and Diagnosis: Is the Problem Solved?},\n  author = {Bernard, Olivier and Lalande, Alain and Zotti, Clement and Cervenansky, Frederick and others},\n  journal = {IEEE Transactions on Medical Imaging},\n  volume = {37},\n  number = {11},\n  pages = {2514--2525},\n  year = {2018}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ade20k",
     "slug": "ade20k",
     "name": "ADE20K: Scene Parsing and Segmentation Benchmark",
@@ -1020,6 +1103,84 @@
         "GHIRI, Maissoun Ghouzlen"
       ],
       "doi": "10.17632/2fgpn5dwgc.3"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "audioset",
+    "slug": "audioset",
+    "name": "AudioSet: Large-Scale Audio Event Dataset",
+    "description": "AudioSet is a large-scale collection of 2,084,320 human-labeled 10-second sound clips drawn from YouTube videos. The dataset covers 632 audio event classes organized in an expanding hierarchical ontology spanning human sounds, animal sounds, musical instruments, engine/transport sounds, and environmental ambiences.",
+    "homepage_url": "https://research.google.com/audioset/dataset/index.html",
+    "publisher": {
+      "name": "Google Research",
+      "type": "industry",
+      "url": "https://research.google"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "audio-classification",
+      "sound-event-detection"
+    ],
+    "tags": [
+      "audio",
+      "sound-events",
+      "google-research",
+      "audio-ontology",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated on Google Research AudioSet page."
+    },
+    "source_references": [
+      {
+        "title": "AudioSet Project Homepage",
+        "url": "https://research.google.com/audioset/dataset/index.html",
+        "type": "official_website",
+        "notes": "Official Google Research dataset distribution."
+      },
+      {
+        "title": "Audio Set: An ontology and human-labeled dataset for audio events (ICASSP 2017)",
+        "url": "https://doi.org/10.1109/ICASSP.2017.7952132",
+        "type": "original_paper",
+        "notes": "Published in IEEE ICASSP 2017."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against IEEE ICASSP 2017 paper and Google Research portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 2084320,
+      "unit": "sound-segments"
+    },
+    "dates": {
+      "published": "2017-03",
+      "last_updated": "2017-03"
+    },
+    "citation": {
+      "paper_title": "Audio Set: An ontology and human-labeled dataset for audio events",
+      "paper_url": "https://doi.org/10.1109/ICASSP.2017.7952132",
+      "authors": [
+        "Jort F. Gemmeke",
+        "Daniel P. W. Ellis",
+        "Dylan Freedman",
+        "Aren Jansen",
+        "Wade Channing",
+        "Dan Ellis"
+      ],
+      "doi": "10.1109/ICASSP.2017.7952132",
+      "bibtex": "@inproceedings{gemmeke2017audio,\n  title = {Audio Set: An ontology and human-labeled dataset for audio events},\n  author = {Gemmeke, Jort F. and Ellis, Daniel P. W. and Freedman, Dylan and Jansen, Aren and Channing, Wade and Ellis, Dan},\n  booktitle = {2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages = {776--780},\n  year = {2017}\n}"
     }
   },
   {
@@ -3863,6 +4024,86 @@
         "Sorensen, David"
       ],
       "doi": "10.17632/mnzhxzrvz6.1"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "beir",
+    "slug": "beir",
+    "name": "BEIR: Benchmarking Information Retrieval",
+    "description": "BEIR is a heterogeneous benchmark for evaluating information retrieval models in a zero-shot setting across 17 diverse datasets covering 9 tasks (fact checking, bio-medical retrieval, question answering, argument retrieval, tweet retrieval, duplicate question retrieval, news retrieval, entity retrieval, and citation prediction).",
+    "homepage_url": "https://github.com/beir-cellar/beir",
+    "publisher": {
+      "name": "UKP Lab, Technical University of Darmstadt",
+      "type": "academic",
+      "url": "https://www.ukp.tu-darmstadt.de/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "information-retrieval",
+      "semantic-search"
+    ],
+    "tags": [
+      "information-retrieval",
+      "zero-shot",
+      "search",
+      "dense-retrieval",
+      "benchmark",
+      "nlp"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Verified Apache 2.0 license declared in official GitHub repository."
+    },
+    "source_references": [
+      {
+        "title": "BEIR Official GitHub Repository",
+        "url": "https://github.com/beir-cellar/beir",
+        "type": "repository",
+        "notes": "Official benchmark codebase and dataset distribution."
+      },
+      {
+        "title": "BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models (NeurIPS 2021)",
+        "url": "https://openreview.net/forum?id=wCu6T5FlyW5",
+        "type": "original_paper",
+        "notes": "Published in NeurIPS 2021 Datasets and Benchmarks Track."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against NeurIPS 2021 paper and TU Darmstadt UKP repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 17,
+      "unit": "evaluation-benchmarks"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2021-09",
+      "last_updated": "2022"
+    },
+    "citation": {
+      "paper_title": "BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+      "paper_url": "https://openreview.net/forum?id=wCu6T5FlyW5",
+      "authors": [
+        "Nandan Thakur",
+        "Nils Reimers",
+        "Andreas Rücklé",
+        "Abhishek Srivastava",
+        "Iryna Gurevych"
+      ],
+      "bibtex": "@inproceedings{thakur2021beir,\n  title = {BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models},\n  author = {Thakur, Nandan and Reimers, Nils and R{\\\"u}ckl{\\'e}, Andreas and Srivastava, Abhishek and Gurevych, Iryna},\n  booktitle = {Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year = {2021}\n}"
     }
   },
   {
@@ -8723,6 +8964,87 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "flores-200",
+    "slug": "flores-200",
+    "name": "FLORES-200: Multilingual Machine Translation Benchmark",
+    "description": "FLORES-200 is an evaluation benchmark for machine translation covering 204 languages and language varieties. It consists of 3,001 sentences professionally translated from 842 diverse web articles across books, travel guides, news, and Wikipedia into 204 languages, yielding over 40,000 translation evaluation directions.",
+    "homepage_url": "https://github.com/openlanguagedata/flores",
+    "publisher": {
+      "name": "Meta AI & Open Language Data Initiative",
+      "type": "industry",
+      "url": "https://ai.meta.com/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "machine-translation",
+      "cross-lingual-transfer"
+    ],
+    "tags": [
+      "machine-translation",
+      "multilingual",
+      "evaluation",
+      "nllb",
+      "meta-ai",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY-SA 4.0 license stated in official FLORES repository."
+    },
+    "source_references": [
+      {
+        "title": "FLORES Official Repository",
+        "url": "https://github.com/openlanguagedata/flores",
+        "type": "repository",
+        "notes": "Official repository with dataset sentences and evaluation tools."
+      },
+      {
+        "title": "No Language Left Behind: Scaling Human-Centered Machine Translation (arXiv 2022)",
+        "url": "https://arxiv.org/abs/2207.04672",
+        "type": "original_paper",
+        "notes": "NLLB Team foundation research paper."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against NLLB Team publication and official FLORES repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 3001,
+      "unit": "sentences-per-language"
+    },
+    "dates": {
+      "published": "2022-07",
+      "last_updated": "2023"
+    },
+    "citation": {
+      "paper_title": "No Language Left Behind: Scaling Human-Centered Machine Translation",
+      "paper_url": "https://arxiv.org/abs/2207.04672",
+      "authors": [
+        "Marta R. Costa-jussà",
+        "James Cross",
+        "Onur Çelebi",
+        "Maha Elbayad",
+        "Angela Fan",
+        "Prangthip Hansanti",
+        "Jiatao Gu",
+        "Kaushik Ram Sadagopan",
+        "Holger Schwenk"
+      ],
+      "bibtex": "@article{nllb2022team,\n  title = {No Language Left Behind: Scaling Human-Centered Machine Translation},\n  author = {NLLB Team and Costa-juss{\\`a}, Marta R. and Cross, James and {\\c{C}}elebi, Onur and Elbayad, Maha and Fan, Angela and others},\n  journal = {arXiv preprint arXiv:2207.04672},\n  year = {2022}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "food-101",
     "slug": "food-101",
     "name": "Food-101",
@@ -8798,6 +9120,84 @@
       ],
       "doi": "10.1007/978-3-319-10599-4_29",
       "bibtex": "@inproceedings{bossard2014food,\n  title = {Food-101 -- Mining Discriminative Components with Random Forests},\n  author = {Bossard, Lukas and Guillaumin, Matthieu and Van Gool, Luc},\n  booktitle = {European Conference on Computer Vision (ECCV)},\n  pages = {446--461},\n  year = {2014}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "fsd50k",
+    "slug": "fsd50k",
+    "name": "FSD50K: Human-Labeled Sound Events Dataset",
+    "description": "FSD50K is an open audio dataset containing 51,197 audio clips (108.3 hours) drawn from Freesound and human-labeled across 200 sound classes hierarchically organized using Google's AudioSet Ontology. Audio clips feature natural environmental, human, animal, musical, and domestic sounds with ground truth vocabulary labels.",
+    "homepage_url": "https://fsannotator.upf.edu/fsd/release/FSD50K/",
+    "publisher": {
+      "name": "Music Technology Group (MTG), Universitat Pompeu Fabra",
+      "type": "academic",
+      "url": "https://www.upf.edu/web/mtg"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "audio-classification",
+      "sound-event-detection"
+    ],
+    "tags": [
+      "audio",
+      "sound-event-detection",
+      "environmental-sound",
+      "freesound",
+      "audioset-ontology",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in official FSD50K release."
+    },
+    "source_references": [
+      {
+        "title": "FSD50K Release Page",
+        "url": "https://fsannotator.upf.edu/fsd/release/FSD50K/",
+        "type": "official_website",
+        "notes": "Official dataset portal hosted by Universitat Pompeu Fabra."
+      },
+      {
+        "title": "FSD50K: An Open Dataset of Human-Labeled Sound Events (IEEE TASLP 2022)",
+        "url": "https://doi.org/10.1109/TASLP.2021.3133208",
+        "type": "original_paper",
+        "notes": "Published in IEEE/ACM Transactions on Audio, Speech, and Language Processing."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against IEEE TASLP 2022 paper and MTG UPF portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 51197,
+      "unit": "clips"
+    },
+    "dates": {
+      "published": "2020-10",
+      "last_updated": "2022"
+    },
+    "citation": {
+      "paper_title": "FSD50K: An Open Dataset of Human-Labeled Sound Events",
+      "paper_url": "https://doi.org/10.1109/TASLP.2021.3133208",
+      "authors": [
+        "Eduardo Fonseca",
+        "Xavier Favory",
+        "Jordi Pons",
+        "Frederic Font",
+        "Xavier Serra"
+      ],
+      "doi": "10.1109/TASLP.2021.3133208",
+      "bibtex": "@article{fonseca2022fsd50k,\n  title = {FSD50K: An Open Dataset of Human-Labeled Sound Events},\n  author = {Fonseca, Eduardo and Favory, Xavier and Pons, Jordi and Font, Frederic and Serra, Xavier},\n  journal = {IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  volume = {30},\n  pages = {829--852},\n  year = {2022}\n}"
     }
   },
   {
@@ -11957,6 +12357,85 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "kvasir-seg",
+    "slug": "kvasir-seg",
+    "name": "Kvasir-SEG: Gastrointestinal Polyp Segmentation Dataset",
+    "description": "Kvasir-SEG is an open-access medical image segmentation dataset consisting of 1,000 gastrointestinal polyp images collected during real colonoscopy procedures at Vestre Viken Health Trust in Norway. Each image is paired with a verified pixel-level ground truth binary segmentation mask and bounding box verified by experienced gastroenterologists.",
+    "homepage_url": "https://datasets.simula.no/kvasir-seg/",
+    "publisher": {
+      "name": "Simula Research Laboratory & UiT The Arctic University of Norway",
+      "type": "academic",
+      "url": "https://www.simula.no/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "medical-imaging"
+    ],
+    "tags": [
+      "endoscopy",
+      "polyp-segmentation",
+      "medical-imaging",
+      "gastroenterology",
+      "simula",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in Simula dataset repository."
+    },
+    "source_references": [
+      {
+        "title": "Kvasir-SEG Dataset at Simula Research Laboratory",
+        "url": "https://datasets.simula.no/kvasir-seg/",
+        "type": "official_website",
+        "notes": "Official Simula dataset distribution page."
+      },
+      {
+        "title": "Kvasir-SEG: A Segmented Polyp Dataset (MMM 2020)",
+        "url": "https://doi.org/10.1007/978-3-030-37734-2_37",
+        "type": "original_paper",
+        "notes": "Published in International Conference on MultiMedia Modeling (MMM 2020)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against MMM 2020 paper and Simula Research Laboratory portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 1000,
+      "unit": "images"
+    },
+    "dates": {
+      "published": "2020-01",
+      "last_updated": "2020-01"
+    },
+    "citation": {
+      "paper_title": "Kvasir-SEG: A Segmented Polyp Dataset",
+      "paper_url": "https://doi.org/10.1007/978-3-030-37734-2_37",
+      "authors": [
+        "Debesh Jha",
+        "Sharib Ali",
+        "Kamin Pogorelov",
+        "Michael A. Riegler",
+        "Pål Halvorsen",
+        "Dag Johansen"
+      ],
+      "doi": "10.1007/978-3-030-37734-2_37",
+      "bibtex": "@inproceedings{jha2020kvasir,\n  title = {Kvasir-SEG: A Segmented Polyp Dataset},\n  author = {Jha, Debesh and Ali, Sharib and Pogorelov, Kamin and Riegler, Michael A. and Halvorsen, P{\\aa}l and Johansen, Dag},\n  booktitle = {International Conference on Multimedia Modeling},\n  pages = {451--462},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ldir-spectra-micron-sized-particles-using",
     "slug": "ldir-spectra-micron-sized-particles-using",
     "name": "LDIR spectra of micron sized particles using Agilant LDIR spectrometer",
@@ -12208,6 +12687,91 @@
     "provenance": {
       "collection_method": "Extracted from LibriVox public domain audio recordings and aligned to Project Gutenberg texts using Kaldi speech recognition toolkit.",
       "curation_notes": "Audio files filtered based on acoustic model score alignments and split into clean and noisy/accented subsets."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "libritts",
+    "slug": "libritts",
+    "name": "LibriTTS: Text-to-Speech Corpus",
+    "description": "LibriTTS is a multi-speaker English speech corpus designed for text-to-speech (TTS) research. Derived from the original audio materials of LibriSpeech, it contains approximately 585 hours of 24kHz audio from 2,456 speakers with normalized text transcripts, sentence-level segmentation, and filtered background noise.",
+    "homepage_url": "https://www.openslr.org/60/",
+    "publisher": {
+      "name": "Google & OpenSLR",
+      "type": "industry",
+      "url": "https://www.openslr.org"
+    },
+    "modalities": [
+      "audio",
+      "nlp"
+    ],
+    "tasks": [
+      "text-to-speech",
+      "speech-synthesis"
+    ],
+    "tags": [
+      "audio",
+      "speech",
+      "tts",
+      "librispeech",
+      "text-to-speech",
+      "openslr"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in OpenSLR resource page."
+    },
+    "source_references": [
+      {
+        "title": "LibriTTS on OpenSLR",
+        "url": "https://www.openslr.org/60/",
+        "type": "official_website",
+        "notes": "Official OpenSLR dataset distribution page."
+      },
+      {
+        "title": "LibriTTS: A Corpus Derived from LibriSpeech for Text-to-Speech (Interspeech 2019)",
+        "url": "https://doi.org/10.21437/Interspeech.2019-2441",
+        "type": "original_paper",
+        "notes": "Published in Interspeech 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Interspeech 2019 paper and OpenSLR 60 archive."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 585,
+      "unit": "hours"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2019-09",
+      "last_updated": "2019-09"
+    },
+    "citation": {
+      "paper_title": "LibriTTS: A Corpus Derived from LibriSpeech for Text-to-Speech",
+      "paper_url": "https://doi.org/10.21437/Interspeech.2019-2441",
+      "authors": [
+        "Heiga Zen",
+        "Viet Dang",
+        "Rob Clark",
+        "Yu Zhang",
+        "Ron J. Weiss",
+        "Ye Jia",
+        "Zhifeng Chen",
+        "Yonghui Wu"
+      ],
+      "doi": "10.21437/Interspeech.2019-2441",
+      "bibtex": "@inproceedings{zen2019libritts,\n  title = {LibriTTS: A Corpus Derived from LibriSpeech for Text-to-Speech},\n  author = {Zen, Heiga and Dang, Viet and Clark, Rob and Zhang, Yu and Weiss, Ron J. and Jia, Ye and Chen, Zhifeng and Wu, Yonghui},\n  booktitle = {Proc. Interspeech 2019},\n  pages = {1526--1530},\n  year = {2019}\n}"
     }
   },
   {
@@ -13216,6 +13780,115 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "miracl",
+    "slug": "miracl",
+    "name": "MIRACL: Multilingual Information Retrieval Across a Continuum of Languages",
+    "description": "MIRACL is a multilingual information retrieval dataset covering 18 typologically diverse languages across 10 distinct language families (including Arabic, Bengali, English, Spanish, Persian, Finnish, French, Hindi, Indonesian, Japanese, Korean, Russian, Swahili, Telugu, Thai, Vietnamese, Yoruba, and Chinese). It contains over 726,000 human-annotated relevance judgments over Wikipedia articles.",
+    "homepage_url": "https://huggingface.co/datasets/miracl/miracl",
+    "publisher": {
+      "name": "University of Waterloo & Research Collaborators",
+      "type": "academic",
+      "url": "https://project-miracl.github.io/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "information-retrieval",
+      "cross-lingual-transfer"
+    ],
+    "tags": [
+      "information-retrieval",
+      "multilingual",
+      "cross-lingual",
+      "bengali",
+      "swahili",
+      "yoruba",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Verified Apache 2.0 license declared on Hugging Face dataset card and repository."
+    },
+    "source_references": [
+      {
+        "title": "MIRACL on Hugging Face",
+        "url": "https://huggingface.co/datasets/miracl/miracl",
+        "type": "repository",
+        "notes": "Official Hugging Face dataset distribution."
+      },
+      {
+        "title": "MIRACL Project Homepage",
+        "url": "https://project-miracl.github.io/",
+        "type": "official_website",
+        "notes": "Official project landing page and leaderboard."
+      },
+      {
+        "title": "MIRACL: A Multilingual Retrieval Dataset Covering 18 Diverse Languages (TACL 2023)",
+        "url": "https://doi.org/10.1162/tacl_a_00547",
+        "type": "original_paper",
+        "notes": "Transactions of the Association for Computational Linguistics (TACL 2023)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against TACL 2023 paper and official Hugging Face release."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 726000,
+      "unit": "relevance-judgments"
+    },
+    "languages": [
+      "ar",
+      "bn",
+      "de",
+      "en",
+      "es",
+      "fa",
+      "fi",
+      "fr",
+      "hi",
+      "id",
+      "ja",
+      "ko",
+      "ru",
+      "sw",
+      "te",
+      "th",
+      "vi",
+      "yo",
+      "zh"
+    ],
+    "dates": {
+      "published": "2022-10",
+      "last_updated": "2023"
+    },
+    "citation": {
+      "paper_title": "MIRACL: A Multilingual Retrieval Dataset Covering 18 Diverse Languages",
+      "paper_url": "https://doi.org/10.1162/tacl_a_00547",
+      "authors": [
+        "Xinyu Zhang",
+        "Nandan Thakur",
+        "Odunayo Ogundepo",
+        "Ehsan Kamalloo",
+        "David Alfonso-Hermelo",
+        "Angela Fan",
+        "Colin Raffel",
+        "Jimmy Lin"
+      ],
+      "doi": "10.1162/tacl_a_00547",
+      "bibtex": "@article{zhang2023miracl,\n  title = {MIRACL: A Multilingual Retrieval Dataset Covering 18 Diverse Languages},\n  author = {Zhang, Xinyu and Thakur, Nandan and Ogundepo, Odunayo and Kamalloo, Ehsan and Alfonso-Hermelo, David and Fan, Angela and Raffel, Colin and Lin, Jimmy},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {11},\n  pages = {111--128},\n  year = {2023}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "mit-bih-arrhythmia",
     "slug": "mit-bih-arrhythmia",
     "name": "MIT-BIH Arrhythmia Database",
@@ -13718,6 +14391,94 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "mura",
+    "slug": "mura",
+    "name": "MURA: Musculoskeletal Radiographs",
+    "description": "MURA is a large dataset of musculoskeletal radiographs consisting of 40,561 multi-view X-ray images from 14,863 studies across 12,173 patients. Each study focuses on one of seven upper extremity body parts (elbow, finger, forearm, hand, humerus, shoulder, wrist) and is labeled by board-certified radiologists as normal or abnormal.",
+    "homepage_url": "https://stanfordmlgroup.github.io/competitions/mura/",
+    "publisher": {
+      "name": "Stanford ML Group, Stanford University",
+      "type": "academic",
+      "url": "https://stanfordmlgroup.github.io/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "medical-imaging"
+    ],
+    "tags": [
+      "medical-imaging",
+      "x-ray",
+      "radiology",
+      "musculoskeletal",
+      "stanford",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Stanford MURA Research Use Agreement",
+      "url": "https://stanfordmlgroup.github.io/competitions/mura/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial academic research upon accepting the Stanford MURA agreement."
+    },
+    "source_references": [
+      {
+        "title": "MURA Competition and Project Page",
+        "url": "https://stanfordmlgroup.github.io/competitions/mura/",
+        "type": "official_website",
+        "notes": "Official Stanford ML Group competition portal."
+      },
+      {
+        "title": "MURA: Large Dataset for Abnormality Detection in Musculoskeletal Radiographs (MIDL 2018)",
+        "url": "https://arxiv.org/abs/1712.06957",
+        "type": "original_paper",
+        "notes": "Published in Medical Imaging with Deep Learning (MIDL 2018)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against MIDL 2018 paper and Stanford ML Group website."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 40561,
+      "splits": {
+        "train": 36808,
+        "valid": 3197
+      },
+      "unit": "radiographs"
+    },
+    "dates": {
+      "published": "2017-12",
+      "last_updated": "2018"
+    },
+    "citation": {
+      "paper_title": "MURA: Large Dataset for Abnormality Detection in Musculoskeletal Radiographs",
+      "paper_url": "https://arxiv.org/abs/1712.06957",
+      "authors": [
+        "Pranav Rajpurkar",
+        "Jeremy Irvin",
+        "Aarti Bagul",
+        "Daisy Ding",
+        "Tony Duan",
+        "Hershel Mehta",
+        "Brandon Yang",
+        "Kaylie Zhu",
+        "Dillon Canto",
+        "Curtis Langlotz",
+        "Katie Shpanskaya",
+        "Matthew P. Lungren",
+        "Andrew Y. Ng"
+      ],
+      "bibtex": "@article{rajpurkar2017mura,\n  title = {MURA: Large Dataset for Abnormality Detection in Musculoskeletal Radiographs},\n  author = {Rajpurkar, Pranav and Irvin, Jeremy and Bagul, Aarti and Ding, Daisy and Duan, Tony and Mehta, Hershel and Yang, Brandon and Zhu, Kaylie and Canto, Dillon and Langlotz, Curtis and others},\n  journal = {arXiv preprint arXiv:1712.06957},\n  year = {2017}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "musan",
     "slug": "musan",
     "name": "MUSAN: A Music, Speech, and Noise Corpus",
@@ -13883,6 +14644,240 @@
     "provenance": {
       "collection_method": "Clinical photography collected from hospital resources and clinical repositories.",
       "curation_notes": "De-identified and verified for dermatological classification research."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "nasa-battery-aging",
+    "slug": "nasa-battery-aging",
+    "name": "NASA Li-ion Battery Aging Dataset",
+    "description": "The NASA Li-ion Battery Aging dataset consists of battery charge, discharge, and electrochemical impedance spectroscopy (EIS) measurements from 34 commercially available 18650 lithium-ion cells cycled through different operational profiles (temperature, discharge currents, cut-off voltages) until end-of-life (EOL).",
+    "homepage_url": "https://data.nasa.gov/dataset/li-ion-battery-aging-datasets",
+    "publisher": {
+      "name": "NASA Ames Prognostics Center of Excellence (PCoE)",
+      "type": "government",
+      "url": "https://data.nasa.gov"
+    },
+    "modalities": [
+      "time-series",
+      "sensor",
+      "tabular"
+    ],
+    "tasks": [
+      "remaining-useful-life-prediction",
+      "predictive-maintenance"
+    ],
+    "tags": [
+      "battery-aging",
+      "lithium-ion",
+      "prognostics",
+      "state-of-health",
+      "nasa",
+      "benchmark"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "NASA Open Data Policy / Public Domain",
+      "url": "https://data.nasa.gov/",
+      "commercial_use": "allowed",
+      "notes": "Distributed as public domain US government data under NASA Open Data Policy."
+    },
+    "source_references": [
+      {
+        "title": "Li-ion Battery Aging Datasets on NASA Open Data",
+        "url": "https://data.nasa.gov/dataset/li-ion-battery-aging-datasets",
+        "type": "official_website",
+        "notes": "Official NASA Open Data entry."
+      },
+      {
+        "title": "Prognostics in Battery Health Management Using Kalman Filter (IEEE IMM 2009)",
+        "url": "https://doi.org/10.1109/MIM.2009.5167960",
+        "type": "original_paper",
+        "notes": "Published in IEEE Instrumentation & Measurement Magazine 2009."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against IEEE IMM 2009 paper and NASA Ames PCoE portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 34,
+      "unit": "battery-cells"
+    },
+    "dates": {
+      "published": "2008",
+      "last_updated": "2014"
+    },
+    "citation": {
+      "paper_title": "Prognostics in Battery Health Management Using Kalman Filter",
+      "paper_url": "https://doi.org/10.1109/MIM.2009.5167960",
+      "authors": [
+        "Bhaskar Saha",
+        "Kai Goebel",
+        "Scott Poll",
+        "Jon Christophersen"
+      ],
+      "doi": "10.1109/MIM.2009.5167960",
+      "bibtex": "@article{saha2009prognostics,\n  title = {Prognostics in Battery Health Management Using Kalman Filter},\n  author = {Saha, Bhaskar and Goebel, Kai and Poll, Scott and Christophersen, Jon},\n  journal = {IEEE Instrumentation & Measurement Magazine},\n  volume = {12},\n  number = {2},\n  pages = {21--26},\n  year = {2009}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "nasa-cmapss",
+    "slug": "nasa-cmapss",
+    "name": "NASA C-MAPSS Turbofan Engine Degradation Simulation Dataset",
+    "description": "The Commercial Modular Aero-Propulsion System Simulation (C-MAPSS) dataset is the foundational benchmark for Remaining Useful Life (RUL) estimation in predictive maintenance. Simulated run-to-failure data from a fleet of commercial turbofan engines across four sub-datasets (FD001-FD004) track 21 sensor channels under varied flight operating regimes and fault modes.",
+    "homepage_url": "https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data",
+    "publisher": {
+      "name": "NASA Ames Prognostics Center of Excellence (PCoE)",
+      "type": "government",
+      "url": "https://data.nasa.gov"
+    },
+    "modalities": [
+      "time-series",
+      "sensor",
+      "tabular"
+    ],
+    "tasks": [
+      "remaining-useful-life-prediction",
+      "predictive-maintenance"
+    ],
+    "tags": [
+      "turbofan",
+      "rul-prediction",
+      "predictive-maintenance",
+      "aeronautics",
+      "nasa",
+      "benchmark"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "NASA Open Data Policy / Public Domain",
+      "url": "https://data.nasa.gov/",
+      "commercial_use": "allowed",
+      "notes": "Distributed as public domain US government scientific data under NASA Open Data Policy."
+    },
+    "source_references": [
+      {
+        "title": "CMAPSS Jet Engine Simulated Data on NASA Open Data",
+        "url": "https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data",
+        "type": "official_website",
+        "notes": "Official NASA Open Data entry."
+      },
+      {
+        "title": "Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation (PHM 2008)",
+        "url": "https://www.phmsociety.org/node/864",
+        "type": "original_paper",
+        "notes": "Published in International Conference on Prognostics and Health Management (PHM 2008)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against PHM 2008 publication and NASA Ames PCoE portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 708,
+      "unit": "engine-trajectories"
+    },
+    "dates": {
+      "published": "2008",
+      "last_updated": "2014"
+    },
+    "citation": {
+      "paper_title": "Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation",
+      "paper_url": "https://www.phmsociety.org/node/864",
+      "authors": [
+        "Abhinav Saxena",
+        "Kai Goebel",
+        "Don Simon",
+        "Neil Eklund"
+      ],
+      "bibtex": "@inproceedings{saxena2008damage,\n  title = {Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation},\n  author = {Saxena, Abhinav and Goebel, Kai and Simon, Don and Eklund, Neil},\n  booktitle = {2008 International Conference on Prognostics and Health Management},\n  pages = {1--9},\n  year = {2008}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "nasa-ims-bearings",
+    "slug": "nasa-ims-bearings",
+    "name": "NASA IMS Bearing Dataset",
+    "description": "The IMS Bearing dataset was generated by the NSF Center for Intelligent Maintenance Systems (IMS) and distributed via NASA. Four double-row bearings were installed on a test shaft rotating at 2,000 RPM under 6,000 lbs radial load until failure. High-frequency vibration data (20kHz sampling) were collected across three run-to-failure endurance tests for predictive maintenance benchmarking.",
+    "homepage_url": "https://data.nasa.gov/dataset/ims-bearings",
+    "publisher": {
+      "name": "NASA Ames Research Center & University of Cincinnati IMS Center",
+      "type": "government",
+      "url": "https://data.nasa.gov"
+    },
+    "modalities": [
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "predictive-maintenance",
+      "anomaly-detection"
+    ],
+    "tags": [
+      "bearings",
+      "vibration",
+      "predictive-maintenance",
+      "industrial-ai",
+      "nasa",
+      "benchmark"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "NASA Open Data Policy / Public Domain",
+      "url": "https://data.nasa.gov/",
+      "commercial_use": "allowed",
+      "notes": "Distributed as public domain US government data under NASA Open Data Policy."
+    },
+    "source_references": [
+      {
+        "title": "IMS Bearings on NASA Open Data",
+        "url": "https://data.nasa.gov/dataset/ims-bearings",
+        "type": "official_website",
+        "notes": "Official NASA Open Data entry."
+      },
+      {
+        "title": "A comparison of vibration-based methods for condition monitoring of machinery (MSSP 2007)",
+        "url": "https://doi.org/10.1016/j.ymssp.2005.06.007",
+        "type": "original_paper",
+        "notes": "Published in Mechanical Systems and Signal Processing."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Mechanical Systems and Signal Processing publication and NASA Open Data portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 3,
+      "unit": "run-to-failure-experiments"
+    },
+    "dates": {
+      "published": "2007",
+      "last_updated": "2014"
+    },
+    "citation": {
+      "paper_title": "A comparison of vibration-based methods for condition monitoring of machinery",
+      "paper_url": "https://doi.org/10.1016/j.ymssp.2005.06.007",
+      "authors": [
+        "J. Lee",
+        "F. Wu",
+        "W. Zhao",
+        "M. Ghaffari",
+        "L. Liao",
+        "D. Siegel"
+      ],
+      "doi": "10.1016/j.ymssp.2005.06.007",
+      "bibtex": "@article{lee2007comparison,\n  title = {A comparison of vibration-based methods for condition monitoring of machinery},\n  author = {Lee, J. and Wu, F. and Zhao, W. and Ghaffari, M. and Liao, L. and Siegel, D.},\n  journal = {Mechanical Systems and Signal Processing},\n  volume = {21},\n  number = {2},\n  pages = {740--759},\n  year = {2007}\n}"
     }
   },
   {
@@ -14243,6 +15238,79 @@
       ],
       "doi": "10.1109/CVPR.2016.115",
       "bibtex": "@inproceedings{shahroudy2016ntu,\n  title={NTU RGB+D: A large scale dataset for 3D human activity analysis},\n  author={Shahroudy, Amir and Liu, Jun and Ng, Tian-Tsong and Wang, Gang},\n  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={1010--1019},\n  year={2016},\n  doi={10.1109/CVPR.2016.115}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "numenta-anomaly-benchmark",
+    "slug": "numenta-anomaly-benchmark",
+    "name": "Numenta Anomaly Benchmark (NAB)",
+    "description": "The Numenta Anomaly Benchmark (NAB) is a standardized benchmark for evaluating streaming, real-time anomaly detection algorithms on time-series data. It comprises 58 labeled time-series data files containing 365,558 data points across diverse real-world domains (AWS server metrics, Twitter traffic, web click-rates, traffic sensors, temperature telemetry) with strict anomaly window scoring.",
+    "homepage_url": "https://github.com/numenta/NAB",
+    "publisher": {
+      "name": "Numenta",
+      "type": "industry",
+      "url": "https://numenta.com"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "anomaly-detection"
+    ],
+    "tags": [
+      "anomaly-detection",
+      "time-series",
+      "streaming-data",
+      "numenta",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "GNU General Public License v3.0",
+      "spdx_id": "GPL-3.0-or-later",
+      "url": "https://www.gnu.org/licenses/gpl-3.0.html",
+      "commercial_use": "allowed",
+      "notes": "Verified GPL-3.0 license stated in official Numenta repository."
+    },
+    "source_references": [
+      {
+        "title": "NAB Official GitHub Repository",
+        "url": "https://github.com/numenta/NAB",
+        "type": "repository",
+        "notes": "Official repository containing data files, scorer, and baselines."
+      },
+      {
+        "title": "Evaluating Real-time Anomaly Detection Algorithms – the Numenta Anomaly Benchmark (IEEE ICMLA 2015)",
+        "url": "https://doi.org/10.1109/ICMLA.2015.141",
+        "type": "original_paper",
+        "notes": "Published in IEEE ICMLA 2015."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against IEEE ICMLA 2015 paper and official Numenta repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 365558,
+      "unit": "observations"
+    },
+    "dates": {
+      "published": "2015-12",
+      "last_updated": "2020"
+    },
+    "citation": {
+      "paper_title": "Evaluating Real-Time Anomaly Detection Algorithms -- The Numenta Anomaly Benchmark",
+      "paper_url": "https://doi.org/10.1109/ICMLA.2015.141",
+      "authors": [
+        "Subutai Ahmad",
+        "Scott Purdy"
+      ],
+      "doi": "10.1109/ICMLA.2015.141",
+      "bibtex": "@inproceedings{ahmad2015evaluating,\n  title = {Evaluating Real-Time Anomaly Detection Algorithms -- The Numenta Anomaly Benchmark},\n  author = {Ahmad, Subutai and Purdy, Scott},\n  booktitle = {2015 IEEE 14th International Conference on Machine Learning and Applications (ICMLA)},\n  pages = {141--146},\n  year = {2015}\n}"
     }
   },
   {
@@ -14986,6 +16054,89 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "padchest",
+    "slug": "padchest",
+    "name": "PadChest: Chest X-ray and Radiology Reports Dataset",
+    "description": "PadChest is a large-scale chest X-ray dataset from Hospital Universitario San Juan de Alicante (Spain) spanning 2009-2017. It contains over 160,000 chest radiographs from 67,000 patients along with associated Spanish clinical radiology reports labeled with 117 radiographic findings and 19 differential diagnoses mapped to UMLS concepts.",
+    "homepage_url": "https://bimcv.cipf.es/bimcv-projects/padchest/",
+    "publisher": {
+      "name": "BIMCV - Medical Imaging Databank of the Valencia Region",
+      "type": "academic",
+      "url": "https://bimcv.cipf.es/"
+    },
+    "modalities": [
+      "vision",
+      "nlp",
+      "multimodal"
+    ],
+    "tasks": [
+      "image-classification",
+      "medical-imaging",
+      "multi-label-classification"
+    ],
+    "tags": [
+      "medical-imaging",
+      "chest-xray",
+      "radiology",
+      "radiology-reports",
+      "bimcv",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Verified CC-BY-NC-SA 4.0 license stated in BIMCV project documentation."
+    },
+    "source_references": [
+      {
+        "title": "PadChest Project at BIMCV",
+        "url": "https://bimcv.cipf.es/bimcv-projects/padchest/",
+        "type": "official_website",
+        "notes": "Official BIMCV resource page."
+      },
+      {
+        "title": "PadChest: A large chest X-ray image dataset with multi-label annotated reports (MedIA 2020)",
+        "url": "https://doi.org/10.1016/j.media.2020.101797",
+        "type": "original_paper",
+        "notes": "Published in Medical Image Analysis (MedIA 2020)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Medical Image Analysis publication and BIMCV portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 160868,
+      "unit": "radiographs"
+    },
+    "languages": [
+      "es"
+    ],
+    "dates": {
+      "published": "2019-01",
+      "last_updated": "2020"
+    },
+    "citation": {
+      "paper_title": "PadChest: A large chest X-ray image dataset with multi-label annotated reports",
+      "paper_url": "https://doi.org/10.1016/j.media.2020.101797",
+      "authors": [
+        "Aurelia Bustos",
+        "Antonio Pertusa",
+        "José-María Salinas",
+        "Maria de la Iglesia-Vayá"
+      ],
+      "doi": "10.1016/j.media.2020.101797",
+      "bibtex": "@article{bustos2020padchest,\n  title = {PadChest: A large chest X-ray image dataset with multi-label annotated reports},\n  author = {Bustos, Aurelia and Pertusa, Antonio and Salinas, Jos{\\'e}-Mar{\\'i}a and de la Iglesia-Vay{\\'a}, Maria},\n  journal = {Medical Image Analysis},\n  volume = {66},\n  pages = {101797},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "pamap2",
     "slug": "pamap2",
     "name": "PAMAP2: Physical Activity Monitoring Dataset",
@@ -15216,6 +16367,92 @@
       ],
       "doi": "10.1007/s11263-014-0733-5",
       "bibtex": "@article{everingham2015pascal,\n  title={The Pascal Visual Object Classes Challenge: A Retrospective},\n  author={Everingham, Mark and Eslami, SM Ali and Van Gool, Luc and Williams, Christopher KI and Winn, John and Zisserman, Andrew},\n  journal={International Journal of Computer Vision},\n  volume={111},\n  number={1},\n  pages={98--136},\n  year={2015},\n  publisher={Springer},\n  doi={10.1007/s11263-014-0733-5}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "paws-x",
+    "slug": "paws-x",
+    "name": "PAWS-X: Cross-Lingual Paraphrase Adversaries from Word Scrambling",
+    "description": "PAWS-X is an adversarial multilingual paraphrase identification dataset covering seven languages: English, French, Spanish, German, Chinese, Japanese, and Korean. It consists of sentence pairs with high lexical overlap and word scrambling that test a model's sensitivity to word order and syntactic structure.",
+    "homepage_url": "https://github.com/google-research-datasets/paws/tree/master/pawsx",
+    "publisher": {
+      "name": "Google Research",
+      "type": "industry",
+      "url": "https://research.google"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "paraphrase-identification",
+      "cross-lingual-transfer"
+    ],
+    "tags": [
+      "paraphrase",
+      "adversarial",
+      "cross-lingual",
+      "multilingual",
+      "google-research",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY-SA 4.0 license stated in Google Research PAWS repository."
+    },
+    "source_references": [
+      {
+        "title": "PAWS-X Official Google Research GitHub Repository",
+        "url": "https://github.com/google-research-datasets/paws/tree/master/pawsx",
+        "type": "repository",
+        "notes": "Official repository with dataset TSV files."
+      },
+      {
+        "title": "PAWS-X: A Cross-lingual Adversarial Dataset for Paraphrase Identification (EMNLP 2019)",
+        "url": "https://doi.org/10.18653/v1/D19-1382",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of EMNLP 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against EMNLP 2019 proceedings and Google Research repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 320485,
+      "unit": "sentence-pairs"
+    },
+    "languages": [
+      "de",
+      "en",
+      "es",
+      "fr",
+      "ja",
+      "ko",
+      "zh"
+    ],
+    "dates": {
+      "published": "2019-11",
+      "last_updated": "2019-11"
+    },
+    "citation": {
+      "paper_title": "PAWS-X: A Cross-lingual Adversarial Dataset for Paraphrase Identification",
+      "paper_url": "https://doi.org/10.18653/v1/D19-1382",
+      "authors": [
+        "Yinfei Yang",
+        "Yuan Zhang",
+        "Chris Tar",
+        "Jason Baldridge"
+      ],
+      "doi": "10.18653/v1/D19-1382",
+      "bibtex": "@inproceedings{yang-etal-2019-paws,\n  title = {PAWS-X: A Cross-lingual Adversarial Dataset for Paraphrase Identification},\n  author = {Yang, Yinfei and Zhang, Yuan and Tar, Chris and Baldridge, Jason},\n  booktitle = {Proceedings of EMNLP 2019},\n  pages = {3687--3692},\n  year = {2019}\n}"
     }
   },
   {
@@ -16816,6 +18053,82 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "speech-commands",
+    "slug": "speech-commands",
+    "name": "Speech Commands: Keyword Spotting Dataset",
+    "description": "The Speech Commands dataset consists of 105,829 one-second audio recordings of 35 words spoken by 2,618 different speakers. Created by Google Brain to provide a standard benchmark for small-footprint keyword spotting and limited-vocabulary voice interface models.",
+    "homepage_url": "https://www.tensorflow.org/datasets/catalog/speech_commands",
+    "publisher": {
+      "name": "Google Brain",
+      "type": "industry",
+      "url": "https://research.google"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "keyword-spotting",
+      "audio-classification"
+    ],
+    "tags": [
+      "audio",
+      "speech",
+      "keyword-spotting",
+      "voice-commands",
+      "google-brain",
+      "tensorflow-datasets"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in TensorFlow Datasets catalog."
+    },
+    "source_references": [
+      {
+        "title": "Speech Commands on TensorFlow Datasets",
+        "url": "https://www.tensorflow.org/datasets/catalog/speech_commands",
+        "type": "official_website",
+        "notes": "Official TFDS catalog entry."
+      },
+      {
+        "title": "Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition (arXiv 2018)",
+        "url": "https://arxiv.org/abs/1804.03209",
+        "type": "original_paper",
+        "notes": "Original technical report on Speech Commands."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against arXiv publication and TensorFlow Datasets documentation."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 105829,
+      "unit": "utterances"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-04",
+      "last_updated": "2018-08"
+    },
+    "citation": {
+      "paper_title": "Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition",
+      "paper_url": "https://arxiv.org/abs/1804.03209",
+      "authors": [
+        "Pete Warden"
+      ],
+      "bibtex": "@article{warden2018speech,\n  title = {Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition},\n  author = {Warden, Pete},\n  journal = {arXiv preprint arXiv:1804.03209},\n  year = {2018}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "spider",
     "slug": "spider",
     "name": "Spider: Complex and Cross-Domain Text-to-SQL Benchmark",
@@ -18211,6 +19524,84 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ucr-time-series-archive",
+    "slug": "ucr-time-series-archive",
+    "name": "UCR Time Series Classification Archive",
+    "description": "The UCR Time Series Classification Archive is the gold-standard benchmark repository for time-series classification. Maintained by researchers at UC Riverside and University of East Anglia, it features 128 standardized univariate time-series datasets spanning sensor data, ECG/EEG, motion capture, audio spectrograms, and simulated physics.",
+    "homepage_url": "https://www.timeseriesclassification.com/",
+    "publisher": {
+      "name": "University of California, Riverside & University of East Anglia",
+      "type": "academic",
+      "url": "https://www.cs.ucr.edu/~eamonn/time_series_data_2018/"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "time-series-classification"
+    ],
+    "tags": [
+      "time-series",
+      "classification",
+      "ucr-archive",
+      "benchmark",
+      "uc-riverside"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Open Academic Research Use",
+      "url": "https://www.timeseriesclassification.com/",
+      "commercial_use": "allowed",
+      "notes": "Freely provided to the research community for algorithmic benchmarking and evaluation."
+    },
+    "source_references": [
+      {
+        "title": "Time Series Classification Repository",
+        "url": "https://www.timeseriesclassification.com/",
+        "type": "official_website",
+        "notes": "Official repository portal hosted by University of East Anglia."
+      },
+      {
+        "title": "The UEA & UCR Time Series Classification Repository (Data Mining and Knowledge Discovery 2019)",
+        "url": "https://doi.org/10.1007/s10618-019-00619-1",
+        "type": "original_paper",
+        "notes": "Published in Data Mining and Knowledge Discovery (DMKD 2019)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against DMKD 2019 paper and UCR/UEA repository portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 128,
+      "unit": "standardized-datasets"
+    },
+    "dates": {
+      "published": "2018-10",
+      "last_updated": "2019"
+    },
+    "citation": {
+      "paper_title": "The UEA & UCR Time Series Classification Repository",
+      "paper_url": "https://doi.org/10.1007/s10618-019-00619-1",
+      "authors": [
+        "Anthony Bagnall",
+        "Hoang Anh Dau",
+        "Jason Lines",
+        "Michael Flynn",
+        "James Large",
+        "Aaron Bostrom",
+        "Paul Southam",
+        "Eamonn Keogh"
+      ],
+      "doi": "10.1007/s10618-019-00619-1",
+      "bibtex": "@article{bagnall2019uea,\n  title = {The UEA & UCR Time Series Classification Repository},\n  author = {Bagnall, Anthony and Dau, Hoang Anh and Lines, Jason and Flynn, Michael and Large, James and Bostrom, Aaron and Southam, Paul and Keogh, Eamonn},\n  journal = {Data Mining and Knowledge Discovery},\n  volume = {33},\n  number = {2},\n  pages = {256--266},\n  year = {2019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "uia-iot-ids-comprehensive-iot-network",
     "slug": "uia-iot-ids-comprehensive-iot-network",
     "name": "UIA-IOT-IDS dataset: Comprehensive IoT network intrusion detection and sensor-anomaly",
@@ -18608,6 +19999,81 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "vctk",
+    "slug": "vctk",
+    "name": "VCTK: CSTR Voice Cloning Toolkit Corpus",
+    "description": "The VCTK corpus contains speech data uttered by 110 English speakers with various accents (Scottish, Irish, English, American, Australian, Welsh, Canadian, etc.). Each speaker reads approximately 400 sentences extracted from a herald text, rainbow passage, and elicitation paragraph recorded at 48kHz with omni-directional and directional microphones.",
+    "homepage_url": "https://datashare.ed.ac.uk/handle/10283/3443",
+    "publisher": {
+      "name": "Centre for Speech Technology Research (CSTR), University of Edinburgh",
+      "type": "academic",
+      "url": "https://www.cstr.ed.ac.uk/"
+    },
+    "modalities": [
+      "audio",
+      "nlp"
+    ],
+    "tasks": [
+      "text-to-speech",
+      "speaker-identification"
+    ],
+    "tags": [
+      "audio",
+      "speech",
+      "multi-speaker",
+      "accents",
+      "tts",
+      "voice-cloning",
+      "edinburgh"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License (ODC-By) v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Verified ODC-By license stated on University of Edinburgh DataShare portal."
+    },
+    "source_references": [
+      {
+        "title": "VCTK on Edinburgh DataShare",
+        "url": "https://datashare.ed.ac.uk/handle/10283/3443",
+        "type": "official_website",
+        "notes": "Official repository distribution at Edinburgh DataShare."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Edinburgh DataShare release and CSTR documentation."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 44242,
+      "unit": "utterances"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2019-06",
+      "last_updated": "2019-06"
+    },
+    "citation": {
+      "paper_title": "CSTR VCTK Corpus: English Multi-speaker Corpus for CSTR Voice Cloning Toolkit",
+      "paper_url": "https://doi.org/10.7488/ds/2645",
+      "authors": [
+        "Christophe Veaux",
+        "Junichi Yamagishi",
+        "Kirsten MacDonald"
+      ],
+      "doi": "10.7488/ds/2645",
+      "bibtex": "@misc{veaux2019cstr,\n  title = {CSTR VCTK Corpus: English Multi-speaker Corpus for CSTR Voice Cloning Toolkit},\n  author = {Veaux, Christophe and Yamagishi, Junichi and MacDonald, Kirsten},\n  publisher = {University of Edinburgh},\n  year = {2019},\n  doi = {10.7488/ds/2645}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "veghealth14-multi-crop-leaf-disease-image",
     "slug": "veghealth14-multi-crop-leaf-disease-image",
     "name": "VegHealth14: A Multi-Crop Leaf Disease Image Dataset of 14 Commonly Cultivated Vegetables in Bangladesh",
@@ -18770,6 +20236,85 @@
       ],
       "doi": "10.1038/s41597-022-01498-w",
       "bibtex": "@article{nguyen2022vindr,\n  title = {VinDr-CXR: An open dataset of chest X-rays with radiologist's annotations},\n  author = {Nguyen, Ha Q. and Lam, Khanh and Le, Linh T. and Pham, Hieu H. and Tran, Dat Q. and others},\n  journal = {Scientific Data},\n  volume = {9},\n  number = {1},\n  pages = {429},\n  year = {2022}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "vindr-mammo",
+    "slug": "vindr-mammo",
+    "name": "VinDr-Mammo: Full-Field Digital Mammography Dataset",
+    "description": "VinDr-Mammo is a public benchmark dataset containing 20,000 full-field digital mammography (FFDM) examinations (5,000 four-view breast screening exams) collected from two major hospitals in Vietnam. Each examination was independently annotated by three experienced radiologists for breast density, BI-RADS assessment categories, and bounding boxes for suspicious breast lesions.",
+    "homepage_url": "https://physionet.org/content/vindr-mammo/1.0.0/",
+    "publisher": {
+      "name": "VinBigdata & PhysioNet",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "medical-imaging",
+      "image-classification"
+    ],
+    "tags": [
+      "mammography",
+      "breast-cancer",
+      "medical-imaging",
+      "oncology",
+      "physionet",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "PhysioNet Credentialed Health Data License 1.5.0",
+      "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
+      "commercial_use": "allowed",
+      "notes": "Available under PhysioNet Credentialed Health Data License for research and clinical algorithm validation."
+    },
+    "source_references": [
+      {
+        "title": "VinDr-Mammo on PhysioNet",
+        "url": "https://physionet.org/content/vindr-mammo/1.0.0/",
+        "type": "official_website",
+        "notes": "Official PhysioNet dataset distribution page."
+      },
+      {
+        "title": "VinDr-Mammo: A large-scale benchmark dataset for computer-aided diagnosis in full-field digital mammography (Scientific Data 2023)",
+        "url": "https://doi.org/10.1038/s41597-023-02100-7",
+        "type": "original_paper",
+        "notes": "Published in Nature Scientific Data 2023."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Nature Scientific Data publication and PhysioNet repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 20000,
+      "unit": "mammograms"
+    },
+    "dates": {
+      "published": "2023-04",
+      "last_updated": "2023-04"
+    },
+    "citation": {
+      "paper_title": "VinDr-Mammo: A large-scale benchmark dataset for computer-aided diagnosis in full-field digital mammography",
+      "paper_url": "https://doi.org/10.1038/s41597-023-02100-7",
+      "authors": [
+        "Hieu T. Nguyen",
+        "Ha Q. Nguyen",
+        "Hieu H. Pham",
+        "Khanh Lam",
+        "Linh T. Le",
+        "Dat T. Ngo",
+        "Minh Dao"
+      ],
+      "doi": "10.1038/s41597-023-02100-7",
+      "bibtex": "@article{nguyen2023vindr,\n  title = {VinDr-Mammo: A large-scale benchmark dataset for computer-aided diagnosis in full-field digital mammography},\n  author = {Nguyen, Hieu T. and Nguyen, Ha Q. and Pham, Hieu H. and Lam, Khanh and Le, Linh T. and Ngo, Dat T. and Dao, Minh},\n  journal = {Scientific Data},\n  volume = {10},\n  number = {1},\n  pages = {211},\n  year = {2023}\n}"
     }
   },
   {
@@ -19353,6 +20898,98 @@
     "provenance": {
       "collection_method": "Certified laboratory measurements collected at the official Viticulture Commission of the Vinho Verde Region (CVRVV) in Portugal.",
       "curation_notes": "Each sample was evaluated by blind sensory testing conducted by a panel of at least three wine experts."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "xcopa",
+    "slug": "xcopa",
+    "name": "XCOPA: Cross-Lingual Choice of Plausible Alternatives",
+    "description": "XCOPA is a benchmark dataset for causal commonsense reasoning across 11 diverse languages (Estonian, Haitian Creole, Indonesian, Italian, Kinyarwanda, Quechua, Swahili, Tamil, Turkish, Vietnamese, and Chinese). Modeled after the English COPA dataset, instances present a premise and ask which of two choices is more plausibly the cause or consequence.",
+    "homepage_url": "https://github.com/cambridgeltl/xcopa",
+    "publisher": {
+      "name": "Language Technology Lab, University of Cambridge",
+      "type": "academic",
+      "url": "https://ltl.fitz.cam.ac.uk/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "commonsense-reasoning",
+      "cross-lingual-transfer"
+    ],
+    "tags": [
+      "commonsense-reasoning",
+      "multilingual",
+      "cross-lingual",
+      "causal-reasoning",
+      "cambridge",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in official Cambridge LTL repository."
+    },
+    "source_references": [
+      {
+        "title": "XCOPA Official GitHub Repository",
+        "url": "https://github.com/cambridgeltl/xcopa",
+        "type": "repository",
+        "notes": "Official repository with dataset JSONLs and evaluation scripts."
+      },
+      {
+        "title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning (EMNLP 2020)",
+        "url": "https://doi.org/10.18653/v1/2020.emnlp-main.185",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of EMNLP 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against EMNLP 2020 proceedings and Cambridge LTL repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 11000,
+      "unit": "examples"
+    },
+    "languages": [
+      "et",
+      "ht",
+      "id",
+      "it",
+      "qu",
+      "rw",
+      "sw",
+      "ta",
+      "tr",
+      "vi",
+      "zh"
+    ],
+    "dates": {
+      "published": "2020-11",
+      "last_updated": "2020-11"
+    },
+    "citation": {
+      "paper_title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+      "paper_url": "https://doi.org/10.18653/v1/2020.emnlp-main.185",
+      "authors": [
+        "Edoardo M. Ponti",
+        "Goran Glavaš",
+        "Olga Majewska",
+        "Qianchu Liu",
+        "Ivan Vulić",
+        "Anna Korhonen"
+      ],
+      "doi": "10.18653/v1/2020.emnlp-main.185",
+      "bibtex": "@inproceedings{ponti-etal-2020-xcopa,\n  title = {XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning},\n  author = {Ponti, Edoardo M. and Glava{\\v{s}}, Goran and Majewska, Olga and Liu, Qianchu and Vuli{\\'c}, Ivan and Korhonen, Anna},\n  booktitle = {Proceedings of EMNLP 2020},\n  pages = {2362--2376},\n  year = {2020}\n}"
     }
   },
   {

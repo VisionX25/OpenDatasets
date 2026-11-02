@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "flores-200",
+  "slug": "flores-200",
+  "name": "FLORES-200: Multilingual Machine Translation Benchmark",
+  "description": "FLORES-200 is an evaluation benchmark for machine translation covering 204 languages and language varieties. It consists of 3,001 sentences professionally translated from 842 diverse web articles across books, travel guides, news, and Wikipedia into 204 languages, yielding over 40,000 translation evaluation directions.",
+  "homepage_url": "https://github.com/openlanguagedata/flores",
+  "publisher": {
+    "name": "Meta AI & Open Language Data Initiative",
+    "type": "industry",
+    "url": "https://ai.meta.com/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "machine-translation",
+    "cross-lingual-transfer"
+  ],
+  "tags": [
+    "machine-translation",
+    "multilingual",
+    "evaluation",
+    "nllb",
+    "meta-ai",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY-SA 4.0 license stated in official FLORES repository."
+  },
+  "source_references": [
+    {
+      "title": "FLORES Official Repository",
+      "url": "https://github.com/openlanguagedata/flores",
+      "type": "repository",
+      "notes": "Official repository with dataset sentences and evaluation tools."
+    },
+    {
+      "title": "No Language Left Behind: Scaling Human-Centered Machine Translation (arXiv 2022)",
+      "url": "https://arxiv.org/abs/2207.04672",
+      "type": "original_paper",
+      "notes": "NLLB Team foundation research paper."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against NLLB Team publication and official FLORES repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 3001,
+    "unit": "sentences-per-language"
+  },
+  "dates": {
+    "published": "2022-07",
+    "last_updated": "2023"
+  },
+  "citation": {
+    "paper_title": "No Language Left Behind: Scaling Human-Centered Machine Translation",
+    "paper_url": "https://arxiv.org/abs/2207.04672",
+    "authors": [
+      "Marta R. Costa-jussà",
+      "James Cross",
+      "Onur Çelebi",
+      "Maha Elbayad",
+      "Angela Fan",
+      "Prangthip Hansanti",
+      "Jiatao Gu",
+      "Kaushik Ram Sadagopan",
+      "Holger Schwenk"
+    ],
+    "bibtex": "@article{nllb2022team,\n  title = {No Language Left Behind: Scaling Human-Centered Machine Translation},\n  author = {NLLB Team and Costa-juss{\\`a}, Marta R. and Cross, James and {\\c{C}}elebi, Onur and Elbayad, Maha and Fan, Angela and others},\n  journal = {arXiv preprint arXiv:2207.04672},\n  year = {2022}\n}"
+  }
+}

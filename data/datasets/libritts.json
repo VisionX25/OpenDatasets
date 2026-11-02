@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "libritts",
+  "slug": "libritts",
+  "name": "LibriTTS: Text-to-Speech Corpus",
+  "description": "LibriTTS is a multi-speaker English speech corpus designed for text-to-speech (TTS) research. Derived from the original audio materials of LibriSpeech, it contains approximately 585 hours of 24kHz audio from 2,456 speakers with normalized text transcripts, sentence-level segmentation, and filtered background noise.",
+  "homepage_url": "https://www.openslr.org/60/",
+  "publisher": {
+    "name": "Google & OpenSLR",
+    "type": "industry",
+    "url": "https://www.openslr.org"
+  },
+  "modalities": [
+    "audio",
+    "nlp"
+  ],
+  "tasks": [
+    "text-to-speech",
+    "speech-synthesis"
+  ],
+  "tags": [
+    "audio",
+    "speech",
+    "tts",
+    "librispeech",
+    "text-to-speech",
+    "openslr"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in OpenSLR resource page."
+  },
+  "source_references": [
+    {
+      "title": "LibriTTS on OpenSLR",
+      "url": "https://www.openslr.org/60/",
+      "type": "official_website",
+      "notes": "Official OpenSLR dataset distribution page."
+    },
+    {
+      "title": "LibriTTS: A Corpus Derived from LibriSpeech for Text-to-Speech (Interspeech 2019)",
+      "url": "https://doi.org/10.21437/Interspeech.2019-2441",
+      "type": "original_paper",
+      "notes": "Published in Interspeech 2019."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against Interspeech 2019 paper and OpenSLR 60 archive."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 585,
+    "unit": "hours"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2019-09",
+    "last_updated": "2019-09"
+  },
+  "citation": {
+    "paper_title": "LibriTTS: A Corpus Derived from LibriSpeech for Text-to-Speech",
+    "paper_url": "https://doi.org/10.21437/Interspeech.2019-2441",
+    "authors": [
+      "Heiga Zen",
+      "Viet Dang",
+      "Rob Clark",
+      "Yu Zhang",
+      "Ron J. Weiss",
+      "Ye Jia",
+      "Zhifeng Chen",
+      "Yonghui Wu"
+    ],
+    "doi": "10.21437/Interspeech.2019-2441",
+    "bibtex": "@inproceedings{zen2019libritts,\n  title = {LibriTTS: A Corpus Derived from LibriSpeech for Text-to-Speech},\n  author = {Zen, Heiga and Dang, Viet and Clark, Rob and Zhang, Yu and Weiss, Ron J. and Jia, Ye and Chen, Zhifeng and Wu, Yonghui},\n  booktitle = {Proc. Interspeech 2019},\n  pages = {1526--1530},\n  year = {2019}\n}"
+  }
+}
