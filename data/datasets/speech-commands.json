@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "speech-commands",
+  "slug": "speech-commands",
+  "name": "Speech Commands: Keyword Spotting Dataset",
+  "description": "The Speech Commands dataset consists of 105,829 one-second audio recordings of 35 words spoken by 2,618 different speakers. Created by Google Brain to provide a standard benchmark for small-footprint keyword spotting and limited-vocabulary voice interface models.",
+  "homepage_url": "https://www.tensorflow.org/datasets/catalog/speech_commands",
+  "publisher": {
+    "name": "Google Brain",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "keyword-spotting",
+    "audio-classification"
+  ],
+  "tags": [
+    "audio",
+    "speech",
+    "keyword-spotting",
+    "voice-commands",
+    "google-brain",
+    "tensorflow-datasets"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in TensorFlow Datasets catalog."
+  },
+  "source_references": [
+    {
+      "title": "Speech Commands on TensorFlow Datasets",
+      "url": "https://www.tensorflow.org/datasets/catalog/speech_commands",
+      "type": "official_website",
+      "notes": "Official TFDS catalog entry."
+    },
+    {
+      "title": "Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition (arXiv 2018)",
+      "url": "https://arxiv.org/abs/1804.03209",
+      "type": "original_paper",
+      "notes": "Original technical report on Speech Commands."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against arXiv publication and TensorFlow Datasets documentation."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 105829,
+    "unit": "utterances"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-04",
+    "last_updated": "2018-08"
+  },
+  "citation": {
+    "paper_title": "Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition",
+    "paper_url": "https://arxiv.org/abs/1804.03209",
+    "authors": [
+      "Pete Warden"
+    ],
+    "bibtex": "@article{warden2018speech,\n  title = {Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition},\n  author = {Warden, Pete},\n  journal = {arXiv preprint arXiv:1804.03209},\n  year = {2018}\n}"
+  }
+}

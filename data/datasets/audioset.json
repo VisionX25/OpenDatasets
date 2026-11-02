@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "audioset",
+  "slug": "audioset",
+  "name": "AudioSet: Large-Scale Audio Event Dataset",
+  "description": "AudioSet is a large-scale collection of 2,084,320 human-labeled 10-second sound clips drawn from YouTube videos. The dataset covers 632 audio event classes organized in an expanding hierarchical ontology spanning human sounds, animal sounds, musical instruments, engine/transport sounds, and environmental ambiences.",
+  "homepage_url": "https://research.google.com/audioset/dataset/index.html",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "audio-classification",
+    "sound-event-detection"
+  ],
+  "tags": [
+    "audio",
+    "sound-events",
+    "google-research",
+    "audio-ontology",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated on Google Research AudioSet page."
+  },
+  "source_references": [
+    {
+      "title": "AudioSet Project Homepage",
+      "url": "https://research.google.com/audioset/dataset/index.html",
+      "type": "official_website",
+      "notes": "Official Google Research dataset distribution."
+    },
+    {
+      "title": "Audio Set: An ontology and human-labeled dataset for audio events (ICASSP 2017)",
+      "url": "https://doi.org/10.1109/ICASSP.2017.7952132",
+      "type": "original_paper",
+      "notes": "Published in IEEE ICASSP 2017."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against IEEE ICASSP 2017 paper and Google Research portal."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 2084320,
+    "unit": "sound-segments"
+  },
+  "dates": {
+    "published": "2017-03",
+    "last_updated": "2017-03"
+  },
+  "citation": {
+    "paper_title": "Audio Set: An ontology and human-labeled dataset for audio events",
+    "paper_url": "https://doi.org/10.1109/ICASSP.2017.7952132",
+    "authors": [
+      "Jort F. Gemmeke",
+      "Daniel P. W. Ellis",
+      "Dylan Freedman",
+      "Aren Jansen",
+      "Wade Channing",
+      "Dan Ellis"
+    ],
+    "doi": "10.1109/ICASSP.2017.7952132",
+    "bibtex": "@inproceedings{gemmeke2017audio,\n  title = {Audio Set: An ontology and human-labeled dataset for audio events},\n  author = {Gemmeke, Jort F. and Ellis, Daniel P. W. and Freedman, Dylan and Jansen, Aren and Channing, Wade and Ellis, Dan},\n  booktitle = {2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages = {776--780},\n  year = {2017}\n}"
+  }
+}

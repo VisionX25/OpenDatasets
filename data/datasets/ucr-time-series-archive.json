@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ucr-time-series-archive",
+  "slug": "ucr-time-series-archive",
+  "name": "UCR Time Series Classification Archive",
+  "description": "The UCR Time Series Classification Archive is the gold-standard benchmark repository for time-series classification. Maintained by researchers at UC Riverside and University of East Anglia, it features 128 standardized univariate time-series datasets spanning sensor data, ECG/EEG, motion capture, audio spectrograms, and simulated physics.",
+  "homepage_url": "https://www.timeseriesclassification.com/",
+  "publisher": {
+    "name": "University of California, Riverside & University of East Anglia",
+    "type": "academic",
+    "url": "https://www.cs.ucr.edu/~eamonn/time_series_data_2018/"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "time-series-classification"
+  ],
+  "tags": [
+    "time-series",
+    "classification",
+    "ucr-archive",
+    "benchmark",
+    "uc-riverside"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Open Academic Research Use",
+    "url": "https://www.timeseriesclassification.com/",
+    "commercial_use": "allowed",
+    "notes": "Freely provided to the research community for algorithmic benchmarking and evaluation."
+  },
+  "source_references": [
+    {
+      "title": "Time Series Classification Repository",
+      "url": "https://www.timeseriesclassification.com/",
+      "type": "official_website",
+      "notes": "Official repository portal hosted by University of East Anglia."
+    },
+    {
+      "title": "The UEA & UCR Time Series Classification Repository (Data Mining and Knowledge Discovery 2019)",
+      "url": "https://doi.org/10.1007/s10618-019-00619-1",
+      "type": "original_paper",
+      "notes": "Published in Data Mining and Knowledge Discovery (DMKD 2019)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against DMKD 2019 paper and UCR/UEA repository portal."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 128,
+    "unit": "standardized-datasets"
+  },
+  "dates": {
+    "published": "2018-10",
+    "last_updated": "2019"
+  },
+  "citation": {
+    "paper_title": "The UEA & UCR Time Series Classification Repository",
+    "paper_url": "https://doi.org/10.1007/s10618-019-00619-1",
+    "authors": [
+      "Anthony Bagnall",
+      "Hoang Anh Dau",
+      "Jason Lines",
+      "Michael Flynn",
+      "James Large",
+      "Aaron Bostrom",
+      "Paul Southam",
+      "Eamonn Keogh"
+    ],
+    "doi": "10.1007/s10618-019-00619-1",
+    "bibtex": "@article{bagnall2019uea,\n  title = {The UEA & UCR Time Series Classification Repository},\n  author = {Bagnall, Anthony and Dau, Hoang Anh and Lines, Jason and Flynn, Michael and Large, James and Bostrom, Aaron and Southam, Paul and Keogh, Eamonn},\n  journal = {Data Mining and Knowledge Discovery},\n  volume = {33},\n  number = {2},\n  pages = {256--266},\n  year = {2019}\n}"
+  }
+}

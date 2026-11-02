@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fsd50k",
+  "slug": "fsd50k",
+  "name": "FSD50K: Human-Labeled Sound Events Dataset",
+  "description": "FSD50K is an open audio dataset containing 51,197 audio clips (108.3 hours) drawn from Freesound and human-labeled across 200 sound classes hierarchically organized using Google's AudioSet Ontology. Audio clips feature natural environmental, human, animal, musical, and domestic sounds with ground truth vocabulary labels.",
+  "homepage_url": "https://fsannotator.upf.edu/fsd/release/FSD50K/",
+  "publisher": {
+    "name": "Music Technology Group (MTG), Universitat Pompeu Fabra",
+    "type": "academic",
+    "url": "https://www.upf.edu/web/mtg"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "audio-classification",
+    "sound-event-detection"
+  ],
+  "tags": [
+    "audio",
+    "sound-event-detection",
+    "environmental-sound",
+    "freesound",
+    "audioset-ontology",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in official FSD50K release."
+  },
+  "source_references": [
+    {
+      "title": "FSD50K Release Page",
+      "url": "https://fsannotator.upf.edu/fsd/release/FSD50K/",
+      "type": "official_website",
+      "notes": "Official dataset portal hosted by Universitat Pompeu Fabra."
+    },
+    {
+      "title": "FSD50K: An Open Dataset of Human-Labeled Sound Events (IEEE TASLP 2022)",
+      "url": "https://doi.org/10.1109/TASLP.2021.3133208",
+      "type": "original_paper",
+      "notes": "Published in IEEE/ACM Transactions on Audio, Speech, and Language Processing."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against IEEE TASLP 2022 paper and MTG UPF portal."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 51197,
+    "unit": "clips"
+  },
+  "dates": {
+    "published": "2020-10",
+    "last_updated": "2022"
+  },
+  "citation": {
+    "paper_title": "FSD50K: An Open Dataset of Human-Labeled Sound Events",
+    "paper_url": "https://doi.org/10.1109/TASLP.2021.3133208",
+    "authors": [
+      "Eduardo Fonseca",
+      "Xavier Favory",
+      "Jordi Pons",
+      "Frederic Font",
+      "Xavier Serra"
+    ],
+    "doi": "10.1109/TASLP.2021.3133208",
+    "bibtex": "@article{fonseca2022fsd50k,\n  title = {FSD50K: An Open Dataset of Human-Labeled Sound Events},\n  author = {Fonseca, Eduardo and Favory, Xavier and Pons, Jordi and Font, Frederic and Serra, Xavier},\n  journal = {IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  volume = {30},\n  pages = {829--852},\n  year = {2022}\n}"
+  }
+}

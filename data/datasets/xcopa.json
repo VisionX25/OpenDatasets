@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "id": "xcopa",
+  "slug": "xcopa",
+  "name": "XCOPA: Cross-Lingual Choice of Plausible Alternatives",
+  "description": "XCOPA is a benchmark dataset for causal commonsense reasoning across 11 diverse languages (Estonian, Haitian Creole, Indonesian, Italian, Kinyarwanda, Quechua, Swahili, Tamil, Turkish, Vietnamese, and Chinese). Modeled after the English COPA dataset, instances present a premise and ask which of two choices is more plausibly the cause or consequence.",
+  "homepage_url": "https://github.com/cambridgeltl/xcopa",
+  "publisher": {
+    "name": "Language Technology Lab, University of Cambridge",
+    "type": "academic",
+    "url": "https://ltl.fitz.cam.ac.uk/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "commonsense-reasoning",
+    "cross-lingual-transfer"
+  ],
+  "tags": [
+    "commonsense-reasoning",
+    "multilingual",
+    "cross-lingual",
+    "causal-reasoning",
+    "cambridge",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in official Cambridge LTL repository."
+  },
+  "source_references": [
+    {
+      "title": "XCOPA Official GitHub Repository",
+      "url": "https://github.com/cambridgeltl/xcopa",
+      "type": "repository",
+      "notes": "Official repository with dataset JSONLs and evaluation scripts."
+    },
+    {
+      "title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning (EMNLP 2020)",
+      "url": "https://doi.org/10.18653/v1/2020.emnlp-main.185",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of EMNLP 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against EMNLP 2020 proceedings and Cambridge LTL repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 11000,
+    "unit": "examples"
+  },
+  "languages": [
+    "et",
+    "ht",
+    "id",
+    "it",
+    "qu",
+    "rw",
+    "sw",
+    "ta",
+    "tr",
+    "vi",
+    "zh"
+  ],
+  "dates": {
+    "published": "2020-11",
+    "last_updated": "2020-11"
+  },
+  "citation": {
+    "paper_title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+    "paper_url": "https://doi.org/10.18653/v1/2020.emnlp-main.185",
+    "authors": [
+      "Edoardo M. Ponti",
+      "Goran Glavaš",
+      "Olga Majewska",
+      "Qianchu Liu",
+      "Ivan Vulić",
+      "Anna Korhonen"
+    ],
+    "doi": "10.18653/v1/2020.emnlp-main.185",
+    "bibtex": "@inproceedings{ponti-etal-2020-xcopa,\n  title = {XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning},\n  author = {Ponti, Edoardo M. and Glava{\\v{s}}, Goran and Majewska, Olga and Liu, Qianchu and Vuli{\\'c}, Ivan and Korhonen, Anna},\n  booktitle = {Proceedings of EMNLP 2020},\n  pages = {2362--2376},\n  year = {2020}\n}"
+  }
+}

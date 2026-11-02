@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "id": "padchest",
+  "slug": "padchest",
+  "name": "PadChest: Chest X-ray and Radiology Reports Dataset",
+  "description": "PadChest is a large-scale chest X-ray dataset from Hospital Universitario San Juan de Alicante (Spain) spanning 2009-2017. It contains over 160,000 chest radiographs from 67,000 patients along with associated Spanish clinical radiology reports labeled with 117 radiographic findings and 19 differential diagnoses mapped to UMLS concepts.",
+  "homepage_url": "https://bimcv.cipf.es/bimcv-projects/padchest/",
+  "publisher": {
+    "name": "BIMCV - Medical Imaging Databank of the Valencia Region",
+    "type": "academic",
+    "url": "https://bimcv.cipf.es/"
+  },
+  "modalities": [
+    "vision",
+    "nlp",
+    "multimodal"
+  ],
+  "tasks": [
+    "image-classification",
+    "medical-imaging",
+    "multi-label-classification"
+  ],
+  "tags": [
+    "medical-imaging",
+    "chest-xray",
+    "radiology",
+    "radiology-reports",
+    "bimcv",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Verified CC-BY-NC-SA 4.0 license stated in BIMCV project documentation."
+  },
+  "source_references": [
+    {
+      "title": "PadChest Project at BIMCV",
+      "url": "https://bimcv.cipf.es/bimcv-projects/padchest/",
+      "type": "official_website",
+      "notes": "Official BIMCV resource page."
+    },
+    {
+      "title": "PadChest: A large chest X-ray image dataset with multi-label annotated reports (MedIA 2020)",
+      "url": "https://doi.org/10.1016/j.media.2020.101797",
+      "type": "original_paper",
+      "notes": "Published in Medical Image Analysis (MedIA 2020)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against Medical Image Analysis publication and BIMCV portal."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 160868,
+    "unit": "radiographs"
+  },
+  "languages": [
+    "es"
+  ],
+  "dates": {
+    "published": "2019-01",
+    "last_updated": "2020"
+  },
+  "citation": {
+    "paper_title": "PadChest: A large chest X-ray image dataset with multi-label annotated reports",
+    "paper_url": "https://doi.org/10.1016/j.media.2020.101797",
+    "authors": [
+      "Aurelia Bustos",
+      "Antonio Pertusa",
+      "José-María Salinas",
+      "Maria de la Iglesia-Vayá"
+    ],
+    "doi": "10.1016/j.media.2020.101797",
+    "bibtex": "@article{bustos2020padchest,\n  title = {PadChest: A large chest X-ray image dataset with multi-label annotated reports},\n  author = {Bustos, Aurelia and Pertusa, Antonio and Salinas, Jos{\\'e}-Mar{\\'i}a and de la Iglesia-Vay{\\'a}, Maria},\n  journal = {Medical Image Analysis},\n  volume = {66},\n  pages = {101797},\n  year = {2020}\n}"
+  }
+}

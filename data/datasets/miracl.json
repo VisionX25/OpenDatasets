@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "id": "miracl",
+  "slug": "miracl",
+  "name": "MIRACL: Multilingual Information Retrieval Across a Continuum of Languages",
+  "description": "MIRACL is a multilingual information retrieval dataset covering 18 typologically diverse languages across 10 distinct language families (including Arabic, Bengali, English, Spanish, Persian, Finnish, French, Hindi, Indonesian, Japanese, Korean, Russian, Swahili, Telugu, Thai, Vietnamese, Yoruba, and Chinese). It contains over 726,000 human-annotated relevance judgments over Wikipedia articles.",
+  "homepage_url": "https://huggingface.co/datasets/miracl/miracl",
+  "publisher": {
+    "name": "University of Waterloo & Research Collaborators",
+    "type": "academic",
+    "url": "https://project-miracl.github.io/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "information-retrieval",
+    "cross-lingual-transfer"
+  ],
+  "tags": [
+    "information-retrieval",
+    "multilingual",
+    "cross-lingual",
+    "bengali",
+    "swahili",
+    "yoruba",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Verified Apache 2.0 license declared on Hugging Face dataset card and repository."
+  },
+  "source_references": [
+    {
+      "title": "MIRACL on Hugging Face",
+      "url": "https://huggingface.co/datasets/miracl/miracl",
+      "type": "repository",
+      "notes": "Official Hugging Face dataset distribution."
+    },
+    {
+      "title": "MIRACL Project Homepage",
+      "url": "https://project-miracl.github.io/",
+      "type": "official_website",
+      "notes": "Official project landing page and leaderboard."
+    },
+    {
+      "title": "MIRACL: A Multilingual Retrieval Dataset Covering 18 Diverse Languages (TACL 2023)",
+      "url": "https://doi.org/10.1162/tacl_a_00547",
+      "type": "original_paper",
+      "notes": "Transactions of the Association for Computational Linguistics (TACL 2023)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against TACL 2023 paper and official Hugging Face release."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 726000,
+    "unit": "relevance-judgments"
+  },
+  "languages": [
+    "ar",
+    "bn",
+    "de",
+    "en",
+    "es",
+    "fa",
+    "fi",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "ru",
+    "sw",
+    "te",
+    "th",
+    "vi",
+    "yo",
+    "zh"
+  ],
+  "dates": {
+    "published": "2022-10",
+    "last_updated": "2023"
+  },
+  "citation": {
+    "paper_title": "MIRACL: A Multilingual Retrieval Dataset Covering 18 Diverse Languages",
+    "paper_url": "https://doi.org/10.1162/tacl_a_00547",
+    "authors": [
+      "Xinyu Zhang",
+      "Nandan Thakur",
+      "Odunayo Ogundepo",
+      "Ehsan Kamalloo",
+      "David Alfonso-Hermelo",
+      "Angela Fan",
+      "Colin Raffel",
+      "Jimmy Lin"
+    ],
+    "doi": "10.1162/tacl_a_00547",
+    "bibtex": "@article{zhang2023miracl,\n  title = {MIRACL: A Multilingual Retrieval Dataset Covering 18 Diverse Languages},\n  author = {Zhang, Xinyu and Thakur, Nandan and Ogundepo, Odunayo and Kamalloo, Ehsan and Alfonso-Hermelo, David and Fan, Angela and Raffel, Colin and Lin, Jimmy},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {11},\n  pages = {111--128},\n  year = {2023}\n}"
+  }
+}

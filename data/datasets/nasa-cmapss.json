@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nasa-cmapss",
+  "slug": "nasa-cmapss",
+  "name": "NASA C-MAPSS Turbofan Engine Degradation Simulation Dataset",
+  "description": "The Commercial Modular Aero-Propulsion System Simulation (C-MAPSS) dataset is the foundational benchmark for Remaining Useful Life (RUL) estimation in predictive maintenance. Simulated run-to-failure data from a fleet of commercial turbofan engines across four sub-datasets (FD001-FD004) track 21 sensor channels under varied flight operating regimes and fault modes.",
+  "homepage_url": "https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data",
+  "publisher": {
+    "name": "NASA Ames Prognostics Center of Excellence (PCoE)",
+    "type": "government",
+    "url": "https://data.nasa.gov"
+  },
+  "modalities": [
+    "time-series",
+    "sensor",
+    "tabular"
+  ],
+  "tasks": [
+    "remaining-useful-life-prediction",
+    "predictive-maintenance"
+  ],
+  "tags": [
+    "turbofan",
+    "rul-prediction",
+    "predictive-maintenance",
+    "aeronautics",
+    "nasa",
+    "benchmark"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "NASA Open Data Policy / Public Domain",
+    "url": "https://data.nasa.gov/",
+    "commercial_use": "allowed",
+    "notes": "Distributed as public domain US government scientific data under NASA Open Data Policy."
+  },
+  "source_references": [
+    {
+      "title": "CMAPSS Jet Engine Simulated Data on NASA Open Data",
+      "url": "https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data",
+      "type": "official_website",
+      "notes": "Official NASA Open Data entry."
+    },
+    {
+      "title": "Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation (PHM 2008)",
+      "url": "https://www.phmsociety.org/node/864",
+      "type": "original_paper",
+      "notes": "Published in International Conference on Prognostics and Health Management (PHM 2008)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against PHM 2008 publication and NASA Ames PCoE portal."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 708,
+    "unit": "engine-trajectories"
+  },
+  "dates": {
+    "published": "2008",
+    "last_updated": "2014"
+  },
+  "citation": {
+    "paper_title": "Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation",
+    "paper_url": "https://www.phmsociety.org/node/864",
+    "authors": [
+      "Abhinav Saxena",
+      "Kai Goebel",
+      "Don Simon",
+      "Neil Eklund"
+    ],
+    "bibtex": "@inproceedings{saxena2008damage,\n  title = {Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation},\n  author = {Saxena, Abhinav and Goebel, Kai and Simon, Don and Eklund, Neil},\n  booktitle = {2008 International Conference on Prognostics and Health Management},\n  pages = {1--9},\n  year = {2008}\n}"
+  }
+}

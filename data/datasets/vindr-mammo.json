@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "vindr-mammo",
+  "slug": "vindr-mammo",
+  "name": "VinDr-Mammo: Full-Field Digital Mammography Dataset",
+  "description": "VinDr-Mammo is a public benchmark dataset containing 20,000 full-field digital mammography (FFDM) examinations (5,000 four-view breast screening exams) collected from two major hospitals in Vietnam. Each examination was independently annotated by three experienced radiologists for breast density, BI-RADS assessment categories, and bounding boxes for suspicious breast lesions.",
+  "homepage_url": "https://physionet.org/content/vindr-mammo/1.0.0/",
+  "publisher": {
+    "name": "VinBigdata & PhysioNet",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "medical-imaging",
+    "image-classification"
+  ],
+  "tags": [
+    "mammography",
+    "breast-cancer",
+    "medical-imaging",
+    "oncology",
+    "physionet",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "PhysioNet Credentialed Health Data License 1.5.0",
+    "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
+    "commercial_use": "allowed",
+    "notes": "Available under PhysioNet Credentialed Health Data License for research and clinical algorithm validation."
+  },
+  "source_references": [
+    {
+      "title": "VinDr-Mammo on PhysioNet",
+      "url": "https://physionet.org/content/vindr-mammo/1.0.0/",
+      "type": "official_website",
+      "notes": "Official PhysioNet dataset distribution page."
+    },
+    {
+      "title": "VinDr-Mammo: A large-scale benchmark dataset for computer-aided diagnosis in full-field digital mammography (Scientific Data 2023)",
+      "url": "https://doi.org/10.1038/s41597-023-02100-7",
+      "type": "original_paper",
+      "notes": "Published in Nature Scientific Data 2023."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against Nature Scientific Data publication and PhysioNet repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 20000,
+    "unit": "mammograms"
+  },
+  "dates": {
+    "published": "2023-04",
+    "last_updated": "2023-04"
+  },
+  "citation": {
+    "paper_title": "VinDr-Mammo: A large-scale benchmark dataset for computer-aided diagnosis in full-field digital mammography",
+    "paper_url": "https://doi.org/10.1038/s41597-023-02100-7",
+    "authors": [
+      "Hieu T. Nguyen",
+      "Ha Q. Nguyen",
+      "Hieu H. Pham",
+      "Khanh Lam",
+      "Linh T. Le",
+      "Dat T. Ngo",
+      "Minh Dao"
+    ],
+    "doi": "10.1038/s41597-023-02100-7",
+    "bibtex": "@article{nguyen2023vindr,\n  title = {VinDr-Mammo: A large-scale benchmark dataset for computer-aided diagnosis in full-field digital mammography},\n  author = {Nguyen, Hieu T. and Nguyen, Ha Q. and Pham, Hieu H. and Lam, Khanh and Le, Linh T. and Ngo, Dat T. and Dao, Minh},\n  journal = {Scientific Data},\n  volume = {10},\n  number = {1},\n  pages = {211},\n  year = {2023}\n}"
+  }
+}
