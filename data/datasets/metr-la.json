@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "metr-la",
+  "slug": "metr-la",
+  "name": "METR-LA: Traffic Speed Forecasting Dataset",
+  "description": "METR-LA is a spatio-temporal benchmark for traffic speed forecasting. It contains highway traffic speed readings aggregated into 5-minute intervals from 207 loop detector sensors installed across Los Angeles County highways from March 1, 2012 to June 30, 2012 (34,272 time steps), accompanied by sensor topology road network distance graphs.",
+  "homepage_url": "https://github.com/liyaguang/DCRNN",
+  "publisher": {
+    "name": "University of Southern California (USC)",
+    "type": "academic",
+    "url": "https://www.usc.edu"
+  },
+  "modalities": [
+    "time-series",
+    "graph",
+    "sensor"
+  ],
+  "tasks": [
+    "traffic-forecasting",
+    "time-series-forecasting"
+  ],
+  "tags": [
+    "traffic",
+    "spatio-temporal",
+    "graph-neural-networks",
+    "sensor-network",
+    "los-angeles",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Verified MIT license declared in official DCRNN repository."
+  },
+  "source_references": [
+    {
+      "title": "DCRNN Official GitHub Repository (METR-LA Data)",
+      "url": "https://github.com/liyaguang/DCRNN",
+      "type": "repository",
+      "notes": "Official repository distributing METR-LA sensor readings and adjacency matrices."
+    },
+    {
+      "title": "Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting (ICLR 2018)",
+      "url": "https://openreview.net/forum?id=SJiHXGWAZ",
+      "type": "original_paper",
+      "notes": "Published in International Conference on Learning Representations (ICLR 2018)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against ICLR 2018 publication and USC DCRNN repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 34272,
+    "unit": "time-steps"
+  },
+  "dates": {
+    "published": "2018-02",
+    "last_updated": "2018-02"
+  },
+  "citation": {
+    "paper_title": "Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting",
+    "paper_url": "https://openreview.net/forum?id=SJiHXGWAZ",
+    "authors": [
+      "Yaguang Li",
+      "Rose Yu",
+      "Cyrus Shahabi",
+      "Yan Liu"
+    ],
+    "bibtex": "@inproceedings{li2018diffusion,\n  title = {Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting},\n  author = {Li, Yaguang and Yu, Rose and Shahabi, Cyrus and Liu, Yan},\n  booktitle = {International Conference on Learning Representations (ICLR)},\n  year = {2018}\n}"
+  }
+}

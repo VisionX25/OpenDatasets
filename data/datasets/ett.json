@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ett",
+  "slug": "ett",
+  "name": "ETT: Electricity Transformer Temperature Dataset",
+  "description": "The Electricity Transformer Temperature (ETT) dataset is a widely adopted benchmark for long-sequence time-series forecasting (LSTF). Collected from two counties in China over a two-year period (2016-2018), each record comprises target oil temperature and 6 power load features. Standard subsets include ETTh1, ETTh2 (1-hour resolution) and ETTm1, ETTm2 (15-minute resolution).",
+  "homepage_url": "https://github.com/zhouhaoyi/ETDataset",
+  "publisher": {
+    "name": "Beihang University & Research Collaborators",
+    "type": "academic",
+    "url": "https://github.com/zhouhaoyi"
+  },
+  "modalities": [
+    "time-series",
+    "sensor",
+    "tabular"
+  ],
+  "tasks": [
+    "time-series-forecasting"
+  ],
+  "tags": [
+    "time-series",
+    "forecasting",
+    "power-systems",
+    "transformer-temperature",
+    "long-sequence",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Verified Apache 2.0 license declared in official repository."
+  },
+  "source_references": [
+    {
+      "title": "ETDataset Official GitHub Repository",
+      "url": "https://github.com/zhouhaoyi/ETDataset",
+      "type": "repository",
+      "notes": "Official repository with dataset CSVs and descriptions."
+    },
+    {
+      "title": "Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting (AAAI 2021)",
+      "url": "https://doi.org/10.1609/aaai.v35i12.12644",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the AAAI Conference on Artificial Intelligence (AAAI 2021, Best Paper Award)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against AAAI 2021 paper and Beihang University ETDataset repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 69680,
+    "unit": "observations"
+  },
+  "dates": {
+    "published": "2020",
+    "last_updated": "2021"
+  },
+  "citation": {
+    "paper_title": "Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting",
+    "paper_url": "https://doi.org/10.1609/aaai.v35i12.12644",
+    "authors": [
+      "Haoyi Zhou",
+      "Shanghang Zhang",
+      "Jieqi Peng",
+      "Shuai Zhang",
+      "Jianxin Li",
+      "Hui Xiong",
+      "Wancai Zhang"
+    ],
+    "doi": "10.1609/aaai.v35i12.12644",
+    "bibtex": "@inproceedings{zhou2021informer,\n  title = {Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting},\n  author = {Zhou, Haoyi and Zhang, Shanghang and Peng, Jieqi and Zhang, Shuai and Li, Jianxin and Xiong, Hui and Zhang, Wancai},\n  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume = {35},\n  number = {12},\n  pages = {11106--11115},\n  year = {2021}\n}"
+  }
+}

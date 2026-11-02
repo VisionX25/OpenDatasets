@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ton-iot",
+  "slug": "ton-iot",
+  "name": "ToN_IoT: IoT and IIoT Cybersecurity Dataset",
+  "description": "ToN_IoT is a comprehensive cybersecurity benchmark capturing telemetry from Internet of Things (IoT) and Industrial IoT (IIoT) sensors, operating systems (Linux, Windows), and network traffic. Created in the Cyber Range Lab at UNSW Canberra, it incorporates diverse attack scenarios including DoS, DDoS, Ransomware, Backdoor, Injection, XSS, Scanning, and Password cracking against physical and simulated IoT testbeds.",
+  "homepage_url": "https://research.unsw.edu.au/projects/toniot-datasets",
+  "publisher": {
+    "name": "UNSW Canberra Cyber, University of New South Wales",
+    "type": "academic",
+    "url": "https://www.unsw.edu.au"
+  },
+  "modalities": [
+    "tabular",
+    "sensor"
+  ],
+  "tasks": [
+    "iot-security",
+    "network-intrusion-detection",
+    "anomaly-detection"
+  ],
+  "tags": [
+    "iot",
+    "iiot",
+    "cybersecurity",
+    "intrusion-detection",
+    "telemetry",
+    "unsw",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "UNSW Canberra Cyber Research License",
+    "url": "https://research.unsw.edu.au/projects/toniot-datasets",
+    "commercial_use": "allowed",
+    "notes": "Freely accessible for academic, industrial, and government cybersecurity research."
+  },
+  "source_references": [
+    {
+      "title": "ToN_IoT Project Portal",
+      "url": "https://research.unsw.edu.au/projects/toniot-datasets",
+      "type": "official_website",
+      "notes": "Official UNSW research repository and dataset distribution."
+    },
+    {
+      "title": "A new distributed architecture for evaluating AI-based security systems at the internet of things: A ToN_IoT datasets (IEEE IoT Journal 2020)",
+      "url": "https://doi.org/10.1109/JIOT.2020.3015952",
+      "type": "original_paper",
+      "notes": "Published in IEEE Internet of Things Journal 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against IEEE IoT Journal 2020 paper and UNSW Canberra Cyber project page."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 22339021,
+    "unit": "telemetry-and-flow-records"
+  },
+  "dates": {
+    "published": "2020-08",
+    "last_updated": "2021"
+  },
+  "citation": {
+    "paper_title": "A New Distributed Architecture for Evaluating AI-Based Security Systems at the Internet of Things: A ToN_IoT Datasets",
+    "paper_url": "https://doi.org/10.1109/JIOT.2020.3015952",
+    "authors": [
+      "Abdullah Alsaedi",
+      "Nour Moustafa",
+      "Eslam Tariq",
+      "Adnan Mahmood",
+      "Asim Anwar"
+    ],
+    "doi": "10.1109/JIOT.2020.3015952",
+    "bibtex": "@article{alsaedi2020ton,\n  title = {A New Distributed Architecture for Evaluating AI-Based Security Systems at the Internet of Things: A ToN\\_IoT Datasets},\n  author = {Alsaedi, Abdullah and Moustafa, Nour and Tariq, Eslam and Mahmood, Adnan and Anwar, Asim},\n  journal = {IEEE Internet of Things Journal},\n  volume = {8},\n  number = {8},\n  pages = {6495--6509},\n  year = {2020}\n}"
+  }
+}

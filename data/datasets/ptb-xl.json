@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ptb-xl",
+  "slug": "ptb-xl",
+  "name": "PTB-XL: Large Publicly Available 12-Lead ECG Dataset",
+  "description": "PTB-XL is a clinical dataset of 21,837 12-lead electrocardiograms (ECGs) of 10-second duration recorded from 18,885 patients. The dataset features comprehensive clinical annotations conforming to SCP-ECG standards covering diagnostic statements (normality, myocardial infarction, conduction disturbances), rhythm statements, and form statements.",
+  "homepage_url": "https://physionet.org/content/ptb-xl/1.0.3/",
+  "publisher": {
+    "name": "PhysioNet & Physikalisch-Technische Bundesanstalt (PTB)",
+    "type": "government",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "ecg-classification",
+    "arrhythmia-detection"
+  ],
+  "tags": [
+    "ecg",
+    "cardiology",
+    "physionet",
+    "biosignals",
+    "medical-diagnostics",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated on PhysioNet resource page."
+  },
+  "source_references": [
+    {
+      "title": "PTB-XL on PhysioNet",
+      "url": "https://physionet.org/content/ptb-xl/1.0.3/",
+      "type": "official_website",
+      "notes": "Official PhysioNet dataset distribution."
+    },
+    {
+      "title": "PTB-XL, a large publicly available electrocardiography dataset (Scientific Data 2020)",
+      "url": "https://doi.org/10.1038/s41597-020-0386-4",
+      "type": "original_paper",
+      "notes": "Published in Nature Scientific Data 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against Nature Scientific Data paper and PhysioNet repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 21837,
+    "unit": "ecg-records"
+  },
+  "dates": {
+    "published": "2020",
+    "last_updated": "2022"
+  },
+  "citation": {
+    "paper_title": "PTB-XL, a large publicly available electrocardiography dataset",
+    "paper_url": "https://doi.org/10.1038/s41597-020-0386-4",
+    "authors": [
+      "Patrick Wagner",
+      "Nils Strodthoff",
+      "Ralf-Dieter Bousseljot",
+      "Dieter Kreiseler",
+      "Fatima I. Lunze",
+      "Wojciech Samek",
+      "Tobias Schaeffter"
+    ],
+    "doi": "10.1038/s41597-020-0386-4",
+    "bibtex": "@article{wagner2020ptb,\n  title = {PTB-XL, a large publicly available electrocardiography dataset},\n  author = {Wagner, Patrick and Strodthoff, Nils and Bousseljot, Ralf-Dieter and Kreiseler, Dieter and Lunze, Fatima I. and Samek, Wojciech and Schaeffter, Tobias},\n  journal = {Scientific Data},\n  volume = {7},\n  number = {1},\n  pages = {154},\n  year = {2020}\n}"
+  }
+}

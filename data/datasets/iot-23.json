@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "iot-23",
+  "slug": "iot-23",
+  "name": "IoT-23: Labeled Dataset of IoT Network Malware & Benign Traffic",
+  "description": "IoT-23 is a semi-automated, labeled dataset of network traffic from Internet of Things (IoT) devices. Created by the Stratosphere Laboratory at Czech Technical University in Prague (CTU), it features 20 malware captures executed on real physical IoT devices and 3 benign IoT network captures, totaling over 325 million network flows with 20.5 million labeled Zeek/Bro connection records.",
+  "homepage_url": "https://www.stratosphereips.org/datasets-iot23",
+  "publisher": {
+    "name": "Stratosphere Laboratory, Czech Technical University in Prague (CTU)",
+    "type": "academic",
+    "url": "https://www.stratosphereips.org"
+  },
+  "modalities": [
+    "tabular",
+    "sensor"
+  ],
+  "tasks": [
+    "malware-detection",
+    "network-intrusion-detection"
+  ],
+  "tags": [
+    "iot",
+    "malware",
+    "cybersecurity",
+    "network-traffic",
+    "zeek",
+    "stratosphere-ips",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in Zenodo record."
+  },
+  "source_references": [
+    {
+      "title": "IoT-23 Dataset Resource Page",
+      "url": "https://www.stratosphereips.org/datasets-iot23",
+      "type": "official_website",
+      "notes": "Official Stratosphere Laboratory project page with pcap and Zeek log downloads."
+    },
+    {
+      "title": "IoT-23 on Zenodo",
+      "url": "https://doi.org/10.5281/zenodo.4743746",
+      "type": "archive",
+      "notes": "Canonical Zenodo DOI deposit."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against Stratosphere Laboratory publications and Zenodo archive."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 20537130,
+    "unit": "labeled-connections"
+  },
+  "dates": {
+    "published": "2020-01",
+    "last_updated": "2021-05"
+  },
+  "citation": {
+    "paper_title": "IoT-23: A labeled dataset with malicious and benign IoT network traffic",
+    "paper_url": "https://doi.org/10.5281/zenodo.4743746",
+    "authors": [
+      "Sebastian Garcia",
+      "Agustin Parmisano",
+      "Maria Jose Erquiaga"
+    ],
+    "doi": "10.5281/zenodo.4743746",
+    "bibtex": "@misc{garcia2020iot23,\n  title = {IoT-23: A labeled dataset with malicious and benign IoT network traffic},\n  author = {Garcia, Sebastian and Parmisano, Agustin and Erquiaga, Maria Jose},\n  publisher = {Zenodo},\n  year = {2020},\n  doi = {10.5281/zenodo.4743746}\n}"
+  }
+}
