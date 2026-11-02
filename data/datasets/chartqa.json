@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "id": "chartqa",
+  "slug": "chartqa",
+  "name": "ChartQA: Benchmark for Question Answering about Charts",
+  "description": "ChartQA is a large benchmark for question answering about charts with visual and logical reasoning. It consists of 9,600 human-written and machine-generated question-answer pairs covering 4,800 chart figures (bar, line, and pie charts) across economic, demographic, and statistical domains.",
+  "homepage_url": "https://github.com/vis-nlp/ChartQA",
+  "publisher": {
+    "name": "York University & Salesforce Research",
+    "type": "academic",
+    "url": "https://github.com/vis-nlp"
+  },
+  "modalities": [
+    "vision",
+    "nlp",
+    "multimodal"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "chart-reasoning"
+  ],
+  "tags": [
+    "visual-qa",
+    "chart-reasoning",
+    "multimodal",
+    "data-visualization",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Verified MIT license stated in repository LICENSE file."
+  },
+  "source_references": [
+    {
+      "title": "ChartQA Official GitHub Repository",
+      "url": "https://github.com/vis-nlp/ChartQA",
+      "type": "repository",
+      "notes": "Official repository with dataset annotations and evaluation tools."
+    },
+    {
+      "title": "ChartQA: A Benchmark for Question Answering about Charts with Visual and Logical Reasoning (ACL 2022)",
+      "url": "https://aclanthology.org/2022.findings-acl.177/",
+      "type": "original_paper",
+      "notes": "Findings of ACL 2022."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against Findings of ACL 2022 paper and official GitHub repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 9600,
+    "unit": "qa-pairs"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2022-05",
+    "last_updated": "2022-05"
+  },
+  "citation": {
+    "paper_title": "ChartQA: A Benchmark for Question Answering about Charts with Visual and Logical Reasoning",
+    "paper_url": "https://aclanthology.org/2022.findings-acl.177/",
+    "authors": [
+      "Ahmed Masry",
+      "Do Xuan Long",
+      "Jia Qing Tan",
+      "Shafiq Joty",
+      "Enamul Hoque"
+    ],
+    "doi": "10.18653/v1/2022.findings-acl.177",
+    "bibtex": "@inproceedings{masry-etal-2022-chartqa,\n  title = {ChartQA: A Benchmark for Question Answering about Charts with Visual and Logical Reasoning},\n  author = {Masry, Ahmed and Long, Do Xuan and Tan, Jia Qing and Joty, Shafiq and Hoque, Enamul},\n  booktitle = {Findings of the Association for Computational Linguistics: ACL 2022},\n  pages = {2263--2279},\n  year = {2022}\n}"
+  }
+}

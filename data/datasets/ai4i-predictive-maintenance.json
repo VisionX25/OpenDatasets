@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ai4i-predictive-maintenance",
+  "slug": "ai4i-predictive-maintenance",
+  "name": "AI4I 2020 Predictive Maintenance Dataset",
+  "description": "The AI4I 2020 Predictive Maintenance dataset reflects real predictive maintenance data encountered in industry. It consists of 10,000 data points with 14 features capturing milling machine operational parameters (air temperature, process temperature, rotational speed, torque, tool wear) and labels for five independent failure modes: tool wear failure, heat dissipation failure, power failure, overstrain failure, and random failure.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "anomaly-detection"
+  ],
+  "tags": [
+    "tabular",
+    "classification",
+    "predictive-maintenance",
+    "manufacturing",
+    "anomaly-detection",
+    "uci-ml-repository"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+  },
+  "source_references": [
+    {
+      "title": "AI4I 2020 Predictive Maintenance on UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset",
+      "type": "official_website",
+      "notes": "Official UCI ML Repository dataset entry."
+    },
+    {
+      "title": "Explainable Artificial Intelligence for Predictive Maintenance Applications (IEEE BigData 2020)",
+      "url": "https://doi.org/10.1109/BigData50022.2020.9378126",
+      "type": "original_paper",
+      "notes": "Published in 2020 IEEE International Conference on Big Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against IEEE BigData 2020 paper and UCI ML Repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 10000,
+    "unit": "observations"
+  },
+  "dates": {
+    "published": "2020-08",
+    "last_updated": "2020-08"
+  },
+  "citation": {
+    "paper_title": "Explainable Artificial Intelligence for Predictive Maintenance Applications",
+    "paper_url": "https://doi.org/10.1109/BigData50022.2020.9378126",
+    "authors": [
+      "Stephan Matzka"
+    ],
+    "doi": "10.1109/BigData50022.2020.9378126",
+    "bibtex": "@inproceedings{matzka2020explainable,\n  title = {Explainable Artificial Intelligence for Predictive Maintenance Applications},\n  author = {Matzka, Stephan},\n  booktitle = {2020 IEEE International Conference on Big Data (Big Data)},\n  pages = {2109--2114},\n  year = {2020}\n}"
+  }
+}

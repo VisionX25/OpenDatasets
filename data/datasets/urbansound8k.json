@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "urbansound8k",
+  "slug": "urbansound8k",
+  "name": "UrbanSound8K",
+  "description": "UrbanSound8K contains 8,732 labeled urban sound excerpts (under 4 seconds) across 10 classes: air_conditioner, car_horn, children_playing, dog_bark, drilling, engine_idling, gun_shot, jackhammer, siren, and street_music. Files are organized into 10 standardized cross-validation folds.",
+  "homepage_url": "https://urbansounddataset.weebly.com/urbansound8k.html",
+  "publisher": {
+    "name": "Music and Audio Research Laboratory (MARL), New York University",
+    "type": "academic",
+    "url": "https://marl.steinhardt.nyu.edu/"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "audio-classification",
+    "acoustic-scene-classification"
+  ],
+  "tags": [
+    "audio",
+    "environmental-sound",
+    "sound-classification",
+    "urban-sound",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 3.0 Unported",
+    "spdx_id": "CC-BY-NC-3.0",
+    "url": "https://creativecommons.org/licenses/by-nc/3.0/",
+    "commercial_use": "forbidden",
+    "notes": "Verified CC-BY-NC 3.0 license stated on project homepage."
+  },
+  "source_references": [
+    {
+      "title": "UrbanSound8K Official Project Homepage",
+      "url": "https://urbansounddataset.weebly.com/urbansound8k.html",
+      "type": "official_website",
+      "notes": "Official project landing page and download links."
+    },
+    {
+      "title": "A Dataset and Taxonomy for Urban Sound Research (ACM MM 2014)",
+      "url": "https://doi.org/10.1145/2647868.2655045",
+      "type": "original_paper",
+      "notes": "Proceedings of ACM Multimedia 2014."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against ACM Multimedia 2014 publication and NYU MARL project site."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 8732,
+    "unit": "audio-excerpts"
+  },
+  "dates": {
+    "published": "2014-11",
+    "last_updated": "2014-11"
+  },
+  "citation": {
+    "paper_title": "A Dataset and Taxonomy for Urban Sound Research",
+    "paper_url": "https://doi.org/10.1145/2647868.2655045",
+    "authors": [
+      "Justin Salamon",
+      "Christopher Jacoby",
+      "Juan Pablo Bello"
+    ],
+    "doi": "10.1145/2647868.2655045",
+    "bibtex": "@inproceedings{salamon2014urbansound,\n  title = {A Dataset and Taxonomy for Urban Sound Research},\n  author = {Salamon, Justin and Jacoby, Christopher and Bello, Juan Pablo},\n  booktitle = {Proceedings of the 22nd ACM International Conference on Multimedia},\n  pages = {1041--1044},\n  year = {2014}\n}"
+  }
+}

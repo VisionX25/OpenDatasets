@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bike-sharing",
+  "slug": "bike-sharing",
+  "name": "Bike Sharing Dataset",
+  "description": "The Bike Sharing dataset contains hourly and daily counts of rental bikes in the Capital Bikeshare system in Washington D.C. between 2011 and 2012. It includes 17,379 hour-level records paired with corresponding weather (temperature, humidity, windspeed) and seasonal information for regression forecasting.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "regression",
+    "time-series-forecasting"
+  ],
+  "tags": [
+    "tabular",
+    "regression",
+    "time-series",
+    "bike-sharing",
+    "urban-mobility",
+    "uci-ml-repository"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+  },
+  "source_references": [
+    {
+      "title": "Bike Sharing Dataset on UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+      "type": "official_website",
+      "notes": "Official UCI ML Repository dataset entry."
+    },
+    {
+      "title": "Event labeling combining ensemble detectors and background knowledge (Progress in AI 2013)",
+      "url": "https://doi.org/10.1007/s13748-013-0040-3",
+      "type": "original_paper",
+      "notes": "Published in Progress in Artificial Intelligence 2013."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against Progress in Artificial Intelligence paper and UCI ML Repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 17379,
+    "unit": "hourly-records"
+  },
+  "dates": {
+    "published": "2013-12",
+    "last_updated": "2013-12"
+  },
+  "citation": {
+    "paper_title": "Event labeling combining ensemble detectors and background knowledge",
+    "paper_url": "https://doi.org/10.1007/s13748-013-0040-3",
+    "authors": [
+      "Hadi Fanaee-T",
+      "João Gama"
+    ],
+    "doi": "10.1007/s13748-013-0040-3",
+    "bibtex": "@article{fanaee2014event,\n  title = {Event labeling combining ensemble detectors and background knowledge},\n  author = {Fanaee-T, Hadi and Gama, Jo{\\~a}o},\n  journal = {Progress in Artificial Intelligence},\n  volume = {2},\n  number = {2},\n  pages = {113--127},\n  year = {2014}\n}"
+  }
+}

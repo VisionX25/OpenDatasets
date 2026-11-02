@@ -577,6 +577,160 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ai4i-predictive-maintenance",
+    "slug": "ai4i-predictive-maintenance",
+    "name": "AI4I 2020 Predictive Maintenance Dataset",
+    "description": "The AI4I 2020 Predictive Maintenance dataset reflects real predictive maintenance data encountered in industry. It consists of 10,000 data points with 14 features capturing milling machine operational parameters (air temperature, process temperature, rotational speed, torque, tool wear) and labels for five independent failure modes: tool wear failure, heat dissipation failure, power failure, overstrain failure, and random failure.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "anomaly-detection"
+    ],
+    "tags": [
+      "tabular",
+      "classification",
+      "predictive-maintenance",
+      "manufacturing",
+      "anomaly-detection",
+      "uci-ml-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+    },
+    "source_references": [
+      {
+        "title": "AI4I 2020 Predictive Maintenance on UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset",
+        "type": "official_website",
+        "notes": "Official UCI ML Repository dataset entry."
+      },
+      {
+        "title": "Explainable Artificial Intelligence for Predictive Maintenance Applications (IEEE BigData 2020)",
+        "url": "https://doi.org/10.1109/BigData50022.2020.9378126",
+        "type": "original_paper",
+        "notes": "Published in 2020 IEEE International Conference on Big Data."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against IEEE BigData 2020 paper and UCI ML Repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 10000,
+      "unit": "observations"
+    },
+    "dates": {
+      "published": "2020-08",
+      "last_updated": "2020-08"
+    },
+    "citation": {
+      "paper_title": "Explainable Artificial Intelligence for Predictive Maintenance Applications",
+      "paper_url": "https://doi.org/10.1109/BigData50022.2020.9378126",
+      "authors": [
+        "Stephan Matzka"
+      ],
+      "doi": "10.1109/BigData50022.2020.9378126",
+      "bibtex": "@inproceedings{matzka2020explainable,\n  title = {Explainable Artificial Intelligence for Predictive Maintenance Applications},\n  author = {Matzka, Stephan},\n  booktitle = {2020 IEEE International Conference on Big Data (Big Data)},\n  pages = {2109--2114},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "air-quality",
+    "slug": "air-quality",
+    "name": "Air Quality",
+    "description": "The Air Quality dataset contains 9,358 instances of hourly averaged responses from an array of 5 metal oxide chemical sensors embedded in an Air Quality Chemical Multisensor Device deployed on the field in a polluted urban area in Italy between March 2004 and February 2005. Ground truth concentrations for CO, Non-Metanic Hydrocarbons, Benzene, Total Nitrogen Oxides (NOx), and NO2 are provided alongside temperature and humidity.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/360/air+quality",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "regression",
+      "time-series-forecasting"
+    ],
+    "tags": [
+      "tabular",
+      "time-series",
+      "sensor",
+      "air-quality",
+      "environmental-monitoring",
+      "uci-ml-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+    },
+    "source_references": [
+      {
+        "title": "Air Quality on UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/360/air+quality",
+        "type": "official_website",
+        "notes": "Official UCI ML Repository dataset entry."
+      },
+      {
+        "title": "On field calibration of an electronic nose for benzene estimation in an urban environment (Sensors and Actuators B 2008)",
+        "url": "https://doi.org/10.1016/j.snb.2007.09.060",
+        "type": "original_paper",
+        "notes": "Published in Sensors and Actuators B: Chemical 2008."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Sensors and Actuators B publication and UCI ML Repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 9358,
+      "unit": "hourly-measurements"
+    },
+    "dates": {
+      "published": "2016-03",
+      "last_updated": "2016-03"
+    },
+    "citation": {
+      "paper_title": "On field calibration of an electronic nose for benzene estimation in an urban environment",
+      "paper_url": "https://doi.org/10.1016/j.snb.2007.09.060",
+      "authors": [
+        "Saverio De Vito",
+        "Elena Massera",
+        "Marco Piga",
+        "Luca Martinotto",
+        "Girolamo Di Francia"
+      ],
+      "doi": "10.1016/j.snb.2007.09.060",
+      "bibtex": "@article{devito2008field,\n  title = {On field calibration of an electronic nose for benzene estimation in an urban environment},\n  author = {De Vito, Saverio and Massera, Elena and Piga, Marco and Martinotto, Luca and Di Francia, Girolamo},\n  journal = {Sensors and Actuators B: Chemical},\n  volume = {129},\n  number = {2},\n  pages = {750--757},\n  year = {2008}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "airc-labwsn-synchronized-multimodal-node-leve",
     "slug": "airc-labwsn-synchronized-multimodal-node-leve",
     "name": "AIRC-LABWSN: A synchronized multimodal node-level time-series dataset for cross-layer anomaly detection in wireless sensor networks",
@@ -639,6 +793,103 @@
         "Le Hoang, SON"
       ],
       "doi": "10.17632/zvkwpsw84d.5"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ami-meeting-corpus",
+    "slug": "ami-meeting-corpus",
+    "name": "AMI Meeting Corpus",
+    "description": "The AMI Meeting Corpus is a multi-modal dataset consisting of 100 hours of meeting recordings captured in specialized instrumented meeting rooms. It includes synchronized multi-channel audio, multi-angle video, slides, whiteboard notes, and rich linguistic and behavioral annotations (dialog acts, topic segmentation, head gestures).",
+    "homepage_url": "https://groups.inf.ed.ac.uk/ami/corpus/",
+    "publisher": {
+      "name": "University of Edinburgh & AMI Consortium",
+      "type": "academic",
+      "url": "https://groups.inf.ed.ac.uk/ami/"
+    },
+    "modalities": [
+      "audio",
+      "vision",
+      "nlp",
+      "multimodal"
+    ],
+    "tasks": [
+      "automatic-speech-recognition",
+      "speaker-diarization",
+      "dialogue-act-classification"
+    ],
+    "tags": [
+      "audio",
+      "multimodal",
+      "meeting-corpus",
+      "asr",
+      "speaker-diarization",
+      "ami"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated on University of Edinburgh AMI portal."
+    },
+    "source_references": [
+      {
+        "title": "AMI Meeting Corpus Official Portal",
+        "url": "https://groups.inf.ed.ac.uk/ami/corpus/",
+        "type": "official_website",
+        "notes": "Official repository and annotation browser."
+      },
+      {
+        "title": "The AMI Meeting Corpus (MLMI 2005)",
+        "url": "https://doi.org/10.1007/11677406_3",
+        "type": "original_paper",
+        "notes": "Published in Machine Learning for Multimodal Interaction (MLMI 2005)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against MLMI 2005 publication and Edinburgh University AMI portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 287,
+      "unit": "meetings"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2005",
+      "last_updated": "2006"
+    },
+    "citation": {
+      "paper_title": "The AMI Meeting Corpus",
+      "paper_url": "https://doi.org/10.1007/11677406_3",
+      "authors": [
+        "Jean Carletta",
+        "Simone Ashby",
+        "Sebastien Bourban",
+        "Mike Flynn",
+        "Mael Guillemot",
+        "Thomas Hain",
+        "Jaroslav Kadlec",
+        "Vasilis Karaiskos",
+        "Wessel Kraaij",
+        "Melissa Kronenthal",
+        "Guillaume Lathoud",
+        "Mike Lincoln",
+        "Agnes Lisowska",
+        "Iain McCowan",
+        "Wilfried Post",
+        "Dennis Reidsma",
+        "Pierre Wellner"
+      ],
+      "doi": "10.1007/11677406_3",
+      "bibtex": "@inproceedings{carletta2005ami,\n  title = {The AMI Meeting Corpus},\n  author = {Carletta, Jean and Ashby, Simone and Bourban, Sebastien and Flynn, Mike and Guillemot, Mael and Hain, Thomas and Kadlec, Jaroslav and Karaiskos, Vasilis and Kraaij, Wessel and Kronenthal, Melissa and others},\n  booktitle = {Machine Learning for Multimodal Interaction},\n  pages = {28--39},\n  year = {2005}\n}"
     }
   },
   {
@@ -1235,6 +1486,70 @@
     "provenance": {
       "collection_method": "Human texts scraped and extracted from Bengali content; AI texts synthesized using generative language models.",
       "curation_notes": "Balanced 3,000 human and 3,000 AI samples formatted with token length statistics."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "bangla-nlp-corpus",
+    "slug": "bangla-nlp-corpus",
+    "name": "Bangla NLP Corpus",
+    "description": "A curated, deduplicated, provenance-tracked Bangla text corpus and benchmark suite. It provides pre-training text data and derived task datasets for topic classification, sentiment analysis, editorial and machine summarization, and code-switching detection.",
+    "homepage_url": "https://huggingface.co/datasets/irfanhossainsust/bangla-nlp-corpus",
+    "publisher": {
+      "name": "Shahjalal University of Science and Technology (SUST)",
+      "type": "academic",
+      "url": "https://huggingface.co/irfanhossainsust"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "text-generation",
+      "text-classification",
+      "summarization",
+      "fill-mask"
+    ],
+    "tags": [
+      "bangla",
+      "bengali",
+      "corpus",
+      "summarization",
+      "sentiment-analysis",
+      "topic-classification"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY-SA-4.0 license metadata on Hugging Face dataset card."
+    },
+    "source_references": [
+      {
+        "title": "Bangla NLP Corpus on Hugging Face",
+        "url": "https://huggingface.co/datasets/irfanhossainsust/bangla-nlp-corpus",
+        "type": "repository",
+        "notes": "Official Hugging Face dataset repository."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Hugging Face dataset card and Parquet split metadata."
+    },
+    "sample_count": {
+      "status": "estimated",
+      "total": 500000,
+      "unit": "documents"
+    },
+    "languages": [
+      "bn"
+    ],
+    "dates": {
+      "published": "2024",
+      "last_updated": "2024"
     }
   },
   {
@@ -2706,6 +3021,81 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "bank-marketing",
+    "slug": "bank-marketing",
+    "name": "Bank Marketing",
+    "description": "The Bank Marketing dataset is related to direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls, and the classification goal is to predict if the client will subscribe to a term deposit based on 16 client, campaign, and economic attributes across 45,211 contacts.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/222/bank+marketing",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification"
+    ],
+    "tags": [
+      "tabular",
+      "classification",
+      "marketing",
+      "banking",
+      "finance",
+      "uci-ml-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+    },
+    "source_references": [
+      {
+        "title": "Bank Marketing on UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/222/bank+marketing",
+        "type": "official_website",
+        "notes": "Official UCI ML Repository dataset entry."
+      },
+      {
+        "title": "A data-driven approach to predict the success of bank telemarketing (Decision Support Systems 2014)",
+        "url": "https://doi.org/10.1016/j.dss.2014.03.001",
+        "type": "original_paper",
+        "notes": "Published in Decision Support Systems 2014."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Decision Support Systems paper and UCI ML Repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 45211,
+      "unit": "instances"
+    },
+    "dates": {
+      "published": "2012-02",
+      "last_updated": "2014"
+    },
+    "citation": {
+      "paper_title": "A data-driven approach to predict the success of bank telemarketing",
+      "paper_url": "https://doi.org/10.1016/j.dss.2014.03.001",
+      "authors": [
+        "Sérgio Moro",
+        "Paulo Cortez",
+        "Paulo Rita"
+      ],
+      "doi": "10.1016/j.dss.2014.03.001",
+      "bibtex": "@article{moro2014data,\n  title = {A data-driven approach to predict the success of bank telemarketing},\n  author = {Moro, S{\\'e}rgio and Cortez, Paulo and Rita, Paulo},\n  journal = {Decision Support Systems},\n  volume = {62},\n  pages = {22--31},\n  year = {2014}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "banknote-authentication",
     "slug": "banknote-authentication",
     "name": "Banknote Authentication",
@@ -2794,6 +3184,107 @@
     "provenance": {
       "collection_method": "Digitized from genuine and forged banknote-like specimens using an industrial print-inspection camera. Features were extracted using Wavelet Transform tools from 400x400 pixel grayscale images with ~660 dpi resolution.",
       "curation_notes": "Donated to UCI in 2012 by Volker Lohweg of University of Applied Sciences Ostwestfalen-Lippe (Hochschule Ostwestfalen-Lippe). The dataset does not define official train/test splits; the sample counts denote class distribution: 762 genuine (class 0) and 610 counterfeit (class 1) instances."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "banth",
+    "slug": "banth",
+    "name": "BanTH: Multi-label Hate Speech Detection Dataset for Transliterated Bangla",
+    "description": "BanTH is a multi-label hate speech detection dataset for transliterated Bangla (Banglish) comprising 37,300 comments collected from 26 YouTube channels across News, Blogs, and Entertainment. It includes binary hate detection and multi-label categorization across 7 target groups: Political, Religious, Gender, Personal Offense, Abusive/Violence, Origin, and Body Shaming.",
+    "homepage_url": "https://huggingface.co/datasets/aplycaebous/BanTH",
+    "publisher": {
+      "name": "BRAC University & Research Collaborators",
+      "type": "academic",
+      "url": "https://github.com/farhanishmam/BanTH"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "text-classification",
+      "hate-speech-detection",
+      "multi-label-classification"
+    ],
+    "tags": [
+      "bangla",
+      "banglish",
+      "transliteration",
+      "hate-speech",
+      "nlp",
+      "social-media"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Dataset repository and Hugging Face card specify the MIT license."
+    },
+    "source_references": [
+      {
+        "title": "BanTH Hugging Face Dataset Repository",
+        "url": "https://huggingface.co/datasets/aplycaebous/BanTH",
+        "type": "repository",
+        "notes": "Hugging Face dataset distribution."
+      },
+      {
+        "title": "BanTH Official GitHub Repository",
+        "url": "https://github.com/farhanishmam/BanTH",
+        "type": "repository",
+        "notes": "Source code and dataset reference repository."
+      },
+      {
+        "title": "BanTH: A Multi-label Hate Speech Detection Dataset for Transliterated Bangla (Findings of NAACL 2025)",
+        "url": "https://aclanthology.org/2025.findings-naacl.403/",
+        "type": "original_paper",
+        "notes": "Published peer-reviewed research paper in Findings of NAACL 2025."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against NAACL 2025 paper and official Hugging Face / GitHub release."
+    },
+    "size": {
+      "status": "estimated",
+      "amount": 15,
+      "unit": "MB",
+      "file_formats": [
+        "csv",
+        "parquet"
+      ],
+      "notes": "Raw CSV and parquet distributions."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 37300,
+      "unit": "comments"
+    },
+    "languages": [
+      "bn",
+      "en"
+    ],
+    "dates": {
+      "published": "2025",
+      "last_updated": "2025"
+    },
+    "citation": {
+      "paper_title": "BanTH: A Multi-label Hate Speech Detection Dataset for Transliterated Bangla",
+      "paper_url": "https://aclanthology.org/2025.findings-naacl.403/",
+      "authors": [
+        "Fabiha Haider",
+        "Fariha Tanjim Shifat",
+        "Md Farhan Ishmam",
+        "Md Sakib Ul Rahman Sourove",
+        "Deeparghya Dutta Barua",
+        "Md Fahim",
+        "Md Farhad Alam Bhuiyan"
+      ],
+      "doi": "10.18653/v1/2025.findings-naacl.403",
+      "bibtex": "@inproceedings{haider-etal-2025-banth,\n  title = {BanTH: A Multi-label Hate Speech Detection Dataset for Transliterated Bangla},\n  author = {Haider, Fabiha and Shifat, Fariha Tanjim and Ishmam, Md Farhan and Sourove, Md Sakib Ul Rahman and Barua, Deeparghya Dutta and Fahim, Md and Bhuiyan, Md Farhad Alam},\n  booktitle = {Findings of NAACL 2025},\n  pages = {7217--7236},\n  year = {2025}\n}"
     }
   },
   {
@@ -3118,6 +3609,94 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "bd-shs",
+    "slug": "bd-shs",
+    "name": "BD-SHS: Benchmark Dataset for Online Bangla Hate Speech in Social Contexts",
+    "description": "BD-SHS is a large benchmark dataset for learning to detect online Bangla hate speech across various social contexts. It contains over 50,200 manually annotated social media comments crawled from Facebook and YouTube, featuring hierarchical annotations for hate speech detection (binary), target detection (individual, male, female, group), and hate type detection (slander, religion, gender, call to violence).",
+    "homepage_url": "https://github.com/naurosromim/hate-speech-dataset-for-Bengali-social-media",
+    "publisher": {
+      "name": "Shahjalal University of Science and Technology",
+      "type": "academic",
+      "url": "https://www.sust.edu"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "text-classification",
+      "hate-speech-detection",
+      "multi-label-classification"
+    ],
+    "tags": [
+      "bangla",
+      "bengali",
+      "hate-speech",
+      "nlp",
+      "social-media",
+      "lrec"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Verified MIT license declared in GitHub repository."
+    },
+    "source_references": [
+      {
+        "title": "BD-SHS Official GitHub Repository",
+        "url": "https://github.com/naurosromim/hate-speech-dataset-for-Bengali-social-media",
+        "type": "repository",
+        "notes": "Official code and dataset repository."
+      },
+      {
+        "title": "BD-SHS Kaggle Dataset Release",
+        "url": "https://www.kaggle.com/datasets/naurosromim/bdshs",
+        "type": "repository",
+        "notes": "Official dataset distribution files."
+      },
+      {
+        "title": "BD-SHS: A Benchmark Dataset for Learning to Detect Online Bangla Hate Speech in Different Social Contexts (LREC 2022)",
+        "url": "https://aclanthology.org/2022.lrec-1.552/",
+        "type": "original_paper",
+        "notes": "Proceedings of LREC 2022."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against LREC 2022 proceedings and GitHub repository metadata."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 50200,
+      "unit": "comments"
+    },
+    "languages": [
+      "bn"
+    ],
+    "dates": {
+      "published": "2022-06",
+      "last_updated": "2022-06"
+    },
+    "citation": {
+      "paper_title": "BD-SHS: A Benchmark Dataset for Learning to Detect Online Bangla Hate Speech in Different Social Contexts",
+      "paper_url": "https://aclanthology.org/2022.lrec-1.552/",
+      "authors": [
+        "Nauros Romim",
+        "Mosahed Ahmed",
+        "Md Saiful Islam",
+        "Arnab Sen Sharma",
+        "Hriteshwar Talukder",
+        "Mohammad Ruhul Amin"
+      ],
+      "bibtex": "@inproceedings{romim-etal-2022-bd,\n  title = {BD-SHS: A Benchmark Dataset for Learning to Detect Online Bangla Hate Speech in Different Social Contexts},\n  author = {Romim, Nauros and Ahmed, Mosahed and Islam, Md Saiful and Sen Sharma, Arnab and Talukder, Hriteshwar and Amin, Mohammad Ruhul},\n  booktitle = {Proceedings of LREC 2022},\n  pages = {5153--5162},\n  year = {2022}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bdd100k",
     "slug": "bdd100k",
     "name": "BDD100K: A Diverse Driving Video Dataset",
@@ -3284,6 +3863,88 @@
         "Sorensen, David"
       ],
       "doi": "10.17632/mnzhxzrvz6.1"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "bengali-hate-speech-dataset",
+    "slug": "bengali-hate-speech-dataset",
+    "name": "Bengali Hate Speech Dataset",
+    "description": "A fine-grained Bengali hate speech dataset created for detecting hate and offensive language across social media platforms like Facebook and YouTube. It categorizes statements into political, personal, religious, geopolitical, and gender-abusive hate with expert linguist and native-speaker validation.",
+    "homepage_url": "https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset",
+    "publisher": {
+      "name": "Fraunhofer FIT, University of Galway, and Collaborators",
+      "type": "academic",
+      "url": "https://github.com/rezacsedu"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "text-classification",
+      "hate-speech-detection"
+    ],
+    "tags": [
+      "bengali",
+      "bangla",
+      "hate-speech",
+      "nlp",
+      "social-media"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Research Use Only License",
+      "url": "https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset",
+      "commercial_use": "forbidden",
+      "notes": "Publisher specifies dataset is publicly available for academic and non-commercial research purposes."
+    },
+    "source_references": [
+      {
+        "title": "Bengali Hate Speech Dataset GitHub Repository",
+        "url": "https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset",
+        "type": "repository",
+        "notes": "Official repository containing subset CSV and documentation."
+      },
+      {
+        "title": "DeepHateExplainer: Explainable Hate Speech Detection in Under-resourced Bengali Language (IEEE DSAA 2021)",
+        "url": "https://doi.org/10.1109/DSAA52396.2021.00045",
+        "type": "original_paper",
+        "notes": "Published peer-reviewed paper in IEEE DSAA 2021."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against IEEE DSAA publication and official GitHub repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 6418,
+      "unit": "statements"
+    },
+    "languages": [
+      "bn"
+    ],
+    "dates": {
+      "published": "2020",
+      "last_updated": "2021"
+    },
+    "citation": {
+      "paper_title": "DeepHateExplainer: Explainable Hate Speech Detection in Under-resourced Bengali Language",
+      "paper_url": "https://doi.org/10.1109/DSAA52396.2021.00045",
+      "authors": [
+        "Md Rezaul Karim",
+        "Sumon Kanti Dey",
+        "Tanhim Islam",
+        "Sagor Sarker",
+        "Mehadi Hasan Menon",
+        "Kabir Hossain",
+        "Md Azam Hossain",
+        "Stefan Decker"
+      ],
+      "doi": "10.1109/DSAA52396.2021.00045",
+      "bibtex": "@inproceedings{karim2021deephateexplainer,\n  title = {DeepHateExplainer: Explainable Hate Speech Detection in Under-resourced Bengali Language},\n  author = {Karim, Md Rezaul and Dey, Sumon Kanti and Islam, Tanhim and Sarker, Sagor and Menon, Mehadi Hasan and Hossain, Kabir and Hossain, Md Azam and Decker, Stefan},\n  booktitle = {2021 IEEE 8th International Conference on Data Science and Advanced Analytics (DSAA)},\n  pages = {1--10},\n  year = {2021}\n}"
     }
   },
   {
@@ -3715,6 +4376,82 @@
       ],
       "doi": "10.1109/IGARSS.2019.8900532",
       "bibtex": "@inproceedings{sumbul2019bigearthnet,\n  title={BigEarthNet: A large-scale benchmark archive for remote sensing image understanding},\n  author={Sumbul, Gencer and Charfuelan, Marcela and Demir, Beg{\\\"u}m and Markl, Volker},\n  booktitle={IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},\n  pages={5901--5904},\n  year={2019},\n  doi={10.1109/IGARSS.2019.8900532}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "bike-sharing",
+    "slug": "bike-sharing",
+    "name": "Bike Sharing Dataset",
+    "description": "The Bike Sharing dataset contains hourly and daily counts of rental bikes in the Capital Bikeshare system in Washington D.C. between 2011 and 2012. It includes 17,379 hour-level records paired with corresponding weather (temperature, humidity, windspeed) and seasonal information for regression forecasting.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "regression",
+      "time-series-forecasting"
+    ],
+    "tags": [
+      "tabular",
+      "regression",
+      "time-series",
+      "bike-sharing",
+      "urban-mobility",
+      "uci-ml-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+    },
+    "source_references": [
+      {
+        "title": "Bike Sharing Dataset on UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+        "type": "official_website",
+        "notes": "Official UCI ML Repository dataset entry."
+      },
+      {
+        "title": "Event labeling combining ensemble detectors and background knowledge (Progress in AI 2013)",
+        "url": "https://doi.org/10.1007/s13748-013-0040-3",
+        "type": "original_paper",
+        "notes": "Published in Progress in Artificial Intelligence 2013."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Progress in Artificial Intelligence paper and UCI ML Repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 17379,
+      "unit": "hourly-records"
+    },
+    "dates": {
+      "published": "2013-12",
+      "last_updated": "2013-12"
+    },
+    "citation": {
+      "paper_title": "Event labeling combining ensemble detectors and background knowledge",
+      "paper_url": "https://doi.org/10.1007/s13748-013-0040-3",
+      "authors": [
+        "Hadi Fanaee-T",
+        "João Gama"
+      ],
+      "doi": "10.1007/s13748-013-0040-3",
+      "bibtex": "@article{fanaee2014event,\n  title = {Event labeling combining ensemble detectors and background knowledge},\n  author = {Fanaee-T, Hadi and Gama, Jo{\\~a}o},\n  journal = {Progress in Artificial Intelligence},\n  volume = {2},\n  number = {2},\n  pages = {113--127},\n  year = {2014}\n}"
     }
   },
   {
@@ -4200,6 +4937,81 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "breast-cancer-wisconsin-diagnostic",
+    "slug": "breast-cancer-wisconsin-diagnostic",
+    "name": "Breast Cancer Wisconsin (Diagnostic)",
+    "description": "The Breast Cancer Wisconsin Diagnostic (WDBC) dataset contains 569 instances with 30 continuous real-valued features computed from digitized fine needle aspirate (FNA) images of breast masses. Features describe characteristics of cell nuclei (radius, texture, perimeter, area, smoothness, compactness, concavity, symmetry) to classify masses as benign or malignant.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification"
+    ],
+    "tags": [
+      "tabular",
+      "classification",
+      "oncology",
+      "breast-cancer",
+      "medical-diagnostics",
+      "uci-ml-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+    },
+    "source_references": [
+      {
+        "title": "Breast Cancer Wisconsin (Diagnostic) on UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic",
+        "type": "official_website",
+        "notes": "Official UCI ML Repository dataset entry."
+      },
+      {
+        "title": "Nuclear feature extraction for breast tumor diagnosis (SPIE 1993)",
+        "url": "https://doi.org/10.1117/12.148698",
+        "type": "original_paper",
+        "notes": "Published in Biomedical Image Processing and Biomedical Visualization (SPIE 1993)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against SPIE 1993 paper and UCI ML Repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 569,
+      "unit": "instances"
+    },
+    "dates": {
+      "published": "1995-11",
+      "last_updated": "1995-11"
+    },
+    "citation": {
+      "paper_title": "Nuclear feature extraction for breast tumor diagnosis",
+      "paper_url": "https://doi.org/10.1117/12.148698",
+      "authors": [
+        "William H. Wolberg",
+        "W. Nick Street",
+        "Olvi L. Mangasarian"
+      ],
+      "doi": "10.1117/12.148698",
+      "bibtex": "@inproceedings{street1993nuclear,\n  title = {Nuclear feature extraction for breast tumor diagnosis},\n  author = {Street, W. Nick and Wolberg, William H. and Mangasarian, Olvi L.},\n  booktitle = {Biomedical Image Processing and Biomedical Visualization},\n  volume = {1905},\n  pages = {861--870},\n  year = {1993}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "california-housing",
     "slug": "california-housing",
     "name": "California Housing Prices Database",
@@ -4380,6 +5192,88 @@
     "provenance": {
       "collection_method": "Faces retrieved from internet searches of celebrity names, detected using face detectors, and annotated by human raters for 40 binary attributes.",
       "curation_notes": "All images are for non-commercial research use only."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "chartqa",
+    "slug": "chartqa",
+    "name": "ChartQA: Benchmark for Question Answering about Charts",
+    "description": "ChartQA is a large benchmark for question answering about charts with visual and logical reasoning. It consists of 9,600 human-written and machine-generated question-answer pairs covering 4,800 chart figures (bar, line, and pie charts) across economic, demographic, and statistical domains.",
+    "homepage_url": "https://github.com/vis-nlp/ChartQA",
+    "publisher": {
+      "name": "York University & Salesforce Research",
+      "type": "academic",
+      "url": "https://github.com/vis-nlp"
+    },
+    "modalities": [
+      "vision",
+      "nlp",
+      "multimodal"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "chart-reasoning"
+    ],
+    "tags": [
+      "visual-qa",
+      "chart-reasoning",
+      "multimodal",
+      "data-visualization",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Verified MIT license stated in repository LICENSE file."
+    },
+    "source_references": [
+      {
+        "title": "ChartQA Official GitHub Repository",
+        "url": "https://github.com/vis-nlp/ChartQA",
+        "type": "repository",
+        "notes": "Official repository with dataset annotations and evaluation tools."
+      },
+      {
+        "title": "ChartQA: A Benchmark for Question Answering about Charts with Visual and Logical Reasoning (ACL 2022)",
+        "url": "https://aclanthology.org/2022.findings-acl.177/",
+        "type": "original_paper",
+        "notes": "Findings of ACL 2022."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Findings of ACL 2022 paper and official GitHub repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 9600,
+      "unit": "qa-pairs"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2022-05",
+      "last_updated": "2022-05"
+    },
+    "citation": {
+      "paper_title": "ChartQA: A Benchmark for Question Answering about Charts with Visual and Logical Reasoning",
+      "paper_url": "https://aclanthology.org/2022.findings-acl.177/",
+      "authors": [
+        "Ahmed Masry",
+        "Do Xuan Long",
+        "Jia Qing Tan",
+        "Shafiq Joty",
+        "Enamul Hoque"
+      ],
+      "doi": "10.18653/v1/2022.findings-acl.177",
+      "bibtex": "@inproceedings{masry-etal-2022-chartqa,\n  title = {ChartQA: A Benchmark for Question Answering about Charts with Visual and Logical Reasoning},\n  author = {Masry, Ahmed and Long, Do Xuan and Tan, Jia Qing and Joty, Shafiq and Hoque, Enamul},\n  booktitle = {Findings of the Association for Computational Linguistics: ACL 2022},\n  pages = {2263--2279},\n  year = {2022}\n}"
     }
   },
   {
@@ -4685,6 +5579,91 @@
     "provenance": {
       "collection_method": "Subset of the 80 Million Tiny Images dataset, labeled by hired human workers.",
       "curation_notes": "Classes are completely mutually exclusive (e.g., no overlap between automobiles and trucks)."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cifar-100",
+    "slug": "cifar-100",
+    "name": "CIFAR-100",
+    "description": "The CIFAR-100 dataset consists of 60,000 32x32 colour images across 100 fine-grained classes grouped into 20 coarse superclasses. Each class contains 600 images (500 training images and 100 test images), collected by Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton.",
+    "homepage_url": "https://www.cs.toronto.edu/~kriz/cifar.html",
+    "publisher": {
+      "name": "University of Toronto",
+      "type": "academic",
+      "url": "https://www.cs.toronto.edu"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification"
+    ],
+    "tags": [
+      "computer-vision",
+      "image-classification",
+      "benchmark",
+      "tiny-images"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "License not specified by publisher",
+      "spdx_id": null,
+      "url": "https://www.cs.toronto.edu/~kriz/cifar.html",
+      "commercial_use": "unknown",
+      "notes": "Publisher page provides public download archives and requests citation of the technical report; no explicit license terms are specified."
+    },
+    "source_references": [
+      {
+        "title": "CIFAR-10 and CIFAR-100 Dataset Homepage",
+        "url": "https://www.cs.toronto.edu/~kriz/cifar.html",
+        "type": "official_website",
+        "notes": "Canonical dataset distribution page maintained by Alex Krizhevsky."
+      },
+      {
+        "title": "Learning Multiple Layers of Features from Tiny Images (Tech Report)",
+        "url": "https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf",
+        "type": "original_paper",
+        "notes": "Original 2009 technical report detailing CIFAR-10 and CIFAR-100 dataset collection."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against University of Toronto archive and canonical technical report."
+    },
+    "size": {
+      "status": "verified",
+      "amount": 161,
+      "unit": "MB",
+      "file_formats": [
+        "tar.gz",
+        "python-pickle",
+        "binary"
+      ],
+      "notes": "Python pickle archive size."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 60000,
+      "splits": {
+        "train": 50000,
+        "test": 10000
+      },
+      "unit": "images"
+    },
+    "dates": {
+      "published": "2009-04",
+      "last_updated": "2009-04"
+    },
+    "citation": {
+      "paper_title": "Learning Multiple Layers of Features from Tiny Images",
+      "paper_url": "https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf",
+      "authors": [
+        "Alex Krizhevsky"
+      ],
+      "bibtex": "@techreport{krizhevsky2009learning,\n  title = {Learning Multiple Layers of Features from Tiny Images},\n  author = {Krizhevsky, Alex},\n  institution = {University of Toronto},\n  year = {2009}\n}"
     }
   },
   {
@@ -5026,6 +6005,85 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "coqa",
+    "slug": "coqa",
+    "name": "CoQA: Conversational Question Answering Challenge",
+    "description": "CoQA is a large-scale conversational question answering dataset containing 127,000+ questions with answers from 8,399 conversations across seven diverse domains (children's stories, literature, news, Wikipedia, school exams, Reddit, and science). Unlike standard extractive QA, answers can be free-form text supported by rationale text spans.",
+    "homepage_url": "https://stanfordnlp.github.io/coqa/",
+    "publisher": {
+      "name": "Stanford University NLP Group",
+      "type": "academic",
+      "url": "https://nlp.stanford.edu"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "conversational-qa",
+      "reading-comprehension",
+      "dialog"
+    ],
+    "tags": [
+      "dialogue",
+      "conversational-qa",
+      "nlp",
+      "benchmark",
+      "stanford"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Community Data License Agreement - Permissive (CDLA-Permissive-1.0)",
+      "spdx_id": "CDLA-Permissive-1.0",
+      "url": "https://cdla.dev/permissive-1-0/",
+      "commercial_use": "allowed",
+      "notes": "Released under CDLA-Permissive-1.0, enabling academic and commercial reuse."
+    },
+    "source_references": [
+      {
+        "title": "CoQA Stanford NLP Project Page",
+        "url": "https://stanfordnlp.github.io/coqa/",
+        "type": "official_website",
+        "notes": "Official Stanford benchmark portal."
+      },
+      {
+        "title": "CoQA: A Conversational Question Answering Challenge (TACL 2019)",
+        "url": "https://aclanthology.org/Q19-1016/",
+        "type": "original_paper",
+        "notes": "Transactions of the Association for Computational Linguistics (TACL) 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against TACL 2019 paper and Stanford NLP portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 127000,
+      "unit": "questions"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2019-03",
+      "last_updated": "2019-03"
+    },
+    "citation": {
+      "paper_title": "CoQA: A Conversational Question Answering Challenge",
+      "paper_url": "https://aclanthology.org/Q19-1016/",
+      "authors": [
+        "Siva Reddy",
+        "Danqi Chen",
+        "Christopher D. Manning"
+      ],
+      "doi": "10.1162/tacl_a_00266",
+      "bibtex": "@article{reddy-etal-2019-coqa,\n  title = {CoQA: A Conversational Question Answering Challenge},\n  author = {Reddy, Siva and Chen, Danqi and Manning, Christopher D.},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {7},\n  pages = {249--266},\n  year = {2019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "cord",
     "slug": "cord",
     "name": "CORD: Consolidated Receipt Dataset for Post-OCR Parsing",
@@ -5117,6 +6175,162 @@
         "Hwalsuk Lee"
       ],
       "bibtex": "@inproceedings{park2019cord,\n  title={CORD: A Consolidated Receipt Dataset for Post-OCR Parsing},\n  author={Park, Seunghyun and Shin, Seung and Lee, Bado and Lee, Junyeop and Surh, Jaeheung and Seo, Minjoon and Lee, Hwalsuk},\n  booktitle={NeurIPS 2019 Workshop on Document Intelligence},\n  year={2019},\n  url={https://openreview.net/forum?id=SJl3z659UH}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "covertype",
+    "slug": "covertype",
+    "name": "Covertype (Forest CoverType)",
+    "description": "The Forest CoverType dataset contains cartographic variables for predicting forest cover type from strictly cartographic variables (as opposed to remotely sensed data). It includes 581,012 observations with 54 features describing 30x30 meter cells derived from USFS and USGS data across Roosevelt National Forest in Colorado.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/31/covertype",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification"
+    ],
+    "tags": [
+      "tabular",
+      "classification",
+      "forestry",
+      "cartography",
+      "uci-ml-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+    },
+    "source_references": [
+      {
+        "title": "Covertype on UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/31/covertype",
+        "type": "official_website",
+        "notes": "Official UCI ML Repository dataset entry."
+      },
+      {
+        "title": "Comparative accuracies of artificial neural networks and discriminant analysis in predicting forest cover types from cartographic variables (1999)",
+        "url": "https://doi.org/10.1016/S0168-1699(99)00046-0",
+        "type": "original_paper",
+        "notes": "Published in Computers and Electronics in Agriculture 1999."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Computers and Electronics in Agriculture paper and UCI ML Repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 581012,
+      "unit": "instances"
+    },
+    "dates": {
+      "published": "1998-08",
+      "last_updated": "1998-08"
+    },
+    "citation": {
+      "paper_title": "Comparative accuracies of artificial neural networks and discriminant analysis in predicting forest cover types from cartographic variables",
+      "paper_url": "https://doi.org/10.1016/S0168-1699(99)00046-0",
+      "authors": [
+        "Jock A. Blackard",
+        "Denis J. Dean"
+      ],
+      "doi": "10.1016/S0168-1699(99)00046-0",
+      "bibtex": "@article{blackard1999comparative,\n  title = {Comparative accuracies of artificial neural networks and discriminant analysis in predicting forest cover types from cartographic variables},\n  author = {Blackard, Jock A. and Dean, Denis J.},\n  journal = {Computers and Electronics in Agriculture},\n  volume = {24},\n  number = {3},\n  pages = {131--151},\n  year = {1999}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "crema-d",
+    "slug": "crema-d",
+    "name": "CREMA-D: Crowd-Sourced Emotional Multimodal Actors Dataset",
+    "description": "CREMA-D is a multimodal dataset of 7,442 clips from 91 ethnically diverse actors (48 male, 43 female) performing 12 sentences with six basic emotions (Happy, Sad, Angry, Fearful, Disgusted, Neutral) across four emotion levels (Low, Medium, High, Unspecified). Annotations were validated through crowd-sourced perceptual evaluations.",
+    "homepage_url": "https://github.com/CheyneyComputerScience/CREMA-D",
+    "publisher": {
+      "name": "Cheyney University of Pennsylvania & University of Pennsylvania",
+      "type": "academic",
+      "url": "https://www.cheyney.edu"
+    },
+    "modalities": [
+      "audio",
+      "vision",
+      "multimodal"
+    ],
+    "tasks": [
+      "emotion-recognition",
+      "speech-emotion-recognition"
+    ],
+    "tags": [
+      "audio",
+      "speech",
+      "emotion-recognition",
+      "multimodal",
+      "facial-expressions"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Database License (ODbL) v1.0",
+      "spdx_id": "ODbL-1.0",
+      "url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Verified Open Database License declared on official repository."
+    },
+    "source_references": [
+      {
+        "title": "CREMA-D Official GitHub Repository",
+        "url": "https://github.com/CheyneyComputerScience/CREMA-D",
+        "type": "repository",
+        "notes": "Official repository with dataset access and validation scripts."
+      },
+      {
+        "title": "CREMA-D: Crowd-sourced Emotional Multimodal Actors Dataset (IEEE TAFFC 2014)",
+        "url": "https://doi.org/10.1109/TAFFC.2014.2315612",
+        "type": "original_paper",
+        "notes": "Published in IEEE Transactions on Affective Computing 2014."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against IEEE TAFFC 2014 paper and official GitHub repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 7442,
+      "unit": "clips"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2014-04",
+      "last_updated": "2014-04"
+    },
+    "citation": {
+      "paper_title": "CREMA-D: Crowd-Sourced Emotional Multimodal Actors Dataset",
+      "paper_url": "https://doi.org/10.1109/TAFFC.2014.2315612",
+      "authors": [
+        "Houwei Cao",
+        "David G. Cooper",
+        "Michael K. Keutmann",
+        "Ruben C. Gur",
+        "Ani Nenkova",
+        "Ragini Verma"
+      ],
+      "doi": "10.1109/TAFFC.2014.2315612",
+      "bibtex": "@article{cao2014crema,\n  title = {CREMA-D: Crowd-Sourced Emotional Multimodal Actors Dataset},\n  author = {Cao, Houwei and Cooper, David G. and Keutmann, Michael K. and Gur, Ruben C. and Nenkova, Ani and Verma, Ragini},\n  journal = {IEEE Transactions on Affective Computing},\n  volume = {5},\n  number = {4},\n  pages = {377--390},\n  year = {2014}\n}"
     }
   },
   {
@@ -5550,6 +6764,87 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "doclaynet",
+    "slug": "doclaynet",
+    "name": "DocLayNet: Human-Annotated Dataset for Document-Layout Analysis",
+    "description": "DocLayNet is a large human-annotated dataset for document layout analysis. It contains 80,863 document pages across six core document categories (Financial Reports, Manuals, Scientific Papers, Laws & Regulations, Patents, and Government Documents) with bounding-box annotations across 11 layout classes.",
+    "homepage_url": "https://github.com/DS4SD/DocLayNet",
+    "publisher": {
+      "name": "IBM Research Europe",
+      "type": "industry",
+      "url": "https://research.ibm.com"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "document-layout-analysis",
+      "object-detection"
+    ],
+    "tags": [
+      "document-ai",
+      "document-layout-analysis",
+      "ocr",
+      "layout-parsing",
+      "ibm-research"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Community Data License Agreement - Permissive (CDLA-Permissive-1.0)",
+      "spdx_id": "CDLA-Permissive-1.0",
+      "url": "https://cdla.dev/permissive-1-0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CDLA-Permissive-1.0 license in repository."
+    },
+    "source_references": [
+      {
+        "title": "DocLayNet GitHub Repository",
+        "url": "https://github.com/DS4SD/DocLayNet",
+        "type": "repository",
+        "notes": "Official repository with dataset links and evaluation code."
+      },
+      {
+        "title": "DocLayNet: A Large Human-Annotated Dataset for Document-Layout Analysis (KDD 2022)",
+        "url": "https://doi.org/10.1145/3534678.3539043",
+        "type": "original_paper",
+        "notes": "Proceedings of ACM SIGKDD 2022."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against ACM KDD 2022 proceedings and IBM Research repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 80863,
+      "splits": {
+        "train": 69103,
+        "val": 6480,
+        "test": 4994
+      },
+      "unit": "pages"
+    },
+    "dates": {
+      "published": "2022-08",
+      "last_updated": "2022-08"
+    },
+    "citation": {
+      "paper_title": "DocLayNet: A Large Human-Annotated Dataset for Document-Layout Analysis",
+      "paper_url": "https://doi.org/10.1145/3534678.3539043",
+      "authors": [
+        "Christoph Auer",
+        "Michele Dolfi",
+        "Ahmed Nassar",
+        "Peter Staar"
+      ],
+      "doi": "10.1145/3534678.3539043",
+      "bibtex": "@inproceedings{auer2022doclaynet,\n  title = {DocLayNet: A Large Human-Annotated Dataset for Document-Layout Analysis},\n  author = {Auer, Christoph and Dolfi, Michele and Nassar, Ahmed and Staar, Peter},\n  booktitle = {Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},\n  pages = {3029--3039},\n  year = {2022}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "docvqa",
     "slug": "docvqa",
     "name": "DocVQA: Visual Question Answering on Document Images",
@@ -5960,6 +7255,167 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "drop",
+    "slug": "drop",
+    "name": "DROP: Discrete Reasoning Over Paragraphs",
+    "description": "DROP is a reading comprehension benchmark requiring discrete reasoning over paragraphs. Models must resolve references across paragraph text and perform mathematical or symbolic operations such as addition, counting, and sorting to arrive at the correct answer.",
+    "homepage_url": "https://allenai.org/data/drop",
+    "publisher": {
+      "name": "Allen Institute for AI (AI2)",
+      "type": "academic",
+      "url": "https://allenai.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "reading-comprehension",
+      "discrete-reasoning",
+      "question-answering"
+    ],
+    "tags": [
+      "reading-comprehension",
+      "nlp",
+      "reasoning",
+      "benchmark",
+      "allenai"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license declared by Allen Institute for AI."
+    },
+    "source_references": [
+      {
+        "title": "DROP Benchmark Page at Allen Institute for AI",
+        "url": "https://allenai.org/data/drop",
+        "type": "official_website",
+        "notes": "Official dataset landing page."
+      },
+      {
+        "title": "DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs (NAACL 2019)",
+        "url": "https://aclanthology.org/N19-1246/",
+        "type": "original_paper",
+        "notes": "Proceedings of NAACL 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against NAACL 2019 proceedings and Allen Institute for AI."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 96567,
+      "splits": {
+        "train": 77400,
+        "validation": 9536,
+        "test": 9631
+      },
+      "unit": "questions"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2019-06",
+      "last_updated": "2019-06"
+    },
+    "citation": {
+      "paper_title": "DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs",
+      "paper_url": "https://aclanthology.org/N19-1246/",
+      "authors": [
+        "Dheeru Dua",
+        "Yizhong Wang",
+        "Pradeep Dasigi",
+        "Gabriel Stanovsky",
+        "Sameer Singh",
+        "Matt Gardner"
+      ],
+      "doi": "10.18653/v1/N19-1246",
+      "bibtex": "@inproceedings{dua-etal-2019-drop,\n  title = {DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs},\n  author = {Dua, Dheeru and Wang, Yizhong and Dasigi, Pradeep and Stanovsky, Gabriel and Singh, Sameer and Gardner, Matt},\n  booktitle = {Proceedings of NAACL 2019},\n  pages = {2368--2378},\n  year = {2019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "dry-bean",
+    "slug": "dry-bean",
+    "name": "Dry Bean Dataset",
+    "description": "The Dry Bean dataset consists of 13,611 grains of 7 different registered dry bean varieties (Seker, Barbunya, Bombay, Cali, Dermason, Horoz, Sira) captured with a high-resolution camera. 16 dimensional morphological and shape features were extracted from each bean image for computer vision classification.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/602/dry+bean+dataset",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification"
+    ],
+    "tags": [
+      "tabular",
+      "classification",
+      "agriculture",
+      "botany",
+      "morphology",
+      "uci-ml-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+    },
+    "source_references": [
+      {
+        "title": "Dry Bean Dataset on UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/602/dry+bean+dataset",
+        "type": "official_website",
+        "notes": "Official UCI ML Repository dataset entry."
+      },
+      {
+        "title": "Multiclass classification of dry beans using computer vision and machine learning techniques (2020)",
+        "url": "https://doi.org/10.1016/j.compag.2020.105507",
+        "type": "original_paper",
+        "notes": "Published in Computers and Electronics in Agriculture 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Computers and Electronics in Agriculture publication and UCI ML Repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 13611,
+      "unit": "grains"
+    },
+    "dates": {
+      "published": "2020-01",
+      "last_updated": "2020-01"
+    },
+    "citation": {
+      "paper_title": "Multiclass classification of dry beans using computer vision and machine learning techniques",
+      "paper_url": "https://doi.org/10.1016/j.compag.2020.105507",
+      "authors": [
+        "Murat Koklu",
+        "Ismail Ozkan"
+      ],
+      "doi": "10.1016/j.compag.2020.105507",
+      "bibtex": "@article{koklu2020multiclass,\n  title = {Multiclass classification of dry beans using computer vision and machine learning techniques},\n  author = {Koklu, Murat and Ozkan, Ismail},\n  journal = {Computers and Electronics in Agriculture},\n  volume = {174},\n  pages = {105507},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "eeg-based-lie-detection-using-14",
     "slug": "eeg-based-lie-detection-using-14",
     "name": "EEG-Based Lie Detection Dataset using 14-Channel Emotiv EPOC+: Instructed-Response and Free-Response Protocols",
@@ -6025,6 +7481,81 @@
         "Islam, Md Kafiul"
       ],
       "doi": "10.17632/3d5frp7rnv.1"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "emnist",
+    "slug": "emnist",
+    "name": "EMNIST: Extended MNIST",
+    "description": "The EMNIST (Extended MNIST) dataset is an extension of MNIST to handwritten letters and digits. Derived from the NIST Special Database 19, it matches the 28x28 pixel format of MNIST and provides several standardized splits including By_Class (814,255 samples, 62 classes), Balanced (131,600 samples, 47 classes), and Letters (145,600 samples, 26 classes).",
+    "homepage_url": "https://www.nist.gov/itl/products-and-services/emnist-dataset",
+    "publisher": {
+      "name": "National Institute of Standards and Technology (NIST) & Western Sydney University",
+      "type": "government",
+      "url": "https://www.nist.gov"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "optical-character-recognition"
+    ],
+    "tags": [
+      "ocr",
+      "handwritten-characters",
+      "mnist-extension",
+      "benchmark",
+      "nist"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "NIST Public Domain / Open Access",
+      "url": "https://www.nist.gov/itl/products-and-services/emnist-dataset",
+      "commercial_use": "allowed",
+      "notes": "Derived from NIST Special Database 19; provided openly without copyright restrictions."
+    },
+    "source_references": [
+      {
+        "title": "NIST EMNIST Dataset Page",
+        "url": "https://www.nist.gov/itl/products-and-services/emnist-dataset",
+        "type": "official_website",
+        "notes": "Official NIST product page."
+      },
+      {
+        "title": "EMNIST: an extension of MNIST to handwritten letters (IJCNN 2017)",
+        "url": "https://doi.org/10.1109/IJCNN.2017.7966217",
+        "type": "original_paper",
+        "notes": "Published in 2017 International Joint Conference on Neural Networks (IJCNN)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against NIST documentation and IJCNN 2017 paper."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 814255,
+      "unit": "images"
+    },
+    "dates": {
+      "published": "2017-05",
+      "last_updated": "2017-05"
+    },
+    "citation": {
+      "paper_title": "EMNIST: Extending MNIST to handwritten letters",
+      "paper_url": "https://doi.org/10.1109/IJCNN.2017.7966217",
+      "authors": [
+        "Gregory Cohen",
+        "Saeed Afshar",
+        "Jonathan Tapson",
+        "André van Schaik"
+      ],
+      "doi": "10.1109/IJCNN.2017.7966217",
+      "bibtex": "@inproceedings{cohen2017emnist,\n  title = {EMNIST: Extending MNIST to handwritten letters},\n  author = {Cohen, Gregory and Afshar, Saeed and Tapson, Jonathan and van Schaik, Andr{\\'e}},\n  booktitle = {2017 International Joint Conference on Neural Networks (IJCNN)},\n  pages = {2921--2926},\n  year = {2017}\n}"
     }
   },
   {
@@ -6478,6 +8009,86 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "fgvc-aircraft",
+    "slug": "fgvc-aircraft",
+    "name": "FGVC Aircraft",
+    "description": "FGVC Aircraft (Fine-Grained Visual Classification of Aircraft) is a benchmark dataset of 10,200 aircraft images across 100 model variants (102 images per variant). Aircraft categories are organized in a four-level hierarchy: Model, Variant, Family, and Manufacturer.",
+    "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/",
+    "publisher": {
+      "name": "Visual Geometry Group (VGG), University of Oxford",
+      "type": "academic",
+      "url": "https://www.robots.ox.ac.uk/~vgg/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "fine-grained-classification",
+      "hierarchical-classification"
+    ],
+    "tags": [
+      "fine-grained",
+      "aircraft",
+      "transportation",
+      "benchmark",
+      "vgg"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Open Academic Research Use",
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/",
+      "commercial_use": "unknown",
+      "notes": "Freely available for academic research and evaluation."
+    },
+    "source_references": [
+      {
+        "title": "FGVC Aircraft Dataset Homepage",
+        "url": "https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/",
+        "type": "official_website",
+        "notes": "Canonical dataset distribution page."
+      },
+      {
+        "title": "Fine-Grained Visual Classification of Aircraft (arXiv 2013)",
+        "url": "https://arxiv.org/abs/1306.5151",
+        "type": "original_paper",
+        "notes": "Original technical report on FGVC aircraft dataset."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against arXiv publication and Oxford VGG distribution."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 10200,
+      "splits": {
+        "train": 3334,
+        "val": 3333,
+        "test": 3333
+      },
+      "unit": "images"
+    },
+    "dates": {
+      "published": "2013-06",
+      "last_updated": "2013-06"
+    },
+    "citation": {
+      "paper_title": "Fine-Grained Visual Classification of Aircraft",
+      "paper_url": "https://arxiv.org/abs/1306.5151",
+      "authors": [
+        "Subhransu Maji",
+        "Esa Rahtu",
+        "Juho Kannala",
+        "Matthew Blaschko",
+        "Andrea Vedaldi"
+      ],
+      "bibtex": "@article{maji2013aircraft,\n  title = {Fine-Grained Visual Classification of Aircraft},\n  author = {Maji, Subhransu and Rahtu, Esa and Kannala, Juho and Blaschko, Matthew and Vedaldi, Andrea},\n  journal = {arXiv preprint arXiv:1306.5151},\n  year = {2013}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "field-based-citrus-leaf-disease-image",
     "slug": "field-based-citrus-leaf-disease-image",
     "name": "Field-Based Citrus Leaf Disease Image Dataset",
@@ -6731,6 +8342,173 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "fleurs",
+    "slug": "fleurs",
+    "name": "FLEURS: Few-shot Learning Evaluation of Universal Representations of Speech",
+    "description": "FLEURS is an evaluation benchmark for multi-lingual and few-shot speech recognition covering 102 languages. An extension of the FLoRes machine translation benchmark, it contains approximately 12 hours of supervised high-quality speech per language for multi-task evaluation including ASR, Speech Translation, and Language Identification.",
+    "homepage_url": "https://huggingface.co/datasets/google/fleurs",
+    "publisher": {
+      "name": "Google Research",
+      "type": "industry",
+      "url": "https://research.google"
+    },
+    "modalities": [
+      "audio",
+      "nlp"
+    ],
+    "tasks": [
+      "automatic-speech-recognition",
+      "language-identification",
+      "speech-translation"
+    ],
+    "tags": [
+      "speech",
+      "audio",
+      "multilingual",
+      "asr",
+      "fleurs",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in official Hugging Face dataset card."
+    },
+    "source_references": [
+      {
+        "title": "FLEURS on Hugging Face",
+        "url": "https://huggingface.co/datasets/google/fleurs",
+        "type": "repository",
+        "notes": "Official Hugging Face dataset distribution."
+      },
+      {
+        "title": "FLEURS: Few-shot Learning Evaluation of Universal Representations of Speech (IEEE SLT 2022)",
+        "url": "https://doi.org/10.1109/SLT54892.2023.10023140",
+        "type": "original_paper",
+        "notes": "Published in 2022 IEEE Spoken Language Technology Workshop (SLT)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against IEEE SLT publication and Google Research dataset release."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 306000,
+      "unit": "utterances"
+    },
+    "dates": {
+      "published": "2022-05",
+      "last_updated": "2023-01"
+    },
+    "citation": {
+      "paper_title": "FLEURS: Few-shot Learning Evaluation of Universal Representations of Speech",
+      "paper_url": "https://doi.org/10.1109/SLT54892.2023.10023140",
+      "authors": [
+        "Alexis Conneau",
+        "Min Ma",
+        "Simran Khanuja",
+        "Yu Zhang",
+        "Wei-Ning Hsu",
+        "Ye Jia",
+        "Colin Cherry",
+        "Thalles Silva",
+        "Yacine Hazami",
+        "Patrick von Platen",
+        "Anton Lozhkov",
+        "Clara Rivera",
+        "Ankur Bapna"
+      ],
+      "doi": "10.1109/SLT54892.2023.10023140",
+      "bibtex": "@inproceedings{conneau2023fleurs,\n  title = {FLEURS: Few-shot Learning Evaluation of Universal Representations of Speech},\n  author = {Conneau, Alexis and Ma, Min and Khanuja, Simran and Zhang, Yu and Hsu, Wei-Ning and Jia, Ye and Cherry, Colin and Silva, Thalles and Hazami, Yacine and von Platen, Patrick and Lozhkov, Anton and Rivera, Clara and Bapna, Ankur},\n  booktitle = {2022 IEEE Spoken Language Technology Workshop (SLT)},\n  pages = {798--805},\n  year = {2023}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "food-101",
+    "slug": "food-101",
+    "name": "Food-101",
+    "description": "Food-101 is an image classification dataset consisting of 101 food categories with 1,000 images per category (total 101,000 images). For each class, 250 manually reviewed test images and 750 uncleaned training images are provided.",
+    "homepage_url": "https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/",
+    "publisher": {
+      "name": "Computer Vision Laboratory, ETH Zurich",
+      "type": "academic",
+      "url": "https://vision.ee.ethz.ch"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "fine-grained-classification",
+      "image-classification"
+    ],
+    "tags": [
+      "food",
+      "fine-grained",
+      "computer-vision",
+      "eth-zurich",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0",
+      "spdx_id": "CC-BY-NC-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "commercial_use": "forbidden",
+      "notes": "Verified non-commercial academic license stated on ETH Zurich CVL portal."
+    },
+    "source_references": [
+      {
+        "title": "Food-101 Dataset Homepage",
+        "url": "https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/",
+        "type": "official_website",
+        "notes": "Official ETH Zurich Computer Vision Laboratory portal."
+      },
+      {
+        "title": "Food-101 – Mining Discriminative Components with Random Forests (ECCV 2014)",
+        "url": "https://doi.org/10.1007/978-3-319-10599-4_29",
+        "type": "original_paper",
+        "notes": "Published in European Conference on Computer Vision (ECCV 2014)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against ECCV 2014 publication and ETH Zurich dataset page."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 101000,
+      "splits": {
+        "train": 75750,
+        "test": 25250
+      },
+      "unit": "images"
+    },
+    "dates": {
+      "published": "2014-09",
+      "last_updated": "2014-09"
+    },
+    "citation": {
+      "paper_title": "Food-101 – Mining Discriminative Components with Random Forests",
+      "paper_url": "https://doi.org/10.1007/978-3-319-10599-4_29",
+      "authors": [
+        "Lukas Bossard",
+        "Matthieu Guillaumin",
+        "Luc Van Gool"
+      ],
+      "doi": "10.1007/978-3-319-10599-4_29",
+      "bibtex": "@inproceedings{bossard2014food,\n  title = {Food-101 -- Mining Discriminative Components with Random Forests},\n  author = {Bossard, Lukas and Guillaumin, Matthieu and Van Gool, Luc},\n  booktitle = {European Conference on Computer Vision (ECCV)},\n  pages = {446--461},\n  year = {2014}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "funsd",
     "slug": "funsd",
     "name": "FUNSD: Form Understanding in Noisy Scanned Documents",
@@ -6892,6 +8670,98 @@
     "languages": [
       "bn"
     ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "gigaspeech",
+    "slug": "gigaspeech",
+    "name": "GigaSpeech: Multi-Domain ASR Corpus",
+    "description": "GigaSpeech is an evolving, multi-domain English speech recognition corpus comprising 10,000 hours of high-quality transcribed audio and 33,000 hours of total audio. Sourced from audiobooks, podcasts, and YouTube across diverse topics, speaking styles, and acoustic environments.",
+    "homepage_url": "https://github.com/SpeechColab/GigaSpeech",
+    "publisher": {
+      "name": "SpeechColab Consortium",
+      "type": "community",
+      "url": "https://speechcolab.org"
+    },
+    "modalities": [
+      "audio",
+      "nlp"
+    ],
+    "tasks": [
+      "automatic-speech-recognition",
+      "speech-processing"
+    ],
+    "tags": [
+      "audio",
+      "speech",
+      "asr",
+      "english",
+      "multi-domain",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "SpeechColab Non-Commercial Research License",
+      "url": "https://github.com/SpeechColab/GigaSpeech#license",
+      "commercial_use": "forbidden",
+      "notes": "Code is under Apache 2.0; dataset audio is available for non-commercial research and educational purposes."
+    },
+    "source_references": [
+      {
+        "title": "GigaSpeech GitHub Repository",
+        "url": "https://github.com/SpeechColab/GigaSpeech",
+        "type": "repository",
+        "notes": "Official repository containing download scripts and baselines."
+      },
+      {
+        "title": "GigaSpeech: An Evolving, Multi-domain ASR Corpus with 10,000 Hours of Transcribed Audio (Interspeech 2021)",
+        "url": "https://doi.org/10.21437/Interspeech.2021-1965",
+        "type": "original_paper",
+        "notes": "Proceedings of Interspeech 2021."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Interspeech 2021 paper and SpeechColab consortium release."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 10000,
+      "unit": "hours"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2021-08",
+      "last_updated": "2021-08"
+    },
+    "citation": {
+      "paper_title": "GigaSpeech: An Evolving, Multi-domain ASR Corpus with 10,000 Hours of Transcribed Audio",
+      "paper_url": "https://doi.org/10.21437/Interspeech.2021-1965",
+      "authors": [
+        "Guoguo Chen",
+        "Shuzhou Chai",
+        "Guan-Bo Wang",
+        "Jiayu Du",
+        "Wei-Qiang Zhang",
+        "Chao Weng",
+        "Dan Su",
+        "Daniel Povey",
+        "Jan Trmal",
+        "Junbo Zhang",
+        "Mingjie Wang",
+        "Sheng Li",
+        "Yao-Yuan Wang",
+        "Yongqing Wang",
+        "Yujun Wang",
+        "Zhendong Peng"
+      ],
+      "doi": "10.21437/Interspeech.2021-1965",
+      "bibtex": "@inproceedings{chen2021gigaspeech,\n  title = {GigaSpeech: An Evolving, Multi-domain ASR Corpus with 10,000 Hours of Transcribed Audio},\n  author = {Chen, Guoguo and Chai, Shuzhou and Wang, Guan-Bo and Du, Jiayu and Zhang, Wei-Qiang and Weng, Chao and Su, Dan and Povey, Daniel and Trmal, Jan and Zhang, Junbo and Wang, Mingjie and Li, Sheng and Wang, Yao-Yuan and Wang, Yongqing and Wang, Yujun and Peng, Zhendong},\n  booktitle = {Proc. Interspeech 2021},\n  pages = {3670--3674},\n  year = {2021}\n}"
+    }
   },
   {
     "schema_version": "1.0.0",
@@ -7238,6 +9108,86 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "heart-disease",
+    "slug": "heart-disease",
+    "name": "Heart Disease",
+    "description": "The Heart Disease dataset contains 76 raw attributes across 920 patients collected from four clinical institutions: Cleveland Clinic Foundation, Hungarian Institute of Cardiology, University Hospital Zurich, and VA Medical Center Long Beach. The standard Cleveland subset uses 14 patient attributes for predicting the presence of heart disease.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/45/heart+disease",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification"
+    ],
+    "tags": [
+      "tabular",
+      "classification",
+      "healthcare",
+      "cardiology",
+      "uci-ml-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+    },
+    "source_references": [
+      {
+        "title": "Heart Disease on UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/45/heart+disease",
+        "type": "official_website",
+        "notes": "Official UCI ML Repository dataset entry."
+      },
+      {
+        "title": "International application of a new probability algorithm for the diagnosis of coronary artery disease (1989)",
+        "url": "https://doi.org/10.1016/0002-9149(89)90524-9",
+        "type": "original_paper",
+        "notes": "Published in The American Journal of Cardiology 1989."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against American Journal of Cardiology paper and UCI ML Repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 303,
+      "unit": "patients"
+    },
+    "dates": {
+      "published": "1988-07",
+      "last_updated": "1988-07"
+    },
+    "citation": {
+      "paper_title": "International application of a new probability algorithm for the diagnosis of coronary artery disease",
+      "paper_url": "https://doi.org/10.1016/0002-9149(89)90524-9",
+      "authors": [
+        "Robert Detrano",
+        "Andras Janosi",
+        "Walter Steinbrunn",
+        "Matthias Pfisterer",
+        "Johann-Jakob Schmid",
+        "Sandor Sandhu",
+        "Kern H. Guppy",
+        "Stella Lee",
+        "Victor Froelicher"
+      ],
+      "doi": "10.1016/0002-9149(89)90524-9",
+      "bibtex": "@article{detrano1989international,\n  title = {International application of a new probability algorithm for the diagnosis of coronary artery disease},\n  author = {Detrano, Robert and Janosi, Andras and Steinbrunn, Walter and Pfisterer, Matthias and Schmid, Johann-Jakob and Sandhu, Sandor and Guppy, Kern H. and Lee, Stella and Froelicher, Victor},\n  journal = {The American Journal of Cardiology},\n  volume = {64},\n  number = {5},\n  pages = {304--310},\n  year = {1989}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "hijaiyah-letter-pronunciation-audio-articulat",
     "slug": "hijaiyah-letter-pronunciation-audio-articulat",
     "name": "Hijaiyah Letter Pronunciation Audio Dataset for Articulation Characteristic Classification",
@@ -7395,6 +9345,95 @@
       ],
       "doi": "10.1109/ICCV.2011.6126543",
       "bibtex": "@inproceedings{kuehne2011hmdb,\n  title={HMDB: a large video database for human motion recognition},\n  author={Kuehne, Hildegard and Jhuang, Hueihan and Garrote, Est{\\'\\i}baliz and Poggio, Tomaso and Serre, Thomas},\n  booktitle={2011 International Conference on Computer Vision},\n  pages={2556--2563},\n  year={2011},\n  organization={IEEE},\n  doi={10.1109/ICCV.2011.6126543}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "hotpotqa",
+    "slug": "hotpotqa",
+    "name": "HotpotQA",
+    "description": "HotpotQA is a question answering dataset featuring diverse, multi-hop questions with supporting facts to enable more explainable question answering systems. Models must find and reason over multiple Wikipedia documents to answer questions, rather than relying on single-sentence retrieval.",
+    "homepage_url": "https://hotpotqa.github.io/",
+    "publisher": {
+      "name": "Carnegie Mellon University, Stanford University, Université de Montréal",
+      "type": "academic",
+      "url": "https://hotpotqa.github.io/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "multi-hop-reasoning",
+      "information-retrieval"
+    ],
+    "tags": [
+      "question-answering",
+      "multi-hop",
+      "nlp",
+      "explainable-ai",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY-SA-4.0 license stated on project homepage."
+    },
+    "source_references": [
+      {
+        "title": "HotpotQA Official Benchmark Homepage",
+        "url": "https://hotpotqa.github.io/",
+        "type": "official_website",
+        "notes": "Canonical site hosting data, leaderboard, and evaluation script."
+      },
+      {
+        "title": "HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering (EMNLP 2018)",
+        "url": "https://aclanthology.org/D18-1259/",
+        "type": "original_paper",
+        "notes": "Proceedings of EMNLP 2018."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against EMNLP 2018 paper and official HotpotQA distribution."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 112779,
+      "splits": {
+        "train": 90447,
+        "dev_distractor": 7405,
+        "dev_fullwiki": 7405,
+        "test": 7405
+      },
+      "unit": "qa-pairs"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-10",
+      "last_updated": "2018-10"
+    },
+    "citation": {
+      "paper_title": "HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering",
+      "paper_url": "https://aclanthology.org/D18-1259/",
+      "authors": [
+        "Zhilin Yang",
+        "Peng Qi",
+        "Saizheng Zhang",
+        "Yoshua Bengio",
+        "William W. Cohen",
+        "Ruslan Salakhutdinov",
+        "Christopher D. Manning"
+      ],
+      "doi": "10.18653/v1/D18-1259",
+      "bibtex": "@inproceedings{yang-etal-2018-hotpotqa,\n  title = {HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering},\n  author = {Yang, Zhilin and Qi, Peng and Zhang, Saizheng and Bengio, Yoshua and Cohen, William W. and Salakhutdinov, Ruslan and Manning, Christopher D.},\n  booktitle = {Proceedings of EMNLP 2018},\n  pages = {2369--2380},\n  year = {2018}\n}"
     }
   },
   {
@@ -8130,6 +10169,93 @@
       ],
       "doi": "10.3390/data3030025",
       "bibtex": "@article{porwal2018idrid,\n  title={Indian Diabetic Retinopathy Image Dataset (IDRiD): A Database for Diabetic Retinopathy Screening Research},\n  author={Porwal, Prasanna and Pachade, Samiksha and Kamble, Ravi and Kokare, Manesh and Deshmukh, Girish and Sahasrabuddhe, Vivek and Meriaudeau, Fabrice},\n  journal={Data},\n  volume={3},\n  number={3},\n  pages={25},\n  year={2018},\n  publisher={MDPI},\n  doi={10.3390/data3030025}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "iemocap",
+    "slug": "iemocap",
+    "name": "IEMOCAP: Interactive Emotional Dyadic Motion Capture Database",
+    "description": "The IEMOCAP database is an interactive emotional dyadic motion capture dataset recorded at the Speech Analysis and Interpretation Laboratory (SAIL) at USC. It contains approximately 12 hours of audiovisual data (video, audio, facial motion capture, text transcripts) from 10 actors rehearsing scripts and improvising emotional scenarios.",
+    "homepage_url": "https://sail.usc.edu/iemocap/",
+    "publisher": {
+      "name": "USC Speech Analysis and Interpretation Laboratory (SAIL)",
+      "type": "academic",
+      "url": "https://sail.usc.edu"
+    },
+    "modalities": [
+      "audio",
+      "vision",
+      "nlp",
+      "multimodal"
+    ],
+    "tasks": [
+      "emotion-recognition",
+      "speech-emotion-recognition"
+    ],
+    "tags": [
+      "audio",
+      "speech",
+      "emotion-recognition",
+      "motion-capture",
+      "multimodal",
+      "usc"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "IEMOCAP Academic Non-Commercial Research License",
+      "url": "https://sail.usc.edu/iemocap/release_form.php",
+      "commercial_use": "forbidden",
+      "notes": "Available for non-commercial academic research upon executing the institutional release agreement."
+    },
+    "source_references": [
+      {
+        "title": "IEMOCAP Official Portal at USC SAIL",
+        "url": "https://sail.usc.edu/iemocap/",
+        "type": "official_website",
+        "notes": "Canonical dataset distribution page."
+      },
+      {
+        "title": "IEMOCAP: Interactive emotional dyadic motion capture database (LRE 2008)",
+        "url": "https://doi.org/10.1007/s10579-008-9076-4",
+        "type": "original_paper",
+        "notes": "Published in Language Resources and Evaluation 2008."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Language Resources and Evaluation journal paper and USC SAIL portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 12,
+      "unit": "hours"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2008-12",
+      "last_updated": "2008-12"
+    },
+    "citation": {
+      "paper_title": "IEMOCAP: Interactive emotional dyadic motion capture database",
+      "paper_url": "https://doi.org/10.1007/s10579-008-9076-4",
+      "authors": [
+        "Carlos Busso",
+        "Murtaza Bulut",
+        "Chi-Chun Lee",
+        "Abe Kazemzadeh",
+        "Emily Mower",
+        "Samuel Kim",
+        "Jeannette N. Chang",
+        "Sungbok Lee",
+        "Shrikanth S. Narayanan"
+      ],
+      "doi": "10.1007/s10579-008-9076-4",
+      "bibtex": "@article{busso2008iemocap,\n  title = {IEMOCAP: Interactive emotional dyadic motion capture database},\n  author = {Busso, Carlos and Bulut, Murtaza and Lee, Chi-Chun and Kazemzadeh, Abe and Mower, Emily and Kim, Samuel and Chang, Jeannette N. and Lee, Sungbok and Narayanan, Shrikanth S.},\n  journal = {Language Resources and Evaluation},\n  volume = {42},\n  number = {4},\n  pages = {335--359},\n  year = {2008}\n}"
     }
   },
   {
@@ -9292,6 +11418,87 @@
       ],
       "doi": "10.1109/CVPR.2012.6248074",
       "bibtex": "@inproceedings{geiger2012are,\n  title={Are we ready for autonomous driving? The KITTI vision benchmark suite},\n  author={Geiger, Andreas and Lenz, Philip and Urtasun, Raquel},\n  booktitle={2012 IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={3354--3361},\n  year={2012},\n  organization={IEEE},\n  doi={10.1109/CVPR.2012.6248074}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "kuzushiji-mnist",
+    "slug": "kuzushiji-mnist",
+    "name": "Kuzushiji-MNIST (KMNIST)",
+    "description": "Kuzushiji-MNIST is a drop-in replacement for the MNIST dataset featuring 10 classes of cursive Japanese characters (Kuzushiji). Created by the Center for Open Data in the Humanities (CODH), it consists of 70,000 28x28 grayscale images (60,000 training, 10,000 testing) derived from digitized classical Japanese literature.",
+    "homepage_url": "https://github.com/rois-codh/kmnist",
+    "publisher": {
+      "name": "ROIS-DS Center for Open Data in the Humanities (CODH)",
+      "type": "academic",
+      "url": "http://codh.rois.ac.jp/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "optical-character-recognition"
+    ],
+    "tags": [
+      "kuzushiji",
+      "japanese-characters",
+      "mnist-replacement",
+      "ocr",
+      "cultural-heritage"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY-SA 4.0 license stated in official GitHub repository."
+    },
+    "source_references": [
+      {
+        "title": "Kuzushiji-MNIST Official GitHub Repository",
+        "url": "https://github.com/rois-codh/kmnist",
+        "type": "repository",
+        "notes": "Official repository with dataset downloads and benchmarks."
+      },
+      {
+        "title": "Deep Learning for Classical Japanese Literature (NeurIPS 2018 Workshop)",
+        "url": "https://arxiv.org/abs/1812.01718",
+        "type": "original_paper",
+        "notes": "NeurIPS 2018 Workshop on Machine Learning for Creativity and Design."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against arXiv paper and CODH official repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 70000,
+      "splits": {
+        "train": 60000,
+        "test": 10000
+      },
+      "unit": "images"
+    },
+    "dates": {
+      "published": "2018-12",
+      "last_updated": "2018-12"
+    },
+    "citation": {
+      "paper_title": "Deep Learning for Classical Japanese Literature",
+      "paper_url": "https://arxiv.org/abs/1812.01718",
+      "authors": [
+        "Tarin Clanuwat",
+        "Mikel Bober-Irizar",
+        "Asanobu Kitamoto",
+        "Alex Lamb",
+        "Kazuaki Yamamoto",
+        "David Ha"
+      ],
+      "bibtex": "@article{clanuwat2018kmnist,\n  title = {Deep Learning for Classical Japanese Literature},\n  author = {Clanuwat, Tarin and Bober-Irizar, Mikel and Kitamoto, Asanobu and Lamb, Alex and Yamamoto, Kazuaki and Ha, David},\n  journal = {arXiv preprint arXiv:1812.01718},\n  year = {2018}\n}"
     }
   },
   {
@@ -10751,6 +12958,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "musan",
+    "slug": "musan",
+    "name": "MUSAN: A Music, Speech, and Noise Corpus",
+    "description": "MUSAN is a corpus of music, speech, and noise designed for training robust speech recognition, speaker identification, and audio augmentation systems. It contains approximately 109 hours of audio files comprising 60 hours of speech in 12 languages, 42 hours of diverse musical genres, and 6 hours of technical and natural background noise.",
+    "homepage_url": "https://www.openslr.org/17/",
+    "publisher": {
+      "name": "Johns Hopkins University",
+      "type": "academic",
+      "url": "https://www.clsp.jhu.edu"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "audio-classification",
+      "data-augmentation",
+      "noise-robust-asr"
+    ],
+    "tags": [
+      "audio",
+      "noise",
+      "music",
+      "speech",
+      "openslr",
+      "jhu",
+      "augmentation"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in official OpenSLR distribution."
+    },
+    "source_references": [
+      {
+        "title": "MUSAN on OpenSLR",
+        "url": "https://www.openslr.org/17/",
+        "type": "official_website",
+        "notes": "Official OpenSLR dataset distribution page."
+      },
+      {
+        "title": "MUSAN: A Music, Speech, and Noise Corpus (arXiv 2015)",
+        "url": "https://arxiv.org/abs/1510.08484",
+        "type": "original_paper",
+        "notes": "Technical report on the MUSAN corpus."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against arXiv publication and OpenSLR 17 portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 109,
+      "unit": "hours"
+    },
+    "dates": {
+      "published": "2015-10",
+      "last_updated": "2015-10"
+    },
+    "citation": {
+      "paper_title": "MUSAN: A Music, Speech, and Noise Corpus",
+      "paper_url": "https://arxiv.org/abs/1510.08484",
+      "authors": [
+        "David Snyder",
+        "Guoguo Chen",
+        "Daniel Povey"
+      ],
+      "bibtex": "@article{snyder2015musan,\n  title = {MUSAN: A Music, Speech, and Noise Corpus},\n  author = {Snyder, David and Chen, Guoguo and Povey, Daniel},\n  journal = {arXiv preprint arXiv:1510.08484},\n  year = {2015}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "nail-psoriasis",
     "slug": "nail-psoriasis",
     "name": "Dermatological Conditions Image Dataset for Skin Lesion Classification",
@@ -10839,6 +13123,104 @@
     "provenance": {
       "collection_method": "Clinical photography collected from hospital resources and clinical repositories.",
       "curation_notes": "De-identified and verified for dermatological classification research."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "natural-questions",
+    "slug": "natural-questions",
+    "name": "Natural Questions (NQ)",
+    "description": "Natural Questions is a large-scale QA dataset designed to mimic realistic user information-seeking behavior. It consists of queries submitted to Google search engine paired with corresponding Wikipedia pages and human-annotated long answers (entire paragraphs) and short answers (concise spans).",
+    "homepage_url": "https://ai.google.com/research/NaturalQuestions",
+    "publisher": {
+      "name": "Google Research",
+      "type": "industry",
+      "url": "https://research.google"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "reading-comprehension"
+    ],
+    "tags": [
+      "question-answering",
+      "information-retrieval",
+      "nlp",
+      "benchmark",
+      "wikipedia"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "spdx_id": "CC-BY-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "commercial_use": "allowed",
+      "notes": "Data is released under CC-BY-SA 3.0; associated code is released under Apache 2.0."
+    },
+    "source_references": [
+      {
+        "title": "Natural Questions Research Project Page",
+        "url": "https://ai.google.com/research/NaturalQuestions",
+        "type": "official_website",
+        "notes": "Canonical Google Research benchmark page."
+      },
+      {
+        "title": "Natural Questions: a Benchmark for Question Answering Research (TACL 2019)",
+        "url": "https://aclanthology.org/Q19-1026/",
+        "type": "original_paper",
+        "notes": "Transactions of the Association for Computational Linguistics (TACL) 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against TACL 2019 publication and Google Research official portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 323045,
+      "splits": {
+        "train": 307373,
+        "validation": 7830,
+        "test": 7842
+      },
+      "unit": "examples"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2019-01",
+      "last_updated": "2019-01"
+    },
+    "citation": {
+      "paper_title": "Natural Questions: A Benchmark for Question Answering Research",
+      "paper_url": "https://aclanthology.org/Q19-1026/",
+      "authors": [
+        "Tom Kwiatkowski",
+        "Jennimaria Palomaki",
+        "Olivia Redfield",
+        "Michael Collins",
+        "Ankur Parikh",
+        "Chris Alberti",
+        "Danielle Epstein",
+        "Illia Polosukhin",
+        "Matthew Kelcey",
+        "Jacob Devlin",
+        "Kenton Lee",
+        "Kristina Toutanova",
+        "Llion Jones",
+        "Ming-Wei Chang",
+        "Andrew Dai",
+        "Jakob Uszkoreit",
+        "Quoc Le",
+        "Slav Petrov"
+      ],
+      "doi": "10.1162/tacl_a_00276",
+      "bibtex": "@article{kwiatkowski-etal-2019-natural,\n  title = {Natural Questions: A Benchmark for Question Answering Research},\n  author = {Kwiatkowski, Tom and Palomaki, Jennimaria and Redfield, Olivia and Collins, Michael and Parikh, Ankur and Alberti, Chris and Epstein, Danielle and Polosukhin, Illia and Kelcey, Matthew and Devlin, Jacob and Lee, Kenton and Toutanova, Kristina and Jones, Llion and Chang, Ming-Wei and Dai, Andrew and Uszkoreit, Jakob and Le, Quoc and Petrov, Slav},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {7},\n  pages = {453--466},\n  year = {2019}\n}"
     }
   },
   {
@@ -11209,6 +13591,234 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "omniglot",
+    "slug": "omniglot",
+    "name": "Omniglot",
+    "description": "Omniglot is a benchmark dataset for one-shot learning and human-level concept learning. It contains 1,623 different handwritten characters from 50 alphabets, each drawn by 20 different individuals, yielding 32,460 total character strokes and images.",
+    "homepage_url": "https://github.com/brendenlake/omniglot",
+    "publisher": {
+      "name": "New York University & MIT",
+      "type": "academic",
+      "url": "https://cims.nyu.edu"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "few-shot-learning",
+      "one-shot-learning",
+      "image-classification"
+    ],
+    "tags": [
+      "few-shot",
+      "one-shot",
+      "character-recognition",
+      "meta-learning",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Verified MIT license declared in GitHub repository."
+    },
+    "source_references": [
+      {
+        "title": "Omniglot GitHub Repository",
+        "url": "https://github.com/brendenlake/omniglot",
+        "type": "repository",
+        "notes": "Official data and evaluation repository."
+      },
+      {
+        "title": "Human-level concept learning through probabilistic program induction (Science 2015)",
+        "url": "https://doi.org/10.1126/science.aab3050",
+        "type": "original_paper",
+        "notes": "Published in Science 2015."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Science 2015 publication and official repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 32460,
+      "unit": "character-drawings"
+    },
+    "dates": {
+      "published": "2015-12",
+      "last_updated": "2015-12"
+    },
+    "citation": {
+      "paper_title": "Human-level concept learning through probabilistic program induction",
+      "paper_url": "https://doi.org/10.1126/science.aab3050",
+      "authors": [
+        "Brenden M. Lake",
+        "Ruslan Salakhutdinov",
+        "Joshua B. Tenenbaum"
+      ],
+      "doi": "10.1126/science.aab3050",
+      "bibtex": "@article{lake2015human,\n  title = {Human-level concept learning through probabilistic program induction},\n  author = {Lake, Brenden M. and Salakhutdinov, Ruslan and Tenenbaum, Joshua B.},\n  journal = {Science},\n  volume = {350},\n  number = {6266},\n  pages = {1332--1338},\n  year = {2015}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "online-retail",
+    "slug": "online-retail",
+    "name": "Online Retail",
+    "description": "The Online Retail dataset contains 541,909 transnational transactional records for a UK-based registered non-store online retailer between 01/12/2010 and 09/12/2011. The company mainly sells unique all-occasion gifts, and many customers are wholesalers, widely used for customer segmentation and association rule mining.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/352/online+retail",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "clustering",
+      "association-rule-mining",
+      "customer-segmentation"
+    ],
+    "tags": [
+      "tabular",
+      "retail",
+      "e-commerce",
+      "transactions",
+      "clustering",
+      "uci-ml-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+    },
+    "source_references": [
+      {
+        "title": "Online Retail on UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/352/online+retail",
+        "type": "official_website",
+        "notes": "Official UCI ML Repository dataset entry."
+      },
+      {
+        "title": "Data mining for the online retail industry (Journal of Database Marketing 2012)",
+        "url": "https://doi.org/10.1057/dbm.2012.17",
+        "type": "original_paper",
+        "notes": "Published in Journal of Database Marketing & Customer Strategy Management 2012."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Journal of Database Marketing publication and UCI ML Repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 541909,
+      "unit": "transactions"
+    },
+    "dates": {
+      "published": "2015-11",
+      "last_updated": "2015-11"
+    },
+    "citation": {
+      "paper_title": "Data mining for the online retail industry: A case study of RFM model-based customer segmentation using data mining",
+      "paper_url": "https://doi.org/10.1057/dbm.2012.17",
+      "authors": [
+        "Daqing Chen",
+        "Sai Liang Sain",
+        "Kun Guo"
+      ],
+      "doi": "10.1057/dbm.2012.17",
+      "bibtex": "@article{chen2012data,\n  title = {Data mining for the online retail industry: A case study of RFM model-based customer segmentation using data mining},\n  author = {Chen, Daqing and Sain, Sai Liang and Guo, Kun},\n  journal = {Journal of Database Marketing & Customer Strategy Management},\n  volume = {19},\n  number = {3},\n  pages = {197--208},\n  year = {2012}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "online-shoppers-purchasing-intention",
+    "slug": "online-shoppers-purchasing-intention",
+    "name": "Online Shoppers Purchasing Intention Dataset",
+    "description": "The Online Shoppers Purchasing Intention dataset contains feature vectors of 12,330 online shopping sessions (10,422 negative, 1,908 positive) collected over a 1-year period to avoid campaign bias. It includes 10 numerical and 8 categorical attributes describing administrative, informational, product-related page metrics, bounce rates, exit rates, page values, visitor types, and special days.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification"
+    ],
+    "tags": [
+      "tabular",
+      "classification",
+      "e-commerce",
+      "behavior-analysis",
+      "uci-ml-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+    },
+    "source_references": [
+      {
+        "title": "Online Shoppers Purchasing Intention on UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset",
+        "type": "official_website",
+        "notes": "Official UCI ML Repository dataset entry."
+      },
+      {
+        "title": "Real-time prediction of online shoppers’ purchasing intention using multilayer perceptron and LSTM recurrent neural networks (Neural Computing & Applications 2019)",
+        "url": "https://doi.org/10.1007/s00521-018-3523-0",
+        "type": "original_paper",
+        "notes": "Published in Neural Computing and Applications 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Neural Computing and Applications publication and UCI ML Repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 12330,
+      "unit": "sessions"
+    },
+    "dates": {
+      "published": "2018-08",
+      "last_updated": "2018-08"
+    },
+    "citation": {
+      "paper_title": "Real-time prediction of online shoppers’ purchasing intention using multilayer perceptron and LSTM recurrent neural networks",
+      "paper_url": "https://doi.org/10.1007/s00521-018-3523-0",
+      "authors": [
+        "C. Okan Sakar",
+        "S. Olcay Polat",
+        "Mete Katircioglu",
+        "Yomi Kastro"
+      ],
+      "doi": "10.1007/s00521-018-3523-0",
+      "bibtex": "@article{sakar2019real,\n  title = {Real-time prediction of online shoppers’ purchasing intention using multilayer perceptron and LSTM recurrent neural networks},\n  author = {Sakar, C. Okan and Polat, S. Olcay and Katircioglu, Mete and Kastro, Yomi},\n  journal = {Neural Computing and Applications},\n  volume = {31},\n  number = {10},\n  pages = {6893--6908},\n  year = {2019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "open-images-v7",
     "slug": "open-images-v7",
     "name": "Open Images V7",
@@ -11304,6 +13914,156 @@
     "provenance": {
       "collection_method": "Sourced from Flickr Creative Commons images and annotated through automatic classification, expert verification, and crowd-sourcing pipelines.",
       "curation_notes": "Annotations are owned by Google LLC under CC BY 4.0; individual images are subject to original CC BY licenses."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "oxford-flowers-102",
+    "slug": "oxford-flowers-102",
+    "name": "Oxford Flowers 102",
+    "description": "The Oxford Flowers 102 dataset consists of 8,189 images categorized into 102 flower categories native to the United Kingdom. Each category contains between 40 and 258 images, widely utilized as a standard benchmark for fine-grained visual classification.",
+    "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/",
+    "publisher": {
+      "name": "Visual Geometry Group (VGG), University of Oxford",
+      "type": "academic",
+      "url": "https://www.robots.ox.ac.uk/~vgg/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "fine-grained-classification",
+      "image-classification"
+    ],
+    "tags": [
+      "fine-grained",
+      "flowers",
+      "botany",
+      "benchmark",
+      "vgg"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Open Academic Research Use",
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/",
+      "commercial_use": "unknown",
+      "notes": "Freely available for academic research and evaluation."
+    },
+    "source_references": [
+      {
+        "title": "Oxford 102 Category Flower Dataset Homepage",
+        "url": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/",
+        "type": "official_website",
+        "notes": "Canonical dataset distribution page."
+      },
+      {
+        "title": "Automated Flower Classification over a Large Number of Classes (ICVGIP 2008)",
+        "url": "https://doi.org/10.1109/ICVGIP.2008.47",
+        "type": "original_paper",
+        "notes": "Proceedings of ICVGIP 2008."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against ICVGIP 2008 paper and Oxford VGG distribution."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 8189,
+      "unit": "images"
+    },
+    "dates": {
+      "published": "2008-12",
+      "last_updated": "2008-12"
+    },
+    "citation": {
+      "paper_title": "Automated Flower Classification over a Large Number of Classes",
+      "paper_url": "https://doi.org/10.1109/ICVGIP.2008.47",
+      "authors": [
+        "Maria-Elena Nilsback",
+        "Andrew Zisserman"
+      ],
+      "doi": "10.1109/ICVGIP.2008.47",
+      "bibtex": "@inproceedings{nilsback2008automated,\n  title = {Automated Flower Classification over a Large Number of Classes},\n  author = {Nilsback, Maria-Elena and Zisserman, Andrew},\n  booktitle = {2008 Sixth Indian Conference on Computer Vision, Graphics & Image Processing},\n  pages = {722--729},\n  year = {2008}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "oxford-iiit-pet",
+    "slug": "oxford-iiit-pet",
+    "name": "Oxford-IIIT Pet Dataset",
+    "description": "The Oxford-IIIT Pet dataset is a 37-category pet dataset with approximately 200 images per class. Images feature large variations in scale, pose, and lighting, and include ground truth annotations for cat and dog breeds, head bounding boxes, and pixel-level foreground-background segmentation trimaps.",
+    "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/pets/",
+    "publisher": {
+      "name": "Visual Geometry Group (VGG), University of Oxford",
+      "type": "academic",
+      "url": "https://www.robots.ox.ac.uk/~vgg/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "fine-grained-classification",
+      "semantic-segmentation",
+      "object-detection"
+    ],
+    "tags": [
+      "fine-grained",
+      "pets",
+      "breeds",
+      "segmentation",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY-SA 4.0 license stated in official VGG distribution."
+    },
+    "source_references": [
+      {
+        "title": "Oxford-IIIT Pet Dataset Homepage",
+        "url": "https://www.robots.ox.ac.uk/~vgg/data/pets/",
+        "type": "official_website",
+        "notes": "Canonical dataset distribution page."
+      },
+      {
+        "title": "Cats and Dogs (CVPR 2012)",
+        "url": "https://doi.org/10.1109/CVPR.2012.6248092",
+        "type": "original_paper",
+        "notes": "Published in IEEE CVPR 2012."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against CVPR 2012 paper and official Oxford VGG metadata."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 7349,
+      "unit": "images"
+    },
+    "dates": {
+      "published": "2012-06",
+      "last_updated": "2012-06"
+    },
+    "citation": {
+      "paper_title": "Cats and Dogs",
+      "paper_url": "https://doi.org/10.1109/CVPR.2012.6248092",
+      "authors": [
+        "Omkar M. Parkhi",
+        "Andrea Vedaldi",
+        "Andrew Zisserman",
+        "C. V. Jawahar"
+      ],
+      "doi": "10.1109/CVPR.2012.6248092",
+      "bibtex": "@inproceedings{parkhi2012cats,\n  title = {Cats and Dogs},\n  author = {Parkhi, Omkar M. and Vedaldi, Andrea and Zisserman, Andrew and Jawahar, C. V.},\n  booktitle = {2012 IEEE Conference on Computer Vision and Pattern Recognition},\n  pages = {3498--3505},\n  year = {2012}\n}"
     }
   },
   {
@@ -11716,6 +14476,167 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "publaynet",
+    "slug": "publaynet",
+    "name": "PubLayNet",
+    "description": "PubLayNet is a large-scale dataset for document layout analysis containing over 360,000 document images automatically generated by matching PubMed Central PDF articles with XML representations. It includes bounding boxes for 5 typical document layout categories: Text, Title, List, Table, and Figure.",
+    "homepage_url": "https://github.com/ibm-aur-nlp/PubLayNet",
+    "publisher": {
+      "name": "IBM Research Australia",
+      "type": "industry",
+      "url": "https://research.ibm.com"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "document-layout-analysis",
+      "object-detection",
+      "instance-segmentation"
+    ],
+    "tags": [
+      "document-ai",
+      "document-layout-analysis",
+      "pubmed",
+      "layout-parsing",
+      "ibm"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Community Data License Agreement - Permissive (CDLA-Permissive-1.0)",
+      "spdx_id": "CDLA-Permissive-1.0",
+      "url": "https://cdla.dev/permissive-1-0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CDLA-Permissive-1.0 license declared in repository."
+    },
+    "source_references": [
+      {
+        "title": "PubLayNet GitHub Repository",
+        "url": "https://github.com/ibm-aur-nlp/PubLayNet",
+        "type": "repository",
+        "notes": "Official repository with dataset links and tooling."
+      },
+      {
+        "title": "PubLayNet: largest dataset ever for document layout analysis (ICDAR 2019)",
+        "url": "https://doi.org/10.1109/ICDAR.2019.00166",
+        "type": "original_paper",
+        "notes": "Proceedings of ICDAR 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against ICDAR 2019 publication and IBM Research repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 360000,
+      "unit": "document-images"
+    },
+    "dates": {
+      "published": "2019-09",
+      "last_updated": "2019-09"
+    },
+    "citation": {
+      "paper_title": "PubLayNet: Largest Dataset Ever for Document Layout Analysis",
+      "paper_url": "https://doi.org/10.1109/ICDAR.2019.00166",
+      "authors": [
+        "Xu Zhong",
+        "Jianbin Tang",
+        "Antonio Jimeno Yepes"
+      ],
+      "doi": "10.1109/ICDAR.2019.00166",
+      "bibtex": "@inproceedings{zhong2019publaynet,\n  title = {PubLayNet: Largest Dataset Ever for Document Layout Analysis},\n  author = {Zhong, Xu and Tang, Jianbin and Yepes, Antonio Jimeno},\n  booktitle = {2019 International Conference on Document Analysis and Recognition (ICDAR)},\n  pages = {1015--1022},\n  year = {2019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "pubmedqa",
+    "slug": "pubmedqa",
+    "name": "PubMedQA",
+    "description": "PubMedQA is a biomedical question answering dataset collected from PubMed abstracts. Questions are posed based on the titles of scientific articles, requiring yes/no/maybe reasoning by synthesizing findings reported in the abstract.",
+    "homepage_url": "https://pubmedqa.github.io/",
+    "publisher": {
+      "name": "University of Pittsburgh & Carnegie Mellon University",
+      "type": "academic",
+      "url": "https://pubmedqa.github.io/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "biomedical-nlp"
+    ],
+    "tags": [
+      "biomedical",
+      "pubmed",
+      "question-answering",
+      "nlp",
+      "healthcare"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Verified MIT license on official GitHub repository."
+    },
+    "source_references": [
+      {
+        "title": "PubMedQA Official Project Website",
+        "url": "https://pubmedqa.github.io/",
+        "type": "official_website",
+        "notes": "Canonical dataset homepage and leaderboard."
+      },
+      {
+        "title": "PubMedQA: A Dataset for Biomedical Research Question Answering (EMNLP 2019)",
+        "url": "https://aclanthology.org/D19-1259/",
+        "type": "original_paper",
+        "notes": "Proceedings of EMNLP 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against EMNLP 2019 publication and official GitHub repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 273500,
+      "splits": {
+        "labeled": 1000,
+        "unlabeled": 61200,
+        "artificial": 211300
+      },
+      "unit": "qa-pairs"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2019-11",
+      "last_updated": "2019-11"
+    },
+    "citation": {
+      "paper_title": "PubMedQA: A Dataset for Biomedical Research Question Answering",
+      "paper_url": "https://aclanthology.org/D19-1259/",
+      "authors": [
+        "Qiao Jin",
+        "Bhuwan Dhingra",
+        "Zhengping Liu",
+        "William W. Cohen",
+        "Xinghua Lu"
+      ],
+      "doi": "10.18653/v1/D19-1259",
+      "bibtex": "@inproceedings{jin-etal-2019-pubmedqa,\n  title = {PubMedQA: A Dataset for Biomedical Research Question Answering},\n  author = {Jin, Qiao and Dhingra, Bhuwan and Liu, Zhengping and Cohen, William W. and Lu, Xinghua},\n  booktitle = {Proceedings of EMNLP 2019},\n  pages = {2567--2577},\n  year = {2019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "punctuation-restoration-medical-consumer-heal",
     "slug": "punctuation-restoration-medical-consumer-heal",
     "name": "Punctuation Restoration in Medical Consumer Health Questions in Bangla",
@@ -11787,6 +14708,180 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "quac",
+    "slug": "quac",
+    "name": "QuAC: Question Answering in Context",
+    "description": "QuAC (Question Answering in Context) is a benchmark for conversational reading comprehension. It consists of interactive dialogs between a student who asks questions about an unseen Wikipedia section and a teacher who answers by extracting spans from the text and providing dialog flow feedback.",
+    "homepage_url": "https://quac.ai/",
+    "publisher": {
+      "name": "University of Washington, Allen Institute for AI, Stanford University",
+      "type": "academic",
+      "url": "https://quac.ai/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "conversational-qa",
+      "reading-comprehension",
+      "question-answering"
+    ],
+    "tags": [
+      "dialog",
+      "conversational-qa",
+      "reading-comprehension",
+      "nlp",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY-SA-4.0 license stated on project homepage."
+    },
+    "source_references": [
+      {
+        "title": "QuAC Official Project Homepage",
+        "url": "https://quac.ai/",
+        "type": "official_website",
+        "notes": "Official benchmark portal with leaderboard."
+      },
+      {
+        "title": "QuAC : Question Answering in Context (EMNLP 2018)",
+        "url": "https://aclanthology.org/D18-1241/",
+        "type": "original_paper",
+        "notes": "Proceedings of EMNLP 2018."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against EMNLP 2018 paper and quac.ai site."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 98407,
+      "splits": {
+        "train": 83568,
+        "validation": 7354,
+        "test": 7354
+      },
+      "unit": "questions"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-10",
+      "last_updated": "2018-10"
+    },
+    "citation": {
+      "paper_title": "QuAC: Question Answering in Context",
+      "paper_url": "https://aclanthology.org/D18-1241/",
+      "authors": [
+        "Eunsol Choi",
+        "He He",
+        "Mohit Iyyer",
+        "Mark Yatskar",
+        "Wen-tau Yih",
+        "Yejin Choi",
+        "Percy Liang",
+        "Luke Zettlemoyer"
+      ],
+      "doi": "10.18653/v1/D18-1241",
+      "bibtex": "@inproceedings{choi-etal-2018-quac,\n  title = {QuAC: Question Answering in Context},\n  author = {Choi, Eunsol and He, He and Iyyer, Mohit and Yatskar, Mark and Yih, Wen-tau and Choi, Yejin and Liang, Percy and Zettlemoyer, Luke},\n  booktitle = {Proceedings of EMNLP 2018},\n  pages = {2174--2184},\n  year = {2018}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "race",
+    "slug": "race",
+    "name": "RACE: Large-scale ReAding Comprehension Dataset from Examinations",
+    "description": "RACE is a reading comprehension dataset collected from English examinations designed for middle school and high school students in China. It consists of 27,933 passages and 97,687 questions generated by human educational experts to assess comprehensive reading ability and reasoning.",
+    "homepage_url": "https://www.cs.cmu.edu/~glai1/data/race/",
+    "publisher": {
+      "name": "Carnegie Mellon University",
+      "type": "academic",
+      "url": "https://www.cs.cmu.edu"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "reading-comprehension",
+      "multiple-choice-qa",
+      "question-answering"
+    ],
+    "tags": [
+      "reading-comprehension",
+      "multiple-choice",
+      "nlp",
+      "benchmark",
+      "examinations"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Non-Commercial Academic Research License",
+      "url": "https://www.cs.cmu.edu/~glai1/data/race/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for academic and non-commercial research purposes."
+    },
+    "source_references": [
+      {
+        "title": "RACE Dataset Official Website",
+        "url": "https://www.cs.cmu.edu/~glai1/data/race/",
+        "type": "official_website",
+        "notes": "Canonical CMU dataset page."
+      },
+      {
+        "title": "RACE: Large-scale ReAding Comprehension Dataset From Examinations (EMNLP 2017)",
+        "url": "https://aclanthology.org/D17-1082/",
+        "type": "original_paper",
+        "notes": "Proceedings of EMNLP 2017."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against EMNLP 2017 proceedings and CMU website."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 97687,
+      "splits": {
+        "train": 87866,
+        "dev": 4887,
+        "test": 4934
+      },
+      "unit": "questions"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2017-09",
+      "last_updated": "2017-09"
+    },
+    "citation": {
+      "paper_title": "RACE: Large-scale ReAding Comprehension Dataset From Examinations",
+      "paper_url": "https://aclanthology.org/D17-1082/",
+      "authors": [
+        "Guokun Lai",
+        "Qizhe Xie",
+        "Hanxiao Liu",
+        "Yiming Yang",
+        "Eduard Hovy"
+      ],
+      "doi": "10.18653/v1/D17-1082",
+      "bibtex": "@inproceedings{lai-etal-2017-race,\n  title = {RACE: Large-scale ReAding Comprehension Dataset From Examinations},\n  author = {Lai, Guokun and Xie, Qizhe and Liu, Hanxiao and Yang, Yiming and Hovy, Eduard},\n  booktitle = {Proceedings of EMNLP 2017},\n  pages = {785--794},\n  year = {2017}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "raman-d-l-allulose-d-fructose",
     "slug": "raman-d-l-allulose-d-fructose",
     "name": "Raman_D-/L-allulose and D-fructose",
@@ -11848,6 +14943,85 @@
         "Liu, Bingyang"
       ],
       "doi": "10.17632/mjnkw7r38s.1"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ravdess",
+    "slug": "ravdess",
+    "name": "RAVDESS: Ryerson Audio-Visual Database of Emotional Speech and Song",
+    "description": "The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS) is a multimodal dataset of 7,356 recordings featuring 24 professional actors (12 female, 12 male) vocalizing lexically-matched statements in neutral North American accents. Expressed emotions include calm, happy, sad, angry, fearful, surprise, and disgust at normal and strong emotional intensities.",
+    "homepage_url": "https://zenodo.org/records/1188976",
+    "publisher": {
+      "name": "Ryerson University (SMART Lab)",
+      "type": "academic",
+      "url": "https://www.torontomu.ca"
+    },
+    "modalities": [
+      "audio",
+      "vision",
+      "multimodal"
+    ],
+    "tasks": [
+      "emotion-recognition",
+      "speech-emotion-recognition"
+    ],
+    "tags": [
+      "audio",
+      "speech",
+      "emotion-recognition",
+      "multimodal",
+      "zenodo"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in Zenodo record."
+    },
+    "source_references": [
+      {
+        "title": "RAVDESS on Zenodo",
+        "url": "https://zenodo.org/records/1188976",
+        "type": "repository",
+        "notes": "Official Zenodo DOI record."
+      },
+      {
+        "title": "The Ryerson Audio-Visual Database of Emotional Speech and Song (PLOS ONE 2018)",
+        "url": "https://doi.org/10.1371/journal.pone.0196391",
+        "type": "original_paper",
+        "notes": "Published in PLOS ONE 2018."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against PLOS ONE publication and Zenodo deposit."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 7356,
+      "unit": "recordings"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-05",
+      "last_updated": "2018-05"
+    },
+    "citation": {
+      "paper_title": "The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS): A dynamic, multimodal set of facial and vocal expressions of emotion",
+      "paper_url": "https://doi.org/10.1371/journal.pone.0196391",
+      "authors": [
+        "Steven R. Livingstone",
+        "Frank A. Russo"
+      ],
+      "doi": "10.1371/journal.pone.0196391",
+      "bibtex": "@article{livingstone2018ravdess,\n  title = {The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS): A dynamic, multimodal set of facial and vocal expressions of emotion},\n  author = {Livingstone, Steven R. and Russo, Frank A.},\n  journal = {PLOS ONE},\n  volume = {13},\n  number = {5},\n  pages = {e0196391},\n  year = {2018}\n}"
     }
   },
   {
@@ -12102,6 +15276,94 @@
       ],
       "doi": "10.1109/ICDAR.2015.7333910",
       "bibtex": "@inproceedings{harley2015evaluation,\n  title={Evaluation of deep convolutional nets for document image classification and retrieval},\n  author={Harley, Adam W and Ufkes, Alex and Derpanis, Konstantinos G},\n  booktitle={2015 13th International Conference on Document Analysis and Recognition (ICDAR)},\n  pages={991--995},\n  year={2015},\n  organization={IEEE},\n  doi={10.1109/ICDAR.2015.7333910}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scifact",
+    "slug": "scifact",
+    "name": "SciFact: Scientific Claim Verification Benchmark",
+    "description": "SciFact is a dataset for verifying scientific claims using evidence from scientific literature. It consists of 1,409 expert-written claims paired with evidence rationale sentences and label judgements (SUPPORT, CONTRADICT, NO_INFO) extracted from 5,183 research abstracts.",
+    "homepage_url": "https://github.com/allenai/scifact",
+    "publisher": {
+      "name": "Allen Institute for AI (AI2)",
+      "type": "academic",
+      "url": "https://allenai.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "fact-checking",
+      "claim-verification",
+      "information-retrieval"
+    ],
+    "tags": [
+      "fact-checking",
+      "scientific-nlp",
+      "claim-verification",
+      "nlp",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in official Allen Institute repository."
+    },
+    "source_references": [
+      {
+        "title": "SciFact Official GitHub Repository",
+        "url": "https://github.com/allenai/scifact",
+        "type": "repository",
+        "notes": "Official repository and benchmark evaluation tools."
+      },
+      {
+        "title": "Fact or Fiction: Verifying Scientific Claims (EMNLP 2020)",
+        "url": "https://aclanthology.org/2020.emnlp-main.609/",
+        "type": "original_paper",
+        "notes": "Proceedings of EMNLP 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against EMNLP 2020 proceedings and Allen Institute for AI repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 1409,
+      "splits": {
+        "train": 809,
+        "dev": 300,
+        "test": 300
+      },
+      "unit": "claims"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2020-11",
+      "last_updated": "2020-11"
+    },
+    "citation": {
+      "paper_title": "Fact or Fiction: Verifying Scientific Claims",
+      "paper_url": "https://aclanthology.org/2020.emnlp-main.609/",
+      "authors": [
+        "David Wadden",
+        "Shanchuan Lin",
+        "Kyle Lo",
+        "Lu Wang",
+        "Madeleine van Zuylen",
+        "Arman Cohan",
+        "Hannaneh Hajishirzi"
+      ],
+      "doi": "10.18653/v1/2020.emnlp-main.609",
+      "bibtex": "@inproceedings{wadden-etal-2020-fact,\n  title = {Fact or Fiction: Verifying Scientific Claims},\n  author = {Wadden, David and Lin, Shanchuan and Lo, Kyle and Wang, Lu and van Zuylen, Madeleine and Cohan, Arman and Hajishirzi, Hannaneh},\n  booktitle = {Proceedings of EMNLP 2020},\n  pages = {7534--7550},\n  year = {2020}\n}"
     }
   },
   {
@@ -12480,6 +15742,101 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "spider",
+    "slug": "spider",
+    "name": "Spider: Complex and Cross-Domain Text-to-SQL Benchmark",
+    "description": "Spider is a large-scale human-labeled dataset for complex and cross-domain semantic parsing and text-to-SQL. It contains 10,181 natural language questions and 5,693 unique complex SQL queries covering 200 databases with multiple tables across 138 domains.",
+    "homepage_url": "https://yale-lily.github.io/spider",
+    "publisher": {
+      "name": "Yale University LILY Lab",
+      "type": "academic",
+      "url": "https://yale-lily.github.io"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "text-to-sql",
+      "semantic-parsing"
+    ],
+    "tags": [
+      "text-to-sql",
+      "semantic-parsing",
+      "relational-databases",
+      "nlp",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY-SA-4.0 license stated on project homepage."
+    },
+    "source_references": [
+      {
+        "title": "Spider Project Homepage",
+        "url": "https://yale-lily.github.io/spider",
+        "type": "official_website",
+        "notes": "Canonical project portal with leaderboard and data files."
+      },
+      {
+        "title": "Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task (EMNLP 2018)",
+        "url": "https://aclanthology.org/D18-1425/",
+        "type": "original_paper",
+        "notes": "Proceedings of EMNLP 2018."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against EMNLP 2018 paper and Yale LILY website."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 10181,
+      "unit": "questions"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-10",
+      "last_updated": "2018-10"
+    },
+    "citation": {
+      "paper_title": "Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task",
+      "paper_url": "https://aclanthology.org/D18-1425/",
+      "authors": [
+        "Tao Yu",
+        "Rui Zhang",
+        "Kai Yang",
+        "Michihiro Yasunaga",
+        "Dongxu Wang",
+        "Zifan Li",
+        "James Ma",
+        "Irene Li",
+        "Qingning Yao",
+        "Shanelle Roman",
+        "Zilin Zhang",
+        "Tao Chen",
+        "Peter Yin",
+        "Hao Peng",
+        "Shiyan Yan",
+        "Noah Smith",
+        "Jason Phang",
+        "Xiangru Tang",
+        "Luke Zettlemoyer",
+        "Dragomir Radev"
+      ],
+      "doi": "10.18653/v1/D18-1425",
+      "bibtex": "@inproceedings{yu-etal-2018-spider,\n  title = {Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task},\n  author = {Yu, Tao and Zhang, Rui and Yang, Kai and Yasunaga, Michihiro and Wang, Dongxu and Li, Zifan and Ma, James and Li, Irene and Yao, Qingning and Roman, Shanelle and Zhang, Zilin and Chen, Tao and Yin, Peter and Peng, Hao and Yan, Shiyan and Smith, Noah and Phang, Jason and Tang, Xiangru and Zettlemoyer, Luke and Radev, Dragomir},\n  booktitle = {Proceedings of EMNLP 2018},\n  pages = {3911--3921},\n  year = {2018}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "spotify-audio-lyric-derived-artist-features",
     "slug": "spotify-audio-lyric-derived-artist-features",
     "name": "Spotify Audio, Lyric-Derived, and Artist Features for Billboard Hit Prediction",
@@ -12808,6 +16165,166 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "stl-10",
+    "slug": "stl-10",
+    "name": "STL-10",
+    "description": "The STL-10 dataset is an image recognition benchmark designed for developing unsupervised feature learning and self-supervised learning algorithms. Inspired by CIFAR-10, images are higher resolution (96x96 pixels), comprising 5,000 labeled training images, 8,000 test images, and 100,000 unlabeled images from a broader distribution.",
+    "homepage_url": "https://cs.stanford.edu/~acoates/stl10/",
+    "publisher": {
+      "name": "Stanford University",
+      "type": "academic",
+      "url": "https://cs.stanford.edu"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "unsupervised-learning",
+      "self-supervised-learning"
+    ],
+    "tags": [
+      "computer-vision",
+      "self-supervised-learning",
+      "unsupervised-learning",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Open Academic Research Use",
+      "url": "https://cs.stanford.edu/~acoates/stl10/",
+      "commercial_use": "unknown",
+      "notes": "Publicly distributed for research and algorithmic evaluation."
+    },
+    "source_references": [
+      {
+        "title": "STL-10 Dataset Homepage",
+        "url": "https://cs.stanford.edu/~acoates/stl10/",
+        "type": "official_website",
+        "notes": "Canonical dataset homepage at Stanford University."
+      },
+      {
+        "title": "An Analysis of Single-Layer Networks in Unsupervised Feature Learning (AISTATS 2011)",
+        "url": "http://proceedings.mlr.press/v15/coates11a.html",
+        "type": "original_paper",
+        "notes": "Proceedings of AISTATS 2011."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against AISTATS 2011 paper and Stanford portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 113000,
+      "splits": {
+        "train": 5000,
+        "test": 8000,
+        "unlabeled": 100000
+      },
+      "unit": "images"
+    },
+    "dates": {
+      "published": "2011",
+      "last_updated": "2011"
+    },
+    "citation": {
+      "paper_title": "An Analysis of Single-Layer Networks in Unsupervised Feature Learning",
+      "paper_url": "http://proceedings.mlr.press/v15/coates11a.html",
+      "authors": [
+        "Adam Coates",
+        "Andrew Ng",
+        "Honglak Lee"
+      ],
+      "bibtex": "@inproceedings{coates2011analysis,\n  title = {An Analysis of Single-Layer Networks in Unsupervised Feature Learning},\n  author = {Coates, Adam and Ng, Andrew and Lee, Honglak},\n  booktitle = {Proceedings of the Fourteenth International Conference on Artificial Intelligence and Statistics},\n  pages = {215--223},\n  year = {2011}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "svhn",
+    "slug": "svhn",
+    "name": "Street View House Numbers (SVHN)",
+    "description": "The Street View House Numbers (SVHN) dataset is a real-world image benchmark obtained from house numbers in Google Street View images. It contains over 600,000 labeled character digits formatted in both full-resolution images with bounding boxes and cropped 32x32 pixel images.",
+    "homepage_url": "http://ufldl.stanford.edu/housenumbers/",
+    "publisher": {
+      "name": "Stanford University",
+      "type": "academic",
+      "url": "http://ufldl.stanford.edu"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "optical-character-recognition",
+      "object-detection"
+    ],
+    "tags": [
+      "house-numbers",
+      "street-view",
+      "digit-recognition",
+      "ocr",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Non-Commercial Academic Research Use",
+      "url": "http://ufldl.stanford.edu/housenumbers/",
+      "commercial_use": "forbidden",
+      "notes": "Dataset is freely available for non-commercial research purposes."
+    },
+    "source_references": [
+      {
+        "title": "The Street View House Numbers (SVHN) Dataset Homepage",
+        "url": "http://ufldl.stanford.edu/housenumbers/",
+        "type": "official_website",
+        "notes": "Canonical landing page hosted by Stanford University."
+      },
+      {
+        "title": "Reading Digits in Natural Images with Unsupervised Feature Learning (NIPS 2011 Workshop)",
+        "url": "http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf",
+        "type": "original_paper",
+        "notes": "Workshop on Deep Learning and Unsupervised Feature Learning."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Stanford UFLDL documentation and NIPS 2011 workshop publication."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 630420,
+      "splits": {
+        "train": 73257,
+        "test": 26032,
+        "extra": 531131
+      },
+      "unit": "digits"
+    },
+    "dates": {
+      "published": "2011-12",
+      "last_updated": "2011-12"
+    },
+    "citation": {
+      "paper_title": "Reading Digits in Natural Images with Unsupervised Feature Learning",
+      "paper_url": "http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf",
+      "authors": [
+        "Yuval Netzer",
+        "Tao Wang",
+        "Adam Coates",
+        "Alessandro Bissacco",
+        "Bo Wu",
+        "Andrew Y. Ng"
+      ],
+      "bibtex": "@inproceedings{netzer2011reading,\n  title = {Reading Digits in Natural Images with Unsupervised Feature Learning},\n  author = {Netzer, Yuval and Wang, Tao and Coates, Adam and Bissacco, Alessandro and Wu, Bo and Ng, Andrew Y.},\n  booktitle = {NIPS Workshop on Deep Learning and Unsupervised Feature Learning},\n  year = {2011}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "synchronized-chittagonian-speech-corpus-diale",
     "slug": "synchronized-chittagonian-speech-corpus-diale",
     "name": "A Synchronized Chittagonian Speech Corpus for Dialect ASR and Speech Translation",
@@ -12881,6 +16398,248 @@
       "total": 800,
       "unit": "samples",
       "status": "verified"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "tablebank",
+    "slug": "tablebank",
+    "name": "TableBank: Table Benchmark for Detection and Recognition",
+    "description": "TableBank is a benchmark dataset for image-based table detection and table recognition. It contains 417,236 high-quality document images with table bounding boxes and corresponding markdown / LaTeX / Word table structure markup crawled from arXiv and Word documents.",
+    "homepage_url": "https://github.com/doc-analysis/TableBank",
+    "publisher": {
+      "name": "Microsoft Research Asia & Beihang University",
+      "type": "industry",
+      "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "table-detection",
+      "table-recognition",
+      "document-layout-analysis"
+    ],
+    "tags": [
+      "table-detection",
+      "table-recognition",
+      "document-ai",
+      "ocr",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Verified CC-BY 4.0 license stated in official TableBank repository."
+    },
+    "source_references": [
+      {
+        "title": "TableBank Official GitHub Repository",
+        "url": "https://github.com/doc-analysis/TableBank",
+        "type": "repository",
+        "notes": "Official dataset and evaluation code repository."
+      },
+      {
+        "title": "TableBank: Table Benchmark for Image-based Table Detection and Recognition (LREC 2020)",
+        "url": "https://aclanthology.org/2020.lrec-1.236/",
+        "type": "original_paper",
+        "notes": "Proceedings of LREC 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against LREC 2020 publication and Microsoft Research repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 417236,
+      "unit": "document-images"
+    },
+    "dates": {
+      "published": "2020-05",
+      "last_updated": "2020-05"
+    },
+    "citation": {
+      "paper_title": "TableBank: Table Benchmark for Image-based Table Detection and Recognition",
+      "paper_url": "https://aclanthology.org/2020.lrec-1.236/",
+      "authors": [
+        "Minghao Li",
+        "Lei Cui",
+        "Shaohan Huang",
+        "Furu Wei",
+        "Ming Zhou",
+        "Zhoujun Li"
+      ],
+      "bibtex": "@inproceedings{li-etal-2020-tablebank,\n  title = {TableBank: Table Benchmark for Image-based Table Detection and Recognition},\n  author = {Li, Minghao and Cui, Lei and Huang, Shaohan and Wei, Furu and Zhou, Ming and Li, Zhoujun},\n  booktitle = {Proceedings of LREC 2020},\n  pages = {1918--1925},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "tb-olid",
+    "slug": "tb-olid",
+    "name": "TB-OLID: Transliterated Bangla Offensive Language Identification Dataset",
+    "description": "TB-OLID consists of 5,000 manually annotated social media comments written in transliterated Bangla (Banglish) and code-mixed Latin script. The dataset addresses offensive language and abusive content identification in under-resourced code-mixed contexts across South Asian digital communities.",
+    "homepage_url": "https://github.com/LanguageTechnologyLab/TB-OLID",
+    "publisher": {
+      "name": "Language Technology Lab & Collaborating Universities",
+      "type": "academic",
+      "url": "https://github.com/LanguageTechnologyLab"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "text-classification",
+      "offensive-language-identification"
+    ],
+    "tags": [
+      "bangla",
+      "banglish",
+      "transliteration",
+      "offensive-language",
+      "code-mixed"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "GNU Affero General Public License v3.0",
+      "spdx_id": "AGPL-3.0-only",
+      "url": "https://www.gnu.org/licenses/agpl-3.0.html",
+      "commercial_use": "allowed",
+      "notes": "Verified AGPL-3.0 license in repository LICENSE file."
+    },
+    "source_references": [
+      {
+        "title": "TB-OLID GitHub Repository",
+        "url": "https://github.com/LanguageTechnologyLab/TB-OLID",
+        "type": "repository",
+        "notes": "Official repository containing train.json and test.json data."
+      },
+      {
+        "title": "Offensive Language Identification in Transliterated and Code-Mixed Bangla (BLP 2023)",
+        "url": "https://aclanthology.org/2023.banglalp-1.1/",
+        "type": "original_paper",
+        "notes": "Workshop on Bangla Language Processing at EMNLP 2023."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against BLP 2023 proceedings and GitHub dataset files."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 5000,
+      "unit": "comments"
+    },
+    "languages": [
+      "bn",
+      "en"
+    ],
+    "dates": {
+      "published": "2023-12",
+      "last_updated": "2023-12"
+    },
+    "citation": {
+      "paper_title": "Offensive Language Identification in Transliterated and Code-Mixed Bangla",
+      "paper_url": "https://aclanthology.org/2023.banglalp-1.1/",
+      "authors": [
+        "Md Nishat Raihan",
+        "Umma Tanmoy",
+        "Anika Binte Islam",
+        "Kai North",
+        "Tharindu Ranasinghe",
+        "Antonios Anastasopoulos",
+        "Marcos Zampieri"
+      ],
+      "bibtex": "@inproceedings{raihan-etal-2023-offensive,\n  title = {Offensive Language Identification in Transliterated and Code-Mixed Bangla},\n  author = {Raihan, Md Nishat and Tanmoy, Umma and Islam, Anika Binte and North, Kai and Ranasinghe, Tharindu and Anastasopoulos, Antonios and Zampieri, Marcos},\n  booktitle = {Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)},\n  pages = {1--10},\n  year = {2023}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ted-lium-3",
+    "slug": "ted-lium-3",
+    "name": "TED-LIUM Release 3",
+    "description": "TED-LIUM Release 3 is an automatic speech recognition corpus comprising 452 hours of audio extracted from 2,351 TED talks. It includes high-quality aligned audio recordings and corresponding transcripts, along with an extensive language modeling text corpus of 2.6 million words.",
+    "homepage_url": "https://www.openslr.org/51/",
+    "publisher": {
+      "name": "LIUM - Laboratoire d'Informatique de l'Université du Mans",
+      "type": "academic",
+      "url": "https://lium.univ-lemans.fr"
+    },
+    "modalities": [
+      "audio",
+      "nlp"
+    ],
+    "tasks": [
+      "automatic-speech-recognition",
+      "speech-processing"
+    ],
+    "tags": [
+      "audio",
+      "speech",
+      "asr",
+      "ted-talks",
+      "openslr",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0",
+      "spdx_id": "CC-BY-NC-ND-3.0",
+      "url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+      "commercial_use": "forbidden",
+      "notes": "Verified CC-BY-NC-ND 3.0 license on OpenSLR resource page."
+    },
+    "source_references": [
+      {
+        "title": "TED-LIUM 3 on OpenSLR",
+        "url": "https://www.openslr.org/51/",
+        "type": "official_website",
+        "notes": "Official OpenSLR dataset distribution page."
+      },
+      {
+        "title": "TED-LIUM 3: twice as much data and corpus repartition for out-of-domain ASR (SPECOM 2018)",
+        "url": "https://doi.org/10.1007/978-3-319-99579-3_21",
+        "type": "original_paper",
+        "notes": "Proceedings of SPECOM 2018."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against SPECOM 2018 paper and OpenSLR 51 archive."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 2351,
+      "unit": "talks"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-09",
+      "last_updated": "2018-09"
+    },
+    "citation": {
+      "paper_title": "TED-LIUM 3: Twice as Much Data and Corpus Repartition for Out-of-Domain ASR",
+      "paper_url": "https://doi.org/10.1007/978-3-319-99579-3_21",
+      "authors": [
+        "François Hernandez",
+        "Vincent Nguyen",
+        "Sahar Ghannay",
+        "Natalia Tomashenko",
+        "Yannick Estève"
+      ],
+      "doi": "10.1007/978-3-319-99579-3_21",
+      "bibtex": "@inproceedings{hernandez2018tedlium,\n  title = {TED-LIUM 3: Twice as Much Data and Corpus Repartition for Out-of-Domain ASR},\n  author = {Hernandez, Fran{\\c{c}}ois and Nguyen, Vincent and Ghannay, Sahar and Tomashenko, Natalia and Est{\\`e}ve, Yannick},\n  booktitle = {International Conference on Speech and Computer (SPECOM)},\n  pages = {198--208},\n  year = {2018}\n}"
     }
   },
   {
@@ -13036,6 +16795,99 @@
       ],
       "doi": "10.1109/ICDAR.2017.157",
       "bibtex": "@inproceedings{chng2017total,\n  title={Total-Text: A comprehensive dataset for scene text with arbitrary shapes},\n  author={Ch'ng, Chee-Kheng and Chan, Chee-Seng},\n  booktitle={2017 14th IAPR International Conference on Document Analysis and Recognition (ICDAR)},\n  volume={1},\n  pages={935--940},\n  year={2017},\n  organization={IEEE},\n  doi={10.1109/ICDAR.2017.157}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "tydiqa",
+    "slug": "tydiqa",
+    "name": "TyDi QA: Typologically Diverse Question Answering Benchmark",
+    "description": "TyDi QA is a multilingual question answering benchmark covering 11 typologically diverse languages with over 204,000 question-answer pairs. To avoid translation artefacts, questions are written by native speakers seeking information before knowing the answer, spanning Arabic, Bengali, English, Finnish, Indonesian, Japanese, Korean, Russian, Swahili, Telugu, and Thai.",
+    "homepage_url": "https://github.com/google-research-datasets/tydiqa",
+    "publisher": {
+      "name": "Google Research",
+      "type": "industry",
+      "url": "https://research.google"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "information-retrieval",
+      "cross-lingual-transfer"
+    ],
+    "tags": [
+      "question-answering",
+      "multilingual",
+      "nlp",
+      "benchmark",
+      "typological-diversity"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Official Apache 2.0 license declared in GitHub repository."
+    },
+    "source_references": [
+      {
+        "title": "TyDi QA GitHub Repository",
+        "url": "https://github.com/google-research-datasets/tydiqa",
+        "type": "repository",
+        "notes": "Official repository and evaluation code."
+      },
+      {
+        "title": "TyDi QA: A Benchmark for Information-Seeking Question Answering in Typologically Diverse Languages (TACL 2020)",
+        "url": "https://aclanthology.org/2020.tacl-1.30/",
+        "type": "original_paper",
+        "notes": "Transactions of the Association for Computational Linguistics (TACL) 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against TACL 2020 paper and Google Research repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 204000,
+      "unit": "qa-pairs"
+    },
+    "languages": [
+      "ar",
+      "bn",
+      "en",
+      "fi",
+      "id",
+      "ja",
+      "ko",
+      "ru",
+      "sw",
+      "te",
+      "th"
+    ],
+    "dates": {
+      "published": "2020-03",
+      "last_updated": "2020-03"
+    },
+    "citation": {
+      "paper_title": "TyDi QA: A Benchmark for Information-Seeking Question Answering in Typologically Diverse Languages",
+      "paper_url": "https://aclanthology.org/2020.tacl-1.30/",
+      "authors": [
+        "Jonathan H. Clark",
+        "Eunsol Choi",
+        "Michael Collins",
+        "Dan Garrette",
+        "Kartikay Khandelwal",
+        "Hannaneh Hajishirzi",
+        "Jennimaria Palomaki"
+      ],
+      "doi": "10.1162/tacl_a_00317",
+      "bibtex": "@article{clark-etal-2020-tydi,\n  title = {TyDi QA: A Benchmark for Information-Seeking Question Answering in Typologically Diverse Languages},\n  author = {Clark, Jonathan H. and Choi, Eunsol and Collins, Michael and Garrette, Dan and Khandelwal, Kartikay and Hajishirzi, Hannaneh and Palomaki, Jennimaria},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {8},\n  pages = {469--487},\n  year = {2020}\n}"
     }
   },
   {
@@ -13306,6 +17158,81 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "urbansound8k",
+    "slug": "urbansound8k",
+    "name": "UrbanSound8K",
+    "description": "UrbanSound8K contains 8,732 labeled urban sound excerpts (under 4 seconds) across 10 classes: air_conditioner, car_horn, children_playing, dog_bark, drilling, engine_idling, gun_shot, jackhammer, siren, and street_music. Files are organized into 10 standardized cross-validation folds.",
+    "homepage_url": "https://urbansounddataset.weebly.com/urbansound8k.html",
+    "publisher": {
+      "name": "Music and Audio Research Laboratory (MARL), New York University",
+      "type": "academic",
+      "url": "https://marl.steinhardt.nyu.edu/"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "audio-classification",
+      "acoustic-scene-classification"
+    ],
+    "tags": [
+      "audio",
+      "environmental-sound",
+      "sound-classification",
+      "urban-sound",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 3.0 Unported",
+      "spdx_id": "CC-BY-NC-3.0",
+      "url": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "commercial_use": "forbidden",
+      "notes": "Verified CC-BY-NC 3.0 license stated on project homepage."
+    },
+    "source_references": [
+      {
+        "title": "UrbanSound8K Official Project Homepage",
+        "url": "https://urbansounddataset.weebly.com/urbansound8k.html",
+        "type": "official_website",
+        "notes": "Official project landing page and download links."
+      },
+      {
+        "title": "A Dataset and Taxonomy for Urban Sound Research (ACM MM 2014)",
+        "url": "https://doi.org/10.1145/2647868.2655045",
+        "type": "original_paper",
+        "notes": "Proceedings of ACM Multimedia 2014."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against ACM Multimedia 2014 publication and NYU MARL project site."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 8732,
+      "unit": "audio-excerpts"
+    },
+    "dates": {
+      "published": "2014-11",
+      "last_updated": "2014-11"
+    },
+    "citation": {
+      "paper_title": "A Dataset and Taxonomy for Urban Sound Research",
+      "paper_url": "https://doi.org/10.1145/2647868.2655045",
+      "authors": [
+        "Justin Salamon",
+        "Christopher Jacoby",
+        "Juan Pablo Bello"
+      ],
+      "doi": "10.1145/2647868.2655045",
+      "bibtex": "@inproceedings{salamon2014urbansound,\n  title = {A Dataset and Taxonomy for Urban Sound Research},\n  author = {Salamon, Justin and Jacoby, Christopher and Bello, Juan Pablo},\n  booktitle = {Proceedings of the 22nd ACM International Conference on Multimedia},\n  pages = {1041--1044},\n  year = {2014}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "uzser-mfcc",
     "slug": "uzser-mfcc",
     "name": "UzSER-MFCC",
@@ -13438,6 +17365,102 @@
       "total": 157,
       "unit": "images",
       "status": "verified"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "vindr-cxr",
+    "slug": "vindr-cxr",
+    "name": "VinDr-CXR: Open Dataset of Chest X-rays with Radiologist Annotations",
+    "description": "VinDr-CXR is a public medical imaging dataset comprising 18,000 chest X-ray scans collected from major hospital networks in Vietnam. Each radiograph was independently labeled by 17 experienced radiologists, providing bounding-box annotations for 22 critical local findings and classifications for 6 global thoracic diseases.",
+    "homepage_url": "https://physionet.org/content/vindr-cxr/1.0.0/",
+    "publisher": {
+      "name": "VinBigdata & PhysioNet",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection",
+      "image-classification",
+      "medical-imaging"
+    ],
+    "tags": [
+      "medical-imaging",
+      "chest-xray",
+      "radiology",
+      "thoracic-disease",
+      "physionet"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "PhysioNet Credentialed Health Data License 1.5.0",
+      "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
+      "commercial_use": "allowed",
+      "notes": "Available under PhysioNet Credentialed Health Data License for research and clinical algorithm validation."
+    },
+    "source_references": [
+      {
+        "title": "VinDr-CXR on PhysioNet",
+        "url": "https://physionet.org/content/vindr-cxr/1.0.0/",
+        "type": "official_website",
+        "notes": "Official PhysioNet dataset distribution page."
+      },
+      {
+        "title": "VinDr-CXR: An open dataset of chest X-rays with radiologist's annotations (Scientific Data 2022)",
+        "url": "https://doi.org/10.1038/s41597-022-01498-w",
+        "type": "original_paper",
+        "notes": "Published in Nature Scientific Data 2022."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against Nature Scientific Data publication and PhysioNet portal."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 18000,
+      "splits": {
+        "train": 15000,
+        "test": 3000
+      },
+      "unit": "scans"
+    },
+    "dates": {
+      "published": "2021",
+      "last_updated": "2022"
+    },
+    "citation": {
+      "paper_title": "VinDr-CXR: An open dataset of chest X-rays with radiologist's annotations",
+      "paper_url": "https://doi.org/10.1038/s41597-022-01498-w",
+      "authors": [
+        "Ha Q. Nguyen",
+        "Khanh Lam",
+        "Linh T. Le",
+        "Hieu H. Pham",
+        "Dat Q. Tran",
+        "Dung B. Nguyen",
+        "Dung D. Le",
+        "Chi M. Pham",
+        "Hang T. T. Luu",
+        "Tung T. Dang",
+        "Binh T. Nguyen",
+        "Nhan T. Nguyen",
+        "Tu N. Tran",
+        "Hien T. Dang",
+        "Bao T. Nguyen",
+        "Trinh T. H. Le",
+        "Phuong H. Do",
+        "Ngoc T. H. Tran",
+        "Binh T. Nguyen",
+        "Chinh T. Nguyen"
+      ],
+      "doi": "10.1038/s41597-022-01498-w",
+      "bibtex": "@article{nguyen2022vindr,\n  title = {VinDr-CXR: An open dataset of chest X-rays with radiologist's annotations},\n  author = {Nguyen, Ha Q. and Lam, Khanh and Le, Linh T. and Pham, Hieu H. and Tran, Dat Q. and others},\n  journal = {Scientific Data},\n  volume = {9},\n  number = {1},\n  pages = {429},\n  year = {2022}\n}"
     }
   },
   {
@@ -13600,6 +17623,89 @@
         "Xue, Jinlin"
       ],
       "doi": "10.17632/jskv9f9n7w.2"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "voxpopuli",
+    "slug": "voxpopuli",
+    "name": "VoxPopuli: Large-Scale Multilingual Speech Corpus",
+    "description": "VoxPopuli is a large-scale multilingual speech corpus for representation learning, semi-supervised learning, and speech translation. Extracted from European Parliament plenary session recordings (2009-2020), it provides 400,000 hours of unlabeled speech across 23 languages and 1,800 hours of transcribed audio.",
+    "homepage_url": "https://github.com/facebookresearch/voxpopuli",
+    "publisher": {
+      "name": "Meta AI Research",
+      "type": "industry",
+      "url": "https://ai.meta.com"
+    },
+    "modalities": [
+      "audio",
+      "nlp"
+    ],
+    "tasks": [
+      "automatic-speech-recognition",
+      "speech-translation",
+      "representation-learning"
+    ],
+    "tags": [
+      "audio",
+      "speech",
+      "multilingual",
+      "european-parliament",
+      "self-supervised-learning",
+      "meta-ai"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Creative Commons CC0 / CC BY-NC 4.0",
+      "url": "https://github.com/facebookresearch/voxpopuli#license",
+      "commercial_use": "forbidden",
+      "notes": "Audio is sourced from European Parliament under non-commercial reuse guidelines; code is MIT licensed."
+    },
+    "source_references": [
+      {
+        "title": "VoxPopuli Official GitHub Repository",
+        "url": "https://github.com/facebookresearch/voxpopuli",
+        "type": "repository",
+        "notes": "Official data processing and download scripts."
+      },
+      {
+        "title": "VoxPopuli: A Large-Scale Multilingual Speech Corpus for Representation Learning, Semi-Supervised Learning and Interpretation (ACL 2021)",
+        "url": "https://aclanthology.org/2021.acl-long.80/",
+        "type": "original_paper",
+        "notes": "Proceedings of ACL 2021."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Maintainers",
+      "verified_date": "2026-11-02",
+      "notes": "Verified against ACL 2021 publication and Meta AI repository."
+    },
+    "sample_count": {
+      "status": "verified",
+      "total": 400000,
+      "unit": "hours"
+    },
+    "dates": {
+      "published": "2021-08",
+      "last_updated": "2021-08"
+    },
+    "citation": {
+      "paper_title": "VoxPopuli: A Large-Scale Multilingual Speech Corpus for Representation Learning, Semi-Supervised Learning and Interpretation",
+      "paper_url": "https://aclanthology.org/2021.acl-long.80/",
+      "authors": [
+        "Changhan Wang",
+        "Morgane Riviere",
+        "Ann Lee",
+        "Anne Wu",
+        "Chaitanya Talnikar",
+        "Daniel Haziza",
+        "Mary Williamson",
+        "Juan Pino",
+        "Emmanuel Dupoux"
+      ],
+      "doi": "10.18653/v1/2021.acl-long.80",
+      "bibtex": "@inproceedings{wang-etal-2021-voxpopuli,\n  title = {VoxPopuli: A Large-Scale Multilingual Speech Corpus for Representation Learning, Semi-Supervised Learning and Interpretation},\n  author = {Wang, Changhan and Riviere, Morgane and Lee, Ann and Wu, Anne and Talnikar, Chaitanya and Haziza, Daniel and Williamson, Mary and Pino, Juan and Dupoux, Emmanuel},\n  booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics},\n  pages = {993--1003},\n  year = {2021}\n}"
     }
   },
   {

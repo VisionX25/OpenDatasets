@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "id": "drop",
+  "slug": "drop",
+  "name": "DROP: Discrete Reasoning Over Paragraphs",
+  "description": "DROP is a reading comprehension benchmark requiring discrete reasoning over paragraphs. Models must resolve references across paragraph text and perform mathematical or symbolic operations such as addition, counting, and sorting to arrive at the correct answer.",
+  "homepage_url": "https://allenai.org/data/drop",
+  "publisher": {
+    "name": "Allen Institute for AI (AI2)",
+    "type": "academic",
+    "url": "https://allenai.org"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "reading-comprehension",
+    "discrete-reasoning",
+    "question-answering"
+  ],
+  "tags": [
+    "reading-comprehension",
+    "nlp",
+    "reasoning",
+    "benchmark",
+    "allenai"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license declared by Allen Institute for AI."
+  },
+  "source_references": [
+    {
+      "title": "DROP Benchmark Page at Allen Institute for AI",
+      "url": "https://allenai.org/data/drop",
+      "type": "official_website",
+      "notes": "Official dataset landing page."
+    },
+    {
+      "title": "DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs (NAACL 2019)",
+      "url": "https://aclanthology.org/N19-1246/",
+      "type": "original_paper",
+      "notes": "Proceedings of NAACL 2019."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against NAACL 2019 proceedings and Allen Institute for AI."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 96567,
+    "splits": {
+      "train": 77400,
+      "validation": 9536,
+      "test": 9631
+    },
+    "unit": "questions"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2019-06",
+    "last_updated": "2019-06"
+  },
+  "citation": {
+    "paper_title": "DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs",
+    "paper_url": "https://aclanthology.org/N19-1246/",
+    "authors": [
+      "Dheeru Dua",
+      "Yizhong Wang",
+      "Pradeep Dasigi",
+      "Gabriel Stanovsky",
+      "Sameer Singh",
+      "Matt Gardner"
+    ],
+    "doi": "10.18653/v1/N19-1246",
+    "bibtex": "@inproceedings{dua-etal-2019-drop,\n  title = {DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs},\n  author = {Dua, Dheeru and Wang, Yizhong and Dasigi, Pradeep and Stanovsky, Gabriel and Singh, Sameer and Gardner, Matt},\n  booktitle = {Proceedings of NAACL 2019},\n  pages = {2368--2378},\n  year = {2019}\n}"
+  }
+}

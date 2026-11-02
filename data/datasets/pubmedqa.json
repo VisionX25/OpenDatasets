@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pubmedqa",
+  "slug": "pubmedqa",
+  "name": "PubMedQA",
+  "description": "PubMedQA is a biomedical question answering dataset collected from PubMed abstracts. Questions are posed based on the titles of scientific articles, requiring yes/no/maybe reasoning by synthesizing findings reported in the abstract.",
+  "homepage_url": "https://pubmedqa.github.io/",
+  "publisher": {
+    "name": "University of Pittsburgh & Carnegie Mellon University",
+    "type": "academic",
+    "url": "https://pubmedqa.github.io/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "biomedical-nlp"
+  ],
+  "tags": [
+    "biomedical",
+    "pubmed",
+    "question-answering",
+    "nlp",
+    "healthcare"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Verified MIT license on official GitHub repository."
+  },
+  "source_references": [
+    {
+      "title": "PubMedQA Official Project Website",
+      "url": "https://pubmedqa.github.io/",
+      "type": "official_website",
+      "notes": "Canonical dataset homepage and leaderboard."
+    },
+    {
+      "title": "PubMedQA: A Dataset for Biomedical Research Question Answering (EMNLP 2019)",
+      "url": "https://aclanthology.org/D19-1259/",
+      "type": "original_paper",
+      "notes": "Proceedings of EMNLP 2019."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against EMNLP 2019 publication and official GitHub repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 273500,
+    "splits": {
+      "labeled": 1000,
+      "unlabeled": 61200,
+      "artificial": 211300
+    },
+    "unit": "qa-pairs"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2019-11",
+    "last_updated": "2019-11"
+  },
+  "citation": {
+    "paper_title": "PubMedQA: A Dataset for Biomedical Research Question Answering",
+    "paper_url": "https://aclanthology.org/D19-1259/",
+    "authors": [
+      "Qiao Jin",
+      "Bhuwan Dhingra",
+      "Zhengping Liu",
+      "William W. Cohen",
+      "Xinghua Lu"
+    ],
+    "doi": "10.18653/v1/D19-1259",
+    "bibtex": "@inproceedings{jin-etal-2019-pubmedqa,\n  title = {PubMedQA: A Dataset for Biomedical Research Question Answering},\n  author = {Jin, Qiao and Dhingra, Bhuwan and Liu, Zhengping and Cohen, William W. and Lu, Xinghua},\n  booktitle = {Proceedings of EMNLP 2019},\n  pages = {2567--2577},\n  year = {2019}\n}"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "air-quality",
+  "slug": "air-quality",
+  "name": "Air Quality",
+  "description": "The Air Quality dataset contains 9,358 instances of hourly averaged responses from an array of 5 metal oxide chemical sensors embedded in an Air Quality Chemical Multisensor Device deployed on the field in a polluted urban area in Italy between March 2004 and February 2005. Ground truth concentrations for CO, Non-Metanic Hydrocarbons, Benzene, Total Nitrogen Oxides (NOx), and NO2 are provided alongside temperature and humidity.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/360/air+quality",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "regression",
+    "time-series-forecasting"
+  ],
+  "tags": [
+    "tabular",
+    "time-series",
+    "sensor",
+    "air-quality",
+    "environmental-monitoring",
+    "uci-ml-repository"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in UCI Machine Learning Repository record."
+  },
+  "source_references": [
+    {
+      "title": "Air Quality on UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/dataset/360/air+quality",
+      "type": "official_website",
+      "notes": "Official UCI ML Repository dataset entry."
+    },
+    {
+      "title": "On field calibration of an electronic nose for benzene estimation in an urban environment (Sensors and Actuators B 2008)",
+      "url": "https://doi.org/10.1016/j.snb.2007.09.060",
+      "type": "original_paper",
+      "notes": "Published in Sensors and Actuators B: Chemical 2008."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against Sensors and Actuators B publication and UCI ML Repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 9358,
+    "unit": "hourly-measurements"
+  },
+  "dates": {
+    "published": "2016-03",
+    "last_updated": "2016-03"
+  },
+  "citation": {
+    "paper_title": "On field calibration of an electronic nose for benzene estimation in an urban environment",
+    "paper_url": "https://doi.org/10.1016/j.snb.2007.09.060",
+    "authors": [
+      "Saverio De Vito",
+      "Elena Massera",
+      "Marco Piga",
+      "Luca Martinotto",
+      "Girolamo Di Francia"
+    ],
+    "doi": "10.1016/j.snb.2007.09.060",
+    "bibtex": "@article{devito2008field,\n  title = {On field calibration of an electronic nose for benzene estimation in an urban environment},\n  author = {De Vito, Saverio and Massera, Elena and Piga, Marco and Martinotto, Luca and Di Francia, Girolamo},\n  journal = {Sensors and Actuators B: Chemical},\n  volume = {129},\n  number = {2},\n  pages = {750--757},\n  year = {2008}\n}"
+  }
+}

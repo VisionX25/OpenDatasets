@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ami-meeting-corpus",
+  "slug": "ami-meeting-corpus",
+  "name": "AMI Meeting Corpus",
+  "description": "The AMI Meeting Corpus is a multi-modal dataset consisting of 100 hours of meeting recordings captured in specialized instrumented meeting rooms. It includes synchronized multi-channel audio, multi-angle video, slides, whiteboard notes, and rich linguistic and behavioral annotations (dialog acts, topic segmentation, head gestures).",
+  "homepage_url": "https://groups.inf.ed.ac.uk/ami/corpus/",
+  "publisher": {
+    "name": "University of Edinburgh & AMI Consortium",
+    "type": "academic",
+    "url": "https://groups.inf.ed.ac.uk/ami/"
+  },
+  "modalities": [
+    "audio",
+    "vision",
+    "nlp",
+    "multimodal"
+  ],
+  "tasks": [
+    "automatic-speech-recognition",
+    "speaker-diarization",
+    "dialogue-act-classification"
+  ],
+  "tags": [
+    "audio",
+    "multimodal",
+    "meeting-corpus",
+    "asr",
+    "speaker-diarization",
+    "ami"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated on University of Edinburgh AMI portal."
+  },
+  "source_references": [
+    {
+      "title": "AMI Meeting Corpus Official Portal",
+      "url": "https://groups.inf.ed.ac.uk/ami/corpus/",
+      "type": "official_website",
+      "notes": "Official repository and annotation browser."
+    },
+    {
+      "title": "The AMI Meeting Corpus (MLMI 2005)",
+      "url": "https://doi.org/10.1007/11677406_3",
+      "type": "original_paper",
+      "notes": "Published in Machine Learning for Multimodal Interaction (MLMI 2005)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against MLMI 2005 publication and Edinburgh University AMI portal."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 287,
+    "unit": "meetings"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2005",
+    "last_updated": "2006"
+  },
+  "citation": {
+    "paper_title": "The AMI Meeting Corpus",
+    "paper_url": "https://doi.org/10.1007/11677406_3",
+    "authors": [
+      "Jean Carletta",
+      "Simone Ashby",
+      "Sebastien Bourban",
+      "Mike Flynn",
+      "Mael Guillemot",
+      "Thomas Hain",
+      "Jaroslav Kadlec",
+      "Vasilis Karaiskos",
+      "Wessel Kraaij",
+      "Melissa Kronenthal",
+      "Guillaume Lathoud",
+      "Mike Lincoln",
+      "Agnes Lisowska",
+      "Iain McCowan",
+      "Wilfried Post",
+      "Dennis Reidsma",
+      "Pierre Wellner"
+    ],
+    "doi": "10.1007/11677406_3",
+    "bibtex": "@inproceedings{carletta2005ami,\n  title = {The AMI Meeting Corpus},\n  author = {Carletta, Jean and Ashby, Simone and Bourban, Sebastien and Flynn, Mike and Guillemot, Mael and Hain, Thomas and Kadlec, Jaroslav and Karaiskos, Vasilis and Kraaij, Wessel and Kronenthal, Melissa and others},\n  booktitle = {Machine Learning for Multimodal Interaction},\n  pages = {28--39},\n  year = {2005}\n}"
+  }
+}

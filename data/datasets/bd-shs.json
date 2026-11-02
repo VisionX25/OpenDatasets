@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bd-shs",
+  "slug": "bd-shs",
+  "name": "BD-SHS: Benchmark Dataset for Online Bangla Hate Speech in Social Contexts",
+  "description": "BD-SHS is a large benchmark dataset for learning to detect online Bangla hate speech across various social contexts. It contains over 50,200 manually annotated social media comments crawled from Facebook and YouTube, featuring hierarchical annotations for hate speech detection (binary), target detection (individual, male, female, group), and hate type detection (slander, religion, gender, call to violence).",
+  "homepage_url": "https://github.com/naurosromim/hate-speech-dataset-for-Bengali-social-media",
+  "publisher": {
+    "name": "Shahjalal University of Science and Technology",
+    "type": "academic",
+    "url": "https://www.sust.edu"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "hate-speech-detection",
+    "multi-label-classification"
+  ],
+  "tags": [
+    "bangla",
+    "bengali",
+    "hate-speech",
+    "nlp",
+    "social-media",
+    "lrec"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Verified MIT license declared in GitHub repository."
+  },
+  "source_references": [
+    {
+      "title": "BD-SHS Official GitHub Repository",
+      "url": "https://github.com/naurosromim/hate-speech-dataset-for-Bengali-social-media",
+      "type": "repository",
+      "notes": "Official code and dataset repository."
+    },
+    {
+      "title": "BD-SHS Kaggle Dataset Release",
+      "url": "https://www.kaggle.com/datasets/naurosromim/bdshs",
+      "type": "repository",
+      "notes": "Official dataset distribution files."
+    },
+    {
+      "title": "BD-SHS: A Benchmark Dataset for Learning to Detect Online Bangla Hate Speech in Different Social Contexts (LREC 2022)",
+      "url": "https://aclanthology.org/2022.lrec-1.552/",
+      "type": "original_paper",
+      "notes": "Proceedings of LREC 2022."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against LREC 2022 proceedings and GitHub repository metadata."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 50200,
+    "unit": "comments"
+  },
+  "languages": [
+    "bn"
+  ],
+  "dates": {
+    "published": "2022-06",
+    "last_updated": "2022-06"
+  },
+  "citation": {
+    "paper_title": "BD-SHS: A Benchmark Dataset for Learning to Detect Online Bangla Hate Speech in Different Social Contexts",
+    "paper_url": "https://aclanthology.org/2022.lrec-1.552/",
+    "authors": [
+      "Nauros Romim",
+      "Mosahed Ahmed",
+      "Md Saiful Islam",
+      "Arnab Sen Sharma",
+      "Hriteshwar Talukder",
+      "Mohammad Ruhul Amin"
+    ],
+    "bibtex": "@inproceedings{romim-etal-2022-bd,\n  title = {BD-SHS: A Benchmark Dataset for Learning to Detect Online Bangla Hate Speech in Different Social Contexts},\n  author = {Romim, Nauros and Ahmed, Mosahed and Islam, Md Saiful and Sen Sharma, Arnab and Talukder, Hriteshwar and Amin, Mohammad Ruhul},\n  booktitle = {Proceedings of LREC 2022},\n  pages = {5153--5162},\n  year = {2022}\n}"
+  }
+}

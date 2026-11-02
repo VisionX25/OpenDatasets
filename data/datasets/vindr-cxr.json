@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "vindr-cxr",
+  "slug": "vindr-cxr",
+  "name": "VinDr-CXR: Open Dataset of Chest X-rays with Radiologist Annotations",
+  "description": "VinDr-CXR is a public medical imaging dataset comprising 18,000 chest X-ray scans collected from major hospital networks in Vietnam. Each radiograph was independently labeled by 17 experienced radiologists, providing bounding-box annotations for 22 critical local findings and classifications for 6 global thoracic diseases.",
+  "homepage_url": "https://physionet.org/content/vindr-cxr/1.0.0/",
+  "publisher": {
+    "name": "VinBigdata & PhysioNet",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "image-classification",
+    "medical-imaging"
+  ],
+  "tags": [
+    "medical-imaging",
+    "chest-xray",
+    "radiology",
+    "thoracic-disease",
+    "physionet"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "PhysioNet Credentialed Health Data License 1.5.0",
+    "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
+    "commercial_use": "allowed",
+    "notes": "Available under PhysioNet Credentialed Health Data License for research and clinical algorithm validation."
+  },
+  "source_references": [
+    {
+      "title": "VinDr-CXR on PhysioNet",
+      "url": "https://physionet.org/content/vindr-cxr/1.0.0/",
+      "type": "official_website",
+      "notes": "Official PhysioNet dataset distribution page."
+    },
+    {
+      "title": "VinDr-CXR: An open dataset of chest X-rays with radiologist's annotations (Scientific Data 2022)",
+      "url": "https://doi.org/10.1038/s41597-022-01498-w",
+      "type": "original_paper",
+      "notes": "Published in Nature Scientific Data 2022."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against Nature Scientific Data publication and PhysioNet portal."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 18000,
+    "splits": {
+      "train": 15000,
+      "test": 3000
+    },
+    "unit": "scans"
+  },
+  "dates": {
+    "published": "2021",
+    "last_updated": "2022"
+  },
+  "citation": {
+    "paper_title": "VinDr-CXR: An open dataset of chest X-rays with radiologist's annotations",
+    "paper_url": "https://doi.org/10.1038/s41597-022-01498-w",
+    "authors": [
+      "Ha Q. Nguyen",
+      "Khanh Lam",
+      "Linh T. Le",
+      "Hieu H. Pham",
+      "Dat Q. Tran",
+      "Dung B. Nguyen",
+      "Dung D. Le",
+      "Chi M. Pham",
+      "Hang T. T. Luu",
+      "Tung T. Dang",
+      "Binh T. Nguyen",
+      "Nhan T. Nguyen",
+      "Tu N. Tran",
+      "Hien T. Dang",
+      "Bao T. Nguyen",
+      "Trinh T. H. Le",
+      "Phuong H. Do",
+      "Ngoc T. H. Tran",
+      "Binh T. Nguyen",
+      "Chinh T. Nguyen"
+    ],
+    "doi": "10.1038/s41597-022-01498-w",
+    "bibtex": "@article{nguyen2022vindr,\n  title = {VinDr-CXR: An open dataset of chest X-rays with radiologist's annotations},\n  author = {Nguyen, Ha Q. and Lam, Khanh and Le, Linh T. and Pham, Hieu H. and Tran, Dat Q. and others},\n  journal = {Scientific Data},\n  volume = {9},\n  number = {1},\n  pages = {429},\n  year = {2022}\n}"
+  }
+}

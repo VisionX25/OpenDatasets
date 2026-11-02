@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tydiqa",
+  "slug": "tydiqa",
+  "name": "TyDi QA: Typologically Diverse Question Answering Benchmark",
+  "description": "TyDi QA is a multilingual question answering benchmark covering 11 typologically diverse languages with over 204,000 question-answer pairs. To avoid translation artefacts, questions are written by native speakers seeking information before knowing the answer, spanning Arabic, Bengali, English, Finnish, Indonesian, Japanese, Korean, Russian, Swahili, Telugu, and Thai.",
+  "homepage_url": "https://github.com/google-research-datasets/tydiqa",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "information-retrieval",
+    "cross-lingual-transfer"
+  ],
+  "tags": [
+    "question-answering",
+    "multilingual",
+    "nlp",
+    "benchmark",
+    "typological-diversity"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Official Apache 2.0 license declared in GitHub repository."
+  },
+  "source_references": [
+    {
+      "title": "TyDi QA GitHub Repository",
+      "url": "https://github.com/google-research-datasets/tydiqa",
+      "type": "repository",
+      "notes": "Official repository and evaluation code."
+    },
+    {
+      "title": "TyDi QA: A Benchmark for Information-Seeking Question Answering in Typologically Diverse Languages (TACL 2020)",
+      "url": "https://aclanthology.org/2020.tacl-1.30/",
+      "type": "original_paper",
+      "notes": "Transactions of the Association for Computational Linguistics (TACL) 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against TACL 2020 paper and Google Research repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 204000,
+    "unit": "qa-pairs"
+  },
+  "languages": [
+    "ar",
+    "bn",
+    "en",
+    "fi",
+    "id",
+    "ja",
+    "ko",
+    "ru",
+    "sw",
+    "te",
+    "th"
+  ],
+  "dates": {
+    "published": "2020-03",
+    "last_updated": "2020-03"
+  },
+  "citation": {
+    "paper_title": "TyDi QA: A Benchmark for Information-Seeking Question Answering in Typologically Diverse Languages",
+    "paper_url": "https://aclanthology.org/2020.tacl-1.30/",
+    "authors": [
+      "Jonathan H. Clark",
+      "Eunsol Choi",
+      "Michael Collins",
+      "Dan Garrette",
+      "Kartikay Khandelwal",
+      "Hannaneh Hajishirzi",
+      "Jennimaria Palomaki"
+    ],
+    "doi": "10.1162/tacl_a_00317",
+    "bibtex": "@article{clark-etal-2020-tydi,\n  title = {TyDi QA: A Benchmark for Information-Seeking Question Answering in Typologically Diverse Languages},\n  author = {Clark, Jonathan H. and Choi, Eunsol and Collins, Michael and Garrette, Dan and Khandelwal, Kartikay and Hajishirzi, Hannaneh and Palomaki, Jennimaria},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {8},\n  pages = {469--487},\n  year = {2020}\n}"
+  }
+}

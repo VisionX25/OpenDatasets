@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "oxford-iiit-pet",
+  "slug": "oxford-iiit-pet",
+  "name": "Oxford-IIIT Pet Dataset",
+  "description": "The Oxford-IIIT Pet dataset is a 37-category pet dataset with approximately 200 images per class. Images feature large variations in scale, pose, and lighting, and include ground truth annotations for cat and dog breeds, head bounding boxes, and pixel-level foreground-background segmentation trimaps.",
+  "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/pets/",
+  "publisher": {
+    "name": "Visual Geometry Group (VGG), University of Oxford",
+    "type": "academic",
+    "url": "https://www.robots.ox.ac.uk/~vgg/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "fine-grained-classification",
+    "semantic-segmentation",
+    "object-detection"
+  ],
+  "tags": [
+    "fine-grained",
+    "pets",
+    "breeds",
+    "segmentation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY-SA 4.0 license stated in official VGG distribution."
+  },
+  "source_references": [
+    {
+      "title": "Oxford-IIIT Pet Dataset Homepage",
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/pets/",
+      "type": "official_website",
+      "notes": "Canonical dataset distribution page."
+    },
+    {
+      "title": "Cats and Dogs (CVPR 2012)",
+      "url": "https://doi.org/10.1109/CVPR.2012.6248092",
+      "type": "original_paper",
+      "notes": "Published in IEEE CVPR 2012."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against CVPR 2012 paper and official Oxford VGG metadata."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 7349,
+    "unit": "images"
+  },
+  "dates": {
+    "published": "2012-06",
+    "last_updated": "2012-06"
+  },
+  "citation": {
+    "paper_title": "Cats and Dogs",
+    "paper_url": "https://doi.org/10.1109/CVPR.2012.6248092",
+    "authors": [
+      "Omkar M. Parkhi",
+      "Andrea Vedaldi",
+      "Andrew Zisserman",
+      "C. V. Jawahar"
+    ],
+    "doi": "10.1109/CVPR.2012.6248092",
+    "bibtex": "@inproceedings{parkhi2012cats,\n  title = {Cats and Dogs},\n  author = {Parkhi, Omkar M. and Vedaldi, Andrea and Zisserman, Andrew and Jawahar, C. V.},\n  booktitle = {2012 IEEE Conference on Computer Vision and Pattern Recognition},\n  pages = {3498--3505},\n  year = {2012}\n}"
+  }
+}

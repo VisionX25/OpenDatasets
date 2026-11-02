@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "kuzushiji-mnist",
+  "slug": "kuzushiji-mnist",
+  "name": "Kuzushiji-MNIST (KMNIST)",
+  "description": "Kuzushiji-MNIST is a drop-in replacement for the MNIST dataset featuring 10 classes of cursive Japanese characters (Kuzushiji). Created by the Center for Open Data in the Humanities (CODH), it consists of 70,000 28x28 grayscale images (60,000 training, 10,000 testing) derived from digitized classical Japanese literature.",
+  "homepage_url": "https://github.com/rois-codh/kmnist",
+  "publisher": {
+    "name": "ROIS-DS Center for Open Data in the Humanities (CODH)",
+    "type": "academic",
+    "url": "http://codh.rois.ac.jp/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "optical-character-recognition"
+  ],
+  "tags": [
+    "kuzushiji",
+    "japanese-characters",
+    "mnist-replacement",
+    "ocr",
+    "cultural-heritage"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY-SA 4.0 license stated in official GitHub repository."
+  },
+  "source_references": [
+    {
+      "title": "Kuzushiji-MNIST Official GitHub Repository",
+      "url": "https://github.com/rois-codh/kmnist",
+      "type": "repository",
+      "notes": "Official repository with dataset downloads and benchmarks."
+    },
+    {
+      "title": "Deep Learning for Classical Japanese Literature (NeurIPS 2018 Workshop)",
+      "url": "https://arxiv.org/abs/1812.01718",
+      "type": "original_paper",
+      "notes": "NeurIPS 2018 Workshop on Machine Learning for Creativity and Design."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against arXiv paper and CODH official repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 70000,
+    "splits": {
+      "train": 60000,
+      "test": 10000
+    },
+    "unit": "images"
+  },
+  "dates": {
+    "published": "2018-12",
+    "last_updated": "2018-12"
+  },
+  "citation": {
+    "paper_title": "Deep Learning for Classical Japanese Literature",
+    "paper_url": "https://arxiv.org/abs/1812.01718",
+    "authors": [
+      "Tarin Clanuwat",
+      "Mikel Bober-Irizar",
+      "Asanobu Kitamoto",
+      "Alex Lamb",
+      "Kazuaki Yamamoto",
+      "David Ha"
+    ],
+    "bibtex": "@article{clanuwat2018kmnist,\n  title = {Deep Learning for Classical Japanese Literature},\n  author = {Clanuwat, Tarin and Bober-Irizar, Mikel and Kitamoto, Asanobu and Lamb, Alex and Yamamoto, Kazuaki and Ha, David},\n  journal = {arXiv preprint arXiv:1812.01718},\n  year = {2018}\n}"
+  }
+}

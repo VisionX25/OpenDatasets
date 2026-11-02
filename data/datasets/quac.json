@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quac",
+  "slug": "quac",
+  "name": "QuAC: Question Answering in Context",
+  "description": "QuAC (Question Answering in Context) is a benchmark for conversational reading comprehension. It consists of interactive dialogs between a student who asks questions about an unseen Wikipedia section and a teacher who answers by extracting spans from the text and providing dialog flow feedback.",
+  "homepage_url": "https://quac.ai/",
+  "publisher": {
+    "name": "University of Washington, Allen Institute for AI, Stanford University",
+    "type": "academic",
+    "url": "https://quac.ai/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "conversational-qa",
+    "reading-comprehension",
+    "question-answering"
+  ],
+  "tags": [
+    "dialog",
+    "conversational-qa",
+    "reading-comprehension",
+    "nlp",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY-SA-4.0 license stated on project homepage."
+  },
+  "source_references": [
+    {
+      "title": "QuAC Official Project Homepage",
+      "url": "https://quac.ai/",
+      "type": "official_website",
+      "notes": "Official benchmark portal with leaderboard."
+    },
+    {
+      "title": "QuAC : Question Answering in Context (EMNLP 2018)",
+      "url": "https://aclanthology.org/D18-1241/",
+      "type": "original_paper",
+      "notes": "Proceedings of EMNLP 2018."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against EMNLP 2018 paper and quac.ai site."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 98407,
+    "splits": {
+      "train": 83568,
+      "validation": 7354,
+      "test": 7354
+    },
+    "unit": "questions"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-10",
+    "last_updated": "2018-10"
+  },
+  "citation": {
+    "paper_title": "QuAC: Question Answering in Context",
+    "paper_url": "https://aclanthology.org/D18-1241/",
+    "authors": [
+      "Eunsol Choi",
+      "He He",
+      "Mohit Iyyer",
+      "Mark Yatskar",
+      "Wen-tau Yih",
+      "Yejin Choi",
+      "Percy Liang",
+      "Luke Zettlemoyer"
+    ],
+    "doi": "10.18653/v1/D18-1241",
+    "bibtex": "@inproceedings{choi-etal-2018-quac,\n  title = {QuAC: Question Answering in Context},\n  author = {Choi, Eunsol and He, He and Iyyer, Mohit and Yatskar, Mark and Yih, Wen-tau and Choi, Yejin and Liang, Percy and Zettlemoyer, Luke},\n  booktitle = {Proceedings of EMNLP 2018},\n  pages = {2174--2184},\n  year = {2018}\n}"
+  }
+}

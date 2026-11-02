@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gigaspeech",
+  "slug": "gigaspeech",
+  "name": "GigaSpeech: Multi-Domain ASR Corpus",
+  "description": "GigaSpeech is an evolving, multi-domain English speech recognition corpus comprising 10,000 hours of high-quality transcribed audio and 33,000 hours of total audio. Sourced from audiobooks, podcasts, and YouTube across diverse topics, speaking styles, and acoustic environments.",
+  "homepage_url": "https://github.com/SpeechColab/GigaSpeech",
+  "publisher": {
+    "name": "SpeechColab Consortium",
+    "type": "community",
+    "url": "https://speechcolab.org"
+  },
+  "modalities": [
+    "audio",
+    "nlp"
+  ],
+  "tasks": [
+    "automatic-speech-recognition",
+    "speech-processing"
+  ],
+  "tags": [
+    "audio",
+    "speech",
+    "asr",
+    "english",
+    "multi-domain",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "SpeechColab Non-Commercial Research License",
+    "url": "https://github.com/SpeechColab/GigaSpeech#license",
+    "commercial_use": "forbidden",
+    "notes": "Code is under Apache 2.0; dataset audio is available for non-commercial research and educational purposes."
+  },
+  "source_references": [
+    {
+      "title": "GigaSpeech GitHub Repository",
+      "url": "https://github.com/SpeechColab/GigaSpeech",
+      "type": "repository",
+      "notes": "Official repository containing download scripts and baselines."
+    },
+    {
+      "title": "GigaSpeech: An Evolving, Multi-domain ASR Corpus with 10,000 Hours of Transcribed Audio (Interspeech 2021)",
+      "url": "https://doi.org/10.21437/Interspeech.2021-1965",
+      "type": "original_paper",
+      "notes": "Proceedings of Interspeech 2021."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against Interspeech 2021 paper and SpeechColab consortium release."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 10000,
+    "unit": "hours"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2021-08",
+    "last_updated": "2021-08"
+  },
+  "citation": {
+    "paper_title": "GigaSpeech: An Evolving, Multi-domain ASR Corpus with 10,000 Hours of Transcribed Audio",
+    "paper_url": "https://doi.org/10.21437/Interspeech.2021-1965",
+    "authors": [
+      "Guoguo Chen",
+      "Shuzhou Chai",
+      "Guan-Bo Wang",
+      "Jiayu Du",
+      "Wei-Qiang Zhang",
+      "Chao Weng",
+      "Dan Su",
+      "Daniel Povey",
+      "Jan Trmal",
+      "Junbo Zhang",
+      "Mingjie Wang",
+      "Sheng Li",
+      "Yao-Yuan Wang",
+      "Yongqing Wang",
+      "Yujun Wang",
+      "Zhendong Peng"
+    ],
+    "doi": "10.21437/Interspeech.2021-1965",
+    "bibtex": "@inproceedings{chen2021gigaspeech,\n  title = {GigaSpeech: An Evolving, Multi-domain ASR Corpus with 10,000 Hours of Transcribed Audio},\n  author = {Chen, Guoguo and Chai, Shuzhou and Wang, Guan-Bo and Du, Jiayu and Zhang, Wei-Qiang and Weng, Chao and Su, Dan and Povey, Daniel and Trmal, Jan and Zhang, Junbo and Wang, Mingjie and Li, Sheng and Wang, Yao-Yuan and Wang, Yongqing and Wang, Yujun and Peng, Zhendong},\n  booktitle = {Proc. Interspeech 2021},\n  pages = {3670--3674},\n  year = {2021}\n}"
+  }
+}

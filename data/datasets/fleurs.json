@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fleurs",
+  "slug": "fleurs",
+  "name": "FLEURS: Few-shot Learning Evaluation of Universal Representations of Speech",
+  "description": "FLEURS is an evaluation benchmark for multi-lingual and few-shot speech recognition covering 102 languages. An extension of the FLoRes machine translation benchmark, it contains approximately 12 hours of supervised high-quality speech per language for multi-task evaluation including ASR, Speech Translation, and Language Identification.",
+  "homepage_url": "https://huggingface.co/datasets/google/fleurs",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "audio",
+    "nlp"
+  ],
+  "tasks": [
+    "automatic-speech-recognition",
+    "language-identification",
+    "speech-translation"
+  ],
+  "tags": [
+    "speech",
+    "audio",
+    "multilingual",
+    "asr",
+    "fleurs",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in official Hugging Face dataset card."
+  },
+  "source_references": [
+    {
+      "title": "FLEURS on Hugging Face",
+      "url": "https://huggingface.co/datasets/google/fleurs",
+      "type": "repository",
+      "notes": "Official Hugging Face dataset distribution."
+    },
+    {
+      "title": "FLEURS: Few-shot Learning Evaluation of Universal Representations of Speech (IEEE SLT 2022)",
+      "url": "https://doi.org/10.1109/SLT54892.2023.10023140",
+      "type": "original_paper",
+      "notes": "Published in 2022 IEEE Spoken Language Technology Workshop (SLT)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against IEEE SLT publication and Google Research dataset release."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 306000,
+    "unit": "utterances"
+  },
+  "dates": {
+    "published": "2022-05",
+    "last_updated": "2023-01"
+  },
+  "citation": {
+    "paper_title": "FLEURS: Few-shot Learning Evaluation of Universal Representations of Speech",
+    "paper_url": "https://doi.org/10.1109/SLT54892.2023.10023140",
+    "authors": [
+      "Alexis Conneau",
+      "Min Ma",
+      "Simran Khanuja",
+      "Yu Zhang",
+      "Wei-Ning Hsu",
+      "Ye Jia",
+      "Colin Cherry",
+      "Thalles Silva",
+      "Yacine Hazami",
+      "Patrick von Platen",
+      "Anton Lozhkov",
+      "Clara Rivera",
+      "Ankur Bapna"
+    ],
+    "doi": "10.1109/SLT54892.2023.10023140",
+    "bibtex": "@inproceedings{conneau2023fleurs,\n  title = {FLEURS: Few-shot Learning Evaluation of Universal Representations of Speech},\n  author = {Conneau, Alexis and Ma, Min and Khanuja, Simran and Zhang, Yu and Hsu, Wei-Ning and Jia, Ye and Cherry, Colin and Silva, Thalles and Hazami, Yacine and von Platen, Patrick and Lozhkov, Anton and Rivera, Clara and Bapna, Ankur},\n  booktitle = {2022 IEEE Spoken Language Technology Workshop (SLT)},\n  pages = {798--805},\n  year = {2023}\n}"
+  }
+}

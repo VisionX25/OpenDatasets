@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tablebank",
+  "slug": "tablebank",
+  "name": "TableBank: Table Benchmark for Detection and Recognition",
+  "description": "TableBank is a benchmark dataset for image-based table detection and table recognition. It contains 417,236 high-quality document images with table bounding boxes and corresponding markdown / LaTeX / Word table structure markup crawled from arXiv and Word documents.",
+  "homepage_url": "https://github.com/doc-analysis/TableBank",
+  "publisher": {
+    "name": "Microsoft Research Asia & Beihang University",
+    "type": "industry",
+    "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "table-detection",
+    "table-recognition",
+    "document-layout-analysis"
+  ],
+  "tags": [
+    "table-detection",
+    "table-recognition",
+    "document-ai",
+    "ocr",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Verified CC-BY 4.0 license stated in official TableBank repository."
+  },
+  "source_references": [
+    {
+      "title": "TableBank Official GitHub Repository",
+      "url": "https://github.com/doc-analysis/TableBank",
+      "type": "repository",
+      "notes": "Official dataset and evaluation code repository."
+    },
+    {
+      "title": "TableBank: Table Benchmark for Image-based Table Detection and Recognition (LREC 2020)",
+      "url": "https://aclanthology.org/2020.lrec-1.236/",
+      "type": "original_paper",
+      "notes": "Proceedings of LREC 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against LREC 2020 publication and Microsoft Research repository."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 417236,
+    "unit": "document-images"
+  },
+  "dates": {
+    "published": "2020-05",
+    "last_updated": "2020-05"
+  },
+  "citation": {
+    "paper_title": "TableBank: Table Benchmark for Image-based Table Detection and Recognition",
+    "paper_url": "https://aclanthology.org/2020.lrec-1.236/",
+    "authors": [
+      "Minghao Li",
+      "Lei Cui",
+      "Shaohan Huang",
+      "Furu Wei",
+      "Ming Zhou",
+      "Zhoujun Li"
+    ],
+    "bibtex": "@inproceedings{li-etal-2020-tablebank,\n  title = {TableBank: Table Benchmark for Image-based Table Detection and Recognition},\n  author = {Li, Minghao and Cui, Lei and Huang, Shaohan and Wei, Furu and Zhou, Ming and Li, Zhoujun},\n  booktitle = {Proceedings of LREC 2020},\n  pages = {1918--1925},\n  year = {2020}\n}"
+  }
+}

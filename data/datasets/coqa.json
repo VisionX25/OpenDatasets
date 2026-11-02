@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "coqa",
+  "slug": "coqa",
+  "name": "CoQA: Conversational Question Answering Challenge",
+  "description": "CoQA is a large-scale conversational question answering dataset containing 127,000+ questions with answers from 8,399 conversations across seven diverse domains (children's stories, literature, news, Wikipedia, school exams, Reddit, and science). Unlike standard extractive QA, answers can be free-form text supported by rationale text spans.",
+  "homepage_url": "https://stanfordnlp.github.io/coqa/",
+  "publisher": {
+    "name": "Stanford University NLP Group",
+    "type": "academic",
+    "url": "https://nlp.stanford.edu"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "conversational-qa",
+    "reading-comprehension",
+    "dialog"
+  ],
+  "tags": [
+    "dialogue",
+    "conversational-qa",
+    "nlp",
+    "benchmark",
+    "stanford"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Community Data License Agreement - Permissive (CDLA-Permissive-1.0)",
+    "spdx_id": "CDLA-Permissive-1.0",
+    "url": "https://cdla.dev/permissive-1-0/",
+    "commercial_use": "allowed",
+    "notes": "Released under CDLA-Permissive-1.0, enabling academic and commercial reuse."
+  },
+  "source_references": [
+    {
+      "title": "CoQA Stanford NLP Project Page",
+      "url": "https://stanfordnlp.github.io/coqa/",
+      "type": "official_website",
+      "notes": "Official Stanford benchmark portal."
+    },
+    {
+      "title": "CoQA: A Conversational Question Answering Challenge (TACL 2019)",
+      "url": "https://aclanthology.org/Q19-1016/",
+      "type": "original_paper",
+      "notes": "Transactions of the Association for Computational Linguistics (TACL) 2019."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against TACL 2019 paper and Stanford NLP portal."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 127000,
+    "unit": "questions"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2019-03",
+    "last_updated": "2019-03"
+  },
+  "citation": {
+    "paper_title": "CoQA: A Conversational Question Answering Challenge",
+    "paper_url": "https://aclanthology.org/Q19-1016/",
+    "authors": [
+      "Siva Reddy",
+      "Danqi Chen",
+      "Christopher D. Manning"
+    ],
+    "doi": "10.1162/tacl_a_00266",
+    "bibtex": "@article{reddy-etal-2019-coqa,\n  title = {CoQA: A Conversational Question Answering Challenge},\n  author = {Reddy, Siva and Chen, Danqi and Manning, Christopher D.},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {7},\n  pages = {249--266},\n  year = {2019}\n}"
+  }
+}

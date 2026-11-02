@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tb-olid",
+  "slug": "tb-olid",
+  "name": "TB-OLID: Transliterated Bangla Offensive Language Identification Dataset",
+  "description": "TB-OLID consists of 5,000 manually annotated social media comments written in transliterated Bangla (Banglish) and code-mixed Latin script. The dataset addresses offensive language and abusive content identification in under-resourced code-mixed contexts across South Asian digital communities.",
+  "homepage_url": "https://github.com/LanguageTechnologyLab/TB-OLID",
+  "publisher": {
+    "name": "Language Technology Lab & Collaborating Universities",
+    "type": "academic",
+    "url": "https://github.com/LanguageTechnologyLab"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "offensive-language-identification"
+  ],
+  "tags": [
+    "bangla",
+    "banglish",
+    "transliteration",
+    "offensive-language",
+    "code-mixed"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "GNU Affero General Public License v3.0",
+    "spdx_id": "AGPL-3.0-only",
+    "url": "https://www.gnu.org/licenses/agpl-3.0.html",
+    "commercial_use": "allowed",
+    "notes": "Verified AGPL-3.0 license in repository LICENSE file."
+  },
+  "source_references": [
+    {
+      "title": "TB-OLID GitHub Repository",
+      "url": "https://github.com/LanguageTechnologyLab/TB-OLID",
+      "type": "repository",
+      "notes": "Official repository containing train.json and test.json data."
+    },
+    {
+      "title": "Offensive Language Identification in Transliterated and Code-Mixed Bangla (BLP 2023)",
+      "url": "https://aclanthology.org/2023.banglalp-1.1/",
+      "type": "original_paper",
+      "notes": "Workshop on Bangla Language Processing at EMNLP 2023."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Maintainers",
+    "verified_date": "2026-11-02",
+    "notes": "Verified against BLP 2023 proceedings and GitHub dataset files."
+  },
+  "sample_count": {
+    "status": "verified",
+    "total": 5000,
+    "unit": "comments"
+  },
+  "languages": [
+    "bn",
+    "en"
+  ],
+  "dates": {
+    "published": "2023-12",
+    "last_updated": "2023-12"
+  },
+  "citation": {
+    "paper_title": "Offensive Language Identification in Transliterated and Code-Mixed Bangla",
+    "paper_url": "https://aclanthology.org/2023.banglalp-1.1/",
+    "authors": [
+      "Md Nishat Raihan",
+      "Umma Tanmoy",
+      "Anika Binte Islam",
+      "Kai North",
+      "Tharindu Ranasinghe",
+      "Antonios Anastasopoulos",
+      "Marcos Zampieri"
+    ],
+    "bibtex": "@inproceedings{raihan-etal-2023-offensive,\n  title = {Offensive Language Identification in Transliterated and Code-Mixed Bangla},\n  author = {Raihan, Md Nishat and Tanmoy, Umma and Islam, Anika Binte and North, Kai and Ranasinghe, Tharindu and Anastasopoulos, Antonios and Zampieri, Marcos},\n  booktitle = {Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)},\n  pages = {1--10},\n  year = {2023}\n}"
+  }
+}
