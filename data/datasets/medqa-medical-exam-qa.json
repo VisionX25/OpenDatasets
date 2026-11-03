@@ -25,32 +25,31 @@
     "usmle"
   ],
   "license": {
-    "status": "verified_open",
-    "name": "MIT License",
-    "spdx_id": "MIT",
-    "url": "https://opensource.org/licenses/MIT",
-    "commercial_use": "allowed",
-    "notes": "Open-access research repository licensed under the MIT License."
+    "status": "custom_permissive",
+    "name": "MIT License (Code) / Third-Party Copyrighted Medical Examinations (Data)",
+    "commercial_use": "unknown",
+    "url": "https://github.com/jind11/MedQA/blob/master/LICENSE",
+    "notes": "The repository source code is released under the MIT License. However, the benchmark question bank comprises medical licensing examination questions (USMLE, MCMLE, TMLMLE) and medical textbook excerpts owned by third-party medical examination boards and academic publishers. Commercial permissions for the underlying questions are unknown and not granted by the code license."
   },
   "source_references": [
     {
       "title": "MedQA GitHub Repository",
       "url": "https://github.com/jind11/MedQA",
       "type": "repository",
-      "notes": "Official repository with English and Chinese exam splits."
+      "notes": "Official code and data repository."
     },
     {
-      "title": "JMIR Medical Informatics Publication (DOI: 10.2196/26262)",
-      "url": "https://doi.org/10.2196/26262",
+      "title": "Applied Sciences Benchmark Publication (DOI: 10.3390/app11146421)",
+      "url": "https://doi.org/10.3390/app11146421",
       "type": "original_paper",
-      "notes": "Peer-reviewed journal paper establishing MedQA benchmarks."
+      "notes": "Peer-reviewed research paper in Applied Sciences describing the MedQA benchmark."
     }
   ],
   "verification": {
-    "status": "verified",
+    "status": "provisional",
     "verified_by": "OpenDatasets Curatorial Team",
     "verified_date": "2026-11-03",
-    "notes": "Verified against JMIR Medical Informatics 2021 publication and GitHub repository."
+    "notes": "Provisional verification: repository code is MIT licensed, but underlying medical board examination questions and textbooks remain copyrighted by third parties."
   },
   "dates": {
     "published": "2021-04-12"
@@ -66,8 +65,8 @@
     "status": "verified"
   },
   "citation": {
-    "paper_title": "Disease Knowledge Infusion for Healthcare Cognitive Tasks: Towards Solving Medical Question Answering",
-    "paper_url": "https://doi.org/10.2196/26262",
+    "paper_title": "What Disease Does This Patient Have? A Large-Scale Open Domain Question Answering Dataset from Medical Exams",
+    "paper_url": "https://doi.org/10.3390/app11146421",
     "authors": [
       "Di Jin",
       "Eileen Pan",
@@ -76,8 +75,8 @@
       "Hanyi Fang",
       "Peter Szolovits"
     ],
-    "doi": "10.2196/26262",
-    "bibtex": "@article{jin2021disease,\n  title={Disease Knowledge Infusion for Healthcare Cognitive Tasks: Towards Solving Medical Question Answering},\n  author={Jin, Di and Pan, Eileen and Oufattole, Nassim and Weng, Wei-Hung and Fang, Hanyi and Szolovits, Peter},\n  journal={JMIR Medical Informatics},\n  volume={9},\n  number={4},\n  pages={e26262},\n  year={2021},\n  publisher={JMIR Publications},\n  doi={10.2196/26262}\n}"
+    "doi": "10.3390/app11146421",
+    "bibtex": "@article{jin2021disease,\n  title={What Disease Does This Patient Have? A Large-Scale Open Domain Question Answering Dataset from Medical Exams},\n  author={Jin, Di and Pan, Eileen and Oufattole, Nassim and Weng, Wei-Hung and Fang, Hanyi and Szolovits, Peter},\n  journal={Applied Sciences},\n  volume={11},\n  number={14},\n  pages={6421},\n  year={2021},\n  publisher={MDPI},\n  doi={10.3390/app11146421}\n}"
   },
   "geographic_coverage": [
     "United States",

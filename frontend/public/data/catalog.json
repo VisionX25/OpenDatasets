@@ -1088,6 +1088,12 @@
         "url": "https://doi.org/10.1109/CIC.2000.898505",
         "type": "original_paper",
         "notes": "Conference publication establishing the Apnea-ECG benchmark."
+      },
+      {
+        "title": "PhysioNet Apnea-ECG Record (DOI: 10.13026/C23W2R)",
+        "url": "https://doi.org/10.13026/C23W2R",
+        "type": "repository",
+        "notes": "Official PhysioNet persistent dataset record under ODC-By 1.0."
       }
     ],
     "verification": {
@@ -1097,7 +1103,7 @@
       "notes": "Verified against PhysioNet persistent record DOI 10.13026/C23W2R."
     },
     "dates": {
-      "published": "2000-09-01"
+      "published": "2000-02-10"
     },
     "sample_count": {
       "total": 70,
@@ -3744,11 +3750,11 @@
       "ncbi"
     ],
     "license": {
-      "status": "public_domain",
-      "name": "Public Domain (US Government Work)",
+      "status": "custom_permissive",
+      "name": "U.S. Government Work (Annotations) / Copyrighted Journal Abstracts (Text)",
+      "commercial_use": "unknown",
       "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
-      "commercial_use": "allowed",
-      "notes": "Produced by NCBI/NIH employees as a work of the United States Government in the public domain."
+      "notes": "Curated entity and relation annotations produced by NIH/NCBI researchers are in the public domain as a Work of the U.S. Government (17 U.S.C. § 105). However, the underlying 1,500 abstracts originate from scientific journals indexed in PubMed and remain subject to original publisher and author copyrights. Permitted for non-commercial text-mining and research; commercial permissions on full texts are unknown."
     },
     "source_references": [
       {
@@ -3765,10 +3771,10 @@
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "provisional",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against Oxford Database 2016 publication and NCBI BioCreative V release."
+      "notes": "Provisional verification due to copyright of underlying scientific journal abstracts indexed in PubMed."
     },
     "dates": {
       "published": "2016-05-18"
@@ -5817,32 +5823,49 @@
       "whole-slide-imaging"
     ],
     "license": {
-      "status": "public_domain",
-      "name": "CC0 1.0 Universal",
-      "spdx_id": "CC0-1.0",
-      "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
-      "commercial_use": "allowed",
-      "notes": "Dedicated to the public domain under Creative Commons CC0 1.0 Universal."
+      "status": "custom_permissive",
+      "name": "Conflicting: CC0 1.0 (Data Portal & GigaDB) vs CC BY-NC-ND 4.0 (Download) vs Challenge Rules",
+      "commercial_use": "unknown",
+      "url": "https://camelyon17.grand-challenge.org/Data/",
+      "notes": "Conflicting authoritative terms exist across project documentation: The CAMELYON17 /Data/ portal, GigaScience Database (DOI: 10.5524/100439), and AWS Open Data Registry state CC0 1.0 Universal; conversely, the CAMELYON17 /Download/ page displays a CC BY-NC-ND 4.0 license badge, and CAMELYON16 Challenge Rules forbid redistribution and commercial algorithm development without prior challenge participation. Commercial permissions are unresolved and marked as unknown."
     },
     "source_references": [
       {
         "title": "CAMELYON16 Challenge Data Portal",
         "url": "https://camelyon16.grand-challenge.org/Data/",
         "type": "official_website",
-        "notes": "Official challenge data repository and documentation."
+        "notes": "Official challenge overview and data description."
       },
       {
-        "title": "JAMA Benchmark Paper (DOI: 10.1001/jama.2017.14580)",
-        "url": "https://doi.org/10.1001/jama.2017.14580",
+        "title": "JAMA Benchmark Paper (DOI: 10.1001/jama.2017.14585)",
+        "url": "https://jamanetwork.com/journals/jama/fullarticle/2665774",
         "type": "original_paper",
-        "notes": "Landmark publication comparing deep learning algorithms to expert pathologists."
+        "notes": "Peer-reviewed landmark JAMA evaluation assessing deep learning vs pathologist performance on 399 whole-slide images."
+      },
+      {
+        "title": "CAMELYON16 Challenge Rules",
+        "url": "https://camelyon16.grand-challenge.org/Rules/",
+        "type": "documentation",
+        "notes": "Official terms governing registration, redistribution prohibitions, and challenge submission requirements."
+      },
+      {
+        "title": "GigaScience Database CAMELYON Dataset (DOI: 10.5524/100439)",
+        "url": "https://doi.org/10.5524/100439",
+        "type": "repository",
+        "notes": "DataCite repository archive of the CAMELYON whole-slide dataset."
+      },
+      {
+        "title": "Registry of Open Data on AWS (CAMELYON)",
+        "url": "https://registry.opendata.aws/camelyon/",
+        "type": "repository",
+        "notes": "Cloud repository mirror managed by Radboud University Medical Center."
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "provisional",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against JAMA 2017 publication and Grand Challenge repository."
+      "notes": "Provisional verification due to conflicting terms across official Grand Challenge portals (CC0 on Data page vs CC BY-NC-ND 4.0 on Download page vs Challenge Rules). DOI and slide count distinctions verified against JAMA 2017 paper."
     },
     "dates": {
       "published": "2016-04-13"
@@ -5850,16 +5873,15 @@
     "sample_count": {
       "total": 400,
       "splits": {
-        "train_metastases": 110,
-        "train_normal": 160,
-        "test": 130
+        "train_slides": 270,
+        "test_slides": 130
       },
       "unit": "whole-slide images",
       "status": "verified"
     },
     "citation": {
       "paper_title": "Diagnostic Assessment of Deep Learning Algorithms for Detection of Lymph Node Metastases in Women With Breast Cancer",
-      "paper_url": "https://doi.org/10.1001/jama.2017.14580",
+      "paper_url": "https://jamanetwork.com/journals/jama/fullarticle/2665774",
       "authors": [
         "Babak Ehteshami Bejnordi",
         "Mitko Veta",
@@ -5869,15 +5891,15 @@
         "Geert Litjens",
         "Jeroen A. W. M. van der Laak"
       ],
-      "doi": "10.1001/jama.2017.14580",
-      "bibtex": "@article{bejnordi2017diagnostic,\n  title={Diagnostic Assessment of Deep Learning Algorithms for Detection of Lymph Node Metastases in Women With Breast Cancer},\n  author={Bejnordi, Babak Ehteshami and Veta, Mitko and van Diest, Paul Johannes and van Ginneken, Bram and Karssemeijer, Nico and Litjens, Geert and van der Laak, Jeroen AWM and others},\n  journal={JAMA},\n  volume={318},\n  number={22},\n  pages={2199--2210},\n  year={2017},\n  publisher={American Medical Association},\n  doi={10.1001/jama.2017.14580}\n}"
+      "doi": "10.1001/jama.2017.14585",
+      "bibtex": "@article{bejnordi2017diagnostic,\n  title={Diagnostic Assessment of Deep Learning Algorithms for Detection of Lymph Node Metastases in Women With Breast Cancer},\n  author={Bejnordi, Babak Ehteshami and Veta, Mitko and van Diest, Paul Johannes and van Ginneken, Bram and Karssemeijer, Nico and Litjens, Geert and van der Laak, Jeroen A. W. M. and others},\n  journal={JAMA},\n  volume={318},\n  number={22},\n  pages={2199--2210},\n  year={2017},\n  publisher={American Medical Association},\n  doi={10.1001/jama.2017.14585}\n}"
     },
     "geographic_coverage": [
       "Netherlands"
     ],
     "provenance": {
       "collection_method": "Whole-slide digital scanning of hematoxylin and eosin (H&E) stained sentinel lymph node tissue sections.",
-      "curation_notes": "Exhaustive manual contouring of metastatic foci by pathologist consensus.",
+      "curation_notes": "The challenge dataset officially distributed 400 whole-slide images (270 training: 160 normal, 110 metastasis; 130 testing: 80 normal, 50 metastasis). In the landmark evaluation published in JAMA 2017 (Bejnordi et al., DOI: 10.1001/jama.2017.14585), 399 slides were evaluated (270 training, 129 testing), with one test slide excluded from the evaluation.",
       "data_sources": [
         "Radboud University Medical Center",
         "University Medical Center Utrecht"
@@ -5912,32 +5934,49 @@
       "whole-slide-imaging"
     ],
     "license": {
-      "status": "public_domain",
-      "name": "CC0 1.0 Universal",
-      "spdx_id": "CC0-1.0",
-      "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
-      "commercial_use": "allowed",
-      "notes": "Released into the public domain under CC0 1.0 Universal."
+      "status": "custom_permissive",
+      "name": "Conflicting: CC0 1.0 (Data Portal & GigaDB) vs CC BY-NC-ND 4.0 (Download) vs Challenge Rules",
+      "commercial_use": "unknown",
+      "url": "https://camelyon17.grand-challenge.org/Data/",
+      "notes": "Conflicting terms exist across official channels: The /Data/ portal, GigaScience Database (DOI: 10.5524/100439), and AWS Open Data Registry designate the collection under CC0 1.0; however, the /Download/ portal explicitly licenses the files under CC BY-NC-ND 4.0, while Challenge Rules govern participation and submission rights. Commercial permissions are unresolved and recorded as unknown."
     },
     "source_references": [
       {
         "title": "CAMELYON17 Challenge Data Portal",
         "url": "https://camelyon17.grand-challenge.org/Data/",
         "type": "official_website",
-        "notes": "Official challenge repository and data release."
+        "notes": "Official challenge description stating CC0 terms."
+      },
+      {
+        "title": "CAMELYON17 Download Portal (CC BY-NC-ND 4.0)",
+        "url": "https://camelyon17.grand-challenge.org/Download/",
+        "type": "documentation",
+        "notes": "Download portal displaying Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license."
       },
       {
         "title": "IEEE TMI Benchmark Paper (DOI: 10.1109/TMI.2018.2867350)",
         "url": "https://doi.org/10.1109/TMI.2018.2867350",
         "type": "original_paper",
-        "notes": "IEEE Transactions on Medical Imaging overview paper."
+        "notes": "Peer-reviewed challenge results published in IEEE Transactions on Medical Imaging."
+      },
+      {
+        "title": "GigaScience Database CAMELYON Dataset (DOI: 10.5524/100439)",
+        "url": "https://doi.org/10.5524/100439",
+        "type": "repository",
+        "notes": "Authoritative DataCite repository archive under GigaScience."
+      },
+      {
+        "title": "Registry of Open Data on AWS (CAMELYON)",
+        "url": "https://registry.opendata.aws/camelyon/",
+        "type": "repository",
+        "notes": "AWS Open Data mirror managed by Radboud University Medical Center."
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "provisional",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against IEEE TMI 2019 publication and Grand Challenge repository."
+      "notes": "Provisional verification due to multi-source licensing conflict between CC0 on Data page, CC BY-NC-ND 4.0 on Download page, and Challenge Rules."
     },
     "dates": {
       "published": "2017-04-18"
@@ -6035,7 +6074,7 @@
       "notes": "Verified against UCI record 891 and CDC BRFSS specifications."
     },
     "dates": {
-      "published": "2023-05-15"
+      "published": "2021-10-18"
     },
     "sample_count": {
       "total": 253680,
@@ -6284,6 +6323,12 @@
         "url": "https://dspace.mit.edu/handle/1721.1/54666",
         "type": "original_paper",
         "notes": "Doctoral thesis introducing the dataset and machine learning seizure onset detectors."
+      },
+      {
+        "title": "PhysioNet CHB-MIT Scalp EEG Record (DOI: 10.13026/C2K01R)",
+        "url": "https://doi.org/10.13026/C2K01R",
+        "type": "repository",
+        "notes": "Official PhysioNet persistent dataset record under ODC-By 1.0."
       }
     ],
     "verification": {
@@ -6293,7 +6338,7 @@
       "notes": "Verified against PhysioNet persistent record DOI 10.13026/C2K01R."
     },
     "dates": {
-      "published": "2010-09-08"
+      "published": "2010-06-09"
     },
     "sample_count": {
       "total": 664,
@@ -7401,10 +7446,10 @@
     ],
     "license": {
       "status": "custom_permissive",
-      "name": "CORD-19 Research Use License",
-      "url": "https://github.com/allenai/cord19/blob/master/README.md",
-      "commercial_use": "allowed",
-      "notes": "Open-access research distribution provided under custom permissive research license in partnership with medical publishers."
+      "name": "COVID-19 Open Research Dataset License Agreement",
+      "commercial_use": "unknown",
+      "url": "https://github.com/allenai/cord19/blob/master/LICENSE",
+      "notes": "Governed by AI2 COVID Dataset License Agreement granting non-exclusive license for text and data mining only. The dataset incorporates full-text articles from hundreds of copyrighted publisher sources; commercial reuse is not unconditionally permitted and depends on individual article copyright notices and PMC license tiers."
     },
     "source_references": [
       {
@@ -7418,13 +7463,19 @@
         "url": "https://arxiv.org/abs/2004.10706",
         "type": "original_paper",
         "notes": "Paper documenting the CORD-19 corpus construction and challenges."
+      },
+      {
+        "title": "ACL Anthology CORD-19 Paper (2020.nlpcovid19-acl.1)",
+        "url": "https://aclanthology.org/2020.nlpcovid19-acl.1/",
+        "type": "original_paper",
+        "notes": "Official ACL Anthology record for Workshop on NLP for COVID-19."
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "provisional",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against Allen Institute release and ACL 2020 paper."
+      "notes": "Provisional verification based on AI2 text and data mining agreement; commercial usability is heterogeneous across underlying copyrighted publications."
     },
     "dates": {
       "published": "2020-03-16",
@@ -7437,7 +7488,7 @@
     },
     "citation": {
       "paper_title": "CORD-19: The COVID-19 Open Research Dataset",
-      "paper_url": "https://arxiv.org/abs/2004.10706",
+      "paper_url": "https://aclanthology.org/2020.nlpcovid19-acl.1/",
       "authors": [
         "Lucy Lu Wang",
         "Kyle Lo",
@@ -9005,26 +9056,26 @@
     },
     "source_references": [
       {
-        "title": "UCI ML Repository Early Stage Diabetes Page",
-        "url": "https://archive.ics.uci.edu/dataset/529/early+stage+diabetes+risk+prediction",
+        "title": "UCI Machine Learning Repository Early Stage Diabetes Dataset",
+        "url": "https://archive.ics.uci.edu/dataset/529/early+stage+diabetes+risk+prediction+dataset",
         "type": "repository",
-        "notes": "Official repository page on UCI."
+        "notes": "Official UCI Machine Learning Repository persistent dataset entry."
       },
       {
-        "title": "Computer Methods and Programs in Biomedicine Paper (DOI: 10.1016/j.cmpb.2020.105470)",
-        "url": "https://doi.org/10.1016/j.cmpb.2020.105470",
+        "title": "Springer AISC Publication (DOI: 10.1007/978-981-13-8798-2_12)",
+        "url": "https://doi.org/10.1007/978-981-13-8798-2_12",
         "type": "original_paper",
-        "notes": "Peer-reviewed journal paper establishing the dataset and predictive models."
+        "notes": "Peer-reviewed Springer conference paper introducing the Sylhet Diabetes Hospital dataset."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against UCI record 529 and CMPB 2020 publication."
+      "notes": "Verified against Springer AISC publication (DOI: 10.1007/978-981-13-8798-2_12) and UCI Machine Learning Repository (donated 2020-07-12)."
     },
     "dates": {
-      "published": "2020-07-12"
+      "published": "2019-08-29"
     },
     "sample_count": {
       "total": 520,
@@ -9036,16 +9087,16 @@
       "status": "verified"
     },
     "citation": {
-      "paper_title": "Likelihood prediction of diabetes at early stage using data mining techniques",
-      "paper_url": "https://doi.org/10.1016/j.cmpb.2020.105470",
+      "paper_title": "Likelihood Prediction of Diabetes at Early Stage Using Data Mining Techniques",
+      "paper_url": "https://doi.org/10.1007/978-981-13-8798-2_12",
       "authors": [
-        "Md. Maniruzzaman",
-        "Md. Jahidur Rahman",
-        "Belal Ahammed",
-        "Md. Fazlur Rahman"
+        "M. M. Faniqul Islam",
+        "Rahatara Ferdousi",
+        "Sadikur Rahman",
+        "Humayra Yasmin Bushra"
       ],
-      "doi": "10.1016/j.cmpb.2020.105470",
-      "bibtex": "@article{islam2020likelihood,\n  title={Likelihood prediction of diabetes at early stage using data mining techniques},\n  author={Islam, MM Faniqul and Ferdousi, Rahatara and Rahman, Sadikur and Bushra, Humaira Yasmin},\n  journal={Computer Methods and Programs in Biomedicine},\n  volume={191},\n  pages={105470},\n  year={2020},\n  publisher={Elsevier},\n  doi={10.1016/j.cmpb.2020.105470}\n}"
+      "doi": "10.1007/978-981-13-8798-2_12",
+      "bibtex": "@incollection{islam2020likelihood,\n  title={Likelihood Prediction of Diabetes at Early Stage Using Data Mining Techniques},\n  author={Islam, M. M. Faniqul and Ferdousi, Rahatara and Rahman, Sadikur and Bushra, Humayra Yasmin},\n  booktitle={Computer Vision and Machine Intelligence in Medical Image Analysis},\n  series={Advances in Intelligent Systems and Computing},\n  volume={992},\n  pages={113--125},\n  year={2020},\n  publisher={Springer, Singapore},\n  doi={10.1007/978-981-13-8798-2_12}\n}"
     },
     "geographic_coverage": [
       "Bangladesh"
@@ -9087,8 +9138,8 @@
     ],
     "license": {
       "status": "verified_non_commercial",
-      "name": "Stanford EchoNet Research Use Agreement",
-      "url": "https://echonet.github.io/dynamic/index.html#terms",
+      "name": "Stanford University School of Medicine EchoNet-Dynamic Dataset Research Use Agreement",
+      "url": "https://echonet.github.io/dynamic/index.html#agreement",
       "commercial_use": "forbidden",
       "notes": "Restricted to non-commercial academic research use under Stanford University DUA."
     },
@@ -9104,6 +9155,12 @@
         "url": "https://doi.org/10.1038/s41586-020-2145-8",
         "type": "original_paper",
         "notes": "Original landmark paper on video-based AI for beat-to-beat cardiac assessment."
+      },
+      {
+        "title": "Stanford AIMI Shared Datasets Portal (EchoNet-Dynamic)",
+        "url": "https://stanford.redivis.com/datasets/66s1-2hsmzj5rn",
+        "type": "repository",
+        "notes": "Official Stanford AIMI portal for dataset registration and download."
       }
     ],
     "verification": {
@@ -9254,34 +9311,40 @@
       "clinical-records"
     ],
     "license": {
-      "status": "verified_non_commercial",
-      "name": "PhysioNet Credentialed Data Use Agreement 1.5.0",
-      "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
-      "commercial_use": "forbidden",
-      "notes": "Restricted/credentialed access only: requires certified CITI human subjects training, PhysioNet identity verification, and signed DUA."
+      "status": "custom_permissive",
+      "name": "PhysioNet Credentialed Health Data License 1.5.0",
+      "url": "https://physionet.org/content/eicu-crd/view-license/2.0/",
+      "commercial_use": "unknown",
+      "notes": "Governed by PhysioNet Credentialed/Restricted Health Data License 1.5.0, which restricts use to the \"sole purpose of lawful use in scientific research and no other\". While commercial data resale, unauthorized redistribution, and product deployment are strictly prohibited, whether bona fide scientific research conducted by commercial/industry investigators under institutional credentialing is permitted remains an unstated legal question. Commercial permission is recorded as unknown."
     },
     "source_references": [
       {
-        "title": "PhysioNet eICU-CRD Database Portal",
-        "url": "https://physionet.org/content/eicu-crd/2.0/",
+        "title": "PhysioNet eICU-CRD v2.0 Repository (DOI: 10.13026/C2WM1R)",
+        "url": "https://doi.org/10.13026/C2WM1R",
         "type": "repository",
-        "notes": "Canonical repository page on PhysioNet."
+        "notes": "Official persistent DOI landing page for eICU Collaborative Research Database v2.0."
       },
       {
         "title": "Nature Scientific Data Publication (DOI: 10.1038/sdata.2018.178)",
         "url": "https://doi.org/10.1038/sdata.2018.178",
         "type": "original_paper",
-        "notes": "Peer-reviewed descriptor article in Nature Scientific Data."
+        "notes": "Peer-reviewed cohort descriptor published in Nature Scientific Data."
+      },
+      {
+        "title": "PhysioNet Credentialed Health Data Use Agreement 1.5.0",
+        "url": "https://physionet.org/content/eicu-crd/view-dua/2.0/",
+        "type": "documentation",
+        "notes": "Mandatory DUA governing restricted credentialed research access and HIPAA/CITI compliance."
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "provisional",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against PhysioNet persistent record DOI 10.13026/C2WM1R and Nature Scientific Data 2018 paper."
+      "notes": "Provisional verification due to commercial research interpretation; dataset DOI 10.13026/C2WM1R and CITI training requirements verified."
     },
     "dates": {
-      "published": "2018-09-11"
+      "published": "2019-04-15"
     },
     "sample_count": {
       "total": 200859,
@@ -11377,11 +11440,11 @@
     ],
     "license": {
       "status": "verified_non_commercial",
-      "name": "CC BY-NC 4.0",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)",
       "spdx_id": "CC-BY-NC-4.0",
       "url": "https://creativecommons.org/licenses/by-nc/4.0/legalcode",
       "commercial_use": "forbidden",
-      "notes": "Published under Creative Commons Attribution-NonCommercial 4.0 International."
+      "notes": "The Harvard Dataverse API endpoint (https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/DBW86T) reports 'license: null' with Creative Commons Attribution-NonCommercial 4.0 International terms embedded in dataset-level 'termsOfUse'. All 7 files have 'termsOfAccess: null' and 'restricted: false'. Because the deposit bundles multi-source images and ISIC 2018 challenge test partitions without independent file-level license declarations, the exact license claim is designated as provisional."
     },
     "source_references": [
       {
@@ -11398,13 +11461,13 @@
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "provisional",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against Harvard Dataverse record and Nature Scientific Data 2018 publication."
+      "notes": "Provisional verification: Harvard Dataverse API confirms CC BY-NC 4.0 in dataset termsOfUse; however, constituent ISIC 2018 challenge files lack independent file-level license declarations."
     },
     "dates": {
-      "published": "2018-08-14"
+      "published": "2018-06-03"
     },
     "sample_count": {
       "total": 10015,
@@ -12255,16 +12318,22 @@
     },
     "source_references": [
       {
-        "title": "HyperKvasir Simula Dataset Page",
+        "title": "Simula HyperKvasir Dataset Portal",
         "url": "https://datasets.simula.no/hyper-kvasir/",
-        "type": "repository",
-        "notes": "Official open-data distribution portal."
+        "type": "official_website",
+        "notes": "Official Simula project page and direct download mirrors."
       },
       {
-        "title": "Scientific Data Publication (DOI: 10.1038/s41597-020-00622-y)",
+        "title": "Nature Scientific Data Publication (DOI: 10.1038/s41597-020-00622-y)",
         "url": "https://doi.org/10.1038/s41597-020-00622-y",
         "type": "original_paper",
-        "notes": "Peer-reviewed dataset descriptor article in Scientific Data."
+        "notes": "Peer-reviewed dataset descriptor in Nature Scientific Data."
+      },
+      {
+        "title": "OSF HyperKvasir Repository (mh9sj)",
+        "url": "https://osf.io/mh9sj/",
+        "type": "archive",
+        "notes": "Active Open Science Framework persistent archive for HyperKvasir."
       }
     ],
     "verification": {
@@ -14120,23 +14189,29 @@
     },
     "source_references": [
       {
-        "title": "Kvasir-Capsule Simula Dataset Portal",
+        "title": "Simula Kvasir-Capsule Dataset Portal",
         "url": "https://datasets.simula.no/kvasir-capsule/",
-        "type": "repository",
-        "notes": "Official repository and video sequence distribution."
+        "type": "official_website",
+        "notes": "Official Simula research portal for Kvasir-Capsule downloads."
       },
       {
-        "title": "Scientific Data Publication (DOI: 10.1038/s41597-021-00920-9)",
-        "url": "https://doi.org/10.1038/s41597-021-00920-9",
+        "title": "Nature Scientific Data Publication (DOI: 10.1038/s41597-021-00920-z)",
+        "url": "https://doi.org/10.1038/s41597-021-00920-z",
         "type": "original_paper",
-        "notes": "Peer-reviewed dataset descriptor in Scientific Data."
+        "notes": "Peer-reviewed cohort and benchmark paper in Nature Scientific Data."
+      },
+      {
+        "title": "OSF Kvasir-Capsule Repository (dv2ag)",
+        "url": "https://osf.io/dv2ag/",
+        "type": "archive",
+        "notes": "Active Open Science Framework persistent repository for Kvasir-Capsule."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against Nature Scientific Data publication 10.1038/s41597-021-00920-9."
+      "notes": "Verified against Nature Scientific Data paper (DOI: 10.1038/s41597-021-00920-z) and Simula repository."
     },
     "dates": {
       "published": "2021-05-18"
@@ -14152,7 +14227,7 @@
     },
     "citation": {
       "paper_title": "Kvasir-Capsule, a video capsule endoscopy dataset",
-      "paper_url": "https://doi.org/10.1038/s41597-021-00920-9",
+      "paper_url": "https://doi.org/10.1038/s41597-021-00920-z",
       "authors": [
         "Pia H. Smedsrud",
         "Vajira Thambawita",
@@ -14160,8 +14235,8 @@
         "Pål Halvorsen",
         "Michael A. Riegler"
       ],
-      "doi": "10.1038/s41597-021-00920-9",
-      "bibtex": "@article{smedsrud2021kvasir,\n  title={Kvasir-Capsule, a video capsule endoscopy dataset},\n  author={Smedsrud, Pia H and Thambawita, Vajira and Hicks, Steven A and Gjestang, Henrik and Nedrejord, Oeyvind L and Njoelstad, Espen and Stor{\\aa}s, Andrea M and Engelstad, Kristin and R{\\ae}der, Mona and Jha, Debesh and others},\n  journal={Scientific Data},\n  volume={8},\n  number={1},\n  pages={142},\n  year={2021},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-021-00920-9}\n}"
+      "doi": "10.1038/s41597-021-00920-z",
+      "bibtex": "@article{smedsrud2021kvasir,\n  title={Kvasir-Capsule, a video capsule endoscopy dataset},\n  author={Smedsrud, Pia H and Thambawita, Vajira and Hicks, Steven A and Gjestang, Henrik and Nedrejord, Oeyvind L and Njoelstad, Espen and Stor{\\aa}s, Andrea M and Engelstad, Kristin and R{\\ae}der, Mona and Jha, Debesh and others},\n  journal={Scientific Data},\n  volume={8},\n  number={1},\n  pages={142},\n  year={2021},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-021-00920-z}\n}"
     },
     "geographic_coverage": [
       "Norway"
@@ -14301,6 +14376,12 @@
         "url": "https://doi.org/10.1038/s41597-020-0386-x",
         "type": "original_paper",
         "notes": "Peer-reviewed dataset descriptor in Scientific Data."
+      },
+      {
+        "title": "PhysioNet 12-Lead ECG Arrhythmia Record (DOI: 10.13026/wgex-er52)",
+        "url": "https://doi.org/10.13026/wgex-er52",
+        "type": "repository",
+        "notes": "Official PhysioNet persistent record for the Chapman/Shaoxing database."
       }
     ],
     "verification": {
@@ -14310,7 +14391,7 @@
       "notes": "Verified against PhysioNet record DOI 10.13026/nhjh-w653 and Nature Scientific Data 2020 paper."
     },
     "dates": {
-      "published": "2020-02-14"
+      "published": "2022-08-24"
     },
     "sample_count": {
       "total": 45152,
@@ -15464,12 +15545,11 @@
       "medical-education"
     ],
     "license": {
-      "status": "verified_open",
-      "name": "Apache-2.0",
-      "spdx_id": "Apache-2.0",
-      "url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "commercial_use": "allowed",
-      "notes": "Published under the Apache License 2.0."
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source (Data) / Hugging Face Tagged Apache-2.0",
+      "commercial_use": "unknown",
+      "url": "https://huggingface.co/datasets/medmcqa",
+      "notes": "The official GitHub repository lacks a formal license file, and the questions are derived from AIIMS and NEET-PG Indian medical entrance examinations owned by the respective examination authorities. Although the Hugging Face dataset card specifies Apache-2.0, the primary data source provides no explicit commercial license. Commercial permission is unknown."
     },
     "source_references": [
       {
@@ -15486,10 +15566,10 @@
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "provisional",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against PMLR Volume 174 publication and official GitHub repository."
+      "notes": "Provisional verification: primary source repository lacks a license file, and underlying Indian medical entrance exam questions are subject to third-party testing board copyright."
     },
     "dates": {
       "published": "2022-03-30"
@@ -15652,32 +15732,31 @@
       "usmle"
     ],
     "license": {
-      "status": "verified_open",
-      "name": "MIT License",
-      "spdx_id": "MIT",
-      "url": "https://opensource.org/licenses/MIT",
-      "commercial_use": "allowed",
-      "notes": "Open-access research repository licensed under the MIT License."
+      "status": "custom_permissive",
+      "name": "MIT License (Code) / Third-Party Copyrighted Medical Examinations (Data)",
+      "commercial_use": "unknown",
+      "url": "https://github.com/jind11/MedQA/blob/master/LICENSE",
+      "notes": "The repository source code is released under the MIT License. However, the benchmark question bank comprises medical licensing examination questions (USMLE, MCMLE, TMLMLE) and medical textbook excerpts owned by third-party medical examination boards and academic publishers. Commercial permissions for the underlying questions are unknown and not granted by the code license."
     },
     "source_references": [
       {
         "title": "MedQA GitHub Repository",
         "url": "https://github.com/jind11/MedQA",
         "type": "repository",
-        "notes": "Official repository with English and Chinese exam splits."
+        "notes": "Official code and data repository."
       },
       {
-        "title": "JMIR Medical Informatics Publication (DOI: 10.2196/26262)",
-        "url": "https://doi.org/10.2196/26262",
+        "title": "Applied Sciences Benchmark Publication (DOI: 10.3390/app11146421)",
+        "url": "https://doi.org/10.3390/app11146421",
         "type": "original_paper",
-        "notes": "Peer-reviewed journal paper establishing MedQA benchmarks."
+        "notes": "Peer-reviewed research paper in Applied Sciences describing the MedQA benchmark."
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "provisional",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against JMIR Medical Informatics 2021 publication and GitHub repository."
+      "notes": "Provisional verification: repository code is MIT licensed, but underlying medical board examination questions and textbooks remain copyrighted by third parties."
     },
     "dates": {
       "published": "2021-04-12"
@@ -15693,8 +15772,8 @@
       "status": "verified"
     },
     "citation": {
-      "paper_title": "Disease Knowledge Infusion for Healthcare Cognitive Tasks: Towards Solving Medical Question Answering",
-      "paper_url": "https://doi.org/10.2196/26262",
+      "paper_title": "What Disease Does This Patient Have? A Large-Scale Open Domain Question Answering Dataset from Medical Exams",
+      "paper_url": "https://doi.org/10.3390/app11146421",
       "authors": [
         "Di Jin",
         "Eileen Pan",
@@ -15703,8 +15782,8 @@
         "Hanyi Fang",
         "Peter Szolovits"
       ],
-      "doi": "10.2196/26262",
-      "bibtex": "@article{jin2021disease,\n  title={Disease Knowledge Infusion for Healthcare Cognitive Tasks: Towards Solving Medical Question Answering},\n  author={Jin, Di and Pan, Eileen and Oufattole, Nassim and Weng, Wei-Hung and Fang, Hanyi and Szolovits, Peter},\n  journal={JMIR Medical Informatics},\n  volume={9},\n  number={4},\n  pages={e26262},\n  year={2021},\n  publisher={JMIR Publications},\n  doi={10.2196/26262}\n}"
+      "doi": "10.3390/app11146421",
+      "bibtex": "@article{jin2021disease,\n  title={What Disease Does This Patient Have? A Large-Scale Open Domain Question Answering Dataset from Medical Exams},\n  author={Jin, Di and Pan, Eileen and Oufattole, Nassim and Weng, Wei-Hung and Fang, Hanyi and Szolovits, Peter},\n  journal={Applied Sciences},\n  volume={11},\n  number={14},\n  pages={6421},\n  year={2021},\n  publisher={MDPI},\n  doi={10.3390/app11146421}\n}"
     },
     "geographic_coverage": [
       "United States",
@@ -15895,11 +15974,11 @@
       "multimodal"
     ],
     "license": {
-      "status": "verified_non_commercial",
-      "name": "PhysioNet Credentialed Data Use Agreement v1.5.0",
-      "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
-      "commercial_use": "forbidden",
-      "notes": "Access requires credentialed PhysioNet account, completion of CITI Human Subjects Training, agreement to maintain patient confidentiality, and strict prohibition on re-identification or redistribution."
+      "status": "custom_permissive",
+      "name": "PhysioNet Credentialed Health Data License 1.5.0",
+      "url": "https://physionet.org/content/mimic-cxr/view-license/2.0.0/",
+      "commercial_use": "unknown",
+      "notes": "Governed by PhysioNet Credentialed/Restricted Health Data License 1.5.0, which restricts use to the \"sole purpose of lawful use in scientific research and no other\". While commercial data resale, unauthorized redistribution, and product deployment are strictly prohibited, whether bona fide scientific research conducted by commercial/industry investigators under institutional credentialing is permitted remains an unstated legal question. Commercial permission is recorded as unknown."
     },
     "source_references": [
       {
@@ -15916,10 +15995,10 @@
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "provisional",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-10-30",
-      "notes": "Verified against PhysioNet database landing page and Nature Scientific Data paper (DOI: 10.1038/s41597-019-0322-0)."
+      "notes": "Provisional verification due to commercial research interpretation under PhysioNet Credentialed Health Data License 1.5.0."
     },
     "size": {
       "amount": 4700.0,
@@ -15989,35 +16068,41 @@
       "icu"
     ],
     "license": {
-      "status": "verified_non_commercial",
-      "name": "PhysioNet Credentialed Data Use Agreement 1.5.0",
-      "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
-      "commercial_use": "forbidden",
-      "notes": "Credentialed access only: requires human research ethics training (CITI), identity verification, and signed PhysioNet Data Use Agreement."
+      "status": "custom_permissive",
+      "name": "PhysioNet Credentialed Health Data License 1.5.0",
+      "url": "https://physionet.org/content/mimiciv/view-license/3.1/",
+      "commercial_use": "unknown",
+      "notes": "Governed by PhysioNet Credentialed/Restricted Health Data License 1.5.0, which restricts use to the \"sole purpose of lawful use in scientific research and no other\". While commercial data resale, unauthorized redistribution, and product deployment are strictly prohibited, whether bona fide scientific research conducted by commercial/industry investigators under institutional credentialing is permitted remains an unstated legal question. Commercial permission is recorded as unknown."
     },
     "source_references": [
       {
-        "title": "PhysioNet MIMIC-IV Database Release Page",
-        "url": "https://physionet.org/content/mimiciv/3.1/",
+        "title": "PhysioNet MIMIC-IV v3.1 Repository (DOI: 10.13026/kpb9-mt58)",
+        "url": "https://doi.org/10.13026/kpb9-mt58",
         "type": "repository",
-        "notes": "Official repository and documentation on PhysioNet."
+        "notes": "Official persistent DOI landing page for MIMIC-IV v3.1."
       },
       {
         "title": "Nature Scientific Data Publication (DOI: 10.1038/s41597-022-01899-x)",
         "url": "https://doi.org/10.1038/s41597-022-01899-x",
         "type": "original_paper",
-        "notes": "Peer-reviewed dataset descriptor in Scientific Data."
+        "notes": "Comprehensive peer-reviewed cohort descriptor paper in Nature Scientific Data."
+      },
+      {
+        "title": "PhysioNet Credentialed Health Data Use Agreement 1.5.0",
+        "url": "https://physionet.org/content/mimiciv/view-dua/3.1/",
+        "type": "documentation",
+        "notes": "Mandatory Data Use Agreement governing access, ethical CITI training requirements, and strict non-commercial research use."
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "provisional",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against PhysioNet record DOI 10.13026/k8pt-kh64 and Nature Scientific Data 2023 paper."
+      "notes": "Provisional verification due to commercial research interpretation; dataset DOI 10.13026/kpb9-mt58 and CITI training requirements verified."
     },
     "dates": {
-      "published": "2020-08-10",
-      "last_updated": "2024-07-01"
+      "published": "2024-10-11",
+      "last_updated": "2024-10-11"
     },
     "sample_count": {
       "total": 300000,
@@ -16289,16 +16374,22 @@
         "url": "https://doi.org/10.1161/01.CIR.101.23.e215",
         "type": "original_paper",
         "notes": "Circulation publication describing PhysioNet and MIT-BIH databases."
+      },
+      {
+        "title": "PhysioNet MIT-BIH SVDB Record (DOI: 10.13026/C2V30W)",
+        "url": "https://doi.org/10.13026/C2V30W",
+        "type": "repository",
+        "notes": "Official PhysioNet persistent dataset identifier under ODC-By 1.0."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against PhysioNet persistent record DOI 10.13026/C2MP49."
+      "notes": "Verified against PhysioNet record DOI 10.13026/C2V30W and Circulation 2000 paper."
     },
     "dates": {
-      "published": "1997-06-01"
+      "published": "1999-08-03"
     },
     "sample_count": {
       "total": 78,
@@ -18858,27 +18949,33 @@
       "spdx_id": "CC0-1.0",
       "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
       "commercial_use": "allowed",
-      "notes": "Dedicated to the public domain under CC0 1.0 Universal."
+      "notes": "Image patches are dedicated to the public domain under CC0 1.0 Universal following CAMELYON16 source data; repository code is provided under MIT License."
     },
     "source_references": [
       {
         "title": "PatchCamelyon GitHub Repository",
         "url": "https://github.com/basveeling/pcam",
         "type": "repository",
-        "notes": "Official repository with dataset generation scripts and benchmark links."
+        "notes": "Official repository containing code, download mirrors, and documentation."
       },
       {
         "title": "MICCAI 2018 Conference Paper (DOI: 10.1007/978-3-030-00934-2_24)",
         "url": "https://doi.org/10.1007/978-3-030-00934-2_24",
         "type": "original_paper",
-        "notes": "Paper introducing PCam and rotation equivariant architectures."
+        "notes": "Original paper describing rotation-equivariant CNNs and the PCam benchmark."
+      },
+      {
+        "title": "PatchCamelyon Zenodo Mirror",
+        "url": "https://zenodo.org/records/2546921",
+        "type": "archive",
+        "notes": "Zenodo data mirror for PCam HDF5 splits."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against MICCAI 2018 paper and official GitHub release."
+      "notes": "Verified against MICCAI 2018 paper and official GitHub release. Note that data patches follow CAMELYON16 licensing, which has conflicting CC0 vs CC BY-NC-ND terms across challenge pages."
     },
     "dates": {
       "published": "2018-06-11"
@@ -19051,6 +19148,12 @@
         "url": "https://doi.org/10.22489/CinC.2017.065-469",
         "type": "original_paper",
         "notes": "Challenge overview paper describing dataset generation and evaluation metric."
+      },
+      {
+        "title": "PhysioNet/CinC Challenge 2017 Record (DOI: 10.13026/d3hm-sf11)",
+        "url": "https://doi.org/10.13026/d3hm-sf11",
+        "type": "repository",
+        "notes": "Official PhysioNet persistent challenge repository."
       }
     ],
     "verification": {
@@ -19060,7 +19163,7 @@
       "notes": "Verified against PhysioNet persistent record DOI 10.13026/C2K59Q."
     },
     "dates": {
-      "published": "2017-09-01"
+      "published": "2017-02-01"
     },
     "sample_count": {
       "total": 8528,
@@ -19573,6 +19676,12 @@
         "url": "https://doi.org/10.1117/1.JMI.5.4.044501",
         "type": "original_paper",
         "notes": "SPIE-AAPM-NCI PROSTATEx Challenge summary publication."
+      },
+      {
+        "title": "TCIA PROSTATEx Persistent Collection (DOI: 10.7937/K9TCIA.2017.MURS5CL)",
+        "url": "https://doi.org/10.7937/K9TCIA.2017.MURS5CL",
+        "type": "repository",
+        "notes": "Official DataCite persistent identifier on The Cancer Imaging Archive."
       }
     ],
     "verification": {
@@ -19585,9 +19694,13 @@
       "published": "2017-02-08"
     },
     "sample_count": {
-      "total": 346,
-      "unit": "mpMRI studies",
-      "status": "verified"
+      "total": 344,
+      "unit": "subjects",
+      "status": "verified",
+      "splits": {
+        "train_subjects": 204,
+        "test_subjects": 140
+      }
     },
     "citation": {
       "paper_title": "PROSTATEx Challenges for computerized classification of prostate lesions from multiparametric magnetic resonance images",
@@ -19797,12 +19910,11 @@
       "rct"
     ],
     "license": {
-      "status": "verified_open",
-      "name": "MIT License",
-      "spdx_id": "MIT",
-      "url": "https://opensource.org/licenses/MIT",
-      "commercial_use": "allowed",
-      "notes": "Published under the MIT License."
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source (Academic Text Mining)",
+      "commercial_use": "unknown",
+      "url": "https://github.com/Franck-Dernoncourt/pubmed-rct",
+      "notes": "The GitHub repository does not contain a license file. The dataset consists of sequential sentences extracted from ~200,000 PubMed randomized controlled trial abstracts subject to original journal publisher copyrights. Commercial use permissions are unknown."
     },
     "source_references": [
       {
@@ -19816,13 +19928,19 @@
         "url": "https://arxiv.org/abs/1710.06071",
         "type": "original_paper",
         "notes": "Original benchmark paper defining the sequential sentence classification task."
+      },
+      {
+        "title": "ACL Anthology Publication Record (I17-2052)",
+        "url": "https://aclanthology.org/I17-2052/",
+        "type": "original_paper",
+        "notes": "Official ACL Anthology indexed record for IJCNLP 2017 paper."
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "provisional",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against IJCNLP 2017 publication and GitHub repository."
+      "notes": "Provisional verification: GitHub repository lacks an explicit license file, and underlying abstracts are copyrighted by academic publishers."
     },
     "dates": {
       "published": "2017-10-17"
@@ -19839,7 +19957,7 @@
     },
     "citation": {
       "paper_title": "PubMed 200k RCT: a Dataset for Sequential Sentence Classification in Medical Abstracts",
-      "paper_url": "https://arxiv.org/abs/1710.06071",
+      "paper_url": "https://aclanthology.org/I17-2052/",
       "authors": [
         "Franck Dernoncourt",
         "Ji Young Lee"
@@ -20523,12 +20641,12 @@
       "optic-disc-segmentation"
     ],
     "license": {
-      "status": "verified_non_commercial",
-      "name": "CC BY-NC-SA 4.0",
+      "status": "custom_permissive",
+      "name": "REFUGE Challenge Terms of Participation / Non-Commercial Research",
       "spdx_id": "CC-BY-NC-SA-4.0",
-      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode",
+      "url": "https://refuge.grand-challenge.org/Rules/",
       "commercial_use": "forbidden",
-      "notes": "Published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International."
+      "notes": "Data provided to registered challenge participants under Grand Challenge Terms of Service and REFUGE Terms of Participation. Commercial systems may be evaluated with organizers, but general commercial data exploitation is restricted without separate agreement."
     },
     "source_references": [
       {
@@ -20545,10 +20663,10 @@
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "provisional",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against Medical Image Analysis 2020 publication and Grand Challenge repository."
+      "notes": "Provisional verification based on Grand Challenge Rules; dataset terms are defined via challenge participation terms rather than a standard open license."
     },
     "dates": {
       "published": "2018-09-01"
@@ -20795,23 +20913,23 @@
     },
     "source_references": [
       {
-        "title": "Kaggle RSNA Pneumonia Detection Challenge Portal",
+        "title": "Kaggle RSNA Pneumonia Detection Challenge",
         "url": "https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge/data",
-        "type": "repository",
-        "notes": "Official competition repository with DICOM files and bounding boxes."
+        "type": "official_website",
+        "notes": "Competition landing page and data distribution."
       },
       {
-        "title": "Radiology: Artificial Intelligence Publication (DOI: 10.1148/ryai.2019190055)",
-        "url": "https://doi.org/10.1148/ryai.2019190055",
+        "title": "Radiology: AI Publication (DOI: 10.1148/ryai.2019180041)",
+        "url": "https://doi.org/10.1148/ryai.2019180041",
         "type": "original_paper",
-        "notes": "Publication describing dataset curation and multi-radiologist annotation process."
+        "notes": "Peer-reviewed challenge descriptor paper in Radiology: Artificial Intelligence."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against RSNA challenge repository and Radiology: AI 2019 paper."
+      "notes": "Verified against Radiology: AI publication (DOI: 10.1148/ryai.2019180041) and Kaggle challenge rules."
     },
     "dates": {
       "published": "2018-08-27"
@@ -20826,8 +20944,8 @@
       "status": "verified"
     },
     "citation": {
-      "paper_title": "Augmenting the National Institutes of Health Chest Radiograph Dataset to Create the RSNA Pneumonia Detection Challenge Dataset",
-      "paper_url": "https://doi.org/10.1148/ryai.2019190055",
+      "paper_title": "Augmenting the National Institutes of Health Chest Radiograph Dataset with Expert Annotations of Possible Pneumonia",
+      "paper_url": "https://doi.org/10.1148/ryai.2019180041",
       "authors": [
         "George Shih",
         "Felipe C. Kitamura",
@@ -20835,8 +20953,8 @@
         "Jayashree Kalpathy-Cramer",
         "Carol C. Wu"
       ],
-      "doi": "10.1148/ryai.2019190055",
-      "bibtex": "@article{shih2019augmenting,\n  title={Augmenting the National Institutes of Health Chest Radiograph Dataset to Create the RSNA Pneumonia Detection Challenge Dataset},\n  author={Shih, George and Wu, Carol C and Halabi, Safwan S and Kohli, Marc D and Prevedello, Luciano M and Cook, Tessa S and Sharma, Arjun and Amorosa, Judith K and Arteaga, Veronica and Galperin-Aizenberg, Maya and others},\n  journal={Radiology: Artificial Intelligence},\n  volume={1},\n  number={6},\n  pages={e190055},\n  year={2019},\n  publisher={Radiological Society of North America},\n  doi={10.1148/ryai.2019190055}\n}"
+      "doi": "10.1148/ryai.2019180041",
+      "bibtex": "@article{shih2019augmenting,\n  title={Augmenting the National Institutes of Health Chest Radiograph Dataset with Expert Annotations of Possible Pneumonia},\n  author={Shih, George and Wu, Carol C and Halabi, Safwan S and Kohli, Marc D and Prevedello, Luciano M and Cook, Tessa S and Sharma, Arjun and Amorosa, Judith K and Arteaga, Victorine and Galperin-Aizenberg, Maya and others},\n  journal={Radiology: Artificial Intelligence},\n  volume={1},\n  number={5},\n  pages={e190041},\n  year={2019},\n  publisher={Radiological Society of North America},\n  doi={10.1148/ryai.2019180041}\n}"
     },
     "geographic_coverage": [
       "United States"
@@ -21219,7 +21337,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Curatorial Team",
       "verified_date": "2026-11-03",
-      "notes": "Verified against SIIM-ACR competition repository and radiologist mask schemas."
+      "notes": "Verified against Journal of Digital Imaging publication (DOI: 10.1007/s10278-019-00299-9) and SIIM-ACR challenge terms."
     },
     "dates": {
       "published": "2019-06-25"
@@ -21234,12 +21352,18 @@
       "status": "verified"
     },
     "citation": {
-      "paper_title": "SIIM-ACR Pneumothorax Segmentation Challenge",
-      "paper_url": "https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation",
+      "paper_title": "Crowdsourcing pneumothorax annotations using machine learning annotations on the NIH chest X-ray dataset",
+      "paper_url": "https://doi.org/10.1007/s10278-019-00299-9",
       "authors": [
-        "Society for Imaging Informatics in Medicine",
-        "American College of Radiology"
-      ]
+        "Steven G. Filice",
+        "Mark A. Stein",
+        "Carol C. Wu",
+        "Phoebe N. Arteaga",
+        "Stephen Borstelmann",
+        "George Shih"
+      ],
+      "doi": "10.1007/s10278-019-00299-9",
+      "bibtex": "@article{filice2020crowdsourcing,\n  title={Crowdsourcing pneumothorax annotations using machine learning annotations on the NIH chest X-ray dataset},\n  author={Filice, Steven G and Stein, Mark A and Wu, Carol C and Arteaga, Phoebe N and Borstelmann, Stephen and Gaddikeri, S and Galperin-Aizenberg, M and Gill, R and Godoy, M C B and Hobbs, S and others},\n  journal={Journal of Digital Imaging},\n  volume={33},\n  number={2},\n  pages={490--495},\n  year={2020},\n  publisher={Springer},\n  doi={10.1007/s10278-019-00299-9}\n}"
     },
     "geographic_coverage": [
       "United States"
@@ -21395,6 +21519,12 @@
         "url": "https://doi.org/10.1109/10.867928",
         "type": "original_paper",
         "notes": "Publication on sleep-dependent slow-wave microcontinuity."
+      },
+      {
+        "title": "PhysioNet Sleep-EDF Expanded Record (DOI: 10.13026/C2X676)",
+        "url": "https://doi.org/10.13026/C2X676",
+        "type": "repository",
+        "notes": "Official PhysioNet persistent dataset record under ODC-By 1.0."
       }
     ],
     "verification": {
@@ -21404,7 +21534,7 @@
       "notes": "Verified against PhysioNet record DOI 10.13026/C2X676."
     },
     "dates": {
-      "published": "2018-03-23"
+      "published": "2013-10-24"
     },
     "sample_count": {
       "total": 197,
@@ -23621,6 +23751,12 @@
         "url": "https://www.apollohospitals.com/",
         "type": "official_website",
         "notes": "Source medical institution in Tamil Nadu, India."
+      },
+      {
+        "title": "UCI Machine Learning Repository Persistent Record (DOI: 10.24432/C5G020)",
+        "url": "https://doi.org/10.24432/C5G020",
+        "type": "repository",
+        "notes": "Official UCI Machine Learning Repository persistent DOI record."
       }
     ],
     "verification": {
@@ -24663,9 +24799,9 @@
     "license": {
       "status": "custom_permissive",
       "name": "PhysioNet Credentialed Health Data License 1.5.0",
-      "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
-      "commercial_use": "allowed",
-      "notes": "Available under PhysioNet Credentialed Health Data License for research and clinical algorithm validation."
+      "url": "https://physionet.org/content/vindr-cxr/view-license/1.0.0/",
+      "commercial_use": "unknown",
+      "notes": "Governed by PhysioNet Credentialed/Restricted Health Data License 1.5.0, which restricts use to the \"sole purpose of lawful use in scientific research and no other\". While commercial data resale, unauthorized redistribution, and product deployment are strictly prohibited, whether bona fide scientific research conducted by commercial/industry investigators under institutional credentialing is permitted remains an unstated legal question. Commercial permission is recorded as unknown."
     },
     "source_references": [
       {
@@ -24682,10 +24818,10 @@
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "provisional",
       "verified_by": "OpenDatasets Maintainers",
       "verified_date": "2026-11-02",
-      "notes": "Verified against Nature Scientific Data publication and PhysioNet portal."
+      "notes": "Provisional verification due to commercial research interpretation under PhysioNet Credentialed Health Data License 1.5.0."
     },
     "sample_count": {
       "status": "verified",
@@ -24758,10 +24894,10 @@
     ],
     "license": {
       "status": "custom_permissive",
-      "name": "PhysioNet Credentialed Health Data License 1.5.0",
-      "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
-      "commercial_use": "allowed",
-      "notes": "Available under PhysioNet Credentialed Health Data License for research and clinical algorithm validation."
+      "name": "PhysioNet Restricted Health Data License 1.5.0",
+      "url": "https://physionet.org/content/vindr-mammo/view-license/1.0.0/",
+      "commercial_use": "unknown",
+      "notes": "Governed by PhysioNet Credentialed/Restricted Health Data License 1.5.0, which restricts use to the \"sole purpose of lawful use in scientific research and no other\". While commercial data resale, unauthorized redistribution, and product deployment are strictly prohibited, whether bona fide scientific research conducted by commercial/industry investigators under institutional credentialing is permitted remains an unstated legal question. Commercial permission is recorded as unknown."
     },
     "source_references": [
       {
@@ -24778,10 +24914,10 @@
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "provisional",
       "verified_by": "OpenDatasets Maintainers",
       "verified_date": "2026-11-02",
-      "notes": "Verified against Nature Scientific Data publication and PhysioNet repository."
+      "notes": "Provisional verification due to commercial research interpretation under PhysioNet Restricted Health Data License 1.5.0."
     },
     "sample_count": {
       "status": "verified",

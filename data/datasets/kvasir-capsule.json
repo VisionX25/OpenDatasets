@@ -3,10 +3,10 @@
   "id": "kvasir-capsule",
   "slug": "kvasir-capsule",
   "name": "Kvasir-Capsule: Video Capsule Endoscopy Dataset",
-  "description": "Kvasir-Capsule is an open-access video capsule endoscopy (VCE) dataset collected by Simula Research Laboratory and Bærum Hospital in Norway, published in Nature Scientific Data. Providing unconstrained visual insights into the human small intestine, the dataset comprises 47,238 labeled bounding frames and 117 video sequences from capsule endoscopy examinations. Annotations span 14 distinct pathological and anatomical classes, including vascular lesions (angiectasia), inflammatory changes (ulcers, erosion, erythema), luminal blood, polypoid lesions, and standard anatomical markers (ileocecal valve, pylorus). Kvasir-Capsule enables computer vision researchers to develop automated abnormality detection algorithms that alleviate the labor-intensive burden of reviewing multi-hour capsule videos.",
+  "description": "Kvasir-Capsule is an open-access video capsule endoscopy (VCE) dataset collected by Simula Research Laboratory and B\u00e6rum Hospital in Norway, published in Nature Scientific Data. Providing unconstrained visual insights into the human small intestine, the dataset comprises 47,238 labeled bounding frames and 117 video sequences from capsule endoscopy examinations. Annotations span 14 distinct pathological and anatomical classes, including vascular lesions (angiectasia), inflammatory changes (ulcers, erosion, erythema), luminal blood, polypoid lesions, and standard anatomical markers (ileocecal valve, pylorus). Kvasir-Capsule enables computer vision researchers to develop automated abnormality detection algorithms that alleviate the labor-intensive burden of reviewing multi-hour capsule videos.",
   "homepage_url": "https://datasets.simula.no/kvasir-capsule/",
   "publisher": {
-    "name": "Simula Research Laboratory & Bærum Hospital",
+    "name": "Simula Research Laboratory & B\u00e6rum Hospital",
     "type": "academic",
     "url": "https://datasets.simula.no"
   },
@@ -34,23 +34,29 @@
   },
   "source_references": [
     {
-      "title": "Kvasir-Capsule Simula Dataset Portal",
+      "title": "Simula Kvasir-Capsule Dataset Portal",
       "url": "https://datasets.simula.no/kvasir-capsule/",
-      "type": "repository",
-      "notes": "Official repository and video sequence distribution."
+      "type": "official_website",
+      "notes": "Official Simula research portal for Kvasir-Capsule downloads."
     },
     {
-      "title": "Scientific Data Publication (DOI: 10.1038/s41597-021-00920-9)",
-      "url": "https://doi.org/10.1038/s41597-021-00920-9",
+      "title": "Nature Scientific Data Publication (DOI: 10.1038/s41597-021-00920-z)",
+      "url": "https://doi.org/10.1038/s41597-021-00920-z",
       "type": "original_paper",
-      "notes": "Peer-reviewed dataset descriptor in Scientific Data."
+      "notes": "Peer-reviewed cohort and benchmark paper in Nature Scientific Data."
+    },
+    {
+      "title": "OSF Kvasir-Capsule Repository (dv2ag)",
+      "url": "https://osf.io/dv2ag/",
+      "type": "archive",
+      "notes": "Active Open Science Framework persistent repository for Kvasir-Capsule."
     }
   ],
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Curatorial Team",
     "verified_date": "2026-11-03",
-    "notes": "Verified against Nature Scientific Data publication 10.1038/s41597-021-00920-9."
+    "notes": "Verified against Nature Scientific Data paper (DOI: 10.1038/s41597-021-00920-z) and Simula repository."
   },
   "dates": {
     "published": "2021-05-18"
@@ -66,25 +72,25 @@
   },
   "citation": {
     "paper_title": "Kvasir-Capsule, a video capsule endoscopy dataset",
-    "paper_url": "https://doi.org/10.1038/s41597-021-00920-9",
+    "paper_url": "https://doi.org/10.1038/s41597-021-00920-z",
     "authors": [
       "Pia H. Smedsrud",
       "Vajira Thambawita",
       "Steven A. Hicks",
-      "Pål Halvorsen",
+      "P\u00e5l Halvorsen",
       "Michael A. Riegler"
     ],
-    "doi": "10.1038/s41597-021-00920-9",
-    "bibtex": "@article{smedsrud2021kvasir,\n  title={Kvasir-Capsule, a video capsule endoscopy dataset},\n  author={Smedsrud, Pia H and Thambawita, Vajira and Hicks, Steven A and Gjestang, Henrik and Nedrejord, Oeyvind L and Njoelstad, Espen and Stor{\\aa}s, Andrea M and Engelstad, Kristin and R{\\ae}der, Mona and Jha, Debesh and others},\n  journal={Scientific Data},\n  volume={8},\n  number={1},\n  pages={142},\n  year={2021},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-021-00920-9}\n}"
+    "doi": "10.1038/s41597-021-00920-z",
+    "bibtex": "@article{smedsrud2021kvasir,\n  title={Kvasir-Capsule, a video capsule endoscopy dataset},\n  author={Smedsrud, Pia H and Thambawita, Vajira and Hicks, Steven A and Gjestang, Henrik and Nedrejord, Oeyvind L and Njoelstad, Espen and Stor{\\aa}s, Andrea M and Engelstad, Kristin and R{\\ae}der, Mona and Jha, Debesh and others},\n  journal={Scientific Data},\n  volume={8},\n  number={1},\n  pages={142},\n  year={2021},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-021-00920-z}\n}"
   },
   "geographic_coverage": [
     "Norway"
   ],
   "provenance": {
-    "collection_method": "Ingestible wireless capsule endoscopy exams performed at Bærum Hospital using Olympus EC-10 Endocapsule systems.",
+    "collection_method": "Ingestible wireless capsule endoscopy exams performed at B\u00e6rum Hospital using Olympus EC-10 Endocapsule systems.",
     "curation_notes": "Expert medical labeling across 14 pathological and normal anatomical classes.",
     "data_sources": [
-      "Bærum Hospital, Norway"
+      "B\u00e6rum Hospital, Norway"
     ]
   }
 }

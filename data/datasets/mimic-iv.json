@@ -3,7 +3,7 @@
   "id": "mimic-iv",
   "slug": "mimic-iv",
   "name": "MIMIC-IV: Medical Information Mart for Intensive Care IV",
-  "description": "MIMIC-IV is the contemporary, premier relational electronic health record (EHR) database developed by the MIT Laboratory for Computational Physiology and Beth Israel Deaconess Medical Center (BIDMC), published in Nature Scientific Data. Spanning over a decade of clinical care (2008–2019), MIMIC-IV documents the comprehensive hospital journeys of over 300,000 distinct patients admitted to emergency departments and intensive care units. Structured across modular clinical domains (core, hosp, icu, ed), the database contains de-identified tables capturing admissions, patient demographics, laboratory blood chemistry and hematology tests, provider orders, medication administration records, vital signs, procedural interventions, and ICD-9/ICD-10 diagnostic billing codes.",
+  "description": "MIMIC-IV is the contemporary, premier relational electronic health record (EHR) database developed by the MIT Laboratory for Computational Physiology and Beth Israel Deaconess Medical Center (BIDMC), published in Nature Scientific Data. Spanning over a decade of clinical care (2008\u20132019), MIMIC-IV documents the comprehensive hospital journeys of over 300,000 distinct patients admitted to emergency departments and intensive care units. Structured across modular clinical domains (core, hosp, icu, ed), the database contains de-identified tables capturing admissions, patient demographics, laboratory blood chemistry and hematology tests, provider orders, medication administration records, vital signs, procedural interventions, and ICD-9/ICD-10 diagnostic billing codes.",
   "homepage_url": "https://physionet.org/content/mimiciv/3.1/",
   "publisher": {
     "name": "MIT Laboratory for Computational Physiology & BIDMC",
@@ -28,35 +28,41 @@
     "icu"
   ],
   "license": {
-    "status": "verified_non_commercial",
-    "name": "PhysioNet Credentialed Data Use Agreement 1.5.0",
-    "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
-    "commercial_use": "forbidden",
-    "notes": "Credentialed access only: requires human research ethics training (CITI), identity verification, and signed PhysioNet Data Use Agreement."
+    "status": "custom_permissive",
+    "name": "PhysioNet Credentialed Health Data License 1.5.0",
+    "url": "https://physionet.org/content/mimiciv/view-license/3.1/",
+    "commercial_use": "unknown",
+    "notes": "Governed by PhysioNet Credentialed/Restricted Health Data License 1.5.0, which restricts use to the \"sole purpose of lawful use in scientific research and no other\". While commercial data resale, unauthorized redistribution, and product deployment are strictly prohibited, whether bona fide scientific research conducted by commercial/industry investigators under institutional credentialing is permitted remains an unstated legal question. Commercial permission is recorded as unknown."
   },
   "source_references": [
     {
-      "title": "PhysioNet MIMIC-IV Database Release Page",
-      "url": "https://physionet.org/content/mimiciv/3.1/",
+      "title": "PhysioNet MIMIC-IV v3.1 Repository (DOI: 10.13026/kpb9-mt58)",
+      "url": "https://doi.org/10.13026/kpb9-mt58",
       "type": "repository",
-      "notes": "Official repository and documentation on PhysioNet."
+      "notes": "Official persistent DOI landing page for MIMIC-IV v3.1."
     },
     {
       "title": "Nature Scientific Data Publication (DOI: 10.1038/s41597-022-01899-x)",
       "url": "https://doi.org/10.1038/s41597-022-01899-x",
       "type": "original_paper",
-      "notes": "Peer-reviewed dataset descriptor in Scientific Data."
+      "notes": "Comprehensive peer-reviewed cohort descriptor paper in Nature Scientific Data."
+    },
+    {
+      "title": "PhysioNet Credentialed Health Data Use Agreement 1.5.0",
+      "url": "https://physionet.org/content/mimiciv/view-dua/3.1/",
+      "type": "documentation",
+      "notes": "Mandatory Data Use Agreement governing access, ethical CITI training requirements, and strict non-commercial research use."
     }
   ],
   "verification": {
-    "status": "verified",
+    "status": "provisional",
     "verified_by": "OpenDatasets Curatorial Team",
     "verified_date": "2026-11-03",
-    "notes": "Verified against PhysioNet record DOI 10.13026/k8pt-kh64 and Nature Scientific Data 2023 paper."
+    "notes": "Provisional verification due to commercial research interpretation; dataset DOI 10.13026/kpb9-mt58 and CITI training requirements verified."
   },
   "dates": {
-    "published": "2020-08-10",
-    "last_updated": "2024-07-01"
+    "published": "2024-10-11",
+    "last_updated": "2024-10-11"
   },
   "sample_count": {
     "total": 300000,

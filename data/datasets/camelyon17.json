@@ -26,32 +26,49 @@
     "whole-slide-imaging"
   ],
   "license": {
-    "status": "public_domain",
-    "name": "CC0 1.0 Universal",
-    "spdx_id": "CC0-1.0",
-    "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
-    "commercial_use": "allowed",
-    "notes": "Released into the public domain under CC0 1.0 Universal."
+    "status": "custom_permissive",
+    "name": "Conflicting: CC0 1.0 (Data Portal & GigaDB) vs CC BY-NC-ND 4.0 (Download) vs Challenge Rules",
+    "commercial_use": "unknown",
+    "url": "https://camelyon17.grand-challenge.org/Data/",
+    "notes": "Conflicting terms exist across official channels: The /Data/ portal, GigaScience Database (DOI: 10.5524/100439), and AWS Open Data Registry designate the collection under CC0 1.0; however, the /Download/ portal explicitly licenses the files under CC BY-NC-ND 4.0, while Challenge Rules govern participation and submission rights. Commercial permissions are unresolved and recorded as unknown."
   },
   "source_references": [
     {
       "title": "CAMELYON17 Challenge Data Portal",
       "url": "https://camelyon17.grand-challenge.org/Data/",
       "type": "official_website",
-      "notes": "Official challenge repository and data release."
+      "notes": "Official challenge description stating CC0 terms."
+    },
+    {
+      "title": "CAMELYON17 Download Portal (CC BY-NC-ND 4.0)",
+      "url": "https://camelyon17.grand-challenge.org/Download/",
+      "type": "documentation",
+      "notes": "Download portal displaying Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license."
     },
     {
       "title": "IEEE TMI Benchmark Paper (DOI: 10.1109/TMI.2018.2867350)",
       "url": "https://doi.org/10.1109/TMI.2018.2867350",
       "type": "original_paper",
-      "notes": "IEEE Transactions on Medical Imaging overview paper."
+      "notes": "Peer-reviewed challenge results published in IEEE Transactions on Medical Imaging."
+    },
+    {
+      "title": "GigaScience Database CAMELYON Dataset (DOI: 10.5524/100439)",
+      "url": "https://doi.org/10.5524/100439",
+      "type": "repository",
+      "notes": "Authoritative DataCite repository archive under GigaScience."
+    },
+    {
+      "title": "Registry of Open Data on AWS (CAMELYON)",
+      "url": "https://registry.opendata.aws/camelyon/",
+      "type": "repository",
+      "notes": "AWS Open Data mirror managed by Radboud University Medical Center."
     }
   ],
   "verification": {
-    "status": "verified",
+    "status": "provisional",
     "verified_by": "OpenDatasets Curatorial Team",
     "verified_date": "2026-11-03",
-    "notes": "Verified against IEEE TMI 2019 publication and Grand Challenge repository."
+    "notes": "Provisional verification due to multi-source licensing conflict between CC0 on Data page, CC BY-NC-ND 4.0 on Download page, and Challenge Rules."
   },
   "dates": {
     "published": "2017-04-18"

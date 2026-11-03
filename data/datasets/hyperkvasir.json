@@ -3,10 +3,10 @@
   "id": "hyperkvasir",
   "slug": "hyperkvasir",
   "name": "HyperKvasir: Comprehensive Multi-Class Gastrointestinal Endoscopy Dataset",
-  "description": "HyperKvasir is the largest publicly accessible multi-class image and video dataset for gastrointestinal (GI) endoscopy, published in Nature Scientific Data by Simula Research Laboratory and Bærum Hospital, Norway. The collection aggregates 110,079 images and video frames obtained during real-world colonoscopy and gastroscopy examinations. It encompasses 10,662 labeled images organized into 23 distinct clinical findings across anatomical landmarks, pathological findings (polyps, ulcerative colitis, esophagitis, Barrett's esophagus), therapeutic interventions, and quality-of-preparation stages; 99,417 unlabeled endoscopy frames; 1,000 segmented polyp images with pixel-level ground-truth masks; and 374 video sequences total.",
+  "description": "HyperKvasir is the largest publicly accessible multi-class image and video dataset for gastrointestinal (GI) endoscopy, published in Nature Scientific Data by Simula Research Laboratory and B\u00e6rum Hospital, Norway. The collection aggregates 110,079 images and video frames obtained during real-world colonoscopy and gastroscopy examinations. It encompasses 10,662 labeled images organized into 23 distinct clinical findings across anatomical landmarks, pathological findings (polyps, ulcerative colitis, esophagitis, Barrett's esophagus), therapeutic interventions, and quality-of-preparation stages; 99,417 unlabeled endoscopy frames; 1,000 segmented polyp images with pixel-level ground-truth masks; and 374 video sequences total.",
   "homepage_url": "https://datasets.simula.no/hyper-kvasir/",
   "publisher": {
-    "name": "Simula Research Laboratory & Bærum Hospital",
+    "name": "Simula Research Laboratory & B\u00e6rum Hospital",
     "type": "academic",
     "url": "https://datasets.simula.no"
   },
@@ -36,16 +36,22 @@
   },
   "source_references": [
     {
-      "title": "HyperKvasir Simula Dataset Page",
+      "title": "Simula HyperKvasir Dataset Portal",
       "url": "https://datasets.simula.no/hyper-kvasir/",
-      "type": "repository",
-      "notes": "Official open-data distribution portal."
+      "type": "official_website",
+      "notes": "Official Simula project page and direct download mirrors."
     },
     {
-      "title": "Scientific Data Publication (DOI: 10.1038/s41597-020-00622-y)",
+      "title": "Nature Scientific Data Publication (DOI: 10.1038/s41597-020-00622-y)",
       "url": "https://doi.org/10.1038/s41597-020-00622-y",
       "type": "original_paper",
-      "notes": "Peer-reviewed dataset descriptor article in Scientific Data."
+      "notes": "Peer-reviewed dataset descriptor in Nature Scientific Data."
+    },
+    {
+      "title": "OSF HyperKvasir Repository (mh9sj)",
+      "url": "https://osf.io/mh9sj/",
+      "type": "archive",
+      "notes": "Active Open Science Framework persistent archive for HyperKvasir."
     }
   ],
   "verification": {
@@ -74,7 +80,7 @@
     "authors": [
       "Hanna Borgli",
       "Vajira Thambawita",
-      "Pål Halvorsen",
+      "P\u00e5l Halvorsen",
       "Michael A. Riegler"
     ],
     "doi": "10.1038/s41597-020-00622-y",
@@ -84,10 +90,10 @@
     "Norway"
   ],
   "provenance": {
-    "collection_method": "Standard clinical endoscopy procedures conducted at Bærum Hospital using Olympus endoscopy equipment.",
+    "collection_method": "Standard clinical endoscopy procedures conducted at B\u00e6rum Hospital using Olympus endoscopy equipment.",
     "curation_notes": "Expert gastroenterologist annotation across 23 classes and 1,000 segmented polyp masks.",
     "data_sources": [
-      "Bærum Hospital, Vestre Viken Hospital Trust, Norway"
+      "B\u00e6rum Hospital, Vestre Viken Hospital Trust, Norway"
     ]
   }
 }

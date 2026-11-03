@@ -46,6 +46,12 @@
       "url": "https://doi.org/10.1117/1.JMI.5.4.044501",
       "type": "original_paper",
       "notes": "SPIE-AAPM-NCI PROSTATEx Challenge summary publication."
+    },
+    {
+      "title": "TCIA PROSTATEx Persistent Collection (DOI: 10.7937/K9TCIA.2017.MURS5CL)",
+      "url": "https://doi.org/10.7937/K9TCIA.2017.MURS5CL",
+      "type": "repository",
+      "notes": "Official DataCite persistent identifier on The Cancer Imaging Archive."
     }
   ],
   "verification": {
@@ -58,9 +64,13 @@
     "published": "2017-02-08"
   },
   "sample_count": {
-    "total": 346,
-    "unit": "mpMRI studies",
-    "status": "verified"
+    "total": 344,
+    "unit": "subjects",
+    "status": "verified",
+    "splits": {
+      "train_subjects": 204,
+      "test_subjects": 140
+    }
   },
   "citation": {
     "paper_title": "PROSTATEx Challenges for computerized classification of prostate lesions from multiparametric magnetic resonance images",
