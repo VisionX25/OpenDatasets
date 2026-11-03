@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "soybean-leaf-pest-damage",
+  "slug": "soybean-leaf-pest-damage",
+  "name": "Soybean Leaf Images for Pest Damage Recognition",
+  "description": "The Soybean Leaf Images for Pest Damage Recognition dataset is an agricultural computer vision collection containing 6,410 real-world images of soybean leaves (Glycine max) photographed in commercial farming environments across southern Brazil. The dataset is categorized into three classes: caterpillar defoliation damage (3,309 images), Diabrotica speciosa beetle feeding damage (2,205 images), and healthy foliage without pest injury (896 images). Captured under unconstrained field conditions (wind, sunlight, clouds, and varied shadows) using handheld smartphones and aerial drones, images were standardized to 500x500 pixels. The dataset was designed to train convolutional neural networks for pest monitoring, automated defoliation calculation, and precision pest management.",
+  "homepage_url": "https://data.mendeley.com/datasets/bycbh73438/1",
+  "publisher": {
+    "name": "Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "soybean",
+    "pest-monitoring",
+    "crop-monitoring",
+    "brazil"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Images of Soybean Leaves — Mendeley Data Repository",
+      "url": "https://data.mendeley.com/datasets/bycbh73438/1",
+      "type": "repository",
+      "notes": "Official repository landing page."
+    },
+    {
+      "title": "Revista Brasileira de Computação Aplicada Paper (DOI: 10.5335/rbca.v17i2.16186)",
+      "url": "https://doi.org/10.5335/rbca.v17i2.16186",
+      "type": "original_paper",
+      "notes": "Peer-reviewed research utilizing the dataset for pest defoliation identification."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against DataCite DOI 10.17632/bycbh73438.1 and RBCA journal publication."
+  },
+  "dates": {
+    "published": "2021-09-02"
+  },
+  "sample_count": {
+    "total": 6410,
+    "splits": {
+      "caterpillar": 3309,
+      "diabrotica_speciosa": 2205,
+      "healthy": 896
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "AMIPDI: architecture model to identify pests in soybean defoliation images using convolutional neural networks",
+    "paper_url": "https://doi.org/10.5335/rbca.v17i2.16186",
+    "authors": [
+      "Maria Eloisa Mignoni",
+      "Aislan Honorato",
+      "Cesar Zagonel",
+      "Gabriel de Oliveira Ramos",
+      "Rafael Kunst Kunst"
+    ],
+    "doi": "10.5335/rbca.v17i2.16186",
+    "bibtex": "@article{mignoni2025amipdi,\n  title={AMIPDI: architecture model to identify pests in soybean defoliation images using convolutional neural networks},\n  author={Mignoni, Maria Eloisa and Honorato, Aislan and Zagonel, Cesar and Ramos, Gabriel de Oliveira and Kunst, Rafael},\n  journal={Revista Brasileira de Computa{\\c{c}}{\\~a}o Aplicada},\n  volume={17},\n  number={2},\n  year={2025},\n  publisher={Universidade de Passo Fundo},\n  doi={10.5335/rbca.v17i2.16186}\n}"
+  },
+  "geographic_coverage": [
+    "Brazil"
+  ],
+  "provenance": {
+    "collection_method": "Smartphone and drone photography over commercial soybean crops in Rio Grande do Sul, Brazil.",
+    "curation_notes": "6,410 images standardized to 500x500 pixels preserving uncurated natural lighting and wind movement.",
+    "data_sources": [
+      "Brazilian commercial soybean farms"
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-rice-leaf-diseases",
+  "slug": "uci-rice-leaf-diseases",
+  "name": "Rice Leaf Diseases: UCI Visual Disease Classification Benchmark",
+  "description": "The Rice Leaf Diseases dataset from the UCI Machine Learning Repository is a targeted agricultural computer vision collection containing 120 digital photographs of diseased rice leaves (Oryza sativa) collected from agricultural fields in Gujarat, India. The dataset provides balanced representation across three devastating plant diseases: Bacterial Leaf Blight (caused by Xanthomonas oryzae), Brown Spot (caused by Bipolaris oryzae), and Leaf Smut (caused by Entyloma oryzae), each represented by exactly 40 JPEG images. Collected to benchmark automated image processing, feature extraction, and shallow/deep machine learning pipelines, the dataset serves as an accessible baseline for agricultural diagnostic systems.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/486/rice+leaf+diseases",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / Dharmsinh Desai University",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "rice",
+    "plant-pathology",
+    "uci",
+    "crop-monitoring"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UCI Machine Learning Repository — Rice Leaf Diseases Landing Page",
+      "url": "https://archive.ics.uci.edu/dataset/486/rice+leaf+diseases",
+      "type": "repository",
+      "notes": "Official UCI dataset repository entry."
+    },
+    {
+      "title": "Intelligent Decision Technologies Publication (DOI: 10.3233/IDT-170301)",
+      "url": "https://doi.org/10.3233/IDT-170301",
+      "type": "original_paper",
+      "notes": "Peer-reviewed research paper introducing the dataset."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against UCI Machine Learning Repository record 486 and IDT publication 10.3233/IDT-170301."
+  },
+  "dates": {
+    "published": "2017-09-01"
+  },
+  "sample_count": {
+    "total": 120,
+    "splits": {
+      "bacterial_leaf_blight": 40,
+      "brown_spot": 40,
+      "leaf_smut": 40
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Detection and classification of rice plant diseases",
+    "paper_url": "https://doi.org/10.3233/IDT-170301",
+    "authors": [
+      "Harshadkumar Prajapati",
+      "Jitesh P. Shah",
+      "Vipul K. Dabhi"
+    ],
+    "doi": "10.3233/IDT-170301",
+    "bibtex": "@article{prajapati2018detection,\n  title={Detection and classification of rice plant diseases},\n  author={Prajapati, Harshadkumar and Shah, Jitesh P and Dabhi, Vipul K},\n  journal={Intelligent Decision Technologies},\n  volume={12},\n  number={3},\n  pages={357--373},\n  year={2018},\n  publisher={IOS Press},\n  doi={10.3233/IDT-170301}\n}"
+  },
+  "geographic_coverage": [
+    "India"
+  ],
+  "provenance": {
+    "collection_method": "Digital camera photography of rice crop canopies in agricultural fields across Gujarat, India.",
+    "curation_notes": "Expert pathological categorization verifying 40 instances for each of the three disease types.",
+    "data_sources": [
+      "Agricultural rice fields in Gujarat, India"
+    ]
+  }
+}

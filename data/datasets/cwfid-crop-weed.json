@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cwfid-crop-weed",
+  "slug": "cwfid-crop-weed",
+  "name": "CWFID: Crop/Weed Field Image Dataset for Precision Agriculture",
+  "description": "The Crop/Weed Field Image Dataset (CWFID) is a pioneering precision agriculture computer vision benchmark published alongside research at the ECCV 2014 Computer Vision in Plant Phenotyping and Agriculture workshop. Captured on an organic carrot and sugar beet agricultural plot in Germany, the dataset consists of 60 top-down field images (1296x966 pixels) accompanied by precise pixel-level vegetation segmentation ground-truth masks and point-coordinate annotations distinguishing crop plants from unwanted weeds. CWFID provides an essential evaluation platform for agricultural robotics, robotic weeding, selective herbicide spraying, and spatial vegetation segmentation.",
+  "homepage_url": "https://github.com/cwfid/dataset",
+  "publisher": {
+    "name": "Leibniz University Hannover / Robert Bosch GmbH",
+    "type": "academic",
+    "url": "https://github.com/cwfid"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "object-detection",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "weed-detection",
+    "robotics",
+    "precision-farming",
+    "segmentation"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Non-Commercial Research License",
+    "url": "https://github.com/cwfid/dataset#use",
+    "commercial_use": "forbidden",
+    "notes": "Subject to author copyright; permitted solely for non-commercial academic research with required citation."
+  },
+  "source_references": [
+    {
+      "title": "CWFID Dataset GitHub Repository",
+      "url": "https://github.com/cwfid/dataset",
+      "type": "repository",
+      "notes": "Official repository containing images, masks, and annotations."
+    },
+    {
+      "title": "ECCV 2014 Workshop Paper (DOI: 10.1007/978-3-319-16220-1_8)",
+      "url": "https://doi.org/10.1007/978-3-319-16220-1_8",
+      "type": "original_paper",
+      "notes": "Springer Lecture Notes in Computer Science workshop publication."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against GitHub release and Springer publication 10.1007/978-3-319-16220-1_8."
+  },
+  "dates": {
+    "published": "2015-02-01"
+  },
+  "sample_count": {
+    "total": 60,
+    "unit": "images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "A Crop/Weed Field Image Dataset for the Evaluation of Computer Vision Based Precision Agriculture Tasks",
+    "paper_url": "https://doi.org/10.1007/978-3-319-16220-1_8",
+    "authors": [
+      "Sebastian Haug",
+      "Jörn Ostermann"
+    ],
+    "doi": "10.1007/978-3-319-16220-1_8",
+    "bibtex": "@inproceedings{haug2015cwfid,\n  author={Haug, Sebastian and Ostermann, J{\\\"o}rn},\n  title={A Crop/Weed Field Image Dataset for the Evaluation of Computer Vision Based Precision Agriculture Tasks},\n  booktitle={Computer Vision - ECCV 2014 Workshops},\n  series={Lecture Notes in Computer Science},\n  volume={8928},\n  pages={105--116},\n  year={2015},\n  publisher={Springer},\n  doi={10.1007/978-3-319-16220-1_8}\n}"
+  },
+  "geographic_coverage": [
+    "Germany"
+  ],
+  "provenance": {
+    "collection_method": "Autonomous field robot downward camera capturing unoccluded top-down images of organic agricultural crop rows.",
+    "curation_notes": "Expert pixel-level manual segmentation delineating vegetation masks and individual crop versus weed centroids.",
+    "data_sources": [
+      "Organic agricultural test fields, Germany"
+    ]
+  }
+}

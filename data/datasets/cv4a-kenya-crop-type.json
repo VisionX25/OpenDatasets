@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cv4a-kenya-crop-type",
+  "slug": "cv4a-kenya-crop-type",
+  "name": "CV4A Competition Kenya Crop Type Dataset",
+  "description": "The CV4A Competition Kenya Crop Type Dataset is an agricultural earth observation benchmark released by the Radiant Earth Foundation in conjunction with the Computer Vision for Agriculture (CV4A) Workshop at ICLR 2020. Spanning western Kenya (Busia and Uasin Gishu counties), the dataset couples ground-surveyed agricultural field boundary polygons with multi-temporal Sentinel-2 multi-spectral satellite imagery acquired across 13 distinct dates during the 2019 agricultural growing season. Providing ground-truth crop labels (Maize, Cassava, Common Beans, and mixed cropping patterns), the benchmark fosters machine learning models for smallholder crop mapping, food security monitoring, and agricultural yield prediction in Sub-Saharan Africa.",
+  "homepage_url": "https://source.coop/radiantearth/african-crops-kenya-02",
+  "publisher": {
+    "name": "Radiant Earth Foundation",
+    "type": "academic",
+    "url": "https://www.radiant.earth"
+  },
+  "modalities": [
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "time-series-forecasting",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "remote-sensing",
+    "sentinel-2",
+    "crop-classification",
+    "kenya",
+    "satellite"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY-SA 4.0",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Distributed under Creative Commons Attribution-ShareAlike 4.0 International."
+  },
+  "source_references": [
+    {
+      "title": "CV4A Kenya Crop Type Dataset — Source Cooperative",
+      "url": "https://source.coop/radiantearth/african-crops-kenya-02",
+      "type": "repository",
+      "notes": "Official open-data distribution on Source Cooperative."
+    },
+    {
+      "title": "Digital Object Identifier (DOI: 10.34911/rdnt.dw605x)",
+      "url": "https://doi.org/10.34911/rdnt.dw605x",
+      "type": "documentation",
+      "notes": "DataCite persistent repository record."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against DataCite DOI 10.34911/rdnt.dw605x and Radiant MLHub specifications."
+  },
+  "dates": {
+    "published": "2020-03-01"
+  },
+  "sample_count": {
+    "total": 4000,
+    "unit": "records",
+    "status": "estimated"
+  },
+  "citation": {
+    "paper_title": "CV4A Competition Kenya Crop Type Dataset",
+    "paper_url": "https://doi.org/10.34911/rdnt.dw605x",
+    "authors": [
+      "Radiant Earth Foundation"
+    ],
+    "doi": "10.34911/rdnt.dw605x",
+    "bibtex": "@misc{radiant2020cv4a,\n  title={CV4A Competition Kenya Crop Type Dataset},\n  author={{Radiant Earth Foundation}},\n  year={2020},\n  publisher={Radiant MLHub},\n  doi={10.34911/rdnt.dw605x}\n}"
+  },
+  "geographic_coverage": [
+    "Kenya"
+  ],
+  "provenance": {
+    "collection_method": "GPS field ground-reference perimeter mapping in western Kenya coupled with Sentinel-2 L2A time-series observations.",
+    "curation_notes": "Harmonized cloud-filtered surface reflectance bands paired with polygon ground truth labels.",
+    "data_sources": [
+      "Copernicus Sentinel-2",
+      "Radiant Earth ground surveys"
+    ]
+  }
+}

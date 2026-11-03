@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "taiwan-tomato-leaves",
+  "slug": "taiwan-tomato-leaves",
+  "name": "Dataset of Tomato Leaves: Taiwan Field and PlantVillage Benchmark Suite",
+  "description": "The Dataset of Tomato Leaves is a dual-component agricultural image corpus deposited to facilitate automated tomato disease classification and cross-domain transfer learning. The primary research component consists of 622 field-collected photographs of tomato leaves from Taiwan across six categories (Bacterial spot, Black leaf mold, Gray leaf spot, Healthy, Late blight, and Powdery mildew), capturing leaves against natural, complex agricultural backgrounds and augmented to 4,976 images. The companion component provides a standardized, resized (227x227 pixel) benchmark partition of 14,531 images selected across ten disease and healthy categories from PlantVillage, structured into five folds for cross-validation.",
+  "homepage_url": "https://data.mendeley.com/datasets/ngdgg79rzb/1",
+  "publisher": {
+    "name": "Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "tomato",
+    "plant-pathology",
+    "crop-monitoring",
+    "taiwan"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Dataset of Tomato Leaves — Mendeley Data Repository",
+      "url": "https://data.mendeley.com/datasets/ngdgg79rzb/1",
+      "type": "repository",
+      "notes": "Official repository landing page."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/ngdgg79rzb.1",
+      "url": "https://doi.org/10.17632/ngdgg79rzb.1",
+      "type": "documentation",
+      "notes": "DataCite persistent repository record."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against DataCite DOI 10.17632/ngdgg79rzb.1."
+  },
+  "dates": {
+    "published": "2020-04-20"
+  },
+  "sample_count": {
+    "total": 19507,
+    "splits": {
+      "taiwan_field_original": 622,
+      "taiwan_field_augmented": 4976,
+      "plantvillage_benchmark": 14531
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Dataset of Tomato Leaves",
+    "paper_url": "https://doi.org/10.17632/ngdgg79rzb.1",
+    "authors": [
+      "Ya-Han Chang",
+      "Mei-Ling Huang"
+    ],
+    "doi": "10.17632/ngdgg79rzb.1"
+  },
+  "geographic_coverage": [
+    "Taiwan"
+  ],
+  "provenance": {
+    "collection_method": "Field photography of tomato leaves in agricultural plots in Taiwan combined with standardized PlantVillage subsets.",
+    "curation_notes": "Contains 622 authentic Taiwan field images and a curated 14,531-image 5-fold cross-validation partition.",
+    "data_sources": [
+      "Taiwan tomato cultivation fields",
+      "PlantVillage database"
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sweet-pumpkin-disease",
+  "slug": "sweet-pumpkin-disease",
+  "name": "Sweet Pumpkin Disease Recognition Dataset",
+  "description": "The Sweet Pumpkin Disease Recognition Dataset is a specialized agricultural vision benchmark focused on Cucurbita moschata (sweet gourd/pumpkin), a vital nutritional and cash vegetable in Bangladesh. Collected directly from active agricultural fields, the dataset captures five major foliar health categories: Healthy Leaf, Downy Mildew Disease, Leaf Curl Disease, Mosaic Disease, and Red Beetle infestation damage. The foundational collection contains 1,000 raw field photographs, which were subsequently augmented via geometric shifting, horizontal/vertical flipping, scaling, shear, brightness adjustment, and rotation to produce a 7,000-image augmented suite (8,000 images total).",
+  "homepage_url": "https://data.mendeley.com/datasets/7397w9h5tb/1",
+  "publisher": {
+    "name": "Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "sweet-pumpkin",
+    "plant-pathology",
+    "crop-monitoring",
+    "bangladesh"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Sweet Pumpkin Disease Recognition Dataset — Mendeley Data Repository",
+      "url": "https://data.mendeley.com/datasets/7397w9h5tb/1",
+      "type": "repository",
+      "notes": "Official repository landing page."
+    },
+    {
+      "title": "Digital Object Identifier (DOI): 10.17632/7397w9h5tb.1",
+      "url": "https://doi.org/10.17632/7397w9h5tb.1",
+      "type": "documentation",
+      "notes": "DataCite persistent identifier."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/7397w9h5tb.1."
+  },
+  "dates": {
+    "published": "2024-03-10"
+  },
+  "sample_count": {
+    "total": 8000,
+    "splits": {
+      "original": 1000,
+      "augmented": 7000
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Sweet Pumpkin Disease Recognition Dataset",
+    "paper_url": "https://doi.org/10.17632/7397w9h5tb.1",
+    "authors": [
+      "Md Mafiul Hasan Matin Mafi"
+    ],
+    "doi": "10.17632/7397w9h5tb.1"
+  },
+  "geographic_coverage": [
+    "Bangladesh"
+  ],
+  "provenance": {
+    "collection_method": "In situ camera photography in Bangladeshi sweet pumpkin agricultural plots.",
+    "curation_notes": "1,000 raw field images labeled across 5 health categories plus 7,000 systematic augmentations.",
+    "data_sources": [
+      "Field survey photography across Bangladesh sweet pumpkin farms"
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bracol-coffee-leaf",
+  "slug": "bracol-coffee-leaf",
+  "name": "BRACOL: A Brazilian Arabica Coffee Leaf Images Dataset for Identification and Quantification of Diseases and Pests",
+  "description": "BRACOL is an authentic agricultural benchmark dataset comprising 1,747 full-leaf photographs and 2,147 cropped symptom patches of Arabica coffee leaves (Coffea arabica L.) collected in the mountainous region of Santa Maria de Marechal Floriano, Espírito Santo, Brazil. Photographed from the abaxial (lower) side of leaves using multiple smartphone models (ASUS Zenfone 2, Xiaomi Redmi 5A, Xiaomi S2, Samsung Galaxy S8, and iPhone 6S) on uniform white backgrounds, the dataset captures healthy foliage alongside leaves afflicted by major biotic stresses: leaf miner, leaf rust, brown leaf spot, and cercospora leaf spot. Accompanied by expert diagnostic annotations and pixel-level symptom masks, BRACOL supports multi-label classification, symptom segmentation, and ordinal disease severity grading.",
+  "homepage_url": "https://data.mendeley.com/datasets/yy2k5y8mxg/1",
+  "publisher": {
+    "name": "Computers and Electronics in Agriculture / Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "semantic-segmentation",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "coffee",
+    "arabica",
+    "plant-pathology",
+    "brazil"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "BRACOL Dataset — Mendeley Data Repository",
+      "url": "https://data.mendeley.com/datasets/yy2k5y8mxg/1",
+      "type": "repository",
+      "notes": "Official repository landing page."
+    },
+    {
+      "title": "Computers and Electronics in Agriculture Paper (DOI: 10.1016/j.compag.2019.105162)",
+      "url": "https://doi.org/10.1016/j.compag.2019.105162",
+      "type": "original_paper",
+      "notes": "Peer-reviewed research establishing the dataset and severity estimation."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against DataCite DOI 10.17632/yy2k5y8mxg.1 and Computers and Electronics in Agriculture publication."
+  },
+  "dates": {
+    "published": "2019-09-17"
+  },
+  "sample_count": {
+    "total": 1747,
+    "splits": {
+      "full_leaves": 1747,
+      "symptom_patches": 2147
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Deep learning for classification and severity estimation of coffee leaf biotic stress",
+    "paper_url": "https://doi.org/10.1016/j.compag.2019.105162",
+    "authors": [
+      "José G.M. Esgario",
+      "Renato A. Krohling",
+      "José A. Ventura"
+    ],
+    "doi": "10.1016/j.compag.2019.105162",
+    "bibtex": "@article{esgario2020deep,\n  title={Deep learning for classification and severity estimation of coffee leaf biotic stress},\n  author={Esgario, Jos{\\'e} GM and Krohling, Renato A and Ventura, Jos{\\'e} A},\n  journal={Computers and Electronics in Agriculture},\n  volume={169},\n  pages={105162},\n  year={2020},\n  publisher={Elsevier},\n  doi={10.1016/j.compag.2019.105162}\n}"
+  },
+  "geographic_coverage": [
+    "Brazil"
+  ],
+  "provenance": {
+    "collection_method": "Multi-smartphone photographic sampling in coffee plantations of Santa Maria de Jetibá / Marechal Floriano, Espírito Santo, Brazil.",
+    "curation_notes": "Expert-labeled by agronomists with symptom segmentation masks and 5-level severity quantification.",
+    "data_sources": [
+      "Espírito Santo coffee farms, Brazil"
+    ]
+  }
+}

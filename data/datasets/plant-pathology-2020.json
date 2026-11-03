@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "plant-pathology-2020",
+  "slug": "plant-pathology-2020",
+  "name": "Plant Pathology 2020: Foliar Disease of Apples Benchmark",
+  "description": "The Plant Pathology 2020 dataset is an expert-curated foliar disease image benchmark created by Cornell University and Cornell AgriTech in collaboration with the CVPR 2020 Fine-Grained Visual Categorization (FGVC7) workshop. The dataset comprises 3,651 high-resolution images of apple tree leaves (Malus domestica) exhibiting complex symptoms of foliar diseases photographed in real-world commercial orchards. Annotations classify each leaf into one of four mutually exclusive diagnostic categories: healthy, apple scab (Venturia inaequalis), cedar apple rust (Gymnosporangium juniperi-virginianae), and leaves displaying multiple co-occurring diseases. The dataset supports fine-grained visual classification, multi-task learning, and robust disease severity diagnostics.",
+  "homepage_url": "https://www.kaggle.com/competitions/plant-pathology-2020-fgvc7/data",
+  "publisher": {
+    "name": "Cornell University / CVPR FGVC7",
+    "type": "academic",
+    "url": "https://www.kaggle.com/competitions/plant-pathology-2020-fgvc7"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "apple",
+    "plant-pathology",
+    "fine-grained-classification",
+    "orchard"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Kaggle Plant Pathology 2020 - FGVC7 Competition",
+      "url": "https://www.kaggle.com/competitions/plant-pathology-2020-fgvc7/data",
+      "type": "repository",
+      "notes": "Official competition data download and descriptor."
+    },
+    {
+      "title": "Applications in Plant Sciences Publication (DOI: 10.1002/aps3.11390)",
+      "url": "https://doi.org/10.1002/aps3.11390",
+      "type": "original_paper",
+      "notes": "Peer-reviewed journal paper documenting dataset creation."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against Wiley Applications in Plant Sciences DOI 10.1002/aps3.11390."
+  },
+  "dates": {
+    "published": "2020-03-09"
+  },
+  "sample_count": {
+    "total": 3651,
+    "splits": {
+      "train": 1821,
+      "test": 1830
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "The Plant Pathology Challenge 2020 data set to classify foliar disease of apples",
+    "paper_url": "https://doi.org/10.1002/aps3.11390",
+    "authors": [
+      "Ranjita Thapa",
+      "Kai Zhang",
+      "Noah Snavely",
+      "Serge Belongie",
+      "Awais Khan"
+    ],
+    "doi": "10.1002/aps3.11390",
+    "bibtex": "@article{thapa2020plant,\n  title={The Plant Pathology Challenge 2020 data set to classify foliar disease of apples},\n  author={Thapa, Ranjita and Zhang, Kai and Snavely, Noah and Belongie, Serge and Khan, Awais},\n  journal={Applications in Plant Sciences},\n  volume={8},\n  number={9},\n  pages={e11390},\n  year={2020},\n  publisher={Wiley},\n  doi={10.1002/aps3.11390}\n}"
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "provenance": {
+    "collection_method": "Smartphone photographic surveys conducted across apple orchards at Cornell AgriTech in Geneva, New York.",
+    "curation_notes": "Expert plant pathologist confirmation for scab, cedar apple rust, and complex disease presentations.",
+    "data_sources": [
+      "Cornell AgriTech apple research orchards, Geneva, NY"
+    ]
+  }
+}

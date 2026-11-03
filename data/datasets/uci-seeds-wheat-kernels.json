@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-seeds-wheat-kernels",
+  "slug": "uci-seeds-wheat-kernels",
+  "name": "Seeds: Geometric Properties of Wheat Kernels",
+  "description": "The Seeds dataset is a classical agricultural pattern recognition benchmark from the UCI Machine Learning Repository providing internal geometric measurements of wheat grains (caryopses). Collected by researchers at the Institute of Agrophysics of the Polish Academy of Sciences in Lublin, the dataset comprises 210 instances evenly distributed across three distinct wheat cultivars: Kama, Rosa, and Canadian (70 instances each). Samples were measured using a non-destructive soft X-ray imaging technique and analyzed via the GRAINS image processing system to extract seven continuous morphological attributes: Area, Perimeter, Compactness, Length of kernel, Width of kernel, Asymmetry coefficient, and Length of kernel groove.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/236/seeds",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / Polish Academy of Sciences",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "wheat",
+    "seeds",
+    "uci",
+    "morphology"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UCI Machine Learning Repository — Seeds Dataset Landing Page",
+      "url": "https://archive.ics.uci.edu/dataset/236/seeds",
+      "type": "repository",
+      "notes": "Canonical UCI dataset repository page."
+    },
+    {
+      "title": "Springer Biomedical Engineering Paper (DOI: 10.1007/978-3-642-13105-9_2)",
+      "url": "https://doi.org/10.1007/978-3-642-13105-9_2",
+      "type": "original_paper",
+      "notes": "Original publication describing the soft X-ray acquisition and feature analysis."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against UCI Machine Learning Repository record 236 and Springer publication."
+  },
+  "dates": {
+    "published": "2010-06-08"
+  },
+  "sample_count": {
+    "total": 210,
+    "splits": {
+      "kama": 70,
+      "rosa": 70,
+      "canadian": 70
+    },
+    "unit": "records",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Complete Gradient Clustering Algorithm for Features Analysis of X-Ray Images",
+    "paper_url": "https://doi.org/10.1007/978-3-642-13105-9_2",
+    "authors": [
+      "Małgorzata Charytanowicz",
+      "Jerzy Niewczas",
+      "Piotr Kulczycki",
+      "Piotr A. Kowalski",
+      "Szymon Łukasik",
+      "Sławomir Żak"
+    ],
+    "doi": "10.1007/978-3-642-13105-9_2",
+    "bibtex": "@incollection{charytanowicz2010complete,\n  title={Complete Gradient Clustering Algorithm for Features Analysis of X-Ray Images},\n  author={Charytanowicz, Ma{\\l}gorzata and Niewczas, Jerzy and Kulczycki, Piotr and Kowalski, Piotr A and {\\L}ukasik, Szymon and {\\.Z}ak, S{\\l}awomir},\n  booktitle={Information Technologies in Biomedicine},\n  pages={15--24},\n  year={2010},\n  publisher={Springer},\n  doi={10.1007/978-3-642-13105-9_2}\n}"
+  },
+  "geographic_coverage": [
+    "Poland"
+  ],
+  "provenance": {
+    "collection_method": "Soft X-ray digital radioscopy of harvested wheat kernels at the Institute of Agrophysics of the Polish Academy of Sciences in Lublin.",
+    "curation_notes": "Morphological attribute calculation computed using the GRAINS image analysis software.",
+    "data_sources": [
+      "Institute of Agrophysics, Polish Academy of Sciences"
+    ]
+  }
+}

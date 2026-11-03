@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "rocole-robusta-coffee",
+  "slug": "rocole-robusta-coffee",
+  "name": "RoCoLe: A Robusta Coffee Leaf Images Dataset for Plant Diseases Recognition",
+  "description": "RoCoLe is an agricultural benchmark dataset containing 1,560 images of Robusta coffee leaves (Coffea canephora) captured in active agricultural plantations in Ecuador. The dataset includes healthy leaves and leaves exhibiting visible manifestations of red spider mites and coffee leaf rust (Hemileia vastatrix). Photographed under uncontrolled outdoor lighting conditions, each sample includes image-level diagnostic annotations regarding overall leaf health (healthy vs. diseased) and precise disease severity ratings reflecting the percentage of leaf area affected by lesions. RoCoLe enables rigorous evaluation of machine learning methods for disease detection, severity estimation, and mobile automated phenotyping.",
+  "homepage_url": "https://data.mendeley.com/datasets/c5yvn32dzg/2",
+  "publisher": {
+    "name": "Data in Brief / Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "coffee",
+    "robusta",
+    "plant-pathology",
+    "ecuador"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "RoCoLe Dataset — Mendeley Data Repository",
+      "url": "https://data.mendeley.com/datasets/c5yvn32dzg/2",
+      "type": "repository",
+      "notes": "Official repository landing page."
+    },
+    {
+      "title": "Data in Brief Peer-Reviewed Publication (DOI: 10.1016/j.dib.2019.104414)",
+      "url": "https://doi.org/10.1016/j.dib.2019.104414",
+      "type": "original_paper",
+      "notes": "Peer-reviewed dataset descriptor article in Data in Brief."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against DataCite DOI 10.17632/c5yvn32dzg.2 and Data in Brief publication."
+  },
+  "dates": {
+    "published": "2019-08-05"
+  },
+  "sample_count": {
+    "total": 1560,
+    "unit": "images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "RoCoLe: A robusta coffee leaf images dataset for evaluation of machine learning based methods in plant diseases recognition",
+    "paper_url": "https://doi.org/10.1016/j.dib.2019.104414",
+    "authors": [
+      "Jorge Parraga-Alava",
+      "Kevin Cusme",
+      "Angélica Loor",
+      "Esneider Santander"
+    ],
+    "doi": "10.1016/j.dib.2019.104414",
+    "bibtex": "@article{parraga2019rocole,\n  title={RoCoLe: A robusta coffee leaf images dataset for evaluation of machine learning based methods in plant diseases recognition},\n  author={Parraga-Alava, Jorge and Cusme, Kevin and Loor, Ang{\\'e}lica and Santander, Esneider},\n  journal={Data in Brief},\n  volume={25},\n  pages={104414},\n  year={2019},\n  publisher={Elsevier},\n  doi={10.1016/j.dib.2019.104414}\n}"
+  },
+  "geographic_coverage": [
+    "Ecuador"
+  ],
+  "provenance": {
+    "collection_method": "Smartphone photographic surveys conducted in Robusta coffee orchards across western Ecuador.",
+    "curation_notes": "1,560 verified images annotated for health state and diseased leaf area percentages.",
+    "data_sources": [
+      "Commercial Robusta coffee farms in Ecuador"
+    ]
+  }
+}
