@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-raisin-classification",
+  "slug": "uci-raisin-classification",
+  "name": "Raisin: Agricultural Product Morphology Classification",
+  "description": "The Raisin dataset from the UCI Machine Learning Repository is an agricultural vision-derived benchmark comprising 900 instances across two prominent Turkish raisin cultivars (Kecimen and Besni, with 450 instances per class). Grain samples were digitized using an industrial Computer Vision System (CVS) to measure detailed exterior geometry, texture, and seed morphology. From the captured images, seven continuous morphological attributes were extracted: Area, MajorAxisLength, MinorAxisLength, Eccentricity, ConvexArea, Extent, and Perimeter. The dataset enables rigorous benchmarking of classification algorithms, feature selection methods, and automated quality-sorting systems in post-harvest fruit processing.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/850/raisin",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / Selcuk University",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "raisin",
+    "post-harvest",
+    "uci",
+    "morphology"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UCI Machine Learning Repository — Raisin Dataset Landing Page",
+      "url": "https://archive.ics.uci.edu/dataset/850/raisin",
+      "type": "repository",
+      "notes": "Official UCI dataset repository entry."
+    },
+    {
+      "title": "Gazi Journal of Engineering Sciences Original Paper",
+      "url": "https://dergipark.org.tr/en/pub/gjes/issue/58249/791834",
+      "type": "original_paper",
+      "notes": "Original journal publication introducing the CVS morphological extraction and classification."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against UCI Machine Learning Repository record 850 and Gazi Journal of Engineering Sciences publication."
+  },
+  "dates": {
+    "published": "2020-12-01"
+  },
+  "sample_count": {
+    "total": 900,
+    "splits": {
+      "kecimen": 450,
+      "besni": 450
+    },
+    "unit": "records",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Classification of Raisin Grains Using Machine Vision and Artificial Intelligence Methods",
+    "paper_url": "https://dergipark.org.tr/en/pub/gjes/issue/58249/791834",
+    "authors": [
+      "İlkay Çınar",
+      "Murat Koklu",
+      "Şakir Taşdemir"
+    ],
+    "bibtex": "@article{cinar2020classification,\n  title={Kuru {\\\"U}z{\\\"u}m Tanelerinin Makine G{\\\"o}r{\\\"u}{\\c{s}}{\\\"u} ve Yapay Zeka Y{\\\"o}ntemleri Kullan{\\i}larak S{\\i}n{\\i}fland{\\i}r{\\i}lmas{\\i}},\n  author={{\\c{C}}{\\i}nar, {\\.I}lkay and Koklu, Murat and Ta{\\c{s}}demir, {\\c{S}}akir},\n  journal={Gazi Journal of Engineering Sciences},\n  volume={6},\n  number={3},\n  pages={200--209},\n  year={2020},\n  publisher={Gazi University}\n}"
+  },
+  "geographic_coverage": [
+    "Turkey"
+  ],
+  "provenance": {
+    "collection_method": "High-resolution digital photography inside a closed lighting chamber Computer Vision System (CVS).",
+    "curation_notes": "Thresholding and morphological feature extraction across 900 individual raisin specimens.",
+    "data_sources": [
+      "Commercial raisin harvests in Turkey"
+    ]
+  }
+}

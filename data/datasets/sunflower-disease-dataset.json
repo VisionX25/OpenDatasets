@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sunflower-disease-dataset",
+  "slug": "sunflower-disease-dataset",
+  "name": "Sunflower Fruits and Leaves Disease Dataset",
+  "description": "The Sunflower Fruits and Leaves Disease Dataset is an academic computer vision benchmark compiled to support automated disease identification and classification in sunflower crops (Helianthus annuus). Assembled at the Bangladesh Agricultural Research Institute (BARI) demonstration farm in Gazipur in collaboration with agricultural domain experts, the dataset features healthy specimens and three major sunflower diseases: downy mildew, leaf scars, and gray mold. The raw image collection comprises 467 authentic field photographs, which were subsequently augmented via geometric and photometric transformations to yield 1,668 images for deep learning training.",
+  "homepage_url": "https://data.mendeley.com/datasets/b83hmrzth8/1",
+  "publisher": {
+    "name": "Data in Brief / Mendeley Data",
+    "type": "academic",
+    "url": "https://data.mendeley.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "sunflower",
+    "plant-pathology",
+    "crop-monitoring",
+    "bangladesh"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Sunflower Fruits and Leaves Dataset — Mendeley Data Repository",
+      "url": "https://data.mendeley.com/datasets/b83hmrzth8/1",
+      "type": "repository",
+      "notes": "Official repository landing page."
+    },
+    {
+      "title": "Data in Brief Peer-Reviewed Publication (DOI: 10.1016/j.dib.2022.108043)",
+      "url": "https://doi.org/10.1016/j.dib.2022.108043",
+      "type": "original_paper",
+      "notes": "Peer-reviewed dataset descriptor article in Data in Brief."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against DataCite DOI 10.17632/b83hmrzth8.1 and Data in Brief publication."
+  },
+  "dates": {
+    "published": "2022-03-01"
+  },
+  "sample_count": {
+    "total": 2135,
+    "splits": {
+      "original": 467,
+      "augmented": 1668
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "An extensive sunflower dataset representation for successful identification and classification of sunflower diseases",
+    "paper_url": "https://doi.org/10.1016/j.dib.2022.108043",
+    "authors": [
+      "Umme Sara",
+      "Aditya Rajbongshi",
+      "Rashiduzzaman Shakil",
+      "Bonna Akter",
+      "Sadia Sazzad",
+      "Mohammad Shorif Uddin"
+    ],
+    "doi": "10.1016/j.dib.2022.108043",
+    "bibtex": "@article{sara2022sunflower,\n  title={An extensive sunflower dataset representation for successful identification and classification of sunflower diseases},\n  author={Sara, Umme and Rajbongshi, Aditya and Shakil, Rashiduzzaman and Akter, Bonna and Sazzad, Sadia and Uddin, Mohammad Shorif},\n  journal={Data in Brief},\n  volume={42},\n  pages={108043},\n  year={2022},\n  publisher={Elsevier},\n  doi={10.1016/j.dib.2022.108043}\n}"
+  },
+  "geographic_coverage": [
+    "Bangladesh"
+  ],
+  "provenance": {
+    "collection_method": "Assembled from Bangladesh Agricultural Research Institute (BARI) demonstration farm in Gazipur with domain agronomists.",
+    "curation_notes": "467 original field photographs across 4 condition classes plus 1,668 augmented images.",
+    "data_sources": [
+      "BARI demonstration farm, Gazipur, Bangladesh"
+    ]
+  }
+}

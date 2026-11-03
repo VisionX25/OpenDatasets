@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "paddy-doctor",
+  "slug": "paddy-doctor",
+  "name": "Paddy Doctor: A Visual Image Dataset for Automated Paddy Disease Classification",
+  "description": "Paddy Doctor is an extensive, peer-reviewed visual benchmark dataset comprising 10,407 labeled RGB photographs of paddy crops (Oryza sativa) collected from agricultural regions in Tamil Nadu, India. The dataset classifies individual paddy plant leaves across ten distinct categories: nine devastating plant pathologies (bacterial leaf blight, bacterial leaf streak, bacterial panicle blight, blast, brown spot, dead heart, downy mildew, hispa, and tungro) and healthy control plants. Captured under varied natural illumination and growth conditions, Paddy Doctor serves as the official benchmark for the ACM IKDD CODS-COMAD 2023 competition and ongoing Kaggle challenges, advancing low-cost disease monitoring for smallholder farmers.",
+  "homepage_url": "https://github.com/paddydoc/paddy-doctor-dataset",
+  "publisher": {
+    "name": "Paddy Doctor Project / ACM CODS-COMAD",
+    "type": "academic",
+    "url": "https://github.com/paddydoc"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "rice",
+    "paddy",
+    "plant-pathology",
+    "crop-monitoring"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Paddy Doctor Dataset GitHub Repository",
+      "url": "https://github.com/paddydoc/paddy-doctor-dataset",
+      "type": "repository",
+      "notes": "Official open-source code and data repository."
+    },
+    {
+      "title": "ACM IKDD CODS-COMAD 2023 Paper (DOI: 10.1145/3570991.3570994)",
+      "url": "https://doi.org/10.1145/3570991.3570994",
+      "type": "original_paper",
+      "notes": "Peer-reviewed conference proceedings introducing the dataset and benchmarks."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against ACM Digital Library publication 10.1145/3570991.3570994 and official GitHub release."
+  },
+  "dates": {
+    "published": "2023-01-04"
+  },
+  "sample_count": {
+    "total": 10407,
+    "unit": "images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Paddy Doctor: A Visual Image Dataset for Automated Paddy Disease Classification and Benchmarking",
+    "paper_url": "https://doi.org/10.1145/3570991.3570994",
+    "authors": [
+      "Petchiammal",
+      "Briskline Kiruba",
+      "Murugan",
+      "Pandarasamy Arjunan"
+    ],
+    "doi": "10.1145/3570991.3570994",
+    "bibtex": "@inproceedings{petchiammal2023paddy,\n  title={Paddy Doctor: A Visual Image Dataset for Automated Paddy Disease Classification and Benchmarking},\n  author={Petchiammal, P and Kiruba, Briskline and Murugan, M and Arjunan, Pandarasamy},\n  booktitle={Proceedings of the 6th Joint International Conference on Data Science & Management of Data (10th ACM IKDD CODS and 28th COMAD)},\n  pages={150--154},\n  year={2023},\n  publisher={ACM},\n  doi={10.1145/3570991.3570994}\n}"
+  },
+  "geographic_coverage": [
+    "India"
+  ],
+  "provenance": {
+    "collection_method": "In situ photography of paddy crops across Tamil Nadu, India, by agricultural field workers.",
+    "curation_notes": "Expert-validated diagnoses across 9 disease classes and healthy control samples.",
+    "data_sources": [
+      "Commercial paddy farms across Tamil Nadu, India"
+    ]
+  }
+}

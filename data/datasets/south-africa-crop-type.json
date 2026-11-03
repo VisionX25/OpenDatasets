@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "south-africa-crop-type",
+  "slug": "south-africa-crop-type",
+  "name": "Crop Type Classification Dataset for Western Cape, South Africa",
+  "description": "The South Africa Crop Type Classification Dataset is a high-grade agricultural remote sensing benchmark released by the Western Cape Department of Agriculture and the Radiant Earth Foundation for the Spot the Crop Challenge. Spanning agricultural regions across the Western Cape province of South Africa, the dataset provides ground-truth crop classifications for thousands of agricultural field polygons matched against multi-temporal Sentinel-2 optical imagery and Sentinel-1 synthetic aperture radar (SAR) observations collected across the full 2020–2021 agricultural season. Covering major commercial crops including wheat, barley, canola, lucerne, and planted pastures, the dataset facilitates multimodal satellite time-series research for agricultural inventory and food supply modeling.",
+  "homepage_url": "https://source.coop/radiantearth/south-africa-crops-competition",
+  "publisher": {
+    "name": "Western Cape Department of Agriculture & Radiant Earth Foundation",
+    "type": "academic",
+    "url": "https://www.radiant.earth"
+  },
+  "modalities": [
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "time-series-forecasting",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "remote-sensing",
+    "sentinel-1",
+    "sentinel-2",
+    "crop-classification",
+    "south-africa"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "South Africa Crop Type Competition — Source Cooperative",
+      "url": "https://source.coop/radiantearth/south-africa-crops-competition",
+      "type": "repository",
+      "notes": "Official open-data distribution on Source Cooperative."
+    },
+    {
+      "title": "Digital Object Identifier (DOI: 10.34911/rdnt.j0co8q)",
+      "url": "https://doi.org/10.34911/rdnt.j0co8q",
+      "type": "documentation",
+      "notes": "DataCite persistent repository record."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against DataCite DOI 10.34911/rdnt.j0co8q and Radiant MLHub benchmark documentation."
+  },
+  "dates": {
+    "published": "2021-08-10"
+  },
+  "sample_count": {
+    "total": 2600,
+    "unit": "records",
+    "status": "estimated"
+  },
+  "citation": {
+    "paper_title": "Crop Type Classification Dataset for Western Cape, South Africa",
+    "paper_url": "https://doi.org/10.34911/rdnt.j0co8q",
+    "authors": [
+      "Western Cape Department of Agriculture",
+      "Radiant Earth Foundation"
+    ],
+    "doi": "10.34911/rdnt.j0co8q",
+    "bibtex": "@misc{wcda2021crops,\n  title={Crop Type Classification Dataset for Western Cape, South Africa},\n  author={{Western Cape Department of Agriculture and Radiant Earth Foundation}},\n  year={2021},\n  publisher={Radiant MLHub},\n  doi={10.34911/rdnt.j0co8q}\n}"
+  },
+  "geographic_coverage": [
+    "South Africa"
+  ],
+  "provenance": {
+    "collection_method": "Official agricultural aerial surveys and farmer ground validation by Western Cape Department of Agriculture paired with Sentinel-1 and Sentinel-2 satellite passes.",
+    "curation_notes": "Calibrated optical reflectance and dual-polarization SAR backscatter time series for registered crop polygons.",
+    "data_sources": [
+      "Western Cape Department of Agriculture",
+      "Copernicus Sentinel-1",
+      "Copernicus Sentinel-2"
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gwhd-global-wheat",
+  "slug": "gwhd-global-wheat",
+  "name": "Global Wheat Head Detection (GWHD) Dataset",
+  "description": "The Global Wheat Head Detection (GWHD) dataset is a premier international benchmark created to advance high-throughput plant phenotyping and automated wheat yield estimation. Assembled through an extensive global consortium encompassing nine research institutions across seven countries (France, Switzerland, UK, Japan, Australia, Canada, and China), the dataset comprises 4,700 high-resolution RGB images containing over 190,000 labeled wheat head bounding boxes. Spanning diverse wheat cultivars, development stages, sowing densities, row orientations, and canopy architectures, GWHD provides an unmatched testbed for developing robust, generalizable object detection algorithms capable of handling severe visual occlusions and variable field illumination.",
+  "homepage_url": "https://www.global-wheat.com/gwhd.html",
+  "publisher": {
+    "name": "Global Wheat Consortium / Plant Phenomics",
+    "type": "academic",
+    "url": "https://www.global-wheat.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "wheat",
+    "phenotyping",
+    "object-detection",
+    "yield-estimation"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Global Wheat Head Detection Official Portal",
+      "url": "https://www.global-wheat.com/gwhd.html",
+      "type": "official_website",
+      "notes": "Consortium project portal."
+    },
+    {
+      "title": "Plant Phenomics Research Paper (DOI: 10.34133/2020/3521852)",
+      "url": "https://doi.org/10.34133/2020/3521852",
+      "type": "original_paper",
+      "notes": "Peer-reviewed paper detailing dataset collection and annotation."
+    },
+    {
+      "title": "GWHD Zenodo Archive (DOI: 10.5281/zenodo.5092309)",
+      "url": "https://doi.org/10.5281/zenodo.5092309",
+      "type": "repository",
+      "notes": "Canonical open data repository."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against Plant Phenomics publication and Zenodo deposit 10.5281/zenodo.5092309."
+  },
+  "dates": {
+    "published": "2020-05-18",
+    "last_updated": "2021-07-12"
+  },
+  "sample_count": {
+    "total": 4700,
+    "unit": "images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Global Wheat Head Detection (GWHD) Dataset: A Large and Diverse Dataset of High-Resolution RGB-Labelled Images to Develop and Benchmark Wheat Head Detection Methods",
+    "paper_url": "https://doi.org/10.34133/2020/3521852",
+    "authors": [
+      "Etienne David",
+      "Simon Madec",
+      "Pouria Sadeghi-Tehran",
+      "Helge Aasen",
+      "Bangyou Zheng",
+      "Shouyang Liu",
+      "Norbert Kirchgessner",
+      "Goro Ishikawa",
+      "Koichi Nagasawa",
+      "Mohammad Aminul Badhon",
+      "Curtis Pozniak",
+      "Benoit de Solan",
+      "Andreas Hund",
+      "Scott C. Chapman",
+      "Frédéric Baret",
+      "Ian Stavness",
+      "Wei Guo"
+    ],
+    "doi": "10.34133/2020/3521852",
+    "bibtex": "@article{david2020global,\n  title={Global Wheat Head Detection (GWHD) Dataset: A Large and Diverse Dataset of High-Resolution RGB-Labelled Images to Develop and Benchmark Wheat Head Detection Methods},\n  author={David, Etienne and Madec, Simon and Sadeghi-Tehran, Pouria and Aasen, Helge and Zheng, Bangyou and Liu, Shouyang and Kirchgessner, Norbert and Ishikawa, Goro and Nagasawa, Koichi and Badhon, Mohammad Aminul and others},\n  journal={Plant Phenomics},\n  volume={2020},\n  pages={3521852},\n  year={2020},\n  publisher={AAAS},\n  doi={10.34133/2020/3521852}\n}"
+  },
+  "geographic_coverage": [
+    "France",
+    "United Kingdom",
+    "Switzerland",
+    "Japan",
+    "Australia",
+    "Canada",
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "Multi-site field acquisition using ground vehicles and high-resolution cameras across international wheat breeding trials.",
+    "curation_notes": "Expert manual bounding-box annotations identifying over 190,000 wheat heads.",
+    "data_sources": [
+      "INRAE, Rothamsted Research, ETH Zurich, University of Tokyo, University of Queensland, University of Saskatchewan"
+    ]
+  }
+}

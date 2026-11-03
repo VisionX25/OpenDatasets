@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "plant-seedlings",
+  "slug": "plant-seedlings",
+  "name": "Plant Seedlings Dataset: Crop and Weed Classification Benchmark",
+  "description": "The Plant Seedlings Dataset is a foundational computer vision benchmark created by Aarhus University and the University of Southern Denmark to advance automated site-specific weed recognition. Recorded at the Aarhus University Flakkebjerg Research Station, the dataset comprises 5,539 RGB images of approximately 960 individual plants belonging to 12 agricultural weed and crop species (Maize, Common wheat, Sugar beet, Scentless Mayweed, Common Chickweed, Shepherd's Purse, Cleavers, Charlock, Fat Hen, Small-flowered Cranesbill, Black-grass, and Loose Silky-bent). Images possess a physical resolution of roughly 10 pixels per millimeter, capturing plants across varied early seedling vegetative growth stages.",
+  "homepage_url": "https://vision.eng.au.dk/plant-seedlings-dataset/",
+  "publisher": {
+    "name": "Aarhus University & University of Southern Denmark",
+    "type": "academic",
+    "url": "https://vision.eng.au.dk"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "weed-control",
+    "seedlings",
+    "crop-classification",
+    "precision-farming"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY-SA 4.0",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Distributed under Creative Commons Attribution-ShareAlike (CC BY-SA)."
+  },
+  "source_references": [
+    {
+      "title": "Aarhus University Plant Seedlings Dataset Portal",
+      "url": "https://vision.eng.au.dk/plant-seedlings-dataset/",
+      "type": "official_website",
+      "notes": "Official university research portal."
+    },
+    {
+      "title": "Plant Seedlings Benchmark Paper (arXiv:1711.08736)",
+      "url": "https://arxiv.org/abs/1711.08736",
+      "type": "original_paper",
+      "notes": "Benchmark descriptor paper detailing imaging protocol and species."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against Aarhus University research portal and arXiv:1711.08736."
+  },
+  "dates": {
+    "published": "2017-11-23"
+  },
+  "sample_count": {
+    "total": 5539,
+    "unit": "images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "A Public Image Database for Benchmark of Plant Seedling Classification Algorithms",
+    "paper_url": "https://arxiv.org/abs/1711.08736",
+    "authors": [
+      "Thomas Mosgaard Giselsson",
+      "Mads Dyrmann",
+      "Rasmus Nyholm Jørgensen",
+      "Peter Kryger Jensen",
+      "Henrik Skov Midtiby"
+    ],
+    "bibtex": "@article{giselsson2017public,\n  title={A Public Image Database for Benchmark of Plant Seedling Classification Algorithms},\n  author={Giselsson, Thomas Mosgaard and Dyrmann, Mads and J{\\o}rgensen, Rasmus Nyholm and Jensen, Peter Kryger and Midtiby, Henrik Skov},\n  journal={arXiv preprint arXiv:1711.08736},\n  year={2017}\n}"
+  },
+  "geographic_coverage": [
+    "Denmark"
+  ],
+  "provenance": {
+    "collection_method": "High-resolution overhead imaging of seedlings grown in soil containers at Flakkebjerg Research Station.",
+    "curation_notes": "Expert botanical species identification across 12 target crop and weed taxa.",
+    "data_sources": [
+      "Flakkebjerg Research Station, Aarhus University, Denmark"
+    ]
+  }
+}
