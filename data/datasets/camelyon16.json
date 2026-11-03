@@ -26,32 +26,49 @@
     "whole-slide-imaging"
   ],
   "license": {
-    "status": "public_domain",
-    "name": "CC0 1.0 Universal",
-    "spdx_id": "CC0-1.0",
-    "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
-    "commercial_use": "allowed",
-    "notes": "Dedicated to the public domain under Creative Commons CC0 1.0 Universal."
+    "status": "custom_permissive",
+    "name": "Conflicting: CC0 1.0 (Data Portal & GigaDB) vs CC BY-NC-ND 4.0 (Download) vs Challenge Rules",
+    "commercial_use": "unknown",
+    "url": "https://camelyon17.grand-challenge.org/Data/",
+    "notes": "Conflicting authoritative terms exist across project documentation: The CAMELYON17 /Data/ portal, GigaScience Database (DOI: 10.5524/100439), and AWS Open Data Registry state CC0 1.0 Universal; conversely, the CAMELYON17 /Download/ page displays a CC BY-NC-ND 4.0 license badge, and CAMELYON16 Challenge Rules forbid redistribution and commercial algorithm development without prior challenge participation. Commercial permissions are unresolved and marked as unknown."
   },
   "source_references": [
     {
       "title": "CAMELYON16 Challenge Data Portal",
       "url": "https://camelyon16.grand-challenge.org/Data/",
       "type": "official_website",
-      "notes": "Official challenge data repository and documentation."
+      "notes": "Official challenge overview and data description."
     },
     {
-      "title": "JAMA Benchmark Paper (DOI: 10.1001/jama.2017.14580)",
-      "url": "https://doi.org/10.1001/jama.2017.14580",
+      "title": "JAMA Benchmark Paper (DOI: 10.1001/jama.2017.14585)",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2665774",
       "type": "original_paper",
-      "notes": "Landmark publication comparing deep learning algorithms to expert pathologists."
+      "notes": "Peer-reviewed landmark JAMA evaluation assessing deep learning vs pathologist performance on 399 whole-slide images."
+    },
+    {
+      "title": "CAMELYON16 Challenge Rules",
+      "url": "https://camelyon16.grand-challenge.org/Rules/",
+      "type": "documentation",
+      "notes": "Official terms governing registration, redistribution prohibitions, and challenge submission requirements."
+    },
+    {
+      "title": "GigaScience Database CAMELYON Dataset (DOI: 10.5524/100439)",
+      "url": "https://doi.org/10.5524/100439",
+      "type": "repository",
+      "notes": "DataCite repository archive of the CAMELYON whole-slide dataset."
+    },
+    {
+      "title": "Registry of Open Data on AWS (CAMELYON)",
+      "url": "https://registry.opendata.aws/camelyon/",
+      "type": "repository",
+      "notes": "Cloud repository mirror managed by Radboud University Medical Center."
     }
   ],
   "verification": {
-    "status": "verified",
+    "status": "provisional",
     "verified_by": "OpenDatasets Curatorial Team",
     "verified_date": "2026-11-03",
-    "notes": "Verified against JAMA 2017 publication and Grand Challenge repository."
+    "notes": "Provisional verification due to conflicting terms across official Grand Challenge portals (CC0 on Data page vs CC BY-NC-ND 4.0 on Download page vs Challenge Rules). DOI and slide count distinctions verified against JAMA 2017 paper."
   },
   "dates": {
     "published": "2016-04-13"
@@ -59,16 +76,15 @@
   "sample_count": {
     "total": 400,
     "splits": {
-      "train_metastases": 110,
-      "train_normal": 160,
-      "test": 130
+      "train_slides": 270,
+      "test_slides": 130
     },
     "unit": "whole-slide images",
     "status": "verified"
   },
   "citation": {
     "paper_title": "Diagnostic Assessment of Deep Learning Algorithms for Detection of Lymph Node Metastases in Women With Breast Cancer",
-    "paper_url": "https://doi.org/10.1001/jama.2017.14580",
+    "paper_url": "https://jamanetwork.com/journals/jama/fullarticle/2665774",
     "authors": [
       "Babak Ehteshami Bejnordi",
       "Mitko Veta",
@@ -78,15 +94,15 @@
       "Geert Litjens",
       "Jeroen A. W. M. van der Laak"
     ],
-    "doi": "10.1001/jama.2017.14580",
-    "bibtex": "@article{bejnordi2017diagnostic,\n  title={Diagnostic Assessment of Deep Learning Algorithms for Detection of Lymph Node Metastases in Women With Breast Cancer},\n  author={Bejnordi, Babak Ehteshami and Veta, Mitko and van Diest, Paul Johannes and van Ginneken, Bram and Karssemeijer, Nico and Litjens, Geert and van der Laak, Jeroen AWM and others},\n  journal={JAMA},\n  volume={318},\n  number={22},\n  pages={2199--2210},\n  year={2017},\n  publisher={American Medical Association},\n  doi={10.1001/jama.2017.14580}\n}"
+    "doi": "10.1001/jama.2017.14585",
+    "bibtex": "@article{bejnordi2017diagnostic,\n  title={Diagnostic Assessment of Deep Learning Algorithms for Detection of Lymph Node Metastases in Women With Breast Cancer},\n  author={Bejnordi, Babak Ehteshami and Veta, Mitko and van Diest, Paul Johannes and van Ginneken, Bram and Karssemeijer, Nico and Litjens, Geert and van der Laak, Jeroen A. W. M. and others},\n  journal={JAMA},\n  volume={318},\n  number={22},\n  pages={2199--2210},\n  year={2017},\n  publisher={American Medical Association},\n  doi={10.1001/jama.2017.14585}\n}"
   },
   "geographic_coverage": [
     "Netherlands"
   ],
   "provenance": {
     "collection_method": "Whole-slide digital scanning of hematoxylin and eosin (H&E) stained sentinel lymph node tissue sections.",
-    "curation_notes": "Exhaustive manual contouring of metastatic foci by pathologist consensus.",
+    "curation_notes": "The challenge dataset officially distributed 400 whole-slide images (270 training: 160 normal, 110 metastasis; 130 testing: 80 normal, 50 metastasis). In the landmark evaluation published in JAMA 2017 (Bejnordi et al., DOI: 10.1001/jama.2017.14585), 399 slides were evaluated (270 training, 129 testing), with one test slide excluded from the evaluation.",
     "data_sources": [
       "Radboud University Medical Center",
       "University Medical Center Utrecht"

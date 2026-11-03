@@ -30,27 +30,33 @@
     "spdx_id": "CC0-1.0",
     "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
     "commercial_use": "allowed",
-    "notes": "Dedicated to the public domain under CC0 1.0 Universal."
+    "notes": "Image patches are dedicated to the public domain under CC0 1.0 Universal following CAMELYON16 source data; repository code is provided under MIT License."
   },
   "source_references": [
     {
       "title": "PatchCamelyon GitHub Repository",
       "url": "https://github.com/basveeling/pcam",
       "type": "repository",
-      "notes": "Official repository with dataset generation scripts and benchmark links."
+      "notes": "Official repository containing code, download mirrors, and documentation."
     },
     {
       "title": "MICCAI 2018 Conference Paper (DOI: 10.1007/978-3-030-00934-2_24)",
       "url": "https://doi.org/10.1007/978-3-030-00934-2_24",
       "type": "original_paper",
-      "notes": "Paper introducing PCam and rotation equivariant architectures."
+      "notes": "Original paper describing rotation-equivariant CNNs and the PCam benchmark."
+    },
+    {
+      "title": "PatchCamelyon Zenodo Mirror",
+      "url": "https://zenodo.org/records/2546921",
+      "type": "archive",
+      "notes": "Zenodo data mirror for PCam HDF5 splits."
     }
   ],
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Curatorial Team",
     "verified_date": "2026-11-03",
-    "notes": "Verified against MICCAI 2018 paper and official GitHub release."
+    "notes": "Verified against MICCAI 2018 paper and official GitHub release. Note that data patches follow CAMELYON16 licensing, which has conflicting CC0 vs CC BY-NC-ND terms across challenge pages."
   },
   "dates": {
     "published": "2018-06-11"
