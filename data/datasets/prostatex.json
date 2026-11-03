@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "prostatex",
+  "slug": "prostatex",
+  "name": "PROSTATEx: Prostate Cancer MRI Assessment Challenge",
+  "description": "The PROSTATEx Challenge dataset is a public multiparametric magnetic resonance imaging (mpMRI) benchmark hosted on The Cancer Imaging Archive (TCIA) in collaboration with SPIE, AAPM, and NCI. Curated from examinations performed at Radboud University Medical Center in Nijmegen, Netherlands, the dataset features 346 mpMRI exams from 345 patients acquired on 3T Siemens scanners. Imaging modalities include transverse T2-weighted turbo spin-echo, apparent diffusion coefficient (ADC) maps, high b-value diffusion-weighted imaging (DWI), and dynamic contrast-enhanced (DCE) MRI series. Each patient case provides 3D spatial coordinate centroids of confirmed prostate lesions coupled with histopathology-proven clinically significant prostate cancer binary ground truth (Gleason score >= 7).",
+  "homepage_url": "https://www.cancerimagingarchive.net/collection/prostatex/",
+  "publisher": {
+    "name": "The Cancer Imaging Archive (TCIA) / Radboudumc",
+    "type": "academic",
+    "url": "https://www.cancerimagingarchive.net"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "image-classification",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "oncology",
+    "mri",
+    "prostate-cancer",
+    "tcia",
+    "radiology"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "TCIA Data Usage Policy / CC BY 3.0",
+    "spdx_id": "CC-BY-3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under The Cancer Imaging Archive Data Usage Policy (CC BY 3.0)."
+  },
+  "source_references": [
+    {
+      "title": "TCIA PROSTATEx Collection Page",
+      "url": "https://www.cancerimagingarchive.net/collection/prostatex/",
+      "type": "repository",
+      "notes": "Official open-access repository page on TCIA."
+    },
+    {
+      "title": "Journal of Medical Imaging Paper (DOI: 10.1117/1.JMI.5.4.044501)",
+      "url": "https://doi.org/10.1117/1.JMI.5.4.044501",
+      "type": "original_paper",
+      "notes": "SPIE-AAPM-NCI PROSTATEx Challenge summary publication."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against TCIA persistent collection record and SPIE JMI 2018 paper."
+  },
+  "dates": {
+    "published": "2017-02-08"
+  },
+  "sample_count": {
+    "total": 346,
+    "unit": "mpMRI studies",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "PROSTATEx Challenges for computerized classification of prostate lesions from multiparametric magnetic resonance images",
+    "paper_url": "https://doi.org/10.1117/1.JMI.5.4.044501",
+    "authors": [
+      "Samuel G. Armato III",
+      "Henkjan Huisman",
+      "Karen Drukker",
+      "Lubomir Hadjiiski",
+      "Maryellen L. Giger"
+    ],
+    "doi": "10.1117/1.JMI.5.4.044501",
+    "bibtex": "@article{armato2018prostatex,\n  title={PROSTATEx Challenges for computerized classification of prostate lesions from multiparametric magnetic resonance images},\n  author={Armato, Samuel G and Huisman, Henkjan and Drukker, Karen and Hadjiiski, Lubomir and Vallieres, Martin and Li, Wenyin and Meyer, Charles R and Chen, Weijie and Clarke, Laurence and Kirby, Justin and others},\n  journal={Journal of Medical Imaging},\n  volume={5},\n  number={4},\n  pages={044501},\n  year={2018},\n  publisher={SPIE},\n  doi={10.1117/1.JMI.5.4.044501}\n}"
+  },
+  "geographic_coverage": [
+    "Netherlands"
+  ],
+  "provenance": {
+    "collection_method": "Clinical 3T multiparametric MRI examinations using surface phased-array body coils at Radboud University Medical Center.",
+    "curation_notes": "Lesion coordinates mapped to biopsy and histopathologic findings verifying clinical significance.",
+    "data_sources": [
+      "Radboud University Medical Center, Nijmegen, Netherlands"
+    ]
+  }
+}

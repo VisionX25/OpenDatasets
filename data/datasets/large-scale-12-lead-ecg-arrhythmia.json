@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "large-scale-12-lead-ecg-arrhythmia",
+  "slug": "large-scale-12-lead-ecg-arrhythmia",
+  "name": "Large-Scale 12-Lead Electrocardiogram Database for Arrhythmia Research",
+  "description": "The Large-Scale 12-Lead Electrocardiogram Database is an extensive, open-access clinical electrophysiology collection published in Nature Scientific Data by Chapman University and Shaoxing People's Hospital, hosted on PhysioNet. The database contains 45,152 12-lead ECG recordings from 10,646 individual patients sampled at 500 Hz for 10 seconds per lead. All recordings are labeled by clinical experts across 11 rhythm categories (including atrial fibrillation, sinus tachycardia, sinus bradycardia, supraventricular tachycardia, and junctional rhythms) and 67 distinct arrhythmia and morphological cardiovascular conditions, providing an indispensable resource for multi-label arrhythmia classification and deep learning in cardiology.",
+  "homepage_url": "https://physionet.org/content/ecg-arrhythmia/1.0.0/",
+  "publisher": {
+    "name": "Chapman University & Shaoxing People's Hospital / PhysioNet",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "arrhythmia",
+    "physionet",
+    "biosignals"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet ECG Arrhythmia Database",
+      "url": "https://physionet.org/content/ecg-arrhythmia/1.0.0/",
+      "type": "repository",
+      "notes": "Canonical repository page on PhysioNet."
+    },
+    {
+      "title": "Nature Scientific Data Publication (DOI: 10.1038/s41597-020-0386-x)",
+      "url": "https://doi.org/10.1038/s41597-020-0386-x",
+      "type": "original_paper",
+      "notes": "Peer-reviewed dataset descriptor in Scientific Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against PhysioNet record DOI 10.13026/nhjh-w653 and Nature Scientific Data 2020 paper."
+  },
+  "dates": {
+    "published": "2020-02-14"
+  },
+  "sample_count": {
+    "total": 45152,
+    "unit": "12-lead ECG recordings",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "A 12-lead electrocardiogram database for arrhythmia research covering more than 10,000 patients",
+    "paper_url": "https://doi.org/10.1038/s41597-020-0386-x",
+    "authors": [
+      "Jianwei Zheng",
+      "Jianming Zhang",
+      "Ruchuan Daniere",
+      "Sameh Elhadary",
+      "Guoliang Cheng",
+      "Cyril Hang Hang",
+      "Erik B. Schelbert",
+      "Anthony A. Holmes"
+    ],
+    "doi": "10.1038/s41597-020-0386-x",
+    "bibtex": "@article{zheng202012lead,\n  title={A 12-lead electrocardiogram database for arrhythmia research covering more than 10,000 patients},\n  author={Zheng, Jianwei and Zhang, Jianming and Daniere, Ruchuan and Elhadary, Sameh and Cheng, Guoliang and Hang, Cyril and Schelbert, Erik B and Holmes, Anthony A},\n  journal={Scientific Data},\n  volume={7},\n  number={1},\n  pages={48},\n  year={2020},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-020-0386-x}\n}"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "Standard 10-second 12-lead ECG examinations recorded with GE Healthcare resting ECG machines.",
+    "curation_notes": "Licensed cardiologists validated rhythm and morphological diagnostics adhering to AHA/ACC/HRS guidelines.",
+    "data_sources": [
+      "Shaoxing People's Hospital, Zhejiang, China"
+    ]
+  }
+}

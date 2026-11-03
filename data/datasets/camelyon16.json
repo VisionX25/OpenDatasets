@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "camelyon16",
+  "slug": "camelyon16",
+  "name": "CAMELYON16: Cancer Metastases in Lymph Nodes Challenge 2016",
+  "description": "CAMELYON16 is a landmark digital pathology benchmark for automated detection of metastases in whole-slide histopathology images (WSIs) of breast cancer sentinel lymph node sections. Organized by Radboud University Medical Center and University Medical Center Utrecht in conjunction with ISBI 2016, the dataset contains 400 gigapixel WSIs (270 training slides including 110 with nodal metastases and 160 normal slides, plus 130 test slides). Metastatic regions are delineated with detailed pixel-level ground-truth annotations by expert pathologists, establishing the gold standard for clinical-grade lymph node metastasis detection and whole-slide evaluation algorithms.",
+  "homepage_url": "https://camelyon16.grand-challenge.org/Data/",
+  "publisher": {
+    "name": "Radboud University Medical Center & UMC Utrecht",
+    "type": "academic",
+    "url": "https://camelyon16.grand-challenge.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "semantic-segmentation",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "oncology",
+    "pathology",
+    "histopathology",
+    "whole-slide-imaging"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "CC0 1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Dedicated to the public domain under Creative Commons CC0 1.0 Universal."
+  },
+  "source_references": [
+    {
+      "title": "CAMELYON16 Challenge Data Portal",
+      "url": "https://camelyon16.grand-challenge.org/Data/",
+      "type": "official_website",
+      "notes": "Official challenge data repository and documentation."
+    },
+    {
+      "title": "JAMA Benchmark Paper (DOI: 10.1001/jama.2017.14580)",
+      "url": "https://doi.org/10.1001/jama.2017.14580",
+      "type": "original_paper",
+      "notes": "Landmark publication comparing deep learning algorithms to expert pathologists."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against JAMA 2017 publication and Grand Challenge repository."
+  },
+  "dates": {
+    "published": "2016-04-13"
+  },
+  "sample_count": {
+    "total": 400,
+    "splits": {
+      "train_metastases": 110,
+      "train_normal": 160,
+      "test": 130
+    },
+    "unit": "whole-slide images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Diagnostic Assessment of Deep Learning Algorithms for Detection of Lymph Node Metastases in Women With Breast Cancer",
+    "paper_url": "https://doi.org/10.1001/jama.2017.14580",
+    "authors": [
+      "Babak Ehteshami Bejnordi",
+      "Mitko Veta",
+      "Paul Johannes van Diest",
+      "Bram van Ginneken",
+      "Nico Karssemeijer",
+      "Geert Litjens",
+      "Jeroen A. W. M. van der Laak"
+    ],
+    "doi": "10.1001/jama.2017.14580",
+    "bibtex": "@article{bejnordi2017diagnostic,\n  title={Diagnostic Assessment of Deep Learning Algorithms for Detection of Lymph Node Metastases in Women With Breast Cancer},\n  author={Bejnordi, Babak Ehteshami and Veta, Mitko and van Diest, Paul Johannes and van Ginneken, Bram and Karssemeijer, Nico and Litjens, Geert and van der Laak, Jeroen AWM and others},\n  journal={JAMA},\n  volume={318},\n  number={22},\n  pages={2199--2210},\n  year={2017},\n  publisher={American Medical Association},\n  doi={10.1001/jama.2017.14580}\n}"
+  },
+  "geographic_coverage": [
+    "Netherlands"
+  ],
+  "provenance": {
+    "collection_method": "Whole-slide digital scanning of hematoxylin and eosin (H&E) stained sentinel lymph node tissue sections.",
+    "curation_notes": "Exhaustive manual contouring of metastatic foci by pathologist consensus.",
+    "data_sources": [
+      "Radboud University Medical Center",
+      "University Medical Center Utrecht"
+    ]
+  }
+}

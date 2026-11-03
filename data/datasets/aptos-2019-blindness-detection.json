@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "id": "aptos-2019-blindness-detection",
+  "slug": "aptos-2019-blindness-detection",
+  "name": "APTOS 2019 Blindness Detection: Diabetic Retinopathy Benchmark",
+  "description": "APTOS 2019 Blindness Detection is an international clinical ophthalmology dataset curated by the Asia Pacific Tele-Ophthalmology Society (APTOS) in partnership with the Aravind Eye Hospital in India. The dataset comprises 5,590 high-resolution retinal fundus photographs (3,662 training and 1,928 test images) acquired across multiple rural screening clinics using distinct camera models and imaging conditions. Each image was evaluated and graded by medical experts on the international clinical diabetic retinopathy scale from 0 to 4: No DR (0), Mild (1), Moderate (2), Severe (3), and Proliferative DR (4). APTOS 2019 facilitates development of automated screening models to prevent preventable vision loss in underserved populations.",
+  "homepage_url": "https://www.kaggle.com/competitions/aptos2019-blindness-detection/data",
+  "publisher": {
+    "name": "Asia Pacific Tele-Ophthalmology Society (APTOS) & Aravind Eye Hospital",
+    "type": "academic",
+    "url": "https://www.kaggle.com/competitions/aptos2019-blindness-detection"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "ophthalmology",
+    "retinopathy",
+    "fundus-photography",
+    "diabetic-retinopathy"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Kaggle Competition Rules / Non-Commercial Research License",
+    "url": "https://www.kaggle.com/competitions/aptos2019-blindness-detection/rules",
+    "commercial_use": "forbidden",
+    "notes": "Restricted to non-commercial academic research and benchmarking under official competition terms."
+  },
+  "source_references": [
+    {
+      "title": "Kaggle APTOS 2019 Blindness Detection Portal",
+      "url": "https://www.kaggle.com/competitions/aptos2019-blindness-detection/data",
+      "type": "repository",
+      "notes": "Official competition dataset repository."
+    },
+    {
+      "title": "Aravind Eye Hospital Research Profile",
+      "url": "https://aravind.org/",
+      "type": "official_website",
+      "notes": "Source clinical provider and tele-ophthalmology network."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against Kaggle APTOS 2019 dataset repository and clinical grading schema."
+  },
+  "dates": {
+    "published": "2019-06-25"
+  },
+  "sample_count": {
+    "total": 5590,
+    "splits": {
+      "train": 3662,
+      "test": 1928
+    },
+    "unit": "fundus images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "APTOS 2019 Blindness Detection",
+    "paper_url": "https://www.kaggle.com/competitions/aptos2019-blindness-detection",
+    "authors": [
+      "Asia Pacific Tele-Ophthalmology Society",
+      "Aravind Eye Hospital"
+    ]
+  },
+  "geographic_coverage": [
+    "India"
+  ],
+  "provenance": {
+    "collection_method": "Retinal fundus digital photography conducted across rural vision centers of Aravind Eye Care System in southern India.",
+    "curation_notes": "Clinician-consensus 5-point severity grading according to International Clinical Diabetic Retinopathy Disease Severity Scale.",
+    "data_sources": [
+      "Aravind Eye Hospital clinical records"
+    ]
+  }
+}

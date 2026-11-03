@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mit-bih-svdb",
+  "slug": "mit-bih-svdb",
+  "name": "MIT-BIH Supraventricular Arrhythmia Database",
+  "description": "The MIT-BIH Supraventricular Arrhythmia Database (SVDB) is a foundational electrophysiology benchmark hosted on PhysioNet. Developed by Beth Israel Hospital and MIT, the collection contains 78 half-hour 2-lead ambulatory ECG recordings chosen specifically to supplement the original MIT-BIH Arrhythmia Database with examples of challenging supraventricular arrhythmias. Capturing approximately 160,000 individual heartbeats sampled at 128 Hz per channel, the recordings exhibit supraventricular ectopic beats (atrial premature complexes, junctional premature complexes), atrial fibrillation, atrial flutter, and junctional rhythms, each annotated with beat-by-beat and rhythm-state labels.",
+  "homepage_url": "https://physionet.org/content/svdb/1.0.0/",
+  "publisher": {
+    "name": "Beth Israel Hospital & MIT / PhysioNet",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "arrhythmia",
+    "physionet",
+    "biosignals"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "ODC-By 1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Published under Open Data Commons Attribution License (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet MIT-BIH Supraventricular Arrhythmia Database",
+      "url": "https://physionet.org/content/svdb/1.0.0/",
+      "type": "repository",
+      "notes": "Canonical repository page on PhysioNet."
+    },
+    {
+      "title": "Circulation Landmark Paper (DOI: 10.1161/01.CIR.101.23.e215)",
+      "url": "https://doi.org/10.1161/01.CIR.101.23.e215",
+      "type": "original_paper",
+      "notes": "Circulation publication describing PhysioNet and MIT-BIH databases."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against PhysioNet persistent record DOI 10.13026/C2MP49."
+  },
+  "dates": {
+    "published": "1997-06-01"
+  },
+  "sample_count": {
+    "total": 78,
+    "unit": "ECG recordings",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "PhysioBank, PhysioToolkit, and PhysioNet: Components of a New Research Resource for Complex Physiologic Signals",
+    "paper_url": "https://doi.org/10.1161/01.CIR.101.23.e215",
+    "authors": [
+      "Ary L. Goldberger",
+      "Luis A. N. Amaral",
+      "Leon Glass",
+      "Jeffrey M. Hausdorff",
+      "P. Ch. Ivanov",
+      "Roger G. Mark",
+      "Joseph E. Mietus",
+      "George B. Moody",
+      "Chung-Kang Peng",
+      "H. Eugene Stanley"
+    ],
+    "doi": "10.1161/01.CIR.101.23.e215",
+    "bibtex": "@article{goldberger2000physiobank,\n  title={PhysioBank, PhysioToolkit, and PhysioNet: Components of a New Research Resource for Complex Physiologic Signals},\n  author={Goldberger, Ary L and Amaral, Luis AN and Glass, Leon and Hausdorff, Jeffrey M and Ivanov, Plamen Ch and Mark, Roger G and Mietus, Joseph E and Moody, George B and Peng, Chung-Kang and Stanley, H Eugene},\n  journal={Circulation},\n  volume={101},\n  number={23},\n  pages={e215--e220},\n  year={2000},\n  publisher={Am Heart Assoc},\n  doi={10.1161/01.CIR.101.23.e215}\n}"
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "provenance": {
+    "collection_method": "Ambulatory Holter monitor recordings captured at Boston's Beth Israel Hospital.",
+    "curation_notes": "Expert cardiologists annotated all heartbeats and rhythm transitions.",
+    "data_sources": [
+      "Beth Israel Deaconess Medical Center",
+      "MIT Biomedical Engineering Center"
+    ]
+  }
+}

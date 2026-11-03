@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cdc-diabetes-health-indicators",
+  "slug": "cdc-diabetes-health-indicators",
+  "name": "CDC Diabetes Health Indicators: BRFSS Population Health Benchmark",
+  "description": "The CDC Diabetes Health Indicators dataset from the UCI Machine Learning Repository (ID 891) is a population-scale public health benchmark derived from the Centers for Disease Control and Prevention (CDC) Behavioral Risk Factor Surveillance System (BRFSS) survey. Comprising 253,680 survey responses from US adults, the dataset incorporates 21 key health and lifestyle indicators: high blood pressure, high cholesterol, cholesterol check history, body mass index (BMI), smoking status, stroke history, heart disease or attack, physical activity, fruit consumption, vegetable consumption, heavy alcohol consumption, healthcare access, medical cost barrier, general health rating, mental health days, physical health days, difficulty walking, sex, age, education, and income. The benchmark supports population health modeling and diabetes risk stratification.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / Centers for Disease Control and Prevention (CDC)",
+    "type": "government",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "clinical-risk-prediction",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "public-health",
+    "diabetes",
+    "epidemiology",
+    "cdc",
+    "survey"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UCI ML Repository CDC Diabetes Health Indicators Page",
+      "url": "https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators",
+      "type": "repository",
+      "notes": "Official repository page on UCI."
+    },
+    {
+      "title": "CDC Behavioral Risk Factor Surveillance System (BRFSS)",
+      "url": "https://www.cdc.gov/brfss/",
+      "type": "official_website",
+      "notes": "CDC national health survey system."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against UCI record 891 and CDC BRFSS specifications."
+  },
+  "dates": {
+    "published": "2023-05-15"
+  },
+  "sample_count": {
+    "total": 253680,
+    "unit": "survey responses",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Diabetes Health Indicators Dataset",
+    "paper_url": "https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators",
+    "authors": [
+      "Alex Teboul"
+    ]
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "provenance": {
+    "collection_method": "Nationwide annual telephone health surveys conducted by state health departments in collaboration with CDC.",
+    "curation_notes": "Cleaned and standardized into 21 core health indicator variables with missing data filtering.",
+    "data_sources": [
+      "CDC BRFSS 2015 Survey Data"
+    ]
+  }
+}

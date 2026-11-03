@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "id": "physionet-cinc-2017-af",
+  "slug": "physionet-cinc-2017-af",
+  "name": "PhysioNet/CinC Challenge 2017: Atrial Fibrillation Classification from a Short Single Lead ECG",
+  "description": "The PhysioNet/Computing in Cardiology (CinC) Challenge 2017 dataset is a standard benchmark designed to stimulate algorithms that distinguish atrial fibrillation (AF) from normal sinus rhythm, other cardiac arrhythmias, and noisy signals using short single-lead ECG recordings. Captured with AliveCor KardiaMobile handheld recorders, the dataset consists of 8,528 single-lead ECG recordings sampled at 300 Hz with lengths varying between 9 and 61 seconds. Expert-annotated reference labels categorize each recording into four mutually exclusive classes: Normal sinus rhythm (5,154), Atrial Fibrillation (771), Other rhythm (2,557), and Noisy recording (46).",
+  "homepage_url": "https://physionet.org/content/challenge-2017/1.0.0/",
+  "publisher": {
+    "name": "PhysioNet & Computing in Cardiology",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "atrial-fibrillation",
+    "physionet",
+    "biosignals"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "ODC-By 1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Published under Open Data Commons Attribution License (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet Challenge 2017 Portal",
+      "url": "https://physionet.org/content/challenge-2017/1.0.0/",
+      "type": "repository",
+      "notes": "Official challenge repository on PhysioNet."
+    },
+    {
+      "title": "Computing in Cardiology 2017 Paper (DOI: 10.22489/CinC.2017.065-469)",
+      "url": "https://doi.org/10.22489/CinC.2017.065-469",
+      "type": "original_paper",
+      "notes": "Challenge overview paper describing dataset generation and evaluation metric."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against PhysioNet persistent record DOI 10.13026/C2K59Q."
+  },
+  "dates": {
+    "published": "2017-09-01"
+  },
+  "sample_count": {
+    "total": 8528,
+    "splits": {
+      "normal": 5154,
+      "af": 771,
+      "other": 2557,
+      "noisy": 46
+    },
+    "unit": "ECG recordings",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "AF Classification from a short single lead ECG recording: the PhysioNet/Computing in Cardiology Challenge 2017",
+    "paper_url": "https://doi.org/10.22489/CinC.2017.065-469",
+    "authors": [
+      "Gari D. Clifford",
+      "Chengyu Liu",
+      "Benjamin Moody",
+      "H. Lehman Li-wei",
+      "Ikaro Silva",
+      "Qiao Li",
+      "Alfonso E. Johnson",
+      "Roger G. Mark"
+    ],
+    "doi": "10.22489/CinC.2017.065-469",
+    "bibtex": "@inproceedings{clifford2017af,\n  title={AF Classification from a short single lead ECG recording: the PhysioNet/Computing in Cardiology Challenge 2017},\n  author={Clifford, Gari D and Liu, Chengyu and Moody, Benjamin and Li-wei, H Lehman and Silva, Ikaro and Li, Qiao and Johnson, Alistair E and Mark, Roger G},\n  booktitle={2017 Computing in Cardiology (CinC)},\n  pages={1--4},\n  year={2017},\n  publisher={IEEE},\n  doi={10.22489/CinC.2017.065-469}\n}"
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "provenance": {
+    "collection_method": "Handheld smartphone-connected AliveCor ECG device recordings gathered from volunteer participants.",
+    "curation_notes": "Expert cardiologist panel re-annotated and adjudicated discrepancies across all 8,528 traces.",
+    "data_sources": [
+      "AliveCor",
+      "PhysioNet"
+    ]
+  }
+}

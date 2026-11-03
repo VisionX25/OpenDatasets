@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "eicu-collaborative-research-database",
+  "slug": "eicu-collaborative-research-database",
+  "name": "eICU Collaborative Research Database: Multi-Center Intensive Care EHR Benchmark",
+  "description": "The eICU Collaborative Research Database is a multi-center critical care dataset released by Philips Healthcare and the MIT Laboratory for Computational Physiology, published in Nature Scientific Data. The database comprises clinical records for over 200,000 patient stays admitted to intensive care units across 208 distinct hospitals throughout the United States between 2014 and 2015. Documenting vital signs, care plan documentation, severity of illness scores (APACHE IV), diagnosis information, treatment orders, and laboratory measurements recorded during telehealth ICU operations, eICU-CRD enables cross-hospital generalization studies, clinical risk modeling, and algorithmic fairness benchmarking across disparate healthcare systems.",
+  "homepage_url": "https://physionet.org/content/eicu-crd/2.0/",
+  "publisher": {
+    "name": "Philips Healthcare & MIT LCP / PhysioNet",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "clinical-risk-prediction",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "intensive-care",
+    "telehealth",
+    "eicu",
+    "multi-center",
+    "clinical-records"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "PhysioNet Credentialed Data Use Agreement 1.5.0",
+    "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
+    "commercial_use": "forbidden",
+    "notes": "Restricted/credentialed access only: requires certified CITI human subjects training, PhysioNet identity verification, and signed DUA."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet eICU-CRD Database Portal",
+      "url": "https://physionet.org/content/eicu-crd/2.0/",
+      "type": "repository",
+      "notes": "Canonical repository page on PhysioNet."
+    },
+    {
+      "title": "Nature Scientific Data Publication (DOI: 10.1038/sdata.2018.178)",
+      "url": "https://doi.org/10.1038/sdata.2018.178",
+      "type": "original_paper",
+      "notes": "Peer-reviewed descriptor article in Nature Scientific Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against PhysioNet persistent record DOI 10.13026/C2WM1R and Nature Scientific Data 2018 paper."
+  },
+  "dates": {
+    "published": "2018-09-11"
+  },
+  "sample_count": {
+    "total": 200859,
+    "unit": "patient unit stays",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "The eICU Collaborative Research Database, a multicenter approach to critical care research",
+    "paper_url": "https://doi.org/10.1038/sdata.2018.178",
+    "authors": [
+      "Tom J. Pollard",
+      "Alistair E. W. Johnson",
+      "Jesse D. Raffa",
+      "Leo Anthony Celi",
+      "Roger G. Mark",
+      "Omar Badawi"
+    ],
+    "doi": "10.1038/sdata.2018.178",
+    "bibtex": "@article{pollard2018eicu,\n  title={The eICU Collaborative Research Database, a multicenter approach to critical care research},\n  author={Pollard, Tom J and Johnson, Alistair EW and Raffa, Jesse D and Celi, Leo Anthony and Mark, Roger G and Badawi, Omar},\n  journal={Scientific Data},\n  volume={5},\n  number={1},\n  pages={180178},\n  year={2018},\n  publisher={Nature Publishing Group},\n  doi={10.1038/sdata.2018.178}\n}"
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "provenance": {
+    "collection_method": "Multi-center clinical telemetry and EHR aggregation from the Philips eICU telehealth network across 208 US hospital sites.",
+    "curation_notes": "De-identified in accordance with HIPAA regulations, certified by an independent privacy expert.",
+    "data_sources": [
+      "Philips Healthcare eICU telehealth program"
+    ]
+  }
+}

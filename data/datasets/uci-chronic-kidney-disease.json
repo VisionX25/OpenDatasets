@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-chronic-kidney-disease",
+  "slug": "uci-chronic-kidney-disease",
+  "name": "Chronic Kidney Disease: Diagnostic Clinical Tabular Benchmark",
+  "description": "The Chronic Kidney Disease dataset from the UCI Machine Learning Repository (ID 336) is an established clinical tabular benchmark collected over a two-month period at Apollo Hospitals in Tamil Nadu, India. The dataset contains 400 patient records (250 diagnosed with chronic kidney disease and 150 normal controls) described by 24 clinical, laboratory, and demographic attributes: age, blood pressure, specific gravity, albumin, sugar, red blood cells, pus cells, pus cell clumps, bacteria, blood glucose random, blood urea, serum creatinine, sodium, potassium, hemoglobin, packed cell volume, white blood cell count, red blood cell count, hypertension, diabetes mellitus, coronary artery disease, appetite, pedal edema, and anemia.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/336/chronic+kidney+disease",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / Apollo Hospitals",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "healthcare-diagnostics",
+    "clinical-risk-prediction"
+  ],
+  "tags": [
+    "healthcare",
+    "nephrology",
+    "kidney-disease",
+    "uci",
+    "clinical-data"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UCI ML Repository Chronic Kidney Disease Page",
+      "url": "https://archive.ics.uci.edu/dataset/336/chronic+kidney+disease",
+      "type": "repository",
+      "notes": "Official dataset repository entry on UCI."
+    },
+    {
+      "title": "Apollo Hospitals Clinical Research Unit",
+      "url": "https://www.apollohospitals.com/",
+      "type": "official_website",
+      "notes": "Source medical institution in Tamil Nadu, India."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against UCI Machine Learning Repository record 336."
+  },
+  "dates": {
+    "published": "2015-07-03"
+  },
+  "sample_count": {
+    "total": 400,
+    "splits": {
+      "ckd": 250,
+      "not_ckd": 150
+    },
+    "unit": "patients",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Chronic Kidney Disease Dataset",
+    "paper_url": "https://archive.ics.uci.edu/dataset/336/chronic+kidney+disease",
+    "authors": [
+      "L. Jerlin Rubini",
+      "P. Eswaran"
+    ]
+  },
+  "geographic_coverage": [
+    "India"
+  ],
+  "provenance": {
+    "collection_method": "Laboratory blood and urine analyses paired with patient interviews at Apollo Hospitals, Karaikudi, Tamil Nadu, India.",
+    "curation_notes": "Expert nephrologist clinical confirmation of chronic kidney disease stage and status.",
+    "data_sources": [
+      "Apollo Hospitals, Tamil Nadu, India"
+    ]
+  }
+}

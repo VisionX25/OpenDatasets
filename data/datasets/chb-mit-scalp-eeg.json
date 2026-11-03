@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "id": "chb-mit-scalp-eeg",
+  "slug": "chb-mit-scalp-eeg",
+  "name": "CHB-MIT Scalp EEG Database: Pediatric Seizure Detection Benchmark",
+  "description": "The CHB-MIT Scalp EEG Database is an essential open-access biomedical benchmark for automated seizure onset detection. Collected at Boston Children's Hospital and hosted by PhysioNet, the database consists of 664 continuous multi-channel scalp EEG recordings from 22 pediatric subjects (5 males aged 3–22 and 17 females aged 1.5–19) with intractable epileptic seizures. Recorded over 844 total hours using the International 10-20 system of electrode placement sampled at 256 Hz with 16-bit resolution, the dataset contains 198 clinically documented epileptic seizures with precise onset and offset timestamps annotated by clinical neurophysiologists.",
+  "homepage_url": "https://physionet.org/content/chbmit/1.0.0/",
+  "publisher": {
+    "name": "PhysioNet / Boston Children's Hospital & MIT",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "neurology",
+    "eeg",
+    "epilepsy",
+    "seizure-detection",
+    "physionet"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "ODC-By 1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Published under Open Data Commons Attribution License (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet CHB-MIT Scalp EEG Database",
+      "url": "https://physionet.org/content/chbmit/1.0.0/",
+      "type": "repository",
+      "notes": "Canonical repository page on PhysioNet."
+    },
+    {
+      "title": "MIT PhD Dissertation Foundation (Shoeb, 2009)",
+      "url": "https://dspace.mit.edu/handle/1721.1/54666",
+      "type": "original_paper",
+      "notes": "Doctoral thesis introducing the dataset and machine learning seizure onset detectors."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against PhysioNet persistent record DOI 10.13026/C2K01R."
+  },
+  "dates": {
+    "published": "2010-09-08"
+  },
+  "sample_count": {
+    "total": 664,
+    "unit": "EEG recordings",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Application of Machine Learning to Epileptic Seizure Onset Detection and Treatment",
+    "paper_url": "https://dspace.mit.edu/handle/1721.1/54666",
+    "authors": [
+      "Ali Hossam Shoeb"
+    ],
+    "bibtex": "@phdthesis{shoeb2009application,\n  title={Application of Machine Learning to Epileptic Seizure Onset Detection and Treatment},\n  author={Shoeb, Ali Hossam},\n  year={2009},\n  school={Massachusetts Institute of Technology}\n}"
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "provenance": {
+    "collection_method": "Continuous multi-day scalp EEG monitoring following withdrawal of anti-seizure medications.",
+    "curation_notes": "Expert review by pediatric neurologists at Boston Children's Hospital identifying 198 clinical seizures.",
+    "data_sources": [
+      "Boston Children's Hospital",
+      "MIT Laboratory for Computational Physiology"
+    ]
+  }
+}

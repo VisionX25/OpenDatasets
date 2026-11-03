@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "medqa-medical-exam-qa",
+  "slug": "medqa-medical-exam-qa",
+  "name": "MedQA: Medical Licensing Examination Question Answering Benchmark",
+  "description": "MedQA is a large-scale, multilingual question answering benchmark curated from official medical board examinations across three countries and languages: the United States Medical Licensing Examination (USMLE) in English, the Mainland China National Medical Licensing Examination (MCMQE) in Simplified Chinese, and the Taiwan Medical Licensing Examination (TWMLE) in Traditional Chinese. Developed by researchers at MIT CSAIL and published in JMIR Medical Informatics and Findings of EMNLP, the dataset contains 61,097 multiple-choice clinical questions covering basic sciences, internal medicine, surgery, pediatrics, and clinical ethics. MedQA provides the benchmark for clinical reasoning in large language models and biomedical AI systems.",
+  "homepage_url": "https://github.com/jind11/MedQA",
+  "publisher": {
+    "name": "MIT CSAIL & Tsinghua University",
+    "type": "academic",
+    "url": "https://github.com/jind11"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "biomedical-nlp",
+    "question-answering",
+    "clinical-reasoning",
+    "usmle"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Open-access research repository licensed under the MIT License."
+  },
+  "source_references": [
+    {
+      "title": "MedQA GitHub Repository",
+      "url": "https://github.com/jind11/MedQA",
+      "type": "repository",
+      "notes": "Official repository with English and Chinese exam splits."
+    },
+    {
+      "title": "JMIR Medical Informatics Publication (DOI: 10.2196/26262)",
+      "url": "https://doi.org/10.2196/26262",
+      "type": "original_paper",
+      "notes": "Peer-reviewed journal paper establishing MedQA benchmarks."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against JMIR Medical Informatics 2021 publication and GitHub repository."
+  },
+  "dates": {
+    "published": "2021-04-12"
+  },
+  "sample_count": {
+    "total": 61097,
+    "splits": {
+      "usmle_english": 12723,
+      "mcmqe_simplified_chinese": 34251,
+      "twmle_traditional_chinese": 14123
+    },
+    "unit": "questions",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Disease Knowledge Infusion for Healthcare Cognitive Tasks: Towards Solving Medical Question Answering",
+    "paper_url": "https://doi.org/10.2196/26262",
+    "authors": [
+      "Di Jin",
+      "Eileen Pan",
+      "Nassim Oufattole",
+      "Wei-Hung Weng",
+      "Hanyi Fang",
+      "Peter Szolovits"
+    ],
+    "doi": "10.2196/26262",
+    "bibtex": "@article{jin2021disease,\n  title={Disease Knowledge Infusion for Healthcare Cognitive Tasks: Towards Solving Medical Question Answering},\n  author={Jin, Di and Pan, Eileen and Oufattole, Nassim and Weng, Wei-Hung and Fang, Hanyi and Szolovits, Peter},\n  journal={JMIR Medical Informatics},\n  volume={9},\n  number={4},\n  pages={e26262},\n  year={2021},\n  publisher={JMIR Publications},\n  doi={10.2196/26262}\n}"
+  },
+  "geographic_coverage": [
+    "United States",
+    "China",
+    "Taiwan"
+  ],
+  "provenance": {
+    "collection_method": "Compiled from officially published examination question pools of USMLE, MCMQE, and TWMLE.",
+    "curation_notes": "Expert medical review ensuring answer keys, explanations, and unambiguous clinical question stems.",
+    "data_sources": [
+      "National medical licensing examination authorities"
+    ]
+  }
+}

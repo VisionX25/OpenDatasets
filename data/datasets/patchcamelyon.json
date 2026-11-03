@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "patchcamelyon",
+  "slug": "patchcamelyon",
+  "name": "PatchCamelyon (PCam): Histopathology Patch Classification Benchmark",
+  "description": "PatchCamelyon (PCam) is a widely utilized benchmark dataset designed for machine learning research in digital histopathology without the compute overhead of gigapixel whole-slide processing. Derived from the CAMELYON16 sentinel lymph node dataset, PCam consists of 327,680 color image patches (96x96 pixels at 10x equivalent magnification) split into standardized training (262,144), validation (32,768), and testing (32,768) sets. A patch is labeled positive (binary 1) if its central 32x32 pixel region contains at least one pixel of tumor tissue, while excluding ambiguous borderline cases. PCam is balanced across classes and serves as an accessible testbed for rotation equivariance, self-supervised learning, and convolutional neural network development.",
+  "homepage_url": "https://github.com/basveeling/pcam",
+  "publisher": {
+    "name": "Radboud University Medical Center & Amsterdam UMC",
+    "type": "academic",
+    "url": "https://github.com/basveeling"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "pathology",
+    "histopathology",
+    "patch-classification",
+    "oncology"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "CC0 1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Dedicated to the public domain under CC0 1.0 Universal."
+  },
+  "source_references": [
+    {
+      "title": "PatchCamelyon GitHub Repository",
+      "url": "https://github.com/basveeling/pcam",
+      "type": "repository",
+      "notes": "Official repository with dataset generation scripts and benchmark links."
+    },
+    {
+      "title": "MICCAI 2018 Conference Paper (DOI: 10.1007/978-3-030-00934-2_24)",
+      "url": "https://doi.org/10.1007/978-3-030-00934-2_24",
+      "type": "original_paper",
+      "notes": "Paper introducing PCam and rotation equivariant architectures."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against MICCAI 2018 paper and official GitHub release."
+  },
+  "dates": {
+    "published": "2018-06-11"
+  },
+  "sample_count": {
+    "total": 327680,
+    "splits": {
+      "train": 262144,
+      "validation": 32768,
+      "test": 32768
+    },
+    "unit": "image patches",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Rotation Equivariant CNNs for Digital Pathology",
+    "paper_url": "https://doi.org/10.1007/978-3-030-00934-2_24",
+    "authors": [
+      "Bastiaan S. Veeling",
+      "Jasper Linmans",
+      "Jim Winkens",
+      "Taco Cohen",
+      "Max Welling"
+    ],
+    "doi": "10.1007/978-3-030-00934-2_24",
+    "bibtex": "@inproceedings{veeling2018rotation,\n  title={Rotation Equivariant CNNs for Digital Pathology},\n  author={Veeling, Bastiaan S and Linmans, Jasper and Winkens, Jim and Cohen, Taco and Welling, Max},\n  booktitle={Medical Image Computing and Computer Assisted Intervention -- MICCAI 2018},\n  pages={210--218},\n  year={2018},\n  publisher={Springer},\n  doi={10.1007/978-3-030-00934-2_24}\n}"
+  },
+  "geographic_coverage": [
+    "Netherlands"
+  ],
+  "provenance": {
+    "collection_method": "Extracted as 96x96 pixel tiles from CAMELYON16 gigapixel whole-slide lymph node images.",
+    "curation_notes": "Balanced positive and negative classes determined by the presence of metastatic cells in the central 32x32 window.",
+    "data_sources": [
+      "CAMELYON16 Whole-Slide Image Database"
+    ]
+  }
+}

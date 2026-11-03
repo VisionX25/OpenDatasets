@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "echonet-dynamic",
+  "slug": "echonet-dynamic",
+  "name": "EchoNet-Dynamic: Cardiac Ultrasound Video Dataset for Ejection Fraction Assessment",
+  "description": "EchoNet-Dynamic is a large-scale multimodal cardiac ultrasound video benchmark developed by Stanford University School of Medicine and published in Nature. The dataset comprises 10,030 apical-4-chamber echocardiogram videos (DICOM/AVI format, 112x112 resolution, standardizing at 50 frames per video) from patients who underwent routine diagnostic echocardiography at Stanford Health Care between 2016 and 2018. Each video is paired with expert frame-by-frame left ventricular endocardial border tracings at end-systole and end-diastole, along with clinical tabular measurements of left ventricular ejection fraction (LVEF), end-systolic volume (ESV), and end-diastolic volume (EDV) for beat-to-beat cardiac functional modeling.",
+  "homepage_url": "https://echonet.github.io/dynamic/",
+  "publisher": {
+    "name": "Stanford University School of Medicine",
+    "type": "academic",
+    "url": "https://echonet.github.io"
+  },
+  "modalities": [
+    "vision",
+    "multimodal"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ultrasound",
+    "echocardiography",
+    "video-processing"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Stanford EchoNet Research Use Agreement",
+    "url": "https://echonet.github.io/dynamic/index.html#terms",
+    "commercial_use": "forbidden",
+    "notes": "Restricted to non-commercial academic research use under Stanford University DUA."
+  },
+  "source_references": [
+    {
+      "title": "EchoNet-Dynamic Official Project Website",
+      "url": "https://echonet.github.io/dynamic/",
+      "type": "official_website",
+      "notes": "Project landing page with data access guidelines."
+    },
+    {
+      "title": "Nature Research Paper (DOI: 10.1038/s41586-020-2145-8)",
+      "url": "https://doi.org/10.1038/s41586-020-2145-8",
+      "type": "original_paper",
+      "notes": "Original landmark paper on video-based AI for beat-to-beat cardiac assessment."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against Nature 2020 publication and Stanford EchoNet data agreement."
+  },
+  "dates": {
+    "published": "2020-03-25"
+  },
+  "sample_count": {
+    "total": 10030,
+    "splits": {
+      "train": 7465,
+      "validation": 1288,
+      "test": 1277
+    },
+    "unit": "videos",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Video-based AI for beat-to-beat assessment of cardiac function",
+    "paper_url": "https://doi.org/10.1038/s41586-020-2145-8",
+    "authors": [
+      "David Ouyang",
+      "Bryan He",
+      "Amirata Ghorbani",
+      "Neal Yuan",
+      "Joseph Ebinger",
+      "Curt P. Langlotz",
+      "Paul A. Heidenreich",
+      "Robert A. Harrington",
+      "David H. Liang",
+      "Euan A. Ashley",
+      "James Y. Zou"
+    ],
+    "doi": "10.1038/s41586-020-2145-8",
+    "bibtex": "@article{ouyang2020video,\n  title={Video-based AI for beat-to-beat assessment of cardiac function},\n  author={Ouyang, David and He, Bryan and Ghorbani, Amirata and Yuan, Neal and Ebinger, Joseph and Langlotz, Curt P and Heidenreich, Paul A and Harrington, Robert A and Liang, David H and Ashley, Euan A and Zou, James Y},\n  journal={Nature},\n  volume={580},\n  number={7802},\n  pages={252--256},\n  year={2020},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41586-020-2145-8}\n}"
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "provenance": {
+    "collection_method": "Apical-4-chamber clinical echocardiography examinations conducted at Stanford Health Care.",
+    "curation_notes": "Registered sonographer manual tracing of left ventricular volumes and consensus ejection fraction calculations.",
+    "data_sources": [
+      "Stanford Health Care Echocardiography Laboratory"
+    ]
+  }
+}

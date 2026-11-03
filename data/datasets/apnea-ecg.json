@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "id": "apnea-ecg",
+  "slug": "apnea-ecg",
+  "name": "Apnea-ECG Database: Obstructive Sleep Apnea Detection Benchmark",
+  "description": "The Apnea-ECG Database is a foundational physiological signal benchmark developed for the Computers in Cardiology Challenge 2000 and hosted on PhysioNet. Contributed by Philipps University Marburg in Germany, the collection contains 70 overnight single-lead ECG recordings (approx 7 to 10 hours each) digitized at 100 Hz. The dataset is divided into a 35-recording training set and a 35-recording test set. Accompanied by synchronized continuous respiration signals for a subset of recordings, each recording features expert minute-by-minute annotations indicating the presence or absence of sleep apnea, enabling research into automated detection of obstructive sleep apnea from single-lead electrocardiograms.",
+  "homepage_url": "https://physionet.org/content/apnea-ecg/1.0.0/",
+  "publisher": {
+    "name": "PhysioNet / Philipps University Marburg",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "sleep-apnea",
+    "physionet",
+    "biosignals"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "ODC-By 1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Published under Open Data Commons Attribution License (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet Apnea-ECG Database Portal",
+      "url": "https://physionet.org/content/apnea-ecg/1.0.0/",
+      "type": "repository",
+      "notes": "Canonical repository page on PhysioNet."
+    },
+    {
+      "title": "Computers in Cardiology 2000 Publication (DOI: 10.1109/CIC.2000.898505)",
+      "url": "https://doi.org/10.1109/CIC.2000.898505",
+      "type": "original_paper",
+      "notes": "Conference publication establishing the Apnea-ECG benchmark."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against PhysioNet persistent record DOI 10.13026/C23W2R."
+  },
+  "dates": {
+    "published": "2000-09-01"
+  },
+  "sample_count": {
+    "total": 70,
+    "splits": {
+      "train": 35,
+      "test": 35
+    },
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "The Apnea-ECG Database",
+    "paper_url": "https://doi.org/10.1109/CIC.2000.898505",
+    "authors": [
+      "Thomas Penzel",
+      "George B. Moody",
+      "Roger G. Mark",
+      "Ary L. Goldberger",
+      "J. Hermann Peter"
+    ],
+    "doi": "10.1109/CIC.2000.898505",
+    "bibtex": "@inproceedings{penzel2000apnea,\n  title={The Apnea-ECG Database},\n  author={Penzel, Thomas and Moody, George B and Mark, Roger G and Goldberger, Ary L and Peter, J Hermann},\n  booktitle={Computers in Cardiology 2000},\n  pages={255--258},\n  year={2000},\n  publisher={IEEE},\n  doi={10.1109/CIC.2000.898505}\n}"
+  },
+  "geographic_coverage": [
+    "Germany"
+  ],
+  "provenance": {
+    "collection_method": "Overnight single-lead ECG and multi-channel respiration monitoring in a clinical sleep laboratory at Philipps University.",
+    "curation_notes": "Expert sleep medicine physicians scored apnea events minute-by-minute against full polysomnography.",
+    "data_sources": [
+      "Philipps University Marburg Sleep Laboratory"
+    ]
+  }
+}
