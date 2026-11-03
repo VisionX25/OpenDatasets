@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "refuge-glaucoma",
+  "slug": "refuge-glaucoma",
+  "name": "REFUGE: Retinal Fundus Glaucoma Challenge Dataset",
+  "description": "REFUGE (Retinal Fundus Glaucoma Challenge) is an authoritative benchmark for evaluating automated methods for glaucoma assessment and anatomical structure segmentation from color fundus photographs. Sourced from the Zhongshan Ophthalmic Center (ZOC) in China and published in Medical Image Analysis, the dataset includes 1,200 color fundus images divided equally into 400 training, 400 validation, and 400 testing samples acquired across two different fundus cameras (Zeiss Visucam and Canon CR-2). Each image features image-level clinical glaucoma diagnostic labels, pixel-level ground-truth segmentations of the optic disc and optic cup for cup-to-disc ratio calculation, and precise fovea center coordinate locations.",
+  "homepage_url": "https://refuge.grand-challenge.org/",
+  "publisher": {
+    "name": "Zhongshan Ophthalmic Center & Grand Challenge",
+    "type": "academic",
+    "url": "https://refuge.grand-challenge.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "semantic-segmentation",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "ophthalmology",
+    "glaucoma",
+    "fundus-photography",
+    "optic-disc-segmentation"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "CC BY-NC-SA 4.0",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode",
+    "commercial_use": "forbidden",
+    "notes": "Published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International."
+  },
+  "source_references": [
+    {
+      "title": "REFUGE Grand Challenge Official Website",
+      "url": "https://refuge.grand-challenge.org/",
+      "type": "official_website",
+      "notes": "Challenge portal and benchmark leaderboard."
+    },
+    {
+      "title": "Medical Image Analysis Journal Paper (DOI: 10.1016/j.media.2019.101570)",
+      "url": "https://doi.org/10.1016/j.media.2019.101570",
+      "type": "original_paper",
+      "notes": "Comprehensive peer-reviewed challenge evaluation paper."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against Medical Image Analysis 2020 publication and Grand Challenge repository."
+  },
+  "dates": {
+    "published": "2018-09-01"
+  },
+  "sample_count": {
+    "total": 1200,
+    "splits": {
+      "train": 400,
+      "val": 400,
+      "test": 400
+    },
+    "unit": "fundus images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "REFUGE Challenge: A Unified Framework for Evaluating Automated Methods for Glaucoma Assessment from Fundus Photographs",
+    "paper_url": "https://doi.org/10.1016/j.media.2019.101570",
+    "authors": [
+      "José Ignacio Orlando",
+      "Huazhu Fu",
+      "João Barbosa Breda",
+      "Karel van Keer",
+      "De-Kuang Zhao",
+      "Hongyan Chai",
+      "Yanwu Xu"
+    ],
+    "doi": "10.1016/j.media.2019.101570",
+    "bibtex": "@article{orlando2020refuge,\n  title={REFUGE Challenge: A Unified Framework for Evaluating Automated Methods for Glaucoma Assessment from Fundus Photographs},\n  author={Orlando, Jos{\\'e} Ignacio and Fu, Huazhu and Breda, Jo{\\~a}o Barbosa and van Keer, Karel and Bathula, Deepti R and Diaz-Pinto, Andr{\\'e}s and Fang, Ruogu and Heng, Pheng-Ann and Kim, Jeyoung and Lee, JoonHo and others},\n  journal={Medical Image Analysis},\n  volume={59},\n  pages={101570},\n  year={2020},\n  publisher={Elsevier},\n  doi={10.1016/j.media.2019.101570}\n}"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "Multi-camera clinical fundus imaging of glaucomatous and healthy eyes at Zhongshan Ophthalmic Center, Sun Yat-sen University.",
+    "curation_notes": "Expert consensus segmentations of optic disc and cup boundaries, fovea locations, and glaucomatous neuropathy classifications.",
+    "data_sources": [
+      "Zhongshan Ophthalmic Center, Sun Yat-sen University"
+    ]
+  }
+}

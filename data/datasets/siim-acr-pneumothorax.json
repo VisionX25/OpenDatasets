@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "id": "siim-acr-pneumothorax",
+  "slug": "siim-acr-pneumothorax",
+  "name": "SIIM-ACR Pneumothorax Segmentation Dataset",
+  "description": "The SIIM-ACR Pneumothorax Segmentation dataset was created by the Society for Imaging Informatics in Medicine (SIIM) and the American College of Radiology (ACR) to benchmark machine learning algorithms for identifying and segmenting pneumothorax from frontal chest radiographs. The collection comprises 12,047 de-identified DICOM chest X-ray images (10,675 training images and 1,372 test images). Radiographs positive for pneumothorax are accompanied by fine-grained run-length-encoded (RLE) pixel masks delineating the exact anatomical margins of intrapleural air collections, validated by certified radiologist consensus.",
+  "homepage_url": "https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation/data",
+  "publisher": {
+    "name": "SIIM & American College of Radiology (ACR)",
+    "type": "academic",
+    "url": "https://siim.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "image-classification",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "radiology",
+    "chest-xray",
+    "pneumothorax",
+    "segmentation"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "SIIM-ACR Challenge Rules / Non-Commercial Research License",
+    "url": "https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation/rules",
+    "commercial_use": "forbidden",
+    "notes": "Non-commercial academic research use only in accordance with challenge participation terms."
+  },
+  "source_references": [
+    {
+      "title": "Kaggle SIIM-ACR Pneumothorax Segmentation Portal",
+      "url": "https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation/data",
+      "type": "repository",
+      "notes": "Official competition repository with DICOM files and RLE masks."
+    },
+    {
+      "title": "SIIM Machine Learning Committee Overview",
+      "url": "https://siim.org/page/machine_learning",
+      "type": "official_website",
+      "notes": "Society for Imaging Informatics in Medicine challenge documentation."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against SIIM-ACR competition repository and radiologist mask schemas."
+  },
+  "dates": {
+    "published": "2019-06-25"
+  },
+  "sample_count": {
+    "total": 12047,
+    "splits": {
+      "train": 10675,
+      "test": 1372
+    },
+    "unit": "radiographs",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "SIIM-ACR Pneumothorax Segmentation Challenge",
+    "paper_url": "https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation",
+    "authors": [
+      "Society for Imaging Informatics in Medicine",
+      "American College of Radiology"
+    ]
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "provenance": {
+    "collection_method": "De-identified DICOM frontal chest radiographs from multi-institutional US clinical image repositories.",
+    "curation_notes": "Pneumothorax contours annotated by board-certified radiologists using pixel-level RLE encoding.",
+    "data_sources": [
+      "SIIM",
+      "American College of Radiology"
+    ]
+  }
+}

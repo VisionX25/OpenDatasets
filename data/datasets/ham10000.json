@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ham10000",
+  "slug": "ham10000",
+  "name": "HAM10000: Human Against Machine 10000 Dermatoscopic Skin Lesion Benchmark",
+  "description": "The HAM10000 ('Human Against Machine with 10000 training images') dataset is a multi-source collection of dermatoscopic images of common pigmented skin lesions, curated by the Medical University of Vienna and the University of Queensland and published in Nature Scientific Data. Deposited on Harvard Dataverse, the dataset consists of 10,015 dermatoscopic images accompanied by extensive clinical metadata (patient age, sex, lesion anatomical site, and diagnostic confirmation method: histopathology, confocal microscopy, or follow-up). The benchmark classifies lesions into seven diagnostic categories: actinic keratoses and intraepithelial carcinoma (akiec), basal cell carcinoma (bcc), benign keratosis-like lesions (bkl), dermatofibroma (df), melanoma (mel), melanocytic nevi (nv), and vascular lesions (vasc).",
+  "homepage_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T",
+  "publisher": {
+    "name": "Medical University of Vienna & Harvard Dataverse",
+    "type": "academic",
+    "url": "https://dataverse.harvard.edu"
+  },
+  "modalities": [
+    "vision",
+    "tabular"
+  ],
+  "tasks": [
+    "image-classification",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "dermatology",
+    "skin-cancer",
+    "melanoma",
+    "dermatoscopy"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "CC BY-NC 4.0",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/legalcode",
+    "commercial_use": "forbidden",
+    "notes": "Published under Creative Commons Attribution-NonCommercial 4.0 International."
+  },
+  "source_references": [
+    {
+      "title": "HAM10000 Harvard Dataverse Collection (DOI: 10.7910/DVN/DBW86T)",
+      "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T",
+      "type": "repository",
+      "notes": "Canonical open repository deposit."
+    },
+    {
+      "title": "Nature Scientific Data Publication (DOI: 10.1038/sdata.2018.161)",
+      "url": "https://doi.org/10.1038/sdata.2018.161",
+      "type": "original_paper",
+      "notes": "Peer-reviewed descriptor article in Nature Scientific Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against Harvard Dataverse record and Nature Scientific Data 2018 publication."
+  },
+  "dates": {
+    "published": "2018-08-14"
+  },
+  "sample_count": {
+    "total": 10015,
+    "unit": "images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "The HAM10000 dataset, a large collection of multi-source dermatoscopic images of common pigmented skin lesions",
+    "paper_url": "https://doi.org/10.1038/sdata.2018.161",
+    "authors": [
+      "Philipp Tschandl",
+      "Cliff Rosendahl",
+      "Harald Kittler"
+    ],
+    "doi": "10.1038/sdata.2018.161",
+    "bibtex": "@article{tschandl2018ham10000,\n  title={The HAM10000 dataset, a large collection of multi-source dermatoscopic images of common pigmented skin lesions},\n  author={Tschandl, Philipp and Rosendahl, Cliff and Kittler, Harald},\n  journal={Scientific Data},\n  volume={5},\n  number={1},\n  pages={180161},\n  year={2018},\n  publisher={Nature Publishing Group},\n  doi={10.1038/sdata.2018.161}\n}"
+  },
+  "geographic_coverage": [
+    "Austria",
+    "Australia"
+  ],
+  "provenance": {
+    "collection_method": "Dermatoscopic examinations using diverse contact and non-contact dermatoscope modalities in Vienna and Queensland.",
+    "curation_notes": "Ground truth verified via histopathologic biopsy (>50% of cases), expert consensus, or sequential digital dermatoscopy.",
+    "data_sources": [
+      "Department of Dermatology, Medical University of Vienna",
+      "Cliff Rosendahl Practice, Queensland"
+    ]
+  }
+}

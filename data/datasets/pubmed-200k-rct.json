@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pubmed-200k-rct",
+  "slug": "pubmed-200k-rct",
+  "name": "PubMed 200k RCT: Sequential Sentence Classification in Medical Abstracts",
+  "description": "PubMed 200k RCT is a major benchmark dataset for sequential sentence classification in medical research abstracts, developed by researchers at MIT and Adobe Research and presented at IJCNLP 2017. Sourced from MEDLINE/PubMed, the dataset comprises approximately 200,000 structured abstracts of randomized controlled trials (RCTs) containing over 2.2 million sentences. Each sentence is labeled according to its standardized rhetorical section role based on the CONSORT guidelines: Background, Objective, Method, Result, or Conclusion. PubMed 200k RCT serves as the standard evaluation suite for medical text summarization, information extraction, and semantic literature structuring.",
+  "homepage_url": "https://github.com/Franck-Dernoncourt/pubmed-rct",
+  "publisher": {
+    "name": "MIT & Adobe Research",
+    "type": "academic",
+    "url": "https://github.com/Franck-Dernoncourt"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "biomedical-nlp",
+    "abstract-classification",
+    "pubmed",
+    "rct"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Published under the MIT License."
+  },
+  "source_references": [
+    {
+      "title": "PubMed 200k RCT GitHub Repository",
+      "url": "https://github.com/Franck-Dernoncourt/pubmed-rct",
+      "type": "repository",
+      "notes": "Official open-source repository with full text and splits."
+    },
+    {
+      "title": "IJCNLP 2017 Conference Paper (arXiv:1710.06071)",
+      "url": "https://arxiv.org/abs/1710.06071",
+      "type": "original_paper",
+      "notes": "Original benchmark paper defining the sequential sentence classification task."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against IJCNLP 2017 publication and GitHub repository."
+  },
+  "dates": {
+    "published": "2017-10-17"
+  },
+  "sample_count": {
+    "total": 195654,
+    "splits": {
+      "train": 180000,
+      "dev": 28712,
+      "test": 28978
+    },
+    "unit": "abstracts",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "PubMed 200k RCT: a Dataset for Sequential Sentence Classification in Medical Abstracts",
+    "paper_url": "https://arxiv.org/abs/1710.06071",
+    "authors": [
+      "Franck Dernoncourt",
+      "Ji Young Lee"
+    ],
+    "bibtex": "@inproceedings{dernoncourt2017pubmed,\n  title={PubMed 200k RCT: a Dataset for Sequential Sentence Classification in Medical Abstracts},\n  author={Dernoncourt, Franck and Lee, Ji Young},\n  booktitle={Proceedings of the Eighth International Joint Conference on Natural Language Processing (Volume 2: Short Papers)},\n  pages={308--313},\n  year={2017}\n}"
+  },
+  "geographic_coverage": [
+    "Global"
+  ],
+  "provenance": {
+    "collection_method": "Extracted from PubMed/MEDLINE baseline dumps filtering for structured RCT publications.",
+    "curation_notes": "Mapped publisher explicit abstract section headers to standard CONSORT rhetorical categories.",
+    "data_sources": [
+      "National Library of Medicine (NLM) PubMed / MEDLINE"
+    ]
+  }
+}

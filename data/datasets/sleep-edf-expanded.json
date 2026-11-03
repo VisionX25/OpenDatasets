@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sleep-edf-expanded",
+  "slug": "sleep-edf-expanded",
+  "name": "Sleep-EDF Database Expanded: Polysomnographic Sleep Stage Benchmark",
+  "description": "The Sleep-EDF Database Expanded contains 197 whole-night polysomnographic (PSG) recordings hosted on PhysioNet. Sourced from the Department of Clinical Neurophysiology at the Westeinde Hospital in The Hague and the University of Amsterdam, the collection includes two distinct studies: 153 recordings from 61 healthy subjects (Sleep Cassette Study) and 44 recordings from 22 patients with sleep initiation difficulty (Sleep Telemetry Study). Signal channels include horizontal EEG (Fpz-Cz and Pz-Oz), submental chin EMG, horizontal EOG, oral-nasal respiration, and rectal body temperature. Recordings are accompanied by manual hypnogram annotations scoring 30-second epochs into sleep stages (Wake, N1, N2, N3, N4, REM, and Movement) according to the Rechtschaffen and Kales standard.",
+  "homepage_url": "https://physionet.org/content/sleep-edfx/1.0.0/",
+  "publisher": {
+    "name": "PhysioNet / Westeinde Hospital",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "sleep-medicine",
+    "eeg",
+    "polysomnography",
+    "physionet",
+    "biosignals"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "ODC-By 1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Published under Open Data Commons Attribution License (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet Sleep-EDF Expanded Collection",
+      "url": "https://physionet.org/content/sleep-edfx/1.0.0/",
+      "type": "repository",
+      "notes": "Canonical repository page on PhysioNet."
+    },
+    {
+      "title": "IEEE TBME Foundation Paper (DOI: 10.1109/10.867928)",
+      "url": "https://doi.org/10.1109/10.867928",
+      "type": "original_paper",
+      "notes": "Publication on sleep-dependent slow-wave microcontinuity."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against PhysioNet record DOI 10.13026/C2X676."
+  },
+  "dates": {
+    "published": "2018-03-23"
+  },
+  "sample_count": {
+    "total": 197,
+    "unit": "polysomnographic recordings",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Analysis of a sleep-dependent neuronal feedback loop: the slow-wave microcontinuity of the EEG",
+    "paper_url": "https://doi.org/10.1109/10.867928",
+    "authors": [
+      "Bob Kemp",
+      "Aeilko H. Zwinderman",
+      "Bert Tuk",
+      "Hilbrand A. C. Kamphuisen",
+      "John M. L. Oberyé"
+    ],
+    "doi": "10.1109/10.867928",
+    "bibtex": "@article{kemp2000analysis,\n  title={Analysis of a sleep-dependent neuronal feedback loop: the slow-wave microcontinuity of the EEG},\n  author={Kemp, Bob and Zwinderman, Aeilko H and Tuk, Bert and Kamphuisen, Hilbrand AC and Oberye, John ML},\n  journal={IEEE Transactions on Biomedical Engineering},\n  volume={47},\n  number={9},\n  pages={1185--1194},\n  year={2000},\n  publisher={IEEE},\n  doi={10.1109/10.867928}\n}"
+  },
+  "geographic_coverage": [
+    "Netherlands"
+  ],
+  "provenance": {
+    "collection_method": "Overnight polysomnography at Westeinde Hospital in The Hague using modified Oxford Medilog 9000-series recorders.",
+    "curation_notes": "30-second epoch scoring by well-trained sleep technologists according to Rechtschaffen and Kales criteria.",
+    "data_sources": [
+      "Westeinde Hospital, The Hague, Netherlands"
+    ]
+  }
+}

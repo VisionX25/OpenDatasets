@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "medmcqa",
+  "slug": "medmcqa",
+  "name": "MedMCQA: Multi-Subject Multiple-Choice Medical Question Answering Benchmark",
+  "description": "MedMCQA is a large-scale, multiple-choice question answering dataset compiled to advance biomedical cognitive AI and medical education assessment. Published in the Proceedings of Machine Learning Research (PMLR / CHIL 2022) by researchers from the Indian Institute of Science and AIIMS, the dataset comprises over 194,000 multiple-choice questions collected from past Indian medical entrance examinations (AIIMS PG and NEET-PG). Spanning 21 preclinical, paraclinical, and clinical subjects and covering 2,400 healthcare topics, MedMCQA features 4-option multiple-choice questions accompanied by subject tags, topic classifications, and detailed explanatory solution rationales.",
+  "homepage_url": "https://github.com/medmcqa/medmcqa",
+  "publisher": {
+    "name": "Indian Institute of Science & AIIMS / PMLR",
+    "type": "academic",
+    "url": "https://github.com/medmcqa"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "biomedical-nlp",
+    "question-answering",
+    "clinical-reasoning",
+    "medical-education"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache-2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Published under the Apache License 2.0."
+  },
+  "source_references": [
+    {
+      "title": "MedMCQA GitHub Repository",
+      "url": "https://github.com/medmcqa/medmcqa",
+      "type": "repository",
+      "notes": "Official repository containing data partitions and rationales."
+    },
+    {
+      "title": "PMLR CHIL 2022 Publication",
+      "url": "https://proceedings.mlr.press/v174/pal22a.html",
+      "type": "original_paper",
+      "notes": "Proceedings of the Conference on Health, Inference, and Learning (CHIL 2022)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against PMLR Volume 174 publication and official GitHub repository."
+  },
+  "dates": {
+    "published": "2022-03-30"
+  },
+  "sample_count": {
+    "total": 194289,
+    "splits": {
+      "train": 182822,
+      "dev": 4183,
+      "test": 6184
+    },
+    "unit": "questions",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "MedMCQA: A Large-scale Multi-Subject Multi-Choice Dataset for Medical domain Question Answering",
+    "paper_url": "https://proceedings.mlr.press/v174/pal22a.html",
+    "authors": [
+      "Ankit Pal",
+      "Logesh Kumar Umapathi",
+      "Malaikannan Sankarasubbu"
+    ],
+    "bibtex": "@inproceedings{pal2022medmcqa,\n  title={MedMCQA: A Large-scale Multi-Subject Multi-Choice Dataset for Medical domain Question Answering},\n  author={Pal, Ankit and Umapathi, Logesh Kumar and Sankarasubbu, Malaikannan},\n  booktitle={Conference on Health, Inference, and Learning},\n  pages={248--260},\n  year={2022},\n  organization={PMLR}\n}"
+  },
+  "geographic_coverage": [
+    "India"
+  ],
+  "provenance": {
+    "collection_method": "Sourced from historical medical council and postgraduate entrance examination question papers.",
+    "curation_notes": "Expert curation by medical graduates verifying correct answer keys and explanatory solution rationales.",
+    "data_sources": [
+      "AIIMS PG and NEET-PG examinations"
+    ]
+  }
+}

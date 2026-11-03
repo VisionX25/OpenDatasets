@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "hyperkvasir",
+  "slug": "hyperkvasir",
+  "name": "HyperKvasir: Comprehensive Multi-Class Gastrointestinal Endoscopy Dataset",
+  "description": "HyperKvasir is the largest publicly accessible multi-class image and video dataset for gastrointestinal (GI) endoscopy, published in Nature Scientific Data by Simula Research Laboratory and Bærum Hospital, Norway. The collection aggregates 110,079 images and video frames obtained during real-world colonoscopy and gastroscopy examinations. It encompasses 10,662 labeled images organized into 23 distinct clinical findings across anatomical landmarks, pathological findings (polyps, ulcerative colitis, esophagitis, Barrett's esophagus), therapeutic interventions, and quality-of-preparation stages; 99,417 unlabeled endoscopy frames; 1,000 segmented polyp images with pixel-level ground-truth masks; and 374 video sequences total.",
+  "homepage_url": "https://datasets.simula.no/hyper-kvasir/",
+  "publisher": {
+    "name": "Simula Research Laboratory & Bærum Hospital",
+    "type": "academic",
+    "url": "https://datasets.simula.no"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "semantic-segmentation",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "gastroenterology",
+    "endoscopy",
+    "colonoscopy",
+    "polyps",
+    "simula"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "HyperKvasir Simula Dataset Page",
+      "url": "https://datasets.simula.no/hyper-kvasir/",
+      "type": "repository",
+      "notes": "Official open-data distribution portal."
+    },
+    {
+      "title": "Scientific Data Publication (DOI: 10.1038/s41597-020-00622-y)",
+      "url": "https://doi.org/10.1038/s41597-020-00622-y",
+      "type": "original_paper",
+      "notes": "Peer-reviewed dataset descriptor article in Scientific Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against Nature Scientific Data publication 10.1038/s41597-020-00622-y."
+  },
+  "dates": {
+    "published": "2020-08-28"
+  },
+  "sample_count": {
+    "total": 110079,
+    "splits": {
+      "labeled_images": 10662,
+      "unlabeled_images": 99417,
+      "segmented_images": 1000,
+      "videos": 374
+    },
+    "unit": "images and videos",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "HyperKvasir, a comprehensive multi-class image and video dataset for gastrointestinal endoscopy",
+    "paper_url": "https://doi.org/10.1038/s41597-020-00622-y",
+    "authors": [
+      "Hanna Borgli",
+      "Vajira Thambawita",
+      "Pål Halvorsen",
+      "Michael A. Riegler"
+    ],
+    "doi": "10.1038/s41597-020-00622-y",
+    "bibtex": "@article{borgli2020hyperkvasir,\n  title={HyperKvasir, a comprehensive multi-class image and video dataset for gastrointestinal endoscopy},\n  author={Borgli, Hanna and Thambawita, Vajira and Smedsrud, Pia H and Hicks, Steven and Jha, Debesh and Eskeland, Sigrun L and Randel, Kristin Ranheim and Pogorelov, Konstantin and Lux, Mathias and Nguyen, Duc Tien Dang and others},\n  journal={Scientific Data},\n  volume={7},\n  number={1},\n  pages={283},\n  year={2020},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-020-00622-y}\n}"
+  },
+  "geographic_coverage": [
+    "Norway"
+  ],
+  "provenance": {
+    "collection_method": "Standard clinical endoscopy procedures conducted at Bærum Hospital using Olympus endoscopy equipment.",
+    "curation_notes": "Expert gastroenterologist annotation across 23 classes and 1,000 segmented polyp masks.",
+    "data_sources": [
+      "Bærum Hospital, Vestre Viken Hospital Trust, Norway"
+    ]
+  }
+}

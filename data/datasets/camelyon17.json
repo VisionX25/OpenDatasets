@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "camelyon17",
+  "slug": "camelyon17",
+  "name": "CAMELYON17: Patient-Level Breast Cancer Lymph Node Metastasis Benchmark",
+  "description": "CAMELYON17 is the successor digital pathology challenge to CAMELYON16, shifting the clinical objective from individual lesion detection to automated patient-level pathological nodal (pN) staging in breast cancer. Sourced from five independent pathology laboratories across the Netherlands (Radboudumc, UMC Utrecht, Rijnstate Hospital, Canisius-Wilhelmina Hospital, and Laboratorium Pathologie Oost-Nederland), the dataset provides 1,000 whole-slide images (WSIs) across 200 patients (5 sentinel lymph node sections per patient). With 500 slides provided for training (including exhaustive annotations for 50 slides and patient pN-stage labels) and 500 slides for independent testing, CAMELYON17 rigorously benchmarks multi-center algorithmic robustness and clinical staging accuracy.",
+  "homepage_url": "https://camelyon17.grand-challenge.org/Data/",
+  "publisher": {
+    "name": "Radboud University Medical Center & Dutch Pathology Consortium",
+    "type": "academic",
+    "url": "https://camelyon17.grand-challenge.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "semantic-segmentation",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "oncology",
+    "pathology",
+    "histopathology",
+    "whole-slide-imaging"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "CC0 1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Released into the public domain under CC0 1.0 Universal."
+  },
+  "source_references": [
+    {
+      "title": "CAMELYON17 Challenge Data Portal",
+      "url": "https://camelyon17.grand-challenge.org/Data/",
+      "type": "official_website",
+      "notes": "Official challenge repository and data release."
+    },
+    {
+      "title": "IEEE TMI Benchmark Paper (DOI: 10.1109/TMI.2018.2867350)",
+      "url": "https://doi.org/10.1109/TMI.2018.2867350",
+      "type": "original_paper",
+      "notes": "IEEE Transactions on Medical Imaging overview paper."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against IEEE TMI 2019 publication and Grand Challenge repository."
+  },
+  "dates": {
+    "published": "2017-04-18"
+  },
+  "sample_count": {
+    "total": 1000,
+    "splits": {
+      "train_slides": 500,
+      "test_slides": 500
+    },
+    "unit": "whole-slide images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "From Detection of Individual Metastases to Classification of Lymph Node Status at the Patient Level: The CAMELYON17 Challenge",
+    "paper_url": "https://doi.org/10.1109/TMI.2018.2867350",
+    "authors": [
+      "Peter Bandi",
+      "Geert Litjens",
+      "Bram van Ginneken",
+      "Jeroen van der Laak"
+    ],
+    "doi": "10.1109/TMI.2018.2867350",
+    "bibtex": "@article{bandi2019detection,\n  title={From Detection of Individual Metastases to Classification of Lymph Node Status at the Patient Level: The CAMELYON17 Challenge},\n  author={Bandi, Peter and Geessink, Oscar and Manson, Quirine and Van Dijk, Marcory and Balkenhol, Maschenka and Hermsen, Meyke and Bejnordi, Babak Ehteshami and Litjens, Geert and van Ginneken, Bram and van der Laak, Jeroen},\n  journal={IEEE Transactions on Medical Imaging},\n  volume={38},\n  number={2},\n  pages={550--560},\n  year={2019},\n  publisher={IEEE},\n  doi={10.1109/TMI.2018.2867350}\n}"
+  },
+  "geographic_coverage": [
+    "Netherlands"
+  ],
+  "provenance": {
+    "collection_method": "Multi-center whole-slide imaging using diverse digital scanners across 5 Dutch medical institutions.",
+    "curation_notes": "Five lymph nodes per patient with pathological pN staging annotations (pN0, pN0(i+), pN1mi, pN1, pN2).",
+    "data_sources": [
+      "Radboudumc",
+      "UMC Utrecht",
+      "Rijnstate Hospital",
+      "Canisius-Wilhelmina Hospital",
+      "LabPON"
+    ]
+  }
+}

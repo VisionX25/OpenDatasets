@@ -1042,6 +1042,182 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "apnea-ecg",
+    "slug": "apnea-ecg",
+    "name": "Apnea-ECG Database: Obstructive Sleep Apnea Detection Benchmark",
+    "description": "The Apnea-ECG Database is a foundational physiological signal benchmark developed for the Computers in Cardiology Challenge 2000 and hosted on PhysioNet. Contributed by Philipps University Marburg in Germany, the collection contains 70 overnight single-lead ECG recordings (approx 7 to 10 hours each) digitized at 100 Hz. The dataset is divided into a 35-recording training set and a 35-recording test set. Accompanied by synchronized continuous respiration signals for a subset of recordings, each recording features expert minute-by-minute annotations indicating the presence or absence of sleep apnea, enabling research into automated detection of obstructive sleep apnea from single-lead electrocardiograms.",
+    "homepage_url": "https://physionet.org/content/apnea-ecg/1.0.0/",
+    "publisher": {
+      "name": "PhysioNet / Philipps University Marburg",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "sensor",
+      "time-series"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "sleep-apnea",
+      "physionet",
+      "biosignals"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "ODC-By 1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Published under Open Data Commons Attribution License (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet Apnea-ECG Database Portal",
+        "url": "https://physionet.org/content/apnea-ecg/1.0.0/",
+        "type": "repository",
+        "notes": "Canonical repository page on PhysioNet."
+      },
+      {
+        "title": "Computers in Cardiology 2000 Publication (DOI: 10.1109/CIC.2000.898505)",
+        "url": "https://doi.org/10.1109/CIC.2000.898505",
+        "type": "original_paper",
+        "notes": "Conference publication establishing the Apnea-ECG benchmark."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against PhysioNet persistent record DOI 10.13026/C23W2R."
+    },
+    "dates": {
+      "published": "2000-09-01"
+    },
+    "sample_count": {
+      "total": 70,
+      "splits": {
+        "train": 35,
+        "test": 35
+      },
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "The Apnea-ECG Database",
+      "paper_url": "https://doi.org/10.1109/CIC.2000.898505",
+      "authors": [
+        "Thomas Penzel",
+        "George B. Moody",
+        "Roger G. Mark",
+        "Ary L. Goldberger",
+        "J. Hermann Peter"
+      ],
+      "doi": "10.1109/CIC.2000.898505",
+      "bibtex": "@inproceedings{penzel2000apnea,\n  title={The Apnea-ECG Database},\n  author={Penzel, Thomas and Moody, George B and Mark, Roger G and Goldberger, Ary L and Peter, J Hermann},\n  booktitle={Computers in Cardiology 2000},\n  pages={255--258},\n  year={2000},\n  publisher={IEEE},\n  doi={10.1109/CIC.2000.898505}\n}"
+    },
+    "geographic_coverage": [
+      "Germany"
+    ],
+    "provenance": {
+      "collection_method": "Overnight single-lead ECG and multi-channel respiration monitoring in a clinical sleep laboratory at Philipps University.",
+      "curation_notes": "Expert sleep medicine physicians scored apnea events minute-by-minute against full polysomnography.",
+      "data_sources": [
+        "Philipps University Marburg Sleep Laboratory"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "aptos-2019-blindness-detection",
+    "slug": "aptos-2019-blindness-detection",
+    "name": "APTOS 2019 Blindness Detection: Diabetic Retinopathy Benchmark",
+    "description": "APTOS 2019 Blindness Detection is an international clinical ophthalmology dataset curated by the Asia Pacific Tele-Ophthalmology Society (APTOS) in partnership with the Aravind Eye Hospital in India. The dataset comprises 5,590 high-resolution retinal fundus photographs (3,662 training and 1,928 test images) acquired across multiple rural screening clinics using distinct camera models and imaging conditions. Each image was evaluated and graded by medical experts on the international clinical diabetic retinopathy scale from 0 to 4: No DR (0), Mild (1), Moderate (2), Severe (3), and Proliferative DR (4). APTOS 2019 facilitates development of automated screening models to prevent preventable vision loss in underserved populations.",
+    "homepage_url": "https://www.kaggle.com/competitions/aptos2019-blindness-detection/data",
+    "publisher": {
+      "name": "Asia Pacific Tele-Ophthalmology Society (APTOS) & Aravind Eye Hospital",
+      "type": "academic",
+      "url": "https://www.kaggle.com/competitions/aptos2019-blindness-detection"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "ophthalmology",
+      "retinopathy",
+      "fundus-photography",
+      "diabetic-retinopathy"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Kaggle Competition Rules / Non-Commercial Research License",
+      "url": "https://www.kaggle.com/competitions/aptos2019-blindness-detection/rules",
+      "commercial_use": "forbidden",
+      "notes": "Restricted to non-commercial academic research and benchmarking under official competition terms."
+    },
+    "source_references": [
+      {
+        "title": "Kaggle APTOS 2019 Blindness Detection Portal",
+        "url": "https://www.kaggle.com/competitions/aptos2019-blindness-detection/data",
+        "type": "repository",
+        "notes": "Official competition dataset repository."
+      },
+      {
+        "title": "Aravind Eye Hospital Research Profile",
+        "url": "https://aravind.org/",
+        "type": "official_website",
+        "notes": "Source clinical provider and tele-ophthalmology network."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against Kaggle APTOS 2019 dataset repository and clinical grading schema."
+    },
+    "dates": {
+      "published": "2019-06-25"
+    },
+    "sample_count": {
+      "total": 5590,
+      "splits": {
+        "train": 3662,
+        "test": 1928
+      },
+      "unit": "fundus images",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "APTOS 2019 Blindness Detection",
+      "paper_url": "https://www.kaggle.com/competitions/aptos2019-blindness-detection",
+      "authors": [
+        "Asia Pacific Tele-Ophthalmology Society",
+        "Aravind Eye Hospital"
+      ]
+    },
+    "geographic_coverage": [
+      "India"
+    ],
+    "provenance": {
+      "collection_method": "Retinal fundus digital photography conducted across rural vision centers of Aravind Eye Care System in southern India.",
+      "curation_notes": "Clinician-consensus 5-point severity grading according to International Clinical Diabetic Retinopathy Disease Severity Scale.",
+      "data_sources": [
+        "Aravind Eye Hospital clinical records"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "aslad-190k-arabic-sign-language-alphabet",
     "slug": "aslad-190k-arabic-sign-language-alphabet",
     "name": "ASLAD-190K: Arabic Sign Language Alphabet Dataset consisting of 190,000 Images",
@@ -3541,6 +3717,103 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "bc5cdr",
+    "slug": "bc5cdr",
+    "name": "BC5CDR: BioCreative V Chemical Disease Relation Corpus",
+    "description": "The BC5CDR (BioCreative V Chemical-Disease Relation) corpus is a gold-standard biomedical text mining and named entity recognition (NER) benchmark developed by the National Center for Biotechnology Information (NCBI) for the BioCreative V challenge, published in the journal Database. The corpus consists of 1,500 PubMed abstracts (split into 500 training, 500 development, and 500 test articles) comprehensively annotated for chemical entity mentions, disease entity mentions, and chemical-induced disease (CID) relational interactions. Containing 12,850 chemical mentions, 12,413 disease mentions, and 3,116 distinct CID relations mapped to MeSH concepts, BC5CDR is the definitive benchmark for biomedical information extraction.",
+    "homepage_url": "https://huggingface.co/datasets/tner/bc5cdr",
+    "publisher": {
+      "name": "National Center for Biotechnology Information (NCBI)",
+      "type": "government",
+      "url": "https://www.ncbi.nlm.nih.gov"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "named-entity-recognition",
+      "text-classification",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "biomedical-nlp",
+      "ner",
+      "relation-extraction",
+      "pharmacology",
+      "ncbi"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "Public Domain (US Government Work)",
+      "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+      "commercial_use": "allowed",
+      "notes": "Produced by NCBI/NIH employees as a work of the United States Government in the public domain."
+    },
+    "source_references": [
+      {
+        "title": "Hugging Face Datasets: BC5CDR",
+        "url": "https://huggingface.co/datasets/tner/bc5cdr",
+        "type": "repository",
+        "notes": "Community standardized NER distribution."
+      },
+      {
+        "title": "Oxford Database Journal Publication (DOI: 10.1093/database/baw068)",
+        "url": "https://doi.org/10.1093/database/baw068",
+        "type": "original_paper",
+        "notes": "Peer-reviewed journal paper detailing curation and evaluation."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against Oxford Database 2016 publication and NCBI BioCreative V release."
+    },
+    "dates": {
+      "published": "2016-05-18"
+    },
+    "sample_count": {
+      "total": 1500,
+      "splits": {
+        "train": 500,
+        "development": 500,
+        "test": 500
+      },
+      "unit": "abstracts",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "BioCreative V CDR task corpus: a resource for chemical disease relation extraction",
+      "paper_url": "https://doi.org/10.1093/database/baw068",
+      "authors": [
+        "Jiao Li",
+        "Yueping Sun",
+        "Robin J. Johnson",
+        "Daniela Sciaky",
+        "Chih-Hsuan Wei",
+        "Robert Leaman",
+        "Allan Peter Davis",
+        "Carolyn J. Mattingly",
+        "Thomas C. Wiegers",
+        "Zhiyong Lu"
+      ],
+      "doi": "10.1093/database/baw068",
+      "bibtex": "@article{li2016biocreative,\n  title={BioCreative V CDR task corpus: a resource for chemical disease relation extraction},\n  author={Li, Jiao and Sun, Yueping and Johnson, Robin J and Sciaky, Daniela and Wei, Chih-Hsuan and Leaman, Robert and Davis, Allan Peter and Mattingly, Carolyn J and Wiegers, Thomas C and Lu, Zhiyong},\n  journal={Database},\n  volume={2016},\n  pages={baw068},\n  year={2016},\n  publisher={Oxford University Press},\n  doi={10.1093/database/baw068}\n}"
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "provenance": {
+      "collection_method": "PubMed literature curation conducted by professional Medical Subject Headings (MeSH) indexers.",
+      "curation_notes": "Dual-annotated with full inter-annotator agreement tracking and MeSH concept normalization.",
+      "data_sources": [
+        "NLM PubMed / MEDLINE database"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bd-agromet56",
     "slug": "bd-agromet56",
     "name": "BD-AgroMet56",
@@ -5518,6 +5791,277 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "camelyon16",
+    "slug": "camelyon16",
+    "name": "CAMELYON16: Cancer Metastases in Lymph Nodes Challenge 2016",
+    "description": "CAMELYON16 is a landmark digital pathology benchmark for automated detection of metastases in whole-slide histopathology images (WSIs) of breast cancer sentinel lymph node sections. Organized by Radboud University Medical Center and University Medical Center Utrecht in conjunction with ISBI 2016, the dataset contains 400 gigapixel WSIs (270 training slides including 110 with nodal metastases and 160 normal slides, plus 130 test slides). Metastatic regions are delineated with detailed pixel-level ground-truth annotations by expert pathologists, establishing the gold standard for clinical-grade lymph node metastasis detection and whole-slide evaluation algorithms.",
+    "homepage_url": "https://camelyon16.grand-challenge.org/Data/",
+    "publisher": {
+      "name": "Radboud University Medical Center & UMC Utrecht",
+      "type": "academic",
+      "url": "https://camelyon16.grand-challenge.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "semantic-segmentation",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "oncology",
+      "pathology",
+      "histopathology",
+      "whole-slide-imaging"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "CC0 1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Dedicated to the public domain under Creative Commons CC0 1.0 Universal."
+    },
+    "source_references": [
+      {
+        "title": "CAMELYON16 Challenge Data Portal",
+        "url": "https://camelyon16.grand-challenge.org/Data/",
+        "type": "official_website",
+        "notes": "Official challenge data repository and documentation."
+      },
+      {
+        "title": "JAMA Benchmark Paper (DOI: 10.1001/jama.2017.14580)",
+        "url": "https://doi.org/10.1001/jama.2017.14580",
+        "type": "original_paper",
+        "notes": "Landmark publication comparing deep learning algorithms to expert pathologists."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against JAMA 2017 publication and Grand Challenge repository."
+    },
+    "dates": {
+      "published": "2016-04-13"
+    },
+    "sample_count": {
+      "total": 400,
+      "splits": {
+        "train_metastases": 110,
+        "train_normal": 160,
+        "test": 130
+      },
+      "unit": "whole-slide images",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Diagnostic Assessment of Deep Learning Algorithms for Detection of Lymph Node Metastases in Women With Breast Cancer",
+      "paper_url": "https://doi.org/10.1001/jama.2017.14580",
+      "authors": [
+        "Babak Ehteshami Bejnordi",
+        "Mitko Veta",
+        "Paul Johannes van Diest",
+        "Bram van Ginneken",
+        "Nico Karssemeijer",
+        "Geert Litjens",
+        "Jeroen A. W. M. van der Laak"
+      ],
+      "doi": "10.1001/jama.2017.14580",
+      "bibtex": "@article{bejnordi2017diagnostic,\n  title={Diagnostic Assessment of Deep Learning Algorithms for Detection of Lymph Node Metastases in Women With Breast Cancer},\n  author={Bejnordi, Babak Ehteshami and Veta, Mitko and van Diest, Paul Johannes and van Ginneken, Bram and Karssemeijer, Nico and Litjens, Geert and van der Laak, Jeroen AWM and others},\n  journal={JAMA},\n  volume={318},\n  number={22},\n  pages={2199--2210},\n  year={2017},\n  publisher={American Medical Association},\n  doi={10.1001/jama.2017.14580}\n}"
+    },
+    "geographic_coverage": [
+      "Netherlands"
+    ],
+    "provenance": {
+      "collection_method": "Whole-slide digital scanning of hematoxylin and eosin (H&E) stained sentinel lymph node tissue sections.",
+      "curation_notes": "Exhaustive manual contouring of metastatic foci by pathologist consensus.",
+      "data_sources": [
+        "Radboud University Medical Center",
+        "University Medical Center Utrecht"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "camelyon17",
+    "slug": "camelyon17",
+    "name": "CAMELYON17: Patient-Level Breast Cancer Lymph Node Metastasis Benchmark",
+    "description": "CAMELYON17 is the successor digital pathology challenge to CAMELYON16, shifting the clinical objective from individual lesion detection to automated patient-level pathological nodal (pN) staging in breast cancer. Sourced from five independent pathology laboratories across the Netherlands (Radboudumc, UMC Utrecht, Rijnstate Hospital, Canisius-Wilhelmina Hospital, and Laboratorium Pathologie Oost-Nederland), the dataset provides 1,000 whole-slide images (WSIs) across 200 patients (5 sentinel lymph node sections per patient). With 500 slides provided for training (including exhaustive annotations for 50 slides and patient pN-stage labels) and 500 slides for independent testing, CAMELYON17 rigorously benchmarks multi-center algorithmic robustness and clinical staging accuracy.",
+    "homepage_url": "https://camelyon17.grand-challenge.org/Data/",
+    "publisher": {
+      "name": "Radboud University Medical Center & Dutch Pathology Consortium",
+      "type": "academic",
+      "url": "https://camelyon17.grand-challenge.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "semantic-segmentation",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "oncology",
+      "pathology",
+      "histopathology",
+      "whole-slide-imaging"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "CC0 1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Released into the public domain under CC0 1.0 Universal."
+    },
+    "source_references": [
+      {
+        "title": "CAMELYON17 Challenge Data Portal",
+        "url": "https://camelyon17.grand-challenge.org/Data/",
+        "type": "official_website",
+        "notes": "Official challenge repository and data release."
+      },
+      {
+        "title": "IEEE TMI Benchmark Paper (DOI: 10.1109/TMI.2018.2867350)",
+        "url": "https://doi.org/10.1109/TMI.2018.2867350",
+        "type": "original_paper",
+        "notes": "IEEE Transactions on Medical Imaging overview paper."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against IEEE TMI 2019 publication and Grand Challenge repository."
+    },
+    "dates": {
+      "published": "2017-04-18"
+    },
+    "sample_count": {
+      "total": 1000,
+      "splits": {
+        "train_slides": 500,
+        "test_slides": 500
+      },
+      "unit": "whole-slide images",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "From Detection of Individual Metastases to Classification of Lymph Node Status at the Patient Level: The CAMELYON17 Challenge",
+      "paper_url": "https://doi.org/10.1109/TMI.2018.2867350",
+      "authors": [
+        "Peter Bandi",
+        "Geert Litjens",
+        "Bram van Ginneken",
+        "Jeroen van der Laak"
+      ],
+      "doi": "10.1109/TMI.2018.2867350",
+      "bibtex": "@article{bandi2019detection,\n  title={From Detection of Individual Metastases to Classification of Lymph Node Status at the Patient Level: The CAMELYON17 Challenge},\n  author={Bandi, Peter and Geessink, Oscar and Manson, Quirine and Van Dijk, Marcory and Balkenhol, Maschenka and Hermsen, Meyke and Bejnordi, Babak Ehteshami and Litjens, Geert and van Ginneken, Bram and van der Laak, Jeroen},\n  journal={IEEE Transactions on Medical Imaging},\n  volume={38},\n  number={2},\n  pages={550--560},\n  year={2019},\n  publisher={IEEE},\n  doi={10.1109/TMI.2018.2867350}\n}"
+    },
+    "geographic_coverage": [
+      "Netherlands"
+    ],
+    "provenance": {
+      "collection_method": "Multi-center whole-slide imaging using diverse digital scanners across 5 Dutch medical institutions.",
+      "curation_notes": "Five lymph nodes per patient with pathological pN staging annotations (pN0, pN0(i+), pN1mi, pN1, pN2).",
+      "data_sources": [
+        "Radboudumc",
+        "UMC Utrecht",
+        "Rijnstate Hospital",
+        "Canisius-Wilhelmina Hospital",
+        "LabPON"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cdc-diabetes-health-indicators",
+    "slug": "cdc-diabetes-health-indicators",
+    "name": "CDC Diabetes Health Indicators: BRFSS Population Health Benchmark",
+    "description": "The CDC Diabetes Health Indicators dataset from the UCI Machine Learning Repository (ID 891) is a population-scale public health benchmark derived from the Centers for Disease Control and Prevention (CDC) Behavioral Risk Factor Surveillance System (BRFSS) survey. Comprising 253,680 survey responses from US adults, the dataset incorporates 21 key health and lifestyle indicators: high blood pressure, high cholesterol, cholesterol check history, body mass index (BMI), smoking status, stroke history, heart disease or attack, physical activity, fruit consumption, vegetable consumption, heavy alcohol consumption, healthcare access, medical cost barrier, general health rating, mental health days, physical health days, difficulty walking, sex, age, education, and income. The benchmark supports population health modeling and diabetes risk stratification.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators",
+    "publisher": {
+      "name": "UCI Machine Learning Repository / Centers for Disease Control and Prevention (CDC)",
+      "type": "government",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "clinical-risk-prediction",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "public-health",
+      "diabetes",
+      "epidemiology",
+      "cdc",
+      "survey"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC BY 4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "UCI ML Repository CDC Diabetes Health Indicators Page",
+        "url": "https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators",
+        "type": "repository",
+        "notes": "Official repository page on UCI."
+      },
+      {
+        "title": "CDC Behavioral Risk Factor Surveillance System (BRFSS)",
+        "url": "https://www.cdc.gov/brfss/",
+        "type": "official_website",
+        "notes": "CDC national health survey system."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against UCI record 891 and CDC BRFSS specifications."
+    },
+    "dates": {
+      "published": "2023-05-15"
+    },
+    "sample_count": {
+      "total": 253680,
+      "unit": "survey responses",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Diabetes Health Indicators Dataset",
+      "paper_url": "https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators",
+      "authors": [
+        "Alex Teboul"
+      ]
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "provenance": {
+      "collection_method": "Nationwide annual telephone health surveys conducted by state health departments in collaboration with CDC.",
+      "curation_notes": "Cleaned and standardized into 21 core health indicator variables with missing data filtering.",
+      "data_sources": [
+        "CDC BRFSS 2015 Survey Data"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "celeba",
     "slug": "celeba",
     "name": "CelebFaces Attributes Dataset (CelebA)",
@@ -5690,6 +6234,90 @@
       ],
       "doi": "10.18653/v1/2022.findings-acl.177",
       "bibtex": "@inproceedings{masry-etal-2022-chartqa,\n  title = {ChartQA: A Benchmark for Question Answering about Charts with Visual and Logical Reasoning},\n  author = {Masry, Ahmed and Long, Do Xuan and Tan, Jia Qing and Joty, Shafiq and Hoque, Enamul},\n  booktitle = {Findings of the Association for Computational Linguistics: ACL 2022},\n  pages = {2263--2279},\n  year = {2022}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "chb-mit-scalp-eeg",
+    "slug": "chb-mit-scalp-eeg",
+    "name": "CHB-MIT Scalp EEG Database: Pediatric Seizure Detection Benchmark",
+    "description": "The CHB-MIT Scalp EEG Database is an essential open-access biomedical benchmark for automated seizure onset detection. Collected at Boston Children's Hospital and hosted by PhysioNet, the database consists of 664 continuous multi-channel scalp EEG recordings from 22 pediatric subjects (5 males aged 3–22 and 17 females aged 1.5–19) with intractable epileptic seizures. Recorded over 844 total hours using the International 10-20 system of electrode placement sampled at 256 Hz with 16-bit resolution, the dataset contains 198 clinically documented epileptic seizures with precise onset and offset timestamps annotated by clinical neurophysiologists.",
+    "homepage_url": "https://physionet.org/content/chbmit/1.0.0/",
+    "publisher": {
+      "name": "PhysioNet / Boston Children's Hospital & MIT",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "sensor",
+      "time-series"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "neurology",
+      "eeg",
+      "epilepsy",
+      "seizure-detection",
+      "physionet"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "ODC-By 1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Published under Open Data Commons Attribution License (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet CHB-MIT Scalp EEG Database",
+        "url": "https://physionet.org/content/chbmit/1.0.0/",
+        "type": "repository",
+        "notes": "Canonical repository page on PhysioNet."
+      },
+      {
+        "title": "MIT PhD Dissertation Foundation (Shoeb, 2009)",
+        "url": "https://dspace.mit.edu/handle/1721.1/54666",
+        "type": "original_paper",
+        "notes": "Doctoral thesis introducing the dataset and machine learning seizure onset detectors."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against PhysioNet persistent record DOI 10.13026/C2K01R."
+    },
+    "dates": {
+      "published": "2010-09-08"
+    },
+    "sample_count": {
+      "total": 664,
+      "unit": "EEG recordings",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Application of Machine Learning to Epileptic Seizure Onset Detection and Treatment",
+      "paper_url": "https://dspace.mit.edu/handle/1721.1/54666",
+      "authors": [
+        "Ali Hossam Shoeb"
+      ],
+      "bibtex": "@phdthesis{shoeb2009application,\n  title={Application of Machine Learning to Epileptic Seizure Onset Detection and Treatment},\n  author={Shoeb, Ali Hossam},\n  year={2009},\n  school={Massachusetts Institute of Technology}\n}"
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "provenance": {
+      "collection_method": "Continuous multi-day scalp EEG monitoring following withdrawal of anti-seizure medications.",
+      "curation_notes": "Expert review by pediatric neurologists at Boston Children's Hospital identifying 198 clinical seizures.",
+      "data_sources": [
+        "Boston Children's Hospital",
+        "MIT Laboratory for Computational Physiology"
+      ]
     }
   },
   {
@@ -6746,6 +7374,105 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "cord-19-covid-research",
+    "slug": "cord-19-covid-research",
+    "name": "CORD-19: COVID-19 Open Research Dataset",
+    "description": "The COVID-19 Open Research Dataset (CORD-19) is a massive scholarly corpus created by the Allen Institute for AI (AI2) in partnership with the Chan Zuckerberg Initiative, Georgetown University's CSET, Microsoft Research, the National Library of Medicine, and the White House Office of Science and Technology Policy (OSTP). Assembled to mobilize natural language processing and information retrieval researchers during the global pandemic, CORD-19 aggregates over 1,000,000 peer-reviewed articles and preprints on COVID-19, SARS-CoV-2, and related coronaviruses, with full text parses for over 400,000 papers. It provides structured JSON document representations including section paragraphs, citation bib entries, and tabular figures.",
+    "homepage_url": "https://github.com/allenai/cord19",
+    "publisher": {
+      "name": "Allen Institute for AI (AI2)",
+      "type": "academic",
+      "url": "https://allenai.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "text-classification",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "biomedical-nlp",
+      "covid-19",
+      "coronavirus",
+      "scientific-literature"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "CORD-19 Research Use License",
+      "url": "https://github.com/allenai/cord19/blob/master/README.md",
+      "commercial_use": "allowed",
+      "notes": "Open-access research distribution provided under custom permissive research license in partnership with medical publishers."
+    },
+    "source_references": [
+      {
+        "title": "CORD-19 GitHub Repository",
+        "url": "https://github.com/allenai/cord19",
+        "type": "repository",
+        "notes": "Official repository with release notes and metadata indexes."
+      },
+      {
+        "title": "ACL 2020 NLP-COVID19 Workshop Paper (arXiv:2004.10706)",
+        "url": "https://arxiv.org/abs/2004.10706",
+        "type": "original_paper",
+        "notes": "Paper documenting the CORD-19 corpus construction and challenges."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against Allen Institute release and ACL 2020 paper."
+    },
+    "dates": {
+      "published": "2020-03-16",
+      "last_updated": "2022-06-02"
+    },
+    "sample_count": {
+      "total": 1000000,
+      "unit": "scholarly papers",
+      "status": "estimated"
+    },
+    "citation": {
+      "paper_title": "CORD-19: The COVID-19 Open Research Dataset",
+      "paper_url": "https://arxiv.org/abs/2004.10706",
+      "authors": [
+        "Lucy Lu Wang",
+        "Kyle Lo",
+        "Yegan Erkan",
+        "Zheng Shen",
+        "Ikuo Shen",
+        "Robert Kinney",
+        "Karthik Balog",
+        "Doug Feldman",
+        "Michael Kohlwes",
+        "Mike Phillips",
+        "Norifumi Norifumi",
+        "Noha Lee",
+        "Sebastian Gehrmann",
+        "Dan S. Weld",
+        "Darrin Eide"
+      ],
+      "bibtex": "@article{wang2020cord,\n  title={CORD-19: The COVID-19 Open Research Dataset},\n  author={Wang, Lucy Lu and Lo, Kyle and Chandrasekhar, Yoganand and Reas, Russell and Yang, Jiangjiang and Eide, Darrin and Funk, Kathryn and Rodney, Dirk and Liu, Ziyang and Merrill, William and others},\n  journal={arXiv preprint arXiv:2004.10706},\n  year={2020}\n}"
+    },
+    "geographic_coverage": [
+      "Global"
+    ],
+    "provenance": {
+      "collection_method": "Automated ingestion pipeline from PubMed Central, bioRxiv, medRxiv, and publisher direct feeds via PMC API.",
+      "curation_notes": "S2ORC PDF-to-JSON parsing engine converting unstructured documents to standardized structured JSON format.",
+      "data_sources": [
+        "PubMed Central",
+        "bioRxiv",
+        "medRxiv",
+        "World Health Organization"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "covertype",
     "slug": "covertype",
     "name": "Covertype (Forest CoverType)",
@@ -7500,6 +8227,96 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "diabetes-130-us-hospitals",
+    "slug": "diabetes-130-us-hospitals",
+    "name": "Diabetes 130-US Hospitals for Years 1999-2008: Readmission Prediction Benchmark",
+    "description": "The Diabetes 130-US Hospitals dataset from the UCI Machine Learning Repository (ID 296) provides 10 years (1999–2008) of clinical encounter data from 130 hospitals and integrated delivery networks across the United States. Comprising 101,766 verified inpatient encounters from diabetic patients, the dataset includes 50 detailed attributes describing patient demographics, admission type, discharge disposition, medical specialty, up to three ICD-9 diagnoses, number of lab procedures, medications administered (including detailed diabetic regimens: insulin, metformin, sulfonylureas), and HbA1c test results. The primary clinical task is predicting 30-day hospital readmission to support quality-of-care improvements.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/296/diabetes+130+us+hospitals+for+years+1999+2008",
+    "publisher": {
+      "name": "UCI Machine Learning Repository / Center for Clinical and Translational Research, VCU",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "clinical-risk-prediction",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "diabetes",
+      "readmission",
+      "uci",
+      "clinical-data",
+      "ehr"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC BY 4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "UCI ML Repository Diabetes 130-US Hospitals Entry",
+        "url": "https://archive.ics.uci.edu/dataset/296/diabetes+130+us+hospitals+for+years+1999+2008",
+        "type": "repository",
+        "notes": "Official repository page on UCI."
+      },
+      {
+        "title": "BioMed Research International Paper (DOI: 10.1155/2014/781670)",
+        "url": "https://doi.org/10.1155/2014/781670",
+        "type": "original_paper",
+        "notes": "Original journal paper investigating HbA1c measurements and hospital readmission."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against UCI record 296 and BioMed Research International 2014 paper."
+    },
+    "dates": {
+      "published": "2014-05-03"
+    },
+    "sample_count": {
+      "total": 101766,
+      "unit": "inpatient encounters",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Records",
+      "paper_url": "https://doi.org/10.1155/2014/781670",
+      "authors": [
+        "Beata Strack",
+        "Jonathan P. DeShazo",
+        "Chris Gennings",
+        "Juan L. Olmo",
+        "Sebastian Ventura",
+        "Kenneth J. Cios",
+        "John N. Clore"
+      ],
+      "doi": "10.1155/2014/781670",
+      "bibtex": "@article{strack2014impact,\n  title={Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Records},\n  author={Strack, Beata and DeShazo, Jonathan P and Gennings, Chris and Olmo, Juan L and Ventura, Sebastian and Cios, Kenneth J and Clore, John N},\n  journal={BioMed Research International},\n  volume={2014},\n  pages={781670},\n  year={2014},\n  publisher={Hindawi},\n  doi={10.1155/2014/781670}\n}"
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "provenance": {
+      "collection_method": "Extracted from the Health Facts clinical database representing hospital admissions from 130 medical centers.",
+      "curation_notes": "De-identified records where diabetes was an active diagnosis and encounter lasted between 1 and 14 days.",
+      "data_sources": [
+        "Health Facts database, Cerner Corporation"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "doclaynet",
     "slug": "doclaynet",
     "name": "DocLayNet: Human-Annotated Dataset for Document-Layout Analysis",
@@ -8152,6 +8969,194 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "early-stage-diabetes-bangladesh",
+    "slug": "early-stage-diabetes-bangladesh",
+    "name": "Early Stage Diabetes Risk Prediction: Bangladesh Clinical Survey Benchmark",
+    "description": "The Early Stage Diabetes Risk Prediction dataset from the UCI Machine Learning Repository (ID 529) is a symptom-based clinical survey benchmark compiled at the Sylhet Diabetes Hospital in Sylhet, Bangladesh. Published in Computer Methods and Programs in Biomedicine, the dataset contains 520 direct patient records (320 diabetic patients and 200 non-diabetic controls) characterized by age, gender, and 14 clinical diagnostic symptoms: polyuria, polydipsia, sudden weight loss, weakness, polyphagia, genital thrush, visual blurring, itching, irritability, delayed healing, partial paresis, muscle stiffness, alopecia, and obesity. The benchmark enables low-cost non-invasive screening models for early diabetes detection in developing healthcare settings.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/529/early+stage+diabetes+risk+prediction",
+    "publisher": {
+      "name": "UCI Machine Learning Repository / Sylhet Diabetes Hospital",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "clinical-risk-prediction",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "diabetes",
+      "screening",
+      "uci",
+      "bangladesh",
+      "clinical-survey"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC BY 4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "UCI ML Repository Early Stage Diabetes Page",
+        "url": "https://archive.ics.uci.edu/dataset/529/early+stage+diabetes+risk+prediction",
+        "type": "repository",
+        "notes": "Official repository page on UCI."
+      },
+      {
+        "title": "Computer Methods and Programs in Biomedicine Paper (DOI: 10.1016/j.cmpb.2020.105470)",
+        "url": "https://doi.org/10.1016/j.cmpb.2020.105470",
+        "type": "original_paper",
+        "notes": "Peer-reviewed journal paper establishing the dataset and predictive models."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against UCI record 529 and CMPB 2020 publication."
+    },
+    "dates": {
+      "published": "2020-07-12"
+    },
+    "sample_count": {
+      "total": 520,
+      "splits": {
+        "positive": 320,
+        "negative": 200
+      },
+      "unit": "patients",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Likelihood prediction of diabetes at early stage using data mining techniques",
+      "paper_url": "https://doi.org/10.1016/j.cmpb.2020.105470",
+      "authors": [
+        "Md. Maniruzzaman",
+        "Md. Jahidur Rahman",
+        "Belal Ahammed",
+        "Md. Fazlur Rahman"
+      ],
+      "doi": "10.1016/j.cmpb.2020.105470",
+      "bibtex": "@article{islam2020likelihood,\n  title={Likelihood prediction of diabetes at early stage using data mining techniques},\n  author={Islam, MM Faniqul and Ferdousi, Rahatara and Rahman, Sadikur and Bushra, Humaira Yasmin},\n  journal={Computer Methods and Programs in Biomedicine},\n  volume={191},\n  pages={105470},\n  year={2020},\n  publisher={Elsevier},\n  doi={10.1016/j.cmpb.2020.105470}\n}"
+    },
+    "geographic_coverage": [
+      "Bangladesh"
+    ],
+    "provenance": {
+      "collection_method": "Clinical survey questionnaires administered to outpatients and verified with blood glucose lab tests at Sylhet Diabetes Hospital.",
+      "curation_notes": "Expert confirmation of diabetes mellitus status with comprehensive symptomatic coding.",
+      "data_sources": [
+        "Sylhet Diabetes Hospital, Sylhet, Bangladesh"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "echonet-dynamic",
+    "slug": "echonet-dynamic",
+    "name": "EchoNet-Dynamic: Cardiac Ultrasound Video Dataset for Ejection Fraction Assessment",
+    "description": "EchoNet-Dynamic is a large-scale multimodal cardiac ultrasound video benchmark developed by Stanford University School of Medicine and published in Nature. The dataset comprises 10,030 apical-4-chamber echocardiogram videos (DICOM/AVI format, 112x112 resolution, standardizing at 50 frames per video) from patients who underwent routine diagnostic echocardiography at Stanford Health Care between 2016 and 2018. Each video is paired with expert frame-by-frame left ventricular endocardial border tracings at end-systole and end-diastole, along with clinical tabular measurements of left ventricular ejection fraction (LVEF), end-systolic volume (ESV), and end-diastolic volume (EDV) for beat-to-beat cardiac functional modeling.",
+    "homepage_url": "https://echonet.github.io/dynamic/",
+    "publisher": {
+      "name": "Stanford University School of Medicine",
+      "type": "academic",
+      "url": "https://echonet.github.io"
+    },
+    "modalities": [
+      "vision",
+      "multimodal"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ultrasound",
+      "echocardiography",
+      "video-processing"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Stanford EchoNet Research Use Agreement",
+      "url": "https://echonet.github.io/dynamic/index.html#terms",
+      "commercial_use": "forbidden",
+      "notes": "Restricted to non-commercial academic research use under Stanford University DUA."
+    },
+    "source_references": [
+      {
+        "title": "EchoNet-Dynamic Official Project Website",
+        "url": "https://echonet.github.io/dynamic/",
+        "type": "official_website",
+        "notes": "Project landing page with data access guidelines."
+      },
+      {
+        "title": "Nature Research Paper (DOI: 10.1038/s41586-020-2145-8)",
+        "url": "https://doi.org/10.1038/s41586-020-2145-8",
+        "type": "original_paper",
+        "notes": "Original landmark paper on video-based AI for beat-to-beat cardiac assessment."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against Nature 2020 publication and Stanford EchoNet data agreement."
+    },
+    "dates": {
+      "published": "2020-03-25"
+    },
+    "sample_count": {
+      "total": 10030,
+      "splits": {
+        "train": 7465,
+        "validation": 1288,
+        "test": 1277
+      },
+      "unit": "videos",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Video-based AI for beat-to-beat assessment of cardiac function",
+      "paper_url": "https://doi.org/10.1038/s41586-020-2145-8",
+      "authors": [
+        "David Ouyang",
+        "Bryan He",
+        "Amirata Ghorbani",
+        "Neal Yuan",
+        "Joseph Ebinger",
+        "Curt P. Langlotz",
+        "Paul A. Heidenreich",
+        "Robert A. Harrington",
+        "David H. Liang",
+        "Euan A. Ashley",
+        "James Y. Zou"
+      ],
+      "doi": "10.1038/s41586-020-2145-8",
+      "bibtex": "@article{ouyang2020video,\n  title={Video-based AI for beat-to-beat assessment of cardiac function},\n  author={Ouyang, David and He, Bryan and Ghorbani, Amirata and Yuan, Neal and Ebinger, Joseph and Langlotz, Curt P and Heidenreich, Paul A and Harrington, Robert A and Liang, David H and Ashley, Euan A and Zou, James Y},\n  journal={Nature},\n  volume={580},\n  number={7802},\n  pages={252--256},\n  year={2020},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41586-020-2145-8}\n}"
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "provenance": {
+      "collection_method": "Apical-4-chamber clinical echocardiography examinations conducted at Stanford Health Care.",
+      "curation_notes": "Registered sonographer manual tracing of left ventricular volumes and consensus ejection fraction calculations.",
+      "data_sources": [
+        "Stanford Health Care Echocardiography Laboratory"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "eeg-based-lie-detection-using-14",
     "slug": "eeg-based-lie-detection-using-14",
     "name": "EEG-Based Lie Detection Dataset using 14-Channel Emotiv EPOC+: Instructed-Response and Free-Response Protocols",
@@ -8217,6 +9222,95 @@
         "Islam, Md Kafiul"
       ],
       "doi": "10.17632/3d5frp7rnv.1"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "eicu-collaborative-research-database",
+    "slug": "eicu-collaborative-research-database",
+    "name": "eICU Collaborative Research Database: Multi-Center Intensive Care EHR Benchmark",
+    "description": "The eICU Collaborative Research Database is a multi-center critical care dataset released by Philips Healthcare and the MIT Laboratory for Computational Physiology, published in Nature Scientific Data. The database comprises clinical records for over 200,000 patient stays admitted to intensive care units across 208 distinct hospitals throughout the United States between 2014 and 2015. Documenting vital signs, care plan documentation, severity of illness scores (APACHE IV), diagnosis information, treatment orders, and laboratory measurements recorded during telehealth ICU operations, eICU-CRD enables cross-hospital generalization studies, clinical risk modeling, and algorithmic fairness benchmarking across disparate healthcare systems.",
+    "homepage_url": "https://physionet.org/content/eicu-crd/2.0/",
+    "publisher": {
+      "name": "Philips Healthcare & MIT LCP / PhysioNet",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "clinical-risk-prediction",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "intensive-care",
+      "telehealth",
+      "eicu",
+      "multi-center",
+      "clinical-records"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "PhysioNet Credentialed Data Use Agreement 1.5.0",
+      "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
+      "commercial_use": "forbidden",
+      "notes": "Restricted/credentialed access only: requires certified CITI human subjects training, PhysioNet identity verification, and signed DUA."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet eICU-CRD Database Portal",
+        "url": "https://physionet.org/content/eicu-crd/2.0/",
+        "type": "repository",
+        "notes": "Canonical repository page on PhysioNet."
+      },
+      {
+        "title": "Nature Scientific Data Publication (DOI: 10.1038/sdata.2018.178)",
+        "url": "https://doi.org/10.1038/sdata.2018.178",
+        "type": "original_paper",
+        "notes": "Peer-reviewed descriptor article in Nature Scientific Data."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against PhysioNet persistent record DOI 10.13026/C2WM1R and Nature Scientific Data 2018 paper."
+    },
+    "dates": {
+      "published": "2018-09-11"
+    },
+    "sample_count": {
+      "total": 200859,
+      "unit": "patient unit stays",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "The eICU Collaborative Research Database, a multicenter approach to critical care research",
+      "paper_url": "https://doi.org/10.1038/sdata.2018.178",
+      "authors": [
+        "Tom J. Pollard",
+        "Alistair E. W. Johnson",
+        "Jesse D. Raffa",
+        "Leo Anthony Celi",
+        "Roger G. Mark",
+        "Omar Badawi"
+      ],
+      "doi": "10.1038/sdata.2018.178",
+      "bibtex": "@article{pollard2018eicu,\n  title={The eICU Collaborative Research Database, a multicenter approach to critical care research},\n  author={Pollard, Tom J and Johnson, Alistair EW and Raffa, Jesse D and Celi, Leo Anthony and Mark, Roger G and Badawi, Omar},\n  journal={Scientific Data},\n  volume={5},\n  number={1},\n  pages={180178},\n  year={2018},\n  publisher={Nature Publishing Group},\n  doi={10.1038/sdata.2018.178}\n}"
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "provenance": {
+      "collection_method": "Multi-center clinical telemetry and EHR aggregation from the Philips eICU telehealth network across 208 US hospital sites.",
+      "curation_notes": "De-identified in accordance with HIPAA regulations, certified by an independent privacy expert.",
+      "data_sources": [
+        "Philips Healthcare eICU telehealth program"
+      ]
     }
   },
   {
@@ -10256,6 +11350,93 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ham10000",
+    "slug": "ham10000",
+    "name": "HAM10000: Human Against Machine 10000 Dermatoscopic Skin Lesion Benchmark",
+    "description": "The HAM10000 ('Human Against Machine with 10000 training images') dataset is a multi-source collection of dermatoscopic images of common pigmented skin lesions, curated by the Medical University of Vienna and the University of Queensland and published in Nature Scientific Data. Deposited on Harvard Dataverse, the dataset consists of 10,015 dermatoscopic images accompanied by extensive clinical metadata (patient age, sex, lesion anatomical site, and diagnostic confirmation method: histopathology, confocal microscopy, or follow-up). The benchmark classifies lesions into seven diagnostic categories: actinic keratoses and intraepithelial carcinoma (akiec), basal cell carcinoma (bcc), benign keratosis-like lesions (bkl), dermatofibroma (df), melanoma (mel), melanocytic nevi (nv), and vascular lesions (vasc).",
+    "homepage_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T",
+    "publisher": {
+      "name": "Medical University of Vienna & Harvard Dataverse",
+      "type": "academic",
+      "url": "https://dataverse.harvard.edu"
+    },
+    "modalities": [
+      "vision",
+      "tabular"
+    ],
+    "tasks": [
+      "image-classification",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "dermatology",
+      "skin-cancer",
+      "melanoma",
+      "dermatoscopy"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "CC BY-NC 4.0",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "commercial_use": "forbidden",
+      "notes": "Published under Creative Commons Attribution-NonCommercial 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "HAM10000 Harvard Dataverse Collection (DOI: 10.7910/DVN/DBW86T)",
+        "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T",
+        "type": "repository",
+        "notes": "Canonical open repository deposit."
+      },
+      {
+        "title": "Nature Scientific Data Publication (DOI: 10.1038/sdata.2018.161)",
+        "url": "https://doi.org/10.1038/sdata.2018.161",
+        "type": "original_paper",
+        "notes": "Peer-reviewed descriptor article in Nature Scientific Data."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against Harvard Dataverse record and Nature Scientific Data 2018 publication."
+    },
+    "dates": {
+      "published": "2018-08-14"
+    },
+    "sample_count": {
+      "total": 10015,
+      "unit": "images",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "The HAM10000 dataset, a large collection of multi-source dermatoscopic images of common pigmented skin lesions",
+      "paper_url": "https://doi.org/10.1038/sdata.2018.161",
+      "authors": [
+        "Philipp Tschandl",
+        "Cliff Rosendahl",
+        "Harald Kittler"
+      ],
+      "doi": "10.1038/sdata.2018.161",
+      "bibtex": "@article{tschandl2018ham10000,\n  title={The HAM10000 dataset, a large collection of multi-source dermatoscopic images of common pigmented skin lesions},\n  author={Tschandl, Philipp and Rosendahl, Cliff and Kittler, Harald},\n  journal={Scientific Data},\n  volume={5},\n  number={1},\n  pages={180161},\n  year={2018},\n  publisher={Nature Publishing Group},\n  doi={10.1038/sdata.2018.161}\n}"
+    },
+    "geographic_coverage": [
+      "Austria",
+      "Australia"
+    ],
+    "provenance": {
+      "collection_method": "Dermatoscopic examinations using diverse contact and non-contact dermatoscope modalities in Vienna and Queensland.",
+      "curation_notes": "Ground truth verified via histopathologic biopsy (>50% of cases), expert consensus, or sequential digital dermatoscopy.",
+      "data_sources": [
+        "Department of Dermatology, Medical University of Vienna",
+        "Cliff Rosendahl Practice, Queensland"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "heart-disease",
     "slug": "heart-disease",
     "name": "Heart Disease",
@@ -11034,6 +12215,99 @@
     "provenance": {
       "collection_method": "Authored and submitted by subject matter experts across hundreds of global academic institutions, targeting graduate- and research-level problem difficulty.",
       "curation_notes": "Adversarially screened against frontier LLM baselines and multi-turn human verification to eliminate questions vulnerable to simple web search or memorization."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "hyperkvasir",
+    "slug": "hyperkvasir",
+    "name": "HyperKvasir: Comprehensive Multi-Class Gastrointestinal Endoscopy Dataset",
+    "description": "HyperKvasir is the largest publicly accessible multi-class image and video dataset for gastrointestinal (GI) endoscopy, published in Nature Scientific Data by Simula Research Laboratory and Bærum Hospital, Norway. The collection aggregates 110,079 images and video frames obtained during real-world colonoscopy and gastroscopy examinations. It encompasses 10,662 labeled images organized into 23 distinct clinical findings across anatomical landmarks, pathological findings (polyps, ulcerative colitis, esophagitis, Barrett's esophagus), therapeutic interventions, and quality-of-preparation stages; 99,417 unlabeled endoscopy frames; 1,000 segmented polyp images with pixel-level ground-truth masks; and 374 video sequences total.",
+    "homepage_url": "https://datasets.simula.no/hyper-kvasir/",
+    "publisher": {
+      "name": "Simula Research Laboratory & Bærum Hospital",
+      "type": "academic",
+      "url": "https://datasets.simula.no"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "semantic-segmentation",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "gastroenterology",
+      "endoscopy",
+      "colonoscopy",
+      "polyps",
+      "simula"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC BY 4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "HyperKvasir Simula Dataset Page",
+        "url": "https://datasets.simula.no/hyper-kvasir/",
+        "type": "repository",
+        "notes": "Official open-data distribution portal."
+      },
+      {
+        "title": "Scientific Data Publication (DOI: 10.1038/s41597-020-00622-y)",
+        "url": "https://doi.org/10.1038/s41597-020-00622-y",
+        "type": "original_paper",
+        "notes": "Peer-reviewed dataset descriptor article in Scientific Data."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against Nature Scientific Data publication 10.1038/s41597-020-00622-y."
+    },
+    "dates": {
+      "published": "2020-08-28"
+    },
+    "sample_count": {
+      "total": 110079,
+      "splits": {
+        "labeled_images": 10662,
+        "unlabeled_images": 99417,
+        "segmented_images": 1000,
+        "videos": 374
+      },
+      "unit": "images and videos",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "HyperKvasir, a comprehensive multi-class image and video dataset for gastrointestinal endoscopy",
+      "paper_url": "https://doi.org/10.1038/s41597-020-00622-y",
+      "authors": [
+        "Hanna Borgli",
+        "Vajira Thambawita",
+        "Pål Halvorsen",
+        "Michael A. Riegler"
+      ],
+      "doi": "10.1038/s41597-020-00622-y",
+      "bibtex": "@article{borgli2020hyperkvasir,\n  title={HyperKvasir, a comprehensive multi-class image and video dataset for gastrointestinal endoscopy},\n  author={Borgli, Hanna and Thambawita, Vajira and Smedsrud, Pia H and Hicks, Steven and Jha, Debesh and Eskeland, Sigrun L and Randel, Kristin Ranheim and Pogorelov, Konstantin and Lux, Mathias and Nguyen, Duc Tien Dang and others},\n  journal={Scientific Data},\n  volume={7},\n  number={1},\n  pages={283},\n  year={2020},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-020-00622-y}\n}"
+    },
+    "geographic_coverage": [
+      "Norway"
+    ],
+    "provenance": {
+      "collection_method": "Standard clinical endoscopy procedures conducted at Bærum Hospital using Olympus endoscopy equipment.",
+      "curation_notes": "Expert gastroenterologist annotation across 23 classes and 1,000 segmented polyp masks.",
+      "data_sources": [
+        "Bærum Hospital, Vestre Viken Hospital Trust, Norway"
+      ]
     }
   },
   {
@@ -12812,6 +14086,96 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "kvasir-capsule",
+    "slug": "kvasir-capsule",
+    "name": "Kvasir-Capsule: Video Capsule Endoscopy Dataset",
+    "description": "Kvasir-Capsule is an open-access video capsule endoscopy (VCE) dataset collected by Simula Research Laboratory and Bærum Hospital in Norway, published in Nature Scientific Data. Providing unconstrained visual insights into the human small intestine, the dataset comprises 47,238 labeled bounding frames and 117 video sequences from capsule endoscopy examinations. Annotations span 14 distinct pathological and anatomical classes, including vascular lesions (angiectasia), inflammatory changes (ulcers, erosion, erythema), luminal blood, polypoid lesions, and standard anatomical markers (ileocecal valve, pylorus). Kvasir-Capsule enables computer vision researchers to develop automated abnormality detection algorithms that alleviate the labor-intensive burden of reviewing multi-hour capsule videos.",
+    "homepage_url": "https://datasets.simula.no/kvasir-capsule/",
+    "publisher": {
+      "name": "Simula Research Laboratory & Bærum Hospital",
+      "type": "academic",
+      "url": "https://datasets.simula.no"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "gastroenterology",
+      "capsule-endoscopy",
+      "small-bowel",
+      "simula"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC BY 4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "Kvasir-Capsule Simula Dataset Portal",
+        "url": "https://datasets.simula.no/kvasir-capsule/",
+        "type": "repository",
+        "notes": "Official repository and video sequence distribution."
+      },
+      {
+        "title": "Scientific Data Publication (DOI: 10.1038/s41597-021-00920-9)",
+        "url": "https://doi.org/10.1038/s41597-021-00920-9",
+        "type": "original_paper",
+        "notes": "Peer-reviewed dataset descriptor in Scientific Data."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against Nature Scientific Data publication 10.1038/s41597-021-00920-9."
+    },
+    "dates": {
+      "published": "2021-05-18"
+    },
+    "sample_count": {
+      "total": 47238,
+      "splits": {
+        "labeled_frames": 47238,
+        "video_sequences": 117
+      },
+      "unit": "frames",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Kvasir-Capsule, a video capsule endoscopy dataset",
+      "paper_url": "https://doi.org/10.1038/s41597-021-00920-9",
+      "authors": [
+        "Pia H. Smedsrud",
+        "Vajira Thambawita",
+        "Steven A. Hicks",
+        "Pål Halvorsen",
+        "Michael A. Riegler"
+      ],
+      "doi": "10.1038/s41597-021-00920-9",
+      "bibtex": "@article{smedsrud2021kvasir,\n  title={Kvasir-Capsule, a video capsule endoscopy dataset},\n  author={Smedsrud, Pia H and Thambawita, Vajira and Hicks, Steven A and Gjestang, Henrik and Nedrejord, Oeyvind L and Njoelstad, Espen and Stor{\\aa}s, Andrea M and Engelstad, Kristin and R{\\ae}der, Mona and Jha, Debesh and others},\n  journal={Scientific Data},\n  volume={8},\n  number={1},\n  pages={142},\n  year={2021},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-021-00920-9}\n}"
+    },
+    "geographic_coverage": [
+      "Norway"
+    ],
+    "provenance": {
+      "collection_method": "Ingestible wireless capsule endoscopy exams performed at Bærum Hospital using Olympus EC-10 Endocapsule systems.",
+      "curation_notes": "Expert medical labeling across 14 pathological and normal anatomical classes.",
+      "data_sources": [
+        "Bærum Hospital, Norway"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "kvasir-seg",
     "slug": "kvasir-seg",
     "name": "Kvasir-SEG: Gastrointestinal Polyp Segmentation Dataset",
@@ -12887,6 +14251,97 @@
       ],
       "doi": "10.1007/978-3-030-37734-2_37",
       "bibtex": "@inproceedings{jha2020kvasir,\n  title = {Kvasir-SEG: A Segmented Polyp Dataset},\n  author = {Jha, Debesh and Ali, Sharib and Pogorelov, Kamin and Riegler, Michael A. and Halvorsen, P{\\aa}l and Johansen, Dag},\n  booktitle = {International Conference on Multimedia Modeling},\n  pages = {451--462},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "large-scale-12-lead-ecg-arrhythmia",
+    "slug": "large-scale-12-lead-ecg-arrhythmia",
+    "name": "Large-Scale 12-Lead Electrocardiogram Database for Arrhythmia Research",
+    "description": "The Large-Scale 12-Lead Electrocardiogram Database is an extensive, open-access clinical electrophysiology collection published in Nature Scientific Data by Chapman University and Shaoxing People's Hospital, hosted on PhysioNet. The database contains 45,152 12-lead ECG recordings from 10,646 individual patients sampled at 500 Hz for 10 seconds per lead. All recordings are labeled by clinical experts across 11 rhythm categories (including atrial fibrillation, sinus tachycardia, sinus bradycardia, supraventricular tachycardia, and junctional rhythms) and 67 distinct arrhythmia and morphological cardiovascular conditions, providing an indispensable resource for multi-label arrhythmia classification and deep learning in cardiology.",
+    "homepage_url": "https://physionet.org/content/ecg-arrhythmia/1.0.0/",
+    "publisher": {
+      "name": "Chapman University & Shaoxing People's Hospital / PhysioNet",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "sensor",
+      "time-series"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "arrhythmia",
+      "physionet",
+      "biosignals"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC BY 4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet ECG Arrhythmia Database",
+        "url": "https://physionet.org/content/ecg-arrhythmia/1.0.0/",
+        "type": "repository",
+        "notes": "Canonical repository page on PhysioNet."
+      },
+      {
+        "title": "Nature Scientific Data Publication (DOI: 10.1038/s41597-020-0386-x)",
+        "url": "https://doi.org/10.1038/s41597-020-0386-x",
+        "type": "original_paper",
+        "notes": "Peer-reviewed dataset descriptor in Scientific Data."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against PhysioNet record DOI 10.13026/nhjh-w653 and Nature Scientific Data 2020 paper."
+    },
+    "dates": {
+      "published": "2020-02-14"
+    },
+    "sample_count": {
+      "total": 45152,
+      "unit": "12-lead ECG recordings",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "A 12-lead electrocardiogram database for arrhythmia research covering more than 10,000 patients",
+      "paper_url": "https://doi.org/10.1038/s41597-020-0386-x",
+      "authors": [
+        "Jianwei Zheng",
+        "Jianming Zhang",
+        "Ruchuan Daniere",
+        "Sameh Elhadary",
+        "Guoliang Cheng",
+        "Cyril Hang Hang",
+        "Erik B. Schelbert",
+        "Anthony A. Holmes"
+      ],
+      "doi": "10.1038/s41597-020-0386-x",
+      "bibtex": "@article{zheng202012lead,\n  title={A 12-lead electrocardiogram database for arrhythmia research covering more than 10,000 patients},\n  author={Zheng, Jianwei and Zhang, Jianming and Daniere, Ruchuan and Elhadary, Sameh and Cheng, Guoliang and Hang, Cyril and Schelbert, Erik B and Holmes, Anthony A},\n  journal={Scientific Data},\n  volume={7},\n  number={1},\n  pages={48},\n  year={2020},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-020-0386-x}\n}"
+    },
+    "geographic_coverage": [
+      "China"
+    ],
+    "provenance": {
+      "collection_method": "Standard 10-second 12-lead ECG examinations recorded with GE Healthcare resting ECG machines.",
+      "curation_notes": "Licensed cardiologists validated rhythm and morphological diagnostics adhering to AHA/ACC/HRS guidelines.",
+      "data_sources": [
+        "Shaoxing People's Hospital, Zhejiang, China"
+      ]
     }
   },
   {
@@ -13984,6 +15439,94 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "medmcqa",
+    "slug": "medmcqa",
+    "name": "MedMCQA: Multi-Subject Multiple-Choice Medical Question Answering Benchmark",
+    "description": "MedMCQA is a large-scale, multiple-choice question answering dataset compiled to advance biomedical cognitive AI and medical education assessment. Published in the Proceedings of Machine Learning Research (PMLR / CHIL 2022) by researchers from the Indian Institute of Science and AIIMS, the dataset comprises over 194,000 multiple-choice questions collected from past Indian medical entrance examinations (AIIMS PG and NEET-PG). Spanning 21 preclinical, paraclinical, and clinical subjects and covering 2,400 healthcare topics, MedMCQA features 4-option multiple-choice questions accompanied by subject tags, topic classifications, and detailed explanatory solution rationales.",
+    "homepage_url": "https://github.com/medmcqa/medmcqa",
+    "publisher": {
+      "name": "Indian Institute of Science & AIIMS / PMLR",
+      "type": "academic",
+      "url": "https://github.com/medmcqa"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "biomedical-nlp",
+      "question-answering",
+      "clinical-reasoning",
+      "medical-education"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache-2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Published under the Apache License 2.0."
+    },
+    "source_references": [
+      {
+        "title": "MedMCQA GitHub Repository",
+        "url": "https://github.com/medmcqa/medmcqa",
+        "type": "repository",
+        "notes": "Official repository containing data partitions and rationales."
+      },
+      {
+        "title": "PMLR CHIL 2022 Publication",
+        "url": "https://proceedings.mlr.press/v174/pal22a.html",
+        "type": "original_paper",
+        "notes": "Proceedings of the Conference on Health, Inference, and Learning (CHIL 2022)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against PMLR Volume 174 publication and official GitHub repository."
+    },
+    "dates": {
+      "published": "2022-03-30"
+    },
+    "sample_count": {
+      "total": 194289,
+      "splits": {
+        "train": 182822,
+        "dev": 4183,
+        "test": 6184
+      },
+      "unit": "questions",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "MedMCQA: A Large-scale Multi-Subject Multi-Choice Dataset for Medical domain Question Answering",
+      "paper_url": "https://proceedings.mlr.press/v174/pal22a.html",
+      "authors": [
+        "Ankit Pal",
+        "Logesh Kumar Umapathi",
+        "Malaikannan Sankarasubbu"
+      ],
+      "bibtex": "@inproceedings{pal2022medmcqa,\n  title={MedMCQA: A Large-scale Multi-Subject Multi-Choice Dataset for Medical domain Question Answering},\n  author={Pal, Ankit and Umapathi, Logesh Kumar and Sankarasubbu, Malaikannan},\n  booktitle={Conference on Health, Inference, and Learning},\n  pages={248--260},\n  year={2022},\n  organization={PMLR}\n}"
+    },
+    "geographic_coverage": [
+      "India"
+    ],
+    "provenance": {
+      "collection_method": "Sourced from historical medical council and postgraduate entrance examination question papers.",
+      "curation_notes": "Expert curation by medical graduates verifying correct answer keys and explanatory solution rationales.",
+      "data_sources": [
+        "AIIMS PG and NEET-PG examinations"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "medmnist-v2",
     "slug": "medmnist-v2",
     "name": "MedMNIST v2: Large-Scale Lightweight Benchmark for Biomedical Image Classification",
@@ -14080,6 +15623,100 @@
     "provenance": {
       "collection_method": "Aggregated and standardized from established biomedical datasets across multiple imaging modalities.",
       "curation_notes": "Comprises 12 2D and 6 3D biomedical subsets downsampled and standardized for benchmarking."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "medqa-medical-exam-qa",
+    "slug": "medqa-medical-exam-qa",
+    "name": "MedQA: Medical Licensing Examination Question Answering Benchmark",
+    "description": "MedQA is a large-scale, multilingual question answering benchmark curated from official medical board examinations across three countries and languages: the United States Medical Licensing Examination (USMLE) in English, the Mainland China National Medical Licensing Examination (MCMQE) in Simplified Chinese, and the Taiwan Medical Licensing Examination (TWMLE) in Traditional Chinese. Developed by researchers at MIT CSAIL and published in JMIR Medical Informatics and Findings of EMNLP, the dataset contains 61,097 multiple-choice clinical questions covering basic sciences, internal medicine, surgery, pediatrics, and clinical ethics. MedQA provides the benchmark for clinical reasoning in large language models and biomedical AI systems.",
+    "homepage_url": "https://github.com/jind11/MedQA",
+    "publisher": {
+      "name": "MIT CSAIL & Tsinghua University",
+      "type": "academic",
+      "url": "https://github.com/jind11"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "biomedical-nlp",
+      "question-answering",
+      "clinical-reasoning",
+      "usmle"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Open-access research repository licensed under the MIT License."
+    },
+    "source_references": [
+      {
+        "title": "MedQA GitHub Repository",
+        "url": "https://github.com/jind11/MedQA",
+        "type": "repository",
+        "notes": "Official repository with English and Chinese exam splits."
+      },
+      {
+        "title": "JMIR Medical Informatics Publication (DOI: 10.2196/26262)",
+        "url": "https://doi.org/10.2196/26262",
+        "type": "original_paper",
+        "notes": "Peer-reviewed journal paper establishing MedQA benchmarks."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against JMIR Medical Informatics 2021 publication and GitHub repository."
+    },
+    "dates": {
+      "published": "2021-04-12"
+    },
+    "sample_count": {
+      "total": 61097,
+      "splits": {
+        "usmle_english": 12723,
+        "mcmqe_simplified_chinese": 34251,
+        "twmle_traditional_chinese": 14123
+      },
+      "unit": "questions",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Disease Knowledge Infusion for Healthcare Cognitive Tasks: Towards Solving Medical Question Answering",
+      "paper_url": "https://doi.org/10.2196/26262",
+      "authors": [
+        "Di Jin",
+        "Eileen Pan",
+        "Nassim Oufattole",
+        "Wei-Hung Weng",
+        "Hanyi Fang",
+        "Peter Szolovits"
+      ],
+      "doi": "10.2196/26262",
+      "bibtex": "@article{jin2021disease,\n  title={Disease Knowledge Infusion for Healthcare Cognitive Tasks: Towards Solving Medical Question Answering},\n  author={Jin, Di and Pan, Eileen and Oufattole, Nassim and Weng, Wei-Hung and Fang, Hanyi and Szolovits, Peter},\n  journal={JMIR Medical Informatics},\n  volume={9},\n  number={4},\n  pages={e26262},\n  year={2021},\n  publisher={JMIR Publications},\n  doi={10.2196/26262}\n}"
+    },
+    "geographic_coverage": [
+      "United States",
+      "China",
+      "Taiwan"
+    ],
+    "provenance": {
+      "collection_method": "Compiled from officially published examination question pools of USMLE, MCMQE, and TWMLE.",
+      "curation_notes": "Expert medical review ensuring answer keys, explanations, and unambiguous clinical question stems.",
+      "data_sources": [
+        "National medical licensing examination authorities"
+      ]
     }
   },
   {
@@ -14324,6 +15961,103 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "mimic-iv",
+    "slug": "mimic-iv",
+    "name": "MIMIC-IV: Medical Information Mart for Intensive Care IV",
+    "description": "MIMIC-IV is the contemporary, premier relational electronic health record (EHR) database developed by the MIT Laboratory for Computational Physiology and Beth Israel Deaconess Medical Center (BIDMC), published in Nature Scientific Data. Spanning over a decade of clinical care (2008–2019), MIMIC-IV documents the comprehensive hospital journeys of over 300,000 distinct patients admitted to emergency departments and intensive care units. Structured across modular clinical domains (core, hosp, icu, ed), the database contains de-identified tables capturing admissions, patient demographics, laboratory blood chemistry and hematology tests, provider orders, medication administration records, vital signs, procedural interventions, and ICD-9/ICD-10 diagnostic billing codes.",
+    "homepage_url": "https://physionet.org/content/mimiciv/3.1/",
+    "publisher": {
+      "name": "MIT Laboratory for Computational Physiology & BIDMC",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "clinical-risk-prediction",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "intensive-care",
+      "electronic-health-records",
+      "mimic",
+      "clinical-data",
+      "icu"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "PhysioNet Credentialed Data Use Agreement 1.5.0",
+      "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
+      "commercial_use": "forbidden",
+      "notes": "Credentialed access only: requires human research ethics training (CITI), identity verification, and signed PhysioNet Data Use Agreement."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet MIMIC-IV Database Release Page",
+        "url": "https://physionet.org/content/mimiciv/3.1/",
+        "type": "repository",
+        "notes": "Official repository and documentation on PhysioNet."
+      },
+      {
+        "title": "Nature Scientific Data Publication (DOI: 10.1038/s41597-022-01899-x)",
+        "url": "https://doi.org/10.1038/s41597-022-01899-x",
+        "type": "original_paper",
+        "notes": "Peer-reviewed dataset descriptor in Scientific Data."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against PhysioNet record DOI 10.13026/k8pt-kh64 and Nature Scientific Data 2023 paper."
+    },
+    "dates": {
+      "published": "2020-08-10",
+      "last_updated": "2024-07-01"
+    },
+    "sample_count": {
+      "total": 300000,
+      "unit": "patients",
+      "status": "estimated"
+    },
+    "citation": {
+      "paper_title": "MIMIC-IV, a freely accessible electronic health record dataset",
+      "paper_url": "https://doi.org/10.1038/s41597-022-01899-x",
+      "authors": [
+        "Alistair E. W. Johnson",
+        "Lucas Bulgarelli",
+        "Lu Shen",
+        "Alvin Gayles",
+        "Ayad Shammout",
+        "Steven Horng",
+        "Tom J. Pollard",
+        "Sicheng Hao",
+        "Benjamin Moody",
+        "Brian Gow",
+        "Li-wei H. Lehman",
+        "Leo Anthony Celi",
+        "Roger G. Mark"
+      ],
+      "doi": "10.1038/s41597-022-01899-x",
+      "bibtex": "@article{johnson2023mimiciv,\n  title={MIMIC-IV, a freely accessible electronic health record dataset},\n  author={Johnson, Alistair EW and Bulgarelli, Lucas and Shen, Lu and Gayles, Alvin and Shammout, Ayad and Horng, Steven and Pollard, Tom J and Hao, Sicheng and Moody, Benjamin and Gow, Brian and others},\n  journal={Scientific Data},\n  volume={10},\n  number={1},\n  pages={1},\n  year={2023},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-022-01899-x}\n}"
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "provenance": {
+      "collection_method": "Extracted from clinical hospital databases (Epic and Philips CareVue/ICCA) at Beth Israel Deaconess Medical Center, Boston, MA.",
+      "curation_notes": "De-identified in compliance with HIPAA Safe Harbor standards, including random date shifting and removal of PHI.",
+      "data_sources": [
+        "Beth Israel Deaconess Medical Center EHR"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "miracl",
     "slug": "miracl",
     "name": "MIRACL: Multilingual Information Retrieval Across a Continuum of Languages",
@@ -14505,6 +16239,100 @@
       ],
       "doi": "10.1109/51.932724",
       "bibtex": "@article{moody2001impact,\n  title = {The impact of the MIT-BIH Arrhythmia Database},\n  author = {Moody, George B. and Mark, Roger G.},\n  journal = {IEEE Engineering in Medicine and Biology Magazine},\n  volume = {20},\n  number = {3},\n  pages = {45--50},\n  year = {2001}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mit-bih-svdb",
+    "slug": "mit-bih-svdb",
+    "name": "MIT-BIH Supraventricular Arrhythmia Database",
+    "description": "The MIT-BIH Supraventricular Arrhythmia Database (SVDB) is a foundational electrophysiology benchmark hosted on PhysioNet. Developed by Beth Israel Hospital and MIT, the collection contains 78 half-hour 2-lead ambulatory ECG recordings chosen specifically to supplement the original MIT-BIH Arrhythmia Database with examples of challenging supraventricular arrhythmias. Capturing approximately 160,000 individual heartbeats sampled at 128 Hz per channel, the recordings exhibit supraventricular ectopic beats (atrial premature complexes, junctional premature complexes), atrial fibrillation, atrial flutter, and junctional rhythms, each annotated with beat-by-beat and rhythm-state labels.",
+    "homepage_url": "https://physionet.org/content/svdb/1.0.0/",
+    "publisher": {
+      "name": "Beth Israel Hospital & MIT / PhysioNet",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "sensor",
+      "time-series"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "arrhythmia",
+      "physionet",
+      "biosignals"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "ODC-By 1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Published under Open Data Commons Attribution License (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet MIT-BIH Supraventricular Arrhythmia Database",
+        "url": "https://physionet.org/content/svdb/1.0.0/",
+        "type": "repository",
+        "notes": "Canonical repository page on PhysioNet."
+      },
+      {
+        "title": "Circulation Landmark Paper (DOI: 10.1161/01.CIR.101.23.e215)",
+        "url": "https://doi.org/10.1161/01.CIR.101.23.e215",
+        "type": "original_paper",
+        "notes": "Circulation publication describing PhysioNet and MIT-BIH databases."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against PhysioNet persistent record DOI 10.13026/C2MP49."
+    },
+    "dates": {
+      "published": "1997-06-01"
+    },
+    "sample_count": {
+      "total": 78,
+      "unit": "ECG recordings",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "PhysioBank, PhysioToolkit, and PhysioNet: Components of a New Research Resource for Complex Physiologic Signals",
+      "paper_url": "https://doi.org/10.1161/01.CIR.101.23.e215",
+      "authors": [
+        "Ary L. Goldberger",
+        "Luis A. N. Amaral",
+        "Leon Glass",
+        "Jeffrey M. Hausdorff",
+        "P. Ch. Ivanov",
+        "Roger G. Mark",
+        "Joseph E. Mietus",
+        "George B. Moody",
+        "Chung-Kang Peng",
+        "H. Eugene Stanley"
+      ],
+      "doi": "10.1161/01.CIR.101.23.e215",
+      "bibtex": "@article{goldberger2000physiobank,\n  title={PhysioBank, PhysioToolkit, and PhysioNet: Components of a New Research Resource for Complex Physiologic Signals},\n  author={Goldberger, Ary L and Amaral, Luis AN and Glass, Leon and Hausdorff, Jeffrey M and Ivanov, Plamen Ch and Mark, Roger G and Mietus, Joseph E and Moody, George B and Peng, Chung-Kang and Stanley, H Eugene},\n  journal={Circulation},\n  volume={101},\n  number={23},\n  pages={e215--e220},\n  year={2000},\n  publisher={Am Heart Assoc},\n  doi={10.1161/01.CIR.101.23.e215}\n}"
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "provenance": {
+      "collection_method": "Ambulatory Holter monitor recordings captured at Boston's Beth Israel Hospital.",
+      "curation_notes": "Expert cardiologists annotated all heartbeats and rhythm transitions.",
+      "data_sources": [
+        "Beth Israel Deaconess Medical Center",
+        "MIT Biomedical Engineering Center"
+      ]
     }
   },
   {
@@ -17000,6 +18828,97 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "patchcamelyon",
+    "slug": "patchcamelyon",
+    "name": "PatchCamelyon (PCam): Histopathology Patch Classification Benchmark",
+    "description": "PatchCamelyon (PCam) is a widely utilized benchmark dataset designed for machine learning research in digital histopathology without the compute overhead of gigapixel whole-slide processing. Derived from the CAMELYON16 sentinel lymph node dataset, PCam consists of 327,680 color image patches (96x96 pixels at 10x equivalent magnification) split into standardized training (262,144), validation (32,768), and testing (32,768) sets. A patch is labeled positive (binary 1) if its central 32x32 pixel region contains at least one pixel of tumor tissue, while excluding ambiguous borderline cases. PCam is balanced across classes and serves as an accessible testbed for rotation equivariance, self-supervised learning, and convolutional neural network development.",
+    "homepage_url": "https://github.com/basveeling/pcam",
+    "publisher": {
+      "name": "Radboud University Medical Center & Amsterdam UMC",
+      "type": "academic",
+      "url": "https://github.com/basveeling"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "pathology",
+      "histopathology",
+      "patch-classification",
+      "oncology"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "CC0 1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Dedicated to the public domain under CC0 1.0 Universal."
+    },
+    "source_references": [
+      {
+        "title": "PatchCamelyon GitHub Repository",
+        "url": "https://github.com/basveeling/pcam",
+        "type": "repository",
+        "notes": "Official repository with dataset generation scripts and benchmark links."
+      },
+      {
+        "title": "MICCAI 2018 Conference Paper (DOI: 10.1007/978-3-030-00934-2_24)",
+        "url": "https://doi.org/10.1007/978-3-030-00934-2_24",
+        "type": "original_paper",
+        "notes": "Paper introducing PCam and rotation equivariant architectures."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against MICCAI 2018 paper and official GitHub release."
+    },
+    "dates": {
+      "published": "2018-06-11"
+    },
+    "sample_count": {
+      "total": 327680,
+      "splits": {
+        "train": 262144,
+        "validation": 32768,
+        "test": 32768
+      },
+      "unit": "image patches",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Rotation Equivariant CNNs for Digital Pathology",
+      "paper_url": "https://doi.org/10.1007/978-3-030-00934-2_24",
+      "authors": [
+        "Bastiaan S. Veeling",
+        "Jasper Linmans",
+        "Jim Winkens",
+        "Taco Cohen",
+        "Max Welling"
+      ],
+      "doi": "10.1007/978-3-030-00934-2_24",
+      "bibtex": "@inproceedings{veeling2018rotation,\n  title={Rotation Equivariant CNNs for Digital Pathology},\n  author={Veeling, Bastiaan S and Linmans, Jasper and Winkens, Jim and Cohen, Taco and Welling, Max},\n  booktitle={Medical Image Computing and Computer Assisted Intervention -- MICCAI 2018},\n  pages={210--218},\n  year={2018},\n  publisher={Springer},\n  doi={10.1007/978-3-030-00934-2_24}\n}"
+    },
+    "geographic_coverage": [
+      "Netherlands"
+    ],
+    "provenance": {
+      "collection_method": "Extracted as 96x96 pixel tiles from CAMELYON16 gigapixel whole-slide lymph node images.",
+      "curation_notes": "Balanced positive and negative classes determined by the presence of metastatic cells in the central 32x32 window.",
+      "data_sources": [
+        "CAMELYON16 Whole-Slide Image Database"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "paws-x",
     "slug": "paws-x",
     "name": "PAWS-X: Cross-Lingual Paraphrase Adversaries from Word Scrambling",
@@ -17082,6 +19001,104 @@
       ],
       "doi": "10.18653/v1/D19-1382",
       "bibtex": "@inproceedings{yang-etal-2019-paws,\n  title = {PAWS-X: A Cross-lingual Adversarial Dataset for Paraphrase Identification},\n  author = {Yang, Yinfei and Zhang, Yuan and Tar, Chris and Baldridge, Jason},\n  booktitle = {Proceedings of EMNLP 2019},\n  pages = {3687--3692},\n  year = {2019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "physionet-cinc-2017-af",
+    "slug": "physionet-cinc-2017-af",
+    "name": "PhysioNet/CinC Challenge 2017: Atrial Fibrillation Classification from a Short Single Lead ECG",
+    "description": "The PhysioNet/Computing in Cardiology (CinC) Challenge 2017 dataset is a standard benchmark designed to stimulate algorithms that distinguish atrial fibrillation (AF) from normal sinus rhythm, other cardiac arrhythmias, and noisy signals using short single-lead ECG recordings. Captured with AliveCor KardiaMobile handheld recorders, the dataset consists of 8,528 single-lead ECG recordings sampled at 300 Hz with lengths varying between 9 and 61 seconds. Expert-annotated reference labels categorize each recording into four mutually exclusive classes: Normal sinus rhythm (5,154), Atrial Fibrillation (771), Other rhythm (2,557), and Noisy recording (46).",
+    "homepage_url": "https://physionet.org/content/challenge-2017/1.0.0/",
+    "publisher": {
+      "name": "PhysioNet & Computing in Cardiology",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "sensor",
+      "time-series"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "atrial-fibrillation",
+      "physionet",
+      "biosignals"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "ODC-By 1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Published under Open Data Commons Attribution License (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet Challenge 2017 Portal",
+        "url": "https://physionet.org/content/challenge-2017/1.0.0/",
+        "type": "repository",
+        "notes": "Official challenge repository on PhysioNet."
+      },
+      {
+        "title": "Computing in Cardiology 2017 Paper (DOI: 10.22489/CinC.2017.065-469)",
+        "url": "https://doi.org/10.22489/CinC.2017.065-469",
+        "type": "original_paper",
+        "notes": "Challenge overview paper describing dataset generation and evaluation metric."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against PhysioNet persistent record DOI 10.13026/C2K59Q."
+    },
+    "dates": {
+      "published": "2017-09-01"
+    },
+    "sample_count": {
+      "total": 8528,
+      "splits": {
+        "normal": 5154,
+        "af": 771,
+        "other": 2557,
+        "noisy": 46
+      },
+      "unit": "ECG recordings",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "AF Classification from a short single lead ECG recording: the PhysioNet/Computing in Cardiology Challenge 2017",
+      "paper_url": "https://doi.org/10.22489/CinC.2017.065-469",
+      "authors": [
+        "Gari D. Clifford",
+        "Chengyu Liu",
+        "Benjamin Moody",
+        "H. Lehman Li-wei",
+        "Ikaro Silva",
+        "Qiao Li",
+        "Alfonso E. Johnson",
+        "Roger G. Mark"
+      ],
+      "doi": "10.22489/CinC.2017.065-469",
+      "bibtex": "@inproceedings{clifford2017af,\n  title={AF Classification from a short single lead ECG recording: the PhysioNet/Computing in Cardiology Challenge 2017},\n  author={Clifford, Gari D and Liu, Chengyu and Moody, Benjamin and Li-wei, H Lehman and Silva, Ikaro and Li, Qiao and Johnson, Alistair E and Mark, Roger G},\n  booktitle={2017 Computing in Cardiology (CinC)},\n  pages={1--4},\n  year={2017},\n  publisher={IEEE},\n  doi={10.22489/CinC.2017.065-469}\n}"
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "provenance": {
+      "collection_method": "Handheld smartphone-connected AliveCor ECG device recordings gathered from volunteer participants.",
+      "curation_notes": "Expert cardiologist panel re-annotated and adjudicated discrepancies across all 8,528 traces.",
+      "data_sources": [
+        "AliveCor",
+        "PhysioNet"
+      ]
     }
   },
   {
@@ -17510,6 +19527,94 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "prostatex",
+    "slug": "prostatex",
+    "name": "PROSTATEx: Prostate Cancer MRI Assessment Challenge",
+    "description": "The PROSTATEx Challenge dataset is a public multiparametric magnetic resonance imaging (mpMRI) benchmark hosted on The Cancer Imaging Archive (TCIA) in collaboration with SPIE, AAPM, and NCI. Curated from examinations performed at Radboud University Medical Center in Nijmegen, Netherlands, the dataset features 346 mpMRI exams from 345 patients acquired on 3T Siemens scanners. Imaging modalities include transverse T2-weighted turbo spin-echo, apparent diffusion coefficient (ADC) maps, high b-value diffusion-weighted imaging (DWI), and dynamic contrast-enhanced (DCE) MRI series. Each patient case provides 3D spatial coordinate centroids of confirmed prostate lesions coupled with histopathology-proven clinically significant prostate cancer binary ground truth (Gleason score >= 7).",
+    "homepage_url": "https://www.cancerimagingarchive.net/collection/prostatex/",
+    "publisher": {
+      "name": "The Cancer Imaging Archive (TCIA) / Radboudumc",
+      "type": "academic",
+      "url": "https://www.cancerimagingarchive.net"
+    },
+    "modalities": [
+      "vision",
+      "3d"
+    ],
+    "tasks": [
+      "image-classification",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "oncology",
+      "mri",
+      "prostate-cancer",
+      "tcia",
+      "radiology"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "TCIA Data Usage Policy / CC BY 3.0",
+      "spdx_id": "CC-BY-3.0",
+      "url": "https://creativecommons.org/licenses/by/3.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Published under The Cancer Imaging Archive Data Usage Policy (CC BY 3.0)."
+    },
+    "source_references": [
+      {
+        "title": "TCIA PROSTATEx Collection Page",
+        "url": "https://www.cancerimagingarchive.net/collection/prostatex/",
+        "type": "repository",
+        "notes": "Official open-access repository page on TCIA."
+      },
+      {
+        "title": "Journal of Medical Imaging Paper (DOI: 10.1117/1.JMI.5.4.044501)",
+        "url": "https://doi.org/10.1117/1.JMI.5.4.044501",
+        "type": "original_paper",
+        "notes": "SPIE-AAPM-NCI PROSTATEx Challenge summary publication."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against TCIA persistent collection record and SPIE JMI 2018 paper."
+    },
+    "dates": {
+      "published": "2017-02-08"
+    },
+    "sample_count": {
+      "total": 346,
+      "unit": "mpMRI studies",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "PROSTATEx Challenges for computerized classification of prostate lesions from multiparametric magnetic resonance images",
+      "paper_url": "https://doi.org/10.1117/1.JMI.5.4.044501",
+      "authors": [
+        "Samuel G. Armato III",
+        "Henkjan Huisman",
+        "Karen Drukker",
+        "Lubomir Hadjiiski",
+        "Maryellen L. Giger"
+      ],
+      "doi": "10.1117/1.JMI.5.4.044501",
+      "bibtex": "@article{armato2018prostatex,\n  title={PROSTATEx Challenges for computerized classification of prostate lesions from multiparametric magnetic resonance images},\n  author={Armato, Samuel G and Huisman, Henkjan and Drukker, Karen and Hadjiiski, Lubomir and Vallieres, Martin and Li, Wenyin and Meyer, Charles R and Chen, Weijie and Clarke, Laurence and Kirby, Justin and others},\n  journal={Journal of Medical Imaging},\n  volume={5},\n  number={4},\n  pages={044501},\n  year={2018},\n  publisher={SPIE},\n  doi={10.1117/1.JMI.5.4.044501}\n}"
+    },
+    "geographic_coverage": [
+      "Netherlands"
+    ],
+    "provenance": {
+      "collection_method": "Clinical 3T multiparametric MRI examinations using surface phased-array body coils at Radboud University Medical Center.",
+      "curation_notes": "Lesion coordinates mapped to biopsy and histopathologic findings verifying clinical significance.",
+      "data_sources": [
+        "Radboud University Medical Center, Nijmegen, Netherlands"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ptb-xl",
     "slug": "ptb-xl",
     "name": "PTB-XL: Large Publicly Available 12-Lead ECG Dataset",
@@ -17663,6 +19768,93 @@
       ],
       "doi": "10.1109/ICDAR.2019.00166",
       "bibtex": "@inproceedings{zhong2019publaynet,\n  title = {PubLayNet: Largest Dataset Ever for Document Layout Analysis},\n  author = {Zhong, Xu and Tang, Jianbin and Yepes, Antonio Jimeno},\n  booktitle = {2019 International Conference on Document Analysis and Recognition (ICDAR)},\n  pages = {1015--1022},\n  year = {2019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "pubmed-200k-rct",
+    "slug": "pubmed-200k-rct",
+    "name": "PubMed 200k RCT: Sequential Sentence Classification in Medical Abstracts",
+    "description": "PubMed 200k RCT is a major benchmark dataset for sequential sentence classification in medical research abstracts, developed by researchers at MIT and Adobe Research and presented at IJCNLP 2017. Sourced from MEDLINE/PubMed, the dataset comprises approximately 200,000 structured abstracts of randomized controlled trials (RCTs) containing over 2.2 million sentences. Each sentence is labeled according to its standardized rhetorical section role based on the CONSORT guidelines: Background, Objective, Method, Result, or Conclusion. PubMed 200k RCT serves as the standard evaluation suite for medical text summarization, information extraction, and semantic literature structuring.",
+    "homepage_url": "https://github.com/Franck-Dernoncourt/pubmed-rct",
+    "publisher": {
+      "name": "MIT & Adobe Research",
+      "type": "academic",
+      "url": "https://github.com/Franck-Dernoncourt"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "text-classification",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "biomedical-nlp",
+      "abstract-classification",
+      "pubmed",
+      "rct"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Published under the MIT License."
+    },
+    "source_references": [
+      {
+        "title": "PubMed 200k RCT GitHub Repository",
+        "url": "https://github.com/Franck-Dernoncourt/pubmed-rct",
+        "type": "repository",
+        "notes": "Official open-source repository with full text and splits."
+      },
+      {
+        "title": "IJCNLP 2017 Conference Paper (arXiv:1710.06071)",
+        "url": "https://arxiv.org/abs/1710.06071",
+        "type": "original_paper",
+        "notes": "Original benchmark paper defining the sequential sentence classification task."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against IJCNLP 2017 publication and GitHub repository."
+    },
+    "dates": {
+      "published": "2017-10-17"
+    },
+    "sample_count": {
+      "total": 195654,
+      "splits": {
+        "train": 180000,
+        "dev": 28712,
+        "test": 28978
+      },
+      "unit": "abstracts",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "PubMed 200k RCT: a Dataset for Sequential Sentence Classification in Medical Abstracts",
+      "paper_url": "https://arxiv.org/abs/1710.06071",
+      "authors": [
+        "Franck Dernoncourt",
+        "Ji Young Lee"
+      ],
+      "bibtex": "@inproceedings{dernoncourt2017pubmed,\n  title={PubMed 200k RCT: a Dataset for Sequential Sentence Classification in Medical Abstracts},\n  author={Dernoncourt, Franck and Lee, Ji Young},\n  booktitle={Proceedings of the Eighth International Joint Conference on Natural Language Processing (Volume 2: Short Papers)},\n  pages={308--313},\n  year={2017}\n}"
+    },
+    "geographic_coverage": [
+      "Global"
+    ],
+    "provenance": {
+      "collection_method": "Extracted from PubMed/MEDLINE baseline dumps filtering for structured RCT publications.",
+      "curation_notes": "Mapped publisher explicit abstract section headers to standard CONSORT rhetorical categories.",
+      "data_sources": [
+        "National Library of Medicine (NLM) PubMed / MEDLINE"
+      ]
     }
   },
   {
@@ -18305,6 +20497,100 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "refuge-glaucoma",
+    "slug": "refuge-glaucoma",
+    "name": "REFUGE: Retinal Fundus Glaucoma Challenge Dataset",
+    "description": "REFUGE (Retinal Fundus Glaucoma Challenge) is an authoritative benchmark for evaluating automated methods for glaucoma assessment and anatomical structure segmentation from color fundus photographs. Sourced from the Zhongshan Ophthalmic Center (ZOC) in China and published in Medical Image Analysis, the dataset includes 1,200 color fundus images divided equally into 400 training, 400 validation, and 400 testing samples acquired across two different fundus cameras (Zeiss Visucam and Canon CR-2). Each image features image-level clinical glaucoma diagnostic labels, pixel-level ground-truth segmentations of the optic disc and optic cup for cup-to-disc ratio calculation, and precise fovea center coordinate locations.",
+    "homepage_url": "https://refuge.grand-challenge.org/",
+    "publisher": {
+      "name": "Zhongshan Ophthalmic Center & Grand Challenge",
+      "type": "academic",
+      "url": "https://refuge.grand-challenge.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "semantic-segmentation",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "ophthalmology",
+      "glaucoma",
+      "fundus-photography",
+      "optic-disc-segmentation"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "CC BY-NC-SA 4.0",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode",
+      "commercial_use": "forbidden",
+      "notes": "Published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "REFUGE Grand Challenge Official Website",
+        "url": "https://refuge.grand-challenge.org/",
+        "type": "official_website",
+        "notes": "Challenge portal and benchmark leaderboard."
+      },
+      {
+        "title": "Medical Image Analysis Journal Paper (DOI: 10.1016/j.media.2019.101570)",
+        "url": "https://doi.org/10.1016/j.media.2019.101570",
+        "type": "original_paper",
+        "notes": "Comprehensive peer-reviewed challenge evaluation paper."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against Medical Image Analysis 2020 publication and Grand Challenge repository."
+    },
+    "dates": {
+      "published": "2018-09-01"
+    },
+    "sample_count": {
+      "total": 1200,
+      "splits": {
+        "train": 400,
+        "val": 400,
+        "test": 400
+      },
+      "unit": "fundus images",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "REFUGE Challenge: A Unified Framework for Evaluating Automated Methods for Glaucoma Assessment from Fundus Photographs",
+      "paper_url": "https://doi.org/10.1016/j.media.2019.101570",
+      "authors": [
+        "José Ignacio Orlando",
+        "Huazhu Fu",
+        "João Barbosa Breda",
+        "Karel van Keer",
+        "De-Kuang Zhao",
+        "Hongyan Chai",
+        "Yanwu Xu"
+      ],
+      "doi": "10.1016/j.media.2019.101570",
+      "bibtex": "@article{orlando2020refuge,\n  title={REFUGE Challenge: A Unified Framework for Evaluating Automated Methods for Glaucoma Assessment from Fundus Photographs},\n  author={Orlando, Jos{\\'e} Ignacio and Fu, Huazhu and Breda, Jo{\\~a}o Barbosa and van Keer, Karel and Bathula, Deepti R and Diaz-Pinto, Andr{\\'e}s and Fang, Ruogu and Heng, Pheng-Ann and Kim, Jeyoung and Lee, JoonHo and others},\n  journal={Medical Image Analysis},\n  volume={59},\n  pages={101570},\n  year={2020},\n  publisher={Elsevier},\n  doi={10.1016/j.media.2019.101570}\n}"
+    },
+    "geographic_coverage": [
+      "China"
+    ],
+    "provenance": {
+      "collection_method": "Multi-camera clinical fundus imaging of glaucomatous and healthy eyes at Zhongshan Ophthalmic Center, Sun Yat-sen University.",
+      "curation_notes": "Expert consensus segmentations of optic disc and cup boundaries, fovea locations, and glaucomatous neuropathy classifications.",
+      "data_sources": [
+        "Zhongshan Ophthalmic Center, Sun Yat-sen University"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "rice-leaf-disease-samples",
     "slug": "rice-leaf-disease-samples",
     "name": "Rice Leaf Disease Image Samples",
@@ -18469,6 +20755,98 @@
       "curation_notes": "1,560 verified images annotated for health state and diseased leaf area percentages.",
       "data_sources": [
         "Commercial Robusta coffee farms in Ecuador"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "rsna-pneumonia-detection",
+    "slug": "rsna-pneumonia-detection",
+    "name": "RSNA Pneumonia Detection Challenge Dataset",
+    "description": "The RSNA Pneumonia Detection Challenge dataset is an expert-curated chest radiography benchmark created by the Radiological Society of North America (RSNA), the Society of Thoracic Radiology (STR), and the NIH Clinical Center. Derived from a subset of the NIH ChestX-ray14 repository, the dataset comprises 29,684 frontal view chest radiographs in DICOM format. A panel of 18 board-certified thoracic radiologists systematically reviewed and annotated each radiograph for lung opacities suspicious for pneumonia, providing bounding-box spatial annotations for lung opacities alongside normal and non-pneumonia opacity classifications.",
+    "homepage_url": "https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge/data",
+    "publisher": {
+      "name": "Radiological Society of North America (RSNA)",
+      "type": "academic",
+      "url": "https://www.rsna.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection",
+      "image-classification",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "radiology",
+      "chest-xray",
+      "pneumonia",
+      "rsna",
+      "object-detection"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "RSNA Challenge Rules / Non-Commercial Research License",
+      "url": "https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge/rules",
+      "commercial_use": "forbidden",
+      "notes": "Available exclusively for non-commercial academic research and benchmarking under RSNA rules."
+    },
+    "source_references": [
+      {
+        "title": "Kaggle RSNA Pneumonia Detection Challenge Portal",
+        "url": "https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge/data",
+        "type": "repository",
+        "notes": "Official competition repository with DICOM files and bounding boxes."
+      },
+      {
+        "title": "Radiology: Artificial Intelligence Publication (DOI: 10.1148/ryai.2019190055)",
+        "url": "https://doi.org/10.1148/ryai.2019190055",
+        "type": "original_paper",
+        "notes": "Publication describing dataset curation and multi-radiologist annotation process."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against RSNA challenge repository and Radiology: AI 2019 paper."
+    },
+    "dates": {
+      "published": "2018-08-27"
+    },
+    "sample_count": {
+      "total": 29684,
+      "splits": {
+        "train": 26684,
+        "test": 3000
+      },
+      "unit": "radiographs",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Augmenting the National Institutes of Health Chest Radiograph Dataset to Create the RSNA Pneumonia Detection Challenge Dataset",
+      "paper_url": "https://doi.org/10.1148/ryai.2019190055",
+      "authors": [
+        "George Shih",
+        "Felipe C. Kitamura",
+        "Luciano M. Prevedello",
+        "Jayashree Kalpathy-Cramer",
+        "Carol C. Wu"
+      ],
+      "doi": "10.1148/ryai.2019190055",
+      "bibtex": "@article{shih2019augmenting,\n  title={Augmenting the National Institutes of Health Chest Radiograph Dataset to Create the RSNA Pneumonia Detection Challenge Dataset},\n  author={Shih, George and Wu, Carol C and Halabi, Safwan S and Kohli, Marc D and Prevedello, Luciano M and Cook, Tessa S and Sharma, Arjun and Amorosa, Judith K and Arteaga, Veronica and Galperin-Aizenberg, Maya and others},\n  journal={Radiology: Artificial Intelligence},\n  volume={1},\n  number={6},\n  pages={e190055},\n  year={2019},\n  publisher={Radiological Society of North America},\n  doi={10.1148/ryai.2019190055}\n}"
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "provenance": {
+      "collection_method": "De-identified DICOM frontal radiographs sampled from the NIH Clinical Center repository.",
+      "curation_notes": "Eighteen subspecialty thoracic radiologists annotated bounding boxes for opacity consistent with pneumonia.",
+      "data_sources": [
+        "NIH Clinical Center",
+        "Society of Thoracic Radiology"
       ]
     }
   },
@@ -18791,6 +21169,92 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "siim-acr-pneumothorax",
+    "slug": "siim-acr-pneumothorax",
+    "name": "SIIM-ACR Pneumothorax Segmentation Dataset",
+    "description": "The SIIM-ACR Pneumothorax Segmentation dataset was created by the Society for Imaging Informatics in Medicine (SIIM) and the American College of Radiology (ACR) to benchmark machine learning algorithms for identifying and segmenting pneumothorax from frontal chest radiographs. The collection comprises 12,047 de-identified DICOM chest X-ray images (10,675 training images and 1,372 test images). Radiographs positive for pneumothorax are accompanied by fine-grained run-length-encoded (RLE) pixel masks delineating the exact anatomical margins of intrapleural air collections, validated by certified radiologist consensus.",
+    "homepage_url": "https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation/data",
+    "publisher": {
+      "name": "SIIM & American College of Radiology (ACR)",
+      "type": "academic",
+      "url": "https://siim.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "image-classification",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "radiology",
+      "chest-xray",
+      "pneumothorax",
+      "segmentation"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "SIIM-ACR Challenge Rules / Non-Commercial Research License",
+      "url": "https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation/rules",
+      "commercial_use": "forbidden",
+      "notes": "Non-commercial academic research use only in accordance with challenge participation terms."
+    },
+    "source_references": [
+      {
+        "title": "Kaggle SIIM-ACR Pneumothorax Segmentation Portal",
+        "url": "https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation/data",
+        "type": "repository",
+        "notes": "Official competition repository with DICOM files and RLE masks."
+      },
+      {
+        "title": "SIIM Machine Learning Committee Overview",
+        "url": "https://siim.org/page/machine_learning",
+        "type": "official_website",
+        "notes": "Society for Imaging Informatics in Medicine challenge documentation."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against SIIM-ACR competition repository and radiologist mask schemas."
+    },
+    "dates": {
+      "published": "2019-06-25"
+    },
+    "sample_count": {
+      "total": 12047,
+      "splits": {
+        "train": 10675,
+        "test": 1372
+      },
+      "unit": "radiographs",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "SIIM-ACR Pneumothorax Segmentation Challenge",
+      "paper_url": "https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation",
+      "authors": [
+        "Society for Imaging Informatics in Medicine",
+        "American College of Radiology"
+      ]
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "provenance": {
+      "collection_method": "De-identified DICOM frontal chest radiographs from multi-institutional US clinical image repositories.",
+      "curation_notes": "Pneumothorax contours annotated by board-certified radiologists using pixel-level RLE encoding.",
+      "data_sources": [
+        "SIIM",
+        "American College of Radiology"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "skin-disease-classification",
     "slug": "skin-disease-classification",
     "name": "Skin Disease Classification Dataset (9,548 Dermatoscopic Images)",
@@ -18881,6 +21345,94 @@
     "provenance": {
       "collection_method": "Dermatoscopic and clinical photography collected from hospital resources.",
       "curation_notes": "De-identified records across 5 classes: acne, vitiligo, hyperpigmentation, nail psoriasis, and SJS-TEN."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "sleep-edf-expanded",
+    "slug": "sleep-edf-expanded",
+    "name": "Sleep-EDF Database Expanded: Polysomnographic Sleep Stage Benchmark",
+    "description": "The Sleep-EDF Database Expanded contains 197 whole-night polysomnographic (PSG) recordings hosted on PhysioNet. Sourced from the Department of Clinical Neurophysiology at the Westeinde Hospital in The Hague and the University of Amsterdam, the collection includes two distinct studies: 153 recordings from 61 healthy subjects (Sleep Cassette Study) and 44 recordings from 22 patients with sleep initiation difficulty (Sleep Telemetry Study). Signal channels include horizontal EEG (Fpz-Cz and Pz-Oz), submental chin EMG, horizontal EOG, oral-nasal respiration, and rectal body temperature. Recordings are accompanied by manual hypnogram annotations scoring 30-second epochs into sleep stages (Wake, N1, N2, N3, N4, REM, and Movement) according to the Rechtschaffen and Kales standard.",
+    "homepage_url": "https://physionet.org/content/sleep-edfx/1.0.0/",
+    "publisher": {
+      "name": "PhysioNet / Westeinde Hospital",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "sensor",
+      "time-series"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "sleep-medicine",
+      "eeg",
+      "polysomnography",
+      "physionet",
+      "biosignals"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "ODC-By 1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Published under Open Data Commons Attribution License (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet Sleep-EDF Expanded Collection",
+        "url": "https://physionet.org/content/sleep-edfx/1.0.0/",
+        "type": "repository",
+        "notes": "Canonical repository page on PhysioNet."
+      },
+      {
+        "title": "IEEE TBME Foundation Paper (DOI: 10.1109/10.867928)",
+        "url": "https://doi.org/10.1109/10.867928",
+        "type": "original_paper",
+        "notes": "Publication on sleep-dependent slow-wave microcontinuity."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against PhysioNet record DOI 10.13026/C2X676."
+    },
+    "dates": {
+      "published": "2018-03-23"
+    },
+    "sample_count": {
+      "total": 197,
+      "unit": "polysomnographic recordings",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Analysis of a sleep-dependent neuronal feedback loop: the slow-wave microcontinuity of the EEG",
+      "paper_url": "https://doi.org/10.1109/10.867928",
+      "authors": [
+        "Bob Kemp",
+        "Aeilko H. Zwinderman",
+        "Bert Tuk",
+        "Hilbrand A. C. Kamphuisen",
+        "John M. L. Oberyé"
+      ],
+      "doi": "10.1109/10.867928",
+      "bibtex": "@article{kemp2000analysis,\n  title={Analysis of a sleep-dependent neuronal feedback loop: the slow-wave microcontinuity of the EEG},\n  author={Kemp, Bob and Zwinderman, Aeilko H and Tuk, Bert and Kamphuisen, Hilbrand AC and Oberye, John ML},\n  journal={IEEE Transactions on Biomedical Engineering},\n  volume={47},\n  number={9},\n  pages={1185--1194},\n  year={2000},\n  publisher={IEEE},\n  doi={10.1109/10.867928}\n}"
+    },
+    "geographic_coverage": [
+      "Netherlands"
+    ],
+    "provenance": {
+      "collection_method": "Overnight polysomnography at Westeinde Hospital in The Hague using modified Oxford Medilog 9000-series recorders.",
+      "curation_notes": "30-second epoch scoring by well-trained sleep technologists according to Rechtschaffen and Kales criteria.",
+      "data_sources": [
+        "Westeinde Hospital, The Hague, Netherlands"
+      ]
     }
   },
   {
@@ -21020,6 +23572,177 @@
       ],
       "doi": "10.48550/arXiv.1212.0402",
       "bibtex": "@article{soomro2012ucf101,\n  title={UCF101: A dataset of 101 human actions classes from videos in the wild},\n  author={Soomro, Khurram and Zamir, Amir Roshan and Shah, Mubarak},\n  journal={arXiv preprint arXiv:1212.0402},\n  year={2012}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "uci-chronic-kidney-disease",
+    "slug": "uci-chronic-kidney-disease",
+    "name": "Chronic Kidney Disease: Diagnostic Clinical Tabular Benchmark",
+    "description": "The Chronic Kidney Disease dataset from the UCI Machine Learning Repository (ID 336) is an established clinical tabular benchmark collected over a two-month period at Apollo Hospitals in Tamil Nadu, India. The dataset contains 400 patient records (250 diagnosed with chronic kidney disease and 150 normal controls) described by 24 clinical, laboratory, and demographic attributes: age, blood pressure, specific gravity, albumin, sugar, red blood cells, pus cells, pus cell clumps, bacteria, blood glucose random, blood urea, serum creatinine, sodium, potassium, hemoglobin, packed cell volume, white blood cell count, red blood cell count, hypertension, diabetes mellitus, coronary artery disease, appetite, pedal edema, and anemia.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/336/chronic+kidney+disease",
+    "publisher": {
+      "name": "UCI Machine Learning Repository / Apollo Hospitals",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "healthcare-diagnostics",
+      "clinical-risk-prediction"
+    ],
+    "tags": [
+      "healthcare",
+      "nephrology",
+      "kidney-disease",
+      "uci",
+      "clinical-data"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC BY 4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "UCI ML Repository Chronic Kidney Disease Page",
+        "url": "https://archive.ics.uci.edu/dataset/336/chronic+kidney+disease",
+        "type": "repository",
+        "notes": "Official dataset repository entry on UCI."
+      },
+      {
+        "title": "Apollo Hospitals Clinical Research Unit",
+        "url": "https://www.apollohospitals.com/",
+        "type": "official_website",
+        "notes": "Source medical institution in Tamil Nadu, India."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against UCI Machine Learning Repository record 336."
+    },
+    "dates": {
+      "published": "2015-07-03"
+    },
+    "sample_count": {
+      "total": 400,
+      "splits": {
+        "ckd": 250,
+        "not_ckd": 150
+      },
+      "unit": "patients",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Chronic Kidney Disease Dataset",
+      "paper_url": "https://archive.ics.uci.edu/dataset/336/chronic+kidney+disease",
+      "authors": [
+        "L. Jerlin Rubini",
+        "P. Eswaran"
+      ]
+    },
+    "geographic_coverage": [
+      "India"
+    ],
+    "provenance": {
+      "collection_method": "Laboratory blood and urine analyses paired with patient interviews at Apollo Hospitals, Karaikudi, Tamil Nadu, India.",
+      "curation_notes": "Expert nephrologist clinical confirmation of chronic kidney disease stage and status.",
+      "data_sources": [
+        "Apollo Hospitals, Tamil Nadu, India"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "uci-heart-failure-clinical-records",
+    "slug": "uci-heart-failure-clinical-records",
+    "name": "Heart Failure Clinical Records: Survival Prediction Benchmark",
+    "description": "The Heart Failure Clinical Records dataset from the UCI Machine Learning Repository (ID 519) is a biomedical prognostic benchmark curated from medical records of patients with heart failure seen at the Faisalabad Institute of Cardiology in Pakistan. Published in BMC Medical Informatics and Decision Making, the dataset comprises 299 patient records with 12 clinical and biochemical features: age, anaemia, creatinine phosphokinase, diabetes, ejection fraction, high blood pressure, platelets, serum creatinine, serum sodium, sex, smoking, and follow-up period in days. The primary clinical prediction task is binary survival (death event during the follow-up period), providing a key baseline for clinical risk stratification and machine learning survival analysis.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records",
+    "publisher": {
+      "name": "UCI Machine Learning Repository / Faisalabad Institute of Cardiology",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "clinical-risk-prediction",
+      "healthcare-diagnostics"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "heart-failure",
+      "survival-analysis",
+      "uci",
+      "clinical-data"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC BY 4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "UCI ML Repository Heart Failure Clinical Records Page",
+        "url": "https://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records",
+        "type": "repository",
+        "notes": "Official repository page on UCI."
+      },
+      {
+        "title": "BMC Medical Informatics Journal Paper (DOI: 10.1186/s12911-020-1023-5)",
+        "url": "https://doi.org/10.1186/s12911-020-1023-5",
+        "type": "original_paper",
+        "notes": "Peer-reviewed research paper establishing feature importance for survival prediction."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-03",
+      "notes": "Verified against UCI record 519 and BMC Medical Informatics 2020 publication."
+    },
+    "dates": {
+      "published": "2020-02-05"
+    },
+    "sample_count": {
+      "total": 299,
+      "unit": "patients",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Machine learning can predict survival of patients with heart failure from serum creatinine and ejection fraction alone",
+      "paper_url": "https://doi.org/10.1186/s12911-020-1023-5",
+      "authors": [
+        "Davide Chicco",
+        "Giuseppe Jurman"
+      ],
+      "doi": "10.1186/s12911-020-1023-5",
+      "bibtex": "@article{chicco2020machine,\n  title={Machine learning can predict survival of patients with heart failure from serum creatinine and ejection fraction alone},\n  author={Chicco, Davide and Jurman, Giuseppe},\n  journal={BMC Medical Informatics and Decision Making},\n  volume={20},\n  number={1},\n  pages={16},\n  year={2020},\n  publisher={BioMed Central},\n  doi={10.1186/s12911-020-1023-5}\n}"
+    },
+    "geographic_coverage": [
+      "Pakistan"
+    ],
+    "provenance": {
+      "collection_method": "Inpatient and outpatient follow-up monitoring of adult patients with left ventricular systolic dysfunction.",
+      "curation_notes": "All patients had previous heart failure manifestations and were evaluated during a follow-up period up to 285 days.",
+      "data_sources": [
+        "Faisalabad Institute of Cardiology, Pakistan"
+      ]
     }
   },
   {

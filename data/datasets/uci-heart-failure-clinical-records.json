@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-heart-failure-clinical-records",
+  "slug": "uci-heart-failure-clinical-records",
+  "name": "Heart Failure Clinical Records: Survival Prediction Benchmark",
+  "description": "The Heart Failure Clinical Records dataset from the UCI Machine Learning Repository (ID 519) is a biomedical prognostic benchmark curated from medical records of patients with heart failure seen at the Faisalabad Institute of Cardiology in Pakistan. Published in BMC Medical Informatics and Decision Making, the dataset comprises 299 patient records with 12 clinical and biochemical features: age, anaemia, creatinine phosphokinase, diabetes, ejection fraction, high blood pressure, platelets, serum creatinine, serum sodium, sex, smoking, and follow-up period in days. The primary clinical prediction task is binary survival (death event during the follow-up period), providing a key baseline for clinical risk stratification and machine learning survival analysis.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / Faisalabad Institute of Cardiology",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "clinical-risk-prediction",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "heart-failure",
+    "survival-analysis",
+    "uci",
+    "clinical-data"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UCI ML Repository Heart Failure Clinical Records Page",
+      "url": "https://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records",
+      "type": "repository",
+      "notes": "Official repository page on UCI."
+    },
+    {
+      "title": "BMC Medical Informatics Journal Paper (DOI: 10.1186/s12911-020-1023-5)",
+      "url": "https://doi.org/10.1186/s12911-020-1023-5",
+      "type": "original_paper",
+      "notes": "Peer-reviewed research paper establishing feature importance for survival prediction."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against UCI record 519 and BMC Medical Informatics 2020 publication."
+  },
+  "dates": {
+    "published": "2020-02-05"
+  },
+  "sample_count": {
+    "total": 299,
+    "unit": "patients",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Machine learning can predict survival of patients with heart failure from serum creatinine and ejection fraction alone",
+    "paper_url": "https://doi.org/10.1186/s12911-020-1023-5",
+    "authors": [
+      "Davide Chicco",
+      "Giuseppe Jurman"
+    ],
+    "doi": "10.1186/s12911-020-1023-5",
+    "bibtex": "@article{chicco2020machine,\n  title={Machine learning can predict survival of patients with heart failure from serum creatinine and ejection fraction alone},\n  author={Chicco, Davide and Jurman, Giuseppe},\n  journal={BMC Medical Informatics and Decision Making},\n  volume={20},\n  number={1},\n  pages={16},\n  year={2020},\n  publisher={BioMed Central},\n  doi={10.1186/s12911-020-1023-5}\n}"
+  },
+  "geographic_coverage": [
+    "Pakistan"
+  ],
+  "provenance": {
+    "collection_method": "Inpatient and outpatient follow-up monitoring of adult patients with left ventricular systolic dysfunction.",
+    "curation_notes": "All patients had previous heart failure manifestations and were evaluated during a follow-up period up to 285 days.",
+    "data_sources": [
+      "Faisalabad Institute of Cardiology, Pakistan"
+    ]
+  }
+}

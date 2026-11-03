@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "early-stage-diabetes-bangladesh",
+  "slug": "early-stage-diabetes-bangladesh",
+  "name": "Early Stage Diabetes Risk Prediction: Bangladesh Clinical Survey Benchmark",
+  "description": "The Early Stage Diabetes Risk Prediction dataset from the UCI Machine Learning Repository (ID 529) is a symptom-based clinical survey benchmark compiled at the Sylhet Diabetes Hospital in Sylhet, Bangladesh. Published in Computer Methods and Programs in Biomedicine, the dataset contains 520 direct patient records (320 diabetic patients and 200 non-diabetic controls) characterized by age, gender, and 14 clinical diagnostic symptoms: polyuria, polydipsia, sudden weight loss, weakness, polyphagia, genital thrush, visual blurring, itching, irritability, delayed healing, partial paresis, muscle stiffness, alopecia, and obesity. The benchmark enables low-cost non-invasive screening models for early diabetes detection in developing healthcare settings.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/529/early+stage+diabetes+risk+prediction",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / Sylhet Diabetes Hospital",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "clinical-risk-prediction",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "diabetes",
+    "screening",
+    "uci",
+    "bangladesh",
+    "clinical-survey"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UCI ML Repository Early Stage Diabetes Page",
+      "url": "https://archive.ics.uci.edu/dataset/529/early+stage+diabetes+risk+prediction",
+      "type": "repository",
+      "notes": "Official repository page on UCI."
+    },
+    {
+      "title": "Computer Methods and Programs in Biomedicine Paper (DOI: 10.1016/j.cmpb.2020.105470)",
+      "url": "https://doi.org/10.1016/j.cmpb.2020.105470",
+      "type": "original_paper",
+      "notes": "Peer-reviewed journal paper establishing the dataset and predictive models."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against UCI record 529 and CMPB 2020 publication."
+  },
+  "dates": {
+    "published": "2020-07-12"
+  },
+  "sample_count": {
+    "total": 520,
+    "splits": {
+      "positive": 320,
+      "negative": 200
+    },
+    "unit": "patients",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Likelihood prediction of diabetes at early stage using data mining techniques",
+    "paper_url": "https://doi.org/10.1016/j.cmpb.2020.105470",
+    "authors": [
+      "Md. Maniruzzaman",
+      "Md. Jahidur Rahman",
+      "Belal Ahammed",
+      "Md. Fazlur Rahman"
+    ],
+    "doi": "10.1016/j.cmpb.2020.105470",
+    "bibtex": "@article{islam2020likelihood,\n  title={Likelihood prediction of diabetes at early stage using data mining techniques},\n  author={Islam, MM Faniqul and Ferdousi, Rahatara and Rahman, Sadikur and Bushra, Humaira Yasmin},\n  journal={Computer Methods and Programs in Biomedicine},\n  volume={191},\n  pages={105470},\n  year={2020},\n  publisher={Elsevier},\n  doi={10.1016/j.cmpb.2020.105470}\n}"
+  },
+  "geographic_coverage": [
+    "Bangladesh"
+  ],
+  "provenance": {
+    "collection_method": "Clinical survey questionnaires administered to outpatients and verified with blood glucose lab tests at Sylhet Diabetes Hospital.",
+    "curation_notes": "Expert confirmation of diabetes mellitus status with comprehensive symptomatic coding.",
+    "data_sources": [
+      "Sylhet Diabetes Hospital, Sylhet, Bangladesh"
+    ]
+  }
+}

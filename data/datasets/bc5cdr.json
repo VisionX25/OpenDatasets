@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bc5cdr",
+  "slug": "bc5cdr",
+  "name": "BC5CDR: BioCreative V Chemical Disease Relation Corpus",
+  "description": "The BC5CDR (BioCreative V Chemical-Disease Relation) corpus is a gold-standard biomedical text mining and named entity recognition (NER) benchmark developed by the National Center for Biotechnology Information (NCBI) for the BioCreative V challenge, published in the journal Database. The corpus consists of 1,500 PubMed abstracts (split into 500 training, 500 development, and 500 test articles) comprehensively annotated for chemical entity mentions, disease entity mentions, and chemical-induced disease (CID) relational interactions. Containing 12,850 chemical mentions, 12,413 disease mentions, and 3,116 distinct CID relations mapped to MeSH concepts, BC5CDR is the definitive benchmark for biomedical information extraction.",
+  "homepage_url": "https://huggingface.co/datasets/tner/bc5cdr",
+  "publisher": {
+    "name": "National Center for Biotechnology Information (NCBI)",
+    "type": "government",
+    "url": "https://www.ncbi.nlm.nih.gov"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "named-entity-recognition",
+    "text-classification",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "biomedical-nlp",
+    "ner",
+    "relation-extraction",
+    "pharmacology",
+    "ncbi"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Public Domain (US Government Work)",
+    "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+    "commercial_use": "allowed",
+    "notes": "Produced by NCBI/NIH employees as a work of the United States Government in the public domain."
+  },
+  "source_references": [
+    {
+      "title": "Hugging Face Datasets: BC5CDR",
+      "url": "https://huggingface.co/datasets/tner/bc5cdr",
+      "type": "repository",
+      "notes": "Community standardized NER distribution."
+    },
+    {
+      "title": "Oxford Database Journal Publication (DOI: 10.1093/database/baw068)",
+      "url": "https://doi.org/10.1093/database/baw068",
+      "type": "original_paper",
+      "notes": "Peer-reviewed journal paper detailing curation and evaluation."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against Oxford Database 2016 publication and NCBI BioCreative V release."
+  },
+  "dates": {
+    "published": "2016-05-18"
+  },
+  "sample_count": {
+    "total": 1500,
+    "splits": {
+      "train": 500,
+      "development": 500,
+      "test": 500
+    },
+    "unit": "abstracts",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "BioCreative V CDR task corpus: a resource for chemical disease relation extraction",
+    "paper_url": "https://doi.org/10.1093/database/baw068",
+    "authors": [
+      "Jiao Li",
+      "Yueping Sun",
+      "Robin J. Johnson",
+      "Daniela Sciaky",
+      "Chih-Hsuan Wei",
+      "Robert Leaman",
+      "Allan Peter Davis",
+      "Carolyn J. Mattingly",
+      "Thomas C. Wiegers",
+      "Zhiyong Lu"
+    ],
+    "doi": "10.1093/database/baw068",
+    "bibtex": "@article{li2016biocreative,\n  title={BioCreative V CDR task corpus: a resource for chemical disease relation extraction},\n  author={Li, Jiao and Sun, Yueping and Johnson, Robin J and Sciaky, Daniela and Wei, Chih-Hsuan and Leaman, Robert and Davis, Allan Peter and Mattingly, Carolyn J and Wiegers, Thomas C and Lu, Zhiyong},\n  journal={Database},\n  volume={2016},\n  pages={baw068},\n  year={2016},\n  publisher={Oxford University Press},\n  doi={10.1093/database/baw068}\n}"
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "provenance": {
+    "collection_method": "PubMed literature curation conducted by professional Medical Subject Headings (MeSH) indexers.",
+    "curation_notes": "Dual-annotated with full inter-annotator agreement tracking and MeSH concept normalization.",
+    "data_sources": [
+      "NLM PubMed / MEDLINE database"
+    ]
+  }
+}

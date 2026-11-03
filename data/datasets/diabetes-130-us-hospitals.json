@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "diabetes-130-us-hospitals",
+  "slug": "diabetes-130-us-hospitals",
+  "name": "Diabetes 130-US Hospitals for Years 1999-2008: Readmission Prediction Benchmark",
+  "description": "The Diabetes 130-US Hospitals dataset from the UCI Machine Learning Repository (ID 296) provides 10 years (1999–2008) of clinical encounter data from 130 hospitals and integrated delivery networks across the United States. Comprising 101,766 verified inpatient encounters from diabetic patients, the dataset includes 50 detailed attributes describing patient demographics, admission type, discharge disposition, medical specialty, up to three ICD-9 diagnoses, number of lab procedures, medications administered (including detailed diabetic regimens: insulin, metformin, sulfonylureas), and HbA1c test results. The primary clinical task is predicting 30-day hospital readmission to support quality-of-care improvements.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/296/diabetes+130+us+hospitals+for+years+1999+2008",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / Center for Clinical and Translational Research, VCU",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "clinical-risk-prediction",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "diabetes",
+    "readmission",
+    "uci",
+    "clinical-data",
+    "ehr"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC BY 4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UCI ML Repository Diabetes 130-US Hospitals Entry",
+      "url": "https://archive.ics.uci.edu/dataset/296/diabetes+130+us+hospitals+for+years+1999+2008",
+      "type": "repository",
+      "notes": "Official repository page on UCI."
+    },
+    {
+      "title": "BioMed Research International Paper (DOI: 10.1155/2014/781670)",
+      "url": "https://doi.org/10.1155/2014/781670",
+      "type": "original_paper",
+      "notes": "Original journal paper investigating HbA1c measurements and hospital readmission."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against UCI record 296 and BioMed Research International 2014 paper."
+  },
+  "dates": {
+    "published": "2014-05-03"
+  },
+  "sample_count": {
+    "total": 101766,
+    "unit": "inpatient encounters",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Records",
+    "paper_url": "https://doi.org/10.1155/2014/781670",
+    "authors": [
+      "Beata Strack",
+      "Jonathan P. DeShazo",
+      "Chris Gennings",
+      "Juan L. Olmo",
+      "Sebastian Ventura",
+      "Kenneth J. Cios",
+      "John N. Clore"
+    ],
+    "doi": "10.1155/2014/781670",
+    "bibtex": "@article{strack2014impact,\n  title={Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Records},\n  author={Strack, Beata and DeShazo, Jonathan P and Gennings, Chris and Olmo, Juan L and Ventura, Sebastian and Cios, Kenneth J and Clore, John N},\n  journal={BioMed Research International},\n  volume={2014},\n  pages={781670},\n  year={2014},\n  publisher={Hindawi},\n  doi={10.1155/2014/781670}\n}"
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "provenance": {
+    "collection_method": "Extracted from the Health Facts clinical database representing hospital admissions from 130 medical centers.",
+    "curation_notes": "De-identified records where diabetes was an active diagnosis and encounter lasted between 1 and 14 days.",
+    "data_sources": [
+      "Health Facts database, Cerner Corporation"
+    ]
+  }
+}

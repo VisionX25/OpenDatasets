@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mimic-iv",
+  "slug": "mimic-iv",
+  "name": "MIMIC-IV: Medical Information Mart for Intensive Care IV",
+  "description": "MIMIC-IV is the contemporary, premier relational electronic health record (EHR) database developed by the MIT Laboratory for Computational Physiology and Beth Israel Deaconess Medical Center (BIDMC), published in Nature Scientific Data. Spanning over a decade of clinical care (2008–2019), MIMIC-IV documents the comprehensive hospital journeys of over 300,000 distinct patients admitted to emergency departments and intensive care units. Structured across modular clinical domains (core, hosp, icu, ed), the database contains de-identified tables capturing admissions, patient demographics, laboratory blood chemistry and hematology tests, provider orders, medication administration records, vital signs, procedural interventions, and ICD-9/ICD-10 diagnostic billing codes.",
+  "homepage_url": "https://physionet.org/content/mimiciv/3.1/",
+  "publisher": {
+    "name": "MIT Laboratory for Computational Physiology & BIDMC",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "clinical-risk-prediction",
+    "healthcare-diagnostics"
+  ],
+  "tags": [
+    "healthcare",
+    "intensive-care",
+    "electronic-health-records",
+    "mimic",
+    "clinical-data",
+    "icu"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "PhysioNet Credentialed Data Use Agreement 1.5.0",
+    "url": "https://physionet.org/about/licenses/physionet-credentialed-health-data-license-150/",
+    "commercial_use": "forbidden",
+    "notes": "Credentialed access only: requires human research ethics training (CITI), identity verification, and signed PhysioNet Data Use Agreement."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet MIMIC-IV Database Release Page",
+      "url": "https://physionet.org/content/mimiciv/3.1/",
+      "type": "repository",
+      "notes": "Official repository and documentation on PhysioNet."
+    },
+    {
+      "title": "Nature Scientific Data Publication (DOI: 10.1038/s41597-022-01899-x)",
+      "url": "https://doi.org/10.1038/s41597-022-01899-x",
+      "type": "original_paper",
+      "notes": "Peer-reviewed dataset descriptor in Scientific Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-03",
+    "notes": "Verified against PhysioNet record DOI 10.13026/k8pt-kh64 and Nature Scientific Data 2023 paper."
+  },
+  "dates": {
+    "published": "2020-08-10",
+    "last_updated": "2024-07-01"
+  },
+  "sample_count": {
+    "total": 300000,
+    "unit": "patients",
+    "status": "estimated"
+  },
+  "citation": {
+    "paper_title": "MIMIC-IV, a freely accessible electronic health record dataset",
+    "paper_url": "https://doi.org/10.1038/s41597-022-01899-x",
+    "authors": [
+      "Alistair E. W. Johnson",
+      "Lucas Bulgarelli",
+      "Lu Shen",
+      "Alvin Gayles",
+      "Ayad Shammout",
+      "Steven Horng",
+      "Tom J. Pollard",
+      "Sicheng Hao",
+      "Benjamin Moody",
+      "Brian Gow",
+      "Li-wei H. Lehman",
+      "Leo Anthony Celi",
+      "Roger G. Mark"
+    ],
+    "doi": "10.1038/s41597-022-01899-x",
+    "bibtex": "@article{johnson2023mimiciv,\n  title={MIMIC-IV, a freely accessible electronic health record dataset},\n  author={Johnson, Alistair EW and Bulgarelli, Lucas and Shen, Lu and Gayles, Alvin and Shammout, Ayad and Horng, Steven and Pollard, Tom J and Hao, Sicheng and Moody, Benjamin and Gow, Brian and others},\n  journal={Scientific Data},\n  volume={10},\n  number={1},\n  pages={1},\n  year={2023},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-022-01899-x}\n}"
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "provenance": {
+    "collection_method": "Extracted from clinical hospital databases (Epic and Philips CareVue/ICCA) at Beth Israel Deaconess Medical Center, Boston, MA.",
+    "curation_notes": "De-identified in compliance with HIPAA Safe Harbor standards, including random date shifting and removal of PHI.",
+    "data_sources": [
+      "Beth Israel Deaconess Medical Center EHR"
+    ]
+  }
+}
