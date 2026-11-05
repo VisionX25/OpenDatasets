@@ -463,3 +463,60 @@ def test_generate_catalog_cli_main(tmp_path: Path) -> None:
     assert exit_code == 0
     assert output_file.exists()
 
+
+def test_task_20a_noaa_dataset_version_and_doi_accuracy() -> None:
+    """Regression test: verify NOAA dataset versions, DOIs, dates, and provenance lineage."""
+    data_dir = DEFAULT_DATA_DIR
+
+    # 1. GHCN-Monthly v4: must cite v4 Temp (10.7289/V5XW4GTH) and v4 Precip (10.25921/67zp-5m03)
+    # Must NOT cite legacy v3 DOI (10.7289/V5X34VDR)
+    ghcnm_file = data_dir / "noaa-ghcn-monthly.json"
+    assert ghcnm_file.exists()
+    with open(ghcnm_file, "r", encoding="utf-8") as f:
+        ghcnm = json.load(f)
+
+    ghcnm_str = json.dumps(ghcnm)
+    assert "10.7289/V5X34VDR" not in ghcnm_str, "Found legacy v3 DOI in GHCN-Monthly v4 record"
+    assert "10.7289/V5XW4GTH" in ghcnm_str, "Missing v4 Temperature DOI in GHCN-Monthly v4 record"
+    assert "10.25921/67zp-5m03" in ghcnm_str, "Missing v4 Precipitation DOI in GHCN-Monthly v4 record"
+    assert ghcnm.get("dates", {}).get("published") == "2017"
+
+    # 2. GHCN-Hourly v1: must cite official GHCNh v1 dataset DOI (10.25921/jp3d-3v19) and year 2023
+    # Must NOT cite 2016 ISTI databank paper (10.5194/gi-5-211-2016)
+    ghcnh_file = data_dir / "noaa-ghcn-hourly.json"
+    assert ghcnh_file.exists()
+    with open(ghcnh_file, "r", encoding="utf-8") as f:
+        ghcnh = json.load(f)
+
+    ghcnh_str = json.dumps(ghcnh)
+    assert "10.5194/gi-5-211-2016" not in ghcnh_str, "Found unrelated 2016 paper DOI in GHCN-Hourly record"
+    assert "10.25921/jp3d-3v19" in ghcnh_str, "Missing official GHCNh v1 DOI in GHCN-Hourly record"
+    assert ghcnh.get("dates", {}).get("published") == "2023"
+    assert ghcnh.get("citation", {}).get("doi") == "10.25921/jp3d-3v19"
+
+    # 3. U.S. Climate Normals (1991-2020): must cite 1991-2020 DOIs (10.25921/wck8-er13, 10.25921/4ek7-fk11)
+    # Must NOT cite 1981-2010 White Christmas paper (10.1175/BAMS-D-15-00038.1)
+    normals_file = data_dir / "us-climate-normals.json"
+    assert normals_file.exists()
+    with open(normals_file, "r", encoding="utf-8") as f:
+        normals = json.load(f)
+
+    normals_str = json.dumps(normals)
+    assert "10.1175/BAMS-D-15-00038.1" not in normals_str, "Found 1981-2010 paper DOI in 1991-2020 Climate Normals"
+    assert "10.25921/wck8-er13" in normals_str, "Missing 1991-2020 Monthly Normals DOI"
+    assert "10.25921/4ek7-fk11" in normals_str, "Missing 1991-2020 Annual Normals DOI"
+    assert normals.get("dates", {}).get("published") == "2021-05-04"
+
+    # 4. GSOM vs GSOD provenance distinction
+    gsom_file = data_dir / "noaa-global-summary-of-the-month.json"
+    assert gsom_file.exists()
+    with open(gsom_file, "r", encoding="utf-8") as f:
+        gsom = json.load(f)
+    assert "GHCN-Daily" in gsom.get("provenance", {}).get("data_sources", [])
+    assert "Integrated Surface Database (ISD)" not in gsom.get("provenance", {}).get("data_sources", [])
+
+    gsod_file = data_dir / "noaa-global-summary-of-the-day.json"
+    assert gsod_file.exists()
+    with open(gsod_file, "r", encoding="utf-8") as f:
+        gsod = json.load(f)
+    assert "Integrated Surface Database (ISD)" in gsod.get("provenance", {}).get("data_sources", [])

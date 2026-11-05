@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "us-climate-normals",
+  "slug": "us-climate-normals",
+  "name": "U.S. Climate Normals (1991–2020)",
+  "description": "The U.S. Climate Normals (1991–2020) is NOAA NCEI's official thirty-year baseline multi-product suite characterizing average climate conditions across approximately 15,000 weather stations in the United States. Produced every decade in accordance with World Meteorological Organization (WMO) standards, the 1991–2020 Normals suite provides separate official datasets for Monthly Normals (DOI: 10.25921/wck8-er13), Annual/Seasonal Normals (DOI: 10.25921/4ek7-fk11), Daily Normals (DOI: 10.25921/d3w1-ef83), Hourly Normals (DOI: 10.25921/e3zh-ag77), and Daily Gridded Normals (DOI: 10.25921/4z0k-n484). Variables include temperature averages, precipitation, snowfall, snow depth, degree days, and percentile thresholds.",
+  "homepage_url": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals",
+  "publisher": {
+    "name": "NOAA National Centers for Environmental Information (NCEI)",
+    "type": "government",
+    "url": "https://www.ncei.noaa.gov"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "regression",
+    "tabular-classification"
+  ],
+  "tags": [
+    "climate",
+    "climate-normals",
+    "baseline",
+    "temperature",
+    "precipitation",
+    "noaa",
+    "ncei"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "U.S. Government Work (17 U.S.C. 105) / Open Data",
+    "commercial_use": "allowed",
+    "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+    "notes": "Official public domain data produced by NOAA NCEI in compliance with WMO 30-year climate normal standards."
+  },
+  "source_references": [
+    {
+      "title": "NOAA NCEI U.S. Climate Normals Product Portal",
+      "url": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals",
+      "type": "official_website",
+      "notes": "Official 1991–2020 climate normals documentation and data suite portal."
+    },
+    {
+      "title": "U.S. Monthly Climate Normals (1991–2020) Dataset (DOI: 10.25921/wck8-er13)",
+      "url": "https://doi.org/10.25921/wck8-er13",
+      "type": "repository",
+      "notes": "Official NOAA NCEI DataCite repository DOI for 1991–2020 monthly normals."
+    },
+    {
+      "title": "U.S. Annual/Seasonal Climate Normals (1991–2020) Dataset (DOI: 10.25921/4ek7-fk11)",
+      "url": "https://doi.org/10.25921/4ek7-fk11",
+      "type": "repository",
+      "notes": "Official NOAA NCEI DataCite repository DOI for 1991–2020 annual and seasonal normals."
+    },
+    {
+      "title": "U.S. Daily Climate Normals (1991–2020) Dataset (DOI: 10.25921/d3w1-ef83)",
+      "url": "https://doi.org/10.25921/d3w1-ef83",
+      "type": "repository",
+      "notes": "Official NOAA NCEI DataCite repository DOI for 1991–2020 daily normals."
+    },
+    {
+      "title": "U.S. Hourly Climate Normals (1991–2020) Dataset (DOI: 10.25921/e3zh-ag77)",
+      "url": "https://doi.org/10.25921/e3zh-ag77",
+      "type": "repository",
+      "notes": "Official NOAA NCEI DataCite repository DOI for 1991–2020 hourly normals."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against NOAA NCEI product portal and official 1991–2020 suite DOIs (10.25921/wck8-er13 for Monthly, 10.25921/4ek7-fk11 for Annual/Seasonal). The erroneously assigned 1981–2010 White Christmas paper was removed."
+  },
+  "dates": {
+    "published": "2021-05-04"
+  },
+  "sample_count": {
+    "total": 15000,
+    "unit": "weather stations",
+    "status": "estimated"
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "citation": {
+    "paper_title": "U.S. Climate Normals 2020: U.S. Monthly Climate Normals (1991-2020)",
+    "paper_url": "https://doi.org/10.25921/wck8-er13",
+    "authors": [
+      "Michael A. Palecki",
+      "Imke Durre",
+      "Scott Applequist",
+      "Anthony H. Arguez",
+      "Jay H. Lawrimore"
+    ],
+    "doi": "10.25921/wck8-er13",
+    "bibtex": "@misc{palecki2021monthlynormals,\n  title={{U.S. Climate Normals 2020: U.S. Monthly Climate Normals (1991-2020)}},\n  author={Palecki, Michael and Durre, Imke and Applequist, Scott and Arguez, Anthony and Lawrimore, Jay},\n  year={2021},\n  publisher={NOAA National Centers for Environmental Information},\n  doi={10.25921/wck8-er13},\n  howpublished={\\url{https://doi.org/10.25921/wck8-er13}}\n}"
+  },
+  "provenance": {
+    "collection_method": "30-year mathematical normal calculations across the 1991–2020 baseline period from GHCN-Daily stations adhering to WMO guidelines.",
+    "curation_notes": "Multi-product suite comprising distinct official datasets for monthly (DOI: 10.25921/wck8-er13), annual/seasonal (DOI: 10.25921/4ek7-fk11), daily (DOI: 10.25921/d3w1-ef83), and hourly (DOI: 10.25921/e3zh-ag77) normals.",
+    "data_sources": [
+      "GHCN-Daily",
+      "NOAA NCEI"
+    ]
+  }
+}

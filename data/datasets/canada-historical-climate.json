@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "canada-historical-climate",
+  "slug": "canada-historical-climate",
+  "name": "Historical Climate Data of Canada",
+  "description": "Historical Climate Data of Canada is the official national archive of land-based weather observations collected across Canada by Environment and Climate Change Canada (ECCC). Spanning hourly, daily, and monthly temporal scales across several thousand monitoring stations, the archive contains records dating back to 1840 for elements including temperature, precipitation, wind speed, relative humidity, atmospheric pressure, and visibility. The data are provided in downloadable CSV format and via the MSC Datamart under the Open Government Licence - Canada.",
+  "homepage_url": "https://climate.weather.gc.ca/historical_data/search_historic_data_e.html",
+  "publisher": {
+    "name": "Environment and Climate Change Canada",
+    "type": "government",
+    "url": "https://www.canada.ca/en/environment-climate-change.html"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "regression"
+  ],
+  "tags": [
+    "climate",
+    "weather",
+    "canada",
+    "temperature",
+    "precipitation",
+    "environment-canada"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Government Licence - Canada",
+    "spdx_id": "OGL-Canada-2.0",
+    "commercial_use": "allowed",
+    "url": "https://open.canada.ca/en/open-government-licence-canada",
+    "notes": "Released under the Open Government Licence - Canada, permitting commercial and non-commercial reuse, adaptation, and redistribution with attribution."
+  },
+  "source_references": [
+    {
+      "title": "Historical Climate Data Portal (ECCC)",
+      "url": "https://climate.weather.gc.ca/historical_data/search_historic_data_e.html",
+      "type": "official_website",
+      "notes": "Official Canadian climate search and download portal."
+    },
+    {
+      "title": "Open Government Licence - Canada",
+      "url": "https://open.canada.ca/en/open-government-licence-canada",
+      "type": "documentation",
+      "notes": "Official licence terms governing Canadian open government data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against Environment and Climate Change Canada portal and Open Government Licence - Canada."
+  },
+  "dates": {
+    "published": "2010-01-01",
+    "last_updated": "2026-11-04"
+  },
+  "sample_count": {
+    "unit": "historical meteorological stations",
+    "status": "estimated"
+  },
+  "geographic_coverage": [
+    "Canada"
+  ],
+  "provenance": {
+    "collection_method": "Automated and manual surface weather observations from the Meteorological Service of Canada national observing network.",
+    "curation_notes": "Quality-controlled through automated baseline and consistency checks.",
+    "data_sources": [
+      "Meteorological Service of Canada",
+      "Environment and Climate Change Canada"
+    ]
+  }
+}

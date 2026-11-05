@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "xsum",
+  "slug": "xsum",
+  "name": "XSum: Extreme Summarization Dataset",
+  "description": "XSum (Extreme Summarization) is an abstractive document summarization benchmark curated by the University of Edinburgh NLP Group (Narayan et al., EMNLP 2018). The dataset consists of 226,711 BBC news articles spanning 2010 to 2017 paired with their professional one-sentence summary (the introductory bold sentence). The task requires answering 'What is the article about?' in a single concise sentence. Formally partitioned into 204,045 training (90%), 11,332 validation (5%), and 11,334 test (5%) article-summary pairs.",
+  "homepage_url": "https://github.com/EdinburghNLP/XSum",
+  "publisher": {
+    "name": "University of Edinburgh NLP Group",
+    "type": "academic",
+    "url": "https://github.com/EdinburghNLP"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "summarization",
+    "abstractive-summarization"
+  ],
+  "tags": [
+    "nlp",
+    "summarization",
+    "abstractive-summarization",
+    "bbc-news",
+    "edinburgh-nlp"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT (Code) / Proprietary Third-Party BBC News Content",
+    "commercial_use": "unknown",
+    "url": "https://github.com/EdinburghNLP/XSum/blob/master/LICENSE",
+    "notes": "The repository source code and scraping scripts are licensed under MIT. However, the article texts and summaries originate from BBC News and are copyrighted by the British Broadcasting Corporation. Commercial redistribution and model training rights for BBC text are unstated."
+  },
+  "source_references": [
+    {
+      "title": "Edinburgh NLP XSum GitHub Repository",
+      "url": "https://github.com/EdinburghNLP/XSum",
+      "type": "repository",
+      "notes": "Official repository and processing scripts."
+    },
+    {
+      "title": "Don't Give Me the Details, Just the Summary! (EMNLP 2018)",
+      "url": "https://doi.org/10.18653/v1/D18-1206",
+      "type": "original_paper",
+      "notes": "Peer-reviewed EMNLP 2018 publication."
+    }
+  ],
+  "verification": {
+    "status": "provisional",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Provisional status: dataset provenance and splits verified; underlying BBC article text retains proprietary copyright."
+  },
+  "dates": {
+    "published": "2018-08-20"
+  },
+  "sample_count": {
+    "total": 226711,
+    "splits": {
+      "train": 204045,
+      "validation": 11332,
+      "test": 11334
+    },
+    "unit": "article-summary pairs",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "citation": {
+    "paper_title": "Don't Give Me the Details, Just the Summary! Topic-Aware Convolutional Neural Networks for Extreme Summarization",
+    "paper_url": "https://doi.org/10.18653/v1/D18-1206",
+    "authors": [
+      "Shashi Narayan",
+      "Shay B. Cohen",
+      "Mirella Lapata"
+    ],
+    "doi": "10.18653/v1/D18-1206",
+    "bibtex": "@inproceedings{narayan2018dont,\n  title={Don't Give Me the Details, Just the Summary! Topic-Aware Convolutional Neural Networks for Extreme Summarization},\n  author={Narayan, Shashi and Cohen, Shay B. and Lapata, Mirella},\n  booktitle={Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP)},\n  pages={1797--1807},\n  year={2018},\n  doi={10.18653/v1/D18-1206}\n}"
+  },
+  "provenance": {
+    "collection_method": "Archived scraping of BBC articles from the Wayback Machine covering 2010 to 2017.",
+    "curation_notes": "First sentence of each BBC article is used as the target summary; remaining paragraphs form the document text.",
+    "data_sources": [
+      "BBC News",
+      "Internet Archive Wayback Machine"
+    ]
+  }
+}

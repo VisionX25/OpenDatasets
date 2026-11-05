@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "boolq",
+  "slug": "boolq",
+  "name": "BoolQ: Natural Yes/No Question Answering Dataset",
+  "description": "BoolQ is a reading comprehension and question answering dataset for naturally occurring yes/no questions, curated by Google Research (Clark et al., NAACL 2019). Unlike datasets prompting crowdworkers to formulate synthetic questions, BoolQ samples unprompted information-seeking queries submitted to the Google search engine, each paired with an extracted Wikipedia passage and a binary boolean label (true/false). The dataset contains 15,942 examples partitioned into 9,427 training, 3,270 development, and 3,245 test examples.",
+  "homepage_url": "https://github.com/google-research-datasets/boolean-questions",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "text-classification"
+  ],
+  "tags": [
+    "nlp",
+    "question-answering",
+    "boolean-questions",
+    "google-research",
+    "reading-comprehension"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)",
+    "spdx_id": "CC-BY-SA-3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Released by Google Research under CC BY-SA 3.0 following Wikipedia content licensing. Commercial use is permitted with attribution and share-alike terms."
+  },
+  "source_references": [
+    {
+      "title": "Google Research BoolQ Repository",
+      "url": "https://github.com/google-research-datasets/boolean-questions",
+      "type": "repository",
+      "notes": "Official repository and download files."
+    },
+    {
+      "title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions (NAACL 2019)",
+      "url": "https://doi.org/10.18653/v1/N19-1300",
+      "type": "original_paper",
+      "notes": "Peer-reviewed publication introducing the BoolQ dataset."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against Google Research repository and NAACL 2019 publication."
+  },
+  "dates": {
+    "published": "2019-05-24"
+  },
+  "sample_count": {
+    "total": 15942,
+    "splits": {
+      "train": 9427,
+      "validation": 3270,
+      "test": 3245
+    },
+    "unit": "question-passage pairs",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "citation": {
+    "paper_title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions",
+    "paper_url": "https://doi.org/10.18653/v1/N19-1300",
+    "authors": [
+      "Christopher Clark",
+      "Kenton Lee",
+      "Ming-Wei Chang",
+      "Tom Kwiatkowski",
+      "Michael Collins",
+      "Kristina Toutanova"
+    ],
+    "doi": "10.18653/v1/N19-1300",
+    "bibtex": "@inproceedings{clark2019boolq,\n  title={{BoolQ}: Exploring the Surprising Difficulty of Natural Yes/No Questions},\n  author={Clark, Christopher and Lee, Kenton and Chang, Ming-Wei and Kwiatkowski, Tom and Collins, Michael and Toutanova, Kristina},\n  booktitle={Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL-HLT)},\n  pages={2924--2936},\n  year={2019},\n  doi={10.18653/v1/N19-1300}\n}"
+  },
+  "provenance": {
+    "collection_method": "Unprompted information-seeking queries sampled from Google Search logs paired with Wikipedia passages.",
+    "curation_notes": "Annotated for boolean answers (true or false) by human annotators.",
+    "data_sources": [
+      "Google Search",
+      "Wikipedia"
+    ]
+  }
+}

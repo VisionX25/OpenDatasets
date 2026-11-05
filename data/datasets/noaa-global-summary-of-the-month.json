@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "id": "noaa-global-summary-of-the-month",
+  "slug": "noaa-global-summary-of-the-month",
+  "name": "Global Summary of the Month (GSOM)",
+  "description": "The Global Summary of the Month (GSOM) dataset provides monthly climate summaries derived directly from the Global Historical Climatology Network daily (GHCN-Daily) station observations across the globe. Maintained by NOAA NCEI under DOI: 10.7289/V5QV3JJ5, GSOM computes monthly statistics including mean maximum temperature, mean minimum temperature, monthly average temperature, total monthly precipitation, total snowfall, and departure from normals for over 100,000 stations. Unlike GHCN-Monthly v4, GSOM represents direct arithmetic aggregations of daily records without historical homogenization.",
+  "homepage_url": "https://www.ncei.noaa.gov/access/search/datasets/global-summary-of-the-month/",
+  "publisher": {
+    "name": "NOAA National Centers for Environmental Information (NCEI)",
+    "type": "government",
+    "url": "https://www.ncei.noaa.gov"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "regression"
+  ],
+  "tags": [
+    "climate",
+    "weather",
+    "monthly-summary",
+    "temperature",
+    "precipitation",
+    "noaa",
+    "ncei"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "U.S. Government Work (17 U.S.C. 105) / Public Domain",
+    "commercial_use": "allowed",
+    "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+    "notes": "NOAA publishes GSOM under a U.S. Government Work public domain designation without copyright asserted by NOAA. However, because the underlying GHCN-Daily observations originate from international meteorological agencies, downstream users must not treat all separately sourced international observations as unconditionally free of rights restrictions worldwide."
+  },
+  "source_references": [
+    {
+      "title": "NOAA NCEI GSOM Search and Discovery Portal",
+      "url": "https://www.ncei.noaa.gov/access/search/datasets/global-summary-of-the-month/",
+      "type": "official_website",
+      "notes": "Official portal."
+    },
+    {
+      "title": "NOAA NCEI GSOM DataCite Repository (DOI: 10.7289/V5QV3JJ5)",
+      "url": "https://doi.org/10.7289/V5QV3JJ5",
+      "type": "repository",
+      "notes": "Official DataCite repository identifier (Version 1, published 2016)."
+    },
+    {
+      "title": "NOAA NCEI Metadata Geoportal Record (gov.noaa.ncdc:C00946)",
+      "url": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C00946/html",
+      "type": "documentation",
+      "notes": "Official NOAA NCEI geoportal ISO metadata record confirming derivation from GHCN-Daily."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against NOAA NCEI geoportal record C00946 and DataCite DOI 10.7289/V5QV3JJ5. Explicitly confirmed that GSOM is derived from GHCN-Daily, not from ISD."
+  },
+  "dates": {
+    "published": "2016",
+    "last_updated": "2026-11-04"
+  },
+  "sample_count": {
+    "unit": "reporting stations",
+    "status": "estimated",
+    "total": 100000
+  },
+  "geographic_coverage": [
+    "Global"
+  ],
+  "provenance": {
+    "collection_method": "Automated monthly derivation from daily GHCN-Daily observations.",
+    "curation_notes": "GSOM uses unhomogenized daily summations from GHCN-Daily, whereas GHCNm v4 applies pairwise homogenization algorithms. Distinct from GSOD, which is derived from ISD.",
+    "data_sources": [
+      "GHCN-Daily",
+      "NOAA NCEI"
+    ]
+  }
+}

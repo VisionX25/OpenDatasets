@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "id": "goemotions",
+  "slug": "goemotions",
+  "name": "GoEmotions: Fine-Grained Emotion Classification Dataset",
+  "description": "GoEmotions is a dataset of 58,009 carefully curated Reddit comments labeled for 27 fine-grained emotion categories plus neutral, published by Google Research in ACL 2020. Annotated by human raters, the emotion taxonomy encompasses admiration, amusement, anger, annoyance, approval, caring, confusion, curiosity, desire, disappointment, disapproval, disgust, embarrassment, excitement, fear, gratitude, grief, joy, love, nervousness, optimism, pride, realization, relief, remorse, sadness, and surprise. The benchmark contains 43,410 training, 5,426 validation, and 5,427 test examples in its rater-agreement filtered split.",
+  "homepage_url": "https://github.com/google-research/google-research/tree/master/goemotions",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "multi-label-classification"
+  ],
+  "tags": [
+    "nlp",
+    "emotion-classification",
+    "reddit",
+    "google-research",
+    "sentiment-analysis"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Apache 2.0 (Code) / Reddit User Terms (Text)",
+    "spdx_id": "Apache-2.0",
+    "commercial_use": "unknown",
+    "url": "https://github.com/google-research/google-research/blob/master/LICENSE",
+    "notes": "Google Research repository code and annotations are released under the Apache License 2.0. However, the raw text comments originate from Reddit users and are governed by Reddit Terms of Service and User Agreement. Commercial rights to user-generated Reddit comments are unverified and marked as unknown."
+  },
+  "source_references": [
+    {
+      "title": "GoEmotions Google Research Repository",
+      "url": "https://github.com/google-research/google-research/tree/master/goemotions",
+      "type": "repository",
+      "notes": "Official repository and documentation."
+    },
+    {
+      "title": "GoEmotions: A Dataset of Fine-Grained Emotions (ACL 2020)",
+      "url": "https://doi.org/10.18653/v1/2020.acl-main.372",
+      "type": "original_paper",
+      "notes": "Peer-reviewed ACL 2020 publication."
+    },
+    {
+      "title": "Google Research Publication Overview",
+      "url": "https://research.google/pubs/goemotions-a-dataset-of-fine-grained-emotions/",
+      "type": "official_website",
+      "notes": "Official publication portal."
+    }
+  ],
+  "verification": {
+    "status": "provisional",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Provisional verification due to distinction between Apache 2.0 repository license and third-party Reddit user text copyright."
+  },
+  "dates": {
+    "published": "2020-05-01"
+  },
+  "sample_count": {
+    "total": 54263,
+    "splits": {
+      "train": 43410,
+      "validation": 5426,
+      "test": 5427
+    },
+    "unit": "comments",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "citation": {
+    "paper_title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+    "paper_url": "https://doi.org/10.18653/v1/2020.acl-main.372",
+    "authors": [
+      "Dorottya Demszky",
+      "Dana Movshovitz-Attias",
+      "Jeongwoo Ko",
+      "Alan Cowen",
+      "Gaurav Nemade",
+      "Sujith Ravi"
+    ],
+    "doi": "10.18653/v1/2020.acl-main.372",
+    "bibtex": "@inproceedings{demszky2020goemotions,\n  title={{GoEmotions}: A Dataset of Fine-Grained Emotions},\n  author={Demszky, Dorottya and Movshovitz-Attias, Dana and Ko, Jeongwoo and Cowen, Alan and Nemade, Gaurav and Ravi, Sujith},\n  booktitle={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (ACL)},\n  pages={4040--4054},\n  year={2020},\n  doi={10.18653/v1/2020.acl-main.372}\n}"
+  },
+  "provenance": {
+    "collection_method": "Curated extraction from popular English Reddit subreddits with masking of identifiable entities.",
+    "curation_notes": "Filtered based on multi-rater agreement across India-based English speakers.",
+    "data_sources": [
+      "Reddit"
+    ]
+  }
+}

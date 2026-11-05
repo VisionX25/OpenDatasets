@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "id": "seoul-bike-sharing-demand",
+  "slug": "seoul-bike-sharing-demand",
+  "name": "Seoul Bike Sharing Demand Dataset",
+  "description": "The Seoul Bike Sharing Demand dataset contains 8,760 hourly instances of public bicycle rental counts from the Seoul municipal bike-sharing system paired with meteorological features over a full one-year period (December 2017 to November 2018). Donated to the UCI Machine Learning Repository (DOI: 10.24432/C5F62R), the dataset incorporates 13 features: temperature, humidity, wind speed, visibility, dew point temperature, solar radiation, snowfall, rainfall, season, holiday indicators, and system functional status to forecast urban bike-sharing demand under fluctuating weather conditions.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/560/seoul+bike+sharing+demand",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "regression",
+    "time-series-forecasting"
+  ],
+  "tags": [
+    "tabular",
+    "time-series",
+    "regression",
+    "bike-sharing",
+    "urban-mobility",
+    "weather-features",
+    "uci-ml-repository"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Licensed under CC BY 4.0 in the official UCI Machine Learning Repository record."
+  },
+  "source_references": [
+    {
+      "title": "Seoul Bike Sharing Demand on UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/dataset/560/seoul+bike+sharing+demand",
+      "type": "official_website",
+      "notes": "Official UCI repository record (DOI: 10.24432/C5F62R)."
+    },
+    {
+      "title": "Demand Prediction for Seoul Bike Sharing System (Comput. Commun. 2020)",
+      "url": "https://doi.org/10.1016/j.comcom.2020.02.007",
+      "type": "original_paper",
+      "notes": "Published in Computer Communications 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against UCI ML Repository record (DOI 10.24432/C5F62R) and Computer Communications paper."
+  },
+  "dates": {
+    "published": "2020-03-01"
+  },
+  "sample_count": {
+    "total": 8760,
+    "unit": "hourly records",
+    "status": "verified"
+  },
+  "geographic_coverage": [
+    "South Korea"
+  ],
+  "citation": {
+    "paper_title": "Demand prediction of Seoul bike sharing system using artificial neural network",
+    "paper_url": "https://doi.org/10.1016/j.comcom.2020.02.007",
+    "authors": [
+      "V. E. Sathishkumar",
+      "Yongyun Cho"
+    ],
+    "doi": "10.1016/j.comcom.2020.02.007",
+    "bibtex": "@article{sathishkumar2020demand,\n  title={Demand prediction of Seoul bike sharing system using artificial neural network},\n  author={Sathishkumar, V. E. and Cho, Yongyun},\n  journal={Computer Communications},\n  volume={153},\n  pages={427--435},\n  year={2020},\n  doi={10.1016/j.comcom.2020.02.007}\n}"
+  },
+  "provenance": {
+    "collection_method": "Aggregation of hourly bicycle rental logs from Seoul Open Data Plaza matched with local Korea Meteorological Administration weather data.",
+    "curation_notes": "Tabular/time-series demand forecasting with weather as explanatory features; distinct from the Washington D.C. Capital Bikeshare dataset.",
+    "data_sources": [
+      "Seoul Open Data Plaza",
+      "Korea Meteorological Administration"
+    ]
+  }
+}

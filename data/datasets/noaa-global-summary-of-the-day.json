@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "noaa-global-summary-of-the-day",
+  "slug": "noaa-global-summary-of-the-day",
+  "name": "NOAA Global Summary of the Day (GSOD)",
+  "description": "The Global Summary of the Day (GSOD) database is produced by NOAA NCEI from synoptic/hourly observations contained in USAF DATSAV3 surface data and the Federal Climate Complex Integrated Surface Hourly (ISH / ISD) dataset. Covering over 9,000 global weather stations from 1929 to present, GSOD computes 18 daily meteorological parameters: mean temperature, mean dew point, mean sea level pressure, mean station pressure, mean visibility, mean wind speed, maximum sustained wind, maximum wind gust, maximum temperature, minimum temperature, precipitation amount, snow depth, and binary indicator flags for occurrence of fog, rain, snow, hail, thunder, and tornado.",
+  "homepage_url": "https://www.ncei.noaa.gov/access/search/datasets/global-summary-of-the-day/",
+  "publisher": {
+    "name": "NOAA National Centers for Environmental Information (NCEI)",
+    "type": "government",
+    "url": "https://www.ncei.noaa.gov"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "regression"
+  ],
+  "tags": [
+    "weather",
+    "climate",
+    "gsod",
+    "daily-summary",
+    "temperature",
+    "noaa",
+    "ncei"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "U.S. Government Work (17 U.S.C. 105) / Public Domain",
+    "commercial_use": "allowed",
+    "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+    "notes": "NOAA publishes GSOD under a U.S. Government Work public domain designation with no copyright asserted by NOAA. However, because synoptic observations originate from global weather stations via WMO and USAF collections, commercial users should note that foreign station data may be subject to domestic restrictions in their countries of origin."
+  },
+  "source_references": [
+    {
+      "title": "NOAA NCEI GSOD Access Portal",
+      "url": "https://www.ncei.noaa.gov/access/search/datasets/global-summary-of-the-day/",
+      "type": "official_website",
+      "notes": "Official search and discovery portal."
+    },
+    {
+      "title": "NOAA NCEI GSOD Data Archive Directory",
+      "url": "https://www.ncei.noaa.gov/data/global-summary-of-the-day/",
+      "type": "repository",
+      "notes": "HTTP archive directory with annual tarballs and CSV files."
+    },
+    {
+      "title": "NOAA NCEI Metadata Geoportal Record (gov.noaa.ncdc:C00516)",
+      "url": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C00516/html",
+      "type": "documentation",
+      "notes": "Official NOAA NCEI ISO metadata record for GSOD."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against NOAA NCEI GSOD archive directory and geoportal record C00516. Confirmed input lineage from USAF DATSAV3 and Integrated Surface Hourly (ISH/ISD)."
+  },
+  "dates": {
+    "published": "1999-01-01",
+    "last_updated": "2026-11-04"
+  },
+  "sample_count": {
+    "unit": "reporting stations",
+    "status": "estimated",
+    "total": 9000
+  },
+  "geographic_coverage": [
+    "Global"
+  ],
+  "provenance": {
+    "collection_method": "Daily aggregation of hourly surface synoptic observations from USAF DATSAV3 and Integrated Surface Hourly (ISH/ISD).",
+    "curation_notes": "Requires a minimum of 4 synoptic observations per day to compute daily means; extreme flags indicate quality checks. Distinct from GSOM which is derived from GHCN-Daily.",
+    "data_sources": [
+      "Integrated Surface Database (ISD)",
+      "USAF DATSAV3",
+      "NOAA NCEI"
+    ]
+  }
+}

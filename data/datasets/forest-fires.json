@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "id": "forest-fires",
+  "slug": "forest-fires",
+  "name": "Forest Fires Dataset",
+  "description": "The Forest Fires dataset is a classic environmental regression benchmark curated by Paulo Cortez and Aníbal Morais (EPIA 2007) and deposited in the UCI Machine Learning Repository (DOI: 10.24432/C5D88D). The dataset compiles 517 wildfire events from the Montesinho Natural Park in the Trás-os-Montes region of northeast Portugal (2000–2003) to predict burned area using meteorological attributes and Fire Weather Index (FWI) components. Features include spatial coordinates (X, Y), month, day of week, Fine Fuel Moisture Code (FFMC), Duff Moisture Code (DMC), Drought Code (DC), Initial Spread Index (ISI), temperature, relative humidity, wind speed, and rain.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/162/forest+fires",
+  "publisher": {
+    "name": "UCI Machine Learning Repository & University of Minho",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "regression"
+  ],
+  "tags": [
+    "tabular",
+    "regression",
+    "forest-fires",
+    "wildfire",
+    "meteorology",
+    "uci-ml-repository"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Licensed under CC BY 4.0 in the official UCI Machine Learning Repository record."
+  },
+  "source_references": [
+    {
+      "title": "Forest Fires on UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/dataset/162/forest+fires",
+      "type": "official_website",
+      "notes": "Official UCI repository record (DOI: 10.24432/C5D88D)."
+    },
+    {
+      "title": "A Data Mining Approach to Predict Forest Fires using Meteorological Data (EPIA 2007)",
+      "url": "http://www.dsi.uminho.pt/~pcortez/fires.pdf",
+      "type": "original_paper",
+      "notes": "Original conference publication introducing the dataset."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against UCI Machine Learning Repository record and EPIA 2007 publication."
+  },
+  "dates": {
+    "published": "2008-02-29"
+  },
+  "sample_count": {
+    "total": 517,
+    "unit": "fire event records",
+    "status": "verified"
+  },
+  "geographic_coverage": [
+    "Portugal"
+  ],
+  "citation": {
+    "paper_title": "A Data Mining Approach to Predict Forest Fires using Meteorological Data",
+    "paper_url": "http://www.dsi.uminho.pt/~pcortez/fires.pdf",
+    "authors": [
+      "Paulo Cortez",
+      "Aníbal de Jesus Raimundo Morais"
+    ],
+    "doi": "10.24432/C5D88D",
+    "bibtex": "@inproceedings{cortez2007data,\n  title={A Data Mining Approach to Predict Forest Fires using Meteorological Data},\n  author={Cortez, Paulo and Morais, An{\\'\\i}bal},\n  booktitle={Proceedings of the 13th Portuguese Conference on Artificial Intelligence (EPIA 2007)},\n  pages={512--523},\n  year={2007}\n}"
+  },
+  "provenance": {
+    "collection_method": "Wildfire incident records from Montesinho Natural Park combined with daily meteorological observations from local weather stations.",
+    "curation_notes": "Burned area is highly skewed towards 0.0 ha; logarithmic transform ln(x+1) was used in original benchmarks.",
+    "data_sources": [
+      "Montesinho Natural Park",
+      "University of Minho"
+    ]
+  }
+}
