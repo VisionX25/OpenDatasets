@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nasa-power-daily",
+  "slug": "nasa-power-daily",
+  "name": "NASA POWER: Prediction of Worldwide Energy Resources Daily Meteorology",
+  "description": "NASA POWER (Prediction Of Worldwide Energy Resources) is an operational data service developed by NASA Langley Research Center that delivers continuous global analysis-ready meteorological and solar parameters for renewable energy, building efficiency, and agroclimatology. Powered by NASA satellite observations and the Goddard Modern-Era Retrospective Analysis for Research and Applications Version 2 (MERRA-2) assimilation model, POWER provides daily gridded (0.5° latitude x 0.625° longitude) variables from 1981 to near real-time, including solar irradiance, temperature, humidity, wind speed, surface pressure, and precipitation via REST API, CSV, and JSON.",
+  "homepage_url": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+  "publisher": {
+    "name": "NASA Langley Research Center",
+    "type": "government",
+    "url": "https://power.larc.nasa.gov"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "regression"
+  ],
+  "tags": [
+    "solar-energy",
+    "weather",
+    "meteorology",
+    "nasa",
+    "merra-2",
+    "satellite-observations",
+    "api"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "NASA Open Data Policy / Public Domain",
+    "commercial_use": "allowed",
+    "url": "https://power.larc.nasa.gov/docs/about/",
+    "notes": "NASA POWER data are provided free of charge under NASA's open-access data policy in the public domain for research, commercial, and educational applications worldwide."
+  },
+  "source_references": [
+    {
+      "title": "NASA POWER Daily API Documentation",
+      "url": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+      "type": "documentation",
+      "notes": "Official REST API service endpoints and variable definitions."
+    },
+    {
+      "title": "NASA POWER Project Portal",
+      "url": "https://power.larc.nasa.gov/",
+      "type": "official_website",
+      "notes": "Main portal and data viewer."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against NASA POWER documentation and API service specifications. Correctly cataloged as an ongoing global data service rather than a static single file."
+  },
+  "dates": {
+    "published": "2018-01-01",
+    "last_updated": "2026-11-04"
+  },
+  "sample_count": {
+    "unit": "daily gridded global observations (1981-present)",
+    "status": "unknown"
+  },
+  "geographic_coverage": [
+    "Global"
+  ],
+  "provenance": {
+    "collection_method": "Assimilation of NASA satellite instruments (CERES, MODIS) and GMAO MERRA-2 meteorological reanalysis.",
+    "curation_notes": "Continuous programmatic API service supporting point and regional queries.",
+    "data_sources": [
+      "NASA GMAO MERRA-2",
+      "NASA CERES",
+      "NASA Langley Research Center"
+    ]
+  }
+}

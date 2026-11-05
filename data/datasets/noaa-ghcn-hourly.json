@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "noaa-ghcn-hourly",
+  "slug": "noaa-ghcn-hourly",
+  "name": "Global Historical Climatology Network hourly (GHCNh), Version 1",
+  "description": "The Global Historical Climatology Network hourly (GHCNh) Version 1 is NOAA NCEI's integrated global archive of land-surface hourly and sub-hourly meteorological observations. Spanning station data from the late 18th century to present, GHCNh unifies multiple global and regional surface sources—including the Integrated Surface Database (ISD), international meteorological agency archives, and historical data rescue initiatives—into an unadjusted, quality-controlled, common-format collection of temperature, dew point, pressure, wind, and precipitation readings under official dataset DOI: 10.25921/jp3d-3v19.",
+  "homepage_url": "https://www.ncei.noaa.gov/products/global-historical-climatology-network-hourly",
+  "publisher": {
+    "name": "NOAA National Centers for Environmental Information (NCEI)",
+    "type": "government",
+    "url": "https://www.ncei.noaa.gov"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "regression"
+  ],
+  "tags": [
+    "climate",
+    "weather",
+    "hourly",
+    "sub-hourly",
+    "temperature",
+    "precipitation",
+    "wind",
+    "noaa",
+    "ncei"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "U.S. Government Work (17 U.S.C. 105) / Public Domain",
+    "commercial_use": "allowed",
+    "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+    "notes": "NOAA publishes GHCNh Version 1 under a U.S. Government Work public domain designation with no federal copyright asserted by the publisher. However, because GHCNh integrates hourly observations contributed by foreign meteorological services and historical archives, downstream users should verify source-country terms for commercial redistribution rather than assuming unencumbered worldwide rights."
+  },
+  "source_references": [
+    {
+      "title": "NOAA NCEI GHCN-Hourly Product Portal",
+      "url": "https://www.ncei.noaa.gov/products/global-historical-climatology-network-hourly",
+      "type": "official_website",
+      "notes": "Official product portal and documentation."
+    },
+    {
+      "title": "NOAA NCEI GHCNh Version 1 DataCite Repository (DOI: 10.25921/jp3d-3v19)",
+      "url": "https://doi.org/10.25921/jp3d-3v19",
+      "type": "repository",
+      "notes": "Official NOAA NCEI dataset DOI repository entry for GHCNh Version 1."
+    },
+    {
+      "title": "NOAA NCEI Metadata Geoportal Record (gov.noaa.ncdc:C01688)",
+      "url": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01688/html",
+      "type": "documentation",
+      "notes": "Official NOAA NCEI geoportal ISO metadata record."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against NOAA NCEI Geoportal record C01688 and official dataset DOI 10.25921/jp3d-3v19. The erroneously assigned 2016 ISTI databank paper was removed and replaced with the official GHCNh Version 1 dataset citation published in 2023."
+  },
+  "dates": {
+    "published": "2023",
+    "last_updated": "2026-11-04"
+  },
+  "sample_count": {
+    "unit": "hourly meteorological observations",
+    "status": "unknown"
+  },
+  "geographic_coverage": [
+    "Global"
+  ],
+  "citation": {
+    "paper_title": "Global Historical Climatology Network-Hourly (GHCNh), Version 1",
+    "paper_url": "https://doi.org/10.25921/jp3d-3v19",
+    "authors": [
+      "Matthew J. Menne",
+      "Simon Noone",
+      "Nancy W. Casey",
+      "Robert H. Dunn",
+      "Shelley McNeill",
+      "Diana Kantor",
+      "Peter W. Thorne",
+      "Karen Orcutt",
+      "Sam Cunningham",
+      "Nicholas Risavi"
+    ],
+    "doi": "10.25921/jp3d-3v19",
+    "bibtex": "@misc{menne2023ghcnh,\n  title={Global Historical Climatology Network-Hourly (GHCNh), Version 1},\n  author={Menne, Matthew J. and Noone, Simon and Casey, Nancy W. and Dunn, Robert H. and McNeill, Shelley and Kantor, Diana and Thorne, Peter W. and Orcutt, Karen and Cunningham, Sam and Risavi, Nicholas},\n  year={2023},\n  publisher={NOAA National Centers for Environmental Information},\n  doi={10.25921/jp3d-3v19},\n  howpublished={\\url{https://doi.org/10.25921/jp3d-3v19}}\n}"
+  },
+  "provenance": {
+    "collection_method": "Multisource integration of land-surface hourly/sub-hourly observations from ISD, international meteorological collections, and data rescue initiatives.",
+    "curation_notes": "Merged into a common schema with automated quality assurance; provides non-homogenized baseline hourly records.",
+    "data_sources": [
+      "Integrated Surface Database (ISD)",
+      "NOAA NCEI",
+      "International Meteorological Agencies"
+    ]
+  }
+}

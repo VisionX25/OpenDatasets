@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "jena-weather",
+  "slug": "jena-weather",
+  "name": "Jena Climate: Weather Station Time Series Benchmark",
+  "description": "The Jena Climate dataset is a high-resolution meteorological time series recorded at the Max Planck Institute for Biogeochemistry weather station in Jena, Germany. Recording 14 atmospheric variables every 10 minutes from 2003 to the present—including air temperature, atmospheric pressure, relative humidity, vapor pressure, dew point temperature, wind speed, and wind direction—the dataset serves as a canonical benchmark for recurrent neural networks, LSTMs, and deep learning time series forecasting.",
+  "homepage_url": "https://weather.bgc-jena.mpg.de/weather_data.html",
+  "publisher": {
+    "name": "Max Planck Institute for Biogeochemistry",
+    "type": "academic",
+    "url": "https://www.bgc-jena.mpg.de"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "regression"
+  ],
+  "tags": [
+    "weather",
+    "time-series",
+    "deep-learning",
+    "jena",
+    "max-planck",
+    "sensor"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Explicitly licensed under Creative Commons Attribution 4.0 International (CC BY 4.0) on the official Max Planck Institute weather data download page."
+  },
+  "source_references": [
+    {
+      "title": "Max Planck Institute Jena Weather Data Download Page",
+      "url": "https://weather.bgc-jena.mpg.de/weather_data.html",
+      "type": "official_website",
+      "notes": "Official repository and CC BY 4.0 download portal."
+    },
+    {
+      "title": "Jena Weather Station Overview",
+      "url": "https://weather.bgc-jena.mpg.de/index.html",
+      "type": "documentation",
+      "notes": "Instrumentation and station metadata."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against Max Planck Institute for Biogeochemistry official portal and CC BY 4.0 license declaration."
+  },
+  "dates": {
+    "published": "2009-01-01",
+    "last_updated": "2026-11-04"
+  },
+  "sample_count": {
+    "total": 420551,
+    "unit": "10-minute meteorological observations",
+    "status": "estimated"
+  },
+  "geographic_coverage": [
+    "Germany"
+  ],
+  "provenance": {
+    "collection_method": "Precision meteorological sensors mounted at the weather station of the Max Planck Institute for Biogeochemistry in Jena-Göschwitz.",
+    "curation_notes": "Sampled at 10-minute intervals continuously since 2003.",
+    "data_sources": [
+      "Max Planck Institute for Biogeochemistry"
+    ]
+  }
+}

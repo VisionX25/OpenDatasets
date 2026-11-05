@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tweeteval",
+  "slug": "tweeteval",
+  "name": "TweetEval: Multi-Task Tweet Classification Benchmark",
+  "description": "TweetEval is a multi-task benchmark for tweet classification curated by Cardiff NLP (Barbieri et al., Findings of EMNLP 2020). It unifies seven diverse Twitter NLP benchmarks under standardized train, validation, and test splits: Emotion Recognition (SemEval-2018 Task 1), Emoji Prediction (SemEval-2018 Task 2), Irony Detection (SemEval-2018 Task 3), Hate Speech Detection (SemEval-2019 Task 5), Offensive Language Identification (SemEval-2019 Task 6), Sentiment Analysis (SemEval-2017 Task 4), and Stance Detection (SemEval-2016 Task 6 across 5 targets).",
+  "homepage_url": "https://github.com/cardiffnlp/tweeteval",
+  "publisher": {
+    "name": "Cardiff NLP",
+    "type": "academic",
+    "url": "https://cardiffnlp.github.io"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "sentiment-analysis"
+  ],
+  "tags": [
+    "nlp",
+    "twitter",
+    "social-media",
+    "sentiment-analysis",
+    "cardiff-nlp"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Component Academic Licenses / Twitter (X) Developer Terms",
+    "commercial_use": "unknown",
+    "url": "https://github.com/cardiffnlp/tweeteval",
+    "notes": "The GitHub repository does not include a license file. Tweet text originates from multiple SemEval challenge tracks and is subject to Twitter/X Developer Terms and Policies, which restrict redistribution of full tweet text and commercial reuse without permission."
+  },
+  "source_references": [
+    {
+      "title": "TweetEval GitHub Repository",
+      "url": "https://github.com/cardiffnlp/tweeteval",
+      "type": "repository",
+      "notes": "Official code and benchmark distribution."
+    },
+    {
+      "title": "TweetEval Project Page",
+      "url": "https://cardiffnlp.github.io/project/tweeteval/",
+      "type": "official_website",
+      "notes": "Official Cardiff NLP research project page."
+    },
+    {
+      "title": "TweetEval Benchmark Paper (Findings of EMNLP 2020)",
+      "url": "https://doi.org/10.18653/v1/2020.findings-emnlp.148",
+      "type": "original_paper",
+      "notes": "Peer-reviewed paper establishing the benchmark."
+    }
+  ],
+  "verification": {
+    "status": "provisional",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Provisional status: dataset provenance and tasks verified, but repository lacks explicit license file and Twitter terms restrict commercial redistribution."
+  },
+  "dates": {
+    "published": "2020-10-25"
+  },
+  "sample_count": {
+    "unit": "tweets",
+    "status": "estimated"
+  },
+  "languages": [
+    "en"
+  ],
+  "citation": {
+    "paper_title": "TweetEval: Unified Benchmark and Comparative Evaluation for Tweet Classification",
+    "paper_url": "https://doi.org/10.18653/v1/2020.findings-emnlp.148",
+    "authors": [
+      "Francesco Barbieri",
+      "Jose Camacho-Collados",
+      "Luis Espinosa Anke",
+      "Leonardo Neves"
+    ],
+    "doi": "10.18653/v1/2020.findings-emnlp.148",
+    "bibtex": "@inproceedings{barbieri2020tweeteval,\n  title={{TweetEval}: Unified Benchmark and Comparative Evaluation for Tweet Classification},\n  author={Barbieri, Francesco and Camacho-Collados, Jose and Espinosa Anke, Luis and Neves, Leonardo},\n  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2020},\n  pages={1644--1650},\n  year={2020},\n  doi={10.18653/v1/2020.findings-emnlp.148}\n}"
+  },
+  "provenance": {
+    "collection_method": "Aggregation and standardization of 7 prior SemEval Twitter challenge tracks.",
+    "curation_notes": "Unified into fixed train, validation, and test splits with text preprocessed to replace usernames and URLs.",
+    "data_sources": [
+      "Twitter",
+      "SemEval-2016",
+      "SemEval-2017",
+      "SemEval-2018",
+      "SemEval-2019"
+    ]
+  }
+}

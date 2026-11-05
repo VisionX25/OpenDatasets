@@ -452,6 +452,99 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ag-news",
+    "slug": "ag-news",
+    "name": "AG News: News Topic Classification Benchmark",
+    "description": "AG News is a benchmark dataset for text topic classification constructed by Xiang Zhang, Junbo Zhao, and Yann LeCun (NeurIPS 2015) from Antonio Gulli's AG corpus of news articles. The dataset contains 120,000 training samples and 7,600 test samples equally distributed across 4 topical classes: World, Sports, Business, and Sci/Tech. Each sample consists of the news article title and description fields gathered by the ComeToMyHead academic search engine across more than 2,000 news sources between 2004 and 2005.",
+    "homepage_url": "http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html",
+    "publisher": {
+      "name": "University of Pisa & New York University",
+      "type": "academic",
+      "url": "http://groups.di.unipi.it/~gulli/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "text-classification",
+      "topic-classification"
+    ],
+    "tags": [
+      "nlp",
+      "text-classification",
+      "news",
+      "benchmark",
+      "topic-classification"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Academic Research Use / Proprietary News Content",
+      "commercial_use": "unknown",
+      "url": "http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html",
+      "notes": "Original news corpus was crawled by ComeToMyHead from >2,000 news sources and provided for non-commercial academic research. Underlying article text remains copyrighted by source news publishers. The 4-class classification subset formatted by Zhang et al. (2015) has no explicit open commercial license."
+    },
+    "source_references": [
+      {
+        "title": "AG's Corpus of News Articles (Antonio Gulli)",
+        "url": "http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html",
+        "type": "official_website",
+        "notes": "Original collection landing page."
+      },
+      {
+        "title": "Character-level Convolutional Networks for Text Classification (NeurIPS 2015)",
+        "url": "https://arxiv.org/abs/1509.01626",
+        "type": "original_paper",
+        "notes": "Research paper by Zhang et al. establishing the 4-class AG News classification benchmark."
+      },
+      {
+        "title": "Hugging Face AG News Dataset Card",
+        "url": "https://huggingface.co/datasets/fancyzhx/ag_news",
+        "type": "dataset_card",
+        "notes": "Secondary distribution and loader."
+      }
+    ],
+    "verification": {
+      "status": "provisional",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Provisional status: dataset provenance and sample counts verified against original Gulli corpus and Zhang et al. (2015) NeurIPS paper; commercial rights are unverified due to third-party news copyright."
+    },
+    "dates": {
+      "published": "2015-09-04"
+    },
+    "sample_count": {
+      "total": 127600,
+      "splits": {
+        "train": 120000,
+        "test": 7600
+      },
+      "unit": "news articles",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "Character-level Convolutional Networks for Text Classification",
+      "paper_url": "https://arxiv.org/abs/1509.01626",
+      "authors": [
+        "Xiang Zhang",
+        "Junbo Zhao",
+        "Yann LeCun"
+      ],
+      "bibtex": "@inproceedings{zhang2015character,\n  title={Character-level Convolutional Networks for Text Classification},\n  author={Zhang, Xiang and Zhao, Junbo and LeCun, Yann},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  volume={28},\n  pages={649--657},\n  year={2015}\n}"
+    },
+    "provenance": {
+      "collection_method": "Academic web crawling of RSS and news feeds from >2000 online news outlets using ComeToMyHead.",
+      "curation_notes": "Filtered and balanced by Zhang et al. into 4 balanced classes with 30,000 training and 1,900 test samples per class.",
+      "data_sources": [
+        "ComeToMyHead news engine",
+        "Antonio Gulli AG Corpus"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "agriculture-vision",
     "slug": "agriculture-vision",
     "name": "Agriculture-Vision: Aerial Farmland Pattern Analysis Benchmark",
@@ -4307,6 +4400,92 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "beijing-multi-site-air-quality",
+    "slug": "beijing-multi-site-air-quality",
+    "name": "Beijing Multi-Site Air Quality Dataset",
+    "description": "The Beijing Multi-Site Air Quality dataset contains hourly observations of 6 primary air pollutants (PM2.5, PM10, SO2, NO2, CO, O3) and 6 associated meteorological variables (temperature, atmospheric pressure, dew point temperature, precipitation, wind direction, wind speed) recorded across 12 nationally-controlled air quality monitoring sites in Beijing from March 1, 2013 to February 28, 2017. Donated by Song Chen (Peking University) to the UCI Machine Learning Repository (DOI: 10.24432/C5RK5G), it contains 420,768 instances (35,064 records per site).",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality",
+    "publisher": {
+      "name": "UCI Machine Learning Repository & Peking University",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "regression",
+      "time-series-forecasting"
+    ],
+    "tags": [
+      "air-quality",
+      "tabular",
+      "time-series",
+      "beijing",
+      "meteorology",
+      "uci-ml-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Licensed under CC BY 4.0 as designated in the official UCI Machine Learning Repository record."
+    },
+    "source_references": [
+      {
+        "title": "Beijing Multi-Site Air Quality on UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality",
+        "type": "official_website",
+        "notes": "Official UCI ML repository landing page (DOI: 10.24432/C5RK5G)."
+      },
+      {
+        "title": "A new air quality index based on environmental health risk (Atmospheric Environment 2017)",
+        "url": "https://doi.org/10.1016/j.atmosenv.2017.05.056",
+        "type": "original_paper",
+        "notes": "Reference paper on Beijing air pollution modeling."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against UCI Machine Learning Repository record and DataCite DOI 10.24432/C5RK5G."
+    },
+    "dates": {
+      "published": "2019-09-20"
+    },
+    "sample_count": {
+      "total": 420768,
+      "unit": "hourly records",
+      "status": "verified"
+    },
+    "geographic_coverage": [
+      "China"
+    ],
+    "citation": {
+      "paper_title": "Beijing Multi-Site Air Quality",
+      "paper_url": "https://doi.org/10.24432/C5RK5G",
+      "authors": [
+        "Song Chen"
+      ],
+      "doi": "10.24432/C5RK5G",
+      "bibtex": "@misc{beijing_multi_site_air_quality_501,\n  author = {Chen, Song},\n  title = {{Beijing Multi-Site Air Quality}},\n  year = {2017},\n  howpublished = {UCI Machine Learning Repository},\n  note = {{DOI}: https://doi.org/10.24432/C5RK5G}\n}"
+    },
+    "provenance": {
+      "collection_method": "Real-time automated environmental sensing from 12 Beijing Municipal Environmental Monitoring Center stations.",
+      "curation_notes": "Weather data matched from China Meteorological Administration stations nearest to each air quality site.",
+      "data_sources": [
+        "Beijing Municipal Environmental Monitoring Center",
+        "China Meteorological Administration"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "beir",
     "slug": "beir",
     "name": "BEIR: Benchmarking Information Retrieval",
@@ -5442,6 +5621,99 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "boolq",
+    "slug": "boolq",
+    "name": "BoolQ: Natural Yes/No Question Answering Dataset",
+    "description": "BoolQ is a reading comprehension and question answering dataset for naturally occurring yes/no questions, curated by Google Research (Clark et al., NAACL 2019). Unlike datasets prompting crowdworkers to formulate synthetic questions, BoolQ samples unprompted information-seeking queries submitted to the Google search engine, each paired with an extracted Wikipedia passage and a binary boolean label (true/false). The dataset contains 15,942 examples partitioned into 9,427 training, 3,270 development, and 3,245 test examples.",
+    "homepage_url": "https://github.com/google-research-datasets/boolean-questions",
+    "publisher": {
+      "name": "Google Research",
+      "type": "industry",
+      "url": "https://research.google"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "text-classification"
+    ],
+    "tags": [
+      "nlp",
+      "question-answering",
+      "boolean-questions",
+      "google-research",
+      "reading-comprehension"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)",
+      "spdx_id": "CC-BY-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Released by Google Research under CC BY-SA 3.0 following Wikipedia content licensing. Commercial use is permitted with attribution and share-alike terms."
+    },
+    "source_references": [
+      {
+        "title": "Google Research BoolQ Repository",
+        "url": "https://github.com/google-research-datasets/boolean-questions",
+        "type": "repository",
+        "notes": "Official repository and download files."
+      },
+      {
+        "title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions (NAACL 2019)",
+        "url": "https://doi.org/10.18653/v1/N19-1300",
+        "type": "original_paper",
+        "notes": "Peer-reviewed publication introducing the BoolQ dataset."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against Google Research repository and NAACL 2019 publication."
+    },
+    "dates": {
+      "published": "2019-05-24"
+    },
+    "sample_count": {
+      "total": 15942,
+      "splits": {
+        "train": 9427,
+        "validation": 3270,
+        "test": 3245
+      },
+      "unit": "question-passage pairs",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions",
+      "paper_url": "https://doi.org/10.18653/v1/N19-1300",
+      "authors": [
+        "Christopher Clark",
+        "Kenton Lee",
+        "Ming-Wei Chang",
+        "Tom Kwiatkowski",
+        "Michael Collins",
+        "Kristina Toutanova"
+      ],
+      "doi": "10.18653/v1/N19-1300",
+      "bibtex": "@inproceedings{clark2019boolq,\n  title={{BoolQ}: Exploring the Surprising Difficulty of Natural Yes/No Questions},\n  author={Clark, Christopher and Lee, Kenton and Chang, Ming-Wei and Kwiatkowski, Tom and Collins, Michael and Toutanova, Kristina},\n  booktitle={Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL-HLT)},\n  pages={2924--2936},\n  year={2019},\n  doi={10.18653/v1/N19-1300}\n}"
+    },
+    "provenance": {
+      "collection_method": "Unprompted information-seeking queries sampled from Google Search logs paired with Wikipedia passages.",
+      "curation_notes": "Annotated for boolean answers (true or false) by human annotators.",
+      "data_sources": [
+        "Google Search",
+        "Wikipedia"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bracol-coffee-leaf",
     "slug": "bracol-coffee-leaf",
     "name": "BRACOL: A Brazilian Arabica Coffee Leaf Images Dataset for Identification and Quantification of Diseases and Pests",
@@ -6014,6 +6286,83 @@
         "Rijnstate Hospital",
         "Canisius-Wilhelmina Hospital",
         "LabPON"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "canada-historical-climate",
+    "slug": "canada-historical-climate",
+    "name": "Historical Climate Data of Canada",
+    "description": "Historical Climate Data of Canada is the official national archive of land-based weather observations collected across Canada by Environment and Climate Change Canada (ECCC). Spanning hourly, daily, and monthly temporal scales across several thousand monitoring stations, the archive contains records dating back to 1840 for elements including temperature, precipitation, wind speed, relative humidity, atmospheric pressure, and visibility. The data are provided in downloadable CSV format and via the MSC Datamart under the Open Government Licence - Canada.",
+    "homepage_url": "https://climate.weather.gc.ca/historical_data/search_historic_data_e.html",
+    "publisher": {
+      "name": "Environment and Climate Change Canada",
+      "type": "government",
+      "url": "https://www.canada.ca/en/environment-climate-change.html"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "regression"
+    ],
+    "tags": [
+      "climate",
+      "weather",
+      "canada",
+      "temperature",
+      "precipitation",
+      "environment-canada"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Government Licence - Canada",
+      "spdx_id": "OGL-Canada-2.0",
+      "commercial_use": "allowed",
+      "url": "https://open.canada.ca/en/open-government-licence-canada",
+      "notes": "Released under the Open Government Licence - Canada, permitting commercial and non-commercial reuse, adaptation, and redistribution with attribution."
+    },
+    "source_references": [
+      {
+        "title": "Historical Climate Data Portal (ECCC)",
+        "url": "https://climate.weather.gc.ca/historical_data/search_historic_data_e.html",
+        "type": "official_website",
+        "notes": "Official Canadian climate search and download portal."
+      },
+      {
+        "title": "Open Government Licence - Canada",
+        "url": "https://open.canada.ca/en/open-government-licence-canada",
+        "type": "documentation",
+        "notes": "Official licence terms governing Canadian open government data."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against Environment and Climate Change Canada portal and Open Government Licence - Canada."
+    },
+    "dates": {
+      "published": "2010-01-01",
+      "last_updated": "2026-11-04"
+    },
+    "sample_count": {
+      "unit": "historical meteorological stations",
+      "status": "estimated"
+    },
+    "geographic_coverage": [
+      "Canada"
+    ],
+    "provenance": {
+      "collection_method": "Automated and manual surface weather observations from the Meteorological Service of Canada national observing network.",
+      "curation_notes": "Quality-controlled through automated baseline and consistency checks.",
+      "data_sources": [
+        "Meteorological Service of Canada",
+        "Environment and Climate Change Canada"
       ]
     }
   },
@@ -6925,6 +7274,102 @@
       ],
       "doi": "10.1109/CVPR.2016.350",
       "bibtex": "@inproceedings{cordts2016cityscapes,\n  title={The Cityscapes Dataset for Semantic Urban Scene Understanding},\n  author={Cordts, Marius and Omran, Mohamed and Ramos, Sebastian and Rehfeld, Timo and Enzweiler, Markus and Benenson, Rodrigo and Franke, Uwe and Roth, Stefan and Schiele, Bernt},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={3213--3223},\n  year={2016},\n  doi={10.1109/CVPR.2016.350}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cnn-dailymail",
+    "slug": "cnn-dailymail",
+    "name": "CNN/DailyMail: Non-Anonymized Multi-Sentence Summarization Benchmark",
+    "description": "CNN/DailyMail is a foundational abstractive and extractive document summarization benchmark originally constructed by Hermann et al. (NeurIPS 2015) and modified into its standard non-anonymized form by Abigail See et al. (ACL 2017). The dataset pairs full-length news stories from CNN and the Daily Mail with bulleted highlight summaries written by the story authors. In its standard version 3.0.0 split, the benchmark contains 287,113 training pairs, 13,368 validation pairs, and 11,490 test pairs (total: 311,971 documents).",
+    "homepage_url": "https://github.com/abisee/cnn-dailymail",
+    "publisher": {
+      "name": "Stanford University & DeepMind",
+      "type": "academic",
+      "url": "https://nlp.stanford.edu"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "summarization",
+      "document-summarization"
+    ],
+    "tags": [
+      "nlp",
+      "summarization",
+      "news",
+      "cnn",
+      "dailymail",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Apache 2.0 / MIT (Scripts) / Proprietary Third-Party News Content (CNN & Daily Mail)",
+      "commercial_use": "unknown",
+      "url": "https://github.com/abisee/cnn-dailymail",
+      "notes": "Preprocessing code is open-source (Apache-2.0 on Hugging Face / MIT in forks), but underlying article text is copyrighted by CNN and Daily Mail. The authors do not host or grant commercial redistribution rights to the raw article texts."
+    },
+    "source_references": [
+      {
+        "title": "CNN/DailyMail Preprocessing Repository (Abigail See)",
+        "url": "https://github.com/abisee/cnn-dailymail",
+        "type": "repository",
+        "notes": "Official repository for non-anonymized CNN/DailyMail data processing."
+      },
+      {
+        "title": "Get To The Point: Summarization with Pointer-Generator Networks (ACL 2017)",
+        "url": "https://doi.org/10.18653/v1/P17-1099",
+        "type": "original_paper",
+        "notes": "Peer-reviewed ACL 2017 publication establishing the standard non-anonymized benchmark."
+      },
+      {
+        "title": "Hugging Face CNN/DailyMail Dataset Card",
+        "url": "https://huggingface.co/datasets/abisee/cnn_dailymail",
+        "type": "dataset_card",
+        "notes": "Secondary distribution and schema card."
+      }
+    ],
+    "verification": {
+      "status": "provisional",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Provisional status: dataset benchmark provenance verified against ACL 2017 publication; commercial rights to underlying news articles remain proprietary to CNN and Daily Mail."
+    },
+    "dates": {
+      "published": "2017-04-12"
+    },
+    "sample_count": {
+      "total": 311971,
+      "splits": {
+        "train": 287113,
+        "validation": 13368,
+        "test": 11490
+      },
+      "unit": "article-summary pairs",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "Get To The Point: Summarization with Pointer-Generator Networks",
+      "paper_url": "https://doi.org/10.18653/v1/P17-1099",
+      "authors": [
+        "Abigail See",
+        "Peter J. Liu",
+        "Christopher D. Manning"
+      ],
+      "doi": "10.18653/v1/P17-1099",
+      "bibtex": "@inproceedings{see2017get,\n  title={Get To The Point: Summarization with Pointer-Generator Networks},\n  author={See, Abigail and Liu, Peter J. and Manning, Christopher D.},\n  booktitle={Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (ACL)},\n  pages={1073--1083},\n  year={2017},\n  doi={10.18653/v1/P17-1099}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted from CNN and Daily Mail websites by Hermann et al. (2015) and processed into non-anonymized form by See et al. (2017).",
+      "curation_notes": "Main text forms document input; author-written bulleted highlights serve as reference summary.",
+      "data_sources": [
+        "CNN",
+        "Daily Mail"
+      ]
     }
   },
   {
@@ -9020,6 +9465,103 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "e2e-nlg",
+    "slug": "e2e-nlg",
+    "name": "The E2E NLG Challenge Dataset",
+    "description": "The E2E NLG Challenge Dataset is a crowdsourced data-to-text natural language generation benchmark developed at Heriot-Watt University (Novikova et al., SIGDIAL 2017). Designed for training and evaluating end-to-end NLG systems in the restaurant domain, the dataset provides 51,426 diverse natural language utterances mapped to structured meaning representations (attribute-value pairs including name, food type, price range, customer rating, area, family-friendliness, and near-by landmarks). It contains 42,061 training, 4,672 validation, and 4,693 test samples.",
+    "homepage_url": "https://researchportal.hw.ac.uk/en/datasets/the-e2e-challenge-dataset/",
+    "publisher": {
+      "name": "Heriot-Watt University",
+      "type": "academic",
+      "url": "https://www.hw.ac.uk"
+    },
+    "modalities": [
+      "nlp",
+      "tabular"
+    ],
+    "tasks": [
+      "data-to-text",
+      "text-generation"
+    ],
+    "tags": [
+      "nlp",
+      "data-to-text",
+      "nlg",
+      "natural-language-generation",
+      "heriot-watt"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Formally licensed under CC BY-SA 4.0 in the official Heriot-Watt University Research Portal repository deposit (DOI: 10.17861/c07fe36b-d0fa-4bbe-967c-f8b4341a133f). Commercial use is permitted with attribution and share-alike terms."
+    },
+    "source_references": [
+      {
+        "title": "Heriot-Watt University Research Portal Deposit",
+        "url": "https://researchportal.hw.ac.uk/en/datasets/the-e2e-challenge-dataset/",
+        "type": "repository",
+        "notes": "Authoritative institutional repository deposit (DOI: 10.17861/c07fe36b-d0fa-4bbe-967c-f8b4341a133f)."
+      },
+      {
+        "title": "The E2E Dataset: New Challenges For End-to-End Generation (SIGDIAL 2017)",
+        "url": "https://doi.org/10.18653/v1/W17-5525",
+        "type": "original_paper",
+        "notes": "Peer-reviewed SIGDIAL 2017 publication."
+      },
+      {
+        "title": "E2E NLG Challenge GitHub Repository",
+        "url": "https://github.com/tuetschek/e2e-eval",
+        "type": "repository",
+        "notes": "Evaluation scripts and challenge data files."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against Heriot-Watt University institutional repository and SIGDIAL 2017 paper."
+    },
+    "dates": {
+      "published": "2017-08-15"
+    },
+    "sample_count": {
+      "total": 51426,
+      "splits": {
+        "train": 42061,
+        "validation": 4672,
+        "test": 4693
+      },
+      "unit": "utterance-MR pairs",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "The E2E Dataset: New Challenges For End-to-End Generation",
+      "paper_url": "https://doi.org/10.18653/v1/W17-5525",
+      "authors": [
+        "Jekaterina Novikova",
+        "Ondřej Dušek",
+        "Verena Rieser"
+      ],
+      "doi": "10.18653/v1/W17-5525",
+      "bibtex": "@inproceedings{novikova2017e2e,\n  title={The {E2E} Dataset: New Challenges For End-to-End Generation},\n  author={Novikova, Jekaterina and Du{\\v{s}}ek, Ond{\\v{r}}ej and Rieser, Verena},\n  booktitle={Proceedings of the 18th Annual SIGdial Meeting on Discourse and Dialogue},\n  pages={201--206},\n  year={2017},\n  doi={10.18653/v1/W17-5525}\n}"
+    },
+    "provenance": {
+      "collection_method": "Crowdsourced human text generation from pictorial and text-based meaning representations on CrowdFlower.",
+      "curation_notes": "Quality checked and split into distinct training, validation, and test subsets based on meaning representations.",
+      "data_sources": [
+        "CrowdFlower",
+        "Heriot-Watt University"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "early-stage-diabetes-bangladesh",
     "slug": "early-stage-diabetes-bangladesh",
     "name": "Early Stage Diabetes Risk Prediction: Bangladesh Clinical Survey Benchmark",
@@ -10625,6 +11167,90 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "forest-fires",
+    "slug": "forest-fires",
+    "name": "Forest Fires Dataset",
+    "description": "The Forest Fires dataset is a classic environmental regression benchmark curated by Paulo Cortez and Aníbal Morais (EPIA 2007) and deposited in the UCI Machine Learning Repository (DOI: 10.24432/C5D88D). The dataset compiles 517 wildfire events from the Montesinho Natural Park in the Trás-os-Montes region of northeast Portugal (2000–2003) to predict burned area using meteorological attributes and Fire Weather Index (FWI) components. Features include spatial coordinates (X, Y), month, day of week, Fine Fuel Moisture Code (FFMC), Duff Moisture Code (DMC), Drought Code (DC), Initial Spread Index (ISI), temperature, relative humidity, wind speed, and rain.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/162/forest+fires",
+    "publisher": {
+      "name": "UCI Machine Learning Repository & University of Minho",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "regression"
+    ],
+    "tags": [
+      "tabular",
+      "regression",
+      "forest-fires",
+      "wildfire",
+      "meteorology",
+      "uci-ml-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Licensed under CC BY 4.0 in the official UCI Machine Learning Repository record."
+    },
+    "source_references": [
+      {
+        "title": "Forest Fires on UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/162/forest+fires",
+        "type": "official_website",
+        "notes": "Official UCI repository record (DOI: 10.24432/C5D88D)."
+      },
+      {
+        "title": "A Data Mining Approach to Predict Forest Fires using Meteorological Data (EPIA 2007)",
+        "url": "http://www.dsi.uminho.pt/~pcortez/fires.pdf",
+        "type": "original_paper",
+        "notes": "Original conference publication introducing the dataset."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against UCI Machine Learning Repository record and EPIA 2007 publication."
+    },
+    "dates": {
+      "published": "2008-02-29"
+    },
+    "sample_count": {
+      "total": 517,
+      "unit": "fire event records",
+      "status": "verified"
+    },
+    "geographic_coverage": [
+      "Portugal"
+    ],
+    "citation": {
+      "paper_title": "A Data Mining Approach to Predict Forest Fires using Meteorological Data",
+      "paper_url": "http://www.dsi.uminho.pt/~pcortez/fires.pdf",
+      "authors": [
+        "Paulo Cortez",
+        "Aníbal de Jesus Raimundo Morais"
+      ],
+      "doi": "10.24432/C5D88D",
+      "bibtex": "@inproceedings{cortez2007data,\n  title={A Data Mining Approach to Predict Forest Fires using Meteorological Data},\n  author={Cortez, Paulo and Morais, An{\\'\\i}bal},\n  booktitle={Proceedings of the 13th Portuguese Conference on Artificial Intelligence (EPIA 2007)},\n  pages={512--523},\n  year={2007}\n}"
+    },
+    "provenance": {
+      "collection_method": "Wildfire incident records from Montesinho Natural Park combined with daily meteorological observations from local weather stations.",
+      "curation_notes": "Burned area is highly skewed towards 0.0 ha; logarithmic transform ln(x+1) was used in original benchmarks.",
+      "data_sources": [
+        "Montesinho Natural Park",
+        "University of Minho"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "fsd50k",
     "slug": "fsd50k",
     "name": "FSD50K: Human-Labeled Sound Events Dataset",
@@ -11056,6 +11682,104 @@
     "provenance": {
       "collection_method": "Aggregated from established NLP datasets including CoLA, SST-2, MRPC, STS-B, QQP, MNLI, QNLI, RTE, and WNLI.",
       "curation_notes": "Converted to standard tab-delimited formats with private test sets hosted on evaluation servers."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "goemotions",
+    "slug": "goemotions",
+    "name": "GoEmotions: Fine-Grained Emotion Classification Dataset",
+    "description": "GoEmotions is a dataset of 58,009 carefully curated Reddit comments labeled for 27 fine-grained emotion categories plus neutral, published by Google Research in ACL 2020. Annotated by human raters, the emotion taxonomy encompasses admiration, amusement, anger, annoyance, approval, caring, confusion, curiosity, desire, disappointment, disapproval, disgust, embarrassment, excitement, fear, gratitude, grief, joy, love, nervousness, optimism, pride, realization, relief, remorse, sadness, and surprise. The benchmark contains 43,410 training, 5,426 validation, and 5,427 test examples in its rater-agreement filtered split.",
+    "homepage_url": "https://github.com/google-research/google-research/tree/master/goemotions",
+    "publisher": {
+      "name": "Google Research",
+      "type": "industry",
+      "url": "https://research.google"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "text-classification",
+      "multi-label-classification"
+    ],
+    "tags": [
+      "nlp",
+      "emotion-classification",
+      "reddit",
+      "google-research",
+      "sentiment-analysis"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Apache 2.0 (Code) / Reddit User Terms (Text)",
+      "spdx_id": "Apache-2.0",
+      "commercial_use": "unknown",
+      "url": "https://github.com/google-research/google-research/blob/master/LICENSE",
+      "notes": "Google Research repository code and annotations are released under the Apache License 2.0. However, the raw text comments originate from Reddit users and are governed by Reddit Terms of Service and User Agreement. Commercial rights to user-generated Reddit comments are unverified and marked as unknown."
+    },
+    "source_references": [
+      {
+        "title": "GoEmotions Google Research Repository",
+        "url": "https://github.com/google-research/google-research/tree/master/goemotions",
+        "type": "repository",
+        "notes": "Official repository and documentation."
+      },
+      {
+        "title": "GoEmotions: A Dataset of Fine-Grained Emotions (ACL 2020)",
+        "url": "https://doi.org/10.18653/v1/2020.acl-main.372",
+        "type": "original_paper",
+        "notes": "Peer-reviewed ACL 2020 publication."
+      },
+      {
+        "title": "Google Research Publication Overview",
+        "url": "https://research.google/pubs/goemotions-a-dataset-of-fine-grained-emotions/",
+        "type": "official_website",
+        "notes": "Official publication portal."
+      }
+    ],
+    "verification": {
+      "status": "provisional",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Provisional verification due to distinction between Apache 2.0 repository license and third-party Reddit user text copyright."
+    },
+    "dates": {
+      "published": "2020-05-01"
+    },
+    "sample_count": {
+      "total": 54263,
+      "splits": {
+        "train": 43410,
+        "validation": 5426,
+        "test": 5427
+      },
+      "unit": "comments",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+      "paper_url": "https://doi.org/10.18653/v1/2020.acl-main.372",
+      "authors": [
+        "Dorottya Demszky",
+        "Dana Movshovitz-Attias",
+        "Jeongwoo Ko",
+        "Alan Cowen",
+        "Gaurav Nemade",
+        "Sujith Ravi"
+      ],
+      "doi": "10.18653/v1/2020.acl-main.372",
+      "bibtex": "@inproceedings{demszky2020goemotions,\n  title={{GoEmotions}: A Dataset of Fine-Grained Emotions},\n  author={Demszky, Dorottya and Movshovitz-Attias, Dana and Ko, Jeongwoo and Cowen, Alan and Nemade, Gaurav and Ravi, Sujith},\n  booktitle={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (ACL)},\n  pages={4040--4054},\n  year={2020},\n  doi={10.18653/v1/2020.acl-main.372}\n}"
+    },
+    "provenance": {
+      "collection_method": "Curated extraction from popular English Reddit subreddits with masking of identifiable entities.",
+      "curation_notes": "Filtered based on multi-rater agreement across India-based English speakers.",
+      "data_sources": [
+        "Reddit"
+      ]
     }
   },
   {
@@ -13772,6 +14496,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "jena-weather",
+    "slug": "jena-weather",
+    "name": "Jena Climate: Weather Station Time Series Benchmark",
+    "description": "The Jena Climate dataset is a high-resolution meteorological time series recorded at the Max Planck Institute for Biogeochemistry weather station in Jena, Germany. Recording 14 atmospheric variables every 10 minutes from 2003 to the present—including air temperature, atmospheric pressure, relative humidity, vapor pressure, dew point temperature, wind speed, and wind direction—the dataset serves as a canonical benchmark for recurrent neural networks, LSTMs, and deep learning time series forecasting.",
+    "homepage_url": "https://weather.bgc-jena.mpg.de/weather_data.html",
+    "publisher": {
+      "name": "Max Planck Institute for Biogeochemistry",
+      "type": "academic",
+      "url": "https://www.bgc-jena.mpg.de"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "regression"
+    ],
+    "tags": [
+      "weather",
+      "time-series",
+      "deep-learning",
+      "jena",
+      "max-planck",
+      "sensor"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Explicitly licensed under Creative Commons Attribution 4.0 International (CC BY 4.0) on the official Max Planck Institute weather data download page."
+    },
+    "source_references": [
+      {
+        "title": "Max Planck Institute Jena Weather Data Download Page",
+        "url": "https://weather.bgc-jena.mpg.de/weather_data.html",
+        "type": "official_website",
+        "notes": "Official repository and CC BY 4.0 download portal."
+      },
+      {
+        "title": "Jena Weather Station Overview",
+        "url": "https://weather.bgc-jena.mpg.de/index.html",
+        "type": "documentation",
+        "notes": "Instrumentation and station metadata."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against Max Planck Institute for Biogeochemistry official portal and CC BY 4.0 license declaration."
+    },
+    "dates": {
+      "published": "2009-01-01",
+      "last_updated": "2026-11-04"
+    },
+    "sample_count": {
+      "total": 420551,
+      "unit": "10-minute meteorological observations",
+      "status": "estimated"
+    },
+    "geographic_coverage": [
+      "Germany"
+    ],
+    "provenance": {
+      "collection_method": "Precision meteorological sensors mounted at the weather station of the Max Planck Institute for Biogeochemistry in Jena-Göschwitz.",
+      "curation_notes": "Sampled at 10-minute intervals continuously since 2003.",
+      "data_sources": [
+        "Max Planck Institute for Biogeochemistry"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "kinetics-400",
     "slug": "kinetics-400",
     "name": "Kinetics-400 Action Recognition Dataset",
@@ -15943,6 +16744,85 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "metro-interstate-traffic-volume",
+    "slug": "metro-interstate-traffic-volume",
+    "name": "Metro Interstate Traffic Volume Dataset",
+    "description": "The Metro Interstate Traffic Volume dataset contains 48,204 hourly observations of westbound interstate traffic volume on I-94 between Minneapolis and St. Paul, Minnesota, paired with weather conditions and holiday indicators from 2012 to 2018. Donated by John Hogue to the UCI Machine Learning Repository (DOI: 10.24432/C5X60B), the dataset features 8 predictive attributes: holiday name, ambient temperature, rain accumulation, snow accumulation, cloud coverage, weather description, weather primary category, and date-time to evaluate the impact of adverse weather and holidays on arterial traffic flow.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/492/metro+interstate+traffic+volume",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "regression",
+      "time-series-forecasting"
+    ],
+    "tags": [
+      "traffic",
+      "transportation",
+      "tabular",
+      "time-series",
+      "weather-features",
+      "uci-ml-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Licensed under CC BY 4.0 in the official UCI Machine Learning Repository record."
+    },
+    "source_references": [
+      {
+        "title": "Metro Interstate Traffic Volume on UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/492/metro+interstate+traffic+volume",
+        "type": "official_website",
+        "notes": "Official UCI record (DOI: 10.24432/C5X60B)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against UCI Machine Learning Repository record and DataCite DOI 10.24432/C5X60B."
+    },
+    "dates": {
+      "published": "2019-04-05"
+    },
+    "sample_count": {
+      "total": 48204,
+      "unit": "hourly traffic records",
+      "status": "verified"
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "citation": {
+      "paper_title": "Metro Interstate Traffic Volume",
+      "paper_url": "https://doi.org/10.24432/C5X60B",
+      "authors": [
+        "John Hogue"
+      ],
+      "doi": "10.24432/C5X60B",
+      "bibtex": "@misc{metro_interstate_traffic_volume_492,\n  author = {Hogue, John},\n  title = {{Metro Interstate Traffic Volume}},\n  year = {2019},\n  howpublished = {UCI Machine Learning Repository},\n  note = {{DOI}: https://doi.org/10.24432/C5X60B}\n}"
+    },
+    "provenance": {
+      "collection_method": "Automated loop detectors operated by the Minnesota Department of Transportation (MnDOT) matched with automated surface weather observations from Minneapolis-St Paul International Airport (KMSP).",
+      "curation_notes": "A transportation traffic dataset with weather features, not a pure weather observation dataset.",
+      "data_sources": [
+        "Minnesota Department of Transportation",
+        "National Weather Service KMSP"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "mimic-cxr",
     "slug": "mimic-cxr",
     "name": "MIMIC-CXR: Chest Radiographs and Radiology Reports Database",
@@ -17345,6 +18225,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "nasa-power-daily",
+    "slug": "nasa-power-daily",
+    "name": "NASA POWER: Prediction of Worldwide Energy Resources Daily Meteorology",
+    "description": "NASA POWER (Prediction Of Worldwide Energy Resources) is an operational data service developed by NASA Langley Research Center that delivers continuous global analysis-ready meteorological and solar parameters for renewable energy, building efficiency, and agroclimatology. Powered by NASA satellite observations and the Goddard Modern-Era Retrospective Analysis for Research and Applications Version 2 (MERRA-2) assimilation model, POWER provides daily gridded (0.5° latitude x 0.625° longitude) variables from 1981 to near real-time, including solar irradiance, temperature, humidity, wind speed, surface pressure, and precipitation via REST API, CSV, and JSON.",
+    "homepage_url": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+    "publisher": {
+      "name": "NASA Langley Research Center",
+      "type": "government",
+      "url": "https://power.larc.nasa.gov"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "regression"
+    ],
+    "tags": [
+      "solar-energy",
+      "weather",
+      "meteorology",
+      "nasa",
+      "merra-2",
+      "satellite-observations",
+      "api"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "NASA Open Data Policy / Public Domain",
+      "commercial_use": "allowed",
+      "url": "https://power.larc.nasa.gov/docs/about/",
+      "notes": "NASA POWER data are provided free of charge under NASA's open-access data policy in the public domain for research, commercial, and educational applications worldwide."
+    },
+    "source_references": [
+      {
+        "title": "NASA POWER Daily API Documentation",
+        "url": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+        "type": "documentation",
+        "notes": "Official REST API service endpoints and variable definitions."
+      },
+      {
+        "title": "NASA POWER Project Portal",
+        "url": "https://power.larc.nasa.gov/",
+        "type": "official_website",
+        "notes": "Main portal and data viewer."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against NASA POWER documentation and API service specifications. Correctly cataloged as an ongoing global data service rather than a static single file."
+    },
+    "dates": {
+      "published": "2018-01-01",
+      "last_updated": "2026-11-04"
+    },
+    "sample_count": {
+      "unit": "daily gridded global observations (1981-present)",
+      "status": "unknown"
+    },
+    "geographic_coverage": [
+      "Global"
+    ],
+    "provenance": {
+      "collection_method": "Assimilation of NASA satellite instruments (CERES, MODIS) and GMAO MERRA-2 meteorological reanalysis.",
+      "curation_notes": "Continuous programmatic API service supporting point and regional queries.",
+      "data_sources": [
+        "NASA GMAO MERRA-2",
+        "NASA CERES",
+        "NASA Langley Research Center"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "natural-questions",
     "slug": "natural-questions",
     "name": "Natural Questions (NQ)",
@@ -17606,6 +18563,567 @@
       ],
       "doi": "10.1109/CVPR.2017.369",
       "bibtex": "@inproceedings{wang2017chestx,\n  title={ChestX-Ray8: Hospital-Scale Chest X-Ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases},\n  author={Wang, Xiaosong and Peng, Yifan and Lu, Le and Lu, Zhiyong and Bagheri, Mohammadhadi and Summers, Ronald M},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={2097--2106},\n  year={2017},\n  doi={10.1109/CVPR.2017.369}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "noaa-ghcn-daily",
+    "slug": "noaa-ghcn-daily",
+    "name": "Global Historical Climatology Network daily (GHCNd)",
+    "description": "The Global Historical Climatology Network daily (GHCNd) is an authoritative database of daily climate records from over 100,000 land surface weather stations across 180 countries and territories, maintained by NOAA's National Centers for Environmental Information (NCEI). GHCN-Daily provides daily observations of precipitation, maximum and minimum temperature, snowfall, and snow depth, with some records extending back to the 19th century. Data are subjected to rigorous automated quality control algorithms (Menne et al., 2012) and updated daily.",
+    "homepage_url": "https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily",
+    "publisher": {
+      "name": "NOAA National Centers for Environmental Information (NCEI)",
+      "type": "government",
+      "url": "https://www.ncei.noaa.gov"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "regression"
+    ],
+    "tags": [
+      "climate",
+      "weather",
+      "temperature",
+      "precipitation",
+      "noaa",
+      "ncei",
+      "time-series"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "U.S. Government Work (17 U.S.C. 105) / Public Domain",
+      "commercial_use": "allowed",
+      "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+      "notes": "NOAA publishes GHCN-Daily under a U.S. Government Work public domain designation without copyright asserted by NOAA. However, because GHCN-Daily incorporates daily station feeds from national meteorological agencies worldwide via WMO data exchange, downstream commercial redistributors must verify whether source countries retain domestic rights. Users should not assume blanket worldwide commercial rights for third-party observations."
+    },
+    "source_references": [
+      {
+        "title": "NOAA NCEI GHCN-Daily Product Portal",
+        "url": "https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily",
+        "type": "official_website",
+        "notes": "Official product information and data access landing page."
+      },
+      {
+        "title": "An Overview of the Global Historical Climatology Network-Daily Database (JTECH 2012)",
+        "url": "https://doi.org/10.1175/JTECH-D-11-00103.1",
+        "type": "original_paper",
+        "notes": "Peer-reviewed paper describing dataset structure and automated quality assurance."
+      },
+      {
+        "title": "NOAA NCEI Dataset Archive (DOI: 10.7289/V5D21VHZ)",
+        "url": "https://doi.org/10.7289/V5D21VHZ",
+        "type": "repository",
+        "notes": "DataCite archive identifier for GHCN-Daily (Version 3, published 2012)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against NOAA NCEI product portal, DataCite DOI 10.7289/V5D21VHZ, and JTECH publication."
+    },
+    "dates": {
+      "published": "2012-07-01",
+      "last_updated": "2026-11-04"
+    },
+    "sample_count": {
+      "unit": "land surface stations",
+      "status": "estimated",
+      "total": 100000
+    },
+    "geographic_coverage": [
+      "Global"
+    ],
+    "citation": {
+      "paper_title": "An Overview of the Global Historical Climatology Network-Daily Database",
+      "paper_url": "https://doi.org/10.1175/JTECH-D-11-00103.1",
+      "authors": [
+        "Matthew J. Menne",
+        "Imke Durre",
+        "Russell S. Vose",
+        "Brynn E. Gleason",
+        "Tamara G. Houston"
+      ],
+      "doi": "10.1175/JTECH-D-11-00103.1",
+      "bibtex": "@article{menne2012overview,\n  title={An Overview of the Global Historical Climatology Network-Daily Database},\n  author={Menne, Matthew J. and Durre, Imke and Vose, Russell S. and Gleason, Brynn E. and Houston, Tamara G.},\n  journal={Journal of Atmospheric and Oceanic Technology},\n  volume={29},\n  number={7},\n  pages={897--910},\n  year={2012},\n  doi={10.1175/JTECH-D-11-00103.1}\n}"
+    },
+    "provenance": {
+      "collection_method": "Automated aggregation of daily land meteorological observations from international meteorological agencies and US cooperative observer networks.",
+      "curation_notes": "Rigorous multi-stage automated quality control detecting outliers, climatological bounds, and temporal inconsistencies.",
+      "data_sources": [
+        "NOAA NCEI",
+        "WMO Member Meteorological Services"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "noaa-ghcn-hourly",
+    "slug": "noaa-ghcn-hourly",
+    "name": "Global Historical Climatology Network hourly (GHCNh), Version 1",
+    "description": "The Global Historical Climatology Network hourly (GHCNh) Version 1 is NOAA NCEI's integrated global archive of land-surface hourly and sub-hourly meteorological observations. Spanning station data from the late 18th century to present, GHCNh unifies multiple global and regional surface sources—including the Integrated Surface Database (ISD), international meteorological agency archives, and historical data rescue initiatives—into an unadjusted, quality-controlled, common-format collection of temperature, dew point, pressure, wind, and precipitation readings under official dataset DOI: 10.25921/jp3d-3v19.",
+    "homepage_url": "https://www.ncei.noaa.gov/products/global-historical-climatology-network-hourly",
+    "publisher": {
+      "name": "NOAA National Centers for Environmental Information (NCEI)",
+      "type": "government",
+      "url": "https://www.ncei.noaa.gov"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "regression"
+    ],
+    "tags": [
+      "climate",
+      "weather",
+      "hourly",
+      "sub-hourly",
+      "temperature",
+      "precipitation",
+      "wind",
+      "noaa",
+      "ncei"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "U.S. Government Work (17 U.S.C. 105) / Public Domain",
+      "commercial_use": "allowed",
+      "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+      "notes": "NOAA publishes GHCNh Version 1 under a U.S. Government Work public domain designation with no federal copyright asserted by the publisher. However, because GHCNh integrates hourly observations contributed by foreign meteorological services and historical archives, downstream users should verify source-country terms for commercial redistribution rather than assuming unencumbered worldwide rights."
+    },
+    "source_references": [
+      {
+        "title": "NOAA NCEI GHCN-Hourly Product Portal",
+        "url": "https://www.ncei.noaa.gov/products/global-historical-climatology-network-hourly",
+        "type": "official_website",
+        "notes": "Official product portal and documentation."
+      },
+      {
+        "title": "NOAA NCEI GHCNh Version 1 DataCite Repository (DOI: 10.25921/jp3d-3v19)",
+        "url": "https://doi.org/10.25921/jp3d-3v19",
+        "type": "repository",
+        "notes": "Official NOAA NCEI dataset DOI repository entry for GHCNh Version 1."
+      },
+      {
+        "title": "NOAA NCEI Metadata Geoportal Record (gov.noaa.ncdc:C01688)",
+        "url": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01688/html",
+        "type": "documentation",
+        "notes": "Official NOAA NCEI geoportal ISO metadata record."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against NOAA NCEI Geoportal record C01688 and official dataset DOI 10.25921/jp3d-3v19. The erroneously assigned 2016 ISTI databank paper was removed and replaced with the official GHCNh Version 1 dataset citation published in 2023."
+    },
+    "dates": {
+      "published": "2023",
+      "last_updated": "2026-11-04"
+    },
+    "sample_count": {
+      "unit": "hourly meteorological observations",
+      "status": "unknown"
+    },
+    "geographic_coverage": [
+      "Global"
+    ],
+    "citation": {
+      "paper_title": "Global Historical Climatology Network-Hourly (GHCNh), Version 1",
+      "paper_url": "https://doi.org/10.25921/jp3d-3v19",
+      "authors": [
+        "Matthew J. Menne",
+        "Simon Noone",
+        "Nancy W. Casey",
+        "Robert H. Dunn",
+        "Shelley McNeill",
+        "Diana Kantor",
+        "Peter W. Thorne",
+        "Karen Orcutt",
+        "Sam Cunningham",
+        "Nicholas Risavi"
+      ],
+      "doi": "10.25921/jp3d-3v19",
+      "bibtex": "@misc{menne2023ghcnh,\n  title={Global Historical Climatology Network-Hourly (GHCNh), Version 1},\n  author={Menne, Matthew J. and Noone, Simon and Casey, Nancy W. and Dunn, Robert H. and McNeill, Shelley and Kantor, Diana and Thorne, Peter W. and Orcutt, Karen and Cunningham, Sam and Risavi, Nicholas},\n  year={2023},\n  publisher={NOAA National Centers for Environmental Information},\n  doi={10.25921/jp3d-3v19},\n  howpublished={\\url{https://doi.org/10.25921/jp3d-3v19}}\n}"
+    },
+    "provenance": {
+      "collection_method": "Multisource integration of land-surface hourly/sub-hourly observations from ISD, international meteorological collections, and data rescue initiatives.",
+      "curation_notes": "Merged into a common schema with automated quality assurance; provides non-homogenized baseline hourly records.",
+      "data_sources": [
+        "Integrated Surface Database (ISD)",
+        "NOAA NCEI",
+        "International Meteorological Agencies"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "noaa-ghcn-monthly",
+    "slug": "noaa-ghcn-monthly",
+    "name": "Global Historical Climatology Network monthly (GHCNm) Version 4",
+    "description": "The Global Historical Climatology Network monthly (GHCNm) dataset provides monthly land surface climate summaries across the globe maintained by NOAA's National Centers for Environmental Information (NCEI). Currently in Version 4, GHCNm integrates monthly mean observations from approximately 27,000 land stations worldwide, with historical records extending back to 1701. Version 4 comprises two distinct components released in separate years: Monthly Temperature (published in 2017, DOI: 10.7289/V5XW4GTH) and Monthly Precipitation (published in 2024, DOI: 10.25921/67zp-5m03). The temperature component applies pairwise homogenization algorithms (PHA) to detect and adjust for artificial shifts caused by station relocations, instrumentation changes, and urbanization.",
+    "homepage_url": "https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-monthly",
+    "publisher": {
+      "name": "NOAA National Centers for Environmental Information (NCEI)",
+      "type": "government",
+      "url": "https://www.ncei.noaa.gov"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "regression"
+    ],
+    "tags": [
+      "climate",
+      "weather",
+      "temperature",
+      "precipitation",
+      "climate-change",
+      "noaa",
+      "ncei",
+      "time-series"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "U.S. Government Work (17 U.S.C. 105) / Public Domain",
+      "commercial_use": "allowed",
+      "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+      "notes": "NOAA NCEI produced data files and homogenization algorithms are works of the United States Government in the public domain. However, because underlying station observations originate from global national meteorological services via WMO exchange, downstream users must not assume blanket commercial permission for all third-party international observations where origin countries retain domestic rights."
+    },
+    "source_references": [
+      {
+        "title": "NOAA NCEI GHCN-Monthly Product Portal",
+        "url": "https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-monthly",
+        "type": "official_website",
+        "notes": "Official product information and data portal."
+      },
+      {
+        "title": "GHCN-Monthly Temperature Version 4 Dataset (2017, DOI: 10.7289/V5XW4GTH)",
+        "url": "https://doi.org/10.7289/V5XW4GTH",
+        "type": "repository",
+        "notes": "Official NOAA NCEI dataset DOI for GHCNm Version 4 Temperature, published in 2017."
+      },
+      {
+        "title": "GHCN-Monthly Precipitation Version 4 Dataset (2024, DOI: 10.25921/67zp-5m03)",
+        "url": "https://doi.org/10.25921/67zp-5m03",
+        "type": "repository",
+        "notes": "Official NOAA NCEI dataset DOI for GHCNm Version 4 Precipitation, published in 2024."
+      },
+      {
+        "title": "NOAA NCEI Geoportal Record for GHCNm v4 Temperature (gov.noaa.ncdc:C00950)",
+        "url": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C00950/html",
+        "type": "documentation",
+        "notes": "NOAA NCEI metadata geoportal catalog entry C00950 (published 2017)."
+      },
+      {
+        "title": "NOAA NCEI Geoportal Record for GHCNm v4 Precipitation (gov.noaa.ncdc:C01657)",
+        "url": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01657/html",
+        "type": "documentation",
+        "notes": "NOAA NCEI metadata geoportal catalog entry C01657 (published 2024)."
+      },
+      {
+        "title": "The Global Historical Climatology Network Monthly Temperature Dataset, Version 4 (J. Climate 2018)",
+        "url": "https://doi.org/10.1175/JCLI-D-18-0094.1",
+        "type": "original_paper",
+        "notes": "Peer-reviewed paper by Menne et al. (2018) detailing the v4 temperature homogenization methods."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Independently verified against NOAA NCEI Geoportal records C00950 (v4 Temp, 2017) and C01657 (v4 Precip, 2024), DataCite DOIs 10.7289/V5XW4GTH and 10.25921/67zp-5m03, and Journal of Climate 2018 paper. The dates.published field (2017) corresponds to the initial v4 Temperature release; the v4 Precipitation dataset was published subsequently in 2024."
+    },
+    "dates": {
+      "published": "2017",
+      "last_updated": "2026-11-04"
+    },
+    "sample_count": {
+      "unit": "monitoring stations",
+      "status": "estimated",
+      "total": 27000
+    },
+    "geographic_coverage": [
+      "Global"
+    ],
+    "citation": {
+      "paper_title": "The Global Historical Climatology Network Monthly Temperature Dataset, Version 4",
+      "paper_url": "https://doi.org/10.1175/JCLI-D-18-0094.1",
+      "authors": [
+        "Matthew J. Menne",
+        "Claude N. Williams",
+        "Boyin E. Gleason",
+        "Jay J. Rennie",
+        "Jay H. Lawrimore"
+      ],
+      "doi": "10.1175/JCLI-D-18-0094.1",
+      "bibtex": "@article{menne2018global,\n  title={The Global Historical Climatology Network Monthly Temperature Dataset, Version 4},\n  author={Menne, Matthew J. and Williams, Claude N. and Gleason, Boyin E. and Rennie, Jay J. and Lawrimore, Jay H.},\n  journal={Journal of Climate},\n  volume={31},\n  number={24},\n  pages={9835--9854},\n  year={2018},\n  doi={10.1175/JCLI-D-18-0094.1}\n}"
+    },
+    "provenance": {
+      "collection_method": "Monthly station summaries aggregated across global observation networks, with pairwise homogenization algorithms applied to temperature data.",
+      "curation_notes": "Version 4 consists of separate datasets with distinct publication dates: Temperature was published in 2017 (DOI: 10.7289/V5XW4GTH) with pairwise homogenization algorithm (PHA) adjustments, while Precipitation was published in 2024 (DOI: 10.25921/67zp-5m03).",
+      "data_sources": [
+        "NOAA NCEI",
+        "World Meteorological Organization (WMO)"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "noaa-global-summary-of-the-day",
+    "slug": "noaa-global-summary-of-the-day",
+    "name": "NOAA Global Summary of the Day (GSOD)",
+    "description": "The Global Summary of the Day (GSOD) database is produced by NOAA NCEI from synoptic/hourly observations contained in USAF DATSAV3 surface data and the Federal Climate Complex Integrated Surface Hourly (ISH / ISD) dataset. Covering over 9,000 global weather stations from 1929 to present, GSOD computes 18 daily meteorological parameters: mean temperature, mean dew point, mean sea level pressure, mean station pressure, mean visibility, mean wind speed, maximum sustained wind, maximum wind gust, maximum temperature, minimum temperature, precipitation amount, snow depth, and binary indicator flags for occurrence of fog, rain, snow, hail, thunder, and tornado.",
+    "homepage_url": "https://www.ncei.noaa.gov/access/search/datasets/global-summary-of-the-day/",
+    "publisher": {
+      "name": "NOAA National Centers for Environmental Information (NCEI)",
+      "type": "government",
+      "url": "https://www.ncei.noaa.gov"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "regression"
+    ],
+    "tags": [
+      "weather",
+      "climate",
+      "gsod",
+      "daily-summary",
+      "temperature",
+      "noaa",
+      "ncei"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "U.S. Government Work (17 U.S.C. 105) / Public Domain",
+      "commercial_use": "allowed",
+      "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+      "notes": "NOAA publishes GSOD under a U.S. Government Work public domain designation with no copyright asserted by NOAA. However, because synoptic observations originate from global weather stations via WMO and USAF collections, commercial users should note that foreign station data may be subject to domestic restrictions in their countries of origin."
+    },
+    "source_references": [
+      {
+        "title": "NOAA NCEI GSOD Access Portal",
+        "url": "https://www.ncei.noaa.gov/access/search/datasets/global-summary-of-the-day/",
+        "type": "official_website",
+        "notes": "Official search and discovery portal."
+      },
+      {
+        "title": "NOAA NCEI GSOD Data Archive Directory",
+        "url": "https://www.ncei.noaa.gov/data/global-summary-of-the-day/",
+        "type": "repository",
+        "notes": "HTTP archive directory with annual tarballs and CSV files."
+      },
+      {
+        "title": "NOAA NCEI Metadata Geoportal Record (gov.noaa.ncdc:C00516)",
+        "url": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C00516/html",
+        "type": "documentation",
+        "notes": "Official NOAA NCEI ISO metadata record for GSOD."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against NOAA NCEI GSOD archive directory and geoportal record C00516. Confirmed input lineage from USAF DATSAV3 and Integrated Surface Hourly (ISH/ISD)."
+    },
+    "dates": {
+      "published": "1999-01-01",
+      "last_updated": "2026-11-04"
+    },
+    "sample_count": {
+      "unit": "reporting stations",
+      "status": "estimated",
+      "total": 9000
+    },
+    "geographic_coverage": [
+      "Global"
+    ],
+    "provenance": {
+      "collection_method": "Daily aggregation of hourly surface synoptic observations from USAF DATSAV3 and Integrated Surface Hourly (ISH/ISD).",
+      "curation_notes": "Requires a minimum of 4 synoptic observations per day to compute daily means; extreme flags indicate quality checks. Distinct from GSOM which is derived from GHCN-Daily.",
+      "data_sources": [
+        "Integrated Surface Database (ISD)",
+        "USAF DATSAV3",
+        "NOAA NCEI"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "noaa-global-summary-of-the-month",
+    "slug": "noaa-global-summary-of-the-month",
+    "name": "Global Summary of the Month (GSOM)",
+    "description": "The Global Summary of the Month (GSOM) dataset provides monthly climate summaries derived directly from the Global Historical Climatology Network daily (GHCN-Daily) station observations across the globe. Maintained by NOAA NCEI under DOI: 10.7289/V5QV3JJ5, GSOM computes monthly statistics including mean maximum temperature, mean minimum temperature, monthly average temperature, total monthly precipitation, total snowfall, and departure from normals for over 100,000 stations. Unlike GHCN-Monthly v4, GSOM represents direct arithmetic aggregations of daily records without historical homogenization.",
+    "homepage_url": "https://www.ncei.noaa.gov/access/search/datasets/global-summary-of-the-month/",
+    "publisher": {
+      "name": "NOAA National Centers for Environmental Information (NCEI)",
+      "type": "government",
+      "url": "https://www.ncei.noaa.gov"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "regression"
+    ],
+    "tags": [
+      "climate",
+      "weather",
+      "monthly-summary",
+      "temperature",
+      "precipitation",
+      "noaa",
+      "ncei"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "U.S. Government Work (17 U.S.C. 105) / Public Domain",
+      "commercial_use": "allowed",
+      "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+      "notes": "NOAA publishes GSOM under a U.S. Government Work public domain designation without copyright asserted by NOAA. However, because the underlying GHCN-Daily observations originate from international meteorological agencies, downstream users must not treat all separately sourced international observations as unconditionally free of rights restrictions worldwide."
+    },
+    "source_references": [
+      {
+        "title": "NOAA NCEI GSOM Search and Discovery Portal",
+        "url": "https://www.ncei.noaa.gov/access/search/datasets/global-summary-of-the-month/",
+        "type": "official_website",
+        "notes": "Official portal."
+      },
+      {
+        "title": "NOAA NCEI GSOM DataCite Repository (DOI: 10.7289/V5QV3JJ5)",
+        "url": "https://doi.org/10.7289/V5QV3JJ5",
+        "type": "repository",
+        "notes": "Official DataCite repository identifier (Version 1, published 2016)."
+      },
+      {
+        "title": "NOAA NCEI Metadata Geoportal Record (gov.noaa.ncdc:C00946)",
+        "url": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C00946/html",
+        "type": "documentation",
+        "notes": "Official NOAA NCEI geoportal ISO metadata record confirming derivation from GHCN-Daily."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against NOAA NCEI geoportal record C00946 and DataCite DOI 10.7289/V5QV3JJ5. Explicitly confirmed that GSOM is derived from GHCN-Daily, not from ISD."
+    },
+    "dates": {
+      "published": "2016",
+      "last_updated": "2026-11-04"
+    },
+    "sample_count": {
+      "unit": "reporting stations",
+      "status": "estimated",
+      "total": 100000
+    },
+    "geographic_coverage": [
+      "Global"
+    ],
+    "provenance": {
+      "collection_method": "Automated monthly derivation from daily GHCN-Daily observations.",
+      "curation_notes": "GSOM uses unhomogenized daily summations from GHCN-Daily, whereas GHCNm v4 applies pairwise homogenization algorithms. Distinct from GSOD, which is derived from ISD.",
+      "data_sources": [
+        "GHCN-Daily",
+        "NOAA NCEI"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "noaa-storm-events",
+    "slug": "noaa-storm-events",
+    "name": "NOAA Storm Events Database",
+    "description": "The NOAA Storm Events Database is the official United States record of severe and unusual weather occurrences, compiled by the National Weather Service (NWS) and archived by NOAA NCEI. Covering 1950 to the present, the database documents phenomena that cause loss of life, injuries, property and crop damage, or disruption to commerce, including tornadoes, hurricanes, flash floods, hail, thunderstorm winds, winter storms, extreme heat, and wildfires. Each event record includes event type, episode narratives, start/end timestamps, geographic coordinates, damage cost estimates, and casualty counts across all 50 states and territories.",
+    "homepage_url": "https://www.ncei.noaa.gov/access/storm-events-database/",
+    "publisher": {
+      "name": "NOAA National Centers for Environmental Information (NCEI)",
+      "type": "government",
+      "url": "https://www.ncei.noaa.gov"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "regression",
+      "risk-assessment"
+    ],
+    "tags": [
+      "weather",
+      "severe-weather",
+      "storm-events",
+      "tornado",
+      "hurricane",
+      "flood",
+      "noaa",
+      "ncei"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "U.S. Government Work (17 U.S.C. 105) / Open Data",
+      "commercial_use": "allowed",
+      "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+      "notes": "Official public domain data compiled by the National Weather Service and NOAA NCEI."
+    },
+    "source_references": [
+      {
+        "title": "NOAA NCEI Storm Events Database Portal",
+        "url": "https://www.ncei.noaa.gov/access/storm-events-database/",
+        "type": "official_website",
+        "notes": "Official search and query interface."
+      },
+      {
+        "title": "NOAA Storm Events Bulk CSV Archive",
+        "url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/",
+        "type": "repository",
+        "notes": "Bulk downloadable CSV files split by year (details, fatalities, locations)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against NOAA NCEI Storm Events portal and NWS Directive 10-1605."
+    },
+    "dates": {
+      "published": "1993-01-01",
+      "last_updated": "2026-11-04"
+    },
+    "sample_count": {
+      "unit": "recorded severe weather events",
+      "status": "estimated"
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "provenance": {
+      "collection_method": "Compiled monthly by 122 National Weather Service Weather Forecast Offices from trained storm spotters, law enforcement, and emergency management.",
+      "curation_notes": "Archived in three relational CSV tables: event details, fatalities, and locations.",
+      "data_sources": [
+        "National Weather Service",
+        "NOAA NCEI"
+      ]
     }
   },
   {
@@ -21216,6 +22734,93 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "seoul-bike-sharing-demand",
+    "slug": "seoul-bike-sharing-demand",
+    "name": "Seoul Bike Sharing Demand Dataset",
+    "description": "The Seoul Bike Sharing Demand dataset contains 8,760 hourly instances of public bicycle rental counts from the Seoul municipal bike-sharing system paired with meteorological features over a full one-year period (December 2017 to November 2018). Donated to the UCI Machine Learning Repository (DOI: 10.24432/C5F62R), the dataset incorporates 13 features: temperature, humidity, wind speed, visibility, dew point temperature, solar radiation, snowfall, rainfall, season, holiday indicators, and system functional status to forecast urban bike-sharing demand under fluctuating weather conditions.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/560/seoul+bike+sharing+demand",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "regression",
+      "time-series-forecasting"
+    ],
+    "tags": [
+      "tabular",
+      "time-series",
+      "regression",
+      "bike-sharing",
+      "urban-mobility",
+      "weather-features",
+      "uci-ml-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Licensed under CC BY 4.0 in the official UCI Machine Learning Repository record."
+    },
+    "source_references": [
+      {
+        "title": "Seoul Bike Sharing Demand on UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/560/seoul+bike+sharing+demand",
+        "type": "official_website",
+        "notes": "Official UCI repository record (DOI: 10.24432/C5F62R)."
+      },
+      {
+        "title": "Demand Prediction for Seoul Bike Sharing System (Comput. Commun. 2020)",
+        "url": "https://doi.org/10.1016/j.comcom.2020.02.007",
+        "type": "original_paper",
+        "notes": "Published in Computer Communications 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against UCI ML Repository record (DOI 10.24432/C5F62R) and Computer Communications paper."
+    },
+    "dates": {
+      "published": "2020-03-01"
+    },
+    "sample_count": {
+      "total": 8760,
+      "unit": "hourly records",
+      "status": "verified"
+    },
+    "geographic_coverage": [
+      "South Korea"
+    ],
+    "citation": {
+      "paper_title": "Demand prediction of Seoul bike sharing system using artificial neural network",
+      "paper_url": "https://doi.org/10.1016/j.comcom.2020.02.007",
+      "authors": [
+        "V. E. Sathishkumar",
+        "Yongyun Cho"
+      ],
+      "doi": "10.1016/j.comcom.2020.02.007",
+      "bibtex": "@article{sathishkumar2020demand,\n  title={Demand prediction of Seoul bike sharing system using artificial neural network},\n  author={Sathishkumar, V. E. and Cho, Yongyun},\n  journal={Computer Communications},\n  volume={153},\n  pages={427--435},\n  year={2020},\n  doi={10.1016/j.comcom.2020.02.007}\n}"
+    },
+    "provenance": {
+      "collection_method": "Aggregation of hourly bicycle rental logs from Seoul Open Data Plaza matched with local Korea Meteorological Administration weather data.",
+      "curation_notes": "Tabular/time-series demand forecasting with weather as explanatory features; distinct from the Washington D.C. Capital Bikeshare dataset.",
+      "data_sources": [
+        "Seoul Open Data Plaza",
+        "Korea Meteorological Administration"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "shongbad-chitro-multimodal-bangla-news-image",
     "slug": "shongbad-chitro-multimodal-bangla-news-image",
     "name": "Shongbad Chitro: A Multimodal Bangla News Image-Text Dataset",
@@ -21632,6 +23237,97 @@
       "total": 515,
       "unit": "recordings",
       "status": "verified"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "snli",
+    "slug": "snli",
+    "name": "The Stanford Natural Language Inference (SNLI) Corpus",
+    "description": "The Stanford Natural Language Inference (SNLI) corpus is a collection of 570,152 human-written English sentence pairs manually labeled for balanced classification with the labels entailment, contradiction, and neutral. Created by the Stanford NLP Group, SNLI serves as a foundational benchmark for natural language inference (NLI) and evaluating sentence representations. Premise sentences are derived from Flickr30k image captions, and hypotheses were generated by Amazon Mechanical Turk crowdworkers.",
+    "homepage_url": "https://nlp.stanford.edu/projects/snli/",
+    "publisher": {
+      "name": "Stanford NLP Group",
+      "type": "academic",
+      "url": "https://nlp.stanford.edu"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "natural-language-inference",
+      "text-classification"
+    ],
+    "tags": [
+      "nlp",
+      "natural-language-inference",
+      "nli",
+      "sentence-pairs",
+      "stanford-nlp"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Licensed under CC BY-SA 4.0 as designated by the Stanford NLP Group. Commercial use is permitted with appropriate attribution and share-alike terms."
+    },
+    "source_references": [
+      {
+        "title": "The Stanford Natural Language Inference (SNLI) Project",
+        "url": "https://nlp.stanford.edu/projects/snli/",
+        "type": "official_website",
+        "notes": "Official Stanford project page."
+      },
+      {
+        "title": "A large annotated corpus for learning natural language inference (EMNLP 2015)",
+        "url": "https://doi.org/10.18653/v1/D15-1075",
+        "type": "original_paper",
+        "notes": "Peer-reviewed publication introducing the SNLI corpus."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against Stanford NLP release and EMNLP 2015 paper."
+    },
+    "dates": {
+      "published": "2015-09-17"
+    },
+    "sample_count": {
+      "total": 570152,
+      "splits": {
+        "train": 550152,
+        "validation": 10000,
+        "test": 10000
+      },
+      "unit": "sentence pairs",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "A large annotated corpus for learning natural language inference",
+      "paper_url": "https://doi.org/10.18653/v1/D15-1075",
+      "authors": [
+        "Samuel R. Bowman",
+        "Gabor Angeli",
+        "Christopher Potts",
+        "Christopher D. Manning"
+      ],
+      "doi": "10.18653/v1/D15-1075",
+      "bibtex": "@inproceedings{bowman2015large,\n  title={A large annotated corpus for learning natural language inference},\n  author={Bowman, Samuel R. and Angeli, Gabor and Potts, Christopher and Manning, Christopher D.},\n  booktitle={Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing (EMNLP)},\n  pages={632--642},\n  year={2015},\n  doi={10.18653/v1/D15-1075}\n}"
+    },
+    "provenance": {
+      "collection_method": "Crowdsourced hypothesis generation on Amazon Mechanical Turk based on Flickr30k image caption premises.",
+      "curation_notes": "Quality-controlled with multi-annotator cross-validation on validation and test subsets.",
+      "data_sources": [
+        "Flickr30k",
+        "Amazon Mechanical Turk"
+      ]
     }
   },
   {
@@ -23448,6 +25144,186 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "trec-question-classification",
+    "slug": "trec-question-classification",
+    "name": "TREC Question Classification Dataset",
+    "description": "The TREC Question Classification dataset is an academic benchmark created by Xin Li and Dan Roth (COLING 2002) for classifying open-domain English questions into semantic target types. Built around a two-layered taxonomy comprising 6 coarse classes (Abbreviation, Entity, Description, Human, Location, Numeric Value) and 50 fine-grained subcategories, the dataset contains 5,452 training questions curated from various QA collections and a test set of 500 questions from the TREC 10 Question Answering track (total: 5,952 questions).",
+    "homepage_url": "https://cogcomp.seas.upenn.edu/Data/QA/QC/",
+    "publisher": {
+      "name": "Cognitive Computation Group (UIUC & UPenn)",
+      "type": "academic",
+      "url": "https://cogcomp.seas.upenn.edu"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "text-classification"
+    ],
+    "tags": [
+      "nlp",
+      "question-classification",
+      "trec",
+      "cogcomp",
+      "qa"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Academic Research Use / Fair Use",
+      "commercial_use": "unknown",
+      "url": "https://cogcomp.seas.upenn.edu/Data/QA/QC/",
+      "notes": "Maintained for academic research use by the Cognitive Computation Group. No formal open-source license is provided in the repository; commercial reuse rights are unstated."
+    },
+    "source_references": [
+      {
+        "title": "Experimental Data for Question Classification (CogComp)",
+        "url": "https://cogcomp.seas.upenn.edu/Data/QA/QC/",
+        "type": "official_website",
+        "notes": "Official repository landing page."
+      },
+      {
+        "title": "Learning Question Classifiers (COLING 2002)",
+        "url": "https://doi.org/10.3115/1072228.1072378",
+        "type": "original_paper",
+        "notes": "Peer-reviewed COLING 2002 paper."
+      }
+    ],
+    "verification": {
+      "status": "provisional",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Provisional status: dataset provenance and exact sample counts verified against primary files; formal commercial license unstated."
+    },
+    "dates": {
+      "published": "2002-08-24"
+    },
+    "sample_count": {
+      "total": 5952,
+      "splits": {
+        "train": 5452,
+        "test": 500
+      },
+      "unit": "questions",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "Learning question classifiers",
+      "paper_url": "https://doi.org/10.3115/1072228.1072378",
+      "authors": [
+        "Xin Li",
+        "Dan Roth"
+      ],
+      "doi": "10.3115/1072228.1072378",
+      "bibtex": "@inproceedings{li2002learning,\n  title={Learning question classifiers},\n  author={Li, Xin and Roth, Dan},\n  booktitle={Proceedings of the 19th International Conference on Computational Linguistics (COLING 2002)},\n  pages={556--562},\n  year={2002},\n  doi={10.3115/1072228.1072378}\n}"
+    },
+    "provenance": {
+      "collection_method": "Aggregated from TREC QA tracks and various online question collections.",
+      "curation_notes": "Annotated manually into a 2-tier semantic taxonomy (6 coarse classes, 50 fine classes).",
+      "data_sources": [
+        "TREC QA Track",
+        "UIUC Cognitive Computation Group"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "tweeteval",
+    "slug": "tweeteval",
+    "name": "TweetEval: Multi-Task Tweet Classification Benchmark",
+    "description": "TweetEval is a multi-task benchmark for tweet classification curated by Cardiff NLP (Barbieri et al., Findings of EMNLP 2020). It unifies seven diverse Twitter NLP benchmarks under standardized train, validation, and test splits: Emotion Recognition (SemEval-2018 Task 1), Emoji Prediction (SemEval-2018 Task 2), Irony Detection (SemEval-2018 Task 3), Hate Speech Detection (SemEval-2019 Task 5), Offensive Language Identification (SemEval-2019 Task 6), Sentiment Analysis (SemEval-2017 Task 4), and Stance Detection (SemEval-2016 Task 6 across 5 targets).",
+    "homepage_url": "https://github.com/cardiffnlp/tweeteval",
+    "publisher": {
+      "name": "Cardiff NLP",
+      "type": "academic",
+      "url": "https://cardiffnlp.github.io"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "text-classification",
+      "sentiment-analysis"
+    ],
+    "tags": [
+      "nlp",
+      "twitter",
+      "social-media",
+      "sentiment-analysis",
+      "cardiff-nlp"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Component Academic Licenses / Twitter (X) Developer Terms",
+      "commercial_use": "unknown",
+      "url": "https://github.com/cardiffnlp/tweeteval",
+      "notes": "The GitHub repository does not include a license file. Tweet text originates from multiple SemEval challenge tracks and is subject to Twitter/X Developer Terms and Policies, which restrict redistribution of full tweet text and commercial reuse without permission."
+    },
+    "source_references": [
+      {
+        "title": "TweetEval GitHub Repository",
+        "url": "https://github.com/cardiffnlp/tweeteval",
+        "type": "repository",
+        "notes": "Official code and benchmark distribution."
+      },
+      {
+        "title": "TweetEval Project Page",
+        "url": "https://cardiffnlp.github.io/project/tweeteval/",
+        "type": "official_website",
+        "notes": "Official Cardiff NLP research project page."
+      },
+      {
+        "title": "TweetEval Benchmark Paper (Findings of EMNLP 2020)",
+        "url": "https://doi.org/10.18653/v1/2020.findings-emnlp.148",
+        "type": "original_paper",
+        "notes": "Peer-reviewed paper establishing the benchmark."
+      }
+    ],
+    "verification": {
+      "status": "provisional",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Provisional status: dataset provenance and tasks verified, but repository lacks explicit license file and Twitter terms restrict commercial redistribution."
+    },
+    "dates": {
+      "published": "2020-10-25"
+    },
+    "sample_count": {
+      "unit": "tweets",
+      "status": "estimated"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "TweetEval: Unified Benchmark and Comparative Evaluation for Tweet Classification",
+      "paper_url": "https://doi.org/10.18653/v1/2020.findings-emnlp.148",
+      "authors": [
+        "Francesco Barbieri",
+        "Jose Camacho-Collados",
+        "Luis Espinosa Anke",
+        "Leonardo Neves"
+      ],
+      "doi": "10.18653/v1/2020.findings-emnlp.148",
+      "bibtex": "@inproceedings{barbieri2020tweeteval,\n  title={{TweetEval}: Unified Benchmark and Comparative Evaluation for Tweet Classification},\n  author={Barbieri, Francesco and Camacho-Collados, Jose and Espinosa Anke, Luis and Neves, Leonardo},\n  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2020},\n  pages={1644--1650},\n  year={2020},\n  doi={10.18653/v1/2020.findings-emnlp.148}\n}"
+    },
+    "provenance": {
+      "collection_method": "Aggregation and standardization of 7 prior SemEval Twitter challenge tracks.",
+      "curation_notes": "Unified into fixed train, validation, and test splits with text preprocessed to replace usernames and URLs.",
+      "data_sources": [
+        "Twitter",
+        "SemEval-2016",
+        "SemEval-2017",
+        "SemEval-2018",
+        "SemEval-2019"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "twitch-social-networks",
     "slug": "twitch-social-networks",
     "name": "Twitch Social Networks Dataset",
@@ -24560,6 +26436,204 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "us-climate-normals",
+    "slug": "us-climate-normals",
+    "name": "U.S. Climate Normals (1991–2020)",
+    "description": "The U.S. Climate Normals (1991–2020) is NOAA NCEI's official thirty-year baseline multi-product suite characterizing average climate conditions across approximately 15,000 weather stations in the United States. Produced every decade in accordance with World Meteorological Organization (WMO) standards, the 1991–2020 Normals suite provides separate official datasets for Monthly Normals (DOI: 10.25921/wck8-er13), Annual/Seasonal Normals (DOI: 10.25921/4ek7-fk11), Daily Normals (DOI: 10.25921/d3w1-ef83), Hourly Normals (DOI: 10.25921/e3zh-ag77), and Daily Gridded Normals (DOI: 10.25921/4z0k-n484). Variables include temperature averages, precipitation, snowfall, snow depth, degree days, and percentile thresholds.",
+    "homepage_url": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals",
+    "publisher": {
+      "name": "NOAA National Centers for Environmental Information (NCEI)",
+      "type": "government",
+      "url": "https://www.ncei.noaa.gov"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "regression",
+      "tabular-classification"
+    ],
+    "tags": [
+      "climate",
+      "climate-normals",
+      "baseline",
+      "temperature",
+      "precipitation",
+      "noaa",
+      "ncei"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "U.S. Government Work (17 U.S.C. 105) / Open Data",
+      "commercial_use": "allowed",
+      "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+      "notes": "Official public domain data produced by NOAA NCEI in compliance with WMO 30-year climate normal standards."
+    },
+    "source_references": [
+      {
+        "title": "NOAA NCEI U.S. Climate Normals Product Portal",
+        "url": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals",
+        "type": "official_website",
+        "notes": "Official 1991–2020 climate normals documentation and data suite portal."
+      },
+      {
+        "title": "U.S. Monthly Climate Normals (1991–2020) Dataset (DOI: 10.25921/wck8-er13)",
+        "url": "https://doi.org/10.25921/wck8-er13",
+        "type": "repository",
+        "notes": "Official NOAA NCEI DataCite repository DOI for 1991–2020 monthly normals."
+      },
+      {
+        "title": "U.S. Annual/Seasonal Climate Normals (1991–2020) Dataset (DOI: 10.25921/4ek7-fk11)",
+        "url": "https://doi.org/10.25921/4ek7-fk11",
+        "type": "repository",
+        "notes": "Official NOAA NCEI DataCite repository DOI for 1991–2020 annual and seasonal normals."
+      },
+      {
+        "title": "U.S. Daily Climate Normals (1991–2020) Dataset (DOI: 10.25921/d3w1-ef83)",
+        "url": "https://doi.org/10.25921/d3w1-ef83",
+        "type": "repository",
+        "notes": "Official NOAA NCEI DataCite repository DOI for 1991–2020 daily normals."
+      },
+      {
+        "title": "U.S. Hourly Climate Normals (1991–2020) Dataset (DOI: 10.25921/e3zh-ag77)",
+        "url": "https://doi.org/10.25921/e3zh-ag77",
+        "type": "repository",
+        "notes": "Official NOAA NCEI DataCite repository DOI for 1991–2020 hourly normals."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against NOAA NCEI product portal and official 1991–2020 suite DOIs (10.25921/wck8-er13 for Monthly, 10.25921/4ek7-fk11 for Annual/Seasonal). The erroneously assigned 1981–2010 White Christmas paper was removed."
+    },
+    "dates": {
+      "published": "2021-05-04"
+    },
+    "sample_count": {
+      "total": 15000,
+      "unit": "weather stations",
+      "status": "estimated"
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "citation": {
+      "paper_title": "U.S. Climate Normals 2020: U.S. Monthly Climate Normals (1991-2020)",
+      "paper_url": "https://doi.org/10.25921/wck8-er13",
+      "authors": [
+        "Michael A. Palecki",
+        "Imke Durre",
+        "Scott Applequist",
+        "Anthony H. Arguez",
+        "Jay H. Lawrimore"
+      ],
+      "doi": "10.25921/wck8-er13",
+      "bibtex": "@misc{palecki2021monthlynormals,\n  title={{U.S. Climate Normals 2020: U.S. Monthly Climate Normals (1991-2020)}},\n  author={Palecki, Michael and Durre, Imke and Applequist, Scott and Arguez, Anthony and Lawrimore, Jay},\n  year={2021},\n  publisher={NOAA National Centers for Environmental Information},\n  doi={10.25921/wck8-er13},\n  howpublished={\\url{https://doi.org/10.25921/wck8-er13}}\n}"
+    },
+    "provenance": {
+      "collection_method": "30-year mathematical normal calculations across the 1991–2020 baseline period from GHCN-Daily stations adhering to WMO guidelines.",
+      "curation_notes": "Multi-product suite comprising distinct official datasets for monthly (DOI: 10.25921/wck8-er13), annual/seasonal (DOI: 10.25921/4ek7-fk11), daily (DOI: 10.25921/d3w1-ef83), and hourly (DOI: 10.25921/e3zh-ag77) normals.",
+      "data_sources": [
+        "GHCN-Daily",
+        "NOAA NCEI"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "uscrn",
+    "slug": "uscrn",
+    "name": "U.S. Climate Reference Network (USCRN)",
+    "description": "The U.S. Climate Reference Network (USCRN) is a precision climate monitoring network of 114 stations across the contiguous United States (plus supplemental stations in Alaska and Hawaii) designed by NOAA NCEI to monitor national climate trends with pristine accuracy. Stations are sited in open, rural environments away from artificial heat islands and equipped with triple-redundant sensors measuring air temperature, precipitation, solar radiation, surface temperature, wind speed, relative humidity, and soil moisture/temperature at multiple depths.",
+    "homepage_url": "https://www.ncei.noaa.gov/access/crn/products.html",
+    "publisher": {
+      "name": "NOAA National Centers for Environmental Information (NCEI)",
+      "type": "government",
+      "url": "https://www.ncei.noaa.gov"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "time-series-forecasting",
+      "regression",
+      "anomaly-detection"
+    ],
+    "tags": [
+      "climate",
+      "weather",
+      "uscrn",
+      "soil-moisture",
+      "precision-sensors",
+      "noaa",
+      "ncei"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "U.S. Government Work (17 U.S.C. 105) / Open Data",
+      "commercial_use": "allowed",
+      "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+      "notes": "US Government work in the public domain; freely usable for commercial and non-commercial purposes without restriction."
+    },
+    "source_references": [
+      {
+        "title": "NOAA NCEI USCRN Products Portal",
+        "url": "https://www.ncei.noaa.gov/access/crn/products.html",
+        "type": "official_website",
+        "notes": "Official product information, sub-hourly, hourly, daily, and monthly datasets."
+      },
+      {
+        "title": "The U.S. Climate Reference Network (BAMS 2013)",
+        "url": "https://doi.org/10.1175/BAMS-D-12-00170.1",
+        "type": "original_paper",
+        "notes": "Peer-reviewed Bulletin of the AMS publication detailing the design and instrumentation of USCRN."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against NOAA NCEI USCRN portal and BAMS 2013 publication."
+    },
+    "dates": {
+      "published": "2004-01-01",
+      "last_updated": "2026-11-04"
+    },
+    "sample_count": {
+      "total": 114,
+      "unit": "CONUS reference stations",
+      "status": "estimated"
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "citation": {
+      "paper_title": "U.S. Climate Reference Network after One Decade of Operations: Status and Assessment",
+      "paper_url": "https://doi.org/10.1175/BAMS-D-12-00170.1",
+      "authors": [
+        "Howard J. Diamond",
+        "Thomas R. Karl",
+        "Michael A. Palecki",
+        "C. Bruce Baker",
+        "William G. Collins"
+      ],
+      "doi": "10.1175/BAMS-D-12-00170.1",
+      "bibtex": "@article{diamond2013uscrn,\n  title={U.S. Climate Reference Network after One Decade of Operations: Status and Assessment},\n  author={Diamond, Howard J. and Karl, Thomas R. and Palecki, Michael A. and Baker, C. Bruce and Collins, William G. and others},\n  journal={Bulletin of the American Meteorological Society},\n  volume={94},\n  number={4},\n  pages={485--498},\n  year={2013},\n  doi={10.1175/BAMS-D-12-00170.1}\n}"
+    },
+    "provenance": {
+      "collection_method": "Automated triple-redundant sensor measurements transmitted via GOES satellite every hour.",
+      "curation_notes": "Triple sensor voting algorithms ensure continuous automated sensor cross-checks and failure detection.",
+      "data_sources": [
+        "NOAA NCEI",
+        "Atmospheric Turbulence and Diffusion Division (ATDD)"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "uzser-mfcc",
     "slug": "uzser-mfcc",
     "name": "UzSER-MFCC",
@@ -25435,6 +27509,100 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "wikitext-103",
+    "slug": "wikitext-103",
+    "name": "WikiText-103: Language Modeling Dataset",
+    "description": "WikiText-103 is a curated collection of over 100 million tokens extracted from the set of verified Good and Featured articles on English Wikipedia. Developed by Salesforce Research (Merity et al., 2017), WikiText-103 is over 110 times larger than the Penn Treebank (PTB) language modeling benchmark while retaining original casing, punctuation, and full numbers. It is partitioned into 1,801,350 training lines, 3,760 validation lines, and 4,358 test lines, designed for long-term dependency language modeling.",
+    "homepage_url": "https://blog.salesforceairesearch.com/the-wikitext-long-term-dependency-language-modeling-dataset/",
+    "publisher": {
+      "name": "Salesforce Research",
+      "type": "industry",
+      "url": "https://www.salesforceairesearch.com"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "language-modeling"
+    ],
+    "tags": [
+      "nlp",
+      "language-modeling",
+      "wikipedia",
+      "salesforce-research",
+      "text-generation"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)",
+      "spdx_id": "CC-BY-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/legalcode",
+      "commercial_use": "allowed",
+      "notes": "Wikipedia text is provided under Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) and GFDL. Commercial training and adaptation are permitted under CC BY-SA 3.0 terms with attribution."
+    },
+    "source_references": [
+      {
+        "title": "Salesforce Research WikiText Project Page",
+        "url": "https://blog.salesforceairesearch.com/the-wikitext-long-term-dependency-language-modeling-dataset/",
+        "type": "official_website",
+        "notes": "Official Salesforce Research blog announcement and release notes."
+      },
+      {
+        "title": "Pointer Sentinel Mixture Models (ICLR 2017)",
+        "url": "https://arxiv.org/abs/1609.07843",
+        "type": "original_paper",
+        "notes": "Research paper introducing the WikiText-2 and WikiText-103 benchmarks."
+      },
+      {
+        "title": "Hugging Face Salesforce/wikitext Dataset Repository",
+        "url": "https://huggingface.co/datasets/Salesforce/wikitext",
+        "type": "repository",
+        "notes": "Authoritative Salesforce Research Hugging Face distribution."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Verified against Salesforce Research official release and ICLR 2017 paper."
+    },
+    "dates": {
+      "published": "2016-09-21"
+    },
+    "sample_count": {
+      "total": 1809468,
+      "splits": {
+        "train": 1801350,
+        "validation": 3760,
+        "test": 4358
+      },
+      "unit": "lines",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "Pointer Sentinel Mixture Models",
+      "paper_url": "https://arxiv.org/abs/1609.07843",
+      "authors": [
+        "Stephen Merity",
+        "Caiming Xiong",
+        "James Bradbury",
+        "Richard Socher"
+      ],
+      "bibtex": "@inproceedings{merity2017pointer,\n  title={Pointer Sentinel Mixture Models},\n  author={Merity, Stephen and Xiong, Caiming and Bradbury, James and Socher, Richard},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2017}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted from English Wikipedia Good and Featured articles.",
+      "curation_notes": "Retains complete sub-sections, punctuation, and casing; removes boilerplate and metadata tables.",
+      "data_sources": [
+        "English Wikipedia"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "wine-quality",
     "slug": "wine-quality",
     "name": "Wine Quality Dataset",
@@ -25617,6 +27785,95 @@
       ],
       "doi": "10.18653/v1/2020.emnlp-main.185",
       "bibtex": "@inproceedings{ponti-etal-2020-xcopa,\n  title = {XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning},\n  author = {Ponti, Edoardo M. and Glava{\\v{s}}, Goran and Majewska, Olga and Liu, Qianchu and Vuli{\\'c}, Ivan and Korhonen, Anna},\n  booktitle = {Proceedings of EMNLP 2020},\n  pages = {2362--2376},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "xsum",
+    "slug": "xsum",
+    "name": "XSum: Extreme Summarization Dataset",
+    "description": "XSum (Extreme Summarization) is an abstractive document summarization benchmark curated by the University of Edinburgh NLP Group (Narayan et al., EMNLP 2018). The dataset consists of 226,711 BBC news articles spanning 2010 to 2017 paired with their professional one-sentence summary (the introductory bold sentence). The task requires answering 'What is the article about?' in a single concise sentence. Formally partitioned into 204,045 training (90%), 11,332 validation (5%), and 11,334 test (5%) article-summary pairs.",
+    "homepage_url": "https://github.com/EdinburghNLP/XSum",
+    "publisher": {
+      "name": "University of Edinburgh NLP Group",
+      "type": "academic",
+      "url": "https://github.com/EdinburghNLP"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "summarization",
+      "abstractive-summarization"
+    ],
+    "tags": [
+      "nlp",
+      "summarization",
+      "abstractive-summarization",
+      "bbc-news",
+      "edinburgh-nlp"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "MIT (Code) / Proprietary Third-Party BBC News Content",
+      "commercial_use": "unknown",
+      "url": "https://github.com/EdinburghNLP/XSum/blob/master/LICENSE",
+      "notes": "The repository source code and scraping scripts are licensed under MIT. However, the article texts and summaries originate from BBC News and are copyrighted by the British Broadcasting Corporation. Commercial redistribution and model training rights for BBC text are unstated."
+    },
+    "source_references": [
+      {
+        "title": "Edinburgh NLP XSum GitHub Repository",
+        "url": "https://github.com/EdinburghNLP/XSum",
+        "type": "repository",
+        "notes": "Official repository and processing scripts."
+      },
+      {
+        "title": "Don't Give Me the Details, Just the Summary! (EMNLP 2018)",
+        "url": "https://doi.org/10.18653/v1/D18-1206",
+        "type": "original_paper",
+        "notes": "Peer-reviewed EMNLP 2018 publication."
+      }
+    ],
+    "verification": {
+      "status": "provisional",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-05",
+      "notes": "Provisional status: dataset provenance and splits verified; underlying BBC article text retains proprietary copyright."
+    },
+    "dates": {
+      "published": "2018-08-20"
+    },
+    "sample_count": {
+      "total": 226711,
+      "splits": {
+        "train": 204045,
+        "validation": 11332,
+        "test": 11334
+      },
+      "unit": "article-summary pairs",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "Don't Give Me the Details, Just the Summary! Topic-Aware Convolutional Neural Networks for Extreme Summarization",
+      "paper_url": "https://doi.org/10.18653/v1/D18-1206",
+      "authors": [
+        "Shashi Narayan",
+        "Shay B. Cohen",
+        "Mirella Lapata"
+      ],
+      "doi": "10.18653/v1/D18-1206",
+      "bibtex": "@inproceedings{narayan2018dont,\n  title={Don't Give Me the Details, Just the Summary! Topic-Aware Convolutional Neural Networks for Extreme Summarization},\n  author={Narayan, Shashi and Cohen, Shay B. and Lapata, Mirella},\n  booktitle={Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP)},\n  pages={1797--1807},\n  year={2018},\n  doi={10.18653/v1/D18-1206}\n}"
+    },
+    "provenance": {
+      "collection_method": "Archived scraping of BBC articles from the Wayback Machine covering 2010 to 2017.",
+      "curation_notes": "First sentence of each BBC article is used as the target summary; remaining paragraphs form the document text.",
+      "data_sources": [
+        "BBC News",
+        "Internet Archive Wayback Machine"
+      ]
     }
   },
   {

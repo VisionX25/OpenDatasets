@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uscrn",
+  "slug": "uscrn",
+  "name": "U.S. Climate Reference Network (USCRN)",
+  "description": "The U.S. Climate Reference Network (USCRN) is a precision climate monitoring network of 114 stations across the contiguous United States (plus supplemental stations in Alaska and Hawaii) designed by NOAA NCEI to monitor national climate trends with pristine accuracy. Stations are sited in open, rural environments away from artificial heat islands and equipped with triple-redundant sensors measuring air temperature, precipitation, solar radiation, surface temperature, wind speed, relative humidity, and soil moisture/temperature at multiple depths.",
+  "homepage_url": "https://www.ncei.noaa.gov/access/crn/products.html",
+  "publisher": {
+    "name": "NOAA National Centers for Environmental Information (NCEI)",
+    "type": "government",
+    "url": "https://www.ncei.noaa.gov"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "regression",
+    "anomaly-detection"
+  ],
+  "tags": [
+    "climate",
+    "weather",
+    "uscrn",
+    "soil-moisture",
+    "precision-sensors",
+    "noaa",
+    "ncei"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "U.S. Government Work (17 U.S.C. 105) / Open Data",
+    "commercial_use": "allowed",
+    "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+    "notes": "US Government work in the public domain; freely usable for commercial and non-commercial purposes without restriction."
+  },
+  "source_references": [
+    {
+      "title": "NOAA NCEI USCRN Products Portal",
+      "url": "https://www.ncei.noaa.gov/access/crn/products.html",
+      "type": "official_website",
+      "notes": "Official product information, sub-hourly, hourly, daily, and monthly datasets."
+    },
+    {
+      "title": "The U.S. Climate Reference Network (BAMS 2013)",
+      "url": "https://doi.org/10.1175/BAMS-D-12-00170.1",
+      "type": "original_paper",
+      "notes": "Peer-reviewed Bulletin of the AMS publication detailing the design and instrumentation of USCRN."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against NOAA NCEI USCRN portal and BAMS 2013 publication."
+  },
+  "dates": {
+    "published": "2004-01-01",
+    "last_updated": "2026-11-04"
+  },
+  "sample_count": {
+    "total": 114,
+    "unit": "CONUS reference stations",
+    "status": "estimated"
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "citation": {
+    "paper_title": "U.S. Climate Reference Network after One Decade of Operations: Status and Assessment",
+    "paper_url": "https://doi.org/10.1175/BAMS-D-12-00170.1",
+    "authors": [
+      "Howard J. Diamond",
+      "Thomas R. Karl",
+      "Michael A. Palecki",
+      "C. Bruce Baker",
+      "William G. Collins"
+    ],
+    "doi": "10.1175/BAMS-D-12-00170.1",
+    "bibtex": "@article{diamond2013uscrn,\n  title={U.S. Climate Reference Network after One Decade of Operations: Status and Assessment},\n  author={Diamond, Howard J. and Karl, Thomas R. and Palecki, Michael A. and Baker, C. Bruce and Collins, William G. and others},\n  journal={Bulletin of the American Meteorological Society},\n  volume={94},\n  number={4},\n  pages={485--498},\n  year={2013},\n  doi={10.1175/BAMS-D-12-00170.1}\n}"
+  },
+  "provenance": {
+    "collection_method": "Automated triple-redundant sensor measurements transmitted via GOES satellite every hour.",
+    "curation_notes": "Triple sensor voting algorithms ensure continuous automated sensor cross-checks and failure detection.",
+    "data_sources": [
+      "NOAA NCEI",
+      "Atmospheric Turbulence and Diffusion Division (ATDD)"
+    ]
+  }
+}

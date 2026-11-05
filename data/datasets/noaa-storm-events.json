@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "noaa-storm-events",
+  "slug": "noaa-storm-events",
+  "name": "NOAA Storm Events Database",
+  "description": "The NOAA Storm Events Database is the official United States record of severe and unusual weather occurrences, compiled by the National Weather Service (NWS) and archived by NOAA NCEI. Covering 1950 to the present, the database documents phenomena that cause loss of life, injuries, property and crop damage, or disruption to commerce, including tornadoes, hurricanes, flash floods, hail, thunderstorm winds, winter storms, extreme heat, and wildfires. Each event record includes event type, episode narratives, start/end timestamps, geographic coordinates, damage cost estimates, and casualty counts across all 50 states and territories.",
+  "homepage_url": "https://www.ncei.noaa.gov/access/storm-events-database/",
+  "publisher": {
+    "name": "NOAA National Centers for Environmental Information (NCEI)",
+    "type": "government",
+    "url": "https://www.ncei.noaa.gov"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "regression",
+    "risk-assessment"
+  ],
+  "tags": [
+    "weather",
+    "severe-weather",
+    "storm-events",
+    "tornado",
+    "hurricane",
+    "flood",
+    "noaa",
+    "ncei"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "U.S. Government Work (17 U.S.C. 105) / Open Data",
+    "commercial_use": "allowed",
+    "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+    "notes": "Official public domain data compiled by the National Weather Service and NOAA NCEI."
+  },
+  "source_references": [
+    {
+      "title": "NOAA NCEI Storm Events Database Portal",
+      "url": "https://www.ncei.noaa.gov/access/storm-events-database/",
+      "type": "official_website",
+      "notes": "Official search and query interface."
+    },
+    {
+      "title": "NOAA Storm Events Bulk CSV Archive",
+      "url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/",
+      "type": "repository",
+      "notes": "Bulk downloadable CSV files split by year (details, fatalities, locations)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against NOAA NCEI Storm Events portal and NWS Directive 10-1605."
+  },
+  "dates": {
+    "published": "1993-01-01",
+    "last_updated": "2026-11-04"
+  },
+  "sample_count": {
+    "unit": "recorded severe weather events",
+    "status": "estimated"
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "provenance": {
+    "collection_method": "Compiled monthly by 122 National Weather Service Weather Forecast Offices from trained storm spotters, law enforcement, and emergency management.",
+    "curation_notes": "Archived in three relational CSV tables: event details, fatalities, and locations.",
+    "data_sources": [
+      "National Weather Service",
+      "NOAA NCEI"
+    ]
+  }
+}

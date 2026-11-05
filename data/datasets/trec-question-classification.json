@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "id": "trec-question-classification",
+  "slug": "trec-question-classification",
+  "name": "TREC Question Classification Dataset",
+  "description": "The TREC Question Classification dataset is an academic benchmark created by Xin Li and Dan Roth (COLING 2002) for classifying open-domain English questions into semantic target types. Built around a two-layered taxonomy comprising 6 coarse classes (Abbreviation, Entity, Description, Human, Location, Numeric Value) and 50 fine-grained subcategories, the dataset contains 5,452 training questions curated from various QA collections and a test set of 500 questions from the TREC 10 Question Answering track (total: 5,952 questions).",
+  "homepage_url": "https://cogcomp.seas.upenn.edu/Data/QA/QC/",
+  "publisher": {
+    "name": "Cognitive Computation Group (UIUC & UPenn)",
+    "type": "academic",
+    "url": "https://cogcomp.seas.upenn.edu"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "text-classification"
+  ],
+  "tags": [
+    "nlp",
+    "question-classification",
+    "trec",
+    "cogcomp",
+    "qa"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Academic Research Use / Fair Use",
+    "commercial_use": "unknown",
+    "url": "https://cogcomp.seas.upenn.edu/Data/QA/QC/",
+    "notes": "Maintained for academic research use by the Cognitive Computation Group. No formal open-source license is provided in the repository; commercial reuse rights are unstated."
+  },
+  "source_references": [
+    {
+      "title": "Experimental Data for Question Classification (CogComp)",
+      "url": "https://cogcomp.seas.upenn.edu/Data/QA/QC/",
+      "type": "official_website",
+      "notes": "Official repository landing page."
+    },
+    {
+      "title": "Learning Question Classifiers (COLING 2002)",
+      "url": "https://doi.org/10.3115/1072228.1072378",
+      "type": "original_paper",
+      "notes": "Peer-reviewed COLING 2002 paper."
+    }
+  ],
+  "verification": {
+    "status": "provisional",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Provisional status: dataset provenance and exact sample counts verified against primary files; formal commercial license unstated."
+  },
+  "dates": {
+    "published": "2002-08-24"
+  },
+  "sample_count": {
+    "total": 5952,
+    "splits": {
+      "train": 5452,
+      "test": 500
+    },
+    "unit": "questions",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "citation": {
+    "paper_title": "Learning question classifiers",
+    "paper_url": "https://doi.org/10.3115/1072228.1072378",
+    "authors": [
+      "Xin Li",
+      "Dan Roth"
+    ],
+    "doi": "10.3115/1072228.1072378",
+    "bibtex": "@inproceedings{li2002learning,\n  title={Learning question classifiers},\n  author={Li, Xin and Roth, Dan},\n  booktitle={Proceedings of the 19th International Conference on Computational Linguistics (COLING 2002)},\n  pages={556--562},\n  year={2002},\n  doi={10.3115/1072228.1072378}\n}"
+  },
+  "provenance": {
+    "collection_method": "Aggregated from TREC QA tracks and various online question collections.",
+    "curation_notes": "Annotated manually into a 2-tier semantic taxonomy (6 coarse classes, 50 fine classes).",
+    "data_sources": [
+      "TREC QA Track",
+      "UIUC Cognitive Computation Group"
+    ]
+  }
+}

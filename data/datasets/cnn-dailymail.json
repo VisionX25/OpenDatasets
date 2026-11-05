@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cnn-dailymail",
+  "slug": "cnn-dailymail",
+  "name": "CNN/DailyMail: Non-Anonymized Multi-Sentence Summarization Benchmark",
+  "description": "CNN/DailyMail is a foundational abstractive and extractive document summarization benchmark originally constructed by Hermann et al. (NeurIPS 2015) and modified into its standard non-anonymized form by Abigail See et al. (ACL 2017). The dataset pairs full-length news stories from CNN and the Daily Mail with bulleted highlight summaries written by the story authors. In its standard version 3.0.0 split, the benchmark contains 287,113 training pairs, 13,368 validation pairs, and 11,490 test pairs (total: 311,971 documents).",
+  "homepage_url": "https://github.com/abisee/cnn-dailymail",
+  "publisher": {
+    "name": "Stanford University & DeepMind",
+    "type": "academic",
+    "url": "https://nlp.stanford.edu"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "summarization",
+    "document-summarization"
+  ],
+  "tags": [
+    "nlp",
+    "summarization",
+    "news",
+    "cnn",
+    "dailymail",
+    "benchmark"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Apache 2.0 / MIT (Scripts) / Proprietary Third-Party News Content (CNN & Daily Mail)",
+    "commercial_use": "unknown",
+    "url": "https://github.com/abisee/cnn-dailymail",
+    "notes": "Preprocessing code is open-source (Apache-2.0 on Hugging Face / MIT in forks), but underlying article text is copyrighted by CNN and Daily Mail. The authors do not host or grant commercial redistribution rights to the raw article texts."
+  },
+  "source_references": [
+    {
+      "title": "CNN/DailyMail Preprocessing Repository (Abigail See)",
+      "url": "https://github.com/abisee/cnn-dailymail",
+      "type": "repository",
+      "notes": "Official repository for non-anonymized CNN/DailyMail data processing."
+    },
+    {
+      "title": "Get To The Point: Summarization with Pointer-Generator Networks (ACL 2017)",
+      "url": "https://doi.org/10.18653/v1/P17-1099",
+      "type": "original_paper",
+      "notes": "Peer-reviewed ACL 2017 publication establishing the standard non-anonymized benchmark."
+    },
+    {
+      "title": "Hugging Face CNN/DailyMail Dataset Card",
+      "url": "https://huggingface.co/datasets/abisee/cnn_dailymail",
+      "type": "dataset_card",
+      "notes": "Secondary distribution and schema card."
+    }
+  ],
+  "verification": {
+    "status": "provisional",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Provisional status: dataset benchmark provenance verified against ACL 2017 publication; commercial rights to underlying news articles remain proprietary to CNN and Daily Mail."
+  },
+  "dates": {
+    "published": "2017-04-12"
+  },
+  "sample_count": {
+    "total": 311971,
+    "splits": {
+      "train": 287113,
+      "validation": 13368,
+      "test": 11490
+    },
+    "unit": "article-summary pairs",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "citation": {
+    "paper_title": "Get To The Point: Summarization with Pointer-Generator Networks",
+    "paper_url": "https://doi.org/10.18653/v1/P17-1099",
+    "authors": [
+      "Abigail See",
+      "Peter J. Liu",
+      "Christopher D. Manning"
+    ],
+    "doi": "10.18653/v1/P17-1099",
+    "bibtex": "@inproceedings{see2017get,\n  title={Get To The Point: Summarization with Pointer-Generator Networks},\n  author={See, Abigail and Liu, Peter J. and Manning, Christopher D.},\n  booktitle={Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (ACL)},\n  pages={1073--1083},\n  year={2017},\n  doi={10.18653/v1/P17-1099}\n}"
+  },
+  "provenance": {
+    "collection_method": "Extracted from CNN and Daily Mail websites by Hermann et al. (2015) and processed into non-anonymized form by See et al. (2017).",
+    "curation_notes": "Main text forms document input; author-written bulleted highlights serve as reference summary.",
+    "data_sources": [
+      "CNN",
+      "Daily Mail"
+    ]
+  }
+}

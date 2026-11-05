@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "metro-interstate-traffic-volume",
+  "slug": "metro-interstate-traffic-volume",
+  "name": "Metro Interstate Traffic Volume Dataset",
+  "description": "The Metro Interstate Traffic Volume dataset contains 48,204 hourly observations of westbound interstate traffic volume on I-94 between Minneapolis and St. Paul, Minnesota, paired with weather conditions and holiday indicators from 2012 to 2018. Donated by John Hogue to the UCI Machine Learning Repository (DOI: 10.24432/C5X60B), the dataset features 8 predictive attributes: holiday name, ambient temperature, rain accumulation, snow accumulation, cloud coverage, weather description, weather primary category, and date-time to evaluate the impact of adverse weather and holidays on arterial traffic flow.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/492/metro+interstate+traffic+volume",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "regression",
+    "time-series-forecasting"
+  ],
+  "tags": [
+    "traffic",
+    "transportation",
+    "tabular",
+    "time-series",
+    "weather-features",
+    "uci-ml-repository"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Licensed under CC BY 4.0 in the official UCI Machine Learning Repository record."
+  },
+  "source_references": [
+    {
+      "title": "Metro Interstate Traffic Volume on UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/dataset/492/metro+interstate+traffic+volume",
+      "type": "official_website",
+      "notes": "Official UCI record (DOI: 10.24432/C5X60B)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against UCI Machine Learning Repository record and DataCite DOI 10.24432/C5X60B."
+  },
+  "dates": {
+    "published": "2019-04-05"
+  },
+  "sample_count": {
+    "total": 48204,
+    "unit": "hourly traffic records",
+    "status": "verified"
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "citation": {
+    "paper_title": "Metro Interstate Traffic Volume",
+    "paper_url": "https://doi.org/10.24432/C5X60B",
+    "authors": [
+      "John Hogue"
+    ],
+    "doi": "10.24432/C5X60B",
+    "bibtex": "@misc{metro_interstate_traffic_volume_492,\n  author = {Hogue, John},\n  title = {{Metro Interstate Traffic Volume}},\n  year = {2019},\n  howpublished = {UCI Machine Learning Repository},\n  note = {{DOI}: https://doi.org/10.24432/C5X60B}\n}"
+  },
+  "provenance": {
+    "collection_method": "Automated loop detectors operated by the Minnesota Department of Transportation (MnDOT) matched with automated surface weather observations from Minneapolis-St Paul International Airport (KMSP).",
+    "curation_notes": "A transportation traffic dataset with weather features, not a pure weather observation dataset.",
+    "data_sources": [
+      "Minnesota Department of Transportation",
+      "National Weather Service KMSP"
+    ]
+  }
+}

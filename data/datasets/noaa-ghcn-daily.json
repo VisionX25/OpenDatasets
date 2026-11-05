@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "noaa-ghcn-daily",
+  "slug": "noaa-ghcn-daily",
+  "name": "Global Historical Climatology Network daily (GHCNd)",
+  "description": "The Global Historical Climatology Network daily (GHCNd) is an authoritative database of daily climate records from over 100,000 land surface weather stations across 180 countries and territories, maintained by NOAA's National Centers for Environmental Information (NCEI). GHCN-Daily provides daily observations of precipitation, maximum and minimum temperature, snowfall, and snow depth, with some records extending back to the 19th century. Data are subjected to rigorous automated quality control algorithms (Menne et al., 2012) and updated daily.",
+  "homepage_url": "https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily",
+  "publisher": {
+    "name": "NOAA National Centers for Environmental Information (NCEI)",
+    "type": "government",
+    "url": "https://www.ncei.noaa.gov"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "regression"
+  ],
+  "tags": [
+    "climate",
+    "weather",
+    "temperature",
+    "precipitation",
+    "noaa",
+    "ncei",
+    "time-series"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "U.S. Government Work (17 U.S.C. 105) / Public Domain",
+    "commercial_use": "allowed",
+    "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+    "notes": "NOAA publishes GHCN-Daily under a U.S. Government Work public domain designation without copyright asserted by NOAA. However, because GHCN-Daily incorporates daily station feeds from national meteorological agencies worldwide via WMO data exchange, downstream commercial redistributors must verify whether source countries retain domestic rights. Users should not assume blanket worldwide commercial rights for third-party observations."
+  },
+  "source_references": [
+    {
+      "title": "NOAA NCEI GHCN-Daily Product Portal",
+      "url": "https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily",
+      "type": "official_website",
+      "notes": "Official product information and data access landing page."
+    },
+    {
+      "title": "An Overview of the Global Historical Climatology Network-Daily Database (JTECH 2012)",
+      "url": "https://doi.org/10.1175/JTECH-D-11-00103.1",
+      "type": "original_paper",
+      "notes": "Peer-reviewed paper describing dataset structure and automated quality assurance."
+    },
+    {
+      "title": "NOAA NCEI Dataset Archive (DOI: 10.7289/V5D21VHZ)",
+      "url": "https://doi.org/10.7289/V5D21VHZ",
+      "type": "repository",
+      "notes": "DataCite archive identifier for GHCN-Daily (Version 3, published 2012)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against NOAA NCEI product portal, DataCite DOI 10.7289/V5D21VHZ, and JTECH publication."
+  },
+  "dates": {
+    "published": "2012-07-01",
+    "last_updated": "2026-11-04"
+  },
+  "sample_count": {
+    "unit": "land surface stations",
+    "status": "estimated",
+    "total": 100000
+  },
+  "geographic_coverage": [
+    "Global"
+  ],
+  "citation": {
+    "paper_title": "An Overview of the Global Historical Climatology Network-Daily Database",
+    "paper_url": "https://doi.org/10.1175/JTECH-D-11-00103.1",
+    "authors": [
+      "Matthew J. Menne",
+      "Imke Durre",
+      "Russell S. Vose",
+      "Brynn E. Gleason",
+      "Tamara G. Houston"
+    ],
+    "doi": "10.1175/JTECH-D-11-00103.1",
+    "bibtex": "@article{menne2012overview,\n  title={An Overview of the Global Historical Climatology Network-Daily Database},\n  author={Menne, Matthew J. and Durre, Imke and Vose, Russell S. and Gleason, Brynn E. and Houston, Tamara G.},\n  journal={Journal of Atmospheric and Oceanic Technology},\n  volume={29},\n  number={7},\n  pages={897--910},\n  year={2012},\n  doi={10.1175/JTECH-D-11-00103.1}\n}"
+  },
+  "provenance": {
+    "collection_method": "Automated aggregation of daily land meteorological observations from international meteorological agencies and US cooperative observer networks.",
+    "curation_notes": "Rigorous multi-stage automated quality control detecting outliers, climatological bounds, and temporal inconsistencies.",
+    "data_sources": [
+      "NOAA NCEI",
+      "WMO Member Meteorological Services"
+    ]
+  }
+}

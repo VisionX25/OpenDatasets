@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wikitext-103",
+  "slug": "wikitext-103",
+  "name": "WikiText-103: Language Modeling Dataset",
+  "description": "WikiText-103 is a curated collection of over 100 million tokens extracted from the set of verified Good and Featured articles on English Wikipedia. Developed by Salesforce Research (Merity et al., 2017), WikiText-103 is over 110 times larger than the Penn Treebank (PTB) language modeling benchmark while retaining original casing, punctuation, and full numbers. It is partitioned into 1,801,350 training lines, 3,760 validation lines, and 4,358 test lines, designed for long-term dependency language modeling.",
+  "homepage_url": "https://blog.salesforceairesearch.com/the-wikitext-long-term-dependency-language-modeling-dataset/",
+  "publisher": {
+    "name": "Salesforce Research",
+    "type": "industry",
+    "url": "https://www.salesforceairesearch.com"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "language-modeling"
+  ],
+  "tags": [
+    "nlp",
+    "language-modeling",
+    "wikipedia",
+    "salesforce-research",
+    "text-generation"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)",
+    "spdx_id": "CC-BY-SA-3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Wikipedia text is provided under Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) and GFDL. Commercial training and adaptation are permitted under CC BY-SA 3.0 terms with attribution."
+  },
+  "source_references": [
+    {
+      "title": "Salesforce Research WikiText Project Page",
+      "url": "https://blog.salesforceairesearch.com/the-wikitext-long-term-dependency-language-modeling-dataset/",
+      "type": "official_website",
+      "notes": "Official Salesforce Research blog announcement and release notes."
+    },
+    {
+      "title": "Pointer Sentinel Mixture Models (ICLR 2017)",
+      "url": "https://arxiv.org/abs/1609.07843",
+      "type": "original_paper",
+      "notes": "Research paper introducing the WikiText-2 and WikiText-103 benchmarks."
+    },
+    {
+      "title": "Hugging Face Salesforce/wikitext Dataset Repository",
+      "url": "https://huggingface.co/datasets/Salesforce/wikitext",
+      "type": "repository",
+      "notes": "Authoritative Salesforce Research Hugging Face distribution."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against Salesforce Research official release and ICLR 2017 paper."
+  },
+  "dates": {
+    "published": "2016-09-21"
+  },
+  "sample_count": {
+    "total": 1809468,
+    "splits": {
+      "train": 1801350,
+      "validation": 3760,
+      "test": 4358
+    },
+    "unit": "lines",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "citation": {
+    "paper_title": "Pointer Sentinel Mixture Models",
+    "paper_url": "https://arxiv.org/abs/1609.07843",
+    "authors": [
+      "Stephen Merity",
+      "Caiming Xiong",
+      "James Bradbury",
+      "Richard Socher"
+    ],
+    "bibtex": "@inproceedings{merity2017pointer,\n  title={Pointer Sentinel Mixture Models},\n  author={Merity, Stephen and Xiong, Caiming and Bradbury, James and Socher, Richard},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2017}\n}"
+  },
+  "provenance": {
+    "collection_method": "Extracted from English Wikipedia Good and Featured articles.",
+    "curation_notes": "Retains complete sub-sections, punctuation, and casing; removes boilerplate and metadata tables.",
+    "data_sources": [
+      "English Wikipedia"
+    ]
+  }
+}

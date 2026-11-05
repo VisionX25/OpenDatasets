@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "id": "beijing-multi-site-air-quality",
+  "slug": "beijing-multi-site-air-quality",
+  "name": "Beijing Multi-Site Air Quality Dataset",
+  "description": "The Beijing Multi-Site Air Quality dataset contains hourly observations of 6 primary air pollutants (PM2.5, PM10, SO2, NO2, CO, O3) and 6 associated meteorological variables (temperature, atmospheric pressure, dew point temperature, precipitation, wind direction, wind speed) recorded across 12 nationally-controlled air quality monitoring sites in Beijing from March 1, 2013 to February 28, 2017. Donated by Song Chen (Peking University) to the UCI Machine Learning Repository (DOI: 10.24432/C5RK5G), it contains 420,768 instances (35,064 records per site).",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality",
+  "publisher": {
+    "name": "UCI Machine Learning Repository & Peking University",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "regression",
+    "time-series-forecasting"
+  ],
+  "tags": [
+    "air-quality",
+    "tabular",
+    "time-series",
+    "beijing",
+    "meteorology",
+    "uci-ml-repository"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Licensed under CC BY 4.0 as designated in the official UCI Machine Learning Repository record."
+  },
+  "source_references": [
+    {
+      "title": "Beijing Multi-Site Air Quality on UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality",
+      "type": "official_website",
+      "notes": "Official UCI ML repository landing page (DOI: 10.24432/C5RK5G)."
+    },
+    {
+      "title": "A new air quality index based on environmental health risk (Atmospheric Environment 2017)",
+      "url": "https://doi.org/10.1016/j.atmosenv.2017.05.056",
+      "type": "original_paper",
+      "notes": "Reference paper on Beijing air pollution modeling."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against UCI Machine Learning Repository record and DataCite DOI 10.24432/C5RK5G."
+  },
+  "dates": {
+    "published": "2019-09-20"
+  },
+  "sample_count": {
+    "total": 420768,
+    "unit": "hourly records",
+    "status": "verified"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "citation": {
+    "paper_title": "Beijing Multi-Site Air Quality",
+    "paper_url": "https://doi.org/10.24432/C5RK5G",
+    "authors": [
+      "Song Chen"
+    ],
+    "doi": "10.24432/C5RK5G",
+    "bibtex": "@misc{beijing_multi_site_air_quality_501,\n  author = {Chen, Song},\n  title = {{Beijing Multi-Site Air Quality}},\n  year = {2017},\n  howpublished = {UCI Machine Learning Repository},\n  note = {{DOI}: https://doi.org/10.24432/C5RK5G}\n}"
+  },
+  "provenance": {
+    "collection_method": "Real-time automated environmental sensing from 12 Beijing Municipal Environmental Monitoring Center stations.",
+    "curation_notes": "Weather data matched from China Meteorological Administration stations nearest to each air quality site.",
+    "data_sources": [
+      "Beijing Municipal Environmental Monitoring Center",
+      "China Meteorological Administration"
+    ]
+  }
+}

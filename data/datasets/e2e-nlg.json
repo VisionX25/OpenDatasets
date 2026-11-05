@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "e2e-nlg",
+  "slug": "e2e-nlg",
+  "name": "The E2E NLG Challenge Dataset",
+  "description": "The E2E NLG Challenge Dataset is a crowdsourced data-to-text natural language generation benchmark developed at Heriot-Watt University (Novikova et al., SIGDIAL 2017). Designed for training and evaluating end-to-end NLG systems in the restaurant domain, the dataset provides 51,426 diverse natural language utterances mapped to structured meaning representations (attribute-value pairs including name, food type, price range, customer rating, area, family-friendliness, and near-by landmarks). It contains 42,061 training, 4,672 validation, and 4,693 test samples.",
+  "homepage_url": "https://researchportal.hw.ac.uk/en/datasets/the-e2e-challenge-dataset/",
+  "publisher": {
+    "name": "Heriot-Watt University",
+    "type": "academic",
+    "url": "https://www.hw.ac.uk"
+  },
+  "modalities": [
+    "nlp",
+    "tabular"
+  ],
+  "tasks": [
+    "data-to-text",
+    "text-generation"
+  ],
+  "tags": [
+    "nlp",
+    "data-to-text",
+    "nlg",
+    "natural-language-generation",
+    "heriot-watt"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+    "commercial_use": "allowed",
+    "notes": "Formally licensed under CC BY-SA 4.0 in the official Heriot-Watt University Research Portal repository deposit (DOI: 10.17861/c07fe36b-d0fa-4bbe-967c-f8b4341a133f). Commercial use is permitted with attribution and share-alike terms."
+  },
+  "source_references": [
+    {
+      "title": "Heriot-Watt University Research Portal Deposit",
+      "url": "https://researchportal.hw.ac.uk/en/datasets/the-e2e-challenge-dataset/",
+      "type": "repository",
+      "notes": "Authoritative institutional repository deposit (DOI: 10.17861/c07fe36b-d0fa-4bbe-967c-f8b4341a133f)."
+    },
+    {
+      "title": "The E2E Dataset: New Challenges For End-to-End Generation (SIGDIAL 2017)",
+      "url": "https://doi.org/10.18653/v1/W17-5525",
+      "type": "original_paper",
+      "notes": "Peer-reviewed SIGDIAL 2017 publication."
+    },
+    {
+      "title": "E2E NLG Challenge GitHub Repository",
+      "url": "https://github.com/tuetschek/e2e-eval",
+      "type": "repository",
+      "notes": "Evaluation scripts and challenge data files."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against Heriot-Watt University institutional repository and SIGDIAL 2017 paper."
+  },
+  "dates": {
+    "published": "2017-08-15"
+  },
+  "sample_count": {
+    "total": 51426,
+    "splits": {
+      "train": 42061,
+      "validation": 4672,
+      "test": 4693
+    },
+    "unit": "utterance-MR pairs",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "citation": {
+    "paper_title": "The E2E Dataset: New Challenges For End-to-End Generation",
+    "paper_url": "https://doi.org/10.18653/v1/W17-5525",
+    "authors": [
+      "Jekaterina Novikova",
+      "Ondřej Dušek",
+      "Verena Rieser"
+    ],
+    "doi": "10.18653/v1/W17-5525",
+    "bibtex": "@inproceedings{novikova2017e2e,\n  title={The {E2E} Dataset: New Challenges For End-to-End Generation},\n  author={Novikova, Jekaterina and Du{\\v{s}}ek, Ond{\\v{r}}ej and Rieser, Verena},\n  booktitle={Proceedings of the 18th Annual SIGdial Meeting on Discourse and Dialogue},\n  pages={201--206},\n  year={2017},\n  doi={10.18653/v1/W17-5525}\n}"
+  },
+  "provenance": {
+    "collection_method": "Crowdsourced human text generation from pictorial and text-based meaning representations on CrowdFlower.",
+    "curation_notes": "Quality checked and split into distinct training, validation, and test subsets based on meaning representations.",
+    "data_sources": [
+      "CrowdFlower",
+      "Heriot-Watt University"
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "noaa-ghcn-monthly",
+  "slug": "noaa-ghcn-monthly",
+  "name": "Global Historical Climatology Network monthly (GHCNm) Version 4",
+  "description": "The Global Historical Climatology Network monthly (GHCNm) dataset provides monthly land surface climate summaries across the globe maintained by NOAA's National Centers for Environmental Information (NCEI). Currently in Version 4, GHCNm integrates monthly mean observations from approximately 27,000 land stations worldwide, with historical records extending back to 1701. Version 4 comprises two distinct components released in separate years: Monthly Temperature (published in 2017, DOI: 10.7289/V5XW4GTH) and Monthly Precipitation (published in 2024, DOI: 10.25921/67zp-5m03). The temperature component applies pairwise homogenization algorithms (PHA) to detect and adjust for artificial shifts caused by station relocations, instrumentation changes, and urbanization.",
+  "homepage_url": "https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-monthly",
+  "publisher": {
+    "name": "NOAA National Centers for Environmental Information (NCEI)",
+    "type": "government",
+    "url": "https://www.ncei.noaa.gov"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "regression"
+  ],
+  "tags": [
+    "climate",
+    "weather",
+    "temperature",
+    "precipitation",
+    "climate-change",
+    "noaa",
+    "ncei",
+    "time-series"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "U.S. Government Work (17 U.S.C. 105) / Public Domain",
+    "commercial_use": "allowed",
+    "url": "https://www.noaa.gov/information-technology/policy-oversight/information-quality/disclaimer",
+    "notes": "NOAA NCEI produced data files and homogenization algorithms are works of the United States Government in the public domain. However, because underlying station observations originate from global national meteorological services via WMO exchange, downstream users must not assume blanket commercial permission for all third-party international observations where origin countries retain domestic rights."
+  },
+  "source_references": [
+    {
+      "title": "NOAA NCEI GHCN-Monthly Product Portal",
+      "url": "https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-monthly",
+      "type": "official_website",
+      "notes": "Official product information and data portal."
+    },
+    {
+      "title": "GHCN-Monthly Temperature Version 4 Dataset (2017, DOI: 10.7289/V5XW4GTH)",
+      "url": "https://doi.org/10.7289/V5XW4GTH",
+      "type": "repository",
+      "notes": "Official NOAA NCEI dataset DOI for GHCNm Version 4 Temperature, published in 2017."
+    },
+    {
+      "title": "GHCN-Monthly Precipitation Version 4 Dataset (2024, DOI: 10.25921/67zp-5m03)",
+      "url": "https://doi.org/10.25921/67zp-5m03",
+      "type": "repository",
+      "notes": "Official NOAA NCEI dataset DOI for GHCNm Version 4 Precipitation, published in 2024."
+    },
+    {
+      "title": "NOAA NCEI Geoportal Record for GHCNm v4 Temperature (gov.noaa.ncdc:C00950)",
+      "url": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C00950/html",
+      "type": "documentation",
+      "notes": "NOAA NCEI metadata geoportal catalog entry C00950 (published 2017)."
+    },
+    {
+      "title": "NOAA NCEI Geoportal Record for GHCNm v4 Precipitation (gov.noaa.ncdc:C01657)",
+      "url": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01657/html",
+      "type": "documentation",
+      "notes": "NOAA NCEI metadata geoportal catalog entry C01657 (published 2024)."
+    },
+    {
+      "title": "The Global Historical Climatology Network Monthly Temperature Dataset, Version 4 (J. Climate 2018)",
+      "url": "https://doi.org/10.1175/JCLI-D-18-0094.1",
+      "type": "original_paper",
+      "notes": "Peer-reviewed paper by Menne et al. (2018) detailing the v4 temperature homogenization methods."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-05",
+    "notes": "Independently verified against NOAA NCEI Geoportal records C00950 (v4 Temp, 2017) and C01657 (v4 Precip, 2024), DataCite DOIs 10.7289/V5XW4GTH and 10.25921/67zp-5m03, and Journal of Climate 2018 paper. The dates.published field (2017) corresponds to the initial v4 Temperature release; the v4 Precipitation dataset was published subsequently in 2024."
+  },
+  "dates": {
+    "published": "2017",
+    "last_updated": "2026-11-04"
+  },
+  "sample_count": {
+    "unit": "monitoring stations",
+    "status": "estimated",
+    "total": 27000
+  },
+  "geographic_coverage": [
+    "Global"
+  ],
+  "citation": {
+    "paper_title": "The Global Historical Climatology Network Monthly Temperature Dataset, Version 4",
+    "paper_url": "https://doi.org/10.1175/JCLI-D-18-0094.1",
+    "authors": [
+      "Matthew J. Menne",
+      "Claude N. Williams",
+      "Boyin E. Gleason",
+      "Jay J. Rennie",
+      "Jay H. Lawrimore"
+    ],
+    "doi": "10.1175/JCLI-D-18-0094.1",
+    "bibtex": "@article{menne2018global,\n  title={The Global Historical Climatology Network Monthly Temperature Dataset, Version 4},\n  author={Menne, Matthew J. and Williams, Claude N. and Gleason, Boyin E. and Rennie, Jay J. and Lawrimore, Jay H.},\n  journal={Journal of Climate},\n  volume={31},\n  number={24},\n  pages={9835--9854},\n  year={2018},\n  doi={10.1175/JCLI-D-18-0094.1}\n}"
+  },
+  "provenance": {
+    "collection_method": "Monthly station summaries aggregated across global observation networks, with pairwise homogenization algorithms applied to temperature data.",
+    "curation_notes": "Version 4 consists of separate datasets with distinct publication dates: Temperature was published in 2017 (DOI: 10.7289/V5XW4GTH) with pairwise homogenization algorithm (PHA) adjustments, while Precipitation was published in 2024 (DOI: 10.25921/67zp-5m03).",
+    "data_sources": [
+      "NOAA NCEI",
+      "World Meteorological Organization (WMO)"
+    ]
+  }
+}
