@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "livecodebench",
+  "slug": "livecodebench",
+  "name": "LiveCodeBench: Holistic and Contamination-Free Evaluation of LLMs for Code",
+  "description": "LiveCodeBench is a continuously updated, contamination-free evaluation benchmark for code generation and program synthesis models. Maintained by researchers from UC Berkeley, MIT, and Cornell, it continuously ingests new programming problems from competitive coding platforms (LeetCode, AtCoder, Codeforces) with dates starting after model training cutoffs. It holistically benchmarks code generation, self-repair, and test output prediction.",
+  "homepage_url": "https://livecodebench.github.io/",
+  "publisher": {
+    "name": "UC Berkeley, MIT & Cornell University",
+    "type": "academic",
+    "url": "https://livecodebench.github.io/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "code-generation",
+    "code-repair",
+    "test-output-prediction"
+  ],
+  "tags": [
+    "competitive-programming",
+    "leetcode",
+    "codeforces",
+    "atcoder",
+    "contamination-free",
+    "llm-benchmark",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://github.com/LiveCodeBench/LiveCodeBench/blob/main/LICENSE",
+    "commercial_use": "unknown",
+    "notes": "Evaluation harness is MIT-licensed; competitive programming problems are sourced from contest platforms (LeetCode, AtCoder, Codeforces), so commercial use permissions for problem statements depend on platform terms."
+  },
+  "source_references": [
+    {
+      "title": "LiveCodeBench Project Page",
+      "url": "https://livecodebench.github.io/",
+      "type": "official_website",
+      "notes": "Official portal and dynamic leaderboard."
+    },
+    {
+      "title": "LiveCodeBench GitHub Repository",
+      "url": "https://github.com/LiveCodeBench/LiveCodeBench",
+      "type": "repository",
+      "notes": "Official repository with execution harness and problem definitions."
+    },
+    {
+      "title": "LiveCodeBench arXiv Paper",
+      "url": "https://arxiv.org/abs/2403.07974",
+      "type": "original_paper",
+      "notes": "Foundational paper detailing temporal contamination-free methodology."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against LiveCodeBench official leaderboard and arXiv paper."
+  },
+  "size": {
+    "amount": 0.12,
+    "unit": "GB",
+    "file_formats": [
+      "json",
+      "py"
+    ],
+    "status": "verified",
+    "notes": "Over 500 competitive programming challenges with automated unit test verification scripts."
+  },
+  "sample_count": {
+    "total": 500,
+    "splits": {
+      "test": 500
+    },
+    "unit": "problems",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2024-03-12"
+  },
+  "citation": {
+    "paper_title": "LiveCodeBench: Holistic and Contamination-Free Evaluation of Large Language Models for Code",
+    "paper_url": "https://arxiv.org/abs/2403.07974",
+    "authors": [
+      "Naman Jain",
+      "King Han",
+      "Alex Gu",
+      "Wen-Ding Li",
+      "Fanjia Yan",
+      "Tianjun Zhang",
+      "Sida I. Wang",
+      "Armando Solar-Lezama",
+      "Koushik Sen",
+      "Ion Stoica"
+    ],
+    "doi": "10.48550/arXiv.2403.07974",
+    "bibtex": "@article{jain2024livecodebench,\n  title={LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code},\n  author={Jain, Naman and Han, King and Gu, Alex and Li, Wen-Ding and Yan, Fanjia and Zhang, Tianjun and Wang, Sida I. and Solar-Lezama, Armando and Sen, Koushik and Stoica, Ion},\n  journal={arXiv preprint arXiv:2403.07974},\n  year={2024}\n}"
+  }
+}

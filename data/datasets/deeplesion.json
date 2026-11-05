@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "deeplesion",
+  "slug": "deeplesion",
+  "name": "DeepLesion: Large-Scale NIH Clinical CT Lesion Detection Dataset",
+  "description": "DeepLesion is a massive multi-category radiological benchmark created by the National Institutes of Health (NIH) Clinical Center. It contains 32,735 clinically annotated lesion bounding boxes identified in 32,120 axial CT slices across 10,594 studies from 4,427 unique patients. It spans diverse lesion types including lung nodules, liver lesions, lymphadenopathy, and bone lesions marked by board-certified radiologists.",
+  "homepage_url": "https://nihcc.app.box.com/v/DeepLesion",
+  "publisher": {
+    "name": "National Institutes of Health (NIH Clinical Center)",
+    "type": "government",
+    "url": "https://www.cc.nih.gov/"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "lesion-detection",
+    "medical-object-detection",
+    "lesion-segmentation"
+  ],
+  "tags": [
+    "ct-scans",
+    "radiology",
+    "lesion-detection",
+    "nih",
+    "clinical-center",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "NIH Open Database License / U.S. Government Public Domain",
+    "spdx_id": null,
+    "url": "https://www.nih.gov/health-information/nih-clinical-research-trials-you/basics",
+    "commercial_use": "unknown",
+    "notes": "NIH Clinical Center states that usage of the dataset is unrestricted; marked as unknown for commercial use due to absence of a standardized commercial open data license."
+  },
+  "source_references": [
+    {
+      "title": "DeepLesion NIH Official Download Portal",
+      "url": "https://nihcc.app.box.com/v/DeepLesion",
+      "type": "official_website",
+      "notes": "Official NIH Clinical Center download portal with full multi-part ZIP volumes."
+    },
+    {
+      "title": "DeepLesion Journal of Medical Imaging Paper",
+      "url": "https://doi.org/10.1117/1.JMI.5.3.036501",
+      "type": "original_paper",
+      "notes": "Published in SPIE Journal of Medical Imaging (2018)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against NIH Clinical Center releases and Journal of Medical Imaging publication."
+  },
+  "size": {
+    "amount": 255.0,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "32,120 16-bit PNG key slices and associated 3D contextual slice volumes."
+  },
+  "sample_count": {
+    "total": 32735,
+    "splits": {
+      "train": 22914,
+      "validation": 4889,
+      "test": 4932
+    },
+    "unit": "annotations",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-07-20"
+  },
+  "citation": {
+    "paper_title": "DeepLesion: automated mining of large-scale lesion annotations and universal lesion detection with deep learning",
+    "paper_url": "https://doi.org/10.1117/1.JMI.5.3.036501",
+    "authors": [
+      "Ke Yan",
+      "Xiaosong Wang",
+      "Le Lu",
+      "Ronald M. Summers"
+    ],
+    "doi": "10.1117/1.JMI.5.3.036501",
+    "bibtex": "@article{yan2018deeplesion,\n  title={DeepLesion: automated mining of large-scale lesion annotations and universal lesion detection with deep learning},\n  author={Yan, Ke and Wang, Xiaosong and Lu, Le and Summers, Ronald M.},\n  journal={Journal of Medical Imaging},\n  volume={5},\n  number={3},\n  pages={036501},\n  year={2018},\n  doi={10.1117/1.JMI.5.3.036501}\n}"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mathvista",
+  "slug": "mathvista",
+  "name": "MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts",
+  "description": "MathVista is a premier benchmark for evaluating mathematical reasoning of multimodal foundation models within visual contexts. Created by UCLA, University of Washington, and Microsoft Research, it gathers 6,141 diverse mathematical visual problems requiring visual perception, arithmetic reasoning, geometry, logic puzzles, and scientific chart comprehension across grade-school to university difficulty.",
+  "homepage_url": "https://mathvista.github.io/",
+  "publisher": {
+    "name": "UCLA & University of Washington",
+    "type": "academic",
+    "url": "https://mathvista.github.io/"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "mathematical-reasoning"
+  ],
+  "tags": [
+    "math-reasoning",
+    "multimodal-vlm",
+    "visual-math",
+    "geometry",
+    "charts",
+    "iclr",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://github.com/lupantech/MathVista/blob/main/LICENSE",
+    "commercial_use": "allowed",
+    "notes": "Benchmark dataset and evaluation scripts licensed under Apache 2.0."
+  },
+  "source_references": [
+    {
+      "title": "MathVista Official Portal",
+      "url": "https://mathvista.github.io/",
+      "type": "official_website",
+      "notes": "Official portal with interactive problem explorer and leaderboard."
+    },
+    {
+      "title": "MathVista GitHub Repository",
+      "url": "https://github.com/lupantech/MathVista",
+      "type": "repository",
+      "notes": "Official evaluation codebase and data loader."
+    },
+    {
+      "title": "MathVista ICLR 2024 Oral Paper",
+      "url": "https://arxiv.org/abs/2310.02255",
+      "type": "original_paper",
+      "notes": "Published as Oral Presentation at ICLR 2024."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against ICLR 2024 Oral proceedings and MathVista official project portal."
+  },
+  "size": {
+    "amount": 1.2,
+    "unit": "GB",
+    "file_formats": [
+      "json",
+      "png",
+      "parquet"
+    ],
+    "status": "verified",
+    "notes": "6,141 visual mathematical problems with high-resolution diagrams and detailed reasoning solutions."
+  },
+  "sample_count": {
+    "total": 6141,
+    "splits": {
+      "testmini": 1000,
+      "test": 5141
+    },
+    "unit": "questions",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023-10-03"
+  },
+  "citation": {
+    "paper_title": "MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts",
+    "paper_url": "https://arxiv.org/abs/2310.02255",
+    "authors": [
+      "Pan Lu",
+      "Hritik Bansal",
+      "Tony Xia",
+      "Jiacheng Liu",
+      "Chunyuan Li",
+      "Hannaneh Hajishirzi",
+      "Hao Cheng",
+      "Kai-Wei Chang",
+      "Michel Galley",
+      "Jianfeng Gao"
+    ],
+    "doi": "10.48550/arXiv.2310.02255",
+    "bibtex": "@inproceedings{lu2024mathvista,\n  title={MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts},\n  author={Lu, Pan and Bansal, Hritik and Xia, Tony and Liu, Jiacheng and Li, Chunyuan and Hajishirzi, Hannaneh and Cheng, Hao and Chang, Kai-Wei and Galley, Michel and Gao, Jianfeng},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2024}\n}"
+  }
+}

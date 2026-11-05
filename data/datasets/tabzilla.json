@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tabzilla",
+  "slug": "tabzilla",
+  "name": "TabZilla: Hard Benchmark Suite for Tabular Deep Learning vs. Gradient Boosted Trees",
+  "description": "TabZilla is a standardized, rigorously curated benchmark suite designed to evaluate tabular deep learning architectures against gradient boosted decision trees. Created by researchers from Abacus.AI, University of Maryland, and CMU, it selects the 36 hardest tabular classification datasets across 176 candidates with standardized 10-fold cross-validation splits and systematic hyperparameter tuning pipelines.",
+  "homepage_url": "https://github.com/naszilla/tabzilla",
+  "publisher": {
+    "name": "Abacus.AI, University of Maryland & CMU",
+    "type": "academic",
+    "url": "https://github.com/naszilla/tabzilla"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "automl-benchmarking"
+  ],
+  "tags": [
+    "tabular-data",
+    "gbdt",
+    "tabular-deep-learning",
+    "xgboost",
+    "neurips",
+    "openml",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://github.com/naszilla/tabzilla/blob/main/LICENSE",
+    "commercial_use": "allowed",
+    "notes": "Benchmark evaluation suite and dataset tools licensed under Apache 2.0."
+  },
+  "source_references": [
+    {
+      "title": "TabZilla GitHub Repository",
+      "url": "https://github.com/naszilla/tabzilla",
+      "type": "repository",
+      "notes": "Official benchmark repository with OpenML pipeline runners."
+    },
+    {
+      "title": "TabZilla NeurIPS 2023 Paper",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/f06d5ebd4ff40b40dd97e30cee632123-Abstract-Datasets_and_Benchmarks.html",
+      "type": "original_paper",
+      "notes": "Published in NeurIPS 2023 Datasets and Benchmarks track."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against NeurIPS 2023 proceedings and official repository."
+  },
+  "size": {
+    "amount": 2.1,
+    "unit": "GB",
+    "file_formats": [
+      "csv",
+      "parquet",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Curated suite of the 36 hardest tabular datasets selected from 176 datasets across 19 model families with standardized 10-fold CV splits."
+  },
+  "sample_count": {
+    "total": 36,
+    "unit": "datasets",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023-05-04"
+  },
+  "citation": {
+    "paper_title": "When Do Neural Nets Outperform Boosted Trees on Tabular Data?",
+    "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/f06d5ebd4ff40b40dd97e30cee632123-Abstract-Datasets_and_Benchmarks.html",
+    "authors": [
+      "Duncan McElfresh",
+      "Sujay Khandagale",
+      "Jonathan Valverde",
+      "Vishak Prasad C",
+      "Benjamin Feuer",
+      "Chinmay Hegde",
+      "Ganesh Ramakrishnan",
+      "Micah Goldblum",
+      "Colin White"
+    ],
+    "doi": "10.48550/arXiv.2305.02997",
+    "bibtex": "@inproceedings{mcelfresh2023when,\n  title={When Do Neural Nets Outperform Boosted Trees on Tabular Data?},\n  author={McElfresh, Duncan and Khandagale, Sujay and Valverde, Jonathan and Prasad C, Vishak and Feuer, Benjamin and Hegde, Chinmay and Ramakrishnan, Ganesh and Goldblum, Micah and White, Colin},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  volume={36},\n  pages={76891--77002},\n  year={2023}\n}"
+  }
+}

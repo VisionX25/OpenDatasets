@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "medical-segmentation-decathlon",
+  "slug": "medical-segmentation-decathlon",
+  "name": "Medical Segmentation Decathlon (MSD): 10-Task 3D Biomedical Segmentation Benchmark",
+  "description": "The Medical Segmentation Decathlon (MSD) is a landmark 10-task biomedical image segmentation challenge covering multiple organs, imaging modalities (CT and MRI), and pathological conditions. Organized by King's College London, Memorial Sloan Kettering, and DKFZ, it encompasses 2,633 volumetric 3D scans across brain tumor, heart, liver, hippocampus, prostate, lung, pancreas, hepatic vessel, spleen, and colon segmentation.",
+  "homepage_url": "http://medicaldecathlon.com/",
+  "publisher": {
+    "name": "King's College London, Memorial Sloan Kettering & DKFZ",
+    "type": "academic",
+    "url": "http://medicaldecathlon.com/"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "3d-medical-image-segmentation",
+    "semantic-segmentation"
+  ],
+  "tags": [
+    "medical-segmentation",
+    "ct",
+    "mri",
+    "brain-tumor",
+    "liver-segmentation",
+    "nnunet",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed under CC BY-SA 4.0 for research and commercial development."
+  },
+  "source_references": [
+    {
+      "title": "Medical Segmentation Decathlon Official Portal",
+      "url": "http://medicaldecathlon.com/",
+      "type": "official_website",
+      "notes": "Official challenge portal with download links and evaluation metrics."
+    },
+    {
+      "title": "Medical Segmentation Decathlon Nature Communications Paper",
+      "url": "https://doi.org/10.1038/s41467-022-30695-9",
+      "type": "original_paper",
+      "notes": "Published in Nature Communications (2022)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against Nature Communications 2022 publication and official MSD portal."
+  },
+  "size": {
+    "amount": 36.4,
+    "unit": "GB",
+    "file_formats": [
+      "nii",
+      "gz",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Complete 10-task 3D/4D volumetric NIfTI dataset collections comprising 1,745 training volumes and 888 testing volumes across 10 semantic segmentation challenges."
+  },
+  "sample_count": {
+    "total": 2633,
+    "splits": {
+      "train": 1745,
+      "test": 888
+    },
+    "unit": "volumes",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-02-24"
+  },
+  "citation": {
+    "paper_title": "The Medical Segmentation Decathlon",
+    "paper_url": "https://doi.org/10.1038/s41467-022-30695-9",
+    "authors": [
+      "Michela Antonelli",
+      "Annika Reinke",
+      "Spyridon Bakas",
+      "Keyvan Farahani",
+      "Annette Kopp-Schneider",
+      "Bennett A. Landman",
+      "Geert Litjens",
+      "Bjoern Menze",
+      "Olaf Ronneberger",
+      "Ronald M. Summers",
+      "Bram van Ginneken",
+      "M. Jorge Cardoso"
+    ],
+    "doi": "10.1038/s41467-022-30695-9",
+    "bibtex": "@article{antonelli2022medical,\n  title={The Medical Segmentation Decathlon},\n  author={Antonelli, Michela and Reinke, Annika and Bakas, Spyridon and Farahani, Keyvan and Kopp-Schneider, Annette and Landman, Bennett A. and Litjens, Geert and Menze, Bjoern and Ronneberger, Olaf and Summers, Ronald M. and van Ginneken, Bram and Cardoso, M. Jorge},\n  journal={Nature Communications},\n  volume={13},\n  pages={4128},\n  year={2022},\n  doi={10.1038/s41467-022-30695-9}\n}"
+  }
+}

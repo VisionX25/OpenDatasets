@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "id": "swe-bench",
+  "slug": "swe-bench",
+  "name": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+  "description": "SWE-bench is an authoritative evaluation benchmark assessing language models and autonomous coding agents on end-to-end software engineering tasks. Built by Princeton NLP, it extracts 2,294 real-world GitHub issues and pull requests from 12 popular open-source Python repositories. Each task requires an agent to comprehend a problem description, edit code across the repository, and pass human-authored test suites.",
+  "homepage_url": "https://www.swebench.com/",
+  "publisher": {
+    "name": "Princeton University (Princeton NLP)",
+    "type": "academic",
+    "url": "https://www.swebench.com/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "automated-program-repair",
+    "code-generation",
+    "software-engineering-agents"
+  ],
+  "tags": [
+    "software-engineering",
+    "code-agents",
+    "github-issues",
+    "python",
+    "iclr",
+    "llm-evaluation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://github.com/swe-bench/SWE-bench/blob/main/LICENSE",
+    "commercial_use": "allowed",
+    "notes": "Evaluation harness and benchmark released under MIT License; tasks extracted from 12 open-source Python repositories with permissive licenses (BSD, MIT, Apache 2.0)."
+  },
+  "source_references": [
+    {
+      "title": "SWE-bench Official Portal",
+      "url": "https://www.swebench.com/",
+      "type": "official_website",
+      "notes": "Official leaderboard and project portal."
+    },
+    {
+      "title": "SWE-bench GitHub Repository",
+      "url": "https://github.com/swe-bench/SWE-bench",
+      "type": "repository",
+      "notes": "Evaluation harness and environment execution scripts."
+    },
+    {
+      "title": "SWE-bench ICLR 2024 Paper",
+      "url": "https://openreview.net/forum?id=VTF8yNQM66",
+      "type": "original_paper",
+      "notes": "Published at International Conference on Learning Representations (ICLR 2024)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against ICLR 2024 publication and official SWE-bench leaderboard portal."
+  },
+  "size": {
+    "amount": 0.45,
+    "unit": "GB",
+    "file_formats": [
+      "json",
+      "parquet"
+    ],
+    "status": "verified",
+    "notes": "Full Hugging Face repository includes 21,527 instances (19,008 train, 225 dev, and 2,294 test). The core evaluation benchmark evaluates models on the 2,294 test instances."
+  },
+  "sample_count": {
+    "total": 21527,
+    "splits": {
+      "train": 19008,
+      "dev": 225,
+      "test": 2294
+    },
+    "unit": "tasks",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023-10-10"
+  },
+  "citation": {
+    "paper_title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+    "paper_url": "https://arxiv.org/abs/2310.06770",
+    "authors": [
+      "Carlos E. Jimenez",
+      "John Yang",
+      "Alexander Wettig",
+      "Shunyu Yao",
+      "Kexin Pei",
+      "Ofir Press",
+      "Karthik Narasimhan"
+    ],
+    "doi": "10.48550/arXiv.2310.06770",
+    "bibtex": "@inproceedings{jimenez2024swebench,\n  title={SWE-bench: Can Language Models Resolve Real-World GitHub Issues?},\n  author={Jimenez, Carlos E. and Yang, John and Wettig, Alexander and Yao, Shunyu and Pei, Kexin and Press, Ofir and Narasimhan, Karthik},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2024}\n}"
+  }
+}
