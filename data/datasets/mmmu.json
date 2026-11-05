@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mmmu",
+  "slug": "mmmu",
+  "name": "MMMU: A Massive Multi-Discipline Multimodal Understanding and Reasoning Benchmark",
+  "description": "MMMU is an advanced benchmark evaluating multimodal foundation models on university-level multimodal understanding and domain-specific reasoning tasks. Created by Ohio State University, University of Waterloo, and IN.AI Research, it spans 11,500 collegiate examination problems across 6 core disciplines and 30 academic subjects including science, engineering, business, and medicine that require complex visual diagram parsing and joint reasoning.",
+  "homepage_url": "https://mmmu-benchmark.github.io/",
+  "publisher": {
+    "name": "Ohio State University & University of Waterloo",
+    "type": "academic",
+    "url": "https://mmmu-benchmark.github.io/"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "multimodal-reasoning"
+  ],
+  "tags": [
+    "multimodal-benchmark",
+    "college-exams",
+    "stem-reasoning",
+    "vlm-evaluation",
+    "cvpr",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://github.com/MMMU-Benchmark/MMMU/blob/main/LICENSE",
+    "commercial_use": "allowed",
+    "notes": "Released under Apache License 2.0."
+  },
+  "source_references": [
+    {
+      "title": "MMMU Official Leaderboard",
+      "url": "https://mmmu-benchmark.github.io/",
+      "type": "official_website",
+      "notes": "Official benchmark portal and model leaderboard."
+    },
+    {
+      "title": "MMMU GitHub Repository",
+      "url": "https://github.com/MMMU-Benchmark/MMMU",
+      "type": "repository",
+      "notes": "Official repository for data loading and evaluation."
+    },
+    {
+      "title": "MMMU CVPR 2024 Paper",
+      "url": "https://arxiv.org/abs/2311.16502",
+      "type": "original_paper",
+      "notes": "Published in IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2024)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against CVPR 2024 proceedings and MMMU official website."
+  },
+  "size": {
+    "amount": 1.8,
+    "unit": "GB",
+    "file_formats": [
+      "parquet",
+      "png",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "11,550 college-level questions across 6 core disciplines and 30 academic subjects involving charts, diagrams, chemical structures, and sheet music. Official benchmark splits comprise 150 few-shot development questions (5 per subject), 900 validation questions (30 per subject), and 10,500 test questions."
+  },
+  "sample_count": {
+    "total": 11550,
+    "splits": {
+      "dev": 150,
+      "validation": 900,
+      "test": 10500
+    },
+    "unit": "questions",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023-11-27"
+  },
+  "citation": {
+    "paper_title": "MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI",
+    "paper_url": "https://arxiv.org/abs/2311.16502",
+    "authors": [
+      "Xiang Yue",
+      "Yuansheng Ni",
+      "Kai Zhang",
+      "Tianyu Zheng",
+      "Ruoqi Liu",
+      "Ge Zhang",
+      "Samuel Stevens",
+      "Dongfu Jiang",
+      "Weiming Ren",
+      "Yuxuan Sun",
+      "Cong Wei",
+      "Botao Yu",
+      "Ruibin Yuan",
+      "Renliang Sun",
+      "Ming Yin",
+      "Boyuan Zheng",
+      "Zhenzhu Yang",
+      "Yibo Liu",
+      "Wenhao Huang",
+      "Huan Sun",
+      "Yu Su",
+      "Wenhu Chen"
+    ],
+    "doi": "10.48550/arXiv.2311.16502",
+    "bibtex": "@inproceedings{yue2024mmmu,\n  title={MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI},\n  author={Yue, Xiang and Ni, Yuansheng and Zhang, Kai and Zheng, Tianyu and Liu, Ruoqi and Zhang, Ge and Stevens, Samuel and Jiang, Dongfu and Ren, Weiming and Sun, Yuxuan and Wei, Cong and Yu, Botao and Yuan, Ruibin and Sun, Renliang and Yin, Ming and Zheng, Boyuan and Yang, Zhenzhu and Liu, Yibo and Huang, Wenhao and Sun, Huan and Su, Yu and Chen, Wenhu},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  year={2024}\n}"
+  }
+}

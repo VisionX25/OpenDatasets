@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "monash-time-series",
+  "slug": "monash-time-series",
+  "name": "Monash Time Series Forecasting Archive",
+  "description": "The Monash Time Series Forecasting Archive is a premier open-access repository of diverse real-world time series datasets designed for comprehensive forecasting model benchmarking. Created by Monash University, it provides standardized, clean time series collections across economics, energy, transport, healthcare, and nature with consistent evaluation metrics and baseline forecasting benchmarks.",
+  "homepage_url": "https://forecastingdata.org/",
+  "publisher": {
+    "name": "Monash University",
+    "type": "academic",
+    "url": "https://forecastingdata.org/"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "time-series-forecasting",
+    "demand-forecasting"
+  ],
+  "tags": [
+    "time-series",
+    "forecasting",
+    "econometrics",
+    "energy-demand",
+    "monash",
+    "neurips",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Archive and standardized datasets shared under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "Monash Time Series Forecasting Archive Portal",
+      "url": "https://forecastingdata.org/",
+      "type": "official_website",
+      "notes": "Official repository containing datasets, formats, and python tools."
+    },
+    {
+      "title": "Monash Time Series NeurIPS 2021 Paper",
+      "url": "https://proceedings.neurips.cc/paper/2021/hash/c3062e2ce1c59f50c5a300f3ced87e68-Abstract.html",
+      "type": "original_paper",
+      "notes": "Published in NeurIPS 2021 Datasets and Benchmarks track."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against NeurIPS 2021 publication and forecastingdata.org archive."
+  },
+  "size": {
+    "amount": 4.8,
+    "unit": "GB",
+    "file_formats": [
+      "tsf",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "Standardized TSF and CSV format collections spanning 30 diverse domain datasets."
+  },
+  "sample_count": {
+    "total": 30,
+    "unit": "datasets",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-05-14"
+  },
+  "citation": {
+    "paper_title": "Monash Time Series Forecasting Archive",
+    "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/c3062e2ce1c59f50c5a300f3ced87e68-Abstract.html",
+    "authors": [
+      "Rakshitha Godahewa",
+      "Christoph Bergmeir",
+      "Geoffrey I. Webb",
+      "Rob J. Hyndman",
+      "Pablo Montero-Manso"
+    ],
+    "doi": "10.48550/arXiv.2105.06643",
+    "bibtex": "@inproceedings{godahewa2021monash,\n  title={Monash Time Series Forecasting Archive},\n  author={Godahewa, Rakshitha and Bergmeir, Christoph and Webb, Geoffrey I. and Hyndman, Rob J. and Montero-Manso, Pablo},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS) Track on Datasets and Benchmarks},\n  year={2021}\n}"
+  }
+}

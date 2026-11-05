@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "taco-trash",
+  "slug": "taco-trash",
+  "name": "TACO: Trash Annotations in Context for Litter Detection",
+  "description": "TACO is an open-source image dataset designed to advance automated litter detection and waste management technologies. Developed by researchers at the University of Surrey, it contains high-resolution photographs taken in diverse real-world indoor and outdoor environments with bounding boxes and polygonal segmentation masks classifying litter into a hierarchical taxonomy of 60 waste classes.",
+  "homepage_url": "https://github.com/pedropro/TACO",
+  "publisher": {
+    "name": "University of Surrey",
+    "type": "academic",
+    "url": "https://github.com/pedropro/TACO"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "instance-segmentation",
+    "object-detection"
+  ],
+  "tags": [
+    "waste-detection",
+    "litter",
+    "environmental-ai",
+    "instance-segmentation",
+    "coco-format",
+    "sustainability",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Images and annotations distributed under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "TACO GitHub Repository",
+      "url": "https://github.com/pedropro/TACO",
+      "type": "repository",
+      "notes": "Official repository containing download scripts, annotations, and API tools."
+    },
+    {
+      "title": "TACO arXiv Paper",
+      "url": "https://arxiv.org/abs/2003.06975",
+      "type": "original_paper",
+      "notes": "Foundational paper on dataset collection methodology."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against TACO official repository and arXiv publication."
+  },
+  "size": {
+    "amount": 3.4,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "High-resolution photos with COCO-compliant JSON instance segmentation annotations."
+  },
+  "sample_count": {
+    "total": 1500,
+    "splits": {
+      "train": 1200,
+      "test": 300
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-03-15"
+  },
+  "citation": {
+    "paper_title": "TACO: Trash Annotations in Context for Litter Detection",
+    "paper_url": "https://arxiv.org/abs/2003.06975",
+    "authors": [
+      "Pedro F. Proen\u00e7a",
+      "Pedro Sim\u00f5es"
+    ],
+    "doi": "10.48550/arXiv.2003.06975",
+    "bibtex": "@article{proenca2020taco,\n  title={TACO: Trash Annotations in Context for Litter Detection},\n  author={Proen{\\c{c}}a, Pedro F. and Sim{\\~o}es, Pedro},\n  journal={arXiv preprint arXiv:2003.06975},\n  year={2020}\n}"
+  }
+}

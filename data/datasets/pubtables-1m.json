@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pubtables-1m",
+  "slug": "pubtables-1m",
+  "name": "PubTables-1M: Towards Comprehensive Table Extraction From Unstructured Documents",
+  "description": "PubTables-1M is a large-scale benchmark for comprehensive table extraction from unstructured scientific documents. Containing nearly one million annotated tables from PubMed Central articles, it provides complete annotations for table detection, table structure recognition, and functional analysis. It addresses previous limitations in automated table parsing by enforcing rigorous ground-truth consistency and structural cell topology.",
+  "homepage_url": "https://github.com/microsoft/table-transformer",
+  "publisher": {
+    "name": "Microsoft Research",
+    "type": "industry",
+    "url": "https://www.microsoft.com/en-us/research/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "table-detection",
+    "table-structure-recognition",
+    "document-layout-analysis"
+  ],
+  "tags": [
+    "table-extraction",
+    "document-ai",
+    "ocr",
+    "scientific-pdfs",
+    "pubmed",
+    "table-transformer",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Community Data License Agreement - Permissive 2.0",
+    "spdx_id": "CDLA-Permissive-2.0",
+    "url": "https://huggingface.co/datasets/bsmock/pubtables-1m",
+    "commercial_use": "allowed",
+    "notes": "Released under the CDLA-Permissive-2.0 data license permitting commercial application."
+  },
+  "source_references": [
+    {
+      "title": "Table Transformer GitHub Repository",
+      "url": "https://github.com/microsoft/table-transformer",
+      "type": "repository",
+      "notes": "Official repository for Table Transformer and PubTables-1M extraction models."
+    },
+    {
+      "title": "PubTables-1M Hugging Face Dataset Card",
+      "url": "https://huggingface.co/datasets/bsmock/pubtables-1m",
+      "type": "dataset_card",
+      "notes": "Direct download endpoints for detection, structure recognition, and functional analysis splits."
+    },
+    {
+      "title": "PubTables-1M CVPR 2022 Paper",
+      "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Smock_PubTables-1M_Towards_Comprehensive_Table_Extraction_From_Unstructured_Documents_CVPR_2022_paper.html",
+      "type": "original_paper",
+      "notes": "Official publication in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against CVPR 2022 publication and Microsoft Table-Transformer official repository."
+  },
+  "size": {
+    "amount": 84.5,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "xml",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Contains 947,642 fully annotated tables across detection, structure recognition, and functional analysis splits."
+  },
+  "sample_count": {
+    "total": 947642,
+    "splits": {
+      "train": 758849,
+      "validation": 94959,
+      "test": 93834
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022-06-01"
+  },
+  "citation": {
+    "paper_title": "PubTables-1M: Towards Comprehensive Table Extraction From Unstructured Documents",
+    "paper_url": "https://doi.org/10.1109/CVPR52688.2022.00459",
+    "authors": [
+      "Brandon Smock",
+      "Rohith Pesala",
+      "Robin Abraham"
+    ],
+    "doi": "10.1109/CVPR52688.2022.00459",
+    "bibtex": "@inproceedings{smock2022pubtables,\n  title={PubTables-1M: Towards Comprehensive Table Extraction From Unstructured Documents},\n  author={Smock, Brandon and Pesala, Rohith and Abraham, Robin},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={4634--4642},\n  year={2022},\n  doi={10.1109/CVPR52688.2022.00459}\n}"
+  }
+}

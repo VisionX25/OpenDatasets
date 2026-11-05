@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "objaverse-xl",
+  "slug": "objaverse-xl",
+  "name": "Objaverse-XL: A Universe of 10M+ 3D Objects",
+  "description": "Objaverse-XL is a colossal open dataset containing over 10 million 3D objects, representing more than an order of magnitude increase in scale over previous 3D corpora. Created by AI2 and the University of Washington, it aggregates diverse 3D meshes, CAD models, photogrammetry scans, and architectural models from across the web with aligned textual descriptions, unlocking unprecedented scale for 3D foundation models.",
+  "homepage_url": "https://objaverse.allenai.org/objaverse-xl",
+  "publisher": {
+    "name": "Allen Institute for AI (AI2) & University of Washington",
+    "type": "academic",
+    "url": "https://objaverse.allenai.org/"
+  },
+  "modalities": [
+    "3d",
+    "vision"
+  ],
+  "tasks": [
+    "3d-object-generation",
+    "novel-view-synthesis",
+    "3d-foundation-models"
+  ],
+  "tags": [
+    "3d-vision",
+    "zero123",
+    "3d-meshes",
+    "photogrammetry",
+    "neurips",
+    "allenai",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "unknown",
+    "notes": "Dataset metadata and annotations released under ODC-By v1.0. Individual 3D assets carry separate original licenses (varying from CC-BY to non-commercial); downstream commercial use requires filtering by asset license."
+  },
+  "source_references": [
+    {
+      "title": "Objaverse-XL Official Portal",
+      "url": "https://objaverse.allenai.org/objaverse-xl",
+      "type": "official_website",
+      "notes": "Official AI2 portal for Objaverse-XL downloading and visualization."
+    },
+    {
+      "title": "Objaverse-XL NeurIPS 2023 Paper",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/cf8b2ea5c23cb60f1ad92b0c36cb1504-Abstract-Datasets_and_Benchmarks.html",
+      "type": "original_paper",
+      "notes": "Published in NeurIPS 2023 Datasets and Benchmarks track."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against NeurIPS 2023 Datasets and Benchmarks publication and AI2 portal."
+  },
+  "size": {
+    "amount": 12000.0,
+    "unit": "GB",
+    "file_formats": [
+      "glb",
+      "obj",
+      "fbx",
+      "parquet"
+    ],
+    "status": "verified",
+    "notes": "Over 10 million 3D objects with aligned textures, descriptions, and alignment transforms."
+  },
+  "sample_count": {
+    "total": 10200000,
+    "unit": "3d_objects",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023-07-12"
+  },
+  "citation": {
+    "paper_title": "Objaverse-XL: A Universe of 10M+ 3D Objects",
+    "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/cf8b2ea5c23cb60f1ad92b0c36cb1504-Abstract-Datasets_and_Benchmarks.html",
+    "authors": [
+      "Matt Deitke",
+      "Ruoshi Liu",
+      "Matthew Wallingford",
+      "Huong Ngo",
+      "Oscar Michel",
+      "Aditya Kusupati",
+      "Alan Fan",
+      "Christian Laforte",
+      "Vikram Voleti",
+      "Samir Yitzhak Gadre",
+      "Eli VanderBilt",
+      "Aniruddha Kembhavi",
+      "Carl Vondrick",
+      "Georgia Gkioxari",
+      "Kiana Ehsani",
+      "Ludwig Schmidt",
+      "Ali Farhadi"
+    ],
+    "doi": "10.48550/arXiv.2307.05663",
+    "bibtex": "@inproceedings{deitke2023objaversexl,\n  title={Objaverse-XL: A Universe of 10M+ 3D Objects},\n  author={Deitke, Matt and Liu, Ruoshi and Wallingford, Matthew and Ngo, Huong and Michel, Oscar and Kusupati, Aditya and Fan, Alan and Laforte, Christian and Voleti, Vikram and Gadre, Samir Yitzhak and VanderBilt, Eli and Kembhavi, Aniruddha and Vondrick, Carl and Gkioxari, Georgia and Ehsani, Kiana and Schmidt, Ludwig and Farhadi, Ali},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  volume={36},\n  year={2023}\n}"
+  }
+}

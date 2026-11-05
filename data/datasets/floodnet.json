@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "floodnet",
+  "slug": "floodnet",
+  "name": "FloodNet: High-Resolution UAV Aerial Imagery for Post-Flood Scene Understanding",
+  "description": "FloodNet is a high-resolution unmanned aerial vehicle (UAV) dataset created for post-disaster flood damage assessment. Gathered by researchers at UMBC following Hurricane Harvey, it contains 2,343 ultra-high-resolution aerial images (4000x3000) with detailed semantic segmentation masks across 10 categories including flooded roads and damaged structures, along with 11,000 visual question answering pairs.",
+  "homepage_url": "https://github.com/BinaLab/FloodNet-Supervised_v1.0",
+  "publisher": {
+    "name": "University of Maryland, Baltimore County (BinaLab)",
+    "type": "academic",
+    "url": "https://github.com/BinaLab"
+  },
+  "modalities": [
+    "vision",
+    "multimodal"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "visual-question-answering",
+    "disaster-damage-assessment"
+  ],
+  "tags": [
+    "flood-detection",
+    "uav",
+    "drone-imagery",
+    "disaster-response",
+    "semantic-segmentation",
+    "vqa",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Community Data License Agreement - Permissive, Version 1.0",
+    "spdx_id": "CDLA-Permissive-1.0",
+    "url": "https://cdla.dev/permissive-1-0/",
+    "commercial_use": "allowed",
+    "notes": "Released by BinaLab on GitHub under Community Data License Agreement - Permissive (CDLA-Permissive-1.0)."
+  },
+  "source_references": [
+    {
+      "title": "FloodNet GitHub Repository",
+      "url": "https://github.com/BinaLab/FloodNet-Supervised_v1.0",
+      "type": "repository",
+      "notes": "Official repository for supervised FloodNet annotations and baseline models."
+    },
+    {
+      "title": "FloodNet IEEE Access Publication",
+      "url": "https://doi.org/10.1109/ACCESS.2021.3072979",
+      "type": "original_paper",
+      "notes": "Published in IEEE Access (2021)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against IEEE Access paper and BinaLab GitHub challenge repository."
+  },
+  "size": {
+    "amount": 7.2,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "png",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "2,343 high-resolution UAS aerial frames (4000x3000) with pixel-level damage masks and 11,000 VQA pairs."
+  },
+  "sample_count": {
+    "total": 2343,
+    "splits": {
+      "train": 1445,
+      "validation": 450,
+      "test": 448
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-03-19"
+  },
+  "citation": {
+    "paper_title": "FloodNet: A High Resolution Aerial Imagery Dataset for Post Flood Scene Understanding",
+    "paper_url": "https://doi.org/10.1109/ACCESS.2021.3090981",
+    "authors": [
+      "Maryam Rahnemoonfar",
+      "Tashnim Chowdhury",
+      "Argho Sarkar",
+      "Debvrat Varshney",
+      "Masoud Yari",
+      "Robin Roberson Murphy"
+    ],
+    "doi": "10.1109/ACCESS.2021.3090981",
+    "bibtex": "@article{rahnemoonfar2021floodnet,\n  title={FloodNet: A High Resolution Aerial Imagery Dataset for Post Flood Scene Understanding},\n  author={Rahnemoonfar, Maryam and Chowdhury, Tashnim and Sarkar, Argho and Varshney, Debvrat and Yari, Masoud and Murphy, Robin Roberson},\n  journal={IEEE Access},\n  volume={9},\n  pages={89644--89654},\n  year={2021},\n  doi={10.1109/ACCESS.2021.3090981}\n}"
+  }
+}

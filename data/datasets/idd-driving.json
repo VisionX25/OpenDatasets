@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "idd-driving",
+  "slug": "idd-driving",
+  "name": "IDD: Indian Driving Dataset for Autonomous Navigation in Unconstrained Environments",
+  "description": "IDD is a specialized dataset for autonomous driving perception in unstructured and unconstrained traffic environments, collected by IIIT Hyderabad. It consists of 10,004 road scene images captured across Bangalore and Hyderabad with dense pixel-level annotations across a 4-level label hierarchy of 34 classes. It uniquely captures ambiguous road boundaries, mixed unstructured traffic, and non-standard vehicle interactions.",
+  "homepage_url": "https://idd.insaan.iiit.ac.in/",
+  "publisher": {
+    "name": "International Institute of Information Technology, Hyderabad (IIIT Hyderabad)",
+    "type": "academic",
+    "url": "https://idd.insaan.iiit.ac.in/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "object-detection",
+    "autonomous-driving"
+  ],
+  "tags": [
+    "unstructured-traffic",
+    "autonomous-driving",
+    "semantic-segmentation",
+    "south-asia",
+    "road-scenes",
+    "wacv",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "IDD Non-Commercial Research License",
+    "spdx_id": null,
+    "url": "https://idd.insaan.iiit.ac.in/dataset/terms/",
+    "commercial_use": "forbidden",
+    "notes": "Provided free of charge for non-commercial academic research upon user registration."
+  },
+  "source_references": [
+    {
+      "title": "IDD Official Portal",
+      "url": "https://idd.insaan.iiit.ac.in/",
+      "type": "official_website",
+      "notes": "Official portal for Indian Driving Dataset at IIIT Hyderabad."
+    },
+    {
+      "title": "IDD WACV 2019 Paper",
+      "url": "https://doi.org/10.1109/WACV.2019.00205",
+      "type": "original_paper",
+      "notes": "Published in IEEE Winter Conference on Applications of Computer Vision (WACV 2019)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against IIIT Hyderabad INSAAN portal and WACV 2019 publication."
+  },
+  "size": {
+    "amount": 18.5,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "10,004 finely annotated road scenes with 34 label hierarchy levels captured on unstructured South Asian roads."
+  },
+  "sample_count": {
+    "total": 10004,
+    "splits": {
+      "train": 6993,
+      "validation": 981,
+      "test": 2030
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-01-07"
+  },
+  "citation": {
+    "paper_title": "IDD: A Dataset for Exploring Problems of Autonomous Navigation in Unconstrained Environments",
+    "paper_url": "https://doi.org/10.1109/WACV.2019.00190",
+    "authors": [
+      "Girish Varma",
+      "Anbumani Subramanian",
+      "Anoop Namboodiri",
+      "Manmohan Chandraker",
+      "C. V. Jawahar"
+    ],
+    "doi": "10.1109/WACV.2019.00190",
+    "bibtex": "@inproceedings{varma2019idd,\n  title={IDD: A Dataset for Exploring Problems of Autonomous Navigation in Unconstrained Environments},\n  author={Varma, Girish and Subramanian, Anbumani and Namboodiri, Anoop and Chandraker, Manmohan and Jawahar, C. V.},\n  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},\n  pages={1893--1902},\n  year={2019},\n  doi={10.1109/WACV.2019.00190}\n}"
+  }
+}

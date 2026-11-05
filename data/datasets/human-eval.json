@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0.0",
+  "id": "human-eval",
+  "slug": "human-eval",
+  "name": "HumanEval: Evaluating Large Language Models Trained on Code",
+  "description": "HumanEval is the seminal benchmark developed by OpenAI to measure the functional correctness of code synthesis models. It consists of 164 hand-crafted programming problems with function signatures, docstrings, reference solutions, and comprehensive unit tests. It established the pass@k evaluation metric, becoming the universally adopted standard for code-generation evaluation.",
+  "homepage_url": "https://github.com/openai/human-eval",
+  "publisher": {
+    "name": "OpenAI",
+    "type": "industry",
+    "url": "https://openai.com/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "code-generation",
+    "program-synthesis"
+  ],
+  "tags": [
+    "code-generation",
+    "python",
+    "programming",
+    "openai",
+    "codex",
+    "llm-evaluation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://github.com/openai/human-eval/blob/master/LICENSE",
+    "commercial_use": "allowed",
+    "notes": "Released by OpenAI under the MIT License."
+  },
+  "source_references": [
+    {
+      "title": "HumanEval GitHub Repository",
+      "url": "https://github.com/openai/human-eval",
+      "type": "repository",
+      "notes": "Official OpenAI repository containing the 164 evaluation problems and execution harness."
+    },
+    {
+      "title": "Evaluating Large Language Models Trained on Code (arXiv)",
+      "url": "https://arxiv.org/abs/2107.03374",
+      "type": "original_paper",
+      "notes": "Foundational Codex paper introducing HumanEval and pass@k."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against OpenAI official GitHub repository and research publication."
+  },
+  "size": {
+    "amount": 0.004,
+    "unit": "GB",
+    "file_formats": [
+      "jsonl",
+      "py"
+    ],
+    "status": "verified",
+    "notes": "164 hand-crafted Python programming tasks with docstrings, reference solutions, and unit tests."
+  },
+  "sample_count": {
+    "total": 164,
+    "splits": {
+      "test": 164
+    },
+    "unit": "problems",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-07-07"
+  },
+  "citation": {
+    "paper_title": "Evaluating Large Language Models Trained on Code",
+    "paper_url": "https://arxiv.org/abs/2107.03374",
+    "authors": [
+      "Mark Chen",
+      "Jerry Tworek",
+      "Heewoo Jun",
+      "Qiming Yuan",
+      "Henrique Ponde de Oliveira Pinto",
+      "Jared Kaplan",
+      "Harri Edwards",
+      "Yuri Burda",
+      "Nicholas Joseph",
+      "Greg Brockman",
+      "Alex Ray",
+      "Raul Puri",
+      "Gretchen Krueger",
+      "Michael Petrov",
+      "Heidy Khlaaf",
+      "Girish Sastry",
+      "Pamela Mishkin",
+      "Brooke Chan",
+      "Scott Gray",
+      "Nick Ryder",
+      "Mikhail Pavlov",
+      "Alethea Power",
+      "Lukasz Kaiser",
+      "Mohammad Bavarian",
+      "Alexis Winter",
+      "Philippe Tillet",
+      "Felipe Petroski Such",
+      "Dave Cummings",
+      "Matthias Plappert",
+      "Fotios Chantzis",
+      "Elizabeth Barnes",
+      "Ariel Herbert-Voss",
+      "William Hebgen Guss",
+      "Alex Nichol",
+      "Alex Paino",
+      "Nikolas Tezak",
+      "Jie Tang",
+      "Igor Babuschkin",
+      "Suchir Balaji",
+      "Shantanu Jain",
+      "William Saunders",
+      "Christopher Hesse",
+      "Andrew N. Carr",
+      "Jan Leike",
+      "Josh Achiam",
+      "Vedant Misra",
+      "Evan Morikawa",
+      "Alec Radford",
+      "Matthew Knight",
+      "Miles Brundage",
+      "Mira Murati",
+      "Katie Mayer",
+      "Peter Welinder",
+      "Bob McGrew",
+      "Dario Amodei",
+      "Sam McCandlish",
+      "Ilya Sutskever",
+      "Wojciech Zaremba"
+    ],
+    "doi": "10.48550/arXiv.2107.03374",
+    "bibtex": "@article{chen2021evaluating,\n  title={Evaluating Large Language Models Trained on Code},\n  author={Chen, Mark and Tworek, Jerry and Jun, Heewoo and Yuan, Qiming and Pinto, Henrique Ponde de Oliveira and Kaplan, Jared and Edwards, Harri and Burda, Yuri and Joseph, Nicholas and Brockman, Greg and others},\n  journal={arXiv preprint arXiv:2107.03374},\n  year={2021}\n}"
+  }
+}

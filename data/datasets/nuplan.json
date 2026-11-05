@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nuplan",
+  "slug": "nuplan",
+  "name": "nuPlan: Closed-Loop ML-Based Planning Benchmark for Autonomous Vehicles",
+  "description": "nuPlan is the world's first large-scale ML-based planning benchmark for autonomous vehicles, developed by Motional. It provides 1,300 hours of driving logs collected in Boston, Pittsburgh, Las Vegas, and Singapore with dense sensor streams, HD vector maps, and realistic closed-loop simulation environments. It enables evaluating learned driving policies against complex reactive agents in unconstrained urban environments.",
+  "homepage_url": "https://www.nuscenes.org/nuplan",
+  "publisher": {
+    "name": "Motional",
+    "type": "industry",
+    "url": "https://motional.com/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "3d",
+    "time-series"
+  ],
+  "tasks": [
+    "motion-planning",
+    "trajectory-prediction",
+    "autonomous-driving"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "motion-planning",
+    "closed-loop-simulation",
+    "lidar",
+    "hd-maps",
+    "nuscenes",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://www.nuscenes.org/terms-of-use",
+    "commercial_use": "forbidden",
+    "notes": "Available under CC BY-NC-SA 4.0 for non-commercial research use."
+  },
+  "source_references": [
+    {
+      "title": "nuPlan Official Portal",
+      "url": "https://www.nuscenes.org/nuplan",
+      "type": "official_website",
+      "notes": "Official portal for downloading nuPlan logs, maps, and devkit."
+    },
+    {
+      "title": "nuPlan DevKit GitHub Repository",
+      "url": "https://github.com/motional/nuplan-devkit",
+      "type": "repository",
+      "notes": "Official Motional nuPlan devkit repository."
+    },
+    {
+      "title": "nuPlan CVPR Workshop Paper",
+      "url": "https://arxiv.org/abs/2106.11810",
+      "type": "original_paper",
+      "notes": "Foundational paper on closed-loop planning."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against Motional nuPlan portal and official devkit documentation."
+  },
+  "size": {
+    "amount": 1900.0,
+    "unit": "GB",
+    "file_formats": [
+      "db3",
+      "jpg",
+      "pcd"
+    ],
+    "status": "verified",
+    "notes": "1,300+ hours of human driving logs across Boston, Pittsburgh, Las Vegas, and Singapore with semantic HD maps."
+  },
+  "sample_count": {
+    "total": 1300,
+    "splits": {
+      "train": 1100,
+      "validation": 100,
+      "test": 100
+    },
+    "unit": "hours",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-06-22"
+  },
+  "citation": {
+    "paper_title": "nuPlan: A closed-loop ML-based planning benchmark for autonomous vehicles",
+    "paper_url": "https://arxiv.org/abs/2106.11810",
+    "authors": [
+      "Holger Caesar",
+      "Juraj Kabzan",
+      "Kok Seang Tan",
+      "Whye Kit Fong",
+      "Eric Wolff",
+      "Alex Lang",
+      "Luke Fletcher",
+      "Oscar Beijbom",
+      "Sammy Omari"
+    ],
+    "doi": "10.48550/arXiv.2106.11810",
+    "bibtex": "@article{caesar2021nuplan,\n  title={nuPlan: A closed-loop ML-based planning benchmark for autonomous vehicles},\n  author={Caesar, Holger and Kabzan, Juraj and Tan, Kok Seang and Fong, Whye Kit and Wolff, Eric and Lang, Alex and Fletcher, Luke and Beijbom, Oscar and Omari, Sammy},\n  journal={arXiv preprint arXiv:2106.11810},\n  year={2021}\n}"
+  }
+}

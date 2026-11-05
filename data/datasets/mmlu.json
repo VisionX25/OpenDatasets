@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mmlu",
+  "slug": "mmlu",
+  "name": "MMLU: Measuring Massive Multitask Language Understanding",
+  "description": "MMLU is a foundational language understanding benchmark designed to evaluate text models across a vast spectrum of human knowledge and problem-solving disciplines. Developed by researchers at UC Berkeley and Columbia University, it spans 15,908 multiple-choice questions across 57 academic subjects ranging from elementary mathematics and US history to professional law and computer science.",
+  "homepage_url": "https://github.com/hendrycks/test",
+  "publisher": {
+    "name": "UC Berkeley & Columbia University",
+    "type": "academic",
+    "url": "https://github.com/hendrycks/test"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "general-language-understanding"
+  ],
+  "tags": [
+    "multitask-evaluation",
+    "llm-benchmark",
+    "stem",
+    "humanities",
+    "social-sciences",
+    "iclr",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://github.com/hendrycks/test/blob/master/LICENSE",
+    "commercial_use": "allowed",
+    "notes": "Evaluation benchmark and question datasets distributed under MIT License."
+  },
+  "source_references": [
+    {
+      "title": "MMLU Official Repository",
+      "url": "https://github.com/hendrycks/test",
+      "type": "repository",
+      "notes": "Official repository containing the 57 subject CSVs and evaluation harness."
+    },
+    {
+      "title": "Measuring Massive Multitask Language Understanding (ICLR 2021)",
+      "url": "https://openreview.net/forum?id=d7KBjmI3GmQ",
+      "type": "original_paper",
+      "notes": "Published at International Conference on Learning Representations (ICLR 2021)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against ICLR 2021 proceedings and official UC Berkeley repository."
+  },
+  "size": {
+    "amount": 0.165,
+    "unit": "GB",
+    "file_formats": [
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "15,908 multiple-choice questions across 57 academic subjects in standardized CSV format."
+  },
+  "sample_count": {
+    "total": 15908,
+    "splits": {
+      "dev": 285,
+      "validation": 1531,
+      "test": 14092
+    },
+    "unit": "questions",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-09-07"
+  },
+  "citation": {
+    "paper_title": "Measuring Massive Multitask Language Understanding",
+    "paper_url": "https://arxiv.org/abs/2009.03300",
+    "authors": [
+      "Dan Hendrycks",
+      "Collin Burns",
+      "Steven Basart",
+      "Andy Zou",
+      "Mantas Mazeika",
+      "Dawn Song",
+      "Jacob Steinhardt"
+    ],
+    "doi": "10.48550/arXiv.2009.03300",
+    "bibtex": "@inproceedings{hendrycks2021measuring,\n  title={Measuring Massive Multitask Language Understanding},\n  author={Hendrycks, Dan and Burns, Collin and Basart, Steven and Zou, Andy and Mazeika, Mantas and Song, Dawn and Steinhardt, Jacob},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2021}\n}"
+  }
+}

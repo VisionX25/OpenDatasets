@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "vqa-rad",
+  "slug": "vqa-rad",
+  "name": "VQA-RAD: Visual Question Answering in Radiology Dataset",
+  "description": "VQA-RAD is a foundational benchmark for clinical visual question answering on radiological images. It consists of 3,515 clinician-verified question-answer pairs corresponding to 315 radiology images (head CT, chest X-ray, and abdominal MRI) sourced from MedPix. Questions evaluate free-form natural language clinical reasoning, abnormal finding localization, and anatomical organ identification.",
+  "homepage_url": "https://osf.io/8972f/",
+  "publisher": {
+    "name": "National Library of Medicine (NLM) / MedPix",
+    "type": "government",
+    "url": "https://osf.io/8972f/"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "medical-visual-question-answering",
+    "clinical-reasoning"
+  ],
+  "tags": [
+    "radiology",
+    "medical-vqa",
+    "clinical-qa",
+    "medpix",
+    "x-ray",
+    "ct",
+    "mri",
+    "benchmark"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Creative Commons Zero v1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Dedicated to the public domain under Creative Commons Zero v1.0 Universal on Open Science Framework and Hugging Face."
+  },
+  "source_references": [
+    {
+      "title": "Open Science Framework VQA-RAD Project",
+      "url": "https://osf.io/8972f/",
+      "type": "repository",
+      "notes": "Official repository on Open Science Framework with verified question-answer JSON files."
+    },
+    {
+      "title": "VQA-RAD Scientific Data Paper",
+      "url": "https://doi.org/10.1038/sdata.2018.251",
+      "type": "original_paper",
+      "notes": "Published in Nature Scientific Data (2018)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against Nature Scientific Data paper and official OSF project repository."
+  },
+  "size": {
+    "amount": 0.15,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Contains 315 radiological images and 3,515 clinical QA annotations."
+  },
+  "sample_count": {
+    "total": 3515,
+    "splits": {
+      "train": 3064,
+      "test": 451
+    },
+    "unit": "qa_pairs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-11-20"
+  },
+  "citation": {
+    "paper_title": "A dataset of clinically generated visual questions and answers about radiology images",
+    "paper_url": "https://doi.org/10.1038/sdata.2018.251",
+    "authors": [
+      "Jason J. Lau",
+      "Soumya Gayen",
+      "Asma Ben Abacha",
+      "Dina Demner-Fushman"
+    ],
+    "doi": "10.1038/sdata.2018.251",
+    "bibtex": "@article{lau2018dataset,\n  title={A dataset of clinically generated visual questions and answers about radiology images},\n  author={Lau, Jason J. and Gayen, Soumya and Ben Abacha, Asma and Demner-Fushman, Dina},\n  journal={Scientific Data},\n  volume={5},\n  pages={180251},\n  year={2018},\n  publisher={Nature Publishing Group},\n  doi={10.1038/sdata.2018.251}\n}"
+  }
+}

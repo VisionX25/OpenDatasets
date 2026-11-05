@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "plotqa",
+  "slug": "plotqa",
+  "name": "PlotQA: Reasoning over Scientific Plots",
+  "description": "PlotQA is a large-scale visual question answering benchmark focused on complex reasoning over scientific plots and charts. It comprises 28 million question-answer pairs ground-truthed on 224,377 synthetic and real-world scientific plots across bar charts, line plots, and dot plots. Questions demand both visual perception and structural mathematical and relational reasoning over tabular plot elements.",
+  "homepage_url": "https://github.com/NiteshMethani/PlotQA",
+  "publisher": {
+    "name": "Indian Institute of Technology Madras (IIT Madras)",
+    "type": "academic",
+    "url": "https://iitmnlp.github.io/PlotQA/"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "chart-understanding"
+  ],
+  "tags": [
+    "scientific-plots",
+    "visual-reasoning",
+    "vqa",
+    "chart-qa",
+    "iit-madras",
+    "wacv",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset plots and QA annotations released under CC BY 4.0; evaluation models and codebase licensed under MIT."
+  },
+  "source_references": [
+    {
+      "title": "PlotQA GitHub Repository",
+      "url": "https://github.com/NiteshMethani/PlotQA",
+      "type": "repository",
+      "notes": "Official repository with data generation scripts and annotation parsing tools."
+    },
+    {
+      "title": "PlotQA Project Landing Page",
+      "url": "https://iitmnlp.github.io/PlotQA/",
+      "type": "official_website",
+      "notes": "IIT Madras NLP lab project portal for PlotQA."
+    },
+    {
+      "title": "PlotQA WACV 2020 Paper",
+      "url": "https://openaccess.thecvf.com/content_WACV_2020/html/Methani_PlotQA_Reasoning_over_Scientific_Plots_WACV_2020_paper.html",
+      "type": "original_paper",
+      "notes": "Published in IEEE Winter Conference on Applications of Computer Vision (WACV 2020)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-05",
+    "notes": "Verified against WACV 2020 proceedings and IIT Madras project repository."
+  },
+  "size": {
+    "amount": 16.0,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Includes 224,377 plot images and 28 million QA pairs across train, validation, and test splits."
+  },
+  "sample_count": {
+    "total": 224377,
+    "splits": {
+      "train": 157070,
+      "validation": 33650,
+      "test": 33657
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-03-01"
+  },
+  "citation": {
+    "paper_title": "PlotQA: Reasoning over Scientific Plots",
+    "paper_url": "https://openaccess.thecvf.com/content_WACV_2020/html/Methani_PlotQA_Reasoning_over_Scientific_Plots_WACV_2020_paper.html",
+    "authors": [
+      "Nitesh Methani",
+      "Pritha Ganguly",
+      "Mitesh M. Khapra",
+      "Pratyush Kumar"
+    ],
+    "doi": "10.1109/WACV45572.2020.9093523",
+    "bibtex": "@inproceedings{methani2020plotqa,\n  title={PlotQA: Reasoning over Scientific Plots},\n  author={Methani, Nitesh and Ganguly, Pritha and Khapra, Mitesh M. and Kumar, Pratyush},\n  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},\n  pages={2171--2180},\n  year={2020},\n  doi={10.1109/WACV45572.2020.9093523}\n}"
+  }
+}
