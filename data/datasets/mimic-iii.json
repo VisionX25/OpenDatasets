@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mimic-iii",
+  "slug": "mimic-iii",
+  "name": "MIMIC-III: Medical Information Mart for Intensive Care III",
+  "description": "MIMIC-III is a widely celebrated, freely accessible clinical database developed by the MIT Laboratory for Computational Physiology and Beth Israel Deaconess Medical Center (BIDMC), published in Nature Scientific Data. Spanning over a decade of critical care admissions between 2001 and 2012, MIMIC-III covers 46,520 distinct intensive care unit (ICU) patients across 58,976 hospital admissions. It integrates electronic health records from both CareVue and MetaVision ICU clinical information systems across 26 relational tables documenting patient demographics, continuous hourly physiological vital sign measurements, comprehensive laboratory blood chemistry and microbiological cultures, therapeutic medication administrations, nursing notes, and ICD-9 billing diagnoses. Crucially, MIMIC-III includes an integrated NOTEEVENTS table containing over 2 million de-identified free-text clinical notes, making it a foundational benchmark for clinical NLP, automated ICD coding, mortality prediction, and sepsis detection. Users should note that while MIMIC-IV supersedes MIMIC-III for contemporary MetaVision data (2008–2019), MIMIC-III remains a distinct historical benchmark capturing CareVue system data (2001–2008) and embedded clinical text notes.",
+  "homepage_url": "https://physionet.org/content/mimiciii/1.4/",
+  "publisher": {
+    "name": "MIT Laboratory for Computational Physiology & BIDMC",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "nlp"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "clinical-risk-prediction",
+    "text-classification"
+  ],
+  "tags": [
+    "healthcare",
+    "intensive-care",
+    "electronic-health-records",
+    "mimic",
+    "clinical-nlp",
+    "icu",
+    "physionet"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "PhysioNet Credentialed Health Data License 1.5.0",
+    "spdx_id": null,
+    "url": "https://physionet.org/content/mimiciii/view-license/1.4/",
+    "commercial_use": "unknown",
+    "notes": "Governed by PhysioNet Credentialed Health Data License 1.5.0. Access requires CITI human subjects training, user credentialing, and agreement to strict non-reidentification and non-redistribution terms."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet MIMIC-III v1.4 Repository (DOI: 10.13026/C2XW26)",
+      "url": "https://doi.org/10.13026/C2XW26",
+      "type": "repository"
+    },
+    {
+      "title": "Nature Scientific Data Publication (DOI: 10.1038/sdata.2016.35)",
+      "url": "https://doi.org/10.1038/sdata.2016.35",
+      "type": "original_paper"
+    },
+    {
+      "title": "PhysioNet Credentialed Health Data Use Agreement",
+      "url": "https://physionet.org/content/mimiciii/view-dua/1.4/",
+      "type": "documentation"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet DOI 10.13026/C2XW26 and Johnson et al. (Scientific Data 2016). Documented relationship with MIMIC-IV."
+  },
+  "sample_count": {
+    "total": 58976,
+    "splits": {
+      "admissions": 58976,
+      "patients": 46520
+    },
+    "unit": "admissions",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2015",
+    "last_updated": "2016"
+  },
+  "citation": {
+    "paper_title": "MIMIC-III, a freely accessible critical care database",
+    "paper_url": "https://doi.org/10.1038/sdata.2016.35",
+    "authors": [
+      "Alistair E. W. Johnson",
+      "Tom J. Pollard",
+      "Lu Shen",
+      "Li-wei H. Lehman",
+      "Mengling Feng",
+      "Mohammad Ghassemi",
+      "Benjamin Moody",
+      "Peter Szolovits",
+      "Leo Anthony Celi",
+      "Roger G. Mark"
+    ],
+    "doi": "10.1038/sdata.2016.35",
+    "bibtex": "@article{johnson2016mimic,\n  title={MIMIC-III, a freely accessible critical care database},\n  author={Johnson, Alistair EW and Pollard, Tom J and Shen, Lu and Lehman, Li-wei H and Feng, Mengling and Ghassemi, Mohammad and Moody, Benjamin and Szolovits, Peter and Celi, Leo Anthony and Mark, Roger G},\n  journal={Scientific Data},\n  volume={3},\n  number={1},\n  pages={1--9},\n  year={2016},\n  publisher={Nature Publishing Group}\n}"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "verse-2020",
+  "slug": "verse-2020",
+  "name": "VerSe 2020: Large Scale Vertebrae Segmentation Challenge",
+  "description": "VerSe 2020 (Large Scale Vertebrae Segmentation Challenge 2020) was organized in conjunction with MICCAI 2020 to advance automated spine analysis in computed tomography (CT). The benchmark consists of multi-detector spine CT examinations from 300 subjects (yielding 303 series and over 4,000 individually visualized vertebrae) acquired across multi-center clinical workflows from all four major CT manufacturers (GE, Philips, Siemens, Canon). VerSe 2020 specifically evaluates algorithm robustness in the presence of challenging anatomical anomalies (including transitional vertebrae like lumbarized L6 or thoracicized T13, enumerative variations, osteophytes, and surgical fixation hardware). Annotations include voxel-level semantic segmentation masks and 3D anatomical centroid coordinates for every individual cervical (C1–C7), thoracic (T1–T12), and lumbar (L1–L5/L6) vertebra.",
+  "homepage_url": "https://verse2020.grand-challenge.org/",
+  "publisher": {
+    "name": "Technical University of Munich & VerSe Consortium",
+    "type": "academic",
+    "url": "https://verse2020.grand-challenge.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "medical-image-analysis",
+    "landmark-detection"
+  ],
+  "tags": [
+    "medical-imaging",
+    "ct",
+    "spine",
+    "vertebrae",
+    "segmentation",
+    "radiology",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed on OSF, Hugging Face, and Grand Challenge under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "VerSe 2020 Grand Challenge Page",
+      "url": "https://verse2020.grand-challenge.org/",
+      "type": "official_website"
+    },
+    {
+      "title": "Medical Image Analysis Publication (DOI: 10.1016/j.media.2021.102161)",
+      "url": "https://doi.org/10.1016/j.media.2021.102161",
+      "type": "original_paper"
+    },
+    {
+      "title": "VerSe Official GitHub Repository",
+      "url": "https://github.com/anjany/verse",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against Grand Challenge portal and Liebl et al. (Medical Image Analysis 2021)."
+  },
+  "sample_count": {
+    "total": 303,
+    "splits": {
+      "train": 104,
+      "validation": 99,
+      "test": 100
+    },
+    "unit": "series",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020",
+    "last_updated": "2021"
+  },
+  "citation": {
+    "paper_title": "A computed tomography vertebral segmentation dataset with anatomical variations and multi-vendor scanner data",
+    "paper_url": "https://doi.org/10.1016/j.media.2021.102161",
+    "authors": [
+      "Christian Liebl",
+      "Anjany Sekuboyina",
+      "Malek El Husseini",
+      "Amirhossein Bayat",
+      "Maximilian Löffler",
+      "Thomas Baum",
+      "Jan S. Kirschke"
+    ],
+    "doi": "10.1016/j.media.2021.102161",
+    "bibtex": "@article{liebl2021computed,\n  title={A computed tomography vertebral segmentation dataset with anatomical variations and multi-vendor scanner data},\n  author={Liebl, Christian and Sekuboyina, Anjany and El Husseini, Malek and Bayat, Amirhossein and L{\\\"o}ffler, Maximilian and Baum, Thomas and Kirschke, Jan S},\n  journal={Medical Image Analysis},\n  volume={73},\n  pages={102161},\n  year={2021},\n  publisher={Elsevier}\n}"
+  }
+}

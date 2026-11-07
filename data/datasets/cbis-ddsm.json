@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cbis-ddsm",
+  "slug": "cbis-ddsm",
+  "name": "CBIS-DDSM: Curated Breast Imaging Subset of DDSM",
+  "description": "The Curated Breast Imaging Subset of the Digital Database for Screening Mammography (CBIS-DDSM) is an updated and standardized benchmark dataset for computer-aided detection and diagnosis in screening mammography. Hosted on The Cancer Imaging Archive (TCIA), CBIS-DDSM includes 2,620 scanned film mammography studies across 1,566 participants (3,568 total images). Selected and verified by expert radiologists, the dataset decompresses and standardizes the original DDSM data into DICOM format, updates the pathology ground truth (normal, benign, and malignant), and provides bounding boxes and pixel-level region-of-interest (ROI) segmentation masks for both breast masses and microcalcifications alongside BI-RADS assessment descriptors.",
+  "homepage_url": "https://www.cancerimagingarchive.net/collection/cbis-ddsm/",
+  "publisher": {
+    "name": "The Cancer Imaging Archive (TCIA) & Stanford University",
+    "type": "academic",
+    "url": "https://www.cancerimagingarchive.net"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "semantic-segmentation",
+    "medical-image-analysis",
+    "object-detection"
+  ],
+  "tags": [
+    "medical-imaging",
+    "mammography",
+    "breast-cancer",
+    "radiology",
+    "tcia",
+    "oncology",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 3.0 Unported",
+    "spdx_id": "CC-BY-3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/",
+    "commercial_use": "allowed",
+    "notes": "Published on The Cancer Imaging Archive (TCIA) under Creative Commons Attribution 3.0 Unported (CC BY 3.0)."
+  },
+  "source_references": [
+    {
+      "title": "TCIA CBIS-DDSM Collection Page",
+      "url": "https://doi.org/10.7937/K9/TCIA.2016.7O02S9CY",
+      "type": "repository"
+    },
+    {
+      "title": "Scientific Data Descriptor Paper (DOI: 10.1038/sdata.2017.177)",
+      "url": "https://doi.org/10.1038/sdata.2017.177",
+      "type": "original_paper"
+    },
+    {
+      "title": "TCIA Main Portal",
+      "url": "https://www.cancerimagingarchive.net/collection/cbis-ddsm/",
+      "type": "official_website"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against TCIA collection page and Sawyer-Lee et al. (Scientific Data 2017)."
+  },
+  "sample_count": {
+    "total": 3568,
+    "splits": {
+      "calc_training": 1546,
+      "calc_test": 326,
+      "mass_training": 1318,
+      "mass_test": 378
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2016",
+    "last_updated": "2017"
+  },
+  "citation": {
+    "paper_title": "A curated mammography data set for use in computer-aided detection and diagnosis research",
+    "paper_url": "https://doi.org/10.1038/sdata.2017.177",
+    "authors": [
+      "Rebecca Sawyer Lee",
+      "Francisco Gimenez",
+      "Assaf Hoogi",
+      "Kanae Kawai Miyake",
+      "Mia Gorovoy",
+      "Daniel L. Rubin"
+    ],
+    "doi": "10.1038/sdata.2017.177",
+    "bibtex": "@article{sawyerlee2017curated,\n  title={A curated mammography data set for use in computer-aided detection and diagnosis research},\n  author={Sawyer Lee, Rebecca and Gimenez, Francisco and Hoogi, Assaf and Miyake, Kanae Kawai and Gorovoy, Mia and Rubin, Daniel L},\n  journal={Scientific Data},\n  volume={4},\n  number={1},\n  pages={170177},\n  year={2017},\n  publisher={Nature Publishing Group}\n}"
+  }
+}

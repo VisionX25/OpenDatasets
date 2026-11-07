@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cvc-clinicdb",
+  "slug": "cvc-clinicdb",
+  "name": "CVC-ClinicDB: Colonoscopy Polyp Segmentation Dataset",
+  "description": "CVC-ClinicDB is a canonical biomedical image benchmark for colonoscopy polyp detection and segmentation, developed by researchers from the Computer Vision Center (CVC) at Universitat Autònoma de Barcelona and Hospital Clínic de Barcelona. Standardized for the MICCAI 2015 Endoscopic Video Automatic Polyp Detection challenge, the dataset contains 612 static frames (384x288 resolution) extracted from 29 colonoscopy video sequences. Each frame is accompanied by a ground-truth binary mask indicating the precise pixel-level segmentation of mucosal polyps against the background gastrointestinal lumen. It serves as an essential baseline across modern medical segmentation architectures.",
+  "homepage_url": "https://pages.cvc.uab.es/CVC-Colon/index.php/databases/",
+  "publisher": {
+    "name": "Computer Vision Center & Hospital Clínic de Barcelona",
+    "type": "academic",
+    "url": "https://pages.cvc.uab.es"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "medical-image-analysis"
+  ],
+  "tags": [
+    "medical-imaging",
+    "endoscopy",
+    "colonoscopy",
+    "polyp-segmentation",
+    "gastroenterology",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Research and Educational Use Only License",
+    "spdx_id": null,
+    "url": "https://pages.cvc.uab.es/CVC-Colon/index.php/databases/",
+    "commercial_use": "forbidden",
+    "notes": "Strictly limited to non-commercial research and educational use. Original images are property of Hospital Clínic de Barcelona; ground-truth masks are property of Computer Vision Center."
+  },
+  "source_references": [
+    {
+      "title": "CVC-Colon Official Portal",
+      "url": "https://pages.cvc.uab.es/CVC-Colon/index.php/databases/",
+      "type": "official_website"
+    },
+    {
+      "title": "Computerized Medical Imaging and Graphics Publication (DOI: 10.1016/j.compmedimag.2015.02.007)",
+      "url": "https://doi.org/10.1016/j.compmedimag.2015.02.007",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against CVC database portal and Bernal et al. (CMIG 2015)."
+  },
+  "sample_count": {
+    "total": 612,
+    "unit": "frames",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2015"
+  },
+  "citation": {
+    "paper_title": "WM-DOVA maps for accurate polyp highlighting in colonoscopy: Validation vs. saliency maps from physicians",
+    "paper_url": "https://doi.org/10.1016/j.compmedimag.2015.02.007",
+    "authors": [
+      "Jorge Bernal",
+      "F. Javier Sánchez",
+      "Gloria Fernández-Esparrach",
+      "Debora Gil",
+      "Cristina Rodríguez",
+      "Fernando Vilariño"
+    ],
+    "doi": "10.1016/j.compmedimag.2015.02.007",
+    "bibtex": "@article{bernal2015wm,\n  title={WM-DOVA maps for accurate polyp highlighting in colonoscopy: Validation vs. saliency maps from physicians},\n  author={Bernal, Jorge and S{\\'a}nchez, F Javier and Fern{\\'a}ndez-Esparrach, Gloria and Gil, Debora and Rodr{\\'\\i}guez, Cristina and Vilari{\\~n}o, Fernando},\n  journal={Computerized Medical Imaging and Graphics},\n  volume={43},\n  pages={99--111},\n  year={2015},\n  publisher={Elsevier}\n}"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cap-sleep-database",
+  "slug": "cap-sleep-database",
+  "name": "CAP Sleep Database: Cyclic Alternating Pattern Polysomnographic Benchmark",
+  "description": "The CAP Sleep Database is a collection of 108 polysomnographic (PSG) sleep recordings compiled by the Sleep Disorders Center of the Ospedale Maggiore of Parma, Italy, and hosted on PhysioNet. Cyclic Alternating Pattern (CAP) is a periodic EEG activity pattern occurring during non-REM sleep that reflects sleep instability, micro-arousals, and autonomic fluctuations. The database includes overnight polysomnograms from 16 healthy control subjects and 92 patients diagnosed with sleep disorders (including nocturnal frontal lobe epilepsy, sleep apnea, narcolepsy, REM behavior disorder, and periodic leg movements). Records include multi-channel electroencephalogram (EEG), electrooculogram (EOG), electromyogram (EMG), and respiratory channels annotated by expert sleep physicians according to standard Rechtschaffen & Kales sleep stages and CAP phases (A-phase subtypes A1, A2, A3, and B-phase intervals).",
+  "homepage_url": "https://physionet.org/content/capslpdb/1.0.0/",
+  "publisher": {
+    "name": "Sleep Disorders Center, Ospedale Maggiore of Parma & PhysioNet",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "time-series-classification",
+    "clinical-risk-prediction",
+    "signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "sleep",
+    "polysomnography",
+    "eeg",
+    "neurology",
+    "physionet",
+    "biosignals",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed on PhysioNet under the Open Data Commons Attribution License v1.0."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet CAP Sleep Database Repository (DOI: 10.13026/C2VC79)",
+      "url": "https://doi.org/10.13026/C2VC79",
+      "type": "repository"
+    },
+    {
+      "title": "Sleep Medicine Consensus Paper: Atlas, rules, and recording techniques for the scoring of cyclic alternating pattern (DOI: 10.1016/S1389-9457(02)00012-X)",
+      "url": "https://doi.org/10.1016/S1389-9457(02)00012-X",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository DOI 10.13026/C2VC79 and Terzano et al. (Sleep Med 2001, 2002)."
+  },
+  "sample_count": {
+    "total": 108,
+    "splits": {
+      "normal": 16,
+      "pathological": 92
+    },
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2001",
+    "last_updated": "2013"
+  },
+  "citation": {
+    "paper_title": "Atlas, rules, and recording techniques for the scoring of cyclic alternating pattern (CAP) in human sleep",
+    "paper_url": "https://doi.org/10.1016/S1389-9457(02)00012-X",
+    "authors": [
+      "Mario Giovanni Terzano",
+      "Liborio Parrino",
+      "Arianna Smerieri",
+      "Rosa Chervin",
+      "Sudhansu Chokroverty",
+      "Christian Guilleminault",
+      "Miloslav Hirshkowitz",
+      "Mark Mahowald",
+      "Helder Moldofsky",
+      "Agostino Rosa",
+      "Raffaele Thomas",
+      "Arthur Walters"
+    ],
+    "doi": "10.1016/S1389-9457(02)00012-X",
+    "bibtex": "@article{terzano2002atlas,\n  title={Atlas, rules, and recording techniques for the scoring of cyclic alternating pattern (CAP) in human sleep},\n  author={Terzano, Mario Giovanni and Parrino, Liborio and Smerieri, Arianna and Chervin, Rosa and Chokroverty, Sudhansu and Guilleminault, Christian and Hirshkowitz, Miloslav and Mahowald, Mark and Moldofsky, Helder and Rosa, Agostino and others},\n  journal={Sleep Medicine},\n  volume={3},\n  number={2},\n  pages={187--199},\n  year={2002},\n  publisher={Elsevier}\n}"
+  }
+}

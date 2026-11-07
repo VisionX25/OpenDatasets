@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-cervical-cancer-risk-factors",
+  "slug": "uci-cervical-cancer-risk-factors",
+  "name": "Cervical Cancer (Risk Factors) Clinical Dataset",
+  "description": "The Cervical Cancer (Risk Factors) dataset is a tabular clinical benchmark hosted by the UCI Machine Learning Repository (dataset #383). Collected at Hospital Universitario de Caracas in Caracas, Venezuela, the dataset includes demographic information, lifestyle habits, and medical and sexual history for 858 female patients across 36 attributes (including age, number of sexual partners, smoking habits, use of hormonal contraceptives, intrauterine devices, sexually transmitted disease diagnoses, and previous cervical condylomatosis). Target variables represent clinical screening outcomes for cervical cancer: Hinselmann colposcopy examination, Schiller test, cytology (Pap smear), and histopathological biopsy. Due to patient privacy and clinical omission, several attributes contain missing values, offering a realistic benchmark for missing-data imputation, feature selection, and imbalanced clinical risk prediction.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/383/cervical+cancer+risk+factors",
+  "publisher": {
+    "name": "UCI Machine Learning Repository & University of Porto",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "clinical-risk-prediction"
+  ],
+  "tags": [
+    "healthcare",
+    "oncology",
+    "cervical-cancer",
+    "clinical-data",
+    "uci",
+    "tabular",
+    "risk-prediction"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published on UCI Machine Learning Repository under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UCI Dataset Repository (DOI: 10.24432/C5Z310)",
+      "url": "https://doi.org/10.24432/C5Z310",
+      "type": "repository"
+    },
+    {
+      "title": "Springer EPIA 2017 Publication (DOI: 10.1007/978-3-319-58838-4_27)",
+      "url": "https://doi.org/10.1007/978-3-319-58838-4_27",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against UCI repository dataset #383 and Fernandes et al. (EPIA 2017)."
+  },
+  "sample_count": {
+    "total": 858,
+    "unit": "records",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2017"
+  },
+  "citation": {
+    "paper_title": "Transfer Learning with Partial Observability Applied to Cervical Cancer Screening",
+    "paper_url": "https://doi.org/10.1007/978-3-319-58838-4_27",
+    "authors": [
+      "Kelwin Fernandes",
+      "Jaime S. Cardoso",
+      "Jessica Fernandes"
+    ],
+    "doi": "10.1007/978-3-319-58838-4_27",
+    "bibtex": "@inproceedings{fernandes2017transfer,\n  title={Transfer Learning with Partial Observability Applied to Cervical Cancer Screening},\n  author={Fernandes, Kelwin and Cardoso, Jaime S and Fernandes, Jessica},\n  booktitle={Iberian Conference on Pattern Recognition and Image Analysis},\n  pages={243--250},\n  year={2017},\n  organization={Springer}\n}"
+  }
+}
