@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "id": "isic-2024-slice-3d",
+  "slug": "isic-2024-slice-3d",
+  "name": "ISIC 2024 SLICE-3D: Skin Cancer Detection with 3D-TBP",
+  "description": "The ISIC 2024 SLICE-3D dataset (Skin Lesion Image Crops Extracted from 3D Total Body Photography) was developed for the ISIC 2024 challenge hosted on Kaggle and MICCAI 2024. Comprising 401,059 standardized lesion image crops (15x15 mm field-of-view) extracted from 3D Total Body Photography (3D-TBP) scans of 2,279 patients across nine international medical centers, SLICE-3D models high-volume, low-prevalence screening environments. Each lesion crop is paired with rich clinical and lesion metadata (anatomical site, patient age, sex, 3D coordinate locations, color/dimension attributes). The primary task is binary classification distinguishing malignant lesions (melanoma, basal cell carcinoma, squamous cell carcinoma; ~393 cases) from benign lesions (~400,666 cases) under an extreme class imbalance mimicking clinical primary care screening.",
+  "homepage_url": "https://challenge.isic-archive.com/landing/2024/",
+  "publisher": {
+    "name": "International Skin Imaging Collaboration (ISIC) & Memorial Sloan Kettering",
+    "type": "academic",
+    "url": "https://www.isic-archive.com"
+  },
+  "modalities": [
+    "vision",
+    "tabular"
+  ],
+  "tasks": [
+    "image-classification",
+    "medical-image-analysis",
+    "tabular-classification"
+  ],
+  "tags": [
+    "medical-imaging",
+    "dermatology",
+    "skin-cancer",
+    "isic",
+    "total-body-photography",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Distributed on Kaggle and ISIC Archive under Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0). Contributing sites selected CC0, CC-BY, or CC-BY-NC, with the umbrella dataset restricted to non-commercial use."
+  },
+  "source_references": [
+    {
+      "title": "ISIC 2024 Challenge Landing Page",
+      "url": "https://challenge.isic-archive.com/landing/2024/",
+      "type": "official_website"
+    },
+    {
+      "title": "Kaggle ISIC 2024 Challenge Page",
+      "url": "https://www.kaggle.com/competitions/isic-2024-challenge",
+      "type": "repository"
+    },
+    {
+      "title": "SLICE-3D Preprint (arXiv:2407.03960)",
+      "url": "https://doi.org/10.48550/arXiv.2407.03960",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against Kaggle competition specifications, ISIC Archive 2024 portal, and Rotemberg et al. (arXiv:2407.03960)."
+  },
+  "sample_count": {
+    "total": 401059,
+    "splits": {
+      "train": 401059
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2024"
+  },
+  "citation": {
+    "paper_title": "The SLICE-3D Dataset: 400,000 Skin Lesion Image Crops Extracted from 3D Total Body Photography for Skin Cancer Detection",
+    "paper_url": "https://arxiv.org/abs/2407.03960",
+    "authors": [
+      "Veronica Rotemberg",
+      "Matthew Groh",
+      "Brian Helba",
+      "Philipp Tschandl",
+      "Harald Kittler",
+      "Noel Codella",
+      "Allan Halpern"
+    ],
+    "doi": "10.48550/arXiv.2407.03960",
+    "bibtex": "@article{rotemberg2024slice,\n  title={The SLICE-3D Dataset: 400,000 Skin Lesion Image Crops Extracted from 3D Total Body Photography for Skin Cancer Detection},\n  author={Rotemberg, Veronica and Groh, Matthew and Helba, Brian and Tschandl, Philipp and Kittler, Harald and Codella, Noel and Halpern, Allan},\n  journal={arXiv preprint arXiv:2407.03960},\n  year={2024}\n}"
+  }
+}

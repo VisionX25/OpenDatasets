@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "isic-2019",
+  "slug": "isic-2019",
+  "name": "ISIC 2019: Skin Lesion Analysis Towards Melanoma Detection",
+  "description": "The ISIC 2019 challenge dataset is a major skin disease classification benchmark hosted by the International Skin Imaging Collaboration (ISIC) and MICCAI 2019. The dataset contains 25,331 training dermoscopic images across eight diagnostic categories: melanoma, melanocytic nevus, basal cell carcinoma, actinic keratosis, benign keratosis, dermatofibroma, vascular lesion, and squamous cell carcinoma. The test set comprises 8,238 images and introduces an additional unlabelled outlier class to evaluate out-of-distribution detection. The dataset aggregates images from the HAM10000 dataset (ViDIR Group, Medical University of Vienna), the BCN_20000 dataset (Hospital Clínic de Barcelona), and Memorial Sloan Kettering Cancer Center (MSK). Users should note the partial overlap with HAM10000 and BCN_20000.",
+  "homepage_url": "https://challenge.isic-archive.com/landing/2019/",
+  "publisher": {
+    "name": "International Skin Imaging Collaboration (ISIC)",
+    "type": "community",
+    "url": "https://www.isic-archive.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "medical-image-analysis",
+    "out-of-distribution-detection"
+  ],
+  "tags": [
+    "medical-imaging",
+    "dermatology",
+    "skin-cancer",
+    "isic",
+    "melanoma",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Distributed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Commercial use is forbidden."
+  },
+  "source_references": [
+    {
+      "title": "ISIC 2019 Challenge Landing Page",
+      "url": "https://challenge.isic-archive.com/landing/2019/",
+      "type": "official_website"
+    },
+    {
+      "title": "BCN20000 Publication in Scientific Data (DOI: 10.1038/s41597-024-03387-w)",
+      "url": "https://doi.org/10.1038/s41597-024-03387-w",
+      "type": "original_paper"
+    },
+    {
+      "title": "ISIC Archive 2019 Data Portal",
+      "url": "https://challenge.isic-archive.com/data/",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against official ISIC 2019 challenge repository and Combalia et al. (Scientific Data 2024 / arXiv:1908.02288)."
+  },
+  "sample_count": {
+    "total": 33569,
+    "splits": {
+      "train": 25331,
+      "test": 8238
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019"
+  },
+  "citation": {
+    "paper_title": "BCN20000: Dermoscopic Lesions in the Wild",
+    "paper_url": "https://doi.org/10.1038/s41597-024-03387-w",
+    "authors": [
+      "Marc Combalia",
+      "Noel C. F. Codella",
+      "Veronica Rotemberg",
+      "Brian Helba",
+      "Veronica Vilaplana",
+      "Ofer Reiter",
+      "Cristina Carrera",
+      "Alicia Barreiro",
+      "Allan C. Halpern",
+      "Susana Puig",
+      "Josep Malvehy"
+    ],
+    "doi": "10.1038/s41597-024-03387-w",
+    "bibtex": "@article{combalia2024bcn20000,\n  title={BCN20000: Dermoscopic Lesions in the Wild},\n  author={Combalia, Marc and Codella, Noel CF and Rotemberg, Veronica and Helba, Brian and Vilaplana, Veronica and Reiter, Ofer and Carrera, Cristina and Barreiro, Alicia and Halpern, Allan C and Puig, Susana and Malvehy, Josep},\n  journal={Scientific Data},\n  volume={11},\n  number={1},\n  pages={554},\n  year={2024},\n  publisher={Nature Publishing Group}\n}"
+  }
+}

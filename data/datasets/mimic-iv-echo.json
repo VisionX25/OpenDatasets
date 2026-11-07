@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mimic-iv-echo",
+  "slug": "mimic-iv-echo",
+  "name": "MIMIC-IV-Echo: Echocardiogram Matched Subset",
+  "description": "MIMIC-IV-Echo is a matched multimodal cardiac imaging subset of the MIMIC-IV database, released on PhysioNet by the MIT Laboratory for Computational Physiology. The database links comprehensive transthoracic and transesophageal echocardiography reports and associated DICOM video studies to patient hospitalizations in MIMIC-IV between 2008 and 2019. It captures detailed structural and hemodynamic cardiac assessments, including left ventricular ejection fraction (LVEF), chamber dimensions, wall motion abnormalities, valvular regurgitation and stenosis gradings, and pulmonary artery pressures, providing a rich foundation for multimodal deep learning bridging cardiac ultrasound with electronic health records.",
+  "homepage_url": "https://physionet.org/content/mimic-iv-echo/1.0.1/",
+  "publisher": {
+    "name": "MIT Laboratory for Computational Physiology & BIDMC",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "tabular",
+    "nlp",
+    "multimodal"
+  ],
+  "tasks": [
+    "clinical-risk-prediction",
+    "medical-image-analysis",
+    "tabular-classification"
+  ],
+  "tags": [
+    "healthcare",
+    "echocardiography",
+    "cardiology",
+    "ultrasound",
+    "mimic",
+    "multimodal",
+    "physionet"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "PhysioNet Credentialed Health Data License 1.5.0",
+    "spdx_id": null,
+    "url": "https://physionet.org/content/mimic-iv-echo/view-license/1.0.1/",
+    "commercial_use": "unknown",
+    "notes": "Governed by PhysioNet Credentialed Health Data License 1.5.0. Access requires CITI human subjects training, user credentialing, and agreement to strict non-reidentification and non-redistribution terms."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet MIMIC-IV-Echo v1.0.1 Repository (DOI: 10.13026/307c-mr50)",
+      "url": "https://doi.org/10.13026/307c-mr50",
+      "type": "repository"
+    },
+    {
+      "title": "PhysioNet MIMIC-IV Main Portal",
+      "url": "https://physionet.org/content/mimiciv/",
+      "type": "official_website"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository DOI 10.13026/307c-mr50 (version 1.0.1)."
+  },
+  "sample_count": {
+    "total": 40000,
+    "unit": "reports",
+    "status": "estimated"
+  },
+  "dates": {
+    "published": "2024",
+    "last_updated": "2026"
+  },
+  "citation": {
+    "paper_title": "MIMIC-IV-Echo: Echocardiogram Matched Subset",
+    "paper_url": "https://doi.org/10.13026/307c-mr50",
+    "authors": [
+      "Benjamin Gow",
+      "Tom J. Pollard",
+      "Nathan Greenbaum",
+      "Benjamin Moody",
+      "Albert Han",
+      "Jonathan W. Waks",
+      "Alistair E. W. Johnson",
+      "Emily Herbst",
+      "Pouria Eslami",
+      "Akshay Chaudhari",
+      "Tommaso Carbonati",
+      "Seth Berkowitz",
+      "Roger G. Mark",
+      "Steven Horng"
+    ],
+    "doi": "10.13026/307c-mr50",
+    "bibtex": "@misc{gow2026mimic_iv_echo,\n  title={MIMIC-IV-Echo: Echocardiogram Matched Subset (version 1.0.1)},\n  author={Gow, Benjamin and Pollard, Tom J and Greenbaum, Nathan and Moody, Benjamin and Han, Albert and Waks, Jonathan W and Johnson, Alistair EW and Herbst, Emily and Eslami, Pouria and Chaudhari, Akshay and Carbonati, Tommaso and Berkowitz, Seth and Mark, Roger G and Horng, Steven},\n  year={2026},\n  publisher={PhysioNet},\n  doi={10.13026/307c-mr50}\n}"
+  }
+}

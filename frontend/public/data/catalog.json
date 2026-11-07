@@ -270,6 +270,97 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "adni",
+    "slug": "adni",
+    "name": "ADNI: Alzheimer's Disease Neuroimaging Initiative",
+    "description": "The Alzheimer's Disease Neuroimaging Initiative (ADNI) is a landmark, longitudinal multicenter observational study launched in 2004 by the National Institute on Aging (NIA) and private partners to track the progression of mild cognitive impairment (MCI) and early Alzheimer's disease (AD). The dataset aggregates serial multimodal neuroimaging (structural and functional MRI, amyloid and tau PET), clinical assessments, cognitive test scores, cerebrospinal fluid (CSF) and blood biomarkers, and whole-genome sequencing from thousands of participants across four continuous study phases (ADNI-1, ADNI-GO, ADNI-2, and ADNI-3). Access is governed by the ADNI Data Use Agreement (DUA) through the Laboratory of Neuro Imaging (LONI) Image and Data Archive (IDA), requiring user registration, credentialing, and agreement to strict non-redistribution and non-reidentification rules.",
+    "homepage_url": "https://adni.loni.usc.edu/",
+    "publisher": {
+      "name": "Alzheimer's Disease Neuroimaging Initiative & LONI",
+      "type": "academic",
+      "url": "https://adni.loni.usc.edu"
+    },
+    "modalities": [
+      "vision",
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "clinical-risk-prediction",
+      "medical-image-analysis",
+      "tabular-classification",
+      "time-series-forecasting"
+    ],
+    "tags": [
+      "medical-imaging",
+      "neuroimaging",
+      "alzheimers",
+      "mri",
+      "pet",
+      "biomarkers",
+      "clinical-data",
+      "longitudinal"
+    ],
+    "license": {
+      "status": "proprietary",
+      "name": "ADNI Data Use Agreement",
+      "spdx_id": null,
+      "url": "https://adni.loni.usc.edu/data-samples/access-data/",
+      "commercial_use": "forbidden",
+      "notes": "Access requires a formal data access application and acceptance of the ADNI Data Use Agreement via the LONI IDA platform. Redistribution of raw participant-level data is prohibited. Access is restricted to scientific investigation and research purposes."
+    },
+    "source_references": [
+      {
+        "title": "ADNI Official Portal (LONI IDA)",
+        "url": "https://adni.loni.usc.edu/",
+        "type": "official_website"
+      },
+      {
+        "title": "Overview Paper: The Alzheimer's Disease Neuroimaging Initiative (DOI: 10.1016/j.nic.2005.09.008)",
+        "url": "https://doi.org/10.1016/j.nic.2005.09.008",
+        "type": "original_paper"
+      },
+      {
+        "title": "ADNI MRI Protocol Paper (DOI: 10.1002/jmri.21049)",
+        "url": "https://doi.org/10.1002/jmri.21049",
+        "type": "documentation"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against LONI IDA portal and Mueller et al. (Neuroimaging Clin N Am 2005)."
+    },
+    "sample_count": {
+      "total": 2800,
+      "unit": "participants",
+      "status": "estimated"
+    },
+    "dates": {
+      "published": "2004",
+      "last_updated": "2024"
+    },
+    "citation": {
+      "paper_title": "The Alzheimer's disease neuroimaging initiative",
+      "paper_url": "https://doi.org/10.1016/j.nic.2005.09.008",
+      "authors": [
+        "Susanne G. Mueller",
+        "Michael W. Weiner",
+        "Leon J. Thal",
+        "Ronald C. Petersen",
+        "Clifford R. Jack",
+        "William Jagust",
+        "John Q. Trojanowski",
+        "Arthur W. Toga",
+        "Laurel Beckett"
+      ],
+      "doi": "10.1016/j.nic.2005.09.008",
+      "bibtex": "@article{mueller2005alzheimer,\n  title={The Alzheimer's disease neuroimaging initiative},\n  author={Mueller, Susanne G and Weiner, Michael W and Thal, Leon J and Petersen, Ronald C and Jack, Clifford R and Jagust, William and Trojanowski, John Q and Toga, Arthur W and Beckett, Laurel},\n  journal={Neuroimaging Clinics},\n  volume={15},\n  number={4},\n  pages={869--877},\n  year={2005},\n  publisher={Elsevier}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "adult-census-income",
     "slug": "adult-census-income",
     "name": "Adult Census Income Database",
@@ -1066,6 +1157,106 @@
       ],
       "doi": "10.1007/11677406_3",
       "bibtex": "@inproceedings{carletta2005ami,\n  title = {The AMI Meeting Corpus},\n  author = {Carletta, Jean and Ashby, Simone and Bourban, Sebastien and Flynn, Mike and Guillemot, Mael and Hain, Thomas and Kadlec, Jaroslav and Karaiskos, Vasilis and Kraaij, Wessel and Kronenthal, Melissa and others},\n  booktitle = {Machine Learning for Multimodal Interaction},\n  pages = {28--39},\n  year = {2005}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "amos22",
+    "slug": "amos22",
+    "name": "AMOS22: Abdominal Multi-Organ Benchmark for Medical Image Segmentation",
+    "description": "The AMOS dataset (A Large-Scale Abdominal Multi-Organ Benchmark for Versatile Medical Image Segmentation) was created for the AMOS22 Grand Challenge and published in NeurIPS 2022. It provides a comprehensive multi-modality, multi-scanner, multi-disease benchmark for abdominal organ segmentation. The labeled dataset consists of 600 high-resolution volumetric clinical scans (500 contrast-enhanced abdominal CT scans and 100 abdominal MRI scans) collected from multi-center clinical routines. Expert radiologists annotated 15 anatomical structures: spleen, right kidney, left kidney, gallbladder, esophagus, liver, stomach, aorta, inferior vena cava, pancreas, right adrenal gland, left adrenal gland, duodenum, bladder, and prostate/uterus. The challenge partitions the 600 cases into 360 training, 120 validation, and 120 test volumes.",
+    "homepage_url": "https://amos22.grand-challenge.org/",
+    "publisher": {
+      "name": "The Chinese University of Hong Kong & AMOS Consortium",
+      "type": "academic",
+      "url": "https://amos22.grand-challenge.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "medical-image-analysis"
+    ],
+    "tags": [
+      "medical-imaging",
+      "ct",
+      "mri",
+      "segmentation",
+      "abdominal",
+      "radiology",
+      "neurips",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Distributed on Zenodo and Grand Challenge under Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "AMOS22 Grand Challenge Page",
+        "url": "https://amos22.grand-challenge.org/",
+        "type": "official_website"
+      },
+      {
+        "title": "NeurIPS 2022 Benchmark Paper (arXiv:2206.08020)",
+        "url": "https://doi.org/10.48550/arXiv.2206.08020",
+        "type": "original_paper"
+      },
+      {
+        "title": "Zenodo AMOS Dataset Repository (DOI: 10.5281/zenodo.7265705)",
+        "url": "https://doi.org/10.5281/zenodo.7265705",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against NeurIPS 2022 publication and AMOS22 Grand Challenge specifications."
+    },
+    "sample_count": {
+      "total": 600,
+      "splits": {
+        "train": 360,
+        "validation": 120,
+        "test": 120
+      },
+      "unit": "scans",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022"
+    },
+    "citation": {
+      "paper_title": "AMOS: A Large-Scale Abdominal Multi-Organ Benchmark for Versatile Medical Image Segmentation",
+      "paper_url": "https://arxiv.org/abs/2206.08020",
+      "authors": [
+        "Yuanfeng Ji",
+        "Haotian Bai",
+        "Jie Yang",
+        "Chongjian Ge",
+        "Ye Zhu",
+        "Ruimao Zhang",
+        "Mengke Li",
+        "Lingyan Zhang",
+        "Wanling Ma",
+        "Baochun He",
+        "Xiaoxi Chen",
+        "Yuan Cheng",
+        "Zhicheng Zhang",
+        "Li Ting",
+        "Haoqian Wang",
+        "Jie Chen",
+        "Pheng-Ann Heng",
+        "Shuguang Cui"
+      ],
+      "doi": "10.48550/arXiv.2206.08020",
+      "bibtex": "@inproceedings{ji2022amos,\n  title={AMOS: A Large-Scale Abdominal Multi-Organ Benchmark for Versatile Medical Image Segmentation},\n  author={Ji, Yuanfeng and Bai, Haotian and Yang, Jie and Ge, Chongjian and Zhu, Ye and Zhang, Ruimao and Li, Mengke and Zhang, Lingyan and Ma, Wanling and He, Baochun and others},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  volume={35},\n  pages={36796--36809},\n  year={2022}\n}"
     }
   },
   {
@@ -5363,6 +5554,87 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "bidmc-ppg-and-respiration",
+    "slug": "bidmc-ppg-and-respiration",
+    "name": "BIDMC PPG and Respiration Dataset",
+    "description": "The BIDMC PPG and Respiration Dataset was developed by researchers at the University of Oxford and Beth Israel Deaconess Medical Center, published in IEEE Transactions on Biomedical Engineering and hosted on PhysioNet. Extracted from the MIMIC-II matched waveform database, the dataset contains 53 recordings of physiological signals from critically ill patients (aged 19–90+ years) admitted to intensive care. Each record spans 8 minutes and captures continuous photoplethysmogram (PPG), impedance pneumography respiratory signal, and lead II electrocardiogram (ECG) sampled at 125 Hz. Ground-truth respiratory rate annotations were manually labeled by two independent human annotators inspecting impedance breaths, providing an authoritative benchmark for non-invasive respiratory rate estimation and pulse oximeter waveform analysis.",
+    "homepage_url": "https://physionet.org/content/bidmc/1.0.0/",
+    "publisher": {
+      "name": "University of Oxford & PhysioNet",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "signal-processing",
+      "time-series-forecasting",
+      "clinical-risk-prediction"
+    ],
+    "tags": [
+      "healthcare",
+      "ppg",
+      "respiration",
+      "biosignals",
+      "pulse-oximetry",
+      "icu",
+      "physionet"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed on PhysioNet under the Open Data Commons Attribution License v1.0."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet BIDMC Repository (DOI: 10.13026/C2205R)",
+        "url": "https://doi.org/10.13026/C2205R",
+        "type": "repository"
+      },
+      {
+        "title": "IEEE TBME Descriptor Publication (DOI: 10.1109/TBME.2016.2613124)",
+        "url": "https://doi.org/10.1109/TBME.2016.2613124",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository DOI 10.13026/C2205R and Pimentel et al. (IEEE TBME 2017)."
+    },
+    "sample_count": {
+      "total": 53,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2016",
+      "last_updated": "2017"
+    },
+    "citation": {
+      "paper_title": "Toward a Robust Estimation of Respiratory Rate From Pulse Oximeters",
+      "paper_url": "https://doi.org/10.1109/TBME.2016.2613124",
+      "authors": [
+        "Marco A. F. Pimentel",
+        "Alun E. Johnson",
+        "Peter H. Charlton",
+        "David Birrenkott",
+        "Peter J. Watkinson",
+        "Lionel Tarassenko",
+        "David A. Clifton"
+      ],
+      "doi": "10.1109/TBME.2016.2613124",
+      "bibtex": "@article{pimentel2016toward,\n  title={Toward a Robust Estimation of Respiratory Rate From Pulse Oximeters},\n  author={Pimentel, Marco AF and Johnson, Alun E and Charlton, Peter H and Birrenkott, David and Watkinson, Peter J and Tarassenko, Lionel and Clifton, David A},\n  journal={IEEE Transactions on Biomedical Engineering},\n  volume={64},\n  number={8},\n  pages={1914--1923},\n  year={2017},\n  publisher={IEEE}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bigearthnet",
     "slug": "bigearthnet",
     "name": "BigEarthNet: Large-Scale Sentinel Earth Observation Archive",
@@ -6268,6 +6540,153 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "bus-bra",
+    "slug": "bus-bra",
+    "name": "BUS-BRA: Breast Ultrasound Dataset with BI-RADS Categories",
+    "description": "BUS-BRA is an open-access breast ultrasound benchmark dataset compiled by researchers from the National Institute of Cancer (INCA) in Rio de Janeiro, Brazil, and CINVESTAV in Mexico. Hosted on Zenodo, the dataset consists of 1,875 B-mode breast ultrasound images acquired from 1,064 female patients. Each image is paired with verified biopsy-proven histopathological diagnosis (benign vs. malignant), Breast Imaging Reporting and Data System (BI-RADS) assessment categories (2 to 5) determined by senior ultrasonographers, and manual pixel-level binary tumor segmentation masks. The dataset also provides pre-defined 5-fold and 10-fold cross-validation partitions for reproducible machine learning benchmarking.",
+    "homepage_url": "https://zenodo.org/records/8231412",
+    "publisher": {
+      "name": "National Institute of Cancer (INCA) & CINVESTAV",
+      "type": "academic",
+      "url": "https://zenodo.org/records/8231412"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "semantic-segmentation",
+      "medical-image-analysis"
+    ],
+    "tags": [
+      "medical-imaging",
+      "ultrasound",
+      "breast-cancer",
+      "oncology",
+      "segmentation",
+      "bi-rads",
+      "zenodo"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed on Zenodo under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "Zenodo BUS-BRA Dataset Repository (DOI: 10.5281/zenodo.8231412)",
+        "url": "https://doi.org/10.5281/zenodo.8231412",
+        "type": "repository"
+      },
+      {
+        "title": "Medical Physics Journal Descriptor (DOI: 10.1002/mp.16812)",
+        "url": "https://doi.org/10.1002/mp.16812",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against Zenodo record 8231412 and Gómez-Flores et al. (Medical Physics 2024)."
+    },
+    "sample_count": {
+      "total": 1875,
+      "splits": {
+        "benign": 997,
+        "malignant": 878
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023",
+      "last_updated": "2024"
+    },
+    "citation": {
+      "paper_title": "BUS-BRA: A breast ultrasound dataset for assessing computer-aided diagnosis systems",
+      "paper_url": "https://doi.org/10.1002/mp.16812",
+      "authors": [
+        "Wilfrido Gómez-Flores",
+        "Maria Julia Gregorio-Calas",
+        "Wagner Coelho de Albuquerque Pereira"
+      ],
+      "doi": "10.1002/mp.16812",
+      "bibtex": "@article{gomezflores2024busbra,\n  title={BUS-BRA: A breast ultrasound dataset for assessing computer-aided diagnosis systems},\n  author={G{\\'o}mez-Flores, Wilfrido and Gregorio-Calas, Maria Julia and Pereira, Wagner Coelho de Albuquerque},\n  journal={Medical Physics},\n  volume={51},\n  number={4},\n  pages={3110--3123},\n  year={2024},\n  publisher={Wiley Online Library}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "busi-whu",
+    "slug": "busi-whu",
+    "name": "BUSI-WHU: Breast Cancer Ultrasound Image Dataset",
+    "description": "BUSI-WHU is a breast cancer ultrasound imaging dataset collected from female patients aged 17 to 79 at the Department of Ultrasound, Renmin Hospital of Wuhan University (WHU). Hosted on Mendeley Data, the dataset contains 927 B-mode breast ultrasound images across benign and malignant breast tumors. The images illustrate diverse tumor morphology, margins, acoustic shadowing, and echogenicity characteristics, designed for evaluating computer-aided diagnosis, classification, and lesion segmentation models in clinical breast ultrasound.",
+    "homepage_url": "https://data.mendeley.com/datasets/k6cpmwybk3/1",
+    "publisher": {
+      "name": "Renmin Hospital of Wuhan University",
+      "type": "academic",
+      "url": "https://data.mendeley.com/datasets/k6cpmwybk3"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "semantic-segmentation",
+      "medical-image-analysis"
+    ],
+    "tags": [
+      "medical-imaging",
+      "ultrasound",
+      "breast-cancer",
+      "oncology",
+      "mendeley",
+      "clinical-data"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published on Mendeley Data under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "Mendeley Data BUSI_WHU Repository (DOI: 10.17632/k6cpmwybk3.1)",
+        "url": "https://doi.org/10.17632/k6cpmwybk3.1",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against Mendeley Data repository 10.17632/k6cpmwybk3.1."
+    },
+    "sample_count": {
+      "total": 927,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023"
+    },
+    "citation": {
+      "paper_title": "BUSI_WHU (Breast Cancer Ultrasound Image Dataset)",
+      "paper_url": "https://doi.org/10.17632/k6cpmwybk3.1",
+      "authors": [
+        "Wuhan University Renmin Hospital Ultrasound Department"
+      ],
+      "doi": "10.17632/k6cpmwybk3.1",
+      "bibtex": "@misc{busi_whu_2023,\n  title={BUSI\\_WHU (Breast Cancer Ultrasound Image Dataset)},\n  author={{Renmin Hospital of Wuhan University}},\n  year={2023},\n  publisher={Mendeley Data},\n  doi={10.17632/k6cpmwybk3.1}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "california-housing",
     "slug": "california-housing",
     "name": "California Housing Prices Database",
@@ -6741,6 +7160,188 @@
         "Meteorological Service of Canada",
         "Environment and Climate Change Canada"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cap-sleep-database",
+    "slug": "cap-sleep-database",
+    "name": "CAP Sleep Database: Cyclic Alternating Pattern Polysomnographic Benchmark",
+    "description": "The CAP Sleep Database is a collection of 108 polysomnographic (PSG) sleep recordings compiled by the Sleep Disorders Center of the Ospedale Maggiore of Parma, Italy, and hosted on PhysioNet. Cyclic Alternating Pattern (CAP) is a periodic EEG activity pattern occurring during non-REM sleep that reflects sleep instability, micro-arousals, and autonomic fluctuations. The database includes overnight polysomnograms from 16 healthy control subjects and 92 patients diagnosed with sleep disorders (including nocturnal frontal lobe epilepsy, sleep apnea, narcolepsy, REM behavior disorder, and periodic leg movements). Records include multi-channel electroencephalogram (EEG), electrooculogram (EOG), electromyogram (EMG), and respiratory channels annotated by expert sleep physicians according to standard Rechtschaffen & Kales sleep stages and CAP phases (A-phase subtypes A1, A2, A3, and B-phase intervals).",
+    "homepage_url": "https://physionet.org/content/capslpdb/1.0.0/",
+    "publisher": {
+      "name": "Sleep Disorders Center, Ospedale Maggiore of Parma & PhysioNet",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "time-series-classification",
+      "clinical-risk-prediction",
+      "signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "sleep",
+      "polysomnography",
+      "eeg",
+      "neurology",
+      "physionet",
+      "biosignals",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed on PhysioNet under the Open Data Commons Attribution License v1.0."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet CAP Sleep Database Repository (DOI: 10.13026/C2VC79)",
+        "url": "https://doi.org/10.13026/C2VC79",
+        "type": "repository"
+      },
+      {
+        "title": "Sleep Medicine Consensus Paper: Atlas, rules, and recording techniques for the scoring of cyclic alternating pattern (DOI: 10.1016/S1389-9457(02)00012-X)",
+        "url": "https://doi.org/10.1016/S1389-9457(02)00012-X",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository DOI 10.13026/C2VC79 and Terzano et al. (Sleep Med 2001, 2002)."
+    },
+    "sample_count": {
+      "total": 108,
+      "splits": {
+        "normal": 16,
+        "pathological": 92
+      },
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2001",
+      "last_updated": "2013"
+    },
+    "citation": {
+      "paper_title": "Atlas, rules, and recording techniques for the scoring of cyclic alternating pattern (CAP) in human sleep",
+      "paper_url": "https://doi.org/10.1016/S1389-9457(02)00012-X",
+      "authors": [
+        "Mario Giovanni Terzano",
+        "Liborio Parrino",
+        "Arianna Smerieri",
+        "Rosa Chervin",
+        "Sudhansu Chokroverty",
+        "Christian Guilleminault",
+        "Miloslav Hirshkowitz",
+        "Mark Mahowald",
+        "Helder Moldofsky",
+        "Agostino Rosa",
+        "Raffaele Thomas",
+        "Arthur Walters"
+      ],
+      "doi": "10.1016/S1389-9457(02)00012-X",
+      "bibtex": "@article{terzano2002atlas,\n  title={Atlas, rules, and recording techniques for the scoring of cyclic alternating pattern (CAP) in human sleep},\n  author={Terzano, Mario Giovanni and Parrino, Liborio and Smerieri, Arianna and Chervin, Rosa and Chokroverty, Sudhansu and Guilleminault, Christian and Hirshkowitz, Miloslav and Mahowald, Mark and Moldofsky, Helder and Rosa, Agostino and others},\n  journal={Sleep Medicine},\n  volume={3},\n  number={2},\n  pages={187--199},\n  year={2002},\n  publisher={Elsevier}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cbis-ddsm",
+    "slug": "cbis-ddsm",
+    "name": "CBIS-DDSM: Curated Breast Imaging Subset of DDSM",
+    "description": "The Curated Breast Imaging Subset of the Digital Database for Screening Mammography (CBIS-DDSM) is an updated and standardized benchmark dataset for computer-aided detection and diagnosis in screening mammography. Hosted on The Cancer Imaging Archive (TCIA), CBIS-DDSM includes 2,620 scanned film mammography studies across 1,566 participants (3,568 total images). Selected and verified by expert radiologists, the dataset decompresses and standardizes the original DDSM data into DICOM format, updates the pathology ground truth (normal, benign, and malignant), and provides bounding boxes and pixel-level region-of-interest (ROI) segmentation masks for both breast masses and microcalcifications alongside BI-RADS assessment descriptors.",
+    "homepage_url": "https://www.cancerimagingarchive.net/collection/cbis-ddsm/",
+    "publisher": {
+      "name": "The Cancer Imaging Archive (TCIA) & Stanford University",
+      "type": "academic",
+      "url": "https://www.cancerimagingarchive.net"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "semantic-segmentation",
+      "medical-image-analysis",
+      "object-detection"
+    ],
+    "tags": [
+      "medical-imaging",
+      "mammography",
+      "breast-cancer",
+      "radiology",
+      "tcia",
+      "oncology",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 3.0 Unported",
+      "spdx_id": "CC-BY-3.0",
+      "url": "https://creativecommons.org/licenses/by/3.0/",
+      "commercial_use": "allowed",
+      "notes": "Published on The Cancer Imaging Archive (TCIA) under Creative Commons Attribution 3.0 Unported (CC BY 3.0)."
+    },
+    "source_references": [
+      {
+        "title": "TCIA CBIS-DDSM Collection Page",
+        "url": "https://doi.org/10.7937/K9/TCIA.2016.7O02S9CY",
+        "type": "repository"
+      },
+      {
+        "title": "Scientific Data Descriptor Paper (DOI: 10.1038/sdata.2017.177)",
+        "url": "https://doi.org/10.1038/sdata.2017.177",
+        "type": "original_paper"
+      },
+      {
+        "title": "TCIA Main Portal",
+        "url": "https://www.cancerimagingarchive.net/collection/cbis-ddsm/",
+        "type": "official_website"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against TCIA collection page and Sawyer-Lee et al. (Scientific Data 2017)."
+    },
+    "sample_count": {
+      "total": 3568,
+      "splits": {
+        "calc_training": 1546,
+        "calc_test": 326,
+        "mass_training": 1318,
+        "mass_test": 378
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2016",
+      "last_updated": "2017"
+    },
+    "citation": {
+      "paper_title": "A curated mammography data set for use in computer-aided detection and diagnosis research",
+      "paper_url": "https://doi.org/10.1038/sdata.2017.177",
+      "authors": [
+        "Rebecca Sawyer Lee",
+        "Francisco Gimenez",
+        "Assaf Hoogi",
+        "Kanae Kawai Miyake",
+        "Mia Gorovoy",
+        "Daniel L. Rubin"
+      ],
+      "doi": "10.1038/sdata.2017.177",
+      "bibtex": "@article{sawyerlee2017curated,\n  title={A curated mammography data set for use in computer-aided detection and diagnosis research},\n  author={Sawyer Lee, Rebecca and Gimenez, Francisco and Hoogi, Assaf and Miyake, Kanae Kawai and Gorovoy, Mia and Rubin, Daniel L},\n  journal={Scientific Data},\n  volume={4},\n  number={1},\n  pages={170177},\n  year={2017},\n  publisher={Nature Publishing Group}\n}"
     }
   },
   {
@@ -7398,6 +7999,88 @@
         "WSJ0 Corpus Prompts",
         "Live In-Situ Audio Captures"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cholec80",
+    "slug": "cholec80",
+    "name": "Cholec80: Laparoscopic Cholecystectomy Surgical Video Dataset",
+    "description": "The Cholec80 dataset is an established benchmark for surgical workflow recognition and computer-assisted interventions, created by the CAMMA research group at the University of Strasbourg and IHU Strasbourg. The dataset consists of 80 high-definition videos of laparoscopic cholecystectomy procedures performed by 13 different surgeons. Captured at 25 fps and annotated at 1 fps by expert surgeons, the dataset provides complete ground-truth labels for seven standard surgical workflow phases (preparation, Calot's triangle dissection, clipping and cutting, gallbladder dissection, gallbladder packaging, cleaning and coagulation, gallbladder retraction) and binary presence indicators for seven surgical tools (grasper, hook, scissors, clipper, bipolar, irrigator, specimen bag). The benchmark standardly partitions into 40 training and 40 testing videos.",
+    "homepage_url": "https://camma.unistra.fr/datasets/",
+    "publisher": {
+      "name": "CAMMA Research Group, University of Strasbourg & IHU Strasbourg",
+      "type": "academic",
+      "url": "https://camma.unistra.fr"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "action-recognition",
+      "medical-image-analysis",
+      "time-series-forecasting"
+    ],
+    "tags": [
+      "medical-imaging",
+      "surgical-video",
+      "laparoscopy",
+      "workflow-analysis",
+      "computer-assisted-surgery",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "End-User Academic Research Agreement",
+      "spdx_id": null,
+      "url": "https://camma.unistra.fr/datasets/",
+      "commercial_use": "forbidden",
+      "notes": "Available for academic non-commercial research through an electronic request form on the CAMMA portal. Commercial use is forbidden."
+    },
+    "source_references": [
+      {
+        "title": "CAMMA Datasets Portal",
+        "url": "https://camma.unistra.fr/datasets/",
+        "type": "official_website"
+      },
+      {
+        "title": "IEEE TMI EndoNet Publication (DOI: 10.1109/TMI.2016.2593957)",
+        "url": "https://doi.org/10.1109/TMI.2016.2593957",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against CAMMA portal and Twinanda et al. (IEEE TMI 2017)."
+    },
+    "sample_count": {
+      "total": 80,
+      "splits": {
+        "train": 40,
+        "test": 40
+      },
+      "unit": "videos",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2016",
+      "last_updated": "2017"
+    },
+    "citation": {
+      "paper_title": "EndoNet: A Deep Architecture for Recognition Tasks on Laparoscopic Videos",
+      "paper_url": "https://doi.org/10.1109/TMI.2016.2593957",
+      "authors": [
+        "Andru P. Twinanda",
+        "Sherif Shehata",
+        "Didier Mutter",
+        "Jacques Marescaux",
+        "Michel de Mathelin",
+        "Nicolas Padoy"
+      ],
+      "doi": "10.1109/TMI.2016.2593957",
+      "bibtex": "@article{twinanda2016endonet,\n  title={EndoNet: A Deep Architecture for Recognition Tasks on Laparoscopic Videos},\n  author={Twinanda, Andru P and Shehata, Sherif and Mutter, Didier and Marescaux, Jacques and de Mathelin, Michel and Padoy, Nicolas},\n  journal={IEEE Transactions on Medical Imaging},\n  volume={36},\n  number={1},\n  pages={86--97},\n  year={2017},\n  publisher={IEEE}\n}"
     }
   },
   {
@@ -9057,6 +9740,82 @@
         "Copernicus Sentinel-2",
         "Radiant Earth ground surveys"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cvc-clinicdb",
+    "slug": "cvc-clinicdb",
+    "name": "CVC-ClinicDB: Colonoscopy Polyp Segmentation Dataset",
+    "description": "CVC-ClinicDB is a canonical biomedical image benchmark for colonoscopy polyp detection and segmentation, developed by researchers from the Computer Vision Center (CVC) at Universitat Autònoma de Barcelona and Hospital Clínic de Barcelona. Standardized for the MICCAI 2015 Endoscopic Video Automatic Polyp Detection challenge, the dataset contains 612 static frames (384x288 resolution) extracted from 29 colonoscopy video sequences. Each frame is accompanied by a ground-truth binary mask indicating the precise pixel-level segmentation of mucosal polyps against the background gastrointestinal lumen. It serves as an essential baseline across modern medical segmentation architectures.",
+    "homepage_url": "https://pages.cvc.uab.es/CVC-Colon/index.php/databases/",
+    "publisher": {
+      "name": "Computer Vision Center & Hospital Clínic de Barcelona",
+      "type": "academic",
+      "url": "https://pages.cvc.uab.es"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "medical-image-analysis"
+    ],
+    "tags": [
+      "medical-imaging",
+      "endoscopy",
+      "colonoscopy",
+      "polyp-segmentation",
+      "gastroenterology",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Research and Educational Use Only License",
+      "spdx_id": null,
+      "url": "https://pages.cvc.uab.es/CVC-Colon/index.php/databases/",
+      "commercial_use": "forbidden",
+      "notes": "Strictly limited to non-commercial research and educational use. Original images are property of Hospital Clínic de Barcelona; ground-truth masks are property of Computer Vision Center."
+    },
+    "source_references": [
+      {
+        "title": "CVC-Colon Official Portal",
+        "url": "https://pages.cvc.uab.es/CVC-Colon/index.php/databases/",
+        "type": "official_website"
+      },
+      {
+        "title": "Computerized Medical Imaging and Graphics Publication (DOI: 10.1016/j.compmedimag.2015.02.007)",
+        "url": "https://doi.org/10.1016/j.compmedimag.2015.02.007",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against CVC database portal and Bernal et al. (CMIG 2015)."
+    },
+    "sample_count": {
+      "total": 612,
+      "unit": "frames",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2015"
+    },
+    "citation": {
+      "paper_title": "WM-DOVA maps for accurate polyp highlighting in colonoscopy: Validation vs. saliency maps from physicians",
+      "paper_url": "https://doi.org/10.1016/j.compmedimag.2015.02.007",
+      "authors": [
+        "Jorge Bernal",
+        "F. Javier Sánchez",
+        "Gloria Fernández-Esparrach",
+        "Debora Gil",
+        "Cristina Rodríguez",
+        "Fernando Vilariño"
+      ],
+      "doi": "10.1016/j.compmedimag.2015.02.007",
+      "bibtex": "@article{bernal2015wm,\n  title={WM-DOVA maps for accurate polyp highlighting in colonoscopy: Validation vs. saliency maps from physicians},\n  author={Bernal, Jorge and S{\\'a}nchez, F Javier and Fern{\\'a}ndez-Esparrach, Gloria and Gil, Debora and Rodr{\\'\\i}guez, Cristina and Vilari{\\~n}o, Fernando},\n  journal={Computerized Medical Imaging and Graphics},\n  volume={43},\n  pages={99--111},\n  year={2015},\n  publisher={Elsevier}\n}"
     }
   },
   {
@@ -15947,6 +16706,196 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "isic-2018",
+    "slug": "isic-2018",
+    "name": "ISIC 2018: Skin Lesion Analysis Towards Melanoma Detection",
+    "description": "The ISIC 2018 dataset is a landmark benchmark challenge for automated skin cancer diagnosis hosted by the International Skin Imaging Collaboration (ISIC) and MICCAI 2018. It comprises three specialized tasks: Task 1 for lesion boundary segmentation (2,594 training, 100 validation, 1,000 test dermoscopic images with binary ground-truth masks); Task 2 for dermoscopic attribute detection (2,594 images annotated for pigment network, negative network, streaks, milia-like cysts, and globules); and Task 3 for multi-class disease classification (10,015 training images corresponding to the HAM10000 collection, 193 validation, and 1,512 test images across seven diagnostic categories: melanoma, melanocytic nevus, basal cell carcinoma, actinic keratosis, benign keratosis, dermatofibroma, and vascular lesion). Users should note that Task 3 training data overlaps directly with the canonical HAM10000 dataset, whereas Tasks 1 and 2 provide distinct boundary and attribute annotations.",
+    "homepage_url": "https://challenge.isic-archive.com/landing/2018/",
+    "publisher": {
+      "name": "International Skin Imaging Collaboration (ISIC)",
+      "type": "community",
+      "url": "https://www.isic-archive.com"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "semantic-segmentation",
+      "medical-image-analysis",
+      "object-detection"
+    ],
+    "tags": [
+      "medical-imaging",
+      "dermatology",
+      "skin-cancer",
+      "isic",
+      "melanoma",
+      "segmentation",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 / CC0",
+      "spdx_id": null,
+      "url": "https://challenge.isic-archive.com/data/",
+      "commercial_use": "forbidden",
+      "notes": "Task 1 (Segmentation) and Task 2 (Attribute Detection) data are dedicated to the public domain under Creative Commons CC0. Task 3 (Disease Classification, incorporating HAM10000) is licensed under Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0). Overall commercial use is forbidden due to the Task 3 non-commercial terms."
+    },
+    "source_references": [
+      {
+        "title": "ISIC 2018 Challenge Landing Page",
+        "url": "https://challenge.isic-archive.com/landing/2018/",
+        "type": "official_website"
+      },
+      {
+        "title": "Challenge Overview Paper: Skin Lesion Analysis Toward Melanoma Detection 2018 (arXiv:1902.03368)",
+        "url": "https://doi.org/10.48550/arXiv.1902.03368",
+        "type": "original_paper"
+      },
+      {
+        "title": "ISIC Archive Data Portal",
+        "url": "https://challenge.isic-archive.com/data/",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against ISIC 2018 official challenge landing page and Codella et al. (arXiv:1902.03368). Documented overlap with HAM10000 for Task 3."
+    },
+    "sample_count": {
+      "total": 12720,
+      "splits": {
+        "task1_train": 2594,
+        "task1_val": 100,
+        "task1_test": 1000,
+        "task2_train": 2594,
+        "task3_train": 10015,
+        "task3_val": 193,
+        "task3_test": 1512
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018"
+    },
+    "citation": {
+      "paper_title": "Skin Lesion Analysis Toward Melanoma Detection 2018: A Challenge Hosted by the International Skin Imaging Collaboration (ISIC)",
+      "paper_url": "https://arxiv.org/abs/1902.03368",
+      "authors": [
+        "Noel Codella",
+        "Veronica Rotemberg",
+        "Philipp Tschandl",
+        "M. Emre Celebi",
+        "Stephen Dusza",
+        "David Gutman",
+        "Brian Helba",
+        "Aadi Kalloo",
+        "Konstantinos Liopyris",
+        "Michael Marchetti",
+        "Harald Kittler",
+        "Allan Halpern"
+      ],
+      "doi": "10.48550/arXiv.1902.03368",
+      "bibtex": "@article{codella2019skin,\n  title={Skin Lesion Analysis Toward Melanoma Detection 2018: A Challenge Hosted by the International Skin Imaging Collaboration (ISIC)},\n  author={Codella, Noel and Rotemberg, Veronica and Tschandl, Philipp and Celebi, M Emre and Dusza, Stephen and Gutman, David and Helba, Brian and Kalloo, Aadi and Liopyris, Konstantinos and Marchetti, Michael and Kittler, Harald and Halpern, Allan},\n  journal={arXiv preprint arXiv:1902.03368},\n  year={2019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "isic-2019",
+    "slug": "isic-2019",
+    "name": "ISIC 2019: Skin Lesion Analysis Towards Melanoma Detection",
+    "description": "The ISIC 2019 challenge dataset is a major skin disease classification benchmark hosted by the International Skin Imaging Collaboration (ISIC) and MICCAI 2019. The dataset contains 25,331 training dermoscopic images across eight diagnostic categories: melanoma, melanocytic nevus, basal cell carcinoma, actinic keratosis, benign keratosis, dermatofibroma, vascular lesion, and squamous cell carcinoma. The test set comprises 8,238 images and introduces an additional unlabelled outlier class to evaluate out-of-distribution detection. The dataset aggregates images from the HAM10000 dataset (ViDIR Group, Medical University of Vienna), the BCN_20000 dataset (Hospital Clínic de Barcelona), and Memorial Sloan Kettering Cancer Center (MSK). Users should note the partial overlap with HAM10000 and BCN_20000.",
+    "homepage_url": "https://challenge.isic-archive.com/landing/2019/",
+    "publisher": {
+      "name": "International Skin Imaging Collaboration (ISIC)",
+      "type": "community",
+      "url": "https://www.isic-archive.com"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "medical-image-analysis",
+      "out-of-distribution-detection"
+    ],
+    "tags": [
+      "medical-imaging",
+      "dermatology",
+      "skin-cancer",
+      "isic",
+      "melanoma",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Distributed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Commercial use is forbidden."
+    },
+    "source_references": [
+      {
+        "title": "ISIC 2019 Challenge Landing Page",
+        "url": "https://challenge.isic-archive.com/landing/2019/",
+        "type": "official_website"
+      },
+      {
+        "title": "BCN20000 Publication in Scientific Data (DOI: 10.1038/s41597-024-03387-w)",
+        "url": "https://doi.org/10.1038/s41597-024-03387-w",
+        "type": "original_paper"
+      },
+      {
+        "title": "ISIC Archive 2019 Data Portal",
+        "url": "https://challenge.isic-archive.com/data/",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against official ISIC 2019 challenge repository and Combalia et al. (Scientific Data 2024 / arXiv:1908.02288)."
+    },
+    "sample_count": {
+      "total": 33569,
+      "splits": {
+        "train": 25331,
+        "test": 8238
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019"
+    },
+    "citation": {
+      "paper_title": "BCN20000: Dermoscopic Lesions in the Wild",
+      "paper_url": "https://doi.org/10.1038/s41597-024-03387-w",
+      "authors": [
+        "Marc Combalia",
+        "Noel C. F. Codella",
+        "Veronica Rotemberg",
+        "Brian Helba",
+        "Veronica Vilaplana",
+        "Ofer Reiter",
+        "Cristina Carrera",
+        "Alicia Barreiro",
+        "Allan C. Halpern",
+        "Susana Puig",
+        "Josep Malvehy"
+      ],
+      "doi": "10.1038/s41597-024-03387-w",
+      "bibtex": "@article{combalia2024bcn20000,\n  title={BCN20000: Dermoscopic Lesions in the Wild},\n  author={Combalia, Marc and Codella, Noel CF and Rotemberg, Veronica and Helba, Brian and Vilaplana, Veronica and Reiter, Ofer and Carrera, Cristina and Barreiro, Alicia and Halpern, Allan C and Puig, Susana and Malvehy, Josep},\n  journal={Scientific Data},\n  volume={11},\n  number={1},\n  pages={554},\n  year={2024},\n  publisher={Nature Publishing Group}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "isic-2020",
     "slug": "isic-2020",
     "name": "ISIC 2020 Challenge Dataset (SIIM-ISIC Melanoma Classification)",
@@ -16049,6 +16998,167 @@
     "provenance": {
       "collection_method": "Multi-center clinical dermoscopy collection spanning Memorial Sloan Kettering Cancer Center, Hospital Clinic de Barcelona, University of Queensland, and Medical University of Vienna.",
       "curation_notes": "Patient-centric aggregation with biopsy-confirmed ground truth and clinical context."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "isic-2024-slice-3d",
+    "slug": "isic-2024-slice-3d",
+    "name": "ISIC 2024 SLICE-3D: Skin Cancer Detection with 3D-TBP",
+    "description": "The ISIC 2024 SLICE-3D dataset (Skin Lesion Image Crops Extracted from 3D Total Body Photography) was developed for the ISIC 2024 challenge hosted on Kaggle and MICCAI 2024. Comprising 401,059 standardized lesion image crops (15x15 mm field-of-view) extracted from 3D Total Body Photography (3D-TBP) scans of 2,279 patients across nine international medical centers, SLICE-3D models high-volume, low-prevalence screening environments. Each lesion crop is paired with rich clinical and lesion metadata (anatomical site, patient age, sex, 3D coordinate locations, color/dimension attributes). The primary task is binary classification distinguishing malignant lesions (melanoma, basal cell carcinoma, squamous cell carcinoma; ~393 cases) from benign lesions (~400,666 cases) under an extreme class imbalance mimicking clinical primary care screening.",
+    "homepage_url": "https://challenge.isic-archive.com/landing/2024/",
+    "publisher": {
+      "name": "International Skin Imaging Collaboration (ISIC) & Memorial Sloan Kettering",
+      "type": "academic",
+      "url": "https://www.isic-archive.com"
+    },
+    "modalities": [
+      "vision",
+      "tabular"
+    ],
+    "tasks": [
+      "image-classification",
+      "medical-image-analysis",
+      "tabular-classification"
+    ],
+    "tags": [
+      "medical-imaging",
+      "dermatology",
+      "skin-cancer",
+      "isic",
+      "total-body-photography",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Distributed on Kaggle and ISIC Archive under Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0). Contributing sites selected CC0, CC-BY, or CC-BY-NC, with the umbrella dataset restricted to non-commercial use."
+    },
+    "source_references": [
+      {
+        "title": "ISIC 2024 Challenge Landing Page",
+        "url": "https://challenge.isic-archive.com/landing/2024/",
+        "type": "official_website"
+      },
+      {
+        "title": "Kaggle ISIC 2024 Challenge Page",
+        "url": "https://www.kaggle.com/competitions/isic-2024-challenge",
+        "type": "repository"
+      },
+      {
+        "title": "SLICE-3D Preprint (arXiv:2407.03960)",
+        "url": "https://doi.org/10.48550/arXiv.2407.03960",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against Kaggle competition specifications, ISIC Archive 2024 portal, and Rotemberg et al. (arXiv:2407.03960)."
+    },
+    "sample_count": {
+      "total": 401059,
+      "splits": {
+        "train": 401059
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2024"
+    },
+    "citation": {
+      "paper_title": "The SLICE-3D Dataset: 400,000 Skin Lesion Image Crops Extracted from 3D Total Body Photography for Skin Cancer Detection",
+      "paper_url": "https://arxiv.org/abs/2407.03960",
+      "authors": [
+        "Veronica Rotemberg",
+        "Matthew Groh",
+        "Brian Helba",
+        "Philipp Tschandl",
+        "Harald Kittler",
+        "Noel Codella",
+        "Allan Halpern"
+      ],
+      "doi": "10.48550/arXiv.2407.03960",
+      "bibtex": "@article{rotemberg2024slice,\n  title={The SLICE-3D Dataset: 400,000 Skin Lesion Image Crops Extracted from 3D Total Body Photography for Skin Cancer Detection},\n  author={Rotemberg, Veronica and Groh, Matthew and Helba, Brian and Tschandl, Philipp and Kittler, Harald and Codella, Noel and Halpern, Allan},\n  journal={arXiv preprint arXiv:2407.03960},\n  year={2024}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ixi-dataset",
+    "slug": "ixi-dataset",
+    "name": "IXI: Information eXtraction from Images Brain MRI Dataset",
+    "description": "The IXI Dataset (Information eXtraction from Images) is an open-access collection of multi-contrast brain magnetic resonance imaging (MRI) scans acquired from nearly 600 healthy adult subjects. Collected across three major London clinical centers (Hammersmith Hospital on a Philips 3T scanner, Guy's Hospital on a Philips 1.5T scanner, and the Institute of Psychiatry on a GE 1.5T scanner) under an EPSRC-funded project, the dataset includes T1-weighted, T2-weighted, Proton Density (PD)-weighted, Magnetic Resonance Angiography (MRA), and 15-direction Diffusion-Weighted (DTI) images. Accompanying demographic variables include subject age, sex, height, weight, and education level. IXI serves as a standard normative reference cohort for neuroimaging research, including brain age prediction, multi-modal MRI registration, tissue segmentation, and image synthesis.",
+    "homepage_url": "https://brain-development.org/ixi-dataset/",
+    "publisher": {
+      "name": "Imperial College London & IXI Consortium",
+      "type": "academic",
+      "url": "https://brain-development.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "semantic-segmentation",
+      "medical-image-analysis",
+      "image-generation"
+    ],
+    "tags": [
+      "medical-imaging",
+      "mri",
+      "neuroimaging",
+      "brain",
+      "radiology",
+      "open-access"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "spdx_id": "CC-BY-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed under Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)."
+    },
+    "source_references": [
+      {
+        "title": "IXI Dataset Official Portal",
+        "url": "https://brain-development.org/ixi-dataset/",
+        "type": "official_website"
+      },
+      {
+        "title": "NITRC IXI Repository",
+        "url": "https://www.nitrc.org/projects/ixi/",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against brain-development.org portal and NITRC project page."
+    },
+    "sample_count": {
+      "total": 581,
+      "unit": "subjects",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2008"
+    },
+    "citation": {
+      "paper_title": "Information eXtraction from Images (IXI)",
+      "paper_url": "https://brain-development.org/ixi-dataset/",
+      "authors": [
+        "Daniel Rueckert",
+        "Jo V. Hajnal",
+        "Derek Hill"
+      ],
+      "bibtex": "@misc{ixi_dataset_2008,\n  title={Information eXtraction from Images (IXI)},\n  author={Rueckert, Daniel and Hajnal, Jo V and Hill, Derek},\n  howpublished={\\url{https://brain-development.org/ixi-dataset/}},\n  year={2008}\n}"
     }
   },
   {
@@ -18791,6 +19901,96 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "milk10k",
+    "slug": "milk10k",
+    "name": "MILK10k: Multimodal Imaging-Learning Toolkit for Skin Cancer",
+    "description": "MILK10k (Multimodal Imaging-Learning Toolkit for Diagnosing Pigmented and Nonpigmented Skin Cancer and its Simulators) is a curated dermatological dataset compiled by researchers from the Medical University of Vienna and the International Skin Imaging Collaboration (ISIC), published in the Journal of Investigative Dermatology. Hosted on the ISIC Archive (DOI: 10.34970/648456), MILK10k comprises 10,480 images representing 5,240 skin lesions from international clinical centers (Austria, Turkey, the US, Australia, North Macedonia). For every lesion, the dataset pairs a clinical close-up photograph with a polarized dermoscopic image. Over 95.7% of lesions are histopathologically confirmed, providing balanced coverage of pigmented and non-pigmented skin cancers and benign simulators across 11 diagnostic categories (AKIEC, BCC, BKL, DF, INF, MEL, NV, SCCKA, VASC, BEN_OTH, MAL_OTH). Images are further annotated with concept terms (pigmentation, erythema, ulceration, vessels) and Fitzpatrick-aligned skin tone clusters (levels 0–5).",
+    "homepage_url": "https://challenge.isic-archive.com/data/",
+    "publisher": {
+      "name": "Medical University of Vienna & ISIC",
+      "type": "academic",
+      "url": "https://www.isic-archive.com"
+    },
+    "modalities": [
+      "vision",
+      "multimodal"
+    ],
+    "tasks": [
+      "image-classification",
+      "medical-image-analysis"
+    ],
+    "tags": [
+      "medical-imaging",
+      "dermatology",
+      "skin-cancer",
+      "isic",
+      "dermoscopy",
+      "multimodal",
+      "clinical-data",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Published on ISIC Archive under Creative Commons Attribution-NonCommercial (CC BY-NC)."
+    },
+    "source_references": [
+      {
+        "title": "ISIC Archive Dataset Portal (DOI: 10.34970/648456)",
+        "url": "https://doi.org/10.34970/648456",
+        "type": "repository"
+      },
+      {
+        "title": "Journal of Investigative Dermatology Publication (DOI: 10.1016/j.jid.2025.06.1594)",
+        "url": "https://doi.org/10.1016/j.jid.2025.06.1594",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against ISIC Archive DOI 10.34970/648456 and Tschandl et al. (J Invest Dermatol 2026)."
+    },
+    "sample_count": {
+      "total": 10480,
+      "splits": {
+        "lesions": 5240,
+        "images": 10480
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2025",
+      "last_updated": "2026"
+    },
+    "citation": {
+      "paper_title": "MILK10k: A Hierarchical Multimodal Imaging-Learning Toolkit for Diagnosing Pigmented and Nonpigmented Skin Cancer and its Simulators",
+      "paper_url": "https://doi.org/10.1016/j.jid.2025.06.1594",
+      "authors": [
+        "Philipp Tschandl",
+        "Bengu Nisa Akay",
+        "Cliff Rosendahl",
+        "Veronica Rotemberg",
+        "Violeta Todorovska",
+        "Julia Weber",
+        "Ann-Kathrin Wolber",
+        "Christoph Müller",
+        "Noah K. Kurtansky",
+        "Allan Halpern",
+        "Wolfgang Weninger",
+        "Harald Kittler"
+      ],
+      "doi": "10.1016/j.jid.2025.06.1594",
+      "bibtex": "@article{tschandl2026milk10k,\n  title={MILK10k: A Hierarchical Multimodal Imaging-Learning Toolkit for Diagnosing Pigmented and Nonpigmented Skin Cancer and its Simulators},\n  author={Tschandl, Philipp and Akay, Bengu Nisa and Rosendahl, Cliff and Rotemberg, Veronica and Todorovska, Violeta and Weber, Julia and Wolber, Ann-Kathrin and M{\\\"u}ller, Christoph and Kurtansky, Noah K and Halpern, Allan and Weninger, Wolfgang and Kittler, Harald},\n  journal={Journal of Investigative Dermatology},\n  volume={146},\n  number={2},\n  pages={357--364},\n  year={2026},\n  publisher={Elsevier}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "mimic-cxr",
     "slug": "mimic-cxr",
     "name": "MIMIC-CXR: Chest Radiographs and Radiology Reports Database",
@@ -18884,6 +20084,100 @@
       ],
       "doi": "10.1038/s41597-019-0322-0",
       "bibtex": "@article{johnson2019mimic,\n  title={MIMIC-CXR, a de-identified publicly available database of chest radiographs with free-text reports},\n  author={Johnson, Alistair EW and Pollard, Tom J and Berkowitz, Seth J and Greenbaum, Nathaniel R and Lungren, Matthew P and Deng, Chih-ying and Mark, Roger G and Horng, Steven},\n  journal={Scientific Data},\n  volume={6},\n  number={1},\n  pages={317},\n  year={2019},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41597-019-0322-0}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mimic-iii",
+    "slug": "mimic-iii",
+    "name": "MIMIC-III: Medical Information Mart for Intensive Care III",
+    "description": "MIMIC-III is a widely celebrated, freely accessible clinical database developed by the MIT Laboratory for Computational Physiology and Beth Israel Deaconess Medical Center (BIDMC), published in Nature Scientific Data. Spanning over a decade of critical care admissions between 2001 and 2012, MIMIC-III covers 46,520 distinct intensive care unit (ICU) patients across 58,976 hospital admissions. It integrates electronic health records from both CareVue and MetaVision ICU clinical information systems across 26 relational tables documenting patient demographics, continuous hourly physiological vital sign measurements, comprehensive laboratory blood chemistry and microbiological cultures, therapeutic medication administrations, nursing notes, and ICD-9 billing diagnoses. Crucially, MIMIC-III includes an integrated NOTEEVENTS table containing over 2 million de-identified free-text clinical notes, making it a foundational benchmark for clinical NLP, automated ICD coding, mortality prediction, and sepsis detection. Users should note that while MIMIC-IV supersedes MIMIC-III for contemporary MetaVision data (2008–2019), MIMIC-III remains a distinct historical benchmark capturing CareVue system data (2001–2008) and embedded clinical text notes.",
+    "homepage_url": "https://physionet.org/content/mimiciii/1.4/",
+    "publisher": {
+      "name": "MIT Laboratory for Computational Physiology & BIDMC",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "nlp"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "clinical-risk-prediction",
+      "text-classification"
+    ],
+    "tags": [
+      "healthcare",
+      "intensive-care",
+      "electronic-health-records",
+      "mimic",
+      "clinical-nlp",
+      "icu",
+      "physionet"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "PhysioNet Credentialed Health Data License 1.5.0",
+      "spdx_id": null,
+      "url": "https://physionet.org/content/mimiciii/view-license/1.4/",
+      "commercial_use": "unknown",
+      "notes": "Governed by PhysioNet Credentialed Health Data License 1.5.0. Access requires CITI human subjects training, user credentialing, and agreement to strict non-reidentification and non-redistribution terms."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet MIMIC-III v1.4 Repository (DOI: 10.13026/C2XW26)",
+        "url": "https://doi.org/10.13026/C2XW26",
+        "type": "repository"
+      },
+      {
+        "title": "Nature Scientific Data Publication (DOI: 10.1038/sdata.2016.35)",
+        "url": "https://doi.org/10.1038/sdata.2016.35",
+        "type": "original_paper"
+      },
+      {
+        "title": "PhysioNet Credentialed Health Data Use Agreement",
+        "url": "https://physionet.org/content/mimiciii/view-dua/1.4/",
+        "type": "documentation"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet DOI 10.13026/C2XW26 and Johnson et al. (Scientific Data 2016). Documented relationship with MIMIC-IV."
+    },
+    "sample_count": {
+      "total": 58976,
+      "splits": {
+        "admissions": 58976,
+        "patients": 46520
+      },
+      "unit": "admissions",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2015",
+      "last_updated": "2016"
+    },
+    "citation": {
+      "paper_title": "MIMIC-III, a freely accessible critical care database",
+      "paper_url": "https://doi.org/10.1038/sdata.2016.35",
+      "authors": [
+        "Alistair E. W. Johnson",
+        "Tom J. Pollard",
+        "Lu Shen",
+        "Li-wei H. Lehman",
+        "Mengling Feng",
+        "Mohammad Ghassemi",
+        "Benjamin Moody",
+        "Peter Szolovits",
+        "Leo Anthony Celi",
+        "Roger G. Mark"
+      ],
+      "doi": "10.1038/sdata.2016.35",
+      "bibtex": "@article{johnson2016mimic,\n  title={MIMIC-III, a freely accessible critical care database},\n  author={Johnson, Alistair EW and Pollard, Tom J and Shen, Lu and Lehman, Li-wei H and Feng, Mengling and Ghassemi, Mohammad and Moody, Benjamin and Szolovits, Peter and Celi, Leo Anthony and Mark, Roger G},\n  journal={Scientific Data},\n  volume={3},\n  number={1},\n  pages={1--9},\n  year={2016},\n  publisher={Nature Publishing Group}\n}"
     }
   },
   {
@@ -18987,6 +20281,346 @@
       "data_sources": [
         "Beth Israel Deaconess Medical Center EHR"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mimic-iv-ecg",
+    "slug": "mimic-iv-ecg",
+    "name": "MIMIC-IV-ECG: Diagnostic Electrocardiogram Database",
+    "description": "MIMIC-IV-ECG is a comprehensive diagnostic electrocardiogram database derived from patients admitted to Beth Israel Deaconess Medical Center, hosted on PhysioNet by the MIT Laboratory for Computational Physiology. The dataset contains approximately 800,000 diagnostic 12-lead ECG recordings collected from over 160,000 distinct adult patients between 2008 and 2019. Each ECG is recorded at a sampling rate of 500 Hz for 10 seconds and includes machine-generated measurements (heart rate, PR interval, QRS duration, QT/QTc intervals, P/QRS/T axes) alongside official physician-reviewed diagnostic statement reports. Recordings are directly linked to patients in MIMIC-IV and MIMIC-IV-ED, enabling rich cross-modal machine learning integrating biosignals with longitudinal clinical trajectories.",
+    "homepage_url": "https://physionet.org/content/mimic-iv-ecg/1.0/",
+    "publisher": {
+      "name": "MIT Laboratory for Computational Physiology & BIDMC",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "time-series-classification",
+      "clinical-risk-prediction",
+      "signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "ecg",
+      "cardiology",
+      "arrhythmia",
+      "mimic",
+      "biosignals",
+      "physionet"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "PhysioNet Credentialed Health Data License 1.5.0",
+      "spdx_id": null,
+      "url": "https://physionet.org/content/mimic-iv-ecg/view-license/1.0/",
+      "commercial_use": "unknown",
+      "notes": "Governed by PhysioNet Credentialed Health Data License 1.5.0. Access requires CITI human subjects training, user credentialing, and agreement to strict non-reidentification and non-redistribution terms."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet MIMIC-IV-ECG v1.0 Repository (DOI: 10.13026/jwhf-tr66)",
+        "url": "https://doi.org/10.13026/jwhf-tr66",
+        "type": "repository"
+      },
+      {
+        "title": "Nature Scientific Data Publication (DOI: 10.1038/s41597-023-02408-x)",
+        "url": "https://doi.org/10.1038/s41597-023-02408-x",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository DOI 10.13026/jwhf-tr66 and Gow et al. (Scientific Data 2023)."
+    },
+    "sample_count": {
+      "total": 800000,
+      "splits": {
+        "recordings": 800000,
+        "patients": 161244
+      },
+      "unit": "recordings",
+      "status": "estimated"
+    },
+    "dates": {
+      "published": "2023"
+    },
+    "citation": {
+      "paper_title": "A large-scale database of 12-lead electrocardiograms linked to clinical records",
+      "paper_url": "https://doi.org/10.1038/s41597-023-02408-x",
+      "authors": [
+        "Benjamin Gow",
+        "Tom J. Pollard",
+        "Leo Anthony Celi",
+        "Roger G. Mark",
+        "Steven Horng"
+      ],
+      "doi": "10.1038/s41597-023-02408-x",
+      "bibtex": "@article{gow2023large,\n  title={A large-scale database of 12-lead electrocardiograms linked to clinical records},\n  author={Gow, Benjamin and Pollard, Tom J and Celi, Leo Anthony and Mark, Roger G and Horng, Steven},\n  journal={Scientific Data},\n  volume={10},\n  number={1},\n  pages={554},\n  year={2023},\n  publisher={Nature Publishing Group}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mimic-iv-echo",
+    "slug": "mimic-iv-echo",
+    "name": "MIMIC-IV-Echo: Echocardiogram Matched Subset",
+    "description": "MIMIC-IV-Echo is a matched multimodal cardiac imaging subset of the MIMIC-IV database, released on PhysioNet by the MIT Laboratory for Computational Physiology. The database links comprehensive transthoracic and transesophageal echocardiography reports and associated DICOM video studies to patient hospitalizations in MIMIC-IV between 2008 and 2019. It captures detailed structural and hemodynamic cardiac assessments, including left ventricular ejection fraction (LVEF), chamber dimensions, wall motion abnormalities, valvular regurgitation and stenosis gradings, and pulmonary artery pressures, providing a rich foundation for multimodal deep learning bridging cardiac ultrasound with electronic health records.",
+    "homepage_url": "https://physionet.org/content/mimic-iv-echo/1.0.1/",
+    "publisher": {
+      "name": "MIT Laboratory for Computational Physiology & BIDMC",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "tabular",
+      "nlp",
+      "multimodal"
+    ],
+    "tasks": [
+      "clinical-risk-prediction",
+      "medical-image-analysis",
+      "tabular-classification"
+    ],
+    "tags": [
+      "healthcare",
+      "echocardiography",
+      "cardiology",
+      "ultrasound",
+      "mimic",
+      "multimodal",
+      "physionet"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "PhysioNet Credentialed Health Data License 1.5.0",
+      "spdx_id": null,
+      "url": "https://physionet.org/content/mimic-iv-echo/view-license/1.0.1/",
+      "commercial_use": "unknown",
+      "notes": "Governed by PhysioNet Credentialed Health Data License 1.5.0. Access requires CITI human subjects training, user credentialing, and agreement to strict non-reidentification and non-redistribution terms."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet MIMIC-IV-Echo v1.0.1 Repository (DOI: 10.13026/307c-mr50)",
+        "url": "https://doi.org/10.13026/307c-mr50",
+        "type": "repository"
+      },
+      {
+        "title": "PhysioNet MIMIC-IV Main Portal",
+        "url": "https://physionet.org/content/mimiciv/",
+        "type": "official_website"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository DOI 10.13026/307c-mr50 (version 1.0.1)."
+    },
+    "sample_count": {
+      "total": 40000,
+      "unit": "reports",
+      "status": "estimated"
+    },
+    "dates": {
+      "published": "2024",
+      "last_updated": "2026"
+    },
+    "citation": {
+      "paper_title": "MIMIC-IV-Echo: Echocardiogram Matched Subset",
+      "paper_url": "https://doi.org/10.13026/307c-mr50",
+      "authors": [
+        "Benjamin Gow",
+        "Tom J. Pollard",
+        "Nathan Greenbaum",
+        "Benjamin Moody",
+        "Albert Han",
+        "Jonathan W. Waks",
+        "Alistair E. W. Johnson",
+        "Emily Herbst",
+        "Pouria Eslami",
+        "Akshay Chaudhari",
+        "Tommaso Carbonati",
+        "Seth Berkowitz",
+        "Roger G. Mark",
+        "Steven Horng"
+      ],
+      "doi": "10.13026/307c-mr50",
+      "bibtex": "@misc{gow2026mimic_iv_echo,\n  title={MIMIC-IV-Echo: Echocardiogram Matched Subset (version 1.0.1)},\n  author={Gow, Benjamin and Pollard, Tom J and Greenbaum, Nathan and Moody, Benjamin and Han, Albert and Waks, Jonathan W and Johnson, Alistair EW and Herbst, Emily and Eslami, Pouria and Chaudhari, Akshay and Carbonati, Tommaso and Berkowitz, Seth and Mark, Roger G and Horng, Steven},\n  year={2026},\n  publisher={PhysioNet},\n  doi={10.13026/307c-mr50}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mimic-iv-ed",
+    "slug": "mimic-iv-ed",
+    "name": "MIMIC-IV-ED: Emergency Department Relational Database",
+    "description": "MIMIC-IV-ED is a public electronic health record dataset documenting emergency department (ED) visits to the Beth Israel Deaconess Medical Center between 2008 and 2019, hosted on PhysioNet. Containing records for over 425,000 emergency department stays and 215,600 unique patients, the database captures the acute triage and stabilization phase before hospital admission or discharge. Tables document Emergency Severity Index (ESI) triage acuity scores, chief complaints, vital signs recorded upon arrival and throughout the stay, medication reconciliation, medications dispensed via automated pyxis dispensers, and diagnosis codes. All records seamlessly link to inpatient hospitalizations, ICU stays, and clinical notes in MIMIC-IV via shared patient identifiers.",
+    "homepage_url": "https://physionet.org/content/mimic-iv-ed/2.2/",
+    "publisher": {
+      "name": "MIT Laboratory for Computational Physiology & BIDMC",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "clinical-risk-prediction"
+    ],
+    "tags": [
+      "healthcare",
+      "emergency-department",
+      "electronic-health-records",
+      "mimic",
+      "triage",
+      "clinical-data",
+      "physionet"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "PhysioNet Credentialed Health Data License 1.5.0",
+      "spdx_id": null,
+      "url": "https://physionet.org/content/mimic-iv-ed/view-license/2.2/",
+      "commercial_use": "unknown",
+      "notes": "Governed by PhysioNet Credentialed Health Data License 1.5.0. Access requires CITI human subjects training, user credentialing, and agreement to strict non-reidentification and non-redistribution terms."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet MIMIC-IV-ED v2.2 Repository (DOI: 10.13026/v99p-4334)",
+        "url": "https://doi.org/10.13026/v99p-4334",
+        "type": "repository"
+      },
+      {
+        "title": "MIMIC-IV-ED Cohort Descriptor Paper (DOI: 10.1097/CCE.0000000000000843)",
+        "url": "https://doi.org/10.1097/CCE.0000000000000843",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository DOI 10.13026/v99p-4334 and Xie et al. (CCE 2023)."
+    },
+    "sample_count": {
+      "total": 425087,
+      "splits": {
+        "stays": 425087,
+        "patients": 215699
+      },
+      "unit": "stays",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023",
+      "last_updated": "2023"
+    },
+    "citation": {
+      "paper_title": "MIMIC-IV-ED: An Emergency Department Database",
+      "paper_url": "https://doi.org/10.1097/CCE.0000000000000843",
+      "authors": [
+        "Feng Xie",
+        "Tom J. Pollard",
+        "Alistair E. W. Johnson",
+        "Benjamin Moody",
+        "Peter Szolovits",
+        "Leo Anthony Celi",
+        "Roger G. Mark",
+        "Steven Horng"
+      ],
+      "doi": "10.1097/CCE.0000000000000843",
+      "bibtex": "@misc{johnson2023mimic_iv_ed,\n  title={MIMIC-IV-ED: Emergency Department Database (version 2.2)},\n  author={Johnson, Alistair EW and Pollard, Tom J and Horng, Steven and Celi, Leo Anthony and Mark, Roger G},\n  year={2023},\n  publisher={PhysioNet},\n  doi={10.13026/v99p-4334}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mimic-iv-note",
+    "slug": "mimic-iv-note",
+    "name": "MIMIC-IV-Note: Deidentified Free-Text Clinical Notes",
+    "description": "MIMIC-IV-Note is the official free-text clinical documentation module of the Medical Information Mart for Intensive Care IV (MIMIC-IV) database, published on PhysioNet by the MIT Laboratory for Computational Physiology. While structured EHR tables are distributed in the primary MIMIC-IV database, free-text clinical documents were separated into MIMIC-IV-Note to support specialized de-identification protocols. The database comprises 331,794 discharge summaries and 2,321,355 radiology reports across 145,915 unique patients admitted to Beth Israel Deaconess Medical Center between 2008 and 2019. Discharge summaries provide comprehensive narratives of hospital courses, chief complaints, physical findings, and discharge medications, while radiology reports capture expert radiologist impressions across imaging examinations. Each note is linkable to MIMIC-IV structured tables via standard subject_id, hadm_id, and stay_id foreign keys, providing an unparalleled clinical NLP benchmark.",
+    "homepage_url": "https://physionet.org/content/mimic-iv-note/2.2/",
+    "publisher": {
+      "name": "MIT Laboratory for Computational Physiology & BIDMC",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "clinical-nlp",
+      "text-classification",
+      "information-extraction",
+      "summarization"
+    ],
+    "tags": [
+      "healthcare",
+      "clinical-nlp",
+      "electronic-health-records",
+      "mimic",
+      "clinical-notes",
+      "discharge-summaries",
+      "radiology-reports",
+      "physionet"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "PhysioNet Credentialed Health Data License 1.5.0",
+      "spdx_id": null,
+      "url": "https://physionet.org/content/mimic-iv-note/view-license/2.2/",
+      "commercial_use": "unknown",
+      "notes": "Governed by PhysioNet Credentialed Health Data License 1.5.0. Access requires CITI human subjects training, user credentialing, and agreement to strict non-reidentification and non-redistribution terms."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet MIMIC-IV-Note v2.2 Repository (DOI: 10.13026/1n74-ne17)",
+        "url": "https://doi.org/10.13026/1n74-ne17",
+        "type": "repository"
+      },
+      {
+        "title": "MIMIC-IV Nature Scientific Data Descriptor (DOI: 10.1038/s41597-022-01899-x)",
+        "url": "https://doi.org/10.1038/s41597-022-01899-x",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository DOI 10.13026/1n74-ne17 and Johnson et al. (Scientific Data 2023)."
+    },
+    "sample_count": {
+      "total": 2653149,
+      "splits": {
+        "discharge": 331794,
+        "radiology": 2321355
+      },
+      "unit": "notes",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2023",
+      "last_updated": "2023"
+    },
+    "citation": {
+      "paper_title": "MIMIC-IV-Note: Deidentified Free-Text Clinical Notes",
+      "paper_url": "https://doi.org/10.13026/1n74-ne17",
+      "authors": [
+        "Alistair E. W. Johnson",
+        "Tom J. Pollard",
+        "Roger G. Mark"
+      ],
+      "doi": "10.13026/1n74-ne17",
+      "bibtex": "@misc{johnson2023mimic_iv_note,\n  title={MIMIC-IV-Note: Deidentified Free-Text Clinical Notes (version 2.2)},\n  author={Johnson, Alistair EW and Pollard, Tom J and Mark, Roger G},\n  year={2023},\n  publisher={PhysioNet},\n  doi={10.13026/1n74-ne17}\n}"
     }
   },
   {
@@ -21874,6 +23508,102 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "oasis-3",
+    "slug": "oasis-3",
+    "name": "OASIS-3: Longitudinal Neuroimaging, Clinical, and Cognitive Dataset",
+    "description": "OASIS-3 is the third release in the Open Access Series of Imaging Studies (OASIS), compiled by the Knight Alzheimer Disease Research Center (ADRC) at Washington University School of Medicine. The dataset is a longitudinal neuroimaging, clinical, cognitive, and biomarker resource for normal aging and Alzheimer's disease. Spanning over 30 years of observation, OASIS-3 contains data from 1,098 adult participants (aged 42–95) across 2,168 MR imaging sessions (T1w, T2w, FLAIR, DTI, resting-state fMRI, ASL) and 1,608 PET sessions (PIB, AV45, AV1451). Scans are mapped alongside clinical dementia rating (CDR) scores, neuropsychological test batteries, post-mortem neuropathology, and APOE genotype. Access is free upon signing the OASIS Data Use Agreement on central.xnat.org.",
+    "homepage_url": "https://sites.wustl.edu/oasisbrains/home/oasis-3/",
+    "publisher": {
+      "name": "Washington University School of Medicine & Knight ADRC",
+      "type": "academic",
+      "url": "https://www.oasis-brains.org"
+    },
+    "modalities": [
+      "vision",
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "clinical-risk-prediction",
+      "medical-image-analysis",
+      "tabular-classification"
+    ],
+    "tags": [
+      "medical-imaging",
+      "mri",
+      "pet",
+      "neuroimaging",
+      "alzheimers",
+      "brain",
+      "longitudinal",
+      "clinical-data"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "OASIS Data Use Agreement",
+      "spdx_id": null,
+      "url": "https://sites.wustl.edu/oasisbrains/home/oasis-3/",
+      "commercial_use": "unknown",
+      "notes": "Users must register on central.xnat.org and agree to the OASIS Data Use Agreement, which prohibits re-identification, redistributing raw participant-level files, and requires proper citation."
+    },
+    "source_references": [
+      {
+        "title": "OASIS-3 Official Landing Page",
+        "url": "https://sites.wustl.edu/oasisbrains/home/oasis-3/",
+        "type": "official_website"
+      },
+      {
+        "title": "OASIS-3 MedRxiv Descriptor (DOI: 10.1101/2019.12.13.19014902)",
+        "url": "https://doi.org/10.1101/2019.12.13.19014902",
+        "type": "original_paper"
+      },
+      {
+        "title": "OASIS Central XNAT Repository",
+        "url": "https://central.xnat.org",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against official OASIS project documentation and LaMontagne et al. (medRxiv 2019)."
+    },
+    "sample_count": {
+      "total": 1098,
+      "splits": {
+        "mr_sessions": 2168,
+        "pet_sessions": 1608
+      },
+      "unit": "participants",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019",
+      "last_updated": "2020"
+    },
+    "citation": {
+      "paper_title": "OASIS-3: Longitudinal Neuroimaging, Clinical, and Cognitive Dataset for Normal Aging and Alzheimer Disease",
+      "paper_url": "https://doi.org/10.1101/2019.12.13.19014902",
+      "authors": [
+        "Pamela J. LaMontagne",
+        "Tyler L. Benzinger",
+        "John C. Morris",
+        "Sarah Keefe",
+        "Russ Hornbeck",
+        "Chengjie Xiong",
+        "Elizabeth Grant",
+        "Jason Hassenstab",
+        "Kristine Younce",
+        "Marcus E. Raichle",
+        "Daniel S. Marcus"
+      ],
+      "doi": "10.1101/2019.12.13.19014902",
+      "bibtex": "@article{lamontagne2019oasis,\n  title={OASIS-3: Longitudinal Neuroimaging, Clinical, and Cognitive Dataset for Normal Aging and Alzheimer Disease},\n  author={LaMontagne, Pamela J and Benzinger, Tyler L and Morris, John C and Keefe, Sarah and Hornbeck, Russ and Xiong, Chengjie and Grant, Elizabeth and Hassenstab, Jason and Younce, Kristine and Raichle, Marcus E and Marcus, Daniel S},\n  journal={medRxiv},\n  pages={2019--12},\n  year={2019},\n  publisher={Cold Spring Harbor Laboratory Press}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "objaverse",
     "slug": "objaverse",
     "name": "Objaverse 1.0: A Universe of 800K+ Annotated 3D Objects",
@@ -23389,6 +25119,98 @@
       "data_sources": [
         "MIMIC-II Clinical Database"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "physionet-challenge-2019",
+    "slug": "physionet-challenge-2019",
+    "name": "PhysioNet/CinC Challenge 2019: Early Prediction of Sepsis from Clinical Data",
+    "description": "The PhysioNet/Computing in Cardiology (CinC) Challenge 2019 dataset was developed for the international competition on the early prediction of sepsis from clinical data, published in Critical Care Medicine. Sepsis is a life-threatening organ dysfunction caused by a dysregulated host response to infection. The challenge dataset comprises hourly clinical observations from 40,336 intensive care unit (ICU) patients across two distinct US hospital systems (Emory University Hospital and Beth Israel Deaconess Medical Center). For each patient hour, the dataset records 40 clinical variables including six vital signs (heart rate, SpO2, temperature, systolic/mean blood pressure, respiration rate), 28 laboratory values (platelets, white blood cell count, creatinine, bilirubin, lactate, arterial blood gas metrics), and six demographic/admission descriptors alongside binary sepsis labels defined according to Sepsis-3 clinical criteria.",
+    "homepage_url": "https://physionet.org/content/challenge-2019/1.0.0/",
+    "publisher": {
+      "name": "PhysioNet & Computing in Cardiology",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "clinical-risk-prediction",
+      "time-series-forecasting",
+      "tabular-classification"
+    ],
+    "tags": [
+      "healthcare",
+      "sepsis",
+      "icu",
+      "critical-care",
+      "time-series",
+      "physionet",
+      "clinical-data",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed on PhysioNet under the Open Data Commons Attribution License v1.0."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet Challenge 2019 Repository (DOI: 10.13026/v64v-yn42)",
+        "url": "https://doi.org/10.13026/v64v-yn42",
+        "type": "repository"
+      },
+      {
+        "title": "Critical Care Medicine Journal Descriptor (DOI: 10.1097/CCM.0000000000004145)",
+        "url": "https://doi.org/10.1097/CCM.0000000000004145",
+        "type": "original_paper"
+      },
+      {
+        "title": "PhysioNet Challenge 2019 Official Portal",
+        "url": "https://physionet.org/content/challenge-2019/1.0.0/",
+        "type": "official_website"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository DOI 10.13026/v64v-yn42 and Reyna et al. (Crit Care Med 2020)."
+    },
+    "sample_count": {
+      "total": 40336,
+      "splits": {
+        "set_a_emory": 20336,
+        "set_b_bidmc": 20000
+      },
+      "unit": "patients",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019",
+      "last_updated": "2020"
+    },
+    "citation": {
+      "paper_title": "Early Prediction of Sepsis From Clinical Data: The PhysioNet/Computing in Cardiology Challenge 2019",
+      "paper_url": "https://doi.org/10.1097/CCM.0000000000004145",
+      "authors": [
+        "Matthew A. Reyna",
+        "Christopher S. Josef",
+        "Russell Jeter",
+        "Supreeth P. Shashikumar",
+        "M. Brandon Westover",
+        "Shamir Nemati",
+        "Gari D. Clifford",
+        "Ashish Sharma"
+      ],
+      "doi": "10.1097/CCM.0000000000004145",
+      "bibtex": "@article{reyna2020early,\n  title={Early Prediction of Sepsis From Clinical Data: The PhysioNet/Computing in Cardiology Challenge 2019},\n  author={Reyna, Matthew A and Josef, Christopher S and Jeter, Russell and Shashikumar, Supreeth P and Westover, M Brandon and Nemati, Shamir and Clifford, Gari D and Sharma, Ashish},\n  journal={Critical Care Medicine},\n  volume={48},\n  number={2},\n  pages={210--217},\n  year={2020},\n  publisher={LWW}\n}"
     }
   },
   {
@@ -27246,6 +29068,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "st-petersburg-incart-arrhythmia",
+    "slug": "st-petersburg-incart-arrhythmia",
+    "name": "St Petersburg INCART 12-lead Arrhythmia Database",
+    "description": "The St Petersburg INCART 12-lead Arrhythmia Database is a public clinical electrocardiogram database contributed to PhysioNet by the St. Petersburg Institute of Cardiological Technics (INCART) in St. Petersburg, Russia. The database consists of 75 annotated 30-minute 12-lead ECG recordings extracted from 32 Holter records of patients undergoing evaluation for coronary artery disease. Sampled at 257 Hz per lead, recordings capture diverse cardiac morphologies and rhythm disturbances, including premature ventricular complexes, bundle branch blocks, supraventricular arrhythmias, and ischemic transient ST-segment shifts. Each record contains over 175,000 reference beat annotations verified by expert cardiologists, making it an essential reference dataset for multi-lead automated arrhythmia detection.",
+    "homepage_url": "https://physionet.org/content/incartdb/1.0.0/",
+    "publisher": {
+      "name": "St. Petersburg Institute of Cardiological Technics (INCART) & PhysioNet",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "time-series-classification",
+      "clinical-risk-prediction",
+      "signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "ecg",
+      "cardiology",
+      "arrhythmia",
+      "holter",
+      "physionet",
+      "biosignals"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed on PhysioNet under the Open Data Commons Attribution License v1.0."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet INCART Database Repository (DOI: 10.13026/C2V88N)",
+        "url": "https://doi.org/10.13026/C2V88N",
+        "type": "repository"
+      },
+      {
+        "title": "PhysioNet Circulation Research Resource Paper (DOI: 10.1161/01.cir.101.23.e215)",
+        "url": "https://doi.org/10.1161/01.cir.101.23.e215",
+        "type": "documentation"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository DOI 10.13026/C2V88N."
+    },
+    "sample_count": {
+      "total": 75,
+      "splits": {
+        "recordings": 75,
+        "patients": 32
+      },
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2008"
+    },
+    "citation": {
+      "paper_title": "St Petersburg INCART 12-lead Arrhythmia Database",
+      "paper_url": "https://doi.org/10.13026/C2V88N",
+      "authors": [
+        "St. Petersburg Institute of Cardiological Technics"
+      ],
+      "doi": "10.13026/C2V88N",
+      "bibtex": "@misc{incartdb_2008,\n  title={St Petersburg INCART 12-lead Arrhythmia Database (version 1.0.0)},\n  author={{St. Petersburg Institute of Cardiological Technics}},\n  year={2008},\n  publisher={PhysioNet},\n  doi={10.13026/C2V88N}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "stl-10",
     "slug": "stl-10",
     "name": "STL-10",
@@ -28779,6 +30678,95 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "totalsegmentator-ct",
+    "slug": "totalsegmentator-ct",
+    "name": "TotalSegmentator: Anatomical Structure Segmentation in CT Images",
+    "description": "TotalSegmentator is a foundational open-source computed tomography (CT) segmentation dataset and toolkit developed by researchers at the Department of Radiology, University Hospital Basel. Published in Radiology: Artificial Intelligence, the dataset provides voxel-level ground-truth segmentations of 104 to 117 vital anatomical structures (including 27 organs, 59 bones, 10 muscles, and 8 vessels) across 1,204 randomly sampled clinical CT examinations (version 1) and expanded to 1,939 CT scans (version 3) from diverse pathologies, scanners, and imaging protocols. Available on Zenodo under CC BY 4.0, TotalSegmentator is widely used as a cornerstone dataset for full-body anatomical parsing, organ volumetry, and opportunistic screening in diagnostic CT.",
+    "homepage_url": "https://zenodo.org/records/6802614",
+    "publisher": {
+      "name": "University Hospital Basel",
+      "type": "academic",
+      "url": "https://zenodo.org/records/6802614"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "medical-image-analysis"
+    ],
+    "tags": [
+      "medical-imaging",
+      "ct",
+      "segmentation",
+      "anatomy",
+      "radiology",
+      "whole-body",
+      "zenodo"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Data and annotations published on Zenodo under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "Zenodo TotalSegmentator Dataset (DOI: 10.5281/zenodo.6802614)",
+        "url": "https://doi.org/10.5281/zenodo.6802614",
+        "type": "repository"
+      },
+      {
+        "title": "Radiology: Artificial Intelligence Publication (DOI: 10.1148/ryai.230024)",
+        "url": "https://doi.org/10.1148/ryai.230024",
+        "type": "original_paper"
+      },
+      {
+        "title": "TotalSegmentator GitHub Repository",
+        "url": "https://github.com/wasserth/TotalSegmentator",
+        "type": "documentation"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against Zenodo record 6802614 / 22688904 and Wasserthal et al. (Radiology: AI 2023)."
+    },
+    "sample_count": {
+      "total": 1204,
+      "unit": "scans",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022",
+      "last_updated": "2023"
+    },
+    "citation": {
+      "paper_title": "TotalSegmentator: Robust Segmentation of 104 Anatomic Structures in CT Images",
+      "paper_url": "https://doi.org/10.1148/ryai.230024",
+      "authors": [
+        "Jakob Wasserthal",
+        "Hanns-Christian Breit",
+        "Manfred T. Meyer",
+        "Maurice Pradella",
+        "Daniel Hinck",
+        "Alexander W. Sauter",
+        "Tobias Heye",
+        "Daniel T. Boll",
+        "Joshy Cyriac",
+        "Shan Yang",
+        "Michael Bach",
+        "Martin Segeroth"
+      ],
+      "doi": "10.1148/ryai.230024",
+      "bibtex": "@article{wasserthal2023totalsegmentator,\n  title={TotalSegmentator: Robust Segmentation of 104 Anatomic Structures in CT Images},\n  author={Wasserthal, Jakob and Breit, Hanns-Christian and Meyer, Manfred T and Pradella, Maurice and Hinck, Daniel and Sauter, Alexander W and Heye, Tobias and Boll, Daniel T and Cyriac, Joshy and Yang, Shan and Bach, Michael and Segeroth, Martin},\n  journal={Radiology: Artificial Intelligence},\n  volume={5},\n  number={5},\n  pages={e230024},\n  year={2023},\n  publisher={Radiological Society of North America}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "trec-question-classification",
     "slug": "trec-question-classification",
     "name": "TREC Question Classification Dataset",
@@ -29213,6 +31201,80 @@
       ],
       "doi": "10.48550/arXiv.1212.0402",
       "bibtex": "@article{soomro2012ucf101,\n  title={UCF101: A dataset of 101 human actions classes from videos in the wild},\n  author={Soomro, Khurram and Zamir, Amir Roshan and Shah, Mubarak},\n  journal={arXiv preprint arXiv:1212.0402},\n  year={2012}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "uci-cervical-cancer-risk-factors",
+    "slug": "uci-cervical-cancer-risk-factors",
+    "name": "Cervical Cancer (Risk Factors) Clinical Dataset",
+    "description": "The Cervical Cancer (Risk Factors) dataset is a tabular clinical benchmark hosted by the UCI Machine Learning Repository (dataset #383). Collected at Hospital Universitario de Caracas in Caracas, Venezuela, the dataset includes demographic information, lifestyle habits, and medical and sexual history for 858 female patients across 36 attributes (including age, number of sexual partners, smoking habits, use of hormonal contraceptives, intrauterine devices, sexually transmitted disease diagnoses, and previous cervical condylomatosis). Target variables represent clinical screening outcomes for cervical cancer: Hinselmann colposcopy examination, Schiller test, cytology (Pap smear), and histopathological biopsy. Due to patient privacy and clinical omission, several attributes contain missing values, offering a realistic benchmark for missing-data imputation, feature selection, and imbalanced clinical risk prediction.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/383/cervical+cancer+risk+factors",
+    "publisher": {
+      "name": "UCI Machine Learning Repository & University of Porto",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "clinical-risk-prediction"
+    ],
+    "tags": [
+      "healthcare",
+      "oncology",
+      "cervical-cancer",
+      "clinical-data",
+      "uci",
+      "tabular",
+      "risk-prediction"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published on UCI Machine Learning Repository under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "UCI Dataset Repository (DOI: 10.24432/C5Z310)",
+        "url": "https://doi.org/10.24432/C5Z310",
+        "type": "repository"
+      },
+      {
+        "title": "Springer EPIA 2017 Publication (DOI: 10.1007/978-3-319-58838-4_27)",
+        "url": "https://doi.org/10.1007/978-3-319-58838-4_27",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against UCI repository dataset #383 and Fernandes et al. (EPIA 2017)."
+    },
+    "sample_count": {
+      "total": 858,
+      "unit": "records",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2017"
+    },
+    "citation": {
+      "paper_title": "Transfer Learning with Partial Observability Applied to Cervical Cancer Screening",
+      "paper_url": "https://doi.org/10.1007/978-3-319-58838-4_27",
+      "authors": [
+        "Kelwin Fernandes",
+        "Jaime S. Cardoso",
+        "Jessica Fernandes"
+      ],
+      "doi": "10.1007/978-3-319-58838-4_27",
+      "bibtex": "@inproceedings{fernandes2017transfer,\n  title={Transfer Learning with Partial Observability Applied to Cervical Cancer Screening},\n  author={Fernandes, Kelwin and Cardoso, Jaime S and Fernandes, Jessica},\n  booktitle={Iberian Conference on Pattern Recognition and Image Analysis},\n  pages={243--250},\n  year={2017},\n  organization={Springer}\n}"
     }
   },
   {
@@ -30476,6 +32538,96 @@
       "total": 157,
       "unit": "images",
       "status": "verified"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "verse-2020",
+    "slug": "verse-2020",
+    "name": "VerSe 2020: Large Scale Vertebrae Segmentation Challenge",
+    "description": "VerSe 2020 (Large Scale Vertebrae Segmentation Challenge 2020) was organized in conjunction with MICCAI 2020 to advance automated spine analysis in computed tomography (CT). The benchmark consists of multi-detector spine CT examinations from 300 subjects (yielding 303 series and over 4,000 individually visualized vertebrae) acquired across multi-center clinical workflows from all four major CT manufacturers (GE, Philips, Siemens, Canon). VerSe 2020 specifically evaluates algorithm robustness in the presence of challenging anatomical anomalies (including transitional vertebrae like lumbarized L6 or thoracicized T13, enumerative variations, osteophytes, and surgical fixation hardware). Annotations include voxel-level semantic segmentation masks and 3D anatomical centroid coordinates for every individual cervical (C1–C7), thoracic (T1–T12), and lumbar (L1–L5/L6) vertebra.",
+    "homepage_url": "https://verse2020.grand-challenge.org/",
+    "publisher": {
+      "name": "Technical University of Munich & VerSe Consortium",
+      "type": "academic",
+      "url": "https://verse2020.grand-challenge.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "medical-image-analysis",
+      "landmark-detection"
+    ],
+    "tags": [
+      "medical-imaging",
+      "ct",
+      "spine",
+      "vertebrae",
+      "segmentation",
+      "radiology",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed on OSF, Hugging Face, and Grand Challenge under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "VerSe 2020 Grand Challenge Page",
+        "url": "https://verse2020.grand-challenge.org/",
+        "type": "official_website"
+      },
+      {
+        "title": "Medical Image Analysis Publication (DOI: 10.1016/j.media.2021.102161)",
+        "url": "https://doi.org/10.1016/j.media.2021.102161",
+        "type": "original_paper"
+      },
+      {
+        "title": "VerSe Official GitHub Repository",
+        "url": "https://github.com/anjany/verse",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against Grand Challenge portal and Liebl et al. (Medical Image Analysis 2021)."
+    },
+    "sample_count": {
+      "total": 303,
+      "splits": {
+        "train": 104,
+        "validation": 99,
+        "test": 100
+      },
+      "unit": "series",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020",
+      "last_updated": "2021"
+    },
+    "citation": {
+      "paper_title": "A computed tomography vertebral segmentation dataset with anatomical variations and multi-vendor scanner data",
+      "paper_url": "https://doi.org/10.1016/j.media.2021.102161",
+      "authors": [
+        "Christian Liebl",
+        "Anjany Sekuboyina",
+        "Malek El Husseini",
+        "Amirhossein Bayat",
+        "Maximilian Löffler",
+        "Thomas Baum",
+        "Jan S. Kirschke"
+      ],
+      "doi": "10.1016/j.media.2021.102161",
+      "bibtex": "@article{liebl2021computed,\n  title={A computed tomography vertebral segmentation dataset with anatomical variations and multi-vendor scanner data},\n  author={Liebl, Christian and Sekuboyina, Anjany and El Husseini, Malek and Bayat, Amirhossein and L{\\\"o}ffler, Maximilian and Baum, Thomas and Kirschke, Jan S},\n  journal={Medical Image Analysis},\n  volume={73},\n  pages={102161},\n  year={2021},\n  publisher={Elsevier}\n}"
     }
   },
   {

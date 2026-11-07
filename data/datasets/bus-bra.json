@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bus-bra",
+  "slug": "bus-bra",
+  "name": "BUS-BRA: Breast Ultrasound Dataset with BI-RADS Categories",
+  "description": "BUS-BRA is an open-access breast ultrasound benchmark dataset compiled by researchers from the National Institute of Cancer (INCA) in Rio de Janeiro, Brazil, and CINVESTAV in Mexico. Hosted on Zenodo, the dataset consists of 1,875 B-mode breast ultrasound images acquired from 1,064 female patients. Each image is paired with verified biopsy-proven histopathological diagnosis (benign vs. malignant), Breast Imaging Reporting and Data System (BI-RADS) assessment categories (2 to 5) determined by senior ultrasonographers, and manual pixel-level binary tumor segmentation masks. The dataset also provides pre-defined 5-fold and 10-fold cross-validation partitions for reproducible machine learning benchmarking.",
+  "homepage_url": "https://zenodo.org/records/8231412",
+  "publisher": {
+    "name": "National Institute of Cancer (INCA) & CINVESTAV",
+    "type": "academic",
+    "url": "https://zenodo.org/records/8231412"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "semantic-segmentation",
+    "medical-image-analysis"
+  ],
+  "tags": [
+    "medical-imaging",
+    "ultrasound",
+    "breast-cancer",
+    "oncology",
+    "segmentation",
+    "bi-rads",
+    "zenodo"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed on Zenodo under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Zenodo BUS-BRA Dataset Repository (DOI: 10.5281/zenodo.8231412)",
+      "url": "https://doi.org/10.5281/zenodo.8231412",
+      "type": "repository"
+    },
+    {
+      "title": "Medical Physics Journal Descriptor (DOI: 10.1002/mp.16812)",
+      "url": "https://doi.org/10.1002/mp.16812",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against Zenodo record 8231412 and Gómez-Flores et al. (Medical Physics 2024)."
+  },
+  "sample_count": {
+    "total": 1875,
+    "splits": {
+      "benign": 997,
+      "malignant": 878
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023",
+    "last_updated": "2024"
+  },
+  "citation": {
+    "paper_title": "BUS-BRA: A breast ultrasound dataset for assessing computer-aided diagnosis systems",
+    "paper_url": "https://doi.org/10.1002/mp.16812",
+    "authors": [
+      "Wilfrido Gómez-Flores",
+      "Maria Julia Gregorio-Calas",
+      "Wagner Coelho de Albuquerque Pereira"
+    ],
+    "doi": "10.1002/mp.16812",
+    "bibtex": "@article{gomezflores2024busbra,\n  title={BUS-BRA: A breast ultrasound dataset for assessing computer-aided diagnosis systems},\n  author={G{\\'o}mez-Flores, Wilfrido and Gregorio-Calas, Maria Julia and Pereira, Wagner Coelho de Albuquerque},\n  journal={Medical Physics},\n  volume={51},\n  number={4},\n  pages={3110--3123},\n  year={2024},\n  publisher={Wiley Online Library}\n}"
+  }
+}

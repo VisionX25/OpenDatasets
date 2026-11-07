@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mimic-iv-ecg",
+  "slug": "mimic-iv-ecg",
+  "name": "MIMIC-IV-ECG: Diagnostic Electrocardiogram Database",
+  "description": "MIMIC-IV-ECG is a comprehensive diagnostic electrocardiogram database derived from patients admitted to Beth Israel Deaconess Medical Center, hosted on PhysioNet by the MIT Laboratory for Computational Physiology. The dataset contains approximately 800,000 diagnostic 12-lead ECG recordings collected from over 160,000 distinct adult patients between 2008 and 2019. Each ECG is recorded at a sampling rate of 500 Hz for 10 seconds and includes machine-generated measurements (heart rate, PR interval, QRS duration, QT/QTc intervals, P/QRS/T axes) alongside official physician-reviewed diagnostic statement reports. Recordings are directly linked to patients in MIMIC-IV and MIMIC-IV-ED, enabling rich cross-modal machine learning integrating biosignals with longitudinal clinical trajectories.",
+  "homepage_url": "https://physionet.org/content/mimic-iv-ecg/1.0/",
+  "publisher": {
+    "name": "MIT Laboratory for Computational Physiology & BIDMC",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "time-series-classification",
+    "clinical-risk-prediction",
+    "signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "ecg",
+    "cardiology",
+    "arrhythmia",
+    "mimic",
+    "biosignals",
+    "physionet"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "PhysioNet Credentialed Health Data License 1.5.0",
+    "spdx_id": null,
+    "url": "https://physionet.org/content/mimic-iv-ecg/view-license/1.0/",
+    "commercial_use": "unknown",
+    "notes": "Governed by PhysioNet Credentialed Health Data License 1.5.0. Access requires CITI human subjects training, user credentialing, and agreement to strict non-reidentification and non-redistribution terms."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet MIMIC-IV-ECG v1.0 Repository (DOI: 10.13026/jwhf-tr66)",
+      "url": "https://doi.org/10.13026/jwhf-tr66",
+      "type": "repository"
+    },
+    {
+      "title": "Nature Scientific Data Publication (DOI: 10.1038/s41597-023-02408-x)",
+      "url": "https://doi.org/10.1038/s41597-023-02408-x",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository DOI 10.13026/jwhf-tr66 and Gow et al. (Scientific Data 2023)."
+  },
+  "sample_count": {
+    "total": 800000,
+    "splits": {
+      "recordings": 800000,
+      "patients": 161244
+    },
+    "unit": "recordings",
+    "status": "estimated"
+  },
+  "dates": {
+    "published": "2023"
+  },
+  "citation": {
+    "paper_title": "A large-scale database of 12-lead electrocardiograms linked to clinical records",
+    "paper_url": "https://doi.org/10.1038/s41597-023-02408-x",
+    "authors": [
+      "Benjamin Gow",
+      "Tom J. Pollard",
+      "Leo Anthony Celi",
+      "Roger G. Mark",
+      "Steven Horng"
+    ],
+    "doi": "10.1038/s41597-023-02408-x",
+    "bibtex": "@article{gow2023large,\n  title={A large-scale database of 12-lead electrocardiograms linked to clinical records},\n  author={Gow, Benjamin and Pollard, Tom J and Celi, Leo Anthony and Mark, Roger G and Horng, Steven},\n  journal={Scientific Data},\n  volume={10},\n  number={1},\n  pages={554},\n  year={2023},\n  publisher={Nature Publishing Group}\n}"
+  }
+}

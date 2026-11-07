@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bidmc-ppg-and-respiration",
+  "slug": "bidmc-ppg-and-respiration",
+  "name": "BIDMC PPG and Respiration Dataset",
+  "description": "The BIDMC PPG and Respiration Dataset was developed by researchers at the University of Oxford and Beth Israel Deaconess Medical Center, published in IEEE Transactions on Biomedical Engineering and hosted on PhysioNet. Extracted from the MIMIC-II matched waveform database, the dataset contains 53 recordings of physiological signals from critically ill patients (aged 19–90+ years) admitted to intensive care. Each record spans 8 minutes and captures continuous photoplethysmogram (PPG), impedance pneumography respiratory signal, and lead II electrocardiogram (ECG) sampled at 125 Hz. Ground-truth respiratory rate annotations were manually labeled by two independent human annotators inspecting impedance breaths, providing an authoritative benchmark for non-invasive respiratory rate estimation and pulse oximeter waveform analysis.",
+  "homepage_url": "https://physionet.org/content/bidmc/1.0.0/",
+  "publisher": {
+    "name": "University of Oxford & PhysioNet",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "signal-processing",
+    "time-series-forecasting",
+    "clinical-risk-prediction"
+  ],
+  "tags": [
+    "healthcare",
+    "ppg",
+    "respiration",
+    "biosignals",
+    "pulse-oximetry",
+    "icu",
+    "physionet"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed on PhysioNet under the Open Data Commons Attribution License v1.0."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet BIDMC Repository (DOI: 10.13026/C2205R)",
+      "url": "https://doi.org/10.13026/C2205R",
+      "type": "repository"
+    },
+    {
+      "title": "IEEE TBME Descriptor Publication (DOI: 10.1109/TBME.2016.2613124)",
+      "url": "https://doi.org/10.1109/TBME.2016.2613124",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository DOI 10.13026/C2205R and Pimentel et al. (IEEE TBME 2017)."
+  },
+  "sample_count": {
+    "total": 53,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2016",
+    "last_updated": "2017"
+  },
+  "citation": {
+    "paper_title": "Toward a Robust Estimation of Respiratory Rate From Pulse Oximeters",
+    "paper_url": "https://doi.org/10.1109/TBME.2016.2613124",
+    "authors": [
+      "Marco A. F. Pimentel",
+      "Alun E. Johnson",
+      "Peter H. Charlton",
+      "David Birrenkott",
+      "Peter J. Watkinson",
+      "Lionel Tarassenko",
+      "David A. Clifton"
+    ],
+    "doi": "10.1109/TBME.2016.2613124",
+    "bibtex": "@article{pimentel2016toward,\n  title={Toward a Robust Estimation of Respiratory Rate From Pulse Oximeters},\n  author={Pimentel, Marco AF and Johnson, Alun E and Charlton, Peter H and Birrenkott, David and Watkinson, Peter J and Tarassenko, Lionel and Clifton, David A},\n  journal={IEEE Transactions on Biomedical Engineering},\n  volume={64},\n  number={8},\n  pages={1914--1923},\n  year={2017},\n  publisher={IEEE}\n}"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "id": "physionet-challenge-2019",
+  "slug": "physionet-challenge-2019",
+  "name": "PhysioNet/CinC Challenge 2019: Early Prediction of Sepsis from Clinical Data",
+  "description": "The PhysioNet/Computing in Cardiology (CinC) Challenge 2019 dataset was developed for the international competition on the early prediction of sepsis from clinical data, published in Critical Care Medicine. Sepsis is a life-threatening organ dysfunction caused by a dysregulated host response to infection. The challenge dataset comprises hourly clinical observations from 40,336 intensive care unit (ICU) patients across two distinct US hospital systems (Emory University Hospital and Beth Israel Deaconess Medical Center). For each patient hour, the dataset records 40 clinical variables including six vital signs (heart rate, SpO2, temperature, systolic/mean blood pressure, respiration rate), 28 laboratory values (platelets, white blood cell count, creatinine, bilirubin, lactate, arterial blood gas metrics), and six demographic/admission descriptors alongside binary sepsis labels defined according to Sepsis-3 clinical criteria.",
+  "homepage_url": "https://physionet.org/content/challenge-2019/1.0.0/",
+  "publisher": {
+    "name": "PhysioNet & Computing in Cardiology",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "clinical-risk-prediction",
+    "time-series-forecasting",
+    "tabular-classification"
+  ],
+  "tags": [
+    "healthcare",
+    "sepsis",
+    "icu",
+    "critical-care",
+    "time-series",
+    "physionet",
+    "clinical-data",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed on PhysioNet under the Open Data Commons Attribution License v1.0."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet Challenge 2019 Repository (DOI: 10.13026/v64v-yn42)",
+      "url": "https://doi.org/10.13026/v64v-yn42",
+      "type": "repository"
+    },
+    {
+      "title": "Critical Care Medicine Journal Descriptor (DOI: 10.1097/CCM.0000000000004145)",
+      "url": "https://doi.org/10.1097/CCM.0000000000004145",
+      "type": "original_paper"
+    },
+    {
+      "title": "PhysioNet Challenge 2019 Official Portal",
+      "url": "https://physionet.org/content/challenge-2019/1.0.0/",
+      "type": "official_website"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository DOI 10.13026/v64v-yn42 and Reyna et al. (Crit Care Med 2020)."
+  },
+  "sample_count": {
+    "total": 40336,
+    "splits": {
+      "set_a_emory": 20336,
+      "set_b_bidmc": 20000
+    },
+    "unit": "patients",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019",
+    "last_updated": "2020"
+  },
+  "citation": {
+    "paper_title": "Early Prediction of Sepsis From Clinical Data: The PhysioNet/Computing in Cardiology Challenge 2019",
+    "paper_url": "https://doi.org/10.1097/CCM.0000000000004145",
+    "authors": [
+      "Matthew A. Reyna",
+      "Christopher S. Josef",
+      "Russell Jeter",
+      "Supreeth P. Shashikumar",
+      "M. Brandon Westover",
+      "Shamir Nemati",
+      "Gari D. Clifford",
+      "Ashish Sharma"
+    ],
+    "doi": "10.1097/CCM.0000000000004145",
+    "bibtex": "@article{reyna2020early,\n  title={Early Prediction of Sepsis From Clinical Data: The PhysioNet/Computing in Cardiology Challenge 2019},\n  author={Reyna, Matthew A and Josef, Christopher S and Jeter, Russell and Shashikumar, Supreeth P and Westover, M Brandon and Nemati, Shamir and Clifford, Gari D and Sharma, Ashish},\n  journal={Critical Care Medicine},\n  volume={48},\n  number={2},\n  pages={210--217},\n  year={2020},\n  publisher={LWW}\n}"
+  }
+}

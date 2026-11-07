@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "adni",
+  "slug": "adni",
+  "name": "ADNI: Alzheimer's Disease Neuroimaging Initiative",
+  "description": "The Alzheimer's Disease Neuroimaging Initiative (ADNI) is a landmark, longitudinal multicenter observational study launched in 2004 by the National Institute on Aging (NIA) and private partners to track the progression of mild cognitive impairment (MCI) and early Alzheimer's disease (AD). The dataset aggregates serial multimodal neuroimaging (structural and functional MRI, amyloid and tau PET), clinical assessments, cognitive test scores, cerebrospinal fluid (CSF) and blood biomarkers, and whole-genome sequencing from thousands of participants across four continuous study phases (ADNI-1, ADNI-GO, ADNI-2, and ADNI-3). Access is governed by the ADNI Data Use Agreement (DUA) through the Laboratory of Neuro Imaging (LONI) Image and Data Archive (IDA), requiring user registration, credentialing, and agreement to strict non-redistribution and non-reidentification rules.",
+  "homepage_url": "https://adni.loni.usc.edu/",
+  "publisher": {
+    "name": "Alzheimer's Disease Neuroimaging Initiative & LONI",
+    "type": "academic",
+    "url": "https://adni.loni.usc.edu"
+  },
+  "modalities": [
+    "vision",
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "clinical-risk-prediction",
+    "medical-image-analysis",
+    "tabular-classification",
+    "time-series-forecasting"
+  ],
+  "tags": [
+    "medical-imaging",
+    "neuroimaging",
+    "alzheimers",
+    "mri",
+    "pet",
+    "biomarkers",
+    "clinical-data",
+    "longitudinal"
+  ],
+  "license": {
+    "status": "proprietary",
+    "name": "ADNI Data Use Agreement",
+    "spdx_id": null,
+    "url": "https://adni.loni.usc.edu/data-samples/access-data/",
+    "commercial_use": "forbidden",
+    "notes": "Access requires a formal data access application and acceptance of the ADNI Data Use Agreement via the LONI IDA platform. Redistribution of raw participant-level data is prohibited. Access is restricted to scientific investigation and research purposes."
+  },
+  "source_references": [
+    {
+      "title": "ADNI Official Portal (LONI IDA)",
+      "url": "https://adni.loni.usc.edu/",
+      "type": "official_website"
+    },
+    {
+      "title": "Overview Paper: The Alzheimer's Disease Neuroimaging Initiative (DOI: 10.1016/j.nic.2005.09.008)",
+      "url": "https://doi.org/10.1016/j.nic.2005.09.008",
+      "type": "original_paper"
+    },
+    {
+      "title": "ADNI MRI Protocol Paper (DOI: 10.1002/jmri.21049)",
+      "url": "https://doi.org/10.1002/jmri.21049",
+      "type": "documentation"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against LONI IDA portal and Mueller et al. (Neuroimaging Clin N Am 2005)."
+  },
+  "sample_count": {
+    "total": 2800,
+    "unit": "participants",
+    "status": "estimated"
+  },
+  "dates": {
+    "published": "2004",
+    "last_updated": "2024"
+  },
+  "citation": {
+    "paper_title": "The Alzheimer's disease neuroimaging initiative",
+    "paper_url": "https://doi.org/10.1016/j.nic.2005.09.008",
+    "authors": [
+      "Susanne G. Mueller",
+      "Michael W. Weiner",
+      "Leon J. Thal",
+      "Ronald C. Petersen",
+      "Clifford R. Jack",
+      "William Jagust",
+      "John Q. Trojanowski",
+      "Arthur W. Toga",
+      "Laurel Beckett"
+    ],
+    "doi": "10.1016/j.nic.2005.09.008",
+    "bibtex": "@article{mueller2005alzheimer,\n  title={The Alzheimer's disease neuroimaging initiative},\n  author={Mueller, Susanne G and Weiner, Michael W and Thal, Leon J and Petersen, Ronald C and Jack, Clifford R and Jagust, William and Trojanowski, John Q and Toga, Arthur W and Beckett, Laurel},\n  journal={Neuroimaging Clinics},\n  volume={15},\n  number={4},\n  pages={869--877},\n  year={2005},\n  publisher={Elsevier}\n}"
+  }
+}

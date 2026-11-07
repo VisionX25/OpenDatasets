@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ixi-dataset",
+  "slug": "ixi-dataset",
+  "name": "IXI: Information eXtraction from Images Brain MRI Dataset",
+  "description": "The IXI Dataset (Information eXtraction from Images) is an open-access collection of multi-contrast brain magnetic resonance imaging (MRI) scans acquired from nearly 600 healthy adult subjects. Collected across three major London clinical centers (Hammersmith Hospital on a Philips 3T scanner, Guy's Hospital on a Philips 1.5T scanner, and the Institute of Psychiatry on a GE 1.5T scanner) under an EPSRC-funded project, the dataset includes T1-weighted, T2-weighted, Proton Density (PD)-weighted, Magnetic Resonance Angiography (MRA), and 15-direction Diffusion-Weighted (DTI) images. Accompanying demographic variables include subject age, sex, height, weight, and education level. IXI serves as a standard normative reference cohort for neuroimaging research, including brain age prediction, multi-modal MRI registration, tissue segmentation, and image synthesis.",
+  "homepage_url": "https://brain-development.org/ixi-dataset/",
+  "publisher": {
+    "name": "Imperial College London & IXI Consortium",
+    "type": "academic",
+    "url": "https://brain-development.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "semantic-segmentation",
+    "medical-image-analysis",
+    "image-generation"
+  ],
+  "tags": [
+    "medical-imaging",
+    "mri",
+    "neuroimaging",
+    "brain",
+    "radiology",
+    "open-access"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+    "spdx_id": "CC-BY-SA-3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed under Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)."
+  },
+  "source_references": [
+    {
+      "title": "IXI Dataset Official Portal",
+      "url": "https://brain-development.org/ixi-dataset/",
+      "type": "official_website"
+    },
+    {
+      "title": "NITRC IXI Repository",
+      "url": "https://www.nitrc.org/projects/ixi/",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against brain-development.org portal and NITRC project page."
+  },
+  "sample_count": {
+    "total": 581,
+    "unit": "subjects",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2008"
+  },
+  "citation": {
+    "paper_title": "Information eXtraction from Images (IXI)",
+    "paper_url": "https://brain-development.org/ixi-dataset/",
+    "authors": [
+      "Daniel Rueckert",
+      "Jo V. Hajnal",
+      "Derek Hill"
+    ],
+    "bibtex": "@misc{ixi_dataset_2008,\n  title={Information eXtraction from Images (IXI)},\n  author={Rueckert, Daniel and Hajnal, Jo V and Hill, Derek},\n  howpublished={\\url{https://brain-development.org/ixi-dataset/}},\n  year={2008}\n}"
+  }
+}

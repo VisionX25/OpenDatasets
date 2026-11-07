@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "oasis-3",
+  "slug": "oasis-3",
+  "name": "OASIS-3: Longitudinal Neuroimaging, Clinical, and Cognitive Dataset",
+  "description": "OASIS-3 is the third release in the Open Access Series of Imaging Studies (OASIS), compiled by the Knight Alzheimer Disease Research Center (ADRC) at Washington University School of Medicine. The dataset is a longitudinal neuroimaging, clinical, cognitive, and biomarker resource for normal aging and Alzheimer's disease. Spanning over 30 years of observation, OASIS-3 contains data from 1,098 adult participants (aged 42–95) across 2,168 MR imaging sessions (T1w, T2w, FLAIR, DTI, resting-state fMRI, ASL) and 1,608 PET sessions (PIB, AV45, AV1451). Scans are mapped alongside clinical dementia rating (CDR) scores, neuropsychological test batteries, post-mortem neuropathology, and APOE genotype. Access is free upon signing the OASIS Data Use Agreement on central.xnat.org.",
+  "homepage_url": "https://sites.wustl.edu/oasisbrains/home/oasis-3/",
+  "publisher": {
+    "name": "Washington University School of Medicine & Knight ADRC",
+    "type": "academic",
+    "url": "https://www.oasis-brains.org"
+  },
+  "modalities": [
+    "vision",
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "clinical-risk-prediction",
+    "medical-image-analysis",
+    "tabular-classification"
+  ],
+  "tags": [
+    "medical-imaging",
+    "mri",
+    "pet",
+    "neuroimaging",
+    "alzheimers",
+    "brain",
+    "longitudinal",
+    "clinical-data"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "OASIS Data Use Agreement",
+    "spdx_id": null,
+    "url": "https://sites.wustl.edu/oasisbrains/home/oasis-3/",
+    "commercial_use": "unknown",
+    "notes": "Users must register on central.xnat.org and agree to the OASIS Data Use Agreement, which prohibits re-identification, redistributing raw participant-level files, and requires proper citation."
+  },
+  "source_references": [
+    {
+      "title": "OASIS-3 Official Landing Page",
+      "url": "https://sites.wustl.edu/oasisbrains/home/oasis-3/",
+      "type": "official_website"
+    },
+    {
+      "title": "OASIS-3 MedRxiv Descriptor (DOI: 10.1101/2019.12.13.19014902)",
+      "url": "https://doi.org/10.1101/2019.12.13.19014902",
+      "type": "original_paper"
+    },
+    {
+      "title": "OASIS Central XNAT Repository",
+      "url": "https://central.xnat.org",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against official OASIS project documentation and LaMontagne et al. (medRxiv 2019)."
+  },
+  "sample_count": {
+    "total": 1098,
+    "splits": {
+      "mr_sessions": 2168,
+      "pet_sessions": 1608
+    },
+    "unit": "participants",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019",
+    "last_updated": "2020"
+  },
+  "citation": {
+    "paper_title": "OASIS-3: Longitudinal Neuroimaging, Clinical, and Cognitive Dataset for Normal Aging and Alzheimer Disease",
+    "paper_url": "https://doi.org/10.1101/2019.12.13.19014902",
+    "authors": [
+      "Pamela J. LaMontagne",
+      "Tyler L. Benzinger",
+      "John C. Morris",
+      "Sarah Keefe",
+      "Russ Hornbeck",
+      "Chengjie Xiong",
+      "Elizabeth Grant",
+      "Jason Hassenstab",
+      "Kristine Younce",
+      "Marcus E. Raichle",
+      "Daniel S. Marcus"
+    ],
+    "doi": "10.1101/2019.12.13.19014902",
+    "bibtex": "@article{lamontagne2019oasis,\n  title={OASIS-3: Longitudinal Neuroimaging, Clinical, and Cognitive Dataset for Normal Aging and Alzheimer Disease},\n  author={LaMontagne, Pamela J and Benzinger, Tyler L and Morris, John C and Keefe, Sarah and Hornbeck, Russ and Xiong, Chengjie and Grant, Elizabeth and Hassenstab, Jason and Younce, Kristine and Raichle, Marcus E and Marcus, Daniel S},\n  journal={medRxiv},\n  pages={2019--12},\n  year={2019},\n  publisher={Cold Spring Harbor Laboratory Press}\n}"
+  }
+}

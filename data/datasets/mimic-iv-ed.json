@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mimic-iv-ed",
+  "slug": "mimic-iv-ed",
+  "name": "MIMIC-IV-ED: Emergency Department Relational Database",
+  "description": "MIMIC-IV-ED is a public electronic health record dataset documenting emergency department (ED) visits to the Beth Israel Deaconess Medical Center between 2008 and 2019, hosted on PhysioNet. Containing records for over 425,000 emergency department stays and 215,600 unique patients, the database captures the acute triage and stabilization phase before hospital admission or discharge. Tables document Emergency Severity Index (ESI) triage acuity scores, chief complaints, vital signs recorded upon arrival and throughout the stay, medication reconciliation, medications dispensed via automated pyxis dispensers, and diagnosis codes. All records seamlessly link to inpatient hospitalizations, ICU stays, and clinical notes in MIMIC-IV via shared patient identifiers.",
+  "homepage_url": "https://physionet.org/content/mimic-iv-ed/2.2/",
+  "publisher": {
+    "name": "MIT Laboratory for Computational Physiology & BIDMC",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "clinical-risk-prediction"
+  ],
+  "tags": [
+    "healthcare",
+    "emergency-department",
+    "electronic-health-records",
+    "mimic",
+    "triage",
+    "clinical-data",
+    "physionet"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "PhysioNet Credentialed Health Data License 1.5.0",
+    "spdx_id": null,
+    "url": "https://physionet.org/content/mimic-iv-ed/view-license/2.2/",
+    "commercial_use": "unknown",
+    "notes": "Governed by PhysioNet Credentialed Health Data License 1.5.0. Access requires CITI human subjects training, user credentialing, and agreement to strict non-reidentification and non-redistribution terms."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet MIMIC-IV-ED v2.2 Repository (DOI: 10.13026/v99p-4334)",
+      "url": "https://doi.org/10.13026/v99p-4334",
+      "type": "repository"
+    },
+    {
+      "title": "MIMIC-IV-ED Cohort Descriptor Paper (DOI: 10.1097/CCE.0000000000000843)",
+      "url": "https://doi.org/10.1097/CCE.0000000000000843",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository DOI 10.13026/v99p-4334 and Xie et al. (CCE 2023)."
+  },
+  "sample_count": {
+    "total": 425087,
+    "splits": {
+      "stays": 425087,
+      "patients": 215699
+    },
+    "unit": "stays",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023",
+    "last_updated": "2023"
+  },
+  "citation": {
+    "paper_title": "MIMIC-IV-ED: An Emergency Department Database",
+    "paper_url": "https://doi.org/10.1097/CCE.0000000000000843",
+    "authors": [
+      "Feng Xie",
+      "Tom J. Pollard",
+      "Alistair E. W. Johnson",
+      "Benjamin Moody",
+      "Peter Szolovits",
+      "Leo Anthony Celi",
+      "Roger G. Mark",
+      "Steven Horng"
+    ],
+    "doi": "10.1097/CCE.0000000000000843",
+    "bibtex": "@misc{johnson2023mimic_iv_ed,\n  title={MIMIC-IV-ED: Emergency Department Database (version 2.2)},\n  author={Johnson, Alistair EW and Pollard, Tom J and Horng, Steven and Celi, Leo Anthony and Mark, Roger G},\n  year={2023},\n  publisher={PhysioNet},\n  doi={10.13026/v99p-4334}\n}"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "st-petersburg-incart-arrhythmia",
+  "slug": "st-petersburg-incart-arrhythmia",
+  "name": "St Petersburg INCART 12-lead Arrhythmia Database",
+  "description": "The St Petersburg INCART 12-lead Arrhythmia Database is a public clinical electrocardiogram database contributed to PhysioNet by the St. Petersburg Institute of Cardiological Technics (INCART) in St. Petersburg, Russia. The database consists of 75 annotated 30-minute 12-lead ECG recordings extracted from 32 Holter records of patients undergoing evaluation for coronary artery disease. Sampled at 257 Hz per lead, recordings capture diverse cardiac morphologies and rhythm disturbances, including premature ventricular complexes, bundle branch blocks, supraventricular arrhythmias, and ischemic transient ST-segment shifts. Each record contains over 175,000 reference beat annotations verified by expert cardiologists, making it an essential reference dataset for multi-lead automated arrhythmia detection.",
+  "homepage_url": "https://physionet.org/content/incartdb/1.0.0/",
+  "publisher": {
+    "name": "St. Petersburg Institute of Cardiological Technics (INCART) & PhysioNet",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "time-series-classification",
+    "clinical-risk-prediction",
+    "signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "ecg",
+    "cardiology",
+    "arrhythmia",
+    "holter",
+    "physionet",
+    "biosignals"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed on PhysioNet under the Open Data Commons Attribution License v1.0."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet INCART Database Repository (DOI: 10.13026/C2V88N)",
+      "url": "https://doi.org/10.13026/C2V88N",
+      "type": "repository"
+    },
+    {
+      "title": "PhysioNet Circulation Research Resource Paper (DOI: 10.1161/01.cir.101.23.e215)",
+      "url": "https://doi.org/10.1161/01.cir.101.23.e215",
+      "type": "documentation"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository DOI 10.13026/C2V88N."
+  },
+  "sample_count": {
+    "total": 75,
+    "splits": {
+      "recordings": 75,
+      "patients": 32
+    },
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2008"
+  },
+  "citation": {
+    "paper_title": "St Petersburg INCART 12-lead Arrhythmia Database",
+    "paper_url": "https://doi.org/10.13026/C2V88N",
+    "authors": [
+      "St. Petersburg Institute of Cardiological Technics"
+    ],
+    "doi": "10.13026/C2V88N",
+    "bibtex": "@misc{incartdb_2008,\n  title={St Petersburg INCART 12-lead Arrhythmia Database (version 1.0.0)},\n  author={{St. Petersburg Institute of Cardiological Technics}},\n  year={2008},\n  publisher={PhysioNet},\n  doi={10.13026/C2V88N}\n}"
+  }
+}

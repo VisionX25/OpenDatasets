@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "milk10k",
+  "slug": "milk10k",
+  "name": "MILK10k: Multimodal Imaging-Learning Toolkit for Skin Cancer",
+  "description": "MILK10k (Multimodal Imaging-Learning Toolkit for Diagnosing Pigmented and Nonpigmented Skin Cancer and its Simulators) is a curated dermatological dataset compiled by researchers from the Medical University of Vienna and the International Skin Imaging Collaboration (ISIC), published in the Journal of Investigative Dermatology. Hosted on the ISIC Archive (DOI: 10.34970/648456), MILK10k comprises 10,480 images representing 5,240 skin lesions from international clinical centers (Austria, Turkey, the US, Australia, North Macedonia). For every lesion, the dataset pairs a clinical close-up photograph with a polarized dermoscopic image. Over 95.7% of lesions are histopathologically confirmed, providing balanced coverage of pigmented and non-pigmented skin cancers and benign simulators across 11 diagnostic categories (AKIEC, BCC, BKL, DF, INF, MEL, NV, SCCKA, VASC, BEN_OTH, MAL_OTH). Images are further annotated with concept terms (pigmentation, erythema, ulceration, vessels) and Fitzpatrick-aligned skin tone clusters (levels 0–5).",
+  "homepage_url": "https://challenge.isic-archive.com/data/",
+  "publisher": {
+    "name": "Medical University of Vienna & ISIC",
+    "type": "academic",
+    "url": "https://www.isic-archive.com"
+  },
+  "modalities": [
+    "vision",
+    "multimodal"
+  ],
+  "tasks": [
+    "image-classification",
+    "medical-image-analysis"
+  ],
+  "tags": [
+    "medical-imaging",
+    "dermatology",
+    "skin-cancer",
+    "isic",
+    "dermoscopy",
+    "multimodal",
+    "clinical-data",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Published on ISIC Archive under Creative Commons Attribution-NonCommercial (CC BY-NC)."
+  },
+  "source_references": [
+    {
+      "title": "ISIC Archive Dataset Portal (DOI: 10.34970/648456)",
+      "url": "https://doi.org/10.34970/648456",
+      "type": "repository"
+    },
+    {
+      "title": "Journal of Investigative Dermatology Publication (DOI: 10.1016/j.jid.2025.06.1594)",
+      "url": "https://doi.org/10.1016/j.jid.2025.06.1594",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against ISIC Archive DOI 10.34970/648456 and Tschandl et al. (J Invest Dermatol 2026)."
+  },
+  "sample_count": {
+    "total": 10480,
+    "splits": {
+      "lesions": 5240,
+      "images": 10480
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2025",
+    "last_updated": "2026"
+  },
+  "citation": {
+    "paper_title": "MILK10k: A Hierarchical Multimodal Imaging-Learning Toolkit for Diagnosing Pigmented and Nonpigmented Skin Cancer and its Simulators",
+    "paper_url": "https://doi.org/10.1016/j.jid.2025.06.1594",
+    "authors": [
+      "Philipp Tschandl",
+      "Bengu Nisa Akay",
+      "Cliff Rosendahl",
+      "Veronica Rotemberg",
+      "Violeta Todorovska",
+      "Julia Weber",
+      "Ann-Kathrin Wolber",
+      "Christoph Müller",
+      "Noah K. Kurtansky",
+      "Allan Halpern",
+      "Wolfgang Weninger",
+      "Harald Kittler"
+    ],
+    "doi": "10.1016/j.jid.2025.06.1594",
+    "bibtex": "@article{tschandl2026milk10k,\n  title={MILK10k: A Hierarchical Multimodal Imaging-Learning Toolkit for Diagnosing Pigmented and Nonpigmented Skin Cancer and its Simulators},\n  author={Tschandl, Philipp and Akay, Bengu Nisa and Rosendahl, Cliff and Rotemberg, Veronica and Todorovska, Violeta and Weber, Julia and Wolber, Ann-Kathrin and M{\\\"u}ller, Christoph and Kurtansky, Noah K and Halpern, Allan and Weninger, Wolfgang and Kittler, Harald},\n  journal={Journal of Investigative Dermatology},\n  volume={146},\n  number={2},\n  pages={357--364},\n  year={2026},\n  publisher={Elsevier}\n}"
+  }
+}

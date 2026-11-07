@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "id": "isic-2018",
+  "slug": "isic-2018",
+  "name": "ISIC 2018: Skin Lesion Analysis Towards Melanoma Detection",
+  "description": "The ISIC 2018 dataset is a landmark benchmark challenge for automated skin cancer diagnosis hosted by the International Skin Imaging Collaboration (ISIC) and MICCAI 2018. It comprises three specialized tasks: Task 1 for lesion boundary segmentation (2,594 training, 100 validation, 1,000 test dermoscopic images with binary ground-truth masks); Task 2 for dermoscopic attribute detection (2,594 images annotated for pigment network, negative network, streaks, milia-like cysts, and globules); and Task 3 for multi-class disease classification (10,015 training images corresponding to the HAM10000 collection, 193 validation, and 1,512 test images across seven diagnostic categories: melanoma, melanocytic nevus, basal cell carcinoma, actinic keratosis, benign keratosis, dermatofibroma, and vascular lesion). Users should note that Task 3 training data overlaps directly with the canonical HAM10000 dataset, whereas Tasks 1 and 2 provide distinct boundary and attribute annotations.",
+  "homepage_url": "https://challenge.isic-archive.com/landing/2018/",
+  "publisher": {
+    "name": "International Skin Imaging Collaboration (ISIC)",
+    "type": "community",
+    "url": "https://www.isic-archive.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "semantic-segmentation",
+    "medical-image-analysis",
+    "object-detection"
+  ],
+  "tags": [
+    "medical-imaging",
+    "dermatology",
+    "skin-cancer",
+    "isic",
+    "melanoma",
+    "segmentation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 / CC0",
+    "spdx_id": null,
+    "url": "https://challenge.isic-archive.com/data/",
+    "commercial_use": "forbidden",
+    "notes": "Task 1 (Segmentation) and Task 2 (Attribute Detection) data are dedicated to the public domain under Creative Commons CC0. Task 3 (Disease Classification, incorporating HAM10000) is licensed under Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0). Overall commercial use is forbidden due to the Task 3 non-commercial terms."
+  },
+  "source_references": [
+    {
+      "title": "ISIC 2018 Challenge Landing Page",
+      "url": "https://challenge.isic-archive.com/landing/2018/",
+      "type": "official_website"
+    },
+    {
+      "title": "Challenge Overview Paper: Skin Lesion Analysis Toward Melanoma Detection 2018 (arXiv:1902.03368)",
+      "url": "https://doi.org/10.48550/arXiv.1902.03368",
+      "type": "original_paper"
+    },
+    {
+      "title": "ISIC Archive Data Portal",
+      "url": "https://challenge.isic-archive.com/data/",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against ISIC 2018 official challenge landing page and Codella et al. (arXiv:1902.03368). Documented overlap with HAM10000 for Task 3."
+  },
+  "sample_count": {
+    "total": 12720,
+    "splits": {
+      "task1_train": 2594,
+      "task1_val": 100,
+      "task1_test": 1000,
+      "task2_train": 2594,
+      "task3_train": 10015,
+      "task3_val": 193,
+      "task3_test": 1512
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018"
+  },
+  "citation": {
+    "paper_title": "Skin Lesion Analysis Toward Melanoma Detection 2018: A Challenge Hosted by the International Skin Imaging Collaboration (ISIC)",
+    "paper_url": "https://arxiv.org/abs/1902.03368",
+    "authors": [
+      "Noel Codella",
+      "Veronica Rotemberg",
+      "Philipp Tschandl",
+      "M. Emre Celebi",
+      "Stephen Dusza",
+      "David Gutman",
+      "Brian Helba",
+      "Aadi Kalloo",
+      "Konstantinos Liopyris",
+      "Michael Marchetti",
+      "Harald Kittler",
+      "Allan Halpern"
+    ],
+    "doi": "10.48550/arXiv.1902.03368",
+    "bibtex": "@article{codella2019skin,\n  title={Skin Lesion Analysis Toward Melanoma Detection 2018: A Challenge Hosted by the International Skin Imaging Collaboration (ISIC)},\n  author={Codella, Noel and Rotemberg, Veronica and Tschandl, Philipp and Celebi, M Emre and Dusza, Stephen and Gutman, David and Helba, Brian and Kalloo, Aadi and Liopyris, Konstantinos and Marchetti, Michael and Kittler, Harald and Halpern, Allan},\n  journal={arXiv preprint arXiv:1902.03368},\n  year={2019}\n}"
+  }
+}

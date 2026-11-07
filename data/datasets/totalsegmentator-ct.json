@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "totalsegmentator-ct",
+  "slug": "totalsegmentator-ct",
+  "name": "TotalSegmentator: Anatomical Structure Segmentation in CT Images",
+  "description": "TotalSegmentator is a foundational open-source computed tomography (CT) segmentation dataset and toolkit developed by researchers at the Department of Radiology, University Hospital Basel. Published in Radiology: Artificial Intelligence, the dataset provides voxel-level ground-truth segmentations of 104 to 117 vital anatomical structures (including 27 organs, 59 bones, 10 muscles, and 8 vessels) across 1,204 randomly sampled clinical CT examinations (version 1) and expanded to 1,939 CT scans (version 3) from diverse pathologies, scanners, and imaging protocols. Available on Zenodo under CC BY 4.0, TotalSegmentator is widely used as a cornerstone dataset for full-body anatomical parsing, organ volumetry, and opportunistic screening in diagnostic CT.",
+  "homepage_url": "https://zenodo.org/records/6802614",
+  "publisher": {
+    "name": "University Hospital Basel",
+    "type": "academic",
+    "url": "https://zenodo.org/records/6802614"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "medical-image-analysis"
+  ],
+  "tags": [
+    "medical-imaging",
+    "ct",
+    "segmentation",
+    "anatomy",
+    "radiology",
+    "whole-body",
+    "zenodo"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Data and annotations published on Zenodo under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Zenodo TotalSegmentator Dataset (DOI: 10.5281/zenodo.6802614)",
+      "url": "https://doi.org/10.5281/zenodo.6802614",
+      "type": "repository"
+    },
+    {
+      "title": "Radiology: Artificial Intelligence Publication (DOI: 10.1148/ryai.230024)",
+      "url": "https://doi.org/10.1148/ryai.230024",
+      "type": "original_paper"
+    },
+    {
+      "title": "TotalSegmentator GitHub Repository",
+      "url": "https://github.com/wasserth/TotalSegmentator",
+      "type": "documentation"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against Zenodo record 6802614 / 22688904 and Wasserthal et al. (Radiology: AI 2023)."
+  },
+  "sample_count": {
+    "total": 1204,
+    "unit": "scans",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022",
+    "last_updated": "2023"
+  },
+  "citation": {
+    "paper_title": "TotalSegmentator: Robust Segmentation of 104 Anatomic Structures in CT Images",
+    "paper_url": "https://doi.org/10.1148/ryai.230024",
+    "authors": [
+      "Jakob Wasserthal",
+      "Hanns-Christian Breit",
+      "Manfred T. Meyer",
+      "Maurice Pradella",
+      "Daniel Hinck",
+      "Alexander W. Sauter",
+      "Tobias Heye",
+      "Daniel T. Boll",
+      "Joshy Cyriac",
+      "Shan Yang",
+      "Michael Bach",
+      "Martin Segeroth"
+    ],
+    "doi": "10.1148/ryai.230024",
+    "bibtex": "@article{wasserthal2023totalsegmentator,\n  title={TotalSegmentator: Robust Segmentation of 104 Anatomic Structures in CT Images},\n  author={Wasserthal, Jakob and Breit, Hanns-Christian and Meyer, Manfred T and Pradella, Maurice and Hinck, Daniel and Sauter, Alexander W and Heye, Tobias and Boll, Daniel T and Cyriac, Joshy and Yang, Shan and Bach, Michael and Segeroth, Martin},\n  journal={Radiology: Artificial Intelligence},\n  volume={5},\n  number={5},\n  pages={e230024},\n  year={2023},\n  publisher={Radiological Society of North America}\n}"
+  }
+}

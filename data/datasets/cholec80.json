@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cholec80",
+  "slug": "cholec80",
+  "name": "Cholec80: Laparoscopic Cholecystectomy Surgical Video Dataset",
+  "description": "The Cholec80 dataset is an established benchmark for surgical workflow recognition and computer-assisted interventions, created by the CAMMA research group at the University of Strasbourg and IHU Strasbourg. The dataset consists of 80 high-definition videos of laparoscopic cholecystectomy procedures performed by 13 different surgeons. Captured at 25 fps and annotated at 1 fps by expert surgeons, the dataset provides complete ground-truth labels for seven standard surgical workflow phases (preparation, Calot's triangle dissection, clipping and cutting, gallbladder dissection, gallbladder packaging, cleaning and coagulation, gallbladder retraction) and binary presence indicators for seven surgical tools (grasper, hook, scissors, clipper, bipolar, irrigator, specimen bag). The benchmark standardly partitions into 40 training and 40 testing videos.",
+  "homepage_url": "https://camma.unistra.fr/datasets/",
+  "publisher": {
+    "name": "CAMMA Research Group, University of Strasbourg & IHU Strasbourg",
+    "type": "academic",
+    "url": "https://camma.unistra.fr"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "action-recognition",
+    "medical-image-analysis",
+    "time-series-forecasting"
+  ],
+  "tags": [
+    "medical-imaging",
+    "surgical-video",
+    "laparoscopy",
+    "workflow-analysis",
+    "computer-assisted-surgery",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "End-User Academic Research Agreement",
+    "spdx_id": null,
+    "url": "https://camma.unistra.fr/datasets/",
+    "commercial_use": "forbidden",
+    "notes": "Available for academic non-commercial research through an electronic request form on the CAMMA portal. Commercial use is forbidden."
+  },
+  "source_references": [
+    {
+      "title": "CAMMA Datasets Portal",
+      "url": "https://camma.unistra.fr/datasets/",
+      "type": "official_website"
+    },
+    {
+      "title": "IEEE TMI EndoNet Publication (DOI: 10.1109/TMI.2016.2593957)",
+      "url": "https://doi.org/10.1109/TMI.2016.2593957",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against CAMMA portal and Twinanda et al. (IEEE TMI 2017)."
+  },
+  "sample_count": {
+    "total": 80,
+    "splits": {
+      "train": 40,
+      "test": 40
+    },
+    "unit": "videos",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2016",
+    "last_updated": "2017"
+  },
+  "citation": {
+    "paper_title": "EndoNet: A Deep Architecture for Recognition Tasks on Laparoscopic Videos",
+    "paper_url": "https://doi.org/10.1109/TMI.2016.2593957",
+    "authors": [
+      "Andru P. Twinanda",
+      "Sherif Shehata",
+      "Didier Mutter",
+      "Jacques Marescaux",
+      "Michel de Mathelin",
+      "Nicolas Padoy"
+    ],
+    "doi": "10.1109/TMI.2016.2593957",
+    "bibtex": "@article{twinanda2016endonet,\n  title={EndoNet: A Deep Architecture for Recognition Tasks on Laparoscopic Videos},\n  author={Twinanda, Andru P and Shehata, Sherif and Mutter, Didier and Marescaux, Jacques and de Mathelin, Michel and Padoy, Nicolas},\n  journal={IEEE Transactions on Medical Imaging},\n  volume={36},\n  number={1},\n  pages={86--97},\n  year={2017},\n  publisher={IEEE}\n}"
+  }
+}

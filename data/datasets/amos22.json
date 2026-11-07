@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "amos22",
+  "slug": "amos22",
+  "name": "AMOS22: Abdominal Multi-Organ Benchmark for Medical Image Segmentation",
+  "description": "The AMOS dataset (A Large-Scale Abdominal Multi-Organ Benchmark for Versatile Medical Image Segmentation) was created for the AMOS22 Grand Challenge and published in NeurIPS 2022. It provides a comprehensive multi-modality, multi-scanner, multi-disease benchmark for abdominal organ segmentation. The labeled dataset consists of 600 high-resolution volumetric clinical scans (500 contrast-enhanced abdominal CT scans and 100 abdominal MRI scans) collected from multi-center clinical routines. Expert radiologists annotated 15 anatomical structures: spleen, right kidney, left kidney, gallbladder, esophagus, liver, stomach, aorta, inferior vena cava, pancreas, right adrenal gland, left adrenal gland, duodenum, bladder, and prostate/uterus. The challenge partitions the 600 cases into 360 training, 120 validation, and 120 test volumes.",
+  "homepage_url": "https://amos22.grand-challenge.org/",
+  "publisher": {
+    "name": "The Chinese University of Hong Kong & AMOS Consortium",
+    "type": "academic",
+    "url": "https://amos22.grand-challenge.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "medical-image-analysis"
+  ],
+  "tags": [
+    "medical-imaging",
+    "ct",
+    "mri",
+    "segmentation",
+    "abdominal",
+    "radiology",
+    "neurips",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Distributed on Zenodo and Grand Challenge under Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "AMOS22 Grand Challenge Page",
+      "url": "https://amos22.grand-challenge.org/",
+      "type": "official_website"
+    },
+    {
+      "title": "NeurIPS 2022 Benchmark Paper (arXiv:2206.08020)",
+      "url": "https://doi.org/10.48550/arXiv.2206.08020",
+      "type": "original_paper"
+    },
+    {
+      "title": "Zenodo AMOS Dataset Repository (DOI: 10.5281/zenodo.7265705)",
+      "url": "https://doi.org/10.5281/zenodo.7265705",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against NeurIPS 2022 publication and AMOS22 Grand Challenge specifications."
+  },
+  "sample_count": {
+    "total": 600,
+    "splits": {
+      "train": 360,
+      "validation": 120,
+      "test": 120
+    },
+    "unit": "scans",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022"
+  },
+  "citation": {
+    "paper_title": "AMOS: A Large-Scale Abdominal Multi-Organ Benchmark for Versatile Medical Image Segmentation",
+    "paper_url": "https://arxiv.org/abs/2206.08020",
+    "authors": [
+      "Yuanfeng Ji",
+      "Haotian Bai",
+      "Jie Yang",
+      "Chongjian Ge",
+      "Ye Zhu",
+      "Ruimao Zhang",
+      "Mengke Li",
+      "Lingyan Zhang",
+      "Wanling Ma",
+      "Baochun He",
+      "Xiaoxi Chen",
+      "Yuan Cheng",
+      "Zhicheng Zhang",
+      "Li Ting",
+      "Haoqian Wang",
+      "Jie Chen",
+      "Pheng-Ann Heng",
+      "Shuguang Cui"
+    ],
+    "doi": "10.48550/arXiv.2206.08020",
+    "bibtex": "@inproceedings{ji2022amos,\n  title={AMOS: A Large-Scale Abdominal Multi-Organ Benchmark for Versatile Medical Image Segmentation},\n  author={Ji, Yuanfeng and Bai, Haotian and Yang, Jie and Ge, Chongjian and Zhu, Ye and Zhang, Ruimao and Li, Mengke and Zhang, Lingyan and Ma, Wanling and He, Baochun and others},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  volume={35},\n  pages={36796--36809},\n  year={2022}\n}"
+  }
+}
