@@ -7,7 +7,13 @@ import { DatasetsPage } from './pages/DatasetsPage'
 import { DatasetDetailPage } from './pages/DatasetDetailPage'
 import { AboutPage } from './pages/AboutPage'
 import { SubmitDatasetPage } from './pages/SubmitDatasetPage'
+import { ComparePage } from './pages/ComparePage'
+import type { DatasetMetadata } from './types/dataset'
 import { isCategoryId } from './utils/datasetFilters'
+
+export interface DatasetsRouteDispatcherProps {
+  initialCatalog?: DatasetMetadata[]
+}
 
 /**
  * Route dispatcher for legacy /datasets/:param URLs:
@@ -15,7 +21,7 @@ import { isCategoryId } from './utils/datasetFilters'
  * - Otherwise redirects to the canonical /dataset/:slug detail page, preserving existing
  *   /datasets/:slug deep links and query parameters without depending on a hardcoded slug list.
  */
-export const DatasetsRouteDispatcher: React.FC = () => {
+export const DatasetsRouteDispatcher: React.FC<DatasetsRouteDispatcherProps> = ({ initialCatalog }) => {
   const { param } = useParams<{ param: string }>()
 
   if (!param) {
@@ -23,7 +29,7 @@ export const DatasetsRouteDispatcher: React.FC = () => {
   }
 
   if (isCategoryId(param)) {
-    return <DatasetsPage />
+    return <DatasetsPage initialCatalog={initialCatalog} />
   }
 
   // Compatible routing for legacy /datasets/:slug deep links:
@@ -42,6 +48,7 @@ export const App: React.FC = () => {
           <Route path="datasets/:param" element={<DatasetsRouteDispatcher />} />
           <Route path="dataset/:slug" element={<DatasetDetailPage />} />
           <Route path="submit" element={<SubmitDatasetPage />} />
+          <Route path="compare" element={<ComparePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>

@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "higgs-uci",
+  "slug": "higgs-uci",
+  "name": "HIGGS: High-Energy Physics Benchmark",
+  "description": "The HIGGS dataset is a massive tabular classification benchmark consisting of 11,000,000 simulated particle collisions produced by Monte Carlo simulations of the ATLAS and CMS experiments. Each collision is represented by 28 kinematic features (21 low-level kinematic properties and 7 high-level derived features) and labeled for binary classification: signal processes that produce Higgs bosons versus background processes. It is a benchmark for deep learning on structured tabular data.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/280/higgs",
+  "publisher": {
+    "name": "UCI Machine Learning Repository & UC Irvine",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu/"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "binary-classification"
+  ],
+  "tags": [
+    "tabular",
+    "physics",
+    "benchmark",
+    "uci",
+    "deep-learning"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC-BY-4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Released under Creative Commons Attribution 4.0 International on the UCI ML Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI ML Repository: HIGGS",
+      "url": "https://archive.ics.uci.edu/dataset/280/higgs",
+      "type": "official_website"
+    },
+    {
+      "title": "Nature Communications Publication (Baldi et al., 2014)",
+      "url": "https://doi.org/10.1038/ncomms5308",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Editorial Review",
+    "verified_date": "2026-11-07",
+    "notes": "Verified against UCI Machine Learning Repository record 280."
+  },
+  "size": {
+    "amount": 2.8,
+    "unit": "GB",
+    "file_formats": [
+      "CSV",
+      "GZ"
+    ],
+    "status": "verified"
+  },
+  "sample_count": {
+    "total": 11000000,
+    "splits": {
+      "train": 10500000,
+      "test": 500000
+    },
+    "unit": "events",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2014-07-02",
+    "last_updated": "2014-07-02"
+  },
+  "citation": {
+    "paper_title": "Searching for Exotic Particles in High-Energy Physics with Deep Learning",
+    "paper_url": "https://doi.org/10.1038/ncomms5308",
+    "authors": [
+      "P. Baldi",
+      "P. Sadowski",
+      "D. Whiteson"
+    ],
+    "doi": "10.1038/ncomms5308",
+    "bibtex": "@article{baldi2014searching,\n  title={Searching for exotic particles in high-energy physics with deep learning},\n  author={Baldi, Pierre and Sadowski, Peter and Whiteson, Daniel},\n  journal={Nature Communications},\n  volume={5},\n  pages={4308},\n  year={2014},\n  publisher={Nature Publishing Group}\n}"
+  },
+  "provenance": {
+    "collection_method": "Simulated using standard high-energy physics Monte Carlo event generators (MadGraph, Pythia, Delphes) for 8 TeV proton-proton collisions.",
+    "curation_notes": "The first 21 features are kinematic properties measured by particle detectors; the final 7 features are high-level functions derived by physicists.",
+    "data_sources": [
+      "Monte Carlo Event Generators (MadGraph / Pythia / Delphes)"
+    ]
+  }
+}

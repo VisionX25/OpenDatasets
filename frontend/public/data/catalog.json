@@ -1070,6 +1070,101 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "anli",
+    "slug": "anli",
+    "name": "Adversarial NLI (ANLI)",
+    "description": "Adversarial Natural Language Inference (ANLI) is a dynamic benchmark of 162,865 sentence pairs created through an iterative, human-and-model-in-the-loop adversarial data collection process across three progressive rounds (R1, R2, R3). Developed by Meta AI and UNC Chapel Hill, ANLI specifically targets linguistic weaknesses, subtle negation, numerical reasoning, and pragmatic implications in state-of-the-art NLU architectures.",
+    "homepage_url": "https://github.com/facebookresearch/anli",
+    "publisher": {
+      "name": "Meta AI",
+      "type": "industry",
+      "url": "https://ai.meta.com/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "natural-language-inference"
+    ],
+    "tags": [
+      "nlp",
+      "nli",
+      "adversarial",
+      "meta-ai",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC-BY-NC-4.0",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released under Creative Commons Attribution-NonCommercial 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "Official ANLI Repository",
+        "url": "https://github.com/facebookresearch/anli",
+        "type": "repository"
+      },
+      {
+        "title": "ANLI ACL 2020 Paper",
+        "url": "https://arxiv.org/abs/1910.14599",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against Meta AI research publication and GitHub repository."
+    },
+    "size": {
+      "amount": 28.5,
+      "unit": "MB",
+      "file_formats": [
+        "JSONL"
+      ],
+      "status": "verified"
+    },
+    "sample_count": {
+      "total": 162865,
+      "unit": "pairs",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-07-05",
+      "last_updated": "2021-03-24"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "Adversarial NLI: A New Benchmark for Natural Language Understanding",
+      "paper_url": "https://arxiv.org/abs/1910.14599",
+      "authors": [
+        "Yixin Nie",
+        "Adina Williams",
+        "Emily Dinan",
+        "Mohit Bansal",
+        "Jason Weston",
+        "Douwe Kiela"
+      ],
+      "doi": "10.18653/v1/2020.acl-main.441",
+      "bibtex": "@inproceedings{nie2020adversarial,\n  title={Adversarial NLI: A New Benchmark for Natural Language Understanding},\n  author={Nie, Yixin and Williams, Adina and Dinan, Emily and Bansal, Mohit and Weston, Jason and Kiela, Douwe},\n  booktitle={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (ACL)},\n  year={2020}\n}"
+    },
+    "provenance": {
+      "collection_method": "Crowdsourced human-and-model-in-the-loop interface where annotators are challenged to craft premises and hypotheses that fool the strongest serving model.",
+      "curation_notes": "Organized across three rounds (R1: BERT, R2: RoBERTa, R3: Ensemble) with expert adjudication.",
+      "data_sources": [
+        "Wikipedia",
+        "Wikitext",
+        "News Articles"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "annotated-image-vision-based-bolt-detection",
     "slug": "annotated-image-vision-based-bolt-detection",
     "name": "Annotated Image Dataset for Vision-Based Bolt Detection in Steel Connections for Robotic Deconstruction",
@@ -6263,6 +6358,94 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "caltech-101",
+    "slug": "caltech-101",
+    "name": "Caltech 101: 101 Object Categories",
+    "description": "Caltech 101 consists of pictures of objects belonging to 101 distinct categories, plus an additional background clutter category, containing a total of 9,145 images. Each category contains roughly 40 to 800 images, commonly sized around 300x200 pixels. Created at the California Institute of Technology by Fei-Fei Li, Marco Andreetto, and Marc'Aurelio Ranzato in 2004, it is a foundational early object recognition benchmark.",
+    "homepage_url": "https://data.caltech.edu/records/mzrjq-6wc02",
+    "publisher": {
+      "name": "California Institute of Technology",
+      "type": "academic",
+      "url": "https://data.caltech.edu/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "object-recognition"
+    ],
+    "tags": [
+      "computer-vision",
+      "benchmark",
+      "object-classification",
+      "caltech"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC-BY-4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published under Creative Commons Attribution 4.0 International on CaltechDATA."
+    },
+    "source_references": [
+      {
+        "title": "CaltechDATA Archive",
+        "url": "https://data.caltech.edu/records/mzrjq-6wc02",
+        "type": "archive"
+      },
+      {
+        "title": "Original Caltech 101 Report",
+        "url": "https://resolver.caltech.edu/CaltechAUTHORS:20140224-113220556",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against CaltechDATA permanent digital repository record."
+    },
+    "size": {
+      "amount": 137.0,
+      "unit": "MB",
+      "file_formats": [
+        "JPG",
+        "TAR.GZ"
+      ],
+      "status": "verified"
+    },
+    "sample_count": {
+      "total": 9145,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2004-09-01",
+      "last_updated": "2022-04-14"
+    },
+    "citation": {
+      "paper_title": "Learning Generative Visual Models from Few Training Examples: An Incremental Bayesian Approach Tested on 101 Object Categories",
+      "paper_url": "https://doi.org/10.1109/CVPR.2004.383",
+      "authors": [
+        "Fei-Fei Li",
+        "Marco Andreetto",
+        "Marc'Aurelio Ranzato"
+      ],
+      "doi": "10.1109/CVPR.2004.383",
+      "bibtex": "@article{feifei2004learning,\n  title={Learning Generative Visual Models from Few Training Examples: An Incremental Bayesian Approach Tested on 101 Object Categories},\n  author={Fei-Fei, Li and Andreetto, Marco and Ranzato, Marc'Aurelio},\n  journal={Computer Vision and Pattern Recognition Workshop},\n  year={2004}\n}"
+    },
+    "provenance": {
+      "collection_method": "Images collected from Google Image Search in 2003 and subsequently manually pruned to retain canonical object viewpoints.",
+      "curation_notes": "Objects are predominantly centered and oriented upright with minimal background occlusion.",
+      "data_sources": [
+        "Google Images"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "camelyon16",
     "slug": "camelyon16",
     "name": "CAMELYON16: Cancer Metastases in Lymph Nodes Challenge 2016",
@@ -7125,6 +7308,100 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "chime-4",
+    "slug": "chime-4",
+    "name": "The 4th CHiME Speech Separation and Recognition Challenge",
+    "description": "CHiME-4 is a benchmark corpus designed for speech separation and recognition in realistic, challenging noisy environments using 1-, 2-, or 6-channel tablet microphone arrays. Based on the Wall Street Journal (WSJ0) reading task, it incorporates both real recordings made in four public locations (cafe, street junction, public transport, pedestrian area) and simulated noisy conditions with reverberation.",
+    "homepage_url": "https://spandh.dcs.shef.ac.uk/chime_challenge/chime2016/",
+    "publisher": {
+      "name": "CHiME Challenge Steering Committee & University of Sheffield",
+      "type": "academic",
+      "url": "https://spandh.dcs.shef.ac.uk/"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-recognition",
+      "speech-enhancement",
+      "source-separation"
+    ],
+    "tags": [
+      "audio",
+      "speech-recognition",
+      "microphone-array",
+      "noise-robust",
+      "chime"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "CHiME Challenge Academic Research License",
+      "url": "https://spandh.dcs.shef.ac.uk/chime_challenge/chime2016/rules.html",
+      "commercial_use": "unknown",
+      "notes": "Available for research community evaluations and speech processing benchmarking."
+    },
+    "source_references": [
+      {
+        "title": "Official CHiME-4 Portal",
+        "url": "https://spandh.dcs.shef.ac.uk/chime_challenge/chime2016/",
+        "type": "official_website"
+      },
+      {
+        "title": "CHiME-4 Summary Paper",
+        "url": "https://spandh.dcs.shef.ac.uk/chime_challenge/chime2016/papers/CHiME_2016_paper_vincent.pdf",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against University of Sheffield SPandH portal and CHiME-4 challenge report."
+    },
+    "size": {
+      "amount": 20.0,
+      "unit": "GB",
+      "file_formats": [
+        "WAV",
+        "JSON"
+      ],
+      "status": "estimated"
+    },
+    "sample_count": {
+      "total": 8799,
+      "unit": "utterances",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2016-09-13",
+      "last_updated": "2016-09-13"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "The 4th CHiME Speech Separation and Recognition Challenge",
+      "paper_url": "https://spandh.dcs.shef.ac.uk/chime_challenge/chime2016/papers/CHiME_2016_paper_vincent.pdf",
+      "authors": [
+        "Emmanuel Vincent",
+        "Shinji Watanabe",
+        "Aditya Arie Nugraha",
+        "Jon Barker",
+        "Ricard Marxer"
+      ],
+      "bibtex": "@inproceedings{vincent2016chime4,\n  title={The 4th CHiME Speech Separation and Recognition Challenge},\n  author={Vincent, Emmanuel and Watanabe, Shinji and Nugraha, Aditya Arie and Barker, Jon and Marxer, Ricard},\n  booktitle={Proceedings of the 4th International Workshop on Speech Processing in Everyday Environments (CHiME 2016)},\n  year={2016}\n}"
+    },
+    "provenance": {
+      "collection_method": "Speakers read Wall Street Journal prompts while wearing headphones and holding a 6-channel tablet device in real noisy urban locations.",
+      "curation_notes": "Contains parallel real and simulated multi-channel streams with baseline Kaldi scripts.",
+      "data_sources": [
+        "WSJ0 Corpus Prompts",
+        "Live In-Situ Audio Captures"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "cic-ids2017",
     "slug": "cic-ids2017",
     "name": "CIC-IDS2017: Network Intrusion Detection Dataset",
@@ -7472,6 +7749,108 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "clevr",
+    "slug": "clevr",
+    "name": "CLEVR: Compositional Language and Elementary Visual Reasoning",
+    "description": "CLEVR is a diagnostic visual reasoning dataset created by Stanford University and Facebook AI Research to isolate and evaluate compositional visual question answering. It contains 100,000 synthetic 3D rendered scenes and approximately 1,000,000 automatically generated questions testing visual reasoning abilities: counting, spatial relationship comparison, logical operations (AND, OR, NOT), and attribute identification (shape, color, material, size).",
+    "homepage_url": "https://cs.stanford.edu/people/jcjohns/clevr/",
+    "publisher": {
+      "name": "Stanford University & Facebook AI Research",
+      "type": "academic",
+      "url": "https://cs.stanford.edu/"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "compositional-reasoning"
+    ],
+    "tags": [
+      "multimodal",
+      "vqa",
+      "compositional-reasoning",
+      "stanford",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC-BY-4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Images and questions are released under Creative Commons Attribution 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "Official Stanford CLEVR Portal",
+        "url": "https://cs.stanford.edu/people/jcjohns/clevr/",
+        "type": "official_website"
+      },
+      {
+        "title": "CLEVR CVPR 2017 Paper",
+        "url": "https://arxiv.org/abs/1612.06890",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against Stanford University official release page and CVPR 2017 paper."
+    },
+    "size": {
+      "amount": 18.0,
+      "unit": "GB",
+      "file_formats": [
+        "PNG",
+        "JSON"
+      ],
+      "status": "verified"
+    },
+    "sample_count": {
+      "total": 999968,
+      "splits": {
+        "train": 699989,
+        "val": 149991,
+        "test": 149988
+      },
+      "unit": "questions",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2017-07-21",
+      "last_updated": "2017-07-21"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "CLEVR: A Diagnostic Dataset for Compositional Language and Elementary Visual Reasoning",
+      "paper_url": "https://arxiv.org/abs/1612.06890",
+      "authors": [
+        "Justin Johnson",
+        "Bharath Hariharan",
+        "Laurens van der Maaten",
+        "Li Fei-Fei",
+        "C. Lawrence Zitnick",
+        "Ross Girshick"
+      ],
+      "doi": "10.1109/CVPR.2017.318",
+      "bibtex": "@inproceedings{johnson2017clevr,\n  title={CLEVR: A Diagnostic Dataset for Compositional Language and Elementary Visual Reasoning},\n  author={Johnson, Justin and Hariharan, Bharath and van der Maaten, Laurens and Fei-Fei, Li and Zitnick, C Lawrence and Girshick, Ross},\n  booktitle={Computer Vision and Pattern Recognition (CVPR)},\n  year={2017}\n}"
+    },
+    "provenance": {
+      "collection_method": "Synthetic 3D scenes rendered using Blender with random object configurations; questions generated from functional programs over scene ground-truth graphs.",
+      "curation_notes": "Engineered specifically to minimize statistical question bias and avoid shortcuts prevalent in human-collected VQA datasets.",
+      "data_sources": [
+        "Blender Procedural Rendering Engine"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "cnn-dailymail",
     "slug": "cnn-dailymail",
     "name": "CNN/DailyMail: Non-Anonymized Multi-Sentence Summarization Benchmark",
@@ -7563,6 +7942,96 @@
       "data_sources": [
         "CNN",
         "Daily Mail"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "coco-stuff",
+    "slug": "coco-stuff",
+    "name": "COCO-Stuff: Dense Pixel Annotations for Things and Stuff",
+    "description": "COCO-Stuff augments the Microsoft COCO dataset with pixel-level annotations for 91 stuff classes (e.g. sky, grass, water, pavement) alongside the original 80 thing classes, yielding complete dense scene coverage across 164,000 images. Developed by Caesar, Uijlings, and Ferrari, COCO-Stuff is a principal benchmark for semantic segmentation, panoptic segmentation, and scene layout understanding.",
+    "homepage_url": "https://github.com/nightrome/cocostuff",
+    "publisher": {
+      "name": "University of Edinburgh",
+      "type": "academic",
+      "url": "https://www.ed.ac.uk/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "panoptic-segmentation"
+    ],
+    "tags": [
+      "computer-vision",
+      "semantic-segmentation",
+      "coco",
+      "dense-annotations"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC-BY-4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "COCO-Stuff annotations are released under Creative Commons Attribution 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "Official COCO-Stuff Repository",
+        "url": "https://github.com/nightrome/cocostuff",
+        "type": "repository"
+      },
+      {
+        "title": "COCO-Stuff Paper (CVPR 2018)",
+        "url": "https://arxiv.org/abs/1612.03716",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against University of Edinburgh release and CVPR 2018 publication."
+    },
+    "size": {
+      "amount": 2.1,
+      "unit": "GB",
+      "file_formats": [
+        "PNG",
+        "JSON",
+        "MAT"
+      ],
+      "status": "verified",
+      "notes": "Annotation payload; image payload shared with MS COCO."
+    },
+    "sample_count": {
+      "total": 164000,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018-06-18",
+      "last_updated": "2019-07-26"
+    },
+    "citation": {
+      "paper_title": "COCO-Stuff: Thing and Stuff Classes in Context",
+      "paper_url": "https://arxiv.org/abs/1612.03716",
+      "authors": [
+        "Holger Caesar",
+        "Jasper Uijlings",
+        "Vittorio Ferrari"
+      ],
+      "doi": "10.1109/CVPR.2018.00132",
+      "bibtex": "@inproceedings{caesar2018cocostuff,\n  title={COCO-Stuff: Thing and Stuff Classes in Context},\n  author={Caesar, Holger and Uijlings, Jasper and Ferrari, Vittorio},\n  booktitle={Computer Vision and Pattern Recognition (CVPR)},\n  year={2018}\n}"
+    },
+    "provenance": {
+      "collection_method": "Dense superpixel-level labeling applied to MS COCO 2017 training and validation images using Amazon Mechanical Turk.",
+      "curation_notes": "Quality control enforced through multi-annotator consistency checks and expert verification of ambiguous boundary regions.",
+      "data_sources": [
+        "MS COCO 2017 Image Collection"
       ]
     }
   },
@@ -7739,6 +8208,100 @@
       "total": 150,
       "unit": "images",
       "status": "verified"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "conll-2003",
+    "slug": "conll-2003",
+    "name": "CoNLL-2003: Named Entity Recognition Benchmark",
+    "description": "The CoNLL-2003 shared task dataset is the standard benchmark for language-independent named entity recognition (NER). It contains English and German Reuters news stories annotated with four types of named entities: persons (PER), organizations (ORG), locations (LOC), and miscellaneous names (MISC). The English corpus comprises 1,393 news stories spanning 301,418 tokens across standard train, dev, and test splits.",
+    "homepage_url": "https://www.clips.uantwerpen.be/conll2003/ner/",
+    "publisher": {
+      "name": "CoNLL Organization",
+      "type": "academic",
+      "url": "https://www.clips.uantwerpen.be/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "named-entity-recognition",
+      "token-classification"
+    ],
+    "tags": [
+      "nlp",
+      "ner",
+      "benchmark",
+      "information-extraction",
+      "token-classification"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Reuters News Research License",
+      "url": "https://www.clips.uantwerpen.be/conll2003/ner/",
+      "commercial_use": "unknown",
+      "notes": "Freely available for academic, scientific, and research purposes."
+    },
+    "source_references": [
+      {
+        "title": "Official CoNLL-2003 Shared Task Page",
+        "url": "https://www.clips.uantwerpen.be/conll2003/ner/",
+        "type": "official_website"
+      },
+      {
+        "title": "CoNLL-2003 Overview Paper",
+        "url": "https://aclanthology.org/W03-0419/",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against ACL Anthology record and University of Antwerp host site."
+    },
+    "size": {
+      "amount": 2.5,
+      "unit": "MB",
+      "file_formats": [
+        "TXT"
+      ],
+      "status": "verified"
+    },
+    "sample_count": {
+      "total": 20744,
+      "splits": {
+        "train": 14041,
+        "validation": 3250,
+        "test": 3453
+      },
+      "unit": "sentences",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2003-06-01",
+      "last_updated": "2003-06-01"
+    },
+    "languages": [
+      "en",
+      "de"
+    ],
+    "citation": {
+      "paper_title": "Introduction to the CoNLL-2003 Shared Task: Language-Independent Named Entity Recognition",
+      "paper_url": "https://aclanthology.org/W03-0419/",
+      "authors": [
+        "Erik F. Tjong Kim Sang",
+        "Fien De Meulder"
+      ],
+      "bibtex": "@inproceedings{tjong-kim-sang-de-meulder-2003-introduction,\n  title={Introduction to the {C}o{NLL}-2003 Shared Task: Language-Independent Named Entity Recognition},\n  author={Tjong Kim Sang, Erik F. and De Meulder, Fien},\n  booktitle={Proceedings of the Seventh Conference on Natural Language Learning at HLT-NAACL 2003},\n  year={2003},\n  pages={142--147}\n}"
+    },
+    "provenance": {
+      "collection_method": "Curated from Reuters Corpus Volume 1 (RCV1) wire stories covering August 1996 through August 1997.",
+      "curation_notes": "Annotated by University of Antwerp linguistics researchers using IOB tagging scheme for named entities.",
+      "data_sources": [
+        "Reuters Corpus Volume 1"
+      ]
     }
   },
   {
@@ -9006,6 +9569,94 @@
       ],
       "doi": "10.1038/s41598-018-38343-3",
       "bibtex": "@article{olsen2019deepweeds,\n  title={DeepWeeds: A multiclass weed species image dataset for deep learning},\n  author={Olsen, Alex and Konovalov, Dmitry A and Philippa, Bronson and Ridd, Peter and Wood, Jake C and Calvert, Jamie and Azghadi, Mostafa Rahimi and Banks, Ronald D},\n  journal={Scientific Reports},\n  volume={9},\n  number={1},\n  pages={2058},\n  year={2019},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41598-018-38343-3}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "demand-noise",
+    "slug": "demand-noise",
+    "name": "DEMAND: Diverse Environments Multi-channel Acoustic Noise Database",
+    "description": "The Diverse Environments Multi-channel Acoustic Noise Database (DEMAND) provides calibrated 16-channel acoustic noise recordings sampled at 48 kHz across 18 distinct real-world acoustic settings, including domestic environments, office spaces, public transport (subway, bus, train), outdoors (park, city square, street), and high-noise social venues. Developed at Inria and hosted on Zenodo, DEMAND is the primary standard for multi-channel speech enhancement, noise-robust ASR, and dereverberation.",
+    "homepage_url": "https://zenodo.org/records/1227121",
+    "publisher": {
+      "name": "Inria",
+      "type": "academic",
+      "url": "https://www.inria.fr/"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "audio-noise-reduction",
+      "speech-enhancement",
+      "acoustic-scene-classification"
+    ],
+    "tags": [
+      "audio",
+      "speech-enhancement",
+      "noise-robust",
+      "inria",
+      "multichannel"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC-BY-SA-3.0",
+      "spdx_id": "CC-BY-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "commercial_use": "allowed",
+      "notes": "Released under Creative Commons Attribution-ShareAlike 3.0 Unported."
+    },
+    "source_references": [
+      {
+        "title": "Zenodo Digital Repository Record",
+        "url": "https://zenodo.org/records/1227121",
+        "type": "archive"
+      },
+      {
+        "title": "DEMAND Design Paper (ICA 2013)",
+        "url": "https://hal.inria.fr/hal-00813735",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against Zenodo DOI record and Inria research archive."
+    },
+    "size": {
+      "amount": 15.6,
+      "unit": "GB",
+      "file_formats": [
+        "WAV"
+      ],
+      "status": "verified"
+    },
+    "sample_count": {
+      "total": 18,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2013-06-02",
+      "last_updated": "2018-04-23"
+    },
+    "citation": {
+      "paper_title": "The Diverse Environments Multi-channel Acoustic Noise Database: A Database of Multichannel Environmental Noise Recordings",
+      "paper_url": "https://hal.inria.fr/hal-00813735",
+      "authors": [
+        "Joachim Thiemann",
+        "Nobutaka Ito",
+        "Emmanuel Vincent"
+      ],
+      "bibtex": "@inproceedings{thiemann2013demand,\n  title={The Diverse Environments Multi-channel Acoustic Noise Database: A Database of Multichannel Environmental Noise Recordings},\n  author={Thiemann, Joachim and Ito, Nobutaka and Vincent, Emmanuel},\n  booktitle={Proceedings of Meetings on Acoustics (ICA 2013)},\n  year={2013}\n}"
+    },
+    "provenance": {
+      "collection_method": "Recorded with a specialized spherical microphone array holding 16 condenser microphones in various naturalistic real-world environments.",
+      "curation_notes": "Calibrated sound pressure levels documented for all channels; 5-minute continuous takes per setting.",
+      "data_sources": [
+        "Inria Acoustic Recording Campaigns"
+      ]
     }
   },
   {
@@ -12871,6 +13522,204 @@
       ],
       "doi": "10.1016/0002-9149(89)90524-9",
       "bibtex": "@article{detrano1989international,\n  title = {International application of a new probability algorithm for the diagnosis of coronary artery disease},\n  author = {Detrano, Robert and Janosi, Andras and Steinbrunn, Walter and Pfisterer, Matthias and Schmid, Johann-Jakob and Sandhu, Sandor and Guppy, Kern H. and Lee, Stella and Froelicher, Victor},\n  journal = {The American Journal of Cardiology},\n  volume = {64},\n  number = {5},\n  pages = {304--310},\n  year = {1989}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "hellaswag",
+    "slug": "hellaswag",
+    "name": "HellaSwag: Hard Commonsense NLU Benchmark",
+    "description": "HellaSwag is a challenging commonsense reasoning and natural language inference benchmark consisting of 70,057 multi-choice sentence completion problems. Constructed using Adversarial Filtering (AF), where a series of discriminatory models iteratively filter out trivial distractors, HellaSwag targets machine commonsense reasoning that is straightforward for humans (>95% accuracy) but persistently difficult for state-of-the-art language models.",
+    "homepage_url": "https://rowanzellers.com/hellaswag/",
+    "publisher": {
+      "name": "University of Washington & Allen Institute for AI",
+      "type": "academic",
+      "url": "https://allenai.org/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "commonsense-reasoning",
+      "multiple-choice-qa",
+      "natural-language-inference"
+    ],
+    "tags": [
+      "nlp",
+      "benchmark",
+      "commonsense",
+      "evaluation",
+      "adversarial-filtering"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Dataset code and benchmark instances are released under the MIT License."
+    },
+    "source_references": [
+      {
+        "title": "Official HellaSwag Project Page",
+        "url": "https://rowanzellers.com/hellaswag/",
+        "type": "official_website"
+      },
+      {
+        "title": "HellaSwag ACL 2019 Paper",
+        "url": "https://arxiv.org/abs/1905.07830",
+        "type": "original_paper"
+      },
+      {
+        "title": "HellaSwag GitHub Repository",
+        "url": "https://github.com/rowanz/hellaswag",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against official ACL 2019 paper and Rowan Zellers GitHub repository."
+    },
+    "size": {
+      "amount": 68.0,
+      "unit": "MB",
+      "file_formats": [
+        "JSONL"
+      ],
+      "status": "verified"
+    },
+    "sample_count": {
+      "total": 70057,
+      "splits": {
+        "train": 39905,
+        "validation": 10042,
+        "test": 20110
+      },
+      "unit": "problems",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-05-19",
+      "last_updated": "2019-07-28"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+      "paper_url": "https://arxiv.org/abs/1905.07830",
+      "authors": [
+        "Rowan Zellers",
+        "Ari Holtzman",
+        "Yonatan Bisk",
+        "Ali Farhadi",
+        "Yejin Choi"
+      ],
+      "doi": "10.18653/v1/P19-1472",
+      "bibtex": "@inproceedings{zellers2019hellaswag,\n  title={HellaSwag: Can a Machine Really Finish Your Sentence?},\n  author={Zellers, Rowan and Holtzman, Ari and Bisk, Yonatan and Farhadi, Ali and Choi, Yejin},\n  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics (ACL)},\n  year={2019}\n}"
+    },
+    "provenance": {
+      "collection_method": "Video captions from ActivityNet and how-to guides from WikiHow were parsed into contexts; candidate completions were generated via generative language models and pruned via adversarial filtering.",
+      "curation_notes": "Adversarial Filtering pruned distractors until only human-intuitive yet model-fooling completions remained.",
+      "data_sources": [
+        "ActivityNet Captions",
+        "WikiHow"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "higgs-uci",
+    "slug": "higgs-uci",
+    "name": "HIGGS: High-Energy Physics Benchmark",
+    "description": "The HIGGS dataset is a massive tabular classification benchmark consisting of 11,000,000 simulated particle collisions produced by Monte Carlo simulations of the ATLAS and CMS experiments. Each collision is represented by 28 kinematic features (21 low-level kinematic properties and 7 high-level derived features) and labeled for binary classification: signal processes that produce Higgs bosons versus background processes. It is a benchmark for deep learning on structured tabular data.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/280/higgs",
+    "publisher": {
+      "name": "UCI Machine Learning Repository & UC Irvine",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu/"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "binary-classification"
+    ],
+    "tags": [
+      "tabular",
+      "physics",
+      "benchmark",
+      "uci",
+      "deep-learning"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC-BY-4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Released under Creative Commons Attribution 4.0 International on the UCI ML Repository."
+    },
+    "source_references": [
+      {
+        "title": "UCI ML Repository: HIGGS",
+        "url": "https://archive.ics.uci.edu/dataset/280/higgs",
+        "type": "official_website"
+      },
+      {
+        "title": "Nature Communications Publication (Baldi et al., 2014)",
+        "url": "https://doi.org/10.1038/ncomms5308",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against UCI Machine Learning Repository record 280."
+    },
+    "size": {
+      "amount": 2.8,
+      "unit": "GB",
+      "file_formats": [
+        "CSV",
+        "GZ"
+      ],
+      "status": "verified"
+    },
+    "sample_count": {
+      "total": 11000000,
+      "splits": {
+        "train": 10500000,
+        "test": 500000
+      },
+      "unit": "events",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2014-07-02",
+      "last_updated": "2014-07-02"
+    },
+    "citation": {
+      "paper_title": "Searching for Exotic Particles in High-Energy Physics with Deep Learning",
+      "paper_url": "https://doi.org/10.1038/ncomms5308",
+      "authors": [
+        "P. Baldi",
+        "P. Sadowski",
+        "D. Whiteson"
+      ],
+      "doi": "10.1038/ncomms5308",
+      "bibtex": "@article{baldi2014searching,\n  title={Searching for exotic particles in high-energy physics with deep learning},\n  author={Baldi, Pierre and Sadowski, Peter and Whiteson, Daniel},\n  journal={Nature Communications},\n  volume={5},\n  pages={4308},\n  year={2014},\n  publisher={Nature Publishing Group}\n}"
+    },
+    "provenance": {
+      "collection_method": "Simulated using standard high-energy physics Monte Carlo event generators (MadGraph, Pythia, Delphes) for 8 TeV proton-proton collisions.",
+      "curation_notes": "The first 21 features are kinematic properties measured by particle detectors; the final 7 features are high-level functions derived by physicists.",
+      "data_sources": [
+        "Monte Carlo Event Generators (MadGraph / Pythia / Delphes)"
+      ]
     }
   },
   {
@@ -19014,6 +19863,103 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ms-marco",
+    "slug": "ms-marco",
+    "name": "MS MARCO: Microsoft Machine Reading Comprehension",
+    "description": "MS MARCO (Microsoft Machine Reading COmprehension) is a large-scale information retrieval and question answering dataset comprising 1,010,916 real search queries sampled from Bing search logs, paired with 8.8 million web passages extracted from relevant search result documents. Developed by Microsoft AI & Research, it is the primary academic benchmark for dense retrieval, re-ranking, and open-domain question answering.",
+    "homepage_url": "https://microsoft.github.io/msmarco/",
+    "publisher": {
+      "name": "Microsoft Research",
+      "type": "industry",
+      "url": "https://www.microsoft.com/en-us/research/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "information-retrieval",
+      "question-answering",
+      "text-ranking"
+    ],
+    "tags": [
+      "nlp",
+      "information-retrieval",
+      "question-answering",
+      "search",
+      "microsoft"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Microsoft Research Data License",
+      "url": "https://microsoft.github.io/msmarco/",
+      "commercial_use": "forbidden",
+      "notes": "Released strictly for non-commercial research and educational use."
+    },
+    "source_references": [
+      {
+        "title": "Official MS MARCO Portal",
+        "url": "https://microsoft.github.io/msmarco/",
+        "type": "official_website"
+      },
+      {
+        "title": "MS MARCO NeurIPS Workshop Paper",
+        "url": "https://arxiv.org/abs/1611.09268",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against Microsoft Research official documentation and data portal."
+    },
+    "size": {
+      "amount": 3.2,
+      "unit": "GB",
+      "file_formats": [
+        "TSV",
+        "TAR.GZ",
+        "JSON"
+      ],
+      "status": "verified"
+    },
+    "sample_count": {
+      "total": 1010916,
+      "unit": "queries",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2016-11-28",
+      "last_updated": "2021-06-15"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "MS MARCO: A Human Generated MAchine Reading COmprehension Dataset",
+      "paper_url": "https://arxiv.org/abs/1611.09268",
+      "authors": [
+        "Tri Nguyen",
+        "Mir Rosenberg",
+        "Xia Song",
+        "Jianfeng Gao",
+        "Saurabh Tiwary",
+        "Rangan Majumder",
+        "Li Deng"
+      ],
+      "bibtex": "@article{nguyen2016ms,\n  title={MS MARCO: A Human Generated Machine Reading Comprehension Dataset},\n  author={Nguyen, Tri and Rosenberg, Mir and Song, Xia and Gao, Jianfeng and Tiwary, Saurabh and Majumder, Rangan and Deng, Li},\n  journal={CoRR},\n  volume={abs/1611.09268},\n  year={2016}\n}"
+    },
+    "provenance": {
+      "collection_method": "Anonymized real-world user queries extracted from Bing search logs; retrieved web pages segmented into passages.",
+      "curation_notes": "Human annotators drafted comprehensive natural language answers only when evidence was verified in the retrieved web passages.",
+      "data_sources": [
+        "Bing Search Query Logs",
+        "Public Web Documents"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "multi-class-vehicle-detection-dense-heterogen",
     "slug": "multi-class-vehicle-detection-dense-heterogen",
     "name": "Multi-Class Vehicle Detection Dataset for Dense and Heterogeneous Urban Traffic in Bangladesh",
@@ -22348,6 +23294,105 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "physionet-challenge-2012",
+    "slug": "physionet-challenge-2012",
+    "name": "PhysioNet Challenge 2012: ICU Mortality Prediction",
+    "description": "The PhysioNet/Computing in Cardiology Challenge 2012 dataset consists of multi-parameter clinical time series from 12,000 Intensive Care Unit (ICU) admissions at Beth Israel Deaconess Medical Center. Collected during the first 48 hours following ICU admission, each record includes static demographic descriptors alongside repeated physiological measurements (e.g. heart rate, blood pressure, Glasgow Coma Scale, serum glucose, lactate). It is a classic benchmark for irregularly sampled clinical time series modeling.",
+    "homepage_url": "https://physionet.org/content/challenge-2012/1.0.0/",
+    "publisher": {
+      "name": "PhysioNet & MIT Laboratory for Computational Physiology",
+      "type": "academic",
+      "url": "https://physionet.org/"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "mortality-prediction",
+      "time-series-classification",
+      "clinical-risk-scoring"
+    ],
+    "tags": [
+      "tabular",
+      "time-series",
+      "healthcare",
+      "icu",
+      "physionet",
+      "clinical"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Public Domain Dedication and License (PDDL)",
+      "spdx_id": "ODC-PDDL-1.0",
+      "url": "https://opendatacommons.org/licenses/pddl/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Dedicated to the public domain under the ODC Public Domain Dedication and License v1.0."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet Permanent Challenge 2012 Archive",
+        "url": "https://physionet.org/content/challenge-2012/1.0.0/",
+        "type": "archive"
+      },
+      {
+        "title": "Challenge Overview Paper (Silva et al., 2012)",
+        "url": "https://doi.org/10.1109/CIC.2012.6463428",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against MIT PhysioNet official archive record."
+    },
+    "size": {
+      "amount": 48.0,
+      "unit": "MB",
+      "file_formats": [
+        "CSV",
+        "TXT"
+      ],
+      "status": "verified"
+    },
+    "sample_count": {
+      "total": 12000,
+      "splits": {
+        "set-a": 4000,
+        "set-b": 4000,
+        "set-c": 4000
+      },
+      "unit": "patients",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2012-09-01",
+      "last_updated": "2021-02-09"
+    },
+    "citation": {
+      "paper_title": "Predicting In-Hospital Mortality of ICU Patients: The PhysioNet/Computing in Cardiology Challenge 2012",
+      "paper_url": "https://doi.org/10.1109/CIC.2012.6463428",
+      "authors": [
+        "Ikaro Silva",
+        "George B. Moody",
+        "Daniel J. Scott",
+        "Leo Anthony Celi",
+        "Roger G. Mark"
+      ],
+      "doi": "10.1109/CIC.2012.6463428",
+      "bibtex": "@inproceedings{silva2012predicting,\n  title={Predicting in-hospital mortality of ICU patients: The PhysioNet/Computing in Cardiology Challenge 2012},\n  author={Silva, Ikaro and Moody, George B and Scott, Daniel J and Celi, Leo Anthony and Mark, Roger G},\n  booktitle={2012 Computing in Cardiology},\n  pages={245--248},\n  year={2012},\n  organization={IEEE}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted from the MIMIC-II clinical database representing adult intensive care unit admissions at Beth Israel Deaconess Medical Center in Boston.",
+      "curation_notes": "De-identified in accordance with HIPAA Privacy Rule standards; irregularly sampled time stamps preserved.",
+      "data_sources": [
+        "MIMIC-II Clinical Database"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "physionet-cinc-2017-af",
     "slug": "physionet-cinc-2017-af",
     "name": "PhysioNet/CinC Challenge 2017: Atrial Fibrillation Classification from a Short Single Lead ECG",
@@ -24688,6 +25733,103 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "sciq",
+    "slug": "sciq",
+    "name": "SciQ: Science Exam Question Answering Dataset",
+    "description": "SciQ is a dataset of 13,679 multiple-choice science exam questions covering physics, chemistry, biology, earth science, and environmental science. Each question contains four multiple-choice options with a verified correct answer, accompanied by an explanatory paragraph supporting the scientific rationale. Created by the Allen Institute for AI in 2017, SciQ tests reading comprehension and science QA.",
+    "homepage_url": "https://allenai.org/data/sciq",
+    "publisher": {
+      "name": "Allen Institute for AI",
+      "type": "academic",
+      "url": "https://allenai.org/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "multiple-choice-qa"
+    ],
+    "tags": [
+      "nlp",
+      "science",
+      "question-answering",
+      "allenai",
+      "education"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC-BY-NC-3.0",
+      "spdx_id": "CC-BY-NC-3.0",
+      "url": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released under Creative Commons Attribution-NonCommercial 3.0 Unported."
+    },
+    "source_references": [
+      {
+        "title": "Official AllenAI SciQ Page",
+        "url": "https://allenai.org/data/sciq",
+        "type": "official_website"
+      },
+      {
+        "title": "SciQ Original Paper (Welbl et al., 2017)",
+        "url": "https://aclanthology.org/K17-1025/",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against Allen Institute for AI and ACL Anthology record."
+    },
+    "size": {
+      "amount": 18.0,
+      "unit": "MB",
+      "file_formats": [
+        "JSON"
+      ],
+      "status": "verified"
+    },
+    "sample_count": {
+      "total": 13679,
+      "splits": {
+        "train": 11679,
+        "validation": 1000,
+        "test": 1000
+      },
+      "unit": "questions",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2017-08-01",
+      "last_updated": "2017-08-01"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "Crowdsourcing Multiple Choice Science Questions",
+      "paper_url": "https://aclanthology.org/K17-1025/",
+      "authors": [
+        "Johannes Welbl",
+        "Nelson F. Liu",
+        "Matt Gardner"
+      ],
+      "doi": "10.18653/v1/K17-1025",
+      "bibtex": "@inproceedings{welbl2017crowdsourcing,\n  title={Crowdsourcing Multiple Choice Science Questions},\n  author={Welbl, Johannes and Liu, Nelson F. and Gardner, Matt},\n  booktitle={Proceedings of the 21st Conference on Computational Natural Language Learning (CoNLL 2017)},\n  pages={94--106},\n  year={2017}\n}"
+    },
+    "provenance": {
+      "collection_method": "Crowdsourced via Amazon Mechanical Turk from open-access scientific textbooks, with workers generating questions, correct answers, and distractors.",
+      "curation_notes": "Strict multi-stage validation ensured that questions are unambiguously answerable from the provided background passages.",
+      "data_sources": [
+        "OpenStax Open Access Textbooks",
+        "CK-12 Science Texts"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "scoa-pharmaceutical-blister-image",
     "slug": "scoa-pharmaceutical-blister-image",
     "name": "SCOA Pharmaceutical Blister Image Dataset",
@@ -26266,6 +27408,97 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "sun397",
+    "slug": "sun397",
+    "name": "SUN397: Scene Categorization Benchmark",
+    "description": "The Scene UNderstanding (SUN) 397 benchmark is a comprehensive scene categorization dataset comprising 108,754 images spanning 397 well-defined scene categories, with at least 100 images per category. Developed at Princeton University, it serves as a foundational benchmark for scene recognition, indoor vs. outdoor classification, and visual context modeling.",
+    "homepage_url": "https://vision.princeton.edu/projects/2010/SUN/",
+    "publisher": {
+      "name": "Princeton Vision & Robotics Group",
+      "type": "academic",
+      "url": "https://vision.princeton.edu/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "scene-recognition"
+    ],
+    "tags": [
+      "computer-vision",
+      "scene-classification",
+      "benchmark",
+      "princeton"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Princeton Research License",
+      "url": "https://vision.princeton.edu/projects/2010/SUN/",
+      "commercial_use": "unknown",
+      "notes": "Freely available for academic and educational research use."
+    },
+    "source_references": [
+      {
+        "title": "Official SUN Project Page",
+        "url": "https://vision.princeton.edu/projects/2010/SUN/",
+        "type": "official_website"
+      },
+      {
+        "title": "SUN Database Paper (CVPR 2010)",
+        "url": "https://doi.org/10.1109/CVPR.2010.5539970",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against Princeton University official project documentation."
+    },
+    "size": {
+      "amount": 37.0,
+      "unit": "GB",
+      "file_formats": [
+        "JPG",
+        "TAR"
+      ],
+      "status": "verified"
+    },
+    "sample_count": {
+      "total": 108754,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2010-06-13",
+      "last_updated": "2010-06-13"
+    },
+    "citation": {
+      "paper_title": "SUN Database: Large-scale Scene Recognition from Abbey to Zoo",
+      "paper_url": "https://doi.org/10.1109/CVPR.2010.5539970",
+      "authors": [
+        "Jianxiong Xiao",
+        "James Hays",
+        "Krista A. Ehinger",
+        "Aude Oliva",
+        "Antonio Torralba"
+      ],
+      "doi": "10.1109/CVPR.2010.5539970",
+      "bibtex": "@inproceedings{xiao2010sun,\n  title={SUN database: Large-scale scene recognition from abbey to zoo},\n  author={Xiao, Jianxiong and Hays, James and Ehinger, Krista A and Oliva, Aude and Torralba, Antonio},\n  booktitle={2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition},\n  pages={3485--3492},\n  year={2010},\n  organization={IEEE}\n}"
+    },
+    "provenance": {
+      "collection_method": "Curated from online image search engines across 397 WordNet scene categories, manually verified by Amazon Mechanical Turk workers.",
+      "curation_notes": "Each category contains at least 100 images; two-stage human verification ensured quality and label agreement.",
+      "data_sources": [
+        "Flickr",
+        "Google Images",
+        "Bing"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "sunflower-disease-dataset",
     "slug": "sunflower-disease-dataset",
     "name": "Sunflower Fruits and Leaves Disease Dataset",
@@ -26352,6 +27585,102 @@
       "curation_notes": "467 original field photographs across 4 condition classes plus 1,668 augmented images.",
       "data_sources": [
         "BARI demonstration farm, Gazipur, Bangladesh"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "superglue",
+    "slug": "superglue",
+    "name": "SuperGLUE Benchmark",
+    "description": "SuperGLUE is an advanced multi-task benchmark designed to test general-purpose language understanding across demanding linguistic tasks including multi-sentence reasoning (MultiRC), causal reasoning (COPA), reading comprehension with commonsense (ReCoRD), and word sense disambiguation (WiC). SuperGLUE features a public leaderboard and human performance baselines to measure progress beyond the original GLUE benchmark.",
+    "homepage_url": "https://super.gluebenchmark.com/",
+    "publisher": {
+      "name": "New York University & DeepMind",
+      "type": "academic",
+      "url": "https://super.gluebenchmark.com/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "natural-language-inference",
+      "reading-comprehension",
+      "question-answering"
+    ],
+    "tags": [
+      "nlp",
+      "benchmark",
+      "superglue",
+      "evaluation",
+      "nlu"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "SuperGLUE Research License Terms",
+      "url": "https://super.gluebenchmark.com/terms",
+      "commercial_use": "unknown",
+      "notes": "SuperGLUE benchmark tasks inherit licenses from underlying constituent corpora, freely accessible for research."
+    },
+    "source_references": [
+      {
+        "title": "Official SuperGLUE Leaderboard",
+        "url": "https://super.gluebenchmark.com/",
+        "type": "official_website"
+      },
+      {
+        "title": "SuperGLUE NeurIPS 2019 Paper",
+        "url": "https://arxiv.org/abs/1905.00537",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against SuperGLUE official portal and NeurIPS 2019 paper."
+    },
+    "size": {
+      "amount": 125.0,
+      "unit": "MB",
+      "file_formats": [
+        "JSONL",
+        "ZIP"
+      ],
+      "status": "verified"
+    },
+    "sample_count": {
+      "total": 172900,
+      "unit": "examples",
+      "status": "estimated"
+    },
+    "dates": {
+      "published": "2019-05-02",
+      "last_updated": "2020-04-18"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems",
+      "paper_url": "https://arxiv.org/abs/1905.00537",
+      "authors": [
+        "Alex Wang",
+        "Yada Pruksachatkun",
+        "Nikita Nangia",
+        "Amanpreet Singh",
+        "Julian Michael",
+        "Felix Hill",
+        "Omer Levy",
+        "Samuel R. Bowman"
+      ],
+      "bibtex": "@inproceedings{wang2019superglue,\n  title={SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems},\n  author={Wang, Alex and Pruksachatkun, Yada and Nangia, Nikita and Singh, Amanpreet and Michael, Julian and Hill, Felix and Levy, Omer and Bowman, Samuel R},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  year={2019}\n}"
+    },
+    "provenance": {
+      "collection_method": "Curated collection of 8 distinct NLP tasks (BoolQ, CB, COPA, MultiRC, ReCoRD, RTE, WiC, WSC) formatted into a unified API and submission evaluation pipeline.",
+      "curation_notes": "Each constituent dataset was selected for high human performance paired with persistent difficulty for pre-trained language models.",
+      "data_sources": [
+        "Constituent corpus providers"
       ]
     }
   },
@@ -29419,6 +30748,112 @@
       ],
       "doi": "10.1109/TPAMI.2021.3119563",
       "bibtex": "@article{zhu2021detection,\n  title={Detection and Tracking Meet Drones Challenge},\n  author={Zhu, Pengfei and Wen, Longyin and Du, Dawei and Bian, Xiao and Fan, Heng and Hu, Qinghua and Ling, Haibin},\n  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  volume={44},\n  number={11},\n  pages={7380--7399},\n  year={2021},\n  publisher={IEEE},\n  doi={10.1109/TPAMI.2021.3119563}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "visual-genome",
+    "slug": "visual-genome",
+    "name": "Visual Genome: Connecting Language and Vision",
+    "description": "Visual Genome is an extensive multimodal knowledge dataset created to advance visual understanding from individual pixels to structured semantics. It contains 108,077 images richly annotated with 5.4 million region descriptions, 1.7 million visual question-answer pairs, 3.8 million object instances, 2.8 million attributes, and 2.3 million visual relationships mapped into unified scene graphs and WordNet synsets.",
+    "homepage_url": "https://visualgenome.org/",
+    "publisher": {
+      "name": "Stanford University",
+      "type": "academic",
+      "url": "https://stanford.edu/"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "scene-graph-generation",
+      "visual-question-answering",
+      "grounded-captioning"
+    ],
+    "tags": [
+      "multimodal",
+      "scene-graphs",
+      "vqa",
+      "visual-genome",
+      "stanford",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "CC-BY-4.0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Annotations are made freely available under Creative Commons Attribution 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "Official Visual Genome Portal",
+        "url": "https://visualgenome.org/",
+        "type": "official_website"
+      },
+      {
+        "title": "Visual Genome IJCV 2017 Paper",
+        "url": "https://arxiv.org/abs/1602.07332",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Editorial Review",
+      "verified_date": "2026-11-07",
+      "notes": "Verified against Stanford University Visual Genome web portal and IJCV publication."
+    },
+    "size": {
+      "amount": 15.0,
+      "unit": "GB",
+      "file_formats": [
+        "JPG",
+        "JSON"
+      ],
+      "status": "verified"
+    },
+    "sample_count": {
+      "total": 108077,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2016-02-23",
+      "last_updated": "2017-05-15"
+    },
+    "languages": [
+      "en"
+    ],
+    "citation": {
+      "paper_title": "Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations",
+      "paper_url": "https://arxiv.org/abs/1602.07332",
+      "authors": [
+        "Ranjay Krishna",
+        "Yuke Zhu",
+        "Oliver Groth",
+        "Justin Johnson",
+        "Kenji Hata",
+        "Joshua Kravitz",
+        "Stephanie Chen",
+        "Yannis Kalantidis",
+        "Li-Jia Li",
+        "David A. Shamma",
+        "Michael S. Bernstein",
+        "Li Fei-Fei"
+      ],
+      "doi": "10.1007/s11263-016-0981-7",
+      "bibtex": "@article{krishna2017visual,\n  title={Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations},\n  author={Krishna, Ranjay and Zhu, Yuke and Groth, Oliver and Johnson, Justin and Hata, Kenji and Kravitz, Joshua and Chen, Stephanie and Kalantidis, Yannis and Li, Li-Jia and Shamma, David A and Bernstein, Michael S and Fei-Fei, Li},\n  journal={International Journal of Computer Vision (IJCV)},\n  volume={123},\n  pages={32--73},\n  year={2017}\n}"
+    },
+    "provenance": {
+      "collection_method": "108,077 images sourced from MS COCO and YFCC100M, annotated across 33,000 hours of Amazon Mechanical Turk human work.",
+      "curation_notes": "Objects, attributes, and relationships canonicalized to WordNet synsets to ensure consistent semantic ontology.",
+      "data_sources": [
+        "MS COCO",
+        "YFCC100M"
+      ]
     }
   },
   {

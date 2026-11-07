@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "visual-genome",
+  "slug": "visual-genome",
+  "name": "Visual Genome: Connecting Language and Vision",
+  "description": "Visual Genome is an extensive multimodal knowledge dataset created to advance visual understanding from individual pixels to structured semantics. It contains 108,077 images richly annotated with 5.4 million region descriptions, 1.7 million visual question-answer pairs, 3.8 million object instances, 2.8 million attributes, and 2.3 million visual relationships mapped into unified scene graphs and WordNet synsets.",
+  "homepage_url": "https://visualgenome.org/",
+  "publisher": {
+    "name": "Stanford University",
+    "type": "academic",
+    "url": "https://stanford.edu/"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "scene-graph-generation",
+    "visual-question-answering",
+    "grounded-captioning"
+  ],
+  "tags": [
+    "multimodal",
+    "scene-graphs",
+    "vqa",
+    "visual-genome",
+    "stanford",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC-BY-4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Annotations are made freely available under Creative Commons Attribution 4.0 International."
+  },
+  "source_references": [
+    {
+      "title": "Official Visual Genome Portal",
+      "url": "https://visualgenome.org/",
+      "type": "official_website"
+    },
+    {
+      "title": "Visual Genome IJCV 2017 Paper",
+      "url": "https://arxiv.org/abs/1602.07332",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Editorial Review",
+    "verified_date": "2026-11-07",
+    "notes": "Verified against Stanford University Visual Genome web portal and IJCV publication."
+  },
+  "size": {
+    "amount": 15.0,
+    "unit": "GB",
+    "file_formats": [
+      "JPG",
+      "JSON"
+    ],
+    "status": "verified"
+  },
+  "sample_count": {
+    "total": 108077,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2016-02-23",
+    "last_updated": "2017-05-15"
+  },
+  "languages": [
+    "en"
+  ],
+  "citation": {
+    "paper_title": "Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations",
+    "paper_url": "https://arxiv.org/abs/1602.07332",
+    "authors": [
+      "Ranjay Krishna",
+      "Yuke Zhu",
+      "Oliver Groth",
+      "Justin Johnson",
+      "Kenji Hata",
+      "Joshua Kravitz",
+      "Stephanie Chen",
+      "Yannis Kalantidis",
+      "Li-Jia Li",
+      "David A. Shamma",
+      "Michael S. Bernstein",
+      "Li Fei-Fei"
+    ],
+    "doi": "10.1007/s11263-016-0981-7",
+    "bibtex": "@article{krishna2017visual,\n  title={Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations},\n  author={Krishna, Ranjay and Zhu, Yuke and Groth, Oliver and Johnson, Justin and Hata, Kenji and Kravitz, Joshua and Chen, Stephanie and Kalantidis, Yannis and Li, Li-Jia and Shamma, David A and Bernstein, Michael S and Fei-Fei, Li},\n  journal={International Journal of Computer Vision (IJCV)},\n  volume={123},\n  pages={32--73},\n  year={2017}\n}"
+  },
+  "provenance": {
+    "collection_method": "108,077 images sourced from MS COCO and YFCC100M, annotated across 33,000 hours of Amazon Mechanical Turk human work.",
+    "curation_notes": "Objects, attributes, and relationships canonicalized to WordNet synsets to ensure consistent semantic ontology.",
+    "data_sources": [
+      "MS COCO",
+      "YFCC100M"
+    ]
+  }
+}

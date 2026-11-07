@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "conll-2003",
+  "slug": "conll-2003",
+  "name": "CoNLL-2003: Named Entity Recognition Benchmark",
+  "description": "The CoNLL-2003 shared task dataset is the standard benchmark for language-independent named entity recognition (NER). It contains English and German Reuters news stories annotated with four types of named entities: persons (PER), organizations (ORG), locations (LOC), and miscellaneous names (MISC). The English corpus comprises 1,393 news stories spanning 301,418 tokens across standard train, dev, and test splits.",
+  "homepage_url": "https://www.clips.uantwerpen.be/conll2003/ner/",
+  "publisher": {
+    "name": "CoNLL Organization",
+    "type": "academic",
+    "url": "https://www.clips.uantwerpen.be/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "named-entity-recognition",
+    "token-classification"
+  ],
+  "tags": [
+    "nlp",
+    "ner",
+    "benchmark",
+    "information-extraction",
+    "token-classification"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Reuters News Research License",
+    "url": "https://www.clips.uantwerpen.be/conll2003/ner/",
+    "commercial_use": "unknown",
+    "notes": "Freely available for academic, scientific, and research purposes."
+  },
+  "source_references": [
+    {
+      "title": "Official CoNLL-2003 Shared Task Page",
+      "url": "https://www.clips.uantwerpen.be/conll2003/ner/",
+      "type": "official_website"
+    },
+    {
+      "title": "CoNLL-2003 Overview Paper",
+      "url": "https://aclanthology.org/W03-0419/",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Editorial Review",
+    "verified_date": "2026-11-07",
+    "notes": "Verified against ACL Anthology record and University of Antwerp host site."
+  },
+  "size": {
+    "amount": 2.5,
+    "unit": "MB",
+    "file_formats": [
+      "TXT"
+    ],
+    "status": "verified"
+  },
+  "sample_count": {
+    "total": 20744,
+    "splits": {
+      "train": 14041,
+      "validation": 3250,
+      "test": 3453
+    },
+    "unit": "sentences",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2003-06-01",
+    "last_updated": "2003-06-01"
+  },
+  "languages": [
+    "en",
+    "de"
+  ],
+  "citation": {
+    "paper_title": "Introduction to the CoNLL-2003 Shared Task: Language-Independent Named Entity Recognition",
+    "paper_url": "https://aclanthology.org/W03-0419/",
+    "authors": [
+      "Erik F. Tjong Kim Sang",
+      "Fien De Meulder"
+    ],
+    "bibtex": "@inproceedings{tjong-kim-sang-de-meulder-2003-introduction,\n  title={Introduction to the {C}o{NLL}-2003 Shared Task: Language-Independent Named Entity Recognition},\n  author={Tjong Kim Sang, Erik F. and De Meulder, Fien},\n  booktitle={Proceedings of the Seventh Conference on Natural Language Learning at HLT-NAACL 2003},\n  year={2003},\n  pages={142--147}\n}"
+  },
+  "provenance": {
+    "collection_method": "Curated from Reuters Corpus Volume 1 (RCV1) wire stories covering August 1996 through August 1997.",
+    "curation_notes": "Annotated by University of Antwerp linguistics researchers using IOB tagging scheme for named entities.",
+    "data_sources": [
+      "Reuters Corpus Volume 1"
+    ]
+  }
+}

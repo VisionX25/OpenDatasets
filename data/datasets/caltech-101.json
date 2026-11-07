@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "caltech-101",
+  "slug": "caltech-101",
+  "name": "Caltech 101: 101 Object Categories",
+  "description": "Caltech 101 consists of pictures of objects belonging to 101 distinct categories, plus an additional background clutter category, containing a total of 9,145 images. Each category contains roughly 40 to 800 images, commonly sized around 300x200 pixels. Created at the California Institute of Technology by Fei-Fei Li, Marco Andreetto, and Marc'Aurelio Ranzato in 2004, it is a foundational early object recognition benchmark.",
+  "homepage_url": "https://data.caltech.edu/records/mzrjq-6wc02",
+  "publisher": {
+    "name": "California Institute of Technology",
+    "type": "academic",
+    "url": "https://data.caltech.edu/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "object-recognition"
+  ],
+  "tags": [
+    "computer-vision",
+    "benchmark",
+    "object-classification",
+    "caltech"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC-BY-4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International on CaltechDATA."
+  },
+  "source_references": [
+    {
+      "title": "CaltechDATA Archive",
+      "url": "https://data.caltech.edu/records/mzrjq-6wc02",
+      "type": "archive"
+    },
+    {
+      "title": "Original Caltech 101 Report",
+      "url": "https://resolver.caltech.edu/CaltechAUTHORS:20140224-113220556",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Editorial Review",
+    "verified_date": "2026-11-07",
+    "notes": "Verified against CaltechDATA permanent digital repository record."
+  },
+  "size": {
+    "amount": 137.0,
+    "unit": "MB",
+    "file_formats": [
+      "JPG",
+      "TAR.GZ"
+    ],
+    "status": "verified"
+  },
+  "sample_count": {
+    "total": 9145,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2004-09-01",
+    "last_updated": "2022-04-14"
+  },
+  "citation": {
+    "paper_title": "Learning Generative Visual Models from Few Training Examples: An Incremental Bayesian Approach Tested on 101 Object Categories",
+    "paper_url": "https://doi.org/10.1109/CVPR.2004.383",
+    "authors": [
+      "Fei-Fei Li",
+      "Marco Andreetto",
+      "Marc'Aurelio Ranzato"
+    ],
+    "doi": "10.1109/CVPR.2004.383",
+    "bibtex": "@article{feifei2004learning,\n  title={Learning Generative Visual Models from Few Training Examples: An Incremental Bayesian Approach Tested on 101 Object Categories},\n  author={Fei-Fei, Li and Andreetto, Marco and Ranzato, Marc'Aurelio},\n  journal={Computer Vision and Pattern Recognition Workshop},\n  year={2004}\n}"
+  },
+  "provenance": {
+    "collection_method": "Images collected from Google Image Search in 2003 and subsequently manually pruned to retain canonical object viewpoints.",
+    "curation_notes": "Objects are predominantly centered and oriented upright with minimal background occlusion.",
+    "data_sources": [
+      "Google Images"
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ms-marco",
+  "slug": "ms-marco",
+  "name": "MS MARCO: Microsoft Machine Reading Comprehension",
+  "description": "MS MARCO (Microsoft Machine Reading COmprehension) is a large-scale information retrieval and question answering dataset comprising 1,010,916 real search queries sampled from Bing search logs, paired with 8.8 million web passages extracted from relevant search result documents. Developed by Microsoft AI & Research, it is the primary academic benchmark for dense retrieval, re-ranking, and open-domain question answering.",
+  "homepage_url": "https://microsoft.github.io/msmarco/",
+  "publisher": {
+    "name": "Microsoft Research",
+    "type": "industry",
+    "url": "https://www.microsoft.com/en-us/research/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "information-retrieval",
+    "question-answering",
+    "text-ranking"
+  ],
+  "tags": [
+    "nlp",
+    "information-retrieval",
+    "question-answering",
+    "search",
+    "microsoft"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Microsoft Research Data License",
+    "url": "https://microsoft.github.io/msmarco/",
+    "commercial_use": "forbidden",
+    "notes": "Released strictly for non-commercial research and educational use."
+  },
+  "source_references": [
+    {
+      "title": "Official MS MARCO Portal",
+      "url": "https://microsoft.github.io/msmarco/",
+      "type": "official_website"
+    },
+    {
+      "title": "MS MARCO NeurIPS Workshop Paper",
+      "url": "https://arxiv.org/abs/1611.09268",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Editorial Review",
+    "verified_date": "2026-11-07",
+    "notes": "Verified against Microsoft Research official documentation and data portal."
+  },
+  "size": {
+    "amount": 3.2,
+    "unit": "GB",
+    "file_formats": [
+      "TSV",
+      "TAR.GZ",
+      "JSON"
+    ],
+    "status": "verified"
+  },
+  "sample_count": {
+    "total": 1010916,
+    "unit": "queries",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2016-11-28",
+    "last_updated": "2021-06-15"
+  },
+  "languages": [
+    "en"
+  ],
+  "citation": {
+    "paper_title": "MS MARCO: A Human Generated MAchine Reading COmprehension Dataset",
+    "paper_url": "https://arxiv.org/abs/1611.09268",
+    "authors": [
+      "Tri Nguyen",
+      "Mir Rosenberg",
+      "Xia Song",
+      "Jianfeng Gao",
+      "Saurabh Tiwary",
+      "Rangan Majumder",
+      "Li Deng"
+    ],
+    "bibtex": "@article{nguyen2016ms,\n  title={MS MARCO: A Human Generated Machine Reading Comprehension Dataset},\n  author={Nguyen, Tri and Rosenberg, Mir and Song, Xia and Gao, Jianfeng and Tiwary, Saurabh and Majumder, Rangan and Deng, Li},\n  journal={CoRR},\n  volume={abs/1611.09268},\n  year={2016}\n}"
+  },
+  "provenance": {
+    "collection_method": "Anonymized real-world user queries extracted from Bing search logs; retrieved web pages segmented into passages.",
+    "curation_notes": "Human annotators drafted comprehensive natural language answers only when evidence was verified in the retrieved web passages.",
+    "data_sources": [
+      "Bing Search Query Logs",
+      "Public Web Documents"
+    ]
+  }
+}

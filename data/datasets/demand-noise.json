@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "demand-noise",
+  "slug": "demand-noise",
+  "name": "DEMAND: Diverse Environments Multi-channel Acoustic Noise Database",
+  "description": "The Diverse Environments Multi-channel Acoustic Noise Database (DEMAND) provides calibrated 16-channel acoustic noise recordings sampled at 48 kHz across 18 distinct real-world acoustic settings, including domestic environments, office spaces, public transport (subway, bus, train), outdoors (park, city square, street), and high-noise social venues. Developed at Inria and hosted on Zenodo, DEMAND is the primary standard for multi-channel speech enhancement, noise-robust ASR, and dereverberation.",
+  "homepage_url": "https://zenodo.org/records/1227121",
+  "publisher": {
+    "name": "Inria",
+    "type": "academic",
+    "url": "https://www.inria.fr/"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "audio-noise-reduction",
+    "speech-enhancement",
+    "acoustic-scene-classification"
+  ],
+  "tags": [
+    "audio",
+    "speech-enhancement",
+    "noise-robust",
+    "inria",
+    "multichannel"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC-BY-SA-3.0",
+    "spdx_id": "CC-BY-SA-3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "commercial_use": "allowed",
+    "notes": "Released under Creative Commons Attribution-ShareAlike 3.0 Unported."
+  },
+  "source_references": [
+    {
+      "title": "Zenodo Digital Repository Record",
+      "url": "https://zenodo.org/records/1227121",
+      "type": "archive"
+    },
+    {
+      "title": "DEMAND Design Paper (ICA 2013)",
+      "url": "https://hal.inria.fr/hal-00813735",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Editorial Review",
+    "verified_date": "2026-11-07",
+    "notes": "Verified against Zenodo DOI record and Inria research archive."
+  },
+  "size": {
+    "amount": 15.6,
+    "unit": "GB",
+    "file_formats": [
+      "WAV"
+    ],
+    "status": "verified"
+  },
+  "sample_count": {
+    "total": 18,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2013-06-02",
+    "last_updated": "2018-04-23"
+  },
+  "citation": {
+    "paper_title": "The Diverse Environments Multi-channel Acoustic Noise Database: A Database of Multichannel Environmental Noise Recordings",
+    "paper_url": "https://hal.inria.fr/hal-00813735",
+    "authors": [
+      "Joachim Thiemann",
+      "Nobutaka Ito",
+      "Emmanuel Vincent"
+    ],
+    "bibtex": "@inproceedings{thiemann2013demand,\n  title={The Diverse Environments Multi-channel Acoustic Noise Database: A Database of Multichannel Environmental Noise Recordings},\n  author={Thiemann, Joachim and Ito, Nobutaka and Vincent, Emmanuel},\n  booktitle={Proceedings of Meetings on Acoustics (ICA 2013)},\n  year={2013}\n}"
+  },
+  "provenance": {
+    "collection_method": "Recorded with a specialized spherical microphone array holding 16 condenser microphones in various naturalistic real-world environments.",
+    "curation_notes": "Calibrated sound pressure levels documented for all channels; 5-minute continuous takes per setting.",
+    "data_sources": [
+      "Inria Acoustic Recording Campaigns"
+    ]
+  }
+}

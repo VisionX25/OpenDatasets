@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "coco-stuff",
+  "slug": "coco-stuff",
+  "name": "COCO-Stuff: Dense Pixel Annotations for Things and Stuff",
+  "description": "COCO-Stuff augments the Microsoft COCO dataset with pixel-level annotations for 91 stuff classes (e.g. sky, grass, water, pavement) alongside the original 80 thing classes, yielding complete dense scene coverage across 164,000 images. Developed by Caesar, Uijlings, and Ferrari, COCO-Stuff is a principal benchmark for semantic segmentation, panoptic segmentation, and scene layout understanding.",
+  "homepage_url": "https://github.com/nightrome/cocostuff",
+  "publisher": {
+    "name": "University of Edinburgh",
+    "type": "academic",
+    "url": "https://www.ed.ac.uk/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "panoptic-segmentation"
+  ],
+  "tags": [
+    "computer-vision",
+    "semantic-segmentation",
+    "coco",
+    "dense-annotations"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC-BY-4.0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "COCO-Stuff annotations are released under Creative Commons Attribution 4.0 International."
+  },
+  "source_references": [
+    {
+      "title": "Official COCO-Stuff Repository",
+      "url": "https://github.com/nightrome/cocostuff",
+      "type": "repository"
+    },
+    {
+      "title": "COCO-Stuff Paper (CVPR 2018)",
+      "url": "https://arxiv.org/abs/1612.03716",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Editorial Review",
+    "verified_date": "2026-11-07",
+    "notes": "Verified against University of Edinburgh release and CVPR 2018 publication."
+  },
+  "size": {
+    "amount": 2.1,
+    "unit": "GB",
+    "file_formats": [
+      "PNG",
+      "JSON",
+      "MAT"
+    ],
+    "status": "verified",
+    "notes": "Annotation payload; image payload shared with MS COCO."
+  },
+  "sample_count": {
+    "total": 164000,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-06-18",
+    "last_updated": "2019-07-26"
+  },
+  "citation": {
+    "paper_title": "COCO-Stuff: Thing and Stuff Classes in Context",
+    "paper_url": "https://arxiv.org/abs/1612.03716",
+    "authors": [
+      "Holger Caesar",
+      "Jasper Uijlings",
+      "Vittorio Ferrari"
+    ],
+    "doi": "10.1109/CVPR.2018.00132",
+    "bibtex": "@inproceedings{caesar2018cocostuff,\n  title={COCO-Stuff: Thing and Stuff Classes in Context},\n  author={Caesar, Holger and Uijlings, Jasper and Ferrari, Vittorio},\n  booktitle={Computer Vision and Pattern Recognition (CVPR)},\n  year={2018}\n}"
+  },
+  "provenance": {
+    "collection_method": "Dense superpixel-level labeling applied to MS COCO 2017 training and validation images using Amazon Mechanical Turk.",
+    "curation_notes": "Quality control enforced through multi-annotator consistency checks and expert verification of ambiguous boundary regions.",
+    "data_sources": [
+      "MS COCO 2017 Image Collection"
+    ]
+  }
+}

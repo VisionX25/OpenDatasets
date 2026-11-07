@@ -2,267 +2,190 @@
 
 [![CI](https://github.com/VisionX25/OpenDatasets/actions/workflows/ci.yml/badge.svg)](https://github.com/VisionX25/OpenDatasets/actions/workflows/ci.yml)
 
-An open-source catalog for discovering machine learning datasets and validating their metadata.
+An open-source catalog for discovering machine learning datasets and inspecting their structured metadata, source references, and access conditions.
 
 ## Project Overview
 
-OpenDatasets is a project by [VisionX25](https://github.com/VisionX25) for researchers, students, data scientists, and ML engineers who need clear dataset descriptions, source references, and license information.
+OpenDatasets is an academic, open-source initiative by [VisionX25](https://github.com/VisionX25) built for researchers, machine learning engineers, data scientists, and students. The platform provides clean, standardized dataset metadata across multiple modalities with documented access terms and authoritative citations.
 
-The current catalog contains **27 dataset metadata records** (29 October 2026). Browse by category, search the catalog, and inspect individual dataset details. This repository catalogs metadata and links to original publishers; it does not host the underlying datasets.
+The current catalog indexes **365 verified research dataset records** across six core machine learning domains. Users can explore records, search and filter facets, compare datasets side-by-side within categories, save datasets locally, and export academic citations.
 
-**Start here:** [Contribute](CONTRIBUTING.md) · [Suggest a dataset](https://github.com/VisionX25/OpenDatasets/issues/new?template=dataset_suggestion.yml) · [Report a problem](https://github.com/VisionX25/OpenDatasets/issues/new/choose) · [Roadmap](ROADMAP.md) · [LinkedIn](https://www.linkedin.com/company/visionx25/)
+> **Note on Data Hosting**: OpenDatasets catalogs structured metadata and links to original publishers and papers. It does not host or redistribute the underlying binary data files.
 
-**[Open the live demo](https://visionx25.github.io/OpenDatasets/)**
+**Quick Links:** [Explore Datasets](https://visionx25.github.io/OpenDatasets/explore) · [Contribute](CONTRIBUTING.md) · [Suggest a Dataset](https://github.com/VisionX25/OpenDatasets/issues/new?template=dataset_suggestion.yml) · [Report an Issue](https://github.com/VisionX25/OpenDatasets/issues/new/choose) · [Roadmap](ROADMAP.md)
 
-## Walkthrough and review notes
+**[Open the Live Application](https://visionx25.github.io/OpenDatasets/)**
 
-![OpenDatasets home](docs/images/home.jpg)
+---
 
-1. Open **Explore** and choose a category, or open **Datasets** to search all records.
-2. Search for a name such as MNIST, then open its named details link.
-3. Review source references, license/access conditions and the metadata audit scope before using a dataset.
+## Key Features
 
-See the [deployment guide](docs/deployment.md), [keyboard/mobile review](docs/accessibility-review.md), and [source metadata audit](docs/metadata-audit.md). The review covers 27 records and documents source checks for eight records with missing metadata. Unknown values remain explicit.
+### 1. Six Curated Research Categories
+OpenDatasets categorizes all records into six distinct machine learning categories:
+- **Computer Vision (`computer-vision`)**: Object detection, segmentation, image classification, facial recognition, and medical imaging.
+- **Natural Language Processing (`natural-language-processing`)**: Question answering, summarization, machine translation, sentiment analysis, and reasoning benchmarks.
+- **Audio & Speech (`audio-speech`)**: Speech recognition (ASR), speaker verification, audio classification, and speech translation.
+- **Tabular & Time-Series (`tabular-time-series`)**: Tabular classification, regression, weather forecasting, financial time-series, and sensor benchmarks.
+- **Multimodal & Generative (`multimodal-generative`)**: Vision-language models, image captioning, text-to-image/video, and generative audio.
+- **Evaluation & Benchmarks (`evaluation-benchmarks`)**: Holistic model evaluation suites, safety benchmarks, reasoning diagnostics, and code generation testbeds.
 
-### What verification means
+### 2. Dataset Discovery, Search & Filtering
+- **Multi-Field Instant Search**: Full-text searching across dataset titles, descriptions, publisher names, tasks, and tags.
+- **Faceted Filters**: Narrow the catalog by Category, Data Modality (`vision`, `nlp`, `audio`, `tabular`, `multimodal`), Task, License Status, and Publication Year.
+- **Lightweight Sorting**: Order datasets by Default order, Name (A–Z / Z–A), Publication Year (Newest / Oldest), or Sample Count (Largest / Smallest) with deterministic tie-breaking and URL persistence.
+- **URL Synchronization**: All search queries, filter facets, and sort preferences are mirrored in URL search parameters for seamless sharing.
 
-Metadata is curated against the cited sources. Automated checks validate the JSON schema, URL syntax, unique IDs/slugs, and generated catalog consistency. These offline checks do **not** establish live link availability, inspect every underlying data file, measure label accuracy or bias, or guarantee fitness for a particular use. License and access conditions belong to each original publisher; consult its terms before using a dataset.
+### 3. Category-Specific Dataset Comparison
+- **Side-by-Side Comparison**: Compare 2 to 3 datasets from the same category at `/compare?datasets=slug1,slug2,slug3`.
+- **In-Context Activation**: Click the minimal "Compare" action in the footer of any dataset card within a category page to add it to the comparison selection.
+- **Comparison Selection Bar**: A compact, accessible floating toolbar indicates selection progress (`X of 3 selected`), allows clearing selections, and navigates directly to the comparison matrix.
+- **Detailed Attribute Matrix**: Evaluates modalities, primary tasks, license status, sample counts, split breakdowns, download sizes, publication dates, and citation metadata side-by-side. Handles missing, unverified, or non-comparable fields explicitly without fabricating information.
 
-Data profiling, quality metrics from actual data, and a FastAPI service are planned work, not current features.
+### 4. Bookmark & Saved Datasets
+- **Minimal Card Action**: A subtle, borderless bookmark icon anchored at the top-right of every dataset card allows quick saving and removal.
+- **Client-Side Persistence**: Saved dataset slugs are stored in browser `localStorage` (`opendatasets_saved_bookmarks`), ensuring zero tracking, zero accounts, and zero database requirements.
+- **Catalog Integration**: Access your saved collection via the "Saved (X)" toggle button in the catalog filter bar or directly via `/datasets?saved=true`.
 
-### Current Implementation Status
+### 5. Academic Citation Export
+- **Multi-Format Support**: Generate standard academic citations in **BibTeX**, **APA 7th edition**, and **IEEE** formats directly on dataset detail pages.
+- **Authoritative Provenance**: Formatted from verified author lists, publication venues, years, and DOIs.
+- **One-Click Actions**: Copy formatted citation text to the clipboard or download citation files (`.bib` / `.txt`).
+- **Transparent Limitations**: If citation metadata is incomplete, clear limitation notices are displayed rather than inventing missing authors or dates.
 
-- **Task 01 (Frontend Shell)**: Completed — React 19 + TypeScript + Vite responsive application shell with client-side routing, Tailwind CSS, and Lucide React.
-- **Task 02 (Dataset Metadata Foundation)**: Completed — Versioned JSON Schema (`v1`), structured catalog in `data/datasets/`, strict offline validator (`scripts/validate_datasets.py`), and automated pytest suite.
-- **Task 03 (Functional Dataset Explorer & Reliability)**: Completed — Automated atomic catalog generator (`scripts/generate_catalog.py`), interactive category-based discovery, multi-field search and filters, canonical dataset details route (`/dataset/:slug`) with legacy `/datasets/:slug` compatibility, runtime catalog validation, and reliable clipboard copying.
-- **Task 04 (GitHub Actions CI/CD)**: Completed — Professional, lightweight CI workflow (`.github/workflows/ci.yml`) automatically validating metadata, testing schemas, enforcing catalog sync, and running frontend unit tests, lints, and builds on push and pull requests.
-- **Task 05 (Dataset Catalog Expansion)**: Completed — Expanded catalog to 27 curated dataset metadata records across Computer Vision, NLP, Audio, and Tabular ML with authoritative source documentation.
-- **Planned Milestones**:
-  - Python + FastAPI backend service (REST API endpoints, dataset ingestion pipeline).
-  - Automated dataset schema & distribution profiling pipelines.
+---
 
-## Tech Stack
+## Metadata Verification & Audit Scope
 
-- **Frontend**:
-  - React 19
-  - TypeScript
-  - Vite
-  - Tailwind CSS
-  - React Router
-  - Lucide React
-  - Vitest
-- **Data Engineering & Backend Foundation**:
+Metadata is curated against official publications, institutional repositories, and original documentation.
+
+Automated offline checks enforce:
+- JSON Schema Draft-7 conformance (`schemas/dataset.v1.schema.json`).
+- Valid HTTP/HTTPS URL syntax without whitespace.
+- Unique dataset IDs and URL slugs.
+- Arithmetic consistency of sample splits where exhaustive.
+- Deterministic synchronization between `data/datasets/*.json` and `frontend/public/data/catalog.json`.
+
+> **Verification Limitations**: Automated offline checks validate schema syntax and cited metadata. They do **not** inspect raw binary data files, measure labeling bias or accuracy, confirm live external mirror availability, or guarantee fitness for a particular application. Dataset licenses and access conditions remain strictly under each publisher's original terms; users must review them prior to downloading or using underlying data.
+
+### Historical Audit Documentation
+Earlier audits and verification manifests are preserved in `docs/`:
+- [`docs/metadata-audit.md`](docs/metadata-audit.md): Historical audit of initial 27 baseline dataset records.
+- [`docs/research-verification-manifest.md`](docs/research-verification-manifest.md): Research manifest for initial expansion batches.
+- [`docs/medical-dataset-metadata-audit.md`](docs/medical-dataset-metadata-audit.md): Specialized audit of biomedical and clinical dataset records.
+- [`docs/task20-nlp-weather-dataset-audit.md`](docs/task20-nlp-weather-dataset-audit.md): Split verification and license audit for NLP and environmental datasets.
+
+---
+
+## Architecture & Technology Stack
+
+- **Frontend Application**:
+  - React 19 with TypeScript
+  - Vite build toolchain
+  - Tailwind CSS (responsive layout, dark mode support)
+  - React Router (client-side routing with deep linking)
+  - Lucide React (minimal, accessible icons)
+  - Vitest (unit and integration tests)
+- **Data Engineering & Automation**:
   - Python 3.10+
-  - JSON Schema (Draft-7)
-  - `jsonschema`
-  - `pytest`
-- **Planned Backend**:
-  - Python
-  - FastAPI
+  - JSON Schema Draft-7 (`jsonschema`)
+  - Pytest (validation and automation test suite)
+- **Deployment**:
+  - Static GitHub Pages hosting
+  - GitHub Actions CI/CD (`.github/workflows/ci.yml`)
+  - `scripts/prepare_pages.py` deep-link generator for direct route navigation and page reloads
+
+---
 
 ## Project Structure
 
 | Path | Purpose |
-| --- | --- |
-| `frontend/` | React application, pages, and frontend tests |
-| `data/datasets/` | Individual dataset metadata records |
-| `frontend/public/data/catalog.json` | Generated catalog consumed by the UI |
-| `schemas/` | Versioned metadata schema |
-| `scripts/` | Metadata validation and catalog generation |
-| `tests/` | Python tests |
-| `.github/` | CI, issue forms, and pull request template |
-| `CONTRIBUTING.md` | Contribution and source-verification workflow |
-| `ROADMAP.md` | Current capabilities and planned work |
-
-## Dataset Metadata Architecture
-
-OpenDatasets adheres to a modular, file-per-dataset metadata pattern:
-
-1. **Source of Truth (`data/datasets/*.json`)**:
-   Each dataset is stored as an independent JSON record conforming to `schemas/dataset.v1.schema.json`.
-2. **Deterministic Catalog (`frontend/public/data/catalog.json`)**:
-   `scripts/generate_catalog.py` validates all dataset JSON files, enforces unique IDs and slugs, sorts them deterministically by dataset ID, and atomically writes the unified catalog.
-3. **Build & Dev Integration**:
-   `frontend/package.json` includes `predev` and `prebuild` hooks that automatically invoke `generate_catalog.py`, ensuring the web UI always serves fresh, validated dataset metadata.
-
-### Schema Overview (`schemas/dataset.v1.schema.json`)
-
-All dataset metadata files conform to JSON Schema Draft-7 (`dataset.v1.schema.json`):
-
-| Field | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| `schema_version` | String | Schema version (e.g., `"1.0.0"`). | Yes |
-| `id` | String | Unique machine identifier (e.g., `"cifar-10"`). | Yes |
-| `slug` | String | URL-friendly slug (e.g., `"cifar-10"`). | Yes |
-| `name` | String | Official dataset title. | Yes |
-| `description` | String | Comprehensive dataset summary. | Yes |
-| `homepage_url` | String | Canonical dataset landing page (HTTP/HTTPS). | Yes |
-| `publisher` | Object | Publishing organization or individual, with category. | Yes |
-| `modalities` | Array | Data types (`vision`, `tabular`, `nlp`, `audio`, etc.). | Yes |
-| `tasks` | Array | Standard ML tasks (`image-classification`, etc.). | Yes |
-| `tags` | Array | Descriptive discovery tags. | Yes |
-| `license` | Object | License details with explicit status (`verified_open`, `unspecified_by_source`, etc.). | Yes |
-| `source_references` | Array | Primary and secondary source links and documentation. | Yes |
-| `verification` | Object | Metadata audit trail (`status`, `verified_by`, `verified_date`). | Yes |
-| `size` | Object | Disk / download size, formats, and verification status. | Optional |
-| `sample_count` | Object | Total records, split breakdowns, and item unit. | Optional |
-| `dates` | Object | `published` and `last_updated` ISO dates. | Optional |
-| `citation` | Object | Academic paper citation, DOI, and BibTeX. | Optional |
-| `provenance` | Object | Collection methodology and curation notes. | Optional |
-
-> **Handling Missing or Unverified Information**: Do not guess or invent data. The schema provides explicit states such as `status: "unspecified_by_source"`, `status: "unknown"`, or `status: "unverified"` when authoritative values are not provided by the source.
-
-### Instructions for Adding a Dataset
-
-1. Create a new JSON file inside `data/datasets/` named after the dataset slug (e.g., `data/datasets/<slug>.json`).
-2. Populate the required metadata fields using authoritative sources (official website, documentation, or original paper).
-3. Ensure all URLs start with `http://` or `https://` and do not contain whitespace.
-4. Verify that the `id` and `slug` do not collide with any existing catalog entry.
-5. Validate the dataset:
-   ```bash
-   python3 scripts/validate_datasets.py data/datasets/<slug>.json
-   ```
-6. Regenerate the catalog:
-   ```bash
-   python3 scripts/generate_catalog.py
-   ```
-7. Run the test suites:
-   ```bash
-   pytest
-   cd frontend && npm test
-   ```
+| :--- | :--- |
+| `data/datasets/` | Individual dataset metadata records (`<slug>.json`) |
+| `frontend/src/` | React application source code, components, and pages |
+| `frontend/public/data/catalog.json` | Deterministic, unified dataset catalog consumed by the frontend |
+| `schemas/` | Versioned JSON Schemas (`dataset.v1.schema.json`) |
+| `scripts/validate_datasets.py` | Offline dataset validator ensuring schema compliance |
+| `scripts/generate_catalog.py` | Atomic, deterministic catalog generator |
+| `scripts/prepare_pages.py` | GitHub Pages static entry points and routing preparation |
+| `tests/` | Python test suite (`test_metadata_validation.py`, `test_pages.py`, etc.) |
+| `docs/` | Deployment guides, accessibility audits, and historical review manifests |
+| `CONTRIBUTING.md` | Guidelines for proposing and adding datasets |
+| `ROADMAP.md` | Development roadmap of implemented features and planned research |
 
 ---
 
-## Local Development Setup
+## Local Development & Testing
 
 ### Prerequisites
-
 - **Python**: v3.10 or later
-- **Node.js**: use a current supported version compatible with the locked Vite toolchain (Node 22.12+ or Node 24 recommended)
+- **Node.js**: v20 or later (v22/v24 recommended)
 - **npm**: v9.0.0 or later
 
-### Python Environment & Validation
-
-1. **Install Python dependencies**:
-   ```bash
-   pip install -r requirements-dev.txt
-   ```
-
-2. **Run metadata validation**:
-   ```bash
-   python3 scripts/validate_datasets.py
-   ```
-
-3. **Regenerate dataset catalog**:
-   ```bash
-   python3 scripts/generate_catalog.py
-   ```
-
-4. **Run Python automated tests**:
-   ```bash
-   pytest
-   ```
-
-### Frontend Setup
-
-1. **Navigate to the frontend directory**:
-   ```bash
-   cd frontend
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm ci
-   ```
-
-3. **Start the local development server**:
-   ```bash
-   npm run dev
-   ```
-   *Note: `npm run dev` automatically runs the `predev` hook to regenerate `catalog.json` before booting Vite.*
-   The application will be accessible at `http://localhost:5173/`.
-
-4. **Frontend quality & test checks**:
-   ```bash
-   npm test           # Run Vitest unit tests (search, filter, category logic, clipboard, catalogService)
-   npm run lint       # Run ESLint quality checks
-   npx tsc --noEmit   # Run TypeScript compiler checks
-   npm run build      # Run production build (includes prebuild catalog generation)
-   ```
-
----
-
-## Continuous Integration (CI/CD)
-
-OpenDatasets uses a lightweight, secure GitHub Actions workflow defined in [`.github/workflows/ci.yml`](.github/workflows/ci.yml) to validate every contribution automatically.
-
-### Workflow Purpose & Triggers
-
-The CI pipeline runs on:
-- Every **push** to the `main` branch.
-- Every **pull request** targeting the `main` branch.
-- Manual triggers via **`workflow_dispatch`**.
-
-### Checks Performed
-
-The pipeline executes two independent jobs concurrently:
-
-1. **Python Metadata Validation (`python-validation`)**:
-   - **Environment**: Python 3.11 on `ubuntu-latest`.
-   - **Schema & Semantic Validation**: Executes `python3 scripts/validate_datasets.py` to ensure all dataset records in `data/datasets/*.json` adhere to `schemas/dataset.v1.schema.json`, contain valid HTTP/HTTPS URL formats without whitespace, and contain unique dataset IDs and slugs.
-   - **Automated Test Suite**: Executes `pytest` to run all unit tests covering schema compliance, duplicate detection, and atomic catalog generation.
-   - **Catalog Consistency Check**: Generates a temporary catalog and compares it against the committed `frontend/public/data/catalog.json` using `diff -u`. If a metadata change was made without regenerating and committing the catalog, the job fails.
-
-2. **Frontend Quality & Build (`frontend-quality`)**:
-   - **Environment**: Node.js 24 and Python 3.11 on `ubuntu-latest`.
-   - **Dependency Installation**: Uses `npm ci` with automated package caching based on `frontend/package-lock.json`.
-   - **Unit Tests**: Executes Vitest suite (`npm test`) covering search filtering, category mapping, runtime catalog validation, and clipboard utilities.
-   - **Static Analysis (Linting)**: Executes ESLint (`npm run lint`) to maintain strict code quality standards.
-   - **Production Build**: Compiles TypeScript and builds the production bundle with Vite (`npm run build`).
-
-### Running Checks Locally
-
-Contributors can run the exact same checks locally before committing or opening a pull request:
-
+### 1. Python Setup & Metadata Validation
 ```bash
-# 1. Run Python metadata validation and tests
+# Install development dependencies
+pip install -r requirements-dev.txt
+
+# Run dataset schema validation
 python3 scripts/validate_datasets.py
+
+# Run Python automated test suite
 pytest
+```
 
-# 2. Verify catalog consistency (regenerate if needed)
-python3 scripts/generate_catalog.py --output /tmp/catalog.test.json
-diff -u frontend/public/data/catalog.json /tmp/catalog.test.json
-
-# 3. Run frontend quality checks and production build
+### 2. Frontend Setup & Development
+```bash
+# Navigate to the frontend directory
 cd frontend
+
+# Install dependencies
+npm ci
+
+# Start local development server (automatically updates catalog.json via predev hook)
+npm run dev
+```
+The application will be accessible at `http://localhost:5173/` (or your assigned Vite port).
+
+### 3. Frontend Quality Checks & Production Build
+```bash
+# Run Vitest test suite
 npm test
+
+# Run ESLint quality checks
 npm run lint
+
+# Run TypeScript typechecks and production build
 npm run build
 ```
 
-### Regenerating the Catalog
-
-If you add, modify, or remove any dataset in `data/datasets/`, regenerate the catalog and commit the result:
-
+### 4. GitHub Pages Static Route Preparation
 ```bash
-python3 scripts/generate_catalog.py
+# Prepare static HTML deep-link entry points for GitHub Pages
+python3 scripts/prepare_pages.py
 ```
 
-### Pre-PR Contribution Checklist
+---
 
-Before opening a pull request, ensure all verification steps pass cleanly:
+## Contributing & Adding Datasets
 
-- [ ] All new or modified dataset files conform to `schemas/dataset.v1.schema.json` (`python3 scripts/validate_datasets.py`).
-- [ ] Pytest passes with zero failures (`pytest`).
-- [ ] Catalog has been regenerated and synchronized (`python3 scripts/generate_catalog.py`).
-- [ ] Frontend Vitest passes (`cd frontend && npm test`).
-- [ ] ESLint passes without errors or warnings (`cd frontend && npm run lint`).
-- [ ] Production build completes successfully (`cd frontend && npm run build`).
+We welcome contributions of high-quality research datasets. To add a dataset:
+
+1. **Verify Uniqueness**: Check that the dataset `id`, `slug`, `name`, or `homepage_url` does not already exist in `data/datasets/`.
+2. **Create Metadata Record**: Create `data/datasets/<slug>.json` conforming to `schemas/dataset.v1.schema.json`.
+3. **Reference Authoritative Sources**: Populate metadata using official documentation, publications, and repository pages.
+4. **Mark Uncertainties Explicitly**: If license terms, split numbers, or sizes are not documented by original authors, mark them as `"unspecified_by_source"`, `"unknown"`, or `"unverified"` rather than guessing.
+5. **Validate & Regenerate**:
+   ```bash
+   python3 scripts/validate_datasets.py data/datasets/<slug>.json
+   python3 scripts/generate_catalog.py
+   pytest
+   npm test --prefix frontend
+   npm run lint --prefix frontend
+   ```
+6. **Submit**: See [CONTRIBUTING.md](CONTRIBUTING.md) for complete details on opening pull requests.
 
 ---
 
 ## License
 
-The application source code is licensed under the [MIT License](LICENSE). Cataloged datasets retain their publishers' respective licenses and access conditions; inclusion in this catalog does not relicense them.
-
+Application code is licensed under the [MIT License](LICENSE). Metadata records are compiled from publicly available research documentation. Cataloged datasets remain under their publishers' respective licenses.
