@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo, useCallback } from 'react'
+import React, { useEffect, useState, useMemo, useCallback, useRef } from 'react'
 import { useParams, useSearchParams, Link } from 'react-router-dom'
 import {
   Search,
@@ -11,6 +11,8 @@ import {
   ChevronRight,
   Calendar,
   ArrowUp,
+  Bookmark,
+  ArrowUpDown,
 } from 'lucide-react'
 import type { DatasetMetadata, LicenseStatus, CategoryId } from '../types/dataset'
 import { fetchCatalog } from '../services/catalogService'
@@ -27,13 +29,31 @@ import {
   CATEGORY_ACCENTS,
   isCategoryId,
   getCategoryById,
+  SORT_OPTIONS,
+  sortDatasets,
+  type SortOption,
 } from '../utils/datasetFilters'
 import type { FilterState } from '../utils/datasetFilters'
 import { DatasetCard } from '../components/DatasetCard'
+import { CategoryCompareToolbar } from '../components/CategoryCompareToolbar'
+import {
+  getStoredComparisonSlugs,
+  saveStoredComparisonSlugs,
+  MAX_COMPARE_COUNT,
+} from '../utils/comparisonUtils'
+import {
+  getBookmarkedSlugs,
+  toggleBookmarkSlug,
+  BOOKMARK_EVENT_NAME,
+} from '../utils/bookmarkUtils'
 
 const PAGE_SIZE = 24
 
-export const DatasetsPage: React.FC = () => {
+export interface DatasetsPageProps {
+  initialCatalog?: DatasetMetadata[]
+}
+
+export const DatasetsPage: React.FC<DatasetsPageProps> = ({ initialCatalog }) => {
   const params = useParams<{ categorySlug?: string; param?: string }>()
   const rawCategorySlug = params.categorySlug || params.param
   const isCategoryScoped = Boolean(rawCategorySlug)
@@ -44,8 +64,8 @@ export const DatasetsPage: React.FC = () => {
       ? CATEGORY_ACCENTS[rawCategorySlug as CategoryId]
       : undefined
 
-  const [catalog, setCatalog] = useState<DatasetMetadata[]>([])
-  const [loading, setLoading] = useState(true)
+  const [catalog, setCatalog] = useState<DatasetMetadata[]>(() => initialCatalog || [])
+  const [loading, setLoading] = useState(() => !initialCatalog)
   const [error, setError] = useState<string | null>(null)
   const [searchParams, setSearchParams] = useSearchParams()
 
@@ -53,6 +73,72 @@ export const DatasetsPage: React.FC = () => {
 
   // Accessible Back to Top control for long result pages
   const [showBackToTop, setShowBackToTop] = useState(false)
+
+  const prevCategoryRef = useRef(rawCategorySlug)
+
+  // Comparison selection state synchronized with sessionStorage
+  const [comparisonSlugs, setComparisonSlugs] = useState<string[]>(() =>
+    getStoredComparisonSlugs(),
+  )
+
+  // Changing categories or visiting All Datasets clears the selection
+  useEffect(() => {
+    if (prevCategoryRef.current !== rawCategorySlug) {
+      prevCategoryRef.current = rawCategorySlug
+      setComparisonSlugs([])
+      saveStoredComparisonSlugs([])
+    }
+  }, [rawCategorySlug])
+
+  const handleToggleCompare = useCallback((slug: string) => {
+    setComparisonSlugs((prev) => {
+      let next: string[]
+      if (prev.includes(slug)) {
+        next = prev.filter((s) => s !== slug)
+      } else if (prev.length < MAX_COMPARE_COUNT) {
+        next = [...prev, slug]
+      } else {
+        return prev
+      }
+      saveStoredComparisonSlugs(next)
+      return next
+    })
+  }, [])
+
+  const handleRemoveCompare = useCallback((slug: string) => {
+    setComparisonSlugs((prev) => {
+      const next = prev.filter((s) => s !== slug)
+      saveStoredComparisonSlugs(next)
+      return next
+    })
+  }, [])
+
+  const handleClearCompare = useCallback(() => {
+    setComparisonSlugs([])
+    saveStoredComparisonSlugs([])
+  }, [])
+
+  // Local bookmarks state synchronized with localStorage and cross-component updates
+  const [bookmarkedSlugs, setBookmarkedSlugs] = useState<string[]>(() => getBookmarkedSlugs())
+
+  useEffect(() => {
+    const handleBookmarkUpdate = () => {
+      setBookmarkedSlugs(getBookmarkedSlugs())
+    }
+    window.addEventListener(BOOKMARK_EVENT_NAME, handleBookmarkUpdate)
+    window.addEventListener('storage', handleBookmarkUpdate)
+    return () => {
+      window.removeEventListener(BOOKMARK_EVENT_NAME, handleBookmarkUpdate)
+      window.removeEventListener('storage', handleBookmarkUpdate)
+    }
+  }, [])
+
+  const handleToggleBookmark = useCallback((slug: string) => {
+    const next = toggleBookmarkSlug(slug)
+    setBookmarkedSlugs(next)
+  }, [])
+
+  const isCategoryPage = Boolean(isCategoryScoped && isValidCategory)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,6 +156,9 @@ export const DatasetsPage: React.FC = () => {
   }
 
   useEffect(() => {
+    if (initialCatalog && initialCatalog.length > 0) {
+      return
+    }
     let ignore = false
     fetchCatalog()
       .then((data) => {
@@ -87,7 +176,7 @@ export const DatasetsPage: React.FC = () => {
     return () => {
       ignore = true
     }
-  }, [])
+  }, [initialCatalog])
 
   const handleRetry = () => {
     setLoading(true)
@@ -150,9 +239,11 @@ export const DatasetsPage: React.FC = () => {
     ? (rawCategorySlug as CategoryId)
     : activeFilters.category
 
+  const isSavedOnly = searchParams.get('saved') === 'true'
+
   // Filtered dataset result
   const filteredDatasets = useMemo(() => {
-    return filterDatasets(catalog, {
+    const base = filterDatasets(catalog, {
       searchQuery: activeFilters.searchQuery,
       category: effectiveCategory,
       modality: activeFilters.modality || null,
@@ -160,24 +251,28 @@ export const DatasetsPage: React.FC = () => {
       license: activeFilters.license || null,
       year: activeFilters.year || null,
     })
-  }, [catalog, activeFilters, effectiveCategory])
+    const list = isSavedOnly ? base.filter((d) => bookmarkedSlugs.includes(d.slug)) : base
+    return sortDatasets(list, activeFilters.sort || 'default')
+  }, [catalog, activeFilters, effectiveCategory, isSavedOnly, bookmarkedSlugs])
 
   const displayedDatasets = useMemo(() => {
     return filteredDatasets.slice(0, visibleCount)
   }, [filteredDatasets, visibleCount])
 
   const hasActiveFilters = Boolean(
-    activeFilters.searchQuery.trim() ||
+    isSavedOnly ||
+      activeFilters.searchQuery.trim() ||
       (!isCategoryScoped && activeFilters.category) ||
       activeFilters.modality ||
       activeFilters.task ||
       activeFilters.license ||
-      activeFilters.year,
+      activeFilters.year ||
+      (activeFilters.sort && activeFilters.sort !== 'default'),
   )
 
   const handleResetFilters = useCallback(() => {
-    setSearchParams((prev) =>
-      serializeFilterParams(
+    setSearchParams((prev) => {
+      const next = serializeFilterParams(
         {
           searchQuery: '',
           category: isCategoryScoped ? null : null,
@@ -185,10 +280,13 @@ export const DatasetsPage: React.FC = () => {
           task: '',
           license: '',
           year: '',
+          sort: 'default',
         },
         prev,
-      ),
-    )
+      )
+      next.delete('saved')
+      return next
+    })
     setSearchInput('')
   }, [setSearchParams, isCategoryScoped])
 
@@ -318,6 +416,16 @@ export const DatasetsPage: React.FC = () => {
         {/* Search and Filters Controls */}
         {!loading && !error && (
           <>
+            {/* Category Comparison Selection Toolbar (Non-floating, visible when at least one dataset is selected) */}
+            {isCategoryPage && comparisonSlugs.length > 0 && (
+              <CategoryCompareToolbar
+                selectedSlugs={comparisonSlugs}
+                catalog={catalog}
+                onRemoveSlug={handleRemoveCompare}
+                onClear={handleClearCompare}
+              />
+            )}
+
             <div className="bg-white dark:bg-slate-900/80 rounded-xl border border-slate-200 dark:border-slate-800 p-4 sm:p-5 mb-8 shadow-xs">
               <div className="flex flex-col md:flex-row gap-3 flex-wrap">
                 {/* Search Input */}
@@ -457,6 +565,52 @@ export const DatasetsPage: React.FC = () => {
                   </div>
                 </div>
 
+                {/* Sort Order Dropdown */}
+                <div className="w-full md:w-48">
+                  <div className="relative">
+                    <select
+                      value={activeFilters.sort}
+                      onChange={(e) => updateFilters({ sort: e.target.value as SortOption })}
+                      aria-label="Sort datasets"
+                      className="w-full px-3 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm text-slate-700 dark:text-slate-200 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 appearance-none pr-8 cursor-pointer"
+                    >
+                      {SORT_OPTIONS.map((opt) => (
+                        <option key={opt.id} value={opt.id}>
+                          {opt.label}
+                        </option>
+                      ))}
+                    </select>
+                    <ArrowUpDown className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400 pointer-events-none" />
+                  </div>
+                </div>
+
+                {/* Saved Datasets Filter Toggle */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSearchParams((prev) => {
+                      const next = new URLSearchParams(prev)
+                      if (isSavedOnly) {
+                        next.delete('saved')
+                      } else {
+                        next.set('saved', 'true')
+                      }
+                      return next
+                    })
+                  }}
+                  aria-pressed={isSavedOnly}
+                  className={`inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg border text-sm font-medium transition-colors shrink-0 cursor-pointer ${
+                    isSavedOnly
+                      ? 'bg-amber-50 dark:bg-amber-950/60 border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-300 font-semibold'
+                      : 'border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
+                  }`}
+                  aria-label="Filter saved datasets"
+                  title={isSavedOnly ? 'Show all datasets' : 'Show only saved datasets'}
+                >
+                  <Bookmark className={`w-3.5 h-3.5 ${isSavedOnly ? 'fill-current text-amber-500' : 'text-slate-400'}`} />
+                  <span>{`Saved (${bookmarkedSlugs.length})`}</span>
+                </button>
+
                 {/* Reset Filters Button */}
                 {hasActiveFilters && (
                   <button
@@ -474,6 +628,26 @@ export const DatasetsPage: React.FC = () => {
               {hasActiveFilters && (
                 <div className="flex items-center gap-2 flex-wrap pt-3 mt-3 border-t border-slate-100 dark:border-slate-800/80 text-xs">
                   <span className="text-slate-500 font-medium">Active filters:</span>
+                  {isSavedOnly && (
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-950/70 dark:text-amber-300">
+                      <Bookmark className="w-3 h-3 fill-current" />
+                      Saved Datasets
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSearchParams((prev) => {
+                            const next = new URLSearchParams(prev)
+                            next.delete('saved')
+                            return next
+                          })
+                        }}
+                        aria-label="Remove saved filter"
+                        className="hover:text-amber-950 dark:hover:text-white cursor-pointer"
+                      >
+                        <X className="w-3 h-3" />
+                      </button>
+                    </span>
+                  )}
                   {!isCategoryScoped && activeCategoryName && (
                     <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-950/70 dark:text-indigo-300">
                       Category: {activeCategoryName}
@@ -552,6 +726,19 @@ export const DatasetsPage: React.FC = () => {
                       </button>
                     </span>
                   )}
+                  {activeFilters.sort && activeFilters.sort !== 'default' && (
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+                      {`Sort: ${SORT_OPTIONS.find((o) => o.id === activeFilters.sort)?.label || activeFilters.sort}`}
+                      <button
+                        type="button"
+                        onClick={() => updateFilters({ sort: 'default' })}
+                        aria-label="Reset sort order"
+                        className="hover:text-slate-950 dark:hover:text-white cursor-pointer"
+                      >
+                        <X className="w-3 h-3" />
+                      </button>
+                    </span>
+                  )}
                 </div>
               )}
             </div>
@@ -574,21 +761,45 @@ export const DatasetsPage: React.FC = () => {
             {/* Empty State */}
             {filteredDatasets.length === 0 && (
               <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 p-12 text-center my-6">
-                <Search className="w-10 h-10 text-slate-400 mx-auto mb-3 opacity-60" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">
-                  No Datasets Found
-                </h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 max-w-md mx-auto leading-relaxed">
-                  No datasets match your active search and filter settings. Try adjusting your query or resetting filters.
-                </p>
-                <button
-                  type="button"
-                  onClick={handleResetFilters}
-                  className="mt-5 inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-xs transition-colors cursor-pointer"
-                >
-                  <RotateCcw className="w-3.5 h-3.5" />
-                  <span>Reset All Filters</span>
-                </button>
+                {isSavedOnly ? (
+                  <>
+                    <Bookmark className="w-10 h-10 text-amber-500 dark:text-amber-400 mx-auto mb-3 opacity-90" />
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                      No Saved Datasets
+                    </h3>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 max-w-md mx-auto leading-relaxed">
+                      {bookmarkedSlugs.length === 0
+                        ? "You haven't bookmarked any datasets yet. Click the bookmark icon on any dataset card to save it for quick reference."
+                        : "No saved datasets match your active search and filter settings. Try adjusting your query or resetting filters."}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={handleResetFilters}
+                      className="mt-5 inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-xs transition-colors cursor-pointer"
+                    >
+                      <RotateCcw className="w-3.5 h-3.5" />
+                      <span>{bookmarkedSlugs.length === 0 ? 'Browse All Datasets' : 'Reset All Filters'}</span>
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <Search className="w-10 h-10 text-slate-400 mx-auto mb-3 opacity-60" />
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                      No Datasets Found
+                    </h3>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 max-w-md mx-auto leading-relaxed">
+                      No datasets match your active search and filter settings. Try adjusting your query or resetting filters.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={handleResetFilters}
+                      className="mt-5 inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-xs transition-colors cursor-pointer"
+                    >
+                      <RotateCcw className="w-3.5 h-3.5" />
+                      <span>Reset All Filters</span>
+                    </button>
+                  </>
+                )}
               </div>
             )}
 
@@ -596,7 +807,15 @@ export const DatasetsPage: React.FC = () => {
             {filteredDatasets.length > 0 && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {displayedDatasets.map((dataset) => (
-                  <DatasetCard key={dataset.id} dataset={dataset} />
+                  <DatasetCard
+                    key={dataset.id}
+                    dataset={dataset}
+                    isSelected={isCategoryPage ? comparisonSlugs.includes(dataset.slug) : false}
+                    onToggleSelect={isCategoryPage ? handleToggleCompare : undefined}
+                    isSelectionDisabled={isCategoryPage ? comparisonSlugs.length >= MAX_COMPARE_COUNT : false}
+                    isBookmarked={bookmarkedSlugs.includes(dataset.slug)}
+                    onToggleBookmark={handleToggleBookmark}
+                  />
                 ))}
               </div>
             )}

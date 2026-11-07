@@ -519,6 +519,40 @@ export function getAvailablePublicationYears(datasets: DatasetMetadata[]): strin
   return Array.from(yearSet).sort((a, b) => b.localeCompare(a))
 }
 
+export type SortOption =
+  | 'default'
+  | 'name-asc'
+  | 'name-desc'
+  | 'year-desc'
+  | 'year-asc'
+  | 'samples-desc'
+  | 'samples-asc'
+
+export interface SortOptionDefinition {
+  id: SortOption
+  label: string
+}
+
+export const SORT_OPTIONS: SortOptionDefinition[] = [
+  { id: 'default', label: 'Default Order' },
+  { id: 'name-asc', label: 'Name (A–Z)' },
+  { id: 'name-desc', label: 'Name (Z–A)' },
+  { id: 'year-desc', label: 'Newest Publication' },
+  { id: 'year-asc', label: 'Oldest Publication' },
+  { id: 'samples-desc', label: 'Largest Sample Count' },
+  { id: 'samples-asc', label: 'Smallest Sample Count' },
+]
+
+export const VALID_SORT_OPTIONS: readonly SortOption[] = [
+  'default',
+  'name-asc',
+  'name-desc',
+  'year-desc',
+  'year-asc',
+  'samples-desc',
+  'samples-asc',
+]
+
 export interface FilterState {
   searchQuery: string
   category: CategoryId | null
@@ -526,6 +560,7 @@ export interface FilterState {
   task: string
   license: LicenseStatus | ''
   year: string
+  sort: SortOption
 }
 
 export const DEFAULT_FILTER_STATE: FilterState = {
@@ -535,6 +570,7 @@ export const DEFAULT_FILTER_STATE: FilterState = {
   task: '',
   license: '',
   year: '',
+  sort: 'default',
 }
 
 /**
@@ -596,6 +632,13 @@ export function parseFilterParams(
   const rawYear = params.get('year')?.trim()
   const year = rawYear && /^[0-9]{4}$/.test(rawYear) ? rawYear : ''
 
+  // 7. Sort Option
+  const rawSort = params.get('sort')?.trim().toLowerCase()
+  const sort =
+    rawSort && (VALID_SORT_OPTIONS as readonly string[]).includes(rawSort)
+      ? (rawSort as SortOption)
+      : 'default'
+
   return {
     searchQuery,
     category,
@@ -603,6 +646,7 @@ export function parseFilterParams(
     task,
     license,
     year,
+    sort,
   }
 }
 
@@ -677,5 +721,112 @@ export function serializeFilterParams(
     }
   }
 
+  // 7. Sort Option
+  if (filters.sort !== undefined) {
+    if (
+      filters.sort &&
+      filters.sort !== 'default' &&
+      (VALID_SORT_OPTIONS as readonly string[]).includes(filters.sort)
+    ) {
+      params.set('sort', filters.sort)
+    } else {
+      params.delete('sort')
+    }
+  }
+
   return params
+}
+
+/**
+ * Helper to extract 4-digit publication year as a number from published dates or BibTeX.
+ */
+export function getDatasetNumericYear(dataset: DatasetMetadata): number | null {
+  if (dataset.dates?.published) {
+    const match = dataset.dates.published.match(/\b(\d{4})\b/)
+    if (match) return parseInt(match[1], 10)
+  }
+  if (dataset.citation?.bibtex) {
+    const match = dataset.citation.bibtex.match(/year\s*=\s*[{"]?(\d{4})[}"]?/i)
+    if (match) return parseInt(match[1], 10)
+  }
+  return null
+}
+
+/**
+ * Helper to extract total sample count as a number.
+ */
+export function getDatasetSampleCount(dataset: DatasetMetadata): number | null {
+  const total = dataset.sample_count?.total
+  if (typeof total === 'number' && !Number.isNaN(total)) {
+    return total
+  }
+  return null
+}
+
+/**
+ * Sorts datasets according to requested SortOption.
+ * Non-mutating, stable tie-breaking, with missing values placed last.
+ */
+export function sortDatasets(
+  datasets: DatasetMetadata[],
+  sort: SortOption = 'default',
+): DatasetMetadata[] {
+  if (sort === 'default') {
+    return datasets.slice()
+  }
+
+  return [...datasets].sort((a, b) => {
+    switch (sort) {
+      case 'name-asc': {
+        const cmp = a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
+        return cmp !== 0 ? cmp : a.slug.localeCompare(b.slug)
+      }
+      case 'name-desc': {
+        const cmp = b.name.localeCompare(a.name, undefined, { sensitivity: 'base' })
+        return cmp !== 0 ? cmp : a.slug.localeCompare(b.slug)
+      }
+      case 'year-desc': {
+        const yearA = getDatasetNumericYear(a)
+        const yearB = getDatasetNumericYear(b)
+        if (yearA !== null && yearB !== null) {
+          return yearB !== yearA ? yearB - yearA : a.name.localeCompare(b.name)
+        }
+        if (yearA !== null) return -1
+        if (yearB !== null) return 1
+        return a.name.localeCompare(b.name)
+      }
+      case 'year-asc': {
+        const yearA = getDatasetNumericYear(a)
+        const yearB = getDatasetNumericYear(b)
+        if (yearA !== null && yearB !== null) {
+          return yearA !== yearB ? yearA - yearB : a.name.localeCompare(b.name)
+        }
+        if (yearA !== null) return -1
+        if (yearB !== null) return 1
+        return a.name.localeCompare(b.name)
+      }
+      case 'samples-desc': {
+        const countA = getDatasetSampleCount(a)
+        const countB = getDatasetSampleCount(b)
+        if (countA !== null && countB !== null) {
+          return countB !== countA ? countB - countA : a.name.localeCompare(b.name)
+        }
+        if (countA !== null) return -1
+        if (countB !== null) return 1
+        return a.name.localeCompare(b.name)
+      }
+      case 'samples-asc': {
+        const countA = getDatasetSampleCount(a)
+        const countB = getDatasetSampleCount(b)
+        if (countA !== null && countB !== null) {
+          return countA !== countB ? countA - countB : a.name.localeCompare(b.name)
+        }
+        if (countA !== null) return -1
+        if (countB !== null) return 1
+        return a.name.localeCompare(b.name)
+      }
+      default:
+        return 0
+    }
+  })
 }

@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "id": "physionet-challenge-2012",
+  "slug": "physionet-challenge-2012",
+  "name": "PhysioNet Challenge 2012: ICU Mortality Prediction",
+  "description": "The PhysioNet/Computing in Cardiology Challenge 2012 dataset consists of multi-parameter clinical time series from 12,000 Intensive Care Unit (ICU) admissions at Beth Israel Deaconess Medical Center. Collected during the first 48 hours following ICU admission, each record includes static demographic descriptors alongside repeated physiological measurements (e.g. heart rate, blood pressure, Glasgow Coma Scale, serum glucose, lactate). It is a classic benchmark for irregularly sampled clinical time series modeling.",
+  "homepage_url": "https://physionet.org/content/challenge-2012/1.0.0/",
+  "publisher": {
+    "name": "PhysioNet & MIT Laboratory for Computational Physiology",
+    "type": "academic",
+    "url": "https://physionet.org/"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "mortality-prediction",
+    "time-series-classification",
+    "clinical-risk-scoring"
+  ],
+  "tags": [
+    "tabular",
+    "time-series",
+    "healthcare",
+    "icu",
+    "physionet",
+    "clinical"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Public Domain Dedication and License (PDDL)",
+    "spdx_id": "ODC-PDDL-1.0",
+    "url": "https://opendatacommons.org/licenses/pddl/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Dedicated to the public domain under the ODC Public Domain Dedication and License v1.0."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet Permanent Challenge 2012 Archive",
+      "url": "https://physionet.org/content/challenge-2012/1.0.0/",
+      "type": "archive"
+    },
+    {
+      "title": "Challenge Overview Paper (Silva et al., 2012)",
+      "url": "https://doi.org/10.1109/CIC.2012.6463428",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Editorial Review",
+    "verified_date": "2026-11-07",
+    "notes": "Verified against MIT PhysioNet official archive record."
+  },
+  "size": {
+    "amount": 48.0,
+    "unit": "MB",
+    "file_formats": [
+      "CSV",
+      "TXT"
+    ],
+    "status": "verified"
+  },
+  "sample_count": {
+    "total": 12000,
+    "splits": {
+      "set-a": 4000,
+      "set-b": 4000,
+      "set-c": 4000
+    },
+    "unit": "patients",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2012-09-01",
+    "last_updated": "2021-02-09"
+  },
+  "citation": {
+    "paper_title": "Predicting In-Hospital Mortality of ICU Patients: The PhysioNet/Computing in Cardiology Challenge 2012",
+    "paper_url": "https://doi.org/10.1109/CIC.2012.6463428",
+    "authors": [
+      "Ikaro Silva",
+      "George B. Moody",
+      "Daniel J. Scott",
+      "Leo Anthony Celi",
+      "Roger G. Mark"
+    ],
+    "doi": "10.1109/CIC.2012.6463428",
+    "bibtex": "@inproceedings{silva2012predicting,\n  title={Predicting in-hospital mortality of ICU patients: The PhysioNet/Computing in Cardiology Challenge 2012},\n  author={Silva, Ikaro and Moody, George B and Scott, Daniel J and Celi, Leo Anthony and Mark, Roger G},\n  booktitle={2012 Computing in Cardiology},\n  pages={245--248},\n  year={2012},\n  organization={IEEE}\n}"
+  },
+  "provenance": {
+    "collection_method": "Extracted from the MIMIC-II clinical database representing adult intensive care unit admissions at Beth Israel Deaconess Medical Center in Boston.",
+    "curation_notes": "De-identified in accordance with HIPAA Privacy Rule standards; irregularly sampled time stamps preserved.",
+    "data_sources": [
+      "MIMIC-II Clinical Database"
+    ]
+  }
+}

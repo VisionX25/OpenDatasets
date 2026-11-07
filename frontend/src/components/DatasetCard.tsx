@@ -7,15 +7,31 @@ import {
   ArrowRight,
   Building2,
   Scale,
+  Check,
+  GitCompareArrows,
+  Bookmark,
 } from 'lucide-react'
 import type { DatasetMetadata } from '../types/dataset'
 
-interface DatasetCardProps {
+export interface DatasetCardProps {
   dataset: DatasetMetadata
   animateOnScroll?: boolean
+  isSelected?: boolean
+  onToggleSelect?: (slug: string) => void
+  isSelectionDisabled?: boolean
+  isBookmarked?: boolean
+  onToggleBookmark?: (slug: string) => void
 }
 
-export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset, animateOnScroll = true }) => {
+export const DatasetCard: React.FC<DatasetCardProps> = ({
+  dataset,
+  animateOnScroll = true,
+  isSelected = false,
+  onToggleSelect,
+  isSelectionDisabled = false,
+  isBookmarked = false,
+  onToggleBookmark,
+}) => {
   // Initialize visibility state: if animateOnScroll is disabled, in non-browser/SSR
   // environments, or if reduced-motion is requested, render immediately visible.
   const [isVisible, setIsVisible] = useState(() => {
@@ -149,15 +165,49 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset, animateOnScro
       onFocusCapture={() => setIsVisible(true)}
       data-testid={`dataset-card-${dataset.id}`}
       data-revealed={isVisible ? 'true' : 'false'}
-      className={`group min-w-0 flex flex-col justify-between p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-indigo-400 dark:hover:border-indigo-600 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100 ${
+      className={`group relative min-w-0 flex flex-col justify-between p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-indigo-400 dark:hover:border-indigo-600 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100 ${
+        isSelected ? 'ring-2 ring-indigo-500/30 border-indigo-500 dark:border-indigo-500' : ''
+      } ${
         isVisible
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-y-2.5'
       }`}
     >
+      {/* Top-Right Fixed Bookmark Action */}
+      {onToggleBookmark && (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            onToggleBookmark(dataset.slug)
+          }}
+          aria-label={
+            isBookmarked
+              ? `Remove ${dataset.name} from bookmarks`
+              : `Bookmark ${dataset.name}`
+          }
+          aria-pressed={isBookmarked}
+          title={isBookmarked ? 'Saved to bookmarks' : 'Save dataset'}
+          className={`absolute top-3 right-3 z-10 flex items-center justify-center w-8 h-8 rounded-lg transition-colors cursor-pointer focus:outline-hidden focus-visible:ring-2 focus-visible:ring-amber-500/70 ${
+            isBookmarked
+              ? 'text-amber-500 dark:text-amber-400 hover:text-amber-600 dark:hover:text-amber-300'
+              : 'text-slate-400 hover:text-amber-500 dark:text-slate-500 dark:hover:text-amber-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50'
+          }`}
+        >
+          <Bookmark
+            className={`w-4 h-4 transition-colors ${
+              isBookmarked
+                ? 'fill-amber-500 text-amber-500 dark:fill-amber-400 dark:text-amber-400'
+                : ''
+            }`}
+          />
+        </button>
+      )}
+
       <div>
         {/* Top Badges */}
-        <div className="flex items-center justify-between gap-2 mb-3 flex-wrap">
+        <div className="flex items-center justify-between gap-2 mb-3 pr-10 flex-wrap">
           <div className="flex items-center gap-1.5 flex-wrap">
             {modalities.map((modality) => (
               <span
@@ -169,7 +219,9 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset, animateOnScro
             ))}
             {renderLicenseBadge(dataset.license)}
           </div>
-          {renderVerificationBadge(verificationStatus)}
+          <div className="flex items-center gap-2">
+            {renderVerificationBadge(verificationStatus)}
+          </div>
         </div>
 
         {/* Dataset Title & Publisher */}
@@ -211,12 +263,52 @@ export const DatasetCard: React.FC<DatasetCardProps> = ({ dataset, animateOnScro
       </div>
 
       {/* Card Action Link */}
-      <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap gap-3 items-center justify-between text-xs">
-        <span className="text-slate-400 font-mono break-all">id: {dataset.id}</span>
+      <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs mt-auto min-h-[42px]">
+        <div>
+          {onToggleSelect && (
+            <button
+              type="button"
+              onClick={() => onToggleSelect(dataset.slug)}
+              disabled={Boolean(isSelectionDisabled && !isSelected)}
+              aria-pressed={isSelected}
+              aria-label={
+                isSelected
+                  ? `Remove ${dataset.name} from comparison`
+                  : `Add ${dataset.name} to comparison`
+              }
+              title={
+                isSelectionDisabled && !isSelected
+                  ? 'Maximum of 3 datasets can be compared'
+                  : isSelected
+                    ? `Remove ${dataset.name} from comparison`
+                    : `Add ${dataset.name} to comparison`
+              }
+              className={`inline-flex items-center gap-1.5 font-semibold text-xs transition-colors rounded-sm focus:outline-hidden focus-visible:ring-2 focus-visible:ring-indigo-500 ${
+                isSelected
+                  ? 'text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 cursor-pointer'
+                  : isSelectionDisabled
+                    ? 'text-slate-400 dark:text-slate-600 cursor-not-allowed opacity-50'
+                    : 'text-slate-500 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400 cursor-pointer'
+              }`}
+            >
+              {isSelected ? (
+                <>
+                  <Check className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
+                  <span>Selected</span>
+                </>
+              ) : (
+                <>
+                  <GitCompareArrows className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" />
+                  <span>Compare</span>
+                </>
+              )}
+            </button>
+          )}
+        </div>
         <Link
           to={`/dataset/${dataset.slug}`}
           aria-label={`View details for ${dataset.name}`}
-          className="inline-flex items-center gap-1 font-semibold text-indigo-600 dark:text-indigo-400 hover:gap-1.5 transition-all"
+          className="inline-flex items-center gap-1 font-semibold text-indigo-600 dark:text-indigo-400 hover:gap-1.5 transition-all ml-auto"
         >
           <span>View Details</span>
           <ArrowRight className="w-3.5 h-3.5" />

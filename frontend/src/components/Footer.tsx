@@ -98,8 +98,29 @@ export const Footer: React.FC = () => {
                   GitHub Repository
                 </a>
               </li>
-              <li className="text-xs text-slate-500">
-                Maintained by <span className="font-medium text-slate-700 dark:text-slate-300">VisionX25</span>
+              <li className="text-xs text-slate-500 space-y-1">
+                <div>
+                  Created by{' '}
+                  <a
+                    href="https://github.com/naimNB"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                  >
+                    Md Naim
+                  </a>
+                </div>
+                <div>
+                  Maintained under{' '}
+                  <a
+                    href="https://github.com/VisionX25"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                  >
+                    VisionX25
+                  </a>
+                </div>
               </li>
             </ul>
           </div>

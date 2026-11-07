@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "anli",
+  "slug": "anli",
+  "name": "Adversarial NLI (ANLI)",
+  "description": "Adversarial Natural Language Inference (ANLI) is a dynamic benchmark of 162,865 sentence pairs created through an iterative, human-and-model-in-the-loop adversarial data collection process across three progressive rounds (R1, R2, R3). Developed by Meta AI and UNC Chapel Hill, ANLI specifically targets linguistic weaknesses, subtle negation, numerical reasoning, and pragmatic implications in state-of-the-art NLU architectures.",
+  "homepage_url": "https://github.com/facebookresearch/anli",
+  "publisher": {
+    "name": "Meta AI",
+    "type": "industry",
+    "url": "https://ai.meta.com/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "natural-language-inference"
+  ],
+  "tags": [
+    "nlp",
+    "nli",
+    "adversarial",
+    "meta-ai",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC-BY-NC-4.0",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under Creative Commons Attribution-NonCommercial 4.0 International."
+  },
+  "source_references": [
+    {
+      "title": "Official ANLI Repository",
+      "url": "https://github.com/facebookresearch/anli",
+      "type": "repository"
+    },
+    {
+      "title": "ANLI ACL 2020 Paper",
+      "url": "https://arxiv.org/abs/1910.14599",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Editorial Review",
+    "verified_date": "2026-11-07",
+    "notes": "Verified against Meta AI research publication and GitHub repository."
+  },
+  "size": {
+    "amount": 28.5,
+    "unit": "MB",
+    "file_formats": [
+      "JSONL"
+    ],
+    "status": "verified"
+  },
+  "sample_count": {
+    "total": 162865,
+    "unit": "pairs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-07-05",
+    "last_updated": "2021-03-24"
+  },
+  "languages": [
+    "en"
+  ],
+  "citation": {
+    "paper_title": "Adversarial NLI: A New Benchmark for Natural Language Understanding",
+    "paper_url": "https://arxiv.org/abs/1910.14599",
+    "authors": [
+      "Yixin Nie",
+      "Adina Williams",
+      "Emily Dinan",
+      "Mohit Bansal",
+      "Jason Weston",
+      "Douwe Kiela"
+    ],
+    "doi": "10.18653/v1/2020.acl-main.441",
+    "bibtex": "@inproceedings{nie2020adversarial,\n  title={Adversarial NLI: A New Benchmark for Natural Language Understanding},\n  author={Nie, Yixin and Williams, Adina and Dinan, Emily and Bansal, Mohit and Weston, Jason and Kiela, Douwe},\n  booktitle={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (ACL)},\n  year={2020}\n}"
+  },
+  "provenance": {
+    "collection_method": "Crowdsourced human-and-model-in-the-loop interface where annotators are challenged to craft premises and hypotheses that fool the strongest serving model.",
+    "curation_notes": "Organized across three rounds (R1: BERT, R2: RoBERTa, R3: Ensemble) with expert adjudication.",
+    "data_sources": [
+      "Wikipedia",
+      "Wikitext",
+      "News Articles"
+    ]
+  }
+}

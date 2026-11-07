@@ -19,6 +19,9 @@ import {
   CATEGORIES,
   CATEGORY_ACCENTS,
   getCategoryAccent,
+  sortDatasets,
+  SORT_OPTIONS,
+  VALID_SORT_OPTIONS,
 } from './datasetFilters'
 
 const mockCifar: DatasetMetadata = {
@@ -533,6 +536,7 @@ describe('Dataset Search and Filtering Logic', () => {
       task: 'speech-recognition',
       license: 'public_domain',
       year: '',
+      sort: 'default',
     })
 
     // URLSearchParams instance input
@@ -959,5 +963,134 @@ describe('Category Selection Visual Refinement (Task 06.2)', () => {
     // Reset via Show All Categories (pass null)
     currentCategory = null
     expect(currentCategory).toBeNull()
+  })
+
+  describe('Dataset Sorting Engine (Task 24)', () => {
+    const dsA: DatasetMetadata = {
+      ...mockCifar,
+      slug: 'alpha-dataset',
+      name: 'Alpha Dataset',
+      dates: { published: '2020-05-01' },
+      sample_count: { total: 5000, status: 'verified' },
+    }
+    const dsB: DatasetMetadata = {
+      ...mockIris,
+      slug: 'beta-dataset',
+      name: 'Beta Dataset',
+      dates: { published: '2023-01-15' },
+      sample_count: { total: 100000, status: 'verified' },
+    }
+    const dsC: DatasetMetadata = {
+      ...mockNlpDataset,
+      slug: 'gamma-dataset',
+      name: 'Gamma Dataset',
+      dates: { published: '2015-10-12' },
+      sample_count: { total: 250, status: 'verified' },
+    }
+    const dsMissing: DatasetMetadata = {
+      ...mockCifar,
+      slug: 'zeta-dataset',
+      name: 'Zeta Dataset',
+      dates: {},
+      sample_count: undefined,
+    }
+
+    const testCatalog = [dsB, dsA, dsC, dsMissing]
+
+    it('exposes all expected sort options', () => {
+      expect(SORT_OPTIONS.map((o) => o.id)).toEqual([
+        'default',
+        'name-asc',
+        'name-desc',
+        'year-desc',
+        'year-asc',
+        'samples-desc',
+        'samples-asc',
+      ])
+      expect(VALID_SORT_OPTIONS.length).toBe(7)
+    })
+
+    it('default sort preserves catalog order and does not mutate array', () => {
+      const copy = [...testCatalog]
+      const sorted = sortDatasets(testCatalog, 'default')
+      expect(sorted.map((d) => d.slug)).toEqual(['beta-dataset', 'alpha-dataset', 'gamma-dataset', 'zeta-dataset'])
+      expect(testCatalog).toEqual(copy)
+    })
+
+    it('name-asc sorts alphabetically from A to Z', () => {
+      const sorted = sortDatasets(testCatalog, 'name-asc')
+      expect(sorted.map((d) => d.name)).toEqual([
+        'Alpha Dataset',
+        'Beta Dataset',
+        'Gamma Dataset',
+        'Zeta Dataset',
+      ])
+    })
+
+    it('name-desc sorts alphabetically from Z to A', () => {
+      const sorted = sortDatasets(testCatalog, 'name-desc')
+      expect(sorted.map((d) => d.name)).toEqual([
+        'Zeta Dataset',
+        'Gamma Dataset',
+        'Beta Dataset',
+        'Alpha Dataset',
+      ])
+    })
+
+    it('year-desc sorts newest first and places missing years last', () => {
+      const sorted = sortDatasets(testCatalog, 'year-desc')
+      expect(sorted.map((d) => d.slug)).toEqual([
+        'beta-dataset', // 2023
+        'alpha-dataset', // 2020
+        'gamma-dataset', // 2015
+        'zeta-dataset', // missing
+      ])
+    })
+
+    it('year-asc sorts oldest first and places missing years last', () => {
+      const sorted = sortDatasets(testCatalog, 'year-asc')
+      expect(sorted.map((d) => d.slug)).toEqual([
+        'gamma-dataset', // 2015
+        'alpha-dataset', // 2020
+        'beta-dataset', // 2023
+        'zeta-dataset', // missing placed last
+      ])
+    })
+
+    it('samples-desc sorts largest sample count first and places missing last', () => {
+      const sorted = sortDatasets(testCatalog, 'samples-desc')
+      expect(sorted.map((d) => d.slug)).toEqual([
+        'beta-dataset', // 100,000
+        'alpha-dataset', // 5,000
+        'gamma-dataset', // 250
+        'zeta-dataset', // missing placed last
+      ])
+    })
+
+    it('samples-asc sorts smallest sample count first and places missing last', () => {
+      const sorted = sortDatasets(testCatalog, 'samples-asc')
+      expect(sorted.map((d) => d.slug)).toEqual([
+        'gamma-dataset', // 250
+        'alpha-dataset', // 5,000
+        'beta-dataset', // 100,000
+        'zeta-dataset', // missing placed last
+      ])
+    })
+
+    it('parses valid sort URL parameter and falls back to default on invalid value', () => {
+      expect(parseFilterParams('sort=year-desc').sort).toBe('year-desc')
+      expect(parseFilterParams('sort=name-asc').sort).toBe('name-asc')
+      expect(parseFilterParams('sort=invalid-sort').sort).toBe('default')
+      expect(parseFilterParams('').sort).toBe('default')
+    })
+
+    it('serializes sort parameter to URL when active and deletes when default', () => {
+      const params1 = serializeFilterParams({ sort: 'samples-desc' })
+      expect(params1.get('sort')).toBe('samples-desc')
+
+      const params2 = serializeFilterParams({ sort: 'default' }, 'sort=samples-desc&q=vision')
+      expect(params2.get('sort')).toBeNull()
+      expect(params2.get('q')).toBe('vision')
+    })
   })
 })

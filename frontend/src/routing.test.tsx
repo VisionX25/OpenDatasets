@@ -3,8 +3,10 @@ import { renderToString } from 'react-dom/server'
 import { MemoryRouter, Routes, Route } from 'react-router-dom'
 import { DatasetCard } from './components/DatasetCard'
 import { DatasetsRouteDispatcher } from './App'
+import { DatasetsPage } from './pages/DatasetsPage'
 import { DatasetDetailPage } from './pages/DatasetDetailPage'
 import { SubmitDatasetPage } from './pages/SubmitDatasetPage'
+import { ComparePage } from './pages/ComparePage'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { HomePage } from './pages/HomePage'
@@ -245,5 +247,53 @@ describe('Task 08.2: Dataset Details Routing and Regression Tests', () => {
     expect(html).toContain('Contribute to OpenDatasets')
     expect(html).toContain('href="/submit"')
     expect(html).toContain('Submit Dataset')
+  })
+
+  // 11. Task 21B: Direct /compare route renders ComparePage
+  it('11. Direct /compare route renders ComparePage properly', () => {
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/compare']}>
+        <Routes>
+          <Route path="/compare" element={<ComparePage />} />
+        </Routes>
+      </MemoryRouter>,
+    )
+    expect(html).toContain('Loading comparison data...')
+
+    const htmlWithCatalog = renderToString(
+      <MemoryRouter initialEntries={['/compare']}>
+        <Routes>
+          <Route path="/compare" element={<ComparePage initialCatalog={[]} />} />
+        </Routes>
+      </MemoryRouter>,
+    )
+    expect(htmlWithCatalog).toContain('Dataset Comparison')
+    expect(htmlWithCatalog).toContain('Compare Datasets')
+    expect(htmlWithCatalog).toContain('Back to Datasets')
+  })
+
+  // 12. Task 21C: Compare action exists on category pages, not All Datasets
+  it('12. Category pages offer Compare action on dataset cards while All Datasets page does not', () => {
+    // All Datasets page
+    const allDatasetsHtml = renderToString(
+      <MemoryRouter initialEntries={['/datasets']}>
+        <Routes>
+          <Route path="/datasets" element={<DatasetsPage initialCatalog={[mockDataset]} />} />
+        </Routes>
+      </MemoryRouter>,
+    )
+    expect(allDatasetsHtml).not.toContain('<span>Compare</span>')
+    expect(allDatasetsHtml).not.toContain('Exit Compare')
+
+    // Category-specific page
+    const categoryHtml = renderToString(
+      <MemoryRouter initialEntries={['/datasets/computer-vision']}>
+        <Routes>
+          <Route path="/datasets/:param" element={<DatasetsRouteDispatcher initialCatalog={[mockDataset]} />} />
+        </Routes>
+      </MemoryRouter>,
+    )
+    expect(categoryHtml).toContain('<span>Compare</span>')
+    expect(categoryHtml).not.toContain('Compare Datasets</button>')
   })
 })

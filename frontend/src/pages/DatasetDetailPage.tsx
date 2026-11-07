@@ -19,21 +19,35 @@ import {
   Info,
   Loader2,
   RotateCcw,
+  Terminal,
+  Download,
 } from 'lucide-react'
 import type { DatasetMetadata } from '../types/dataset'
 import { getDatasetBySlug } from '../services/catalogService'
 import { copyTextToClipboard } from '../utils/clipboard'
+import {
+  formatCitation,
+  downloadCitationFile,
+  type CitationFormat,
+} from '../utils/citationUtils'
 
-export const DatasetDetailPage: React.FC = () => {
+export interface DatasetDetailPageProps {
+  initialDataset?: DatasetMetadata | null
+}
+
+export const DatasetDetailPage: React.FC<DatasetDetailPageProps> = ({ initialDataset }) => {
   const { slug, param } = useParams<{ slug?: string; param?: string }>()
   const effectiveSlug = (slug || param || '').trim()
   const location = useLocation()
   const navigate = useNavigate()
-  const [dataset, setDataset] = useState<DatasetMetadata | null>(null)
-  const [loading, setLoading] = useState(true)
+  const [dataset, setDataset] = useState<DatasetMetadata | null>(() => initialDataset ?? null)
+  const [loading, setLoading] = useState(() => initialDataset === undefined)
   const [error, setError] = useState<string | null>(null)
-  const [copiedBibtex, setCopiedBibtex] = useState(false)
-  const [copyError, setCopyError] = useState(false)
+  const [citationFormat, setCitationFormat] = useState<CitationFormat>('bibtex')
+  const [copiedCitation, setCopiedCitation] = useState(false)
+  const [copyCitationError, setCopyCitationError] = useState(false)
+  const [copiedId, setCopiedId] = useState(false)
+  const [copiedSlug, setCopiedSlug] = useState(false)
 
   useEffect(() => {
     // If accessed via legacy /datasets/:slug, smoothly canonicalize URL to /dataset/:slug
@@ -45,6 +59,9 @@ export const DatasetDetailPage: React.FC = () => {
   }, [location.pathname, location.search, effectiveSlug, navigate])
 
   useEffect(() => {
+    if (initialDataset !== undefined) {
+      return
+    }
     let ignore = false
 
     getDatasetBySlug(effectiveSlug)
@@ -66,7 +83,7 @@ export const DatasetDetailPage: React.FC = () => {
     return () => {
       ignore = true
     }
-  }, [effectiveSlug])
+  }, [effectiveSlug, initialDataset])
 
   const handleRetry = () => {
     if (!effectiveSlug) {
@@ -87,16 +104,39 @@ export const DatasetDetailPage: React.FC = () => {
       })
   }
 
-  const handleCopyBibtex = async (text: string) => {
+  const handleCopyCitation = async (text: string) => {
     const success = await copyTextToClipboard(text)
     if (success) {
-      setCopyError(false)
-      setCopiedBibtex(true)
-      setTimeout(() => setCopiedBibtex(false), 2000)
+      setCopyCitationError(false)
+      setCopiedCitation(true)
+      setTimeout(() => setCopiedCitation(false), 2000)
     } else {
-      setCopiedBibtex(false)
-      setCopyError(true)
-      setTimeout(() => setCopyError(false), 2000)
+      setCopiedCitation(false)
+      setCopyCitationError(true)
+      setTimeout(() => setCopyCitationError(false), 2000)
+    }
+  }
+
+  const handleDownloadCitation = (text: string, format: CitationFormat) => {
+    if (!dataset || !text) return
+    const extension = format === 'bibtex' ? 'bib' : 'txt'
+    const filename = `${dataset.slug}.${extension}`
+    downloadCitationFile(filename, text)
+  }
+
+  const handleCopyId = async (id: string) => {
+    const success = await copyTextToClipboard(id)
+    if (success) {
+      setCopiedId(true)
+      setTimeout(() => setCopiedId(false), 2000)
+    }
+  }
+
+  const handleCopySlug = async (slug: string) => {
+    const success = await copyTextToClipboard(slug)
+    if (success) {
+      setCopiedSlug(true)
+      setTimeout(() => setCopiedSlug(false), 2000)
     }
   }
 
@@ -234,7 +274,6 @@ export const DatasetDetailPage: React.FC = () => {
                   {mod}
                 </span>
               ))}
-              <span className="text-xs font-mono text-slate-400">id: {dataset.id}</span>
             </div>
             {renderVerificationBadge(dataset.verification.status)}
           </div>
@@ -322,34 +361,194 @@ export const DatasetDetailPage: React.FC = () => {
               </div>
             </section>
 
-            {/* Provenance & Collection */}
-            {dataset.provenance && (
-              <section className="bg-white dark:bg-slate-900/60 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
-                <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-3">
-                  Provenance & Curation
-                </h2>
-                {dataset.provenance.collection_method && (
-                  <div className="mb-3">
-                    <span className="text-xs font-semibold text-slate-500 uppercase">
-                      Collection Method
-                    </span>
-                    <p className="text-sm text-slate-700 dark:text-slate-300 mt-0.5">
-                      {dataset.provenance.collection_method}
-                    </p>
+            {/* Research Metadata & Provenance Details (Task 25) */}
+            <details
+              open
+              className="group bg-white dark:bg-slate-900/60 p-6 rounded-xl border border-slate-200 dark:border-slate-800 transition-colors"
+            >
+              <summary className="font-bold text-lg text-slate-900 dark:text-white cursor-pointer select-none flex items-center justify-between list-none">
+                <span className="flex items-center gap-2">
+                  <BookOpen className="w-5 h-5 text-indigo-500" />
+                  <span>Research &amp; Provenance Details</span>
+                </span>
+                <span className="text-xs font-normal text-slate-400 group-open:hidden">Show details</span>
+                <span className="text-xs font-normal text-slate-400 hidden group-open:inline">Hide details</span>
+              </summary>
+
+              <div className="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800/80 space-y-5 text-sm">
+                {/* 1. Intended Use & Scope */}
+                <div>
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                    Intended Use &amp; Domain Scope
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                    <div className="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800">
+                      <span className="text-slate-500 font-medium block mb-1">Supported ML Tasks</span>
+                      <p className="text-slate-800 dark:text-slate-200 font-medium">
+                        {dataset.tasks && dataset.tasks.length > 0 ? (
+                          dataset.tasks.join(', ')
+                        ) : (
+                          <span className="text-slate-400 italic">Not documented</span>
+                        )}
+                      </p>
+                    </div>
+
+                    <div className="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800">
+                      <span className="text-slate-500 font-medium block mb-1">Data Modalities</span>
+                      <p className="text-slate-800 dark:text-slate-200 font-medium capitalize">
+                        {dataset.modalities && dataset.modalities.length > 0 ? (
+                          dataset.modalities.join(', ')
+                        ) : (
+                          <span className="text-slate-400 italic">Not documented</span>
+                        )}
+                      </p>
+                    </div>
+
+                    <div className="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800">
+                      <span className="text-slate-500 font-medium block mb-1">Geographic Coverage</span>
+                      <p className="text-slate-800 dark:text-slate-200">
+                        {dataset.geographic_coverage && dataset.geographic_coverage.length > 0 ? (
+                          dataset.geographic_coverage.join(', ')
+                        ) : (
+                          <span className="text-slate-400 italic">Unspecified by upstream source</span>
+                        )}
+                      </p>
+                    </div>
+
+                    <div className="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800">
+                      <span className="text-slate-500 font-medium block mb-1">Linguistic Representation</span>
+                      <p className="text-slate-800 dark:text-slate-200">
+                        {dataset.languages && dataset.languages.length > 0 ? (
+                          dataset.languages.join(', ')
+                        ) : (
+                          <span className="text-slate-400 italic">Language-independent / Unspecified</span>
+                        )}
+                      </p>
+                    </div>
                   </div>
-                )}
-                {dataset.provenance.curation_notes && (
-                  <div>
-                    <span className="text-xs font-semibold text-slate-500 uppercase">
-                      Curation Notes
-                    </span>
-                    <p className="text-sm text-slate-700 dark:text-slate-300 mt-0.5">
-                      {dataset.provenance.curation_notes}
-                    </p>
+                </div>
+
+                {/* 2. Access Requirements & Restrictions */}
+                <div>
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                    Access Requirements &amp; Known Restrictions
+                  </h3>
+                  <div className="space-y-2 text-xs">
+                    <div className="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800 space-y-2">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                        <span className="text-slate-500 font-medium">Commercial Usability:</span>
+                        <span className="font-semibold">
+                          {dataset.license.commercial_use === 'allowed' ? (
+                            <span className="text-emerald-600 dark:text-emerald-400">
+                              Permitted under declared terms
+                            </span>
+                          ) : dataset.license.commercial_use === 'forbidden' ? (
+                            <span className="text-rose-600 dark:text-rose-400">
+                              Non-commercial research only
+                            </span>
+                          ) : (
+                            <span className="text-slate-400 italic">Unspecified by upstream source</span>
+                          )}
+                        </span>
+                      </div>
+
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                        <span className="text-slate-500 font-medium">Access Authorization:</span>
+                        <span className="text-slate-700 dark:text-slate-300">
+                          {dataset.license.status === 'verified_open' || dataset.license.status === 'public_domain'
+                            ? 'Open Access (no login or API key required)'
+                            : dataset.license.status === 'proprietary'
+                              ? 'Restricted Access (requires approval or registration)'
+                              : 'Standard Public Research Access'}
+                        </span>
+                      </div>
+
+                      {dataset.license.notes && (
+                        <div className="pt-2 border-t border-slate-200/60 dark:border-slate-700/60 text-slate-600 dark:text-slate-300 leading-relaxed">
+                          <span className="font-medium text-slate-700 dark:text-slate-200">Documented Terms: </span>
+                          {dataset.license.notes}
+                        </div>
+                      )}
+                    </div>
                   </div>
-                )}
-              </section>
-            )}
+                </div>
+
+                {/* 3. Provenance & Curation Context */}
+                <div>
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                    Provenance &amp; Methodology
+                  </h3>
+                  <div className="space-y-2 text-xs">
+                    <div className="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800 space-y-2">
+                      <div>
+                        <span className="text-slate-500 font-medium block mb-0.5">Collection Methodology</span>
+                        <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                          {dataset.provenance?.collection_method || (
+                            <span className="text-slate-400 italic">
+                              Upstream source has not published formal data collection protocol details.
+                            </span>
+                          )}
+                        </p>
+                      </div>
+
+                      {dataset.provenance?.curation_notes && (
+                        <div className="pt-2 border-t border-slate-200/60 dark:border-slate-700/60">
+                          <span className="text-slate-500 font-medium block mb-0.5">Curation &amp; Annotation</span>
+                          <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                            {dataset.provenance.curation_notes}
+                          </p>
+                        </div>
+                      )}
+
+                      {dataset.provenance?.data_sources && dataset.provenance.data_sources.length > 0 && (
+                        <div className="pt-2 border-t border-slate-200/60 dark:border-slate-700/60">
+                          <span className="text-slate-500 font-medium block mb-0.5">Underlying Data Sources</span>
+                          <p className="text-slate-700 dark:text-slate-300">
+                            {dataset.provenance.data_sources.join(', ')}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* 4. Versioning & Audit Timeline */}
+                <div>
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                    Version &amp; Audit Timeline
+                  </h3>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+                    <div className="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800">
+                      <span className="text-slate-500 block mb-0.5">Published</span>
+                      <span className="font-semibold text-slate-900 dark:text-white">
+                        {dataset.dates?.published || <span className="text-slate-400 font-normal italic">Unspecified</span>}
+                      </span>
+                    </div>
+
+                    <div className="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800">
+                      <span className="text-slate-500 block mb-0.5">Last Updated</span>
+                      <span className="font-semibold text-slate-900 dark:text-white">
+                        {dataset.dates?.last_updated || <span className="text-slate-400 font-normal italic">Unspecified</span>}
+                      </span>
+                    </div>
+
+                    <div className="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800">
+                      <span className="text-slate-500 block mb-0.5">Audit Status</span>
+                      <span className="font-semibold text-emerald-600 dark:text-emerald-400 capitalize">
+                        {dataset.verification.status}
+                      </span>
+                    </div>
+
+                    <div className="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800">
+                      <span className="text-slate-500 block mb-0.5">Schema Version</span>
+                      <span className="font-semibold text-slate-700 dark:text-slate-300">
+                        v{dataset.schema_version}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </details>
 
             {/* Source References */}
             <section className="bg-white dark:bg-slate-900/60 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
@@ -391,42 +590,177 @@ export const DatasetDetailPage: React.FC = () => {
               </ul>
             </section>
 
-            {/* BibTeX Citation */}
-            {dataset.citation?.bibtex && (
-              <section className="bg-white dark:bg-slate-900/60 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
-                <div className="flex items-center justify-between mb-3">
-                  <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                    <FileText className="w-5 h-5 text-indigo-500" />
-                    <span>Academic Citation</span>
-                  </h2>
+            {/* Academic Citation Multi-Format */}
+            {(() => {
+              const activeCitation = dataset ? formatCitation(dataset, citationFormat) : null
+              return (
+                <section className="bg-white dark:bg-slate-900/60 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+                    <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                      <FileText className="w-5 h-5 text-indigo-500" />
+                      <span>Academic Citation</span>
+                    </h2>
+
+                    {/* Format Selector Tabs */}
+                    <div
+                      role="tablist"
+                      aria-label="Citation format"
+                      className="inline-flex p-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium self-start sm:self-auto"
+                    >
+                      {(['bibtex', 'apa', 'ieee'] as const).map((fmt) => {
+                        const label = fmt === 'bibtex' ? 'BibTeX' : fmt === 'apa' ? 'APA 7th' : 'IEEE'
+                        const isActive = citationFormat === fmt
+                        return (
+                          <button
+                            key={fmt}
+                            role="tab"
+                            aria-selected={isActive}
+                            type="button"
+                            onClick={() => {
+                              setCitationFormat(fmt)
+                              setCopiedCitation(false)
+                            }}
+                            className={`px-3 py-1 rounded-md transition-colors cursor-pointer ${
+                              isActive
+                                ? 'bg-white dark:bg-slate-700 text-indigo-600 dark:text-indigo-400 font-semibold shadow-xs'
+                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                            }`}
+                          >
+                            {label}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  </div>
+
+                  {activeCitation?.warning && (
+                    <div className="mb-4 p-3.5 rounded-lg border border-amber-200 dark:border-amber-900/50 bg-amber-50/60 dark:bg-amber-950/20 text-xs text-amber-800 dark:text-amber-300 flex items-start gap-2.5">
+                      <AlertCircle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                      <p className="leading-relaxed">{activeCitation.warning}</p>
+                    </div>
+                  )}
+
+                  {activeCitation?.citationText && (
+                    <>
+                      {citationFormat === 'bibtex' ? (
+                        <pre className="p-4 rounded-lg bg-slate-950 text-slate-200 font-mono text-xs overflow-x-auto leading-relaxed border border-slate-800">
+                          {activeCitation.citationText}
+                        </pre>
+                      ) : (
+                        <div className="p-4 rounded-lg bg-slate-50 dark:bg-slate-950/80 text-slate-800 dark:text-slate-200 font-serif text-xs sm:text-sm leading-relaxed border border-slate-200 dark:border-slate-800 select-all">
+                          {activeCitation.citationText}
+                        </div>
+                      )}
+
+                      <div className="mt-4 flex flex-wrap items-center justify-end gap-2.5">
+                        <button
+                          type="button"
+                          onClick={() => handleCopyCitation(activeCitation.citationText || '')}
+                          aria-label={`Copy ${citationFormat.toUpperCase()} citation`}
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors cursor-pointer"
+                        >
+                          {copiedCitation ? (
+                            <>
+                              <Check className="w-3.5 h-3.5 text-emerald-500" />
+                              <span>Copied!</span>
+                            </>
+                          ) : copyCitationError ? (
+                            <>
+                              <AlertCircle className="w-3.5 h-3.5 text-rose-500" />
+                              <span>Copy Failed</span>
+                            </>
+                          ) : (
+                            <>
+                              <Copy className="w-3.5 h-3.5 text-slate-500" />
+                              <span>Copy Citation</span>
+                            </>
+                          )}
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={() =>
+                            handleDownloadCitation(activeCitation.citationText || '', citationFormat)
+                          }
+                          aria-label={`Download ${citationFormat.toUpperCase()} citation file`}
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 transition-colors cursor-pointer"
+                        >
+                          <Download className="w-3.5 h-3.5 text-slate-500" />
+                          <span>{`Download (.${citationFormat === 'bibtex' ? 'bib' : 'txt'})`}</span>
+                        </button>
+                      </div>
+                    </>
+                  )}
+                </section>
+              )
+            })()}
+
+            {/* Collapsible Technical Metadata */}
+            <details className="group bg-white dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-800 p-4 text-xs transition-colors">
+              <summary className="font-semibold text-slate-700 dark:text-slate-300 cursor-pointer select-none flex items-center justify-between list-none">
+                <span className="flex items-center gap-2">
+                  <Terminal className="w-4 h-4 text-slate-400" />
+                  <span>Technical Metadata</span>
+                </span>
+                <span className="text-2xs text-slate-400 group-open:hidden">Show details</span>
+                <span className="text-2xs text-slate-400 hidden group-open:inline">Hide details</span>
+              </summary>
+              <div className="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800/80 space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-slate-500 font-medium">Dataset ID:</span>
+                    <code className="font-mono text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">
+                      {dataset.id}
+                    </code>
+                  </div>
                   <button
                     type="button"
-                    onClick={() => handleCopyBibtex(dataset.citation?.bibtex || '')}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-semibold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors"
+                    onClick={() => handleCopyId(dataset.id)}
+                    aria-label="Copy dataset ID"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer self-start sm:self-auto"
                   >
-                    {copiedBibtex ? (
+                    {copiedId ? (
                       <>
                         <Check className="w-3.5 h-3.5 text-emerald-500" />
-                        <span>Copied!</span>
-                      </>
-                    ) : copyError ? (
-                      <>
-                        <AlertCircle className="w-3.5 h-3.5 text-rose-500" />
-                        <span>Copy Failed</span>
+                        <span className="text-emerald-600 dark:text-emerald-400 font-medium">Copied ID!</span>
                       </>
                     ) : (
                       <>
-                        <Copy className="w-3.5 h-3.5" />
-                        <span>Copy BibTeX</span>
+                        <Copy className="w-3.5 h-3.5 text-slate-400" />
+                        <span>Copy ID</span>
                       </>
                     )}
                   </button>
                 </div>
-                <pre className="p-4 rounded-lg bg-slate-950 text-slate-200 font-mono text-xs overflow-x-auto leading-relaxed border border-slate-800">
-                  {dataset.citation.bibtex}
-                </pre>
-              </section>
-            )}
+
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-slate-500 font-medium">URL Slug:</span>
+                    <code className="font-mono text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">
+                      {dataset.slug}
+                    </code>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleCopySlug(dataset.slug)}
+                    aria-label="Copy URL slug"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer self-start sm:self-auto"
+                  >
+                    {copiedSlug ? (
+                      <>
+                        <Check className="w-3.5 h-3.5 text-emerald-500" />
+                        <span className="text-emerald-600 dark:text-emerald-400 font-medium">Copied Slug!</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-3.5 h-3.5 text-slate-400" />
+                        <span>Copy Slug</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
+            </details>
           </div>
 
           {/* Right Column: Key Specifications & Legal Metadata */}

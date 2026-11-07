@@ -192,4 +192,225 @@ describe('Task 06.3.1: Category Hover Colors & Dataset Reveal Animations', () =>
     )
     expect(missingSlugHtml).toBe('')
   })
+
+  // 8. Task 21C: DatasetCard compare action button (no checkboxes)
+  it('8. renders accessible comparison button and responds to selection state', () => {
+    // When onToggleSelect is provided
+    const htmlUnselected = renderToString(
+      <MemoryRouter>
+        <DatasetCard
+          dataset={mockDataset}
+          isSelected={false}
+          onToggleSelect={() => {}}
+        />
+      </MemoryRouter>,
+    )
+    expect(htmlUnselected).toContain('aria-label="Add CIFAR-10 to comparison"')
+    expect(htmlUnselected).toContain('Compare</span>')
+    expect(htmlUnselected).not.toContain('type="checkbox"')
+    expect(htmlUnselected).toContain('aria-pressed="false"')
+
+    // When isSelected is true
+    const htmlSelected = renderToString(
+      <MemoryRouter>
+        <DatasetCard
+          dataset={mockDataset}
+          isSelected={true}
+          onToggleSelect={() => {}}
+        />
+      </MemoryRouter>,
+    )
+    expect(htmlSelected).toContain('aria-label="Remove CIFAR-10 from comparison"')
+    expect(htmlSelected).toContain('aria-pressed="true"')
+    expect(htmlSelected).toContain('Selected</span>')
+    expect(htmlSelected).toContain('ring-2 ring-indigo-500/30')
+    expect(htmlSelected).not.toContain('type="checkbox"')
+
+    // When selection is disabled because max compare count reached
+    const htmlDisabled = renderToString(
+      <MemoryRouter>
+        <DatasetCard
+          dataset={mockDataset}
+          isSelected={false}
+          isSelectionDisabled={true}
+          onToggleSelect={() => {}}
+        />
+      </MemoryRouter>,
+    )
+    expect(htmlDisabled).toContain('disabled=""')
+    expect(htmlDisabled).toContain('Maximum of 3 datasets can be compared')
+  })
+
+  // 9. Task 21C: Dataset ID removed and Compare hidden when inactive
+  it('9. does not render technical dataset id and hides comparison control when inactive', () => {
+    const html = renderToString(
+      <MemoryRouter>
+        <DatasetCard dataset={mockDataset} />
+      </MemoryRouter>,
+    )
+    // Dataset ID must not be visible on the card
+    expect(html).not.toContain('id: cifar-10')
+    expect(html).not.toContain('id: ')
+
+    // Compare button must not be rendered when onToggleSelect is omitted
+    expect(html).not.toContain('Add CIFAR-10 to comparison')
+    expect(html).not.toContain('Compare</span>')
+    expect(html).not.toContain('type="checkbox"')
+
+    // View Details link remains present
+    expect(html).toContain('View Details')
+  })
+
+  // 10. Bookmark button accessibility and visual states
+  it('10. renders bookmark button with appropriate outline/fill styling and accessible labels', () => {
+    // Unbookmarked state
+    const htmlUnbookmarked = renderToString(
+      <MemoryRouter>
+        <DatasetCard dataset={mockDataset} isBookmarked={false} onToggleBookmark={() => {}} />
+      </MemoryRouter>,
+    )
+    expect(htmlUnbookmarked).toContain('aria-label="Bookmark CIFAR-10"')
+    expect(htmlUnbookmarked).toContain('aria-pressed="false"')
+    expect(htmlUnbookmarked).toContain('title="Save dataset"')
+    expect(htmlUnbookmarked).not.toContain('fill-amber-500')
+
+    // Bookmarked state
+    const htmlBookmarked = renderToString(
+      <MemoryRouter>
+        <DatasetCard dataset={mockDataset} isBookmarked={true} onToggleBookmark={() => {}} />
+      </MemoryRouter>,
+    )
+    expect(htmlBookmarked).toContain('aria-label="Remove CIFAR-10 from bookmarks"')
+    expect(htmlBookmarked).toContain('aria-pressed="true"')
+    expect(htmlBookmarked).toContain('title="Saved to bookmarks"')
+    expect(htmlBookmarked).toContain('fill-amber-500')
+    expect(htmlBookmarked).toContain('text-amber-500')
+  })
+
+  // 11. Compare button displays GitCompareArrows when unselected and Check when selected
+  it('11. renders GitCompareArrows icon when unselected and Check icon when selected', () => {
+    const htmlUnselected = renderToString(
+      <MemoryRouter>
+        <DatasetCard dataset={mockDataset} isSelected={false} onToggleSelect={() => {}} />
+      </MemoryRouter>,
+    )
+    expect(htmlUnselected).toContain('lucide-git-compare-arrows')
+    expect(htmlUnselected).not.toContain('lucide-check')
+
+    const htmlSelected = renderToString(
+      <MemoryRouter>
+        <DatasetCard dataset={mockDataset} isSelected={true} onToggleSelect={() => {}} />
+      </MemoryRouter>,
+    )
+    expect(htmlSelected).toContain('lucide-check')
+    expect(htmlSelected).not.toContain('lucide-git-compare-arrows')
+  })
+
+  // 12. Task 21E: Fixed bookmark position and visual hierarchy under extreme content conditions
+  it('12. maintains fixed top-right bookmark positioning and content spacing for long titles, descriptions, and multiple badges', () => {
+    const complexDataset: DatasetMetadata = {
+      ...mockDataset,
+      name: 'Extremely Long Dataset Title For Benchmarking Complex Multi-Modal Reasoning Across Multiple Modalities and Tasks Under Distribution Shift',
+      description:
+        'This is an exceptionally long dataset description designed to simulate datasets with verbose documentation, extensive corpus explanations, benchmark evaluation splits, detailed annotation methodologies, preprocessing pipelines, and licensing caveats across hundreds of words to verify line-clamping and vertical layout stability.',
+      modalities: ['vision', 'nlp', 'audio', 'multimodal'],
+      tasks: ['image-classification', 'question-answering', 'speech-recognition', 'object-detection'],
+      tags: ['benchmark', 'computer-vision', 'nlp', 'multimodal', 'speech'],
+    }
+
+    const html = renderToString(
+      <MemoryRouter>
+        <DatasetCard
+          dataset={complexDataset}
+          isBookmarked={true}
+          onToggleBookmark={() => {}}
+          isSelected={true}
+          onToggleSelect={() => {}}
+        />
+      </MemoryRouter>,
+    )
+
+    // Card has relative container and fixed corner bookmark button
+    expect(html).toContain('group relative')
+    expect(html).toContain('absolute top-3 right-3')
+    expect(html).toContain('w-8 h-8 rounded-lg')
+
+    // Top badges container reserves right-side padding to prevent overlap with bookmark button
+    expect(html).toContain('pr-10')
+
+    // Long description retains line-clamp
+    expect(html).toContain('line-clamp-3')
+
+    // Footer maintains subtle selected compare state and view details link
+    expect(html).toContain('Selected</span>')
+    expect(html).toContain('View Details</span>')
+    expect(html).toContain('mt-auto min-h-[42px]')
+  })
+
+  // 13. Task 21F: Minimal, non-boxy action styling for Bookmark and Compare
+  it('13. renders Bookmark and Compare actions without visible rectangular boxes, borders, or filled button containers', () => {
+    const htmlUnselected = renderToString(
+      <MemoryRouter>
+        <DatasetCard
+          dataset={mockDataset}
+          isBookmarked={false}
+          onToggleBookmark={() => {}}
+          isSelected={false}
+          onToggleSelect={() => {}}
+        />
+      </MemoryRouter>,
+    )
+
+    // Bookmark button: icon-only, no visible box/border classes
+    const bookmarkStart = htmlUnselected.indexOf('aria-label="Bookmark CIFAR-10"')
+    const bookmarkEnd = htmlUnselected.indexOf('</button>', bookmarkStart)
+    const bookmarkHtml = htmlUnselected.slice(bookmarkStart, bookmarkEnd)
+    expect(bookmarkHtml).not.toContain('border')
+    expect(bookmarkHtml).not.toContain('bg-white')
+    expect(bookmarkHtml).not.toContain('bg-amber')
+
+    // Compare action: matching typography and sizing of View Details without rectangular border/background
+    const compareStart = htmlUnselected.indexOf('aria-label="Add CIFAR-10 to comparison"')
+    const compareEnd = htmlUnselected.indexOf('</button>', compareStart)
+    const compareHtml = htmlUnselected.slice(compareStart, compareEnd)
+    expect(compareHtml).toContain('font-semibold text-xs')
+    expect(compareHtml).not.toContain('border')
+    expect(compareHtml).not.toContain('bg-indigo')
+    expect(compareHtml).not.toContain('bg-slate')
+    expect(compareHtml).toContain('Compare</span>')
+
+    const htmlSelected = renderToString(
+      <MemoryRouter>
+        <DatasetCard
+          dataset={mockDataset}
+          isBookmarked={true}
+          onToggleBookmark={() => {}}
+          isSelected={true}
+          onToggleSelect={() => {}}
+        />
+      </MemoryRouter>,
+    )
+
+    // Selected compare action: clean text + icon, no filled button container
+    const selectedCompareStart = htmlSelected.indexOf('aria-label="Remove CIFAR-10 from comparison"')
+    const selectedCompareEnd = htmlSelected.indexOf('</button>', selectedCompareStart)
+    const selectedCompareHtml = htmlSelected.slice(selectedCompareStart, selectedCompareEnd)
+    expect(selectedCompareHtml).toContain('Selected</span>')
+    expect(selectedCompareHtml).not.toContain('border')
+    expect(selectedCompareHtml).not.toContain('bg-indigo')
+
+    // Disabled state
+    const htmlDisabled = renderToString(
+      <MemoryRouter>
+        <DatasetCard
+          dataset={mockDataset}
+          isSelected={false}
+          isSelectionDisabled={true}
+          onToggleSelect={() => {}}
+        />
+      </MemoryRouter>,
+    )
+    expect(htmlDisabled).toContain('cursor-not-allowed')
+    expect(htmlDisabled).toContain('opacity-50')
+  })
 })

@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "hellaswag",
+  "slug": "hellaswag",
+  "name": "HellaSwag: Hard Commonsense NLU Benchmark",
+  "description": "HellaSwag is a challenging commonsense reasoning and natural language inference benchmark consisting of 70,057 multi-choice sentence completion problems. Constructed using Adversarial Filtering (AF), where a series of discriminatory models iteratively filter out trivial distractors, HellaSwag targets machine commonsense reasoning that is straightforward for humans (>95% accuracy) but persistently difficult for state-of-the-art language models.",
+  "homepage_url": "https://rowanzellers.com/hellaswag/",
+  "publisher": {
+    "name": "University of Washington & Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "commonsense-reasoning",
+    "multiple-choice-qa",
+    "natural-language-inference"
+  ],
+  "tags": [
+    "nlp",
+    "benchmark",
+    "commonsense",
+    "evaluation",
+    "adversarial-filtering"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Dataset code and benchmark instances are released under the MIT License."
+  },
+  "source_references": [
+    {
+      "title": "Official HellaSwag Project Page",
+      "url": "https://rowanzellers.com/hellaswag/",
+      "type": "official_website"
+    },
+    {
+      "title": "HellaSwag ACL 2019 Paper",
+      "url": "https://arxiv.org/abs/1905.07830",
+      "type": "original_paper"
+    },
+    {
+      "title": "HellaSwag GitHub Repository",
+      "url": "https://github.com/rowanz/hellaswag",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Editorial Review",
+    "verified_date": "2026-11-07",
+    "notes": "Verified against official ACL 2019 paper and Rowan Zellers GitHub repository."
+  },
+  "size": {
+    "amount": 68.0,
+    "unit": "MB",
+    "file_formats": [
+      "JSONL"
+    ],
+    "status": "verified"
+  },
+  "sample_count": {
+    "total": 70057,
+    "splits": {
+      "train": 39905,
+      "validation": 10042,
+      "test": 20110
+    },
+    "unit": "problems",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-05-19",
+    "last_updated": "2019-07-28"
+  },
+  "languages": [
+    "en"
+  ],
+  "citation": {
+    "paper_title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+    "paper_url": "https://arxiv.org/abs/1905.07830",
+    "authors": [
+      "Rowan Zellers",
+      "Ari Holtzman",
+      "Yonatan Bisk",
+      "Ali Farhadi",
+      "Yejin Choi"
+    ],
+    "doi": "10.18653/v1/P19-1472",
+    "bibtex": "@inproceedings{zellers2019hellaswag,\n  title={HellaSwag: Can a Machine Really Finish Your Sentence?},\n  author={Zellers, Rowan and Holtzman, Ari and Bisk, Yonatan and Farhadi, Ali and Choi, Yejin},\n  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics (ACL)},\n  year={2019}\n}"
+  },
+  "provenance": {
+    "collection_method": "Video captions from ActivityNet and how-to guides from WikiHow were parsed into contexts; candidate completions were generated via generative language models and pruned via adversarial filtering.",
+    "curation_notes": "Adversarial Filtering pruned distractors until only human-intuitive yet model-fooling completions remained.",
+    "data_sources": [
+      "ActivityNet Captions",
+      "WikiHow"
+    ]
+  }
+}

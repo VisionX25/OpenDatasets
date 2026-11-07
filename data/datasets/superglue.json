@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "superglue",
+  "slug": "superglue",
+  "name": "SuperGLUE Benchmark",
+  "description": "SuperGLUE is an advanced multi-task benchmark designed to test general-purpose language understanding across demanding linguistic tasks including multi-sentence reasoning (MultiRC), causal reasoning (COPA), reading comprehension with commonsense (ReCoRD), and word sense disambiguation (WiC). SuperGLUE features a public leaderboard and human performance baselines to measure progress beyond the original GLUE benchmark.",
+  "homepage_url": "https://super.gluebenchmark.com/",
+  "publisher": {
+    "name": "New York University & DeepMind",
+    "type": "academic",
+    "url": "https://super.gluebenchmark.com/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "natural-language-inference",
+    "reading-comprehension",
+    "question-answering"
+  ],
+  "tags": [
+    "nlp",
+    "benchmark",
+    "superglue",
+    "evaluation",
+    "nlu"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "SuperGLUE Research License Terms",
+    "url": "https://super.gluebenchmark.com/terms",
+    "commercial_use": "unknown",
+    "notes": "SuperGLUE benchmark tasks inherit licenses from underlying constituent corpora, freely accessible for research."
+  },
+  "source_references": [
+    {
+      "title": "Official SuperGLUE Leaderboard",
+      "url": "https://super.gluebenchmark.com/",
+      "type": "official_website"
+    },
+    {
+      "title": "SuperGLUE NeurIPS 2019 Paper",
+      "url": "https://arxiv.org/abs/1905.00537",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Editorial Review",
+    "verified_date": "2026-11-07",
+    "notes": "Verified against SuperGLUE official portal and NeurIPS 2019 paper."
+  },
+  "size": {
+    "amount": 125.0,
+    "unit": "MB",
+    "file_formats": [
+      "JSONL",
+      "ZIP"
+    ],
+    "status": "verified"
+  },
+  "sample_count": {
+    "total": 172900,
+    "unit": "examples",
+    "status": "estimated"
+  },
+  "dates": {
+    "published": "2019-05-02",
+    "last_updated": "2020-04-18"
+  },
+  "languages": [
+    "en"
+  ],
+  "citation": {
+    "paper_title": "SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems",
+    "paper_url": "https://arxiv.org/abs/1905.00537",
+    "authors": [
+      "Alex Wang",
+      "Yada Pruksachatkun",
+      "Nikita Nangia",
+      "Amanpreet Singh",
+      "Julian Michael",
+      "Felix Hill",
+      "Omer Levy",
+      "Samuel R. Bowman"
+    ],
+    "bibtex": "@inproceedings{wang2019superglue,\n  title={SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems},\n  author={Wang, Alex and Pruksachatkun, Yada and Nangia, Nikita and Singh, Amanpreet and Michael, Julian and Hill, Felix and Levy, Omer and Bowman, Samuel R},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  year={2019}\n}"
+  },
+  "provenance": {
+    "collection_method": "Curated collection of 8 distinct NLP tasks (BoolQ, CB, COPA, MultiRC, ReCoRD, RTE, WiC, WSC) formatted into a unified API and submission evaluation pipeline.",
+    "curation_notes": "Each constituent dataset was selected for high human performance paired with persistent difficulty for pre-trained language models.",
+    "data_sources": [
+      "Constituent corpus providers"
+    ]
+  }
+}

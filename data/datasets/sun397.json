@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sun397",
+  "slug": "sun397",
+  "name": "SUN397: Scene Categorization Benchmark",
+  "description": "The Scene UNderstanding (SUN) 397 benchmark is a comprehensive scene categorization dataset comprising 108,754 images spanning 397 well-defined scene categories, with at least 100 images per category. Developed at Princeton University, it serves as a foundational benchmark for scene recognition, indoor vs. outdoor classification, and visual context modeling.",
+  "homepage_url": "https://vision.princeton.edu/projects/2010/SUN/",
+  "publisher": {
+    "name": "Princeton Vision & Robotics Group",
+    "type": "academic",
+    "url": "https://vision.princeton.edu/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "scene-recognition"
+  ],
+  "tags": [
+    "computer-vision",
+    "scene-classification",
+    "benchmark",
+    "princeton"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Princeton Research License",
+    "url": "https://vision.princeton.edu/projects/2010/SUN/",
+    "commercial_use": "unknown",
+    "notes": "Freely available for academic and educational research use."
+  },
+  "source_references": [
+    {
+      "title": "Official SUN Project Page",
+      "url": "https://vision.princeton.edu/projects/2010/SUN/",
+      "type": "official_website"
+    },
+    {
+      "title": "SUN Database Paper (CVPR 2010)",
+      "url": "https://doi.org/10.1109/CVPR.2010.5539970",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Editorial Review",
+    "verified_date": "2026-11-07",
+    "notes": "Verified against Princeton University official project documentation."
+  },
+  "size": {
+    "amount": 37.0,
+    "unit": "GB",
+    "file_formats": [
+      "JPG",
+      "TAR"
+    ],
+    "status": "verified"
+  },
+  "sample_count": {
+    "total": 108754,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2010-06-13",
+    "last_updated": "2010-06-13"
+  },
+  "citation": {
+    "paper_title": "SUN Database: Large-scale Scene Recognition from Abbey to Zoo",
+    "paper_url": "https://doi.org/10.1109/CVPR.2010.5539970",
+    "authors": [
+      "Jianxiong Xiao",
+      "James Hays",
+      "Krista A. Ehinger",
+      "Aude Oliva",
+      "Antonio Torralba"
+    ],
+    "doi": "10.1109/CVPR.2010.5539970",
+    "bibtex": "@inproceedings{xiao2010sun,\n  title={SUN database: Large-scale scene recognition from abbey to zoo},\n  author={Xiao, Jianxiong and Hays, James and Ehinger, Krista A and Oliva, Aude and Torralba, Antonio},\n  booktitle={2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition},\n  pages={3485--3492},\n  year={2010},\n  organization={IEEE}\n}"
+  },
+  "provenance": {
+    "collection_method": "Curated from online image search engines across 397 WordNet scene categories, manually verified by Amazon Mechanical Turk workers.",
+    "curation_notes": "Each category contains at least 100 images; two-stage human verification ensured quality and label agreement.",
+    "data_sources": [
+      "Flickr",
+      "Google Images",
+      "Bing"
+    ]
+  }
+}

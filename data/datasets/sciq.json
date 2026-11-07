@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sciq",
+  "slug": "sciq",
+  "name": "SciQ: Science Exam Question Answering Dataset",
+  "description": "SciQ is a dataset of 13,679 multiple-choice science exam questions covering physics, chemistry, biology, earth science, and environmental science. Each question contains four multiple-choice options with a verified correct answer, accompanied by an explanatory paragraph supporting the scientific rationale. Created by the Allen Institute for AI in 2017, SciQ tests reading comprehension and science QA.",
+  "homepage_url": "https://allenai.org/data/sciq",
+  "publisher": {
+    "name": "Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "multiple-choice-qa"
+  ],
+  "tags": [
+    "nlp",
+    "science",
+    "question-answering",
+    "allenai",
+    "education"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "CC-BY-NC-3.0",
+    "spdx_id": "CC-BY-NC-3.0",
+    "url": "https://creativecommons.org/licenses/by-nc/3.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under Creative Commons Attribution-NonCommercial 3.0 Unported."
+  },
+  "source_references": [
+    {
+      "title": "Official AllenAI SciQ Page",
+      "url": "https://allenai.org/data/sciq",
+      "type": "official_website"
+    },
+    {
+      "title": "SciQ Original Paper (Welbl et al., 2017)",
+      "url": "https://aclanthology.org/K17-1025/",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Editorial Review",
+    "verified_date": "2026-11-07",
+    "notes": "Verified against Allen Institute for AI and ACL Anthology record."
+  },
+  "size": {
+    "amount": 18.0,
+    "unit": "MB",
+    "file_formats": [
+      "JSON"
+    ],
+    "status": "verified"
+  },
+  "sample_count": {
+    "total": 13679,
+    "splits": {
+      "train": 11679,
+      "validation": 1000,
+      "test": 1000
+    },
+    "unit": "questions",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2017-08-01",
+    "last_updated": "2017-08-01"
+  },
+  "languages": [
+    "en"
+  ],
+  "citation": {
+    "paper_title": "Crowdsourcing Multiple Choice Science Questions",
+    "paper_url": "https://aclanthology.org/K17-1025/",
+    "authors": [
+      "Johannes Welbl",
+      "Nelson F. Liu",
+      "Matt Gardner"
+    ],
+    "doi": "10.18653/v1/K17-1025",
+    "bibtex": "@inproceedings{welbl2017crowdsourcing,\n  title={Crowdsourcing Multiple Choice Science Questions},\n  author={Welbl, Johannes and Liu, Nelson F. and Gardner, Matt},\n  booktitle={Proceedings of the 21st Conference on Computational Natural Language Learning (CoNLL 2017)},\n  pages={94--106},\n  year={2017}\n}"
+  },
+  "provenance": {
+    "collection_method": "Crowdsourced via Amazon Mechanical Turk from open-access scientific textbooks, with workers generating questions, correct answers, and distractors.",
+    "curation_notes": "Strict multi-stage validation ensured that questions are unambiguously answerable from the provided background passages.",
+    "data_sources": [
+      "OpenStax Open Access Textbooks",
+      "CK-12 Science Texts"
+    ]
+  }
+}
