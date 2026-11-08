@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pastis",
+  "slug": "pastis",
+  "name": "PASTIS: Agricultural Parcel Panoptic Segmentation Benchmark",
+  "description": "PASTIS (Panoptic Agricultural Satellite Time Series) is a remote sensing benchmark dataset curated by the LASTIG laboratory at IGN (Institut National de l'Information Géographique et Forestière), France, published at ICCV 2021. The benchmark consists of 2,433 multi-spectral satellite image time-series patches (each 128x128 pixels at 10m/pixel spatial resolution with up to 70 observation dates) acquired by Sentinel-2 across four diverse agro-ecological regions in France. The dataset encompasses 124,422 individual agricultural parcel instances annotated with exact parcel instance IDs and 18 crop type semantic classes, establishing a standard benchmark for satellite panoptic segmentation and temporal attention networks.",
+  "homepage_url": "https://github.com/VSainteuf/pastis-benchmark",
+  "publisher": {
+    "name": "IGN LASTIG Laboratory",
+    "type": "academic",
+    "url": "https://github.com/VSainteuf"
+  },
+  "modalities": [
+    "time-series",
+    "vision"
+  ],
+  "tasks": [
+    "panoptic-segmentation",
+    "crop-type-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "sentinel-2",
+    "satellite-imagery",
+    "panoptic-segmentation",
+    "earth-observation",
+    "remote-sensing",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "PASTIS Benchmark GitHub Repository",
+      "url": "https://github.com/VSainteuf/pastis-benchmark",
+      "type": "repository"
+    },
+    {
+      "title": "ICCV 2021 Publication (DOI: 10.1109/ICCV48922.2021.00483)",
+      "url": "https://doi.org/10.1109/ICCV48922.2021.00483",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against GitHub repository and Sainte Fare Garnot & Landrieu (ICCV 2021)."
+  },
+  "sample_count": {
+    "total": 2433,
+    "unit": "patches",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021"
+  },
+  "citation": {
+    "paper_title": "Panoptic Segmentation of Satellite Image Time Series with Convolutional Temporal Attention Networks",
+    "paper_url": "https://doi.org/10.1109/ICCV48922.2021.00483",
+    "authors": [
+      "Vivien Sainte Fare Garnot",
+      "Loic Landrieu"
+    ],
+    "doi": "10.1109/ICCV48922.2021.00483",
+    "bibtex": "@inproceedings{garnot2021panoptic,\n  title={Panoptic Segmentation of Satellite Image Time Series with Convolutional Temporal Attention Networks},\n  author={Garnot, Vivien Sainte Fare and Landrieu, Loic},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n  pages={4872--4881},\n  year={2021},\n  doi={10.1109/ICCV48922.2021.00483}\n}"
+  }
+}

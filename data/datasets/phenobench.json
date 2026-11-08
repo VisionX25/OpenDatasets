@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "phenobench",
+  "slug": "phenobench",
+  "name": "PhenoBench: Plant Phenotyping and Panoptic Segmentation Benchmark",
+  "description": "PhenoBench is a high-resolution agricultural computer vision benchmark curated by the University of Bonn, the PhenoRob Cluster of Excellence, and IPB Bonn, published at CVPR 2023. The dataset comprises 2,937 high-resolution imagery samples collected over three cultivation seasons in German sugar beet fields using UAVs and ground cameras under varying natural illumination, crop growth stages, and weed infestations. PhenoBench provides hierarchical pixel-wise annotations across multiple precision agriculture tasks: plant-level semantic segmentation (soil, crop, weed), plant instance segmentation, leaf instance segmentation, and leaf counting. Users should note that while PhenoBench focuses on sugar beet fields from the University of Bonn, it is a dedicated panoptic phenotyping benchmark distinct from earlier robotic collections (Sugar Beets 2016, SB20).",
+  "homepage_url": "https://www.phenobench.org/dataset.html",
+  "publisher": {
+    "name": "University of Bonn & PhenoRob Cluster of Excellence",
+    "type": "academic",
+    "url": "https://www.phenobench.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "instance-segmentation",
+    "semantic-segmentation",
+    "plant-phenotyping",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "precision-farming",
+    "sugar-beet",
+    "weed-detection",
+    "panoptic-segmentation",
+    "phenotyping",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). Permitted for non-commercial academic research."
+  },
+  "source_references": [
+    {
+      "title": "PhenoBench Official Portal",
+      "url": "https://www.phenobench.org/dataset.html",
+      "type": "official_website"
+    },
+    {
+      "title": "CVPR 2023 Publication: PhenoBench (arXiv:2306.03507)",
+      "url": "https://doi.org/10.48550/arXiv.2306.03507",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhenoBench official portal and Weyler et al. (CVPR 2023 / arXiv:2306.03507)."
+  },
+  "sample_count": {
+    "total": 2937,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023"
+  },
+  "citation": {
+    "paper_title": "PhenoBench — A Large Dataset and Benchmarks for Semantic Image Interpretation in the Field",
+    "paper_url": "https://doi.org/10.48550/arXiv.2306.03507",
+    "authors": [
+      "Jan Weyler",
+      "Federico Magistri",
+      "Elias Marks",
+      "Yong Liu",
+      "Cyrill Stachniss"
+    ],
+    "doi": "10.48550/arXiv.2306.03507",
+    "bibtex": "@inproceedings{weyler2023phenobench,\n  title={PhenoBench -- A Large Dataset and Benchmarks for Semantic Image Interpretation in the Field},\n  author={Weyler, Jan and Magistri, Federico and Marks, Elias and Liu, Yong and Stachniss, Cyrill},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={17156--17165},\n  year={2023}\n}"
+  }
+}

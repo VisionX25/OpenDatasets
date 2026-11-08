@@ -816,6 +816,80 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "agrifieldnet",
+    "slug": "agrifieldnet",
+    "name": "AgriFieldNet: Indian Smallholder Crop Type Benchmark",
+    "description": "AgriFieldNet is an open-access crop type classification benchmark curated by Radiant Earth Foundation and funded by IDRC and IDinsight. The dataset focuses on smallholder agricultural landscapes in Northern India across the states of Bihar, Uttar Pradesh, and Rajasthan. It features ground-truth crop classifications collected via field surveys from over 7,041 agricultural parcels paired with high-resolution Sentinel-2 multi-spectral satellite imagery time series across 1,220 distinct spatial tiles. The collection captures complex smallholder farming dynamics including multi-cropping, irregular field boundaries, and diverse crop types (wheat, mustard, rice, maize, lentils, and sugarcane).",
+    "homepage_url": "https://source.coop/radiantearth/agrifieldnet-competition",
+    "publisher": {
+      "name": "Radiant Earth Foundation",
+      "type": "community",
+      "url": "https://radiant.earth"
+    },
+    "modalities": [
+      "vision",
+      "tabular"
+    ],
+    "tasks": [
+      "crop-type-classification",
+      "agricultural-monitoring",
+      "satellite-imagery-analysis"
+    ],
+    "tags": [
+      "agriculture",
+      "smallholder-farming",
+      "india",
+      "sentinel-2",
+      "crop-classification",
+      "radiant-earth",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published on Source Cooperative / Radiant MLHub under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "AgriFieldNet Source Cooperative Repository",
+        "url": "https://source.coop/radiantearth/agrifieldnet-competition",
+        "type": "repository"
+      },
+      {
+        "title": "Radiant MLHub Dataset Descriptor (DOI: 10.34911/rdnt.xs6s88)",
+        "url": "https://doi.org/10.34911/rdnt.xs6s88",
+        "type": "documentation"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against Radiant Earth Source Cooperative portal and Radiant MLHub DOI 10.34911/rdnt.xs6s88."
+    },
+    "sample_count": {
+      "total": 7041,
+      "unit": "fields",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022"
+    },
+    "citation": {
+      "paper_title": "AgriFieldNet India Challenge Dataset",
+      "paper_url": "https://doi.org/10.34911/rdnt.xs6s88",
+      "authors": [
+        "Radiant Earth Foundation"
+      ],
+      "doi": "10.34911/rdnt.xs6s88",
+      "bibtex": "@misc{radiantearth_agrifieldnet_2022,\n  title={AgriFieldNet India Challenge Dataset},\n  author={{Radiant Earth Foundation}},\n  year={2022},\n  publisher={Radiant MLHub},\n  doi={10.34911/rdnt.xs6s88}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ai2-arc",
     "slug": "ai2-arc",
     "name": "AI2 Reasoning Challenge (ARC)",
@@ -6699,6 +6773,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "breizhcrops",
+    "slug": "breizhcrops",
+    "name": "BreizhCrops: Satellite Time-Series Crop Type Mapping Benchmark",
+    "description": "BreizhCrops is an open-access multi-temporal satellite benchmark curated by the Technical University of Munich (TUM) and Stanford University to evaluate machine learning and deep recurrent architectures on satellite time series for agricultural monitoring. The dataset covers the entire Brittany (Breizh) administrative region of France, integrating over 582,000 agricultural field parcels across four French departments (Côtes-d'Armor, Finistère, Ille-et-Vilaine, and Morbihan). For each parcel, it provides continuous 45-step multi-spectral Sentinel-2 satellite observation time series paired with official European Land Parcel Identification System (LPIS) ground truth crop labels across nine principal agricultural categories.",
+    "homepage_url": "https://github.com/dl4sits/BreizhCrops",
+    "publisher": {
+      "name": "Technical University of Munich & Stanford University",
+      "type": "academic",
+      "url": "https://github.com/dl4sits/BreizhCrops"
+    },
+    "modalities": [
+      "time-series",
+      "tabular"
+    ],
+    "tasks": [
+      "crop-type-classification",
+      "time-series-classification",
+      "agricultural-monitoring"
+    ],
+    "tags": [
+      "agriculture",
+      "satellite-imagery",
+      "crop-classification",
+      "sentinel-2",
+      "earth-observation",
+      "remote-sensing",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Code and extracted dataset time-series distributed under the permissive MIT License; underlying Sentinel-2 and French LPIS public data are openly accessible."
+    },
+    "source_references": [
+      {
+        "title": "BreizhCrops GitHub Repository",
+        "url": "https://github.com/dl4sits/BreizhCrops",
+        "type": "repository"
+      },
+      {
+        "title": "ISPRS / NeurIPS 2019 Descriptor (DOI: 10.48550/arXiv.1905.11893)",
+        "url": "https://doi.org/10.48550/arXiv.1905.11893",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against GitHub repository and Rußwurm et al. (arXiv:1905.11893)."
+    },
+    "sample_count": {
+      "total": 582319,
+      "unit": "parcels",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019"
+    },
+    "citation": {
+      "paper_title": "BreizhCrops: A Time Series Dataset for Crop Type Mapping",
+      "paper_url": "https://doi.org/10.48550/arXiv.1905.11893",
+      "authors": [
+        "Marc Rußwurm",
+        "Sherrie Wang",
+        "Marco Körner",
+        "David Lobell"
+      ],
+      "doi": "10.48550/arXiv.1905.11893",
+      "bibtex": "@article{russwurm2019breizhcrops,\n  title={BreizhCrops: A Time Series Dataset for Crop Type Mapping},\n  author={Ru{\\ss}wurm, Marc and Wang, Sherrie and K{\\\"o}rner, Marco and Lobell, David},\n  journal={arXiv preprint arXiv:1905.11893},\n  year={2019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bus-bra",
     "slug": "bus-bra",
     "name": "BUS-BRA: Breast Ultrasound Dataset with BI-RADS Categories",
@@ -7566,6 +7717,83 @@
       ],
       "doi": "10.1016/S1389-9457(02)00012-X",
       "bibtex": "@article{terzano2002atlas,\n  title={Atlas, rules, and recording techniques for the scoring of cyclic alternating pattern (CAP) in human sleep},\n  author={Terzano, Mario Giovanni and Parrino, Liborio and Smerieri, Arianna and Chervin, Rosa and Chokroverty, Sudhansu and Guilleminault, Christian and Hirshkowitz, Miloslav and Mahowald, Mark and Moldofsky, Helder and Rosa, Agostino and others},\n  journal={Sleep Medicine},\n  volume={3},\n  number={2},\n  pages={187--199},\n  year={2002},\n  publisher={Elsevier}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cassava-leaf-disease-2020",
+    "slug": "cassava-leaf-disease-2020",
+    "name": "Cassava Leaf Disease Classification Benchmark",
+    "description": "The Cassava Leaf Disease dataset is an in-field crop pathology benchmark created by the Makerere University AI Lab in Uganda, the National Crops Resources Research Institute (NaCRRI), and the CVPR 2020 Fine-Grained Visual Categorization workshop. It contains 21,397 high-resolution digital photographs of cassava leaves (Manihot esculenta) taken by agricultural extension workers and smallholder farmers in rural Uganda using standard smartphones under unconstrained natural lighting. Each image is categorized by expert plant pathologists into one of five diagnostic categories: Cassava Bacterial Blight (CBB), Cassava Brown Streak Disease (CBSD), Cassava Green Mottle (CGM), Cassava Mosaic Disease (CMD), and Healthy.",
+    "homepage_url": "https://www.kaggle.com/competitions/cassava-leaf-disease-classification/data",
+    "publisher": {
+      "name": "Makerere University AI Lab & CVPR FGVC",
+      "type": "academic",
+      "url": "https://air.ug"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "agricultural-monitoring",
+      "plant-disease-detection"
+    ],
+    "tags": [
+      "agriculture",
+      "cassava",
+      "plant-pathology",
+      "crop-disease",
+      "smallholder-farming",
+      "africa",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Research and Educational Competition License",
+      "spdx_id": null,
+      "url": "https://www.kaggle.com/competitions/cassava-leaf-disease-classification/rules",
+      "commercial_use": "forbidden",
+      "notes": "Dataset distributed for academic and educational research use under Kaggle competition terms."
+    },
+    "source_references": [
+      {
+        "title": "Kaggle Cassava Leaf Disease Classification Competition",
+        "url": "https://www.kaggle.com/competitions/cassava-leaf-disease-classification/data",
+        "type": "repository"
+      },
+      {
+        "title": "Mwebaze et al. arXiv 2019 Publication",
+        "url": "https://doi.org/10.48550/arXiv.1908.02900",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against Kaggle competition specifications and Mwebaze et al. (arXiv:1908.02900)."
+    },
+    "sample_count": {
+      "total": 21397,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020"
+    },
+    "citation": {
+      "paper_title": "iCassava 2019Fine-Grained Visual Categorization for Cassava Leaf Disease Identification",
+      "paper_url": "https://doi.org/10.48550/arXiv.1908.02900",
+      "authors": [
+        "Ernest Mwebaze",
+        "Timnit Gebru",
+        "Andrea Frome",
+        "Solomon Nsumba",
+        "Jeremy Tusubira"
+      ],
+      "doi": "10.48550/arXiv.1908.02900",
+      "bibtex": "@article{mwebaze2019icassava,\n  title={iCassava 2019Fine-Grained Visual Categorization for Cassava Leaf Disease Identification},\n  author={Mwebaze, Ernest and Gebru, Timnit and Frome, Andrea and Nsumba, Solomon and Tusubira, Jeremy},\n  journal={arXiv preprint arXiv:1908.02900},\n  year={2019}\n}"
     }
   },
   {
@@ -9956,6 +10184,85 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "cropandweed",
+    "slug": "cropandweed",
+    "name": "CropAndWeed: Crop and Weed Species Detection Dataset",
+    "description": "CropAndWeed is a comprehensive fine-grained in-field dataset compiled by the AIT Austrian Institute of Technology and the University of Bonn, published at BMVC 2023. It contains 112,248 high-resolution image crops and 9,193 fully annotated field images capturing 74 distinct crop and weed species (including monocot and dicot weeds, maize, sugar beet, sunflower, and soya). The imagery was recorded across experimental and commercial agricultural plots in Austria and Germany under varied natural lighting, weather conditions, soil textures, and growth stages, providing bounding boxes, species classifications, and crop/weed categories for precision weeding and robotic spraying.",
+    "homepage_url": "https://publications.ait.ac.at/en/datasets/cropandweed-dataset/",
+    "publisher": {
+      "name": "AIT Austrian Institute of Technology & University of Bonn",
+      "type": "academic",
+      "url": "https://www.ait.ac.at"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection",
+      "image-classification",
+      "weed-detection",
+      "agricultural-monitoring"
+    ],
+    "tags": [
+      "agriculture",
+      "weed-detection",
+      "crops",
+      "precision-farming",
+      "robotics",
+      "plant-classification",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "AIT CropAndWeed Dataset Repository",
+        "url": "https://publications.ait.ac.at/en/datasets/cropandweed-dataset/",
+        "type": "repository"
+      },
+      {
+        "title": "BMVC 2023 Publication: CropAndWeed (arXiv:2307.03157)",
+        "url": "https://doi.org/10.48550/arXiv.2307.03157",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against AIT repository and Steininger et al. (BMVC 2023 / arXiv:2307.03157)."
+    },
+    "sample_count": {
+      "total": 112248,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023"
+    },
+    "citation": {
+      "paper_title": "CropAndWeed: A Dataset for Plant Classification and Detection for Precision Agriculture",
+      "paper_url": "https://doi.org/10.48550/arXiv.2307.03157",
+      "authors": [
+        "Michael Steininger",
+        "Andreas Verleysdonk",
+        "Horst Stern",
+        "Marcus Hebel",
+        "Michael Arens",
+        "Cyrill Stachniss"
+      ],
+      "doi": "10.48550/arXiv.2307.03157",
+      "bibtex": "@inproceedings{steininger2023cropandweed,\n  title={CropAndWeed: A Dataset for Plant Classification and Detection for Precision Agriculture},\n  author={Steininger, Michael and Verleysdonk, Andreas and Stern, Horst and Hebel, Marcus and Arens, Michael and Stachniss, Cyrill},\n  booktitle={British Machine Vision Conference (BMVC)},\n  year={2023}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "cropharvest",
     "slug": "cropharvest",
     "name": "CropHarvest: Global Dataset for Agricultural Land Cover Classification",
@@ -10287,6 +10594,73 @@
       ],
       "doi": "10.1016/j.compmedimag.2015.02.007",
       "bibtex": "@article{bernal2015wm,\n  title={WM-DOVA maps for accurate polyp highlighting in colonoscopy: Validation vs. saliency maps from physicians},\n  author={Bernal, Jorge and S{\\'a}nchez, F Javier and Fern{\\'a}ndez-Esparrach, Gloria and Gil, Debora and Rodr{\\'\\i}guez, Cristina and Vilari{\\~n}o, Fernando},\n  journal={Computerized Medical Imaging and Graphics},\n  volume={43},\n  pages={99--111},\n  year={2015},\n  publisher={Elsevier}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cwd30",
+    "slug": "cwd30",
+    "name": "CWD30: Crop and Weed Image Classification Benchmark",
+    "description": "CWD30 is an extensive agricultural benchmark dataset curated by Zhejiang University for fine-grained crop and weed identification in precision farming. It contains over 30,000 high-resolution field images encompassing 30 different agricultural crop and weed species (including staple crops like rice, wheat, and maize alongside dominant invasive weeds such as barnyard grass and sedges). Images capture plants across varied seedling, vegetative, and flowering growth stages under diverse natural field illumination, providing an evaluation suite for automated robotic herbicide application, weeding, and smart agricultural scouting.",
+    "homepage_url": "https://cwd-30.github.io/cwd-30/",
+    "publisher": {
+      "name": "Zhejiang University & CWD30 Consortium",
+      "type": "academic",
+      "url": "https://cwd-30.github.io"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "object-detection",
+      "weed-detection",
+      "agricultural-monitoring"
+    ],
+    "tags": [
+      "agriculture",
+      "weed-detection",
+      "crop-classification",
+      "precision-farming",
+      "field-robotics",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Published under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) for research use."
+    },
+    "source_references": [
+      {
+        "title": "CWD30 Official Website",
+        "url": "https://cwd-30.github.io/cwd-30/",
+        "type": "official_website"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against official CWD30 project portal."
+    },
+    "sample_count": {
+      "total": 30000,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023"
+    },
+    "citation": {
+      "paper_title": "CWD30: A Large-Scale Benchmark for Crop and Weed Detection and Classification",
+      "paper_url": "https://cwd-30.github.io/cwd-30/",
+      "authors": [
+        "CWD30 Project Team"
+      ],
+      "bibtex": "@misc{cwd30_2023,\n  title={CWD30: A Large-Scale Benchmark for Crop and Weed Detection and Classification},\n  author={{CWD30 Project Team}},\n  howpublished={\\url{https://cwd-30.github.io/cwd-30/}},\n  year={2023}\n}"
     }
   },
   {
@@ -12730,6 +13104,87 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "eurocrops",
+    "slug": "eurocrops",
+    "name": "EuroCrops: Harmonised Pan-European Crop Parcel Dataset",
+    "description": "EuroCrops is a large-scale, open-source agricultural parcel collection compiled by the Technical University of Munich (TUM) and the German Aerospace Center (DLR), published in Nature Scientific Data. It harmonizes publicly accessible European Land Parcel Identification System (LPIS) declaration records from 16 European nations into a unified, cross-border semantic taxonomy called the Hierarchical Crop Alignment Taxonomy (HCAT). Covering over 10 million agricultural parcel vector geometries and crop classifications across Austria, Germany, France, Slovenia, Estonia, Latvia, Portugal, Romania, and the Netherlands, EuroCrops provides a standardized benchmark for training and evaluating transnational satellite crop type classification and earth observation models.",
+    "homepage_url": "https://www.eurocrops.tum.de/",
+    "publisher": {
+      "name": "Technical University of Munich & DLR",
+      "type": "academic",
+      "url": "https://www.eurocrops.tum.de"
+    },
+    "modalities": [
+      "tabular",
+      "vision"
+    ],
+    "tasks": [
+      "crop-type-classification",
+      "agricultural-monitoring",
+      "geospatial-analysis"
+    ],
+    "tags": [
+      "agriculture",
+      "pan-european",
+      "crop-classification",
+      "lpis",
+      "earth-observation",
+      "remote-sensing",
+      "geospatial"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) alongside Open Database License (ODbL) terms."
+    },
+    "source_references": [
+      {
+        "title": "EuroCrops Official Portal",
+        "url": "https://www.eurocrops.tum.de/",
+        "type": "official_website"
+      },
+      {
+        "title": "Nature Scientific Data Publication (DOI: 10.1038/s41597-023-02357-5)",
+        "url": "https://doi.org/10.1038/s41597-023-02357-5",
+        "type": "original_paper"
+      },
+      {
+        "title": "Zenodo EuroCrops Repository (DOI: 10.5281/zenodo.5153126)",
+        "url": "https://doi.org/10.5281/zenodo.5153126",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against EuroCrops portal, Zenodo 10.5281/zenodo.5153126, and Schneider et al. (Scientific Data 2023)."
+    },
+    "sample_count": {
+      "total": 10000000,
+      "unit": "parcels",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023"
+    },
+    "citation": {
+      "paper_title": "EuroCrops: The largest harmonised open-source dataset for crop-type classification in Europe",
+      "paper_url": "https://doi.org/10.1038/s41597-023-02357-5",
+      "authors": [
+        "Marion Schneider",
+        "Marc Rußwurm",
+        "Marco Körner"
+      ],
+      "doi": "10.1038/s41597-023-02357-5",
+      "bibtex": "@article{schneider2023eurocrops,\n  title={EuroCrops: The largest harmonised open-source dataset for crop-type classification in Europe},\n  author={Schneider, Marion and Ru{\\ss}wurm, Marc and K{\\\"o}rner, Marco},\n  journal={Scientific Data},\n  volume={10},\n  number={1},\n  pages={487},\n  year={2023},\n  publisher={Nature Publishing Group UK London},\n  doi={10.1038/s41597-023-02357-5}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "european-st-t-database",
     "slug": "european-st-t-database",
     "name": "European ST-T Database: Myocardial Ischemia Detection Benchmark",
@@ -14000,6 +14455,79 @@
         "Montesinho Natural Park",
         "University of Minho"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "fruits-360",
+    "slug": "fruits-360",
+    "name": "Fruits-360: Fine-Grained Fruits and Vegetables Dataset",
+    "description": "Fruits-360 is a widely utilized visual object recognition dataset compiled by researchers at Babeș-Bolyai University in Cluj-Napoca, Romania. The collection consists of 90,483 images (each 100x100 pixels on uniform white backgrounds) across 131 distinct fruit and vegetable classes (apples, bananas, peppers, tomatoes, grapes, citrus fruits, plums, and exotic varieties). Images were captured by rotating physical fruits and vegetables 360 degrees using a low-speed motor while recording video streams under controlled laboratory illumination. The dataset serves as a benchmark for fine-grained multi-class classification, object localization, and grocery retail automation.",
+    "homepage_url": "https://github.com/fruits-360",
+    "publisher": {
+      "name": "Babeș-Bolyai University",
+      "type": "academic",
+      "url": "https://github.com/fruits-360"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "fine-grained-classification"
+    ],
+    "tags": [
+      "agriculture",
+      "fruit",
+      "vegetables",
+      "food",
+      "fine-grained-classification",
+      "computer-vision",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Published under the permissive MIT License on GitHub and Kaggle."
+    },
+    "source_references": [
+      {
+        "title": "Fruits-360 GitHub Organization",
+        "url": "https://github.com/fruits-360",
+        "type": "repository"
+      },
+      {
+        "title": "Acta Universitatis Sapientiae Informatica Publication",
+        "url": "https://doi.org/10.2478/ausi-2018-0002",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against GitHub repository and Mureșan & Oltean (Acta Univ Sapientiae Inf 2018)."
+    },
+    "sample_count": {
+      "total": 90483,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018"
+    },
+    "citation": {
+      "paper_title": "A fruit recognition dataset",
+      "paper_url": "https://doi.org/10.2478/ausi-2018-0002",
+      "authors": [
+        "Horea Mureșan",
+        "Mihai Oltean"
+      ],
+      "doi": "10.2478/ausi-2018-0002",
+      "bibtex": "@article{muresan2018fruit,\n  title={A fruit recognition dataset},\n  author={Mure{\\c{s}}an, Horea and Oltean, Mihai},\n  journal={Acta Universitatis Sapientiae, Informatica},\n  volume={10},\n  number={1},\n  pages={26--42},\n  year={2018},\n  doi={10.2478/ausi-2018-0002}\n}"
     }
   },
   {
@@ -21629,6 +22157,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "minneapple",
+    "slug": "minneapple",
+    "name": "MinneApple: Apple Detection and Segmentation Benchmark",
+    "description": "MinneApple is an orchard-based agricultural computer vision benchmark compiled by the Department of Computer Science and Engineering at the University of Minnesota, published in IEEE Robotics and Automation Letters. The dataset was recorded at the University of Minnesota Horticultural Research Center using high-resolution cameras in commercial apple orchards under varied foliage density, branch occlusions, fruit clustering, and fluctuating daylight. It comprises 1,000 high-resolution images containing 41,325 manually annotated individual apples with precise polygonal instance segmentation masks and bounding boxes. The benchmark is designed to advance automated fruit yield estimation, robotic harvesting, and in-field object detection.",
+    "homepage_url": "https://github.com/nicolaihaeni/MinneApple",
+    "publisher": {
+      "name": "University of Minnesota",
+      "type": "academic",
+      "url": "https://github.com/nicolaihaeni/MinneApple"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection",
+      "instance-segmentation",
+      "yield-estimation",
+      "agricultural-monitoring"
+    ],
+    "tags": [
+      "agriculture",
+      "precision-farming",
+      "apple",
+      "fruit-detection",
+      "instance-segmentation",
+      "robotics",
+      "orchard",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "MinneApple GitHub Repository",
+        "url": "https://github.com/nicolaihaeni/MinneApple",
+        "type": "repository"
+      },
+      {
+        "title": "IEEE Robotics and Automation Letters 2020 Publication",
+        "url": "https://doi.org/10.1109/LRA.2020.2965061",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against GitHub repository and Häni et al. (IEEE RA-L 2020)."
+    },
+    "sample_count": {
+      "total": 1000,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020"
+    },
+    "citation": {
+      "paper_title": "MinneApple: A Benchmark Dataset for Apple Detection and Segmentation",
+      "paper_url": "https://doi.org/10.1109/LRA.2020.2965061",
+      "authors": [
+        "Nicolai Häni",
+        "Pravakar Roy",
+        "Volkan Isler"
+      ],
+      "doi": "10.1109/LRA.2020.2965061",
+      "bibtex": "@article{hani2020minneapple,\n  title={MinneApple: A Benchmark Dataset for Apple Detection and Segmentation},\n  author={H{\\\"a}ni, Nicolai and Roy, Pravakar and Isler, Volkan},\n  journal={IEEE Robotics and Automation Letters},\n  volume={5},\n  number={2},\n  pages={852--858},\n  year={2020},\n  publisher={IEEE},\n  doi={10.1109/LRA.2020.2965061}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "miracl",
     "slug": "miracl",
     "name": "MIRACL: Multilingual Information Retrieval Across a Continuum of Languages",
@@ -26218,6 +26823,81 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "pastis",
+    "slug": "pastis",
+    "name": "PASTIS: Agricultural Parcel Panoptic Segmentation Benchmark",
+    "description": "PASTIS (Panoptic Agricultural Satellite Time Series) is a remote sensing benchmark dataset curated by the LASTIG laboratory at IGN (Institut National de l'Information Géographique et Forestière), France, published at ICCV 2021. The benchmark consists of 2,433 multi-spectral satellite image time-series patches (each 128x128 pixels at 10m/pixel spatial resolution with up to 70 observation dates) acquired by Sentinel-2 across four diverse agro-ecological regions in France. The dataset encompasses 124,422 individual agricultural parcel instances annotated with exact parcel instance IDs and 18 crop type semantic classes, establishing a standard benchmark for satellite panoptic segmentation and temporal attention networks.",
+    "homepage_url": "https://github.com/VSainteuf/pastis-benchmark",
+    "publisher": {
+      "name": "IGN LASTIG Laboratory",
+      "type": "academic",
+      "url": "https://github.com/VSainteuf"
+    },
+    "modalities": [
+      "time-series",
+      "vision"
+    ],
+    "tasks": [
+      "panoptic-segmentation",
+      "crop-type-classification",
+      "agricultural-monitoring"
+    ],
+    "tags": [
+      "agriculture",
+      "sentinel-2",
+      "satellite-imagery",
+      "panoptic-segmentation",
+      "earth-observation",
+      "remote-sensing",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "PASTIS Benchmark GitHub Repository",
+        "url": "https://github.com/VSainteuf/pastis-benchmark",
+        "type": "repository"
+      },
+      {
+        "title": "ICCV 2021 Publication (DOI: 10.1109/ICCV48922.2021.00483)",
+        "url": "https://doi.org/10.1109/ICCV48922.2021.00483",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against GitHub repository and Sainte Fare Garnot & Landrieu (ICCV 2021)."
+    },
+    "sample_count": {
+      "total": 2433,
+      "unit": "patches",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021"
+    },
+    "citation": {
+      "paper_title": "Panoptic Segmentation of Satellite Image Time Series with Convolutional Temporal Attention Networks",
+      "paper_url": "https://doi.org/10.1109/ICCV48922.2021.00483",
+      "authors": [
+        "Vivien Sainte Fare Garnot",
+        "Loic Landrieu"
+      ],
+      "doi": "10.1109/ICCV48922.2021.00483",
+      "bibtex": "@inproceedings{garnot2021panoptic,\n  title={Panoptic Segmentation of Satellite Image Time Series with Convolutional Temporal Attention Networks},\n  author={Garnot, Vivien Sainte Fare and Landrieu, Loic},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n  pages={4872--4881},\n  year={2021},\n  doi={10.1109/ICCV48922.2021.00483}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "patchcamelyon",
     "slug": "patchcamelyon",
     "name": "PatchCamelyon (PCam): Histopathology Patch Classification Benchmark",
@@ -26397,6 +27077,84 @@
       ],
       "doi": "10.18653/v1/D19-1382",
       "bibtex": "@inproceedings{yang-etal-2019-paws,\n  title = {PAWS-X: A Cross-lingual Adversarial Dataset for Paraphrase Identification},\n  author = {Yang, Yinfei and Zhang, Yuan and Tar, Chris and Baldridge, Jason},\n  booktitle = {Proceedings of EMNLP 2019},\n  pages = {3687--3692},\n  year = {2019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "phenobench",
+    "slug": "phenobench",
+    "name": "PhenoBench: Plant Phenotyping and Panoptic Segmentation Benchmark",
+    "description": "PhenoBench is a high-resolution agricultural computer vision benchmark curated by the University of Bonn, the PhenoRob Cluster of Excellence, and IPB Bonn, published at CVPR 2023. The dataset comprises 2,937 high-resolution imagery samples collected over three cultivation seasons in German sugar beet fields using UAVs and ground cameras under varying natural illumination, crop growth stages, and weed infestations. PhenoBench provides hierarchical pixel-wise annotations across multiple precision agriculture tasks: plant-level semantic segmentation (soil, crop, weed), plant instance segmentation, leaf instance segmentation, and leaf counting. Users should note that while PhenoBench focuses on sugar beet fields from the University of Bonn, it is a dedicated panoptic phenotyping benchmark distinct from earlier robotic collections (Sugar Beets 2016, SB20).",
+    "homepage_url": "https://www.phenobench.org/dataset.html",
+    "publisher": {
+      "name": "University of Bonn & PhenoRob Cluster of Excellence",
+      "type": "academic",
+      "url": "https://www.phenobench.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "instance-segmentation",
+      "semantic-segmentation",
+      "plant-phenotyping",
+      "agricultural-monitoring"
+    ],
+    "tags": [
+      "agriculture",
+      "precision-farming",
+      "sugar-beet",
+      "weed-detection",
+      "panoptic-segmentation",
+      "phenotyping",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). Permitted for non-commercial academic research."
+    },
+    "source_references": [
+      {
+        "title": "PhenoBench Official Portal",
+        "url": "https://www.phenobench.org/dataset.html",
+        "type": "official_website"
+      },
+      {
+        "title": "CVPR 2023 Publication: PhenoBench (arXiv:2306.03507)",
+        "url": "https://doi.org/10.48550/arXiv.2306.03507",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhenoBench official portal and Weyler et al. (CVPR 2023 / arXiv:2306.03507)."
+    },
+    "sample_count": {
+      "total": 2937,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023"
+    },
+    "citation": {
+      "paper_title": "PhenoBench — A Large Dataset and Benchmarks for Semantic Image Interpretation in the Field",
+      "paper_url": "https://doi.org/10.48550/arXiv.2306.03507",
+      "authors": [
+        "Jan Weyler",
+        "Federico Magistri",
+        "Elias Marks",
+        "Yong Liu",
+        "Cyrill Stachniss"
+      ],
+      "doi": "10.48550/arXiv.2306.03507",
+      "bibtex": "@inproceedings{weyler2023phenobench,\n  title={PhenoBench -- A Large Dataset and Benchmarks for Semantic Image Interpretation in the Field},\n  author={Weyler, Jan and Magistri, Federico and Marks, Elias and Liu, Yong and Stachniss, Cyrill},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={17156--17165},\n  year={2023}\n}"
     }
   },
   {
@@ -26782,6 +27540,81 @@
       "data_sources": [
         "Cornell AgriTech apple research orchards, Geneva, NY"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "plant-pathology-2021",
+    "slug": "plant-pathology-2021",
+    "name": "Plant Pathology 2021: Multi-Label Foliar Disease of Apples Benchmark",
+    "description": "The Plant Pathology 2021 dataset is a large-scale agricultural visual benchmark organized by Cornell AgriTech, Cornell University, and the CVPR 2021 Fine-Grained Visual Categorization (FGVC8) workshop. Expanding significantly upon the 2020 release (which had 3,651 images in 4 classes), the 2021 edition provides 18,632 expertly curated and verified high-resolution images of apple tree leaves photographed in commercial orchards across North America. The dataset models complex multi-label co-occurring disease symptoms across 12 diagnostic states, including apple scab, cedar apple rust, frogeye leaf spot, powdery mildew, and severe mixed infections.",
+    "homepage_url": "https://www.kaggle.com/competitions/plant-pathology-2021-fgvc8/data",
+    "publisher": {
+      "name": "Cornell AgriTech & CVPR FGVC8",
+      "type": "academic",
+      "url": "https://www.kaggle.com/competitions/plant-pathology-2021-fgvc8"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "multi-label-classification",
+      "agricultural-monitoring"
+    ],
+    "tags": [
+      "agriculture",
+      "apple",
+      "plant-pathology",
+      "multi-label",
+      "crop-disease",
+      "orchard",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Research and Educational Competition License",
+      "spdx_id": null,
+      "url": "https://www.kaggle.com/competitions/plant-pathology-2021-fgvc8/rules",
+      "commercial_use": "forbidden",
+      "notes": "Distributed for research and educational purposes under Kaggle FGVC8 competition rules."
+    },
+    "source_references": [
+      {
+        "title": "Kaggle Plant Pathology 2021 - FGVC8 Competition",
+        "url": "https://www.kaggle.com/competitions/plant-pathology-2021-fgvc8/data",
+        "type": "repository"
+      },
+      {
+        "title": "CVPR 2021 FGVC8 Workshop Overview",
+        "url": "https://github.com/visipedia/fgvc8",
+        "type": "documentation"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against Kaggle FGVC8 competition specifications. Documented expansion and partial source overlap with Plant Pathology 2020."
+    },
+    "sample_count": {
+      "total": 18632,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021"
+    },
+    "citation": {
+      "paper_title": "Plant Pathology 2021 -- FGVC8 Challenge",
+      "paper_url": "https://www.kaggle.com/competitions/plant-pathology-2021-fgvc8",
+      "authors": [
+        "Ranjita Thapa",
+        "Noah Snavely",
+        "Serge Belongie",
+        "Awais Khan"
+      ],
+      "bibtex": "@misc{thapa2021plant,\n  title={Plant Pathology 2021 -- FGVC8 Challenge},\n  author={Thapa, Ranjita and Snavely, Noah and Belongie, Serge and Khan, Awais},\n  year={2021},\n  publisher={Kaggle},\n  howpublished={\\url{https://www.kaggle.com/competitions/plant-pathology-2021-fgvc8}}\n}"
     }
   },
   {
@@ -29080,6 +29913,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "sb20-sugar-beet",
+    "slug": "sb20-sugar-beet",
+    "name": "SB20: RGB-D Crop and Weed Segmentation Dataset",
+    "description": "The SB20 (Sugar Beet 2020) dataset is a multi-modal RGB-D agricultural benchmark developed by the Agricultural Robotics Lab at the University of Bonn and the PhenoRob Cluster of Excellence, published in IEEE Robotics and Automation Letters. The dataset comprises 324 synchronized high-resolution RGB and depth image pairs recorded by a field robot operating in commercial German sugar beet fields under challenging direct sunlight, deep shadows, and variable crop stages. The collection provides dense, manually verified pixel-level ground truth masks separating individual sugar beet leaves from invasive weed species and background soil, facilitating research on depth-guided vegetation segmentation and robotic weeding.",
+    "homepage_url": "https://agrobotics.uni-bonn.de/sugar_beet_2020_dataset/",
+    "publisher": {
+      "name": "University of Bonn Agricultural Robotics Lab",
+      "type": "academic",
+      "url": "https://agrobotics.uni-bonn.de"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "rgb-d-segmentation",
+      "weed-detection",
+      "agricultural-monitoring"
+    ],
+    "tags": [
+      "agriculture",
+      "sugar-beet",
+      "weed-detection",
+      "rgb-d",
+      "depth-imaging",
+      "field-robotics",
+      "segmentation"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "University of Bonn SB20 Dataset Portal",
+        "url": "https://agrobotics.uni-bonn.de/sugar_beet_2020_dataset/",
+        "type": "official_website"
+      },
+      {
+        "title": "IEEE RA-L 2021 Publication (DOI: 10.1109/LRA.2021.3096144)",
+        "url": "https://doi.org/10.1109/LRA.2021.3096144",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against University of Bonn portal and Weyler et al. (IEEE RA-L 2021)."
+    },
+    "sample_count": {
+      "total": 324,
+      "unit": "image-pairs",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021"
+    },
+    "citation": {
+      "paper_title": "A Real-World Dataset for RGB-D Crop/Weed Segmentation in Sugar Beet Fields",
+      "paper_url": "https://doi.org/10.1109/LRA.2021.3096144",
+      "authors": [
+        "Jan Weyler",
+        "Federico Magistri",
+        "Elias Marks",
+        "Cyrill Stachniss"
+      ],
+      "doi": "10.1109/LRA.2021.3096144",
+      "bibtex": "@article{weyler2021real,\n  title={A Real-World Dataset for RGB-D Crop/Weed Segmentation in Sugar Beet Fields},\n  author={Weyler, Jan and Magistri, Federico and Marks, Elias and Stachniss, Cyrill},\n  journal={IEEE Robotics and Automation Letters},\n  volume={6},\n  number={4},\n  pages={7085--7092},\n  year={2021},\n  publisher={IEEE},\n  doi={10.1109/LRA.2021.3096144}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "scifact",
     "slug": "scifact",
     "name": "SciFact: Scientific Claim Verification Benchmark",
@@ -29329,6 +30239,84 @@
         "Wang, Shuohe "
       ],
       "doi": "10.17632/5vrffvkt96.1"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "sen4agrinet",
+    "slug": "sen4agrinet",
+    "name": "Sen4AgriNet: Multi-Country Agricultural Satellite Benchmark",
+    "description": "Sen4AgriNet is a multi-country European benchmark dataset and machine learning pipeline developed by the National Technical University of Athens (NTUA) and Orion AI Lab in collaboration with the European Space Agency (ESA). Built to address agricultural parcel classification across heterogeneous climatic zones, the benchmark combines Sentinel-2 optical time series with European Land Parcel Identification System (LPIS) ground truth. It covers over 57,000 Sentinel-2 image patches across France and Catalonia (Spain), documenting 250,000+ agricultural parcel polygons with harmonized agricultural crop labels and vegetative indices.",
+    "homepage_url": "https://github.com/Orion-AI-Lab/S4A",
+    "publisher": {
+      "name": "National Technical University of Athens & ESA",
+      "type": "academic",
+      "url": "https://github.com/Orion-AI-Lab/S4A"
+    },
+    "modalities": [
+      "time-series",
+      "vision"
+    ],
+    "tasks": [
+      "crop-type-classification",
+      "agricultural-monitoring",
+      "time-series-classification"
+    ],
+    "tags": [
+      "agriculture",
+      "satellite-imagery",
+      "sentinel-2",
+      "crop-classification",
+      "earth-observation",
+      "remote-sensing",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Code and benchmark released under the Apache License 2.0; underlying Sentinel-2 data governed by the ESA Open Access policy."
+    },
+    "source_references": [
+      {
+        "title": "Sen4AgriNet GitHub Repository",
+        "url": "https://github.com/Orion-AI-Lab/S4A",
+        "type": "repository"
+      },
+      {
+        "title": "IEEE JSTARS Publication (DOI: 10.1109/JSTARS.2021.3117565)",
+        "url": "https://doi.org/10.1109/JSTARS.2021.3117565",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against GitHub repository and Sitokonstantinou et al. (IEEE JSTARS 2021)."
+    },
+    "sample_count": {
+      "total": 57000,
+      "unit": "patches",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021"
+    },
+    "citation": {
+      "paper_title": "Sen4AgriNet: A Multi-Country, Multi-Year Sentinel-2 Dataset and Benchmark for Agricultural Applications",
+      "paper_url": "https://doi.org/10.1109/JSTARS.2021.3117565",
+      "authors": [
+        "Vassilis Sitokonstantinou",
+        "Alkis Koukos",
+        "Ilias Tsoumas",
+        "Charalampos Kontoes",
+        "Vasileios Karathanassi"
+      ],
+      "doi": "10.1109/JSTARS.2021.3117565",
+      "bibtex": "@article{sitokonstantinou2021sen4agrinet,\n  title={Sen4AgriNet: A Multi-Country, Multi-Year Sentinel-2 Dataset and Benchmark for Agricultural Applications},\n  author={Sitokonstantinou, Vassilis and Koukos, Alkis and Tsoumas, Ilias and Kontoes, Charalampos and Karathanassi, Vasileios},\n  journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},\n  volume={14},\n  pages={11174--11187},\n  year={2021},\n  publisher={IEEE},\n  doi={10.1109/JSTARS.2021.3117565}\n}"
     }
   },
   {
@@ -30910,6 +31898,86 @@
         "Honglak Lee"
       ],
       "bibtex": "@inproceedings{coates2011analysis,\n  title = {An Analysis of Single-Layer Networks in Unsupervised Feature Learning},\n  author = {Coates, Adam and Ng, Andrew and Lee, Honglak},\n  booktitle = {Proceedings of the Fourteenth International Conference on Artificial Intelligence and Statistics},\n  pages = {215--223},\n  year = {2011}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "sugar-beets-2016",
+    "slug": "sugar-beets-2016",
+    "name": "Sugar Beets 2016: Agricultural Robot Multi-Sensor Dataset",
+    "description": "The Sugar Beets 2016 dataset is a multi-sensor agricultural robotics dataset recorded by the Institute of Geodesy and Geoinformation (IPB) at the University of Bonn and the German Research Foundation (DFG). Recorded across three months during the spring 2016 growing season on a commercial farm in Germany, it captures the autonomous Bonirob field robot navigating through sugar beet fields from the early emergence stage until closed canopy. The dataset features synchronized multi-sensor streams: high-resolution RGB-D images (Kinect v2), 4-channel JAI multi-spectral cameras, 3D LiDAR (Velodyne VLP-16), wheel odometry, and RTK-GPS centimeter-accurate localization tracks, accompanied by pixel-wise ground-truth annotations for crop vs. weed semantic segmentation.",
+    "homepage_url": "https://www.ipb.uni-bonn.de/data/sugarbeets2016/index.html",
+    "publisher": {
+      "name": "University of Bonn Institute of Geodesy and Geoinformation",
+      "type": "academic",
+      "url": "https://www.ipb.uni-bonn.de"
+    },
+    "modalities": [
+      "vision",
+      "time-series"
+    ],
+    "tasks": [
+      "agricultural-robotics",
+      "plant-classification",
+      "semantic-segmentation",
+      "robot-localization"
+    ],
+    "tags": [
+      "agriculture",
+      "robotics",
+      "sugar-beet",
+      "weed-detection",
+      "lidar",
+      "multispectral",
+      "precision-farming"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0",
+      "spdx_id": "CC-BY-NC-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "commercial_use": "forbidden",
+      "notes": "Published by University of Bonn under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (CC BY-NC-SA 3.0)."
+    },
+    "source_references": [
+      {
+        "title": "University of Bonn IPB Sugar Beets 2016 Portal",
+        "url": "https://www.ipb.uni-bonn.de/data/sugarbeets2016/index.html",
+        "type": "official_website"
+      },
+      {
+        "title": "IJRR 2017 Publication (DOI: 10.1177/0278364917720510)",
+        "url": "https://doi.org/10.1177/0278364917720510",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against IPB University of Bonn portal and Chebrolu et al. (IJRR 2017). Distinct from SB20 and PhenoBench."
+    },
+    "sample_count": {
+      "total": 10000,
+      "unit": "frames",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2017"
+    },
+    "citation": {
+      "paper_title": "Agricultural robot dataset for plant classification, localization and mapping on sugar beet fields",
+      "paper_url": "https://doi.org/10.1177/0278364917720510",
+      "authors": [
+        "Nived Chebrolu",
+        "Philipp Lottes",
+        "Alexander Schaefer",
+        "Wera Winterhalter",
+        "Wolfram Burgard",
+        "Cyrill Stachniss"
+      ],
+      "doi": "10.1177/0278364917720510",
+      "bibtex": "@article{chebrolu2017agricultural,\n  title={Agricultural robot dataset for plant classification, localization and mapping on sugar beet fields},\n  author={Chebrolu, Nived and Lottes, Philipp and Schaefer, Alexander and Winterhalter, Wera and Burgard, Wolfram and Stachniss, Cyrill},\n  journal={The International Journal of Robotics Research},\n  volume={36},\n  number={10},\n  pages={1045--1052},\n  year={2017},\n  publisher={SAGE Publications Sage UK: London, England},\n  doi={10.1177/0278364917720510}\n}"
     }
   },
   {
@@ -35434,6 +36502,83 @@
       ],
       "doi": "10.1145/3242969.3242985",
       "bibtex": "@inproceedings{schmidt2018wesad,\n  title = {Introducing WESAD, a Multimodal Dataset for Wearable Stress and Affect Detection},\n  author = {Schmidt, Philip and Reiss, Attila and Duerichen, Robert and Stockhardt, Claus and Van Laerhoven, Kristof},\n  booktitle = {Proceedings of the 20th ACM International Conference on Multimodal Interaction},\n  pages = {400--408},\n  year = {2018}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "wgisd-wine-grape",
+    "slug": "wgisd-wine-grape",
+    "name": "WGISD: Wine Grape Instance Segmentation Dataset",
+    "description": "The Wine Grape Instance Segmentation Dataset (WGISD) is an open agricultural image collection curated by Embrapa Digital Agriculture and the University of Campinas (UNICAMP) in Brazil, published in BioData Mining. The dataset consists of 300 high-resolution field photographs captured in commercial Brazilian vineyards across five distinct wine grape varieties (Cabernet Franc, Cabernet Sauvignon, Chardonnay, Merlot, and Sauvignon Blanc). Annotations document 4,432 grape bunches with precise bounding boxes, instance segmentation polygon masks, and individual berry point annotations, serving as a benchmark for automated cluster detection, robotic harvesting, and in-field viticultural yield estimation.",
+    "homepage_url": "https://github.com/thsant/wgisd",
+    "publisher": {
+      "name": "Embrapa Digital Agriculture & UNICAMP",
+      "type": "academic",
+      "url": "https://github.com/thsant/wgisd"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "instance-segmentation",
+      "object-detection",
+      "yield-estimation",
+      "agricultural-monitoring"
+    ],
+    "tags": [
+      "agriculture",
+      "viticulture",
+      "grapes",
+      "instance-segmentation",
+      "fruit-detection",
+      "precision-farming",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "WGISD GitHub Repository",
+        "url": "https://github.com/thsant/wgisd",
+        "type": "repository"
+      },
+      {
+        "title": "BioData Mining 2020 Publication (DOI: 10.1186/s13040-020-00219-3)",
+        "url": "https://doi.org/10.1186/s13040-020-00219-3",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against GitHub repository and Santos et al. (BioData Mining 2020)."
+    },
+    "sample_count": {
+      "total": 300,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020"
+    },
+    "citation": {
+      "paper_title": "Grape detection, segmentation and tracking using deep learning",
+      "paper_url": "https://doi.org/10.1186/s13040-020-00219-3",
+      "authors": [
+        "Thiago T. Santos",
+        "Leonardo L. de Souza",
+        "Andre A. dos Santos",
+        "Sandra Avila"
+      ],
+      "doi": "10.1186/s13040-020-00219-3",
+      "bibtex": "@article{santos2020grape,\n  title={Grape detection, segmentation and tracking using deep learning},\n  author={Santos, Thiago T and de Souza, Leonardo L and dos Santos, Andre A and Avila, Sandra},\n  journal={BioData Mining},\n  volume={13},\n  number={1},\n  pages={9},\n  year={2020},\n  publisher={BioMed Central},\n  doi={10.1186/s13040-020-00219-3}\n}"
     }
   },
   {

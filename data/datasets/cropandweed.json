@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cropandweed",
+  "slug": "cropandweed",
+  "name": "CropAndWeed: Crop and Weed Species Detection Dataset",
+  "description": "CropAndWeed is a comprehensive fine-grained in-field dataset compiled by the AIT Austrian Institute of Technology and the University of Bonn, published at BMVC 2023. It contains 112,248 high-resolution image crops and 9,193 fully annotated field images capturing 74 distinct crop and weed species (including monocot and dicot weeds, maize, sugar beet, sunflower, and soya). The imagery was recorded across experimental and commercial agricultural plots in Austria and Germany under varied natural lighting, weather conditions, soil textures, and growth stages, providing bounding boxes, species classifications, and crop/weed categories for precision weeding and robotic spraying.",
+  "homepage_url": "https://publications.ait.ac.at/en/datasets/cropandweed-dataset/",
+  "publisher": {
+    "name": "AIT Austrian Institute of Technology & University of Bonn",
+    "type": "academic",
+    "url": "https://www.ait.ac.at"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "image-classification",
+    "weed-detection",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "weed-detection",
+    "crops",
+    "precision-farming",
+    "robotics",
+    "plant-classification",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "AIT CropAndWeed Dataset Repository",
+      "url": "https://publications.ait.ac.at/en/datasets/cropandweed-dataset/",
+      "type": "repository"
+    },
+    {
+      "title": "BMVC 2023 Publication: CropAndWeed (arXiv:2307.03157)",
+      "url": "https://doi.org/10.48550/arXiv.2307.03157",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against AIT repository and Steininger et al. (BMVC 2023 / arXiv:2307.03157)."
+  },
+  "sample_count": {
+    "total": 112248,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023"
+  },
+  "citation": {
+    "paper_title": "CropAndWeed: A Dataset for Plant Classification and Detection for Precision Agriculture",
+    "paper_url": "https://doi.org/10.48550/arXiv.2307.03157",
+    "authors": [
+      "Michael Steininger",
+      "Andreas Verleysdonk",
+      "Horst Stern",
+      "Marcus Hebel",
+      "Michael Arens",
+      "Cyrill Stachniss"
+    ],
+    "doi": "10.48550/arXiv.2307.03157",
+    "bibtex": "@inproceedings{steininger2023cropandweed,\n  title={CropAndWeed: A Dataset for Plant Classification and Detection for Precision Agriculture},\n  author={Steininger, Michael and Verleysdonk, Andreas and Stern, Horst and Hebel, Marcus and Arens, Michael and Stachniss, Cyrill},\n  booktitle={British Machine Vision Conference (BMVC)},\n  year={2023}\n}"
+  }
+}

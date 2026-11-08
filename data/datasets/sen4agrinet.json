@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sen4agrinet",
+  "slug": "sen4agrinet",
+  "name": "Sen4AgriNet: Multi-Country Agricultural Satellite Benchmark",
+  "description": "Sen4AgriNet is a multi-country European benchmark dataset and machine learning pipeline developed by the National Technical University of Athens (NTUA) and Orion AI Lab in collaboration with the European Space Agency (ESA). Built to address agricultural parcel classification across heterogeneous climatic zones, the benchmark combines Sentinel-2 optical time series with European Land Parcel Identification System (LPIS) ground truth. It covers over 57,000 Sentinel-2 image patches across France and Catalonia (Spain), documenting 250,000+ agricultural parcel polygons with harmonized agricultural crop labels and vegetative indices.",
+  "homepage_url": "https://github.com/Orion-AI-Lab/S4A",
+  "publisher": {
+    "name": "National Technical University of Athens & ESA",
+    "type": "academic",
+    "url": "https://github.com/Orion-AI-Lab/S4A"
+  },
+  "modalities": [
+    "time-series",
+    "vision"
+  ],
+  "tasks": [
+    "crop-type-classification",
+    "agricultural-monitoring",
+    "time-series-classification"
+  ],
+  "tags": [
+    "agriculture",
+    "satellite-imagery",
+    "sentinel-2",
+    "crop-classification",
+    "earth-observation",
+    "remote-sensing",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Code and benchmark released under the Apache License 2.0; underlying Sentinel-2 data governed by the ESA Open Access policy."
+  },
+  "source_references": [
+    {
+      "title": "Sen4AgriNet GitHub Repository",
+      "url": "https://github.com/Orion-AI-Lab/S4A",
+      "type": "repository"
+    },
+    {
+      "title": "IEEE JSTARS Publication (DOI: 10.1109/JSTARS.2021.3117565)",
+      "url": "https://doi.org/10.1109/JSTARS.2021.3117565",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against GitHub repository and Sitokonstantinou et al. (IEEE JSTARS 2021)."
+  },
+  "sample_count": {
+    "total": 57000,
+    "unit": "patches",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021"
+  },
+  "citation": {
+    "paper_title": "Sen4AgriNet: A Multi-Country, Multi-Year Sentinel-2 Dataset and Benchmark for Agricultural Applications",
+    "paper_url": "https://doi.org/10.1109/JSTARS.2021.3117565",
+    "authors": [
+      "Vassilis Sitokonstantinou",
+      "Alkis Koukos",
+      "Ilias Tsoumas",
+      "Charalampos Kontoes",
+      "Vasileios Karathanassi"
+    ],
+    "doi": "10.1109/JSTARS.2021.3117565",
+    "bibtex": "@article{sitokonstantinou2021sen4agrinet,\n  title={Sen4AgriNet: A Multi-Country, Multi-Year Sentinel-2 Dataset and Benchmark for Agricultural Applications},\n  author={Sitokonstantinou, Vassilis and Koukos, Alkis and Tsoumas, Ilias and Kontoes, Charalampos and Karathanassi, Vasileios},\n  journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},\n  volume={14},\n  pages={11174--11187},\n  year={2021},\n  publisher={IEEE},\n  doi={10.1109/JSTARS.2021.3117565}\n}"
+  }
+}

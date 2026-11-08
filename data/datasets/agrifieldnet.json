@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "agrifieldnet",
+  "slug": "agrifieldnet",
+  "name": "AgriFieldNet: Indian Smallholder Crop Type Benchmark",
+  "description": "AgriFieldNet is an open-access crop type classification benchmark curated by Radiant Earth Foundation and funded by IDRC and IDinsight. The dataset focuses on smallholder agricultural landscapes in Northern India across the states of Bihar, Uttar Pradesh, and Rajasthan. It features ground-truth crop classifications collected via field surveys from over 7,041 agricultural parcels paired with high-resolution Sentinel-2 multi-spectral satellite imagery time series across 1,220 distinct spatial tiles. The collection captures complex smallholder farming dynamics including multi-cropping, irregular field boundaries, and diverse crop types (wheat, mustard, rice, maize, lentils, and sugarcane).",
+  "homepage_url": "https://source.coop/radiantearth/agrifieldnet-competition",
+  "publisher": {
+    "name": "Radiant Earth Foundation",
+    "type": "community",
+    "url": "https://radiant.earth"
+  },
+  "modalities": [
+    "vision",
+    "tabular"
+  ],
+  "tasks": [
+    "crop-type-classification",
+    "agricultural-monitoring",
+    "satellite-imagery-analysis"
+  ],
+  "tags": [
+    "agriculture",
+    "smallholder-farming",
+    "india",
+    "sentinel-2",
+    "crop-classification",
+    "radiant-earth",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published on Source Cooperative / Radiant MLHub under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "AgriFieldNet Source Cooperative Repository",
+      "url": "https://source.coop/radiantearth/agrifieldnet-competition",
+      "type": "repository"
+    },
+    {
+      "title": "Radiant MLHub Dataset Descriptor (DOI: 10.34911/rdnt.xs6s88)",
+      "url": "https://doi.org/10.34911/rdnt.xs6s88",
+      "type": "documentation"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against Radiant Earth Source Cooperative portal and Radiant MLHub DOI 10.34911/rdnt.xs6s88."
+  },
+  "sample_count": {
+    "total": 7041,
+    "unit": "fields",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022"
+  },
+  "citation": {
+    "paper_title": "AgriFieldNet India Challenge Dataset",
+    "paper_url": "https://doi.org/10.34911/rdnt.xs6s88",
+    "authors": [
+      "Radiant Earth Foundation"
+    ],
+    "doi": "10.34911/rdnt.xs6s88",
+    "bibtex": "@misc{radiantearth_agrifieldnet_2022,\n  title={AgriFieldNet India Challenge Dataset},\n  author={{Radiant Earth Foundation}},\n  year={2022},\n  publisher={Radiant MLHub},\n  doi={10.34911/rdnt.xs6s88}\n}"
+  }
+}

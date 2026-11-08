@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sb20-sugar-beet",
+  "slug": "sb20-sugar-beet",
+  "name": "SB20: RGB-D Crop and Weed Segmentation Dataset",
+  "description": "The SB20 (Sugar Beet 2020) dataset is a multi-modal RGB-D agricultural benchmark developed by the Agricultural Robotics Lab at the University of Bonn and the PhenoRob Cluster of Excellence, published in IEEE Robotics and Automation Letters. The dataset comprises 324 synchronized high-resolution RGB and depth image pairs recorded by a field robot operating in commercial German sugar beet fields under challenging direct sunlight, deep shadows, and variable crop stages. The collection provides dense, manually verified pixel-level ground truth masks separating individual sugar beet leaves from invasive weed species and background soil, facilitating research on depth-guided vegetation segmentation and robotic weeding.",
+  "homepage_url": "https://agrobotics.uni-bonn.de/sugar_beet_2020_dataset/",
+  "publisher": {
+    "name": "University of Bonn Agricultural Robotics Lab",
+    "type": "academic",
+    "url": "https://agrobotics.uni-bonn.de"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "rgb-d-segmentation",
+    "weed-detection",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "sugar-beet",
+    "weed-detection",
+    "rgb-d",
+    "depth-imaging",
+    "field-robotics",
+    "segmentation"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "University of Bonn SB20 Dataset Portal",
+      "url": "https://agrobotics.uni-bonn.de/sugar_beet_2020_dataset/",
+      "type": "official_website"
+    },
+    {
+      "title": "IEEE RA-L 2021 Publication (DOI: 10.1109/LRA.2021.3096144)",
+      "url": "https://doi.org/10.1109/LRA.2021.3096144",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against University of Bonn portal and Weyler et al. (IEEE RA-L 2021)."
+  },
+  "sample_count": {
+    "total": 324,
+    "unit": "image-pairs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021"
+  },
+  "citation": {
+    "paper_title": "A Real-World Dataset for RGB-D Crop/Weed Segmentation in Sugar Beet Fields",
+    "paper_url": "https://doi.org/10.1109/LRA.2021.3096144",
+    "authors": [
+      "Jan Weyler",
+      "Federico Magistri",
+      "Elias Marks",
+      "Cyrill Stachniss"
+    ],
+    "doi": "10.1109/LRA.2021.3096144",
+    "bibtex": "@article{weyler2021real,\n  title={A Real-World Dataset for RGB-D Crop/Weed Segmentation in Sugar Beet Fields},\n  author={Weyler, Jan and Magistri, Federico and Marks, Elias and Stachniss, Cyrill},\n  journal={IEEE Robotics and Automation Letters},\n  volume={6},\n  number={4},\n  pages={7085--7092},\n  year={2021},\n  publisher={IEEE},\n  doi={10.1109/LRA.2021.3096144}\n}"
+  }
+}
