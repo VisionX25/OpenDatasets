@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "id": "weedmap",
+  "slug": "weedmap",
+  "name": "weedMap: Large-Scale Aerial Multispectral Weed Mapping Dataset",
+  "description": "weedMap is an open-access aerial multispectral weed mapping benchmark collected using autonomous unmanned aerial vehicles (UAVs) equipped with multi-spectral sensors (green, red, red-edge, and near-infrared channels) over agricultural fields in Switzerland and Germany. Curated by the Autonomous Systems Lab at ETH Zurich and the University of Bonn, the dataset includes calibrated multispectral orthomosaics and 11,000+ tile patches annotated across sugar beet, sunflower, soil, and weed classes, providing a standard testbed for automated weed mapping and targeted herbicide application.",
+  "homepage_url": "https://projects.asl.ethz.ch/datasets/doku.php?id=weedmap:remotesensing2018weedmap",
+  "publisher": {
+    "name": "Autonomous Systems Lab, ETH Zurich",
+    "type": "academic",
+    "url": "https://asl.ethz.ch"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "crop-weed-segmentation",
+    "uav-remote-sensing",
+    "agricultural-robotics"
+  ],
+  "tags": [
+    "agriculture",
+    "precision-farming",
+    "multispectral",
+    "uav",
+    "remote-sensing",
+    "weed-detection",
+    "sugar-beet",
+    "sunflower"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset published under CC BY 4.0 open access terms."
+  },
+  "source_references": [
+    {
+      "title": "weedMap ETH Zurich Project Portal",
+      "url": "https://projects.asl.ethz.ch/datasets/doku.php?id=weedmap:remotesensing2018weedmap",
+      "type": "official_website",
+      "notes": "Official ASL ETH Zurich project repository with download links for orthomosaics and tiles."
+    },
+    {
+      "title": "weedMap: A Large-Scale Semantic Weed Mapping Framework Using Aerial Multispectral Imaging and Deep Neural Network for Precision Farming",
+      "url": "https://doi.org/10.3390/rs10091423",
+      "type": "original_paper",
+      "notes": "Published open-access paper in MDPI Remote Sensing."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official ASL ETH Zurich dataset page and MDPI publication."
+  },
+  "sample_count": {
+    "total": 11000,
+    "unit": "annotated tiles",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018"
+  },
+  "citation": {
+    "paper_title": "weedMap: A Large-Scale Semantic Weed Mapping Framework Using Aerial Multispectral Imaging and Deep Neural Network for Precision Farming",
+    "paper_url": "https://doi.org/10.3390/rs10091423",
+    "authors": [
+      "Inkyu Sa",
+      "Marija Popović",
+      "Raghav Khanna",
+      "Zetao Chen",
+      "Philipp Lottes",
+      "Frank Liebisch",
+      "Juan I. Nieto",
+      "Cyrill Stachniss",
+      "Achim Walter",
+      "Roland Siegwart"
+    ],
+    "doi": "10.3390/rs10091423",
+    "bibtex": "@article{sa2018weedmap,\n  title={weedMap: A Large-Scale Semantic Weed Mapping Framework Using Aerial Multispectral Imaging and Deep Neural Network for Precision Farming},\n  author={Sa, Inkyu and Popovi{\\'c}, Marija and Khanna, Raghav and Chen, Zetao and Lottes, Philipp and Liebisch, Frank and Nieto, Juan I and Stachniss, Cyrill and Walter, Achim and Siegwart, Roland},\n  journal={Remote Sensing},\n  volume={10},\n  number={9},\n  pages={1423},\n  year={2018},\n  publisher={MDPI}\n}"
+  }
+}

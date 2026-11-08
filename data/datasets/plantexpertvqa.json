@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "plantexpertvqa",
+  "slug": "plantexpertvqa",
+  "name": "PlantExpertVQA: Plant Disease Visual Question Answering Benchmark",
+  "description": "PlantExpertVQA is a large-scale, expert-level multimodal benchmark for visual question answering in agricultural plant pathology, disease diagnosis, and treatment recommendation. Developed by Syed Nazmus Sakib et al. and hosted on Hugging Face, the benchmark features 765,186 question-answer pairs paired with 150,841 leaf images across diverse crops and conditions alongside an expert Disease Knowledge Base. Unlike static classification datasets, PlantExpertVQA evaluates the multi-step diagnostic reasoning, symptom identification, etiology understanding, and treatment recommendation capabilities of vision-language models.",
+  "homepage_url": "https://huggingface.co/datasets/SyedNazmusSakib/PlantExpertVQA",
+  "publisher": {
+    "name": "Syed Nazmus Sakib et al.",
+    "type": "academic",
+    "url": "https://huggingface.co/SyedNazmusSakib"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "disease-diagnosis",
+    "multimodal-reasoning",
+    "treatment-recommendation"
+  ],
+  "tags": [
+    "agriculture",
+    "plant-pathology",
+    "visual-question-answering",
+    "vqa",
+    "multimodal",
+    "crop-disease",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset and QA pairs released under CC BY 4.0 on Hugging Face Hub."
+  },
+  "source_references": [
+    {
+      "title": "PlantExpertVQA Hugging Face Dataset Card",
+      "url": "https://huggingface.co/datasets/SyedNazmusSakib/PlantExpertVQA",
+      "type": "dataset_card",
+      "notes": "Official Hugging Face Hub repository containing parquet QA files and image archives."
+    },
+    {
+      "title": "PlantExpertVQA: A Large-Scale Expert-Level Visual Question Answering Benchmark for Plant Disease Diagnosis and Treatment",
+      "url": "https://arxiv.org/abs/2410.15833",
+      "type": "original_paper",
+      "notes": "Research paper introducing the VQA benchmark and evaluation protocols."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official Hugging Face Hub dataset card and arXiv publication."
+  },
+  "sample_count": {
+    "total": 765186,
+    "unit": "question-answer pairs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2024"
+  },
+  "citation": {
+    "paper_title": "PlantExpertVQA: A Large-Scale Expert-Level Visual Question Answering Benchmark for Plant Disease Diagnosis and Treatment",
+    "paper_url": "https://arxiv.org/abs/2410.15833",
+    "authors": [
+      "Syed Nazmus Sakib",
+      "Nafiul Haque",
+      "Mohammad Zabed Hossain",
+      "Shifat E. Arman"
+    ],
+    "bibtex": "@article{sakib2024plantexpertvqa,\n  title={PlantExpertVQA: A Large-Scale Expert-Level Visual Question Answering Benchmark for Plant Disease Diagnosis and Treatment},\n  author={Sakib, Syed Nazmus and Haque, Nafiul and Hossain, Mohammad Zabed and Arman, Shifat E},\n  journal={arXiv preprint arXiv:2410.15833},\n  year={2024}\n}"
+  }
+}

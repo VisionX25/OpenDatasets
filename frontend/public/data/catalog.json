@@ -251,6 +251,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "acfr-orchard-fruit",
+    "slug": "acfr-orchard-fruit",
+    "name": "ACFR Orchard Fruit Dataset: Multi-Fruit Detection and Yield Estimation",
+    "description": "The ACFR Orchard Fruit Dataset (2016-multifruit) is an open-access multi-sensor benchmark collected by the Australian Centre for Field Robotics (ACFR) at The University of Sydney. Recorded across commercial apple, mango, and almond orchards in Victoria and Queensland, Australia, the dataset features over 1,300 high-resolution color and near-infrared images captured under variable daytime natural illumination and uniform nighttime strobe lighting, complete with comprehensive bounding circle, bounding box, and pixel-level segmentations for fruit detection and automated robotic yield estimation.",
+    "homepage_url": "https://data.acfr.usyd.edu.au/ag/treecrops/2016-multifruit/",
+    "publisher": {
+      "name": "Australian Centre for Field Robotics (ACFR), The University of Sydney",
+      "type": "academic",
+      "url": "https://www.sydney.edu.au/engineering/our-research/robotics-and-intelligent-systems/australian-centre-for-field-robotics.html"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection",
+      "fruit-detection",
+      "yield-estimation",
+      "agricultural-robotics"
+    ],
+    "tags": [
+      "agriculture",
+      "precision-farming",
+      "fruit-detection",
+      "apple",
+      "mango",
+      "almond",
+      "orchard",
+      "robotics"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Custom Academic Research Use License",
+      "spdx_id": null,
+      "url": "https://data.acfr.usyd.edu.au/ag/treecrops/2016-multifruit/",
+      "commercial_use": "forbidden",
+      "notes": "Data provided by the University of Sydney for non-commercial academic research and benchmarking."
+    },
+    "source_references": [
+      {
+        "title": "ACFR Tree Crops Multi-Fruit Repository",
+        "url": "https://data.acfr.usyd.edu.au/ag/treecrops/2016-multifruit/",
+        "type": "repository",
+        "notes": "Official data distribution portal hosting image files and XML/CSV annotation ground truth."
+      },
+      {
+        "title": "Deep Fruit Detection in Orchards",
+        "url": "https://arxiv.org/abs/1610.03677",
+        "type": "original_paper",
+        "notes": "Published in 2017 IEEE International Conference on Robotics and Automation (ICRA)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official ACFR repository and IEEE ICRA 2017 publication."
+    },
+    "sample_count": {
+      "total": 1300,
+      "unit": "annotated orchard images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2016"
+    },
+    "citation": {
+      "paper_title": "Deep Fruit Detection in Orchards",
+      "paper_url": "https://arxiv.org/abs/1610.03677",
+      "authors": [
+        "Suchet Bargoti",
+        "James Underwood"
+      ],
+      "bibtex": "@inproceedings{bargoti2017deep,\n  title={Deep Fruit Detection in Orchards},\n  author={Bargoti, Suchet and Underwood, James},\n  booktitle={IEEE International Conference on Robotics and Automation (ICRA)},\n  pages={3626--3633},\n  year={2017},\n  organization={IEEE}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ade20k",
     "slug": "ade20k",
     "name": "ADE20K: Scene Parsing and Segmentation Benchmark",
@@ -6415,6 +6492,86 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "bonnbeetclouds3d",
+    "slug": "bonnbeetclouds3d",
+    "name": "BonnBeetClouds3D: 3D Point Cloud Organ-Level Sugar Beet Phenotyping",
+    "description": "BonnBeetClouds3D is an open-access 3D point cloud dataset for organ-level plant phenotyping and semantic segmentation of sugar beet crops under real field conditions, developed by the Photogrammetry and Robotics Lab at the University of Bonn (PhenoRob Cluster of Excellence). Reconstructed from high-resolution multi-view UAV photogrammetry across 48 breeding plots and multiple growth stages (BBCH 12 to 39), the dataset features dense 3D point clouds with fine-grained semantic annotations for individual plant organs (leaves, stems, soil) and leaf instance IDs alongside physical trait measurements.",
+    "homepage_url": "https://www.ipb.uni-bonn.de/data/bonnbeetclouds3d/index.html",
+    "publisher": {
+      "name": "University of Bonn (Photogrammetry & Robotics Lab)",
+      "type": "academic",
+      "url": "https://www.ipb.uni-bonn.de"
+    },
+    "modalities": [
+      "3d"
+    ],
+    "tasks": [
+      "3d-semantic-segmentation",
+      "point-cloud-segmentation",
+      "plant-phenotyping",
+      "organ-level-segmentation"
+    ],
+    "tags": [
+      "agriculture",
+      "precision-farming",
+      "point-clouds",
+      "3d-vision",
+      "sugar-beet",
+      "plant-phenotyping",
+      "uav"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Dataset provided by the University of Bonn for non-commercial academic research and benchmarking."
+    },
+    "source_references": [
+      {
+        "title": "BonnBeetClouds3D Project Webpage",
+        "url": "https://www.ipb.uni-bonn.de/data/bonnbeetclouds3d/index.html",
+        "type": "official_website",
+        "notes": "Official University of Bonn data page with point cloud downloads and evaluation tools."
+      },
+      {
+        "title": "BonnBeetClouds3D: A Dataset Towards Point Cloud-Based Organ-Level Phenotyping of Sugar Beet Plants Under Real Field Conditions",
+        "url": "https://arxiv.org/abs/2208.08434",
+        "type": "original_paper",
+        "notes": "Published in IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official University of Bonn project portal and IROS 2022 publication."
+    },
+    "sample_count": {
+      "total": 100,
+      "unit": "annotated 3D point clouds",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022"
+    },
+    "citation": {
+      "paper_title": "BonnBeetClouds3D: A Dataset Towards Point Cloud-Based Organ-Level Phenotyping of Sugar Beet Plants Under Real Field Conditions",
+      "paper_url": "https://arxiv.org/abs/2208.08434",
+      "authors": [
+        "Elias Marks",
+        "Jonas Bömer",
+        "Federico Magistri",
+        "Anurag Sah",
+        "Jens Behley",
+        "Cyrill Stachniss"
+      ],
+      "bibtex": "@inproceedings{marks2022bonnbeetclouds3d,\n  title={BonnBeetClouds3D: A Dataset Towards Point Cloud-Based Organ-Level Phenotyping of Sugar Beet Plants Under Real Field Conditions},\n  author={Marks, Elias and B{\\\"o}mer, Jonas and Magistri, Federico and Sah, Anurag and Behley, Jens and Stachniss, Cyrill},\n  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},\n  year={2022}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "boolq",
     "slug": "boolq",
     "name": "BoolQ: Natural Yes/No Question Answering Dataset",
@@ -7794,6 +7951,78 @@
       ],
       "doi": "10.48550/arXiv.1908.02900",
       "bibtex": "@article{mwebaze2019icassava,\n  title={iCassava 2019Fine-Grained Visual Categorization for Cassava Leaf Disease Identification},\n  author={Mwebaze, Ernest and Gebru, Timnit and Frome, Andrea and Nsumba, Solomon and Tusubira, Jeremy},\n  journal={arXiv preprint arXiv:1908.02900},\n  year={2019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cattlebehaviours6",
+    "slug": "cattlebehaviours6",
+    "name": "CattleBehaviours6: Dairy Cattle Behaviour Recognition Video Dataset",
+    "description": "CattleBehaviours6 is a curated video benchmark for automated dairy cattle behaviour recognition, published by the University of Bristol on data.bris. Designed to support computer vision and multimodal vision-language frameworks (such as Cattle-CLIP) in precision livestock farming, the collection comprises 1,905 verified video clips capturing six distinct indoor dairy cow behaviours: feeding, drinking, standing-self-grooming, standing-ruminating, lying-self-grooming, and lying-ruminating.",
+    "homepage_url": "https://data.bris.ac.uk/data/dataset/b5c8h75pug4m235p3po6ogitc",
+    "publisher": {
+      "name": "University of Bristol",
+      "type": "academic",
+      "url": "https://www.bristol.ac.uk"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "action-recognition",
+      "behavior-analysis",
+      "precision-livestock-farming"
+    ],
+    "tags": [
+      "agriculture",
+      "precision-livestock-farming",
+      "cattle",
+      "behavior-recognition",
+      "video",
+      "computer-vision"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Non-Commercial Government Licence for Public Sector Information",
+      "spdx_id": null,
+      "url": "https://data.bris.ac.uk/data/dataset/b5c8h75pug4m235p3po6ogitc",
+      "commercial_use": "forbidden",
+      "notes": "Released under the Non-Commercial Government Licence for research and educational applications."
+    },
+    "source_references": [
+      {
+        "title": "data.bris CattleBehaviours6 Repository",
+        "url": "https://data.bris.ac.uk/data/dataset/b5c8h75pug4m235p3po6ogitc",
+        "type": "repository",
+        "notes": "Canonical data.bris repository containing video clips, metadata, and train/val/test splits."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official University of Bristol data.bris repository (DOI: 10.5523/bris.b5c8h75pug4m235p3po6ogitc)."
+    },
+    "sample_count": {
+      "total": 1905,
+      "unit": "annotated video clips",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2024"
+    },
+    "citation": {
+      "paper_title": "CattleBehaviours6: A Behavior-Consistent Dairy Cattle Video Dataset",
+      "paper_url": "https://doi.org/10.5523/bris.b5c8h75pug4m235p3po6ogitc",
+      "authors": [
+        "Neill Campbell",
+        "Andrew Dowsey",
+        "Daria Baran",
+        "Huimin Liu",
+        "Axel Montout"
+      ],
+      "doi": "10.5523/bris.b5c8h75pug4m235p3po6ogitc",
+      "bibtex": "@misc{campbell2024cattlebehaviours6,\n  title={CattleBehaviours6: A Behavior-Consistent Dairy Cattle Video Dataset},\n  author={Campbell, Neill and Dowsey, Andrew and Baran, Daria and Liu, Huimin and Montout, Axel},\n  publisher={University of Bristol},\n  year={2024},\n  doi={10.5523/bris.b5c8h75pug4m235p3po6ogitc}\n}"
     }
   },
   {
@@ -9339,6 +9568,78 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "cofly-weeddb",
+    "slug": "cofly-weeddb",
+    "name": "CoFly-WeedDB: UAV Cotton Field Weed Detection and Segmentation Dataset",
+    "description": "CoFly-WeedDB is an open-access unmanned aerial vehicle (UAV) image dataset captured for weed detection, species identification, and semantic segmentation in row-crop cotton farming, published on Zenodo by researchers at the Agricultural University of Athens and CERTH. Captured using a DJI Phantom 4 Pro at an altitude of 5 meters over cotton fields in Larissa, Greece, the dataset contains 366 high-resolution RGB images (201 densely annotated with pixel-level segmentation masks) covering three target weed species: Johnson grass, Field bindweed, and Purslane.",
+    "homepage_url": "https://zenodo.org/records/6697343",
+    "publisher": {
+      "name": "Agricultural University of Athens / CERTH",
+      "type": "academic",
+      "url": "https://www2.aua.gr"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "crop-weed-segmentation",
+      "object-detection",
+      "uav-remote-sensing"
+    ],
+    "tags": [
+      "agriculture",
+      "precision-farming",
+      "uav",
+      "cotton",
+      "weed-detection",
+      "semantic-segmentation",
+      "robotics"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset and annotations released under CC BY 4.0 on Zenodo."
+    },
+    "source_references": [
+      {
+        "title": "CoFly-WeedDB Zenodo Repository",
+        "url": "https://zenodo.org/records/6697343",
+        "type": "repository",
+        "notes": "Official Zenodo distribution containing raw images, ground-truth masks, and LabelMe JSON files."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official Zenodo record 6697343 (DOI: 10.5281/zenodo.6697343)."
+    },
+    "sample_count": {
+      "total": 366,
+      "unit": "uav images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022"
+    },
+    "citation": {
+      "paper_title": "CoFly-WeedDB: A UAV image dataset for weed detection and species identification in cotton fields",
+      "paper_url": "https://doi.org/10.5281/zenodo.6697343",
+      "authors": [
+        "Dimitrios Loukatos",
+        "Konstantinos G. Arvanitis",
+        "Dimitrios M. Pipilis"
+      ],
+      "doi": "10.5281/zenodo.6697343",
+      "bibtex": "@misc{loukatos2022coflyweeddb,\n  title={CoFly-WeedDB: A UAV image dataset for weed detection and species identification in cotton fields},\n  author={Loukatos, Dimitrios and Arvanitis, Konstantinos G and Pipilis, Dimitrios M},\n  publisher={Zenodo},\n  year={2022},\n  doi={10.5281/zenodo.6697343}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "common-voice",
     "slug": "common-voice",
     "name": "Mozilla Common Voice",
@@ -10744,6 +11045,81 @@
       "data_sources": [
         "Organic agricultural test fields, Germany"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cy-bench",
+    "slug": "cy-bench",
+    "name": "CY-Bench: Global Sub-National Crop Yield Forecasting Benchmark",
+    "description": "CY-Bench is a comprehensive open-access machine learning benchmark dataset for sub-national crop yield forecasting developed by the AgML initiative of the Agricultural Model Intercomparison and Improvement Project (AgMIP), Wageningen University, and CGIAR. Featuring harmonized multi-year crop yield statistics for maize and wheat across dozens of countries, CY-Bench pairs historical yield observations with spatio-temporal agrometeorological indicators from ERA5, soil properties from SoilGrids, and satellite vegetation indices from Copernicus to enable reproducible model evaluation across continents.",
+    "homepage_url": "https://essd.copernicus.org/articles/18/3997/2026/essd-18-3997-2026.html",
+    "publisher": {
+      "name": "Agricultural Model Intercomparison and Improvement Project (AgMIP)",
+      "type": "academic",
+      "url": "https://agmip.org"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "crop-yield-prediction",
+      "forecasting",
+      "regression",
+      "agricultural-monitoring"
+    ],
+    "tags": [
+      "agriculture",
+      "crop-yield",
+      "forecasting",
+      "climate-impact",
+      "wheat",
+      "maize",
+      "benchmark",
+      "time-series"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published under open-access CC BY 4.0 terms in Earth System Science Data."
+    },
+    "source_references": [
+      {
+        "title": "CY-Bench Article in Earth System Science Data",
+        "url": "https://essd.copernicus.org/articles/18/3997/2026/essd-18-3997-2026.html",
+        "type": "original_paper",
+        "notes": "Published peer-reviewed benchmark paper in ESSD (Copernicus)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against Copernicus ESSD article DOI 10.5194/essd-18-3997-2026."
+    },
+    "sample_count": {
+      "total": 30000,
+      "unit": "administrative-year observations",
+      "status": "estimated"
+    },
+    "dates": {
+      "published": "2026"
+    },
+    "citation": {
+      "paper_title": "CY-Bench: a comprehensive benchmark dataset for sub-national crop yield forecasting",
+      "paper_url": "https://doi.org/10.5194/essd-18-3997-2026",
+      "authors": [
+        "Michiel Kallenberg",
+        "Dilli Paudel",
+        "Stella Ofori-Ampofo",
+        "et al."
+      ],
+      "doi": "10.5194/essd-18-3997-2026",
+      "bibtex": "@article{kallenberg2026cybench,\n  title={CY-Bench: a comprehensive benchmark dataset for sub-national crop yield forecasting},\n  author={Kallenberg, Michiel and Paudel, Dilli and Ofori-Ampofo, Stella and others},\n  journal={Earth System Science Data},\n  volume={18},\n  pages={3997--4018},\n  year={2026},\n  publisher={Copernicus GmbH}\n}"
     }
   },
   {
@@ -12930,6 +13306,86 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "esa-worldcereal-global-maps",
+    "slug": "esa-worldcereal-global-maps",
+    "name": "ESA WorldCereal Global Maps: 10m Crop Type and Irrigation Products",
+    "description": "ESA WorldCereal Global Maps is the first open-access, dynamically updated 10-meter global agricultural monitoring product suite funded by the European Space Agency (ESA) and developed by an international consortium led by VITO Remote Sensing. Utilizing Sentinel-1, Sentinel-2, and Landsat 8 satellite time-series, WorldCereal delivers global raster layers detailing temporary cropland extent, season-specific active cropland, crop types (maize, winter cereals, spring cereals), and active irrigation status across worldwide agro-ecological zones.",
+    "homepage_url": "https://esa-worldcereal.org/en/products/global-maps",
+    "publisher": {
+      "name": "European Space Agency (ESA)",
+      "type": "government",
+      "url": "https://www.esa.int"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "crop-type-classification",
+      "agricultural-monitoring",
+      "land-cover-mapping",
+      "irrigation-detection"
+    ],
+    "tags": [
+      "agriculture",
+      "remote-sensing",
+      "sentinel-2",
+      "global-maps",
+      "crop-classification",
+      "irrigation",
+      "earth-observation"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Global map products distributed openly under CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "ESA WorldCereal Global Maps Portal",
+        "url": "https://esa-worldcereal.org/en/products/global-maps",
+        "type": "official_website",
+        "notes": "Official portal providing global raster downloads and interactive viewing."
+      },
+      {
+        "title": "WorldCereal: a dynamic open-source system for global-scale, seasonal, and reproducible crop and irrigation mapping",
+        "url": "https://doi.org/10.5194/essd-15-5491-2023",
+        "type": "original_paper",
+        "notes": "Comprehensive system and product description published in Earth System Science Data."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official ESA WorldCereal portal and ESSD journal publication."
+    },
+    "sample_count": {
+      "total": 100000,
+      "unit": "global 10m raster tiles",
+      "status": "estimated"
+    },
+    "dates": {
+      "published": "2023"
+    },
+    "citation": {
+      "paper_title": "WorldCereal: a dynamic open-source system for global-scale, seasonal, and reproducible crop and irrigation mapping",
+      "paper_url": "https://doi.org/10.5194/essd-15-5491-2023",
+      "authors": [
+        "Kristof Van Tricht",
+        "Damien Degré",
+        "Sven Gilliams",
+        "Marc Zanaga",
+        "Ruben Van De Kerchove"
+      ],
+      "doi": "10.5194/essd-15-5491-2023",
+      "bibtex": "@article{vantricht2023worldcereal,\n  title={WorldCereal: a dynamic open-source system for global-scale, seasonal, and reproducible crop and irrigation mapping},\n  author={Van Tricht, Kristof and Degr{\\'e}, Damien and Gilliams, Sven and Zanaga, Marc and Van De Kerchove, Ruben},\n  journal={Earth System Science Data},\n  volume={15},\n  number={12},\n  pages={5491--5515},\n  year={2023},\n  publisher={Copernicus GmbH}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "esc-50",
     "slug": "esc-50",
     "name": "ESC-50: Dataset for Environmental Sound Classification",
@@ -13503,6 +13959,82 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "faostat-crops-livestock",
+    "slug": "faostat-crops-livestock",
+    "name": "FAOSTAT Crops and Livestock Products Database (QCL)",
+    "description": "The FAOSTAT Crops and Livestock Products database (Domain QCL) is the canonical global statistical repository curated by the Food and Agriculture Organization of the United Nations (FAO). Tracking agricultural production, area harvested, and yields for 278 individual crop and livestock commodities across 245+ countries and territories from 1961 to the present, QCL provides harmonized international data on cereals, pulses, fruits, vegetables, livestock populations, dairy, meat, and processed commodities to underpin global food security and economic policy research.",
+    "homepage_url": "https://www.fao.org/faostat/en/#data/QCL",
+    "publisher": {
+      "name": "Food and Agriculture Organization of the United Nations (FAO)",
+      "type": "government",
+      "url": "https://www.fao.org"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "agricultural-monitoring",
+      "forecasting",
+      "time-series-analysis",
+      "economic-analysis"
+    ],
+    "tags": [
+      "agriculture",
+      "global-food-security",
+      "statistics",
+      "crop-production",
+      "livestock",
+      "faostat",
+      "economic-data"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "FAO statistical databases are licensed under CC BY 4.0 for non-endorsement statistical and research use."
+    },
+    "source_references": [
+      {
+        "title": "FAOSTAT Crops and Livestock Products Portal",
+        "url": "https://www.fao.org/faostat/en/#data/QCL",
+        "type": "official_website",
+        "notes": "Official interactive query and bulk download portal for domain QCL."
+      },
+      {
+        "title": "FAOSTAT Statistical Database Metadata Catalog",
+        "url": "https://data.fao.org/catalog/iso/d24a448b-3b62-4c09-8c1d-4a39bb599876",
+        "type": "documentation",
+        "notes": "Official ISO metadata specification for FAO Crops and Livestock domain."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official FAOSTAT data domain QCL catalog entry."
+    },
+    "sample_count": {
+      "total": 4000000,
+      "unit": "country-year commodity records",
+      "status": "estimated"
+    },
+    "dates": {
+      "published": "1961"
+    },
+    "citation": {
+      "paper_title": "FAOSTAT Statistical Database: Crops and Livestock Products",
+      "paper_url": "https://www.fao.org/faostat/en/#data/QCL",
+      "authors": [
+        "Food and Agriculture Organization of the United Nations"
+      ],
+      "bibtex": "@misc{faostat_qcl,\n  title={FAOSTAT Statistical Database: Crops and Livestock Products (QCL)},\n  author={{Food and Agriculture Organization of the United Nations}},\n  year={2024},\n  howpublished={\\url{https://www.fao.org/faostat/en/#data/QCL}}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "fashion-mnist",
     "slug": "fashion-mnist",
     "name": "Fashion-MNIST",
@@ -13838,6 +14370,89 @@
         "hamdaoui, wafae"
       ],
       "doi": "10.17632/szsms728jf.1"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "fields-of-the-world",
+    "slug": "fields-of-the-world",
+    "name": "Fields of The World (FTW): Global Agricultural Field Boundary Benchmark",
+    "description": "Fields of The World (FTW) is an open-access, community-driven global benchmark dataset designed for agricultural field boundary instance and semantic segmentation. Maintained by Earth Genome, Taylor Geospatial Engine, and international collaborators, FTW provides multi-temporal Sentinel-2 satellite imagery paired with high-quality instance masks across diverse agricultural landscapes, biomes, and field sizes spanning Europe, Africa, Asia, and South America. The benchmark standardizes evaluation for delineating agricultural parcel boundaries at 10-meter resolution.",
+    "homepage_url": "https://fieldsofthe.world/",
+    "publisher": {
+      "name": "Fields of The World Community",
+      "type": "community",
+      "url": "https://fieldsofthe.world"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "instance-segmentation",
+      "semantic-segmentation",
+      "field-boundary-detection",
+      "agricultural-monitoring"
+    ],
+    "tags": [
+      "agriculture",
+      "remote-sensing",
+      "sentinel-2",
+      "field-boundaries",
+      "instance-segmentation",
+      "earth-observation"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Benchmark datasets and polygon products distributed under CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "Fields of The World GitHub Organization",
+        "url": "https://github.com/fieldsoftheworld",
+        "type": "repository",
+        "notes": "Official repository for benchmark loaders, data catalog, and baseline segmentation models."
+      },
+      {
+        "title": "Fields of The World Official Portal",
+        "url": "https://fieldsofthe.world/",
+        "type": "official_website",
+        "notes": "Main project portal and interactive global map viewer."
+      },
+      {
+        "title": "Fields of The World: A Global Benchmark for Field Boundary Instance Segmentation",
+        "url": "https://arxiv.org/abs/2309.09638",
+        "type": "original_paper",
+        "notes": "Preprint detailing benchmark methodology, curation, and model evaluation."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official GitHub organization and arXiv publication."
+    },
+    "sample_count": {
+      "total": 10000,
+      "unit": "annotated satellite patches",
+      "status": "estimated"
+    },
+    "dates": {
+      "published": "2023"
+    },
+    "citation": {
+      "paper_title": "Fields of The World: A Global Benchmark for Field Boundary Instance Segmentation",
+      "paper_url": "https://arxiv.org/abs/2309.09638",
+      "authors": [
+        "Hannah R. Kerner",
+        "Gabriel Tseng",
+        "Inbal Becker-Reshef",
+        "Catherine Nakalembe"
+      ],
+      "bibtex": "@article{kerner2023fields,\n  title={Fields of The World: A Global Benchmark for Field Boundary Instance Segmentation},\n  author={Kerner, Hannah R and Tseng, Gabriel and Becker-Reshef, Inbal and Nakalembe, Catherine},\n  journal={arXiv preprint arXiv:2309.09638},\n  year={2023}\n}"
     }
   },
   {
@@ -18389,6 +19004,88 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "isric-soilgrids-2",
+    "slug": "isric-soilgrids-2",
+    "name": "ISRIC SoilGrids 2.0: Global Gridded Soil Property Prediction Maps",
+    "description": "SoilGrids 2.0 is a global collection of digital soil property maps generated at 250-meter spatial resolution by ISRIC - World Soil Information. Using machine learning models trained on approximately 240,000 ground soil profiles and over 400 environmental covariates, SoilGrids 2.0 predicts key physical and chemical soil properties (soil organic carbon, bulk density, pH, cation exchange capacity, total nitrogen, and sand, silt, and clay fractions) across six standardized depth intervals (0-5, 5-15, 15-30, 30-60, 60-100, and 100-200 cm) alongside spatial uncertainty estimates.",
+    "homepage_url": "https://isric.org/explore/soilgrids",
+    "publisher": {
+      "name": "ISRIC - World Soil Information",
+      "type": "academic",
+      "url": "https://isric.org"
+    },
+    "modalities": [
+      "tabular",
+      "vision"
+    ],
+    "tasks": [
+      "soil-property-prediction",
+      "agricultural-monitoring",
+      "regression",
+      "environmental-modeling"
+    ],
+    "tags": [
+      "agriculture",
+      "soil-science",
+      "geospatial",
+      "digital-soil-mapping",
+      "environmental-modeling",
+      "machine-learning"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "SoilGrids 2.0 layers released under CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "ISRIC SoilGrids Official Portal",
+        "url": "https://isric.org/explore/soilgrids",
+        "type": "official_website",
+        "notes": "Web portal for map exploration, Web Coverage Services (WCS), and GeoTIFF downloads."
+      },
+      {
+        "title": "SoilGrids 2.0: producing soil information for the globe with quantified spatial uncertainty",
+        "url": "https://doi.org/10.5194/soil-7-217-2021",
+        "type": "original_paper",
+        "notes": "Methodology and evaluation paper published in SOIL."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official ISRIC portal and SOIL journal article."
+    },
+    "sample_count": {
+      "total": 240000,
+      "unit": "profile locations modeled globally",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021"
+    },
+    "citation": {
+      "paper_title": "SoilGrids 2.0: producing soil information for the globe with quantified spatial uncertainty",
+      "paper_url": "https://doi.org/10.5194/soil-7-217-2021",
+      "authors": [
+        "Laura Poggio",
+        "Luís M. de Sousa",
+        "Niels H. Batjes",
+        "Gerard B. M. Heuvelink",
+        "Bas Kempen",
+        "Eloi Ribeiro",
+        "David Rossiter"
+      ],
+      "doi": "10.5194/soil-7-217-2021",
+      "bibtex": "@article{poggio2021soilgrids,\n  title={SoilGrids 2.0: producing soil information for the globe with quantified spatial uncertainty},\n  author={Poggio, Laura and de Sousa, Lu{\\'\\i}s M and Batjes, Niels H and Heuvelink, Gerard BM and Kempen, Bas and Ribeiro, Eloi and Rossiter, David},\n  journal={SOIL},\n  volume={7},\n  number={1},\n  pages={217--240},\n  year={2021},\n  publisher={Copernicus GmbH}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ixi-dataset",
     "slug": "ixi-dataset",
     "name": "IXI: Information eXtraction from Images Brain MRI Dataset",
@@ -19992,6 +20689,78 @@
       ],
       "doi": "10.13026/C2G01T",
       "bibtex": "@article{jager2003long,\n  title={Long-term ST database: a reference for the development and evaluation of automated ischaemia detectors and for the study of the dynamics of myocardial ischaemia},\n  author={Jager, Franc and Taddei, Alessandro and Moody, George B and Emdin, Michele and Antolic, Gorazd and Dorn, Roman and Smrdel, Ales and Marchesi, Carlo and Mark, Roger G},\n  journal={Circulation},\n  volume={107},\n  number={2},\n  pages={247--254},\n  year={2003},\n  publisher={Am Heart Assoc},\n  doi={10.13026/C2G01T}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "lucas-2018-topsoil",
+    "slug": "lucas-2018-topsoil",
+    "name": "LUCAS 2018 Topsoil: European Soil Chemistry and Physical Properties",
+    "description": "LUCAS 2018 Topsoil is an extensive harmonized soil database covering the European Union, curated by the European Soil Data Centre (ESDAC) of the European Commission Joint Research Centre (JRC). Based on standardized topsoil field sampling (0-20 cm depth) across 18,984 survey points in EU member states, the dataset provides laboratory-measured physical and chemical properties including soil pH, organic carbon content (SOC), carbonates, total nitrogen, extractable phosphorus and potassium, electrical conductivity, heavy metals, and bulk density.",
+    "homepage_url": "https://esdac.jrc.ec.europa.eu/content/lucas-2018-topsoil-data",
+    "publisher": {
+      "name": "European Soil Data Centre (ESDAC) / European Commission JRC",
+      "type": "government",
+      "url": "https://esdac.jrc.ec.europa.eu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "soil-property-prediction",
+      "environmental-modeling",
+      "regression",
+      "agricultural-monitoring"
+    ],
+    "tags": [
+      "agriculture",
+      "soil-science",
+      "topsoil",
+      "soil-chemistry",
+      "europe",
+      "esdac",
+      "jrc"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "JRC/ESDAC Data License Agreement (Non-Commercial Research)",
+      "spdx_id": null,
+      "url": "https://esdac.jrc.ec.europa.eu/content/lucas-2018-topsoil-data",
+      "commercial_use": "forbidden",
+      "notes": "Free access granted for non-commercial research; redistribution of raw coordinates restricted under ESDAC terms."
+    },
+    "source_references": [
+      {
+        "title": "ESDAC LUCAS 2018 Topsoil Webpage",
+        "url": "https://esdac.jrc.ec.europa.eu/content/lucas-2018-topsoil-data",
+        "type": "official_website",
+        "notes": "Official European Soil Data Centre page with data access guidelines and CSV downloads."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official European Soil Data Centre (ESDAC) repository entry."
+    },
+    "sample_count": {
+      "total": 18984,
+      "unit": "soil sample locations",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020"
+    },
+    "citation": {
+      "paper_title": "LUCAS 2018 Topsoil Dataset",
+      "paper_url": "https://esdac.jrc.ec.europa.eu/content/lucas-2018-topsoil-data",
+      "authors": [
+        "Arwyn Jones",
+        "Luca Montanarella",
+        "Panos Panagos",
+        "Gergely Tóth"
+      ],
+      "bibtex": "@misc{lucas2018topsoil,\n  title={LUCAS 2018 Topsoil Dataset},\n  author={Jones, Arwyn and Montanarella, Luca and Panagos, Panos and T{\\'o}th, Gergely},\n  publisher={European Commission Joint Research Centre (JRC)},\n  year={2020},\n  howpublished={\\url{https://esdac.jrc.ec.europa.eu/content/lucas-2018-topsoil-data}}\n}"
     }
   },
   {
@@ -24051,6 +24820,86 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "nasa-gfsad30-cropland-extent",
+    "slug": "nasa-gfsad30-cropland-extent",
+    "name": "NASA GFSAD30 Global Cropland Extent 2015 Validation Dataset (GFSAD30VAL)",
+    "description": "NASA GFSAD30VAL is an independent, global ground-truth validation dataset produced by the Global Food Security-support Analysis Data (GFSAD) project led by the USGS and NASA LP DAAC. Comprising 18,986 rigorously vetted reference sample points distributed across agro-ecological zones on all global continents, the dataset provides ground-truth assessments separating cropland and non-cropland areas to evaluate and benchmark global 30-meter cropland extent satellite products.",
+    "homepage_url": "https://data.nasa.gov/dataset/global-food-security-support-analysis-data-gfsad-cropland-extent-product-2015-validation-3-cb116",
+    "publisher": {
+      "name": "NASA LP DAAC / USGS",
+      "type": "government",
+      "url": "https://lpdaac.usgs.gov"
+    },
+    "modalities": [
+      "tabular",
+      "vision"
+    ],
+    "tasks": [
+      "land-cover-mapping",
+      "agricultural-monitoring",
+      "accuracy-assessment"
+    ],
+    "tags": [
+      "agriculture",
+      "remote-sensing",
+      "cropland",
+      "global-food-security",
+      "validation",
+      "nasa",
+      "usgs"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "U.S. Government Work (Public Domain / CC0 1.0)",
+      "spdx_id": "CC0-1.0",
+      "url": "https://www.earthdata.nasa.gov/engage/open-data-policy",
+      "commercial_use": "allowed",
+      "notes": "NASA and USGS earth observation data are released freely to the public under open government data policies."
+    },
+    "source_references": [
+      {
+        "title": "NASA Open Data Catalog GFSAD30VAL Record",
+        "url": "https://data.nasa.gov/dataset/global-food-security-support-analysis-data-gfsad-cropland-extent-product-2015-validation-3-cb116",
+        "type": "official_website",
+        "notes": "Official metadata landing page on NASA Data Portal."
+      },
+      {
+        "title": "NASA LP DAAC GFSAD30VAL Product Specification",
+        "url": "https://doi.org/10.5067/MEaSUREs/GFSAD/GFSAD30VAL.001",
+        "type": "documentation",
+        "notes": "Official USGS/NASA LP DAAC dataset documentation and download link."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official NASA Data Portal and LP DAAC metadata."
+    },
+    "sample_count": {
+      "total": 18986,
+      "unit": "validation sample points",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2017"
+    },
+    "citation": {
+      "paper_title": "Global Food Security-support Analysis Data (GFSAD) Cropland Extent 2015 Validation 30 m V001",
+      "paper_url": "https://doi.org/10.5067/MEaSUREs/GFSAD/GFSAD30VAL.001",
+      "authors": [
+        "Prasad S. Thenkabail",
+        "Adam Oliphant",
+        "Jun Xiong",
+        "Kamini Yadav",
+        "Pardhasaradhi Teluguntla"
+      ],
+      "doi": "10.5067/MEaSUREs/GFSAD/GFSAD30VAL.001",
+      "bibtex": "@misc{thenkabail2017gfsad30val,\n  title={Global Food Security-support Analysis Data (GFSAD) Cropland Extent 2015 Validation 30 m V001},\n  author={Thenkabail, Prasad S and Oliphant, Adam and Xiong, Jun and Yadav, Kamini and Teluguntla, Pardhasaradhi},\n  publisher={NASA LP DAAC},\n  year={2017},\n  doi={10.5067/MEaSUREs/GFSAD/GFSAD30VAL.001}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "nasa-ims-bearings",
     "slug": "nasa-ims-bearings",
     "name": "NASA IMS Bearing Dataset",
@@ -27704,6 +28553,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "plantclef-2022",
+    "slug": "plantclef-2022",
+    "name": "PlantCLEF 2022: Large-Scale Global Plant Species Identification Benchmark",
+    "description": "PlantCLEF 2022 is a large-scale visual benchmark for continental- and global-scale automated plant species identification, organized under the LifeCLEF evaluation campaign at the CLEF conference by Inria, CIRAD, and partners. Spanning approximately 80,000 vascular plant species worldwide, the benchmark provides roughly 4 million images (2.9 million trusted, curated records from GBIF, iNaturalist, and Pl@ntNet alongside 1.1 million web images), addressing the challenge of identifying rare and wild flora under real-world visual noise and long-tailed class distributions.",
+    "homepage_url": "https://www.imageclef.org/PlantCLEF2022",
+    "publisher": {
+      "name": "LifeCLEF / ImageCLEF Consortium",
+      "type": "academic",
+      "url": "https://www.imageclef.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "species-identification",
+      "fine-grained-classification",
+      "biodiversity-monitoring"
+    ],
+    "tags": [
+      "agriculture",
+      "botany",
+      "plant-identification",
+      "biodiversity",
+      "fine-grained",
+      "lifeclef",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial (CC BY-NC / LifeCLEF Terms)",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://www.imageclef.org/PlantCLEF2022",
+      "commercial_use": "forbidden",
+      "notes": "Images derived from GBIF, Pl@ntNet, and iNaturalist under respective CC / non-commercial open biodiversity terms."
+    },
+    "source_references": [
+      {
+        "title": "PlantCLEF 2022 Evaluation Campaign Webpage",
+        "url": "https://www.imageclef.org/PlantCLEF2022",
+        "type": "official_website",
+        "notes": "Official challenge description, participation guidelines, and dataset access portal."
+      },
+      {
+        "title": "Overview of PlantCLEF 2022: Image-based plant identification at global scale",
+        "url": "https://ceur-ws.org/Vol-3180/paper-149.pdf",
+        "type": "original_paper",
+        "notes": "Overview paper published in CLEF 2022 Working Notes (CEUR Workshop Proceedings)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official ImageCLEF 2022 campaign portal and CEUR-WS publication."
+    },
+    "sample_count": {
+      "total": 4000000,
+      "unit": "plant images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022"
+    },
+    "citation": {
+      "paper_title": "Overview of PlantCLEF 2022: Image-based plant identification at global scale",
+      "paper_url": "https://ceur-ws.org/Vol-3180/paper-149.pdf",
+      "authors": [
+        "Hervé Goëau",
+        "Pierre Bonnet",
+        "Alexis Joly"
+      ],
+      "bibtex": "@inproceedings{goeau2022overview,\n  title={Overview of PlantCLEF 2022: Image-based plant identification at global scale},\n  author={Go{\\\"e}au, Herv{\\'e} and Bonnet, Pierre and Joly, Alexis},\n  booktitle={CLEF 2022 Working Notes, CEUR Workshop Proceedings},\n  volume={3180},\n  pages={1924--1939},\n  year={2022}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "plantdoc",
     "slug": "plantdoc",
     "name": "PlantDoc: Plant Disease Detection in Natural Field Conditions",
@@ -27794,6 +28720,86 @@
       ],
       "doi": "10.1145/3371158.3371196",
       "bibtex": "@inproceedings{singh2020plantdoc,\n  title={PlantDoc: A Dataset for Visual Plant Disease Detection},\n  author={Singh, Davinder and Jain, Naman and Jain, Pranjali and Kayal, Pratik and Kumawat, Sudhakar and Batra, Nipun},\n  booktitle={Proceedings of the 7th ACM IKDD CoDS and 25th COMAD},\n  pages={249--253},\n  year={2020},\n  doi={10.1145/3371158.3371196}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "plantexpertvqa",
+    "slug": "plantexpertvqa",
+    "name": "PlantExpertVQA: Plant Disease Visual Question Answering Benchmark",
+    "description": "PlantExpertVQA is a large-scale, expert-level multimodal benchmark for visual question answering in agricultural plant pathology, disease diagnosis, and treatment recommendation. Developed by Syed Nazmus Sakib et al. and hosted on Hugging Face, the benchmark features 765,186 question-answer pairs paired with 150,841 leaf images across diverse crops and conditions alongside an expert Disease Knowledge Base. Unlike static classification datasets, PlantExpertVQA evaluates the multi-step diagnostic reasoning, symptom identification, etiology understanding, and treatment recommendation capabilities of vision-language models.",
+    "homepage_url": "https://huggingface.co/datasets/SyedNazmusSakib/PlantExpertVQA",
+    "publisher": {
+      "name": "Syed Nazmus Sakib et al.",
+      "type": "academic",
+      "url": "https://huggingface.co/SyedNazmusSakib"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "disease-diagnosis",
+      "multimodal-reasoning",
+      "treatment-recommendation"
+    ],
+    "tags": [
+      "agriculture",
+      "plant-pathology",
+      "visual-question-answering",
+      "vqa",
+      "multimodal",
+      "crop-disease",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset and QA pairs released under CC BY 4.0 on Hugging Face Hub."
+    },
+    "source_references": [
+      {
+        "title": "PlantExpertVQA Hugging Face Dataset Card",
+        "url": "https://huggingface.co/datasets/SyedNazmusSakib/PlantExpertVQA",
+        "type": "dataset_card",
+        "notes": "Official Hugging Face Hub repository containing parquet QA files and image archives."
+      },
+      {
+        "title": "PlantExpertVQA: A Large-Scale Expert-Level Visual Question Answering Benchmark for Plant Disease Diagnosis and Treatment",
+        "url": "https://arxiv.org/abs/2410.15833",
+        "type": "original_paper",
+        "notes": "Research paper introducing the VQA benchmark and evaluation protocols."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official Hugging Face Hub dataset card and arXiv publication."
+    },
+    "sample_count": {
+      "total": 765186,
+      "unit": "question-answer pairs",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2024"
+    },
+    "citation": {
+      "paper_title": "PlantExpertVQA: A Large-Scale Expert-Level Visual Question Answering Benchmark for Plant Disease Diagnosis and Treatment",
+      "paper_url": "https://arxiv.org/abs/2410.15833",
+      "authors": [
+        "Syed Nazmus Sakib",
+        "Nafiul Haque",
+        "Mohammad Zabed Hossain",
+        "Shifat E. Arman"
+      ],
+      "bibtex": "@article{sakib2024plantexpertvqa,\n  title={PlantExpertVQA: A Large-Scale Expert-Level Visual Question Answering Benchmark for Plant Disease Diagnosis and Treatment},\n  author={Sakib, Syed Nazmus and Haque, Nafiul and Hossain, Mohammad Zabed and Arman, Shifat E},\n  journal={arXiv preprint arXiv:2410.15833},\n  year={2024}\n}"
     }
   },
   {
@@ -29819,6 +30825,84 @@
         "NIH Clinical Center",
         "Society of Thoracic Radiology"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "rumexweeds",
+    "slug": "rumexweeds",
+    "name": "RumexWeeds: Grassland Weed Dataset for Agricultural Robotics",
+    "description": "RumexWeeds is an open-access field robotics and computer vision dataset specifically collected for the autonomous detection and localized control of grassland dock weeds (Rumex obtusifolius and Rumex crispus) in organic pastures. Developed by the Technical University of Denmark (DTU) and Wageningen University & Research, the dataset comprises 5,510 high-resolution images recorded across dynamic field conditions in Denmark, featuring 15,519 bounding box annotations, 340 pixel-level semantic segmentation masks, and synchronized GNSS, IMU, and odometry telemetry.",
+    "homepage_url": "https://orbit.dtu.dk/en/datasets/data-for-rumexweeds-a-grassland-dataset-for-agricultural-robotics/",
+    "publisher": {
+      "name": "Technical University of Denmark (DTU)",
+      "type": "academic",
+      "url": "https://www.dtu.dk"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection",
+      "semantic-segmentation",
+      "crop-weed-segmentation",
+      "agricultural-robotics"
+    ],
+    "tags": [
+      "agriculture",
+      "precision-farming",
+      "weed-detection",
+      "grassland",
+      "rumex",
+      "agricultural-robotics",
+      "computer-vision"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Data and annotations licensed under CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "DTU Orbit RumexWeeds Dataset Record",
+        "url": "https://orbit.dtu.dk/en/datasets/data-for-rumexweeds-a-grassland-dataset-for-agricultural-robotics/",
+        "type": "repository",
+        "notes": "Official DTU research repository record with DOI 10.11583/dtu.17040518."
+      },
+      {
+        "title": "RumexWeeds: A grassland dataset for agricultural robotics",
+        "url": "https://doi.org/10.1002/rob.22196",
+        "type": "original_paper",
+        "notes": "Research article published in the Journal of Field Robotics."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against DTU Orbit dataset deposit and Journal of Field Robotics publication."
+    },
+    "sample_count": {
+      "total": 5510,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023"
+    },
+    "citation": {
+      "paper_title": "RumexWeeds: A grassland dataset for agricultural robotics",
+      "paper_url": "https://doi.org/10.1002/rob.22196",
+      "authors": [
+        "Ronja Güldenring",
+        "Frits K. van Evert",
+        "Lazaros Nalpantidis"
+      ],
+      "doi": "10.1002/rob.22196",
+      "bibtex": "@article{guldenring2023rumexweeds,\n  title={RumexWeeds: A grassland dataset for agricultural robotics},\n  author={G{\\\"u}ldenring, Ronja and van Evert, Frits K and Nalpantidis, Lazaros},\n  journal={Journal of Field Robotics},\n  volume={40},\n  number={6},\n  pages={1639--1656},\n  year={2023},\n  publisher={Wiley Online Library}\n}"
     }
   },
   {
@@ -35167,6 +36251,161 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "usda-cropland-data-layer",
+    "slug": "usda-cropland-data-layer",
+    "name": "USDA NASS Cropland Data Layer (CDL)",
+    "description": "The Cropland Data Layer (CDL) is an official annual agricultural land cover mapping program produced by the United States Department of Agriculture (USDA) National Agricultural Statistics Service (NASS). Spanning 1997 to the present, CDL provides high-resolution, geo-referenced, crop-specific land cover classification rasters for the contiguous United States at 30-meter and modern 10-meter resolutions. The collection identifies over 100 distinct crop types, pasture, woodland, water, and urban categories, serving as the benchmark standard for agricultural monitoring, crop acreage estimation, and land-use change research.",
+    "homepage_url": "https://www.nass.usda.gov/Research_and_Science/Cropland/Release/",
+    "publisher": {
+      "name": "USDA National Agricultural Statistics Service",
+      "type": "government",
+      "url": "https://www.nass.usda.gov"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "crop-type-classification",
+      "land-cover-mapping",
+      "agricultural-monitoring"
+    ],
+    "tags": [
+      "agriculture",
+      "remote-sensing",
+      "cropland",
+      "land-cover",
+      "satellite-imagery",
+      "usda",
+      "time-series"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "U.S. Government Work (Public Domain)",
+      "spdx_id": null,
+      "url": "https://www.nass.usda.gov/Research_and_Science/Cropland/Release/",
+      "commercial_use": "allowed",
+      "notes": "U.S. government public domain work. Free of copyright restrictions."
+    },
+    "source_references": [
+      {
+        "title": "USDA NASS CDL Official Webpage",
+        "url": "https://www.nass.usda.gov/Research_and_Science/Cropland/Release/",
+        "type": "official_website",
+        "notes": "Official release portal with CropScape access, FAQs, and national data downloads."
+      },
+      {
+        "title": "Cloud-Powered Agricultural Mapping: A Revolution Toward 10m Resolution Cropland Data Layers",
+        "url": "https://doi.org/10.1109/IGARSS53475.2024.10641079",
+        "type": "original_paper",
+        "notes": "Technical paper in IEEE IGARSS detailing 10m CDL modernization."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official USDA NASS release portal and CropScape application."
+    },
+    "sample_count": {
+      "total": 48,
+      "unit": "state annual raster mosaics",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2008"
+    },
+    "citation": {
+      "paper_title": "Cloud-Powered Agricultural Mapping: A Revolution Toward 10m Resolution Cropland Data Layers",
+      "paper_url": "https://doi.org/10.1109/IGARSS53475.2024.10641079",
+      "authors": [
+        "Zhe Li",
+        "Rick Mueller",
+        "Zhengwei Yang",
+        "David Johnson",
+        "Patrick Willis"
+      ],
+      "doi": "10.1109/IGARSS53475.2024.10641079",
+      "bibtex": "@inproceedings{li2024cdl,\n  title={Cloud-Powered Agricultural Mapping: A Revolution Toward 10m Resolution Cropland Data Layers},\n  author={Li, Zhe and Mueller, Rick and Yang, Zhengwei and Johnson, David and Willis, Patrick},\n  booktitle={IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},\n  year={2024}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "usda-nass-quick-stats",
+    "slug": "usda-nass-quick-stats",
+    "name": "USDA NASS Quick Stats: US Agricultural Statistics Database",
+    "description": "USDA NASS Quick Stats is the official, comprehensive public statistical repository of United States agricultural data maintained by the USDA National Agricultural Statistics Service. Housing over 50 million historical and current data points dating from 1850 to the present, Quick Stats aggregates information from hundreds of annual sample surveys and the 5-year Census of Agriculture covering crop acreage, yields, production, livestock counts, prices, farm labor, and environmental practices down to state and county levels.",
+    "homepage_url": "https://quickstats.nass.usda.gov/",
+    "publisher": {
+      "name": "USDA National Agricultural Statistics Service",
+      "type": "government",
+      "url": "https://www.nass.usda.gov"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "agricultural-monitoring",
+      "economic-analysis",
+      "time-series-analysis",
+      "forecasting"
+    ],
+    "tags": [
+      "agriculture",
+      "statistics",
+      "usda",
+      "census-of-agriculture",
+      "crop-yield",
+      "livestock",
+      "farm-economics"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "U.S. Government Work (Public Domain)",
+      "spdx_id": null,
+      "url": "https://quickstats.nass.usda.gov/",
+      "commercial_use": "allowed",
+      "notes": "U.S. Federal Government public data produced by USDA NASS employees in official capacity; free of copyright."
+    },
+    "source_references": [
+      {
+        "title": "USDA NASS Quick Stats 2.0 Database",
+        "url": "https://quickstats.nass.usda.gov/",
+        "type": "official_website",
+        "notes": "Official online searchable database and API query tool."
+      },
+      {
+        "title": "USDA NASS Official Statistics Portal",
+        "url": "https://www.nass.usda.gov/",
+        "type": "documentation",
+        "notes": "National Agricultural Statistics Service main portal and methodology guides."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official USDA NASS Quick Stats database portal."
+    },
+    "sample_count": {
+      "total": 50000000,
+      "unit": "agricultural data points",
+      "status": "estimated"
+    },
+    "dates": {
+      "published": "1850"
+    },
+    "citation": {
+      "paper_title": "USDA National Agricultural Statistics Service Quick Stats Database",
+      "paper_url": "https://quickstats.nass.usda.gov/",
+      "authors": [
+        "United States Department of Agriculture National Agricultural Statistics Service"
+      ],
+      "bibtex": "@misc{usda_nass_quickstats,\n  title={USDA National Agricultural Statistics Service Quick Stats Database},\n  author={{USDA National Agricultural Statistics Service}},\n  year={2024},\n  howpublished={\\url{https://quickstats.nass.usda.gov/}}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "uzser-mfcc",
     "slug": "uzser-mfcc",
     "name": "UzSER-MFCC",
@@ -36242,6 +37481,85 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "we3ds",
+    "slug": "we3ds",
+    "name": "WE3DS: An RGB-D Image Dataset for Semantic Segmentation in Agriculture",
+    "description": "WE3DS is an open-access multi-class RGB-D image benchmark designed for semantic segmentation in early-stage crop farming, developed by researchers at the University of Natural Resources and Life Sciences, Vienna (BOKU). It features 2,568 densely annotated RGB-D images combining high-resolution color imagery with calibrated distance and depth maps captured under outdoor field conditions. The dataset provides pixel-level ground truth masks separating soil, 7 crop species (sugar beet, maize, sunflower, soybean, etc.), and 10 weed species, establishing a foundation for 3D agricultural vision and precision robotic spraying.",
+    "homepage_url": "https://zenodo.org/records/7457983",
+    "publisher": {
+      "name": "University of Natural Resources and Life Sciences, Vienna (BOKU)",
+      "type": "academic",
+      "url": "https://boku.ac.at"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "crop-weed-segmentation",
+      "agricultural-robotics"
+    ],
+    "tags": [
+      "agriculture",
+      "precision-farming",
+      "rgb-d",
+      "depth-maps",
+      "semantic-segmentation",
+      "weed-detection",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset and annotations released under CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "WE3DS Zenodo Repository",
+        "url": "https://zenodo.org/records/7457983",
+        "type": "repository",
+        "notes": "Canonical Zenodo repository containing RGB-D images, depth maps, and segmentation masks."
+      },
+      {
+        "title": "WE3DS: An RGB-D Image Dataset for Semantic Segmentation in Agriculture",
+        "url": "https://doi.org/10.3390/s23052821",
+        "type": "original_paper",
+        "notes": "Published open-access research paper in MDPI Sensors."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official Zenodo record 7457983 and MDPI Sensors publication."
+    },
+    "sample_count": {
+      "total": 2568,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023"
+    },
+    "citation": {
+      "paper_title": "WE3DS: An RGB-D Image Dataset for Semantic Segmentation in Agriculture",
+      "paper_url": "https://doi.org/10.3390/s23052821",
+      "authors": [
+        "Florian Kitzler",
+        "Norbert Barta",
+        "Reinhard W. Neugschwandtner",
+        "Andreas Gronauer",
+        "Viktoria Motsch"
+      ],
+      "doi": "10.3390/s23052821",
+      "bibtex": "@article{kitzler2023we3ds,\n  title={WE3DS: An RGB-D Image Dataset for Semantic Segmentation in Agriculture},\n  author={Kitzler, Florian and Barta, Norbert and Neugschwandtner, Reinhard W and Gronauer, Andreas and Motsch, Viktoria},\n  journal={Sensors},\n  volume={23},\n  number={5},\n  pages={2821},\n  year={2023},\n  publisher={MDPI}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "weatherbench-2",
     "slug": "weatherbench-2",
     "name": "WeatherBench 2: Benchmark for Next-Generation Data-Driven Global Weather Models",
@@ -36352,6 +37670,170 @@
       ],
       "doi": "10.1029/2023MS004019",
       "bibtex": "@article{rasp2024weatherbench2,\n  title={WeatherBench 2: A Benchmark for the Next Generation of Data-Driven Global Weather Models},\n  author={Rasp, Stephan and Hoyer, Stephan and Merose, Alexander and Langmore, Ian and Battaglia, Peter and Russell, Tyler and Sanchez-Gonzalez, Alvaro and Yang, Vivian and Carver, Rob and Agrawal, Shreya and Chantry, Matthew and Ben Bouallegue, Zied and Dueben, Peter and Bromberg, Carla and Sisk, Jared and Barrington, Luke and Bell, Aaron and Sha, Fei},\n  journal={Journal of Advances in Modeling Earth Systems},\n  volume={16},\n  number={6},\n  pages={e2023MS004019},\n  year={2024},\n  doi={10.1029/2023MS004019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "weedmap",
+    "slug": "weedmap",
+    "name": "weedMap: Large-Scale Aerial Multispectral Weed Mapping Dataset",
+    "description": "weedMap is an open-access aerial multispectral weed mapping benchmark collected using autonomous unmanned aerial vehicles (UAVs) equipped with multi-spectral sensors (green, red, red-edge, and near-infrared channels) over agricultural fields in Switzerland and Germany. Curated by the Autonomous Systems Lab at ETH Zurich and the University of Bonn, the dataset includes calibrated multispectral orthomosaics and 11,000+ tile patches annotated across sugar beet, sunflower, soil, and weed classes, providing a standard testbed for automated weed mapping and targeted herbicide application.",
+    "homepage_url": "https://projects.asl.ethz.ch/datasets/doku.php?id=weedmap:remotesensing2018weedmap",
+    "publisher": {
+      "name": "Autonomous Systems Lab, ETH Zurich",
+      "type": "academic",
+      "url": "https://asl.ethz.ch"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "crop-weed-segmentation",
+      "uav-remote-sensing",
+      "agricultural-robotics"
+    ],
+    "tags": [
+      "agriculture",
+      "precision-farming",
+      "multispectral",
+      "uav",
+      "remote-sensing",
+      "weed-detection",
+      "sugar-beet",
+      "sunflower"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset published under CC BY 4.0 open access terms."
+    },
+    "source_references": [
+      {
+        "title": "weedMap ETH Zurich Project Portal",
+        "url": "https://projects.asl.ethz.ch/datasets/doku.php?id=weedmap:remotesensing2018weedmap",
+        "type": "official_website",
+        "notes": "Official ASL ETH Zurich project repository with download links for orthomosaics and tiles."
+      },
+      {
+        "title": "weedMap: A Large-Scale Semantic Weed Mapping Framework Using Aerial Multispectral Imaging and Deep Neural Network for Precision Farming",
+        "url": "https://doi.org/10.3390/rs10091423",
+        "type": "original_paper",
+        "notes": "Published open-access paper in MDPI Remote Sensing."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official ASL ETH Zurich dataset page and MDPI publication."
+    },
+    "sample_count": {
+      "total": 11000,
+      "unit": "annotated tiles",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018"
+    },
+    "citation": {
+      "paper_title": "weedMap: A Large-Scale Semantic Weed Mapping Framework Using Aerial Multispectral Imaging and Deep Neural Network for Precision Farming",
+      "paper_url": "https://doi.org/10.3390/rs10091423",
+      "authors": [
+        "Inkyu Sa",
+        "Marija Popović",
+        "Raghav Khanna",
+        "Zetao Chen",
+        "Philipp Lottes",
+        "Frank Liebisch",
+        "Juan I. Nieto",
+        "Cyrill Stachniss",
+        "Achim Walter",
+        "Roland Siegwart"
+      ],
+      "doi": "10.3390/rs10091423",
+      "bibtex": "@article{sa2018weedmap,\n  title={weedMap: A Large-Scale Semantic Weed Mapping Framework Using Aerial Multispectral Imaging and Deep Neural Network for Precision Farming},\n  author={Sa, Inkyu and Popovi{\\'c}, Marija and Khanna, Raghav and Chen, Zetao and Lottes, Philipp and Liebisch, Frank and Nieto, Juan I and Stachniss, Cyrill and Walter, Achim and Siegwart, Roland},\n  journal={Remote Sensing},\n  volume={10},\n  number={9},\n  pages={1423},\n  year={2018},\n  publisher={MDPI}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "weedsgalore",
+    "slug": "weedsgalore",
+    "name": "WeedsGalore: Multispectral and Multitemporal UAV Crop and Weed Dataset",
+    "description": "WeedsGalore is a high-resolution multispectral and multitemporal UAV image benchmark for crop and weed semantic and instance segmentation in agricultural maize fields, published by the GFZ German Research Centre for Geosciences, Humboldt-Universität zu Berlin, and Karlsruhe Institute of Technology (KIT). Recorded across multiple growth stages in Germany using a 5-band multispectral sensor (RGB, Red-Edge, NIR) at a ground sampling distance of 2.5 mm/pixel, the dataset features 156 high-density tiles with dense pixel-level annotations for maize and 4 prominent weed species.",
+    "homepage_url": "https://github.com/GFZ/weedsgalore",
+    "publisher": {
+      "name": "GFZ German Research Centre for Geosciences",
+      "type": "academic",
+      "url": "https://www.gfz-potsdam.de"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "instance-segmentation",
+      "crop-weed-segmentation",
+      "uav-remote-sensing"
+    ],
+    "tags": [
+      "agriculture",
+      "precision-farming",
+      "multispectral",
+      "uav",
+      "remote-sensing",
+      "weed-detection",
+      "maize"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset licensed under CC BY 4.0. Associated code released under Apache 2.0."
+    },
+    "source_references": [
+      {
+        "title": "WeedsGalore Official GitHub Repository",
+        "url": "https://github.com/GFZ/weedsgalore",
+        "type": "repository",
+        "notes": "Canonical repository containing multispectral image splits and semantic masks."
+      },
+      {
+        "title": "WeedsGalore: A Multispectral and Multitemporal UAV-Based Dataset for Crop and Weed Segmentation in Agricultural Maize Fields",
+        "url": "https://openaccess.thecvf.com/content/WACV2025/html/WeedsGalore_WACV_2025_paper.html",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2025)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official GFZ GitHub repository and WACV 2025 proceedings."
+    },
+    "sample_count": {
+      "total": 156,
+      "unit": "multispectral tiles",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2024"
+    },
+    "citation": {
+      "paper_title": "WeedsGalore: A Multispectral and Multitemporal UAV-Based Dataset for Crop and Weed Segmentation in Agricultural Maize Fields",
+      "paper_url": "https://github.com/GFZ/weedsgalore",
+      "authors": [
+        "S. Bareth",
+        "J. Bömer",
+        "A. Sah",
+        "M. Klein"
+      ],
+      "bibtex": "@inproceedings{weedsgalore2025,\n  title={WeedsGalore: A Multispectral and Multitemporal UAV-Based Dataset for Crop and Weed Segmentation in Agricultural Maize Fields},\n  author={Bareth, S and B{\\\"o}mer, J and Sah, A and Klein, M},\n  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},\n  year={2025}\n}"
     }
   },
   {
@@ -36861,6 +38343,93 @@
     "provenance": {
       "collection_method": "Certified laboratory measurements collected at the official Viticulture Commission of the Vinho Verde Region (CVRVV) in Portugal.",
       "curation_notes": "Each sample was evaluated by blind sensory testing conducted by a panel of at least three wine experts."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "worldcereal-reference-data",
+    "slug": "worldcereal-reference-data",
+    "name": "WorldCereal Harmonized Global In-Situ Crop Reference Dataset",
+    "description": "WorldCereal Harmonized Reference Data is the global, multi-source reference ground-truth benchmark developed under the ESA WorldCereal project by an international consortium including VITO, IIASA, and Wageningen University. Assembling and harmonizing in-situ ground observations from more than 80 independent regional and national data collections across all continents, this open benchmark provides over 400,000 standardized spatial point and polygon records with verified labels for crop extent, crop type (maize, cereals), and irrigation status to train and benchmark global agricultural mapping models.",
+    "homepage_url": "https://rdm.esa-worldcereal.org",
+    "publisher": {
+      "name": "ESA WorldCereal Consortium (VITO / IIASA)",
+      "type": "community",
+      "url": "https://esa-worldcereal.org"
+    },
+    "modalities": [
+      "tabular",
+      "vision"
+    ],
+    "tasks": [
+      "crop-type-classification",
+      "agricultural-monitoring",
+      "land-cover-mapping",
+      "irrigation-detection"
+    ],
+    "tags": [
+      "agriculture",
+      "ground-truth",
+      "reference-data",
+      "crop-classification",
+      "irrigation",
+      "remote-sensing",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Harmonized reference collections released on Zenodo under CC BY 4.0 and associated open terms."
+    },
+    "source_references": [
+      {
+        "title": "WorldCereal Reference Data Module (RDM)",
+        "url": "https://rdm.esa-worldcereal.org",
+        "type": "official_website",
+        "notes": "Official interactive query, download, and visualization module for harmonized reference datasets."
+      },
+      {
+        "title": "WorldCereal Harmonized Reference Data Zenodo Record",
+        "url": "https://zenodo.org/records/18769612",
+        "type": "repository",
+        "notes": "Open Zenodo archive containing standardized spatial reference collections."
+      },
+      {
+        "title": "WorldCereal: a dynamic open-source system for global-scale, seasonal, and reproducible crop and irrigation mapping",
+        "url": "https://doi.org/10.5194/essd-15-5491-2023",
+        "type": "original_paper",
+        "notes": "Comprehensive system and reference dataset paper published in Earth System Science Data."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-08",
+      "notes": "Verified against official ESA WorldCereal Reference Data Module and Zenodo repository."
+    },
+    "sample_count": {
+      "total": 400000,
+      "unit": "harmonized ground truth locations",
+      "status": "estimated"
+    },
+    "dates": {
+      "published": "2023"
+    },
+    "citation": {
+      "paper_title": "WorldCereal: a dynamic open-source system for global-scale, seasonal, and reproducible crop and irrigation mapping",
+      "paper_url": "https://doi.org/10.5194/essd-15-5491-2023",
+      "authors": [
+        "Kristof Van Tricht",
+        "Damien Degré",
+        "Sven Gilliams",
+        "Marc Zanaga",
+        "Ruben Van De Kerchove"
+      ],
+      "doi": "10.5194/essd-15-5491-2023",
+      "bibtex": "@article{vantricht2023worldcereal,\n  title={WorldCereal: a dynamic open-source system for global-scale, seasonal, and reproducible crop and irrigation mapping},\n  author={Van Tricht, Kristof and Degr{\\'e}, Damien and Gilliams, Sven and Zanaga, Marc and Van De Kerchove, Ruben},\n  journal={Earth System Science Data},\n  volume={15},\n  number={12},\n  pages={5491--5515},\n  year={2023},\n  publisher={Copernicus GmbH}\n}"
     }
   },
   {

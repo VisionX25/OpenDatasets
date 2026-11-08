@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "usda-cropland-data-layer",
+  "slug": "usda-cropland-data-layer",
+  "name": "USDA NASS Cropland Data Layer (CDL)",
+  "description": "The Cropland Data Layer (CDL) is an official annual agricultural land cover mapping program produced by the United States Department of Agriculture (USDA) National Agricultural Statistics Service (NASS). Spanning 1997 to the present, CDL provides high-resolution, geo-referenced, crop-specific land cover classification rasters for the contiguous United States at 30-meter and modern 10-meter resolutions. The collection identifies over 100 distinct crop types, pasture, woodland, water, and urban categories, serving as the benchmark standard for agricultural monitoring, crop acreage estimation, and land-use change research.",
+  "homepage_url": "https://www.nass.usda.gov/Research_and_Science/Cropland/Release/",
+  "publisher": {
+    "name": "USDA National Agricultural Statistics Service",
+    "type": "government",
+    "url": "https://www.nass.usda.gov"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "crop-type-classification",
+    "land-cover-mapping",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "remote-sensing",
+    "cropland",
+    "land-cover",
+    "satellite-imagery",
+    "usda",
+    "time-series"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "U.S. Government Work (Public Domain)",
+    "spdx_id": null,
+    "url": "https://www.nass.usda.gov/Research_and_Science/Cropland/Release/",
+    "commercial_use": "allowed",
+    "notes": "U.S. government public domain work. Free of copyright restrictions."
+  },
+  "source_references": [
+    {
+      "title": "USDA NASS CDL Official Webpage",
+      "url": "https://www.nass.usda.gov/Research_and_Science/Cropland/Release/",
+      "type": "official_website",
+      "notes": "Official release portal with CropScape access, FAQs, and national data downloads."
+    },
+    {
+      "title": "Cloud-Powered Agricultural Mapping: A Revolution Toward 10m Resolution Cropland Data Layers",
+      "url": "https://doi.org/10.1109/IGARSS53475.2024.10641079",
+      "type": "original_paper",
+      "notes": "Technical paper in IEEE IGARSS detailing 10m CDL modernization."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official USDA NASS release portal and CropScape application."
+  },
+  "sample_count": {
+    "total": 48,
+    "unit": "state annual raster mosaics",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2008"
+  },
+  "citation": {
+    "paper_title": "Cloud-Powered Agricultural Mapping: A Revolution Toward 10m Resolution Cropland Data Layers",
+    "paper_url": "https://doi.org/10.1109/IGARSS53475.2024.10641079",
+    "authors": [
+      "Zhe Li",
+      "Rick Mueller",
+      "Zhengwei Yang",
+      "David Johnson",
+      "Patrick Willis"
+    ],
+    "doi": "10.1109/IGARSS53475.2024.10641079",
+    "bibtex": "@inproceedings{li2024cdl,\n  title={Cloud-Powered Agricultural Mapping: A Revolution Toward 10m Resolution Cropland Data Layers},\n  author={Li, Zhe and Mueller, Rick and Yang, Zhengwei and Johnson, David and Willis, Patrick},\n  booktitle={IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},\n  year={2024}\n}"
+  }
+}

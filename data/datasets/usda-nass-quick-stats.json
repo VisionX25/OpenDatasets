@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "usda-nass-quick-stats",
+  "slug": "usda-nass-quick-stats",
+  "name": "USDA NASS Quick Stats: US Agricultural Statistics Database",
+  "description": "USDA NASS Quick Stats is the official, comprehensive public statistical repository of United States agricultural data maintained by the USDA National Agricultural Statistics Service. Housing over 50 million historical and current data points dating from 1850 to the present, Quick Stats aggregates information from hundreds of annual sample surveys and the 5-year Census of Agriculture covering crop acreage, yields, production, livestock counts, prices, farm labor, and environmental practices down to state and county levels.",
+  "homepage_url": "https://quickstats.nass.usda.gov/",
+  "publisher": {
+    "name": "USDA National Agricultural Statistics Service",
+    "type": "government",
+    "url": "https://www.nass.usda.gov"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "agricultural-monitoring",
+    "economic-analysis",
+    "time-series-analysis",
+    "forecasting"
+  ],
+  "tags": [
+    "agriculture",
+    "statistics",
+    "usda",
+    "census-of-agriculture",
+    "crop-yield",
+    "livestock",
+    "farm-economics"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "U.S. Government Work (Public Domain)",
+    "spdx_id": null,
+    "url": "https://quickstats.nass.usda.gov/",
+    "commercial_use": "allowed",
+    "notes": "U.S. Federal Government public data produced by USDA NASS employees in official capacity; free of copyright."
+  },
+  "source_references": [
+    {
+      "title": "USDA NASS Quick Stats 2.0 Database",
+      "url": "https://quickstats.nass.usda.gov/",
+      "type": "official_website",
+      "notes": "Official online searchable database and API query tool."
+    },
+    {
+      "title": "USDA NASS Official Statistics Portal",
+      "url": "https://www.nass.usda.gov/",
+      "type": "documentation",
+      "notes": "National Agricultural Statistics Service main portal and methodology guides."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official USDA NASS Quick Stats database portal."
+  },
+  "sample_count": {
+    "total": 50000000,
+    "unit": "agricultural data points",
+    "status": "estimated"
+  },
+  "dates": {
+    "published": "1850"
+  },
+  "citation": {
+    "paper_title": "USDA National Agricultural Statistics Service Quick Stats Database",
+    "paper_url": "https://quickstats.nass.usda.gov/",
+    "authors": [
+      "United States Department of Agriculture National Agricultural Statistics Service"
+    ],
+    "bibtex": "@misc{usda_nass_quickstats,\n  title={USDA National Agricultural Statistics Service Quick Stats Database},\n  author={{USDA National Agricultural Statistics Service}},\n  year={2024},\n  howpublished={\\url{https://quickstats.nass.usda.gov/}}\n}"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "acfr-orchard-fruit",
+  "slug": "acfr-orchard-fruit",
+  "name": "ACFR Orchard Fruit Dataset: Multi-Fruit Detection and Yield Estimation",
+  "description": "The ACFR Orchard Fruit Dataset (2016-multifruit) is an open-access multi-sensor benchmark collected by the Australian Centre for Field Robotics (ACFR) at The University of Sydney. Recorded across commercial apple, mango, and almond orchards in Victoria and Queensland, Australia, the dataset features over 1,300 high-resolution color and near-infrared images captured under variable daytime natural illumination and uniform nighttime strobe lighting, complete with comprehensive bounding circle, bounding box, and pixel-level segmentations for fruit detection and automated robotic yield estimation.",
+  "homepage_url": "https://data.acfr.usyd.edu.au/ag/treecrops/2016-multifruit/",
+  "publisher": {
+    "name": "Australian Centre for Field Robotics (ACFR), The University of Sydney",
+    "type": "academic",
+    "url": "https://www.sydney.edu.au/engineering/our-research/robotics-and-intelligent-systems/australian-centre-for-field-robotics.html"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "fruit-detection",
+    "yield-estimation",
+    "agricultural-robotics"
+  ],
+  "tags": [
+    "agriculture",
+    "precision-farming",
+    "fruit-detection",
+    "apple",
+    "mango",
+    "almond",
+    "orchard",
+    "robotics"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Custom Academic Research Use License",
+    "spdx_id": null,
+    "url": "https://data.acfr.usyd.edu.au/ag/treecrops/2016-multifruit/",
+    "commercial_use": "forbidden",
+    "notes": "Data provided by the University of Sydney for non-commercial academic research and benchmarking."
+  },
+  "source_references": [
+    {
+      "title": "ACFR Tree Crops Multi-Fruit Repository",
+      "url": "https://data.acfr.usyd.edu.au/ag/treecrops/2016-multifruit/",
+      "type": "repository",
+      "notes": "Official data distribution portal hosting image files and XML/CSV annotation ground truth."
+    },
+    {
+      "title": "Deep Fruit Detection in Orchards",
+      "url": "https://arxiv.org/abs/1610.03677",
+      "type": "original_paper",
+      "notes": "Published in 2017 IEEE International Conference on Robotics and Automation (ICRA)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official ACFR repository and IEEE ICRA 2017 publication."
+  },
+  "sample_count": {
+    "total": 1300,
+    "unit": "annotated orchard images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2016"
+  },
+  "citation": {
+    "paper_title": "Deep Fruit Detection in Orchards",
+    "paper_url": "https://arxiv.org/abs/1610.03677",
+    "authors": [
+      "Suchet Bargoti",
+      "James Underwood"
+    ],
+    "bibtex": "@inproceedings{bargoti2017deep,\n  title={Deep Fruit Detection in Orchards},\n  author={Bargoti, Suchet and Underwood, James},\n  booktitle={IEEE International Conference on Robotics and Automation (ICRA)},\n  pages={3626--3633},\n  year={2017},\n  organization={IEEE}\n}"
+  }
+}

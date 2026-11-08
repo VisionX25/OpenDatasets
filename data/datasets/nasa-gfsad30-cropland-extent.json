@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nasa-gfsad30-cropland-extent",
+  "slug": "nasa-gfsad30-cropland-extent",
+  "name": "NASA GFSAD30 Global Cropland Extent 2015 Validation Dataset (GFSAD30VAL)",
+  "description": "NASA GFSAD30VAL is an independent, global ground-truth validation dataset produced by the Global Food Security-support Analysis Data (GFSAD) project led by the USGS and NASA LP DAAC. Comprising 18,986 rigorously vetted reference sample points distributed across agro-ecological zones on all global continents, the dataset provides ground-truth assessments separating cropland and non-cropland areas to evaluate and benchmark global 30-meter cropland extent satellite products.",
+  "homepage_url": "https://data.nasa.gov/dataset/global-food-security-support-analysis-data-gfsad-cropland-extent-product-2015-validation-3-cb116",
+  "publisher": {
+    "name": "NASA LP DAAC / USGS",
+    "type": "government",
+    "url": "https://lpdaac.usgs.gov"
+  },
+  "modalities": [
+    "tabular",
+    "vision"
+  ],
+  "tasks": [
+    "land-cover-mapping",
+    "agricultural-monitoring",
+    "accuracy-assessment"
+  ],
+  "tags": [
+    "agriculture",
+    "remote-sensing",
+    "cropland",
+    "global-food-security",
+    "validation",
+    "nasa",
+    "usgs"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "U.S. Government Work (Public Domain / CC0 1.0)",
+    "spdx_id": "CC0-1.0",
+    "url": "https://www.earthdata.nasa.gov/engage/open-data-policy",
+    "commercial_use": "allowed",
+    "notes": "NASA and USGS earth observation data are released freely to the public under open government data policies."
+  },
+  "source_references": [
+    {
+      "title": "NASA Open Data Catalog GFSAD30VAL Record",
+      "url": "https://data.nasa.gov/dataset/global-food-security-support-analysis-data-gfsad-cropland-extent-product-2015-validation-3-cb116",
+      "type": "official_website",
+      "notes": "Official metadata landing page on NASA Data Portal."
+    },
+    {
+      "title": "NASA LP DAAC GFSAD30VAL Product Specification",
+      "url": "https://doi.org/10.5067/MEaSUREs/GFSAD/GFSAD30VAL.001",
+      "type": "documentation",
+      "notes": "Official USGS/NASA LP DAAC dataset documentation and download link."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official NASA Data Portal and LP DAAC metadata."
+  },
+  "sample_count": {
+    "total": 18986,
+    "unit": "validation sample points",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2017"
+  },
+  "citation": {
+    "paper_title": "Global Food Security-support Analysis Data (GFSAD) Cropland Extent 2015 Validation 30 m V001",
+    "paper_url": "https://doi.org/10.5067/MEaSUREs/GFSAD/GFSAD30VAL.001",
+    "authors": [
+      "Prasad S. Thenkabail",
+      "Adam Oliphant",
+      "Jun Xiong",
+      "Kamini Yadav",
+      "Pardhasaradhi Teluguntla"
+    ],
+    "doi": "10.5067/MEaSUREs/GFSAD/GFSAD30VAL.001",
+    "bibtex": "@misc{thenkabail2017gfsad30val,\n  title={Global Food Security-support Analysis Data (GFSAD) Cropland Extent 2015 Validation 30 m V001},\n  author={Thenkabail, Prasad S and Oliphant, Adam and Xiong, Jun and Yadav, Kamini and Teluguntla, Pardhasaradhi},\n  publisher={NASA LP DAAC},\n  year={2017},\n  doi={10.5067/MEaSUREs/GFSAD/GFSAD30VAL.001}\n}"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bonnbeetclouds3d",
+  "slug": "bonnbeetclouds3d",
+  "name": "BonnBeetClouds3D: 3D Point Cloud Organ-Level Sugar Beet Phenotyping",
+  "description": "BonnBeetClouds3D is an open-access 3D point cloud dataset for organ-level plant phenotyping and semantic segmentation of sugar beet crops under real field conditions, developed by the Photogrammetry and Robotics Lab at the University of Bonn (PhenoRob Cluster of Excellence). Reconstructed from high-resolution multi-view UAV photogrammetry across 48 breeding plots and multiple growth stages (BBCH 12 to 39), the dataset features dense 3D point clouds with fine-grained semantic annotations for individual plant organs (leaves, stems, soil) and leaf instance IDs alongside physical trait measurements.",
+  "homepage_url": "https://www.ipb.uni-bonn.de/data/bonnbeetclouds3d/index.html",
+  "publisher": {
+    "name": "University of Bonn (Photogrammetry & Robotics Lab)",
+    "type": "academic",
+    "url": "https://www.ipb.uni-bonn.de"
+  },
+  "modalities": [
+    "3d"
+  ],
+  "tasks": [
+    "3d-semantic-segmentation",
+    "point-cloud-segmentation",
+    "plant-phenotyping",
+    "organ-level-segmentation"
+  ],
+  "tags": [
+    "agriculture",
+    "precision-farming",
+    "point-clouds",
+    "3d-vision",
+    "sugar-beet",
+    "plant-phenotyping",
+    "uav"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Dataset provided by the University of Bonn for non-commercial academic research and benchmarking."
+  },
+  "source_references": [
+    {
+      "title": "BonnBeetClouds3D Project Webpage",
+      "url": "https://www.ipb.uni-bonn.de/data/bonnbeetclouds3d/index.html",
+      "type": "official_website",
+      "notes": "Official University of Bonn data page with point cloud downloads and evaluation tools."
+    },
+    {
+      "title": "BonnBeetClouds3D: A Dataset Towards Point Cloud-Based Organ-Level Phenotyping of Sugar Beet Plants Under Real Field Conditions",
+      "url": "https://arxiv.org/abs/2208.08434",
+      "type": "original_paper",
+      "notes": "Published in IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official University of Bonn project portal and IROS 2022 publication."
+  },
+  "sample_count": {
+    "total": 100,
+    "unit": "annotated 3D point clouds",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022"
+  },
+  "citation": {
+    "paper_title": "BonnBeetClouds3D: A Dataset Towards Point Cloud-Based Organ-Level Phenotyping of Sugar Beet Plants Under Real Field Conditions",
+    "paper_url": "https://arxiv.org/abs/2208.08434",
+    "authors": [
+      "Elias Marks",
+      "Jonas Bömer",
+      "Federico Magistri",
+      "Anurag Sah",
+      "Jens Behley",
+      "Cyrill Stachniss"
+    ],
+    "bibtex": "@inproceedings{marks2022bonnbeetclouds3d,\n  title={BonnBeetClouds3D: A Dataset Towards Point Cloud-Based Organ-Level Phenotyping of Sugar Beet Plants Under Real Field Conditions},\n  author={Marks, Elias and B{\\\"o}mer, Jonas and Magistri, Federico and Sah, Anurag and Behley, Jens and Stachniss, Cyrill},\n  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},\n  year={2022}\n}"
+  }
+}

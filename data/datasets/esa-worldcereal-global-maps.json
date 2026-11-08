@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "esa-worldcereal-global-maps",
+  "slug": "esa-worldcereal-global-maps",
+  "name": "ESA WorldCereal Global Maps: 10m Crop Type and Irrigation Products",
+  "description": "ESA WorldCereal Global Maps is the first open-access, dynamically updated 10-meter global agricultural monitoring product suite funded by the European Space Agency (ESA) and developed by an international consortium led by VITO Remote Sensing. Utilizing Sentinel-1, Sentinel-2, and Landsat 8 satellite time-series, WorldCereal delivers global raster layers detailing temporary cropland extent, season-specific active cropland, crop types (maize, winter cereals, spring cereals), and active irrigation status across worldwide agro-ecological zones.",
+  "homepage_url": "https://esa-worldcereal.org/en/products/global-maps",
+  "publisher": {
+    "name": "European Space Agency (ESA)",
+    "type": "government",
+    "url": "https://www.esa.int"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "crop-type-classification",
+    "agricultural-monitoring",
+    "land-cover-mapping",
+    "irrigation-detection"
+  ],
+  "tags": [
+    "agriculture",
+    "remote-sensing",
+    "sentinel-2",
+    "global-maps",
+    "crop-classification",
+    "irrigation",
+    "earth-observation"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Global map products distributed openly under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "ESA WorldCereal Global Maps Portal",
+      "url": "https://esa-worldcereal.org/en/products/global-maps",
+      "type": "official_website",
+      "notes": "Official portal providing global raster downloads and interactive viewing."
+    },
+    {
+      "title": "WorldCereal: a dynamic open-source system for global-scale, seasonal, and reproducible crop and irrigation mapping",
+      "url": "https://doi.org/10.5194/essd-15-5491-2023",
+      "type": "original_paper",
+      "notes": "Comprehensive system and product description published in Earth System Science Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official ESA WorldCereal portal and ESSD journal publication."
+  },
+  "sample_count": {
+    "total": 100000,
+    "unit": "global 10m raster tiles",
+    "status": "estimated"
+  },
+  "dates": {
+    "published": "2023"
+  },
+  "citation": {
+    "paper_title": "WorldCereal: a dynamic open-source system for global-scale, seasonal, and reproducible crop and irrigation mapping",
+    "paper_url": "https://doi.org/10.5194/essd-15-5491-2023",
+    "authors": [
+      "Kristof Van Tricht",
+      "Damien Degré",
+      "Sven Gilliams",
+      "Marc Zanaga",
+      "Ruben Van De Kerchove"
+    ],
+    "doi": "10.5194/essd-15-5491-2023",
+    "bibtex": "@article{vantricht2023worldcereal,\n  title={WorldCereal: a dynamic open-source system for global-scale, seasonal, and reproducible crop and irrigation mapping},\n  author={Van Tricht, Kristof and Degr{\\'e}, Damien and Gilliams, Sven and Zanaga, Marc and Van De Kerchove, Ruben},\n  journal={Earth System Science Data},\n  volume={15},\n  number={12},\n  pages={5491--5515},\n  year={2023},\n  publisher={Copernicus GmbH}\n}"
+  }
+}
