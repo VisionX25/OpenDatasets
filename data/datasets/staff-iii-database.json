@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "staff-iii-database",
+  "slug": "staff-iii-database",
+  "name": "STAFF III Database: Acutely Induced Myocardial Ischemia ECGs",
+  "description": "The STAFF III Database is an experimental clinical study recorded at the Charleston Area Medical Center in West Virginia by Lund University, Duke University, and University of Zaragoza. It comprises continuous high-resolution standard 12-lead ECGs recorded from 104 patients undergoing elective percutaneous transluminal coronary angioplasty (PTCA). Balloon inflations produced controlled, acutely induced regional myocardial ischemia lasting up to several minutes. The collection captures pre-inflation, peak inflation, and post-deflation reperfusion ECG states, offering in vivo human data for studying the spatio-temporal evolution of acute ischemic cardiac injury.",
+  "homepage_url": "https://physionet.org/content/staffiii/1.0.0/",
+  "publisher": {
+    "name": "Charleston Area Medical Center & Lund University",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "myocardial-ischemia-detection",
+    "ecg-classification",
+    "biomedical-signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "ischemia",
+    "ptca",
+    "angioplasty",
+    "physionet"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet STAFF III Database Repository (DOI: 10.13026/C20P4H)",
+      "url": "https://doi.org/10.13026/C20P4H",
+      "type": "repository"
+    },
+    {
+      "title": "Martínez et al. Computing in Cardiology 2017 Publication",
+      "url": "https://doi.org/10.22489/CinC.2017.266-133",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C20P4H and Martínez et al. (CinC 2017)."
+  },
+  "sample_count": {
+    "total": 104,
+    "unit": "patients",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2017"
+  },
+  "citation": {
+    "paper_title": "The STAFF III Database: ECGs Recorded During Acutely Induced Myocardial Ischemia",
+    "paper_url": "https://doi.org/10.22489/CinC.2017.266-133",
+    "authors": [
+      "Juan Pablo Martínez",
+      "Olle Pahlm",
+      "Mats Ringborn",
+      "Staffan Warren",
+      "Pablo Laguna",
+      "Leif Sörnmo"
+    ],
+    "doi": "10.13026/C20P4H",
+    "bibtex": "@article{martinez2017staff,\n  title={The STAFF III Database: ECGs recorded during acutely induced myocardial ischemia},\n  author={Mart{\\'\\i}nez, Juan Pablo and Pahlm, Olle and Ringborn, Mats and Warren, Staffan and Laguna, Pablo and S{\\\"o}rnmo, Leif},\n  journal={Computing in Cardiology},\n  volume={44},\n  pages={1--4},\n  year={2017},\n  doi={10.13026/C20P4H}\n}"
+  }
+}

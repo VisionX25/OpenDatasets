@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bidmc-congestive-heart-failure",
+  "slug": "bidmc-congestive-heart-failure",
+  "name": "BIDMC Congestive Heart Failure Database",
+  "description": "The BIDMC Congestive Heart Failure Database is a physiological time series collection compiled by Beth Israel Deaconess Medical Center and Harvard Medical School. It includes 15 continuous long-term Holter ECG recordings (each approximately 20 hours in duration, sampled at 250 Hz) from 15 subjects (11 men, aged 22 to 71; and 4 women, aged 54 to 63) suffering from severe chronic congestive heart failure (NYHA functional class III–IV). The collection has served as a benchmark for studying heart rate turbulence, non-linear interbeat interval dynamics, and sudden cardiac death risk stratification.",
+  "homepage_url": "https://physionet.org/content/chfdb/1.0.0/",
+  "publisher": {
+    "name": "Beth Israel Deaconess Medical Center & Harvard Medical School",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "heart-failure-detection",
+    "heart-rate-variability",
+    "biomedical-signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "heart-failure",
+    "heart-rate-variability",
+    "physionet",
+    "holter"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet BIDMC Congestive Heart Failure Database Repository (DOI: 10.13026/C29G60)",
+      "url": "https://doi.org/10.13026/C29G60",
+      "type": "repository"
+    },
+    {
+      "title": "Baim et al. Journal of the American College of Cardiology 1986 Publication",
+      "url": "https://doi.org/10.1016/S0735-1097(86)80456-8",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C29G60 and Baim et al. (JACC 1986)."
+  },
+  "sample_count": {
+    "total": 15,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1986"
+  },
+  "citation": {
+    "paper_title": "Survival of patients with severe congestive heart failure treated with oral milrinone",
+    "paper_url": "https://doi.org/10.1016/S0735-1097(86)80456-8",
+    "authors": [
+      "Donald S. Baim",
+      "William S. Colucci",
+      "E. Scott Monrad",
+      "H. Sandra Smith",
+      "R. Fletcher Wright",
+      "Anne Lanoue",
+      "Donald F. Gauthier",
+      "Raymond J. Ransil",
+      "William Grossman",
+      "Eugene Braunwald"
+    ],
+    "doi": "10.13026/C29G60",
+    "bibtex": "@article{baim1986survival,\n  title={Survival of patients with severe congestive heart failure treated with oral milrinone},\n  author={Baim, Donald S and Colucci, William S and Monrad, E Scott and Smith, H Sandra and Wright, R Fletcher and Lanoue, Anne and Gauthier, Donald F and Ransil, Raymond J and Grossman, William and Braunwald, Eugene},\n  journal={Journal of the American College of Cardiology},\n  volume={7},\n  number={3},\n  pages={661--670},\n  year={1986},\n  publisher={Elsevier},\n  doi={10.13026/C29G60}\n}"
+  }
+}

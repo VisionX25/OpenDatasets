@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mgh-mf-waveform-database",
+  "slug": "mgh-mf-waveform-database",
+  "name": "MGH/MF Waveform Database: Multi-Parameter ICU Hemodynamics",
+  "description": "The Massachusetts General Hospital / Marquette Foundation (MGH/MF) Waveform Database is a pioneering critical care monitoring repository recorded in the intensive care units of Massachusetts General Hospital. It contains 250 multi-channel physiological recordings from 250 adult patients admitted to cardiac and surgical ICUs, with recording durations typically ranging from 12 to 24 hours. Signals include 3 continuous ECG leads (leads I, II, and V), arterial blood pressure (ABP), central venous pressure (CVP), pulmonary arterial pressure (PAP), and airway respiration. Expert clinicians provided comprehensive annotations for cardiac arrhythmias, hemodynamic state shifts, and catheter calibration events.",
+  "homepage_url": "https://physionet.org/content/mghdb/1.0.0/",
+  "publisher": {
+    "name": "Massachusetts General Hospital & Marquette Electronics",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "hemodynamic-monitoring",
+    "arrhythmia-detection",
+    "critical-care-monitoring"
+  ],
+  "tags": [
+    "healthcare",
+    "intensive-care",
+    "icu",
+    "ecg",
+    "hemodynamics",
+    "blood-pressure",
+    "physionet"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet MGH/MF Waveform Database Repository (DOI: 10.13026/C26K5Q)",
+      "url": "https://doi.org/10.13026/C26K5Q",
+      "type": "repository"
+    },
+    {
+      "title": "Welch et al. Computers in Cardiology 1991 Publication",
+      "url": "https://doi.org/10.1109/CIC.1991.168995",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C26K5Q and Welch et al. (Computers in Cardiology 1991)."
+  },
+  "sample_count": {
+    "total": 250,
+    "unit": "patients",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1991"
+  },
+  "citation": {
+    "paper_title": "The Massachusetts General Hospital-Marquette Foundation Hemodynamic and Electrocardiographic Database -- Comprehensive collection of critical care waveforms",
+    "paper_url": "https://doi.org/10.1109/CIC.1991.168995",
+    "authors": [
+      "J. P. Welch",
+      "P. J. Ford",
+      "R. S. Teplick",
+      "R. M. Rubsamen"
+    ],
+    "doi": "10.13026/C26K5Q",
+    "bibtex": "@inproceedings{welch1991massachusetts,\n  title={The Massachusetts General Hospital-Marquette Foundation Hemodynamic and Electrocardiographic Database--Comprehensive collection of critical care waveforms},\n  author={Welch, JP and Ford, PJ and Teplick, RS and Rubsamen, RM},\n  booktitle={Computers in Cardiology 1991},\n  pages={389--392},\n  year={1991},\n  organization={IEEE},\n  doi={10.13026/C26K5Q}\n}"
+  }
+}

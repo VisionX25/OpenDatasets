@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "voiced-pathological-voice",
+  "slug": "voiced-pathological-voice",
+  "name": "VOICED: Voice Disorders Acoustic Signal Database",
+  "description": "The VOICED Database (Voice Disorders Database) is an acoustic clinical speech repository curated by the National Research Council of Italy (CNR-ICAR) and the Department of Clinical Medicine and Surgery at the University of Naples Federico II. It contains 208 high-quality uncompressed audio recordings from 208 adult subjects (150 patients with diagnosed vocal fold pathologies such as nodules, polyps, cysts, dysphonias, and paralyses, and 58 healthy control subjects) uttering sustained phonations of vowel /a/. The recordings were captured using professional studio equipment in clinical settings and are accompanied by structured medical metadata (diagnostic confirmation, videolaryngostroboscopy findings, smoking status, and subjective voice impairment scores).",
+  "homepage_url": "https://physionet.org/content/voiced/1.0.0/",
+  "publisher": {
+    "name": "National Research Council of Italy (CNR) & University of Naples Federico II",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "pathological-voice-detection",
+    "audio-classification",
+    "biomedical-signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "audio",
+    "voice-pathology",
+    "speech-processing",
+    "otolaryngology",
+    "physionet",
+    "clinical-data"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet VOICED Database Repository (DOI: 10.13026/C25Q2N)",
+      "url": "https://doi.org/10.13026/C25Q2N",
+      "type": "repository"
+    },
+    {
+      "title": "Cesari et al. Computers & Electrical Engineering 2018 Publication",
+      "url": "https://doi.org/10.1016/j.compeleceng.2018.04.015",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C25Q2N and Cesari et al. (Computers & Electrical Engineering 2018)."
+  },
+  "sample_count": {
+    "total": 208,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018"
+  },
+  "citation": {
+    "paper_title": "A new database of healthy and pathological voices",
+    "paper_url": "https://doi.org/10.1016/j.compeleceng.2018.04.015",
+    "authors": [
+      "U. Cesari",
+      "G. De Pietro",
+      "E. Marciano",
+      "C. Niri",
+      "G. Sannino",
+      "L. Verde"
+    ],
+    "doi": "10.13026/C25Q2N",
+    "bibtex": "@article{cesari2018new,\n  title={A new database of healthy and pathological voices},\n  author={Cesari, U and De Pietro, G and Marciano, E and Niri, C and Sannino, G and Verde, L},\n  journal={Computers \\& Electrical Engineering},\n  volume={68},\n  pages={310--321},\n  year={2018},\n  publisher={Elsevier},\n  doi={10.13026/C25Q2N}\n}"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "normal-sinus-rhythm-rr-interval",
+  "slug": "normal-sinus-rhythm-rr-interval",
+  "name": "Normal Sinus Rhythm RR Interval Database",
+  "description": "The Normal Sinus Rhythm RR Interval Database is an interbeat interval time series archive curated by PhysioNet and Beth Israel Deaconess Medical Center. It contains beat-to-beat RR interval sequences extracted from 24-hour ambulatory Holter ECG recordings of 54 healthy adult subjects (30 men, aged 28.5 to 76; and 24 women, aged 58 to 73) verified to have normal sinus rhythm. Unlike waveform-level ECG databases, this repository provides filtered and audited interbeat intervals, serving as a dedicated comparative baseline for heart rate variability (HRV) analysis, autonomic nervous system evaluation, and non-linear dynamics research.",
+  "homepage_url": "https://physionet.org/content/nsr2db/1.0.0/",
+  "publisher": {
+    "name": "Beth Israel Deaconess Medical Center & PhysioNet",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "heart-rate-variability",
+    "biomedical-signal-processing",
+    "autonomic-assessment"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "rr-intervals",
+    "heart-rate-variability",
+    "physionet",
+    "normative"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet Normal Sinus Rhythm RR Interval Database Repository (DOI: 10.13026/C2S881)",
+      "url": "https://doi.org/10.13026/C2S881",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C2S881. Distinct from nsrdb full waveform collection."
+  },
+  "sample_count": {
+    "total": 54,
+    "unit": "subjects",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1997"
+  },
+  "citation": {
+    "paper_title": "Normal Sinus Rhythm RR Interval Database",
+    "paper_url": "https://doi.org/10.13026/C2S881",
+    "authors": [
+      "Ary L. Goldberger",
+      "Luis A. N. Amaral",
+      "Leon Glass",
+      "Jeffrey M. Hausdorff",
+      "Plamen Ch. Ivanov",
+      "Roger G. Mark",
+      "Joseph E. Mietus",
+      "George B. Moody",
+      "Chung-Kang Peng",
+      "H. Eugene Stanley"
+    ],
+    "doi": "10.13026/C2S881",
+    "bibtex": "@misc{nsr2db_1997,\n  title={Normal Sinus Rhythm RR Interval Database},\n  author={Goldberger, Ary L and Amaral, Luis AN and Glass, Leon and Hausdorff, Jeffrey M and Ivanov, Plamen Ch and Mark, Roger G and Mietus, Joseph E and Moody, George B and Peng, Chung-Kang and Stanley, H Eugene},\n  year={1997},\n  publisher={PhysioNet},\n  doi={10.13026/C2S881}\n}"
+  }
+}

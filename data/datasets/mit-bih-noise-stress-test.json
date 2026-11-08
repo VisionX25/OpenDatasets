@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mit-bih-noise-stress-test",
+  "slug": "mit-bih-noise-stress-test",
+  "name": "MIT-BIH Noise Stress Test Database: Robust Arrhythmia Benchmark",
+  "description": "The MIT-BIH Noise Stress Test Database is a standardized stress-testing resource created by the MIT and Beth Israel Hospital biomedical engineering teams to quantitatively evaluate ECG arrhythmia detection algorithms under adverse noise conditions. It consists of 12 half-hour standard two-channel ECG recordings synthesized by combining clean recordings from the MIT-BIH Arrhythmia Database with calibrated levels of realistic ambulatory noise (baseline wander, muscle tremor, and electrode motion artifact) at signal-to-noise ratios ranging from -6 dB to 24 dB. It also includes 3 pure half-hour recordings of typical clinical noise recorded from limbs using standard electrodes.",
+  "homepage_url": "https://physionet.org/content/nstdb/1.0.0/",
+  "publisher": {
+    "name": "MIT Laboratory for Computational Physiology",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "arrhythmia-detection",
+    "signal-denoising",
+    "noise-robustness-evaluation"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "noise-stress",
+    "arrhythmia",
+    "benchmark",
+    "evaluation",
+    "physionet"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet MIT-BIH Noise Stress Test Database Repository (DOI: 10.13026/C2HS3T)",
+      "url": "https://doi.org/10.13026/C2HS3T",
+      "type": "repository"
+    },
+    {
+      "title": "Moody et al. Computers in Cardiology 1984 Publication",
+      "url": "https://doi.org/10.13026/C2HS3T",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C2HS3T and Moody et al. (Computers in Cardiology 1984). Evaluates detector degradation."
+  },
+  "sample_count": {
+    "total": 15,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1984"
+  },
+  "citation": {
+    "paper_title": "A noise stress test for arrhythmia detectors",
+    "paper_url": "https://doi.org/10.13026/C2HS3T",
+    "authors": [
+      "George B. Moody",
+      "William E. Muldrow",
+      "Roger G. Mark"
+    ],
+    "doi": "10.13026/C2HS3T",
+    "bibtex": "@article{moody1984noise,\n  title={A noise stress test for arrhythmia detectors},\n  author={Moody, George B and Muldrow, William E and Mark, Roger G},\n  journal={Computers in Cardiology},\n  volume={11},\n  pages={381--384},\n  year={1984},\n  doi={10.13026/C2HS3T}\n}"
+  }
+}

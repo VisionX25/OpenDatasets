@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ptb-diagnostic-ecg",
+  "slug": "ptb-diagnostic-ecg",
+  "name": "PTB Diagnostic ECG Database",
+  "description": "The PTB Diagnostic ECG Database is a foundational clinical electrocardiography repository compiled by the National Metrology Institute of Germany (Physikalisch-Technische Bundesanstalt - PTB). It contains 549 high-resolution records from 290 subjects (209 men and 81 women, aged 17 to 87), encompassing healthy volunteers and patients across nine major clinical diagnostic categories: myocardial infarction, cardiomyopathy, heart failure, bundle branch block, dysrhythmia, myocardial hypertrophy, valvular heart disease, and myocarditis. Each record contains 15 simultaneously recorded signals (the 12 standard leads plus 3 orthogonal Frank XYZ leads) sampled at 1,000 Hz with 16-bit resolution. Users should note that this collection is the original 1995 PTB diagnostic database, distinct from the larger 2020 PTB-XL database.",
+  "homepage_url": "https://physionet.org/content/ptbdb/1.0.0/",
+  "publisher": {
+    "name": "Physikalisch-Technische Bundesanstalt (PTB)",
+    "type": "academic",
+    "url": "https://www.ptb.de"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "ecg-classification",
+    "myocardial-infarction-detection",
+    "biomedical-signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "myocardial-infarction",
+    "ptb",
+    "physionet",
+    "diagnostic"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet PTB Diagnostic ECG Database Repository (DOI: 10.13026/C28C71)",
+      "url": "https://doi.org/10.13026/C28C71",
+      "type": "repository"
+    },
+    {
+      "title": "Bousseljot et al. Biomedizinische Technik 1995 Publication",
+      "url": "https://doi.org/10.1515/bmte.1995.40.s1.317",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C28C71 and Bousseljot et al. (Biomed Tech 1995). Distinct from PTB-XL."
+  },
+  "sample_count": {
+    "total": 549,
+    "unit": "records",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1995"
+  },
+  "citation": {
+    "paper_title": "Nutzung der EKG-Signaldatenbank CARDIODAT der PTB über das Internet",
+    "paper_url": "https://doi.org/10.1515/bmte.1995.40.s1.317",
+    "authors": [
+      "R. Bousseljot",
+      "D. Kreiseler",
+      "A. Schnabel"
+    ],
+    "doi": "10.13026/C28C71",
+    "bibtex": "@article{bousseljot1995nutzung,\n  title={Nutzung der EKG-Signaldatenbank CARDIODAT der PTB {\\\"u}ber das Internet},\n  author={Bousseljot, R and Kreiseler, D and Schnabel, A},\n  journal={Biomedizinische Technik/Biomedical Engineering},\n  volume={40},\n  number={s1},\n  pages={317--318},\n  year={1995},\n  publisher={De Gruyter},\n  doi={10.13026/C28C71}\n}"
+  }
+}

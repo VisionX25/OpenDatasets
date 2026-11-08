@@ -91,6 +91,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "abdominal-direct-fetal-ecg",
+    "slug": "abdominal-direct-fetal-ecg",
+    "name": "Abdominal and Direct Fetal ECG Database",
+    "description": "The Abdominal and Direct Fetal ECG Database is an obstetrical signal processing benchmark recorded at the Department of Obstetrics, Medical University of Silesia, Poland. It comprises 5 multichannel recordings obtained from women in active labor (aged 21 to 31, at 38 to 41 weeks gestation). Each recording features 4 differential abdominal channels capturing non-invasive composite maternal and fetal ECG signals alongside a direct fetal electrocardiogram signal acquired simultaneously via a scalp electrode during delivery. Sampled at 1,000 Hz with 16-bit resolution, this dataset serves as a benchmark for evaluating blind source separation, maternal ECG cancellation, and non-invasive fetal QRS detection.",
+    "homepage_url": "https://physionet.org/content/adfecgdb/1.0.0/",
+    "publisher": {
+      "name": "Institute of Medical Technology and Equipment & Medical University of Silesia",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "fetal-ecg-extraction",
+      "blind-source-separation",
+      "biomedical-signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "obstetrics",
+      "fetal-ecg",
+      "ecg",
+      "maternal-fetal",
+      "physionet",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet Abdominal and Direct Fetal ECG Database Repository (DOI: 10.13026/C2RP4B)",
+        "url": "https://doi.org/10.13026/C2RP4B",
+        "type": "repository"
+      },
+      {
+        "title": "Jezewski et al. IEEE Transactions on Biomedical Engineering 2012 Publication",
+        "url": "https://doi.org/10.1109/TBME.2011.2179934",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C2RP4B and Jezewski et al. (IEEE TBME 2012)."
+    },
+    "sample_count": {
+      "total": 5,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2012"
+    },
+    "citation": {
+      "paper_title": "Determination of the fetal heart rate from abdominal signals: evaluation of beat-to-beat accuracy in relation to the direct fetal electrocardiogram",
+      "paper_url": "https://doi.org/10.1109/TBME.2011.2179934",
+      "authors": [
+        "Janusz Jezewski",
+        "Adam Matonia",
+        "Tomasz Kupka",
+        "Dawid Roj",
+        "Robert Czabanski"
+      ],
+      "doi": "10.13026/C2RP4B",
+      "bibtex": "@article{jezewski2012determination,\n  title={Determination of the fetal heart rate from abdominal signals: evaluation of beat-to-beat accuracy in relation to the direct fetal electrocardiogram},\n  author={Jezewski, Janusz and Matonia, Adam and Kupka, Tomasz and Roj, Dawid and Czabanski, Robert},\n  journal={IEEE Transactions on Biomedical Engineering},\n  volume={59},\n  number={3},\n  pages={686--694},\n  year={2012},\n  publisher={IEEE},\n  doi={10.13026/C2RP4B}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "acdc-cardiac",
     "slug": "acdc-cardiac",
     "name": "ACDC: Automated Cardiac Diagnosis Challenge Dataset",
@@ -5554,6 +5631,88 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "bidmc-congestive-heart-failure",
+    "slug": "bidmc-congestive-heart-failure",
+    "name": "BIDMC Congestive Heart Failure Database",
+    "description": "The BIDMC Congestive Heart Failure Database is a physiological time series collection compiled by Beth Israel Deaconess Medical Center and Harvard Medical School. It includes 15 continuous long-term Holter ECG recordings (each approximately 20 hours in duration, sampled at 250 Hz) from 15 subjects (11 men, aged 22 to 71; and 4 women, aged 54 to 63) suffering from severe chronic congestive heart failure (NYHA functional class III–IV). The collection has served as a benchmark for studying heart rate turbulence, non-linear interbeat interval dynamics, and sudden cardiac death risk stratification.",
+    "homepage_url": "https://physionet.org/content/chfdb/1.0.0/",
+    "publisher": {
+      "name": "Beth Israel Deaconess Medical Center & Harvard Medical School",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "heart-failure-detection",
+      "heart-rate-variability",
+      "biomedical-signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "heart-failure",
+      "heart-rate-variability",
+      "physionet",
+      "holter"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet BIDMC Congestive Heart Failure Database Repository (DOI: 10.13026/C29G60)",
+        "url": "https://doi.org/10.13026/C29G60",
+        "type": "repository"
+      },
+      {
+        "title": "Baim et al. Journal of the American College of Cardiology 1986 Publication",
+        "url": "https://doi.org/10.1016/S0735-1097(86)80456-8",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C29G60 and Baim et al. (JACC 1986)."
+    },
+    "sample_count": {
+      "total": 15,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1986"
+    },
+    "citation": {
+      "paper_title": "Survival of patients with severe congestive heart failure treated with oral milrinone",
+      "paper_url": "https://doi.org/10.1016/S0735-1097(86)80456-8",
+      "authors": [
+        "Donald S. Baim",
+        "William S. Colucci",
+        "E. Scott Monrad",
+        "H. Sandra Smith",
+        "R. Fletcher Wright",
+        "Anne Lanoue",
+        "Donald F. Gauthier",
+        "Raymond J. Ransil",
+        "William Grossman",
+        "Eugene Braunwald"
+      ],
+      "doi": "10.13026/C29G60",
+      "bibtex": "@article{baim1986survival,\n  title={Survival of patients with severe congestive heart failure treated with oral milrinone},\n  author={Baim, Donald S and Colucci, William S and Monrad, E Scott and Smith, H Sandra and Wright, R Fletcher and Lanoue, Anne and Gauthier, Donald F and Ransil, Raymond J and Grossman, William and Braunwald, Eugene},\n  journal={Journal of the American College of Cardiology},\n  volume={7},\n  number={3},\n  pages={661--670},\n  year={1986},\n  publisher={Elsevier},\n  doi={10.13026/C29G60}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bidmc-ppg-and-respiration",
     "slug": "bidmc-ppg-and-respiration",
     "name": "BIDMC PPG and Respiration Dataset",
@@ -6687,6 +6846,162 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "but-ecg-quality-database",
+    "slug": "but-ecg-quality-database",
+    "name": "Brno University of Technology ECG Quality Database (BUT QDB)",
+    "description": "The BUT ECG Quality Database (BUT QDB) is an annotated electrocardiographic benchmark curated by Brno University of Technology in the Czech Republic. It consists of 180 two-minute single-lead ECG recordings selected from 15 subjects recorded over 24 hours under active, free-living ambulatory conditions using wearable Bittium Faros 180 monitors. Three independent medical and engineering experts audited each recording, providing continuous beat-by-beat quality segmentations into three classes: optimal quality, suboptimal quality, and uninterpretable/artifact. The benchmark enables training and objective evaluation of automated ECG signal quality assessment (SQA) and noise rejection algorithms.",
+    "homepage_url": "https://physionet.org/content/butqdb/1.0.0/",
+    "publisher": {
+      "name": "Brno University of Technology",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "signal-quality-assessment",
+      "ecg-denoising",
+      "quality-classification"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "signal-quality",
+      "wearables",
+      "physionet",
+      "benchmark",
+      "evaluation"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet BUT QDB Repository (DOI: 10.13026/kah4-0w24)",
+        "url": "https://doi.org/10.13026/kah4-0w24",
+        "type": "repository"
+      },
+      {
+        "title": "Nemcova et al. Scientific Data 2020 Publication",
+        "url": "https://doi.org/10.1038/s41597-020-00717-0",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/kah4-0w24 and Nemcova et al. (Scientific Data 2020)."
+    },
+    "sample_count": {
+      "total": 180,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020"
+    },
+    "citation": {
+      "paper_title": "Brno University of Technology ECG quality database (BUT QDB)",
+      "paper_url": "https://doi.org/10.1038/s41597-020-00717-0",
+      "authors": [
+        "Andrea Nemcova",
+        "Radovan Smisek",
+        "Katerina Opravilova",
+        "Martin Vitek",
+        "Lukas Smital",
+        "Lucie Marsanova"
+      ],
+      "doi": "10.13026/kah4-0w24",
+      "bibtex": "@article{nemcova2020brno,\n  title={Brno University of Technology ECG quality database (BUT QDB)},\n  author={Nemcova, Andrea and Smisek, Radovan and Opravilova, Katerina and Vitek, Martin and Smital, Lukas and Marsanova, Lucie},\n  journal={Scientific Data},\n  volume={7},\n  number={1},\n  pages={381},\n  year={2020},\n  publisher={Nature Publishing Group UK London},\n  doi={10.13026/kah4-0w24}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "but-smartphone-ppg-database",
+    "slug": "but-smartphone-ppg-database",
+    "name": "Brno University of Technology Smartphone PPG Database (BUT PPG)",
+    "description": "The BUT Smartphone PPG Database (BUT PPG) is an open-access photoplethysmographic benchmark created by the Department of Biomedical Engineering at Brno University of Technology. It contains 480 smartphone-camera PPG recordings acquired from 50 healthy adult subjects (aged 18 to 72) using contemporary smartphones (Xiaomi Mi9, Apple iPhone, etc.) placed against the fingertip. Recordings include resting and post-exercise states and are accompanied by simultaneous reference single-lead ECG ground truth. Version 2.0 provides manual pulse wave annotations, blood volume peak coordinates, and signal quality indices, serving as a primary benchmark for mobile optical heart rate estimation and mobile health AI.",
+    "homepage_url": "https://physionet.org/content/butppg/2.0.0/",
+    "publisher": {
+      "name": "Brno University of Technology",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "heart-rate-estimation",
+      "ppg-quality-assessment",
+      "biomedical-signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ppg",
+      "photoplethysmography",
+      "smartphones",
+      "mhealth",
+      "physionet"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet BUT PPG Repository (DOI: 10.13026/tn53-8153)",
+        "url": "https://doi.org/10.13026/tn53-8153",
+        "type": "repository"
+      },
+      {
+        "title": "Nemcova et al. Biomedical Signal Processing and Control 2021 Publication",
+        "url": "https://doi.org/10.1016/j.bspc.2020.102234",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/tn53-8153 (version 2.0.0) and Nemcova et al."
+    },
+    "sample_count": {
+      "total": 480,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021"
+    },
+    "citation": {
+      "paper_title": "Brno University of Technology smartphone PPG database (BUT PPG)",
+      "paper_url": "https://doi.org/10.1016/j.bspc.2020.102234",
+      "authors": [
+        "Andrea Nemcova",
+        "Radovan Smisek",
+        "Lucie Marsanova",
+        "Martin Vitek",
+        "Lukas Smital"
+      ],
+      "doi": "10.13026/tn53-8153",
+      "bibtex": "@article{nemcova2021brno,\n  title={Brno University of Technology smartphone PPG database (BUT PPG)},\n  author={Nemcova, Andrea and Smisek, Radovan and Marsanova, Lucie and Vitek, Martin and Smital, Lukas},\n  journal={Biomedical Signal Processing and Control},\n  volume={64},\n  pages={102234},\n  year={2021},\n  publisher={Elsevier},\n  doi={10.13026/tn53-8153}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "california-housing",
     "slug": "california-housing",
     "name": "California Housing Prices Database",
@@ -7424,6 +7739,82 @@
       "data_sources": [
         "CDC BRFSS 2015 Survey Data"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cebs-database",
+    "slug": "cebs-database",
+    "name": "Combined Measurement of ECG, Breathing and Seismocardiograms (CEBS)",
+    "description": "The CEBS Database is a multi-parameter cardiorespiratory recording repository developed by the Universitat Politècnica de Catalunya (UPC) in Barcelona. It consists of 60 physiological recordings collected from 20 healthy volunteers (aged 18 to 30) during three resting protocol states: basal baseline, listening to relaxing music, and post-listening recovery. Recorded signals simultaneously capture two conventional ECG leads (leads I and II), respiration using an impedance thoracic band, and high-sensitivity seismocardiograms (SCG) acquired via a triaxial accelerometer positioned over the lower sternum. This resource allows investigation of mechanical cardiac contractility (aortic valve opening and rapid ventricular ejection) and electromechanical coupling.",
+    "homepage_url": "https://physionet.org/content/cebsdb/1.0.0/",
+    "publisher": {
+      "name": "Universitat Politècnica de Catalunya (UPC)",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "seismocardiography",
+      "heartbeat-detection",
+      "biomedical-signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "seismocardiogram",
+      "respiration",
+      "physionet",
+      "sensors"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet CEBS Database Repository (DOI: 10.13026/C2KW23)",
+        "url": "https://doi.org/10.13026/C2KW23",
+        "type": "repository"
+      },
+      {
+        "title": "García-González et al. Computing in Cardiology 2013 Publication",
+        "url": "https://doi.org/10.13026/C2KW23",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C2KW23 and García-González et al. (CinC 2013)."
+    },
+    "sample_count": {
+      "total": 60,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2013"
+    },
+    "citation": {
+      "paper_title": "A comparison of heartbeat detectors for the seismocardiogram",
+      "paper_url": "https://doi.org/10.13026/C2KW23",
+      "authors": [
+        "M. A. García-González",
+        "A. Argelagós-Palau",
+        "M. Fernández-Chimeno",
+        "J. Ramos-Castro"
+      ],
+      "doi": "10.13026/C2KW23",
+      "bibtex": "@article{garcia2013comparison,\n  title={A comparison of heartbeat detectors for the seismocardiogram},\n  author={Garc{\\'\\i}a-Gonz{\\'a}lez, MA and Argelag{\\'o}s-Palau, A and Fern{\\'a}ndez-Chimeno, M and Ramos-Castro, J},\n  journal={Computing in Cardiology},\n  volume={40},\n  pages={461--464},\n  year={2013},\n  doi={10.13026/C2KW23}\n}"
     }
   },
   {
@@ -9658,6 +10049,86 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ctu-chb-intrapartum-ctg",
+    "slug": "ctu-chb-intrapartum-ctg",
+    "name": "CTU-CHB Intrapartum Cardiotocography Database",
+    "description": "The CTU-CHB Intrapartum Cardiotocography Database is an obstetrical and fetal monitoring collection compiled by the Czech Technical University in Prague and University Hospital in Brno (UHB). It contains 552 intrapartum cardiotocography (CTG) recordings (fetal heart rate and uterine contractions, sampled at 4 Hz) collected between 2009 and 2012, with each recording up to 90 minutes in length and terminating directly before delivery. Records are accompanied by objective newborn outcomes, maternal and labor characteristics, and biochemical fetal blood gas measurements (umbilical artery pH, base deficit, and pCO2), providing an objective ground truth for automated fetal hypoxia and metabolic acidosis detection.",
+    "homepage_url": "https://physionet.org/content/ctu-uhb-ctgdb/1.0.0/",
+    "publisher": {
+      "name": "Czech Technical University & University Hospital in Brno",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series",
+      "tabular"
+    ],
+    "tasks": [
+      "fetal-hypoxia-detection",
+      "biomedical-signal-processing",
+      "clinical-risk-prediction"
+    ],
+    "tags": [
+      "healthcare",
+      "obstetrics",
+      "fetal-monitoring",
+      "cardiotocography",
+      "ctg",
+      "physionet",
+      "clinical-data"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet CTU-CHB Intrapartum Cardiotocography Database Repository (DOI: 10.13026/C22013)",
+        "url": "https://doi.org/10.13026/C22013",
+        "type": "repository"
+      },
+      {
+        "title": "Chudáček et al. BMC Pregnancy and Childbirth 2014 Publication",
+        "url": "https://doi.org/10.1186/1471-2393-14-16",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C22013 and Chudáček et al. (BMC Pregnancy Childbirth 2014)."
+    },
+    "sample_count": {
+      "total": 552,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2014"
+    },
+    "citation": {
+      "paper_title": "Open access intrapartum CTG database",
+      "paper_url": "https://doi.org/10.1186/1471-2393-14-16",
+      "authors": [
+        "Václav Chudáček",
+        "Jiří Spilka",
+        "Miroslav Burša",
+        "Petr Janků",
+        "Lukáš Hruban",
+        "Michal Huptych",
+        "Lenka Lhotská"
+      ],
+      "doi": "10.13026/C22013",
+      "bibtex": "@article{chudacek2014open,\n  title={Open access intrapartum CTG database},\n  author={Chud{\\'a}{\\v{c}}ek, V{\\'a}clav and Spilka, Ji{\\v{r}}{\\'\\i} and Bur{\\v{s}}a, Miroslav and Jank{\\r{u}}, Petr and Hruban, Luk{\\'a}{\\v{s}} and Huptych, Michal and Lhotsk{\\'a}, Lenka},\n  journal={BMC Pregnancy and Childbirth},\n  volume={14},\n  pages={1--12},\n  year={2014},\n  publisher={Springer},\n  doi={10.13026/C22013}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "cv4a-kenya-crop-type",
     "slug": "cv4a-kenya-crop-type",
     "name": "CV4A Competition Kenya Crop Type Dataset",
@@ -11350,6 +11821,74 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ecg-id-database",
+    "slug": "ecg-id-database",
+    "name": "ECG-ID Database: Biometric Human Identification Benchmark",
+    "description": "The ECG-ID Database is an electrocardiographic biometric benchmark compiled by Saint Petersburg State Electrotechnical University (LETI). It comprises 310 single-lead ECG recordings obtained from 90 volunteers (44 men and 46 women, aged 13 to 75). Recordings were acquired from the palms of the hands using non-invasive dry copper electrodes, with each recording lasting 20 seconds (sampled at 500 Hz with 12-bit resolution). Each subject contributed between 2 and 20 recordings collected across multiple days, providing intra-subject morphological variability for evaluating biometric identity verification and recognition models.",
+    "homepage_url": "https://physionet.org/content/ecgiddb/1.0.0/",
+    "publisher": {
+      "name": "Saint Petersburg State Electrotechnical University (LETI)",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "biometric-identification",
+      "ecg-classification",
+      "biomedical-signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "biometrics",
+      "identification",
+      "physionet",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet ECG-ID Database Repository (DOI: 10.13026/C2J01F)",
+        "url": "https://doi.org/10.13026/C2J01F",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C2J01F and Lugovaya (LETI 2005)."
+    },
+    "sample_count": {
+      "total": 310,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2005"
+    },
+    "citation": {
+      "paper_title": "Biometric human identification based on electrocardiogram",
+      "paper_url": "https://doi.org/10.13026/C2J01F",
+      "authors": [
+        "Tatiana S. Lugovaya"
+      ],
+      "doi": "10.13026/C2J01F",
+      "bibtex": "@mastersthesis{lugovaya2005biometric,\n  title={Biometric human identification based on electrocardiogram},\n  author={Lugovaya, Tatiana S},\n  year={2005},\n  school={Faculty of Computing Technologies and Informatics, Electrotechnical University (LETI), Saint-Petersburg, Russian Federation},\n  doi={10.13026/C2J01F}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "echonet-dynamic",
     "slug": "echonet-dynamic",
     "name": "EchoNet-Dynamic: Cardiac Ultrasound Video Dataset for Ejection Fraction Assessment",
@@ -11518,6 +12057,83 @@
         "Islam, Md Kafiul"
       ],
       "doi": "10.17632/3d5frp7rnv.1"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "eeg-motor-movement-imagery",
+    "slug": "eeg-motor-movement-imagery",
+    "name": "EEG Motor Movement/Imagery Dataset",
+    "description": "The EEG Motor Movement/Imagery Dataset is an electroencephalographic benchmark collected by the Wadsworth Center, New York State Department of Health, using the BCI2000 research platform. The dataset consists of over 1,500 one- and two-minute 64-channel EEG recordings (sampled at 160 Hz according to the international 10-10 system) obtained from 109 healthy volunteers. Participants performed motor execution and mental imagery tasks, including opening and closing left or right fists, imagining hand movements, and moving both feet. The dataset provides continuous event annotations, serving as a primary benchmark for motor imagery classification, Brain-Computer Interface (BCI) decoding, and neuroprosthetic control.",
+    "homepage_url": "https://physionet.org/content/eegmmidb/1.0.0/",
+    "publisher": {
+      "name": "Wadsworth Center, New York State Department of Health",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "brain-computer-interface",
+      "motor-imagery-classification",
+      "eeg-analysis"
+    ],
+    "tags": [
+      "healthcare",
+      "neuroscience",
+      "eeg",
+      "bci",
+      "motor-imagery",
+      "brain-computer-interface",
+      "physionet"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet EEG Motor Movement/Imagery Dataset Repository (DOI: 10.13026/C28G6P)",
+        "url": "https://doi.org/10.13026/C28G6P",
+        "type": "repository"
+      },
+      {
+        "title": "Schalk et al. IEEE Transactions on Biomedical Engineering 2004 Publication",
+        "url": "https://doi.org/10.1109/TBME.2004.827072",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C28G6P and Schalk et al. (IEEE TBME 2004)."
+    },
+    "sample_count": {
+      "total": 109,
+      "unit": "subjects",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2004"
+    },
+    "citation": {
+      "paper_title": "BCI2000: a general-purpose brain-computer interface (BCI) system",
+      "paper_url": "https://doi.org/10.1109/TBME.2004.827072",
+      "authors": [
+        "Gerwin Schalk",
+        "Dennis J. McFarland",
+        "Thilo Hinterberger",
+        "Niels Birbaumer",
+        "Jonathan R. Wolpaw"
+      ],
+      "doi": "10.13026/C28G6P",
+      "bibtex": "@article{schalk2004bci2000,\n  title={BCI2000: a general-purpose brain-computer interface (BCI) system},\n  author={Schalk, Gerwin and McFarland, Dennis J and Hinterberger, Thilo and Birbaumer, Niels and Wolpaw, Jonathan R},\n  journal={IEEE Transactions on Biomedical Engineering},\n  volume={51},\n  number={6},\n  pages={1034--1043},\n  year={2004},\n  publisher={IEEE},\n  doi={10.13026/C28G6P}\n}"
     }
   },
   {
@@ -12114,6 +12730,85 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "european-st-t-database",
+    "slug": "european-st-t-database",
+    "name": "European ST-T Database: Myocardial Ischemia Detection Benchmark",
+    "description": "The European ST-T Database is a standard international reference library created by the CNR Institute of Clinical Physiology in Pisa, Italy, and the Thoraxcenter in Rotterdam under the auspices of the European Society of Cardiology. It comprises 90 two-hour continuous two-channel ambulatory ECG recordings from 79 subjects (70 men and 9 women, aged 30 to 84) with diagnosed or suspected myocardial ischemia. Each record is sampled at 250 Hz with 12-bit resolution and annotated with beat-by-beat labels as well as detailed episodic markers for ischemic and non-ischemic ST-segment and T-wave morphology variations.",
+    "homepage_url": "https://physionet.org/content/edb/1.0.0/",
+    "publisher": {
+      "name": "CNR Institute of Clinical Physiology & European Society of Cardiology",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "myocardial-ischemia-detection",
+      "ecg-classification",
+      "biomedical-signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "ischemia",
+      "st-segment",
+      "physionet",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet European ST-T Database Repository (DOI: 10.13026/C2D59Z)",
+        "url": "https://doi.org/10.13026/C2D59Z",
+        "type": "repository"
+      },
+      {
+        "title": "Taddei et al. Computers in Cardiology 1992 Publication",
+        "url": "https://doi.org/10.1109/CIC.1992.269420",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C2D59Z and Taddei et al. (Computers in Cardiology 1992)."
+    },
+    "sample_count": {
+      "total": 90,
+      "unit": "records",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1992"
+    },
+    "citation": {
+      "paper_title": "The European ST-T Database: standard for evaluating systems for the analysis of ST-T changes in ambulatory electrocardiography",
+      "paper_url": "https://doi.org/10.1109/CIC.1992.269420",
+      "authors": [
+        "A. Taddei",
+        "G. Distante",
+        "M. Emdin",
+        "P. Pisani",
+        "G. B. Moody",
+        "C. Zeelenberg",
+        "C. Marchesi"
+      ],
+      "doi": "10.13026/C2D59Z",
+      "bibtex": "@inproceedings{taddei1992european,\n  title={The European ST-T Database: standard for evaluating systems for the analysis of ST-T changes in ambulatory electrocardiography},\n  author={Taddei, A and Distante, G and Emdin, M and Pisani, P and Moody, GB and Zeelenberg, C and Marchesi, C},\n  booktitle={Computers in Cardiology 1992},\n  pages={177--180},\n  year={1992},\n  organization={IEEE},\n  doi={10.13026/C2D59Z}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "eurosat",
     "slug": "eurosat",
     "name": "EuroSAT: Land Use and Land Cover Sentinel-2 Benchmark",
@@ -12272,6 +12967,83 @@
       "total": 467,
       "unit": "images",
       "status": "verified"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "fantasia-database",
+    "slug": "fantasia-database",
+    "name": "Fantasia Database: Healthy Aging and Cardiac Dynamics Benchmark",
+    "description": "The Fantasia Database is a physiological study curated by the Beth Israel Deaconess Medical Center, Harvard Medical School, and PhysioNet to investigate the effects of healthy adult aging on cardiac interbeat interval dynamics. The collection consists of 40 continuous ambulatory recordings from 20 young healthy subjects (aged 21 to 34) and 20 elderly healthy subjects (aged 68 to 85) while resting supine and viewing the movie Fantasia to maintain wakefulness without emotional arousal. Signals include continuous ECG (sampled at 250 Hz) and respiratory movements, with automated beat detection and comprehensive visual audit by expert researchers.",
+    "homepage_url": "https://physionet.org/content/fantasia/1.0.0/",
+    "publisher": {
+      "name": "Beth Israel Deaconess Medical Center & Harvard Medical School",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "heart-rate-variability",
+      "biomedical-signal-processing",
+      "aging-biomarkers"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "heart-rate-variability",
+      "aging",
+      "physionet",
+      "respiration"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet Fantasia Database Repository (DOI: 10.13026/C2RG61)",
+        "url": "https://doi.org/10.13026/C2RG61",
+        "type": "repository"
+      },
+      {
+        "title": "Iyengar et al. American Journal of Physiology 1996 Publication",
+        "url": "https://doi.org/10.1152/ajpheart.1996.271.3.H1078",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C2RG61 and Iyengar et al. (Am J Physiol 1996)."
+    },
+    "sample_count": {
+      "total": 40,
+      "unit": "subjects",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1996"
+    },
+    "citation": {
+      "paper_title": "Age-related alterations in the fractal scaling of cardiac interbeat interval dynamics",
+      "paper_url": "https://doi.org/10.1152/ajpheart.1996.271.3.H1078",
+      "authors": [
+        "N. Iyengar",
+        "C. K. Peng",
+        "R. Morin",
+        "A. L. Goldberger",
+        "L. A. Lipsitz"
+      ],
+      "doi": "10.13026/C2RG61",
+      "bibtex": "@article{iyengar1996age,\n  title={Age-related alterations in the fractal scaling of cardiac interbeat interval dynamics},\n  author={Iyengar, N and Peng, C-K and Morin, R and Goldberger, AL and Lipsitz, LA},\n  journal={American Journal of Physiology-Heart and Circulatory Physiology},\n  volume={271},\n  number={3},\n  pages={H1078--H1084},\n  year={1996},\n  publisher={American Physiological Society},\n  doi={10.13026/C2RG61}\n}"
     }
   },
   {
@@ -18540,6 +19312,162 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "long-term-af-database",
+    "slug": "long-term-af-database",
+    "name": "Long Term AF Database: Paroxysmal Atrial Fibrillation Dynamics",
+    "description": "The Long Term AF Database is an extensive clinical electrocardiographic dataset compiled by Northwestern University and Rush University Medical Center in Chicago. It contains 84 continuous two-lead Holter ECG recordings, typically 24 to 25 hours long (sampled at 128 Hz with 12-bit resolution), from 84 subjects with paroxysmal or sustained atrial fibrillation. The collection was designed to study the long-term temporal dynamics and abrupt changes in fibrillatory wave frequency and amplitude preceding spontaneous termination and re-initiation of AF episodes.",
+    "homepage_url": "https://physionet.org/content/ltafdb/1.0.0/",
+    "publisher": {
+      "name": "Northwestern University & Rush University Medical Center",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "atrial-fibrillation-detection",
+      "arrhythmia-detection",
+      "ecg-classification"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "atrial-fibrillation",
+      "holter",
+      "long-term",
+      "physionet"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet Long Term AF Database Repository (DOI: 10.13026/C2QG6Q)",
+        "url": "https://doi.org/10.13026/C2QG6Q",
+        "type": "repository"
+      },
+      {
+        "title": "Petrutiu et al. Europace 2007 Publication",
+        "url": "https://doi.org/10.1093/europace/eum075",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C2QG6Q and Petrutiu et al. (Europace 2007)."
+    },
+    "sample_count": {
+      "total": 84,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2007"
+    },
+    "citation": {
+      "paper_title": "Abrupt changes in fibrillatory wave characteristics at the termination of paroxysmal atrial fibrillation in humans",
+      "paper_url": "https://doi.org/10.1093/europace/eum075",
+      "authors": [
+        "Simona Petrutiu",
+        "Alan V. Sahakian",
+        "Steven Swiryn"
+      ],
+      "doi": "10.13026/C2QG6Q",
+      "bibtex": "@article{petrutiu2007abrupt,\n  title={Abrupt changes in fibrillatory wave characteristics at the termination of paroxysmal atrial fibrillation in humans},\n  author={Petrutiu, Simona and Sahakian, Alan V and Swiryn, Steven},\n  journal={Europace},\n  volume={9},\n  number={7},\n  pages={466--470},\n  year={2007},\n  publisher={Oxford University Press},\n  doi={10.13026/C2QG6Q}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "long-term-st-database",
+    "slug": "long-term-st-database",
+    "name": "Long Term ST Database: Ambulatory Ischemia Monitoring Benchmark",
+    "description": "The Long Term ST Database is an extensive multi-center benchmark developed by an international collaboration (University of Ljubljana, CNR Institute of Clinical Physiology, and Beth Israel Deaconess Medical Center/MIT) to evaluate automated Holter monitoring systems during daily activities. The database consists of 86 continuous 2- and 3-lead Holter ECG recordings, each 21 to 24 hours in duration, from 80 subjects with documented ischemic heart disease. The dataset contains comprehensive beat-by-beat annotations and expert clinical consensus labels for over 1,100 ischemic and non-ischemic ST episodes, providing a challenging benchmark for distinguishing true myocardial ischemia from postural shifts and conduction abnormalities.",
+    "homepage_url": "https://physionet.org/content/ltstdb/1.0.0/",
+    "publisher": {
+      "name": "University of Ljubljana & PhysioNet",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "myocardial-ischemia-detection",
+      "ecg-classification",
+      "biomedical-signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "ischemia",
+      "holter",
+      "physionet",
+      "long-term"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet Long Term ST Database Repository (DOI: 10.13026/C2G01T)",
+        "url": "https://doi.org/10.13026/C2G01T",
+        "type": "repository"
+      },
+      {
+        "title": "Jager et al. Circulation 2003 Publication",
+        "url": "https://doi.org/10.1161/01.CIR.0000045667.65345.9F",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C2G01T and Jager et al. (Circulation 2003)."
+    },
+    "sample_count": {
+      "total": 86,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2000"
+    },
+    "citation": {
+      "paper_title": "Long-term ST database: a reference for the development and evaluation of automated ischaemia detectors and for the study of the dynamics of myocardial ischaemia",
+      "paper_url": "https://doi.org/10.1161/01.CIR.0000045667.65345.9F",
+      "authors": [
+        "Franc Jager",
+        "Alessandro Taddei",
+        "George B. Moody",
+        "Michele Emdin",
+        "Gorazd Antolic",
+        "Roman Dorn",
+        "Ales Smrdel",
+        "Carlo Marchesi",
+        "Roger G. Mark"
+      ],
+      "doi": "10.13026/C2G01T",
+      "bibtex": "@article{jager2003long,\n  title={Long-term ST database: a reference for the development and evaluation of automated ischaemia detectors and for the study of the dynamics of myocardial ischaemia},\n  author={Jager, Franc and Taddei, Alessandro and Moody, George B and Emdin, Michele and Antolic, Gorazd and Dorn, Roman and Smrdel, Ales and Marchesi, Carlo and Mark, Roger G},\n  journal={Circulation},\n  volume={107},\n  number={2},\n  pages={247--254},\n  year={2003},\n  publisher={Am Heart Assoc},\n  doi={10.13026/C2G01T}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "lvis",
     "slug": "lvis",
     "name": "LVIS: Large Vocabulary Instance Segmentation",
@@ -19901,6 +20829,82 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "mgh-mf-waveform-database",
+    "slug": "mgh-mf-waveform-database",
+    "name": "MGH/MF Waveform Database: Multi-Parameter ICU Hemodynamics",
+    "description": "The Massachusetts General Hospital / Marquette Foundation (MGH/MF) Waveform Database is a pioneering critical care monitoring repository recorded in the intensive care units of Massachusetts General Hospital. It contains 250 multi-channel physiological recordings from 250 adult patients admitted to cardiac and surgical ICUs, with recording durations typically ranging from 12 to 24 hours. Signals include 3 continuous ECG leads (leads I, II, and V), arterial blood pressure (ABP), central venous pressure (CVP), pulmonary arterial pressure (PAP), and airway respiration. Expert clinicians provided comprehensive annotations for cardiac arrhythmias, hemodynamic state shifts, and catheter calibration events.",
+    "homepage_url": "https://physionet.org/content/mghdb/1.0.0/",
+    "publisher": {
+      "name": "Massachusetts General Hospital & Marquette Electronics",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "hemodynamic-monitoring",
+      "arrhythmia-detection",
+      "critical-care-monitoring"
+    ],
+    "tags": [
+      "healthcare",
+      "intensive-care",
+      "icu",
+      "ecg",
+      "hemodynamics",
+      "blood-pressure",
+      "physionet"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet MGH/MF Waveform Database Repository (DOI: 10.13026/C26K5Q)",
+        "url": "https://doi.org/10.13026/C26K5Q",
+        "type": "repository"
+      },
+      {
+        "title": "Welch et al. Computers in Cardiology 1991 Publication",
+        "url": "https://doi.org/10.1109/CIC.1991.168995",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C26K5Q and Welch et al. (Computers in Cardiology 1991)."
+    },
+    "sample_count": {
+      "total": 250,
+      "unit": "patients",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1991"
+    },
+    "citation": {
+      "paper_title": "The Massachusetts General Hospital-Marquette Foundation Hemodynamic and Electrocardiographic Database -- Comprehensive collection of critical care waveforms",
+      "paper_url": "https://doi.org/10.1109/CIC.1991.168995",
+      "authors": [
+        "J. P. Welch",
+        "P. J. Ford",
+        "R. S. Teplick",
+        "R. M. Rubsamen"
+      ],
+      "doi": "10.13026/C26K5Q",
+      "bibtex": "@inproceedings{welch1991massachusetts,\n  title={The Massachusetts General Hospital-Marquette Foundation Hemodynamic and Electrocardiographic Database--Comprehensive collection of critical care waveforms},\n  author={Welch, JP and Ford, PJ and Teplick, RS and Rubsamen, RM},\n  booktitle={Computers in Cardiology 1991},\n  pages={389--392},\n  year={1991},\n  organization={IEEE},\n  doi={10.13026/C26K5Q}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "milk10k",
     "slug": "milk10k",
     "name": "MILK10k: Multimodal Imaging-Learning Toolkit for Skin Cancer",
@@ -20806,6 +21810,302 @@
       ],
       "doi": "10.1109/51.932724",
       "bibtex": "@article{moody2001impact,\n  title = {The impact of the MIT-BIH Arrhythmia Database},\n  author = {Moody, George B. and Mark, Roger G.},\n  journal = {IEEE Engineering in Medicine and Biology Magazine},\n  volume = {20},\n  number = {3},\n  pages = {45--50},\n  year = {2001}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mit-bih-atrial-fibrillation",
+    "slug": "mit-bih-atrial-fibrillation",
+    "name": "MIT-BIH Atrial Fibrillation Database",
+    "description": "The MIT-BIH Atrial Fibrillation Database is a classic benchmark developed by the Massachusetts Institute of Technology and Beth Israel Hospital Arrhythmia Laboratory for developing and evaluating algorithms that detect atrial fibrillation (AF) and flutter. The collection contains 25 ten-hour continuous two-channel ECG recordings sampled at 250 Hz with 12-bit resolution, acquired from 25 subjects with predominantly paroxysmal atrial fibrillation. It includes expert beat annotations and precise rhythm episode state markers denoting the exact transitions between normal sinus rhythm, atrial fibrillation, atrial flutter, and junctional rhythm.",
+    "homepage_url": "https://physionet.org/content/afdb/1.0.0/",
+    "publisher": {
+      "name": "MIT & Beth Israel Deaconess Medical Center",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "atrial-fibrillation-detection",
+      "arrhythmia-detection",
+      "ecg-classification"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "atrial-fibrillation",
+      "arrhythmia",
+      "physionet",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet MIT-BIH Atrial Fibrillation Database Repository (DOI: 10.13026/C2MW2D)",
+        "url": "https://doi.org/10.13026/C2MW2D",
+        "type": "repository"
+      },
+      {
+        "title": "Moody & Mark Computers in Cardiology 1983 Publication",
+        "url": "https://doi.org/10.13026/C2MW2D",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C2MW2D and Moody & Mark (Computers in Cardiology 1983)."
+    },
+    "sample_count": {
+      "total": 25,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1983"
+    },
+    "citation": {
+      "paper_title": "A new method for detecting atrial fibrillation using R-R intervals",
+      "paper_url": "https://doi.org/10.13026/C2MW2D",
+      "authors": [
+        "George B. Moody",
+        "Roger G. Mark"
+      ],
+      "doi": "10.13026/C2MW2D",
+      "bibtex": "@article{moody1983new,\n  title={A new method for detecting atrial fibrillation using R-R intervals},\n  author={Moody, George B and Mark, Roger G},\n  journal={Computers in Cardiology},\n  volume={10},\n  pages={227--230},\n  year={1983},\n  doi={10.13026/C2MW2D}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mit-bih-noise-stress-test",
+    "slug": "mit-bih-noise-stress-test",
+    "name": "MIT-BIH Noise Stress Test Database: Robust Arrhythmia Benchmark",
+    "description": "The MIT-BIH Noise Stress Test Database is a standardized stress-testing resource created by the MIT and Beth Israel Hospital biomedical engineering teams to quantitatively evaluate ECG arrhythmia detection algorithms under adverse noise conditions. It consists of 12 half-hour standard two-channel ECG recordings synthesized by combining clean recordings from the MIT-BIH Arrhythmia Database with calibrated levels of realistic ambulatory noise (baseline wander, muscle tremor, and electrode motion artifact) at signal-to-noise ratios ranging from -6 dB to 24 dB. It also includes 3 pure half-hour recordings of typical clinical noise recorded from limbs using standard electrodes.",
+    "homepage_url": "https://physionet.org/content/nstdb/1.0.0/",
+    "publisher": {
+      "name": "MIT Laboratory for Computational Physiology",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "arrhythmia-detection",
+      "signal-denoising",
+      "noise-robustness-evaluation"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "noise-stress",
+      "arrhythmia",
+      "benchmark",
+      "evaluation",
+      "physionet"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet MIT-BIH Noise Stress Test Database Repository (DOI: 10.13026/C2HS3T)",
+        "url": "https://doi.org/10.13026/C2HS3T",
+        "type": "repository"
+      },
+      {
+        "title": "Moody et al. Computers in Cardiology 1984 Publication",
+        "url": "https://doi.org/10.13026/C2HS3T",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C2HS3T and Moody et al. (Computers in Cardiology 1984). Evaluates detector degradation."
+    },
+    "sample_count": {
+      "total": 15,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1984"
+    },
+    "citation": {
+      "paper_title": "A noise stress test for arrhythmia detectors",
+      "paper_url": "https://doi.org/10.13026/C2HS3T",
+      "authors": [
+        "George B. Moody",
+        "William E. Muldrow",
+        "Roger G. Mark"
+      ],
+      "doi": "10.13026/C2HS3T",
+      "bibtex": "@article{moody1984noise,\n  title={A noise stress test for arrhythmia detectors},\n  author={Moody, George B and Muldrow, William E and Mark, Roger G},\n  journal={Computers in Cardiology},\n  volume={11},\n  pages={381--384},\n  year={1984},\n  doi={10.13026/C2HS3T}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mit-bih-normal-sinus-rhythm",
+    "slug": "mit-bih-normal-sinus-rhythm",
+    "name": "MIT-BIH Normal Sinus Rhythm Database",
+    "description": "The MIT-BIH Normal Sinus Rhythm Database is a widely utilized normative reference dataset compiled by the Beth Israel Hospital Arrhythmia Laboratory in Boston. It includes 18 long-term two-channel ambulatory Holter ECG recordings (each approximately 24 hours long, sampled at 128 Hz) acquired from healthy adult subjects (5 men, aged 26 to 45; and 13 women, aged 20 to 50) who underwent continuous Holter monitoring and were verified to have no significant arrhythmias. Users should note that this repository contains continuous raw ECG waveforms, serving as a clean baseline for cardiac pathology comparisons, distinct from the RR interval-only NSR dataset.",
+    "homepage_url": "https://physionet.org/content/nsrdb/1.0.0/",
+    "publisher": {
+      "name": "Beth Israel Deaconess Medical Center & PhysioNet",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "heart-rate-variability",
+      "ecg-classification",
+      "biomedical-signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "sinus-rhythm",
+      "normative",
+      "physionet",
+      "holter"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet MIT-BIH Normal Sinus Rhythm Database Repository (DOI: 10.13026/C2NK5R)",
+        "url": "https://doi.org/10.13026/C2NK5R",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C2NK5R. Distinct from nsr2db RR interval dataset."
+    },
+    "sample_count": {
+      "total": 18,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1997"
+    },
+    "citation": {
+      "paper_title": "PhysioNet: Components of a New Research Resource for Complex Physiologic Signals",
+      "paper_url": "https://doi.org/10.13026/C2NK5R",
+      "authors": [
+        "Ary L. Goldberger",
+        "Luis A. N. Amaral",
+        "Leon Glass",
+        "Jeffrey M. Hausdorff",
+        "Plamen Ch. Ivanov",
+        "Roger G. Mark",
+        "Joseph E. Mietus",
+        "George B. Moody",
+        "Chung-Kang Peng",
+        "H. Eugene Stanley"
+      ],
+      "doi": "10.13026/C2NK5R",
+      "bibtex": "@misc{mitbih_nsrdb_1997,\n  title={MIT-BIH Normal Sinus Rhythm Database},\n  author={Goldberger, Ary L and Amaral, Luis AN and Glass, Leon and Hausdorff, Jeffrey M and Ivanov, Plamen Ch and Mark, Roger G and Mietus, Joseph E and Moody, George B and Peng, Chung-Kang and Stanley, H Eugene},\n  year={1997},\n  publisher={PhysioNet},\n  doi={10.13026/C2NK5R}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mit-bih-polysomnographic-database",
+    "slug": "mit-bih-polysomnographic-database",
+    "name": "MIT-BIH Polysomnographic Database: Sleep Staging & Apnea Benchmark",
+    "description": "The MIT-BIH Polysomnographic Database is an over-night sleep and physiological monitoring library collected at Boston's Beth Israel Hospital Sleep Laboratory. It contains 18 multi-channel polysomnographic recordings (each over 6 hours in duration) recorded from 16 male subjects (aged 32 to 56) evaluated for chronic sleep apnea. Each recording includes continuous EEG, single-channel ECG, respiration (chest/abdominal effort and airflow), and continuous pulse oximetry (SpO2). The collection features expert annotations for sleep staging (stages 1, 2, 3, 4, REM, and wakefulness) alongside respiratory event markers for obstructive and central sleep apneas.",
+    "homepage_url": "https://physionet.org/content/slpdb/1.0.0/",
+    "publisher": {
+      "name": "Beth Israel Hospital Sleep Laboratory & MIT",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "sleep-staging",
+      "sleep-apnea-detection",
+      "polysomnography-analysis"
+    ],
+    "tags": [
+      "healthcare",
+      "sleep-medicine",
+      "polysomnography",
+      "eeg",
+      "ecg",
+      "sleep-apnea",
+      "physionet",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet MIT-BIH Polysomnographic Database Repository (DOI: 10.13026/C23K5S)",
+        "url": "https://doi.org/10.13026/C23K5S",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C23K5S. Multi-channel sleep benchmark."
+    },
+    "sample_count": {
+      "total": 18,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1999"
+    },
+    "citation": {
+      "paper_title": "MIT-BIH Polysomnographic Database",
+      "paper_url": "https://doi.org/10.13026/C23K5S",
+      "authors": [
+        "George B. Moody"
+      ],
+      "doi": "10.13026/C23K5S",
+      "bibtex": "@misc{moody1999slpdb,\n  title={MIT-BIH Polysomnographic Database},\n  author={Moody, George B},\n  year={1999},\n  publisher={PhysioNet},\n  doi={10.13026/C23K5S}\n}"
     }
   },
   {
@@ -23124,6 +24424,83 @@
         "National Weather Service",
         "NOAA NCEI"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "normal-sinus-rhythm-rr-interval",
+    "slug": "normal-sinus-rhythm-rr-interval",
+    "name": "Normal Sinus Rhythm RR Interval Database",
+    "description": "The Normal Sinus Rhythm RR Interval Database is an interbeat interval time series archive curated by PhysioNet and Beth Israel Deaconess Medical Center. It contains beat-to-beat RR interval sequences extracted from 24-hour ambulatory Holter ECG recordings of 54 healthy adult subjects (30 men, aged 28.5 to 76; and 24 women, aged 58 to 73) verified to have normal sinus rhythm. Unlike waveform-level ECG databases, this repository provides filtered and audited interbeat intervals, serving as a dedicated comparative baseline for heart rate variability (HRV) analysis, autonomic nervous system evaluation, and non-linear dynamics research.",
+    "homepage_url": "https://physionet.org/content/nsr2db/1.0.0/",
+    "publisher": {
+      "name": "Beth Israel Deaconess Medical Center & PhysioNet",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "heart-rate-variability",
+      "biomedical-signal-processing",
+      "autonomic-assessment"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "rr-intervals",
+      "heart-rate-variability",
+      "physionet",
+      "normative"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet Normal Sinus Rhythm RR Interval Database Repository (DOI: 10.13026/C2S881)",
+        "url": "https://doi.org/10.13026/C2S881",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C2S881. Distinct from nsrdb full waveform collection."
+    },
+    "sample_count": {
+      "total": 54,
+      "unit": "subjects",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1997"
+    },
+    "citation": {
+      "paper_title": "Normal Sinus Rhythm RR Interval Database",
+      "paper_url": "https://doi.org/10.13026/C2S881",
+      "authors": [
+        "Ary L. Goldberger",
+        "Luis A. N. Amaral",
+        "Leon Glass",
+        "Jeffrey M. Hausdorff",
+        "Plamen Ch. Ivanov",
+        "Roger G. Mark",
+        "Joseph E. Mietus",
+        "George B. Moody",
+        "Chung-Kang Peng",
+        "H. Eugene Stanley"
+      ],
+      "doi": "10.13026/C2S881",
+      "bibtex": "@misc{nsr2db_1997,\n  title={Normal Sinus Rhythm RR Interval Database},\n  author={Goldberger, Ary L and Amaral, Luis AN and Glass, Leon and Hausdorff, Jeffrey M and Ivanov, Plamen Ch and Mark, Roger G and Mietus, Joseph E and Moody, George B and Peng, Chung-Kang and Stanley, H Eugene},\n  year={1997},\n  publisher={PhysioNet},\n  doi={10.13026/C2S881}\n}"
     }
   },
   {
@@ -25941,6 +27318,81 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ptb-diagnostic-ecg",
+    "slug": "ptb-diagnostic-ecg",
+    "name": "PTB Diagnostic ECG Database",
+    "description": "The PTB Diagnostic ECG Database is a foundational clinical electrocardiography repository compiled by the National Metrology Institute of Germany (Physikalisch-Technische Bundesanstalt - PTB). It contains 549 high-resolution records from 290 subjects (209 men and 81 women, aged 17 to 87), encompassing healthy volunteers and patients across nine major clinical diagnostic categories: myocardial infarction, cardiomyopathy, heart failure, bundle branch block, dysrhythmia, myocardial hypertrophy, valvular heart disease, and myocarditis. Each record contains 15 simultaneously recorded signals (the 12 standard leads plus 3 orthogonal Frank XYZ leads) sampled at 1,000 Hz with 16-bit resolution. Users should note that this collection is the original 1995 PTB diagnostic database, distinct from the larger 2020 PTB-XL database.",
+    "homepage_url": "https://physionet.org/content/ptbdb/1.0.0/",
+    "publisher": {
+      "name": "Physikalisch-Technische Bundesanstalt (PTB)",
+      "type": "academic",
+      "url": "https://www.ptb.de"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "ecg-classification",
+      "myocardial-infarction-detection",
+      "biomedical-signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "myocardial-infarction",
+      "ptb",
+      "physionet",
+      "diagnostic"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet PTB Diagnostic ECG Database Repository (DOI: 10.13026/C28C71)",
+        "url": "https://doi.org/10.13026/C28C71",
+        "type": "repository"
+      },
+      {
+        "title": "Bousseljot et al. Biomedizinische Technik 1995 Publication",
+        "url": "https://doi.org/10.1515/bmte.1995.40.s1.317",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C28C71 and Bousseljot et al. (Biomed Tech 1995). Distinct from PTB-XL."
+    },
+    "sample_count": {
+      "total": 549,
+      "unit": "records",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1995"
+    },
+    "citation": {
+      "paper_title": "Nutzung der EKG-Signaldatenbank CARDIODAT der PTB über das Internet",
+      "paper_url": "https://doi.org/10.1515/bmte.1995.40.s1.317",
+      "authors": [
+        "R. Bousseljot",
+        "D. Kreiseler",
+        "A. Schnabel"
+      ],
+      "doi": "10.13026/C28C71",
+      "bibtex": "@article{bousseljot1995nutzung,\n  title={Nutzung der EKG-Signaldatenbank CARDIODAT der PTB {\\\"u}ber das Internet},\n  author={Bousseljot, R and Kreiseler, D and Schnabel, A},\n  journal={Biomedizinische Technik/Biomedical Engineering},\n  volume={40},\n  number={s1},\n  pages={317--318},\n  year={1995},\n  publisher={De Gruyter},\n  doi={10.13026/C28C71}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ptb-xl",
     "slug": "ptb-xl",
     "name": "PTB-XL: Large Publicly Available 12-Lead ECG Dataset",
@@ -26018,6 +27470,91 @@
       ],
       "doi": "10.1038/s41597-020-0386-4",
       "bibtex": "@article{wagner2020ptb,\n  title = {PTB-XL, a large publicly available electrocardiography dataset},\n  author = {Wagner, Patrick and Strodthoff, Nils and Bousseljot, Ralf-Dieter and Kreiseler, Dieter and Lunze, Fatima I. and Samek, Wojciech and Schaeffter, Tobias},\n  journal = {Scientific Data},\n  volume = {7},\n  number = {1},\n  pages = {154},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ptb-xl-plus",
+    "slug": "ptb-xl-plus",
+    "name": "PTB-XL+: Comprehensive Electrocardiographic Feature Dataset",
+    "description": "PTB-XL+ is an extensive clinical feature and annotation dataset complementing the 21,837 twelve-lead ECG records of the canonical PTB-XL database. Developed by the Physikalisch-Technische Bundesanstalt (PTB), Charité Universitätsmedizin Berlin, and Karlsruhe Institute of Technology, it provides fiducial point segmentations (P-onset, P-peak, P-offset, QRS-onset, QRS-peak, J-point, T-offset), morphological wave boundaries, heart rate, electrical axis metrics, and median heartbeat waveforms extracted using validated commercial and academic ECG analysis software (GE Marquette 12SL and Uni-G). The dataset serves as a rich multi-modal bridge between raw 12-lead voltage waveforms, clinical diagnoses, and tabular cardiological features.",
+    "homepage_url": "https://physionet.org/content/ptb-xl-plus/1.0.1/",
+    "publisher": {
+      "name": "Physikalisch-Technische Bundesanstalt (PTB) & Charité Berlin",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "ecg-classification",
+      "waveform-segmentation",
+      "tabular-classification"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "ptb-xl",
+      "feature-extraction",
+      "physionet",
+      "median-beats"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet PTB-XL+ Repository (DOI: 10.13026/g6h6-7g88)",
+        "url": "https://doi.org/10.13026/g6h6-7g88",
+        "type": "repository"
+      },
+      {
+        "title": "Strodthoff et al. Scientific Data 2023 Publication",
+        "url": "https://doi.org/10.1038/s41597-023-02338-8",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/g6h6-7g88 and Strodthoff et al. (Scientific Data 2023). Extends PTB-XL."
+    },
+    "sample_count": {
+      "total": 21837,
+      "unit": "records",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023"
+    },
+    "citation": {
+      "paper_title": "PTB-XL+, a comprehensive electrocardiographic feature dataset",
+      "paper_url": "https://doi.org/10.1038/s41597-023-02338-8",
+      "authors": [
+        "Nils Strodthoff",
+        "Temesgen Mehari",
+        "Claudia Nagel",
+        "Philip Aston",
+        "Arun Sundar",
+        "Claus Graff",
+        "Jørgen Kanters",
+        "Wilhelm Haverkamp",
+        "Olaf Doessel",
+        "Axel Loewe",
+        "Markus Bär",
+        "Tobias Schaeffter"
+      ],
+      "doi": "10.13026/g6h6-7g88",
+      "bibtex": "@article{strodthoff2023ptb,\n  title={PTB-XL+, a comprehensive electrocardiographic feature dataset},\n  author={Strodthoff, Nils and Mehari, Temesgen and Nagel, Claudia and Aston, Philip and Sundar, Arun and Graff, Claus and Kanters, J{\\o}rgen and Haverkamp, Wilhelm and Doessel, Olaf and Loewe, Axel and others},\n  journal={Scientific Data},\n  volume={10},\n  number={1},\n  pages={279},\n  year={2023},\n  publisher={Nature Publishing Group UK London},\n  doi={10.13026/g6h6-7g88}\n}"
     }
   },
   {
@@ -26442,6 +27979,82 @@
     "languages": [
       "bn"
     ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "qt-database",
+    "slug": "qt-database",
+    "name": "QT Database: ECG Waveform Interval and Morphology Benchmark",
+    "description": "The QT Database is an internationally recognized electrocardiographic benchmark curated by the NIH-sponsored PhysioNet team and the University of Zaragoza to design and evaluate algorithms for automated detection and timing of ECG boundaries (P-wave onset and offset, QRS onset and offset, and T-wave end). Comprising 105 fifteen-minute excerpts of two-channel surface ECGs sampled at 250 Hz, it draws from the MIT-BIH Arrhythmia Database, European ST-T Database, and sudden death risk cohorts. The benchmark contains over 3,600 manually audited beat segmentations by expert cardiologists, serving as the gold standard for validating automated QT interval measurement and cardiac repolarization analysis.",
+    "homepage_url": "https://physionet.org/content/qtdb/1.0.0/",
+    "publisher": {
+      "name": "PhysioNet & University of Zaragoza",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "ecg-classification",
+      "waveform-segmentation",
+      "biomedical-signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "qt-interval",
+      "arrhythmia",
+      "physionet",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet QT Database Repository (DOI: 10.13026/C24K53)",
+        "url": "https://doi.org/10.13026/C24K53",
+        "type": "repository"
+      },
+      {
+        "title": "Laguna et al. Computers in Cardiology 1997 Publication",
+        "url": "https://doi.org/10.1109/CIC.1997.647986",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C24K53 and Laguna et al. (Computers in Cardiology 1997)."
+    },
+    "sample_count": {
+      "total": 105,
+      "unit": "records",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "1997"
+    },
+    "citation": {
+      "paper_title": "A Database for Evaluation of Algorithms for Measurement of QT and Other Waveform Intervals in the ECG",
+      "paper_url": "https://doi.org/10.1109/CIC.1997.647986",
+      "authors": [
+        "Pablo Laguna",
+        "Roger G. Mark",
+        "Ary L. Goldberger",
+        "George B. Moody"
+      ],
+      "doi": "10.13026/C24K53",
+      "bibtex": "@article{laguna1997database,\n  title={A database for evaluation of algorithms for measurement of QT and other waveform intervals in the ECG},\n  author={Laguna, Pablo and Mark, Roger G and Goldberger, Ary L and Moody, George B},\n  journal={Computers in Cardiology},\n  volume={24},\n  pages={673--676},\n  year={1997},\n  publisher={IEEE},\n  doi={10.13026/C24K53}\n}"
+    }
   },
   {
     "schema_version": "1.0.0",
@@ -29145,6 +30758,84 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "staff-iii-database",
+    "slug": "staff-iii-database",
+    "name": "STAFF III Database: Acutely Induced Myocardial Ischemia ECGs",
+    "description": "The STAFF III Database is an experimental clinical study recorded at the Charleston Area Medical Center in West Virginia by Lund University, Duke University, and University of Zaragoza. It comprises continuous high-resolution standard 12-lead ECGs recorded from 104 patients undergoing elective percutaneous transluminal coronary angioplasty (PTCA). Balloon inflations produced controlled, acutely induced regional myocardial ischemia lasting up to several minutes. The collection captures pre-inflation, peak inflation, and post-deflation reperfusion ECG states, offering in vivo human data for studying the spatio-temporal evolution of acute ischemic cardiac injury.",
+    "homepage_url": "https://physionet.org/content/staffiii/1.0.0/",
+    "publisher": {
+      "name": "Charleston Area Medical Center & Lund University",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "myocardial-ischemia-detection",
+      "ecg-classification",
+      "biomedical-signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "cardiology",
+      "ecg",
+      "ischemia",
+      "ptca",
+      "angioplasty",
+      "physionet"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet STAFF III Database Repository (DOI: 10.13026/C20P4H)",
+        "url": "https://doi.org/10.13026/C20P4H",
+        "type": "repository"
+      },
+      {
+        "title": "Martínez et al. Computing in Cardiology 2017 Publication",
+        "url": "https://doi.org/10.22489/CinC.2017.266-133",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C20P4H and Martínez et al. (CinC 2017)."
+    },
+    "sample_count": {
+      "total": 104,
+      "unit": "patients",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2017"
+    },
+    "citation": {
+      "paper_title": "The STAFF III Database: ECGs Recorded During Acutely Induced Myocardial Ischemia",
+      "paper_url": "https://doi.org/10.22489/CinC.2017.266-133",
+      "authors": [
+        "Juan Pablo Martínez",
+        "Olle Pahlm",
+        "Mats Ringborn",
+        "Staffan Warren",
+        "Pablo Laguna",
+        "Leif Sörnmo"
+      ],
+      "doi": "10.13026/C20P4H",
+      "bibtex": "@article{martinez2017staff,\n  title={The STAFF III Database: ECGs recorded during acutely induced myocardial ischemia},\n  author={Mart{\\'\\i}nez, Juan Pablo and Pahlm, Olle and Ringborn, Mats and Warren, Staffan and Laguna, Pablo and S{\\\"o}rnmo, Leif},\n  journal={Computing in Cardiology},\n  volume={44},\n  pages={1--4},\n  year={2017},\n  doi={10.13026/C20P4H}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "stl-10",
     "slug": "stl-10",
     "name": "STL-10",
@@ -31116,6 +32807,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ucd-sleep-apnea-database",
+    "slug": "ucd-sleep-apnea-database",
+    "name": "St. Vincent's University Hospital / UCD Sleep Apnea Database",
+    "description": "The St. Vincent's University Hospital / University College Dublin Sleep Apnea Database is an overnight polysomnographic cohort acquired at the Sleep Disorders Clinic, St. Vincent's University Hospital in Dublin. It comprises 25 full overnight polysomnograms recorded from 25 adult patients (21 men and 4 women, aged 28 to 68) with suspected obstructive sleep apnea. Each recording includes 14 physiological channels: 2 EEG channels (C3-A2, C4-A1), left/right EOG, submental EMG, ECG, nasal airflow, ribcage and abdominal respiratory effort, arterial oxygen saturation (SpO2), snoring microphone, and body position. An expert sleep medicine specialist verified all 30-second epoch sleep stages and clinical apnea/hypopnea events.",
+    "homepage_url": "https://physionet.org/content/ucddb/1.0.0/",
+    "publisher": {
+      "name": "St. Vincent's University Hospital & University College Dublin",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series"
+    ],
+    "tasks": [
+      "sleep-apnea-detection",
+      "sleep-staging",
+      "polysomnography-analysis"
+    ],
+    "tags": [
+      "healthcare",
+      "sleep-medicine",
+      "sleep-apnea",
+      "polysomnography",
+      "eeg",
+      "ecg",
+      "physionet"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet UCD Sleep Apnea Database Repository (DOI: 10.13026/C26C7D)",
+        "url": "https://doi.org/10.13026/C26C7D",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C26C7D and UCD Sleep Clinic records."
+    },
+    "sample_count": {
+      "total": 25,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2011"
+    },
+    "citation": {
+      "paper_title": "PhysioNet: Components of a New Research Resource for Complex Physiologic Signals",
+      "paper_url": "https://doi.org/10.13026/C26C7D",
+      "authors": [
+        "Ary L. Goldberger",
+        "Luis A. N. Amaral",
+        "Leon Glass",
+        "Jeffrey M. Hausdorff",
+        "Plamen Ch. Ivanov",
+        "Roger G. Mark",
+        "Joseph E. Mietus",
+        "George B. Moody",
+        "Chung-Kang Peng",
+        "H. Eugene Stanley"
+      ],
+      "doi": "10.13026/C26C7D",
+      "bibtex": "@misc{ucddb_2011,\n  title={St. Vincent's University Hospital / University College Dublin Sleep Apnea Database},\n  author={Goldberger, Ary L and Amaral, Luis AN and Glass, Leon and Hausdorff, Jeffrey M and Ivanov, Plamen Ch and Mark, Roger G and Mietus, Joseph E and Moody, George B and Peng, Chung-Kang and Stanley, H Eugene},\n  year={2011},\n  publisher={PhysioNet},\n  doi={10.13026/C26C7D}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ucf101",
     "slug": "ucf101",
     "name": "UCF101: Action Recognition Dataset",
@@ -33071,6 +34839,160 @@
         "Xue, Jinlin"
       ],
       "doi": "10.17632/jskv9f9n7w.2"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "vitaldb",
+    "slug": "vitaldb",
+    "name": "VitalDB: High-Fidelity Multi-Parameter Vital Signs Surgical Database",
+    "description": "VitalDB is an open-access, high-resolution perioperative monitoring database curated by Seoul National University Hospital. It contains 6,388 non-cardiac surgical cases representing over 486,000 hours of recording under general anesthesia. Captured multi-parameter biosignals include high-frequency arterial line blood pressure waveforms, multi-lead ECGs, photoplethysmograms (PPG), bispectral index (BIS), end-tidal CO2, and ventilation mechanics recorded via patient monitors and anesthesia workstations. The dataset is coupled with 73 clinical and laboratory variables (patient demographics, surgical procedures, lab blood panels, intraoperative drug infusions, and postoperative adverse outcomes), serving as a premier benchmark for predictive anesthesia AI and real-time intraoperative hypotension forecasting.",
+    "homepage_url": "https://physionet.org/content/vitaldb/1.0.0/",
+    "publisher": {
+      "name": "Seoul National University College of Medicine",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "time-series",
+      "tabular"
+    ],
+    "tasks": [
+      "perioperative-risk-prediction",
+      "hemodynamic-monitoring",
+      "hypotension-prediction"
+    ],
+    "tags": [
+      "healthcare",
+      "anesthesiology",
+      "surgery",
+      "vital-signs",
+      "hemodynamics",
+      "icu",
+      "physionet",
+      "clinical-data"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet VitalDB Repository (DOI: 10.13026/czw8-9p62)",
+        "url": "https://doi.org/10.13026/czw8-9p62",
+        "type": "repository"
+      },
+      {
+        "title": "Lee et al. Scientific Data 2022 Publication",
+        "url": "https://doi.org/10.1038/s41597-022-01411-5",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/czw8-9p62 and Lee et al. (Scientific Data 2022)."
+    },
+    "sample_count": {
+      "total": 6388,
+      "unit": "cases",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022"
+    },
+    "citation": {
+      "paper_title": "VitalDB, a high-fidelity multi-parameter vital signs database in surgical patients",
+      "paper_url": "https://doi.org/10.1038/s41597-022-01411-5",
+      "authors": [
+        "Hyung-Chul Lee",
+        "Chul-Woo Jung"
+      ],
+      "doi": "10.13026/czw8-9p62",
+      "bibtex": "@article{lee2022vitaldb,\n  title={VitalDB, a high-fidelity multi-parameter vital signs database in surgical patients},\n  author={Lee, Hyung-Chul and Jung, Chul-Woo},\n  journal={Scientific Data},\n  volume={9},\n  number={1},\n  pages={279},\n  year={2022},\n  publisher={Nature Publishing Group UK London},\n  doi={10.13026/czw8-9p62}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "voiced-pathological-voice",
+    "slug": "voiced-pathological-voice",
+    "name": "VOICED: Voice Disorders Acoustic Signal Database",
+    "description": "The VOICED Database (Voice Disorders Database) is an acoustic clinical speech repository curated by the National Research Council of Italy (CNR-ICAR) and the Department of Clinical Medicine and Surgery at the University of Naples Federico II. It contains 208 high-quality uncompressed audio recordings from 208 adult subjects (150 patients with diagnosed vocal fold pathologies such as nodules, polyps, cysts, dysphonias, and paralyses, and 58 healthy control subjects) uttering sustained phonations of vowel /a/. The recordings were captured using professional studio equipment in clinical settings and are accompanied by structured medical metadata (diagnostic confirmation, videolaryngostroboscopy findings, smoking status, and subjective voice impairment scores).",
+    "homepage_url": "https://physionet.org/content/voiced/1.0.0/",
+    "publisher": {
+      "name": "National Research Council of Italy (CNR) & University of Naples Federico II",
+      "type": "academic",
+      "url": "https://physionet.org"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "pathological-voice-detection",
+      "audio-classification",
+      "biomedical-signal-processing"
+    ],
+    "tags": [
+      "healthcare",
+      "audio",
+      "voice-pathology",
+      "speech-processing",
+      "otolaryngology",
+      "physionet",
+      "clinical-data"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet VOICED Database Repository (DOI: 10.13026/C25Q2N)",
+        "url": "https://doi.org/10.13026/C25Q2N",
+        "type": "repository"
+      },
+      {
+        "title": "Cesari et al. Computers & Electrical Engineering 2018 Publication",
+        "url": "https://doi.org/10.1016/j.compeleceng.2018.04.015",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-08",
+      "notes": "Audited against PhysioNet repository 10.13026/C25Q2N and Cesari et al. (Computers & Electrical Engineering 2018)."
+    },
+    "sample_count": {
+      "total": 208,
+      "unit": "recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018"
+    },
+    "citation": {
+      "paper_title": "A new database of healthy and pathological voices",
+      "paper_url": "https://doi.org/10.1016/j.compeleceng.2018.04.015",
+      "authors": [
+        "U. Cesari",
+        "G. De Pietro",
+        "E. Marciano",
+        "C. Niri",
+        "G. Sannino",
+        "L. Verde"
+      ],
+      "doi": "10.13026/C25Q2N",
+      "bibtex": "@article{cesari2018new,\n  title={A new database of healthy and pathological voices},\n  author={Cesari, U and De Pietro, G and Marciano, E and Niri, C and Sannino, G and Verde, L},\n  journal={Computers \\& Electrical Engineering},\n  volume={68},\n  pages={310--321},\n  year={2018},\n  publisher={Elsevier},\n  doi={10.13026/C25Q2N}\n}"
     }
   },
   {

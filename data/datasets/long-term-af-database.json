@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "long-term-af-database",
+  "slug": "long-term-af-database",
+  "name": "Long Term AF Database: Paroxysmal Atrial Fibrillation Dynamics",
+  "description": "The Long Term AF Database is an extensive clinical electrocardiographic dataset compiled by Northwestern University and Rush University Medical Center in Chicago. It contains 84 continuous two-lead Holter ECG recordings, typically 24 to 25 hours long (sampled at 128 Hz with 12-bit resolution), from 84 subjects with paroxysmal or sustained atrial fibrillation. The collection was designed to study the long-term temporal dynamics and abrupt changes in fibrillatory wave frequency and amplitude preceding spontaneous termination and re-initiation of AF episodes.",
+  "homepage_url": "https://physionet.org/content/ltafdb/1.0.0/",
+  "publisher": {
+    "name": "Northwestern University & Rush University Medical Center",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "atrial-fibrillation-detection",
+    "arrhythmia-detection",
+    "ecg-classification"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "atrial-fibrillation",
+    "holter",
+    "long-term",
+    "physionet"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet Long Term AF Database Repository (DOI: 10.13026/C2QG6Q)",
+      "url": "https://doi.org/10.13026/C2QG6Q",
+      "type": "repository"
+    },
+    {
+      "title": "Petrutiu et al. Europace 2007 Publication",
+      "url": "https://doi.org/10.1093/europace/eum075",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C2QG6Q and Petrutiu et al. (Europace 2007)."
+  },
+  "sample_count": {
+    "total": 84,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2007"
+  },
+  "citation": {
+    "paper_title": "Abrupt changes in fibrillatory wave characteristics at the termination of paroxysmal atrial fibrillation in humans",
+    "paper_url": "https://doi.org/10.1093/europace/eum075",
+    "authors": [
+      "Simona Petrutiu",
+      "Alan V. Sahakian",
+      "Steven Swiryn"
+    ],
+    "doi": "10.13026/C2QG6Q",
+    "bibtex": "@article{petrutiu2007abrupt,\n  title={Abrupt changes in fibrillatory wave characteristics at the termination of paroxysmal atrial fibrillation in humans},\n  author={Petrutiu, Simona and Sahakian, Alan V and Swiryn, Steven},\n  journal={Europace},\n  volume={9},\n  number={7},\n  pages={466--470},\n  year={2007},\n  publisher={Oxford University Press},\n  doi={10.13026/C2QG6Q}\n}"
+  }
+}

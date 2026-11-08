@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "but-smartphone-ppg-database",
+  "slug": "but-smartphone-ppg-database",
+  "name": "Brno University of Technology Smartphone PPG Database (BUT PPG)",
+  "description": "The BUT Smartphone PPG Database (BUT PPG) is an open-access photoplethysmographic benchmark created by the Department of Biomedical Engineering at Brno University of Technology. It contains 480 smartphone-camera PPG recordings acquired from 50 healthy adult subjects (aged 18 to 72) using contemporary smartphones (Xiaomi Mi9, Apple iPhone, etc.) placed against the fingertip. Recordings include resting and post-exercise states and are accompanied by simultaneous reference single-lead ECG ground truth. Version 2.0 provides manual pulse wave annotations, blood volume peak coordinates, and signal quality indices, serving as a primary benchmark for mobile optical heart rate estimation and mobile health AI.",
+  "homepage_url": "https://physionet.org/content/butppg/2.0.0/",
+  "publisher": {
+    "name": "Brno University of Technology",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "heart-rate-estimation",
+    "ppg-quality-assessment",
+    "biomedical-signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ppg",
+    "photoplethysmography",
+    "smartphones",
+    "mhealth",
+    "physionet"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet BUT PPG Repository (DOI: 10.13026/tn53-8153)",
+      "url": "https://doi.org/10.13026/tn53-8153",
+      "type": "repository"
+    },
+    {
+      "title": "Nemcova et al. Biomedical Signal Processing and Control 2021 Publication",
+      "url": "https://doi.org/10.1016/j.bspc.2020.102234",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/tn53-8153 (version 2.0.0) and Nemcova et al."
+  },
+  "sample_count": {
+    "total": 480,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021"
+  },
+  "citation": {
+    "paper_title": "Brno University of Technology smartphone PPG database (BUT PPG)",
+    "paper_url": "https://doi.org/10.1016/j.bspc.2020.102234",
+    "authors": [
+      "Andrea Nemcova",
+      "Radovan Smisek",
+      "Lucie Marsanova",
+      "Martin Vitek",
+      "Lukas Smital"
+    ],
+    "doi": "10.13026/tn53-8153",
+    "bibtex": "@article{nemcova2021brno,\n  title={Brno University of Technology smartphone PPG database (BUT PPG)},\n  author={Nemcova, Andrea and Smisek, Radovan and Marsanova, Lucie and Vitek, Martin and Smital, Lukas},\n  journal={Biomedical Signal Processing and Control},\n  volume={64},\n  pages={102234},\n  year={2021},\n  publisher={Elsevier},\n  doi={10.13026/tn53-8153}\n}"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cebs-database",
+  "slug": "cebs-database",
+  "name": "Combined Measurement of ECG, Breathing and Seismocardiograms (CEBS)",
+  "description": "The CEBS Database is a multi-parameter cardiorespiratory recording repository developed by the Universitat Politècnica de Catalunya (UPC) in Barcelona. It consists of 60 physiological recordings collected from 20 healthy volunteers (aged 18 to 30) during three resting protocol states: basal baseline, listening to relaxing music, and post-listening recovery. Recorded signals simultaneously capture two conventional ECG leads (leads I and II), respiration using an impedance thoracic band, and high-sensitivity seismocardiograms (SCG) acquired via a triaxial accelerometer positioned over the lower sternum. This resource allows investigation of mechanical cardiac contractility (aortic valve opening and rapid ventricular ejection) and electromechanical coupling.",
+  "homepage_url": "https://physionet.org/content/cebsdb/1.0.0/",
+  "publisher": {
+    "name": "Universitat Politècnica de Catalunya (UPC)",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "seismocardiography",
+    "heartbeat-detection",
+    "biomedical-signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "seismocardiogram",
+    "respiration",
+    "physionet",
+    "sensors"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet CEBS Database Repository (DOI: 10.13026/C2KW23)",
+      "url": "https://doi.org/10.13026/C2KW23",
+      "type": "repository"
+    },
+    {
+      "title": "García-González et al. Computing in Cardiology 2013 Publication",
+      "url": "https://doi.org/10.13026/C2KW23",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C2KW23 and García-González et al. (CinC 2013)."
+  },
+  "sample_count": {
+    "total": 60,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2013"
+  },
+  "citation": {
+    "paper_title": "A comparison of heartbeat detectors for the seismocardiogram",
+    "paper_url": "https://doi.org/10.13026/C2KW23",
+    "authors": [
+      "M. A. García-González",
+      "A. Argelagós-Palau",
+      "M. Fernández-Chimeno",
+      "J. Ramos-Castro"
+    ],
+    "doi": "10.13026/C2KW23",
+    "bibtex": "@article{garcia2013comparison,\n  title={A comparison of heartbeat detectors for the seismocardiogram},\n  author={Garc{\\'\\i}a-Gonz{\\'a}lez, MA and Argelag{\\'o}s-Palau, A and Fern{\\'a}ndez-Chimeno, M and Ramos-Castro, J},\n  journal={Computing in Cardiology},\n  volume={40},\n  pages={461--464},\n  year={2013},\n  doi={10.13026/C2KW23}\n}"
+  }
+}
