@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nasa-gedi-l4a-biomass",
+  "slug": "nasa-gedi-l4a-biomass",
+  "name": "NASA GEDI L4A Footprint Level Aboveground Biomass Density",
+  "description": "GEDI L4A Version 2.1 provides footprint-level aboveground biomass density (AGBD, in megagrams per hectare) estimates derived from the Global Ecosystem Dynamics Investigation (GEDI) spaceborne lidar aboard the International Space Station (ISS). Operating since April 2019, GEDI's high-resolution multi-beam lasers sample 25-meter circular footprints across Earth's temperate and tropical forests (51.6°N to 51.6°S). Waveform metrics from return signals are coupled with parametric models to infer vegetation height, canopy vertical profile, and biomass density with quantified prediction intervals.",
+  "homepage_url": "https://data.nasa.gov/dataset/gedi-l4a-footprint-level-aboveground-biomass-density-version-2",
+  "publisher": {
+    "name": "NASA Land Processes Distributed Active Archive Center (LP DAAC) / University of Maryland",
+    "type": "government",
+    "url": "https://lpdaac.usgs.gov"
+  },
+  "modalities": [
+    "tabular",
+    "sensor",
+    "3d"
+  ],
+  "tasks": [
+    "aboveground-biomass-estimation",
+    "forest-canopy-structure-analysis",
+    "carbon-stock-quantification"
+  ],
+  "tags": [
+    "gedi",
+    "biomass",
+    "lidar",
+    "canopy-height",
+    "forest-carbon",
+    "iss",
+    "lp-daac",
+    "remote-sensing"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "NASA Open Data Policy (Public Domain)",
+    "spdx_id": null,
+    "url": "https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/",
+    "commercial_use": "allowed",
+    "notes": "US Federal open government data freely available for worldwide research and commercial use."
+  },
+  "source_references": [
+    {
+      "title": "NASA Open Data Catalog GEDI L4A Record",
+      "url": "https://data.nasa.gov/dataset/gedi-l4a-footprint-level-aboveground-biomass-density-version-2",
+      "type": "official_website",
+      "notes": "Official metadata record on data.nasa.gov."
+    },
+    {
+      "title": "GEDI L4A Footprint Level Aboveground Biomass Density, Version 2.1 (Data DOI: 10.5067/GEDI/GEDI04_A.002)",
+      "url": "https://doi.org/10.5067/GEDI/GEDI04_A.002",
+      "type": "documentation",
+      "notes": "Official USGS/NASA product page, user guide, and download instructions."
+    },
+    {
+      "title": "The Global Ecosystem Dynamics Investigation: High-resolution laser ranging of the Earth's forests and topography",
+      "url": "https://doi.org/10.1016/j.srs.2020.100002",
+      "type": "original_paper",
+      "notes": "Foundational mission overview published in Science of Remote Sensing."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against NASA Open Data Catalog and LP DAAC GEDI product documentation."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "HDF-5"
+    ],
+    "notes": "Global orbit-granule HDF5 collection containing all footprint metrics."
+  },
+  "dates": {
+    "published": "2022",
+    "last_updated": "2023"
+  },
+  "citation": {
+    "paper_title": "The Global Ecosystem Dynamics Investigation: High-resolution laser ranging of the Earth's forests and topography",
+    "paper_url": "https://doi.org/10.1016/j.srs.2020.100002",
+    "authors": [
+      "Ralph Dubayah",
+      "J. Bryan Blair",
+      "Scott Goetz",
+      "Lola Fatoyinbo",
+      "Matthew Hansen",
+      "Sean Healey",
+      "Michelle Hofton",
+      "George Hurtt",
+      "James Kellner",
+      "Scott Luthcke",
+      "John Armston"
+    ],
+    "doi": "10.1016/j.srs.2020.100002",
+    "bibtex": "@article{dubayah2020gedi,\n  title={The Global Ecosystem Dynamics Investigation: High-resolution laser ranging of the Earth's forests and topography},\n  author={Dubayah, Ralph and Blair, J Bryan and Goetz, Scott and Fatoyinbo, Lola and Hansen, Matthew and Healey, Sean and Hofton, Michelle and Hurtt, George and Kellner, James and Luthcke, Scott and others},\n  journal={Science of Remote Sensing},\n  volume={1},\n  pages={100002},\n  year={2020},\n  publisher={Elsevier},\n  doi={10.1016/j.srs.2020.100002}\n}"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "id": "modis-mod13q1-vegetation-indices",
+  "slug": "modis-mod13q1-vegetation-indices",
+  "name": "MODIS MOD13Q1 Terra Vegetation Indices 16-Day L3 Global 250m",
+  "description": "MOD13Q1 Version 6.1 is the global 16-day composite vegetation index product generated at 250-meter spatial resolution from the Moderate Resolution Imaging Spectroradiometer (MODIS) aboard NASA's Terra satellite. Operating continuously since February 2000, MOD13Q1 delivers standardized Normalized Difference Vegetation Index (NDVI) and Enhanced Vegetation Index (EVI) layers alongside surface reflectance bands (red, NIR, blue, MIR), view angles, and pixel-level quality assurance (QA) flags, providing the gold standard time-series for terrestrial vegetation phenology and photosynthetic activity.",
+  "homepage_url": "https://lpdaac.usgs.gov/products/mod13q1v061/",
+  "publisher": {
+    "name": "NASA Land Processes Distributed Active Archive Center (LP DAAC) / USGS",
+    "type": "government",
+    "url": "https://lpdaac.usgs.gov"
+  },
+  "modalities": [
+    "vision",
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "vegetation-health-monitoring",
+    "crop-phenology-tracking",
+    "drought-impact-assessment"
+  ],
+  "tags": [
+    "modis",
+    "ndvi",
+    "evi",
+    "vegetation-index",
+    "phenology",
+    "earth-observation",
+    "remote-sensing",
+    "lp-daac"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "NASA Open Data Policy (Public Domain)",
+    "spdx_id": null,
+    "url": "https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/",
+    "commercial_use": "allowed",
+    "notes": "US Federal open government work available globally without restriction."
+  },
+  "source_references": [
+    {
+      "title": "NASA LP DAAC MOD13Q1 Product Information",
+      "url": "https://lpdaac.usgs.gov/products/mod13q1v061/",
+      "type": "official_website",
+      "notes": "Official LP DAAC product catalog entry, user guide, and download access."
+    },
+    {
+      "title": "NASA Earthdata Search MOD13Q1",
+      "url": "https://search.earthdata.nasa.gov/search?q=MOD13Q1+V061",
+      "type": "repository",
+      "notes": "NASA Earthdata search and order interface for global MODIS tiles."
+    },
+    {
+      "title": "MODIS/Terra Vegetation Indices 16-Day L3 Global 250m SIN Grid V061 (Data DOI: 10.5067/MODIS/MOD13Q1.061)",
+      "url": "https://doi.org/10.5067/MODIS/MOD13Q1.061",
+      "type": "documentation",
+      "notes": "Official product landing page and dataset digital object identifier."
+    },
+    {
+      "title": "Overview of the radiometric and biophysical performance of the MODIS vegetation indices",
+      "url": "https://doi.org/10.1016/S0034-4257(02)00096-2",
+      "type": "original_paper",
+      "notes": "Foundational sensor and algorithm evaluation paper in Remote Sensing of Environment."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against USGS LP DAAC official catalog and NASA Earthdata registry."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "HDF-EOS",
+      "Cloud-Optimized GeoTIFF"
+    ],
+    "notes": "Multi-terabyte global tile archive managed by NASA LP DAAC."
+  },
+  "dates": {
+    "published": "2021",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "Overview of the radiometric and biophysical performance of the MODIS vegetation indices",
+    "paper_url": "https://doi.org/10.1016/S0034-4257(02)00096-2",
+    "authors": [
+      "Alfredo Huete",
+      "Kamel Didan",
+      "Tomoaki Miura",
+      "E. Patricia Rodriguez",
+      "Xiang Gao",
+      "Laerte G. Ferreira"
+    ],
+    "doi": "10.1016/S0034-4257(02)00096-2",
+    "bibtex": "@article{huete2002modis,\n  title={Overview of the radiometric and biophysical performance of the MODIS vegetation indices},\n  author={Huete, Alfredo and Didan, Kamel and Miura, Tomoaki and Rodriguez, E Patricia and Gao, Xiang and Ferreira, Laerte G},\n  journal={Remote Sensing of Environment},\n  volume={83},\n  number={1-2},\n  pages={195--213},\n  year={2002},\n  publisher={Elsevier},\n  doi={10.1016/S0034-4257(02)00096-2}\n}"
+  }
+}

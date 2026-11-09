@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "chirps-precipitation",
+  "slug": "chirps-precipitation",
+  "name": "CHIRPS Climate Hazards Group InfraRed Precipitation with Stations",
+  "description": "CHIRPS (Climate Hazards Group InfraRed Precipitation with Stations) is a quasi-global (50°S–50°N, all longitudes) rainfall dataset spanning 1981 to near-present at 0.05° (~5 km) spatial resolution. Developed by the Climate Hazards Center at UC Santa Barbara in collaboration with the USGS Earth Resources Observation and Science (EROS) Center, CHIRPS merges satellite cold cloud duration (CCD) thermal infrared observations, long-term CHPclim climatologies, and in-situ ground precipitation station observations to provide robust daily, pentadal, and monthly precipitation estimates for drought monitoring and humanitarian early warning.",
+  "homepage_url": "https://www.chc.ucsb.edu/data",
+  "publisher": {
+    "name": "Climate Hazards Center (CHC) - UC Santa Barbara / USGS",
+    "type": "academic",
+    "url": "https://www.chc.ucsb.edu"
+  },
+  "modalities": [
+    "time-series",
+    "tabular",
+    "vision"
+  ],
+  "tasks": [
+    "rainfall-monitoring",
+    "drought-early-warning",
+    "hydrological-modeling"
+  ],
+  "tags": [
+    "chirps",
+    "precipitation",
+    "drought-monitoring",
+    "satellite-rainfall",
+    "climate-hazards",
+    "quasi-global",
+    "hydrology"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Creative Commons CC0 1.0 Universal (Public Domain Dedication)",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Dedicated to the public domain under CC0 / USGS open data terms."
+  },
+  "source_references": [
+    {
+      "title": "Climate Hazards Center CHIRPS Data Page",
+      "url": "https://www.chc.ucsb.edu/data",
+      "type": "official_website",
+      "notes": "Official repository page with direct FTP/HTTP download directories."
+    },
+    {
+      "title": "The climate hazards infrared precipitation with stations—a new environmental record for monitoring extremes",
+      "url": "https://doi.org/10.1038/sdata.2015.66",
+      "type": "original_paper",
+      "notes": "Foundational dataset publication in Nature Scientific Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against UCSB Climate Hazards Center official repository."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "GeoTIFF",
+      "NetCDF"
+    ],
+    "notes": "Multi-terabyte quasi-global raster archive hosted by UCSB Climate Hazards Center."
+  },
+  "dates": {
+    "published": "2015",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "The climate hazards infrared precipitation with stations—a new environmental record for monitoring extremes",
+    "paper_url": "https://doi.org/10.1038/sdata.2015.66",
+    "authors": [
+      "Chris Funk",
+      "Pete Peterson",
+      "Martin Landsfeld",
+      "Diego Pedreros",
+      "James Verdin",
+      "Shraddhanand Shukla",
+      "Gregory Husak"
+    ],
+    "doi": "10.1038/sdata.2015.66",
+    "bibtex": "@article{funk2015chirps,\n  title={The climate hazards infrared precipitation with stations---a new environmental record for monitoring extremes},\n  author={Funk, Chris and Peterson, Pete and Landsfeld, Martin and Pedreros, Diego and Verdin, James and Shukla, Shraddhanand and Husak, Gregory and others},\n  journal={Scientific Data},\n  volume={2},\n  number={1},\n  pages={1--21},\n  year={2015},\n  publisher={Nature Publishing Group},\n  doi={10.1038/sdata.2015.66}\n}"
+  }
+}

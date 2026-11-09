@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nasa-gistemp-v4",
+  "slug": "nasa-gistemp-v4",
+  "name": "NASA GISTEMP v4 Global Surface Temperature Change",
+  "description": "GISTEMP v4 (GISS Surface Temperature Analysis Version 4) is NASA Goddard Institute for Space Studies' authoritative estimate of global surface temperature change from 1880 to the present. The analysis integrates in-situ surface air temperature measurements from thousands of meteorological stations in the NOAA Global Historical Climatology Network (GHCN-Daily / GHCNv4) with sea surface temperature (SST) records from NOAA ERSSTv5. GISTEMP computes anomalies relative to the 1951–1980 base period on a 2°x2° global grid using a 1,200-kilometer spatial correlation weighting algorithm, providing a primary climate change benchmark used in IPCC assessments.",
+  "homepage_url": "https://data.giss.nasa.gov/gistemp/",
+  "publisher": {
+    "name": "NASA Goddard Institute for Space Studies (GISS)",
+    "type": "government",
+    "url": "https://www.giss.nasa.gov"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "temperature-anomaly-estimation",
+    "climate-change-trend-analysis",
+    "global-warming-monitoring"
+  ],
+  "tags": [
+    "surface-temperature",
+    "climate-change",
+    "temperature-anomalies",
+    "nasa-giss",
+    "global-warming",
+    "gridded-climatology"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "NASA Open Data Policy (Public Domain)",
+    "spdx_id": null,
+    "url": "https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/",
+    "commercial_use": "allowed",
+    "notes": "US Government public domain work freely accessible without restriction."
+  },
+  "source_references": [
+    {
+      "title": "NASA GISTEMP v4 Official Portal",
+      "url": "https://data.giss.nasa.gov/gistemp/",
+      "type": "official_website",
+      "notes": "Official repository for global, hemispheric, and zonal mean temperature anomalies."
+    },
+    {
+      "title": "Improvements in the GISTEMP Uncertainty Model",
+      "url": "https://doi.org/10.1029/2018JD029522",
+      "type": "original_paper",
+      "notes": "Peer-reviewed paper outlining the version 4 update and comprehensive uncertainty quantification."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against NASA GISS official web portal and JGR Atmospheres paper."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "amount": 2.5,
+    "unit": "GB",
+    "status": "estimated",
+    "file_formats": [
+      "NetCDF",
+      "CSV",
+      "TXT"
+    ],
+    "notes": "Gridded monthly anomaly files and regional tabular series."
+  },
+  "dates": {
+    "published": "2019",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "Improvements in the GISTEMP Uncertainty Model",
+    "paper_url": "https://doi.org/10.1029/2018JD029522",
+    "authors": [
+      "Nathan J. L. Lenssen",
+      "Gavin A. Schmidt",
+      "James E. Hansen",
+      "Matthew J. Menne",
+      "Avraham Persin",
+      "Reto Ruedy",
+      "Dan Zyss"
+    ],
+    "doi": "10.1029/2018JD029522",
+    "bibtex": "@article{lenssen2019gistemp,\n  title={Improvements in the GISTEMP uncertainty model},\n  author={Lenssen, Nathan JL and Schmidt, Gavin A and Hansen, James E and Menne, Matthew J and Persin, Avraham and Ruedy, Reto and Zyss, Dan},\n  journal={Journal of Geophysical Research: Atmospheres},\n  volume={124},\n  number={12},\n  pages={6307--6326},\n  year={2019},\n  publisher={Wiley Online Library},\n  doi={10.1029/2018JD029522}\n}"
+  }
+}

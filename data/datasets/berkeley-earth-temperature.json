@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "berkeley-earth-temperature",
+  "slug": "berkeley-earth-temperature",
+  "name": "Berkeley Earth Global Surface Temperature Dataset",
+  "description": "The Berkeley Earth Surface Temperature dataset is an independent, high-resolution scientific reconstruction of global land and ocean temperature changes from 1750 (land) and 1850 (land-ocean) to the present. Developed to address debates regarding station selection bias, urban heat islands, and data adjustments, Berkeley Earth applies automated algorithmic breakpoint detection and spatial network weighting across more than 50,000 distinct weather stations. The resulting dataset provides monthly and daily 1°x1° gridded temperature anomalies and regional averages.",
+  "homepage_url": "https://berkeleyearth.org/data/",
+  "publisher": {
+    "name": "Berkeley Earth",
+    "type": "academic",
+    "url": "https://berkeleyearth.org"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "surface-temperature-reconstruction",
+    "spatial-temperature-homogenization",
+    "climate-trend-analysis"
+  ],
+  "tags": [
+    "berkeley-earth",
+    "surface-temperature",
+    "climate-change",
+    "homogenization",
+    "gridded-data",
+    "regional-temperatures"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Openly distributed under the Creative Commons Attribution 4.0 International license."
+  },
+  "source_references": [
+    {
+      "title": "Berkeley Earth Data Repository",
+      "url": "https://berkeleyearth.org/data/",
+      "type": "official_website",
+      "notes": "Primary download repository for gridded NetCDF and regional temperature summaries."
+    },
+    {
+      "title": "The Berkeley Earth Land/Ocean Temperature Record",
+      "url": "https://doi.org/10.5194/essd-12-3469-2020",
+      "type": "original_paper",
+      "notes": "Descriptive research paper published in Earth System Science Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against Berkeley Earth data repository and ESSD publication."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "amount": 8.0,
+    "unit": "GB",
+    "status": "estimated",
+    "file_formats": [
+      "NetCDF",
+      "TXT"
+    ],
+    "notes": "Gridded daily and monthly NetCDF datasets alongside regional time series."
+  },
+  "dates": {
+    "published": "2020",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "The Berkeley Earth Land/Ocean Temperature Record",
+    "paper_url": "https://doi.org/10.5194/essd-12-3469-2020",
+    "authors": [
+      "Robert A. Rohde",
+      "Zeke Hausfather"
+    ],
+    "doi": "10.5194/essd-12-3469-2020",
+    "bibtex": "@article{rohde2020berkeley,\n  title={The Berkeley Earth land/ocean temperature record},\n  author={Rohde, Robert A and Hausfather, Zeke},\n  journal={Earth System Science Data},\n  volume={12},\n  number={4},\n  pages={3469--3479},\n  year={2020},\n  publisher={Copernicus GmbH},\n  doi={10.5194/essd-12-3469-2020}\n}"
+  }
+}

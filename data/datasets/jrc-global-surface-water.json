@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "jrc-global-surface-water",
+  "slug": "jrc-global-surface-water",
+  "name": "JRC Global Surface Water Dynamics Dataset",
+  "description": "Developed by the European Commission Joint Research Centre (JRC) in partnership with Google Earth Engine, the JRC Global Surface Water dataset maps the location, temporal persistence, and long-term changes of surface water over a 38-year period (1984–present) at 30-meter resolution globally. Generated from more than 4.5 million Landsat satellite scenes using automated expert systems, the dataset delivers six core thematic layers: Water Occurrence, Occurrence Change Intensity, Water Seasonality, Water Recurrence, Water Transitions, and Maximum Water Extent.",
+  "homepage_url": "https://global-surface-water.appspot.com/download",
+  "publisher": {
+    "name": "European Commission Joint Research Centre (JRC)",
+    "type": "government",
+    "url": "https://joint-research-centre.ec.europa.eu"
+  },
+  "modalities": [
+    "vision",
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "surface-water-mapping",
+    "water-occurrence-trend-analysis",
+    "hydrological-monitoring"
+  ],
+  "tags": [
+    "jrc",
+    "surface-water",
+    "water-dynamics",
+    "landsat",
+    "hydrology",
+    "wetland-monitoring",
+    "remote-sensing"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Open reuse under the European Commission open data decisions and CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "JRC Global Surface Water Data Download Portal",
+      "url": "https://global-surface-water.appspot.com/download",
+      "type": "official_website",
+      "notes": "Official interactive visualization and 10°x10° tile download interface."
+    },
+    {
+      "title": "High-resolution mapping of global surface water and its long-term changes",
+      "url": "https://doi.org/10.1038/nature20584",
+      "type": "original_paper",
+      "notes": "Seminal research article published in Nature."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against official European Commission JRC web portal and Nature paper."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "amount": 1.5,
+    "unit": "TB",
+    "status": "estimated",
+    "file_formats": [
+      "GeoTIFF"
+    ],
+    "notes": "Global 10°x10° GeoTIFF tile collection covering all global landmasses."
+  },
+  "dates": {
+    "published": "2016",
+    "last_updated": "2023"
+  },
+  "citation": {
+    "paper_title": "High-resolution mapping of global surface water and its long-term changes",
+    "paper_url": "https://doi.org/10.1038/nature20584",
+    "authors": [
+      "Jean-Francois Pekel",
+      "Andrew Cottam",
+      "Noel Gorelick",
+      "Alan S. Belward"
+    ],
+    "doi": "10.1038/nature20584",
+    "bibtex": "@article{pekel2016surface,\n  title={High-resolution mapping of global surface water and its long-term changes},\n  author={Pekel, Jean-Francois and Cottam, Andrew and Gorelick, Noel and Belward, Alan S},\n  journal={Nature},\n  volume={540},\n  number={7633},\n  pages={418--422},\n  year={2016},\n  publisher={Nature Publishing Group},\n  doi={10.1038/nature20584}\n}"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "hydrosheds-hydrographic-data",
+  "slug": "hydrosheds-hydrographic-data",
+  "name": "HydroSHEDS Global Hydrographic Data and River Networks",
+  "description": "HydroSHEDS (Hydrological data and maps based on SHuttle Elevation Derivatives at multiple Scales) is a globally consistent hydrographic database developed by McGill University, WWF, and USGS. Derived primarily from elevation data obtained during NASA's Shuttle Radar Topography Mission (SRTM) at 3 arc-second (~90 m) resolution, HydroSHEDS provides hydrologically conditioned elevation, flow direction (DIR), flow accumulation (ACC), vector stream networks (FreeFlow, HydroRIVERS), and hierarchical catchment delineations (HydroBASINS across 12 Pfafstetter coding levels).",
+  "homepage_url": "https://www.hydrosheds.org/products",
+  "publisher": {
+    "name": "HydroSHEDS Consortium (McGill University / WWF / USGS)",
+    "type": "academic",
+    "url": "https://www.hydrosheds.org"
+  },
+  "modalities": [
+    "tabular",
+    "graph",
+    "vision"
+  ],
+  "tasks": [
+    "river-network-modeling",
+    "watershed-delineation",
+    "hydrological-routing"
+  ],
+  "tags": [
+    "hydrosheds",
+    "river-networks",
+    "watersheds",
+    "catchment-delineation",
+    "flow-direction",
+    "hydrology",
+    "topography"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "HydroSHEDS v1/v2 suites are freely accessible under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "HydroSHEDS Products Portal",
+      "url": "https://www.hydrosheds.org/products",
+      "type": "official_website",
+      "notes": "Official suite portal hosting HydroRIVERS, HydroBASINS, and raster layers."
+    },
+    {
+      "title": "New Global Hydrography Derived From Spaceborne Elevation Data",
+      "url": "https://doi.org/10.1029/2008EO100001",
+      "type": "original_paper",
+      "notes": "Foundational documentation published in Eos, Transactions American Geophysical Union."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against official HydroSHEDS website and product documentation."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "amount": 75.0,
+    "unit": "GB",
+    "status": "estimated",
+    "file_formats": [
+      "Shapefile",
+      "GeoPackage",
+      "GeoTIFF"
+    ],
+    "notes": "Global raster and vector suites covering continental basins."
+  },
+  "dates": {
+    "published": "2008",
+    "last_updated": "2022"
+  },
+  "citation": {
+    "paper_title": "New Global Hydrography Derived From Spaceborne Elevation Data",
+    "paper_url": "https://doi.org/10.1029/2008EO100001",
+    "authors": [
+      "Bernhard Lehner",
+      "Kristine Verdin",
+      "Andy Jarvis"
+    ],
+    "doi": "10.1029/2008EO100001",
+    "bibtex": "@article{lehner2008hydrosheds,\n  title={New global hydrography derived from spaceborne elevation data},\n  author={Lehner, Bernhard and Verdin, Kristine and Jarvis, Andy},\n  journal={Eos, Transactions American Geophysical Union},\n  volume={89},\n  number={10},\n  pages={93--94},\n  year={2008},\n  publisher={Wiley Online Library},\n  doi={10.1029/2008EO100001}\n}"
+  }
+}

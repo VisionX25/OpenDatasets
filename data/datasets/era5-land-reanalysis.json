@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "era5-land-reanalysis",
+  "slug": "era5-land-reanalysis",
+  "name": "ERA5-Land Global Terrestrial Surface Reanalysis",
+  "description": "ERA5-Land is a global enhanced-resolution replay of the land surface component of the ERA5 atmospheric reanalysis, produced by the Copernicus Climate Change Service (C3S). Running at an upgraded spatial resolution of 9 km (~0.1 degrees) from 1950 to the present with hourly temporal frequency, ERA5-Land simulates the hydrological and thermodynamic states of the Earth's terrestrial surfaces. Driven by atmospheric forcing from ERA5 with elevation-dependent thermodynamic corrections, it resolves 50 core parameters encompassing soil moisture at four depth layers, snow accumulation, runoff, surface temperature, and turbulent heat fluxes.",
+  "homepage_url": "https://climate.copernicus.eu/climate-reanalysis",
+  "publisher": {
+    "name": "Copernicus Climate Change Service (C3S) / ECMWF",
+    "type": "government",
+    "url": "https://climate.copernicus.eu"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "terrestrial-reanalysis",
+    "hydrological-modeling",
+    "land-surface-forecasting"
+  ],
+  "tags": [
+    "land-surface",
+    "hydrology",
+    "soil-moisture",
+    "snow-cover",
+    "temperature",
+    "copernicus",
+    "reanalysis",
+    "era5-land"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Copernicus Open Access / Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Open license granted under the Copernicus Data Policy and CC BY 4.0 framework."
+  },
+  "source_references": [
+    {
+      "title": "Copernicus Climate Reanalysis Overview",
+      "url": "https://climate.copernicus.eu/climate-reanalysis",
+      "type": "official_website",
+      "notes": "Official overview of Copernicus climate reanalyses including ERA5-Land."
+    },
+    {
+      "title": "ERA5-Land Hourly Data on Copernicus Climate Data Store",
+      "url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land",
+      "type": "repository",
+      "notes": "Direct repository catalog entry for ERA5-Land hourly gridded series."
+    },
+    {
+      "title": "ERA5-Land: a state-of-the-art global reanalysis dataset for land applications",
+      "url": "https://doi.org/10.5194/essd-13-4349-2021",
+      "type": "original_paper",
+      "notes": "Comprehensive documentation paper in Earth System Science Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against official Copernicus Climate Data Store and ESSD publication."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "GRIB",
+      "NetCDF"
+    ],
+    "notes": "Petabyte-scale global land surface archive accessible via the Copernicus Climate Data Store."
+  },
+  "dates": {
+    "published": "2021",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "ERA5-Land: a state-of-the-art global reanalysis dataset for land applications",
+    "paper_url": "https://doi.org/10.5194/essd-13-4349-2021",
+    "authors": [
+      "Julio Munoz-Sabater",
+      "Emanuel Dutra",
+      "Agusti Agusti-Panareda",
+      "Clement Albergel",
+      "Gianpaolo Balsamo",
+      "Souhail Boussetta",
+      "Hans Hersbach"
+    ],
+    "doi": "10.5194/essd-13-4349-2021",
+    "bibtex": "@article{munozsabater2021era5land,\n  title={ERA5-Land: a state-of-the-art global reanalysis dataset for land applications},\n  author={Munoz-Sabater, Julio and Dutra, Emanuel and Agusti-Panareda, Agusti and Albergel, Clement and Balsamo, Gianpaolo and Boussetta, Souhail and Hersbach, Hans and others},\n  journal={Earth System Science Data},\n  volume={13},\n  number={9},\n  pages={4349--4383},\n  year={2021},\n  publisher={Copernicus GmbH},\n  doi={10.5194/essd-13-4349-2021}\n}"
+  }
+}

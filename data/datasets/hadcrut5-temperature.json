@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "hadcrut5-temperature",
+  "slug": "hadcrut5-temperature",
+  "name": "HadCRUT5 Global Surface Temperature Anomaly Dataset",
+  "description": "HadCRUT5 is the fifth generation gridded dataset of global historical surface temperature anomalies jointly produced by the UK Met Office Hadley Centre and the Climatic Research Unit (CRU) at the University of East Anglia. Spanning 1850 to the present at monthly 5°x5° resolution, HadCRUT5 combines land surface air temperatures from CRUTEM5 with sea surface temperature measurements from HadSST4. HadCRUT5 provides two versions: a non-infilled version and an infilled version produced using statistical Gaussian process regression to achieve global spatial coverage, supported by a 200-member ensemble that quantifies observational and sampling uncertainties.",
+  "homepage_url": "https://www.metoffice.gov.uk/hadobs/hadcrut5/",
+  "publisher": {
+    "name": "Met Office Hadley Centre / Climatic Research Unit (UEA)",
+    "type": "academic",
+    "url": "https://www.metoffice.gov.uk/hadobs"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "surface-temperature-analysis",
+    "climate-trend-estimation",
+    "ensemble-temperature-reconstruction"
+  ],
+  "tags": [
+    "hadcrut",
+    "temperature-anomalies",
+    "met-office",
+    "cru",
+    "climate-change",
+    "sea-surface-temperature",
+    "land-surface"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Government Licence v3.0 / Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Available under UK Open Government Licence v3.0 and CC BY 4.0 conditions."
+  },
+  "source_references": [
+    {
+      "title": "Met Office HadCRUT5 Official Data Portal",
+      "url": "https://www.metoffice.gov.uk/hadobs/hadcrut5/",
+      "type": "official_website",
+      "notes": "Official portal hosting gridded NetCDF anomalies and global time series."
+    },
+    {
+      "title": "An Updated Assessment of Near-Surface Temperature Change From 1850: The HadCRUT5 Dataset",
+      "url": "https://doi.org/10.1029/2019JD032361",
+      "type": "original_paper",
+      "notes": "Primary descriptive paper published in Journal of Geophysical Research: Atmospheres."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against Met Office Hadley Centre data repository."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "amount": 12.0,
+    "unit": "GB",
+    "status": "estimated",
+    "file_formats": [
+      "NetCDF",
+      "CSV"
+    ],
+    "notes": "200-member ensemble gridded NetCDF files and global mean series."
+  },
+  "dates": {
+    "published": "2021",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "An Updated Assessment of Near-Surface Temperature Change From 1850: The HadCRUT5 Dataset",
+    "paper_url": "https://doi.org/10.1029/2019JD032361",
+    "authors": [
+      "Colin P. Morice",
+      "John J. Kennedy",
+      "Nick A. Rayner",
+      "Phil D. Jones",
+      "Christopher W. Schwarz",
+      "Kate E. Willett",
+      "Clare E. Good"
+    ],
+    "doi": "10.1029/2019JD032361",
+    "bibtex": "@article{morice2021hadcrut5,\n  title={An updated assessment of near-surface temperature change from 1850: The HadCRUT5 dataset},\n  author={Morice, Colin P and Kennedy, John J and Rayner, Nick A and Jones, Phil D and Schwarz, Christopher W and Willett, Kate E and Good, Clare E and others},\n  journal={Journal of Geophysical Research: Atmospheres},\n  volume={126},\n  number={3},\n  pages={e2019JD032361},\n  year={2021},\n  publisher={Wiley Online Library},\n  doi={10.1029/2019JD032361}\n}"
+  }
+}

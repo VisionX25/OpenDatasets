@@ -1831,6 +1831,101 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "argo-ocean-profiling-floats",
+    "slug": "argo-ocean-profiling-floats",
+    "name": "Argo Global Ocean Profiling Float Array",
+    "description": "The Argo Program is an international collaboration that maintains a real-time global array of approximately 4,000 autonomous robotic profiling floats collecting temperature, salinity, and pressure profiles from the sea surface down to 2,000 meters depth (with Deep Argo extending to 6,000 m, and Biogeochemical-Argo measuring oxygen, pH, nitrate, and chlorophyll). Floats cycle every 10 days, transmitting data via satellite. The dataset provides the definitive observational record of global ocean heat content, marine heatwaves, and thermohaline circulation changes.",
+    "homepage_url": "https://argo.ucsd.edu/data/",
+    "publisher": {
+      "name": "Argo Steering Team / Scripps Institution of Oceanography / Ifremer",
+      "type": "academic",
+      "url": "https://argo.ucsd.edu"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "ocean-heat-content-estimation",
+      "salinity-profile-forecasting",
+      "oceanic-circulation-modeling"
+    ],
+    "tags": [
+      "argo",
+      "oceanography",
+      "ocean-floats",
+      "temperature-profiles",
+      "salinity-profiles",
+      "marine-climate",
+      "autonomous-sensors"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0) / Argo Open Data Policy",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Openly distributed under the IOC/WMO Argo data policy and CC BY 4.0 terms."
+    },
+    "source_references": [
+      {
+        "title": "Scripps Argo Data Portal",
+        "url": "https://argo.ucsd.edu/data/",
+        "type": "official_website",
+        "notes": "Central international portal for Argo float data, GDAC access, and gridded products."
+      },
+      {
+        "title": "Argo Global Data Assembly Centre (GDAC) Repository",
+        "url": "https://www.argodatamgt.org/Access-to-data/Argo-GDAC-synchronization",
+        "type": "repository",
+        "notes": "Synchronized FTP/HTTP GDAC mirrors hosting profile NetCDF files."
+      },
+      {
+        "title": "On the Future of Argo: A Global, Full-Depth, Multi-Disciplinary Array",
+        "url": "https://doi.org/10.3389/fmars.2019.00439",
+        "type": "original_paper",
+        "notes": "Comprehensive vision and program description in Frontiers in Marine Science."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Scripps Institution of Oceanography and Argo Data Management."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "NetCDF"
+      ],
+      "notes": "Dynamic global oceanographic repository synchronized across international GDAC mirrors."
+    },
+    "dates": {
+      "published": "2019",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "On the Future of Argo: A Global, Full-Depth, Multi-Disciplinary Array",
+      "paper_url": "https://doi.org/10.3389/fmars.2019.00439",
+      "authors": [
+        "Dean Roemmich",
+        "Matthew H. Alford",
+        "Herve Claustre",
+        "Kenneth S. Johnson",
+        "Brian King",
+        "Virginie Thierry",
+        "Susan E. Wijffels"
+      ],
+      "doi": "10.3389/fmars.2019.00439",
+      "bibtex": "@article{roemmich2019argo,\n  title={On the future of Argo: A global, full-depth, multi-disciplinary array},\n  author={Roemmich, Dean and Alford, Matthew H and Claustre, Herve and Johnson, Kenneth and King, Brian and Moum, James and Oke, Peter and Owens, W Brechner and Pouliquen, Sylvie and Purkey, Sarah and others},\n  journal={Frontiers in Marine Science},\n  volume={6},\n  pages={439},\n  year={2019},\n  publisher={Frontiers},\n  doi={10.3389/fmars.2019.00439}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "aslad-190k-arabic-sign-language-alphabet",
     "slug": "aslad-190k-arabic-sign-language-alphabet",
     "name": "ASLAD-190K: Arabic Sign Language Alphabet Dataset consisting of 190,000 Images",
@@ -5597,6 +5692,91 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "berkeley-earth-temperature",
+    "slug": "berkeley-earth-temperature",
+    "name": "Berkeley Earth Global Surface Temperature Dataset",
+    "description": "The Berkeley Earth Surface Temperature dataset is an independent, high-resolution scientific reconstruction of global land and ocean temperature changes from 1750 (land) and 1850 (land-ocean) to the present. Developed to address debates regarding station selection bias, urban heat islands, and data adjustments, Berkeley Earth applies automated algorithmic breakpoint detection and spatial network weighting across more than 50,000 distinct weather stations. The resulting dataset provides monthly and daily 1°x1° gridded temperature anomalies and regional averages.",
+    "homepage_url": "https://berkeleyearth.org/data/",
+    "publisher": {
+      "name": "Berkeley Earth",
+      "type": "academic",
+      "url": "https://berkeleyearth.org"
+    },
+    "modalities": [
+      "time-series",
+      "tabular"
+    ],
+    "tasks": [
+      "surface-temperature-reconstruction",
+      "spatial-temperature-homogenization",
+      "climate-trend-analysis"
+    ],
+    "tags": [
+      "berkeley-earth",
+      "surface-temperature",
+      "climate-change",
+      "homogenization",
+      "gridded-data",
+      "regional-temperatures"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Openly distributed under the Creative Commons Attribution 4.0 International license."
+    },
+    "source_references": [
+      {
+        "title": "Berkeley Earth Data Repository",
+        "url": "https://berkeleyearth.org/data/",
+        "type": "official_website",
+        "notes": "Primary download repository for gridded NetCDF and regional temperature summaries."
+      },
+      {
+        "title": "The Berkeley Earth Land/Ocean Temperature Record",
+        "url": "https://doi.org/10.5194/essd-12-3469-2020",
+        "type": "original_paper",
+        "notes": "Descriptive research paper published in Earth System Science Data."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Berkeley Earth data repository and ESSD publication."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "amount": 8.0,
+      "unit": "GB",
+      "status": "estimated",
+      "file_formats": [
+        "NetCDF",
+        "TXT"
+      ],
+      "notes": "Gridded daily and monthly NetCDF datasets alongside regional time series."
+    },
+    "dates": {
+      "published": "2020",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "The Berkeley Earth Land/Ocean Temperature Record",
+      "paper_url": "https://doi.org/10.5194/essd-12-3469-2020",
+      "authors": [
+        "Robert A. Rohde",
+        "Zeke Hausfather"
+      ],
+      "doi": "10.5194/essd-12-3469-2020",
+      "bibtex": "@article{rohde2020berkeley,\n  title={The Berkeley Earth land/ocean temperature record},\n  author={Rohde, Robert A and Hausfather, Zeke},\n  journal={Earth System Science Data},\n  volume={12},\n  number={4},\n  pages={3469--3479},\n  year={2020},\n  publisher={Copernicus GmbH},\n  doi={10.5194/essd-12-3469-2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "betel-leaf-bangladesh",
     "slug": "betel-leaf-bangladesh",
     "name": "Betel Leaf Image Dataset from Bangladesh",
@@ -7710,6 +7890,102 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "cams-atmospheric-composition",
+    "slug": "cams-atmospheric-composition",
+    "name": "CAMS Global Atmospheric Composition Reanalysis (EAC4)",
+    "description": "The CAMS Reanalysis (EAC4 - ECMWF Atmospheric Composition Reanalysis 4) is the flagship global atmospheric chemistry dataset produced by the Copernicus Atmosphere Monitoring Service. Spanning 2003 to the present at approximately 80 km horizontal resolution across 60 vertical pressure levels with 3-hourly temporal resolution, EAC4 assimilates satellite observations into the ECMWF IFS chemistry module. It provides continuous 3D fields of reactive gases (ozone, nitrogen dioxide, carbon monoxide, sulphur dioxide), greenhouse gases, and aerosol optical properties partitioned into dust, sea salt, black carbon, organic matter, and sulphate.",
+    "homepage_url": "https://atmosphere.copernicus.eu/data",
+    "publisher": {
+      "name": "Copernicus Atmosphere Monitoring Service (CAMS) / ECMWF",
+      "type": "government",
+      "url": "https://atmosphere.copernicus.eu"
+    },
+    "modalities": [
+      "time-series",
+      "tabular"
+    ],
+    "tasks": [
+      "air-quality-modeling",
+      "aerosol-forecasting",
+      "greenhouse-gas-monitoring"
+    ],
+    "tags": [
+      "atmosphere",
+      "aerosols",
+      "greenhouse-gases",
+      "ozone",
+      "air-quality",
+      "copernicus",
+      "reanalysis",
+      "cams"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Copernicus Open Access / Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Free and open distribution under the European Union Copernicus Data Policy and CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "Copernicus Atmosphere Monitoring Service Data Portal",
+        "url": "https://atmosphere.copernicus.eu/data",
+        "type": "official_website",
+        "notes": "Canonical portal for atmospheric composition data and documentation."
+      },
+      {
+        "title": "CAMS Global Reanalysis (EAC4) on Atmosphere Data Store",
+        "url": "https://ads.atmosphere.copernicus.eu/datasets/cams-global-reanalysis-eac4",
+        "type": "repository",
+        "notes": "Direct Atmosphere Data Store repository page for EAC4 reanalysis."
+      },
+      {
+        "title": "The CAMS reanalysis of atmospheric composition",
+        "url": "https://doi.org/10.5194/acp-19-3515-2019",
+        "type": "original_paper",
+        "notes": "Primary reference paper published in Atmospheric Chemistry and Physics."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against official Copernicus Atmosphere Data Store portal."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "GRIB",
+        "NetCDF"
+      ],
+      "notes": "Multi-terabyte 3D atmospheric chemistry archive distributed via the Copernicus Atmosphere Data Store."
+    },
+    "dates": {
+      "published": "2019",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "The CAMS reanalysis of atmospheric composition",
+      "paper_url": "https://doi.org/10.5194/acp-19-3515-2019",
+      "authors": [
+        "Antje Inness",
+        "Melanie Ades",
+        "Anna Agusti-Panareda",
+        "Johannes Flemming",
+        "Zak Kipling",
+        "Vincent Huijnen",
+        "Richard J. Engelen"
+      ],
+      "doi": "10.5194/acp-19-3515-2019",
+      "bibtex": "@article{inness2019cams,\n  title={The CAMS reanalysis of atmospheric composition},\n  author={Inness, Antje and Ades, Melanie and Agusti-Panareda, Anna and Flemming, Johannes and Kipling, Zak and Huijnen, Vincent and Engelen, Richard J and others},\n  journal={Atmospheric Chemistry and Physics},\n  volume={19},\n  number={6},\n  pages={3515--3600},\n  year={2019},\n  publisher={Copernicus GmbH},\n  doi={10.5194/acp-19-3515-2019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "canada-historical-climate",
     "slug": "canada-historical-climate",
     "name": "Historical Climate Data of Canada",
@@ -8847,6 +9123,96 @@
         "WSJ0 Corpus Prompts",
         "Live In-Situ Audio Captures"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "chirps-precipitation",
+    "slug": "chirps-precipitation",
+    "name": "CHIRPS Climate Hazards Group InfraRed Precipitation with Stations",
+    "description": "CHIRPS (Climate Hazards Group InfraRed Precipitation with Stations) is a quasi-global (50°S–50°N, all longitudes) rainfall dataset spanning 1981 to near-present at 0.05° (~5 km) spatial resolution. Developed by the Climate Hazards Center at UC Santa Barbara in collaboration with the USGS Earth Resources Observation and Science (EROS) Center, CHIRPS merges satellite cold cloud duration (CCD) thermal infrared observations, long-term CHPclim climatologies, and in-situ ground precipitation station observations to provide robust daily, pentadal, and monthly precipitation estimates for drought monitoring and humanitarian early warning.",
+    "homepage_url": "https://www.chc.ucsb.edu/data",
+    "publisher": {
+      "name": "Climate Hazards Center (CHC) - UC Santa Barbara / USGS",
+      "type": "academic",
+      "url": "https://www.chc.ucsb.edu"
+    },
+    "modalities": [
+      "time-series",
+      "tabular",
+      "vision"
+    ],
+    "tasks": [
+      "rainfall-monitoring",
+      "drought-early-warning",
+      "hydrological-modeling"
+    ],
+    "tags": [
+      "chirps",
+      "precipitation",
+      "drought-monitoring",
+      "satellite-rainfall",
+      "climate-hazards",
+      "quasi-global",
+      "hydrology"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "Creative Commons CC0 1.0 Universal (Public Domain Dedication)",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Dedicated to the public domain under CC0 / USGS open data terms."
+    },
+    "source_references": [
+      {
+        "title": "Climate Hazards Center CHIRPS Data Page",
+        "url": "https://www.chc.ucsb.edu/data",
+        "type": "official_website",
+        "notes": "Official repository page with direct FTP/HTTP download directories."
+      },
+      {
+        "title": "The climate hazards infrared precipitation with stations—a new environmental record for monitoring extremes",
+        "url": "https://doi.org/10.1038/sdata.2015.66",
+        "type": "original_paper",
+        "notes": "Foundational dataset publication in Nature Scientific Data."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against UCSB Climate Hazards Center official repository."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "GeoTIFF",
+        "NetCDF"
+      ],
+      "notes": "Multi-terabyte quasi-global raster archive hosted by UCSB Climate Hazards Center."
+    },
+    "dates": {
+      "published": "2015",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "The climate hazards infrared precipitation with stations—a new environmental record for monitoring extremes",
+      "paper_url": "https://doi.org/10.1038/sdata.2015.66",
+      "authors": [
+        "Chris Funk",
+        "Pete Peterson",
+        "Martin Landsfeld",
+        "Diego Pedreros",
+        "James Verdin",
+        "Shraddhanand Shukla",
+        "Gregory Husak"
+      ],
+      "doi": "10.1038/sdata.2015.66",
+      "bibtex": "@article{funk2015chirps,\n  title={The climate hazards infrared precipitation with stations---a new environmental record for monitoring extremes},\n  author={Funk, Chris and Peterson, Pete and Landsfeld, Martin and Pedreros, Diego and Verdin, James and Shukla, Shraddhanand and Husak, Gregory and others},\n  journal={Scientific Data},\n  volume={2},\n  number={1},\n  pages={1--21},\n  year={2015},\n  publisher={Nature Publishing Group},\n  doi={10.1038/sdata.2015.66}\n}"
     }
   },
   {
@@ -12571,6 +12937,96 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ebird-basic-dataset",
+    "slug": "ebird-basic-dataset",
+    "name": "eBird Basic Dataset (EBD)",
+    "description": "The eBird Basic Dataset (EBD) is the world's largest biodiversity citizen science dataset, managed by the Cornell Lab of Ornithology. Updated monthly, the EBD contains more than 1.4 billion bird observation records submitted by hundreds of thousands of birders worldwide. Each observation includes species identity, count, precise latitude/longitude, timestamp, and crucially, sampling effort metadata (duration, distance traveled, protocol type) enabling statistical modeling of species distributions, migratory corridors, and population abundances while controlling for observer effort.",
+    "homepage_url": "https://science.ebird.org/en/use-ebird-data",
+    "publisher": {
+      "name": "Cornell Lab of Ornithology",
+      "type": "academic",
+      "url": "https://www.birds.cornell.edu"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "avian-distribution-modeling",
+      "migration-timing-prediction",
+      "population-trend-estimation"
+    ],
+    "tags": [
+      "ebird",
+      "ornithology",
+      "bird-observations",
+      "citizen-science",
+      "species-distribution",
+      "cornell-lab",
+      "ecology"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "eBird Data Access Terms of Use (Open for Research and Conservation)",
+      "spdx_id": null,
+      "url": "https://science.ebird.org/en/use-ebird-data/download-ebird-data-products",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for research and education upon standard non-commercial agreement with Cornell Lab of Ornithology."
+    },
+    "source_references": [
+      {
+        "title": "eBird Science Data Portal",
+        "url": "https://science.ebird.org/en/use-ebird-data",
+        "type": "official_website",
+        "notes": "Official Cornell portal for downloading EBD and eBird Status and Trends data."
+      },
+      {
+        "title": "The eBird enterprise: An integrated approach to development and application of citizen science",
+        "url": "https://doi.org/10.1016/j.biocon.2013.11.003",
+        "type": "original_paper",
+        "notes": "Foundational methodology and enterprise design published in Biological Conservation."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Cornell Lab of Ornithology eBird Science portal."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "TSV",
+        "Parquet"
+      ],
+      "notes": "Multi-hundred gigabyte monthly global checklist archive distributed by Cornell Lab."
+    },
+    "dates": {
+      "published": "2014",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "The eBird enterprise: An integrated approach to development and application of citizen science",
+      "paper_url": "https://doi.org/10.1016/j.biocon.2013.11.003",
+      "authors": [
+        "Brian L. Sullivan",
+        "Jocelyn L. Aycrigg",
+        "Jessie H. Barry",
+        "Rick E. Bonney",
+        "Nicholas Bruns",
+        "Caren B. Cooper",
+        "Theo Damoulas",
+        "Steve Kelling"
+      ],
+      "doi": "10.1016/j.biocon.2013.11.003",
+      "bibtex": "@article{sullivan2014ebird,\n  title={The eBird enterprise: An integrated approach to development and application of citizen science},\n  author={Sullivan, Brian L and Aycrigg, Jocelyn L and Barry, Jessie H and Bonney, Rick E and Bruns, Nicholas and Cooper, Caren B and Damoulas, Theo and Dhondt, Andre A and Dietterich, Tom and Farnsworth, Andrew and others},\n  journal={Biological Conservation},\n  volume={169},\n  pages={31--40},\n  year={2014},\n  publisher={Elsevier},\n  doi={10.1016/j.biocon.2013.11.003}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ecg-id-database",
     "slug": "ecg-id-database",
     "name": "ECG-ID Database: Biometric Human Identification Benchmark",
@@ -13302,6 +13758,198 @@
       ],
       "doi": "10.1109/IJCNN.2017.7966217",
       "bibtex": "@inproceedings{cohen2017emnist,\n  title = {EMNIST: Extending MNIST to handwritten letters},\n  author = {Cohen, Gregory and Afshar, Saeed and Tapson, Jonathan and van Schaik, Andr{\\'e}},\n  booktitle = {2017 International Joint Conference on Neural Networks (IJCNN)},\n  pages = {2921--2926},\n  year = {2017}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "era5-atmospheric-reanalysis",
+    "slug": "era5-atmospheric-reanalysis",
+    "name": "ERA5 Global Atmospheric Reanalysis",
+    "description": "ERA5 is the fifth generation ECMWF atmospheric reanalysis of the global climate from January 1940 to the present. Produced by the Copernicus Climate Change Service (C3S) at ECMWF, ERA5 combines vast amounts of historical atmospheric observations into globally complete and consistent 31-kilometer gridded estimates using advanced 4D-Var data assimilation in the Integrated Forecasting System (IFS Cycle 41r2). ERA5 provides hourly estimates for an extensive suite of atmospheric, land-surface, and oceanic climate variables across 137 vertical pressure levels.",
+    "homepage_url": "https://www.ecmwf.int/en/forecasts/datasets/complete-era5-global-atmospheric-reanalysis",
+    "publisher": {
+      "name": "European Centre for Medium-Range Weather Forecasts (ECMWF)",
+      "type": "government",
+      "url": "https://www.ecmwf.int"
+    },
+    "modalities": [
+      "time-series",
+      "tabular"
+    ],
+    "tasks": [
+      "atmospheric-reanalysis",
+      "weather-forecasting",
+      "climate-monitoring"
+    ],
+    "tags": [
+      "climate",
+      "meteorology",
+      "atmosphere",
+      "reanalysis",
+      "ecmwf",
+      "copernicus",
+      "weather",
+      "era5"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Copernicus Open Access / Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Freely accessible under the License to use Copernicus Products and CC BY 4.0 conditions."
+    },
+    "source_references": [
+      {
+        "title": "ECMWF ERA5 Reanalysis Portal",
+        "url": "https://www.ecmwf.int/en/forecasts/datasets/complete-era5-global-atmospheric-reanalysis",
+        "type": "official_website",
+        "notes": "Canonical landing page and technical specification for ERA5 global reanalysis."
+      },
+      {
+        "title": "Copernicus Climate Data Store (CDS) ERA5 Access",
+        "url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels",
+        "type": "repository",
+        "notes": "Official repository for subsetting and downloading hourly ERA5 data."
+      },
+      {
+        "title": "The ERA5 global reanalysis",
+        "url": "https://doi.org/10.1002/qj.3803",
+        "type": "original_paper",
+        "notes": "Primary descriptive paper published in Quarterly Journal of the Royal Meteorological Society."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against official ECMWF portal and Copernicus Climate Data Store specifications."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "GRIB",
+        "NetCDF"
+      ],
+      "notes": "Multi-petabyte global atmospheric archive accessible via the Copernicus Climate Data Store API."
+    },
+    "dates": {
+      "published": "2020",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "The ERA5 global reanalysis",
+      "paper_url": "https://doi.org/10.1002/qj.3803",
+      "authors": [
+        "Hans Hersbach",
+        "Bill Bell",
+        "Paul Berrisford",
+        "Shoji Hirahara",
+        "Andras Horanyi",
+        "Julio Munoz-Sabater",
+        "Jean-Noel Thepaut"
+      ],
+      "doi": "10.1002/qj.3803",
+      "bibtex": "@article{hersbach2020era5,\n  title={The ERA5 global reanalysis},\n  author={Hersbach, Hans and Bell, Bill and Berrisford, Paul and Hirahara, Shoji and Horanyi, Andras and Munoz-Sabater, Julio and Thepaut, Jean-Noel and others},\n  journal={Quarterly Journal of the Royal Meteorological Society},\n  volume={146},\n  number={730},\n  pages={1999--2049},\n  year={2020},\n  publisher={Wiley Online Library},\n  doi={10.1002/qj.3803}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "era5-land-reanalysis",
+    "slug": "era5-land-reanalysis",
+    "name": "ERA5-Land Global Terrestrial Surface Reanalysis",
+    "description": "ERA5-Land is a global enhanced-resolution replay of the land surface component of the ERA5 atmospheric reanalysis, produced by the Copernicus Climate Change Service (C3S). Running at an upgraded spatial resolution of 9 km (~0.1 degrees) from 1950 to the present with hourly temporal frequency, ERA5-Land simulates the hydrological and thermodynamic states of the Earth's terrestrial surfaces. Driven by atmospheric forcing from ERA5 with elevation-dependent thermodynamic corrections, it resolves 50 core parameters encompassing soil moisture at four depth layers, snow accumulation, runoff, surface temperature, and turbulent heat fluxes.",
+    "homepage_url": "https://climate.copernicus.eu/climate-reanalysis",
+    "publisher": {
+      "name": "Copernicus Climate Change Service (C3S) / ECMWF",
+      "type": "government",
+      "url": "https://climate.copernicus.eu"
+    },
+    "modalities": [
+      "time-series",
+      "tabular"
+    ],
+    "tasks": [
+      "terrestrial-reanalysis",
+      "hydrological-modeling",
+      "land-surface-forecasting"
+    ],
+    "tags": [
+      "land-surface",
+      "hydrology",
+      "soil-moisture",
+      "snow-cover",
+      "temperature",
+      "copernicus",
+      "reanalysis",
+      "era5-land"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Copernicus Open Access / Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Open license granted under the Copernicus Data Policy and CC BY 4.0 framework."
+    },
+    "source_references": [
+      {
+        "title": "Copernicus Climate Reanalysis Overview",
+        "url": "https://climate.copernicus.eu/climate-reanalysis",
+        "type": "official_website",
+        "notes": "Official overview of Copernicus climate reanalyses including ERA5-Land."
+      },
+      {
+        "title": "ERA5-Land Hourly Data on Copernicus Climate Data Store",
+        "url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land",
+        "type": "repository",
+        "notes": "Direct repository catalog entry for ERA5-Land hourly gridded series."
+      },
+      {
+        "title": "ERA5-Land: a state-of-the-art global reanalysis dataset for land applications",
+        "url": "https://doi.org/10.5194/essd-13-4349-2021",
+        "type": "original_paper",
+        "notes": "Comprehensive documentation paper in Earth System Science Data."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against official Copernicus Climate Data Store and ESSD publication."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "GRIB",
+        "NetCDF"
+      ],
+      "notes": "Petabyte-scale global land surface archive accessible via the Copernicus Climate Data Store."
+    },
+    "dates": {
+      "published": "2021",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "ERA5-Land: a state-of-the-art global reanalysis dataset for land applications",
+      "paper_url": "https://doi.org/10.5194/essd-13-4349-2021",
+      "authors": [
+        "Julio Munoz-Sabater",
+        "Emanuel Dutra",
+        "Agusti Agusti-Panareda",
+        "Clement Albergel",
+        "Gianpaolo Balsamo",
+        "Souhail Boussetta",
+        "Hans Hersbach"
+      ],
+      "doi": "10.5194/essd-13-4349-2021",
+      "bibtex": "@article{munozsabater2021era5land,\n  title={ERA5-Land: a state-of-the-art global reanalysis dataset for land applications},\n  author={Munoz-Sabater, Julio and Dutra, Emanuel and Agusti-Panareda, Agusti and Albergel, Clement and Balsamo, Gianpaolo and Boussetta, Souhail and Hersbach, Hans and others},\n  journal={Earth System Science Data},\n  volume={13},\n  number={9},\n  pages={4349--4383},\n  year={2021},\n  publisher={Copernicus GmbH},\n  doi={10.5194/essd-13-4349-2021}\n}"
     }
   },
   {
@@ -15389,6 +16037,199 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "gbif-occurrence-data",
+    "slug": "gbif-occurrence-data",
+    "name": "GBIF Global Biodiversity Information Facility Species Occurrences",
+    "description": "The Global Biodiversity Information Facility (GBIF) is an international open data infrastructure funded by governments worldwide to provide anyone, anywhere, open access to data about all types of life on Earth. The GBIF Occurrence index harmonizes more than 2.8 billion species occurrence records from over 2,000 publishing institutions across 150 countries. Integrating museum specimens, camera trap images, environmental DNA, citizen science records, and ecological transects, GBIF indexes species occurrences tagged with standardized Darwin Core geospatial, taxonomic, and temporal metadata.",
+    "homepage_url": "https://www.gbif.org/occurrence/search",
+    "publisher": {
+      "name": "Global Biodiversity Information Facility (GBIF) Secretariat",
+      "type": "community",
+      "url": "https://www.gbif.org"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "species-distribution-modeling",
+      "biodiversity-monitoring",
+      "ecological-range-estimation"
+    ],
+    "tags": [
+      "gbif",
+      "biodiversity",
+      "species-occurrences",
+      "taxonomy",
+      "ecology",
+      "specimen-records",
+      "citizen-science",
+      "global-fauna-flora"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0) / CC0",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Records published under standardized machine-readable CC0, CC BY, or CC BY-NC licenses (over 85% open under CC0/CC BY)."
+    },
+    "source_references": [
+      {
+        "title": "GBIF Occurrence Search Portal",
+        "url": "https://www.gbif.org/occurrence/search",
+        "type": "official_website",
+        "notes": "Interactive search, filter, and download portal for global species records."
+      },
+      {
+        "title": "GBIF Occurrence API Documentation",
+        "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+        "type": "documentation",
+        "notes": "Comprehensive RESTful API documentation for automated occurrence queries."
+      },
+      {
+        "title": "GBIF Backbone Taxonomy (Data DOI: 10.15468/39omei)",
+        "url": "https://doi.org/10.15468/39omei",
+        "type": "documentation",
+        "notes": "Canonical publication and taxonomy documentation for the GBIF Backbone."
+      },
+      {
+        "title": "Data integration enables global biodiversity synthesis",
+        "url": "https://doi.org/10.1073/pnas.2013790118",
+        "type": "original_paper",
+        "notes": "Peer-reviewed scientific assessment of GBIF data published in PNAS."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against GBIF Secretariat official portal and API documentation."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "CSV",
+        "Darwin Core Archive",
+        "Parquet"
+      ],
+      "notes": "Terabyte-scale monthly snapshot available via cloud exports on AWS, Azure, and Google Cloud."
+    },
+    "dates": {
+      "published": "2001",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "Data integration enables global biodiversity synthesis",
+      "paper_url": "https://doi.org/10.1073/pnas.2013790118",
+      "authors": [
+        "J. Mason Heberling",
+        "Joseph T. Miller",
+        "Daniel Noesgaard",
+        "Scott B. Weingart",
+        "Dmitry Schigel"
+      ],
+      "doi": "10.1073/pnas.2013790118",
+      "bibtex": "@article{heberling2021gbif,\n  title={Data integration enables global biodiversity synthesis},\n  author={Heberling, J Mason and Miller, Joseph T and Noesgaard, Daniel and Weingart, Scott B and Schigel, Dmitry},\n  journal={Proceedings of the National Academy of Sciences},\n  volume={118},\n  number={6},\n  pages={e2013790118},\n  year={2021},\n  publisher={National Academy of Sciences},\n  doi={10.1073/pnas.2013790118}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "gfed-fire-emissions",
+    "slug": "gfed-fire-emissions",
+    "name": "GFED Global Fire Emissions Database (GFED4s)",
+    "description": "The Global Fire Emissions Database (GFED, Version 4s) combines satellite-derived burned area observations from MODIS with the Carnegie-Ames-Stanford Approach (CASA) biogeochemical model to quantify monthly global fire activity and trace gas emissions from 1997 to the present at 0.25° resolution. GFED4s incorporates small fire burn estimates based on active fire detections, delivering gridded dry matter emissions and emission factors for carbon dioxide (CO2), carbon monoxide (CO), methane (CH4), black carbon (BC), organic carbon (OC), and PM2.5 partitioned across six fire types.",
+    "homepage_url": "https://www.globalfiredata.org/data.html",
+    "publisher": {
+      "name": "Global Fire Emissions Database Team (VU Amsterdam / UC Irvine / NASA GSFC)",
+      "type": "academic",
+      "url": "https://www.globalfiredata.org"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "fire-emissions-quantification",
+      "atmospheric-chemistry-modeling",
+      "biomass-burning-accounting"
+    ],
+    "tags": [
+      "gfed",
+      "fire-emissions",
+      "carbon-cycle",
+      "biomass-burning",
+      "trace-gases",
+      "aerosols",
+      "wildfire-emissions"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Freely available for research and commercial applications with proper attribution."
+    },
+    "source_references": [
+      {
+        "title": "GFED Official Data Portal",
+        "url": "https://www.globalfiredata.org/data.html",
+        "type": "official_website",
+        "notes": "Official repository for GFED4s HDF5/NetCDF gridded files and emissions factors."
+      },
+      {
+        "title": "Global fire emissions estimates during 1997–2016 mapped with a new approach using small-fire emissions",
+        "url": "https://doi.org/10.5194/essd-9-697-2017",
+        "type": "original_paper",
+        "notes": "Comprehensive documentation paper in Earth System Science Data."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against official GFED website and Earth System Science Data journal publication."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "amount": 22.0,
+      "unit": "GB",
+      "status": "estimated",
+      "file_formats": [
+        "HDF-5",
+        "NetCDF",
+        "TXT"
+      ],
+      "notes": "Gridded global emissions archives with daily cycle and ancillary layers."
+    },
+    "dates": {
+      "published": "2017",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "Global fire emissions estimates during 1997–2016 mapped with a new approach using the small-fire emissions",
+      "paper_url": "https://doi.org/10.5194/essd-9-697-2017",
+      "authors": [
+        "Guido R. van der Werf",
+        "James T. Randerson",
+        "Louis Giglio",
+        "Thijs T. van Leeuwen",
+        "Yang Chen",
+        "Bobbins M. Rogers",
+        "Miriam E. Mu"
+      ],
+      "doi": "10.5194/essd-9-697-2017",
+      "bibtex": "@article{vanderwerf2017gfed,\n  title={Global fire emissions estimates during 1997--2016 mapped with a new approach using the small-fire emissions},\n  author={van der Werf, Guido R and Randerson, James T and Giglio, Louis and van Leeuwen, Thijs T and Chen, Yang and Rogers, Brendan M and Mu, Miriam E and others},\n  journal={Earth System Science Data},\n  volume={9},\n  number={2},\n  pages={697--720},\n  year={2017},\n  publisher={Copernicus GmbH},\n  doi={10.5194/essd-9-697-2017}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "gigaspeech",
     "slug": "gigaspeech",
     "name": "GigaSpeech: Multi-Domain ASR Corpus",
@@ -15745,6 +16586,93 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "grdc-river-discharge",
+    "slug": "grdc-river-discharge",
+    "name": "Global Runoff Data Centre (GRDC) River Discharge Database",
+    "description": "Operated by the German Federal Institute of Hydrology (BfG) under the auspices of the World Meteorological Organization (WMO), the Global Runoff Data Centre (GRDC) maintains the primary worldwide repository of observed river discharge and streamflow records. The database contains standardized daily and monthly runoff series from more than 10,700 gauging stations across 160 countries, representing drainage areas of over 100 million km². It provides the baseline empirical benchmark for calibration and validation of global hydrological, land-surface, and climate models.",
+    "homepage_url": "https://grdc.bafg.de/data/data_portal/",
+    "publisher": {
+      "name": "Global Runoff Data Centre (GRDC) / Federal Institute of Hydrology (BfG) / WMO",
+      "type": "government",
+      "url": "https://www.bafg.de/GRDC/"
+    },
+    "modalities": [
+      "time-series",
+      "tabular"
+    ],
+    "tasks": [
+      "river-runoff-forecasting",
+      "streamflow-modeling",
+      "flood-and-drought-analysis"
+    ],
+    "tags": [
+      "grdc",
+      "river-discharge",
+      "streamflow",
+      "runoff",
+      "gauging-stations",
+      "hydrology",
+      "water-resources",
+      "wmo"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "GRDC Data Policy (WMO Resolution 40 / Open for Non-Commercial Research)",
+      "spdx_id": null,
+      "url": "https://www.bafg.de/GRDC/EN/01_GRDC/12_plcy/data_policy_node.html",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for scientific research, educational, and non-commercial assessment purposes pursuant to WMO Resolution 40."
+    },
+    "source_references": [
+      {
+        "title": "GRDC Data Portal",
+        "url": "https://grdc.bafg.de/data/data_portal/",
+        "type": "official_website",
+        "notes": "Official web GIS interface for discovering and ordering station discharge time series."
+      },
+      {
+        "title": "High-resolution composite of global runoff and water balance",
+        "url": "https://doi.org/10.1029/1999GB001254",
+        "type": "original_paper",
+        "notes": "Foundational global hydrological validation study integrating GRDC records."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against official GRDC/BfG web portal and WMO data sharing guidelines."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "CSV",
+        "TXT",
+        "WaterML"
+      ],
+      "notes": "Historical time-series archives spanning over a century across 10,700+ gauging stations."
+    },
+    "dates": {
+      "published": "2002",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "High-resolution composite of global runoff and water balance",
+      "paper_url": "https://doi.org/10.1029/1999GB001254",
+      "authors": [
+        "B. M. Fekete",
+        "C. J. Vorosmarty",
+        "W. Grabs"
+      ],
+      "doi": "10.1029/1999GB001254",
+      "bibtex": "@article{fekete2002runoff,\n  title={High-resolution composite of global runoff and water balance},\n  author={Fekete, Balazs M and Vorosmarty, Charles J and Grabs, Wolfgang},\n  journal={Global Biogeochemical Cycles},\n  volume={16},\n  number={4},\n  pages={15--1},\n  year={2002},\n  publisher={Wiley Online Library},\n  doi={10.1029/1999GB001254}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "gsm8k",
     "slug": "gsm8k",
     "name": "Grade School Math 8K (GSM8K)",
@@ -16029,6 +16957,97 @@
       "data_sources": [
         "INRAE, Rothamsted Research, ETH Zurich, University of Tokyo, University of Queensland, University of Saskatchewan"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "hadcrut5-temperature",
+    "slug": "hadcrut5-temperature",
+    "name": "HadCRUT5 Global Surface Temperature Anomaly Dataset",
+    "description": "HadCRUT5 is the fifth generation gridded dataset of global historical surface temperature anomalies jointly produced by the UK Met Office Hadley Centre and the Climatic Research Unit (CRU) at the University of East Anglia. Spanning 1850 to the present at monthly 5°x5° resolution, HadCRUT5 combines land surface air temperatures from CRUTEM5 with sea surface temperature measurements from HadSST4. HadCRUT5 provides two versions: a non-infilled version and an infilled version produced using statistical Gaussian process regression to achieve global spatial coverage, supported by a 200-member ensemble that quantifies observational and sampling uncertainties.",
+    "homepage_url": "https://www.metoffice.gov.uk/hadobs/hadcrut5/",
+    "publisher": {
+      "name": "Met Office Hadley Centre / Climatic Research Unit (UEA)",
+      "type": "academic",
+      "url": "https://www.metoffice.gov.uk/hadobs"
+    },
+    "modalities": [
+      "time-series",
+      "tabular"
+    ],
+    "tasks": [
+      "surface-temperature-analysis",
+      "climate-trend-estimation",
+      "ensemble-temperature-reconstruction"
+    ],
+    "tags": [
+      "hadcrut",
+      "temperature-anomalies",
+      "met-office",
+      "cru",
+      "climate-change",
+      "sea-surface-temperature",
+      "land-surface"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Government Licence v3.0 / Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Available under UK Open Government Licence v3.0 and CC BY 4.0 conditions."
+    },
+    "source_references": [
+      {
+        "title": "Met Office HadCRUT5 Official Data Portal",
+        "url": "https://www.metoffice.gov.uk/hadobs/hadcrut5/",
+        "type": "official_website",
+        "notes": "Official portal hosting gridded NetCDF anomalies and global time series."
+      },
+      {
+        "title": "An Updated Assessment of Near-Surface Temperature Change From 1850: The HadCRUT5 Dataset",
+        "url": "https://doi.org/10.1029/2019JD032361",
+        "type": "original_paper",
+        "notes": "Primary descriptive paper published in Journal of Geophysical Research: Atmospheres."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Met Office Hadley Centre data repository."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "amount": 12.0,
+      "unit": "GB",
+      "status": "estimated",
+      "file_formats": [
+        "NetCDF",
+        "CSV"
+      ],
+      "notes": "200-member ensemble gridded NetCDF files and global mean series."
+    },
+    "dates": {
+      "published": "2021",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "An Updated Assessment of Near-Surface Temperature Change From 1850: The HadCRUT5 Dataset",
+      "paper_url": "https://doi.org/10.1029/2019JD032361",
+      "authors": [
+        "Colin P. Morice",
+        "John J. Kennedy",
+        "Nick A. Rayner",
+        "Phil D. Jones",
+        "Christopher W. Schwarz",
+        "Kate E. Willett",
+        "Clare E. Good"
+      ],
+      "doi": "10.1029/2019JD032361",
+      "bibtex": "@article{morice2021hadcrut5,\n  title={An updated assessment of near-surface temperature change from 1850: The HadCRUT5 dataset},\n  author={Morice, Colin P and Kennedy, John J and Rayner, Nick A and Jones, Phil D and Schwarz, Christopher W and Willett, Kate E and Good, Clare E and others},\n  journal={Journal of Geophysical Research: Atmospheres},\n  volume={126},\n  number={3},\n  pages={e2019JD032361},\n  year={2021},\n  publisher={Wiley Online Library},\n  doi={10.1029/2019JD032361}\n}"
     }
   },
   {
@@ -17240,6 +18259,95 @@
     "provenance": {
       "collection_method": "Authored and submitted by subject matter experts across hundreds of global academic institutions, targeting graduate- and research-level problem difficulty.",
       "curation_notes": "Adversarially screened against frontier LLM baselines and multi-turn human verification to eliminate questions vulnerable to simple web search or memorization."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "hydrosheds-hydrographic-data",
+    "slug": "hydrosheds-hydrographic-data",
+    "name": "HydroSHEDS Global Hydrographic Data and River Networks",
+    "description": "HydroSHEDS (Hydrological data and maps based on SHuttle Elevation Derivatives at multiple Scales) is a globally consistent hydrographic database developed by McGill University, WWF, and USGS. Derived primarily from elevation data obtained during NASA's Shuttle Radar Topography Mission (SRTM) at 3 arc-second (~90 m) resolution, HydroSHEDS provides hydrologically conditioned elevation, flow direction (DIR), flow accumulation (ACC), vector stream networks (FreeFlow, HydroRIVERS), and hierarchical catchment delineations (HydroBASINS across 12 Pfafstetter coding levels).",
+    "homepage_url": "https://www.hydrosheds.org/products",
+    "publisher": {
+      "name": "HydroSHEDS Consortium (McGill University / WWF / USGS)",
+      "type": "academic",
+      "url": "https://www.hydrosheds.org"
+    },
+    "modalities": [
+      "tabular",
+      "graph",
+      "vision"
+    ],
+    "tasks": [
+      "river-network-modeling",
+      "watershed-delineation",
+      "hydrological-routing"
+    ],
+    "tags": [
+      "hydrosheds",
+      "river-networks",
+      "watersheds",
+      "catchment-delineation",
+      "flow-direction",
+      "hydrology",
+      "topography"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "HydroSHEDS v1/v2 suites are freely accessible under CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "HydroSHEDS Products Portal",
+        "url": "https://www.hydrosheds.org/products",
+        "type": "official_website",
+        "notes": "Official suite portal hosting HydroRIVERS, HydroBASINS, and raster layers."
+      },
+      {
+        "title": "New Global Hydrography Derived From Spaceborne Elevation Data",
+        "url": "https://doi.org/10.1029/2008EO100001",
+        "type": "original_paper",
+        "notes": "Foundational documentation published in Eos, Transactions American Geophysical Union."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against official HydroSHEDS website and product documentation."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "amount": 75.0,
+      "unit": "GB",
+      "status": "estimated",
+      "file_formats": [
+        "Shapefile",
+        "GeoPackage",
+        "GeoTIFF"
+      ],
+      "notes": "Global raster and vector suites covering continental basins."
+    },
+    "dates": {
+      "published": "2008",
+      "last_updated": "2022"
+    },
+    "citation": {
+      "paper_title": "New Global Hydrography Derived From Spaceborne Elevation Data",
+      "paper_url": "https://doi.org/10.1029/2008EO100001",
+      "authors": [
+        "Bernhard Lehner",
+        "Kristine Verdin",
+        "Andy Jarvis"
+      ],
+      "doi": "10.1029/2008EO100001",
+      "bibtex": "@article{lehner2008hydrosheds,\n  title={New global hydrography derived from spaceborne elevation data},\n  author={Lehner, Bernhard and Verdin, Kristine and Jarvis, Andy},\n  journal={Eos, Transactions American Geophysical Union},\n  volume={89},\n  number={10},\n  pages={93--94},\n  year={2008},\n  publisher={Wiley Online Library},\n  doi={10.1029/2008EO100001}\n}"
     }
   },
   {
@@ -19334,6 +20442,94 @@
       "data_sources": [
         "Max Planck Institute for Biogeochemistry"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "jrc-global-surface-water",
+    "slug": "jrc-global-surface-water",
+    "name": "JRC Global Surface Water Dynamics Dataset",
+    "description": "Developed by the European Commission Joint Research Centre (JRC) in partnership with Google Earth Engine, the JRC Global Surface Water dataset maps the location, temporal persistence, and long-term changes of surface water over a 38-year period (1984–present) at 30-meter resolution globally. Generated from more than 4.5 million Landsat satellite scenes using automated expert systems, the dataset delivers six core thematic layers: Water Occurrence, Occurrence Change Intensity, Water Seasonality, Water Recurrence, Water Transitions, and Maximum Water Extent.",
+    "homepage_url": "https://global-surface-water.appspot.com/download",
+    "publisher": {
+      "name": "European Commission Joint Research Centre (JRC)",
+      "type": "government",
+      "url": "https://joint-research-centre.ec.europa.eu"
+    },
+    "modalities": [
+      "vision",
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "surface-water-mapping",
+      "water-occurrence-trend-analysis",
+      "hydrological-monitoring"
+    ],
+    "tags": [
+      "jrc",
+      "surface-water",
+      "water-dynamics",
+      "landsat",
+      "hydrology",
+      "wetland-monitoring",
+      "remote-sensing"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Open reuse under the European Commission open data decisions and CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "JRC Global Surface Water Data Download Portal",
+        "url": "https://global-surface-water.appspot.com/download",
+        "type": "official_website",
+        "notes": "Official interactive visualization and 10°x10° tile download interface."
+      },
+      {
+        "title": "High-resolution mapping of global surface water and its long-term changes",
+        "url": "https://doi.org/10.1038/nature20584",
+        "type": "original_paper",
+        "notes": "Seminal research article published in Nature."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against official European Commission JRC web portal and Nature paper."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "amount": 1.5,
+      "unit": "TB",
+      "status": "estimated",
+      "file_formats": [
+        "GeoTIFF"
+      ],
+      "notes": "Global 10°x10° GeoTIFF tile collection covering all global landmasses."
+    },
+    "dates": {
+      "published": "2016",
+      "last_updated": "2023"
+    },
+    "citation": {
+      "paper_title": "High-resolution mapping of global surface water and its long-term changes",
+      "paper_url": "https://doi.org/10.1038/nature20584",
+      "authors": [
+        "Jean-Francois Pekel",
+        "Andrew Cottam",
+        "Noel Gorelick",
+        "Alan S. Belward"
+      ],
+      "doi": "10.1038/nature20584",
+      "bibtex": "@article{pekel2016surface,\n  title={High-resolution mapping of global surface water and its long-term changes},\n  author={Pekel, Jean-Francois and Cottam, Andrew and Gorelick, Noel and Belward, Alan S},\n  journal={Nature},\n  volume={540},\n  number={7633},\n  pages={418--422},\n  year={2016},\n  publisher={Nature Publishing Group},\n  doi={10.1038/nature20584}\n}"
     }
   },
   {
@@ -23892,6 +25088,202 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "modis-mcd64a1-burned-area",
+    "slug": "modis-mcd64a1-burned-area",
+    "name": "MODIS MCD64A1 Burned Area Monthly Global 500m",
+    "description": "MCD64A1 Version 6.1 is the standard MODIS monthly burned area product produced at 500-meter spatial resolution by the Land Processes DAAC. Fusing Terra and Aqua surface reflectance observations with 1-kilometer active fire detections using a hybrid algorithm, MCD64A1 maps the approximate burn date (day of year) and burn uncertainty for every 500m pixel globally from November 2000 to the present. The product serves as the primary empirical constraint for global fire emissions inventories (including GFED) and global carbon accounting.",
+    "homepage_url": "https://lpdaac.usgs.gov/products/mcd64a1v061/",
+    "publisher": {
+      "name": "NASA Land Processes Distributed Active Archive Center (LP DAAC) / USGS",
+      "type": "government",
+      "url": "https://lpdaac.usgs.gov"
+    },
+    "modalities": [
+      "vision",
+      "time-series",
+      "tabular"
+    ],
+    "tasks": [
+      "burned-area-mapping",
+      "wildfire-damage-assessment",
+      "carbon-emissions-estimation"
+    ],
+    "tags": [
+      "modis",
+      "burned-area",
+      "wildfire",
+      "fire-ecology",
+      "remote-sensing",
+      "mcd64a1",
+      "land-cover"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "NASA Open Data Policy (Public Domain)",
+      "spdx_id": null,
+      "url": "https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/",
+      "commercial_use": "allowed",
+      "notes": "US Government public domain data freely distributed by NASA and USGS."
+    },
+    "source_references": [
+      {
+        "title": "NASA LP DAAC MCD64A1 Product Details",
+        "url": "https://lpdaac.usgs.gov/products/mcd64a1v061/",
+        "type": "official_website",
+        "notes": "Official USGS/NASA product landing page with user manual and file specs."
+      },
+      {
+        "title": "MODIS/Terra+Aqua Burned Area Monthly L3 Global 500m SIN Grid V061 (Data DOI: 10.5067/MODIS/MCD64A1.061)",
+        "url": "https://doi.org/10.5067/MODIS/MCD64A1.061",
+        "type": "documentation",
+        "notes": "Official LP DAAC product catalog entry and dataset DOI."
+      },
+      {
+        "title": "The Collection 6 MODIS burned area mapping algorithm and product",
+        "url": "https://doi.org/10.1016/j.rse.2018.08.005",
+        "type": "original_paper",
+        "notes": "Primary algorithm methodology paper published in Remote Sensing of Environment."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against USGS LP DAAC and peer-reviewed Remote Sensing of Environment article."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "HDF-EOS",
+        "Cloud-Optimized GeoTIFF"
+      ],
+      "notes": "Multi-terabyte global monthly tile archive at NASA LP DAAC."
+    },
+    "dates": {
+      "published": "2018",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "The Collection 6 MODIS burned area mapping algorithm and product",
+      "paper_url": "https://doi.org/10.1016/j.rse.2018.08.005",
+      "authors": [
+        "Louis Giglio",
+        "Luigi Boschetti",
+        "David P. Roy",
+        "Michael L. Humber",
+        "Christopher O. Justice"
+      ],
+      "doi": "10.1016/j.rse.2018.08.005",
+      "bibtex": "@article{giglio2018mcd64a1,\n  title={The Collection 6 MODIS burned area mapping algorithm and product},\n  author={Giglio, Louis and Boschetti, Luigi and Roy, David P and Humber, Michael L and Justice, Christopher O},\n  journal={Remote Sensing of Environment},\n  volume={217},\n  pages={72--85},\n  year={2018},\n  publisher={Elsevier},\n  doi={10.1016/j.rse.2018.08.005}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "modis-mod13q1-vegetation-indices",
+    "slug": "modis-mod13q1-vegetation-indices",
+    "name": "MODIS MOD13Q1 Terra Vegetation Indices 16-Day L3 Global 250m",
+    "description": "MOD13Q1 Version 6.1 is the global 16-day composite vegetation index product generated at 250-meter spatial resolution from the Moderate Resolution Imaging Spectroradiometer (MODIS) aboard NASA's Terra satellite. Operating continuously since February 2000, MOD13Q1 delivers standardized Normalized Difference Vegetation Index (NDVI) and Enhanced Vegetation Index (EVI) layers alongside surface reflectance bands (red, NIR, blue, MIR), view angles, and pixel-level quality assurance (QA) flags, providing the gold standard time-series for terrestrial vegetation phenology and photosynthetic activity.",
+    "homepage_url": "https://lpdaac.usgs.gov/products/mod13q1v061/",
+    "publisher": {
+      "name": "NASA Land Processes Distributed Active Archive Center (LP DAAC) / USGS",
+      "type": "government",
+      "url": "https://lpdaac.usgs.gov"
+    },
+    "modalities": [
+      "vision",
+      "time-series",
+      "tabular"
+    ],
+    "tasks": [
+      "vegetation-health-monitoring",
+      "crop-phenology-tracking",
+      "drought-impact-assessment"
+    ],
+    "tags": [
+      "modis",
+      "ndvi",
+      "evi",
+      "vegetation-index",
+      "phenology",
+      "earth-observation",
+      "remote-sensing",
+      "lp-daac"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "NASA Open Data Policy (Public Domain)",
+      "spdx_id": null,
+      "url": "https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/",
+      "commercial_use": "allowed",
+      "notes": "US Federal open government work available globally without restriction."
+    },
+    "source_references": [
+      {
+        "title": "NASA LP DAAC MOD13Q1 Product Information",
+        "url": "https://lpdaac.usgs.gov/products/mod13q1v061/",
+        "type": "official_website",
+        "notes": "Official LP DAAC product catalog entry, user guide, and download access."
+      },
+      {
+        "title": "NASA Earthdata Search MOD13Q1",
+        "url": "https://search.earthdata.nasa.gov/search?q=MOD13Q1+V061",
+        "type": "repository",
+        "notes": "NASA Earthdata search and order interface for global MODIS tiles."
+      },
+      {
+        "title": "MODIS/Terra Vegetation Indices 16-Day L3 Global 250m SIN Grid V061 (Data DOI: 10.5067/MODIS/MOD13Q1.061)",
+        "url": "https://doi.org/10.5067/MODIS/MOD13Q1.061",
+        "type": "documentation",
+        "notes": "Official product landing page and dataset digital object identifier."
+      },
+      {
+        "title": "Overview of the radiometric and biophysical performance of the MODIS vegetation indices",
+        "url": "https://doi.org/10.1016/S0034-4257(02)00096-2",
+        "type": "original_paper",
+        "notes": "Foundational sensor and algorithm evaluation paper in Remote Sensing of Environment."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against USGS LP DAAC official catalog and NASA Earthdata registry."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "HDF-EOS",
+        "Cloud-Optimized GeoTIFF"
+      ],
+      "notes": "Multi-terabyte global tile archive managed by NASA LP DAAC."
+    },
+    "dates": {
+      "published": "2021",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "Overview of the radiometric and biophysical performance of the MODIS vegetation indices",
+      "paper_url": "https://doi.org/10.1016/S0034-4257(02)00096-2",
+      "authors": [
+        "Alfredo Huete",
+        "Kamel Didan",
+        "Tomoaki Miura",
+        "E. Patricia Rodriguez",
+        "Xiang Gao",
+        "Laerte G. Ferreira"
+      ],
+      "doi": "10.1016/S0034-4257(02)00096-2",
+      "bibtex": "@article{huete2002modis,\n  title={Overview of the radiometric and biophysical performance of the MODIS vegetation indices},\n  author={Huete, Alfredo and Didan, Kamel and Miura, Tomoaki and Rodriguez, E Patricia and Gao, Xiang and Ferreira, Laerte G},\n  journal={Remote Sensing of Environment},\n  volume={83},\n  number={1-2},\n  pages={195--213},\n  year={2002},\n  publisher={Elsevier},\n  doi={10.1016/S0034-4257(02)00096-2}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "monash-time-series",
     "slug": "monash-time-series",
     "name": "Monash Time Series Forecasting Archive",
@@ -24820,6 +26212,201 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "nasa-firms-active-fire",
+    "slug": "nasa-firms-active-fire",
+    "name": "NASA FIRMS Fire Information for Resource Management System",
+    "description": "NASA FIRMS (Fire Information for Resource Management System) delivers near-real-time global active fire and thermal anomaly locations detected by the MODIS instruments (Terra and Aqua, 1 km) and VIIRS sensors (Suomi NPP and NOAA-20/21, 375 m). Processed within three hours of satellite overpass by NASA LANCE (Land, Atmosphere Near real-time Capability for EOS), FIRMS distributes point vector coordinates with Brightness Temperature, Fire Radiative Power (FRP), acquisition timestamp, satellite confidence score, and day/night flags.",
+    "homepage_url": "https://firms.modaps.eosdis.nasa.gov/content/active_fire/",
+    "publisher": {
+      "name": "NASA Earth Science Data and Information System (ESDIS)",
+      "type": "government",
+      "url": "https://firms.modaps.eosdis.nasa.gov"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "active-fire-detection",
+      "near-real-time-hazard-monitoring",
+      "thermal-anomaly-tracking"
+    ],
+    "tags": [
+      "firms",
+      "active-fires",
+      "thermal-anomalies",
+      "wildfire-detection",
+      "modis",
+      "viirs",
+      "near-real-time",
+      "nasa-esdis"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "NASA Open Data Policy (Public Domain)",
+      "spdx_id": null,
+      "url": "https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/",
+      "commercial_use": "allowed",
+      "notes": "NASA Earth science data is freely accessible without restrictions under US open data rules."
+    },
+    "source_references": [
+      {
+        "title": "NASA FIRMS Active Fire Data Portal",
+        "url": "https://firms.modaps.eosdis.nasa.gov/content/active_fire/",
+        "type": "official_website",
+        "notes": "Direct access portal for historical archives, NRT downloads, and MapServer APIs."
+      },
+      {
+        "title": "NASA FIRMS Global Active Fire Archive Download",
+        "url": "https://firms.modaps.eosdis.nasa.gov/download/",
+        "type": "repository",
+        "notes": "Custom download interface for country, regional, and global SHP and CSV records."
+      },
+      {
+        "title": "The New 375m VIIRS Active Fire Detection Data",
+        "url": "https://doi.org/10.1016/j.rse.2013.12.008",
+        "type": "original_paper",
+        "notes": "Sensor description and algorithm validation paper in Remote Sensing of Environment."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against official NASA FIRMS portal and NASA ESDIS distribution services."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "CSV",
+        "SHP",
+        "KML",
+        "GeoJSON"
+      ],
+      "notes": "Comprehensive point vector tables and shapefiles distributed via NASA FIRMS."
+    },
+    "dates": {
+      "published": "2014",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "The New 375m VIIRS Active Fire Detection Data: Algorithm Description and Initial Evaluation",
+      "paper_url": "https://doi.org/10.1016/j.rse.2013.12.008",
+      "authors": [
+        "Wilfrid Schroeder",
+        "Patricia Oliva",
+        "Louis Giglio",
+        "Ivan A. Csiszar"
+      ],
+      "doi": "10.1016/j.rse.2013.12.008",
+      "bibtex": "@article{schroeder2014viirs,\n  title={The new 375 m VIIRS active fire detection data: Algorithm description and initial evaluation},\n  author={Schroeder, Wilfrid and Oliva, Patricia and Giglio, Louis and Csiszar, Ivan A},\n  journal={Remote Sensing of Environment},\n  volume={143},\n  pages={85--96},\n  year={2014},\n  publisher={Elsevier},\n  doi={10.1016/j.rse.2013.12.008}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "nasa-gedi-l4a-biomass",
+    "slug": "nasa-gedi-l4a-biomass",
+    "name": "NASA GEDI L4A Footprint Level Aboveground Biomass Density",
+    "description": "GEDI L4A Version 2.1 provides footprint-level aboveground biomass density (AGBD, in megagrams per hectare) estimates derived from the Global Ecosystem Dynamics Investigation (GEDI) spaceborne lidar aboard the International Space Station (ISS). Operating since April 2019, GEDI's high-resolution multi-beam lasers sample 25-meter circular footprints across Earth's temperate and tropical forests (51.6°N to 51.6°S). Waveform metrics from return signals are coupled with parametric models to infer vegetation height, canopy vertical profile, and biomass density with quantified prediction intervals.",
+    "homepage_url": "https://data.nasa.gov/dataset/gedi-l4a-footprint-level-aboveground-biomass-density-version-2",
+    "publisher": {
+      "name": "NASA Land Processes Distributed Active Archive Center (LP DAAC) / University of Maryland",
+      "type": "government",
+      "url": "https://lpdaac.usgs.gov"
+    },
+    "modalities": [
+      "tabular",
+      "sensor",
+      "3d"
+    ],
+    "tasks": [
+      "aboveground-biomass-estimation",
+      "forest-canopy-structure-analysis",
+      "carbon-stock-quantification"
+    ],
+    "tags": [
+      "gedi",
+      "biomass",
+      "lidar",
+      "canopy-height",
+      "forest-carbon",
+      "iss",
+      "lp-daac",
+      "remote-sensing"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "NASA Open Data Policy (Public Domain)",
+      "spdx_id": null,
+      "url": "https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/",
+      "commercial_use": "allowed",
+      "notes": "US Federal open government data freely available for worldwide research and commercial use."
+    },
+    "source_references": [
+      {
+        "title": "NASA Open Data Catalog GEDI L4A Record",
+        "url": "https://data.nasa.gov/dataset/gedi-l4a-footprint-level-aboveground-biomass-density-version-2",
+        "type": "official_website",
+        "notes": "Official metadata record on data.nasa.gov."
+      },
+      {
+        "title": "GEDI L4A Footprint Level Aboveground Biomass Density, Version 2.1 (Data DOI: 10.5067/GEDI/GEDI04_A.002)",
+        "url": "https://doi.org/10.5067/GEDI/GEDI04_A.002",
+        "type": "documentation",
+        "notes": "Official USGS/NASA product page, user guide, and download instructions."
+      },
+      {
+        "title": "The Global Ecosystem Dynamics Investigation: High-resolution laser ranging of the Earth's forests and topography",
+        "url": "https://doi.org/10.1016/j.srs.2020.100002",
+        "type": "original_paper",
+        "notes": "Foundational mission overview published in Science of Remote Sensing."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against NASA Open Data Catalog and LP DAAC GEDI product documentation."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "HDF-5"
+      ],
+      "notes": "Global orbit-granule HDF5 collection containing all footprint metrics."
+    },
+    "dates": {
+      "published": "2022",
+      "last_updated": "2023"
+    },
+    "citation": {
+      "paper_title": "The Global Ecosystem Dynamics Investigation: High-resolution laser ranging of the Earth's forests and topography",
+      "paper_url": "https://doi.org/10.1016/j.srs.2020.100002",
+      "authors": [
+        "Ralph Dubayah",
+        "J. Bryan Blair",
+        "Scott Goetz",
+        "Lola Fatoyinbo",
+        "Matthew Hansen",
+        "Sean Healey",
+        "Michelle Hofton",
+        "George Hurtt",
+        "James Kellner",
+        "Scott Luthcke",
+        "John Armston"
+      ],
+      "doi": "10.1016/j.srs.2020.100002",
+      "bibtex": "@article{dubayah2020gedi,\n  title={The Global Ecosystem Dynamics Investigation: High-resolution laser ranging of the Earth's forests and topography},\n  author={Dubayah, Ralph and Blair, J Bryan and Goetz, Scott and Fatoyinbo, Lola and Hansen, Matthew and Healey, Sean and Hofton, Michelle and Hurtt, George and Kellner, James and Luthcke, Scott and others},\n  journal={Science of Remote Sensing},\n  volume={1},\n  pages={100002},\n  year={2020},\n  publisher={Elsevier},\n  doi={10.1016/j.srs.2020.100002}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "nasa-gfsad30-cropland-extent",
     "slug": "nasa-gfsad30-cropland-extent",
     "name": "NASA GFSAD30 Global Cropland Extent 2015 Validation Dataset (GFSAD30VAL)",
@@ -24900,6 +26487,194 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "nasa-gistemp-v4",
+    "slug": "nasa-gistemp-v4",
+    "name": "NASA GISTEMP v4 Global Surface Temperature Change",
+    "description": "GISTEMP v4 (GISS Surface Temperature Analysis Version 4) is NASA Goddard Institute for Space Studies' authoritative estimate of global surface temperature change from 1880 to the present. The analysis integrates in-situ surface air temperature measurements from thousands of meteorological stations in the NOAA Global Historical Climatology Network (GHCN-Daily / GHCNv4) with sea surface temperature (SST) records from NOAA ERSSTv5. GISTEMP computes anomalies relative to the 1951–1980 base period on a 2°x2° global grid using a 1,200-kilometer spatial correlation weighting algorithm, providing a primary climate change benchmark used in IPCC assessments.",
+    "homepage_url": "https://data.giss.nasa.gov/gistemp/",
+    "publisher": {
+      "name": "NASA Goddard Institute for Space Studies (GISS)",
+      "type": "government",
+      "url": "https://www.giss.nasa.gov"
+    },
+    "modalities": [
+      "time-series",
+      "tabular"
+    ],
+    "tasks": [
+      "temperature-anomaly-estimation",
+      "climate-change-trend-analysis",
+      "global-warming-monitoring"
+    ],
+    "tags": [
+      "surface-temperature",
+      "climate-change",
+      "temperature-anomalies",
+      "nasa-giss",
+      "global-warming",
+      "gridded-climatology"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "NASA Open Data Policy (Public Domain)",
+      "spdx_id": null,
+      "url": "https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/",
+      "commercial_use": "allowed",
+      "notes": "US Government public domain work freely accessible without restriction."
+    },
+    "source_references": [
+      {
+        "title": "NASA GISTEMP v4 Official Portal",
+        "url": "https://data.giss.nasa.gov/gistemp/",
+        "type": "official_website",
+        "notes": "Official repository for global, hemispheric, and zonal mean temperature anomalies."
+      },
+      {
+        "title": "Improvements in the GISTEMP Uncertainty Model",
+        "url": "https://doi.org/10.1029/2018JD029522",
+        "type": "original_paper",
+        "notes": "Peer-reviewed paper outlining the version 4 update and comprehensive uncertainty quantification."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against NASA GISS official web portal and JGR Atmospheres paper."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "amount": 2.5,
+      "unit": "GB",
+      "status": "estimated",
+      "file_formats": [
+        "NetCDF",
+        "CSV",
+        "TXT"
+      ],
+      "notes": "Gridded monthly anomaly files and regional tabular series."
+    },
+    "dates": {
+      "published": "2019",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "Improvements in the GISTEMP Uncertainty Model",
+      "paper_url": "https://doi.org/10.1029/2018JD029522",
+      "authors": [
+        "Nathan J. L. Lenssen",
+        "Gavin A. Schmidt",
+        "James E. Hansen",
+        "Matthew J. Menne",
+        "Avraham Persin",
+        "Reto Ruedy",
+        "Dan Zyss"
+      ],
+      "doi": "10.1029/2018JD029522",
+      "bibtex": "@article{lenssen2019gistemp,\n  title={Improvements in the GISTEMP uncertainty model},\n  author={Lenssen, Nathan JL and Schmidt, Gavin A and Hansen, James E and Menne, Matthew J and Persin, Avraham and Ruedy, Reto and Zyss, Dan},\n  journal={Journal of Geophysical Research: Atmospheres},\n  volume={124},\n  number={12},\n  pages={6307--6326},\n  year={2019},\n  publisher={Wiley Online Library},\n  doi={10.1029/2018JD029522}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "nasa-gpm-imerg-precipitation",
+    "slug": "nasa-gpm-imerg-precipitation",
+    "name": "NASA GPM IMERG Integrated Multi-satellitE Retrievals for GPM",
+    "description": "IMERG (Integrated Multi-satellitE Retrievals for GPM) is the flagship global precipitation product produced by NASA Goddard Space Flight Center and JAXA. Fusing passive microwave retrievals from the Global Precipitation Measurement (GPM) constellation, geostationary infrared observations via motion-vector morphing, and monthly ground rain gauge analyses (GPCC), IMERG provides quasi-global (60°N–60°S and pole-to-pole in recent versions) precipitation rates at half-hourly 0.1°x0.1° (~10 km) resolution from 2000 to the present across Early, Late, and Final research-grade runs.",
+    "homepage_url": "https://gpm.nasa.gov/data/imerg",
+    "publisher": {
+      "name": "NASA Goddard Space Flight Center / JAXA",
+      "type": "government",
+      "url": "https://gpm.nasa.gov"
+    },
+    "modalities": [
+      "time-series",
+      "tabular",
+      "vision"
+    ],
+    "tasks": [
+      "precipitation-estimation",
+      "extreme-weather-monitoring",
+      "flood-forecasting"
+    ],
+    "tags": [
+      "precipitation",
+      "rainfall",
+      "nasa-gpm",
+      "imerg",
+      "satellite-meteorology",
+      "radar",
+      "hydrology"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "NASA Open Data Policy (Public Domain)",
+      "spdx_id": null,
+      "url": "https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/",
+      "commercial_use": "allowed",
+      "notes": "US Government open access data provided freely to the worldwide community."
+    },
+    "source_references": [
+      {
+        "title": "NASA GPM IMERG Official Mission Page",
+        "url": "https://gpm.nasa.gov/data/imerg",
+        "type": "official_website",
+        "notes": "Official portal explaining IMERG versions, algorithms, and data access."
+      },
+      {
+        "title": "NASA GES DISC IMERG Data Holdings",
+        "url": "https://disc.gsfc.nasa.gov/datasets?keywords=IMERG",
+        "type": "repository",
+        "notes": "NASA GES DISC archive for IMERG Final Run half-hourly and daily files."
+      },
+      {
+        "title": "Integrated Multi-satellitE Retrievals for the Global Precipitation Measurement (GPM) Mission (IMERG)",
+        "url": "https://doi.org/10.1007/978-3-030-24568-9_19",
+        "type": "original_paper",
+        "notes": "Core book chapter and algorithm description published in Satellite Precipitation Measurement."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against NASA GPM mission portal and GES DISC repository."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "HDF-5",
+        "NetCDF-4",
+        "GeoTIFF"
+      ],
+      "notes": "Multi-terabyte archive distributed through NASA GES DISC."
+    },
+    "dates": {
+      "published": "2020",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "Integrated Multi-satellitE Retrievals for the Global Precipitation Measurement (GPM) Mission (IMERG)",
+      "paper_url": "https://doi.org/10.1007/978-3-030-24568-9_19",
+      "authors": [
+        "George J. Huffman",
+        "David T. Bolvin",
+        "Dan Braithwaite",
+        "Kuolin Hsu",
+        "Robert F. Joyce",
+        "Christopher Kidd",
+        "Pingping Xie"
+      ],
+      "doi": "10.1007/978-3-030-24568-9_19",
+      "bibtex": "@incollection{huffman2020imerg,\n  title={Integrated multi-satellitE retrievals for the Global Precipitation Measurement (GPM) mission (IMERG)},\n  author={Huffman, George J and Bolvin, David T and Braithwaite, Dan and Hsu, Kuo-lin and Joyce, Robert and Kidd, Christopher and Nelkin, Eric J and Sorooshian, Soroosh and Tan, Jackson and Xie, Pingping},\n  booktitle={Satellite Precipitation Measurement: Volume 1},\n  pages={343--353},\n  year={2020},\n  publisher={Springer},\n  doi={10.1007/978-3-030-24568-9_19}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "nasa-ims-bearings",
     "slug": "nasa-ims-bearings",
     "name": "NASA IMS Bearing Dataset",
@@ -24975,6 +26750,102 @@
       ],
       "doi": "10.1016/j.ymssp.2005.06.007",
       "bibtex": "@article{lee2007comparison,\n  title = {A comparison of vibration-based methods for condition monitoring of machinery},\n  author = {Lee, J. and Wu, F. and Zhao, W. and Ghaffari, M. and Liao, L. and Siegel, D.},\n  journal = {Mechanical Systems and Signal Processing},\n  volume = {21},\n  number = {2},\n  pages = {740--759},\n  year = {2007}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "nasa-merra2-reanalysis",
+    "slug": "nasa-merra2-reanalysis",
+    "name": "NASA MERRA-2 Modern-Era Retrospective Analysis for Research and Applications",
+    "description": "MERRA-2 (Modern-Era Retrospective analysis for Research and Applications, Version 2) is NASA's atmospheric reanalysis of the modern satellite era produced by the Global Modeling and Assimilation Office (GMAO). Spanning from 1980 to the present at 0.5° latitude by 0.625° longitude resolution with 72 hybrid-eta vertical levels, MERRA-2 incorporates hyperspectral radiance assimilation and is the first long-term global reanalysis to assimilate interactive aerosol observations (MODIS, MISR, AVHRR, AERONET). It provides continuous gridded estimates of radiation, precipitation, ozone, aerosols, and general atmospheric dynamics.",
+    "homepage_url": "https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/",
+    "publisher": {
+      "name": "NASA Global Modeling and Assimilation Office (GMAO)",
+      "type": "government",
+      "url": "https://gmao.gsfc.nasa.gov"
+    },
+    "modalities": [
+      "time-series",
+      "tabular"
+    ],
+    "tasks": [
+      "climate-modeling",
+      "aerosol-assimilation",
+      "meteorological-forecasting"
+    ],
+    "tags": [
+      "climate",
+      "atmosphere",
+      "aerosol",
+      "meteorology",
+      "satellite-data",
+      "reanalysis",
+      "nasa",
+      "merra-2"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "NASA Open Data Policy (Public Domain)",
+      "spdx_id": null,
+      "url": "https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/",
+      "commercial_use": "allowed",
+      "notes": "Freely and openly available according to the US Federal and NASA Open Data Policies."
+    },
+    "source_references": [
+      {
+        "title": "NASA GMAO MERRA-2 Project Page",
+        "url": "https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/",
+        "type": "official_website",
+        "notes": "Official homepage for MERRA-2 documentation, file specifications, and updates."
+      },
+      {
+        "title": "NASA GES DISC MERRA-2 Data Holdings",
+        "url": "https://disc.gsfc.nasa.gov/datasets?project=MERRA-2",
+        "type": "repository",
+        "notes": "NASA Goddard Earth Sciences Data and Information Services Center (GES DISC) archive."
+      },
+      {
+        "title": "The Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA-2)",
+        "url": "https://doi.org/10.1175/JCLI-D-16-0758.1",
+        "type": "original_paper",
+        "notes": "Foundational peer-reviewed description published in Journal of Climate."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against NASA GMAO portal and GES DISC repository."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "NetCDF-4",
+        "HDF-5"
+      ],
+      "notes": "Petabyte-scale archive managed by NASA GMAO and distributed via NASA GES DISC."
+    },
+    "dates": {
+      "published": "2017",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "The Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA-2)",
+      "paper_url": "https://doi.org/10.1175/JCLI-D-16-0758.1",
+      "authors": [
+        "Ronald Gelaro",
+        "Will McCarty",
+        "Max J. Suarez",
+        "Ralf Todling",
+        "Arlindo da Silva",
+        "Arthur D. Collins",
+        "Michael G. Bosilovich"
+      ],
+      "doi": "10.1175/JCLI-D-16-0758.1",
+      "bibtex": "@article{gelaro2017merra2,\n  title={The modern-era retrospective analysis for research and applications, version 2 (MERRA-2)},\n  author={Gelaro, Ronald and McCarty, Will and Suarez, Max J and Todling, Ralf and da Silva, Arlindo and Collins, Arthur D and Bosilovich, Michael G and others},\n  journal={Journal of Climate},\n  volume={30},\n  number={14},\n  pages={5419--5454},\n  year={2017},\n  publisher={American Meteorological Society},\n  doi={10.1175/JCLI-D-16-0758.1}\n}"
     }
   },
   {
@@ -25317,6 +27188,97 @@
       ],
       "doi": "10.1109/CVPR.2017.369",
       "bibtex": "@inproceedings{wang2017chestx,\n  title={ChestX-Ray8: Hospital-Scale Chest X-Ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases},\n  author={Wang, Xiaosong and Peng, Yifan and Lu, Le and Lu, Zhiyong and Bagheri, Mohammadhadi and Summers, Ronald M},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={2097--2106},\n  year={2017},\n  doi={10.1109/CVPR.2017.369}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "noaa-coral-reef-watch-5km",
+    "slug": "noaa-coral-reef-watch-5km",
+    "name": "NOAA Coral Reef Watch 5km Satellite Coral Bleaching Heat Stress",
+    "description": "NOAA Coral Reef Watch (CRW) Version 3.1 provides daily, global 5-kilometer (0.05°) satellite-derived products monitoring thermal stress on coral reef ecosystems from 1985 to the present. Using blended sea surface temperature (SST) analyses from polar-orbiting and geostationary environmental satellites, CRW computes daily SST anomalies, Coral Bleaching HotSpots, and Degree Heating Weeks (DHW) — the metric measuring accumulated thermal stress linked to mass coral bleaching and mortality events worldwide.",
+    "homepage_url": "https://coralreefwatch.noaa.gov/product/5km/",
+    "publisher": {
+      "name": "NOAA Coral Reef Watch (CRW) / NOAA NESDIS",
+      "type": "government",
+      "url": "https://coralreefwatch.noaa.gov"
+    },
+    "modalities": [
+      "time-series",
+      "tabular",
+      "vision"
+    ],
+    "tasks": [
+      "coral-bleaching-risk-prediction",
+      "marine-heatwave-detection",
+      "thermal-stress-monitoring"
+    ],
+    "tags": [
+      "coral-reef",
+      "coral-bleaching",
+      "sea-surface-temperature",
+      "degree-heating-weeks",
+      "marine-heatwaves",
+      "noaa-crw",
+      "marine-biology"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "US Government Work (Public Domain)",
+      "spdx_id": null,
+      "url": "https://www.noaa.gov/protecting-and-managing-information/open-data",
+      "commercial_use": "allowed",
+      "notes": "US Federal open government work available globally without restriction."
+    },
+    "source_references": [
+      {
+        "title": "NOAA Coral Reef Watch 5km Product Suite",
+        "url": "https://coralreefwatch.noaa.gov/product/5km/",
+        "type": "official_website",
+        "notes": "Official access page for daily global 5km NetCDF products and regional virtual stations."
+      },
+      {
+        "title": "The relentless march of mass coral bleaching: a review of the science and subsequent monitoring of thermal stress",
+        "url": "https://doi.org/10.1016/j.scitotenv.2020.141387",
+        "type": "original_paper",
+        "notes": "Comprehensive scientific review published in Science of The Total Environment."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against NOAA CRW official product suite and scientific publications."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "amount": 2.2,
+      "unit": "TB",
+      "status": "estimated",
+      "file_formats": [
+        "NetCDF-4",
+        "GeoTIFF"
+      ],
+      "notes": "Global multi-decadal 5km NetCDF daily time-series archive."
+    },
+    "dates": {
+      "published": "2020",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "The relentless march of mass coral bleaching: a review of the science and subsequent monitoring of thermal stress",
+      "paper_url": "https://doi.org/10.1016/j.scitotenv.2020.141387",
+      "authors": [
+        "William J. Skirving",
+        "Scott F. Heron",
+        "C. Mark Eakin",
+        "Gang Liu",
+        "Jacqueline L. De La Cour",
+        "Eileen M. Burgess"
+      ],
+      "doi": "10.1016/j.scitotenv.2020.141387",
+      "bibtex": "@article{skirving2020coral,\n  title={The relentless march of mass coral bleaching: a review of the science and subsequent monitoring of thermal stress},\n  author={Skirving, William J and Heron, Scott F and Marsh, Bernardo L and Liu, Gang and De La Cour, Jacqueline L and Burgess, Eileen M and Eakin, C Mark},\n  journal={Science of The Total Environment},\n  volume={740},\n  pages={141387},\n  year={2020},\n  publisher={Elsevier},\n  doi={10.1016/j.scitotenv.2020.141387}\n}"
     }
   },
   {
@@ -25882,6 +27844,95 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "noaaglobaltemp-surface-temperature",
+    "slug": "noaaglobaltemp-surface-temperature",
+    "name": "NOAA Global Surface Temperature Dataset (NOAAGlobalTemp v5)",
+    "description": "NOAAGlobalTemp (NOAA Global Surface Temperature, Version 5) is the operational climate benchmark maintained by NOAA's National Centers for Environmental Information (NCEI) to track global and regional temperature changes from 1880 to the present. The dataset merges land surface air temperatures from GHCN-Monthly v4 with ocean sea surface temperatures from the Extended Reconstructed Sea Surface Temperature dataset (ERSSTv5). Output is provided on a 5°x5° monthly latitude-longitude grid alongside operational global, hemispheric, and tropical area-weighted time series, providing key inputs for NOAA's State of the Climate reports.",
+    "homepage_url": "https://www.ncei.noaa.gov/products/land-based-station/noaa-global-temp",
+    "publisher": {
+      "name": "NOAA National Centers for Environmental Information (NCEI)",
+      "type": "government",
+      "url": "https://www.ncei.noaa.gov"
+    },
+    "modalities": [
+      "time-series",
+      "tabular"
+    ],
+    "tasks": [
+      "surface-temperature-monitoring",
+      "climate-anomaly-detection",
+      "long-term-trend-analysis"
+    ],
+    "tags": [
+      "noaa",
+      "surface-temperature",
+      "climate-anomalies",
+      "global-warming",
+      "ersst",
+      "ghcn",
+      "gridded-temperature"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "US Government Work (Public Domain)",
+      "spdx_id": null,
+      "url": "https://www.noaa.gov/protecting-and-managing-information/open-data",
+      "commercial_use": "allowed",
+      "notes": "US Federal open government data freely reusable for commercial and non-commercial purposes."
+    },
+    "source_references": [
+      {
+        "title": "NOAA NCEI NOAAGlobalTemp Portal",
+        "url": "https://www.ncei.noaa.gov/products/land-based-station/noaa-global-temp",
+        "type": "official_website",
+        "notes": "Official repository and documentation landing page at NOAA NCEI."
+      },
+      {
+        "title": "Assessment of the Global Surface Temperature Changes from 1880 to 2018 in the NOAAGlobalTemp Dataset",
+        "url": "https://doi.org/10.1175/JCLI-D-18-0394.1",
+        "type": "original_paper",
+        "notes": "Foundational methodology and validation study published in Journal of Climate."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against NOAA NCEI official landing page and data distribution endpoints."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "amount": 1.2,
+      "unit": "GB",
+      "status": "estimated",
+      "file_formats": [
+        "NetCDF",
+        "CSV"
+      ],
+      "notes": "Monthly gridded anomaly files and area-averaged time series."
+    },
+    "dates": {
+      "published": "2019",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "Assessment of the Global Surface Temperature Changes from 1880 to 2018 in the NOAAGlobalTemp Dataset",
+      "paper_url": "https://doi.org/10.1175/JCLI-D-18-0394.1",
+      "authors": [
+        "Huai-Min Zhang",
+        "Boyin Huang",
+        "Jay H. Lawrimore",
+        "Matthew J. Menne",
+        "Thomas C. Peterson"
+      ],
+      "doi": "10.1175/JCLI-D-18-0394.1",
+      "bibtex": "@article{zhang2019noaaglobaltemp,\n  title={Assessment of the global surface temperature changes from 1880 to 2018 in the NOAAGlobalTemp dataset},\n  author={Zhang, Huai-Min and Huang, Boyin and Lawrimore, Jay H and Menne, Matthew J and Peterson, Thomas C},\n  journal={Journal of Climate},\n  volume={32},\n  number={17},\n  pages={5565--5579},\n  year={2019},\n  publisher={American Meteorological Society},\n  doi={10.1175/JCLI-D-18-0394.1}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "normal-sinus-rhythm-rr-interval",
     "slug": "normal-sinus-rhythm-rr-interval",
     "name": "Normal Sinus Rhythm RR Interval Database",
@@ -25955,6 +28006,103 @@
       ],
       "doi": "10.13026/C2S881",
       "bibtex": "@misc{nsr2db_1997,\n  title={Normal Sinus Rhythm RR Interval Database},\n  author={Goldberger, Ary L and Amaral, Luis AN and Glass, Leon and Hausdorff, Jeffrey M and Ivanov, Plamen Ch and Mark, Roger G and Mietus, Joseph E and Moody, George B and Peng, Chung-Kang and Stanley, H Eugene},\n  year={1997},\n  publisher={PhysioNet},\n  doi={10.13026/C2S881}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "nsf-neon-ecological-data",
+    "slug": "nsf-neon-ecological-data",
+    "name": "NSF NEON National Ecological Observatory Network Open Data",
+    "description": "The National Ecological Observatory Network (NEON), funded by the National Science Foundation and operated by Battelle, is a continental-scale ecological observation facility designed to collect standardized ecological data across 81 field sites (47 terrestrial, 34 aquatic) in 20 ecoclimatic domains across the United States. NEON delivers 180+ standardized open data products combining automated sensor telemetry (flux towers, eddy covariance, soil arrays, stream gauges), airborne remote sensing (hyperspectral, LiDAR, RGB), and observational field sampling (plants, insects, microbes, mammals).",
+    "homepage_url": "https://www.neonscience.org/data",
+    "publisher": {
+      "name": "National Science Foundation (NSF) / Battelle",
+      "type": "government",
+      "url": "https://www.neonscience.org"
+    },
+    "modalities": [
+      "tabular",
+      "sensor",
+      "time-series",
+      "vision"
+    ],
+    "tasks": [
+      "ecological-forecasting",
+      "ecosystem-flux-modeling",
+      "environmental-sensor-telemetry-analysis"
+    ],
+    "tags": [
+      "nsf-neon",
+      "ecology",
+      "flux-tower",
+      "ecosystem-monitoring",
+      "eddy-covariance",
+      "biogeochemistry",
+      "continental-scale"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "Creative Commons CC0 1.0 Universal (Public Domain Dedication)",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Open access data provided under CC0 public domain terms in accordance with NSF policy."
+    },
+    "source_references": [
+      {
+        "title": "NEON Data Portal",
+        "url": "https://www.neonscience.org/data",
+        "type": "official_website",
+        "notes": "Official repository for exploring and downloading all 180+ NEON data products."
+      },
+      {
+        "title": "NEON API Documentation",
+        "url": "https://data.neonscience.org/data-api",
+        "type": "documentation",
+        "notes": "REST API documentation for programmatic access and batch downloading."
+      },
+      {
+        "title": "A continental-scale approach to monitor and understand the causes and consequences of environmental change: NEON",
+        "url": "https://doi.org/10.1890/070113",
+        "type": "original_paper",
+        "notes": "Foundational design paper published in Frontiers in Ecology and the Environment."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against official NSF NEON portal and API endpoints."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "CSV",
+        "HDF-5",
+        "NetCDF",
+        "LAS",
+        "GeoTIFF"
+      ],
+      "notes": "Multi-terabyte repository combining sensor streams, field surveys, and airborne remote sensing."
+    },
+    "dates": {
+      "published": "2008",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "A continental-scale approach to monitor and understand the causes and consequences of environmental change: NEON",
+      "paper_url": "https://doi.org/10.1890/070113",
+      "authors": [
+        "Michael Keller",
+        "David S. Schimel",
+        "William W. Hargrove",
+        "Forrest M. Hoffman"
+      ],
+      "doi": "10.1890/070113",
+      "bibtex": "@article{keller2008neon,\n  title={A continental-scale approach to monitor and understand the causes and consequences of environmental change: NEON},\n  author={Keller, Michael and Schimel, David S and Hargrove, William W and Hoffman, Forrest M},\n  journal={Frontiers in Ecology and the Environment},\n  volume={6},\n  number={5},\n  pages={282--284},\n  year={2008},\n  publisher={Wiley Online Library},\n  doi={10.1890/070113}\n}"
     }
   },
   {
@@ -37481,6 +39629,102 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "water-quality-portal",
+    "slug": "water-quality-portal",
+    "name": "USGS/EPA Water Quality Portal (WQP)",
+    "description": "The Water Quality Portal (WQP) is the United States' premier collaborative repository of in-situ water quality data, integrating records from the USGS National Water Information System (NWIS), the EPA Water Quality Exchange (WQX / STORET), and the USDA Agricultural Research Service (STEWARDS). WQP standardizes and serves over 400 million water monitoring results from more than 2.1 million monitoring stations across the United States and its territories, detailing chemical concentrations, biological metrics, physical water parameters, and sampling provenance.",
+    "homepage_url": "https://www.waterqualitydata.us/",
+    "publisher": {
+      "name": "National Water Quality Monitoring Council / USGS / EPA",
+      "type": "government",
+      "url": "https://www.waterqualitydata.us"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "water-quality-assessment",
+      "contaminant-concentration-modeling",
+      "aquatic-ecosystem-health-monitoring"
+    ],
+    "tags": [
+      "water-quality",
+      "usgs",
+      "epa",
+      "wqx",
+      "aquatic-chemistry",
+      "pollutants",
+      "hydrology",
+      "environmental-monitoring"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "US Government Work (Public Domain)",
+      "spdx_id": null,
+      "url": "https://www.waterqualitydata.us/disclaimer/",
+      "commercial_use": "allowed",
+      "notes": "US Federal open government data distributed freely without copyright restriction."
+    },
+    "source_references": [
+      {
+        "title": "Water Quality Portal Official Website",
+        "url": "https://www.waterqualitydata.us/",
+        "type": "official_website",
+        "notes": "Main search and download query interface for national water quality records."
+      },
+      {
+        "title": "Water Quality Portal REST Web Services",
+        "url": "https://www.waterqualitydata.us/webservices_documentation/",
+        "type": "documentation",
+        "notes": "Comprehensive documentation for programmatic RESTful query endpoints."
+      },
+      {
+        "title": "Water Quality Portal as a collaborative data hub for national water quality data",
+        "url": "https://doi.org/10.1111/1752-1688.12532",
+        "type": "original_paper",
+        "notes": "System description published in Journal of the American Water Resources Association."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against official USGS/EPA Water Quality Portal and JAWRA journal paper."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "CSV",
+        "TSV",
+        "JSON",
+        "XML"
+      ],
+      "notes": "Dynamic national repository containing hundreds of millions of in-situ measurement records."
+    },
+    "dates": {
+      "published": "2017",
+      "last_updated": "2026-11"
+    },
+    "citation": {
+      "paper_title": "Water Quality Portal as a collaborative data hub for national water quality data",
+      "paper_url": "https://doi.org/10.1111/1752-1688.12532",
+      "authors": [
+        "Emily K. Read",
+        "James M. Falcone",
+        "Charles P. Kovach",
+        "Timothy S. Welty",
+        "Lorne G. Leonard"
+      ],
+      "doi": "10.1111/1752-1688.12532",
+      "bibtex": "@article{read2017wqp,\n  title={Water Quality Portal as a collaborative data hub for national water quality data},\n  author={Read, Emily K and Falcone, James M and Kovach, Charles P and Welty, Timothy S and Leonard, Lorne G and others},\n  journal={JAWRA Journal of the American Water Resources Association},\n  volume={53},\n  number={3},\n  pages={700--712},\n  year={2017},\n  publisher={Wiley Online Library},\n  doi={10.1111/1752-1688.12532}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "we3ds",
     "slug": "we3ds",
     "name": "WE3DS: An RGB-D Image Dataset for Semantic Segmentation in Agriculture",
@@ -38430,6 +40674,91 @@
       ],
       "doi": "10.5194/essd-15-5491-2023",
       "bibtex": "@article{vantricht2023worldcereal,\n  title={WorldCereal: a dynamic open-source system for global-scale, seasonal, and reproducible crop and irrigation mapping},\n  author={Van Tricht, Kristof and Degr{\\'e}, Damien and Gilliams, Sven and Zanaga, Marc and Van De Kerchove, Ruben},\n  journal={Earth System Science Data},\n  volume={15},\n  number={12},\n  pages={5491--5515},\n  year={2023},\n  publisher={Copernicus GmbH}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "worldclim-2",
+    "slug": "worldclim-2",
+    "name": "WorldClim 2.1 Global High-Resolution Climate Surface Grids",
+    "description": "WorldClim 2.1 is an open database of high-resolution global weather and climate surfaces for 1970–2000 baseline conditions, developed by researchers at UC Davis and partners. Provided across four spatial resolutions from 30 arc-seconds (~1 km²) to 10 arc-minutes (~340 km²), WorldClim 2.1 contains spatially interpolated monthly minimum, mean, and maximum temperature, precipitation, solar radiation, wind speed, and water vapor pressure, alongside 19 standardized bioclimatic variables (BIO1–BIO19) widely employed in ecological niche modeling and species distribution projections.",
+    "homepage_url": "https://www.worldclim.org/data/worldclim21.html",
+    "publisher": {
+      "name": "WorldClim / University of California, Davis",
+      "type": "academic",
+      "url": "https://www.worldclim.org"
+    },
+    "modalities": [
+      "tabular",
+      "vision"
+    ],
+    "tasks": [
+      "species-distribution-modeling",
+      "ecological-niche-modeling",
+      "climatological-spatial-interpolation"
+    ],
+    "tags": [
+      "worldclim",
+      "bioclimatic-variables",
+      "temperature-grids",
+      "precipitation-grids",
+      "spatial-interpolation",
+      "ecology",
+      "biodiversity"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Freely available for academic, commercial, and research use with attribution."
+    },
+    "source_references": [
+      {
+        "title": "WorldClim 2.1 Download Page",
+        "url": "https://www.worldclim.org/data/worldclim21.html",
+        "type": "official_website",
+        "notes": "Official distribution portal for 30s, 2.5m, 5m, and 10m global GeoTIFF rasters."
+      },
+      {
+        "title": "WorldClim 2: new 1-km spatial resolution climate surfaces for global land areas",
+        "url": "https://doi.org/10.1002/joc.5086",
+        "type": "original_paper",
+        "notes": "Descriptive paper published in International Journal of Climatology."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Curation Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against official WorldClim website and Royal Meteorological Society journal."
+    },
+    "sample_count": {
+      "status": "unknown"
+    },
+    "size": {
+      "amount": 28.0,
+      "unit": "GB",
+      "status": "estimated",
+      "file_formats": [
+        "GeoTIFF"
+      ],
+      "notes": "Complete 30-arcsecond global GeoTIFF raster layers collection."
+    },
+    "dates": {
+      "published": "2017",
+      "last_updated": "2020"
+    },
+    "citation": {
+      "paper_title": "WorldClim 2: new 1-km spatial resolution climate surfaces for global land areas",
+      "paper_url": "https://doi.org/10.1002/joc.5086",
+      "authors": [
+        "Stephen E. Fick",
+        "Robert J. Hijmans"
+      ],
+      "doi": "10.1002/joc.5086",
+      "bibtex": "@article{fick2017worldclim,\n  title={WorldClim 2: new 1-km spatial resolution climate surfaces for global land areas},\n  author={Fick, Stephen E and Hijmans, Robert J},\n  journal={International Journal of Climatology},\n  volume={37},\n  number={12},\n  pages={4302--4315},\n  year={2017},\n  publisher={Wiley Online Library},\n  doi={10.1002/joc.5086}\n}"
     }
   },
   {

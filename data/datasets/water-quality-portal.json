@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "water-quality-portal",
+  "slug": "water-quality-portal",
+  "name": "USGS/EPA Water Quality Portal (WQP)",
+  "description": "The Water Quality Portal (WQP) is the United States' premier collaborative repository of in-situ water quality data, integrating records from the USGS National Water Information System (NWIS), the EPA Water Quality Exchange (WQX / STORET), and the USDA Agricultural Research Service (STEWARDS). WQP standardizes and serves over 400 million water monitoring results from more than 2.1 million monitoring stations across the United States and its territories, detailing chemical concentrations, biological metrics, physical water parameters, and sampling provenance.",
+  "homepage_url": "https://www.waterqualitydata.us/",
+  "publisher": {
+    "name": "National Water Quality Monitoring Council / USGS / EPA",
+    "type": "government",
+    "url": "https://www.waterqualitydata.us"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "water-quality-assessment",
+    "contaminant-concentration-modeling",
+    "aquatic-ecosystem-health-monitoring"
+  ],
+  "tags": [
+    "water-quality",
+    "usgs",
+    "epa",
+    "wqx",
+    "aquatic-chemistry",
+    "pollutants",
+    "hydrology",
+    "environmental-monitoring"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "US Government Work (Public Domain)",
+    "spdx_id": null,
+    "url": "https://www.waterqualitydata.us/disclaimer/",
+    "commercial_use": "allowed",
+    "notes": "US Federal open government data distributed freely without copyright restriction."
+  },
+  "source_references": [
+    {
+      "title": "Water Quality Portal Official Website",
+      "url": "https://www.waterqualitydata.us/",
+      "type": "official_website",
+      "notes": "Main search and download query interface for national water quality records."
+    },
+    {
+      "title": "Water Quality Portal REST Web Services",
+      "url": "https://www.waterqualitydata.us/webservices_documentation/",
+      "type": "documentation",
+      "notes": "Comprehensive documentation for programmatic RESTful query endpoints."
+    },
+    {
+      "title": "Water Quality Portal as a collaborative data hub for national water quality data",
+      "url": "https://doi.org/10.1111/1752-1688.12532",
+      "type": "original_paper",
+      "notes": "System description published in Journal of the American Water Resources Association."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against official USGS/EPA Water Quality Portal and JAWRA journal paper."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "CSV",
+      "TSV",
+      "JSON",
+      "XML"
+    ],
+    "notes": "Dynamic national repository containing hundreds of millions of in-situ measurement records."
+  },
+  "dates": {
+    "published": "2017",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "Water Quality Portal as a collaborative data hub for national water quality data",
+    "paper_url": "https://doi.org/10.1111/1752-1688.12532",
+    "authors": [
+      "Emily K. Read",
+      "James M. Falcone",
+      "Charles P. Kovach",
+      "Timothy S. Welty",
+      "Lorne G. Leonard"
+    ],
+    "doi": "10.1111/1752-1688.12532",
+    "bibtex": "@article{read2017wqp,\n  title={Water Quality Portal as a collaborative data hub for national water quality data},\n  author={Read, Emily K and Falcone, James M and Kovach, Charles P and Welty, Timothy S and Leonard, Lorne G and others},\n  journal={JAWRA Journal of the American Water Resources Association},\n  volume={53},\n  number={3},\n  pages={700--712},\n  year={2017},\n  publisher={Wiley Online Library},\n  doi={10.1111/1752-1688.12532}\n}"
+  }
+}

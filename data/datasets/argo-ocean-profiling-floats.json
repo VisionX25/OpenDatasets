@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "argo-ocean-profiling-floats",
+  "slug": "argo-ocean-profiling-floats",
+  "name": "Argo Global Ocean Profiling Float Array",
+  "description": "The Argo Program is an international collaboration that maintains a real-time global array of approximately 4,000 autonomous robotic profiling floats collecting temperature, salinity, and pressure profiles from the sea surface down to 2,000 meters depth (with Deep Argo extending to 6,000 m, and Biogeochemical-Argo measuring oxygen, pH, nitrate, and chlorophyll). Floats cycle every 10 days, transmitting data via satellite. The dataset provides the definitive observational record of global ocean heat content, marine heatwaves, and thermohaline circulation changes.",
+  "homepage_url": "https://argo.ucsd.edu/data/",
+  "publisher": {
+    "name": "Argo Steering Team / Scripps Institution of Oceanography / Ifremer",
+    "type": "academic",
+    "url": "https://argo.ucsd.edu"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "ocean-heat-content-estimation",
+    "salinity-profile-forecasting",
+    "oceanic-circulation-modeling"
+  ],
+  "tags": [
+    "argo",
+    "oceanography",
+    "ocean-floats",
+    "temperature-profiles",
+    "salinity-profiles",
+    "marine-climate",
+    "autonomous-sensors"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0) / Argo Open Data Policy",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Openly distributed under the IOC/WMO Argo data policy and CC BY 4.0 terms."
+  },
+  "source_references": [
+    {
+      "title": "Scripps Argo Data Portal",
+      "url": "https://argo.ucsd.edu/data/",
+      "type": "official_website",
+      "notes": "Central international portal for Argo float data, GDAC access, and gridded products."
+    },
+    {
+      "title": "Argo Global Data Assembly Centre (GDAC) Repository",
+      "url": "https://www.argodatamgt.org/Access-to-data/Argo-GDAC-synchronization",
+      "type": "repository",
+      "notes": "Synchronized FTP/HTTP GDAC mirrors hosting profile NetCDF files."
+    },
+    {
+      "title": "On the Future of Argo: A Global, Full-Depth, Multi-Disciplinary Array",
+      "url": "https://doi.org/10.3389/fmars.2019.00439",
+      "type": "original_paper",
+      "notes": "Comprehensive vision and program description in Frontiers in Marine Science."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against Scripps Institution of Oceanography and Argo Data Management."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "NetCDF"
+    ],
+    "notes": "Dynamic global oceanographic repository synchronized across international GDAC mirrors."
+  },
+  "dates": {
+    "published": "2019",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "On the Future of Argo: A Global, Full-Depth, Multi-Disciplinary Array",
+    "paper_url": "https://doi.org/10.3389/fmars.2019.00439",
+    "authors": [
+      "Dean Roemmich",
+      "Matthew H. Alford",
+      "Herve Claustre",
+      "Kenneth S. Johnson",
+      "Brian King",
+      "Virginie Thierry",
+      "Susan E. Wijffels"
+    ],
+    "doi": "10.3389/fmars.2019.00439",
+    "bibtex": "@article{roemmich2019argo,\n  title={On the future of Argo: A global, full-depth, multi-disciplinary array},\n  author={Roemmich, Dean and Alford, Matthew H and Claustre, Herve and Johnson, Kenneth and King, Brian and Moum, James and Oke, Peter and Owens, W Brechner and Pouliquen, Sylvie and Purkey, Sarah and others},\n  journal={Frontiers in Marine Science},\n  volume={6},\n  pages={439},\n  year={2019},\n  publisher={Frontiers},\n  doi={10.3389/fmars.2019.00439}\n}"
+  }
+}

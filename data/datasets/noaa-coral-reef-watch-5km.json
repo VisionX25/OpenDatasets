@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "noaa-coral-reef-watch-5km",
+  "slug": "noaa-coral-reef-watch-5km",
+  "name": "NOAA Coral Reef Watch 5km Satellite Coral Bleaching Heat Stress",
+  "description": "NOAA Coral Reef Watch (CRW) Version 3.1 provides daily, global 5-kilometer (0.05°) satellite-derived products monitoring thermal stress on coral reef ecosystems from 1985 to the present. Using blended sea surface temperature (SST) analyses from polar-orbiting and geostationary environmental satellites, CRW computes daily SST anomalies, Coral Bleaching HotSpots, and Degree Heating Weeks (DHW) — the metric measuring accumulated thermal stress linked to mass coral bleaching and mortality events worldwide.",
+  "homepage_url": "https://coralreefwatch.noaa.gov/product/5km/",
+  "publisher": {
+    "name": "NOAA Coral Reef Watch (CRW) / NOAA NESDIS",
+    "type": "government",
+    "url": "https://coralreefwatch.noaa.gov"
+  },
+  "modalities": [
+    "time-series",
+    "tabular",
+    "vision"
+  ],
+  "tasks": [
+    "coral-bleaching-risk-prediction",
+    "marine-heatwave-detection",
+    "thermal-stress-monitoring"
+  ],
+  "tags": [
+    "coral-reef",
+    "coral-bleaching",
+    "sea-surface-temperature",
+    "degree-heating-weeks",
+    "marine-heatwaves",
+    "noaa-crw",
+    "marine-biology"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "US Government Work (Public Domain)",
+    "spdx_id": null,
+    "url": "https://www.noaa.gov/protecting-and-managing-information/open-data",
+    "commercial_use": "allowed",
+    "notes": "US Federal open government work available globally without restriction."
+  },
+  "source_references": [
+    {
+      "title": "NOAA Coral Reef Watch 5km Product Suite",
+      "url": "https://coralreefwatch.noaa.gov/product/5km/",
+      "type": "official_website",
+      "notes": "Official access page for daily global 5km NetCDF products and regional virtual stations."
+    },
+    {
+      "title": "The relentless march of mass coral bleaching: a review of the science and subsequent monitoring of thermal stress",
+      "url": "https://doi.org/10.1016/j.scitotenv.2020.141387",
+      "type": "original_paper",
+      "notes": "Comprehensive scientific review published in Science of The Total Environment."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against NOAA CRW official product suite and scientific publications."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "amount": 2.2,
+    "unit": "TB",
+    "status": "estimated",
+    "file_formats": [
+      "NetCDF-4",
+      "GeoTIFF"
+    ],
+    "notes": "Global multi-decadal 5km NetCDF daily time-series archive."
+  },
+  "dates": {
+    "published": "2020",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "The relentless march of mass coral bleaching: a review of the science and subsequent monitoring of thermal stress",
+    "paper_url": "https://doi.org/10.1016/j.scitotenv.2020.141387",
+    "authors": [
+      "William J. Skirving",
+      "Scott F. Heron",
+      "C. Mark Eakin",
+      "Gang Liu",
+      "Jacqueline L. De La Cour",
+      "Eileen M. Burgess"
+    ],
+    "doi": "10.1016/j.scitotenv.2020.141387",
+    "bibtex": "@article{skirving2020coral,\n  title={The relentless march of mass coral bleaching: a review of the science and subsequent monitoring of thermal stress},\n  author={Skirving, William J and Heron, Scott F and Marsh, Bernardo L and Liu, Gang and De La Cour, Jacqueline L and Burgess, Eileen M and Eakin, C Mark},\n  journal={Science of The Total Environment},\n  volume={740},\n  pages={141387},\n  year={2020},\n  publisher={Elsevier},\n  doi={10.1016/j.scitotenv.2020.141387}\n}"
+  }
+}
