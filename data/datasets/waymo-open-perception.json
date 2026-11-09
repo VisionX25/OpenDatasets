@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "id": "waymo-open-perception",
+  "slug": "waymo-open-perception",
+  "name": "Waymo Open Dataset — Perception Dataset",
+  "description": "High-resolution autonomous driving perception dataset from Waymo featuring 1,150 20-second continuous driving segments recorded with 5 high-grade LiDAR sensors and 5 synchronized pinhole cameras. Collected across diverse urban and suburban environments including San Francisco, Mountain View, and Phoenix in varied weather and lighting conditions. Provides high-precision 3D bounding boxes with persistent tracking IDs, dense 2D camera bounding boxes, and point cloud semantic segmentation for autonomous driving research.",
+  "homepage_url": "https://waymo.com/open/",
+  "publisher": {
+    "name": "Waymo LLC",
+    "type": "industry",
+    "url": "https://waymo.com"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor",
+    "multimodal"
+  ],
+  "tasks": [
+    "3d-object-detection",
+    "3d-tracking",
+    "point-cloud-segmentation",
+    "object-detection"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "lidar",
+    "camera",
+    "waymo",
+    "3d-bounding-box",
+    "multimodal"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Waymo Open Dataset Terms of Service (Non-Commercial)",
+    "spdx_id": null,
+    "url": "https://waymo.com/open/terms/",
+    "commercial_use": "forbidden",
+    "notes": "Freely accessible for non-commercial research and educational use upon registration and agreement to Waymo Open Dataset Terms of Service."
+  },
+  "source_references": [
+    {
+      "title": "Waymo Open Dataset Official Portal",
+      "url": "https://waymo.com/open/",
+      "type": "official_website",
+      "notes": "Official portal for data download, benchmark leaderboards, and documentation."
+    },
+    {
+      "title": "Scalability in Perception for Autonomous Driving: Waymo Open Dataset",
+      "url": "https://doi.org/10.1109/CVPR42600.2020.00253",
+      "type": "original_paper",
+      "notes": "Foundational conference paper published in the 2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)."
+    },
+    {
+      "title": "Waymo Open Dataset Devkit",
+      "url": "https://github.com/waymo-research/waymo-open-dataset",
+      "type": "repository",
+      "notes": "Official evaluation devkit, dataset readers, and metrics implementations."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against official Waymo Open Dataset portal (waymo.com/open) and CVPR 2020 proceedings (DOI: 10.1109/CVPR42600.2020.00253)."
+  },
+  "size": {
+    "amount": 1.9,
+    "unit": "TB",
+    "file_formats": [
+      "tfrecord",
+      "parquet",
+      "tar"
+    ],
+    "status": "estimated",
+    "notes": "Full sensor payload across all synchronized camera and LiDAR segments."
+  },
+  "sample_count": {
+    "total": 1150,
+    "splits": {
+      "train": 798,
+      "val": 202,
+      "test": 150
+    },
+    "unit": "sequences",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-08-21",
+    "last_updated": "2023-05-15"
+  },
+  "citation": {
+    "paper_title": "Scalability in Perception for Autonomous Driving: Waymo Open Dataset",
+    "paper_url": "https://doi.org/10.1109/CVPR42600.2020.00253",
+    "authors": [
+      "Pei Sun",
+      "Henrik Kretzschmar",
+      "Xerxes Dotiwalla",
+      "Aurelien Chouard",
+      "Vijaysai Patnaik",
+      "Paul Tsui",
+      "James Guo",
+      "Yin Zhou",
+      "Yuning Chai",
+      "Benjamin Caine",
+      "Vijay Vasudevan",
+      "Wei Han",
+      "Jiquan Ngiam",
+      "Hang Zhao",
+      "Aleksei Timofeev",
+      "Scott Ettinger",
+      "Maxim Krivokon",
+      "Amy Gao",
+      "Aditya Joshi",
+      "Sheng Zhao",
+      "Shuyang Cheng",
+      "Yu Zhang",
+      "Jonathon Shlens",
+      "Zhifeng Chen",
+      "Dragomir Anguelov"
+    ],
+    "doi": "10.1109/CVPR42600.2020.00253",
+    "bibtex": "@inproceedings{sun2020scalability,\n  title={Scalability in perception for autonomous driving: Waymo open dataset},\n  author={Sun, Pei and Kretzschmar, Henrik and Dotiwalla, Xerxes and Chouard, Aurelien and Patnaik, Vijaysai and Tsui, Paul and Guo, James and Zhou, Yin and Chai, Yuning and Caine, Benjamin and others},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={2446--2454},\n  year={2020},\n  doi={10.1109/CVPR42600.2020.00253}\n}"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "id": "semanticposs",
+  "slug": "semanticposs",
+  "name": "SemanticPOSS — Point Cloud Segmentation in Crowded Environments",
+  "description": "LiDAR point cloud semantic segmentation benchmark released by Peking University focusing on dynamic agents in crowded campus environments. Recorded using a 40-beam Hesai Pandar40 LiDAR mounted on an autonomous low-speed vehicle across Peking University campus. Contains 2,988 high-density LiDAR scans with fine-grained point-wise semantic labels across 14 categories, specifically emphasizing dynamic road agents, pedestrians, cyclists, and campus traffic furniture.",
+  "homepage_url": "https://doi.org/10.1109/IV47402.2020.9304596",
+  "publisher": {
+    "name": "Peking University",
+    "type": "academic",
+    "url": "https://www.pku.edu.cn"
+  },
+  "modalities": [
+    "3d",
+    "sensor"
+  ],
+  "tasks": [
+    "point-cloud-segmentation",
+    "panoptic-segmentation"
+  ],
+  "tags": [
+    "lidar",
+    "point-cloud",
+    "campus-driving",
+    "crowded-scenes",
+    "semantic-segmentation"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "SemanticPOSS Non-Commercial Research License",
+    "spdx_id": null,
+    "url": "https://github.com/Theia-4869/semantic-poss-api",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for non-commercial research and educational applications."
+  },
+  "source_references": [
+    {
+      "title": "SemanticPOSS: A LiDAR Point Cloud Dataset with Dynamic Objects in Campus Scenes",
+      "url": "https://doi.org/10.1109/IV47402.2020.9304596",
+      "type": "original_paper",
+      "notes": "Foundational conference paper published in the 2020 IEEE Intelligent Vehicles Symposium (IV)."
+    },
+    {
+      "title": "SemanticPOSS API Repository",
+      "url": "https://github.com/Theia-4869/semantic-poss-api",
+      "type": "repository",
+      "notes": "Official repository providing dataset loading utilities, visualization tools, and evaluation scripts."
+    },
+    {
+      "title": "SemanticPOSS arXiv Preprint",
+      "url": "https://arxiv.org/abs/2002.09147",
+      "type": "documentation",
+      "notes": "Open-access preprint describing dataset collection, class breakdown, and baseline segmentation models."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against IEEE IV 2020 conference proceedings (DOI: 10.1109/IV47402.2020.9304596) and official API repository (Theia-4869/semantic-poss-api)."
+  },
+  "size": {
+    "amount": 10.0,
+    "unit": "GB",
+    "file_formats": [
+      "bin",
+      "label"
+    ],
+    "status": "estimated",
+    "notes": "Hesai 40-beam LiDAR scans captured on Peking University campus."
+  },
+  "sample_count": {
+    "total": 2988,
+    "splits": {
+      "scans": 2988,
+      "points_millions": 100
+    },
+    "unit": "scans",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-10-20"
+  },
+  "citation": {
+    "paper_title": "SemanticPOSS: A LiDAR Point Cloud Dataset with Dynamic Objects in Campus Scenes",
+    "paper_url": "https://doi.org/10.1109/IV47402.2020.9304596",
+    "authors": [
+      "Yancheng Pan",
+      "Biao Gao",
+      "Jizhou Shen",
+      "Siting Zhu",
+      "Chensheng Peng",
+      "Hao Zhao"
+    ],
+    "doi": "10.1109/IV47402.2020.9304596",
+    "bibtex": "@inproceedings{pan2020semanticposs,\n  title={SemanticPOSS: A LiDAR point cloud dataset with dynamic objects in campus scenes},\n  author={Pan, Yancheng and Gao, Biao and Shen, Jizhou and Zhu, Siting and Peng, Chensheng and Zhao, Hao},\n  booktitle={2020 IEEE Intelligent Vehicles Symposium (IV)},\n  pages={1061--1067},\n  year={2020},\n  organization={IEEE},\n  doi={10.1109/IV47402.2020.9304596}\n}"
+  }
+}

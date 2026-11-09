@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "radiate",
+  "slug": "radiate",
+  "name": "RADIATE — Radar Dataset in Adverse Weather",
+  "description": "Automotive perception benchmark focusing on severe weather conditions, captured by Heriot-Watt University in the UK. Equipped with a Navtech CTS350-X 360-degree high-resolution scanning radar, a Quanergy M8 LiDAR, a ZED stereo camera, an infrared thermal camera, and GPS/IMU navigation sensors. Records driving sequences under dense fog, heavy snow, severe rain, and darkness, providing 43,800 labeled radar frames with bounding boxes for vehicles and pedestrians.",
+  "homepage_url": "https://pro.hw.ac.uk/radiate/",
+  "publisher": {
+    "name": "Heriot-Watt University",
+    "type": "academic",
+    "url": "https://www.hw.ac.uk"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor",
+    "multimodal"
+  ],
+  "tasks": [
+    "3d-object-detection",
+    "odometry",
+    "radar-perception",
+    "tracking"
+  ],
+  "tags": [
+    "radar",
+    "autonomous-driving",
+    "adverse-weather",
+    "fog",
+    "snow",
+    "lidar"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for non-commercial research and academic use under CC BY-NC-SA 4.0."
+  },
+  "source_references": [
+    {
+      "title": "RADIATE Official Project Portal",
+      "url": "https://pro.hw.ac.uk/radiate/",
+      "type": "official_website",
+      "notes": "Primary portal for dataset registration, radar files, and evaluation scripts."
+    },
+    {
+      "title": "RADIATE: A Radar Dataset for Automotive Perception in Bad Weather",
+      "url": "https://doi.org/10.1109/ICRA48506.2021.9561655",
+      "type": "original_paper",
+      "notes": "Conference paper published in the 2021 IEEE International Conference on Robotics and Automation (ICRA)."
+    },
+    {
+      "title": "RADIATE SDK Repository",
+      "url": "https://github.com/marcelsheeny/radiate_sdk",
+      "type": "repository",
+      "notes": "Open-source Python SDK for parsing radar polar images, bounding boxes, and projections."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against Heriot-Watt University RADIATE portal and IEEE ICRA 2021 publication (DOI: 10.1109/ICRA48506.2021.9561655)."
+  },
+  "size": {
+    "amount": 140.0,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "csv",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Navtech CTS350-X 360-degree scanning radar, Quanergy M8 LiDAR, ZED stereo camera, and thermal camera data in fog, snow, rain, and nighttime conditions."
+  },
+  "sample_count": {
+    "total": 43800,
+    "splits": {
+      "annotated_radar_frames": 43800,
+      "scenarios": 3
+    },
+    "unit": "frames",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-05-30"
+  },
+  "citation": {
+    "paper_title": "RADIATE: A Radar Dataset for Automotive Perception in Bad Weather",
+    "paper_url": "https://doi.org/10.1109/ICRA48506.2021.9561655",
+    "authors": [
+      "Marcel Sheeny",
+      "Emanuele De Pellegrin",
+      "Saptarshi Mukherjee",
+      "Alireza Ahrabian",
+      "Sen Wang",
+      "Andrew Wallace"
+    ],
+    "doi": "10.1109/ICRA48506.2021.9561655",
+    "bibtex": "@inproceedings{sheeny2021radiate,\n  title={RADIATE: A radar dataset for automotive perception in bad weather},\n  author={Sheeny, Marcel and De Pellegrin, Emanuele and Mukherjee, Saptarshi and Ahrabian, Alireza and Wang, Sen and Wallace, Andrew},\n  booktitle={2021 IEEE International Conference on Robotics and Automation (ICRA)},\n  pages={1--7},\n  year={2021},\n  organization={IEEE},\n  doi={10.1109/ICRA48506.2021.9561655}\n}"
+  }
+}

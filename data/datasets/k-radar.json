@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "k-radar",
+  "slug": "k-radar",
+  "name": "K-Radar — 4D Radar Object Detection Dataset",
+  "description": "High-resolution 4D radar object detection benchmark created by the Autonomous Vehicle Laboratory at KAIST. Features 35,000 synchronized frames of 4D radar tensors (Range-Azimuth-Elevation-Doppler), 128-channel LiDAR point clouds, 4 surround cameras, and RTK-GPS navigation data. Collected in diverse adverse weather conditions including heavy snow, dense fog, rain, and sleet across urban roads, highways, and tunnels, providing 3D bounding boxes for robust weather-resilient perception.",
+  "homepage_url": "https://github.com/kaist-avelab/K-Radar",
+  "publisher": {
+    "name": "KAIST Autonomous Vehicle Laboratory",
+    "type": "academic",
+    "url": "https://www.kaist.ac.kr/en/"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor",
+    "multimodal"
+  ],
+  "tasks": [
+    "3d-object-detection",
+    "radar-perception",
+    "adverse-weather-perception"
+  ],
+  "tags": [
+    "4d-radar",
+    "autonomous-driving",
+    "point-cloud",
+    "adverse-weather",
+    "3d-bounding-box"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for non-commercial research and academic benchmarking under CC BY-NC-SA 4.0."
+  },
+  "source_references": [
+    {
+      "title": "K-Radar Official Repository",
+      "url": "https://github.com/kaist-avelab/K-Radar",
+      "type": "repository",
+      "notes": "Official repository containing dataset download links, 4D radar processing tools, and baseline models."
+    },
+    {
+      "title": "K-Radar: 4D Radar Object Detection for Autonomous Driving in Various Weather Conditions",
+      "url": "https://doi.org/10.48550/arXiv.2206.08171",
+      "type": "original_paper",
+      "notes": "Conference paper presented at NeurIPS 2022 Track on Datasets and Benchmarks."
+    },
+    {
+      "title": "KAIST Official Portal",
+      "url": "https://www.kaist.ac.kr/en/",
+      "type": "official_website",
+      "notes": "Institutional portal for Korea Advanced Institute of Science and Technology."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against KAIST AVE-Lab GitHub repository and NeurIPS 2022 paper (DOI: 10.48550/arXiv.2206.08171)."
+  },
+  "size": {
+    "amount": 300.0,
+    "unit": "GB",
+    "file_formats": [
+      "bin",
+      "pcd",
+      "png",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "High-resolution 4D radar tensors (range-azimuth-elevation-Doppler), 128-channel LiDAR, 4 stereo/surround cameras, and RTK-GPS."
+  },
+  "sample_count": {
+    "total": 35000,
+    "splits": {
+      "train": 28000,
+      "test": 7000
+    },
+    "unit": "frames",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022-06-16"
+  },
+  "citation": {
+    "paper_title": "K-Radar: 4D Radar Object Detection for Autonomous Driving in Various Weather Conditions",
+    "paper_url": "https://doi.org/10.48550/arXiv.2206.08171",
+    "authors": [
+      "Dong-Hee Paek",
+      "Seung-Hyun Kong",
+      "Kevin Tirta Wijaya"
+    ],
+    "doi": "10.48550/arXiv.2206.08171",
+    "bibtex": "@article{paek2022k,\n  title={K-Radar: 4D radar object detection for autonomous driving in various weather conditions},\n  author={Paek, Dong-Hee and Kong, Seung-Hyun and Wijaya, Kevin Tirta},\n  journal={arXiv preprint arXiv:2206.08171},\n  year={2022},\n  doi={10.48550/arXiv.2206.08171}\n}"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "rellis-3d",
+  "slug": "rellis-3d",
+  "name": "RELLIS-3D — Multimodal Off-Road Autonomous Driving Dataset",
+  "description": "Multi-modal off-road robot navigation dataset created by the Unmanned Systems Laboratory at Texas A&M University. Collected on the RELLIS Campus using a Clearpath Robotics Warthog unmanned ground vehicle equipped with an Ouster OS1-64 LiDAR, a high-resolution RGB camera, and GPS/IMU navigation sensors. Contains 13,556 LiDAR scans and 6,235 camera images labeled with 20 class-level semantic annotations tailored to off-road terrain traversability, grass, bushes, puddles, and mud.",
+  "homepage_url": "https://github.com/unmannedlab/RELLIS-3D",
+  "publisher": {
+    "name": "Texas A&M University Unmanned Systems Lab",
+    "type": "academic",
+    "url": "https://unmannedlab.github.io"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor",
+    "multimodal"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "point-cloud-segmentation",
+    "traversability-estimation"
+  ],
+  "tags": [
+    "off-road",
+    "autonomous-driving",
+    "lidar",
+    "unstructured-terrain",
+    "robotics"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for non-commercial research and academic education under CC BY-NC-SA 4.0."
+  },
+  "source_references": [
+    {
+      "title": "RELLIS-3D Official Repository",
+      "url": "https://github.com/unmannedlab/RELLIS-3D",
+      "type": "repository",
+      "notes": "Official repository containing download scripts, toolkit utilities, and calibration matrices."
+    },
+    {
+      "title": "RELLIS-3D Dataset: Data, Benchmarks and Analysis",
+      "url": "https://doi.org/10.1109/ICRA48506.2021.9561251",
+      "type": "original_paper",
+      "notes": "Journal publication in IEEE Robotics and Automation Letters (RA-L)."
+    },
+    {
+      "title": "Texas A&M Unmanned Systems Lab",
+      "url": "https://unmannedlab.github.io",
+      "type": "official_website",
+      "notes": "Research group website describing unmanned ground vehicle testbeds and field robotics."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against Texas A&M Unmanned Systems Lab repository and IEEE RA-L 2021 paper (DOI: 10.1109/LRA.2021.3056353)."
+  },
+  "size": {
+    "amount": 115.0,
+    "unit": "GB",
+    "file_formats": [
+      "pcd",
+      "bin",
+      "jpg",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Ouster OS1-64 LiDAR, RGB camera, and GPS/IMU captured on an off-road Clearpath Robotics Warthog UGV."
+  },
+  "sample_count": {
+    "total": 13556,
+    "splits": {
+      "lidar_scans": 13556,
+      "annotated_images": 6235
+    },
+    "unit": "scans",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-02-02"
+  },
+  "citation": {
+    "paper_title": "RELLIS-3D Dataset: Data, Benchmarks and Analysis",
+    "paper_url": "https://doi.org/10.1109/ICRA48506.2021.9561251",
+    "authors": [
+      "Peng Jiang",
+      "Philip Osteen",
+      "Mitch Wigness",
+      "Srikanth Saripalli"
+    ],
+    "doi": "10.1109/ICRA48506.2021.9561251",
+    "bibtex": "@article{jiang2021rellis,\n  title={RELLIS-3D: A multi-modal dataset for off-road robot navigation},\n  author={Jiang, Peng and Osteen, Philip and Wigness, Mitch and Saripalli, Srikanth},\n  journal={IEEE Robotics and Automation Letters},\n  volume={6},\n  number={3},\n  pages={2343--2350},\n  year={2021},\n  publisher={IEEE},\n  doi={10.1109/LRA.2021.3056353}\n}"
+  }
+}

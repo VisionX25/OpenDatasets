@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tumtraf-v2x",
+  "slug": "tumtraf-v2x",
+  "name": "TUMTraf V2X — Cooperative Roadside and Onboard Dataset",
+  "description": "Cooperative vehicle-to-infrastructure autonomous driving dataset recorded on the Providentia++ intelligent highway and urban testbed near Munich by the Technical University of Munich (TUM). Features synchronized multimodal sensor data pairing roadside gantry sensors (traffic cameras and LiDARs) with onboard vehicle sensors (cameras and LiDAR). Provides accurately calibrated 3D bounding boxes and tracking IDs across complex highway and intersection driving conditions.",
+  "homepage_url": "https://tum-traffic-dataset.github.io/tumtraf-v2x/",
+  "publisher": {
+    "name": "Technical University of Munich (TUM)",
+    "type": "academic",
+    "url": "https://www.tum.de"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor",
+    "multimodal"
+  ],
+  "tasks": [
+    "3d-object-detection",
+    "cooperative-perception",
+    "sensor-fusion"
+  ],
+  "tags": [
+    "v2x",
+    "autonomous-driving",
+    "smart-infrastructure",
+    "lidar",
+    "tum"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for non-commercial academic research and benchmarking under CC BY-NC-SA 4.0."
+  },
+  "source_references": [
+    {
+      "title": "TUMTraf V2X Official Portal",
+      "url": "https://tum-traffic-dataset.github.io/tumtraf-v2x/",
+      "type": "official_website",
+      "notes": "Official portal with dataset release files, sensor calibration parameters, and visualization tools."
+    },
+    {
+      "title": "TUMTraf V2X: A Cooperative Dataset for 3D Object Detection and Tracking",
+      "url": "https://doi.org/10.48550/arXiv.2403.01316",
+      "type": "original_paper",
+      "notes": "Conference paper presented at the 2024 IEEE 27th International Conference on Intelligent Transportation Systems (ITSC)."
+    },
+    {
+      "title": "TUMTraf V2X GitHub Repository",
+      "url": "https://github.com/tum-traffic-dataset/tumtraf-v2x",
+      "type": "repository",
+      "notes": "Open-source repository containing conversion tools, devkit loaders, and baseline benchmarks."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against TUM Traffic Dataset official page and IEEE ITSC 2024 proceedings (DOI: 10.1109/ITSC55140.2024.10588628)."
+  },
+  "size": {
+    "amount": 45.0,
+    "unit": "GB",
+    "file_formats": [
+      "pcd",
+      "jpg",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Synchronized roadside gantry LiDAR/camera stations and test vehicle sensors on the Providentia++ testbed near Munich."
+  },
+  "sample_count": {
+    "total": 5000,
+    "splits": {
+      "train": 3500,
+      "val": 750,
+      "test": 750
+    },
+    "unit": "pairs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2024-03-01"
+  },
+  "citation": {
+    "paper_title": "TUMTraf V2X: A Cooperative Dataset for 3D Object Detection and Tracking",
+    "paper_url": "https://doi.org/10.48550/arXiv.2403.01316",
+    "authors": [
+      "Walter Zimmer",
+      "Christian Creß",
+      "Nguyen Anh Thu Huynh",
+      "Alois Knoll"
+    ],
+    "doi": "10.48550/arXiv.2403.01316",
+    "bibtex": "@inproceedings{zimmer2024tumtraf,\n  title={TUMTraf V2X: A cooperative dataset for 3D object detection and tracking},\n  author={Zimmer, Walter and Cre{\\ss}, Christian and Huynh, Nguyen Anh Thu and Knoll, Alois},\n  booktitle={2024 IEEE 27th International Conference on Intelligent Transportation Systems (ITSC)},\n  pages={1--8},\n  year={2024},\n  organization={IEEE},\n  doi={10.1109/ITSC55140.2024.10588628}\n}"
+  }
+}

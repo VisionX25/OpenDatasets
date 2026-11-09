@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "once-autonomous-driving",
+  "slug": "once-autonomous-driving",
+  "name": "ONCE — One Million Scenes for Autonomous Driving",
+  "description": "Large-scale autonomous driving dataset developed by Huawei Noah's Ark Lab and Sun Yat-sen University to benchmark semi-supervised and self-supervised 3D perception methods. Consists of 1 million LiDAR scenes and 7 million camera images collected over 144 driving hours across diverse geographical locations, weather conditions, and times of day. Provides 15,000 fully annotated 3D frames spanning 5 core object classes alongside 985,000 unannotated frames.",
+  "homepage_url": "https://once-for-auto-driving.github.io/",
+  "publisher": {
+    "name": "Huawei Noah's Ark Lab & Sun Yat-sen University",
+    "type": "industry",
+    "url": "https://www.noahsarklab.com"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor",
+    "multimodal"
+  ],
+  "tasks": [
+    "3d-object-detection",
+    "semi-supervised-learning",
+    "unsupervised-learning"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "lidar",
+    "semi-supervised",
+    "large-scale",
+    "3d-bounding-box"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for academic and non-commercial research purposes under CC BY-NC-SA 4.0."
+  },
+  "source_references": [
+    {
+      "title": "ONCE Official Project Website",
+      "url": "https://once-for-auto-driving.github.io/",
+      "type": "official_website",
+      "notes": "Official benchmark portal with download links, toolkits, and leaderboard."
+    },
+    {
+      "title": "One Million Scenes for Autonomous Driving: ONCE Dataset",
+      "url": "https://doi.org/10.48550/arXiv.2106.11037",
+      "type": "original_paper",
+      "notes": "Conference paper presented at NeurIPS 2021 Track on Datasets and Benchmarks."
+    },
+    {
+      "title": "ONCE Devkit Repository",
+      "url": "https://github.com/PointsCoder/Once_Benchmark",
+      "type": "repository",
+      "notes": "Official repository containing visualization scripts and semi-supervised 3D detection baselines."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against ONCE project website and NeurIPS 2021 paper (DOI: 10.48550/arXiv.2106.11037)."
+  },
+  "size": {
+    "amount": 1.2,
+    "unit": "TB",
+    "file_formats": [
+      "bin",
+      "jpg",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "One million LiDAR frames and 7 million camera images collected over 144 driving hours."
+  },
+  "sample_count": {
+    "total": 1000000,
+    "splits": {
+      "annotated_frames": 15000,
+      "unlabeled_frames": 985000
+    },
+    "unit": "scenes",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-06-21"
+  },
+  "citation": {
+    "paper_title": "One Million Scenes for Autonomous Driving: ONCE Dataset",
+    "paper_url": "https://doi.org/10.48550/arXiv.2106.11037",
+    "authors": [
+      "Jiageng Mao",
+      "Minzhe Niu",
+      "Chenhan Jiang",
+      "Hanxue Liang",
+      "Jingheng Chen",
+      "Xiaodan Liang",
+      "Yamin Li",
+      "Chaoqiang Ye",
+      "Wei Zhang",
+      "Zhenguo Li",
+      "Jiequan Cui",
+      "Hang Xu"
+    ],
+    "doi": "10.48550/arXiv.2106.11037",
+    "bibtex": "@article{mao2021one,\n  title={One million scenes for autonomous driving: ONCE dataset},\n  author={Mao, Jiageng and Niu, Minzhe and Jiang, Chenhan and Liang, Hanxue and Chen, Jingheng and Liang, Xiaodan and Li, Yamin and Ye, Chaoqiang and Zhang, Wei and Li, Zhenguo and others},\n  journal={arXiv preprint arXiv:2106.11037},\n  year={2021},\n  doi={10.48550/arXiv.2106.11037}\n}"
+  }
+}

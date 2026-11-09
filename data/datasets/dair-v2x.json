@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "dair-v2x",
+  "slug": "dair-v2x",
+  "name": "DAIR-V2X — Vehicle-Infrastructure Cooperative Dataset",
+  "description": "Pioneering large-scale real-world multi-modality dataset for vehicle-infrastructure cooperative autonomous driving, released by Tsinghua University AIR and Baidu. Covers 38 km of urban roads and 10 km of highways in Beijing equipped with roadside sensing infrastructure. Provides 71,254 spatial-temporally synchronized frames pairing vehicle-side LiDAR and camera data with roadside infrastructure sensors, featuring 3D bounding boxes for cooperative 3D object detection.",
+  "homepage_url": "https://air.tsinghua.edu.cn/DAIR-V2X/english/index.html",
+  "publisher": {
+    "name": "Tsinghua University AIR & Baidu",
+    "type": "academic",
+    "url": "https://air.tsinghua.edu.cn"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor",
+    "multimodal"
+  ],
+  "tasks": [
+    "3d-object-detection",
+    "cooperative-perception",
+    "sensor-fusion"
+  ],
+  "tags": [
+    "v2x",
+    "autonomous-driving",
+    "infrastructure-sensing",
+    "cooperative-perception",
+    "lidar"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Freely available under CC BY-NC-SA 4.0 for non-commercial research and academic development."
+  },
+  "source_references": [
+    {
+      "title": "DAIR-V2X Official Portal",
+      "url": "https://air.tsinghua.edu.cn/DAIR-V2X/english/index.html",
+      "type": "official_website",
+      "notes": "Official portal providing dataset downloads, task definitions, and cooperative perception challenges."
+    },
+    {
+      "title": "DAIR-V2X: A Large-Scale Dataset for Vehicle-Infrastructure Cooperative 3D Object Detection",
+      "url": "https://doi.org/10.1109/CVPR52688.2022.02068",
+      "type": "original_paper",
+      "notes": "Foundational conference paper published in the 2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)."
+    },
+    {
+      "title": "DAIR-V2X Toolkit",
+      "url": "https://github.com/AIR-THU/DAIR-V2X",
+      "type": "repository",
+      "notes": "Official evaluation devkit and cooperative perception baseline models."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against Tsinghua AIR DAIR-V2X portal and CVPR 2022 conference proceedings (DOI: 10.1109/CVPR52688.2022.02068)."
+  },
+  "size": {
+    "amount": 120.0,
+    "unit": "GB",
+    "file_formats": [
+      "pcd",
+      "jpg",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Synchronized spatial-temporal frames from vehicle LiDAR/camera and roadside infrastructure sensors."
+  },
+  "sample_count": {
+    "total": 71254,
+    "splits": {
+      "vehicle_infrastructure_pairs": 38845,
+      "infrastructure_only": 10088,
+      "vehicle_only": 22321
+    },
+    "unit": "frames",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022-03-31"
+  },
+  "citation": {
+    "paper_title": "DAIR-V2X: A Large-Scale Dataset for Vehicle-Infrastructure Cooperative 3D Object Detection",
+    "paper_url": "https://doi.org/10.1109/CVPR52688.2022.02068",
+    "authors": [
+      "Haibao Yu",
+      "Yifeng Zheng",
+      "Zaiqing Nie",
+      "Mao Shu",
+      "Kaicheng Yu",
+      "Zheng Chen",
+      "Zaiqing Nie"
+    ],
+    "doi": "10.1109/CVPR52688.2022.02068",
+    "bibtex": "@inproceedings{yu2022dair,\n  title={DAIR-V2X: A large-scale dataset for vehicle-infrastructure cooperative 3D object detection},\n  author={Yu, Haibao and Zheng, Yifeng and Lian, Zaiqing and Gao, Mao and Wang, Yiqi and Chen, Siqi and Li, Zaiqing and others},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={21361--21370},\n  year={2022},\n  doi={10.1109/CVPR52688.2022.02068}\n}"
+  },
+  "provenance": {
+    "collection_method": "Synchronized collection pairing vehicle-side LiDAR/camera with roadside infrastructure sensors across Beijing testbed.",
+    "curation_notes": "Foundational vehicle-infrastructure dataset focusing on spatial-temporal paired 3D detection across 71,254 frames. Serves as the base recording platform and parent dataset for subsequent sequential benchmarking in V2X-Seq.",
+    "data_sources": [
+      "Tsinghua University AIR & Baidu High-level Autonomous Driving Demonstration Zone (Beijing)"
+    ]
+  }
+}
