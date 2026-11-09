@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nuimages",
+  "slug": "nuimages",
+  "name": "nuImages — Large-Scale 2D Autonomous Driving Image Dataset",
+  "description": "Large-scale 2D autonomous driving perception dataset released by Motional as part of the nuScenes ecosystem. Contains 93,000 carefully curated high-resolution camera images selected from 800 hours of driving video in Boston and Singapore. Richly annotated with 2D bounding boxes and pixel-level semantic and instance segmentation masks across 25 object classes, specifically selected to represent rare, hazardous, and diverse driving situations (night, rain, heavy traffic, and diverse pedestrian appearances).",
+  "homepage_url": "https://www.nuscenes.org/nuimages",
+  "publisher": {
+    "name": "Motional",
+    "type": "industry",
+    "url": "https://motional.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "instance-segmentation"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "motional",
+    "nuscenes",
+    "instance-segmentation",
+    "urban-driving"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Available for non-commercial research under CC BY-NC-SA 4.0 upon registration on the nuScenes portal."
+  },
+  "source_references": [
+    {
+      "title": "nuImages Official Portal",
+      "url": "https://www.nuscenes.org/nuimages",
+      "type": "official_website",
+      "notes": "Official portal for downloading the 93,000 image dataset and accessing visual previews."
+    },
+    {
+      "title": "nuScenes Devkit Repository",
+      "url": "https://github.com/nutonomy/nuscenes-devkit",
+      "type": "repository",
+      "notes": "Official Python devkit containing nuImages API and evaluation metrics."
+    },
+    {
+      "title": "nuScenes: A Multimodal Dataset for Autonomous Driving",
+      "url": "https://arxiv.org/abs/1903.11027",
+      "type": "original_paper",
+      "notes": "Foundational preprint establishing the sensor vehicle, data collection, and taxonomy of the nuScenes and nuImages ecosystem."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against Motional nuScenes/nuImages portal and nuscenes-devkit release. Cites Caesar et al. (2020) per official devkit instructions."
+  },
+  "size": {
+    "amount": 130.0,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "png",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "93,000 high-resolution camera images with 2D bounding boxes and pixel-level instance masks."
+  },
+  "sample_count": {
+    "total": 93000,
+    "splits": {
+      "train": 60000,
+      "val": 15000,
+      "test": 18000
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-08-31"
+  },
+  "citation": {
+    "paper_title": "nuScenes: A Multimodal Dataset for Autonomous Driving",
+    "paper_url": "https://arxiv.org/abs/1903.11027",
+    "authors": [
+      "Holger Caesar",
+      "Varun Bankiti",
+      "Alex H. Lang",
+      "Sourabh Vora",
+      "Venice Erin Liong",
+      "Qiang Xu",
+      "Anush Krishnan",
+      "Yu Pan",
+      "Giancarlo Baldan",
+      "Oscar Beijbom"
+    ],
+    "doi": "10.48550/arXiv.1903.11027",
+    "bibtex": "@article{caesar2019nuscenes,\n  title={nuScenes: A multimodal dataset for autonomous driving},\n  author={Caesar, Holger and Bankiti, Varun and Lang, Alex H and Vora, Sourabh and Liong, Venice Erin and Xu, Qiang and Krishnan, Anush and Pan, Yu and Baldan, Giancarlo and Beijbom, Oscar},\n  journal={arXiv preprint arXiv:1903.11027},\n  year={2019},\n  doi={10.48550/arXiv.1903.11027}\n}"
+  },
+  "provenance": {
+    "collection_method": "Curated 2D images sampled from 800 hours of video across Boston and Singapore driving runs.",
+    "curation_notes": "nuImages is the standalone 2D image and instance-mask counterpart to the 3D multimodal nuScenes video sequences. It does not have an independent dataset DOI; the official devkit instructs users to cite the overarching nuScenes paper (Caesar et al., 2020).",
+    "data_sources": [
+      "nuScenes sensor vehicle platform (Boston and Singapore)"
+    ]
+  }
+}

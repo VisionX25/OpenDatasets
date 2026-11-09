@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "id": "argoverse-2-sensor",
+  "slug": "argoverse-2-sensor",
+  "name": "Argoverse 2 — Sensor Dataset",
+  "description": "Next-generation multimodal autonomous driving dataset from Argo AI and Carnegie Mellon University, comprising 1,000 raw 15-second driving sequences collected across six major U.S. cities (Austin, Detroit, Miami, Palo Alto, Pittsburgh, and Washington, D.C.). Features 7 ring cameras, 2 front-facing stereo cameras, 2 roof-mounted 32-beam LiDARs spinning in opposite directions, and rich HD vector map coverage. Includes 3D oriented cuboids for 26 distinct object categories with high-precision egovehicle poses.",
+  "homepage_url": "https://www.argoverse.org/av2.html",
+  "publisher": {
+    "name": "Argo AI & Carnegie Mellon University",
+    "type": "industry",
+    "url": "https://www.argoverse.org"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor",
+    "multimodal"
+  ],
+  "tasks": [
+    "3d-object-detection",
+    "3d-tracking",
+    "point-cloud-segmentation"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "lidar",
+    "hd-maps",
+    "3d-bounding-box",
+    "argoverse"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Freely available under CC BY-NC-SA 4.0 for non-commercial research and educational applications."
+  },
+  "source_references": [
+    {
+      "title": "Argoverse 2 Official Portal",
+      "url": "https://www.argoverse.org/av2.html",
+      "type": "official_website",
+      "notes": "Official portal for data downloads, benchmarks, and API documentation."
+    },
+    {
+      "title": "Argoverse 2: Next Generation Datasets for Self-Driving Perception and Forecasting",
+      "url": "https://doi.org/10.48550/arXiv.2301.00493",
+      "type": "original_paper",
+      "notes": "Comprehensive dataset paper published in NeurIPS 2021 Datasets and Benchmarks track."
+    },
+    {
+      "title": "Argoverse 2 Devkit Repository",
+      "url": "https://github.com/argoverse/av2-api",
+      "type": "repository",
+      "notes": "Open-source Python devkit for map parsing, sensor processing, and evaluation."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against Argoverse 2 official portal and NeurIPS 2021/2023 dataset paper (DOI: 10.48550/arXiv.2301.00493)."
+  },
+  "size": {
+    "amount": 720.0,
+    "unit": "GB",
+    "file_formats": [
+      "feather",
+      "parquet",
+      "png",
+      "tar"
+    ],
+    "status": "estimated",
+    "notes": "Multimodal sensor archive containing 7 ring cameras, 2 stereo cameras, 2 roof LiDARs, and HD map vector layers."
+  },
+  "sample_count": {
+    "total": 1000,
+    "splits": {
+      "train": 700,
+      "val": 150,
+      "test": 150
+    },
+    "unit": "sequences",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-12-06",
+    "last_updated": "2023-01-03"
+  },
+  "citation": {
+    "paper_title": "Argoverse 2: Next Generation Datasets for Self-Driving Perception and Forecasting",
+    "paper_url": "https://doi.org/10.48550/arXiv.2301.00493",
+    "authors": [
+      "Benjamin Wilson",
+      "William Qi",
+      "Tanmay Agarwal",
+      "John Lambert",
+      "Jagjeet Singh",
+      "Siddhesh Khandelwal",
+      "Florian Panse",
+      "Ratnesh Kumar",
+      "Chiho Choi",
+      "Scott Hurley",
+      "Jerome Noel",
+      "Oscar Beijbom",
+      "James Hays"
+    ],
+    "doi": "10.48550/arXiv.2301.00493",
+    "bibtex": "@article{wilson2023argoverse,\n  title={Argoverse 2: Next generation datasets for self-driving perception and forecasting},\n  author={Wilson, Benjamin and Qi, William and Agarwal, Tanmay and Lambert, John and Singh, Jagjeet and Khandelwal, Siddhesh and Panse, Florian and Kumar, Ratnesh and Choi, Chiho and Hurley, Scott and others},\n  journal={arXiv preprint arXiv:2301.00493},\n  year={2023},\n  doi={10.48550/arXiv.2301.00493}\n}"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "boreas",
+  "slug": "boreas",
+  "name": "Boreas Autonomous Driving Dataset",
+  "description": "Multi-season repeat-route autonomous driving dataset collected over more than an entire year by the Autonomous Space Robotics Lab at the University of Toronto. Features high-resolution 360-degree Navtech CIR304-H radar, Velodyne Alpha-Prime 128-beam LiDAR, FLIR Blackfly S camera, and high-precision Applanix POS LV GNSS/IMU. Designed to benchmark long-term localization, place recognition, odometry, and adverse-weather perception across repeated routes under diverse seasonal conditions (sun, rain, snow, nighttime).",
+  "homepage_url": "https://registry.opendata.aws/boreas/",
+  "publisher": {
+    "name": "University of Toronto Planetary Robotics",
+    "type": "academic",
+    "url": "https://asrl.utias.utoronto.ca"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor",
+    "multimodal"
+  ],
+  "tasks": [
+    "visual-odometry",
+    "place-recognition",
+    "metric-localization",
+    "3d-object-detection"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "radar",
+    "lidar",
+    "all-weather",
+    "long-term-localization"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for non-commercial research and educational applications under CC BY-NC-SA 4.0."
+  },
+  "source_references": [
+    {
+      "title": "Boreas on AWS Open Data Registry",
+      "url": "https://registry.opendata.aws/boreas/",
+      "type": "official_website",
+      "notes": "Official public AWS Open Data Registry listing with direct S3 bucket access instructions."
+    },
+    {
+      "title": "Boreas: A Multi-Season Autonomous Driving Dataset with Navtech Radar, Velodyne LiDAR, and FLIR Cameras",
+      "url": "https://doi.org/10.1177/02783649231160195",
+      "type": "original_paper",
+      "notes": "Comprehensive archival paper published in The International Journal of Robotics Research (IJRR)."
+    },
+    {
+      "title": "PyBoreas Devkit Repository",
+      "url": "https://github.com/utiasASRL/pyboreas",
+      "type": "repository",
+      "notes": "Official Python SDK for loading Boreas radar scans, point clouds, and benchmark evaluation."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against AWS Open Data Registry entry and International Journal of Robotics Research (IJRR) 2023 paper (DOI: 10.1177/02783649231160202)."
+  },
+  "size": {
+    "amount": 1.5,
+    "unit": "TB",
+    "file_formats": [
+      "bin",
+      "png",
+      "csv"
+    ],
+    "status": "estimated",
+    "notes": "Multi-season dataset featuring Navtech CIR304-H 360-degree radar, Velodyne Alpha-Prime 128-beam LiDAR, FLIR Blackfly S camera, and Applanix POS LV GNSS."
+  },
+  "sample_count": {
+    "total": 44,
+    "splits": {
+      "driving_sequences": 44,
+      "total_driving_km": 350
+    },
+    "unit": "sequences",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023-03-24"
+  },
+  "citation": {
+    "paper_title": "Boreas: A Multi-Season Autonomous Driving Dataset with Navtech Radar, Velodyne LiDAR, and FLIR Cameras",
+    "paper_url": "https://doi.org/10.1177/02783649231160195",
+    "authors": [
+      "Keenan Burnett",
+      "David J. Yoon",
+      "Yuchen Wu",
+      "Andrew Zhihao Zou",
+      "Haoletian Zhang",
+      "Angela P. Schoellig",
+      "Timothy D. Barfoot"
+    ],
+    "doi": "10.1177/02783649231160195",
+    "bibtex": "@article{burnett2023boreas,\n  title={Boreas: A multi-season autonomous driving dataset with Navtech radar, Velodyne LiDAR, and FLIR cameras},\n  author={Burnett, Keenan and Yoon, David J and Wu, Yuchen and Zou, Andrew Zhihao and Zhang, Haoletian and Schoellig, Angela P and Barfoot, Timothy D},\n  journal={The International Journal of Robotics Research},\n  volume={42},\n  number={10},\n  pages={876--888},\n  year={2023},\n  publisher={SAGE Publications},\n  doi={10.1177/02783649231160202}\n}"
+  }
+}

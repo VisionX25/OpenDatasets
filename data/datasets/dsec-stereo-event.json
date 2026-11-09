@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "dsec-stereo-event",
+  "slug": "dsec-stereo-event",
+  "name": "DSEC — Stereo Event Camera Dataset for Driving Scenarios",
+  "description": "High-resolution stereo event camera dataset for automotive perception developed by the Robotics and Perception Group at the University of Zurich. Features synchronized data from a stereo pair of high-resolution Prophesee event cameras (640x480), a stereo pair of global-shutter RGB cameras (1440x1080), a Velodyne VLS-128 LiDAR, and RTK-GNSS/IMU. Captures 53 diverse driving sequences in Zurich, Switzerland, across day, dusk, night, and adverse illumination conditions for optical flow and disparity benchmarks.",
+  "homepage_url": "https://dsec.ifi.uzh.ch/",
+  "publisher": {
+    "name": "University of Zurich",
+    "type": "academic",
+    "url": "https://rpg.ifi.uzh.ch"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "optical-flow",
+    "depth-estimation",
+    "event-camera-perception"
+  ],
+  "tags": [
+    "event-camera",
+    "autonomous-driving",
+    "neuromorphic",
+    "stereo-vision",
+    "high-dynamic-range"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Freely available under CC BY-SA 4.0 for commercial and non-commercial research and development."
+  },
+  "source_references": [
+    {
+      "title": "DSEC Official Project Portal",
+      "url": "https://dsec.ifi.uzh.ch/",
+      "type": "official_website",
+      "notes": "Official benchmark portal with data download scripts, evaluation server, and documentation."
+    },
+    {
+      "title": "DSEC: A Stereo Event Camera Dataset for Driving Scenarios",
+      "url": "https://doi.org/10.1109/LRA.2021.3068942",
+      "type": "original_paper",
+      "notes": "Journal publication in IEEE Robotics and Automation Letters (RA-L)."
+    },
+    {
+      "title": "DSEC Devkit Repository",
+      "url": "https://github.com/uzh-rpg/dsec",
+      "type": "repository",
+      "notes": "Official Python devkit for reading HDF5 event streams and evaluating disparity/optical flow."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against University of Zurich Robotics and Perception Group portal and IEEE RA-L 2021 paper (DOI: 10.1109/LRA.2021.3072529)."
+  },
+  "size": {
+    "amount": 1.4,
+    "unit": "TB",
+    "file_formats": [
+      "hdf5",
+      "png",
+      "yaml"
+    ],
+    "status": "estimated",
+    "notes": "High-resolution stereo Prophesee Gen3.1 event cameras, stereo global shutter RGB cameras, and Velodyne VLS-128 LiDAR."
+  },
+  "sample_count": {
+    "total": 53,
+    "splits": {
+      "driving_sequences": 53,
+      "duration_minutes": 60
+    },
+    "unit": "sequences",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-04-12"
+  },
+  "citation": {
+    "paper_title": "DSEC: A Stereo Event Camera Dataset for Driving Scenarios",
+    "paper_url": "https://doi.org/10.1109/LRA.2021.3068942",
+    "authors": [
+      "Mathias Gehrig",
+      "Willem Aarents",
+      "Daniel Gehrig",
+      "Davide Scaramuzza"
+    ],
+    "doi": "10.1109/LRA.2021.3068942",
+    "bibtex": "@article{gehrig2021dsec,\n  title={DSEC: A stereo event camera dataset for driving scenarios},\n  author={Gehrig, Mathias and Aarents, Willem and Gehrig, Daniel and Scaramuzza, Davide},\n  journal={IEEE Robotics and Automation Letters},\n  volume={6},\n  number={3},\n  pages={4947--4954},\n  year={2021},\n  publisher={IEEE},\n  doi={10.1109/LRA.2021.3072529}\n}"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "id": "openlane-v2",
+  "slug": "openlane-v2",
+  "name": "OpenLane-V2 — 3D Lane and Traffic Topology Dataset",
+  "description": "Pioneering road topology and scene structure dataset for autonomous driving, developed by OpenDriveLab and Shanghai AI Laboratory. Expands autonomous perception beyond bounding boxes to comprehensive 3D lane centerline modeling and topological relationship reasoning between traffic lanes and traffic regulatory elements (traffic lights, road signs). Built upon 2,000 multi-view driving sequences containing 88,000 annotated frames, supporting lane detection, scene parsing, and navigation planning.",
+  "homepage_url": "https://github.com/OpenDriveLab/OpenLane-V2",
+  "publisher": {
+    "name": "OpenDriveLab & Shanghai AI Laboratory",
+    "type": "academic",
+    "url": "https://opendrivelab.com"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor",
+    "graph"
+  ],
+  "tasks": [
+    "3d-lane-detection",
+    "road-topology-reasoning",
+    "scene-understanding"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "lane-detection",
+    "topology",
+    "hd-map",
+    "traffic-elements"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Apache License 2.0 (Code) & CC BY-NC-SA 4.0 (Data)",
+    "spdx_id": null,
+    "url": "https://github.com/OpenDriveLab/OpenLane-V2/blob/master/LICENSE",
+    "commercial_use": "forbidden",
+    "notes": "Dataset annotations available under CC BY-NC-SA 4.0 for non-commercial research; devkit software licensed under Apache 2.0."
+  },
+  "source_references": [
+    {
+      "title": "OpenLane-V2 Official Repository",
+      "url": "https://github.com/OpenDriveLab/OpenLane-V2",
+      "type": "repository",
+      "notes": "Official repository for OpenLane-V2 data download, devkit utilities, and benchmark challenge leaderboards."
+    },
+    {
+      "title": "OpenLane-V2: A Topology Reasoning Benchmark for Autonomous Driving",
+      "url": "https://doi.org/10.48550/arXiv.2304.10440",
+      "type": "original_paper",
+      "notes": "Conference paper presented at NeurIPS 2023 Datasets and Benchmarks track."
+    },
+    {
+      "title": "OpenDriveLab Research Portal",
+      "url": "https://opendrivelab.com",
+      "type": "official_website",
+      "notes": "Primary organization portal for open autonomous driving benchmarks and models."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against OpenDriveLab GitHub repository and NeurIPS 2023 paper (DOI: 10.48550/arXiv.2304.10440)."
+  },
+  "size": {
+    "amount": 35.0,
+    "unit": "GB",
+    "file_formats": [
+      "pkl",
+      "json",
+      "png"
+    ],
+    "status": "estimated",
+    "notes": "Structured 3D lane spline geometries, traffic element graphs, and lane-to-traffic-element relationship topologies."
+  },
+  "sample_count": {
+    "total": 2000,
+    "splits": {
+      "sequences": 2000,
+      "frames": 88000
+    },
+    "unit": "sequences",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023-04-20"
+  },
+  "citation": {
+    "paper_title": "OpenLane-V2: A Topology Reasoning Benchmark for Autonomous Driving",
+    "paper_url": "https://doi.org/10.48550/arXiv.2304.10440",
+    "authors": [
+      "Huijie Wang",
+      "Tianyu Li",
+      "Yang Li",
+      "Li Chen",
+      "Chonghao Sima",
+      "Zhenbo Liu",
+      "Bangjun Wang",
+      "Peijin Jia",
+      "Yuting Wang",
+      "Shengyin Jiang",
+      "Feng Wen",
+      "Hang Xu",
+      "Ping Luo"
+    ],
+    "doi": "10.48550/arXiv.2304.10440",
+    "bibtex": "@article{wang2023openlane,\n  title={OpenLane-V2: A topology reasoning benchmark for autonomous driving},\n  author={Wang, Huijie and Li, Tianyu and Li, Yang and Chen, Li and Sima, Chonghao and Liu, Zhenbo and Wang, Bangjun and Jia, Peijin and Wang, Yuting and Jiang, Shengyin and others},\n  journal={arXiv preprint arXiv:2304.10440},\n  year={2023},\n  doi={10.48550/arXiv.2304.10440}\n}"
+  }
+}

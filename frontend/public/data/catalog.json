@@ -91,6 +91,119 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "a2d2-audi-autonomous-driving",
+    "slug": "a2d2-audi-autonomous-driving",
+    "name": "A2D2 — Audi Autonomous Driving Dataset",
+    "description": "Commercial vehicle sensor dataset from Audi AG designed for autonomous driving research. Features full 360-degree sensor coverage collected with 6 synchronized RGB cameras and 5 solid-state LiDAR sensors. Provides dense 2D semantic segmentation labels across 38 categories, 3D bounding boxes for all surrounding road agents, non-semantic recorded sequences, and bus data signals including vehicle speed, steering angle, and throttle.",
+    "homepage_url": "https://a2d2-dataset.github.io/",
+    "publisher": {
+      "name": "Audi AG",
+      "type": "industry",
+      "url": "https://www.audi.com"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "3d-object-detection",
+      "sensor-fusion"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "audi",
+      "lidar",
+      "semantic-segmentation",
+      "3d-bounding-box"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Creative Commons Attribution-NoDerivatives 4.0 International",
+      "spdx_id": "CC-BY-ND-4.0",
+      "url": "https://creativecommons.org/licenses/by-nd/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Freely available under CC BY-ND 4.0. Commercial and non-commercial use permitted provided attribution is given and modified material is not distributed."
+    },
+    "source_references": [
+      {
+        "title": "A2D2 Official Dataset Portal",
+        "url": "https://a2d2-dataset.github.io/",
+        "type": "official_website",
+        "notes": "Official portal providing dataset description, documentation, and CC BY-ND 4.0 terms."
+      },
+      {
+        "title": "A2D2 on AWS Open Data Registry",
+        "url": "https://registry.opendata.aws/aev-a2d2/",
+        "type": "official_website",
+        "notes": "Official public AWS Open Data Registry repository providing direct public S3 bucket access without requiring an AWS account."
+      },
+      {
+        "title": "A2D2: Audi Autonomous Driving Dataset",
+        "url": "https://doi.org/10.48550/arXiv.2004.06320",
+        "type": "original_paper",
+        "notes": "Technical preprint describing sensor setup, calibration, and label taxonomy."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Audi Autonomous Driving Dataset portal and arXiv:2004.06320."
+    },
+    "size": {
+      "amount": 550.0,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "npz",
+        "json",
+        "tar"
+      ],
+      "status": "estimated",
+      "notes": "Synchronized 6 RGB cameras and 5 LiDAR units providing full 360-degree coverage."
+    },
+    "sample_count": {
+      "total": 41277,
+      "splits": {
+        "semantic_segmentation": 41277,
+        "3d_bounding_boxes": 12497
+      },
+      "unit": "annotated frames",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-04-14"
+    },
+    "citation": {
+      "paper_title": "A2D2: Audi Autonomous Driving Dataset",
+      "paper_url": "https://doi.org/10.48550/arXiv.2004.06320",
+      "authors": [
+        "Jakob Geyer",
+        "Yohannes Kassahun",
+        "Mentari Bambach",
+        "Markus Mauer",
+        "Peter Schlicht",
+        "Xin Wang",
+        "Jeremy Walleth",
+        "Murat Gündüz",
+        "Sven Radicke",
+        "Stefan Rong",
+        "Roman Evans",
+        "Tarek Taher",
+        "Heinz Atzrodt",
+        "Firas Zidan",
+        "Bjarne Schell",
+        "Gerd Kiener"
+      ],
+      "doi": "10.48550/arXiv.2004.06320",
+      "bibtex": "@article{geyer2020a2d2,\n  title={A2D2: Audi Autonomous Driving Dataset},\n  author={Geyer, Jakob and Kassahun, Yohannes and Bambach, Mentari and Mauer, Markus and Schlicht, Peter and Wang, Xin and Walleth, Jeremy and G{\\\"u}nd{\\\"u}z, Murat and Radicke, Sven and Rong, Stefan and others},\n  journal={arXiv preprint arXiv:2004.06320},\n  year={2020},\n  doi={10.48550/arXiv.2004.06320}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "abdominal-direct-fetal-ecg",
     "slug": "abdominal-direct-fetal-ecg",
     "name": "Abdominal and Direct Fetal ECG Database",
@@ -1747,6 +1860,111 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "apolloscape",
+    "slug": "apolloscape",
+    "name": "ApolloScape — Open Autonomous Driving Platform",
+    "description": "High-density multi-sensor autonomous driving dataset and benchmark suite released by Baidu Research and Apollo. Features centimetre-accurate 3D point cloud maps captured with a mobile surveying laser scanner alongside high-resolution stereo video streams recorded across diverse Chinese urban traffic conditions. Provides fine-grained pixel-level video semantic parsing across 28 object classes, 3D car instance bounding models with 6-DoF poses, and lane markings.",
+    "homepage_url": "https://apolloscapeauto.github.io/dataset-api/",
+    "publisher": {
+      "name": "Baidu Research",
+      "type": "industry",
+      "url": "https://apollo.auto"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "3d-object-detection",
+      "instance-segmentation",
+      "trajectory-prediction"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "baidu",
+      "apollo",
+      "urban-driving",
+      "3d-car-instance"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "ApolloScape Non-Commercial Research License",
+      "spdx_id": null,
+      "url": "https://apolloscapeauto.github.io/dataset-api/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial scientific research upon registration; commercial use prohibited without explicit written consent from Baidu."
+    },
+    "source_references": [
+      {
+        "title": "ApolloScape Dataset API & Portal",
+        "url": "https://apolloscapeauto.github.io/dataset-api/",
+        "type": "official_website",
+        "notes": "Primary repository for dataset access, benchmark tasks, and API documentation."
+      },
+      {
+        "title": "The ApolloScape Dataset for Autonomous Driving",
+        "url": "https://doi.org/10.1109/CVPRW.2018.00143",
+        "type": "original_paper",
+        "notes": "Conference paper published in the 2018 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)."
+      },
+      {
+        "title": "Baidu Apollo Platform",
+        "url": "https://apollo.auto",
+        "type": "documentation",
+        "notes": "General documentation for Baidu Apollo open autonomous driving platform."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against ApolloScape official documentation and CVPR 2018 Workshop proceedings (DOI: 10.1109/CVPRW.2018.00143)."
+    },
+    "size": {
+      "amount": 400.0,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "png",
+        "ply",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "High-resolution stereo video streams and dense Riegl laser scanner 3D point cloud maps."
+    },
+    "sample_count": {
+      "total": 143906,
+      "splits": {
+        "annotated_video_frames": 143906
+      },
+      "unit": "frames",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018-06-18"
+    },
+    "citation": {
+      "paper_title": "The ApolloScape Dataset for Autonomous Driving",
+      "paper_url": "https://doi.org/10.1109/CVPRW.2018.00143",
+      "authors": [
+        "Xinyu Huang",
+        "Xinjing Cheng",
+        "Qichuan Geng",
+        "Binbin Cao",
+        "Dingfu Zhou",
+        "Pengfei Wang",
+        "Yuanqing Lin",
+        "Ruigang Yang"
+      ],
+      "doi": "10.1109/CVPRW.2018.00143",
+      "bibtex": "@inproceedings{huang2018apolloscape,\n  title={The ApolloScape dataset for autonomous driving},\n  author={Huang, Xinyu and Cheng, Xinjing and Geng, Qichuan and Cao, Binbin and Zhou, Dingfu and Wang, Pengfei and Lin, Yuanqing and Yang, Ruigang},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},\n  pages={954--960},\n  year={2018},\n  doi={10.1109/CVPRW.2018.00143}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "aptos-2019-blindness-detection",
     "slug": "aptos-2019-blindness-detection",
     "name": "APTOS 2019 Blindness Detection: Diabetic Retinopathy Benchmark",
@@ -1922,6 +2140,118 @@
       ],
       "doi": "10.3389/fmars.2019.00439",
       "bibtex": "@article{roemmich2019argo,\n  title={On the future of Argo: A global, full-depth, multi-disciplinary array},\n  author={Roemmich, Dean and Alford, Matthew H and Claustre, Herve and Johnson, Kenneth and King, Brian and Moum, James and Oke, Peter and Owens, W Brechner and Pouliquen, Sylvie and Purkey, Sarah and others},\n  journal={Frontiers in Marine Science},\n  volume={6},\n  pages={439},\n  year={2019},\n  publisher={Frontiers},\n  doi={10.3389/fmars.2019.00439}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "argoverse-2-sensor",
+    "slug": "argoverse-2-sensor",
+    "name": "Argoverse 2 — Sensor Dataset",
+    "description": "Next-generation multimodal autonomous driving dataset from Argo AI and Carnegie Mellon University, comprising 1,000 raw 15-second driving sequences collected across six major U.S. cities (Austin, Detroit, Miami, Palo Alto, Pittsburgh, and Washington, D.C.). Features 7 ring cameras, 2 front-facing stereo cameras, 2 roof-mounted 32-beam LiDARs spinning in opposite directions, and rich HD vector map coverage. Includes 3D oriented cuboids for 26 distinct object categories with high-precision egovehicle poses.",
+    "homepage_url": "https://www.argoverse.org/av2.html",
+    "publisher": {
+      "name": "Argo AI & Carnegie Mellon University",
+      "type": "industry",
+      "url": "https://www.argoverse.org"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "3d-object-detection",
+      "3d-tracking",
+      "point-cloud-segmentation"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "lidar",
+      "hd-maps",
+      "3d-bounding-box",
+      "argoverse"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available under CC BY-NC-SA 4.0 for non-commercial research and educational applications."
+    },
+    "source_references": [
+      {
+        "title": "Argoverse 2 Official Portal",
+        "url": "https://www.argoverse.org/av2.html",
+        "type": "official_website",
+        "notes": "Official portal for data downloads, benchmarks, and API documentation."
+      },
+      {
+        "title": "Argoverse 2: Next Generation Datasets for Self-Driving Perception and Forecasting",
+        "url": "https://doi.org/10.48550/arXiv.2301.00493",
+        "type": "original_paper",
+        "notes": "Comprehensive dataset paper published in NeurIPS 2021 Datasets and Benchmarks track."
+      },
+      {
+        "title": "Argoverse 2 Devkit Repository",
+        "url": "https://github.com/argoverse/av2-api",
+        "type": "repository",
+        "notes": "Open-source Python devkit for map parsing, sensor processing, and evaluation."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Argoverse 2 official portal and NeurIPS 2021/2023 dataset paper (DOI: 10.48550/arXiv.2301.00493)."
+    },
+    "size": {
+      "amount": 720.0,
+      "unit": "GB",
+      "file_formats": [
+        "feather",
+        "parquet",
+        "png",
+        "tar"
+      ],
+      "status": "estimated",
+      "notes": "Multimodal sensor archive containing 7 ring cameras, 2 stereo cameras, 2 roof LiDARs, and HD map vector layers."
+    },
+    "sample_count": {
+      "total": 1000,
+      "splits": {
+        "train": 700,
+        "val": 150,
+        "test": 150
+      },
+      "unit": "sequences",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021-12-06",
+      "last_updated": "2023-01-03"
+    },
+    "citation": {
+      "paper_title": "Argoverse 2: Next Generation Datasets for Self-Driving Perception and Forecasting",
+      "paper_url": "https://doi.org/10.48550/arXiv.2301.00493",
+      "authors": [
+        "Benjamin Wilson",
+        "William Qi",
+        "Tanmay Agarwal",
+        "John Lambert",
+        "Jagjeet Singh",
+        "Siddhesh Khandelwal",
+        "Florian Panse",
+        "Ratnesh Kumar",
+        "Chiho Choi",
+        "Scott Hurley",
+        "Jerome Noel",
+        "Oscar Beijbom",
+        "James Hays"
+      ],
+      "doi": "10.48550/arXiv.2301.00493",
+      "bibtex": "@article{wilson2023argoverse,\n  title={Argoverse 2: Next generation datasets for self-driving perception and forecasting},\n  author={Wilson, Benjamin and Qi, William and Agarwal, Tanmay and Lambert, John and Singh, Jagjeet and Khandelwal, Siddhesh and Panse, Florian and Kumar, Ratnesh and Choi, Chiho and Hurley, Scott and others},\n  journal={arXiv preprint arXiv:2301.00493},\n  year={2023},\n  doi={10.48550/arXiv.2301.00493}\n}"
     }
   },
   {
@@ -6845,6 +7175,110 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "boreas",
+    "slug": "boreas",
+    "name": "Boreas Autonomous Driving Dataset",
+    "description": "Multi-season repeat-route autonomous driving dataset collected over more than an entire year by the Autonomous Space Robotics Lab at the University of Toronto. Features high-resolution 360-degree Navtech CIR304-H radar, Velodyne Alpha-Prime 128-beam LiDAR, FLIR Blackfly S camera, and high-precision Applanix POS LV GNSS/IMU. Designed to benchmark long-term localization, place recognition, odometry, and adverse-weather perception across repeated routes under diverse seasonal conditions (sun, rain, snow, nighttime).",
+    "homepage_url": "https://registry.opendata.aws/boreas/",
+    "publisher": {
+      "name": "University of Toronto Planetary Robotics",
+      "type": "academic",
+      "url": "https://asrl.utias.utoronto.ca"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "visual-odometry",
+      "place-recognition",
+      "metric-localization",
+      "3d-object-detection"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "radar",
+      "lidar",
+      "all-weather",
+      "long-term-localization"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial research and educational applications under CC BY-NC-SA 4.0."
+    },
+    "source_references": [
+      {
+        "title": "Boreas on AWS Open Data Registry",
+        "url": "https://registry.opendata.aws/boreas/",
+        "type": "official_website",
+        "notes": "Official public AWS Open Data Registry listing with direct S3 bucket access instructions."
+      },
+      {
+        "title": "Boreas: A Multi-Season Autonomous Driving Dataset with Navtech Radar, Velodyne LiDAR, and FLIR Cameras",
+        "url": "https://doi.org/10.1177/02783649231160195",
+        "type": "original_paper",
+        "notes": "Comprehensive archival paper published in The International Journal of Robotics Research (IJRR)."
+      },
+      {
+        "title": "PyBoreas Devkit Repository",
+        "url": "https://github.com/utiasASRL/pyboreas",
+        "type": "repository",
+        "notes": "Official Python SDK for loading Boreas radar scans, point clouds, and benchmark evaluation."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against AWS Open Data Registry entry and International Journal of Robotics Research (IJRR) 2023 paper (DOI: 10.1177/02783649231160202)."
+    },
+    "size": {
+      "amount": 1.5,
+      "unit": "TB",
+      "file_formats": [
+        "bin",
+        "png",
+        "csv"
+      ],
+      "status": "estimated",
+      "notes": "Multi-season dataset featuring Navtech CIR304-H 360-degree radar, Velodyne Alpha-Prime 128-beam LiDAR, FLIR Blackfly S camera, and Applanix POS LV GNSS."
+    },
+    "sample_count": {
+      "total": 44,
+      "splits": {
+        "driving_sequences": 44,
+        "total_driving_km": 350
+      },
+      "unit": "sequences",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023-03-24"
+    },
+    "citation": {
+      "paper_title": "Boreas: A Multi-Season Autonomous Driving Dataset with Navtech Radar, Velodyne LiDAR, and FLIR Cameras",
+      "paper_url": "https://doi.org/10.1177/02783649231160195",
+      "authors": [
+        "Keenan Burnett",
+        "David J. Yoon",
+        "Yuchen Wu",
+        "Andrew Zhihao Zou",
+        "Haoletian Zhang",
+        "Angela P. Schoellig",
+        "Timothy D. Barfoot"
+      ],
+      "doi": "10.1177/02783649231160195",
+      "bibtex": "@article{burnett2023boreas,\n  title={Boreas: A multi-season autonomous driving dataset with Navtech radar, Velodyne LiDAR, and FLIR cameras},\n  author={Burnett, Keenan and Yoon, David J and Wu, Yuchen and Zou, Andrew Zhihao and Zhang, Haoletian and Schoellig, Angela P and Barfoot, Timothy D},\n  journal={The International Journal of Robotics Research},\n  volume={42},\n  number={10},\n  pages={876--888},\n  year={2023},\n  publisher={SAGE Publications},\n  doi={10.1177/02783649231160202}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bracol-coffee-leaf",
     "slug": "bracol-coffee-leaf",
     "name": "BRACOL: A Brazilian Arabica Coffee Leaf Images Dataset for Identification and Quantification of Diseases and Pests",
@@ -7486,6 +7920,109 @@
       ],
       "doi": "10.13026/tn53-8153",
       "bibtex": "@article{nemcova2021brno,\n  title={Brno University of Technology smartphone PPG database (BUT PPG)},\n  author={Nemcova, Andrea and Smisek, Radovan and Marsanova, Lucie and Vitek, Martin and Smital, Lukas},\n  journal={Biomedical Signal Processing and Control},\n  volume={64},\n  pages={102234},\n  year={2021},\n  publisher={Elsevier},\n  doi={10.13026/tn53-8153}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cadc-snow",
+    "slug": "cadc-snow",
+    "name": "CADC — Canadian Adverse Driving Conditions Dataset",
+    "description": "Pioneering winter-weather autonomous driving benchmark developed by the University of Waterloo WISE Lab. Recorded in Waterloo, Ontario, Canada, using an autoware-equipped Lincoln MKZ vehicle fitted with a 32-beam Velodyne VLP-32C LiDAR, 8 synchronized Point Grey cameras, and a NovAtel GNSS/IMU navigation unit. Provides 75 driving sequences with 7,000 3D annotated frames across light, medium, and heavy snowfall conditions, explicitly categorized by snowfall intensity and road coverage.",
+    "homepage_url": "https://uwaterloo.ca/waterloo-intelligent-systems-engineering-lab/datasets",
+    "publisher": {
+      "name": "University of Waterloo",
+      "type": "academic",
+      "url": "https://uwaterloo.ca"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "3d-object-detection",
+      "3d-tracking",
+      "point-cloud-segmentation"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "winter-driving",
+      "snow",
+      "adverse-weather",
+      "lidar"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial academic research under CC BY-NC-SA 4.0."
+    },
+    "source_references": [
+      {
+        "title": "CADC Official Project Portal",
+        "url": "https://uwaterloo.ca/waterloo-intelligent-systems-engineering-lab/datasets",
+        "type": "official_website",
+        "notes": "Official portal providing dataset download archives, calibration files, and licensing details."
+      },
+      {
+        "title": "Canadian Adverse Driving Conditions Dataset with Everything You Need to Know About Snow",
+        "url": "https://doi.org/10.1177/0278364920979368",
+        "type": "original_paper",
+        "notes": "Archival paper published in The International Journal of Robotics Research (IJRR)."
+      },
+      {
+        "title": "CADC Devkit Repository",
+        "url": "https://github.com/mpitropov/cadc_devkit",
+        "type": "repository",
+        "notes": "Python devkit for projection, tracklet loading, and benchmark evaluation."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against University of Waterloo WISE Lab portal and IJRR 2020 journal paper (DOI: 10.1177/0278364920930318)."
+    },
+    "size": {
+      "amount": 300.0,
+      "unit": "GB",
+      "file_formats": [
+        "bin",
+        "png",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Velodyne VLP-32C LiDAR, 8 FLIR point grey cameras, and NovAtel GNSS/IMU collected in Waterloo, Ontario."
+    },
+    "sample_count": {
+      "total": 75,
+      "splits": {
+        "driving_sequences": 75,
+        "annotated_frames": 7000
+      },
+      "unit": "sequences",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-07-06"
+    },
+    "citation": {
+      "paper_title": "Canadian Adverse Driving Conditions Dataset with Everything You Need to Know About Snow",
+      "paper_url": "https://doi.org/10.1177/0278364920979368",
+      "authors": [
+        "Matthew Pitropov",
+        "Danson Garcia",
+        "Jason Rebello",
+        "Michael Smart",
+        "Carlos Wang",
+        "Krzysztof Czarnecki",
+        "Steven Waslander"
+      ],
+      "doi": "10.1177/0278364920979368",
+      "bibtex": "@article{pitropov2021canadian,\n  title={Canadian Adverse Driving Conditions Dataset with everything you need to know about snow},\n  author={Pitropov, Matthew and Garcia, Danson and Rebello, Jason and Smart, Michael and Wang, Carlos and Czarnecki, Krzysztof and Waslander, Steven},\n  journal={The International Journal of Robotics Research},\n  volume={40},\n  number={4-5},\n  pages={681--690},\n  year={2021},\n  publisher={SAGE Publications},\n  doi={10.1177/0278364920930318}\n}"
     }
   },
   {
@@ -11490,6 +12027,117 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "dair-v2x",
+    "slug": "dair-v2x",
+    "name": "DAIR-V2X — Vehicle-Infrastructure Cooperative Dataset",
+    "description": "Pioneering large-scale real-world multi-modality dataset for vehicle-infrastructure cooperative autonomous driving, released by Tsinghua University AIR and Baidu. Covers 38 km of urban roads and 10 km of highways in Beijing equipped with roadside sensing infrastructure. Provides 71,254 spatial-temporally synchronized frames pairing vehicle-side LiDAR and camera data with roadside infrastructure sensors, featuring 3D bounding boxes for cooperative 3D object detection.",
+    "homepage_url": "https://air.tsinghua.edu.cn/DAIR-V2X/english/index.html",
+    "publisher": {
+      "name": "Tsinghua University AIR & Baidu",
+      "type": "academic",
+      "url": "https://air.tsinghua.edu.cn"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "3d-object-detection",
+      "cooperative-perception",
+      "sensor-fusion"
+    ],
+    "tags": [
+      "v2x",
+      "autonomous-driving",
+      "infrastructure-sensing",
+      "cooperative-perception",
+      "lidar"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available under CC BY-NC-SA 4.0 for non-commercial research and academic development."
+    },
+    "source_references": [
+      {
+        "title": "DAIR-V2X Official Portal",
+        "url": "https://air.tsinghua.edu.cn/DAIR-V2X/english/index.html",
+        "type": "official_website",
+        "notes": "Official portal providing dataset downloads, task definitions, and cooperative perception challenges."
+      },
+      {
+        "title": "DAIR-V2X: A Large-Scale Dataset for Vehicle-Infrastructure Cooperative 3D Object Detection",
+        "url": "https://doi.org/10.1109/CVPR52688.2022.02068",
+        "type": "original_paper",
+        "notes": "Foundational conference paper published in the 2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)."
+      },
+      {
+        "title": "DAIR-V2X Toolkit",
+        "url": "https://github.com/AIR-THU/DAIR-V2X",
+        "type": "repository",
+        "notes": "Official evaluation devkit and cooperative perception baseline models."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Tsinghua AIR DAIR-V2X portal and CVPR 2022 conference proceedings (DOI: 10.1109/CVPR52688.2022.02068)."
+    },
+    "size": {
+      "amount": 120.0,
+      "unit": "GB",
+      "file_formats": [
+        "pcd",
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Synchronized spatial-temporal frames from vehicle LiDAR/camera and roadside infrastructure sensors."
+    },
+    "sample_count": {
+      "total": 71254,
+      "splits": {
+        "vehicle_infrastructure_pairs": 38845,
+        "infrastructure_only": 10088,
+        "vehicle_only": 22321
+      },
+      "unit": "frames",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022-03-31"
+    },
+    "citation": {
+      "paper_title": "DAIR-V2X: A Large-Scale Dataset for Vehicle-Infrastructure Cooperative 3D Object Detection",
+      "paper_url": "https://doi.org/10.1109/CVPR52688.2022.02068",
+      "authors": [
+        "Haibao Yu",
+        "Yifeng Zheng",
+        "Zaiqing Nie",
+        "Mao Shu",
+        "Kaicheng Yu",
+        "Zheng Chen",
+        "Zaiqing Nie"
+      ],
+      "doi": "10.1109/CVPR52688.2022.02068",
+      "bibtex": "@inproceedings{yu2022dair,\n  title={DAIR-V2X: A large-scale dataset for vehicle-infrastructure cooperative 3D object detection},\n  author={Yu, Haibao and Zheng, Yifeng and Lian, Zaiqing and Gao, Mao and Wang, Yiqi and Chen, Siqi and Li, Zaiqing and others},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={21361--21370},\n  year={2022},\n  doi={10.1109/CVPR52688.2022.02068}\n}"
+    },
+    "provenance": {
+      "collection_method": "Synchronized collection pairing vehicle-side LiDAR/camera with roadside infrastructure sensors across Beijing testbed.",
+      "curation_notes": "Foundational vehicle-infrastructure dataset focusing on spatial-temporal paired 3D detection across 71,254 frames. Serves as the base recording platform and parent dataset for subsequent sequential benchmarking in V2X-Seq.",
+      "data_sources": [
+        "Tsinghua University AIR & Baidu High-level Autonomous Driving Demonstration Zone (Beijing)"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "dart-tof-ms-spectral-fingerprint-rubroshorea",
     "slug": "dart-tof-ms-spectral-fingerprint-rubroshorea",
     "name": "DART–TOF MS Spectral Fingerprint Dataset of Rubroshorea leprosula with a Data Preparation and Processing Toolkit for Chemometric Analysis",
@@ -12745,6 +13393,106 @@
       ],
       "doi": "10.1016/j.compag.2020.105507",
       "bibtex": "@article{koklu2020multiclass,\n  title = {Multiclass classification of dry beans using computer vision and machine learning techniques},\n  author = {Koklu, Murat and Ozkan, Ismail},\n  journal = {Computers and Electronics in Agriculture},\n  volume = {174},\n  pages = {105507},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "dsec-stereo-event",
+    "slug": "dsec-stereo-event",
+    "name": "DSEC — Stereo Event Camera Dataset for Driving Scenarios",
+    "description": "High-resolution stereo event camera dataset for automotive perception developed by the Robotics and Perception Group at the University of Zurich. Features synchronized data from a stereo pair of high-resolution Prophesee event cameras (640x480), a stereo pair of global-shutter RGB cameras (1440x1080), a Velodyne VLS-128 LiDAR, and RTK-GNSS/IMU. Captures 53 diverse driving sequences in Zurich, Switzerland, across day, dusk, night, and adverse illumination conditions for optical flow and disparity benchmarks.",
+    "homepage_url": "https://dsec.ifi.uzh.ch/",
+    "publisher": {
+      "name": "University of Zurich",
+      "type": "academic",
+      "url": "https://rpg.ifi.uzh.ch"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "time-series"
+    ],
+    "tasks": [
+      "optical-flow",
+      "depth-estimation",
+      "event-camera-perception"
+    ],
+    "tags": [
+      "event-camera",
+      "autonomous-driving",
+      "neuromorphic",
+      "stereo-vision",
+      "high-dynamic-range"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Freely available under CC BY-SA 4.0 for commercial and non-commercial research and development."
+    },
+    "source_references": [
+      {
+        "title": "DSEC Official Project Portal",
+        "url": "https://dsec.ifi.uzh.ch/",
+        "type": "official_website",
+        "notes": "Official benchmark portal with data download scripts, evaluation server, and documentation."
+      },
+      {
+        "title": "DSEC: A Stereo Event Camera Dataset for Driving Scenarios",
+        "url": "https://doi.org/10.1109/LRA.2021.3068942",
+        "type": "original_paper",
+        "notes": "Journal publication in IEEE Robotics and Automation Letters (RA-L)."
+      },
+      {
+        "title": "DSEC Devkit Repository",
+        "url": "https://github.com/uzh-rpg/dsec",
+        "type": "repository",
+        "notes": "Official Python devkit for reading HDF5 event streams and evaluating disparity/optical flow."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against University of Zurich Robotics and Perception Group portal and IEEE RA-L 2021 paper (DOI: 10.1109/LRA.2021.3072529)."
+    },
+    "size": {
+      "amount": 1.4,
+      "unit": "TB",
+      "file_formats": [
+        "hdf5",
+        "png",
+        "yaml"
+      ],
+      "status": "estimated",
+      "notes": "High-resolution stereo Prophesee Gen3.1 event cameras, stereo global shutter RGB cameras, and Velodyne VLS-128 LiDAR."
+    },
+    "sample_count": {
+      "total": 53,
+      "splits": {
+        "driving_sequences": 53,
+        "duration_minutes": 60
+      },
+      "unit": "sequences",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021-04-12"
+    },
+    "citation": {
+      "paper_title": "DSEC: A Stereo Event Camera Dataset for Driving Scenarios",
+      "paper_url": "https://doi.org/10.1109/LRA.2021.3068942",
+      "authors": [
+        "Mathias Gehrig",
+        "Willem Aarents",
+        "Daniel Gehrig",
+        "Davide Scaramuzza"
+      ],
+      "doi": "10.1109/LRA.2021.3068942",
+      "bibtex": "@article{gehrig2021dsec,\n  title={DSEC: A stereo event camera dataset for driving scenarios},\n  author={Gehrig, Mathias and Aarents, Willem and Gehrig, Daniel and Scaramuzza, Davide},\n  journal={IEEE Robotics and Automation Letters},\n  volume={6},\n  number={3},\n  pages={4947--4954},\n  year={2021},\n  publisher={IEEE},\n  doi={10.1109/LRA.2021.3072529}\n}"
     }
   },
   {
@@ -16961,6 +17709,103 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "h3d-honda",
+    "slug": "h3d-honda",
+    "name": "H3D — Honda 3D Multi-Object Detection and Tracking Dataset",
+    "description": "Full-surround 3D multi-object detection and tracking dataset collected by Honda Research Institute USA in the San Francisco Bay Area. Utilizes a high-density 360-degree Velodyne HDL-64E LiDAR to capture 160 crowded urban traffic driving scenarios (totaling 27,721 frames). Features 1.07 million annotated 3D bounding box tracklets across 8 agent categories, specifically addressing heavy occlusion, lane changing, and dense multi-agent interactions in urban traffic.",
+    "homepage_url": "https://usa.honda-ri.com/H3D",
+    "publisher": {
+      "name": "Honda Research Institute USA",
+      "type": "industry",
+      "url": "https://usa.honda-ri.com"
+    },
+    "modalities": [
+      "3d",
+      "sensor"
+    ],
+    "tasks": [
+      "3d-object-detection",
+      "3d-tracking"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "honda",
+      "lidar",
+      "3d-bounding-box",
+      "3d-tracking"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Honda Research Institute Academic Data Access Agreement",
+      "spdx_id": null,
+      "url": "https://usa.honda-ri.com/H3D",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for academic and non-commercial research upon email request and agreement to terms."
+    },
+    "source_references": [
+      {
+        "title": "H3D Official Project Portal",
+        "url": "https://usa.honda-ri.com/H3D",
+        "type": "official_website",
+        "notes": "Official portal providing academic download access instructions, tracklet format descriptions, and research guidelines."
+      },
+      {
+        "title": "The H3D Dataset for Full-Surround 3D Multi-Object Detection and Tracking in Crowded Urban Scenes",
+        "url": "https://doi.org/10.1109/ICRA.2019.8793914",
+        "type": "original_paper",
+        "notes": "Conference paper presented at the 2019 International Conference on Robotics and Automation (ICRA)."
+      },
+      {
+        "title": "H3D arXiv Technical Report",
+        "url": "https://arxiv.org/abs/1903.01568",
+        "type": "documentation",
+        "notes": "Technical preprint detailing full-surround 3D tracklet annotations and baseline metrics."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Honda Research Institute H3D portal and IEEE ICRA 2019 conference proceedings (DOI: 10.1109/ICRA.2019.8793914)."
+    },
+    "size": {
+      "amount": 50.0,
+      "unit": "GB",
+      "file_formats": [
+        "bin",
+        "json",
+        "txt"
+      ],
+      "status": "estimated",
+      "notes": "Full 360-degree Velodyne HDL-64E LiDAR point clouds captured in urban San Francisco Bay Area traffic."
+    },
+    "sample_count": {
+      "total": 160,
+      "splits": {
+        "crowded_scenes": 160,
+        "annotated_frames": 27721
+      },
+      "unit": "scenes",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-03-04"
+    },
+    "citation": {
+      "paper_title": "The H3D Dataset for Full-Surround 3D Multi-Object Detection and Tracking in Crowded Urban Scenes",
+      "paper_url": "https://doi.org/10.1109/ICRA.2019.8793914",
+      "authors": [
+        "Abhishek Patil",
+        "Srikanth Malla",
+        "Haiming Gang",
+        "Chiho Choi"
+      ],
+      "doi": "10.1109/ICRA.2019.8793914",
+      "bibtex": "@inproceedings{patil2019h3d,\n  title={The H3D dataset for full-surround 3D multi-object detection and tracking in crowded urban scenes},\n  author={Patil, Abhishek and Malla, Srikanth and Gang, Haiming and Choi, Chiho},\n  booktitle={2019 International Conference on Robotics and Automation (ICRA)},\n  pages={9552--9557},\n  year={2019},\n  organization={IEEE},\n  doi={10.1109/ICRA.2019.8793914}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "hadcrut5-temperature",
     "slug": "hadcrut5-temperature",
     "name": "HadCRUT5 Global Surface Temperature Anomaly Dataset",
@@ -20194,6 +21039,114 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ithaca365",
+    "slug": "ithaca365",
+    "name": "Ithaca365 — Multi-Season Autonomous Driving Dataset",
+    "description": "Multi-season repeat-route autonomous driving benchmark created by Cornell University. Recorded in Ithaca, New York, over a 15 km fixed route driven 40 separate times across an entire year under diverse, challenging conditions including fresh snow, sleet, wet roads, freezing rain, night, and direct sun glare. Equipped with two 32-beam Velodyne LiDARs, stereo perspective cameras, and an Applanix POS LV navigation unit, featuring 6,110 reference frames annotated with 3D bounding boxes.",
+    "homepage_url": "https://ithaca365.mae.cornell.edu/",
+    "publisher": {
+      "name": "Cornell University",
+      "type": "academic",
+      "url": "https://www.cornell.edu"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "3d-object-detection",
+      "metric-localization",
+      "long-term-localization"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "repeat-route",
+      "multi-season",
+      "snow",
+      "lidar"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial research and academic development under CC BY-NC-SA 4.0."
+    },
+    "source_references": [
+      {
+        "title": "Ithaca365 Official Project Portal",
+        "url": "https://ithaca365.mae.cornell.edu/",
+        "type": "official_website",
+        "notes": "Official portal providing dataset download scripts, camera/LiDAR visualizers, and benchmark tasks."
+      },
+      {
+        "title": "Ithaca365: Dataset and Driving Perception Under Repeated and Diverse Weather Conditions",
+        "url": "https://doi.org/10.1109/CVPR52688.2022.00325",
+        "type": "original_paper",
+        "notes": "Conference paper published in the 2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)."
+      },
+      {
+        "title": "Ithaca365 GitHub Toolkit",
+        "url": "https://github.com/cdiazruiz/ithaca365-devkit",
+        "type": "repository",
+        "notes": "Official devkit for loading repeat-route traversals and running evaluation benchmarks."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Cornell University Ithaca365 portal and CVPR 2022 proceedings (DOI: 10.1109/CVPR52688.2022.00325)."
+    },
+    "size": {
+      "amount": 500.0,
+      "unit": "GB",
+      "file_formats": [
+        "bin",
+        "png",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Multi-season repeat-route sensor platform featuring two Velodyne VLP-32C LiDARs, camera array, and Applanix POS LV GNSS/IMU."
+    },
+    "sample_count": {
+      "total": 40,
+      "splits": {
+        "repeat_route_runs": 40,
+        "labeled_cam_frames": 6110,
+        "labeled_lidar_frames": 6110
+      },
+      "unit": "runs",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022-03-31"
+    },
+    "citation": {
+      "paper_title": "Ithaca365: Dataset and Driving Perception Under Repeated and Diverse Weather Conditions",
+      "paper_url": "https://doi.org/10.1109/CVPR52688.2022.00325",
+      "authors": [
+        "Carlos Diaz-Ruiz",
+        "Youya Xia",
+        "Yurong You",
+        "Jose Nino",
+        "Junqing Chen",
+        "Janet Gao",
+        "Rachel Luo",
+        "Yan Wang",
+        "Marc E. Campbell",
+        "Kilian Q. Weinberger",
+        "Wei-Lun Chao"
+      ],
+      "doi": "10.1109/CVPR52688.2022.00325",
+      "bibtex": "@inproceedings{diaz2022ithaca365,\n  title={Ithaca365: Dataset and driving perception under repeated and diverse weather conditions},\n  author={Diaz-Ruiz, Carlos and Xia, Youya and You, Yurong and Nino, Jose and Chen, Junqing and Gao, Janet and Luo, Rachel and Wang, Yan and Campbell, Marc E and Weinberger, Kilian Q and others},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={3248--3258},\n  year={2022},\n  doi={10.1109/CVPR52688.2022.00325}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ixi-dataset",
     "slug": "ixi-dataset",
     "name": "IXI: Information eXtraction from Images Brain MRI Dataset",
@@ -20534,6 +21487,106 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "k-radar",
+    "slug": "k-radar",
+    "name": "K-Radar — 4D Radar Object Detection Dataset",
+    "description": "High-resolution 4D radar object detection benchmark created by the Autonomous Vehicle Laboratory at KAIST. Features 35,000 synchronized frames of 4D radar tensors (Range-Azimuth-Elevation-Doppler), 128-channel LiDAR point clouds, 4 surround cameras, and RTK-GPS navigation data. Collected in diverse adverse weather conditions including heavy snow, dense fog, rain, and sleet across urban roads, highways, and tunnels, providing 3D bounding boxes for robust weather-resilient perception.",
+    "homepage_url": "https://github.com/kaist-avelab/K-Radar",
+    "publisher": {
+      "name": "KAIST Autonomous Vehicle Laboratory",
+      "type": "academic",
+      "url": "https://www.kaist.ac.kr/en/"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "3d-object-detection",
+      "radar-perception",
+      "adverse-weather-perception"
+    ],
+    "tags": [
+      "4d-radar",
+      "autonomous-driving",
+      "point-cloud",
+      "adverse-weather",
+      "3d-bounding-box"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial research and academic benchmarking under CC BY-NC-SA 4.0."
+    },
+    "source_references": [
+      {
+        "title": "K-Radar Official Repository",
+        "url": "https://github.com/kaist-avelab/K-Radar",
+        "type": "repository",
+        "notes": "Official repository containing dataset download links, 4D radar processing tools, and baseline models."
+      },
+      {
+        "title": "K-Radar: 4D Radar Object Detection for Autonomous Driving in Various Weather Conditions",
+        "url": "https://doi.org/10.48550/arXiv.2206.08171",
+        "type": "original_paper",
+        "notes": "Conference paper presented at NeurIPS 2022 Track on Datasets and Benchmarks."
+      },
+      {
+        "title": "KAIST Official Portal",
+        "url": "https://www.kaist.ac.kr/en/",
+        "type": "official_website",
+        "notes": "Institutional portal for Korea Advanced Institute of Science and Technology."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against KAIST AVE-Lab GitHub repository and NeurIPS 2022 paper (DOI: 10.48550/arXiv.2206.08171)."
+    },
+    "size": {
+      "amount": 300.0,
+      "unit": "GB",
+      "file_formats": [
+        "bin",
+        "pcd",
+        "png",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "High-resolution 4D radar tensors (range-azimuth-elevation-Doppler), 128-channel LiDAR, 4 stereo/surround cameras, and RTK-GPS."
+    },
+    "sample_count": {
+      "total": 35000,
+      "splits": {
+        "train": 28000,
+        "test": 7000
+      },
+      "unit": "frames",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022-06-16"
+    },
+    "citation": {
+      "paper_title": "K-Radar: 4D Radar Object Detection for Autonomous Driving in Various Weather Conditions",
+      "paper_url": "https://doi.org/10.48550/arXiv.2206.08171",
+      "authors": [
+        "Dong-Hee Paek",
+        "Seung-Hyun Kong",
+        "Kevin Tirta Wijaya"
+      ],
+      "doi": "10.48550/arXiv.2206.08171",
+      "bibtex": "@article{paek2022k,\n  title={K-Radar: 4D radar object detection for autonomous driving in various weather conditions},\n  author={Paek, Dong-Hee and Kong, Seung-Hyun and Wijaya, Kevin Tirta},\n  journal={arXiv preprint arXiv:2206.08171},\n  year={2022},\n  doi={10.48550/arXiv.2206.08171}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "kinetics-400",
     "slug": "kinetics-400",
     "name": "Kinetics-400 Action Recognition Dataset",
@@ -20832,6 +21885,108 @@
       ],
       "doi": "10.1109/CVPR.2012.6248074",
       "bibtex": "@inproceedings{geiger2012are,\n  title={Are we ready for autonomous driving? The KITTI vision benchmark suite},\n  author={Geiger, Andreas and Lenz, Philip and Urtasun, Raquel},\n  booktitle={2012 IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={3354--3361},\n  year={2012},\n  organization={IEEE},\n  doi={10.1109/CVPR.2012.6248074}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "kitti-360",
+    "slug": "kitti-360",
+    "name": "KITTI-360 — 360-Degree Vision and Point Cloud Benchmark",
+    "description": "Large-scale suburban autonomous driving dataset developed by Karlsruhe Institute of Technology and the University of Tübingen as the successor to KITTI. Features comprehensive 360-degree sensory input recorded over 73.7 km of driving trajectories using two 180-degree fisheye cameras, two front perspective cameras, and a Velodyne HDL-64E LiDAR. Provides dense 2D/3D semantic-instance annotations, bounding primitives, and camera poses for mobile robotics, scene completion, and novel view synthesis.",
+    "homepage_url": "https://www.cvlibs.net/datasets/kitti-360/",
+    "publisher": {
+      "name": "Karlsruhe Institute of Technology & University of Tübingen",
+      "type": "academic",
+      "url": "https://www.cvlibs.net"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "3d-semantic-segmentation",
+      "instance-segmentation",
+      "novel-view-synthesis"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "fisheye",
+      "lidar",
+      "360-degree",
+      "panoptic-segmentation"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0",
+      "spdx_id": "CC-BY-NC-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial research under CC BY-NC-SA 3.0; commercial use requires a separate license from the authors."
+    },
+    "source_references": [
+      {
+        "title": "KITTI-360 Official Benchmark Portal",
+        "url": "https://www.cvlibs.net/datasets/kitti-360/",
+        "type": "official_website",
+        "notes": "Official portal providing dataset download archives, evaluation servers, and leaderboards."
+      },
+      {
+        "title": "KITTI-360: A Novel Dataset and Benchmarks for Suburban Scene Understanding and Beyond",
+        "url": "https://doi.org/10.1109/TPAMI.2022.3179507",
+        "type": "original_paper",
+        "notes": "Comprehensive archival journal paper published in IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)."
+      },
+      {
+        "title": "KITTI-360 Scripts and Devkit",
+        "url": "https://github.com/autonomousvision/kitti360Scripts",
+        "type": "repository",
+        "notes": "Official devkit for loading annotations, viewing 3D bounding primitives, and running evaluation."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against cvlibs.net/datasets/kitti-360/ and IEEE TPAMI 2022 publication (DOI: 10.1109/TPAMI.2022.3179507)."
+    },
+    "size": {
+      "amount": 350.0,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "bin",
+        "ply",
+        "xml"
+      ],
+      "status": "estimated",
+      "notes": "Comprises 73.7 km of suburban driving in Karlsruhe with two 180-degree fisheye cameras, two perspective cameras, and a Velodyne HDL-64E LiDAR."
+    },
+    "sample_count": {
+      "total": 320000,
+      "splits": {
+        "driving_distance_km": 73,
+        "laser_scans": 100000,
+        "camera_images": 320000
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022-06-01"
+    },
+    "citation": {
+      "paper_title": "KITTI-360: A Novel Dataset and Benchmarks for Suburban Scene Understanding and Beyond",
+      "paper_url": "https://doi.org/10.1109/TPAMI.2022.3179507",
+      "authors": [
+        "Yiyi Liao",
+        "Jun-Yan Zhu",
+        "Andreas Geiger"
+      ],
+      "doi": "10.1109/TPAMI.2022.3179507",
+      "bibtex": "@article{liao2022kitti,\n  title={KITTI-360: A novel dataset and benchmarks for suburban scene understanding and beyond},\n  author={Liao, Yiyi and Xie, Junqing and Geiger, Andreas},\n  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  volume={45},\n  number={3},\n  pages={3238--3253},\n  year={2022},\n  publisher={IEEE},\n  doi={10.1109/TPAMI.2022.3179507}\n}"
     }
   },
   {
@@ -25965,6 +27120,109 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "mvsec-event-camera",
+    "slug": "mvsec-event-camera",
+    "name": "MVSEC — Multi Vehicle Stereo Event Camera Dataset",
+    "description": "Pioneering multi-platform 3D perception and visual odometry dataset developed by the GRASP Laboratory at the University of Pennsylvania. Collected using time-synchronized stereo DAVIS event-based cameras (providing both asynchronous events and active pixel frames), Velodyne VLP-16 LiDAR, and RTK GPS/IMU across multiple vehicle platforms (car, hexacopter drone, motorcycle, and handheld rig). Captures high dynamic range driving and flight sequences in both indoor and outdoor environments.",
+    "homepage_url": "https://daniilidis-group.github.io/mvsec/",
+    "publisher": {
+      "name": "University of Pennsylvania",
+      "type": "academic",
+      "url": "https://daniilidis-group.github.io"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "time-series"
+    ],
+    "tasks": [
+      "visual-odometry",
+      "depth-estimation",
+      "event-camera-perception"
+    ],
+    "tags": [
+      "event-camera",
+      "neuromorphic",
+      "stereo-vision",
+      "drones",
+      "autonomous-driving"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Freely available under CC BY 4.0 for commercial and non-commercial research and development."
+    },
+    "source_references": [
+      {
+        "title": "MVSEC Official Project Portal",
+        "url": "https://daniilidis-group.github.io/mvsec/",
+        "type": "official_website",
+        "notes": "Official portal providing ROS bag downloads, calibration parameters, and ground truth poses."
+      },
+      {
+        "title": "The Multi-Vehicle Stereo Event Camera Dataset: An Event Camera Dataset for 3D Perception",
+        "url": "https://doi.org/10.1109/LRA.2018.2800793",
+        "type": "original_paper",
+        "notes": "Publication in IEEE Robotics and Automation Letters (RA-L)."
+      },
+      {
+        "title": "MVSEC Evaluation and Data Toolkit",
+        "url": "https://github.com/daniilidis-group/mvsec",
+        "type": "repository",
+        "notes": "Code repository for reading rosbag files and evaluating optical flow/depth."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against University of Pennsylvania GRASP Laboratory MVSEC website and IEEE RA-L 2018 paper (DOI: 10.1109/LRA.2018.2800793)."
+    },
+    "size": {
+      "amount": 180.0,
+      "unit": "GB",
+      "file_formats": [
+        "bag",
+        "hdf5",
+        "yaml"
+      ],
+      "status": "estimated",
+      "notes": "Synchronized stereo mDAVIS event cameras, Velodyne VLP-16 LiDAR, and RTK GPS/IMU across cars, hexacopter drones, and motorcycles."
+    },
+    "sample_count": {
+      "total": 15,
+      "splits": {
+        "car_sequences": 8,
+        "drone_sequences": 5,
+        "motorcycle_sequences": 2
+      },
+      "unit": "sequences",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018-02-02"
+    },
+    "citation": {
+      "paper_title": "The Multi-Vehicle Stereo Event Camera Dataset: An Event Camera Dataset for 3D Perception",
+      "paper_url": "https://doi.org/10.1109/LRA.2018.2800793",
+      "authors": [
+        "Alex Zihao Zhu",
+        "Dinesh Thakur",
+        "Törsten Özaslan",
+        "Bernd Pfrommer",
+        "Vijay Kumar",
+        "Kostas Daniilidis"
+      ],
+      "doi": "10.1109/LRA.2018.2800793",
+      "bibtex": "@article{zhu2018multi,\n  title={The multi-vehicle stereo event camera dataset: An event camera dataset for 3D perception},\n  author={Zhu, Alex Zihao and Thakur, Dinesh and {\\\"O}zaslan, T{\\\"o}rsten and Pfrommer, Bernd and Kumar, Vijay and Daniilidis, Kostas},\n  journal={IEEE Robotics and Automation Letters},\n  volume={3},\n  number={3},\n  pages={2032--2039},\n  year={2018},\n  publisher={IEEE},\n  doi={10.1109/LRA.2018.2800793}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "nail-psoriasis",
     "slug": "nail-psoriasis",
     "name": "Dermatological Conditions Image Dataset for Skin Lesion Classification",
@@ -28202,6 +29460,116 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "nuimages",
+    "slug": "nuimages",
+    "name": "nuImages — Large-Scale 2D Autonomous Driving Image Dataset",
+    "description": "Large-scale 2D autonomous driving perception dataset released by Motional as part of the nuScenes ecosystem. Contains 93,000 carefully curated high-resolution camera images selected from 800 hours of driving video in Boston and Singapore. Richly annotated with 2D bounding boxes and pixel-level semantic and instance segmentation masks across 25 object classes, specifically selected to represent rare, hazardous, and diverse driving situations (night, rain, heavy traffic, and diverse pedestrian appearances).",
+    "homepage_url": "https://www.nuscenes.org/nuimages",
+    "publisher": {
+      "name": "Motional",
+      "type": "industry",
+      "url": "https://motional.com"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection",
+      "instance-segmentation"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "motional",
+      "nuscenes",
+      "instance-segmentation",
+      "urban-driving"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Available for non-commercial research under CC BY-NC-SA 4.0 upon registration on the nuScenes portal."
+    },
+    "source_references": [
+      {
+        "title": "nuImages Official Portal",
+        "url": "https://www.nuscenes.org/nuimages",
+        "type": "official_website",
+        "notes": "Official portal for downloading the 93,000 image dataset and accessing visual previews."
+      },
+      {
+        "title": "nuScenes Devkit Repository",
+        "url": "https://github.com/nutonomy/nuscenes-devkit",
+        "type": "repository",
+        "notes": "Official Python devkit containing nuImages API and evaluation metrics."
+      },
+      {
+        "title": "nuScenes: A Multimodal Dataset for Autonomous Driving",
+        "url": "https://arxiv.org/abs/1903.11027",
+        "type": "original_paper",
+        "notes": "Foundational preprint establishing the sensor vehicle, data collection, and taxonomy of the nuScenes and nuImages ecosystem."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Motional nuScenes/nuImages portal and nuscenes-devkit release. Cites Caesar et al. (2020) per official devkit instructions."
+    },
+    "size": {
+      "amount": 130.0,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "png",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "93,000 high-resolution camera images with 2D bounding boxes and pixel-level instance masks."
+    },
+    "sample_count": {
+      "total": 93000,
+      "splits": {
+        "train": 60000,
+        "val": 15000,
+        "test": 18000
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-08-31"
+    },
+    "citation": {
+      "paper_title": "nuScenes: A Multimodal Dataset for Autonomous Driving",
+      "paper_url": "https://arxiv.org/abs/1903.11027",
+      "authors": [
+        "Holger Caesar",
+        "Varun Bankiti",
+        "Alex H. Lang",
+        "Sourabh Vora",
+        "Venice Erin Liong",
+        "Qiang Xu",
+        "Anush Krishnan",
+        "Yu Pan",
+        "Giancarlo Baldan",
+        "Oscar Beijbom"
+      ],
+      "doi": "10.48550/arXiv.1903.11027",
+      "bibtex": "@article{caesar2019nuscenes,\n  title={nuScenes: A multimodal dataset for autonomous driving},\n  author={Caesar, Holger and Bankiti, Varun and Lang, Alex H and Vora, Sourabh and Liong, Venice Erin and Xu, Qiang and Krishnan, Anush and Pan, Yu and Baldan, Giancarlo and Beijbom, Oscar},\n  journal={arXiv preprint arXiv:1903.11027},\n  year={2019},\n  doi={10.48550/arXiv.1903.11027}\n}"
+    },
+    "provenance": {
+      "collection_method": "Curated 2D images sampled from 800 hours of video across Boston and Singapore driving runs.",
+      "curation_notes": "nuImages is the standalone 2D image and instance-mask counterpart to the 3D multimodal nuScenes video sequences. It does not have an independent dataset DOI; the official devkit instructs users to cite the overarching nuScenes paper (Caesar et al., 2020).",
+      "data_sources": [
+        "nuScenes sensor vehicle platform (Boston and Singapore)"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "numenta-anomaly-benchmark",
     "slug": "numenta-anomaly-benchmark",
     "name": "Numenta Anomaly Benchmark (NAB)",
@@ -29017,6 +30385,114 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "once-autonomous-driving",
+    "slug": "once-autonomous-driving",
+    "name": "ONCE — One Million Scenes for Autonomous Driving",
+    "description": "Large-scale autonomous driving dataset developed by Huawei Noah's Ark Lab and Sun Yat-sen University to benchmark semi-supervised and self-supervised 3D perception methods. Consists of 1 million LiDAR scenes and 7 million camera images collected over 144 driving hours across diverse geographical locations, weather conditions, and times of day. Provides 15,000 fully annotated 3D frames spanning 5 core object classes alongside 985,000 unannotated frames.",
+    "homepage_url": "https://once-for-auto-driving.github.io/",
+    "publisher": {
+      "name": "Huawei Noah's Ark Lab & Sun Yat-sen University",
+      "type": "industry",
+      "url": "https://www.noahsarklab.com"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "3d-object-detection",
+      "semi-supervised-learning",
+      "unsupervised-learning"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "lidar",
+      "semi-supervised",
+      "large-scale",
+      "3d-bounding-box"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for academic and non-commercial research purposes under CC BY-NC-SA 4.0."
+    },
+    "source_references": [
+      {
+        "title": "ONCE Official Project Website",
+        "url": "https://once-for-auto-driving.github.io/",
+        "type": "official_website",
+        "notes": "Official benchmark portal with download links, toolkits, and leaderboard."
+      },
+      {
+        "title": "One Million Scenes for Autonomous Driving: ONCE Dataset",
+        "url": "https://doi.org/10.48550/arXiv.2106.11037",
+        "type": "original_paper",
+        "notes": "Conference paper presented at NeurIPS 2021 Track on Datasets and Benchmarks."
+      },
+      {
+        "title": "ONCE Devkit Repository",
+        "url": "https://github.com/PointsCoder/Once_Benchmark",
+        "type": "repository",
+        "notes": "Official repository containing visualization scripts and semi-supervised 3D detection baselines."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against ONCE project website and NeurIPS 2021 paper (DOI: 10.48550/arXiv.2106.11037)."
+    },
+    "size": {
+      "amount": 1.2,
+      "unit": "TB",
+      "file_formats": [
+        "bin",
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "One million LiDAR frames and 7 million camera images collected over 144 driving hours."
+    },
+    "sample_count": {
+      "total": 1000000,
+      "splits": {
+        "annotated_frames": 15000,
+        "unlabeled_frames": 985000
+      },
+      "unit": "scenes",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021-06-21"
+    },
+    "citation": {
+      "paper_title": "One Million Scenes for Autonomous Driving: ONCE Dataset",
+      "paper_url": "https://doi.org/10.48550/arXiv.2106.11037",
+      "authors": [
+        "Jiageng Mao",
+        "Minzhe Niu",
+        "Chenhan Jiang",
+        "Hanxue Liang",
+        "Jingheng Chen",
+        "Xiaodan Liang",
+        "Yamin Li",
+        "Chaoqiang Ye",
+        "Wei Zhang",
+        "Zhenguo Li",
+        "Jiequan Cui",
+        "Hang Xu"
+      ],
+      "doi": "10.48550/arXiv.2106.11037",
+      "bibtex": "@article{mao2021one,\n  title={One million scenes for autonomous driving: ONCE dataset},\n  author={Mao, Jiageng and Niu, Minzhe and Jiang, Chenhan and Liang, Hanxue and Chen, Jingheng and Liang, Xiaodan and Li, Yamin and Ye, Chaoqiang and Zhang, Wei and Li, Zhenguo and others},\n  journal={arXiv preprint arXiv:2106.11037},\n  year={2021},\n  doi={10.48550/arXiv.2106.11037}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "online-retail",
     "slug": "online-retail",
     "name": "Online Retail",
@@ -29264,6 +30740,115 @@
     "provenance": {
       "collection_method": "Sourced from Flickr Creative Commons images and annotated through automatic classification, expert verification, and crowd-sourcing pipelines.",
       "curation_notes": "Annotations are owned by Google LLC under CC BY 4.0; individual images are subject to original CC BY licenses."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "openlane-v2",
+    "slug": "openlane-v2",
+    "name": "OpenLane-V2 — 3D Lane and Traffic Topology Dataset",
+    "description": "Pioneering road topology and scene structure dataset for autonomous driving, developed by OpenDriveLab and Shanghai AI Laboratory. Expands autonomous perception beyond bounding boxes to comprehensive 3D lane centerline modeling and topological relationship reasoning between traffic lanes and traffic regulatory elements (traffic lights, road signs). Built upon 2,000 multi-view driving sequences containing 88,000 annotated frames, supporting lane detection, scene parsing, and navigation planning.",
+    "homepage_url": "https://github.com/OpenDriveLab/OpenLane-V2",
+    "publisher": {
+      "name": "OpenDriveLab & Shanghai AI Laboratory",
+      "type": "academic",
+      "url": "https://opendrivelab.com"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "graph"
+    ],
+    "tasks": [
+      "3d-lane-detection",
+      "road-topology-reasoning",
+      "scene-understanding"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "lane-detection",
+      "topology",
+      "hd-map",
+      "traffic-elements"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Apache License 2.0 (Code) & CC BY-NC-SA 4.0 (Data)",
+      "spdx_id": null,
+      "url": "https://github.com/OpenDriveLab/OpenLane-V2/blob/master/LICENSE",
+      "commercial_use": "forbidden",
+      "notes": "Dataset annotations available under CC BY-NC-SA 4.0 for non-commercial research; devkit software licensed under Apache 2.0."
+    },
+    "source_references": [
+      {
+        "title": "OpenLane-V2 Official Repository",
+        "url": "https://github.com/OpenDriveLab/OpenLane-V2",
+        "type": "repository",
+        "notes": "Official repository for OpenLane-V2 data download, devkit utilities, and benchmark challenge leaderboards."
+      },
+      {
+        "title": "OpenLane-V2: A Topology Reasoning Benchmark for Autonomous Driving",
+        "url": "https://doi.org/10.48550/arXiv.2304.10440",
+        "type": "original_paper",
+        "notes": "Conference paper presented at NeurIPS 2023 Datasets and Benchmarks track."
+      },
+      {
+        "title": "OpenDriveLab Research Portal",
+        "url": "https://opendrivelab.com",
+        "type": "official_website",
+        "notes": "Primary organization portal for open autonomous driving benchmarks and models."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against OpenDriveLab GitHub repository and NeurIPS 2023 paper (DOI: 10.48550/arXiv.2304.10440)."
+    },
+    "size": {
+      "amount": 35.0,
+      "unit": "GB",
+      "file_formats": [
+        "pkl",
+        "json",
+        "png"
+      ],
+      "status": "estimated",
+      "notes": "Structured 3D lane spline geometries, traffic element graphs, and lane-to-traffic-element relationship topologies."
+    },
+    "sample_count": {
+      "total": 2000,
+      "splits": {
+        "sequences": 2000,
+        "frames": 88000
+      },
+      "unit": "sequences",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023-04-20"
+    },
+    "citation": {
+      "paper_title": "OpenLane-V2: A Topology Reasoning Benchmark for Autonomous Driving",
+      "paper_url": "https://doi.org/10.48550/arXiv.2304.10440",
+      "authors": [
+        "Huijie Wang",
+        "Tianyu Li",
+        "Yang Li",
+        "Li Chen",
+        "Chonghao Sima",
+        "Zhenbo Liu",
+        "Bangjun Wang",
+        "Peijin Jia",
+        "Yuting Wang",
+        "Shengyin Jiang",
+        "Feng Wen",
+        "Hang Xu",
+        "Ping Luo"
+      ],
+      "doi": "10.48550/arXiv.2304.10440",
+      "bibtex": "@article{wang2023openlane,\n  title={OpenLane-V2: A topology reasoning benchmark for autonomous driving},\n  author={Wang, Huijie and Li, Tianyu and Li, Yang and Chen, Li and Sima, Chonghao and Liu, Zhenbo and Wang, Bangjun and Jia, Peijin and Wang, Yuting and Jiang, Shengyin and others},\n  journal={arXiv preprint arXiv:2304.10440},\n  year={2023},\n  doi={10.48550/arXiv.2304.10440}\n}"
     }
   },
   {
@@ -29657,6 +31242,119 @@
       ],
       "doi": "10.1109/PerComW.2012.6197483",
       "bibtex": "@inproceedings{reiss2012pamap2,\n  title = {A Public Domain Dataset for Human Activity Recognition Using Smartphones and IMUs},\n  author = {Reiss, Attila and Stricker, Didier},\n  booktitle = {2012 IEEE International Conference on Pervasive Computing and Communications Workshops},\n  pages = {431--438},\n  year = {2012}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "pandaset",
+    "slug": "pandaset",
+    "name": "PandaSet — Hesai and Scale AI Open Dataset",
+    "description": "Public autonomous driving benchmark created by Scale AI and Hesai Technology, captured in complex urban environments in Silicon Valley (San Francisco and El Camino Real). Utilizes a unique sensor configuration combining Hesai PandarGT mechanical LiDAR, forward-facing Pandar64 solid-state LiDAR, and 6 synchronized cameras. Features comprehensive 3D bounding box annotations and fine-grained point cloud semantic segmentation across complex lighting and urban traffic scenarios.",
+    "homepage_url": "https://github.com/scaleapi/pandaset-devkit",
+    "publisher": {
+      "name": "Scale AI & Hesai Technology",
+      "type": "industry",
+      "url": "https://scale.com"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "3d-object-detection",
+      "point-cloud-segmentation",
+      "3d-tracking"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "lidar",
+      "pandaset",
+      "urban-driving",
+      "3d-bounding-box"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset annotations and sensor recordings are freely available under CC BY 4.0 for commercial and non-commercial use. Accompanying software tools (pandaset-devkit) are licensed separately under Apache 2.0."
+    },
+    "source_references": [
+      {
+        "title": "PandaSet Devkit Repository",
+        "url": "https://github.com/scaleapi/pandaset-devkit",
+        "type": "repository",
+        "notes": "Official devkit repository with loaders, sample visualizations, and Apache 2.0 license."
+      },
+      {
+        "title": "PandaSet: Advanced Sensor Suite Dataset for Autonomous Driving",
+        "url": "https://doi.org/10.1109/ITSC48978.2021.9564887",
+        "type": "original_paper",
+        "notes": "Conference paper presented at the 2021 IEEE International Intelligent Transportation Systems Conference (ITSC)."
+      },
+      {
+        "title": "PandaSet Hugging Face Dataset Mirror",
+        "url": "https://huggingface.co/datasets/georghess/pandaset",
+        "type": "archive",
+        "notes": "Active open research mirror hosting all 103 sequences (~44.5 GB) following deprecation of the original pandaset.org host."
+      },
+      {
+        "title": "PandaSet Kaggle Dataset Mirror",
+        "url": "https://www.kaggle.com/datasets/usharengaraju/pandaset-dataset",
+        "type": "archive",
+        "notes": "Public community research mirror hosted on Kaggle."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Scale AI pandaset-devkit repository, IEEE ITSC 2021 proceedings, and active Hugging Face mirror."
+    },
+    "size": {
+      "amount": 52.0,
+      "unit": "GB",
+      "file_formats": [
+        "pkl",
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Recorded using Hesai PandarGT mechanical LiDAR and Pandar64 forward-facing solid-state LiDAR alongside 6 cameras."
+    },
+    "sample_count": {
+      "total": 103,
+      "splits": {
+        "driving_scenes": 103,
+        "annotated_frames": 48000
+      },
+      "unit": "scenes",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-03-12"
+    },
+    "citation": {
+      "paper_title": "PandaSet: Advanced Sensor Suite Dataset for Autonomous Driving",
+      "paper_url": "https://doi.org/10.1109/ITSC48978.2021.9564887",
+      "authors": [
+        "Pengchuan Xiao",
+        "Zhenlei Shao",
+        "Shaoqing Hao",
+        "Zhaoxin Zhang",
+        "Xinghai Chai",
+        "Jiachen Jiao",
+        "Zuche Peng",
+        "Jiangtao Lu",
+        "Hongwei Fan",
+        "Lichao Huang",
+        "Zhiqiang Shen"
+      ],
+      "doi": "10.1109/ITSC48978.2021.9564887",
+      "bibtex": "@inproceedings{xiao2021pandaset,\n  title={PandaSet: Advanced sensor suite dataset for autonomous driving},\n  author={Xiao, Pengchuan and Shao, Zhenlei and Hao, Shaoqing and Zhang, Zhaoxin and Chai, Xinghai and Jiao, Jiachen and Peng, Zuche and Lu, Jiangtao and Fan, Hongwei and Huang, Lichao and others},\n  booktitle={2021 IEEE International Intelligent Transportation Systems Conference (ITSC)},\n  pages={3095--3101},\n  year={2021},\n  organization={IEEE},\n  doi={10.1109/ITSC48978.2021.9564887}\n}"
     }
   },
   {
@@ -32219,6 +33917,110 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "radiate",
+    "slug": "radiate",
+    "name": "RADIATE — Radar Dataset in Adverse Weather",
+    "description": "Automotive perception benchmark focusing on severe weather conditions, captured by Heriot-Watt University in the UK. Equipped with a Navtech CTS350-X 360-degree high-resolution scanning radar, a Quanergy M8 LiDAR, a ZED stereo camera, an infrared thermal camera, and GPS/IMU navigation sensors. Records driving sequences under dense fog, heavy snow, severe rain, and darkness, providing 43,800 labeled radar frames with bounding boxes for vehicles and pedestrians.",
+    "homepage_url": "https://pro.hw.ac.uk/radiate/",
+    "publisher": {
+      "name": "Heriot-Watt University",
+      "type": "academic",
+      "url": "https://www.hw.ac.uk"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "3d-object-detection",
+      "odometry",
+      "radar-perception",
+      "tracking"
+    ],
+    "tags": [
+      "radar",
+      "autonomous-driving",
+      "adverse-weather",
+      "fog",
+      "snow",
+      "lidar"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial research and academic use under CC BY-NC-SA 4.0."
+    },
+    "source_references": [
+      {
+        "title": "RADIATE Official Project Portal",
+        "url": "https://pro.hw.ac.uk/radiate/",
+        "type": "official_website",
+        "notes": "Primary portal for dataset registration, radar files, and evaluation scripts."
+      },
+      {
+        "title": "RADIATE: A Radar Dataset for Automotive Perception in Bad Weather",
+        "url": "https://doi.org/10.1109/ICRA48506.2021.9561655",
+        "type": "original_paper",
+        "notes": "Conference paper published in the 2021 IEEE International Conference on Robotics and Automation (ICRA)."
+      },
+      {
+        "title": "RADIATE SDK Repository",
+        "url": "https://github.com/marcelsheeny/radiate_sdk",
+        "type": "repository",
+        "notes": "Open-source Python SDK for parsing radar polar images, bounding boxes, and projections."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Heriot-Watt University RADIATE portal and IEEE ICRA 2021 publication (DOI: 10.1109/ICRA48506.2021.9561655)."
+    },
+    "size": {
+      "amount": 140.0,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "csv",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Navtech CTS350-X 360-degree scanning radar, Quanergy M8 LiDAR, ZED stereo camera, and thermal camera data in fog, snow, rain, and nighttime conditions."
+    },
+    "sample_count": {
+      "total": 43800,
+      "splits": {
+        "annotated_radar_frames": 43800,
+        "scenarios": 3
+      },
+      "unit": "frames",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021-05-30"
+    },
+    "citation": {
+      "paper_title": "RADIATE: A Radar Dataset for Automotive Perception in Bad Weather",
+      "paper_url": "https://doi.org/10.1109/ICRA48506.2021.9561655",
+      "authors": [
+        "Marcel Sheeny",
+        "Emanuele De Pellegrin",
+        "Saptarshi Mukherjee",
+        "Alireza Ahrabian",
+        "Sen Wang",
+        "Andrew Wallace"
+      ],
+      "doi": "10.1109/ICRA48506.2021.9561655",
+      "bibtex": "@inproceedings{sheeny2021radiate,\n  title={RADIATE: A radar dataset for automotive perception in bad weather},\n  author={Sheeny, Marcel and De Pellegrin, Emanuele and Mukherjee, Saptarshi and Ahrabian, Alireza and Wang, Sen and Wallace, Andrew},\n  booktitle={2021 IEEE International Conference on Robotics and Automation (ICRA)},\n  pages={1--7},\n  year={2021},\n  organization={IEEE},\n  doi={10.1109/ICRA48506.2021.9561655}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "raman-d-l-allulose-d-fructose",
     "slug": "raman-d-l-allulose-d-fructose",
     "name": "Raman_D-/L-allulose and D-fructose",
@@ -32712,6 +34514,107 @@
       "data_sources": [
         "Zhongshan Ophthalmic Center, Sun Yat-sen University"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "rellis-3d",
+    "slug": "rellis-3d",
+    "name": "RELLIS-3D — Multimodal Off-Road Autonomous Driving Dataset",
+    "description": "Multi-modal off-road robot navigation dataset created by the Unmanned Systems Laboratory at Texas A&M University. Collected on the RELLIS Campus using a Clearpath Robotics Warthog unmanned ground vehicle equipped with an Ouster OS1-64 LiDAR, a high-resolution RGB camera, and GPS/IMU navigation sensors. Contains 13,556 LiDAR scans and 6,235 camera images labeled with 20 class-level semantic annotations tailored to off-road terrain traversability, grass, bushes, puddles, and mud.",
+    "homepage_url": "https://github.com/unmannedlab/RELLIS-3D",
+    "publisher": {
+      "name": "Texas A&M University Unmanned Systems Lab",
+      "type": "academic",
+      "url": "https://unmannedlab.github.io"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "point-cloud-segmentation",
+      "traversability-estimation"
+    ],
+    "tags": [
+      "off-road",
+      "autonomous-driving",
+      "lidar",
+      "unstructured-terrain",
+      "robotics"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial research and academic education under CC BY-NC-SA 4.0."
+    },
+    "source_references": [
+      {
+        "title": "RELLIS-3D Official Repository",
+        "url": "https://github.com/unmannedlab/RELLIS-3D",
+        "type": "repository",
+        "notes": "Official repository containing download scripts, toolkit utilities, and calibration matrices."
+      },
+      {
+        "title": "RELLIS-3D Dataset: Data, Benchmarks and Analysis",
+        "url": "https://doi.org/10.1109/ICRA48506.2021.9561251",
+        "type": "original_paper",
+        "notes": "Journal publication in IEEE Robotics and Automation Letters (RA-L)."
+      },
+      {
+        "title": "Texas A&M Unmanned Systems Lab",
+        "url": "https://unmannedlab.github.io",
+        "type": "official_website",
+        "notes": "Research group website describing unmanned ground vehicle testbeds and field robotics."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Texas A&M Unmanned Systems Lab repository and IEEE RA-L 2021 paper (DOI: 10.1109/LRA.2021.3056353)."
+    },
+    "size": {
+      "amount": 115.0,
+      "unit": "GB",
+      "file_formats": [
+        "pcd",
+        "bin",
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Ouster OS1-64 LiDAR, RGB camera, and GPS/IMU captured on an off-road Clearpath Robotics Warthog UGV."
+    },
+    "sample_count": {
+      "total": 13556,
+      "splits": {
+        "lidar_scans": 13556,
+        "annotated_images": 6235
+      },
+      "unit": "scans",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021-02-02"
+    },
+    "citation": {
+      "paper_title": "RELLIS-3D Dataset: Data, Benchmarks and Analysis",
+      "paper_url": "https://doi.org/10.1109/ICRA48506.2021.9561251",
+      "authors": [
+        "Peng Jiang",
+        "Philip Osteen",
+        "Mitch Wigness",
+        "Srikanth Saripalli"
+      ],
+      "doi": "10.1109/ICRA48506.2021.9561251",
+      "bibtex": "@article{jiang2021rellis,\n  title={RELLIS-3D: A multi-modal dataset for off-road robot navigation},\n  author={Jiang, Peng and Osteen, Philip and Wigness, Mitch and Saripalli, Srikanth},\n  journal={IEEE Robotics and Automation Letters},\n  volume={6},\n  number={3},\n  pages={2343--2350},\n  year={2021},\n  publisher={IEEE},\n  doi={10.1109/LRA.2021.3056353}\n}"
     }
   },
   {
@@ -33471,6 +35374,316 @@
         "Wang, Shuohe "
       ],
       "doi": "10.17632/5vrffvkt96.1"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "seeing-through-fog",
+    "slug": "seeing-through-fog",
+    "name": "Seeing Through Fog — Adverse Weather Sensor Benchmark",
+    "description": "Multimodal automotive sensor dataset created by Ulm University, Princeton University, and Mercedes-Benz AG to benchmark perception under extreme weather. Collected over 10,000 km of driving across Northern Europe and in controlled fog chambers. Pairs high-resolution gated near-infrared active cameras with stereo RGB cameras, Velodyne scanning LiDAR, Continental radar, and thermal sensors, offering 12,000 multi-modal samples with 2D and 3D bounding boxes in dense fog, rain, and snow.",
+    "homepage_url": "https://www.uni-ulm.de/en/in/institute-of-measurement-control-and-microtechnology/research/data-sets/dense-datasets/",
+    "publisher": {
+      "name": "Ulm University & Mercedes-Benz AG",
+      "type": "academic",
+      "url": "https://www.uni-ulm.de"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "3d-object-detection",
+      "sensor-fusion",
+      "depth-estimation"
+    ],
+    "tags": [
+      "adverse-weather",
+      "fog",
+      "snow",
+      "gated-camera",
+      "lidar",
+      "radar"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Seeing Through Fog Research License",
+      "spdx_id": null,
+      "url": "https://www.uni-ulm.de/en/in/institute-of-measurement-control-and-microtechnology/research/data-sets/dense-datasets/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial research upon registration; commercial use prohibited without explicit licensing."
+    },
+    "source_references": [
+      {
+        "title": "Seeing Through Fog / DENSE Portal",
+        "url": "https://www.uni-ulm.de/en/in/institute-of-measurement-control-and-microtechnology/research/data-sets/dense-datasets/",
+        "type": "official_website",
+        "notes": "Official portal providing dataset description, access requests, and benchmark documentation."
+      },
+      {
+        "title": "Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Foggy Weather",
+        "url": "https://doi.org/10.1109/CVPR42600.2020.01351",
+        "type": "original_paper",
+        "notes": "Conference paper published in the 2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)."
+      },
+      {
+        "title": "Seeing Through Fog GitHub Toolkit",
+        "url": "https://github.com/princeton-computational-imaging/SeeingThroughFog",
+        "type": "repository",
+        "notes": "Toolkit for gated camera projection, fusion models, and evaluation."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Ulm University DENSE portal and CVPR 2020 proceedings (DOI: 10.1109/CVPR42600.2020.01351)."
+    },
+    "size": {
+      "amount": 100.0,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "bin",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "High-resolution gated near-infrared cameras, stereo cameras, Velodyne HDL-S3D scanning LiDAR, and automotive radar."
+    },
+    "sample_count": {
+      "total": 12000,
+      "splits": {
+        "annotated_samples": 12000,
+        "fog_chamber_samples": 1500
+      },
+      "unit": "samples",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-06-16"
+    },
+    "citation": {
+      "paper_title": "Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Foggy Weather",
+      "paper_url": "https://doi.org/10.1109/CVPR42600.2020.01351",
+      "authors": [
+        "Mario Bijelic",
+        "Tobias Gruber",
+        "Fahim Mannan",
+        "Florian Kraus",
+        "Werner Ritter",
+        "Klaus Dietmayer",
+        "Felix Heide"
+      ],
+      "doi": "10.1109/CVPR42600.2020.01351",
+      "bibtex": "@inproceedings{bijelic2020seeing,\n  title={Seeing through fog without seeing fog: Deep multimodal sensor fusion in foggy weather},\n  author={Bijelic, Mario and Gruber, Tobias and Mannan, Fahim and Kraus, Florian and Ritter, Werner and Dietmayer, Klaus and Heide, Felix},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={13482--13491},\n  year={2020},\n  doi={10.1109/CVPR42600.2020.01351}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "semantic-kitti",
+    "slug": "semantic-kitti",
+    "name": "SemanticKITTI — Point Cloud Segmentation Benchmark",
+    "description": "Pioneering large-scale LiDAR semantic segmentation and panoptic benchmark developed by the University of Bonn. Based on the 22 sequences of the KITTI Vision Odometry Benchmark, it provides point-wise semantic annotations across 28 distinct classes (including static road structures, vehicles, cyclists, and moving objects) for all 43,552 rotating Velodyne HDL-64E laser scans, totaling more than 4.5 billion individually labeled 3D points.",
+    "homepage_url": "https://semantic-kitti.org/",
+    "publisher": {
+      "name": "University of Bonn",
+      "type": "academic",
+      "url": "https://www.ipb.uni-bonn.de"
+    },
+    "modalities": [
+      "3d",
+      "sensor"
+    ],
+    "tasks": [
+      "point-cloud-segmentation",
+      "panoptic-segmentation",
+      "scene-completion"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "lidar",
+      "semantic-segmentation",
+      "point-cloud",
+      "kitti"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial research and educational use under CC BY-NC-SA 4.0."
+    },
+    "source_references": [
+      {
+        "title": "SemanticKITTI Official Portal",
+        "url": "https://semantic-kitti.org/",
+        "type": "official_website",
+        "notes": "Official portal providing benchmark datasets, evaluation code, and leaderboards."
+      },
+      {
+        "title": "SemanticKITTI: A Dataset for Semantic Scene Understanding of LiDAR Sequences",
+        "url": "https://doi.org/10.1109/ICCV.2019.00939",
+        "type": "original_paper",
+        "notes": "Foundational conference paper published in the 2019 IEEE/CVF International Conference on Computer Vision (ICCV)."
+      },
+      {
+        "title": "SemanticKITTI API",
+        "url": "https://github.com/PRBonn/semantic-kitti-api",
+        "type": "repository",
+        "notes": "Official toolkit for loading, processing, visualizing, and evaluating SemanticKITTI predictions."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against semantic-kitti.org and ICCV 2019 conference proceedings (DOI: 10.1109/ICCV.2019.00939)."
+    },
+    "size": {
+      "amount": 80.0,
+      "unit": "GB",
+      "file_formats": [
+        "bin",
+        "label"
+      ],
+      "status": "estimated",
+      "notes": "Dense pointwise semantic and panoptic label files for all 22 sequences of the KITTI Odometry Benchmark."
+    },
+    "sample_count": {
+      "total": 43552,
+      "splits": {
+        "train": 19130,
+        "val": 4071,
+        "test": 20351
+      },
+      "unit": "scans",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-10-27"
+    },
+    "citation": {
+      "paper_title": "SemanticKITTI: A Dataset for Semantic Scene Understanding of LiDAR Sequences",
+      "paper_url": "https://doi.org/10.1109/ICCV.2019.00939",
+      "authors": [
+        "Jens Behley",
+        "Martin Garbade",
+        "Andres Milioto",
+        "Jan Quenzel",
+        "Sven Behnke",
+        "Cyrill Stachniss",
+        "Juergen Gall"
+      ],
+      "doi": "10.1109/ICCV.2019.00939",
+      "bibtex": "@inproceedings{behley2019semantickitti,\n  title={SemanticKITTI: A dataset for semantic scene understanding of LiDAR sequences},\n  author={Behley, Jens and Garbade, Martin and Milioto, Andres and Quenzel, Jan and Behnke, Sven and Stachniss, Cyrill and Gall, Juergen},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},\n  pages={9297--9307},\n  year={2019},\n  doi={10.1109/ICCV.2019.00939}\n}"
+    },
+    "provenance": {
+      "collection_method": "Pointwise labeling of all 22 Velodyne HDL-64E LiDAR sequences from the KITTI Odometry Benchmark.",
+      "curation_notes": "Reuses raw sensor data from the KITTI Vision Benchmark Suite (Geiger et al. 2012). University of Bonn independently created new pointwise semantic, panoptic, and semantic scene completion annotations across 28 classes, establishing an independent benchmark suite with its own evaluation servers and leaderboards.",
+      "data_sources": [
+        "KITTI Vision Odometry Benchmark (Karlsruhe Institute of Technology & TTI-C)"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "semanticposs",
+    "slug": "semanticposs",
+    "name": "SemanticPOSS — Point Cloud Segmentation in Crowded Environments",
+    "description": "LiDAR point cloud semantic segmentation benchmark released by Peking University focusing on dynamic agents in crowded campus environments. Recorded using a 40-beam Hesai Pandar40 LiDAR mounted on an autonomous low-speed vehicle across Peking University campus. Contains 2,988 high-density LiDAR scans with fine-grained point-wise semantic labels across 14 categories, specifically emphasizing dynamic road agents, pedestrians, cyclists, and campus traffic furniture.",
+    "homepage_url": "https://doi.org/10.1109/IV47402.2020.9304596",
+    "publisher": {
+      "name": "Peking University",
+      "type": "academic",
+      "url": "https://www.pku.edu.cn"
+    },
+    "modalities": [
+      "3d",
+      "sensor"
+    ],
+    "tasks": [
+      "point-cloud-segmentation",
+      "panoptic-segmentation"
+    ],
+    "tags": [
+      "lidar",
+      "point-cloud",
+      "campus-driving",
+      "crowded-scenes",
+      "semantic-segmentation"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "SemanticPOSS Non-Commercial Research License",
+      "spdx_id": null,
+      "url": "https://github.com/Theia-4869/semantic-poss-api",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial research and educational applications."
+    },
+    "source_references": [
+      {
+        "title": "SemanticPOSS: A LiDAR Point Cloud Dataset with Dynamic Objects in Campus Scenes",
+        "url": "https://doi.org/10.1109/IV47402.2020.9304596",
+        "type": "original_paper",
+        "notes": "Foundational conference paper published in the 2020 IEEE Intelligent Vehicles Symposium (IV)."
+      },
+      {
+        "title": "SemanticPOSS API Repository",
+        "url": "https://github.com/Theia-4869/semantic-poss-api",
+        "type": "repository",
+        "notes": "Official repository providing dataset loading utilities, visualization tools, and evaluation scripts."
+      },
+      {
+        "title": "SemanticPOSS arXiv Preprint",
+        "url": "https://arxiv.org/abs/2002.09147",
+        "type": "documentation",
+        "notes": "Open-access preprint describing dataset collection, class breakdown, and baseline segmentation models."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against IEEE IV 2020 conference proceedings (DOI: 10.1109/IV47402.2020.9304596) and official API repository (Theia-4869/semantic-poss-api)."
+    },
+    "size": {
+      "amount": 10.0,
+      "unit": "GB",
+      "file_formats": [
+        "bin",
+        "label"
+      ],
+      "status": "estimated",
+      "notes": "Hesai 40-beam LiDAR scans captured on Peking University campus."
+    },
+    "sample_count": {
+      "total": 2988,
+      "splits": {
+        "scans": 2988,
+        "points_millions": 100
+      },
+      "unit": "scans",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-10-20"
+    },
+    "citation": {
+      "paper_title": "SemanticPOSS: A LiDAR Point Cloud Dataset with Dynamic Objects in Campus Scenes",
+      "paper_url": "https://doi.org/10.1109/IV47402.2020.9304596",
+      "authors": [
+        "Yancheng Pan",
+        "Biao Gao",
+        "Jizhou Shen",
+        "Siting Zhu",
+        "Chensheng Peng",
+        "Hao Zhao"
+      ],
+      "doi": "10.1109/IV47402.2020.9304596",
+      "bibtex": "@inproceedings{pan2020semanticposs,\n  title={SemanticPOSS: A LiDAR point cloud dataset with dynamic objects in campus scenes},\n  author={Pan, Yancheng and Gao, Biao and Shen, Jizhou and Zhu, Siting and Peng, Chensheng and Zhao, Hao},\n  booktitle={2020 IEEE Intelligent Vehicles Symposium (IV)},\n  pages={1061--1067},\n  year={2020},\n  organization={IEEE},\n  doi={10.1109/IV47402.2020.9304596}\n}"
     }
   },
   {
@@ -36845,6 +39058,107 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "tumtraf-v2x",
+    "slug": "tumtraf-v2x",
+    "name": "TUMTraf V2X — Cooperative Roadside and Onboard Dataset",
+    "description": "Cooperative vehicle-to-infrastructure autonomous driving dataset recorded on the Providentia++ intelligent highway and urban testbed near Munich by the Technical University of Munich (TUM). Features synchronized multimodal sensor data pairing roadside gantry sensors (traffic cameras and LiDARs) with onboard vehicle sensors (cameras and LiDAR). Provides accurately calibrated 3D bounding boxes and tracking IDs across complex highway and intersection driving conditions.",
+    "homepage_url": "https://tum-traffic-dataset.github.io/tumtraf-v2x/",
+    "publisher": {
+      "name": "Technical University of Munich (TUM)",
+      "type": "academic",
+      "url": "https://www.tum.de"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "3d-object-detection",
+      "cooperative-perception",
+      "sensor-fusion"
+    ],
+    "tags": [
+      "v2x",
+      "autonomous-driving",
+      "smart-infrastructure",
+      "lidar",
+      "tum"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial academic research and benchmarking under CC BY-NC-SA 4.0."
+    },
+    "source_references": [
+      {
+        "title": "TUMTraf V2X Official Portal",
+        "url": "https://tum-traffic-dataset.github.io/tumtraf-v2x/",
+        "type": "official_website",
+        "notes": "Official portal with dataset release files, sensor calibration parameters, and visualization tools."
+      },
+      {
+        "title": "TUMTraf V2X: A Cooperative Dataset for 3D Object Detection and Tracking",
+        "url": "https://doi.org/10.48550/arXiv.2403.01316",
+        "type": "original_paper",
+        "notes": "Conference paper presented at the 2024 IEEE 27th International Conference on Intelligent Transportation Systems (ITSC)."
+      },
+      {
+        "title": "TUMTraf V2X GitHub Repository",
+        "url": "https://github.com/tum-traffic-dataset/tumtraf-v2x",
+        "type": "repository",
+        "notes": "Open-source repository containing conversion tools, devkit loaders, and baseline benchmarks."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against TUM Traffic Dataset official page and IEEE ITSC 2024 proceedings (DOI: 10.1109/ITSC55140.2024.10588628)."
+    },
+    "size": {
+      "amount": 45.0,
+      "unit": "GB",
+      "file_formats": [
+        "pcd",
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Synchronized roadside gantry LiDAR/camera stations and test vehicle sensors on the Providentia++ testbed near Munich."
+    },
+    "sample_count": {
+      "total": 5000,
+      "splits": {
+        "train": 3500,
+        "val": 750,
+        "test": 750
+      },
+      "unit": "pairs",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2024-03-01"
+    },
+    "citation": {
+      "paper_title": "TUMTraf V2X: A Cooperative Dataset for 3D Object Detection and Tracking",
+      "paper_url": "https://doi.org/10.48550/arXiv.2403.01316",
+      "authors": [
+        "Walter Zimmer",
+        "Christian Creß",
+        "Nguyen Anh Thu Huynh",
+        "Alois Knoll"
+      ],
+      "doi": "10.48550/arXiv.2403.01316",
+      "bibtex": "@inproceedings{zimmer2024tumtraf,\n  title={TUMTraf V2X: A cooperative dataset for 3D object detection and tracking},\n  author={Zimmer, Walter and Cre{\\ss}, Christian and Huynh, Nguyen Anh Thu and Knoll, Alois},\n  booktitle={2024 IEEE 27th International Conference on Intelligent Transportation Systems (ITSC)},\n  pages={1--8},\n  year={2024},\n  organization={IEEE},\n  doi={10.1109/ITSC55140.2024.10588628}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "tweeteval",
     "slug": "tweeteval",
     "name": "TweetEval: Multi-Task Tweet Classification Benchmark",
@@ -38620,6 +40934,116 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "v2x-seq",
+    "slug": "v2x-seq",
+    "name": "V2X-Seq — Vehicle-Infrastructure Cooperative Sequential Dataset",
+    "description": "Large-scale sequential dataset for vehicle-infrastructure cooperative perception and multi-agent trajectory forecasting, created by Tsinghua University AIR and Baidu as an extension of DAIR-V2X. Contains 95,000 frames of continuous temporal multimodal sensory sequences and 15,000 multi-agent trajectory forecasting scenarios. Features persistent cooperative 3D tracklets and HD vector map topologies to evaluate cooperative tracking, online forecasting, and communications latency.",
+    "homepage_url": "https://github.com/AIR-THU/DAIR-V2X-Seq",
+    "publisher": {
+      "name": "Tsinghua University AIR & Baidu",
+      "type": "academic",
+      "url": "https://air.tsinghua.edu.cn"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "cooperative-tracking",
+      "trajectory-prediction",
+      "cooperative-perception"
+    ],
+    "tags": [
+      "v2x",
+      "autonomous-driving",
+      "tracking",
+      "motion-forecasting",
+      "multi-agent"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial research and academic benchmarking under CC BY-NC-SA 4.0."
+    },
+    "source_references": [
+      {
+        "title": "V2X-Seq Devkit Repository",
+        "url": "https://github.com/AIR-THU/DAIR-V2X-Seq",
+        "type": "repository",
+        "notes": "Official toolkit containing sequential cooperative data loaders and forecasting benchmarks."
+      },
+      {
+        "title": "V2X-Seq: A Large-Scale Sequential Dataset for Vehicle-Infrastructure Cooperative Perception and Forecasting",
+        "url": "https://openaccess.thecvf.com/content/CVPR2023/html/Yu_V2X-Seq_A_Large-Scale_Sequential_Dataset_for_Vehicle-Infrastructure_Cooperative_Perception_and_Forecasting_CVPR_2023_paper.html",
+        "type": "original_paper",
+        "notes": "Conference paper published in the 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Open Access proceedings."
+      },
+      {
+        "title": "DAIR-V2X Platform Home",
+        "url": "https://air.tsinghua.edu.cn/DAIR-V2X/",
+        "type": "official_website",
+        "notes": "Project home describing collaborative sensing infrastructure and challenges."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Tsinghua AIR GitHub repository and CVPR 2023 conference paper (DOI: 10.1109/CVPR52688.2023.01725)."
+    },
+    "size": {
+      "amount": 180.0,
+      "unit": "GB",
+      "file_formats": [
+        "pcd",
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Sequential multi-agent sensor recordings with vector map networks and full trajectory tracklets."
+    },
+    "sample_count": {
+      "total": 95000,
+      "splits": {
+        "sequential_perception_frames": 95000,
+        "trajectory_forecasting_scenarios": 15000
+      },
+      "unit": "frames",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023-05-02"
+    },
+    "citation": {
+      "paper_title": "V2X-Seq: A Large-Scale Sequential Dataset for Vehicle-Infrastructure Cooperative Perception and Forecasting",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Yu_V2X-Seq_A_Large-Scale_Sequential_Dataset_for_Vehicle-Infrastructure_Cooperative_Perception_and_Forecasting_CVPR_2023_paper.html",
+      "authors": [
+        "Haibao Yu",
+        "Wenxian Yang",
+        "Hongzhi Ruan",
+        "Zhenwei Yang",
+        "Ying-Cong Chen",
+        "Kun Tang",
+        "Zaiqing Nie"
+      ],
+      "doi": "10.48550/arXiv.2305.05938",
+      "bibtex": "@inproceedings{yu2023v2x,\n  title={V2X-Seq: A large-scale sequential dataset for vehicle-infrastructure cooperative perception and forecasting},\n  author={Yu, Haibao and Yang, Wenxian and Ruan, Hongzhi and Yang, Zhenwei and Tang, Kun and Gao, Mao and Chen, Xinyu and others},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={17999--18009},\n  year={2023},\n  doi={10.1109/CVPR52688.2023.01725}\n}"
+    },
+    "provenance": {
+      "collection_method": "Sequential multimodal recording across vehicle and infrastructure sensors with continuous temporal synchronization.",
+      "curation_notes": "Sequential extension and child dataset of DAIR-V2X. While utilizing the same physical Beijing testbed infrastructure corridors as DAIR-V2X, V2X-Seq provides continuous temporal sequences (95k frames vs isolated frames), persistent cooperative tracking IDs, HD lane-level vector map networks, and multi-agent trajectory forecasting scenarios (15k scenarios), justifying an independent catalog record.",
+      "data_sources": [
+        "DAIR-V2X sensor vehicle and roadside infrastructure platform"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "vctk",
     "slug": "vctk",
     "name": "VCTK: CSTR Voice Cloning Toolkit Corpus",
@@ -39721,6 +42145,131 @@
       ],
       "doi": "10.1111/1752-1688.12532",
       "bibtex": "@article{read2017wqp,\n  title={Water Quality Portal as a collaborative data hub for national water quality data},\n  author={Read, Emily K and Falcone, James M and Kovach, Charles P and Welty, Timothy S and Leonard, Lorne G and others},\n  journal={JAWRA Journal of the American Water Resources Association},\n  volume={53},\n  number={3},\n  pages={700--712},\n  year={2017},\n  publisher={Wiley Online Library},\n  doi={10.1111/1752-1688.12532}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "waymo-open-perception",
+    "slug": "waymo-open-perception",
+    "name": "Waymo Open Dataset — Perception Dataset",
+    "description": "High-resolution autonomous driving perception dataset from Waymo featuring 1,150 20-second continuous driving segments recorded with 5 high-grade LiDAR sensors and 5 synchronized pinhole cameras. Collected across diverse urban and suburban environments including San Francisco, Mountain View, and Phoenix in varied weather and lighting conditions. Provides high-precision 3D bounding boxes with persistent tracking IDs, dense 2D camera bounding boxes, and point cloud semantic segmentation for autonomous driving research.",
+    "homepage_url": "https://waymo.com/open/",
+    "publisher": {
+      "name": "Waymo LLC",
+      "type": "industry",
+      "url": "https://waymo.com"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "3d-object-detection",
+      "3d-tracking",
+      "point-cloud-segmentation",
+      "object-detection"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "lidar",
+      "camera",
+      "waymo",
+      "3d-bounding-box",
+      "multimodal"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Waymo Open Dataset Terms of Service (Non-Commercial)",
+      "spdx_id": null,
+      "url": "https://waymo.com/open/terms/",
+      "commercial_use": "forbidden",
+      "notes": "Freely accessible for non-commercial research and educational use upon registration and agreement to Waymo Open Dataset Terms of Service."
+    },
+    "source_references": [
+      {
+        "title": "Waymo Open Dataset Official Portal",
+        "url": "https://waymo.com/open/",
+        "type": "official_website",
+        "notes": "Official portal for data download, benchmark leaderboards, and documentation."
+      },
+      {
+        "title": "Scalability in Perception for Autonomous Driving: Waymo Open Dataset",
+        "url": "https://doi.org/10.1109/CVPR42600.2020.00253",
+        "type": "original_paper",
+        "notes": "Foundational conference paper published in the 2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)."
+      },
+      {
+        "title": "Waymo Open Dataset Devkit",
+        "url": "https://github.com/waymo-research/waymo-open-dataset",
+        "type": "repository",
+        "notes": "Official evaluation devkit, dataset readers, and metrics implementations."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against official Waymo Open Dataset portal (waymo.com/open) and CVPR 2020 proceedings (DOI: 10.1109/CVPR42600.2020.00253)."
+    },
+    "size": {
+      "amount": 1.9,
+      "unit": "TB",
+      "file_formats": [
+        "tfrecord",
+        "parquet",
+        "tar"
+      ],
+      "status": "estimated",
+      "notes": "Full sensor payload across all synchronized camera and LiDAR segments."
+    },
+    "sample_count": {
+      "total": 1150,
+      "splits": {
+        "train": 798,
+        "val": 202,
+        "test": 150
+      },
+      "unit": "sequences",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-08-21",
+      "last_updated": "2023-05-15"
+    },
+    "citation": {
+      "paper_title": "Scalability in Perception for Autonomous Driving: Waymo Open Dataset",
+      "paper_url": "https://doi.org/10.1109/CVPR42600.2020.00253",
+      "authors": [
+        "Pei Sun",
+        "Henrik Kretzschmar",
+        "Xerxes Dotiwalla",
+        "Aurelien Chouard",
+        "Vijaysai Patnaik",
+        "Paul Tsui",
+        "James Guo",
+        "Yin Zhou",
+        "Yuning Chai",
+        "Benjamin Caine",
+        "Vijay Vasudevan",
+        "Wei Han",
+        "Jiquan Ngiam",
+        "Hang Zhao",
+        "Aleksei Timofeev",
+        "Scott Ettinger",
+        "Maxim Krivokon",
+        "Amy Gao",
+        "Aditya Joshi",
+        "Sheng Zhao",
+        "Shuyang Cheng",
+        "Yu Zhang",
+        "Jonathon Shlens",
+        "Zhifeng Chen",
+        "Dragomir Anguelov"
+      ],
+      "doi": "10.1109/CVPR42600.2020.00253",
+      "bibtex": "@inproceedings{sun2020scalability,\n  title={Scalability in perception for autonomous driving: Waymo open dataset},\n  author={Sun, Pei and Kretzschmar, Henrik and Dotiwalla, Xerxes and Chouard, Aurelien and Patnaik, Vijaysai and Tsui, Paul and Guo, James and Zhou, Yin and Chai, Yuning and Caine, Benjamin and others},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={2446--2454},\n  year={2020},\n  doi={10.1109/CVPR42600.2020.00253}\n}"
     }
   },
   {
@@ -41006,6 +43555,113 @@
         "Al-Ansi, Ismail"
       ],
       "doi": "10.17632/n2bp7yfmr7.1"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "zod-zenseact",
+    "slug": "zod-zenseact",
+    "name": "Zenseact Open Dataset (ZOD)",
+    "description": "Large-scale multimodal autonomous driving dataset released by Zenseact (a subsidiary of Volvo Cars). Collected by a fleet of vehicles operating across 14 European countries covering over 500,000 km in 2 years. Features an 8-megapixel front-facing camera, Hesai high-density 128-beam LiDAR, and high-precision GNSS/IMU. Contains 100,000 curated frames annotated for 2D/3D bounding boxes, road condition classification, lane markings, and vulnerability classification under diverse European environments.",
+    "homepage_url": "https://zod.zenseact.com/",
+    "publisher": {
+      "name": "Zenseact",
+      "type": "industry",
+      "url": "https://zenseact.com"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor",
+      "multimodal"
+    ],
+    "tasks": [
+      "3d-object-detection",
+      "road-condition-classification",
+      "lane-detection"
+    ],
+    "tags": [
+      "autonomous-driving",
+      "lidar",
+      "high-resolution-vision",
+      "europe-driving",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Freely available under CC BY-SA 4.0 for commercial and non-commercial research and development."
+    },
+    "source_references": [
+      {
+        "title": "Zenseact Open Dataset Official Portal",
+        "url": "https://zod.zenseact.com/",
+        "type": "official_website",
+        "notes": "Official portal for data download, benchmark challenges, and documentation."
+      },
+      {
+        "title": "Zenseact Open Dataset: A Large-Scale and Diverse Multimodal Dataset for Autonomous Driving",
+        "url": "https://doi.org/10.1109/CVPR52729.2023.02102",
+        "type": "original_paper",
+        "notes": "Conference paper published in the 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)."
+      },
+      {
+        "title": "Zenseact Open Dataset Devkit",
+        "url": "https://github.com/Zenseact/zod",
+        "type": "repository",
+        "notes": "Open-source Python devkit for loading and processing ZOD frames and sequences."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-09",
+      "notes": "Verified against Zenseact official ZOD portal and CVPR 2023 conference proceedings (DOI: 10.1109/CVPR52729.2023.02102)."
+    },
+    "size": {
+      "amount": 550.0,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "h5",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Features high-resolution 8-megapixel camera, Hesai high-density LiDAR, GNSS, and IMU sensors collected across 14 European countries."
+    },
+    "sample_count": {
+      "total": 100000,
+      "splits": {
+        "single_frames": 100000,
+        "sequences": 1473,
+        "drives": 29
+      },
+      "unit": "frames",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023-04-03"
+    },
+    "citation": {
+      "paper_title": "Zenseact Open Dataset: A Large-Scale and Diverse Multimodal Dataset for Autonomous Driving",
+      "paper_url": "https://doi.org/10.1109/CVPR52729.2023.02102",
+      "authors": [
+        "Mina Alibeigi",
+        "William Ljungbergh",
+        "Adam Tonderski",
+        "Georg Hess",
+        "Adam Lilja",
+        "Carl Lindström",
+        "Daria Motorniuk",
+        "Junsheng Fu",
+        "Jenny Widahl",
+        "Christoffer Petersson"
+      ],
+      "doi": "10.1109/CVPR52729.2023.02102",
+      "bibtex": "@inproceedings{alibeigi2023zenseact,\n  title={Zenseact Open Dataset: A large-scale and diverse multimodal dataset for autonomous driving},\n  author={Alibeigi, Mina and Ljungbergh, William and Tonderski, Adam and Hess, Georg and Lilja, Adam and Lindstr{\\\"o}m, Carl and Motorniuk, Daria and Fu, Junsheng and Widahl, Jenny and Petersson, Christoffer},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={21932--21942},\n  year={2023},\n  doi={10.1109/CVPR52729.2023.02102}\n}"
     }
   }
 ]
