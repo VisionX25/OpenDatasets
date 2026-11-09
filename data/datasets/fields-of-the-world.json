@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fields-of-the-world",
+  "slug": "fields-of-the-world",
+  "name": "Fields of The World (FTW): Global Agricultural Field Boundary Benchmark",
+  "description": "Fields of The World (FTW) is an open-access, community-driven global benchmark dataset designed for agricultural field boundary instance and semantic segmentation. Maintained by Earth Genome, Taylor Geospatial Engine, and international collaborators, FTW provides multi-temporal Sentinel-2 satellite imagery paired with high-quality instance masks across diverse agricultural landscapes, biomes, and field sizes spanning Europe, Africa, Asia, and South America. The benchmark standardizes evaluation for delineating agricultural parcel boundaries at 10-meter resolution.",
+  "homepage_url": "https://fieldsofthe.world/",
+  "publisher": {
+    "name": "Fields of The World Community",
+    "type": "community",
+    "url": "https://fieldsofthe.world"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "instance-segmentation",
+    "semantic-segmentation",
+    "field-boundary-detection",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "remote-sensing",
+    "sentinel-2",
+    "field-boundaries",
+    "instance-segmentation",
+    "earth-observation"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Benchmark datasets and polygon products distributed under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "Fields of The World GitHub Organization",
+      "url": "https://github.com/fieldsoftheworld",
+      "type": "repository",
+      "notes": "Official repository for benchmark loaders, data catalog, and baseline segmentation models."
+    },
+    {
+      "title": "Fields of The World Official Portal",
+      "url": "https://fieldsofthe.world/",
+      "type": "official_website",
+      "notes": "Main project portal and interactive global map viewer."
+    },
+    {
+      "title": "Fields of The World: A Global Benchmark for Field Boundary Instance Segmentation",
+      "url": "https://arxiv.org/abs/2309.09638",
+      "type": "original_paper",
+      "notes": "Preprint detailing benchmark methodology, curation, and model evaluation."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official GitHub organization and arXiv publication."
+  },
+  "sample_count": {
+    "total": 10000,
+    "unit": "annotated satellite patches",
+    "status": "estimated"
+  },
+  "dates": {
+    "published": "2023"
+  },
+  "citation": {
+    "paper_title": "Fields of The World: A Global Benchmark for Field Boundary Instance Segmentation",
+    "paper_url": "https://arxiv.org/abs/2309.09638",
+    "authors": [
+      "Hannah R. Kerner",
+      "Gabriel Tseng",
+      "Inbal Becker-Reshef",
+      "Catherine Nakalembe"
+    ],
+    "bibtex": "@article{kerner2023fields,\n  title={Fields of The World: A Global Benchmark for Field Boundary Instance Segmentation},\n  author={Kerner, Hannah R and Tseng, Gabriel and Becker-Reshef, Inbal and Nakalembe, Catherine},\n  journal={arXiv preprint arXiv:2309.09638},\n  year={2023}\n}"
+  }
+}

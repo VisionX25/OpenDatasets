@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mit-bih-atrial-fibrillation",
+  "slug": "mit-bih-atrial-fibrillation",
+  "name": "MIT-BIH Atrial Fibrillation Database",
+  "description": "The MIT-BIH Atrial Fibrillation Database is a classic benchmark developed by the Massachusetts Institute of Technology and Beth Israel Hospital Arrhythmia Laboratory for developing and evaluating algorithms that detect atrial fibrillation (AF) and flutter. The collection contains 25 ten-hour continuous two-channel ECG recordings sampled at 250 Hz with 12-bit resolution, acquired from 25 subjects with predominantly paroxysmal atrial fibrillation. It includes expert beat annotations and precise rhythm episode state markers denoting the exact transitions between normal sinus rhythm, atrial fibrillation, atrial flutter, and junctional rhythm.",
+  "homepage_url": "https://physionet.org/content/afdb/1.0.0/",
+  "publisher": {
+    "name": "MIT & Beth Israel Deaconess Medical Center",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "atrial-fibrillation-detection",
+    "arrhythmia-detection",
+    "ecg-classification"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "atrial-fibrillation",
+    "arrhythmia",
+    "physionet",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet MIT-BIH Atrial Fibrillation Database Repository (DOI: 10.13026/C2MW2D)",
+      "url": "https://doi.org/10.13026/C2MW2D",
+      "type": "repository"
+    },
+    {
+      "title": "Moody & Mark Computers in Cardiology 1983 Publication",
+      "url": "https://doi.org/10.13026/C2MW2D",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C2MW2D and Moody & Mark (Computers in Cardiology 1983)."
+  },
+  "sample_count": {
+    "total": 25,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1983"
+  },
+  "citation": {
+    "paper_title": "A new method for detecting atrial fibrillation using R-R intervals",
+    "paper_url": "https://doi.org/10.13026/C2MW2D",
+    "authors": [
+      "George B. Moody",
+      "Roger G. Mark"
+    ],
+    "doi": "10.13026/C2MW2D",
+    "bibtex": "@article{moody1983new,\n  title={A new method for detecting atrial fibrillation using R-R intervals},\n  author={Moody, George B and Mark, Roger G},\n  journal={Computers in Cardiology},\n  volume={10},\n  pages={227--230},\n  year={1983},\n  doi={10.13026/C2MW2D}\n}"
+  }
+}

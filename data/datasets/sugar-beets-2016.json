@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sugar-beets-2016",
+  "slug": "sugar-beets-2016",
+  "name": "Sugar Beets 2016: Agricultural Robot Multi-Sensor Dataset",
+  "description": "The Sugar Beets 2016 dataset is a multi-sensor agricultural robotics dataset recorded by the Institute of Geodesy and Geoinformation (IPB) at the University of Bonn and the German Research Foundation (DFG). Recorded across three months during the spring 2016 growing season on a commercial farm in Germany, it captures the autonomous Bonirob field robot navigating through sugar beet fields from the early emergence stage until closed canopy. The dataset features synchronized multi-sensor streams: high-resolution RGB-D images (Kinect v2), 4-channel JAI multi-spectral cameras, 3D LiDAR (Velodyne VLP-16), wheel odometry, and RTK-GPS centimeter-accurate localization tracks, accompanied by pixel-wise ground-truth annotations for crop vs. weed semantic segmentation.",
+  "homepage_url": "https://www.ipb.uni-bonn.de/data/sugarbeets2016/index.html",
+  "publisher": {
+    "name": "University of Bonn Institute of Geodesy and Geoinformation",
+    "type": "academic",
+    "url": "https://www.ipb.uni-bonn.de"
+  },
+  "modalities": [
+    "vision",
+    "time-series"
+  ],
+  "tasks": [
+    "agricultural-robotics",
+    "plant-classification",
+    "semantic-segmentation",
+    "robot-localization"
+  ],
+  "tags": [
+    "agriculture",
+    "robotics",
+    "sugar-beet",
+    "weed-detection",
+    "lidar",
+    "multispectral",
+    "precision-farming"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0",
+    "spdx_id": "CC-BY-NC-SA-3.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+    "commercial_use": "forbidden",
+    "notes": "Published by University of Bonn under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (CC BY-NC-SA 3.0)."
+  },
+  "source_references": [
+    {
+      "title": "University of Bonn IPB Sugar Beets 2016 Portal",
+      "url": "https://www.ipb.uni-bonn.de/data/sugarbeets2016/index.html",
+      "type": "official_website"
+    },
+    {
+      "title": "IJRR 2017 Publication (DOI: 10.1177/0278364917720510)",
+      "url": "https://doi.org/10.1177/0278364917720510",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against IPB University of Bonn portal and Chebrolu et al. (IJRR 2017). Distinct from SB20 and PhenoBench."
+  },
+  "sample_count": {
+    "total": 10000,
+    "unit": "frames",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2017"
+  },
+  "citation": {
+    "paper_title": "Agricultural robot dataset for plant classification, localization and mapping on sugar beet fields",
+    "paper_url": "https://doi.org/10.1177/0278364917720510",
+    "authors": [
+      "Nived Chebrolu",
+      "Philipp Lottes",
+      "Alexander Schaefer",
+      "Wera Winterhalter",
+      "Wolfram Burgard",
+      "Cyrill Stachniss"
+    ],
+    "doi": "10.1177/0278364917720510",
+    "bibtex": "@article{chebrolu2017agricultural,\n  title={Agricultural robot dataset for plant classification, localization and mapping on sugar beet fields},\n  author={Chebrolu, Nived and Lottes, Philipp and Schaefer, Alexander and Winterhalter, Wera and Burgard, Wolfram and Stachniss, Cyrill},\n  journal={The International Journal of Robotics Research},\n  volume={36},\n  number={10},\n  pages={1045--1052},\n  year={2017},\n  publisher={SAGE Publications Sage UK: London, England},\n  doi={10.1177/0278364917720510}\n}"
+  }
+}

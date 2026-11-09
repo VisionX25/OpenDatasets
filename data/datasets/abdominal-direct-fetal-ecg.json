@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "abdominal-direct-fetal-ecg",
+  "slug": "abdominal-direct-fetal-ecg",
+  "name": "Abdominal and Direct Fetal ECG Database",
+  "description": "The Abdominal and Direct Fetal ECG Database is an obstetrical signal processing benchmark recorded at the Department of Obstetrics, Medical University of Silesia, Poland. It comprises 5 multichannel recordings obtained from women in active labor (aged 21 to 31, at 38 to 41 weeks gestation). Each recording features 4 differential abdominal channels capturing non-invasive composite maternal and fetal ECG signals alongside a direct fetal electrocardiogram signal acquired simultaneously via a scalp electrode during delivery. Sampled at 1,000 Hz with 16-bit resolution, this dataset serves as a benchmark for evaluating blind source separation, maternal ECG cancellation, and non-invasive fetal QRS detection.",
+  "homepage_url": "https://physionet.org/content/adfecgdb/1.0.0/",
+  "publisher": {
+    "name": "Institute of Medical Technology and Equipment & Medical University of Silesia",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "fetal-ecg-extraction",
+    "blind-source-separation",
+    "biomedical-signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "obstetrics",
+    "fetal-ecg",
+    "ecg",
+    "maternal-fetal",
+    "physionet",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet Abdominal and Direct Fetal ECG Database Repository (DOI: 10.13026/C2RP4B)",
+      "url": "https://doi.org/10.13026/C2RP4B",
+      "type": "repository"
+    },
+    {
+      "title": "Jezewski et al. IEEE Transactions on Biomedical Engineering 2012 Publication",
+      "url": "https://doi.org/10.1109/TBME.2011.2179934",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C2RP4B and Jezewski et al. (IEEE TBME 2012)."
+  },
+  "sample_count": {
+    "total": 5,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2012"
+  },
+  "citation": {
+    "paper_title": "Determination of the fetal heart rate from abdominal signals: evaluation of beat-to-beat accuracy in relation to the direct fetal electrocardiogram",
+    "paper_url": "https://doi.org/10.1109/TBME.2011.2179934",
+    "authors": [
+      "Janusz Jezewski",
+      "Adam Matonia",
+      "Tomasz Kupka",
+      "Dawid Roj",
+      "Robert Czabanski"
+    ],
+    "doi": "10.13026/C2RP4B",
+    "bibtex": "@article{jezewski2012determination,\n  title={Determination of the fetal heart rate from abdominal signals: evaluation of beat-to-beat accuracy in relation to the direct fetal electrocardiogram},\n  author={Jezewski, Janusz and Matonia, Adam and Kupka, Tomasz and Roj, Dawid and Czabanski, Robert},\n  journal={IEEE Transactions on Biomedical Engineering},\n  volume={59},\n  number={3},\n  pages={686--694},\n  year={2012},\n  publisher={IEEE},\n  doi={10.13026/C2RP4B}\n}"
+  }
+}

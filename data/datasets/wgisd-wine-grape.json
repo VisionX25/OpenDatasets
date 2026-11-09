@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wgisd-wine-grape",
+  "slug": "wgisd-wine-grape",
+  "name": "WGISD: Wine Grape Instance Segmentation Dataset",
+  "description": "The Wine Grape Instance Segmentation Dataset (WGISD) is an open agricultural image collection curated by Embrapa Digital Agriculture and the University of Campinas (UNICAMP) in Brazil, published in BioData Mining. The dataset consists of 300 high-resolution field photographs captured in commercial Brazilian vineyards across five distinct wine grape varieties (Cabernet Franc, Cabernet Sauvignon, Chardonnay, Merlot, and Sauvignon Blanc). Annotations document 4,432 grape bunches with precise bounding boxes, instance segmentation polygon masks, and individual berry point annotations, serving as a benchmark for automated cluster detection, robotic harvesting, and in-field viticultural yield estimation.",
+  "homepage_url": "https://github.com/thsant/wgisd",
+  "publisher": {
+    "name": "Embrapa Digital Agriculture & UNICAMP",
+    "type": "academic",
+    "url": "https://github.com/thsant/wgisd"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "instance-segmentation",
+    "object-detection",
+    "yield-estimation",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "viticulture",
+    "grapes",
+    "instance-segmentation",
+    "fruit-detection",
+    "precision-farming",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "WGISD GitHub Repository",
+      "url": "https://github.com/thsant/wgisd",
+      "type": "repository"
+    },
+    {
+      "title": "BioData Mining 2020 Publication (DOI: 10.1186/s13040-020-00219-3)",
+      "url": "https://doi.org/10.1186/s13040-020-00219-3",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against GitHub repository and Santos et al. (BioData Mining 2020)."
+  },
+  "sample_count": {
+    "total": 300,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020"
+  },
+  "citation": {
+    "paper_title": "Grape detection, segmentation and tracking using deep learning",
+    "paper_url": "https://doi.org/10.1186/s13040-020-00219-3",
+    "authors": [
+      "Thiago T. Santos",
+      "Leonardo L. de Souza",
+      "Andre A. dos Santos",
+      "Sandra Avila"
+    ],
+    "doi": "10.1186/s13040-020-00219-3",
+    "bibtex": "@article{santos2020grape,\n  title={Grape detection, segmentation and tracking using deep learning},\n  author={Santos, Thiago T and de Souza, Leonardo L and dos Santos, Andre A and Avila, Sandra},\n  journal={BioData Mining},\n  volume={13},\n  number={1},\n  pages={9},\n  year={2020},\n  publisher={BioMed Central},\n  doi={10.1186/s13040-020-00219-3}\n}"
+  }
+}

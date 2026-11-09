@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ecg-id-database",
+  "slug": "ecg-id-database",
+  "name": "ECG-ID Database: Biometric Human Identification Benchmark",
+  "description": "The ECG-ID Database is an electrocardiographic biometric benchmark compiled by Saint Petersburg State Electrotechnical University (LETI). It comprises 310 single-lead ECG recordings obtained from 90 volunteers (44 men and 46 women, aged 13 to 75). Recordings were acquired from the palms of the hands using non-invasive dry copper electrodes, with each recording lasting 20 seconds (sampled at 500 Hz with 12-bit resolution). Each subject contributed between 2 and 20 recordings collected across multiple days, providing intra-subject morphological variability for evaluating biometric identity verification and recognition models.",
+  "homepage_url": "https://physionet.org/content/ecgiddb/1.0.0/",
+  "publisher": {
+    "name": "Saint Petersburg State Electrotechnical University (LETI)",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "biometric-identification",
+    "ecg-classification",
+    "biomedical-signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "biometrics",
+    "identification",
+    "physionet",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet ECG-ID Database Repository (DOI: 10.13026/C2J01F)",
+      "url": "https://doi.org/10.13026/C2J01F",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C2J01F and Lugovaya (LETI 2005)."
+  },
+  "sample_count": {
+    "total": 310,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2005"
+  },
+  "citation": {
+    "paper_title": "Biometric human identification based on electrocardiogram",
+    "paper_url": "https://doi.org/10.13026/C2J01F",
+    "authors": [
+      "Tatiana S. Lugovaya"
+    ],
+    "doi": "10.13026/C2J01F",
+    "bibtex": "@mastersthesis{lugovaya2005biometric,\n  title={Biometric human identification based on electrocardiogram},\n  author={Lugovaya, Tatiana S},\n  year={2005},\n  school={Faculty of Computing Technologies and Informatics, Electrotechnical University (LETI), Saint-Petersburg, Russian Federation},\n  doi={10.13026/C2J01F}\n}"
+  }
+}

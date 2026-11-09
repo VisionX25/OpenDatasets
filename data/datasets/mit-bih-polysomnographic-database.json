@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mit-bih-polysomnographic-database",
+  "slug": "mit-bih-polysomnographic-database",
+  "name": "MIT-BIH Polysomnographic Database: Sleep Staging & Apnea Benchmark",
+  "description": "The MIT-BIH Polysomnographic Database is an over-night sleep and physiological monitoring library collected at Boston's Beth Israel Hospital Sleep Laboratory. It contains 18 multi-channel polysomnographic recordings (each over 6 hours in duration) recorded from 16 male subjects (aged 32 to 56) evaluated for chronic sleep apnea. Each recording includes continuous EEG, single-channel ECG, respiration (chest/abdominal effort and airflow), and continuous pulse oximetry (SpO2). The collection features expert annotations for sleep staging (stages 1, 2, 3, 4, REM, and wakefulness) alongside respiratory event markers for obstructive and central sleep apneas.",
+  "homepage_url": "https://physionet.org/content/slpdb/1.0.0/",
+  "publisher": {
+    "name": "Beth Israel Hospital Sleep Laboratory & MIT",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "sleep-staging",
+    "sleep-apnea-detection",
+    "polysomnography-analysis"
+  ],
+  "tags": [
+    "healthcare",
+    "sleep-medicine",
+    "polysomnography",
+    "eeg",
+    "ecg",
+    "sleep-apnea",
+    "physionet",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet MIT-BIH Polysomnographic Database Repository (DOI: 10.13026/C23K5S)",
+      "url": "https://doi.org/10.13026/C23K5S",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C23K5S. Multi-channel sleep benchmark."
+  },
+  "sample_count": {
+    "total": 18,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1999"
+  },
+  "citation": {
+    "paper_title": "MIT-BIH Polysomnographic Database",
+    "paper_url": "https://doi.org/10.13026/C23K5S",
+    "authors": [
+      "George B. Moody"
+    ],
+    "doi": "10.13026/C23K5S",
+    "bibtex": "@misc{moody1999slpdb,\n  title={MIT-BIH Polysomnographic Database},\n  author={Moody, George B},\n  year={1999},\n  publisher={PhysioNet},\n  doi={10.13026/C23K5S}\n}"
+  }
+}

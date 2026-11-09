@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ptb-xl-plus",
+  "slug": "ptb-xl-plus",
+  "name": "PTB-XL+: Comprehensive Electrocardiographic Feature Dataset",
+  "description": "PTB-XL+ is an extensive clinical feature and annotation dataset complementing the 21,837 twelve-lead ECG records of the canonical PTB-XL database. Developed by the Physikalisch-Technische Bundesanstalt (PTB), Charité Universitätsmedizin Berlin, and Karlsruhe Institute of Technology, it provides fiducial point segmentations (P-onset, P-peak, P-offset, QRS-onset, QRS-peak, J-point, T-offset), morphological wave boundaries, heart rate, electrical axis metrics, and median heartbeat waveforms extracted using validated commercial and academic ECG analysis software (GE Marquette 12SL and Uni-G). The dataset serves as a rich multi-modal bridge between raw 12-lead voltage waveforms, clinical diagnoses, and tabular cardiological features.",
+  "homepage_url": "https://physionet.org/content/ptb-xl-plus/1.0.1/",
+  "publisher": {
+    "name": "Physikalisch-Technische Bundesanstalt (PTB) & Charité Berlin",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "ecg-classification",
+    "waveform-segmentation",
+    "tabular-classification"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "ptb-xl",
+    "feature-extraction",
+    "physionet",
+    "median-beats"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet PTB-XL+ Repository (DOI: 10.13026/g6h6-7g88)",
+      "url": "https://doi.org/10.13026/g6h6-7g88",
+      "type": "repository"
+    },
+    {
+      "title": "Strodthoff et al. Scientific Data 2023 Publication",
+      "url": "https://doi.org/10.1038/s41597-023-02338-8",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/g6h6-7g88 and Strodthoff et al. (Scientific Data 2023). Extends PTB-XL."
+  },
+  "sample_count": {
+    "total": 21837,
+    "unit": "records",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023"
+  },
+  "citation": {
+    "paper_title": "PTB-XL+, a comprehensive electrocardiographic feature dataset",
+    "paper_url": "https://doi.org/10.1038/s41597-023-02338-8",
+    "authors": [
+      "Nils Strodthoff",
+      "Temesgen Mehari",
+      "Claudia Nagel",
+      "Philip Aston",
+      "Arun Sundar",
+      "Claus Graff",
+      "Jørgen Kanters",
+      "Wilhelm Haverkamp",
+      "Olaf Doessel",
+      "Axel Loewe",
+      "Markus Bär",
+      "Tobias Schaeffter"
+    ],
+    "doi": "10.13026/g6h6-7g88",
+    "bibtex": "@article{strodthoff2023ptb,\n  title={PTB-XL+, a comprehensive electrocardiographic feature dataset},\n  author={Strodthoff, Nils and Mehari, Temesgen and Nagel, Claudia and Aston, Philip and Sundar, Arun and Graff, Claus and Kanters, J{\\o}rgen and Haverkamp, Wilhelm and Doessel, Olaf and Loewe, Axel and others},\n  journal={Scientific Data},\n  volume={10},\n  number={1},\n  pages={279},\n  year={2023},\n  publisher={Nature Publishing Group UK London},\n  doi={10.13026/g6h6-7g88}\n}"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "minneapple",
+  "slug": "minneapple",
+  "name": "MinneApple: Apple Detection and Segmentation Benchmark",
+  "description": "MinneApple is an orchard-based agricultural computer vision benchmark compiled by the Department of Computer Science and Engineering at the University of Minnesota, published in IEEE Robotics and Automation Letters. The dataset was recorded at the University of Minnesota Horticultural Research Center using high-resolution cameras in commercial apple orchards under varied foliage density, branch occlusions, fruit clustering, and fluctuating daylight. It comprises 1,000 high-resolution images containing 41,325 manually annotated individual apples with precise polygonal instance segmentation masks and bounding boxes. The benchmark is designed to advance automated fruit yield estimation, robotic harvesting, and in-field object detection.",
+  "homepage_url": "https://github.com/nicolaihaeni/MinneApple",
+  "publisher": {
+    "name": "University of Minnesota",
+    "type": "academic",
+    "url": "https://github.com/nicolaihaeni/MinneApple"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "instance-segmentation",
+    "yield-estimation",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "precision-farming",
+    "apple",
+    "fruit-detection",
+    "instance-segmentation",
+    "robotics",
+    "orchard",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "MinneApple GitHub Repository",
+      "url": "https://github.com/nicolaihaeni/MinneApple",
+      "type": "repository"
+    },
+    {
+      "title": "IEEE Robotics and Automation Letters 2020 Publication",
+      "url": "https://doi.org/10.1109/LRA.2020.2965061",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against GitHub repository and Häni et al. (IEEE RA-L 2020)."
+  },
+  "sample_count": {
+    "total": 1000,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020"
+  },
+  "citation": {
+    "paper_title": "MinneApple: A Benchmark Dataset for Apple Detection and Segmentation",
+    "paper_url": "https://doi.org/10.1109/LRA.2020.2965061",
+    "authors": [
+      "Nicolai Häni",
+      "Pravakar Roy",
+      "Volkan Isler"
+    ],
+    "doi": "10.1109/LRA.2020.2965061",
+    "bibtex": "@article{hani2020minneapple,\n  title={MinneApple: A Benchmark Dataset for Apple Detection and Segmentation},\n  author={H{\\\"a}ni, Nicolai and Roy, Pravakar and Isler, Volkan},\n  journal={IEEE Robotics and Automation Letters},\n  volume={5},\n  number={2},\n  pages={852--858},\n  year={2020},\n  publisher={IEEE},\n  doi={10.1109/LRA.2020.2965061}\n}"
+  }
+}

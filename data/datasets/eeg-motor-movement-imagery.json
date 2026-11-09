@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "eeg-motor-movement-imagery",
+  "slug": "eeg-motor-movement-imagery",
+  "name": "EEG Motor Movement/Imagery Dataset",
+  "description": "The EEG Motor Movement/Imagery Dataset is an electroencephalographic benchmark collected by the Wadsworth Center, New York State Department of Health, using the BCI2000 research platform. The dataset consists of over 1,500 one- and two-minute 64-channel EEG recordings (sampled at 160 Hz according to the international 10-10 system) obtained from 109 healthy volunteers. Participants performed motor execution and mental imagery tasks, including opening and closing left or right fists, imagining hand movements, and moving both feet. The dataset provides continuous event annotations, serving as a primary benchmark for motor imagery classification, Brain-Computer Interface (BCI) decoding, and neuroprosthetic control.",
+  "homepage_url": "https://physionet.org/content/eegmmidb/1.0.0/",
+  "publisher": {
+    "name": "Wadsworth Center, New York State Department of Health",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "brain-computer-interface",
+    "motor-imagery-classification",
+    "eeg-analysis"
+  ],
+  "tags": [
+    "healthcare",
+    "neuroscience",
+    "eeg",
+    "bci",
+    "motor-imagery",
+    "brain-computer-interface",
+    "physionet"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet EEG Motor Movement/Imagery Dataset Repository (DOI: 10.13026/C28G6P)",
+      "url": "https://doi.org/10.13026/C28G6P",
+      "type": "repository"
+    },
+    {
+      "title": "Schalk et al. IEEE Transactions on Biomedical Engineering 2004 Publication",
+      "url": "https://doi.org/10.1109/TBME.2004.827072",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C28G6P and Schalk et al. (IEEE TBME 2004)."
+  },
+  "sample_count": {
+    "total": 109,
+    "unit": "subjects",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2004"
+  },
+  "citation": {
+    "paper_title": "BCI2000: a general-purpose brain-computer interface (BCI) system",
+    "paper_url": "https://doi.org/10.1109/TBME.2004.827072",
+    "authors": [
+      "Gerwin Schalk",
+      "Dennis J. McFarland",
+      "Thilo Hinterberger",
+      "Niels Birbaumer",
+      "Jonathan R. Wolpaw"
+    ],
+    "doi": "10.13026/C28G6P",
+    "bibtex": "@article{schalk2004bci2000,\n  title={BCI2000: a general-purpose brain-computer interface (BCI) system},\n  author={Schalk, Gerwin and McFarland, Dennis J and Hinterberger, Thilo and Birbaumer, Niels and Wolpaw, Jonathan R},\n  journal={IEEE Transactions on Biomedical Engineering},\n  volume={51},\n  number={6},\n  pages={1034--1043},\n  year={2004},\n  publisher={IEEE},\n  doi={10.13026/C28G6P}\n}"
+  }
+}

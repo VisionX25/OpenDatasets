@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "long-term-st-database",
+  "slug": "long-term-st-database",
+  "name": "Long Term ST Database: Ambulatory Ischemia Monitoring Benchmark",
+  "description": "The Long Term ST Database is an extensive multi-center benchmark developed by an international collaboration (University of Ljubljana, CNR Institute of Clinical Physiology, and Beth Israel Deaconess Medical Center/MIT) to evaluate automated Holter monitoring systems during daily activities. The database consists of 86 continuous 2- and 3-lead Holter ECG recordings, each 21 to 24 hours in duration, from 80 subjects with documented ischemic heart disease. The dataset contains comprehensive beat-by-beat annotations and expert clinical consensus labels for over 1,100 ischemic and non-ischemic ST episodes, providing a challenging benchmark for distinguishing true myocardial ischemia from postural shifts and conduction abnormalities.",
+  "homepage_url": "https://physionet.org/content/ltstdb/1.0.0/",
+  "publisher": {
+    "name": "University of Ljubljana & PhysioNet",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "myocardial-ischemia-detection",
+    "ecg-classification",
+    "biomedical-signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "ischemia",
+    "holter",
+    "physionet",
+    "long-term"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet Long Term ST Database Repository (DOI: 10.13026/C2G01T)",
+      "url": "https://doi.org/10.13026/C2G01T",
+      "type": "repository"
+    },
+    {
+      "title": "Jager et al. Circulation 2003 Publication",
+      "url": "https://doi.org/10.1161/01.CIR.0000045667.65345.9F",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C2G01T and Jager et al. (Circulation 2003)."
+  },
+  "sample_count": {
+    "total": 86,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2000"
+  },
+  "citation": {
+    "paper_title": "Long-term ST database: a reference for the development and evaluation of automated ischaemia detectors and for the study of the dynamics of myocardial ischaemia",
+    "paper_url": "https://doi.org/10.1161/01.CIR.0000045667.65345.9F",
+    "authors": [
+      "Franc Jager",
+      "Alessandro Taddei",
+      "George B. Moody",
+      "Michele Emdin",
+      "Gorazd Antolic",
+      "Roman Dorn",
+      "Ales Smrdel",
+      "Carlo Marchesi",
+      "Roger G. Mark"
+    ],
+    "doi": "10.13026/C2G01T",
+    "bibtex": "@article{jager2003long,\n  title={Long-term ST database: a reference for the development and evaluation of automated ischaemia detectors and for the study of the dynamics of myocardial ischaemia},\n  author={Jager, Franc and Taddei, Alessandro and Moody, George B and Emdin, Michele and Antolic, Gorazd and Dorn, Roman and Smrdel, Ales and Marchesi, Carlo and Mark, Roger G},\n  journal={Circulation},\n  volume={107},\n  number={2},\n  pages={247--254},\n  year={2003},\n  publisher={Am Heart Assoc},\n  doi={10.13026/C2G01T}\n}"
+  }
+}

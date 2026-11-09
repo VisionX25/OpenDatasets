@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "rumexweeds",
+  "slug": "rumexweeds",
+  "name": "RumexWeeds: Grassland Weed Dataset for Agricultural Robotics",
+  "description": "RumexWeeds is an open-access field robotics and computer vision dataset specifically collected for the autonomous detection and localized control of grassland dock weeds (Rumex obtusifolius and Rumex crispus) in organic pastures. Developed by the Technical University of Denmark (DTU) and Wageningen University & Research, the dataset comprises 5,510 high-resolution images recorded across dynamic field conditions in Denmark, featuring 15,519 bounding box annotations, 340 pixel-level semantic segmentation masks, and synchronized GNSS, IMU, and odometry telemetry.",
+  "homepage_url": "https://orbit.dtu.dk/en/datasets/data-for-rumexweeds-a-grassland-dataset-for-agricultural-robotics/",
+  "publisher": {
+    "name": "Technical University of Denmark (DTU)",
+    "type": "academic",
+    "url": "https://www.dtu.dk"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "semantic-segmentation",
+    "crop-weed-segmentation",
+    "agricultural-robotics"
+  ],
+  "tags": [
+    "agriculture",
+    "precision-farming",
+    "weed-detection",
+    "grassland",
+    "rumex",
+    "agricultural-robotics",
+    "computer-vision"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Data and annotations licensed under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "DTU Orbit RumexWeeds Dataset Record",
+      "url": "https://orbit.dtu.dk/en/datasets/data-for-rumexweeds-a-grassland-dataset-for-agricultural-robotics/",
+      "type": "repository",
+      "notes": "Official DTU research repository record with DOI 10.11583/dtu.17040518."
+    },
+    {
+      "title": "RumexWeeds: A grassland dataset for agricultural robotics",
+      "url": "https://doi.org/10.1002/rob.22196",
+      "type": "original_paper",
+      "notes": "Research article published in the Journal of Field Robotics."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against DTU Orbit dataset deposit and Journal of Field Robotics publication."
+  },
+  "sample_count": {
+    "total": 5510,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023"
+  },
+  "citation": {
+    "paper_title": "RumexWeeds: A grassland dataset for agricultural robotics",
+    "paper_url": "https://doi.org/10.1002/rob.22196",
+    "authors": [
+      "Ronja Güldenring",
+      "Frits K. van Evert",
+      "Lazaros Nalpantidis"
+    ],
+    "doi": "10.1002/rob.22196",
+    "bibtex": "@article{guldenring2023rumexweeds,\n  title={RumexWeeds: A grassland dataset for agricultural robotics},\n  author={G{\\\"u}ldenring, Ronja and van Evert, Frits K and Nalpantidis, Lazaros},\n  journal={Journal of Field Robotics},\n  volume={40},\n  number={6},\n  pages={1639--1656},\n  year={2023},\n  publisher={Wiley Online Library}\n}"
+  }
+}

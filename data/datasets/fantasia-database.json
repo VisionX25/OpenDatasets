@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fantasia-database",
+  "slug": "fantasia-database",
+  "name": "Fantasia Database: Healthy Aging and Cardiac Dynamics Benchmark",
+  "description": "The Fantasia Database is a physiological study curated by the Beth Israel Deaconess Medical Center, Harvard Medical School, and PhysioNet to investigate the effects of healthy adult aging on cardiac interbeat interval dynamics. The collection consists of 40 continuous ambulatory recordings from 20 young healthy subjects (aged 21 to 34) and 20 elderly healthy subjects (aged 68 to 85) while resting supine and viewing the movie Fantasia to maintain wakefulness without emotional arousal. Signals include continuous ECG (sampled at 250 Hz) and respiratory movements, with automated beat detection and comprehensive visual audit by expert researchers.",
+  "homepage_url": "https://physionet.org/content/fantasia/1.0.0/",
+  "publisher": {
+    "name": "Beth Israel Deaconess Medical Center & Harvard Medical School",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "heart-rate-variability",
+    "biomedical-signal-processing",
+    "aging-biomarkers"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "heart-rate-variability",
+    "aging",
+    "physionet",
+    "respiration"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet Fantasia Database Repository (DOI: 10.13026/C2RG61)",
+      "url": "https://doi.org/10.13026/C2RG61",
+      "type": "repository"
+    },
+    {
+      "title": "Iyengar et al. American Journal of Physiology 1996 Publication",
+      "url": "https://doi.org/10.1152/ajpheart.1996.271.3.H1078",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C2RG61 and Iyengar et al. (Am J Physiol 1996)."
+  },
+  "sample_count": {
+    "total": 40,
+    "unit": "subjects",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1996"
+  },
+  "citation": {
+    "paper_title": "Age-related alterations in the fractal scaling of cardiac interbeat interval dynamics",
+    "paper_url": "https://doi.org/10.1152/ajpheart.1996.271.3.H1078",
+    "authors": [
+      "N. Iyengar",
+      "C. K. Peng",
+      "R. Morin",
+      "A. L. Goldberger",
+      "L. A. Lipsitz"
+    ],
+    "doi": "10.13026/C2RG61",
+    "bibtex": "@article{iyengar1996age,\n  title={Age-related alterations in the fractal scaling of cardiac interbeat interval dynamics},\n  author={Iyengar, N and Peng, C-K and Morin, R and Goldberger, AL and Lipsitz, LA},\n  journal={American Journal of Physiology-Heart and Circulatory Physiology},\n  volume={271},\n  number={3},\n  pages={H1078--H1084},\n  year={1996},\n  publisher={American Physiological Society},\n  doi={10.13026/C2RG61}\n}"
+  }
+}

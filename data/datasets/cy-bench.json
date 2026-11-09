@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cy-bench",
+  "slug": "cy-bench",
+  "name": "CY-Bench: Global Sub-National Crop Yield Forecasting Benchmark",
+  "description": "CY-Bench is a comprehensive open-access machine learning benchmark dataset for sub-national crop yield forecasting developed by the AgML initiative of the Agricultural Model Intercomparison and Improvement Project (AgMIP), Wageningen University, and CGIAR. Featuring harmonized multi-year crop yield statistics for maize and wheat across dozens of countries, CY-Bench pairs historical yield observations with spatio-temporal agrometeorological indicators from ERA5, soil properties from SoilGrids, and satellite vegetation indices from Copernicus to enable reproducible model evaluation across continents.",
+  "homepage_url": "https://essd.copernicus.org/articles/18/3997/2026/essd-18-3997-2026.html",
+  "publisher": {
+    "name": "Agricultural Model Intercomparison and Improvement Project (AgMIP)",
+    "type": "academic",
+    "url": "https://agmip.org"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "crop-yield-prediction",
+    "forecasting",
+    "regression",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "crop-yield",
+    "forecasting",
+    "climate-impact",
+    "wheat",
+    "maize",
+    "benchmark",
+    "time-series"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published under open-access CC BY 4.0 terms in Earth System Science Data."
+  },
+  "source_references": [
+    {
+      "title": "CY-Bench Article in Earth System Science Data",
+      "url": "https://essd.copernicus.org/articles/18/3997/2026/essd-18-3997-2026.html",
+      "type": "original_paper",
+      "notes": "Published peer-reviewed benchmark paper in ESSD (Copernicus)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against Copernicus ESSD article DOI 10.5194/essd-18-3997-2026."
+  },
+  "sample_count": {
+    "total": 30000,
+    "unit": "administrative-year observations",
+    "status": "estimated"
+  },
+  "dates": {
+    "published": "2026"
+  },
+  "citation": {
+    "paper_title": "CY-Bench: a comprehensive benchmark dataset for sub-national crop yield forecasting",
+    "paper_url": "https://doi.org/10.5194/essd-18-3997-2026",
+    "authors": [
+      "Michiel Kallenberg",
+      "Dilli Paudel",
+      "Stella Ofori-Ampofo",
+      "et al."
+    ],
+    "doi": "10.5194/essd-18-3997-2026",
+    "bibtex": "@article{kallenberg2026cybench,\n  title={CY-Bench: a comprehensive benchmark dataset for sub-national crop yield forecasting},\n  author={Kallenberg, Michiel and Paudel, Dilli and Ofori-Ampofo, Stella and others},\n  journal={Earth System Science Data},\n  volume={18},\n  pages={3997--4018},\n  year={2026},\n  publisher={Copernicus GmbH}\n}"
+  }
+}

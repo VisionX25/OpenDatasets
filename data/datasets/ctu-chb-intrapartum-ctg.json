@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ctu-chb-intrapartum-ctg",
+  "slug": "ctu-chb-intrapartum-ctg",
+  "name": "CTU-CHB Intrapartum Cardiotocography Database",
+  "description": "The CTU-CHB Intrapartum Cardiotocography Database is an obstetrical and fetal monitoring collection compiled by the Czech Technical University in Prague and University Hospital in Brno (UHB). It contains 552 intrapartum cardiotocography (CTG) recordings (fetal heart rate and uterine contractions, sampled at 4 Hz) collected between 2009 and 2012, with each recording up to 90 minutes in length and terminating directly before delivery. Records are accompanied by objective newborn outcomes, maternal and labor characteristics, and biochemical fetal blood gas measurements (umbilical artery pH, base deficit, and pCO2), providing an objective ground truth for automated fetal hypoxia and metabolic acidosis detection.",
+  "homepage_url": "https://physionet.org/content/ctu-uhb-ctgdb/1.0.0/",
+  "publisher": {
+    "name": "Czech Technical University & University Hospital in Brno",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "fetal-hypoxia-detection",
+    "biomedical-signal-processing",
+    "clinical-risk-prediction"
+  ],
+  "tags": [
+    "healthcare",
+    "obstetrics",
+    "fetal-monitoring",
+    "cardiotocography",
+    "ctg",
+    "physionet",
+    "clinical-data"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet CTU-CHB Intrapartum Cardiotocography Database Repository (DOI: 10.13026/C22013)",
+      "url": "https://doi.org/10.13026/C22013",
+      "type": "repository"
+    },
+    {
+      "title": "Chudáček et al. BMC Pregnancy and Childbirth 2014 Publication",
+      "url": "https://doi.org/10.1186/1471-2393-14-16",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C22013 and Chudáček et al. (BMC Pregnancy Childbirth 2014)."
+  },
+  "sample_count": {
+    "total": 552,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2014"
+  },
+  "citation": {
+    "paper_title": "Open access intrapartum CTG database",
+    "paper_url": "https://doi.org/10.1186/1471-2393-14-16",
+    "authors": [
+      "Václav Chudáček",
+      "Jiří Spilka",
+      "Miroslav Burša",
+      "Petr Janků",
+      "Lukáš Hruban",
+      "Michal Huptych",
+      "Lenka Lhotská"
+    ],
+    "doi": "10.13026/C22013",
+    "bibtex": "@article{chudacek2014open,\n  title={Open access intrapartum CTG database},\n  author={Chud{\\'a}{\\v{c}}ek, V{\\'a}clav and Spilka, Ji{\\v{r}}{\\'\\i} and Bur{\\v{s}}a, Miroslav and Jank{\\r{u}}, Petr and Hruban, Luk{\\'a}{\\v{s}} and Huptych, Michal and Lhotsk{\\'a}, Lenka},\n  journal={BMC Pregnancy and Childbirth},\n  volume={14},\n  pages={1--12},\n  year={2014},\n  publisher={Springer},\n  doi={10.13026/C22013}\n}"
+  }
+}

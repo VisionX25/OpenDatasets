@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "plantclef-2022",
+  "slug": "plantclef-2022",
+  "name": "PlantCLEF 2022: Large-Scale Global Plant Species Identification Benchmark",
+  "description": "PlantCLEF 2022 is a large-scale visual benchmark for continental- and global-scale automated plant species identification, organized under the LifeCLEF evaluation campaign at the CLEF conference by Inria, CIRAD, and partners. Spanning approximately 80,000 vascular plant species worldwide, the benchmark provides roughly 4 million images (2.9 million trusted, curated records from GBIF, iNaturalist, and Pl@ntNet alongside 1.1 million web images), addressing the challenge of identifying rare and wild flora under real-world visual noise and long-tailed class distributions.",
+  "homepage_url": "https://www.imageclef.org/PlantCLEF2022",
+  "publisher": {
+    "name": "LifeCLEF / ImageCLEF Consortium",
+    "type": "academic",
+    "url": "https://www.imageclef.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "species-identification",
+    "fine-grained-classification",
+    "biodiversity-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "botany",
+    "plant-identification",
+    "biodiversity",
+    "fine-grained",
+    "lifeclef",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial (CC BY-NC / LifeCLEF Terms)",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://www.imageclef.org/PlantCLEF2022",
+    "commercial_use": "forbidden",
+    "notes": "Images derived from GBIF, Pl@ntNet, and iNaturalist under respective CC / non-commercial open biodiversity terms."
+  },
+  "source_references": [
+    {
+      "title": "PlantCLEF 2022 Evaluation Campaign Webpage",
+      "url": "https://www.imageclef.org/PlantCLEF2022",
+      "type": "official_website",
+      "notes": "Official challenge description, participation guidelines, and dataset access portal."
+    },
+    {
+      "title": "Overview of PlantCLEF 2022: Image-based plant identification at global scale",
+      "url": "https://ceur-ws.org/Vol-3180/paper-149.pdf",
+      "type": "original_paper",
+      "notes": "Overview paper published in CLEF 2022 Working Notes (CEUR Workshop Proceedings)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official ImageCLEF 2022 campaign portal and CEUR-WS publication."
+  },
+  "sample_count": {
+    "total": 4000000,
+    "unit": "plant images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022"
+  },
+  "citation": {
+    "paper_title": "Overview of PlantCLEF 2022: Image-based plant identification at global scale",
+    "paper_url": "https://ceur-ws.org/Vol-3180/paper-149.pdf",
+    "authors": [
+      "Hervé Goëau",
+      "Pierre Bonnet",
+      "Alexis Joly"
+    ],
+    "bibtex": "@inproceedings{goeau2022overview,\n  title={Overview of PlantCLEF 2022: Image-based plant identification at global scale},\n  author={Go{\\\"e}au, Herv{\\'e} and Bonnet, Pierre and Joly, Alexis},\n  booktitle={CLEF 2022 Working Notes, CEUR Workshop Proceedings},\n  volume={3180},\n  pages={1924--1939},\n  year={2022}\n}"
+  }
+}

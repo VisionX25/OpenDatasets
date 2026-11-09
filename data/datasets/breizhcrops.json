@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "breizhcrops",
+  "slug": "breizhcrops",
+  "name": "BreizhCrops: Satellite Time-Series Crop Type Mapping Benchmark",
+  "description": "BreizhCrops is an open-access multi-temporal satellite benchmark curated by the Technical University of Munich (TUM) and Stanford University to evaluate machine learning and deep recurrent architectures on satellite time series for agricultural monitoring. The dataset covers the entire Brittany (Breizh) administrative region of France, integrating over 582,000 agricultural field parcels across four French departments (Côtes-d'Armor, Finistère, Ille-et-Vilaine, and Morbihan). For each parcel, it provides continuous 45-step multi-spectral Sentinel-2 satellite observation time series paired with official European Land Parcel Identification System (LPIS) ground truth crop labels across nine principal agricultural categories.",
+  "homepage_url": "https://github.com/dl4sits/BreizhCrops",
+  "publisher": {
+    "name": "Technical University of Munich & Stanford University",
+    "type": "academic",
+    "url": "https://github.com/dl4sits/BreizhCrops"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "crop-type-classification",
+    "time-series-classification",
+    "agricultural-monitoring"
+  ],
+  "tags": [
+    "agriculture",
+    "satellite-imagery",
+    "crop-classification",
+    "sentinel-2",
+    "earth-observation",
+    "remote-sensing",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Code and extracted dataset time-series distributed under the permissive MIT License; underlying Sentinel-2 and French LPIS public data are openly accessible."
+  },
+  "source_references": [
+    {
+      "title": "BreizhCrops GitHub Repository",
+      "url": "https://github.com/dl4sits/BreizhCrops",
+      "type": "repository"
+    },
+    {
+      "title": "ISPRS / NeurIPS 2019 Descriptor (DOI: 10.48550/arXiv.1905.11893)",
+      "url": "https://doi.org/10.48550/arXiv.1905.11893",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against GitHub repository and Rußwurm et al. (arXiv:1905.11893)."
+  },
+  "sample_count": {
+    "total": 582319,
+    "unit": "parcels",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019"
+  },
+  "citation": {
+    "paper_title": "BreizhCrops: A Time Series Dataset for Crop Type Mapping",
+    "paper_url": "https://doi.org/10.48550/arXiv.1905.11893",
+    "authors": [
+      "Marc Rußwurm",
+      "Sherrie Wang",
+      "Marco Körner",
+      "David Lobell"
+    ],
+    "doi": "10.48550/arXiv.1905.11893",
+    "bibtex": "@article{russwurm2019breizhcrops,\n  title={BreizhCrops: A Time Series Dataset for Crop Type Mapping},\n  author={Ru{\\ss}wurm, Marc and Wang, Sherrie and K{\\\"o}rner, Marco and Lobell, David},\n  journal={arXiv preprint arXiv:1905.11893},\n  year={2019}\n}"
+  }
+}

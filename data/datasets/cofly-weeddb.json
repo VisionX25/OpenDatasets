@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cofly-weeddb",
+  "slug": "cofly-weeddb",
+  "name": "CoFly-WeedDB: UAV Cotton Field Weed Detection and Segmentation Dataset",
+  "description": "CoFly-WeedDB is an open-access unmanned aerial vehicle (UAV) image dataset captured for weed detection, species identification, and semantic segmentation in row-crop cotton farming, published on Zenodo by researchers at the Agricultural University of Athens and CERTH. Captured using a DJI Phantom 4 Pro at an altitude of 5 meters over cotton fields in Larissa, Greece, the dataset contains 366 high-resolution RGB images (201 densely annotated with pixel-level segmentation masks) covering three target weed species: Johnson grass, Field bindweed, and Purslane.",
+  "homepage_url": "https://zenodo.org/records/6697343",
+  "publisher": {
+    "name": "Agricultural University of Athens / CERTH",
+    "type": "academic",
+    "url": "https://www2.aua.gr"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "crop-weed-segmentation",
+    "object-detection",
+    "uav-remote-sensing"
+  ],
+  "tags": [
+    "agriculture",
+    "precision-farming",
+    "uav",
+    "cotton",
+    "weed-detection",
+    "semantic-segmentation",
+    "robotics"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset and annotations released under CC BY 4.0 on Zenodo."
+  },
+  "source_references": [
+    {
+      "title": "CoFly-WeedDB Zenodo Repository",
+      "url": "https://zenodo.org/records/6697343",
+      "type": "repository",
+      "notes": "Official Zenodo distribution containing raw images, ground-truth masks, and LabelMe JSON files."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official Zenodo record 6697343 (DOI: 10.5281/zenodo.6697343)."
+  },
+  "sample_count": {
+    "total": 366,
+    "unit": "uav images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022"
+  },
+  "citation": {
+    "paper_title": "CoFly-WeedDB: A UAV image dataset for weed detection and species identification in cotton fields",
+    "paper_url": "https://doi.org/10.5281/zenodo.6697343",
+    "authors": [
+      "Dimitrios Loukatos",
+      "Konstantinos G. Arvanitis",
+      "Dimitrios M. Pipilis"
+    ],
+    "doi": "10.5281/zenodo.6697343",
+    "bibtex": "@misc{loukatos2022coflyweeddb,\n  title={CoFly-WeedDB: A UAV image dataset for weed detection and species identification in cotton fields},\n  author={Loukatos, Dimitrios and Arvanitis, Konstantinos G and Pipilis, Dimitrios M},\n  publisher={Zenodo},\n  year={2022},\n  doi={10.5281/zenodo.6697343}\n}"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "weedsgalore",
+  "slug": "weedsgalore",
+  "name": "WeedsGalore: Multispectral and Multitemporal UAV Crop and Weed Dataset",
+  "description": "WeedsGalore is a high-resolution multispectral and multitemporal UAV image benchmark for crop and weed semantic and instance segmentation in agricultural maize fields, published by the GFZ German Research Centre for Geosciences, Humboldt-Universität zu Berlin, and Karlsruhe Institute of Technology (KIT). Recorded across multiple growth stages in Germany using a 5-band multispectral sensor (RGB, Red-Edge, NIR) at a ground sampling distance of 2.5 mm/pixel, the dataset features 156 high-density tiles with dense pixel-level annotations for maize and 4 prominent weed species.",
+  "homepage_url": "https://github.com/GFZ/weedsgalore",
+  "publisher": {
+    "name": "GFZ German Research Centre for Geosciences",
+    "type": "academic",
+    "url": "https://www.gfz-potsdam.de"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "instance-segmentation",
+    "crop-weed-segmentation",
+    "uav-remote-sensing"
+  ],
+  "tags": [
+    "agriculture",
+    "precision-farming",
+    "multispectral",
+    "uav",
+    "remote-sensing",
+    "weed-detection",
+    "maize"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset licensed under CC BY 4.0. Associated code released under Apache 2.0."
+  },
+  "source_references": [
+    {
+      "title": "WeedsGalore Official GitHub Repository",
+      "url": "https://github.com/GFZ/weedsgalore",
+      "type": "repository",
+      "notes": "Canonical repository containing multispectral image splits and semantic masks."
+    },
+    {
+      "title": "WeedsGalore: A Multispectral and Multitemporal UAV-Based Dataset for Crop and Weed Segmentation in Agricultural Maize Fields",
+      "url": "https://openaccess.thecvf.com/content/WACV2025/html/WeedsGalore_WACV_2025_paper.html",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2025)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official GFZ GitHub repository and WACV 2025 proceedings."
+  },
+  "sample_count": {
+    "total": 156,
+    "unit": "multispectral tiles",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2024"
+  },
+  "citation": {
+    "paper_title": "WeedsGalore: A Multispectral and Multitemporal UAV-Based Dataset for Crop and Weed Segmentation in Agricultural Maize Fields",
+    "paper_url": "https://github.com/GFZ/weedsgalore",
+    "authors": [
+      "S. Bareth",
+      "J. Bömer",
+      "A. Sah",
+      "M. Klein"
+    ],
+    "bibtex": "@inproceedings{weedsgalore2025,\n  title={WeedsGalore: A Multispectral and Multitemporal UAV-Based Dataset for Crop and Weed Segmentation in Agricultural Maize Fields},\n  author={Bareth, S and B{\\\"o}mer, J and Sah, A and Klein, M},\n  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},\n  year={2025}\n}"
+  }
+}

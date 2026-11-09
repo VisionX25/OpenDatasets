@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "id": "worldcereal-reference-data",
+  "slug": "worldcereal-reference-data",
+  "name": "WorldCereal Harmonized Global In-Situ Crop Reference Dataset",
+  "description": "WorldCereal Harmonized Reference Data is the global, multi-source reference ground-truth benchmark developed under the ESA WorldCereal project by an international consortium including VITO, IIASA, and Wageningen University. Assembling and harmonizing in-situ ground observations from more than 80 independent regional and national data collections across all continents, this open benchmark provides over 400,000 standardized spatial point and polygon records with verified labels for crop extent, crop type (maize, cereals), and irrigation status to train and benchmark global agricultural mapping models.",
+  "homepage_url": "https://rdm.esa-worldcereal.org",
+  "publisher": {
+    "name": "ESA WorldCereal Consortium (VITO / IIASA)",
+    "type": "community",
+    "url": "https://esa-worldcereal.org"
+  },
+  "modalities": [
+    "tabular",
+    "vision"
+  ],
+  "tasks": [
+    "crop-type-classification",
+    "agricultural-monitoring",
+    "land-cover-mapping",
+    "irrigation-detection"
+  ],
+  "tags": [
+    "agriculture",
+    "ground-truth",
+    "reference-data",
+    "crop-classification",
+    "irrigation",
+    "remote-sensing",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Harmonized reference collections released on Zenodo under CC BY 4.0 and associated open terms."
+  },
+  "source_references": [
+    {
+      "title": "WorldCereal Reference Data Module (RDM)",
+      "url": "https://rdm.esa-worldcereal.org",
+      "type": "official_website",
+      "notes": "Official interactive query, download, and visualization module for harmonized reference datasets."
+    },
+    {
+      "title": "WorldCereal Harmonized Reference Data Zenodo Record",
+      "url": "https://zenodo.org/records/18769612",
+      "type": "repository",
+      "notes": "Open Zenodo archive containing standardized spatial reference collections."
+    },
+    {
+      "title": "WorldCereal: a dynamic open-source system for global-scale, seasonal, and reproducible crop and irrigation mapping",
+      "url": "https://doi.org/10.5194/essd-15-5491-2023",
+      "type": "original_paper",
+      "notes": "Comprehensive system and reference dataset paper published in Earth System Science Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official ESA WorldCereal Reference Data Module and Zenodo repository."
+  },
+  "sample_count": {
+    "total": 400000,
+    "unit": "harmonized ground truth locations",
+    "status": "estimated"
+  },
+  "dates": {
+    "published": "2023"
+  },
+  "citation": {
+    "paper_title": "WorldCereal: a dynamic open-source system for global-scale, seasonal, and reproducible crop and irrigation mapping",
+    "paper_url": "https://doi.org/10.5194/essd-15-5491-2023",
+    "authors": [
+      "Kristof Van Tricht",
+      "Damien Degré",
+      "Sven Gilliams",
+      "Marc Zanaga",
+      "Ruben Van De Kerchove"
+    ],
+    "doi": "10.5194/essd-15-5491-2023",
+    "bibtex": "@article{vantricht2023worldcereal,\n  title={WorldCereal: a dynamic open-source system for global-scale, seasonal, and reproducible crop and irrigation mapping},\n  author={Van Tricht, Kristof and Degr{\\'e}, Damien and Gilliams, Sven and Zanaga, Marc and Van De Kerchove, Ruben},\n  journal={Earth System Science Data},\n  volume={15},\n  number={12},\n  pages={5491--5515},\n  year={2023},\n  publisher={Copernicus GmbH}\n}"
+  }
+}

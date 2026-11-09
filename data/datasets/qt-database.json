@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "qt-database",
+  "slug": "qt-database",
+  "name": "QT Database: ECG Waveform Interval and Morphology Benchmark",
+  "description": "The QT Database is an internationally recognized electrocardiographic benchmark curated by the NIH-sponsored PhysioNet team and the University of Zaragoza to design and evaluate algorithms for automated detection and timing of ECG boundaries (P-wave onset and offset, QRS onset and offset, and T-wave end). Comprising 105 fifteen-minute excerpts of two-channel surface ECGs sampled at 250 Hz, it draws from the MIT-BIH Arrhythmia Database, European ST-T Database, and sudden death risk cohorts. The benchmark contains over 3,600 manually audited beat segmentations by expert cardiologists, serving as the gold standard for validating automated QT interval measurement and cardiac repolarization analysis.",
+  "homepage_url": "https://physionet.org/content/qtdb/1.0.0/",
+  "publisher": {
+    "name": "PhysioNet & University of Zaragoza",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "ecg-classification",
+    "waveform-segmentation",
+    "biomedical-signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "qt-interval",
+    "arrhythmia",
+    "physionet",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet QT Database Repository (DOI: 10.13026/C24K53)",
+      "url": "https://doi.org/10.13026/C24K53",
+      "type": "repository"
+    },
+    {
+      "title": "Laguna et al. Computers in Cardiology 1997 Publication",
+      "url": "https://doi.org/10.1109/CIC.1997.647986",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C24K53 and Laguna et al. (Computers in Cardiology 1997)."
+  },
+  "sample_count": {
+    "total": 105,
+    "unit": "records",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1997"
+  },
+  "citation": {
+    "paper_title": "A Database for Evaluation of Algorithms for Measurement of QT and Other Waveform Intervals in the ECG",
+    "paper_url": "https://doi.org/10.1109/CIC.1997.647986",
+    "authors": [
+      "Pablo Laguna",
+      "Roger G. Mark",
+      "Ary L. Goldberger",
+      "George B. Moody"
+    ],
+    "doi": "10.13026/C24K53",
+    "bibtex": "@article{laguna1997database,\n  title={A database for evaluation of algorithms for measurement of QT and other waveform intervals in the ECG},\n  author={Laguna, Pablo and Mark, Roger G and Goldberger, Ary L and Moody, George B},\n  journal={Computers in Cardiology},\n  volume={24},\n  pages={673--676},\n  year={1997},\n  publisher={IEEE},\n  doi={10.13026/C24K53}\n}"
+  }
+}

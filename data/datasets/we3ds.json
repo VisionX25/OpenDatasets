@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "we3ds",
+  "slug": "we3ds",
+  "name": "WE3DS: An RGB-D Image Dataset for Semantic Segmentation in Agriculture",
+  "description": "WE3DS is an open-access multi-class RGB-D image benchmark designed for semantic segmentation in early-stage crop farming, developed by researchers at the University of Natural Resources and Life Sciences, Vienna (BOKU). It features 2,568 densely annotated RGB-D images combining high-resolution color imagery with calibrated distance and depth maps captured under outdoor field conditions. The dataset provides pixel-level ground truth masks separating soil, 7 crop species (sugar beet, maize, sunflower, soybean, etc.), and 10 weed species, establishing a foundation for 3D agricultural vision and precision robotic spraying.",
+  "homepage_url": "https://zenodo.org/records/7457983",
+  "publisher": {
+    "name": "University of Natural Resources and Life Sciences, Vienna (BOKU)",
+    "type": "academic",
+    "url": "https://boku.ac.at"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "crop-weed-segmentation",
+    "agricultural-robotics"
+  ],
+  "tags": [
+    "agriculture",
+    "precision-farming",
+    "rgb-d",
+    "depth-maps",
+    "semantic-segmentation",
+    "weed-detection",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset and annotations released under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "WE3DS Zenodo Repository",
+      "url": "https://zenodo.org/records/7457983",
+      "type": "repository",
+      "notes": "Canonical Zenodo repository containing RGB-D images, depth maps, and segmentation masks."
+    },
+    {
+      "title": "WE3DS: An RGB-D Image Dataset for Semantic Segmentation in Agriculture",
+      "url": "https://doi.org/10.3390/s23052821",
+      "type": "original_paper",
+      "notes": "Published open-access research paper in MDPI Sensors."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official Zenodo record 7457983 and MDPI Sensors publication."
+  },
+  "sample_count": {
+    "total": 2568,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023"
+  },
+  "citation": {
+    "paper_title": "WE3DS: An RGB-D Image Dataset for Semantic Segmentation in Agriculture",
+    "paper_url": "https://doi.org/10.3390/s23052821",
+    "authors": [
+      "Florian Kitzler",
+      "Norbert Barta",
+      "Reinhard W. Neugschwandtner",
+      "Andreas Gronauer",
+      "Viktoria Motsch"
+    ],
+    "doi": "10.3390/s23052821",
+    "bibtex": "@article{kitzler2023we3ds,\n  title={WE3DS: An RGB-D Image Dataset for Semantic Segmentation in Agriculture},\n  author={Kitzler, Florian and Barta, Norbert and Neugschwandtner, Reinhard W and Gronauer, Andreas and Motsch, Viktoria},\n  journal={Sensors},\n  volume={23},\n  number={5},\n  pages={2821},\n  year={2023},\n  publisher={MDPI}\n}"
+  }
+}

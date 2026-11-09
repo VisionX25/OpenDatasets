@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ucd-sleep-apnea-database",
+  "slug": "ucd-sleep-apnea-database",
+  "name": "St. Vincent's University Hospital / UCD Sleep Apnea Database",
+  "description": "The St. Vincent's University Hospital / University College Dublin Sleep Apnea Database is an overnight polysomnographic cohort acquired at the Sleep Disorders Clinic, St. Vincent's University Hospital in Dublin. It comprises 25 full overnight polysomnograms recorded from 25 adult patients (21 men and 4 women, aged 28 to 68) with suspected obstructive sleep apnea. Each recording includes 14 physiological channels: 2 EEG channels (C3-A2, C4-A1), left/right EOG, submental EMG, ECG, nasal airflow, ribcage and abdominal respiratory effort, arterial oxygen saturation (SpO2), snoring microphone, and body position. An expert sleep medicine specialist verified all 30-second epoch sleep stages and clinical apnea/hypopnea events.",
+  "homepage_url": "https://physionet.org/content/ucddb/1.0.0/",
+  "publisher": {
+    "name": "St. Vincent's University Hospital & University College Dublin",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "sleep-apnea-detection",
+    "sleep-staging",
+    "polysomnography-analysis"
+  ],
+  "tags": [
+    "healthcare",
+    "sleep-medicine",
+    "sleep-apnea",
+    "polysomnography",
+    "eeg",
+    "ecg",
+    "physionet"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet UCD Sleep Apnea Database Repository (DOI: 10.13026/C26C7D)",
+      "url": "https://doi.org/10.13026/C26C7D",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C26C7D and UCD Sleep Clinic records."
+  },
+  "sample_count": {
+    "total": 25,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2011"
+  },
+  "citation": {
+    "paper_title": "PhysioNet: Components of a New Research Resource for Complex Physiologic Signals",
+    "paper_url": "https://doi.org/10.13026/C26C7D",
+    "authors": [
+      "Ary L. Goldberger",
+      "Luis A. N. Amaral",
+      "Leon Glass",
+      "Jeffrey M. Hausdorff",
+      "Plamen Ch. Ivanov",
+      "Roger G. Mark",
+      "Joseph E. Mietus",
+      "George B. Moody",
+      "Chung-Kang Peng",
+      "H. Eugene Stanley"
+    ],
+    "doi": "10.13026/C26C7D",
+    "bibtex": "@misc{ucddb_2011,\n  title={St. Vincent's University Hospital / University College Dublin Sleep Apnea Database},\n  author={Goldberger, Ary L and Amaral, Luis AN and Glass, Leon and Hausdorff, Jeffrey M and Ivanov, Plamen Ch and Mark, Roger G and Mietus, Joseph E and Moody, George B and Peng, Chung-Kang and Stanley, H Eugene},\n  year={2011},\n  publisher={PhysioNet},\n  doi={10.13026/C26C7D}\n}"
+  }
+}

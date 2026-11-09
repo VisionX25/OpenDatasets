@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fruits-360",
+  "slug": "fruits-360",
+  "name": "Fruits-360: Fine-Grained Fruits and Vegetables Dataset",
+  "description": "Fruits-360 is a widely utilized visual object recognition dataset compiled by researchers at Babeș-Bolyai University in Cluj-Napoca, Romania. The collection consists of 90,483 images (each 100x100 pixels on uniform white backgrounds) across 131 distinct fruit and vegetable classes (apples, bananas, peppers, tomatoes, grapes, citrus fruits, plums, and exotic varieties). Images were captured by rotating physical fruits and vegetables 360 degrees using a low-speed motor while recording video streams under controlled laboratory illumination. The dataset serves as a benchmark for fine-grained multi-class classification, object localization, and grocery retail automation.",
+  "homepage_url": "https://github.com/fruits-360",
+  "publisher": {
+    "name": "Babeș-Bolyai University",
+    "type": "academic",
+    "url": "https://github.com/fruits-360"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "fine-grained-classification"
+  ],
+  "tags": [
+    "agriculture",
+    "fruit",
+    "vegetables",
+    "food",
+    "fine-grained-classification",
+    "computer-vision",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Published under the permissive MIT License on GitHub and Kaggle."
+  },
+  "source_references": [
+    {
+      "title": "Fruits-360 GitHub Organization",
+      "url": "https://github.com/fruits-360",
+      "type": "repository"
+    },
+    {
+      "title": "Acta Universitatis Sapientiae Informatica Publication",
+      "url": "https://doi.org/10.2478/ausi-2018-0002",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against GitHub repository and Mureșan & Oltean (Acta Univ Sapientiae Inf 2018)."
+  },
+  "sample_count": {
+    "total": 90483,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018"
+  },
+  "citation": {
+    "paper_title": "A fruit recognition dataset",
+    "paper_url": "https://doi.org/10.2478/ausi-2018-0002",
+    "authors": [
+      "Horea Mureșan",
+      "Mihai Oltean"
+    ],
+    "doi": "10.2478/ausi-2018-0002",
+    "bibtex": "@article{muresan2018fruit,\n  title={A fruit recognition dataset},\n  author={Mure{\\c{s}}an, Horea and Oltean, Mihai},\n  journal={Acta Universitatis Sapientiae, Informatica},\n  volume={10},\n  number={1},\n  pages={26--42},\n  year={2018},\n  doi={10.2478/ausi-2018-0002}\n}"
+  }
+}

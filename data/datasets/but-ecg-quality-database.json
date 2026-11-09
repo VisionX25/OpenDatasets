@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "but-ecg-quality-database",
+  "slug": "but-ecg-quality-database",
+  "name": "Brno University of Technology ECG Quality Database (BUT QDB)",
+  "description": "The BUT ECG Quality Database (BUT QDB) is an annotated electrocardiographic benchmark curated by Brno University of Technology in the Czech Republic. It consists of 180 two-minute single-lead ECG recordings selected from 15 subjects recorded over 24 hours under active, free-living ambulatory conditions using wearable Bittium Faros 180 monitors. Three independent medical and engineering experts audited each recording, providing continuous beat-by-beat quality segmentations into three classes: optimal quality, suboptimal quality, and uninterpretable/artifact. The benchmark enables training and objective evaluation of automated ECG signal quality assessment (SQA) and noise rejection algorithms.",
+  "homepage_url": "https://physionet.org/content/butqdb/1.0.0/",
+  "publisher": {
+    "name": "Brno University of Technology",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "signal-quality-assessment",
+    "ecg-denoising",
+    "quality-classification"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "signal-quality",
+    "wearables",
+    "physionet",
+    "benchmark",
+    "evaluation"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet BUT QDB Repository (DOI: 10.13026/kah4-0w24)",
+      "url": "https://doi.org/10.13026/kah4-0w24",
+      "type": "repository"
+    },
+    {
+      "title": "Nemcova et al. Scientific Data 2020 Publication",
+      "url": "https://doi.org/10.1038/s41597-020-00717-0",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/kah4-0w24 and Nemcova et al. (Scientific Data 2020)."
+  },
+  "sample_count": {
+    "total": 180,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020"
+  },
+  "citation": {
+    "paper_title": "Brno University of Technology ECG quality database (BUT QDB)",
+    "paper_url": "https://doi.org/10.1038/s41597-020-00717-0",
+    "authors": [
+      "Andrea Nemcova",
+      "Radovan Smisek",
+      "Katerina Opravilova",
+      "Martin Vitek",
+      "Lukas Smital",
+      "Lucie Marsanova"
+    ],
+    "doi": "10.13026/kah4-0w24",
+    "bibtex": "@article{nemcova2020brno,\n  title={Brno University of Technology ECG quality database (BUT QDB)},\n  author={Nemcova, Andrea and Smisek, Radovan and Opravilova, Katerina and Vitek, Martin and Smital, Lukas and Marsanova, Lucie},\n  journal={Scientific Data},\n  volume={7},\n  number={1},\n  pages={381},\n  year={2020},\n  publisher={Nature Publishing Group UK London},\n  doi={10.13026/kah4-0w24}\n}"
+  }
+}

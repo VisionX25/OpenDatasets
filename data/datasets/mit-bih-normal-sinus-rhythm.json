@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mit-bih-normal-sinus-rhythm",
+  "slug": "mit-bih-normal-sinus-rhythm",
+  "name": "MIT-BIH Normal Sinus Rhythm Database",
+  "description": "The MIT-BIH Normal Sinus Rhythm Database is a widely utilized normative reference dataset compiled by the Beth Israel Hospital Arrhythmia Laboratory in Boston. It includes 18 long-term two-channel ambulatory Holter ECG recordings (each approximately 24 hours long, sampled at 128 Hz) acquired from healthy adult subjects (5 men, aged 26 to 45; and 13 women, aged 20 to 50) who underwent continuous Holter monitoring and were verified to have no significant arrhythmias. Users should note that this repository contains continuous raw ECG waveforms, serving as a clean baseline for cardiac pathology comparisons, distinct from the RR interval-only NSR dataset.",
+  "homepage_url": "https://physionet.org/content/nsrdb/1.0.0/",
+  "publisher": {
+    "name": "Beth Israel Deaconess Medical Center & PhysioNet",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "heart-rate-variability",
+    "ecg-classification",
+    "biomedical-signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "sinus-rhythm",
+    "normative",
+    "physionet",
+    "holter"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet MIT-BIH Normal Sinus Rhythm Database Repository (DOI: 10.13026/C2NK5R)",
+      "url": "https://doi.org/10.13026/C2NK5R",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C2NK5R. Distinct from nsr2db RR interval dataset."
+  },
+  "sample_count": {
+    "total": 18,
+    "unit": "recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1997"
+  },
+  "citation": {
+    "paper_title": "PhysioNet: Components of a New Research Resource for Complex Physiologic Signals",
+    "paper_url": "https://doi.org/10.13026/C2NK5R",
+    "authors": [
+      "Ary L. Goldberger",
+      "Luis A. N. Amaral",
+      "Leon Glass",
+      "Jeffrey M. Hausdorff",
+      "Plamen Ch. Ivanov",
+      "Roger G. Mark",
+      "Joseph E. Mietus",
+      "George B. Moody",
+      "Chung-Kang Peng",
+      "H. Eugene Stanley"
+    ],
+    "doi": "10.13026/C2NK5R",
+    "bibtex": "@misc{mitbih_nsrdb_1997,\n  title={MIT-BIH Normal Sinus Rhythm Database},\n  author={Goldberger, Ary L and Amaral, Luis AN and Glass, Leon and Hausdorff, Jeffrey M and Ivanov, Plamen Ch and Mark, Roger G and Mietus, Joseph E and Moody, George B and Peng, Chung-Kang and Stanley, H Eugene},\n  year={1997},\n  publisher={PhysioNet},\n  doi={10.13026/C2NK5R}\n}"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "id": "isric-soilgrids-2",
+  "slug": "isric-soilgrids-2",
+  "name": "ISRIC SoilGrids 2.0: Global Gridded Soil Property Prediction Maps",
+  "description": "SoilGrids 2.0 is a global collection of digital soil property maps generated at 250-meter spatial resolution by ISRIC - World Soil Information. Using machine learning models trained on approximately 240,000 ground soil profiles and over 400 environmental covariates, SoilGrids 2.0 predicts key physical and chemical soil properties (soil organic carbon, bulk density, pH, cation exchange capacity, total nitrogen, and sand, silt, and clay fractions) across six standardized depth intervals (0-5, 5-15, 15-30, 30-60, 60-100, and 100-200 cm) alongside spatial uncertainty estimates.",
+  "homepage_url": "https://isric.org/explore/soilgrids",
+  "publisher": {
+    "name": "ISRIC - World Soil Information",
+    "type": "academic",
+    "url": "https://isric.org"
+  },
+  "modalities": [
+    "tabular",
+    "vision"
+  ],
+  "tasks": [
+    "soil-property-prediction",
+    "agricultural-monitoring",
+    "regression",
+    "environmental-modeling"
+  ],
+  "tags": [
+    "agriculture",
+    "soil-science",
+    "geospatial",
+    "digital-soil-mapping",
+    "environmental-modeling",
+    "machine-learning"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "SoilGrids 2.0 layers released under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "ISRIC SoilGrids Official Portal",
+      "url": "https://isric.org/explore/soilgrids",
+      "type": "official_website",
+      "notes": "Web portal for map exploration, Web Coverage Services (WCS), and GeoTIFF downloads."
+    },
+    {
+      "title": "SoilGrids 2.0: producing soil information for the globe with quantified spatial uncertainty",
+      "url": "https://doi.org/10.5194/soil-7-217-2021",
+      "type": "original_paper",
+      "notes": "Methodology and evaluation paper published in SOIL."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-08",
+    "notes": "Verified against official ISRIC portal and SOIL journal article."
+  },
+  "sample_count": {
+    "total": 240000,
+    "unit": "profile locations modeled globally",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021"
+  },
+  "citation": {
+    "paper_title": "SoilGrids 2.0: producing soil information for the globe with quantified spatial uncertainty",
+    "paper_url": "https://doi.org/10.5194/soil-7-217-2021",
+    "authors": [
+      "Laura Poggio",
+      "Luís M. de Sousa",
+      "Niels H. Batjes",
+      "Gerard B. M. Heuvelink",
+      "Bas Kempen",
+      "Eloi Ribeiro",
+      "David Rossiter"
+    ],
+    "doi": "10.5194/soil-7-217-2021",
+    "bibtex": "@article{poggio2021soilgrids,\n  title={SoilGrids 2.0: producing soil information for the globe with quantified spatial uncertainty},\n  author={Poggio, Laura and de Sousa, Lu{\\'\\i}s M and Batjes, Niels H and Heuvelink, Gerard BM and Kempen, Bas and Ribeiro, Eloi and Rossiter, David},\n  journal={SOIL},\n  volume={7},\n  number={1},\n  pages={217--240},\n  year={2021},\n  publisher={Copernicus GmbH}\n}"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "vitaldb",
+  "slug": "vitaldb",
+  "name": "VitalDB: High-Fidelity Multi-Parameter Vital Signs Surgical Database",
+  "description": "VitalDB is an open-access, high-resolution perioperative monitoring database curated by Seoul National University Hospital. It contains 6,388 non-cardiac surgical cases representing over 486,000 hours of recording under general anesthesia. Captured multi-parameter biosignals include high-frequency arterial line blood pressure waveforms, multi-lead ECGs, photoplethysmograms (PPG), bispectral index (BIS), end-tidal CO2, and ventilation mechanics recorded via patient monitors and anesthesia workstations. The dataset is coupled with 73 clinical and laboratory variables (patient demographics, surgical procedures, lab blood panels, intraoperative drug infusions, and postoperative adverse outcomes), serving as a premier benchmark for predictive anesthesia AI and real-time intraoperative hypotension forecasting.",
+  "homepage_url": "https://physionet.org/content/vitaldb/1.0.0/",
+  "publisher": {
+    "name": "Seoul National University College of Medicine",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "perioperative-risk-prediction",
+    "hemodynamic-monitoring",
+    "hypotension-prediction"
+  ],
+  "tags": [
+    "healthcare",
+    "anesthesiology",
+    "surgery",
+    "vital-signs",
+    "hemodynamics",
+    "icu",
+    "physionet",
+    "clinical-data"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet VitalDB Repository (DOI: 10.13026/czw8-9p62)",
+      "url": "https://doi.org/10.13026/czw8-9p62",
+      "type": "repository"
+    },
+    {
+      "title": "Lee et al. Scientific Data 2022 Publication",
+      "url": "https://doi.org/10.1038/s41597-022-01411-5",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/czw8-9p62 and Lee et al. (Scientific Data 2022)."
+  },
+  "sample_count": {
+    "total": 6388,
+    "unit": "cases",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022"
+  },
+  "citation": {
+    "paper_title": "VitalDB, a high-fidelity multi-parameter vital signs database in surgical patients",
+    "paper_url": "https://doi.org/10.1038/s41597-022-01411-5",
+    "authors": [
+      "Hyung-Chul Lee",
+      "Chul-Woo Jung"
+    ],
+    "doi": "10.13026/czw8-9p62",
+    "bibtex": "@article{lee2022vitaldb,\n  title={VitalDB, a high-fidelity multi-parameter vital signs database in surgical patients},\n  author={Lee, Hyung-Chul and Jung, Chul-Woo},\n  journal={Scientific Data},\n  volume={9},\n  number={1},\n  pages={279},\n  year={2022},\n  publisher={Nature Publishing Group UK London},\n  doi={10.13026/czw8-9p62}\n}"
+  }
+}

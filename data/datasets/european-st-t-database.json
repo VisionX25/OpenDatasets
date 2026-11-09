@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "european-st-t-database",
+  "slug": "european-st-t-database",
+  "name": "European ST-T Database: Myocardial Ischemia Detection Benchmark",
+  "description": "The European ST-T Database is a standard international reference library created by the CNR Institute of Clinical Physiology in Pisa, Italy, and the Thoraxcenter in Rotterdam under the auspices of the European Society of Cardiology. It comprises 90 two-hour continuous two-channel ambulatory ECG recordings from 79 subjects (70 men and 9 women, aged 30 to 84) with diagnosed or suspected myocardial ischemia. Each record is sampled at 250 Hz with 12-bit resolution and annotated with beat-by-beat labels as well as detailed episodic markers for ischemic and non-ischemic ST-segment and T-wave morphology variations.",
+  "homepage_url": "https://physionet.org/content/edb/1.0.0/",
+  "publisher": {
+    "name": "CNR Institute of Clinical Physiology & European Society of Cardiology",
+    "type": "academic",
+    "url": "https://physionet.org"
+  },
+  "modalities": [
+    "time-series"
+  ],
+  "tasks": [
+    "myocardial-ischemia-detection",
+    "ecg-classification",
+    "biomedical-signal-processing"
+  ],
+  "tags": [
+    "healthcare",
+    "cardiology",
+    "ecg",
+    "ischemia",
+    "st-segment",
+    "physionet",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Published on PhysioNet under the Open Data Commons Attribution License v1.0 (ODC-By 1.0)."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet European ST-T Database Repository (DOI: 10.13026/C2D59Z)",
+      "url": "https://doi.org/10.13026/C2D59Z",
+      "type": "repository"
+    },
+    {
+      "title": "Taddei et al. Computers in Cardiology 1992 Publication",
+      "url": "https://doi.org/10.1109/CIC.1992.269420",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against PhysioNet repository 10.13026/C2D59Z and Taddei et al. (Computers in Cardiology 1992)."
+  },
+  "sample_count": {
+    "total": 90,
+    "unit": "records",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "1992"
+  },
+  "citation": {
+    "paper_title": "The European ST-T Database: standard for evaluating systems for the analysis of ST-T changes in ambulatory electrocardiography",
+    "paper_url": "https://doi.org/10.1109/CIC.1992.269420",
+    "authors": [
+      "A. Taddei",
+      "G. Distante",
+      "M. Emdin",
+      "P. Pisani",
+      "G. B. Moody",
+      "C. Zeelenberg",
+      "C. Marchesi"
+    ],
+    "doi": "10.13026/C2D59Z",
+    "bibtex": "@inproceedings{taddei1992european,\n  title={The European ST-T Database: standard for evaluating systems for the analysis of ST-T changes in ambulatory electrocardiography},\n  author={Taddei, A and Distante, G and Emdin, M and Pisani, P and Moody, GB and Zeelenberg, C and Marchesi, C},\n  booktitle={Computers in Cardiology 1992},\n  pages={177--180},\n  year={1992},\n  organization={IEEE},\n  doi={10.13026/C2D59Z}\n}"
+  }
+}

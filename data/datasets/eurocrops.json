@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "eurocrops",
+  "slug": "eurocrops",
+  "name": "EuroCrops: Harmonised Pan-European Crop Parcel Dataset",
+  "description": "EuroCrops is a large-scale, open-source agricultural parcel collection compiled by the Technical University of Munich (TUM) and the German Aerospace Center (DLR), published in Nature Scientific Data. It harmonizes publicly accessible European Land Parcel Identification System (LPIS) declaration records from 16 European nations into a unified, cross-border semantic taxonomy called the Hierarchical Crop Alignment Taxonomy (HCAT). Covering over 10 million agricultural parcel vector geometries and crop classifications across Austria, Germany, France, Slovenia, Estonia, Latvia, Portugal, Romania, and the Netherlands, EuroCrops provides a standardized benchmark for training and evaluating transnational satellite crop type classification and earth observation models.",
+  "homepage_url": "https://www.eurocrops.tum.de/",
+  "publisher": {
+    "name": "Technical University of Munich & DLR",
+    "type": "academic",
+    "url": "https://www.eurocrops.tum.de"
+  },
+  "modalities": [
+    "tabular",
+    "vision"
+  ],
+  "tasks": [
+    "crop-type-classification",
+    "agricultural-monitoring",
+    "geospatial-analysis"
+  ],
+  "tags": [
+    "agriculture",
+    "pan-european",
+    "crop-classification",
+    "lpis",
+    "earth-observation",
+    "remote-sensing",
+    "geospatial"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) alongside Open Database License (ODbL) terms."
+  },
+  "source_references": [
+    {
+      "title": "EuroCrops Official Portal",
+      "url": "https://www.eurocrops.tum.de/",
+      "type": "official_website"
+    },
+    {
+      "title": "Nature Scientific Data Publication (DOI: 10.1038/s41597-023-02357-5)",
+      "url": "https://doi.org/10.1038/s41597-023-02357-5",
+      "type": "original_paper"
+    },
+    {
+      "title": "Zenodo EuroCrops Repository (DOI: 10.5281/zenodo.5153126)",
+      "url": "https://doi.org/10.5281/zenodo.5153126",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-08",
+    "notes": "Audited against EuroCrops portal, Zenodo 10.5281/zenodo.5153126, and Schneider et al. (Scientific Data 2023)."
+  },
+  "sample_count": {
+    "total": 10000000,
+    "unit": "parcels",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023"
+  },
+  "citation": {
+    "paper_title": "EuroCrops: The largest harmonised open-source dataset for crop-type classification in Europe",
+    "paper_url": "https://doi.org/10.1038/s41597-023-02357-5",
+    "authors": [
+      "Marion Schneider",
+      "Marc Rußwurm",
+      "Marco Körner"
+    ],
+    "doi": "10.1038/s41597-023-02357-5",
+    "bibtex": "@article{schneider2023eurocrops,\n  title={EuroCrops: The largest harmonised open-source dataset for crop-type classification in Europe},\n  author={Schneider, Marion and Ru{\\ss}wurm, Marc and K{\\\"o}rner, Marco},\n  journal={Scientific Data},\n  volume={10},\n  number={1},\n  pages={487},\n  year={2023},\n  publisher={Nature Publishing Group UK London},\n  doi={10.1038/s41597-023-02357-5}\n}"
+  }
+}
