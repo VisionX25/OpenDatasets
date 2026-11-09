@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gbif-occurrence-data",
+  "slug": "gbif-occurrence-data",
+  "name": "GBIF Global Biodiversity Information Facility Species Occurrences",
+  "description": "The Global Biodiversity Information Facility (GBIF) is an international open data infrastructure funded by governments worldwide to provide anyone, anywhere, open access to data about all types of life on Earth. The GBIF Occurrence index harmonizes more than 2.8 billion species occurrence records from over 2,000 publishing institutions across 150 countries. Integrating museum specimens, camera trap images, environmental DNA, citizen science records, and ecological transects, GBIF indexes species occurrences tagged with standardized Darwin Core geospatial, taxonomic, and temporal metadata.",
+  "homepage_url": "https://www.gbif.org/occurrence/search",
+  "publisher": {
+    "name": "Global Biodiversity Information Facility (GBIF) Secretariat",
+    "type": "community",
+    "url": "https://www.gbif.org"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "species-distribution-modeling",
+    "biodiversity-monitoring",
+    "ecological-range-estimation"
+  ],
+  "tags": [
+    "gbif",
+    "biodiversity",
+    "species-occurrences",
+    "taxonomy",
+    "ecology",
+    "specimen-records",
+    "citizen-science",
+    "global-fauna-flora"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0) / CC0",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Records published under standardized machine-readable CC0, CC BY, or CC BY-NC licenses (over 85% open under CC0/CC BY)."
+  },
+  "source_references": [
+    {
+      "title": "GBIF Occurrence Search Portal",
+      "url": "https://www.gbif.org/occurrence/search",
+      "type": "official_website",
+      "notes": "Interactive search, filter, and download portal for global species records."
+    },
+    {
+      "title": "GBIF Occurrence API Documentation",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "type": "documentation",
+      "notes": "Comprehensive RESTful API documentation for automated occurrence queries."
+    },
+    {
+      "title": "GBIF Backbone Taxonomy (Data DOI: 10.15468/39omei)",
+      "url": "https://doi.org/10.15468/39omei",
+      "type": "documentation",
+      "notes": "Canonical publication and taxonomy documentation for the GBIF Backbone."
+    },
+    {
+      "title": "Data integration enables global biodiversity synthesis",
+      "url": "https://doi.org/10.1073/pnas.2013790118",
+      "type": "original_paper",
+      "notes": "Peer-reviewed scientific assessment of GBIF data published in PNAS."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against GBIF Secretariat official portal and API documentation."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "CSV",
+      "Darwin Core Archive",
+      "Parquet"
+    ],
+    "notes": "Terabyte-scale monthly snapshot available via cloud exports on AWS, Azure, and Google Cloud."
+  },
+  "dates": {
+    "published": "2001",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "Data integration enables global biodiversity synthesis",
+    "paper_url": "https://doi.org/10.1073/pnas.2013790118",
+    "authors": [
+      "J. Mason Heberling",
+      "Joseph T. Miller",
+      "Daniel Noesgaard",
+      "Scott B. Weingart",
+      "Dmitry Schigel"
+    ],
+    "doi": "10.1073/pnas.2013790118",
+    "bibtex": "@article{heberling2021gbif,\n  title={Data integration enables global biodiversity synthesis},\n  author={Heberling, J Mason and Miller, Joseph T and Noesgaard, Daniel and Weingart, Scott B and Schigel, Dmitry},\n  journal={Proceedings of the National Academy of Sciences},\n  volume={118},\n  number={6},\n  pages={e2013790118},\n  year={2021},\n  publisher={National Academy of Sciences},\n  doi={10.1073/pnas.2013790118}\n}"
+  }
+}

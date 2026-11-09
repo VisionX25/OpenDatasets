@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "era5-atmospheric-reanalysis",
+  "slug": "era5-atmospheric-reanalysis",
+  "name": "ERA5 Global Atmospheric Reanalysis",
+  "description": "ERA5 is the fifth generation ECMWF atmospheric reanalysis of the global climate from January 1940 to the present. Produced by the Copernicus Climate Change Service (C3S) at ECMWF, ERA5 combines vast amounts of historical atmospheric observations into globally complete and consistent 31-kilometer gridded estimates using advanced 4D-Var data assimilation in the Integrated Forecasting System (IFS Cycle 41r2). ERA5 provides hourly estimates for an extensive suite of atmospheric, land-surface, and oceanic climate variables across 137 vertical pressure levels.",
+  "homepage_url": "https://www.ecmwf.int/en/forecasts/datasets/complete-era5-global-atmospheric-reanalysis",
+  "publisher": {
+    "name": "European Centre for Medium-Range Weather Forecasts (ECMWF)",
+    "type": "government",
+    "url": "https://www.ecmwf.int"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "atmospheric-reanalysis",
+    "weather-forecasting",
+    "climate-monitoring"
+  ],
+  "tags": [
+    "climate",
+    "meteorology",
+    "atmosphere",
+    "reanalysis",
+    "ecmwf",
+    "copernicus",
+    "weather",
+    "era5"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Copernicus Open Access / Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Freely accessible under the License to use Copernicus Products and CC BY 4.0 conditions."
+  },
+  "source_references": [
+    {
+      "title": "ECMWF ERA5 Reanalysis Portal",
+      "url": "https://www.ecmwf.int/en/forecasts/datasets/complete-era5-global-atmospheric-reanalysis",
+      "type": "official_website",
+      "notes": "Canonical landing page and technical specification for ERA5 global reanalysis."
+    },
+    {
+      "title": "Copernicus Climate Data Store (CDS) ERA5 Access",
+      "url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels",
+      "type": "repository",
+      "notes": "Official repository for subsetting and downloading hourly ERA5 data."
+    },
+    {
+      "title": "The ERA5 global reanalysis",
+      "url": "https://doi.org/10.1002/qj.3803",
+      "type": "original_paper",
+      "notes": "Primary descriptive paper published in Quarterly Journal of the Royal Meteorological Society."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against official ECMWF portal and Copernicus Climate Data Store specifications."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "GRIB",
+      "NetCDF"
+    ],
+    "notes": "Multi-petabyte global atmospheric archive accessible via the Copernicus Climate Data Store API."
+  },
+  "dates": {
+    "published": "2020",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "The ERA5 global reanalysis",
+    "paper_url": "https://doi.org/10.1002/qj.3803",
+    "authors": [
+      "Hans Hersbach",
+      "Bill Bell",
+      "Paul Berrisford",
+      "Shoji Hirahara",
+      "Andras Horanyi",
+      "Julio Munoz-Sabater",
+      "Jean-Noel Thepaut"
+    ],
+    "doi": "10.1002/qj.3803",
+    "bibtex": "@article{hersbach2020era5,\n  title={The ERA5 global reanalysis},\n  author={Hersbach, Hans and Bell, Bill and Berrisford, Paul and Hirahara, Shoji and Horanyi, Andras and Munoz-Sabater, Julio and Thepaut, Jean-Noel and others},\n  journal={Quarterly Journal of the Royal Meteorological Society},\n  volume={146},\n  number={730},\n  pages={1999--2049},\n  year={2020},\n  publisher={Wiley Online Library},\n  doi={10.1002/qj.3803}\n}"
+  }
+}

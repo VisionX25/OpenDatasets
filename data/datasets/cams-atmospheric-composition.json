@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cams-atmospheric-composition",
+  "slug": "cams-atmospheric-composition",
+  "name": "CAMS Global Atmospheric Composition Reanalysis (EAC4)",
+  "description": "The CAMS Reanalysis (EAC4 - ECMWF Atmospheric Composition Reanalysis 4) is the flagship global atmospheric chemistry dataset produced by the Copernicus Atmosphere Monitoring Service. Spanning 2003 to the present at approximately 80 km horizontal resolution across 60 vertical pressure levels with 3-hourly temporal resolution, EAC4 assimilates satellite observations into the ECMWF IFS chemistry module. It provides continuous 3D fields of reactive gases (ozone, nitrogen dioxide, carbon monoxide, sulphur dioxide), greenhouse gases, and aerosol optical properties partitioned into dust, sea salt, black carbon, organic matter, and sulphate.",
+  "homepage_url": "https://atmosphere.copernicus.eu/data",
+  "publisher": {
+    "name": "Copernicus Atmosphere Monitoring Service (CAMS) / ECMWF",
+    "type": "government",
+    "url": "https://atmosphere.copernicus.eu"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "air-quality-modeling",
+    "aerosol-forecasting",
+    "greenhouse-gas-monitoring"
+  ],
+  "tags": [
+    "atmosphere",
+    "aerosols",
+    "greenhouse-gases",
+    "ozone",
+    "air-quality",
+    "copernicus",
+    "reanalysis",
+    "cams"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Copernicus Open Access / Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Free and open distribution under the European Union Copernicus Data Policy and CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "Copernicus Atmosphere Monitoring Service Data Portal",
+      "url": "https://atmosphere.copernicus.eu/data",
+      "type": "official_website",
+      "notes": "Canonical portal for atmospheric composition data and documentation."
+    },
+    {
+      "title": "CAMS Global Reanalysis (EAC4) on Atmosphere Data Store",
+      "url": "https://ads.atmosphere.copernicus.eu/datasets/cams-global-reanalysis-eac4",
+      "type": "repository",
+      "notes": "Direct Atmosphere Data Store repository page for EAC4 reanalysis."
+    },
+    {
+      "title": "The CAMS reanalysis of atmospheric composition",
+      "url": "https://doi.org/10.5194/acp-19-3515-2019",
+      "type": "original_paper",
+      "notes": "Primary reference paper published in Atmospheric Chemistry and Physics."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against official Copernicus Atmosphere Data Store portal."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "GRIB",
+      "NetCDF"
+    ],
+    "notes": "Multi-terabyte 3D atmospheric chemistry archive distributed via the Copernicus Atmosphere Data Store."
+  },
+  "dates": {
+    "published": "2019",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "The CAMS reanalysis of atmospheric composition",
+    "paper_url": "https://doi.org/10.5194/acp-19-3515-2019",
+    "authors": [
+      "Antje Inness",
+      "Melanie Ades",
+      "Anna Agusti-Panareda",
+      "Johannes Flemming",
+      "Zak Kipling",
+      "Vincent Huijnen",
+      "Richard J. Engelen"
+    ],
+    "doi": "10.5194/acp-19-3515-2019",
+    "bibtex": "@article{inness2019cams,\n  title={The CAMS reanalysis of atmospheric composition},\n  author={Inness, Antje and Ades, Melanie and Agusti-Panareda, Anna and Flemming, Johannes and Kipling, Zak and Huijnen, Vincent and Engelen, Richard J and others},\n  journal={Atmospheric Chemistry and Physics},\n  volume={19},\n  number={6},\n  pages={3515--3600},\n  year={2019},\n  publisher={Copernicus GmbH},\n  doi={10.5194/acp-19-3515-2019}\n}"
+  }
+}

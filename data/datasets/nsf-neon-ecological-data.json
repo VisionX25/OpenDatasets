@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nsf-neon-ecological-data",
+  "slug": "nsf-neon-ecological-data",
+  "name": "NSF NEON National Ecological Observatory Network Open Data",
+  "description": "The National Ecological Observatory Network (NEON), funded by the National Science Foundation and operated by Battelle, is a continental-scale ecological observation facility designed to collect standardized ecological data across 81 field sites (47 terrestrial, 34 aquatic) in 20 ecoclimatic domains across the United States. NEON delivers 180+ standardized open data products combining automated sensor telemetry (flux towers, eddy covariance, soil arrays, stream gauges), airborne remote sensing (hyperspectral, LiDAR, RGB), and observational field sampling (plants, insects, microbes, mammals).",
+  "homepage_url": "https://www.neonscience.org/data",
+  "publisher": {
+    "name": "National Science Foundation (NSF) / Battelle",
+    "type": "government",
+    "url": "https://www.neonscience.org"
+  },
+  "modalities": [
+    "tabular",
+    "sensor",
+    "time-series",
+    "vision"
+  ],
+  "tasks": [
+    "ecological-forecasting",
+    "ecosystem-flux-modeling",
+    "environmental-sensor-telemetry-analysis"
+  ],
+  "tags": [
+    "nsf-neon",
+    "ecology",
+    "flux-tower",
+    "ecosystem-monitoring",
+    "eddy-covariance",
+    "biogeochemistry",
+    "continental-scale"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Creative Commons CC0 1.0 Universal (Public Domain Dedication)",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Open access data provided under CC0 public domain terms in accordance with NSF policy."
+  },
+  "source_references": [
+    {
+      "title": "NEON Data Portal",
+      "url": "https://www.neonscience.org/data",
+      "type": "official_website",
+      "notes": "Official repository for exploring and downloading all 180+ NEON data products."
+    },
+    {
+      "title": "NEON API Documentation",
+      "url": "https://data.neonscience.org/data-api",
+      "type": "documentation",
+      "notes": "REST API documentation for programmatic access and batch downloading."
+    },
+    {
+      "title": "A continental-scale approach to monitor and understand the causes and consequences of environmental change: NEON",
+      "url": "https://doi.org/10.1890/070113",
+      "type": "original_paper",
+      "notes": "Foundational design paper published in Frontiers in Ecology and the Environment."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against official NSF NEON portal and API endpoints."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "CSV",
+      "HDF-5",
+      "NetCDF",
+      "LAS",
+      "GeoTIFF"
+    ],
+    "notes": "Multi-terabyte repository combining sensor streams, field surveys, and airborne remote sensing."
+  },
+  "dates": {
+    "published": "2008",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "A continental-scale approach to monitor and understand the causes and consequences of environmental change: NEON",
+    "paper_url": "https://doi.org/10.1890/070113",
+    "authors": [
+      "Michael Keller",
+      "David S. Schimel",
+      "William W. Hargrove",
+      "Forrest M. Hoffman"
+    ],
+    "doi": "10.1890/070113",
+    "bibtex": "@article{keller2008neon,\n  title={A continental-scale approach to monitor and understand the causes and consequences of environmental change: NEON},\n  author={Keller, Michael and Schimel, David S and Hargrove, William W and Hoffman, Forrest M},\n  journal={Frontiers in Ecology and the Environment},\n  volume={6},\n  number={5},\n  pages={282--284},\n  year={2008},\n  publisher={Wiley Online Library},\n  doi={10.1890/070113}\n}"
+  }
+}

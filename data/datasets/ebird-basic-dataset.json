@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ebird-basic-dataset",
+  "slug": "ebird-basic-dataset",
+  "name": "eBird Basic Dataset (EBD)",
+  "description": "The eBird Basic Dataset (EBD) is the world's largest biodiversity citizen science dataset, managed by the Cornell Lab of Ornithology. Updated monthly, the EBD contains more than 1.4 billion bird observation records submitted by hundreds of thousands of birders worldwide. Each observation includes species identity, count, precise latitude/longitude, timestamp, and crucially, sampling effort metadata (duration, distance traveled, protocol type) enabling statistical modeling of species distributions, migratory corridors, and population abundances while controlling for observer effort.",
+  "homepage_url": "https://science.ebird.org/en/use-ebird-data",
+  "publisher": {
+    "name": "Cornell Lab of Ornithology",
+    "type": "academic",
+    "url": "https://www.birds.cornell.edu"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "avian-distribution-modeling",
+    "migration-timing-prediction",
+    "population-trend-estimation"
+  ],
+  "tags": [
+    "ebird",
+    "ornithology",
+    "bird-observations",
+    "citizen-science",
+    "species-distribution",
+    "cornell-lab",
+    "ecology"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "eBird Data Access Terms of Use (Open for Research and Conservation)",
+    "spdx_id": null,
+    "url": "https://science.ebird.org/en/use-ebird-data/download-ebird-data-products",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for research and education upon standard non-commercial agreement with Cornell Lab of Ornithology."
+  },
+  "source_references": [
+    {
+      "title": "eBird Science Data Portal",
+      "url": "https://science.ebird.org/en/use-ebird-data",
+      "type": "official_website",
+      "notes": "Official Cornell portal for downloading EBD and eBird Status and Trends data."
+    },
+    {
+      "title": "The eBird enterprise: An integrated approach to development and application of citizen science",
+      "url": "https://doi.org/10.1016/j.biocon.2013.11.003",
+      "type": "original_paper",
+      "notes": "Foundational methodology and enterprise design published in Biological Conservation."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against Cornell Lab of Ornithology eBird Science portal."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "TSV",
+      "Parquet"
+    ],
+    "notes": "Multi-hundred gigabyte monthly global checklist archive distributed by Cornell Lab."
+  },
+  "dates": {
+    "published": "2014",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "The eBird enterprise: An integrated approach to development and application of citizen science",
+    "paper_url": "https://doi.org/10.1016/j.biocon.2013.11.003",
+    "authors": [
+      "Brian L. Sullivan",
+      "Jocelyn L. Aycrigg",
+      "Jessie H. Barry",
+      "Rick E. Bonney",
+      "Nicholas Bruns",
+      "Caren B. Cooper",
+      "Theo Damoulas",
+      "Steve Kelling"
+    ],
+    "doi": "10.1016/j.biocon.2013.11.003",
+    "bibtex": "@article{sullivan2014ebird,\n  title={The eBird enterprise: An integrated approach to development and application of citizen science},\n  author={Sullivan, Brian L and Aycrigg, Jocelyn L and Barry, Jessie H and Bonney, Rick E and Bruns, Nicholas and Cooper, Caren B and Damoulas, Theo and Dhondt, Andre A and Dietterich, Tom and Farnsworth, Andrew and others},\n  journal={Biological Conservation},\n  volume={169},\n  pages={31--40},\n  year={2014},\n  publisher={Elsevier},\n  doi={10.1016/j.biocon.2013.11.003}\n}"
+  }
+}

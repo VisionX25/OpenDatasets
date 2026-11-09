@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nasa-firms-active-fire",
+  "slug": "nasa-firms-active-fire",
+  "name": "NASA FIRMS Fire Information for Resource Management System",
+  "description": "NASA FIRMS (Fire Information for Resource Management System) delivers near-real-time global active fire and thermal anomaly locations detected by the MODIS instruments (Terra and Aqua, 1 km) and VIIRS sensors (Suomi NPP and NOAA-20/21, 375 m). Processed within three hours of satellite overpass by NASA LANCE (Land, Atmosphere Near real-time Capability for EOS), FIRMS distributes point vector coordinates with Brightness Temperature, Fire Radiative Power (FRP), acquisition timestamp, satellite confidence score, and day/night flags.",
+  "homepage_url": "https://firms.modaps.eosdis.nasa.gov/content/active_fire/",
+  "publisher": {
+    "name": "NASA Earth Science Data and Information System (ESDIS)",
+    "type": "government",
+    "url": "https://firms.modaps.eosdis.nasa.gov"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "active-fire-detection",
+    "near-real-time-hazard-monitoring",
+    "thermal-anomaly-tracking"
+  ],
+  "tags": [
+    "firms",
+    "active-fires",
+    "thermal-anomalies",
+    "wildfire-detection",
+    "modis",
+    "viirs",
+    "near-real-time",
+    "nasa-esdis"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "NASA Open Data Policy (Public Domain)",
+    "spdx_id": null,
+    "url": "https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/",
+    "commercial_use": "allowed",
+    "notes": "NASA Earth science data is freely accessible without restrictions under US open data rules."
+  },
+  "source_references": [
+    {
+      "title": "NASA FIRMS Active Fire Data Portal",
+      "url": "https://firms.modaps.eosdis.nasa.gov/content/active_fire/",
+      "type": "official_website",
+      "notes": "Direct access portal for historical archives, NRT downloads, and MapServer APIs."
+    },
+    {
+      "title": "NASA FIRMS Global Active Fire Archive Download",
+      "url": "https://firms.modaps.eosdis.nasa.gov/download/",
+      "type": "repository",
+      "notes": "Custom download interface for country, regional, and global SHP and CSV records."
+    },
+    {
+      "title": "The New 375m VIIRS Active Fire Detection Data",
+      "url": "https://doi.org/10.1016/j.rse.2013.12.008",
+      "type": "original_paper",
+      "notes": "Sensor description and algorithm validation paper in Remote Sensing of Environment."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against official NASA FIRMS portal and NASA ESDIS distribution services."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "CSV",
+      "SHP",
+      "KML",
+      "GeoJSON"
+    ],
+    "notes": "Comprehensive point vector tables and shapefiles distributed via NASA FIRMS."
+  },
+  "dates": {
+    "published": "2014",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "The New 375m VIIRS Active Fire Detection Data: Algorithm Description and Initial Evaluation",
+    "paper_url": "https://doi.org/10.1016/j.rse.2013.12.008",
+    "authors": [
+      "Wilfrid Schroeder",
+      "Patricia Oliva",
+      "Louis Giglio",
+      "Ivan A. Csiszar"
+    ],
+    "doi": "10.1016/j.rse.2013.12.008",
+    "bibtex": "@article{schroeder2014viirs,\n  title={The new 375 m VIIRS active fire detection data: Algorithm description and initial evaluation},\n  author={Schroeder, Wilfrid and Oliva, Patricia and Giglio, Louis and Csiszar, Ivan A},\n  journal={Remote Sensing of Environment},\n  volume={143},\n  pages={85--96},\n  year={2014},\n  publisher={Elsevier},\n  doi={10.1016/j.rse.2013.12.008}\n}"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gfed-fire-emissions",
+  "slug": "gfed-fire-emissions",
+  "name": "GFED Global Fire Emissions Database (GFED4s)",
+  "description": "The Global Fire Emissions Database (GFED, Version 4s) combines satellite-derived burned area observations from MODIS with the Carnegie-Ames-Stanford Approach (CASA) biogeochemical model to quantify monthly global fire activity and trace gas emissions from 1997 to the present at 0.25° resolution. GFED4s incorporates small fire burn estimates based on active fire detections, delivering gridded dry matter emissions and emission factors for carbon dioxide (CO2), carbon monoxide (CO), methane (CH4), black carbon (BC), organic carbon (OC), and PM2.5 partitioned across six fire types.",
+  "homepage_url": "https://www.globalfiredata.org/data.html",
+  "publisher": {
+    "name": "Global Fire Emissions Database Team (VU Amsterdam / UC Irvine / NASA GSFC)",
+    "type": "academic",
+    "url": "https://www.globalfiredata.org"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "fire-emissions-quantification",
+    "atmospheric-chemistry-modeling",
+    "biomass-burning-accounting"
+  ],
+  "tags": [
+    "gfed",
+    "fire-emissions",
+    "carbon-cycle",
+    "biomass-burning",
+    "trace-gases",
+    "aerosols",
+    "wildfire-emissions"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Freely available for research and commercial applications with proper attribution."
+  },
+  "source_references": [
+    {
+      "title": "GFED Official Data Portal",
+      "url": "https://www.globalfiredata.org/data.html",
+      "type": "official_website",
+      "notes": "Official repository for GFED4s HDF5/NetCDF gridded files and emissions factors."
+    },
+    {
+      "title": "Global fire emissions estimates during 1997–2016 mapped with a new approach using small-fire emissions",
+      "url": "https://doi.org/10.5194/essd-9-697-2017",
+      "type": "original_paper",
+      "notes": "Comprehensive documentation paper in Earth System Science Data."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against official GFED website and Earth System Science Data journal publication."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "amount": 22.0,
+    "unit": "GB",
+    "status": "estimated",
+    "file_formats": [
+      "HDF-5",
+      "NetCDF",
+      "TXT"
+    ],
+    "notes": "Gridded global emissions archives with daily cycle and ancillary layers."
+  },
+  "dates": {
+    "published": "2017",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "Global fire emissions estimates during 1997–2016 mapped with a new approach using the small-fire emissions",
+    "paper_url": "https://doi.org/10.5194/essd-9-697-2017",
+    "authors": [
+      "Guido R. van der Werf",
+      "James T. Randerson",
+      "Louis Giglio",
+      "Thijs T. van Leeuwen",
+      "Yang Chen",
+      "Bobbins M. Rogers",
+      "Miriam E. Mu"
+    ],
+    "doi": "10.5194/essd-9-697-2017",
+    "bibtex": "@article{vanderwerf2017gfed,\n  title={Global fire emissions estimates during 1997--2016 mapped with a new approach using the small-fire emissions},\n  author={van der Werf, Guido R and Randerson, James T and Giglio, Louis and van Leeuwen, Thijs T and Chen, Yang and Rogers, Brendan M and Mu, Miriam E and others},\n  journal={Earth System Science Data},\n  volume={9},\n  number={2},\n  pages={697--720},\n  year={2017},\n  publisher={Copernicus GmbH},\n  doi={10.5194/essd-9-697-2017}\n}"
+  }
+}

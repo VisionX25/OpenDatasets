@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "worldclim-2",
+  "slug": "worldclim-2",
+  "name": "WorldClim 2.1 Global High-Resolution Climate Surface Grids",
+  "description": "WorldClim 2.1 is an open database of high-resolution global weather and climate surfaces for 1970–2000 baseline conditions, developed by researchers at UC Davis and partners. Provided across four spatial resolutions from 30 arc-seconds (~1 km²) to 10 arc-minutes (~340 km²), WorldClim 2.1 contains spatially interpolated monthly minimum, mean, and maximum temperature, precipitation, solar radiation, wind speed, and water vapor pressure, alongside 19 standardized bioclimatic variables (BIO1–BIO19) widely employed in ecological niche modeling and species distribution projections.",
+  "homepage_url": "https://www.worldclim.org/data/worldclim21.html",
+  "publisher": {
+    "name": "WorldClim / University of California, Davis",
+    "type": "academic",
+    "url": "https://www.worldclim.org"
+  },
+  "modalities": [
+    "tabular",
+    "vision"
+  ],
+  "tasks": [
+    "species-distribution-modeling",
+    "ecological-niche-modeling",
+    "climatological-spatial-interpolation"
+  ],
+  "tags": [
+    "worldclim",
+    "bioclimatic-variables",
+    "temperature-grids",
+    "precipitation-grids",
+    "spatial-interpolation",
+    "ecology",
+    "biodiversity"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Freely available for academic, commercial, and research use with attribution."
+  },
+  "source_references": [
+    {
+      "title": "WorldClim 2.1 Download Page",
+      "url": "https://www.worldclim.org/data/worldclim21.html",
+      "type": "official_website",
+      "notes": "Official distribution portal for 30s, 2.5m, 5m, and 10m global GeoTIFF rasters."
+    },
+    {
+      "title": "WorldClim 2: new 1-km spatial resolution climate surfaces for global land areas",
+      "url": "https://doi.org/10.1002/joc.5086",
+      "type": "original_paper",
+      "notes": "Descriptive paper published in International Journal of Climatology."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against official WorldClim website and Royal Meteorological Society journal."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "amount": 28.0,
+    "unit": "GB",
+    "status": "estimated",
+    "file_formats": [
+      "GeoTIFF"
+    ],
+    "notes": "Complete 30-arcsecond global GeoTIFF raster layers collection."
+  },
+  "dates": {
+    "published": "2017",
+    "last_updated": "2020"
+  },
+  "citation": {
+    "paper_title": "WorldClim 2: new 1-km spatial resolution climate surfaces for global land areas",
+    "paper_url": "https://doi.org/10.1002/joc.5086",
+    "authors": [
+      "Stephen E. Fick",
+      "Robert J. Hijmans"
+    ],
+    "doi": "10.1002/joc.5086",
+    "bibtex": "@article{fick2017worldclim,\n  title={WorldClim 2: new 1-km spatial resolution climate surfaces for global land areas},\n  author={Fick, Stephen E and Hijmans, Robert J},\n  journal={International Journal of Climatology},\n  volume={37},\n  number={12},\n  pages={4302--4315},\n  year={2017},\n  publisher={Wiley Online Library},\n  doi={10.1002/joc.5086}\n}"
+  }
+}

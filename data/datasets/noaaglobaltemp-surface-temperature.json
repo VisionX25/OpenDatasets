@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "noaaglobaltemp-surface-temperature",
+  "slug": "noaaglobaltemp-surface-temperature",
+  "name": "NOAA Global Surface Temperature Dataset (NOAAGlobalTemp v5)",
+  "description": "NOAAGlobalTemp (NOAA Global Surface Temperature, Version 5) is the operational climate benchmark maintained by NOAA's National Centers for Environmental Information (NCEI) to track global and regional temperature changes from 1880 to the present. The dataset merges land surface air temperatures from GHCN-Monthly v4 with ocean sea surface temperatures from the Extended Reconstructed Sea Surface Temperature dataset (ERSSTv5). Output is provided on a 5°x5° monthly latitude-longitude grid alongside operational global, hemispheric, and tropical area-weighted time series, providing key inputs for NOAA's State of the Climate reports.",
+  "homepage_url": "https://www.ncei.noaa.gov/products/land-based-station/noaa-global-temp",
+  "publisher": {
+    "name": "NOAA National Centers for Environmental Information (NCEI)",
+    "type": "government",
+    "url": "https://www.ncei.noaa.gov"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "surface-temperature-monitoring",
+    "climate-anomaly-detection",
+    "long-term-trend-analysis"
+  ],
+  "tags": [
+    "noaa",
+    "surface-temperature",
+    "climate-anomalies",
+    "global-warming",
+    "ersst",
+    "ghcn",
+    "gridded-temperature"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "US Government Work (Public Domain)",
+    "spdx_id": null,
+    "url": "https://www.noaa.gov/protecting-and-managing-information/open-data",
+    "commercial_use": "allowed",
+    "notes": "US Federal open government data freely reusable for commercial and non-commercial purposes."
+  },
+  "source_references": [
+    {
+      "title": "NOAA NCEI NOAAGlobalTemp Portal",
+      "url": "https://www.ncei.noaa.gov/products/land-based-station/noaa-global-temp",
+      "type": "official_website",
+      "notes": "Official repository and documentation landing page at NOAA NCEI."
+    },
+    {
+      "title": "Assessment of the Global Surface Temperature Changes from 1880 to 2018 in the NOAAGlobalTemp Dataset",
+      "url": "https://doi.org/10.1175/JCLI-D-18-0394.1",
+      "type": "original_paper",
+      "notes": "Foundational methodology and validation study published in Journal of Climate."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against NOAA NCEI official landing page and data distribution endpoints."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "amount": 1.2,
+    "unit": "GB",
+    "status": "estimated",
+    "file_formats": [
+      "NetCDF",
+      "CSV"
+    ],
+    "notes": "Monthly gridded anomaly files and area-averaged time series."
+  },
+  "dates": {
+    "published": "2019",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "Assessment of the Global Surface Temperature Changes from 1880 to 2018 in the NOAAGlobalTemp Dataset",
+    "paper_url": "https://doi.org/10.1175/JCLI-D-18-0394.1",
+    "authors": [
+      "Huai-Min Zhang",
+      "Boyin Huang",
+      "Jay H. Lawrimore",
+      "Matthew J. Menne",
+      "Thomas C. Peterson"
+    ],
+    "doi": "10.1175/JCLI-D-18-0394.1",
+    "bibtex": "@article{zhang2019noaaglobaltemp,\n  title={Assessment of the global surface temperature changes from 1880 to 2018 in the NOAAGlobalTemp dataset},\n  author={Zhang, Huai-Min and Huang, Boyin and Lawrimore, Jay H and Menne, Matthew J and Peterson, Thomas C},\n  journal={Journal of Climate},\n  volume={32},\n  number={17},\n  pages={5565--5579},\n  year={2019},\n  publisher={American Meteorological Society},\n  doi={10.1175/JCLI-D-18-0394.1}\n}"
+  }
+}

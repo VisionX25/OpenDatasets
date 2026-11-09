@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "id": "grdc-river-discharge",
+  "slug": "grdc-river-discharge",
+  "name": "Global Runoff Data Centre (GRDC) River Discharge Database",
+  "description": "Operated by the German Federal Institute of Hydrology (BfG) under the auspices of the World Meteorological Organization (WMO), the Global Runoff Data Centre (GRDC) maintains the primary worldwide repository of observed river discharge and streamflow records. The database contains standardized daily and monthly runoff series from more than 10,700 gauging stations across 160 countries, representing drainage areas of over 100 million km². It provides the baseline empirical benchmark for calibration and validation of global hydrological, land-surface, and climate models.",
+  "homepage_url": "https://grdc.bafg.de/data/data_portal/",
+  "publisher": {
+    "name": "Global Runoff Data Centre (GRDC) / Federal Institute of Hydrology (BfG) / WMO",
+    "type": "government",
+    "url": "https://www.bafg.de/GRDC/"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "river-runoff-forecasting",
+    "streamflow-modeling",
+    "flood-and-drought-analysis"
+  ],
+  "tags": [
+    "grdc",
+    "river-discharge",
+    "streamflow",
+    "runoff",
+    "gauging-stations",
+    "hydrology",
+    "water-resources",
+    "wmo"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "GRDC Data Policy (WMO Resolution 40 / Open for Non-Commercial Research)",
+    "spdx_id": null,
+    "url": "https://www.bafg.de/GRDC/EN/01_GRDC/12_plcy/data_policy_node.html",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for scientific research, educational, and non-commercial assessment purposes pursuant to WMO Resolution 40."
+  },
+  "source_references": [
+    {
+      "title": "GRDC Data Portal",
+      "url": "https://grdc.bafg.de/data/data_portal/",
+      "type": "official_website",
+      "notes": "Official web GIS interface for discovering and ordering station discharge time series."
+    },
+    {
+      "title": "High-resolution composite of global runoff and water balance",
+      "url": "https://doi.org/10.1029/1999GB001254",
+      "type": "original_paper",
+      "notes": "Foundational global hydrological validation study integrating GRDC records."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against official GRDC/BfG web portal and WMO data sharing guidelines."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "CSV",
+      "TXT",
+      "WaterML"
+    ],
+    "notes": "Historical time-series archives spanning over a century across 10,700+ gauging stations."
+  },
+  "dates": {
+    "published": "2002",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "High-resolution composite of global runoff and water balance",
+    "paper_url": "https://doi.org/10.1029/1999GB001254",
+    "authors": [
+      "B. M. Fekete",
+      "C. J. Vorosmarty",
+      "W. Grabs"
+    ],
+    "doi": "10.1029/1999GB001254",
+    "bibtex": "@article{fekete2002runoff,\n  title={High-resolution composite of global runoff and water balance},\n  author={Fekete, Balazs M and Vorosmarty, Charles J and Grabs, Wolfgang},\n  journal={Global Biogeochemical Cycles},\n  volume={16},\n  number={4},\n  pages={15--1},\n  year={2002},\n  publisher={Wiley Online Library},\n  doi={10.1029/1999GB001254}\n}"
+  }
+}

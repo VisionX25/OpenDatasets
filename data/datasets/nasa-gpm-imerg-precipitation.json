@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nasa-gpm-imerg-precipitation",
+  "slug": "nasa-gpm-imerg-precipitation",
+  "name": "NASA GPM IMERG Integrated Multi-satellitE Retrievals for GPM",
+  "description": "IMERG (Integrated Multi-satellitE Retrievals for GPM) is the flagship global precipitation product produced by NASA Goddard Space Flight Center and JAXA. Fusing passive microwave retrievals from the Global Precipitation Measurement (GPM) constellation, geostationary infrared observations via motion-vector morphing, and monthly ground rain gauge analyses (GPCC), IMERG provides quasi-global (60°N–60°S and pole-to-pole in recent versions) precipitation rates at half-hourly 0.1°x0.1° (~10 km) resolution from 2000 to the present across Early, Late, and Final research-grade runs.",
+  "homepage_url": "https://gpm.nasa.gov/data/imerg",
+  "publisher": {
+    "name": "NASA Goddard Space Flight Center / JAXA",
+    "type": "government",
+    "url": "https://gpm.nasa.gov"
+  },
+  "modalities": [
+    "time-series",
+    "tabular",
+    "vision"
+  ],
+  "tasks": [
+    "precipitation-estimation",
+    "extreme-weather-monitoring",
+    "flood-forecasting"
+  ],
+  "tags": [
+    "precipitation",
+    "rainfall",
+    "nasa-gpm",
+    "imerg",
+    "satellite-meteorology",
+    "radar",
+    "hydrology"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "NASA Open Data Policy (Public Domain)",
+    "spdx_id": null,
+    "url": "https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/",
+    "commercial_use": "allowed",
+    "notes": "US Government open access data provided freely to the worldwide community."
+  },
+  "source_references": [
+    {
+      "title": "NASA GPM IMERG Official Mission Page",
+      "url": "https://gpm.nasa.gov/data/imerg",
+      "type": "official_website",
+      "notes": "Official portal explaining IMERG versions, algorithms, and data access."
+    },
+    {
+      "title": "NASA GES DISC IMERG Data Holdings",
+      "url": "https://disc.gsfc.nasa.gov/datasets?keywords=IMERG",
+      "type": "repository",
+      "notes": "NASA GES DISC archive for IMERG Final Run half-hourly and daily files."
+    },
+    {
+      "title": "Integrated Multi-satellitE Retrievals for the Global Precipitation Measurement (GPM) Mission (IMERG)",
+      "url": "https://doi.org/10.1007/978-3-030-24568-9_19",
+      "type": "original_paper",
+      "notes": "Core book chapter and algorithm description published in Satellite Precipitation Measurement."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against NASA GPM mission portal and GES DISC repository."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "HDF-5",
+      "NetCDF-4",
+      "GeoTIFF"
+    ],
+    "notes": "Multi-terabyte archive distributed through NASA GES DISC."
+  },
+  "dates": {
+    "published": "2020",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "Integrated Multi-satellitE Retrievals for the Global Precipitation Measurement (GPM) Mission (IMERG)",
+    "paper_url": "https://doi.org/10.1007/978-3-030-24568-9_19",
+    "authors": [
+      "George J. Huffman",
+      "David T. Bolvin",
+      "Dan Braithwaite",
+      "Kuolin Hsu",
+      "Robert F. Joyce",
+      "Christopher Kidd",
+      "Pingping Xie"
+    ],
+    "doi": "10.1007/978-3-030-24568-9_19",
+    "bibtex": "@incollection{huffman2020imerg,\n  title={Integrated multi-satellitE retrievals for the Global Precipitation Measurement (GPM) mission (IMERG)},\n  author={Huffman, George J and Bolvin, David T and Braithwaite, Dan and Hsu, Kuo-lin and Joyce, Robert and Kidd, Christopher and Nelkin, Eric J and Sorooshian, Soroosh and Tan, Jackson and Xie, Pingping},\n  booktitle={Satellite Precipitation Measurement: Volume 1},\n  pages={343--353},\n  year={2020},\n  publisher={Springer},\n  doi={10.1007/978-3-030-24568-9_19}\n}"
+  }
+}

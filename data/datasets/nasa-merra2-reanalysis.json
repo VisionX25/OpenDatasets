@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nasa-merra2-reanalysis",
+  "slug": "nasa-merra2-reanalysis",
+  "name": "NASA MERRA-2 Modern-Era Retrospective Analysis for Research and Applications",
+  "description": "MERRA-2 (Modern-Era Retrospective analysis for Research and Applications, Version 2) is NASA's atmospheric reanalysis of the modern satellite era produced by the Global Modeling and Assimilation Office (GMAO). Spanning from 1980 to the present at 0.5° latitude by 0.625° longitude resolution with 72 hybrid-eta vertical levels, MERRA-2 incorporates hyperspectral radiance assimilation and is the first long-term global reanalysis to assimilate interactive aerosol observations (MODIS, MISR, AVHRR, AERONET). It provides continuous gridded estimates of radiation, precipitation, ozone, aerosols, and general atmospheric dynamics.",
+  "homepage_url": "https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/",
+  "publisher": {
+    "name": "NASA Global Modeling and Assimilation Office (GMAO)",
+    "type": "government",
+    "url": "https://gmao.gsfc.nasa.gov"
+  },
+  "modalities": [
+    "time-series",
+    "tabular"
+  ],
+  "tasks": [
+    "climate-modeling",
+    "aerosol-assimilation",
+    "meteorological-forecasting"
+  ],
+  "tags": [
+    "climate",
+    "atmosphere",
+    "aerosol",
+    "meteorology",
+    "satellite-data",
+    "reanalysis",
+    "nasa",
+    "merra-2"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "NASA Open Data Policy (Public Domain)",
+    "spdx_id": null,
+    "url": "https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/",
+    "commercial_use": "allowed",
+    "notes": "Freely and openly available according to the US Federal and NASA Open Data Policies."
+  },
+  "source_references": [
+    {
+      "title": "NASA GMAO MERRA-2 Project Page",
+      "url": "https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/",
+      "type": "official_website",
+      "notes": "Official homepage for MERRA-2 documentation, file specifications, and updates."
+    },
+    {
+      "title": "NASA GES DISC MERRA-2 Data Holdings",
+      "url": "https://disc.gsfc.nasa.gov/datasets?project=MERRA-2",
+      "type": "repository",
+      "notes": "NASA Goddard Earth Sciences Data and Information Services Center (GES DISC) archive."
+    },
+    {
+      "title": "The Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA-2)",
+      "url": "https://doi.org/10.1175/JCLI-D-16-0758.1",
+      "type": "original_paper",
+      "notes": "Foundational peer-reviewed description published in Journal of Climate."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Curation Team",
+    "verified_date": "2026-11-09",
+    "notes": "Verified against NASA GMAO portal and GES DISC repository."
+  },
+  "sample_count": {
+    "status": "unknown"
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "NetCDF-4",
+      "HDF-5"
+    ],
+    "notes": "Petabyte-scale archive managed by NASA GMAO and distributed via NASA GES DISC."
+  },
+  "dates": {
+    "published": "2017",
+    "last_updated": "2026-11"
+  },
+  "citation": {
+    "paper_title": "The Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA-2)",
+    "paper_url": "https://doi.org/10.1175/JCLI-D-16-0758.1",
+    "authors": [
+      "Ronald Gelaro",
+      "Will McCarty",
+      "Max J. Suarez",
+      "Ralf Todling",
+      "Arlindo da Silva",
+      "Arthur D. Collins",
+      "Michael G. Bosilovich"
+    ],
+    "doi": "10.1175/JCLI-D-16-0758.1",
+    "bibtex": "@article{gelaro2017merra2,\n  title={The modern-era retrospective analysis for research and applications, version 2 (MERRA-2)},\n  author={Gelaro, Ronald and McCarty, Will and Suarez, Max J and Todling, Ralf and da Silva, Arlindo and Collins, Arthur D and Bosilovich, Michael G and others},\n  journal={Journal of Climate},\n  volume={30},\n  number={14},\n  pages={5419--5454},\n  year={2017},\n  publisher={American Meteorological Society},\n  doi={10.1175/JCLI-D-16-0758.1}\n}"
+  }
+}
