@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "drivingstereo",
+  "slug": "drivingstereo",
+  "name": "DrivingStereo: High-Resolution Stereo Matching Dataset",
+  "description": "Large-scale stereo matching and depth estimation dataset comprising 182,182 rectified binocular image pairs (1752x800 resolution) captured in diverse driving conditions with high-precision LiDAR-derived ground truth disparity maps and adverse weather subsets.",
+  "homepage_url": "https://drivingstereo-dataset.github.io/",
+  "publisher": {
+    "name": "Tsinghua University / SenseTime",
+    "type": "academic",
+    "url": "https://drivingstereo-dataset.github.io/"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor"
+  ],
+  "tasks": [
+    "stereo-matching",
+    "disparity-estimation",
+    "depth-estimation"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "stereo-matching",
+    "disparity-estimation",
+    "depth-estimation",
+    "high-resolution",
+    "adverse-weather",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://github.com/drivingstereo-dataset/drivingstereo-dataset.github.io/blob/master/LICENSE",
+    "commercial_use": "allowed",
+    "notes": "Released under the permissive MIT license."
+  },
+  "source_references": [
+    {
+      "title": "DrivingStereo Official Website",
+      "url": "https://drivingstereo-dataset.github.io/",
+      "type": "official_website",
+      "notes": "Official dataset project page providing download links for full and half resolution stereo pairs, disparity maps, and weather subsets."
+    },
+    {
+      "title": "DrivingStereo: A Large-Scale Dataset for Stereo Matching in Autonomous Driving Scenarios",
+      "url": "https://doi.org/10.1109/CVPR.2019.00099",
+      "type": "original_paper",
+      "notes": "CVPR 2019 conference publication by Yang et al. detailing the stereo camera rig, LiDAR-guided disparity ground truth generation, and model evaluations."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against official DrivingStereo project page and CVPR 2019 proceedings (DOI: 10.1109/CVPR.2019.00099)."
+  },
+  "size": {
+    "file_formats": [
+      "png",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Exact aggregate byte size is not published as a single figure by the authors; dataset is distributed as 38 training sequence zips, 4 testing sequence zips, and weather-specific subsets in full and half resolution."
+  },
+  "sample_count": {
+    "total": 182188,
+    "splits": {
+      "train": 174437,
+      "test": 7751
+    },
+    "unit": "stereo pairs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-06-15",
+    "last_updated": "2020-05-10"
+  },
+  "citation": {
+    "paper_title": "DrivingStereo: A Large-Scale Dataset for Stereo Matching in Autonomous Driving Scenarios",
+    "paper_url": "https://doi.org/10.1109/CVPR.2019.00099",
+    "authors": [
+      "Guorun Yang",
+      "Xiao Song",
+      "Chaoqin Huang",
+      "Zhidong Deng",
+      "Jianping Shi",
+      "Bolei Zhou"
+    ],
+    "doi": "10.1109/CVPR.2019.00099"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "Captured with a roof-mounted binocular stereo camera rig (1752x800 resolution) synchronized with a 64-beam rotating LiDAR sensor across 42 diverse driving sequences.",
+    "curation_notes": "Ground-truth disparity is generated through a multi-frame LiDAR point cloud integration and occlusion-aware filtering pipeline. Includes specialized adverse weather subsets covering rain, fog, dusk, and highway scenarios.",
+    "data_sources": [
+      "Vehicle-mounted binocular cameras and 64-beam LiDAR"
+    ]
+  }
+}

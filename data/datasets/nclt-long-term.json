@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nclt-long-term",
+  "slug": "nclt-long-term",
+  "name": "NCLT: University of Michigan North Campus Long-Term Dataset",
+  "description": "Long-term multi-season autonomy dataset spanning 15 months, 27 sessions, and 147.4 km of travel at the University of Michigan North Campus, recording omnidirectional 360-degree vision, 3D LiDAR, planar LiDAR, and IMU odometry across foliage, rain, and snow.",
+  "homepage_url": "https://robots.engin.umich.edu/nclt/index.html",
+  "publisher": {
+    "name": "University of Michigan, PeRL",
+    "type": "academic",
+    "url": "https://robots.engin.umich.edu/nclt/"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "long-term-slam",
+    "lifelong-localization",
+    "loop-closure-detection",
+    "point-cloud-registration"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "slam",
+    "long-term-slam",
+    "lidar",
+    "omnidirectional-vision",
+    "nclt",
+    "seasonality",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Database License (ODbL) v1.0",
+    "spdx_id": "ODbL-1.0",
+    "url": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Made available under the Open Database License (ODbL) v1.0 and Database Contents License (DbCL)."
+  },
+  "source_references": [
+    {
+      "title": "NCLT Dataset Official Website",
+      "url": "https://robots.engin.umich.edu/nclt/index.html",
+      "type": "official_website",
+      "notes": "Official portal providing direct tarball downloads for all 27 data collection sessions, sensor calibrations, and ground truth covariances."
+    },
+    {
+      "title": "University of Michigan North Campus long-term vision and lidar dataset",
+      "url": "https://doi.org/10.1177/0278364915614638",
+      "type": "original_paper",
+      "notes": "International Journal of Robotics Research (IJRR 2016) paper by Carlevaris-Bianco et al. documenting the multi-season sensor dataset and SLAM benchmarking."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against official University of Michigan NCLT portal and IJRR publication (DOI: 10.1177/0278364915614638)."
+  },
+  "size": {
+    "file_formats": [
+      "tar.gz",
+      "csv",
+      "bin"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as individual per-session archives (Ladybug3 imagery ~100-140 GB, Velodyne scans ~15-25 GB, planar LiDAR, and IMU logs) across 27 sessions totaling approximately 3.5 to 3.8 TB."
+  },
+  "sample_count": {
+    "total": 27,
+    "unit": "sessions",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2015-11-18",
+    "last_updated": "2019-03-24"
+  },
+  "citation": {
+    "paper_title": "University of Michigan North Campus long-term vision and lidar dataset",
+    "paper_url": "https://doi.org/10.1177/0278364915614638",
+    "authors": [
+      "Nicholas Carlevaris-Bianco",
+      "Arash K. Ushani",
+      "Ryan M. Eustice"
+    ],
+    "doi": "10.1177/0278364915614638"
+  },
+  "geographic_coverage": [
+    "United States",
+    "Ann Arbor",
+    "Michigan"
+  ],
+  "provenance": {
+    "collection_method": "Recorded with a Segway robotic mobile platform navigating the North Campus of the University of Michigan over 15 months (Jan 2012 to Apr 2013), traversing 147.4 km in 34.9 hours.",
+    "curation_notes": "Equipped with a Velodyne HDL-32E 3D LiDAR, Hokuyo planar LiDAR, Ladybug3 360-degree vision, Microstrain IMU, KVH fiber-optic gyro, RTK GPS, and wheel odometry. Captures extreme seasonal variations including foliage changes, snow, rain, and construction over more than a year.",
+    "data_sources": [
+      "Mobile Segway robotic platform"
+    ]
+  }
+}

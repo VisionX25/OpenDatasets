@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "argoverse-2-map-change",
+  "slug": "argoverse-2-map-change",
+  "name": "Argoverse 2 Map Change Dataset (Trust, but Verify)",
+  "description": "High-definition map change detection dataset from the Trust, but Verify (TbV) collection, officially specified in the Map Change guide as 1,043 vehicle logs (922 GB extracted data; 15.54 hours of driving, 7,837,614 camera images, 559,440 LiDAR sweeps) across 6 US cities, and characterized in broader Argoverse 2 literature as a 1,000-scenario benchmark for evaluating real and synthetic perception-to-map discrepancies.",
+  "homepage_url": "https://argoverse.github.io/user-guide/datasets/map_change_detection.html",
+  "publisher": {
+    "name": "Argo AI / Georgia Tech",
+    "type": "academic",
+    "url": "https://www.argoverse.org"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor"
+  ],
+  "tasks": [
+    "map-change-detection",
+    "hd-map-updating",
+    "sensor-map-fusion"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "hd-map",
+    "map-change-detection",
+    "lidar",
+    "multimodal",
+    "argoverse-2",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Available under CC BY-NC-SA 4.0 for non-commercial academic research."
+  },
+  "source_references": [
+    {
+      "title": "Argoverse 2 Map Change Detection User Guide",
+      "url": "https://argoverse.github.io/user-guide/datasets/map_change_detection.html",
+      "type": "documentation",
+      "notes": "Official Argoverse user guide detailing the map change dataset structure, sensor-to-map alignment, and evaluation protocols."
+    },
+    {
+      "title": "Trust, but Verify: Cross-Modality Fusion for HD Map Change Detection",
+      "url": "https://doi.org/10.48550/arXiv.2212.07312",
+      "type": "original_paper",
+      "notes": "NeurIPS 2021 Datasets and Benchmarks track paper by Lambert and Hays introducing the dataset benchmark for verifying real and simulated map modifications."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against official Argoverse user guide and publication (DOI: 10.48550/arXiv.2212.07312)."
+  },
+  "size": {
+    "amount": 922.0,
+    "unit": "GB",
+    "file_formats": [
+      "tar.gz",
+      "feather",
+      "jpg",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Officially verified extracted payload size: 922 GB of data across 1,043 vehicle logs (available as 21 tar.gz archives or extracted)."
+  },
+  "sample_count": {
+    "total": 1043,
+    "unit": "vehicle logs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-12-06",
+    "last_updated": "2023-01-15"
+  },
+  "citation": {
+    "paper_title": "Trust, but Verify: Cross-Modality Fusion for HD Map Change Detection",
+    "paper_url": "https://openreview.net/forum?id=cXCZnLjDm4s",
+    "authors": [
+      "John Lambert",
+      "James Hays"
+    ],
+    "bibtex": "@inproceedings{Lambert21neurips_TrustButVerifyHDMapChangeDetection,\n author = {Lambert, John W. and Hays, James},\n booktitle = {Advances in Neural Information Processing Systems Track on Datasets and Benchmarks},\n title = {{Trust, but Verify}: Cross-Modality Fusion for HD Map Change Detection},\n url = {https://openreview.net/pdf?id=cXCZnLjDm4s},\n year = {2021}\n}"
+  },
+  "geographic_coverage": [
+    "United States",
+    "Miami",
+    "Pittsburgh",
+    "Washington DC"
+  ],
+  "provenance": {
+    "collection_method": "Collected during autonomous fleet navigation, pairing multi-view ring cameras and 3D LiDAR point clouds with historical HD vector maps to identify real-world road changes (construction, altered lane dividers, lane reassignments).",
+    "curation_notes": "The primary Trust, but Verify (TbV) user guide specifies the collection as 1,043 vehicle logs (15.54 hours total, 7,837,614 images, 559,440 LiDAR sweeps, 922 GB extracted data) distributed across Austin (80), Detroit (139), Miami (349), Pittsburgh (318), Palo Alto (21), and Washington D.C. (136). In broader Argoverse 2 suite documentation and overview publications, the evaluation task is concurrently described as a 1,000-scenario map change benchmark.",
+    "data_sources": [
+      "Argo AI Autonomous Research Fleet"
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "id": "interaction-dataset",
+  "slug": "interaction-dataset",
+  "name": "INTERACTION: Interactive Trajectories in Dense Traffic Dataset",
+  "description": "International naturalistic vehicle and pedestrian trajectory dataset captured with aerial drones and traffic cameras across roundabouts, intersections, and merging ramps in the US, China, and Germany, featuring highly interactive multi-agent traffic and Lanelet2 HD semantic maps.",
+  "homepage_url": "https://interaction-dataset.github.io/",
+  "publisher": {
+    "name": "UC Berkeley / Karlsruhe Institute of Technology / Tsinghua University",
+    "type": "academic",
+    "url": "https://interaction-dataset.github.io/"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "motion-forecasting",
+    "interactive-behavior-prediction",
+    "trajectory-prediction"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "trajectory-prediction",
+    "motion-forecasting",
+    "multi-agent-interaction",
+    "roundabout",
+    "intersection",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "INTERACTION Dataset Research License (Non-Commercial Academic)",
+    "spdx_id": null,
+    "url": "https://interaction-dataset.github.io/",
+    "commercial_use": "forbidden",
+    "notes": "Free for non-commercial academic research and university benchmarking; commercial usage or distribution requires institutional authorization."
+  },
+  "source_references": [
+    {
+      "title": "INTERACTION Dataset Official Homepage",
+      "url": "https://interaction-dataset.github.io/",
+      "type": "official_website",
+      "notes": "Official portal for the INTERACTION dataset and international driving prediction challenges."
+    },
+    {
+      "title": "INTERACTION Dataset: An INTERnational, Adversarial and Cooperative Motion Dataset in Interactive Driving Scenarios with Semantic Maps",
+      "url": "https://doi.org/10.48550/arXiv.1910.00547",
+      "type": "original_paper",
+      "notes": "Primary research paper by Zhan et al. detailing the aerial collection methodology and international driving benchmarks."
+    },
+    {
+      "title": "INTERACTION Dataset GitHub Devkit",
+      "url": "https://github.com/interaction-dataset/interaction-dataset",
+      "type": "repository",
+      "notes": "Official developer toolkit, visualization utilities, and HD map loaders."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against official GitHub repository and arXiv paper (DOI: 10.48550/arXiv.1910.00547)."
+  },
+  "size": {
+    "file_formats": [
+      "csv",
+      "osm",
+      "xml"
+    ],
+    "status": "unknown",
+    "notes": "Exact aggregate byte size is not formally published on the project portal; distributed as trajectory CSV tables and Lanelet2 OSM semantic maps."
+  },
+  "sample_count": {
+    "total": 40054,
+    "unit": "trajectories",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-10-01",
+    "last_updated": "2023-02-14"
+  },
+  "citation": {
+    "paper_title": "INTERACTION Dataset: An INTERnational, Adversarial and Cooperative Motion Dataset in Interactive Driving Scenarios with Semantic Maps",
+    "paper_url": "https://doi.org/10.48550/arXiv.1910.00547",
+    "authors": [
+      "Wei Zhan",
+      "Liting Sun",
+      "Di Wang",
+      "Haojie Shi",
+      "Aubrey Clausse",
+      "Maximilian Naumann",
+      "Julius Kümmerle",
+      "Hendrik Königshof",
+      "Christoph Stiller",
+      "Arnaud de La Fortelle",
+      "Masayoshi Tomizuka"
+    ],
+    "doi": "10.48550/arXiv.1910.00547"
+  },
+  "geographic_coverage": [
+    "United States",
+    "China",
+    "Germany"
+  ],
+  "provenance": {
+    "collection_method": "Captured using aerial drones and pole-mounted cameras at highly interactive traffic bottlenecks (roundabouts, signalized intersections, merging highway ramps) in the US, China, and Germany.",
+    "curation_notes": "Provides millimeter-precision vehicle and pedestrian tracks paired with detailed Lanelet2 semantic vector maps; designed to evaluate adversarial, cooperative, and highly interactive multi-agent behaviors.",
+    "data_sources": [
+      "High-resolution drone and stationary sensor recordings in Germany, China, and USA"
+    ]
+  }
+}

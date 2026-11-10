@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "argoverse-2-motion-forecasting",
+  "slug": "argoverse-2-motion-forecasting",
+  "name": "Argoverse 2 Motion Forecasting Dataset",
+  "description": "Large-scale dataset for motion forecasting and trajectory prediction in autonomous driving, comprising 250,000 mined 11-second interactive scenarios across six US cities with rich vectorized HD map spline annotations.",
+  "homepage_url": "https://www.argoverse.org/av2.html",
+  "publisher": {
+    "name": "Argo AI / Carnegie Mellon University",
+    "type": "industry",
+    "url": "https://www.argoverse.org"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "3d"
+  ],
+  "tasks": [
+    "motion-forecasting",
+    "trajectory-prediction",
+    "multi-agent-behavior-prediction"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "motion-forecasting",
+    "trajectory-prediction",
+    "argoverse-2",
+    "hd-map",
+    "vector-map",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under CC BY-NC-SA 4.0 for non-commercial academic research."
+  },
+  "source_references": [
+    {
+      "title": "Argoverse 2 Motion Forecasting Dataset Portal",
+      "url": "https://www.argoverse.org/av2.html",
+      "type": "official_website",
+      "notes": "Official Argoverse 2 platform, user guide, and challenge benchmark leaderboard."
+    },
+    {
+      "title": "Argoverse 2: Next Generation Datasets for Self-Driving Perception and Forecasting",
+      "url": "https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/44f683a84163b3523afe57c2e008bc8c-Abstract-round2.html",
+      "type": "original_paper",
+      "notes": "NeurIPS 2021 Datasets and Benchmarks proceedings describing the 250,000 mined trajectory scenarios and vector HD maps."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against Argoverse 2 official portal and NeurIPS 2021 proceedings."
+  },
+  "size": {
+    "file_formats": [
+      "parquet"
+    ],
+    "status": "unknown",
+    "notes": "Exact aggregate compressed download size is not formally published in the documentation; distributed as Parquet scenario archives with accompanying vector maps."
+  },
+  "sample_count": {
+    "total": 250000,
+    "unit": "scenarios",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-12-01",
+    "last_updated": "2023-06-20"
+  },
+  "citation": {
+    "paper_title": "Argoverse 2: Next Generation Datasets for Self-Driving Perception and Forecasting",
+    "paper_url": "https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/44f683a84163b3523afe57c2e008bc8c-Abstract-round2.html",
+    "authors": [
+      "Benjamin Wilson",
+      "William Qi",
+      "Tanmay Agarwal",
+      "John Lambert",
+      "Jagjeet Singh",
+      "Siddhesh Khandelwal",
+      "Florian Panse",
+      "Ratnesh Kumar",
+      "Praveen Pillai",
+      "Faruk Shenep",
+      "Christian Reimer",
+      "Song Hou",
+      "Radha Vashishta",
+      "Alin Burlacu",
+      "Alireza Fathi",
+      "Deva Ramanan",
+      "James Hays"
+    ]
+  },
+  "geographic_coverage": [
+    "United States",
+    "Austin",
+    "Detroit",
+    "Miami",
+    "Pittsburgh",
+    "Palo Alto",
+    "Washington DC"
+  ],
+  "provenance": {
+    "collection_method": "Mined from continuous autonomous driving logs across six geographically diverse US metropolitan areas; selected for challenging multi-agent interactions such as lane merges, intersection turns, and pedestrian crossings.",
+    "curation_notes": "Separate catalog record from Argoverse 2 Sensor and LiDAR datasets. Contains 250,000 11-second trajectory sequences (5 seconds observation, 6 seconds prediction horizon) stored as structured Parquet files with vector map representations, without raw sensor sweeps.",
+    "data_sources": [
+      "Argo AI Autonomous Research Fleet"
+    ]
+  }
+}

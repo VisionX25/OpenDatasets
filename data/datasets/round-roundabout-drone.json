@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "id": "round-roundabout-drone",
+  "slug": "round-roundabout-drone",
+  "name": "rounD: Roundabout Drone Trajectory Dataset",
+  "description": "Naturalistic traffic trajectory dataset captured by aerial drones over three distinct roundabouts in Germany, recording 13,500 road users to benchmark circular motion modeling, gap acceptance, and multi-vehicle yielding behaviors.",
+  "homepage_url": "https://levelxdata.com/round-dataset/",
+  "publisher": {
+    "name": "ika, RWTH Aachen University / levelXData",
+    "type": "academic",
+    "url": "https://levelxdata.com"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "trajectory-prediction",
+    "motion-forecasting",
+    "interactive-behavior-prediction",
+    "gap-acceptance-modeling"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "roundabout",
+    "drone-trajectories",
+    "round",
+    "gap-acceptance",
+    "trajectory-prediction",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "levelXData Non-Commercial Academic License",
+    "spdx_id": null,
+    "url": "https://levelxdata.com/round-dataset/",
+    "commercial_use": "forbidden",
+    "notes": "Freely accessible for non-commercial academic research upon registration with levelXData."
+  },
+  "source_references": [
+    {
+      "title": "rounD Dataset Official Portal",
+      "url": "https://levelxdata.com/round-dataset/",
+      "type": "official_website",
+      "notes": "Official portal containing dataset description, roundabout site layout diagrams, and access registration."
+    },
+    {
+      "title": "The rounD Dataset: A Large-Scale Naturalistic Trajectory Dataset of Roundabout Traffic for Verification of Automated Driving Systems",
+      "url": "https://doi.org/10.1109/ITSC45102.2020.9294424",
+      "type": "original_paper",
+      "notes": "IEEE ITSC 2020 publication by Krajewski et al. documenting the roundabout trajectory benchmark."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against levelXData rounD portal and IEEE ITSC 2020 publication (DOI: 10.1109/ITSC45102.2020.9294424)."
+  },
+  "size": {
+    "file_formats": [
+      "csv"
+    ],
+    "status": "unknown",
+    "notes": "levelXData distributes individual CSV files per recording after academic registration approval; a single fixed aggregate archive size is not officially published."
+  },
+  "sample_count": {
+    "total": 13500,
+    "unit": "road users",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-09-20",
+    "last_updated": "2021-04-12"
+  },
+  "citation": {
+    "paper_title": "The rounD Dataset: A Large-Scale Naturalistic Trajectory Dataset of Roundabout Traffic for Verification of Automated Driving Systems",
+    "paper_url": "https://doi.org/10.1109/ITSC45102.2020.9294424",
+    "authors": [
+      "Robert Krajewski",
+      "Tobias Moers",
+      "Julian Bock",
+      "Lennart Vater",
+      "Lutz Eckstein"
+    ],
+    "doi": "10.1109/ITSC45102.2020.9294424"
+  },
+  "geographic_coverage": [
+    "Germany",
+    "Aachen"
+  ],
+  "provenance": {
+    "collection_method": "Recorded from camera-equipped aerial drones stationed above three distinctive roundabouts in Germany.",
+    "curation_notes": "Contains 13,500 road user trajectories covering 6 hours of recordings, focusing on circular motion dynamics, entry gap acceptance, and multi-lane yielding decisions.",
+    "data_sources": [
+      "High-resolution drone video footage"
+    ]
+  }
+}

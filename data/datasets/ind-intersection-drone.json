@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ind-intersection-drone",
+  "slug": "ind-intersection-drone",
+  "name": "inD: Intersection Drone Trajectory Dataset",
+  "description": "Naturalistic traffic trajectory dataset recorded from aerial drones above four urban intersections in Germany, providing centimeter-accurate positional tracks for 11,500 diverse road users including vehicles, cyclists, and pedestrians.",
+  "homepage_url": "https://levelxdata.com/ind-dataset/",
+  "publisher": {
+    "name": "ika, RWTH Aachen University / levelXData",
+    "type": "academic",
+    "url": "https://levelxdata.com"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "trajectory-prediction",
+    "motion-forecasting",
+    "vulnerable-road-user-prediction",
+    "interactive-behavior-prediction"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "intersection",
+    "drone-trajectories",
+    "ind",
+    "vru",
+    "pedestrian-trajectory",
+    "trajectory-prediction"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "levelXData Non-Commercial Academic License",
+    "spdx_id": null,
+    "url": "https://levelxdata.com/ind-dataset/",
+    "commercial_use": "forbidden",
+    "notes": "Freely accessible for non-commercial academic research upon registration with levelXData."
+  },
+  "source_references": [
+    {
+      "title": "inD Dataset Official Portal",
+      "url": "https://levelxdata.com/ind-dataset/",
+      "type": "official_website",
+      "notes": "Official portal with dataset statistics, sensor configuration, and academic download request form."
+    },
+    {
+      "title": "The inD Dataset: A Trajectory Dataset of Naturalistic Urban Traffic Collected from a Drone",
+      "url": "https://doi.org/10.1109/IV47402.2020.9304839",
+      "type": "original_paper",
+      "notes": "IEEE Intelligent Vehicles Symposium (IV 2020) publication by Bock et al. introducing the intersection trajectory benchmark."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against levelXData inD portal and IEEE IV 2020 publication (DOI: 10.1109/IV47402.2020.9304839)."
+  },
+  "size": {
+    "file_formats": [
+      "csv"
+    ],
+    "status": "unknown",
+    "notes": "levelXData distributes individual CSV files per recording after academic registration approval; a single fixed aggregate archive size is not officially published."
+  },
+  "sample_count": {
+    "total": 11500,
+    "unit": "road users",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-10-20",
+    "last_updated": "2021-04-12"
+  },
+  "citation": {
+    "paper_title": "The inD Dataset: A Trajectory Dataset of Naturalistic Urban Traffic Collected from a Drone",
+    "paper_url": "https://doi.org/10.1109/IV47402.2020.9304839",
+    "authors": [
+      "Julian Bock",
+      "Robert Krajewski",
+      "Tobias Moers",
+      "Sven Rund",
+      "Lennart Vater",
+      "Lutz Eckstein"
+    ],
+    "doi": "10.1109/IV47402.2020.9304839"
+  },
+  "geographic_coverage": [
+    "Germany",
+    "Aachen"
+  ],
+  "provenance": {
+    "collection_method": "Recorded using 4K cameras mounted on hovering drones above four complex urban intersections in Aachen, Germany.",
+    "curation_notes": "Provides naturalistic trajectories for 11,500 road users including cars, trucks, buses, pedestrians, and cyclists across 10 hours of video recordings, specifically capturing complex urban intersection conflicts.",
+    "data_sources": [
+      "High-resolution drone video footage"
+    ]
+  }
+}

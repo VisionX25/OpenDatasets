@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "waymo-open-end-to-end",
+  "slug": "waymo-open-end-to-end",
+  "name": "Waymo Open Dataset — End-to-End Driving Dataset",
+  "description": "Large-scale benchmark dataset designed for end-to-end autonomous driving planners that predict future vehicle trajectories directly from 8 surround camera streams providing 360-degree coverage, high-level navigation routing instructions, and past ego kinematics across 5,000 20-second driving segments in diverse urban conditions.",
+  "homepage_url": "https://waymo.com/open/",
+  "publisher": {
+    "name": "Waymo LLC",
+    "type": "industry",
+    "url": "https://waymo.com/open/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "end-to-end-driving",
+    "motion-planning",
+    "imitation-learning",
+    "trajectory-prediction"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "end-to-end-driving",
+    "motion-planning",
+    "waymo",
+    "long-tail",
+    "imitation-learning",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Waymo Open Dataset Terms of Service (Non-Commercial Research)",
+    "spdx_id": null,
+    "url": "https://waymo.com/open/terms/",
+    "commercial_use": "forbidden",
+    "notes": "Provided for non-commercial academic research and benchmarking under Waymo Open Dataset Terms of Service."
+  },
+  "source_references": [
+    {
+      "title": "Waymo Open Dataset Portal",
+      "url": "https://waymo.com/open/",
+      "type": "official_website",
+      "notes": "Official Waymo Open Dataset platform announcing the End-to-End driving benchmark and long-tail evaluation challenges."
+    },
+    {
+      "title": "WOD-E2E: Waymo Open Dataset for End-to-End Driving in Challenging Long-tail Scenarios",
+      "url": "https://doi.org/10.48550/arXiv.2510.26125",
+      "type": "original_paper",
+      "notes": "Foundational publication by Xu et al. establishing the WOD-E2E benchmark, rare event mining pipeline, surround-camera setup, and expert preference (RFS) reward annotations."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against Waymo Open Dataset portal and arXiv publication (DOI: 10.48550/arXiv.2510.26125)."
+  },
+  "size": {
+    "file_formats": [
+      "tfrecord",
+      "mp4",
+      "json"
+    ],
+    "status": "unknown",
+    "notes": "Aggregate byte size is not formally published on the official Waymo Open Dataset portal; payload comprises 8 surround-view camera video streams, ego kinematics, and text routing instructions across 5,000 20-second segments."
+  },
+  "sample_count": {
+    "total": 5000,
+    "unit": "segments",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2025-03",
+    "last_updated": "2025-03"
+  },
+  "citation": {
+    "paper_title": "WOD-E2E: Waymo Open Dataset for End-to-End Driving in Challenging Long-tail Scenarios",
+    "paper_url": "https://doi.org/10.48550/arXiv.2510.26125",
+    "authors": [
+      "Zhenghao Xu",
+      "Jiageng Mao",
+      "Long Chen",
+      "Shuning Cheng",
+      "Scott Ettinger",
+      "Benjamin Caine",
+      "Charles R. Qi",
+      "Yin Zhou",
+      "Dragomir Anguelov"
+    ],
+    "doi": "10.48550/arXiv.2510.26125"
+  },
+  "geographic_coverage": [
+    "United States",
+    "San Francisco",
+    "Phoenix",
+    "Los Angeles"
+  ],
+  "provenance": {
+    "collection_method": "Captured across diverse urban environments and conditions by the Waymo vehicle fleet, providing 5,000 20-second segments collected at 10 Hz with 8 surrounding cameras, vehicle kinematics, and text-based routing instructions.",
+    "curation_notes": "Officially released in March 2025 as part of the Waymo Open Dataset family. Comprises 5,000 20-second driving segments with 360-degree 8-camera surround vision, past 4-second trajectories (at 4Hz), ego velocity and acceleration, text routing instructions, and (for training) future 5-second trajectory planning ground truth.",
+    "data_sources": [
+      "Waymo Autonomous Vehicle Fleet"
+    ]
+  }
+}
