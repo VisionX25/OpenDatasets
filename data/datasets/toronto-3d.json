@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "toronto-3d",
+  "slug": "toronto-3d",
+  "name": "Toronto-3D: Mobile LiDAR Semantic Segmentation Dataset",
+  "description": "Large-scale mobile laser scanning (MLS) point cloud dataset acquired in Toronto, Canada, covering approximately 1 km of urban roadway with 78.3 million point measurements across four sections with 10 attributes and 8 ground-truth semantic roadway classes.",
+  "homepage_url": "https://github.com/WeikaiTan/Toronto-3D",
+  "publisher": {
+    "name": "University of Waterloo / Geospatial Intelligence Lab",
+    "type": "academic",
+    "url": "https://uwaterloo.ca/geospatial-intelligence/"
+  },
+  "modalities": [
+    "3d",
+    "sensor"
+  ],
+  "tasks": [
+    "point-cloud-segmentation",
+    "semantic-segmentation",
+    "urban-scene-understanding"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "lidar",
+    "point-clouds",
+    "semantic-segmentation",
+    "mobile-laser-scanning",
+    "urban-roadways",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Distributed under the Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0) license by University of Waterloo."
+  },
+  "source_references": [
+    {
+      "title": "Toronto-3D GitHub Repository",
+      "url": "https://github.com/WeikaiTan/Toronto-3D",
+      "type": "repository",
+      "notes": "Official repository by authors with verified OneDrive and Baidu Netdisk dataset download links, benchmarks, and Open3D-ML integration."
+    },
+    {
+      "title": "Toronto-3D: A Large-scale Mobile LiDAR Dataset for Semantic Segmentation of Urban Roadways",
+      "url": "https://doi.org/10.1109/CVPRW50498.2020.00109",
+      "type": "original_paper",
+      "notes": "CVPR 2020 Workshops paper by Tan et al. introducing the MLS collection, 8 semantic classes, and baseline neural network evaluations."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against official GitHub repository and CVPRW 2020 proceedings (DOI: 10.1109/CVPRW50498.2020.00109)."
+  },
+  "size": {
+    "file_formats": [
+      "ply"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as separate PLY point cloud archives for four designated road sections (L001-L004) via OneDrive and Baidu Netdisk."
+  },
+  "sample_count": {
+    "total": 78300000,
+    "unit": "points",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-06-14",
+    "last_updated": "2023-02-07"
+  },
+  "citation": {
+    "paper_title": "Toronto-3D: A Large-scale Mobile LiDAR Dataset for Semantic Segmentation of Urban Roadways",
+    "paper_url": "https://doi.org/10.1109/CVPRW50498.2020.00109",
+    "authors": [
+      "Weikai Tan",
+      "Nannan Qin",
+      "Lingfei Ma",
+      "Ying Li",
+      "Jing Du",
+      "Guorong Cai",
+      "Ke Yang",
+      "Jonathan Li"
+    ],
+    "doi": "10.1109/CVPRW50498.2020.00109"
+  },
+  "geographic_coverage": [
+    "Canada",
+    "Toronto"
+  ],
+  "provenance": {
+    "collection_method": "Acquired using a vehicle-mounted Teledyne Optech Maverick mobile laser scanning (MLS) system equipped with a 32-beam LiDAR and high-resolution camera in Toronto, Canada.",
+    "curation_notes": "Covers approximately 1 km of urban roadway across 4 designated sections (L001-L004). Contains 78.3 million point measurements with 10 attributes (XYZ, RGB, intensity, GPS time, scan angle) manually classified into 8 classes: Road, Road marking, Natural, Building, Utility line, Pole, Car, and Fence.",
+    "data_sources": [
+      "Teledyne Optech Maverick Mobile Laser Scanning system"
+    ]
+  }
+}

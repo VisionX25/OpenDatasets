@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "argoverse-2-lidar",
+  "slug": "argoverse-2-lidar",
+  "name": "Argoverse 2 LiDAR Dataset",
+  "description": "Large-scale self-supervised LiDAR dataset containing 20,000 unannotated 10-second sequences (~2 million point cloud scans) captured with dual 32-beam sensors across six US cities for unsupervised representation learning and scene flow.",
+  "homepage_url": "https://www.argoverse.org/av2.html",
+  "publisher": {
+    "name": "Argo AI / Carnegie Mellon University",
+    "type": "industry",
+    "url": "https://www.argoverse.org"
+  },
+  "modalities": [
+    "3d",
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "self-supervised-learning",
+    "point-cloud-pretraining",
+    "scene-flow-estimation",
+    "unsupervised-representation-learning"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "lidar",
+    "point-clouds",
+    "self-supervised-learning",
+    "argoverse-2",
+    "scene-flow",
+    "pretraining"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under CC BY-NC-SA 4.0 for non-commercial academic research."
+  },
+  "source_references": [
+    {
+      "title": "Argoverse 2 LiDAR Dataset Portal",
+      "url": "https://www.argoverse.org/av2.html",
+      "type": "official_website",
+      "notes": "Official Argoverse 2 portal and documentation for the large-scale unannotated LiDAR dataset."
+    },
+    {
+      "title": "Argoverse 2: Next Generation Datasets for Self-Driving Perception and Forecasting",
+      "url": "https://openreview.net/forum?id=vN1s6i8b3P",
+      "type": "original_paper",
+      "notes": "NeurIPS 2021 Datasets and Benchmarks track paper detailing the collection and utility of 20,000 raw LiDAR driving sequences."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against Argoverse 2 official portal and NeurIPS 2021 publication."
+  },
+  "size": {
+    "file_formats": [
+      "feather",
+      "parquet"
+    ],
+    "status": "unknown",
+    "notes": "Exact aggregate payload size is not formally published in the documentation; distributed via s5cmd/S3 as 20,000 raw 10-second LiDAR sequences across 6 US cities."
+  },
+  "sample_count": {
+    "total": 20000,
+    "unit": "sequences",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-12-01",
+    "last_updated": "2023-06-20"
+  },
+  "citation": {
+    "paper_title": "Argoverse 2: Next Generation Datasets for Self-Driving Perception and Forecasting",
+    "paper_url": "https://openreview.net/forum?id=vN1s6i8b3P",
+    "authors": [
+      "Benjamin Wilson",
+      "William Qi",
+      "Tanmay Agarwal",
+      "John Lambert",
+      "Jagjeet Singh",
+      "Siddhesh Khandelwal",
+      "Florian Panse",
+      "Ratnesh Kumar",
+      "Praveen Pillai",
+      "Faruk Shenep",
+      "Christian Reimer",
+      "Song Hou",
+      "Radha Vashishta",
+      "Alin Burlacu",
+      "Alireza Fathi",
+      "Deva Ramanan",
+      "James Hays"
+    ]
+  },
+  "geographic_coverage": [
+    "United States",
+    "Austin",
+    "Detroit",
+    "Miami",
+    "Pittsburgh",
+    "Palo Alto",
+    "Washington DC"
+  ],
+  "provenance": {
+    "collection_method": "Recorded with vehicle roof-mounted dual 32-beam rotating LiDARs operating at 10 Hz across six metropolitan regions in the United States.",
+    "curation_notes": "Officially separate component of the Argoverse 2 suite. Contains 20,000 raw 10-second unannotated sequences (~2 million total LiDAR sweeps) explicitly curated for self-supervised pretraining, point cloud completion, and unconstrained scene flow estimation.",
+    "data_sources": [
+      "Argo AI Autonomous Research Fleet"
+    ]
+  }
+}

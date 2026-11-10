@@ -3,7 +3,7 @@
   "id": "waymo-open-perception",
   "slug": "waymo-open-perception",
   "name": "Waymo Open Dataset — Perception Dataset",
-  "description": "High-resolution autonomous driving perception dataset from Waymo featuring 1,150 20-second continuous driving segments recorded with 5 high-grade LiDAR sensors and 5 synchronized pinhole cameras. Collected across diverse urban and suburban environments including San Francisco, Mountain View, and Phoenix in varied weather and lighting conditions. Provides high-precision 3D bounding boxes with persistent tracking IDs, dense 2D camera bounding boxes, and point cloud semantic segmentation for autonomous driving research.",
+  "description": "High-resolution autonomous driving perception dataset from Waymo featuring 2,030 20-second continuous driving segments (~390,000 frames at 10 Hz) recorded with 5 high-grade LiDAR sensors and 5 synchronized pinhole cameras across San Francisco, Mountain View, and Phoenix. The standardized core benchmark split comprises 1,150 segments (798 training, 202 validation, and 150 test), expanded in subsequent releases to 2,030 total segments for scalable 3D detection, tracking, and 2D/3D semantic and panoptic segmentation.",
   "homepage_url": "https://waymo.com/open/",
   "publisher": {
     "name": "Waymo LLC",
@@ -76,18 +76,19 @@
     "notes": "Full sensor payload across all synchronized camera and LiDAR segments."
   },
   "sample_count": {
-    "total": 1150,
+    "total": 2030,
     "splits": {
-      "train": 798,
-      "val": 202,
-      "test": 150
+      "core_train": 798,
+      "core_val": 202,
+      "core_test": 150,
+      "expanded_total": 2030
     },
-    "unit": "sequences",
+    "unit": "segments",
     "status": "verified"
   },
   "dates": {
     "published": "2019-08-21",
-    "last_updated": "2023-05-15"
+    "last_updated": "2024-03"
   },
   "citation": {
     "paper_title": "Scalability in Perception for Autonomous Driving: Waymo Open Dataset",
@@ -121,5 +122,12 @@
     ],
     "doi": "10.1109/CVPR42600.2020.00253",
     "bibtex": "@inproceedings{sun2020scalability,\n  title={Scalability in perception for autonomous driving: Waymo open dataset},\n  author={Sun, Pei and Kretzschmar, Henrik and Dotiwalla, Xerxes and Chouard, Aurelien and Patnaik, Vijaysai and Tsui, Paul and Guo, James and Zhou, Yin and Chai, Yuning and Caine, Benjamin and others},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={2446--2454},\n  year={2020},\n  doi={10.1109/CVPR42600.2020.00253}\n}"
+  },
+  "provenance": {
+    "collection_method": "Continuous 20-second driving segments recorded at 10 Hz with 5 LiDARs and 5 high-resolution cameras.",
+    "curation_notes": "Initial v1.0 release established the canonical 1,150-segment benchmark split (798 train / 202 val / 150 test); v1.3.2 and v2 expanded the perception collection to 2,030 total segments (~390,000 frames).",
+    "data_sources": [
+      "Waymo autonomous vehicle fleet (San Francisco, Mountain View, Phoenix)"
+    ]
   }
 }

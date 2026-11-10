@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "id": "highd-highway-drone",
+  "slug": "highd-highway-drone",
+  "name": "highD: Highway Drone Trajectory Dataset",
+  "description": "Large-scale naturalistic vehicle trajectory dataset collected using hovering aerial drones above German Autobahns, capturing 110,500 vehicles across 147 driving hours with sub-10 cm positioning accuracy and rich lane metadata.",
+  "homepage_url": "https://levelxdata.com/highd-dataset/",
+  "publisher": {
+    "name": "ika, RWTH Aachen University / levelXData",
+    "type": "academic",
+    "url": "https://levelxdata.com"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "trajectory-prediction",
+    "motion-forecasting",
+    "driving-behavior-modeling",
+    "safety-surrogate-analysis"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "drone-trajectories",
+    "highway-driving",
+    "highd",
+    "trajectory-prediction",
+    "surrogate-safety",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "levelXData Non-Commercial Academic License",
+    "spdx_id": null,
+    "url": "https://levelxdata.com/highd-dataset/",
+    "commercial_use": "forbidden",
+    "notes": "Free of charge for non-commercial academic research upon registration with levelXData; commercial licensing is available directly from fka GmbH."
+  },
+  "source_references": [
+    {
+      "title": "highD Dataset Official Portal",
+      "url": "https://levelxdata.com/highd-dataset/",
+      "type": "official_website",
+      "notes": "Official portal with documentation, sensor specifications, and academic registration."
+    },
+    {
+      "title": "The highD Dataset: A Large-Scale Naturalistic Trajectory Dataset of Highway Driving for Accelerated Verification of Automated Driving Systems",
+      "url": "https://doi.org/10.1109/ITSC.2018.8569927",
+      "type": "original_paper",
+      "notes": "IEEE ITSC 2018 conference paper by Krajewski et al. presenting the drone recording setup, Bayesian tracking, and trajectory extraction."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against official levelXData highD page and IEEE ITSC 2018 publication (DOI: 10.1109/ITSC.2018.8569927)."
+  },
+  "size": {
+    "file_formats": [
+      "csv"
+    ],
+    "status": "unknown",
+    "notes": "levelXData distributes individual CSV files per recording after academic registration approval; a single fixed aggregate archive size is not officially published."
+  },
+  "sample_count": {
+    "total": 110500,
+    "unit": "vehicles",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-11-04",
+    "last_updated": "2020-03-01"
+  },
+  "citation": {
+    "paper_title": "The highD Dataset: A Large-Scale Naturalistic Trajectory Dataset of Highway Driving for Accelerated Verification of Automated Driving Systems",
+    "paper_url": "https://doi.org/10.1109/ITSC.2018.8569927",
+    "authors": [
+      "Robert Krajewski",
+      "Julian Bock",
+      "Laurent Kloeker",
+      "Lutz Eckstein"
+    ],
+    "doi": "10.1109/ITSC.2018.8569927"
+  },
+  "geographic_coverage": [
+    "Germany",
+    "Cologne"
+  ],
+  "provenance": {
+    "collection_method": "Recorded from a hovering drone at 420-meter altitude overlooking sections of German Autobahns around Cologne, capturing naturalistic highway driving without driver awareness bias.",
+    "curation_notes": "Contains 110,500 naturalistic vehicle trajectories spanning 147 driving hours and 44,700 km driven across 6 distinct German highway locations, with typical positioning error under 10 cm.",
+    "data_sources": [
+      "High-resolution 4K drone video recordings"
+    ]
+  }
+}

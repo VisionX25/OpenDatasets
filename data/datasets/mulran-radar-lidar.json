@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mulran-radar-lidar",
+  "slug": "mulran-radar-lidar",
+  "name": "MulRan: Multimodal Range Dataset for Urban Place Recognition",
+  "description": "Multimodal range dataset featuring 360-degree scanning radar (Navtech CIR204-H), 64-beam 3D LiDAR (Ouster OS1-64), and RTK-GPS/INS across 12 urban and campus driving sequences in South Korea with 6D ground truth trajectories for radar SLAM and place recognition.",
+  "homepage_url": "https://sites.google.com/view/mulran-pr/home",
+  "publisher": {
+    "name": "KAIST / Seoul National University RPM Labs",
+    "type": "academic",
+    "url": "https://sites.google.com/view/mulran-pr/home"
+  },
+  "modalities": [
+    "3d",
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "place-recognition",
+    "radar-slam",
+    "lidar-odometry",
+    "loop-closure-detection"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "radar",
+    "lidar",
+    "place-recognition",
+    "slam",
+    "odometry",
+    "mulran",
+    "adverse-weather"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under CC BY-NC-SA 4.0 for non-commercial academic research."
+  },
+  "source_references": [
+    {
+      "title": "MulRan Dataset Official Portal",
+      "url": "https://sites.google.com/view/mulran-pr/home",
+      "type": "official_website",
+      "notes": "Official portal hosted by KAIST/SNU providing sequence downloads, calibration data, and baseline evaluation codes."
+    },
+    {
+      "title": "MulRan: Multimodal Range Dataset for Urban Place Recognition",
+      "url": "https://doi.org/10.1109/ICRA40945.2020.9197298",
+      "type": "original_paper",
+      "notes": "IEEE ICRA 2020 conference publication by Kim et al. detailing the sensor platform, 6D ground truth pose generation, and place recognition benchmarks."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against official MulRan portal and IEEE ICRA 2020 publication (DOI: 10.1109/ICRA40945.2020.9197298)."
+  },
+  "size": {
+    "file_formats": [
+      "bin",
+      "png",
+      "csv"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as separate download archives for radar, LiDAR, and navigation logs across 12 individual sequences."
+  },
+  "sample_count": {
+    "total": 12,
+    "unit": "sequences",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-05-31",
+    "last_updated": "2023-09-05"
+  },
+  "citation": {
+    "paper_title": "MulRan: Multimodal Range Dataset for Urban Place Recognition",
+    "paper_url": "https://doi.org/10.1109/ICRA40945.2020.9197298",
+    "authors": [
+      "Giseop Kim",
+      "Yeong Sang Park",
+      "Younghun Cho",
+      "Jinyong Jeong",
+      "Ayoung Kim"
+    ],
+    "doi": "10.1109/ICRA40945.2020.9197298"
+  },
+  "geographic_coverage": [
+    "South Korea",
+    "Daejeon",
+    "Sejong"
+  ],
+  "provenance": {
+    "collection_method": "Recorded with a 360-degree scanning radar (Navtech CIR204-H), 64-beam 3D LiDAR (Ouster OS1-64), and an RTK-GPS/INS navigation system (OXTS RT3003) across complex urban and riverside routes in South Korea.",
+    "curation_notes": "Provides 12 sequences across four distinct environments (KAIST campus, Daejeon Convention Center, Riverside, and Sejong City) with cm-level 6D baseline trajectories, specifically targeted at radar-based and multimodal urban place recognition under visual and weather degradations.",
+    "data_sources": [
+      "Mobile research vehicle equipped with scanning radar and LiDAR"
+    ]
+  }
+}

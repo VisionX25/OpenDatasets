@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "id": "waymo-open-motion",
+  "slug": "waymo-open-motion",
+  "name": "Waymo Open Motion Dataset",
+  "description": "Large-scale interactive motion forecasting dataset derived from over 570 hours of real-world autonomous driving recordings across diverse US urban environments. Provides 103,354 20-second segments at 10 Hz (over 20 million frames) with 3D map data and 10.8M tracked objects, partitioned into official proportions of 70% training, 15% validation, and 15% testing, with overlapping mined interactive motion forecasting scenarios for benchmark evaluation.",
+  "homepage_url": "https://waymo.com/open/data/motion/",
+  "publisher": {
+    "name": "Waymo LLC",
+    "type": "industry",
+    "url": "https://waymo.com/open/"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "3d"
+  ],
+  "tasks": [
+    "trajectory-prediction",
+    "motion-forecasting",
+    "interactive-behavior-prediction"
+  ],
+  "tags": [
+    "autonomous-driving",
+    "motion-forecasting",
+    "trajectory-prediction",
+    "waymo",
+    "hd-map",
+    "multi-agent-interaction",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Waymo Open Dataset Terms of Service (Non-Commercial Research)",
+    "spdx_id": null,
+    "url": "https://waymo.com/open/terms/",
+    "commercial_use": "forbidden",
+    "notes": "Freely accessible for non-commercial academic research and benchmarking under Waymo Open Dataset Terms of Service; commercial usage is strictly prohibited."
+  },
+  "source_references": [
+    {
+      "title": "Waymo Open Motion Dataset Official Portal",
+      "url": "https://waymo.com/open/data/motion/",
+      "type": "official_website",
+      "notes": "Official Waymo Open Motion Dataset landing page, tutorial documentation, and benchmark challenge leaderboards."
+    },
+    {
+      "title": "Large Scale Interactive Motion Forecasting for Autonomous Driving: The Waymo Open Motion Dataset",
+      "url": "https://doi.org/10.1109/ICCV48922.2021.00959",
+      "type": "original_paper",
+      "notes": "Primary ICCV 2021 conference publication by Ettinger et al. introducing the dataset format, mining strategy, and baseline interactive metrics."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against Waymo Open Dataset motion portal and ICCV 2021 proceedings (DOI: 10.1109/ICCV48922.2021.00959)."
+  },
+  "size": {
+    "file_formats": [
+      "tfrecord",
+      "parquet"
+    ],
+    "status": "unknown",
+    "notes": "Aggregate byte size is not formally published on the Waymo portal; trajectory and HD map data are distributed across training, validation, and testing shards in TFRecord and Parquet formats."
+  },
+  "sample_count": {
+    "total": 103354,
+    "unit": "segments",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-03-10",
+    "last_updated": "2025-10"
+  },
+  "citation": {
+    "paper_title": "Large Scale Interactive Motion Forecasting for Autonomous Driving: The Waymo Open Motion Dataset",
+    "paper_url": "https://doi.org/10.1109/ICCV48922.2021.00959",
+    "authors": [
+      "Scott Ettinger",
+      "Shuning Cheng",
+      "Benjamin Caine",
+      "Chenxi Liu",
+      "Hang Zhao",
+      "Sabeek Pradhan",
+      "Yuning Chai",
+      "Ben Sapp",
+      "Charles R. Qi",
+      "Yin Zhou",
+      "Zoey Yang",
+      "Aurélien Chouard",
+      "Pei Sun",
+      "Hao-Tien Lewis Chiang",
+      "Zihang Shen",
+      "Otis Mavrovic",
+      "Yana Kulizhskaya",
+      "Ying Shen",
+      "Jiquan Ngiam",
+      "Zhifeng Chen",
+      "Jonathon Shlens",
+      "Dragomir Anguelov"
+    ],
+    "doi": "10.1109/ICCV48922.2021.00959"
+  },
+  "geographic_coverage": [
+    "United States",
+    "Phoenix",
+    "Mountain View",
+    "San Francisco"
+  ],
+  "provenance": {
+    "collection_method": "Mined from over 570 hours of real-world autonomous driving recordings across diverse US urban environments; filtered for dense, highly interactive driving scenarios involving multi-agent yielding, lane changes, unprotected turns, and pedestrian crossings.",
+    "curation_notes": "Officially updated in October 2025 (v1.3.1 sdc_paths). Comprises 103,354 20-second segments (574 hours of data, over 20M frames at 10 Hz) divided according to official split proportions into 70% train, 15% validation, and 15% test. The 103,354 segments are distinct from the ~487,000 overlapping interactive scenario windows mined for motion forecasting challenges.",
+    "data_sources": [
+      "Waymo Autonomous Vehicle Fleet"
+    ]
+  }
+}
