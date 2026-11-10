@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "3d-adam",
+  "slug": "3d-adam",
+  "name": "3D-ADAM: 3D Anomaly Detection in Additive Manufacturing",
+  "description": "Large-scale RGB-D and 3D point cloud anomaly detection dataset for additive manufacturing quality control, comprising 14,120 multi-sensor depth scans across 217 unique manufactured parts. Captured using four industrial depth-imaging sensors under diverse poses, lighting, and viewing angles, annotated with 27,346 defect instances across 12 industrial surface defect categories and 8,110 mechanical element features.",
+  "homepage_url": "https://huggingface.co/datasets/pmchard/3D-ADAM",
+  "publisher": {
+    "name": "University of Glasgow / HAL Robotics",
+    "type": "academic",
+    "url": "https://huggingface.co/pmchard"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "3d-anomaly-detection"
+  ],
+  "tags": [
+    "additive-manufacturing",
+    "3d-printing",
+    "depth-scans",
+    "industrial-inspection",
+    "multi-sensor",
+    "anomaly-detection",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Published on Hugging Face under CC BY-NC-SA 4.0 for non-commercial research."
+  },
+  "source_references": [
+    {
+      "title": "3D-ADAM Hugging Face Dataset Repository",
+      "url": "https://huggingface.co/datasets/pmchard/3D-ADAM",
+      "type": "repository",
+      "notes": "Official repository on Hugging Face distributing raw 3D scans, RGB-D views, and defect annotations."
+    },
+    {
+      "title": "3D-ADAM Benchmark Code Repository",
+      "url": "https://github.com/PaulMcHard/3D-ADAMBench",
+      "type": "repository",
+      "notes": "Evaluation repository supporting TransFusion and Anomalib model baselines."
+    },
+    {
+      "title": "3D-ADAM: A Dataset for 3D Anomaly Detection in Additive Manufacturing",
+      "url": "https://doi.org/10.1109/ICRA57385.2026.11697283",
+      "type": "original_paper",
+      "notes": "IEEE ICRA 2026 conference publication introducing the additive manufacturing 3D anomaly detection benchmark."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against Hugging Face repository pmchard/3D-ADAM and IEEE ICRA 2026 proceedings (DOI: 10.1109/ICRA57385.2026.11697283)."
+  },
+  "size": {
+    "file_formats": [
+      "ply",
+      "pcd",
+      "png",
+      "json"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as individual part-level directories and zip packages on Hugging Face."
+  },
+  "sample_count": {
+    "total": 14120,
+    "unit": "scans",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2025-07-15",
+    "last_updated": "2026-03-01"
+  },
+  "citation": {
+    "paper_title": "3D-ADAM: A Dataset for 3D Anomaly Detection in Additive Manufacturing",
+    "paper_url": "https://doi.org/10.1109/ICRA57385.2026.11697283",
+    "authors": [
+      "Paul McHard",
+      "Gordon Dobie",
+      "Charles MacLeod",
+      "David Flynn"
+    ],
+    "doi": "10.1109/ICRA57385.2026.11697283"
+  },
+  "geographic_coverage": [
+    "United Kingdom"
+  ],
+  "provenance": {
+    "collection_method": "Multi-sensor robotic scanning rig equipped with four distinct industrial depth sensors imaging 217 additive manufacturing components.",
+    "curation_notes": "Defect annotations span 12 categories: stringing, warping, under-extrusion, layer shifting, gaps, blobs, surface cracks, pitting, dimensional inaccuracy, burnt filament, delamination, and porosity.",
+    "data_sources": [
+      "University of Glasgow Centre for Additive Manufacturing / HAL Robotics"
+    ]
+  }
+}

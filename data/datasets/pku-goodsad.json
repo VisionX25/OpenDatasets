@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pku-goodsad",
+  "slug": "pku-goodsad",
+  "name": "PKU-GoodsAD: Supermarket Goods Anomaly Detection Dataset",
+  "description": "Comprehensive visual anomaly detection and segmentation benchmark for retail product quality inspection, containing 6,124 high-resolution images (3000x3000 resolution) spanning 484 different supermarket products in six categories (drink bottles, drink cans, food bottles, food boxes, food packages, and cigarette boxes). Developed by Peking University Shenzhen Graduate School, it provides normal training images and defective test images featuring deformations, surface damage, and opened packaging with pixel-precise ground truth masks.",
+  "homepage_url": "https://github.com/jianzhang96/GoodsAD",
+  "publisher": {
+    "name": "Peking University (PKUSZ)",
+    "type": "academic",
+    "url": "https://robotics.pkusz.edu.cn/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "image-segmentation"
+  ],
+  "tags": [
+    "retail-quality-control",
+    "product-inspection",
+    "supermarket-goods",
+    "anomaly-detection",
+    "packaging-inspection",
+    "unsupervised-learning",
+    "benchmark"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source",
+    "spdx_id": null,
+    "url": "https://github.com/jianzhang96/GoodsAD",
+    "commercial_use": "unknown",
+    "notes": "Publicly shared on GitHub repository jianzhang96/GoodsAD for academic research without a formal open-source license file."
+  },
+  "source_references": [
+    {
+      "title": "GoodsAD Official GitHub Repository",
+      "url": "https://github.com/jianzhang96/GoodsAD",
+      "type": "repository",
+      "notes": "Author repository with download links (OneDrive and Baidu Disk), baseline scripts, and dataset visualizers."
+    },
+    {
+      "title": "PKU-GoodsAD: A Supermarket Goods Dataset for Unsupervised Anomaly Detection and Segmentation",
+      "url": "https://doi.org/10.1109/LRA.2024.3352358",
+      "type": "original_paper",
+      "notes": "IEEE Robotics and Automation Letters (RA-L 2024) journal publication introducing the GoodsAD benchmark."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against IEEE RA-L 2024 publication (DOI: 10.1109/LRA.2024.3352358) and author GitHub repository."
+  },
+  "size": {
+    "file_formats": [
+      "jpg",
+      "png",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as downloadable zip archives across six merchandise categories via OneDrive and Baidu Disk."
+  },
+  "sample_count": {
+    "total": 6124,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2024-03-01"
+  },
+  "citation": {
+    "paper_title": "PKU-GoodsAD: A Supermarket Goods Dataset for Unsupervised Anomaly Detection and Segmentation",
+    "paper_url": "https://doi.org/10.1109/LRA.2024.3352358",
+    "authors": [
+      "Jian Zhang",
+      "Runwei Ding",
+      "Miaoju Ban",
+      "Linhui Dai"
+    ],
+    "doi": "10.1109/LRA.2024.3352358"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "High-resolution industrial camera imaging consumer supermarket merchandise against clean retail backgrounds.",
+    "curation_notes": "Designed for product-quality inspection in automated retail environments. Features 484 merchandise items with authentic packaging flaws including structural deformation, surface tearing, and unsealed containers.",
+    "data_sources": [
+      "Peking University Shenzhen Graduate School Open Lab on Human-Robot Interaction"
+    ]
+  }
+}

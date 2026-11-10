@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "id": "eyecandies",
+  "slug": "eyecandies",
+  "name": "Eyecandies: Synthetic Multimodal Industrial Anomaly Detection Dataset",
+  "description": "Synthetic multimodal industrial inspection benchmark comprising 15,500 object samples (yielding 93,000 rendered images) across 10 candy classes moving on an industrial conveyor scenario. Procedurally rendered with BlenderProc, each sample provides registered multimodal captures including six distinct spotlight illumination conditions, metric depth maps, surface normal maps, and pixel-precise ground truth defect masks.",
+  "homepage_url": "https://eyecan-ai.github.io/eyecandies/",
+  "publisher": {
+    "name": "Eyecan.ai / University of Bologna",
+    "type": "industry",
+    "url": "https://www.eyecan.ai/"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "multimodal"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "image-segmentation"
+  ],
+  "tags": [
+    "multimodal",
+    "photorealistic-rendering",
+    "synthetic-data",
+    "depth-maps",
+    "normal-maps",
+    "industrial-conveyor",
+    "anomaly-detection",
+    "benchmark"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source",
+    "spdx_id": null,
+    "url": "https://eyecan-ai.github.io/eyecandies/",
+    "commercial_use": "unknown",
+    "notes": "Software in repository is GPLv3; underlying dataset download is distributed by Eyecan.ai for research with no explicit license declared."
+  },
+  "source_references": [
+    {
+      "title": "Eyecandies Official Project Page",
+      "url": "https://eyecan-ai.github.io/eyecandies/",
+      "type": "official_website",
+      "notes": "Official benchmark portal with dataset documentation, class visualizer, and download instructions."
+    },
+    {
+      "title": "Eyecandies GitHub Code and Dataloader Repository",
+      "url": "https://github.com/eyecan-ai/eyecandies",
+      "type": "repository",
+      "notes": "Official repository providing PyTorch and Pipelime dataloaders and benchmark pipelines."
+    },
+    {
+      "title": "The Eyecandies Dataset for Unsupervised Multimodal Anomaly Detection and Localization",
+      "url": "https://doi.org/10.1007/978-3-031-26316-2_26",
+      "type": "original_paper",
+      "notes": "ACCV 2022 conference publication introducing the procedural generation pipeline and multimodal baseline evaluations."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against Eyecan.ai project portal and Springer ACCV 2022 proceedings (DOI: 10.1007/978-3-031-26316-2_26)."
+  },
+  "size": {
+    "file_formats": [
+      "png",
+      "exr",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as separate ZIP archives per class containing RGB renders, metric depth EXR files, and normal maps via Google Drive."
+  },
+  "sample_count": {
+    "total": 15500,
+    "splits": {
+      "train": 10000,
+      "val": 1000,
+      "test_public": 500,
+      "test_private": 4000
+    },
+    "unit": "samples",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022-11-04"
+  },
+  "citation": {
+    "paper_title": "The Eyecandies Dataset for Unsupervised Multimodal Anomaly Detection and Localization",
+    "paper_url": "https://doi.org/10.1007/978-3-031-26316-2_26",
+    "authors": [
+      "Luca Bonfiglioli",
+      "Marco Toschi",
+      "Davide Silvestri",
+      "Nicola Fioraio",
+      "Daniele De Gregorio"
+    ],
+    "doi": "10.1007/978-3-031-26316-2_26"
+  },
+  "geographic_coverage": [
+    "Italy"
+  ],
+  "provenance": {
+    "collection_method": "Procedural synthetic rendering pipeline with Blender and BlenderProc simulating realistic candy manufacturing on an active conveyor.",
+    "curation_notes": "Each of the 10 classes contains 1,000 train, 100 validation, 50 public test, and 400 private test samples. Ground truth masks precisely segment surface deformations and missing elements.",
+    "data_sources": [
+      "Eyecan.ai Computer Vision Laboratory"
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "open-industry",
+  "slug": "open-industry",
+  "name": "IEC3D-AD: Industrial Equipment Components 3D Anomaly Detection Dataset (OpenIndustry)",
+  "description": "Industrial 3D point cloud anomaly detection dataset (IEC3D-AD / OpenIndustry) comprising 2,400 high-fidelity 360-degree point cloud scans across 15 real industrial equipment component categories (bearings, bolts, rings, nuts, and studs). Captured via structured-light 3D scanning, each category provides 100 normal training scans and 60 test scans featuring five authentic production defect types (bump, deformation, dent, scar, and scratch) for unsupervised and open-set anomaly detection.",
+  "homepage_url": "https://huggingface.co/datasets/HanzheL/open-industry",
+  "publisher": {
+    "name": "Northeastern University (China)",
+    "type": "academic",
+    "url": "https://www.neu.edu.cn/"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "3d-anomaly-detection"
+  ],
+  "tags": [
+    "point-cloud",
+    "open-set",
+    "industrial-components",
+    "structured-light",
+    "3d-vision",
+    "anomaly-detection",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Author-Restricted Research Distribution",
+    "spdx_id": null,
+    "url": "https://huggingface.co/datasets/HanzheL/open-industry",
+    "commercial_use": "forbidden",
+    "notes": "Shared by authors on Hugging Face for non-commercial academic research and benchmarking; authors reserve all rights."
+  },
+  "source_references": [
+    {
+      "title": "IEC3D-AD: A 3D Dataset of Industrial Equipment Components for Unsupervised Point Cloud Anomaly Detection",
+      "url": "https://doi.org/10.1109/TCSVT.2026.3723149",
+      "type": "original_paper",
+      "notes": "IEEE Transactions on Circuits and Systems for Video Technology (TCSVT) publication introducing the 2,400-scan physical dataset."
+    },
+    {
+      "title": "OpenIndustry Hugging Face Repository",
+      "url": "https://huggingface.co/datasets/HanzheL/open-industry",
+      "type": "repository",
+      "notes": "Official Hugging Face dataset distribution containing point cloud files in PCD format."
+    },
+    {
+      "title": "OpenIndustry GitHub Codebase",
+      "url": "https://github.com/hzzzzzhappy/open-industry",
+      "type": "repository",
+      "notes": "Official codebase for data loaders, preprocessing, and open-set evaluation."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against IEEE Transactions on Circuits and Systems for Video Technology (DOI: 10.1109/TCSVT.2026.3723149) and Hugging Face repository HanzheL/open-industry."
+  },
+  "size": {
+    "amount": 8.14,
+    "unit": "GB",
+    "file_formats": [
+      "pcd",
+      "zip"
+    ],
+    "status": "verified",
+    "notes": "Published dataset repository payload on Hugging Face is 8.14 GB."
+  },
+  "sample_count": {
+    "total": 2400,
+    "splits": {
+      "train_normal": 1500,
+      "test": 900
+    },
+    "unit": "scans",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2025-11-06",
+    "last_updated": "2026-04-03"
+  },
+  "citation": {
+    "paper_title": "IEC3D-AD: A 3D Dataset of Industrial Equipment Components for Unsupervised Point Cloud Anomaly Detection",
+    "paper_url": "https://doi.org/10.1109/TCSVT.2026.3723149",
+    "authors": [
+      "Bingyang Guo",
+      "Hongjie Li",
+      "Ruiyun Yu",
+      "Hanzhe Liang",
+      "Jinbao Wang"
+    ],
+    "doi": "10.1109/TCSVT.2026.3723149"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "Multi-view structured light scanning system generating complete 360-degree point clouds of manufactured mechanical parts with average density of ~160k points per scan.",
+    "curation_notes": "The underlying physical dataset is IEC3D-AD (Industrial Equipment Components 3D Anomaly Detection) containing 2,400 scans across 15 component categories (100 normal training, 60 test per category). OpenIndustry represents the open-set benchmark distribution derived from these exact 2,400 point cloud scans.",
+    "data_sources": [
+      "State Key Laboratory of Synthetical Automation for Process Industries, Northeastern University"
+    ]
+  }
+}

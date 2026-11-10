@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "id": "aitex-fabric-image-database",
+  "slug": "aitex-fabric-image-database",
+  "name": "AFID: AITEX Fabric Image Database",
+  "description": "Public textile fabric surface defect detection benchmark comprising 245 high-resolution textile images (4096x256 resolution) across seven distinct fabric types. Created by the Spanish Textile Industry Research Association (AITEX) and Universitat Politècnica de València, containing 140 defect-free images (20 per fabric) and 105 defective images spanning twelve typical textile manufacturing flaws with binary pixel-level ground truth masks.",
+  "homepage_url": "https://www.aitex.es/afid/",
+  "publisher": {
+    "name": "AITEX / Universitat Politècnica de València",
+    "type": "academic",
+    "url": "https://www.aitex.es/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "defect-detection",
+    "defect-segmentation",
+    "image-segmentation"
+  ],
+  "tags": [
+    "textile-inspection",
+    "fabric-defect",
+    "weaving-flaws",
+    "surface-defect",
+    "automated-inspection",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
+    "spdx_id": "CC-BY-NC-ND-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Distributed by AITEX for non-commercial academic research and benchmarking."
+  },
+  "source_references": [
+    {
+      "title": "AITEX AFID Official Landing Page",
+      "url": "https://www.aitex.es/afid/",
+      "type": "official_website",
+      "notes": "Official research portal by Textile Industry Research Association (AITEX) providing direct access to the database."
+    },
+    {
+      "title": "AFID: a public fabric image database for defect detection",
+      "url": "https://doi.org/10.2478/aut-2019-0035",
+      "type": "original_paper",
+      "notes": "AUTEX Research Journal (2019) publication describing acquisition setup, textile defect taxonomy, and ground truth generation."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against AITEX official portal and AUTEX Research Journal (DOI: 10.2478/aut-2019-0035)."
+  },
+  "size": {
+    "file_formats": [
+      "png",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as downloadable ZIP archives per fabric category from the AITEX research portal."
+  },
+  "sample_count": {
+    "total": 245,
+    "splits": {
+      "defect_free": 140,
+      "defective": 105
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-12-01"
+  },
+  "citation": {
+    "paper_title": "AFID: a public fabric image database for defect detection",
+    "paper_url": "https://doi.org/10.2478/aut-2019-0035",
+    "authors": [
+      "Javier Silvestre-Blanes",
+      "Teresa Albero-Albero",
+      "Ignacio Miralles",
+      "Rubén Pérez-Llorens",
+      "Jorge Moreno"
+    ],
+    "doi": "10.2478/aut-2019-0035"
+  },
+  "geographic_coverage": [
+    "Spain"
+  ],
+  "provenance": {
+    "collection_method": "High-resolution linear camera system capturing 4096-pixel wide web fabric swatches moving continuously through a controlled textile inspection backlighting rig.",
+    "curation_notes": "Encompasses 12 defect classes: broken ends, broken picks, weft curling, fuzzyballs, cut selvage, creases, warp balls, knots, contamination, neps, and weft cracks.",
+    "data_sources": [
+      "AITEX Textile Industry Research Association laboratory looms"
+    ]
+  }
+}

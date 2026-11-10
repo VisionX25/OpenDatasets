@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "id": "neu-surface-defect-database",
+  "slug": "neu-surface-defect-database",
+  "name": "NEU Surface Defect Database",
+  "description": "Hot-rolled steel strip surface defect database comprising 1,800 grayscale industrial images across six representative defect categories (crazing, inclusion, patches, pitted surface, rolled-in scale, and scratches) with 300 samples per class. Created by Northeastern University (China), supporting both image-level classification (NEU-CLS) and Pascal VOC bounding-box defect detection (NEU-DET).",
+  "homepage_url": "https://faculty.neu.edu.cn/songkc/en/zdylm/263265/list/",
+  "publisher": {
+    "name": "Northeastern University (China)",
+    "type": "academic",
+    "url": "https://faculty.neu.edu.cn/songkc/en/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "defect-detection",
+    "object-detection",
+    "image-classification"
+  ],
+  "tags": [
+    "steel-manufacturing",
+    "surface-defect",
+    "hot-rolled-steel",
+    "defect-classification",
+    "defect-detection",
+    "benchmark"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source",
+    "spdx_id": null,
+    "url": "https://faculty.neu.edu.cn/songkc/en/zdylm/263265/list/",
+    "commercial_use": "unknown",
+    "notes": "Hosted on Northeastern University faculty page for academic research; no formal open-source license file is attached."
+  },
+  "source_references": [
+    {
+      "title": "NEU Surface Defect Database Official Faculty Page",
+      "url": "https://faculty.neu.edu.cn/songkc/en/zdylm/263265/list/",
+      "type": "official_website",
+      "notes": "Faculty resource portal of Prof. Kechen Song hosting the NEU-CLS and NEU-DET archive distributions."
+    },
+    {
+      "title": "A noise robust method based on completed local binary patterns for hot-rolled steel strip surface defect detection",
+      "url": "https://doi.org/10.1016/j.apsusc.2013.09.002",
+      "type": "original_paper",
+      "notes": "Applied Surface Science (2013) publication introducing the hot-rolled steel defect dataset and CLBP descriptor."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against Northeastern University faculty portal and Applied Surface Science (DOI: 10.1016/j.apsusc.2013.09.002)."
+  },
+  "size": {
+    "file_formats": [
+      "bmp",
+      "xml",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as downloadable zip archives (NEU-CLS and NEU-DET) from Northeastern University faculty repository."
+  },
+  "sample_count": {
+    "total": 1800,
+    "splits": {
+      "crazing": 300,
+      "inclusion": 300,
+      "patches": 300,
+      "pitted_surface": 300,
+      "rolled_in_scale": 300,
+      "scratches": 300
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2013-11-15",
+    "last_updated": "2021-03-10"
+  },
+  "citation": {
+    "paper_title": "A noise robust method based on completed local binary patterns for hot-rolled steel strip surface defect detection",
+    "paper_url": "https://doi.org/10.1016/j.apsusc.2013.09.002",
+    "authors": [
+      "Kechen Song",
+      "Yunhui Yan"
+    ],
+    "doi": "10.1016/j.apsusc.2013.09.002"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "High-speed line-scan camera capturing surface images of moving hot-rolled steel strips in a steel manufacturing plant.",
+    "curation_notes": "Each image is cropped to 200x200 pixels. NEU-CLS provides classification labels while NEU-DET provides bounding-box coordinates for each defect instance.",
+    "data_sources": [
+      "Northeastern University Surface Inspection Laboratory"
+    ]
+  }
+}

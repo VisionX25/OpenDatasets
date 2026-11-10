@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mvtec-loco-ad",
+  "slug": "mvtec-loco-ad",
+  "name": "MVTec LOCO AD: Logically Consistent Anomaly Detection Dataset",
+  "description": "Industrial visual anomaly detection benchmark of 3,644 high-resolution images across five industrial product categories (Breakfast Box, Juice Bottle, Pushpins, Screw Bag, and Splicing Connectors). Specifically designed to evaluate both structural anomalies (local physical surface damage like scratches or cracks) and logical anomalies (rule violations, missing components, incorrect counts, or forbidden spatial arrangements).",
+  "homepage_url": "https://www.mvtec.com/research-teaching/datasets/mvtec-loco-ad",
+  "publisher": {
+    "name": "MVTec Software GmbH",
+    "type": "industry",
+    "url": "https://www.mvtec.com/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "image-segmentation"
+  ],
+  "tags": [
+    "industrial-inspection",
+    "logical-anomalies",
+    "structural-anomalies",
+    "anomaly-detection",
+    "unsupervised-learning",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under CC BY-NC-SA 4.0 for non-commercial scientific research and education."
+  },
+  "source_references": [
+    {
+      "title": "MVTec LOCO AD Official Dataset Landing Page",
+      "url": "https://www.mvtec.com/research-teaching/datasets/mvtec-loco-ad",
+      "type": "official_website",
+      "notes": "Official release portal by MVTec Software GmbH with direct archive download links and category specifications."
+    },
+    {
+      "title": "The MVTec LOCO AD Dataset for Unsupervised Anomaly Detection",
+      "url": "https://doi.org/10.1109/WACV51458.2022.00395",
+      "type": "original_paper",
+      "notes": "IEEE WACV 2022 conference publication introducing logical constraint anomaly detection and baseline model benchmarks."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against MVTec official portal and IEEE WACV 2022 proceedings (DOI: 10.1109/WACV51458.2022.00395)."
+  },
+  "size": {
+    "file_formats": [
+      "png",
+      "tar.xz"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as separate tar.xz archives per category; aggregate payload size is not published as a single figure."
+  },
+  "sample_count": {
+    "total": 3644,
+    "splits": {
+      "train": 1772,
+      "val": 304,
+      "test": 1568
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022-01-04"
+  },
+  "citation": {
+    "paper_title": "The MVTec LOCO AD Dataset for Unsupervised Anomaly Detection",
+    "paper_url": "https://doi.org/10.1109/WACV51458.2022.00395",
+    "authors": [
+      "Paul Bergmann",
+      "Kilian Batzner",
+      "Michael Fauser",
+      "David Sattlegger",
+      "Carsten Steger"
+    ],
+    "doi": "10.1109/WACV51458.2022.00395"
+  },
+  "geographic_coverage": [
+    "Germany"
+  ],
+  "provenance": {
+    "collection_method": "High-resolution color industrial photography of assembled multi-component packages and kits under controlled illumination.",
+    "curation_notes": "Ground-truth annotations cover both pixel-precise masks for localized physical defects and bounding-region masks for logical constraint violations.",
+    "data_sources": [
+      "MVTec Software GmbH Research & Teaching Portal"
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pku-market-pcb",
+  "slug": "pku-market-pcb",
+  "name": "PKU-Market-PCB: Printed Circuit Board Defect Dataset",
+  "description": "Public printed circuit board defect detection and classification dataset developed by Peking University Shenzhen Graduate School (Open Lab on Human-Robot Interaction). Contains 1,386 high-resolution synthetic defect images across six defect categories (missing hole, mouse-bite, open circuit, short, spur, and spurious copper) rendered from standard PCB layout templates with bounding box annotations.",
+  "homepage_url": "https://robotics.pkusz.edu.cn/resources/datasetENG/",
+  "publisher": {
+    "name": "Peking University (PKUSZ)",
+    "type": "academic",
+    "url": "https://robotics.pkusz.edu.cn/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "defect-detection",
+    "object-detection",
+    "image-classification"
+  ],
+  "tags": [
+    "pcb-inspection",
+    "circuit-board",
+    "defect-detection",
+    "electronics-manufacturing",
+    "image-registration",
+    "benchmark"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source",
+    "spdx_id": null,
+    "url": "https://robotics.pkusz.edu.cn/resources/datasetENG/",
+    "commercial_use": "unknown",
+    "notes": "Hosted on Peking University Open Lab on Human-Robot Interaction portal for academic research without a formal open-source license declaration."
+  },
+  "source_references": [
+    {
+      "title": "PKUSZ Intelligent Robot Open Laboratory Dataset Portal",
+      "url": "https://robotics.pkusz.edu.cn/resources/datasetENG/",
+      "type": "official_website",
+      "notes": "Official university laboratory dataset repository providing original dataset archives and benchmark annotations."
+    },
+    {
+      "title": "A PCB dataset for defects detection and classification",
+      "url": "https://arxiv.org/abs/1901.08204",
+      "type": "original_paper",
+      "notes": "Original preprint introducing the 1,386 image synthetic PCB dataset and defect classification baseline."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against Peking University Shenzhen Graduate School repository and arXiv preprint 1901.08204."
+  },
+  "size": {
+    "file_formats": [
+      "jpg",
+      "xml",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as downloadable zip archives containing images and Pascal VOC XML annotations via Peking University servers."
+  },
+  "sample_count": {
+    "total": 1386,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-01-24"
+  },
+  "citation": {
+    "paper_title": "A PCB dataset for defects detection and classification",
+    "paper_url": "https://arxiv.org/abs/1901.08204",
+    "authors": [
+      "Weibo Huang",
+      "Peng Wei"
+    ],
+    "doi": "10.48550/arXiv.1901.08204"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "Synthetic defect generation pipeline applying realistic physical defect patterns onto high-resolution master PCB templates.",
+    "curation_notes": "Annotated in Pascal VOC XML format with bounding boxes across 6 defect types: missing hole, mouse bite, open circuit, short, spur, and spurious copper.",
+    "data_sources": [
+      "Peking University Shenzhen Graduate School Open Lab on Human-Robot Interaction"
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "id": "severstal-steel-defect-detection",
+  "slug": "severstal-steel-defect-detection",
+  "name": "Severstal: Steel Defect Detection",
+  "description": "Production-line flat sheet steel surface defect classification and segmentation benchmark consisting of 18,074 high-frequency camera images (1600x256 resolution) capturing sheet steel surfaces during active rolling. Features pixel-level run-length encoded annotations across four surface defect classes (pitted surface, crazing, scratches, and patches) alongside flawless surface regions.",
+  "homepage_url": "https://www.kaggle.com/competitions/severstal-steel-defect-detection",
+  "publisher": {
+    "name": "PAO Severstal",
+    "type": "industry",
+    "url": "https://www.severstal.com/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "defect-detection",
+    "image-segmentation",
+    "image-classification"
+  ],
+  "tags": [
+    "steel-manufacturing",
+    "surface-defect",
+    "industrial-inspection",
+    "defect-segmentation",
+    "kaggle-competition"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Kaggle Competition Rules",
+    "spdx_id": null,
+    "url": "https://www.kaggle.com/competitions/severstal-steel-defect-detection/rules",
+    "commercial_use": "forbidden",
+    "notes": "Subject to Kaggle competition rules; data is licensed for non-commercial research and educational participation."
+  },
+  "source_references": [
+    {
+      "title": "Severstal: Steel Defect Detection Kaggle Competition",
+      "url": "https://www.kaggle.com/competitions/severstal-steel-defect-detection",
+      "type": "official_website",
+      "notes": "Official competition platform hosting image files, run-length-encoded training labels, and rules."
+    },
+    {
+      "title": "Kaggle Competition Dataset Files Overview",
+      "url": "https://www.kaggle.com/competitions/severstal-steel-defect-detection/data",
+      "type": "documentation",
+      "notes": "Data description page detailing the four defect classes, image dimensions (1600x256), and submission format."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against official Kaggle competition platform and PAO Severstal contest documentation."
+  },
+  "size": {
+    "amount": 11.6,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "csv",
+      "zip"
+    ],
+    "status": "verified",
+    "notes": "Total download size across train_images.zip, test_images.zip, and CSV annotation files is approximately 11.6 GB."
+  },
+  "sample_count": {
+    "total": 18074,
+    "splits": {
+      "train": 12568,
+      "test": 5506
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-07-22",
+    "last_updated": "2019-10-24"
+  },
+  "citation": {
+    "paper_title": "Severstal: Steel Defect Detection Competition Benchmark",
+    "paper_url": "https://www.kaggle.com/competitions/severstal-steel-defect-detection",
+    "authors": [
+      "PAO Severstal Machine Learning Team",
+      "Kaggle Competition Team"
+    ]
+  },
+  "geographic_coverage": [
+    "Russia"
+  ],
+  "provenance": {
+    "collection_method": "High-frequency industrial inspection cameras continuously photographing moving steel sheets at high speed.",
+    "curation_notes": "Ground-truth annotations are provided in run-length encoding (RLE) across four distinct defect classes (ClassId 1 to 4). Evaluated using the mean Dice coefficient.",
+    "data_sources": [
+      "PAO Severstal industrial flat steel manufacturing facilities"
+    ]
+  }
+}

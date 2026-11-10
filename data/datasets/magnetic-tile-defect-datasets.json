@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "id": "magnetic-tile-defect-datasets",
+  "slug": "magnetic-tile-defect-datasets",
+  "name": "Magnetic Tile Surface Defect Dataset",
+  "description": "Industrial surface defect saliency and segmentation dataset comprising 1,344 images of magnetic tile surfaces used in permanent magnet electric motors. Developed by the Institute of Automation, Chinese Academy of Sciences (CASIA), encompassing five defect categories (blowholes: 115, cracks: 57, frays: 32, breaks: 85, uneven grinding: 103) and 952 defect-free surfaces with pixel-precise ground truth binary masks.",
+  "homepage_url": "https://github.com/abin24/Magnetic-tile-defect-datasets",
+  "publisher": {
+    "name": "Institute of Automation, Chinese Academy of Sciences (CASIA)",
+    "type": "academic",
+    "url": "http://english.ia.cas.cn/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "defect-detection",
+    "defect-segmentation",
+    "image-segmentation"
+  ],
+  "tags": [
+    "magnetic-tile",
+    "surface-defect",
+    "defect-saliency",
+    "industrial-inspection",
+    "manufacturing",
+    "benchmark"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source",
+    "spdx_id": null,
+    "url": "https://github.com/abin24/Magnetic-tile-defect-datasets",
+    "commercial_use": "unknown",
+    "notes": "Publicly shared on GitHub repository abin24/Magnetic-tile-defect-datasets for research and evaluation; no explicit SPDX or formal open-source license is declared."
+  },
+  "source_references": [
+    {
+      "title": "Magnetic Tile Defect Datasets GitHub Repository",
+      "url": "https://github.com/abin24/Magnetic-tile-defect-datasets",
+      "type": "repository",
+      "notes": "Official repository by Yibin Huang containing images, pixel-level binary masks, and category folders."
+    },
+    {
+      "title": "Surface Defect Saliency of Magnetic Tile",
+      "url": "https://doi.org/10.1007/s00371-019-01779-1",
+      "type": "original_paper",
+      "notes": "The Visual Computer (2020) publication proposing the multi-scale defect saliency detection method."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against author GitHub repository and The Visual Computer (DOI: 10.1007/s00371-019-01779-1)."
+  },
+  "size": {
+    "file_formats": [
+      "jpg",
+      "png",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Distributed directly via GitHub repository containing image assets and binary mask directories."
+  },
+  "sample_count": {
+    "total": 1344,
+    "splits": {
+      "blowhole": 115,
+      "crack": 57,
+      "fray": 32,
+      "break": 85,
+      "uneven": 103,
+      "free": 952
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-04-10"
+  },
+  "citation": {
+    "paper_title": "Surface Defect Saliency of Magnetic Tile",
+    "paper_url": "https://doi.org/10.1007/s00371-019-01779-1",
+    "authors": [
+      "Yibin Huang",
+      "Congying Qiu",
+      "Kui Yuan"
+    ],
+    "doi": "10.1007/s00371-019-01779-1"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "Industrial machine vision system capturing curved permanent magnet tile surfaces during manufacturing quality sorting.",
+    "curation_notes": "Defect images are accompanied by ground truth binary masks labeled with pixel precision. Images exhibit significant variation in lighting, illumination reflections, and surface textures.",
+    "data_sources": [
+      "Chinese Academy of Sciences Institute of Automation (CASIA)"
+    ]
+  }
+}

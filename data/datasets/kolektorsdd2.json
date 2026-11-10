@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "kolektorsdd2",
+  "slug": "kolektorsdd2",
+  "name": "KolektorSDD2: Kolektor Surface-Defect Dataset 2",
+  "description": "Expanded surface-defect detection dataset comprising 3,335 high-resolution color images (approx. 230x630 resolution) of electrical commutators provided by Kolektor Group. Contains 356 images with diverse surface defects (scratches, minor spots, surface cracks) with pixel-level ground truth masks, and 2,979 defect-free images, partitioned into standardized training (2,331 images) and testing (1,004 images) splits.",
+  "homepage_url": "https://www.vicos.si/resources/kolektorsdd2/",
+  "publisher": {
+    "name": "University of Ljubljana (ViCoS Lab) / Kolektor Group",
+    "type": "academic",
+    "url": "https://www.vicos.si/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "defect-detection",
+    "anomaly-detection",
+    "image-segmentation"
+  ],
+  "tags": [
+    "surface-defect",
+    "industrial-inspection",
+    "mixed-supervision",
+    "manufacturing",
+    "defect-segmentation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under CC BY-NC-SA 4.0 for non-commercial academic research; commercial inquiries require contacting the ViCoS Laboratory."
+  },
+  "source_references": [
+    {
+      "title": "KolektorSDD2 ViCoS Resource Page",
+      "url": "https://www.vicos.si/resources/kolektorsdd2/",
+      "type": "official_website",
+      "notes": "Official release portal hosted by Visual Cognitive Systems Laboratory, University of Ljubljana."
+    },
+    {
+      "title": "Mixed supervision for surface-defect detection: from weakly to fully supervised learning",
+      "url": "https://doi.org/10.1016/j.compind.2021.103459",
+      "type": "original_paper",
+      "notes": "Computers in Industry (2021) publication detailing dataset construction, mixed supervision protocols, and benchmarks."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against University of Ljubljana ViCoS portal and Computers in Industry (DOI: 10.1016/j.compind.2021.103459)."
+  },
+  "size": {
+    "file_formats": [
+      "png",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as a compressed zip archive via University of Ljubljana ViCoS laboratory servers."
+  },
+  "sample_count": {
+    "total": 3335,
+    "splits": {
+      "train": 2331,
+      "test": 1004
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-06-15"
+  },
+  "citation": {
+    "paper_title": "Mixed supervision for surface-defect detection: from weakly to fully supervised learning",
+    "paper_url": "https://doi.org/10.1016/j.compind.2021.103459",
+    "authors": [
+      "Jakob Božič",
+      "Domen Tabernik",
+      "Danijel Skočaj"
+    ],
+    "doi": "10.1016/j.compind.2021.103459"
+  },
+  "geographic_coverage": [
+    "Slovenia"
+  ],
+  "provenance": {
+    "collection_method": "Industrial visual inspection line of electrical commutators captured across different manufacturing batches.",
+    "curation_notes": "Train set comprises 246 positive (defective) and 2,085 negative images; test set comprises 110 positive and 894 negative images. Fine segmentation masks are provided for all positive instances.",
+    "data_sources": [
+      "Kolektor Group d.o.o. production inspection systems"
+    ]
+  }
+}

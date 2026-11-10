@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pku-market-phone",
+  "slug": "pku-market-phone",
+  "name": "PKU-Market-Phone: Smartphone Screen Surface Defect Dataset",
+  "description": "Smartphone screen glass surface defect segmentation dataset collected with an industrial camera at 1920x1080 resolution by Peking University Shenzhen Graduate School. Comprises 1,200 images evenly distributed across three surface defect classes (oil stains: 400, scratches: 400, spots: 400) with pixel-precise PASCAL VOC ground truth segmentation masks for industrial automated optical inspection benchmarking.",
+  "homepage_url": "https://robotics.pkusz.edu.cn/resources/datasetENG/",
+  "publisher": {
+    "name": "Peking University (PKUSZ)",
+    "type": "academic",
+    "url": "https://robotics.pkusz.edu.cn/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "defect-detection",
+    "defect-segmentation",
+    "image-segmentation"
+  ],
+  "tags": [
+    "smartphone-screen",
+    "surface-defect",
+    "glass-inspection",
+    "industrial-inspection",
+    "defect-segmentation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source",
+    "spdx_id": null,
+    "url": "https://robotics.pkusz.edu.cn/resources/datasetENG/",
+    "commercial_use": "unknown",
+    "notes": "Hosted on Peking University Open Lab on Human-Robot Interaction portal for academic research without a formal open-source license declaration."
+  },
+  "source_references": [
+    {
+      "title": "PKUSZ Intelligent Robot Open Laboratory Dataset Portal",
+      "url": "https://robotics.pkusz.edu.cn/resources/datasetENG/",
+      "type": "official_website",
+      "notes": "Official repository by Peking University Shenzhen Graduate School distributing phone screen defect images and masks."
+    },
+    {
+      "title": "FDSNet: An Accurate Real-Time Surface Defect Segmentation Network",
+      "url": "https://doi.org/10.1109/ICASSP43922.2022.9746358",
+      "type": "original_paper",
+      "notes": "IEEE ICASSP 2022 conference publication introducing the PKU-Market-Phone benchmark and FDSNet architecture."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against Peking University Shenzhen Graduate School repository and IEEE ICASSP 2022 proceedings (DOI: 10.1109/ICASSP43922.2022.9746358)."
+  },
+  "size": {
+    "file_formats": [
+      "jpg",
+      "png",
+      "xml",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as downloadable zip archive via Peking University Shenzhen Graduate School repository."
+  },
+  "sample_count": {
+    "total": 1200,
+    "splits": {
+      "oil_stains": 400,
+      "scratches": 400,
+      "spots": 400
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022-05-07"
+  },
+  "citation": {
+    "paper_title": "FDSNet: An Accurate Real-Time Surface Defect Segmentation Network",
+    "paper_url": "https://doi.org/10.1109/ICASSP43922.2022.9746358",
+    "authors": [
+      "Runwei Ding",
+      "Jian Zhang",
+      "Miaoju Ban",
+      "Tianyu Guo"
+    ],
+    "doi": "10.1109/ICASSP43922.2022.9746358"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "Industrial high-definition camera capturing mobile phone touch screens under directional manufacturing inspection lighting.",
+    "curation_notes": "Ground-truth annotations formatted in standard Pascal VOC structure with pixel-precise color-indexed segmentation masks for oil stain, scratch, and spot defects.",
+    "data_sources": [
+      "Peking University Shenzhen Graduate School Open Lab on Human-Robot Interaction"
+    ]
+  }
+}

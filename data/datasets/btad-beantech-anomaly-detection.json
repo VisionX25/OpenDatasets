@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "id": "btad-beantech-anomaly-detection",
+  "slug": "btad-beantech-anomaly-detection",
+  "name": "BTAD: beanTech Anomaly Detection Dataset",
+  "description": "Industrial image anomaly detection and localization benchmark comprising 2,540 high-resolution images across three manufactured industrial products (01: 470 images at 1600x1600, 02: 629 images at 600x600, 03: 1,441 images at 800x600). Captured via factory acquisition systems from beanTech srl, featuring 1,799 defect-free training images and 741 test images (451 normal, 290 anomalous paired with 290 pixel-precise ground truth defect masks, totaling 2,830 image-file assets in the official distribution).",
+  "homepage_url": "https://github.com/pankajmishra000/VT-ADL",
+  "publisher": {
+    "name": "University of Udine / beanTech srl",
+    "type": "academic",
+    "url": "http://avires.dimi.uniud.it/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "image-segmentation"
+  ],
+  "tags": [
+    "industrial-inspection",
+    "surface-defect",
+    "manufacturing",
+    "vision-transformer",
+    "anomaly-detection",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed by authors under CC-BY-SA terms for open academic and benchmark research."
+  },
+  "source_references": [
+    {
+      "title": "VT-ADL & BTAD Dataset GitHub Repository",
+      "url": "https://github.com/pankajmishra000/VT-ADL",
+      "type": "repository",
+      "notes": "Author repository containing model code and direct download links to the BTAD benchmark archive."
+    },
+    {
+      "title": "University of Udine AVIRES Lab BTAD Archive Download",
+      "url": "http://avires.dimi.uniud.it/papers/btad/btad.zip",
+      "type": "archive",
+      "notes": "Primary university archive hosting the complete BTAD dataset distribution."
+    },
+    {
+      "title": "VT-ADL: A Vision Transformer Network for Image Anomaly Detection and Localization",
+      "url": "https://doi.org/10.1109/ISIE45552.2021.9576231",
+      "type": "original_paper",
+      "notes": "IEEE ISIE 2021 conference publication introducing VT-ADL and the BTAD dataset."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against IEEE ISIE 2021 proceedings (DOI: 10.1109/ISIE45552.2021.9576231) and University of Udine archive manifest."
+  },
+  "size": {
+    "amount": 1.23,
+    "unit": "GB",
+    "file_formats": [
+      "bmp",
+      "png",
+      "zip"
+    ],
+    "status": "verified",
+    "notes": "The official distribution archive btad.zip hosted by the University of Udine (avires.dimi.uniud.it) is 1,229,193,337 bytes (~1.23 GB)."
+  },
+  "sample_count": {
+    "total": 2540,
+    "splits": {
+      "train": 1799,
+      "test": 741,
+      "train_01": 400,
+      "test_01": 70,
+      "train_02": 399,
+      "test_02": 230,
+      "train_03": 1000,
+      "test_03": 441
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-04-20"
+  },
+  "citation": {
+    "paper_title": "VT-ADL: A Vision Transformer Network for Image Anomaly Detection and Localization",
+    "paper_url": "https://doi.org/10.1109/ISIE45552.2021.9576231",
+    "authors": [
+      "Pankaj Mishra",
+      "Riccardo Verk",
+      "Daniele Fornasier",
+      "Claudio Piciarelli",
+      "Gian Luca Foresti"
+    ],
+    "doi": "10.1109/ISIE45552.2021.9576231"
+  },
+  "geographic_coverage": [
+    "Italy"
+  ],
+  "provenance": {
+    "collection_method": "High-resolution industrial machine vision inspection systems operated by beanTech srl.",
+    "curation_notes": "The official BTAD archive (btad.zip) contains exactly 2,540 product images partitioned into 1,799 training images (all defect-free: 400 in 01, 399 in 02, 1,000 in 03) and 741 test images (451 normal, 290 anomalous: 70 in 01 [21 normal, 49 anomalous], 230 in 02 [30 normal, 200 anomalous], 441 in 03 [400 normal, 41 anomalous]). Accompanying the 290 anomalous test images are 290 pixel-level binary ground truth masks (49 in 01, 200 in 02, 41 in 03), bringing the aggregate image-file count in the distribution to exactly 2,830 (2,540 product images + 290 masks). Literature citing 1,799 describes the training subset only; literature citing 2,830 counts all image files including binary masks; 2,540 is the verified physical product image total.",
+    "data_sources": [
+      "beanTech srl industrial manufacturing inspection systems"
+    ]
+  }
+}
