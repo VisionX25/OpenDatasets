@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "id": "anomaly-shapenet",
+  "slug": "anomaly-shapenet",
+  "name": "Anomaly-ShapeNet: 3D Point Cloud Anomaly Detection Benchmark",
+  "description": "Large-scale 3D point cloud anomaly detection benchmark derived from ShapeNetCore, comprising 1,600 point cloud models across 40 object categories (later expanded to 50 categories). Features five distinct types of synthesized physical anomalies (bulge, concavity, crack, hole, and broken parts) with point-level ground truth binary masks for benchmarking self-supervised 3D anomaly detection and localization.",
+  "homepage_url": "https://github.com/Chopper-233/Anomaly-ShapeNet",
+  "publisher": {
+    "name": "ShanghaiTech University",
+    "type": "academic",
+    "url": "https://github.com/Chopper-233"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "3d-anomaly-detection"
+  ],
+  "tags": [
+    "3d-vision",
+    "point-cloud",
+    "synthetic-anomalies",
+    "shapenet",
+    "anomaly-detection",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "ShapeNet Terms of Use",
+    "spdx_id": null,
+    "url": "https://shapenet.org/terms",
+    "commercial_use": "forbidden",
+    "notes": "Derived from ShapeNetCore 3D models; usage is governed by ShapeNet terms for non-commercial academic research."
+  },
+  "source_references": [
+    {
+      "title": "Anomaly-ShapeNet Official GitHub Repository",
+      "url": "https://github.com/Chopper-233/Anomaly-ShapeNet",
+      "type": "repository",
+      "notes": "Official repository with dataset download links (Google Drive and Baidu Netdisk), generation scripts, and baseline IMRNet code."
+    },
+    {
+      "title": "Towards Scalable 3D Anomaly Detection and Localization: A Benchmark via 3D Anomaly Synthesis and A Self-Supervised Learning Network",
+      "url": "https://doi.org/10.1109/CVPR52733.2024.01990",
+      "type": "original_paper",
+      "notes": "IEEE CVPR 2024 conference publication introducing the Anomaly-ShapeNet benchmark and anomaly synthesis pipeline."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against IEEE CVPR 2024 proceedings (DOI: 10.1109/CVPR52733.2024.01990) and author GitHub repository."
+  },
+  "size": {
+    "file_formats": [
+      "h5",
+      "ply",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as downloadable zip archives containing point cloud models and ground-truth H5 files via Google Drive and Baidu Netdisk."
+  },
+  "sample_count": {
+    "total": 1600,
+    "unit": "point clouds",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2024-03-20",
+    "last_updated": "2024-06-18"
+  },
+  "citation": {
+    "paper_title": "Towards Scalable 3D Anomaly Detection and Localization: A Benchmark via 3D Anomaly Synthesis and A Self-Supervised Learning Network",
+    "paper_url": "https://doi.org/10.1109/CVPR52733.2024.01990",
+    "authors": [
+      "Wenqiao Li",
+      "Xiaohao Xu",
+      "Yao Gu",
+      "Bozhong Zheng",
+      "Shenghua Gao",
+      "Yingna Wu"
+    ],
+    "doi": "10.1109/CVPR52733.2024.01990"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "Synthesized 3D defect generation pipeline applying realistic physical deformations onto canonical 3D computer models from ShapeNetCore.",
+    "curation_notes": "Point-level annotations delineate five anomaly types (bulge, concavity, crack, hole, broken) with exact vertex-level coordinate correspondence.",
+    "data_sources": [
+      "ShapeNetCore 3D object models / ShanghaiTech University"
+    ]
+  }
+}

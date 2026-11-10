@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mvtec-ad-2",
+  "slug": "mvtec-ad-2",
+  "name": "MVTec AD 2: Advanced Scenarios for Unsupervised Anomaly Detection",
+  "description": "Next-generation industrial visual anomaly detection benchmark comprising 8,004 high-resolution images across eight challenging scenarios (Can, Fabric, Fruit Jelly, Rice, Sheet Metal, Vial, Wall Plugs, and Walnuts). Features advanced inspection challenges including transparent and overlapping objects, dark-field and backlight illumination, high normal data variance, subtle border anomalies, and systematic distribution shifts through controlled lighting variations evaluated via a centralized benchmark server.",
+  "homepage_url": "https://www.mvtec.com/company/research/datasets/mvtec-ad-2",
+  "publisher": {
+    "name": "MVTec Software GmbH",
+    "type": "industry",
+    "url": "https://www.mvtec.com/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "image-segmentation"
+  ],
+  "tags": [
+    "industrial-inspection",
+    "anomaly-detection",
+    "anomaly-localization",
+    "distribution-shift",
+    "illumination-shift",
+    "unsupervised-learning",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under CC BY-NC-SA 4.0 for non-commercial scientific research and educational purposes."
+  },
+  "source_references": [
+    {
+      "title": "MVTec AD 2 Official Dataset Landing Page",
+      "url": "https://www.mvtec.com/company/research/datasets/mvtec-ad-2",
+      "type": "official_website",
+      "notes": "Official release portal hosted by MVTec Software GmbH with data download links and scenario documentation."
+    },
+    {
+      "title": "MVTec Benchmark Evaluation Server",
+      "url": "https://benchmark.mvtec.com/",
+      "type": "documentation",
+      "notes": "Centralized evaluation platform holding ground truth masks for private test partitions."
+    },
+    {
+      "title": "The MVTec AD 2 Dataset: Advanced Scenarios for Unsupervised Anomaly Detection",
+      "url": "https://arxiv.org/abs/2503.21622",
+      "type": "original_paper",
+      "notes": "Foundational preprint introducing the 8,004 image benchmark and lighting distribution shifts."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against MVTec official research portal, benchmark server, and arXiv preprint 2503.21622."
+  },
+  "size": {
+    "file_formats": [
+      "png",
+      "tar.xz"
+    ],
+    "status": "unknown",
+    "notes": "Aggregated archive byte size not published as a single figure; distributed per scenario archive."
+  },
+  "sample_count": {
+    "total": 8004,
+    "splits": {
+      "train": 2528,
+      "val": 302,
+      "test": 5174
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2025-03-24"
+  },
+  "citation": {
+    "paper_title": "The MVTec AD 2 Dataset: Advanced Scenarios for Unsupervised Anomaly Detection",
+    "paper_url": "https://arxiv.org/abs/2503.21622",
+    "authors": [
+      "Lars Heckler-Kram",
+      "Jan-Hendrik Neudeck",
+      "Ulla Scheler",
+      "Rebecca König",
+      "Carsten Steger"
+    ],
+    "doi": "10.48550/arXiv.2503.21622"
+  },
+  "geographic_coverage": [
+    "Germany"
+  ],
+  "provenance": {
+    "collection_method": "High-resolution camera setups capturing 8 industrial scenarios under multiple controlled illumination settings (regular, overexposed, underexposed, dark-field, and backlight).",
+    "curation_notes": "Test data is split into public test (1,084 images with public ground truth masks), private test (2,045 images with nominal illumination), and private mixed test (2,045 images with mixed illumination shifts).",
+    "data_sources": [
+      "MVTec Software GmbH Research & Benchmark Server"
+    ]
+  }
+}

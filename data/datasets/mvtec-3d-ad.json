@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mvtec-3d-ad",
+  "slug": "mvtec-3d-ad",
+  "name": "MVTec 3D-AD: MVTec 3D Anomaly Detection Dataset",
+  "description": "Comprehensive 3D industrial anomaly detection dataset consisting of 4,147 high-resolution 3D scans across 10 real-world categories (bagel, cable gland, carrot, cookie, dowel, foam, peach, potato, rope, and tire). Acquired using an industrial structured-light 3D sensor, each sample provides synchronized 3D point cloud coordinates (XYZ channels) and registered high-resolution RGB imagery for multi-modal 3D surface defect detection and localization.",
+  "homepage_url": "https://www.mvtec.com/research-teaching/datasets/mvtec-3d-ad",
+  "publisher": {
+    "name": "MVTec Software GmbH",
+    "type": "industry",
+    "url": "https://www.mvtec.com/"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "3d-anomaly-detection"
+  ],
+  "tags": [
+    "3d-vision",
+    "point-cloud",
+    "structured-light",
+    "industrial-inspection",
+    "anomaly-detection",
+    "surface-defect",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under CC BY-NC-SA 4.0 for non-commercial scientific research and education."
+  },
+  "source_references": [
+    {
+      "title": "MVTec 3D-AD Official Dataset Landing Page",
+      "url": "https://www.mvtec.com/research-teaching/datasets/mvtec-3d-ad",
+      "type": "official_website",
+      "notes": "Official distribution portal by MVTec Software GmbH with direct archive download links and documentation."
+    },
+    {
+      "title": "The MVTec 3D-AD Dataset for Unsupervised 3D Anomaly Detection and Localization",
+      "url": "https://doi.org/10.5220/0010865000003124",
+      "type": "original_paper",
+      "notes": "VISAPP 2022 conference proceedings detailing the 3D capture setup, point cloud coordinate encoding, and benchmark evaluations."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against MVTec official portal and VISAPP 2022 proceedings (DOI: 10.5220/0010865000003124)."
+  },
+  "size": {
+    "file_formats": [
+      "tiff",
+      "png",
+      "tar.xz"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as separate tar.xz archives per category containing multi-channel 3D TIFF coordinates and RGB images; aggregate payload size is not published as a single figure."
+  },
+  "sample_count": {
+    "total": 4147,
+    "splits": {
+      "train": 2658,
+      "val": 294,
+      "test": 1195
+    },
+    "unit": "scans",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-12-14",
+    "last_updated": "2022-02-06"
+  },
+  "citation": {
+    "paper_title": "The MVTec 3D-AD Dataset for Unsupervised 3D Anomaly Detection and Localization",
+    "paper_url": "https://doi.org/10.5220/0010865000003124",
+    "authors": [
+      "Paul Bergmann",
+      "Xin Jin",
+      "David Sattlegger",
+      "Carsten Steger"
+    ],
+    "doi": "10.5220/0010865000003124"
+  },
+  "geographic_coverage": [
+    "Germany"
+  ],
+  "provenance": {
+    "collection_method": "Scanned with an industrial-grade structured-light 3D sensor capturing organized 3D point coordinates alongside registered 2D RGB image data.",
+    "curation_notes": "Ground-truth masks delineate both surface imperfections (scratches, dents, contamination) and 3D structural shape deformations.",
+    "data_sources": [
+      "MVTec Software GmbH Research & Teaching Portal"
+    ]
+  }
+}

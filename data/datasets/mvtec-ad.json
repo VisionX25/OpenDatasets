@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mvtec-ad",
+  "slug": "mvtec-ad",
+  "name": "MVTec AD: MVTec Anomaly Detection Dataset",
+  "description": "Foundational benchmark dataset for unsupervised visual anomaly detection and localization in industrial quality inspection. Contains 5,354 high-resolution color images across 15 real-world industrial categories (5 textures and 10 objects). Provides 3,629 anomaly-free images for training and 1,725 test images (467 normal and 1,258 defective) showcasing 73 different defect types with pixel-precise ground truth segmentation masks.",
+  "homepage_url": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+  "publisher": {
+    "name": "MVTec Software GmbH",
+    "type": "industry",
+    "url": "https://www.mvtec.com/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "image-segmentation"
+  ],
+  "tags": [
+    "industrial-inspection",
+    "anomaly-detection",
+    "anomaly-localization",
+    "visual-inspection",
+    "unsupervised-learning",
+    "defect-segmentation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under CC BY-NC-SA 4.0 for non-commercial scientific research and educational purposes."
+  },
+  "source_references": [
+    {
+      "title": "MVTec AD Official Dataset Landing Page",
+      "url": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "type": "official_website",
+      "notes": "Official portal hosted by MVTec Software GmbH with direct download archives and category documentation."
+    },
+    {
+      "title": "MVTec AD — A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection",
+      "url": "https://doi.org/10.1109/CVPR.2019.00982",
+      "type": "original_paper",
+      "notes": "Conference publication in CVPR 2019 introducing the MVTec AD benchmark."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against MVTec official research portal and IEEE CVPR 2019 proceedings (DOI: 10.1109/CVPR.2019.00982)."
+  },
+  "size": {
+    "amount": 4.9,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "tar.xz"
+    ],
+    "status": "verified",
+    "notes": "Published compressed tar.xz archive size is approximately 4.9 GB."
+  },
+  "sample_count": {
+    "total": 5354,
+    "splits": {
+      "train": 3629,
+      "test": 1725
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-06-16",
+    "last_updated": "2021-03-24"
+  },
+  "citation": {
+    "paper_title": "MVTec AD — A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection",
+    "paper_url": "https://doi.org/10.1109/CVPR.2019.00982",
+    "authors": [
+      "Paul Bergmann",
+      "Michael Fauser",
+      "David Sattlegger",
+      "Carsten Steger"
+    ],
+    "doi": "10.1109/CVPR.2019.00982"
+  },
+  "geographic_coverage": [
+    "Germany"
+  ],
+  "provenance": {
+    "collection_method": "High-resolution color images captured with industrial sensors under controlled lighting conditions across 15 manufactured object and texture categories.",
+    "curation_notes": "Defect types encompass real and realistic scratches, dents, contaminations, cracks, and structural flaws. Pixel-precise binary masks accompany each anomalous test image.",
+    "data_sources": [
+      "MVTec Software GmbH Research & Teaching Portal"
+    ]
+  }
+}

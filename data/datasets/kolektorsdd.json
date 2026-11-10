@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "kolektorsdd",
+  "slug": "kolektorsdd",
+  "name": "KolektorSDD: Kolektor Surface-Defect Dataset",
+  "description": "Surface-defect detection and segmentation benchmark consisting of 399 microscopic images of electrical commutators captured in an active manufacturing line by Kolektor Group. Features 52 images containing fractured surfaces, microscopic cracks, and scratches with pixel-accurate ground truth segmentation masks, and 347 defect-free images.",
+  "homepage_url": "https://www.vicos.si/resources/kolektorsdd/",
+  "publisher": {
+    "name": "University of Ljubljana (ViCoS Lab) / Kolektor Group",
+    "type": "academic",
+    "url": "https://www.vicos.si/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "defect-detection",
+    "anomaly-detection",
+    "image-segmentation"
+  ],
+  "tags": [
+    "surface-defect",
+    "industrial-inspection",
+    "manufacturing",
+    "microscopic-inspection",
+    "defect-segmentation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under CC BY-NC-SA 4.0 for non-commercial academic research; commercial inquiries require contacting the ViCoS Laboratory."
+  },
+  "source_references": [
+    {
+      "title": "KolektorSDD ViCoS Resource Page",
+      "url": "https://www.vicos.si/resources/kolektorsdd/",
+      "type": "official_website",
+      "notes": "Official university portal hosted by Visual Cognitive Systems Laboratory, University of Ljubljana."
+    },
+    {
+      "title": "Segmentation-Based Deep-Learning Approach for Surface-Defect Detection",
+      "url": "https://doi.org/10.1007/s10845-019-01476-x",
+      "type": "original_paper",
+      "notes": "Journal of Intelligent Manufacturing (2020) publication introducing the KolektorSDD dataset and segmentation architecture."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against University of Ljubljana ViCoS portal and Journal of Intelligent Manufacturing (DOI: 10.1007/s10845-019-01476-x)."
+  },
+  "size": {
+    "file_formats": [
+      "jpg",
+      "png",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as a zip package hosted on the University of Ljubljana ViCoS laboratory servers."
+  },
+  "sample_count": {
+    "total": 399,
+    "splits": {
+      "defective": 52,
+      "non_defective": 347
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-04-12",
+    "last_updated": "2020-03-01"
+  },
+  "citation": {
+    "paper_title": "Segmentation-Based Deep-Learning Approach for Surface-Defect Detection",
+    "paper_url": "https://doi.org/10.1007/s10845-019-01476-x",
+    "authors": [
+      "Domen Tabernik",
+      "Samo Šela",
+      "Jure Skvarč",
+      "Danijel Skočaj"
+    ],
+    "doi": "10.1007/s10845-019-01476-x"
+  },
+  "geographic_coverage": [
+    "Slovenia"
+  ],
+  "provenance": {
+    "collection_method": "High-precision microscopic cameras in a controlled industrial automated optical inspection cell installed by Kolektor Group d.o.o.",
+    "curation_notes": "Annotated by machine vision inspection experts with fine pixel-level segmentation masks delineating fractured surfaces and cracks.",
+    "data_sources": [
+      "Kolektor Group d.o.o. production lines"
+    ]
+  }
+}

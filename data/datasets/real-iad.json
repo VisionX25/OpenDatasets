@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "real-iad",
+  "slug": "real-iad",
+  "name": "Real-IAD: Real-World Multi-View Industrial Anomaly Detection Dataset",
+  "description": "Large-scale, practical industrial anomaly detection dataset consisting of 150,000 high-resolution images across 30 real-world production objects captured from five synchronized camera viewpoints to simulate automated optical inspection (AOI) lines. Features diverse defect types (pits, deformation, abrasions, scratches, contamination, missing parts) with pixel-level ground truth masks, supporting unsupervised and fully unsupervised industrial anomaly detection (FUIAD).",
+  "homepage_url": "https://realiad4ad.github.io/Real-IAD/",
+  "publisher": {
+    "name": "Fudan University / Rongcheer Co., Ltd.",
+    "type": "academic",
+    "url": "https://realiad4ad.github.io/Real-IAD/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "image-segmentation"
+  ],
+  "tags": [
+    "industrial-inspection",
+    "multi-view",
+    "optical-inspection",
+    "manufacturing",
+    "anomaly-detection",
+    "defect-segmentation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under CC BY-NC-SA 4.0 for non-commercial scientific research purposes via Hugging Face conditions acceptance."
+  },
+  "source_references": [
+    {
+      "title": "Real-IAD Official Project Page",
+      "url": "https://realiad4ad.github.io/Real-IAD/",
+      "type": "official_website",
+      "notes": "Project landing page with documentation, object showcase, and benchmark metrics."
+    },
+    {
+      "title": "Real-IAD Hugging Face Repository",
+      "url": "https://huggingface.co/datasets/Real-IAD/Real-IAD",
+      "type": "repository",
+      "notes": "Author-maintained Hugging Face dataset repository distributing raw high-resolution and 1024x1024 packages."
+    },
+    {
+      "title": "Real-IAD: A Real-World Multi-View Dataset for Benchmarking Versatile Industrial Anomaly Detection",
+      "url": "https://doi.org/10.1109/CVPR52733.2024.01607",
+      "type": "original_paper",
+      "notes": "IEEE CVPR 2024 conference paper introducing the multi-view acquisition methodology and benchmarking suite."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against IEEE CVPR 2024 proceedings (DOI: 10.1109/CVPR52733.2024.01607) and author Hugging Face repository."
+  },
+  "size": {
+    "amount": 507.0,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "png",
+      "json",
+      "zip"
+    ],
+    "status": "verified",
+    "notes": "Full raw high-resolution dataset archive is ~507 GB; downsampled 1024x1024 version is ~53 GB."
+  },
+  "sample_count": {
+    "total": 150000,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2024-03-19",
+    "last_updated": "2024-06-17"
+  },
+  "citation": {
+    "paper_title": "Real-IAD: A Real-World Multi-View Dataset for Benchmarking Versatile Industrial Anomaly Detection",
+    "paper_url": "https://doi.org/10.1109/CVPR52733.2024.01607",
+    "authors": [
+      "Chengjie Wang",
+      "Wenbing Zhu",
+      "Bin-Bin Gao",
+      "Zhenye Gan",
+      "Jiangning Zhang",
+      "Zhihao Gu",
+      "Shuguang Qian",
+      "Mingang Chen",
+      "Lizhuang Ma"
+    ],
+    "doi": "10.1109/CVPR52733.2024.01607"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "Multi-view industrial imaging rig using 5 synchronized cameras (C1–C5) capturing 30 diverse industrial objects under real factory line conditions.",
+    "curation_notes": "Annotated with precise pixel-level masks for defects covering various area ratios from subtle abrasions to severe structural deformations.",
+    "data_sources": [
+      "Rongcheer Co., Ltd. automated optical inspection production lines"
+    ]
+  }
+}

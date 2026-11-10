@@ -91,6 +91,214 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "3cad-3c-product-anomaly-detection",
+    "slug": "3cad-3c-product-anomaly-detection",
+    "name": "3CAD: Large-Scale Real-World 3C Product Dataset for Anomaly Detection",
+    "description": "Large-scale real-world industrial anomaly detection benchmark comprising 27,039 high-resolution images across eight categories of manufactured 3C product parts (Aluminum Camera Cover, Aluminum iPad, Aluminum Middle Frame, Aluminum New Middle Frame, Aluminum New iPad, Aluminum PC, Copper Stator, and Iron Stator). Accumulated from active industrial production lines, providing 10,493 normal training images and 16,546 test images (5,084 normal, 11,462 defective) annotated with pixel-precise masks for 47 defect types.",
+    "homepage_url": "https://github.com/ShuCvlab/3CAD",
+    "publisher": {
+      "name": "Shanghai University",
+      "type": "academic",
+      "url": "https://github.com/ShuCvlab"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "image-segmentation"
+    ],
+    "tags": [
+      "consumer-electronics",
+      "3c-manufacturing",
+      "industrial-inspection",
+      "anomaly-detection",
+      "defect-segmentation",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
+      "spdx_id": null,
+      "url": "https://github.com/ShuCvlab/3CAD",
+      "commercial_use": "unknown",
+      "notes": "Shared via GitHub repository ShuCvlab/3CAD for academic research; no formal open-source license file is provided in the repository."
+    },
+    "source_references": [
+      {
+        "title": "3CAD Official GitHub Repository",
+        "url": "https://github.com/ShuCvlab/3CAD",
+        "type": "repository",
+        "notes": "Official repository with dataset download links (Google Drive and Baidu Netdisk), benchmark scripts, and documentation."
+      },
+      {
+        "title": "3CAD: A Large-Scale Real-World 3C Product Dataset for Unsupervised Anomaly Detection",
+        "url": "https://arxiv.org/abs/2502.05761",
+        "type": "original_paper",
+        "notes": "AAAI 2025 conference publication introducing the 3CAD dataset and the CFRG anomaly detection framework."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against AAAI 2025 proceedings, arXiv:2502.05761, and official ShuCvlab GitHub repository."
+    },
+    "size": {
+      "file_formats": [
+        "png",
+        "jpg",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Dataset is distributed across category-specific zip archives via Google Drive and Baidu Netdisk."
+    },
+    "sample_count": {
+      "total": 27039,
+      "splits": {
+        "train": 10493,
+        "test_normal": 5084,
+        "test_abnormal": 11462
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2025-02-09"
+    },
+    "citation": {
+      "paper_title": "3CAD: A Large-Scale Real-World 3C Product Dataset for Unsupervised Anomaly Detection",
+      "paper_url": "https://arxiv.org/abs/2502.05761",
+      "authors": [
+        "Enquan Yang",
+        "Peng Xing",
+        "Hanyang Sun",
+        "Wenbo Guo",
+        "Yuanwei Ma",
+        "Zechao Li",
+        "Dan Zeng"
+      ],
+      "doi": "10.48550/arXiv.2502.05761"
+    },
+    "geographic_coverage": [
+      "China"
+    ],
+    "provenance": {
+      "collection_method": "High-resolution machine vision cameras on active consumer electronics production lines inspecting metallic housings, covers, and stator coils.",
+      "curation_notes": "Defective images feature between 1 and 23 anomalous regions and up to 4 distinct coexisting defect classes per image, accompanied by pixel-precise segmentation masks.",
+      "data_sources": [
+        "Shanghai University Computer Vision Laboratory / 3C manufacturing production lines"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "3d-adam",
+    "slug": "3d-adam",
+    "name": "3D-ADAM: 3D Anomaly Detection in Additive Manufacturing",
+    "description": "Large-scale RGB-D and 3D point cloud anomaly detection dataset for additive manufacturing quality control, comprising 14,120 multi-sensor depth scans across 217 unique manufactured parts. Captured using four industrial depth-imaging sensors under diverse poses, lighting, and viewing angles, annotated with 27,346 defect instances across 12 industrial surface defect categories and 8,110 mechanical element features.",
+    "homepage_url": "https://huggingface.co/datasets/pmchard/3D-ADAM",
+    "publisher": {
+      "name": "University of Glasgow / HAL Robotics",
+      "type": "academic",
+      "url": "https://huggingface.co/pmchard"
+    },
+    "modalities": [
+      "vision",
+      "3d"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "3d-anomaly-detection"
+    ],
+    "tags": [
+      "additive-manufacturing",
+      "3d-printing",
+      "depth-scans",
+      "industrial-inspection",
+      "multi-sensor",
+      "anomaly-detection",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Published on Hugging Face under CC BY-NC-SA 4.0 for non-commercial research."
+    },
+    "source_references": [
+      {
+        "title": "3D-ADAM Hugging Face Dataset Repository",
+        "url": "https://huggingface.co/datasets/pmchard/3D-ADAM",
+        "type": "repository",
+        "notes": "Official repository on Hugging Face distributing raw 3D scans, RGB-D views, and defect annotations."
+      },
+      {
+        "title": "3D-ADAM Benchmark Code Repository",
+        "url": "https://github.com/PaulMcHard/3D-ADAMBench",
+        "type": "repository",
+        "notes": "Evaluation repository supporting TransFusion and Anomalib model baselines."
+      },
+      {
+        "title": "3D-ADAM: A Dataset for 3D Anomaly Detection in Additive Manufacturing",
+        "url": "https://doi.org/10.1109/ICRA57385.2026.11697283",
+        "type": "original_paper",
+        "notes": "IEEE ICRA 2026 conference publication introducing the additive manufacturing 3D anomaly detection benchmark."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against Hugging Face repository pmchard/3D-ADAM and IEEE ICRA 2026 proceedings (DOI: 10.1109/ICRA57385.2026.11697283)."
+    },
+    "size": {
+      "file_formats": [
+        "ply",
+        "pcd",
+        "png",
+        "json"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as individual part-level directories and zip packages on Hugging Face."
+    },
+    "sample_count": {
+      "total": 14120,
+      "unit": "scans",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2025-07-15",
+      "last_updated": "2026-03-01"
+    },
+    "citation": {
+      "paper_title": "3D-ADAM: A Dataset for 3D Anomaly Detection in Additive Manufacturing",
+      "paper_url": "https://doi.org/10.1109/ICRA57385.2026.11697283",
+      "authors": [
+        "Paul McHard",
+        "Gordon Dobie",
+        "Charles MacLeod",
+        "David Flynn"
+      ],
+      "doi": "10.1109/ICRA57385.2026.11697283"
+    },
+    "geographic_coverage": [
+      "United Kingdom"
+    ],
+    "provenance": {
+      "collection_method": "Multi-sensor robotic scanning rig equipped with four distinct industrial depth sensors imaging 217 additive manufacturing components.",
+      "curation_notes": "Defect annotations span 12 categories: stringing, warping, under-extrusion, layer shifting, gaps, blobs, surface cracks, pitting, dimensional inaccuracy, burnt filament, delamination, and porosity.",
+      "data_sources": [
+        "University of Glasgow Centre for Additive Manufacturing / HAL Robotics"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "a2d2-audi-autonomous-driving",
     "slug": "a2d2-audi-autonomous-driving",
     "name": "A2D2 — Audi Autonomous Driving Dataset",
@@ -1405,6 +1613,105 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "aitex-fabric-image-database",
+    "slug": "aitex-fabric-image-database",
+    "name": "AFID: AITEX Fabric Image Database",
+    "description": "Public textile fabric surface defect detection benchmark comprising 245 high-resolution textile images (4096x256 resolution) across seven distinct fabric types. Created by the Spanish Textile Industry Research Association (AITEX) and Universitat Politècnica de València, containing 140 defect-free images (20 per fabric) and 105 defective images spanning twelve typical textile manufacturing flaws with binary pixel-level ground truth masks.",
+    "homepage_url": "https://www.aitex.es/afid/",
+    "publisher": {
+      "name": "AITEX / Universitat Politècnica de València",
+      "type": "academic",
+      "url": "https://www.aitex.es/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "defect-detection",
+      "defect-segmentation",
+      "image-segmentation"
+    ],
+    "tags": [
+      "textile-inspection",
+      "fabric-defect",
+      "weaving-flaws",
+      "surface-defect",
+      "automated-inspection",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
+      "spdx_id": "CC-BY-NC-ND-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Distributed by AITEX for non-commercial academic research and benchmarking."
+    },
+    "source_references": [
+      {
+        "title": "AITEX AFID Official Landing Page",
+        "url": "https://www.aitex.es/afid/",
+        "type": "official_website",
+        "notes": "Official research portal by Textile Industry Research Association (AITEX) providing direct access to the database."
+      },
+      {
+        "title": "AFID: a public fabric image database for defect detection",
+        "url": "https://doi.org/10.2478/aut-2019-0035",
+        "type": "original_paper",
+        "notes": "AUTEX Research Journal (2019) publication describing acquisition setup, textile defect taxonomy, and ground truth generation."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against AITEX official portal and AUTEX Research Journal (DOI: 10.2478/aut-2019-0035)."
+    },
+    "size": {
+      "file_formats": [
+        "png",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as downloadable ZIP archives per fabric category from the AITEX research portal."
+    },
+    "sample_count": {
+      "total": 245,
+      "splits": {
+        "defect_free": 140,
+        "defective": 105
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-12-01"
+    },
+    "citation": {
+      "paper_title": "AFID: a public fabric image database for defect detection",
+      "paper_url": "https://doi.org/10.2478/aut-2019-0035",
+      "authors": [
+        "Javier Silvestre-Blanes",
+        "Teresa Albero-Albero",
+        "Ignacio Miralles",
+        "Rubén Pérez-Llorens",
+        "Jorge Moreno"
+      ],
+      "doi": "10.2478/aut-2019-0035"
+    },
+    "geographic_coverage": [
+      "Spain"
+    ],
+    "provenance": {
+      "collection_method": "High-resolution linear camera system capturing 4096-pixel wide web fabric swatches moving continuously through a controlled textile inspection backlighting rig.",
+      "curation_notes": "Encompasses 12 defect classes: broken ends, broken picks, weft curling, fuzzyballs, cut selvage, creases, warp balls, knots, contamination, neps, and weft cracks.",
+      "data_sources": [
+        "AITEX Textile Industry Research Association laboratory looms"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ami-meeting-corpus",
     "slug": "ami-meeting-corpus",
     "name": "AMI Meeting Corpus",
@@ -1758,6 +2065,105 @@
         "Carvalho, Ricardo"
       ],
       "doi": "10.17632/kg6gc5sx7y.1"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "anomaly-shapenet",
+    "slug": "anomaly-shapenet",
+    "name": "Anomaly-ShapeNet: 3D Point Cloud Anomaly Detection Benchmark",
+    "description": "Large-scale 3D point cloud anomaly detection benchmark derived from ShapeNetCore, comprising 1,600 point cloud models across 40 object categories (later expanded to 50 categories). Features five distinct types of synthesized physical anomalies (bulge, concavity, crack, hole, and broken parts) with point-level ground truth binary masks for benchmarking self-supervised 3D anomaly detection and localization.",
+    "homepage_url": "https://github.com/Chopper-233/Anomaly-ShapeNet",
+    "publisher": {
+      "name": "ShanghaiTech University",
+      "type": "academic",
+      "url": "https://github.com/Chopper-233"
+    },
+    "modalities": [
+      "vision",
+      "3d"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "3d-anomaly-detection"
+    ],
+    "tags": [
+      "3d-vision",
+      "point-cloud",
+      "synthetic-anomalies",
+      "shapenet",
+      "anomaly-detection",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "ShapeNet Terms of Use",
+      "spdx_id": null,
+      "url": "https://shapenet.org/terms",
+      "commercial_use": "forbidden",
+      "notes": "Derived from ShapeNetCore 3D models; usage is governed by ShapeNet terms for non-commercial academic research."
+    },
+    "source_references": [
+      {
+        "title": "Anomaly-ShapeNet Official GitHub Repository",
+        "url": "https://github.com/Chopper-233/Anomaly-ShapeNet",
+        "type": "repository",
+        "notes": "Official repository with dataset download links (Google Drive and Baidu Netdisk), generation scripts, and baseline IMRNet code."
+      },
+      {
+        "title": "Towards Scalable 3D Anomaly Detection and Localization: A Benchmark via 3D Anomaly Synthesis and A Self-Supervised Learning Network",
+        "url": "https://doi.org/10.1109/CVPR52733.2024.01990",
+        "type": "original_paper",
+        "notes": "IEEE CVPR 2024 conference publication introducing the Anomaly-ShapeNet benchmark and anomaly synthesis pipeline."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against IEEE CVPR 2024 proceedings (DOI: 10.1109/CVPR52733.2024.01990) and author GitHub repository."
+    },
+    "size": {
+      "file_formats": [
+        "h5",
+        "ply",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as downloadable zip archives containing point cloud models and ground-truth H5 files via Google Drive and Baidu Netdisk."
+    },
+    "sample_count": {
+      "total": 1600,
+      "unit": "point clouds",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2024-03-20",
+      "last_updated": "2024-06-18"
+    },
+    "citation": {
+      "paper_title": "Towards Scalable 3D Anomaly Detection and Localization: A Benchmark via 3D Anomaly Synthesis and A Self-Supervised Learning Network",
+      "paper_url": "https://doi.org/10.1109/CVPR52733.2024.01990",
+      "authors": [
+        "Wenqiao Li",
+        "Xiaohao Xu",
+        "Yao Gu",
+        "Bozhong Zheng",
+        "Shenghua Gao",
+        "Yingna Wu"
+      ],
+      "doi": "10.1109/CVPR52733.2024.01990"
+    },
+    "geographic_coverage": [
+      "China"
+    ],
+    "provenance": {
+      "collection_method": "Synthesized 3D defect generation pipeline applying realistic physical deformations onto canonical 3D computer models from ShapeNetCore.",
+      "curation_notes": "Point-level annotations delineate five anomaly types (bulge, concavity, crack, hole, broken) with exact vertex-level coordinate correspondence.",
+      "data_sources": [
+        "ShapeNetCore 3D object models / ShanghaiTech University"
+      ]
     }
   },
   {
@@ -7956,6 +8362,120 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "btad-beantech-anomaly-detection",
+    "slug": "btad-beantech-anomaly-detection",
+    "name": "BTAD: beanTech Anomaly Detection Dataset",
+    "description": "Industrial image anomaly detection and localization benchmark comprising 2,540 high-resolution images across three manufactured industrial products (01: 470 images at 1600x1600, 02: 629 images at 600x600, 03: 1,441 images at 800x600). Captured via factory acquisition systems from beanTech srl, featuring 1,799 defect-free training images and 741 test images (451 normal, 290 anomalous paired with 290 pixel-precise ground truth defect masks, totaling 2,830 image-file assets in the official distribution).",
+    "homepage_url": "https://github.com/pankajmishra000/VT-ADL",
+    "publisher": {
+      "name": "University of Udine / beanTech srl",
+      "type": "academic",
+      "url": "http://avires.dimi.uniud.it/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "image-segmentation"
+    ],
+    "tags": [
+      "industrial-inspection",
+      "surface-defect",
+      "manufacturing",
+      "vision-transformer",
+      "anomaly-detection",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed by authors under CC-BY-SA terms for open academic and benchmark research."
+    },
+    "source_references": [
+      {
+        "title": "VT-ADL & BTAD Dataset GitHub Repository",
+        "url": "https://github.com/pankajmishra000/VT-ADL",
+        "type": "repository",
+        "notes": "Author repository containing model code and direct download links to the BTAD benchmark archive."
+      },
+      {
+        "title": "University of Udine AVIRES Lab BTAD Archive Download",
+        "url": "http://avires.dimi.uniud.it/papers/btad/btad.zip",
+        "type": "archive",
+        "notes": "Primary university archive hosting the complete BTAD dataset distribution."
+      },
+      {
+        "title": "VT-ADL: A Vision Transformer Network for Image Anomaly Detection and Localization",
+        "url": "https://doi.org/10.1109/ISIE45552.2021.9576231",
+        "type": "original_paper",
+        "notes": "IEEE ISIE 2021 conference publication introducing VT-ADL and the BTAD dataset."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against IEEE ISIE 2021 proceedings (DOI: 10.1109/ISIE45552.2021.9576231) and University of Udine archive manifest."
+    },
+    "size": {
+      "amount": 1.23,
+      "unit": "GB",
+      "file_formats": [
+        "bmp",
+        "png",
+        "zip"
+      ],
+      "status": "verified",
+      "notes": "The official distribution archive btad.zip hosted by the University of Udine (avires.dimi.uniud.it) is 1,229,193,337 bytes (~1.23 GB)."
+    },
+    "sample_count": {
+      "total": 2540,
+      "splits": {
+        "train": 1799,
+        "test": 741,
+        "train_01": 400,
+        "test_01": 70,
+        "train_02": 399,
+        "test_02": 230,
+        "train_03": 1000,
+        "test_03": 441
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021-04-20"
+    },
+    "citation": {
+      "paper_title": "VT-ADL: A Vision Transformer Network for Image Anomaly Detection and Localization",
+      "paper_url": "https://doi.org/10.1109/ISIE45552.2021.9576231",
+      "authors": [
+        "Pankaj Mishra",
+        "Riccardo Verk",
+        "Daniele Fornasier",
+        "Claudio Piciarelli",
+        "Gian Luca Foresti"
+      ],
+      "doi": "10.1109/ISIE45552.2021.9576231"
+    },
+    "geographic_coverage": [
+      "Italy"
+    ],
+    "provenance": {
+      "collection_method": "High-resolution industrial machine vision inspection systems operated by beanTech srl.",
+      "curation_notes": "The official BTAD archive (btad.zip) contains exactly 2,540 product images partitioned into 1,799 training images (all defect-free: 400 in 01, 399 in 02, 1,000 in 03) and 741 test images (451 normal, 290 anomalous: 70 in 01 [21 normal, 49 anomalous], 230 in 02 [30 normal, 200 anomalous], 441 in 03 [400 normal, 41 anomalous]). Accompanying the 290 anomalous test images are 290 pixel-level binary ground truth masks (49 in 01, 200 in 02, 41 in 03), bringing the aggregate image-file count in the distribution to exactly 2,830 (2,540 product images + 290 masks). Literature citing 1,799 describes the training subset only; literature citing 2,830 counts all image files including binary masks; 2,540 is the verified physical product image total.",
+      "data_sources": [
+        "beanTech srl industrial manufacturing inspection systems"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bus-bra",
     "slug": "bus-bra",
     "name": "BUS-BRA: Breast Ultrasound Dataset with BI-RADS Categories",
@@ -12362,6 +12882,103 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "dagm-2007-industrial-optical-inspection",
+    "slug": "dagm-2007-industrial-optical-inspection",
+    "name": "DAGM 2007: Industrial Optical Inspection Benchmark",
+    "description": "Foundational synthetic texture defect detection benchmark created for the DAGM 2007 symposium competition (Weakly Supervised Learning for Industrial Optical Inspection) by Heidelberg Collaboratory for Image Processing and Robert Bosch GmbH. Comprises 16,100 grayscale images (512x512 resolution) across 10 distinct classes: Classes 1 to 6 (development set: 6,900 images) and Classes 7 to 10 (competition set: 9,200 images), featuring subtle surface anomalies labeled by bounding ellipses against stochastic textured backgrounds.",
+    "homepage_url": "https://conferences.mpi-inf.mpg.de/dagm/2007/prizes.html",
+    "publisher": {
+      "name": "German Association for Pattern Recognition (DAGM) / Heidelberg University",
+      "type": "academic",
+      "url": "https://conferences.mpi-inf.mpg.de/dagm/2007/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "defect-detection",
+      "image-segmentation"
+    ],
+    "tags": [
+      "industrial-inspection",
+      "texture-defect",
+      "synthetic-anomalies",
+      "weakly-supervised",
+      "surface-inspection",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
+      "spdx_id": null,
+      "url": "https://conferences.mpi-inf.mpg.de/dagm/2007/prizes.html",
+      "commercial_use": "unknown",
+      "notes": "Distributed for the DAGM 2007 competition; no formal open-source license agreement was specified in the distribution."
+    },
+    "source_references": [
+      {
+        "title": "DAGM 2007 Competition Official Homepage",
+        "url": "https://conferences.mpi-inf.mpg.de/dagm/2007/prizes.html",
+        "type": "official_website",
+        "notes": "Symposium portal hosting the competition guidelines, dataset descriptions, and historical archives."
+      },
+      {
+        "title": "Weakly Supervised Learning for Industrial Optical Inspection",
+        "url": "https://conferences.mpi-inf.mpg.de/dagm/2007/",
+        "type": "original_paper",
+        "notes": "Symposium competition overview paper by Wieler, Hahn, and Hamprecht introducing the textured benchmark."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against DAGM 2007 symposium archives and Heidelberg Collaboratory for Image Processing records."
+    },
+    "size": {
+      "file_formats": [
+        "png",
+        "txt",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as separate development and competition class archives; total aggregate payload is not authoritatively published."
+    },
+    "sample_count": {
+      "total": 16100,
+      "splits": {
+        "development_classes_1_to_6": 6900,
+        "competition_classes_7_to_10": 9200
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2007-09-12"
+    },
+    "citation": {
+      "paper_title": "Weakly Supervised Learning for Industrial Optical Inspection",
+      "paper_url": "https://conferences.mpi-inf.mpg.de/dagm/2007/prizes.html",
+      "authors": [
+        "Matthias Wieler",
+        "Tobias Hahn",
+        "Fred A. Hamprecht"
+      ]
+    },
+    "geographic_coverage": [
+      "Germany"
+    ],
+    "provenance": {
+      "collection_method": "Synthesized texture images generated by statistical texture models with embedded structural anomalies resembling scratches, stains, and material inclusions.",
+      "curation_notes": "Classes 1–6 each contain 1,000 background images and 150 defective images (1,150 per class). Classes 7–10 each contain 2,000 background images and 300 defective images (2,300 per class). Defective regions are annotated with bounding ellipses.",
+      "data_sources": [
+        "Heidelberg Collaboratory for Image Processing / Robert Bosch GmbH"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "dair-v2x",
     "slug": "dair-v2x",
     "name": "DAIR-V2X — Vehicle-Infrastructure Cooperative Dataset",
@@ -12915,6 +13532,104 @@
       ],
       "doi": "10.1117/1.JMI.5.3.036501",
       "bibtex": "@article{yan2018deeplesion,\n  title={DeepLesion: automated mining of large-scale lesion annotations and universal lesion detection with deep learning},\n  author={Yan, Ke and Wang, Xiaosong and Lu, Le and Summers, Ronald M.},\n  journal={Journal of Medical Imaging},\n  volume={5},\n  number={3},\n  pages={036501},\n  year={2018},\n  doi={10.1117/1.JMI.5.3.036501}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "deeppcb",
+    "slug": "deeppcb",
+    "name": "DeepPCB: A Printed Circuit Board Defect Detection Dataset",
+    "description": "Printed circuit board defect detection dataset comprising 1,500 aligned image pairs (3,000 images total, each pair consisting of a defect-free template image and an aligned tested image at 640x640 resolution) obtained via industrial linear-scan CCD cameras at 48 pixels/mm. Features bounding-box annotations across six common PCB defect types: open circuit, short, mousebite, spur, pinhole, and spurious copper.",
+    "homepage_url": "https://github.com/tangsanli5201/DeepPCB",
+    "publisher": {
+      "name": "Tsinghua University",
+      "type": "academic",
+      "url": "https://www.tsinghua.edu.cn/en/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "defect-detection",
+      "object-detection"
+    ],
+    "tags": [
+      "pcb-inspection",
+      "electronics-manufacturing",
+      "defect-detection",
+      "circuit-board",
+      "image-registration",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
+      "spdx_id": null,
+      "url": "https://github.com/tangsanli5201/DeepPCB",
+      "commercial_use": "forbidden",
+      "notes": "Code repository contains an MIT license file, but the author README explicitly restricts dataset usage: 'You can only use this dataset for research purpose.'"
+    },
+    "source_references": [
+      {
+        "title": "DeepPCB Official GitHub Repository",
+        "url": "https://github.com/tangsanli5201/DeepPCB",
+        "type": "repository",
+        "notes": "Official repository containing image pairs, ground truth annotation text files, and evaluation scripts."
+      },
+      {
+        "title": "On-line PCB Defect Detector On A New PCB Defect Dataset",
+        "url": "https://arxiv.org/abs/1902.06197",
+        "type": "original_paper",
+        "notes": "Original preprint introducing the 1,500 pair DeepPCB dataset, CCD collection pipeline, and real-time detection model."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against author GitHub repository and arXiv preprint 1902.06197."
+    },
+    "size": {
+      "file_formats": [
+        "jpg",
+        "txt",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as downloadable zip packages across repository directories containing aligned template and tested image pairs."
+    },
+    "sample_count": {
+      "total": 1500,
+      "splits": {
+        "train": 1000,
+        "test": 500
+      },
+      "unit": "image pairs",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-02-17"
+    },
+    "citation": {
+      "paper_title": "On-line PCB Defect Detector On A New PCB Defect Dataset",
+      "paper_url": "https://arxiv.org/abs/1902.06197",
+      "authors": [
+        "Sanli Tang",
+        "Fang He",
+        "Xiaoqing Liu",
+        "Weihua Li"
+      ],
+      "doi": "10.48550/arXiv.1902.06197"
+    },
+    "geographic_coverage": [
+      "China"
+    ],
+    "provenance": {
+      "collection_method": "High-precision linear scan CCD camera capturing 16k x 16k raw PCB images at 48 pixels/mm, cropped into aligned 640x640 binarized sub-images.",
+      "curation_notes": "Annotated with class-labeled axis-aligned bounding boxes for 6 defect categories: open, short, mousebite, spur, spurious copper, and pin-hole.",
+      "data_sources": [
+        "Tsinghua University Department of Automation"
+      ]
     }
   },
   {
@@ -15854,6 +16569,118 @@
       "curation_notes": "Captures 70,000 vehicle trajectories over 16 hours of video across acceleration and deceleration lanes, highlighting high-speed merging and lane-change interactions.",
       "data_sources": [
         "High-resolution drone video footage"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "eyecandies",
+    "slug": "eyecandies",
+    "name": "Eyecandies: Synthetic Multimodal Industrial Anomaly Detection Dataset",
+    "description": "Synthetic multimodal industrial inspection benchmark comprising 15,500 object samples (yielding 93,000 rendered images) across 10 candy classes moving on an industrial conveyor scenario. Procedurally rendered with BlenderProc, each sample provides registered multimodal captures including six distinct spotlight illumination conditions, metric depth maps, surface normal maps, and pixel-precise ground truth defect masks.",
+    "homepage_url": "https://eyecan-ai.github.io/eyecandies/",
+    "publisher": {
+      "name": "Eyecan.ai / University of Bologna",
+      "type": "industry",
+      "url": "https://www.eyecan.ai/"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "multimodal"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "image-segmentation"
+    ],
+    "tags": [
+      "multimodal",
+      "photorealistic-rendering",
+      "synthetic-data",
+      "depth-maps",
+      "normal-maps",
+      "industrial-conveyor",
+      "anomaly-detection",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
+      "spdx_id": null,
+      "url": "https://eyecan-ai.github.io/eyecandies/",
+      "commercial_use": "unknown",
+      "notes": "Software in repository is GPLv3; underlying dataset download is distributed by Eyecan.ai for research with no explicit license declared."
+    },
+    "source_references": [
+      {
+        "title": "Eyecandies Official Project Page",
+        "url": "https://eyecan-ai.github.io/eyecandies/",
+        "type": "official_website",
+        "notes": "Official benchmark portal with dataset documentation, class visualizer, and download instructions."
+      },
+      {
+        "title": "Eyecandies GitHub Code and Dataloader Repository",
+        "url": "https://github.com/eyecan-ai/eyecandies",
+        "type": "repository",
+        "notes": "Official repository providing PyTorch and Pipelime dataloaders and benchmark pipelines."
+      },
+      {
+        "title": "The Eyecandies Dataset for Unsupervised Multimodal Anomaly Detection and Localization",
+        "url": "https://doi.org/10.1007/978-3-031-26316-2_26",
+        "type": "original_paper",
+        "notes": "ACCV 2022 conference publication introducing the procedural generation pipeline and multimodal baseline evaluations."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against Eyecan.ai project portal and Springer ACCV 2022 proceedings (DOI: 10.1007/978-3-031-26316-2_26)."
+    },
+    "size": {
+      "file_formats": [
+        "png",
+        "exr",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as separate ZIP archives per class containing RGB renders, metric depth EXR files, and normal maps via Google Drive."
+    },
+    "sample_count": {
+      "total": 15500,
+      "splits": {
+        "train": 10000,
+        "val": 1000,
+        "test_public": 500,
+        "test_private": 4000
+      },
+      "unit": "samples",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022-11-04"
+    },
+    "citation": {
+      "paper_title": "The Eyecandies Dataset for Unsupervised Multimodal Anomaly Detection and Localization",
+      "paper_url": "https://doi.org/10.1007/978-3-031-26316-2_26",
+      "authors": [
+        "Luca Bonfiglioli",
+        "Marco Toschi",
+        "Davide Silvestri",
+        "Nicola Fioraio",
+        "Daniele De Gregorio"
+      ],
+      "doi": "10.1007/978-3-031-26316-2_26"
+    },
+    "geographic_coverage": [
+      "Italy"
+    ],
+    "provenance": {
+      "collection_method": "Procedural synthetic rendering pipeline with Blender and BlenderProc simulating realistic candy manufacturing on an active conveyor.",
+      "curation_notes": "Each of the 10 classes contains 1,000 train, 100 validation, 50 public test, and 400 private test samples. Ground truth masks precisely segment surface deformations and missing elements.",
+      "data_sources": [
+        "Eyecan.ai Computer Vision Laboratory"
       ]
     }
   },
@@ -22954,6 +23781,203 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "kolektorsdd",
+    "slug": "kolektorsdd",
+    "name": "KolektorSDD: Kolektor Surface-Defect Dataset",
+    "description": "Surface-defect detection and segmentation benchmark consisting of 399 microscopic images of electrical commutators captured in an active manufacturing line by Kolektor Group. Features 52 images containing fractured surfaces, microscopic cracks, and scratches with pixel-accurate ground truth segmentation masks, and 347 defect-free images.",
+    "homepage_url": "https://www.vicos.si/resources/kolektorsdd/",
+    "publisher": {
+      "name": "University of Ljubljana (ViCoS Lab) / Kolektor Group",
+      "type": "academic",
+      "url": "https://www.vicos.si/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "defect-detection",
+      "anomaly-detection",
+      "image-segmentation"
+    ],
+    "tags": [
+      "surface-defect",
+      "industrial-inspection",
+      "manufacturing",
+      "microscopic-inspection",
+      "defect-segmentation",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released under CC BY-NC-SA 4.0 for non-commercial academic research; commercial inquiries require contacting the ViCoS Laboratory."
+    },
+    "source_references": [
+      {
+        "title": "KolektorSDD ViCoS Resource Page",
+        "url": "https://www.vicos.si/resources/kolektorsdd/",
+        "type": "official_website",
+        "notes": "Official university portal hosted by Visual Cognitive Systems Laboratory, University of Ljubljana."
+      },
+      {
+        "title": "Segmentation-Based Deep-Learning Approach for Surface-Defect Detection",
+        "url": "https://doi.org/10.1007/s10845-019-01476-x",
+        "type": "original_paper",
+        "notes": "Journal of Intelligent Manufacturing (2020) publication introducing the KolektorSDD dataset and segmentation architecture."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against University of Ljubljana ViCoS portal and Journal of Intelligent Manufacturing (DOI: 10.1007/s10845-019-01476-x)."
+    },
+    "size": {
+      "file_formats": [
+        "jpg",
+        "png",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as a zip package hosted on the University of Ljubljana ViCoS laboratory servers."
+    },
+    "sample_count": {
+      "total": 399,
+      "splits": {
+        "defective": 52,
+        "non_defective": 347
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-04-12",
+      "last_updated": "2020-03-01"
+    },
+    "citation": {
+      "paper_title": "Segmentation-Based Deep-Learning Approach for Surface-Defect Detection",
+      "paper_url": "https://doi.org/10.1007/s10845-019-01476-x",
+      "authors": [
+        "Domen Tabernik",
+        "Samo Šela",
+        "Jure Skvarč",
+        "Danijel Skočaj"
+      ],
+      "doi": "10.1007/s10845-019-01476-x"
+    },
+    "geographic_coverage": [
+      "Slovenia"
+    ],
+    "provenance": {
+      "collection_method": "High-precision microscopic cameras in a controlled industrial automated optical inspection cell installed by Kolektor Group d.o.o.",
+      "curation_notes": "Annotated by machine vision inspection experts with fine pixel-level segmentation masks delineating fractured surfaces and cracks.",
+      "data_sources": [
+        "Kolektor Group d.o.o. production lines"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "kolektorsdd2",
+    "slug": "kolektorsdd2",
+    "name": "KolektorSDD2: Kolektor Surface-Defect Dataset 2",
+    "description": "Expanded surface-defect detection dataset comprising 3,335 high-resolution color images (approx. 230x630 resolution) of electrical commutators provided by Kolektor Group. Contains 356 images with diverse surface defects (scratches, minor spots, surface cracks) with pixel-level ground truth masks, and 2,979 defect-free images, partitioned into standardized training (2,331 images) and testing (1,004 images) splits.",
+    "homepage_url": "https://www.vicos.si/resources/kolektorsdd2/",
+    "publisher": {
+      "name": "University of Ljubljana (ViCoS Lab) / Kolektor Group",
+      "type": "academic",
+      "url": "https://www.vicos.si/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "defect-detection",
+      "anomaly-detection",
+      "image-segmentation"
+    ],
+    "tags": [
+      "surface-defect",
+      "industrial-inspection",
+      "mixed-supervision",
+      "manufacturing",
+      "defect-segmentation",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released under CC BY-NC-SA 4.0 for non-commercial academic research; commercial inquiries require contacting the ViCoS Laboratory."
+    },
+    "source_references": [
+      {
+        "title": "KolektorSDD2 ViCoS Resource Page",
+        "url": "https://www.vicos.si/resources/kolektorsdd2/",
+        "type": "official_website",
+        "notes": "Official release portal hosted by Visual Cognitive Systems Laboratory, University of Ljubljana."
+      },
+      {
+        "title": "Mixed supervision for surface-defect detection: from weakly to fully supervised learning",
+        "url": "https://doi.org/10.1016/j.compind.2021.103459",
+        "type": "original_paper",
+        "notes": "Computers in Industry (2021) publication detailing dataset construction, mixed supervision protocols, and benchmarks."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against University of Ljubljana ViCoS portal and Computers in Industry (DOI: 10.1016/j.compind.2021.103459)."
+    },
+    "size": {
+      "file_formats": [
+        "png",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as a compressed zip archive via University of Ljubljana ViCoS laboratory servers."
+    },
+    "sample_count": {
+      "total": 3335,
+      "splits": {
+        "train": 2331,
+        "test": 1004
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021-06-15"
+    },
+    "citation": {
+      "paper_title": "Mixed supervision for surface-defect detection: from weakly to fully supervised learning",
+      "paper_url": "https://doi.org/10.1016/j.compind.2021.103459",
+      "authors": [
+        "Jakob Božič",
+        "Domen Tabernik",
+        "Danijel Skočaj"
+      ],
+      "doi": "10.1016/j.compind.2021.103459"
+    },
+    "geographic_coverage": [
+      "Slovenia"
+    ],
+    "provenance": {
+      "collection_method": "Industrial visual inspection line of electrical commutators captured across different manufacturing batches.",
+      "curation_notes": "Train set comprises 246 positive (defective) and 2,085 negative images; test set comprises 110 positive and 894 negative images. Fine segmentation masks are provided for all positive instances.",
+      "data_sources": [
+        "Kolektor Group d.o.o. production inspection systems"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "kuzushiji-mnist",
     "slug": "kuzushiji-mnist",
     "name": "Kuzushiji-MNIST (KMNIST)",
@@ -24319,6 +25343,108 @@
       ],
       "doi": "10.1016/j.ijforecast.2021.11.013",
       "bibtex": "@article{makridakis2022m5,\n  title = {The M5 competition: Background, organization, and implementation},\n  author = {Makridakis, Spyros and Spiliotis, Evangelos and Assimakopoulos, Vassilios},\n  journal = {International Journal of Forecasting},\n  volume = {38},\n  number = {4},\n  pages = {1483--1499},\n  year = {2022}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "magnetic-tile-defect-datasets",
+    "slug": "magnetic-tile-defect-datasets",
+    "name": "Magnetic Tile Surface Defect Dataset",
+    "description": "Industrial surface defect saliency and segmentation dataset comprising 1,344 images of magnetic tile surfaces used in permanent magnet electric motors. Developed by the Institute of Automation, Chinese Academy of Sciences (CASIA), encompassing five defect categories (blowholes: 115, cracks: 57, frays: 32, breaks: 85, uneven grinding: 103) and 952 defect-free surfaces with pixel-precise ground truth binary masks.",
+    "homepage_url": "https://github.com/abin24/Magnetic-tile-defect-datasets",
+    "publisher": {
+      "name": "Institute of Automation, Chinese Academy of Sciences (CASIA)",
+      "type": "academic",
+      "url": "http://english.ia.cas.cn/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "defect-detection",
+      "defect-segmentation",
+      "image-segmentation"
+    ],
+    "tags": [
+      "magnetic-tile",
+      "surface-defect",
+      "defect-saliency",
+      "industrial-inspection",
+      "manufacturing",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
+      "spdx_id": null,
+      "url": "https://github.com/abin24/Magnetic-tile-defect-datasets",
+      "commercial_use": "unknown",
+      "notes": "Publicly shared on GitHub repository abin24/Magnetic-tile-defect-datasets for research and evaluation; no explicit SPDX or formal open-source license is declared."
+    },
+    "source_references": [
+      {
+        "title": "Magnetic Tile Defect Datasets GitHub Repository",
+        "url": "https://github.com/abin24/Magnetic-tile-defect-datasets",
+        "type": "repository",
+        "notes": "Official repository by Yibin Huang containing images, pixel-level binary masks, and category folders."
+      },
+      {
+        "title": "Surface Defect Saliency of Magnetic Tile",
+        "url": "https://doi.org/10.1007/s00371-019-01779-1",
+        "type": "original_paper",
+        "notes": "The Visual Computer (2020) publication proposing the multi-scale defect saliency detection method."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against author GitHub repository and The Visual Computer (DOI: 10.1007/s00371-019-01779-1)."
+    },
+    "size": {
+      "file_formats": [
+        "jpg",
+        "png",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Distributed directly via GitHub repository containing image assets and binary mask directories."
+    },
+    "sample_count": {
+      "total": 1344,
+      "splits": {
+        "blowhole": 115,
+        "crack": 57,
+        "fray": 32,
+        "break": 85,
+        "uneven": 103,
+        "free": 952
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-04-10"
+    },
+    "citation": {
+      "paper_title": "Surface Defect Saliency of Magnetic Tile",
+      "paper_url": "https://doi.org/10.1007/s00371-019-01779-1",
+      "authors": [
+        "Yibin Huang",
+        "Congying Qiu",
+        "Kui Yuan"
+      ],
+      "doi": "10.1007/s00371-019-01779-1"
+    },
+    "geographic_coverage": [
+      "China"
+    ],
+    "provenance": {
+      "collection_method": "Industrial machine vision system capturing curved permanent magnet tile surfaces during manufacturing quality sorting.",
+      "curation_notes": "Defect images are accompanied by ground truth binary masks labeled with pixel precision. Images exhibit significant variation in lighting, illumination reflections, and surface textures.",
+      "data_sources": [
+        "Chinese Academy of Sciences Institute of Automation (CASIA)"
+      ]
     }
   },
   {
@@ -27491,6 +28617,107 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "mpdd-metal-parts-defect-detection",
+    "slug": "mpdd-metal-parts-defect-detection",
+    "name": "MPDD: Metal Parts Defect Detection Dataset",
+    "description": "Industrial defect detection benchmark comprising 1,346 high-resolution images across six painted and untreated metal manufacturing part categories (Bracket Black, Bracket Brown, Bracket White, Connector, Metal Plate, and Tubes). Captured under challenging industrial conditions with variable object positioning, multiple distances, and non-uniform backgrounds, providing pixel-precise defect annotation masks.",
+    "homepage_url": "https://github.com/stepanje/MPDD",
+    "publisher": {
+      "name": "Brno University of Technology",
+      "type": "academic",
+      "url": "https://www.vut.cz/en/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "image-segmentation"
+    ],
+    "tags": [
+      "metal-parts",
+      "defect-detection",
+      "manufacturing",
+      "surface-defect",
+      "anomaly-detection",
+      "defect-segmentation",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
+      "spdx_id": null,
+      "url": "https://github.com/stepanje/MPDD",
+      "commercial_use": "unknown",
+      "notes": "Publicly hosted by Brno University of Technology under Technology Agency of the Czech Republic project FW03010273; no explicit open-source license file is provided in the repository."
+    },
+    "source_references": [
+      {
+        "title": "MPDD Official GitHub Repository",
+        "url": "https://github.com/stepanje/MPDD",
+        "type": "repository",
+        "notes": "Author repository with direct download links hosted on Brno University of Technology SharePoint."
+      },
+      {
+        "title": "Deep learning-based defect detection of metal parts: evaluating current methods in complex conditions",
+        "url": "https://doi.org/10.1109/ICUMT54235.2021.9631567",
+        "type": "original_paper",
+        "notes": "IEEE ICUMT 2021 conference publication detailing part acquisition, complex condition challenges, and defect types."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against IEEE ICUMT 2021 proceedings (DOI: 10.1109/ICUMT54235.2021.9631567) and Brno University of Technology repository."
+    },
+    "size": {
+      "file_formats": [
+        "png",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Distributed via university cloud storage links across six category archives; aggregate payload size is not authoritatively published."
+    },
+    "sample_count": {
+      "total": 1346,
+      "splits": {
+        "train": 888,
+        "test_normal": 176,
+        "test_abnormal": 282
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021-10-26"
+    },
+    "citation": {
+      "paper_title": "Deep learning-based defect detection of metal parts: evaluating current methods in complex conditions",
+      "paper_url": "https://doi.org/10.1109/ICUMT54235.2021.9631567",
+      "authors": [
+        "Štěpán Ježek",
+        "Martin Jonák",
+        "Radim Burget",
+        "Pavel Dvořák",
+        "Miloš Skoták"
+      ],
+      "doi": "10.1109/ICUMT54235.2021.9631567"
+    },
+    "geographic_coverage": [
+      "Czech Republic"
+    ],
+    "provenance": {
+      "collection_method": "High-resolution camera imaging of real manufactured metal parts under variable illumination, spatial orientations, and background settings.",
+      "curation_notes": "Defect categories include surface scratches, missing paint, dents, holes, and edge deformations with pixel-precise binary ground truth masks.",
+      "data_sources": [
+        "Technology Agency of the Czech Republic Project FW03010273 / Brno University of Technology"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "mpii-human-pose",
     "slug": "mpii-human-pose",
     "name": "MPII Human Pose Dataset",
@@ -28286,6 +29513,418 @@
       ],
       "doi": "10.1109/LRA.2018.2800793",
       "bibtex": "@article{zhu2018multi,\n  title={The multi-vehicle stereo event camera dataset: An event camera dataset for 3D perception},\n  author={Zhu, Alex Zihao and Thakur, Dinesh and {\\\"O}zaslan, T{\\\"o}rsten and Pfrommer, Bernd and Kumar, Vijay and Daniilidis, Kostas},\n  journal={IEEE Robotics and Automation Letters},\n  volume={3},\n  number={3},\n  pages={2032--2039},\n  year={2018},\n  publisher={IEEE},\n  doi={10.1109/LRA.2018.2800793}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mvtec-3d-ad",
+    "slug": "mvtec-3d-ad",
+    "name": "MVTec 3D-AD: MVTec 3D Anomaly Detection Dataset",
+    "description": "Comprehensive 3D industrial anomaly detection dataset consisting of 4,147 high-resolution 3D scans across 10 real-world categories (bagel, cable gland, carrot, cookie, dowel, foam, peach, potato, rope, and tire). Acquired using an industrial structured-light 3D sensor, each sample provides synchronized 3D point cloud coordinates (XYZ channels) and registered high-resolution RGB imagery for multi-modal 3D surface defect detection and localization.",
+    "homepage_url": "https://www.mvtec.com/research-teaching/datasets/mvtec-3d-ad",
+    "publisher": {
+      "name": "MVTec Software GmbH",
+      "type": "industry",
+      "url": "https://www.mvtec.com/"
+    },
+    "modalities": [
+      "vision",
+      "3d"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "3d-anomaly-detection"
+    ],
+    "tags": [
+      "3d-vision",
+      "point-cloud",
+      "structured-light",
+      "industrial-inspection",
+      "anomaly-detection",
+      "surface-defect",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released under CC BY-NC-SA 4.0 for non-commercial scientific research and education."
+    },
+    "source_references": [
+      {
+        "title": "MVTec 3D-AD Official Dataset Landing Page",
+        "url": "https://www.mvtec.com/research-teaching/datasets/mvtec-3d-ad",
+        "type": "official_website",
+        "notes": "Official distribution portal by MVTec Software GmbH with direct archive download links and documentation."
+      },
+      {
+        "title": "The MVTec 3D-AD Dataset for Unsupervised 3D Anomaly Detection and Localization",
+        "url": "https://doi.org/10.5220/0010865000003124",
+        "type": "original_paper",
+        "notes": "VISAPP 2022 conference proceedings detailing the 3D capture setup, point cloud coordinate encoding, and benchmark evaluations."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against MVTec official portal and VISAPP 2022 proceedings (DOI: 10.5220/0010865000003124)."
+    },
+    "size": {
+      "file_formats": [
+        "tiff",
+        "png",
+        "tar.xz"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as separate tar.xz archives per category containing multi-channel 3D TIFF coordinates and RGB images; aggregate payload size is not published as a single figure."
+    },
+    "sample_count": {
+      "total": 4147,
+      "splits": {
+        "train": 2658,
+        "val": 294,
+        "test": 1195
+      },
+      "unit": "scans",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021-12-14",
+      "last_updated": "2022-02-06"
+    },
+    "citation": {
+      "paper_title": "The MVTec 3D-AD Dataset for Unsupervised 3D Anomaly Detection and Localization",
+      "paper_url": "https://doi.org/10.5220/0010865000003124",
+      "authors": [
+        "Paul Bergmann",
+        "Xin Jin",
+        "David Sattlegger",
+        "Carsten Steger"
+      ],
+      "doi": "10.5220/0010865000003124"
+    },
+    "geographic_coverage": [
+      "Germany"
+    ],
+    "provenance": {
+      "collection_method": "Scanned with an industrial-grade structured-light 3D sensor capturing organized 3D point coordinates alongside registered 2D RGB image data.",
+      "curation_notes": "Ground-truth masks delineate both surface imperfections (scratches, dents, contamination) and 3D structural shape deformations.",
+      "data_sources": [
+        "MVTec Software GmbH Research & Teaching Portal"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mvtec-ad",
+    "slug": "mvtec-ad",
+    "name": "MVTec AD: MVTec Anomaly Detection Dataset",
+    "description": "Foundational benchmark dataset for unsupervised visual anomaly detection and localization in industrial quality inspection. Contains 5,354 high-resolution color images across 15 real-world industrial categories (5 textures and 10 objects). Provides 3,629 anomaly-free images for training and 1,725 test images (467 normal and 1,258 defective) showcasing 73 different defect types with pixel-precise ground truth segmentation masks.",
+    "homepage_url": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+    "publisher": {
+      "name": "MVTec Software GmbH",
+      "type": "industry",
+      "url": "https://www.mvtec.com/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "image-segmentation"
+    ],
+    "tags": [
+      "industrial-inspection",
+      "anomaly-detection",
+      "anomaly-localization",
+      "visual-inspection",
+      "unsupervised-learning",
+      "defect-segmentation",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released under CC BY-NC-SA 4.0 for non-commercial scientific research and educational purposes."
+    },
+    "source_references": [
+      {
+        "title": "MVTec AD Official Dataset Landing Page",
+        "url": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+        "type": "official_website",
+        "notes": "Official portal hosted by MVTec Software GmbH with direct download archives and category documentation."
+      },
+      {
+        "title": "MVTec AD — A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection",
+        "url": "https://doi.org/10.1109/CVPR.2019.00982",
+        "type": "original_paper",
+        "notes": "Conference publication in CVPR 2019 introducing the MVTec AD benchmark."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against MVTec official research portal and IEEE CVPR 2019 proceedings (DOI: 10.1109/CVPR.2019.00982)."
+    },
+    "size": {
+      "amount": 4.9,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "tar.xz"
+      ],
+      "status": "verified",
+      "notes": "Published compressed tar.xz archive size is approximately 4.9 GB."
+    },
+    "sample_count": {
+      "total": 5354,
+      "splits": {
+        "train": 3629,
+        "test": 1725
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-06-16",
+      "last_updated": "2021-03-24"
+    },
+    "citation": {
+      "paper_title": "MVTec AD — A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection",
+      "paper_url": "https://doi.org/10.1109/CVPR.2019.00982",
+      "authors": [
+        "Paul Bergmann",
+        "Michael Fauser",
+        "David Sattlegger",
+        "Carsten Steger"
+      ],
+      "doi": "10.1109/CVPR.2019.00982"
+    },
+    "geographic_coverage": [
+      "Germany"
+    ],
+    "provenance": {
+      "collection_method": "High-resolution color images captured with industrial sensors under controlled lighting conditions across 15 manufactured object and texture categories.",
+      "curation_notes": "Defect types encompass real and realistic scratches, dents, contaminations, cracks, and structural flaws. Pixel-precise binary masks accompany each anomalous test image.",
+      "data_sources": [
+        "MVTec Software GmbH Research & Teaching Portal"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mvtec-ad-2",
+    "slug": "mvtec-ad-2",
+    "name": "MVTec AD 2: Advanced Scenarios for Unsupervised Anomaly Detection",
+    "description": "Next-generation industrial visual anomaly detection benchmark comprising 8,004 high-resolution images across eight challenging scenarios (Can, Fabric, Fruit Jelly, Rice, Sheet Metal, Vial, Wall Plugs, and Walnuts). Features advanced inspection challenges including transparent and overlapping objects, dark-field and backlight illumination, high normal data variance, subtle border anomalies, and systematic distribution shifts through controlled lighting variations evaluated via a centralized benchmark server.",
+    "homepage_url": "https://www.mvtec.com/company/research/datasets/mvtec-ad-2",
+    "publisher": {
+      "name": "MVTec Software GmbH",
+      "type": "industry",
+      "url": "https://www.mvtec.com/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "image-segmentation"
+    ],
+    "tags": [
+      "industrial-inspection",
+      "anomaly-detection",
+      "anomaly-localization",
+      "distribution-shift",
+      "illumination-shift",
+      "unsupervised-learning",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released under CC BY-NC-SA 4.0 for non-commercial scientific research and educational purposes."
+    },
+    "source_references": [
+      {
+        "title": "MVTec AD 2 Official Dataset Landing Page",
+        "url": "https://www.mvtec.com/company/research/datasets/mvtec-ad-2",
+        "type": "official_website",
+        "notes": "Official release portal hosted by MVTec Software GmbH with data download links and scenario documentation."
+      },
+      {
+        "title": "MVTec Benchmark Evaluation Server",
+        "url": "https://benchmark.mvtec.com/",
+        "type": "documentation",
+        "notes": "Centralized evaluation platform holding ground truth masks for private test partitions."
+      },
+      {
+        "title": "The MVTec AD 2 Dataset: Advanced Scenarios for Unsupervised Anomaly Detection",
+        "url": "https://arxiv.org/abs/2503.21622",
+        "type": "original_paper",
+        "notes": "Foundational preprint introducing the 8,004 image benchmark and lighting distribution shifts."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against MVTec official research portal, benchmark server, and arXiv preprint 2503.21622."
+    },
+    "size": {
+      "file_formats": [
+        "png",
+        "tar.xz"
+      ],
+      "status": "unknown",
+      "notes": "Aggregated archive byte size not published as a single figure; distributed per scenario archive."
+    },
+    "sample_count": {
+      "total": 8004,
+      "splits": {
+        "train": 2528,
+        "val": 302,
+        "test": 5174
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2025-03-24"
+    },
+    "citation": {
+      "paper_title": "The MVTec AD 2 Dataset: Advanced Scenarios for Unsupervised Anomaly Detection",
+      "paper_url": "https://arxiv.org/abs/2503.21622",
+      "authors": [
+        "Lars Heckler-Kram",
+        "Jan-Hendrik Neudeck",
+        "Ulla Scheler",
+        "Rebecca König",
+        "Carsten Steger"
+      ],
+      "doi": "10.48550/arXiv.2503.21622"
+    },
+    "geographic_coverage": [
+      "Germany"
+    ],
+    "provenance": {
+      "collection_method": "High-resolution camera setups capturing 8 industrial scenarios under multiple controlled illumination settings (regular, overexposed, underexposed, dark-field, and backlight).",
+      "curation_notes": "Test data is split into public test (1,084 images with public ground truth masks), private test (2,045 images with nominal illumination), and private mixed test (2,045 images with mixed illumination shifts).",
+      "data_sources": [
+        "MVTec Software GmbH Research & Benchmark Server"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mvtec-loco-ad",
+    "slug": "mvtec-loco-ad",
+    "name": "MVTec LOCO AD: Logically Consistent Anomaly Detection Dataset",
+    "description": "Industrial visual anomaly detection benchmark of 3,644 high-resolution images across five industrial product categories (Breakfast Box, Juice Bottle, Pushpins, Screw Bag, and Splicing Connectors). Specifically designed to evaluate both structural anomalies (local physical surface damage like scratches or cracks) and logical anomalies (rule violations, missing components, incorrect counts, or forbidden spatial arrangements).",
+    "homepage_url": "https://www.mvtec.com/research-teaching/datasets/mvtec-loco-ad",
+    "publisher": {
+      "name": "MVTec Software GmbH",
+      "type": "industry",
+      "url": "https://www.mvtec.com/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "image-segmentation"
+    ],
+    "tags": [
+      "industrial-inspection",
+      "logical-anomalies",
+      "structural-anomalies",
+      "anomaly-detection",
+      "unsupervised-learning",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released under CC BY-NC-SA 4.0 for non-commercial scientific research and education."
+    },
+    "source_references": [
+      {
+        "title": "MVTec LOCO AD Official Dataset Landing Page",
+        "url": "https://www.mvtec.com/research-teaching/datasets/mvtec-loco-ad",
+        "type": "official_website",
+        "notes": "Official release portal by MVTec Software GmbH with direct archive download links and category specifications."
+      },
+      {
+        "title": "The MVTec LOCO AD Dataset for Unsupervised Anomaly Detection",
+        "url": "https://doi.org/10.1109/WACV51458.2022.00395",
+        "type": "original_paper",
+        "notes": "IEEE WACV 2022 conference publication introducing logical constraint anomaly detection and baseline model benchmarks."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against MVTec official portal and IEEE WACV 2022 proceedings (DOI: 10.1109/WACV51458.2022.00395)."
+    },
+    "size": {
+      "file_formats": [
+        "png",
+        "tar.xz"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as separate tar.xz archives per category; aggregate payload size is not published as a single figure."
+    },
+    "sample_count": {
+      "total": 3644,
+      "splits": {
+        "train": 1772,
+        "val": 304,
+        "test": 1568
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022-01-04"
+    },
+    "citation": {
+      "paper_title": "The MVTec LOCO AD Dataset for Unsupervised Anomaly Detection",
+      "paper_url": "https://doi.org/10.1109/WACV51458.2022.00395",
+      "authors": [
+        "Paul Bergmann",
+        "Kilian Batzner",
+        "Michael Fauser",
+        "David Sattlegger",
+        "Carsten Steger"
+      ],
+      "doi": "10.1109/WACV51458.2022.00395"
+    },
+    "geographic_coverage": [
+      "Germany"
+    ],
+    "provenance": {
+      "collection_method": "High-resolution color industrial photography of assembled multi-component packages and kits under controlled illumination.",
+      "curation_notes": "Ground-truth annotations cover both pixel-precise masks for localized physical defects and bounding-region masks for logical constraint violations.",
+      "data_sources": [
+        "MVTec Software GmbH Research & Teaching Portal"
+      ]
     }
   },
   {
@@ -29448,6 +31087,108 @@
       "curation_notes": "Equipped with a Velodyne HDL-32E 3D LiDAR, Hokuyo planar LiDAR, Ladybug3 360-degree vision, Microstrain IMU, KVH fiber-optic gyro, RTK GPS, and wheel odometry. Captures extreme seasonal variations including foliage changes, snow, rain, and construction over more than a year.",
       "data_sources": [
         "Mobile Segway robotic platform"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "neu-surface-defect-database",
+    "slug": "neu-surface-defect-database",
+    "name": "NEU Surface Defect Database",
+    "description": "Hot-rolled steel strip surface defect database comprising 1,800 grayscale industrial images across six representative defect categories (crazing, inclusion, patches, pitted surface, rolled-in scale, and scratches) with 300 samples per class. Created by Northeastern University (China), supporting both image-level classification (NEU-CLS) and Pascal VOC bounding-box defect detection (NEU-DET).",
+    "homepage_url": "https://faculty.neu.edu.cn/songkc/en/zdylm/263265/list/",
+    "publisher": {
+      "name": "Northeastern University (China)",
+      "type": "academic",
+      "url": "https://faculty.neu.edu.cn/songkc/en/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "defect-detection",
+      "object-detection",
+      "image-classification"
+    ],
+    "tags": [
+      "steel-manufacturing",
+      "surface-defect",
+      "hot-rolled-steel",
+      "defect-classification",
+      "defect-detection",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
+      "spdx_id": null,
+      "url": "https://faculty.neu.edu.cn/songkc/en/zdylm/263265/list/",
+      "commercial_use": "unknown",
+      "notes": "Hosted on Northeastern University faculty page for academic research; no formal open-source license file is attached."
+    },
+    "source_references": [
+      {
+        "title": "NEU Surface Defect Database Official Faculty Page",
+        "url": "https://faculty.neu.edu.cn/songkc/en/zdylm/263265/list/",
+        "type": "official_website",
+        "notes": "Faculty resource portal of Prof. Kechen Song hosting the NEU-CLS and NEU-DET archive distributions."
+      },
+      {
+        "title": "A noise robust method based on completed local binary patterns for hot-rolled steel strip surface defect detection",
+        "url": "https://doi.org/10.1016/j.apsusc.2013.09.002",
+        "type": "original_paper",
+        "notes": "Applied Surface Science (2013) publication introducing the hot-rolled steel defect dataset and CLBP descriptor."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against Northeastern University faculty portal and Applied Surface Science (DOI: 10.1016/j.apsusc.2013.09.002)."
+    },
+    "size": {
+      "file_formats": [
+        "bmp",
+        "xml",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as downloadable zip archives (NEU-CLS and NEU-DET) from Northeastern University faculty repository."
+    },
+    "sample_count": {
+      "total": 1800,
+      "splits": {
+        "crazing": 300,
+        "inclusion": 300,
+        "patches": 300,
+        "pitted_surface": 300,
+        "rolled_in_scale": 300,
+        "scratches": 300
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2013-11-15",
+      "last_updated": "2021-03-10"
+    },
+    "citation": {
+      "paper_title": "A noise robust method based on completed local binary patterns for hot-rolled steel strip surface defect detection",
+      "paper_url": "https://doi.org/10.1016/j.apsusc.2013.09.002",
+      "authors": [
+        "Kechen Song",
+        "Yunhui Yan"
+      ],
+      "doi": "10.1016/j.apsusc.2013.09.002"
+    },
+    "geographic_coverage": [
+      "China"
+    ],
+    "provenance": {
+      "collection_method": "High-speed line-scan camera capturing surface images of moving hot-rolled steel strips in a steel manufacturing plant.",
+      "curation_notes": "Each image is cropped to 200x200 pixels. NEU-CLS provides classification labels while NEU-DET provides bounding-box coordinates for each defect instance.",
+      "data_sources": [
+        "Northeastern University Surface Inspection Laboratory"
       ]
     }
   },
@@ -31914,6 +33655,116 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "open-industry",
+    "slug": "open-industry",
+    "name": "IEC3D-AD: Industrial Equipment Components 3D Anomaly Detection Dataset (OpenIndustry)",
+    "description": "Industrial 3D point cloud anomaly detection dataset (IEC3D-AD / OpenIndustry) comprising 2,400 high-fidelity 360-degree point cloud scans across 15 real industrial equipment component categories (bearings, bolts, rings, nuts, and studs). Captured via structured-light 3D scanning, each category provides 100 normal training scans and 60 test scans featuring five authentic production defect types (bump, deformation, dent, scar, and scratch) for unsupervised and open-set anomaly detection.",
+    "homepage_url": "https://huggingface.co/datasets/HanzheL/open-industry",
+    "publisher": {
+      "name": "Northeastern University (China)",
+      "type": "academic",
+      "url": "https://www.neu.edu.cn/"
+    },
+    "modalities": [
+      "vision",
+      "3d"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "3d-anomaly-detection"
+    ],
+    "tags": [
+      "point-cloud",
+      "open-set",
+      "industrial-components",
+      "structured-light",
+      "3d-vision",
+      "anomaly-detection",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Author-Restricted Research Distribution",
+      "spdx_id": null,
+      "url": "https://huggingface.co/datasets/HanzheL/open-industry",
+      "commercial_use": "forbidden",
+      "notes": "Shared by authors on Hugging Face for non-commercial academic research and benchmarking; authors reserve all rights."
+    },
+    "source_references": [
+      {
+        "title": "IEC3D-AD: A 3D Dataset of Industrial Equipment Components for Unsupervised Point Cloud Anomaly Detection",
+        "url": "https://doi.org/10.1109/TCSVT.2026.3723149",
+        "type": "original_paper",
+        "notes": "IEEE Transactions on Circuits and Systems for Video Technology (TCSVT) publication introducing the 2,400-scan physical dataset."
+      },
+      {
+        "title": "OpenIndustry Hugging Face Repository",
+        "url": "https://huggingface.co/datasets/HanzheL/open-industry",
+        "type": "repository",
+        "notes": "Official Hugging Face dataset distribution containing point cloud files in PCD format."
+      },
+      {
+        "title": "OpenIndustry GitHub Codebase",
+        "url": "https://github.com/hzzzzzhappy/open-industry",
+        "type": "repository",
+        "notes": "Official codebase for data loaders, preprocessing, and open-set evaluation."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against IEEE Transactions on Circuits and Systems for Video Technology (DOI: 10.1109/TCSVT.2026.3723149) and Hugging Face repository HanzheL/open-industry."
+    },
+    "size": {
+      "amount": 8.14,
+      "unit": "GB",
+      "file_formats": [
+        "pcd",
+        "zip"
+      ],
+      "status": "verified",
+      "notes": "Published dataset repository payload on Hugging Face is 8.14 GB."
+    },
+    "sample_count": {
+      "total": 2400,
+      "splits": {
+        "train_normal": 1500,
+        "test": 900
+      },
+      "unit": "scans",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2025-11-06",
+      "last_updated": "2026-04-03"
+    },
+    "citation": {
+      "paper_title": "IEC3D-AD: A 3D Dataset of Industrial Equipment Components for Unsupervised Point Cloud Anomaly Detection",
+      "paper_url": "https://doi.org/10.1109/TCSVT.2026.3723149",
+      "authors": [
+        "Bingyang Guo",
+        "Hongjie Li",
+        "Ruiyun Yu",
+        "Hanzhe Liang",
+        "Jinbao Wang"
+      ],
+      "doi": "10.1109/TCSVT.2026.3723149"
+    },
+    "geographic_coverage": [
+      "China"
+    ],
+    "provenance": {
+      "collection_method": "Multi-view structured light scanning system generating complete 360-degree point clouds of manufactured mechanical parts with average density of ~160k points per scan.",
+      "curation_notes": "The underlying physical dataset is IEC3D-AD (Industrial Equipment Components 3D Anomaly Detection) containing 2,400 scans across 15 component categories (100 normal training, 60 test per category). OpenIndustry represents the open-set benchmark distribution derived from these exact 2,400 point cloud scans.",
+      "data_sources": [
+        "State Key Laboratory of Synthetical Automation for Process Industries, Northeastern University"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "openlane-v2",
     "slug": "openlane-v2",
     "name": "OpenLane-V2 — 3D Lane and Traffic Topology Dataset",
@@ -33321,6 +35172,296 @@
       "data_sources": [
         "AliveCor",
         "PhysioNet"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "pku-goodsad",
+    "slug": "pku-goodsad",
+    "name": "PKU-GoodsAD: Supermarket Goods Anomaly Detection Dataset",
+    "description": "Comprehensive visual anomaly detection and segmentation benchmark for retail product quality inspection, containing 6,124 high-resolution images (3000x3000 resolution) spanning 484 different supermarket products in six categories (drink bottles, drink cans, food bottles, food boxes, food packages, and cigarette boxes). Developed by Peking University Shenzhen Graduate School, it provides normal training images and defective test images featuring deformations, surface damage, and opened packaging with pixel-precise ground truth masks.",
+    "homepage_url": "https://github.com/jianzhang96/GoodsAD",
+    "publisher": {
+      "name": "Peking University (PKUSZ)",
+      "type": "academic",
+      "url": "https://robotics.pkusz.edu.cn/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "image-segmentation"
+    ],
+    "tags": [
+      "retail-quality-control",
+      "product-inspection",
+      "supermarket-goods",
+      "anomaly-detection",
+      "packaging-inspection",
+      "unsupervised-learning",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
+      "spdx_id": null,
+      "url": "https://github.com/jianzhang96/GoodsAD",
+      "commercial_use": "unknown",
+      "notes": "Publicly shared on GitHub repository jianzhang96/GoodsAD for academic research without a formal open-source license file."
+    },
+    "source_references": [
+      {
+        "title": "GoodsAD Official GitHub Repository",
+        "url": "https://github.com/jianzhang96/GoodsAD",
+        "type": "repository",
+        "notes": "Author repository with download links (OneDrive and Baidu Disk), baseline scripts, and dataset visualizers."
+      },
+      {
+        "title": "PKU-GoodsAD: A Supermarket Goods Dataset for Unsupervised Anomaly Detection and Segmentation",
+        "url": "https://doi.org/10.1109/LRA.2024.3352358",
+        "type": "original_paper",
+        "notes": "IEEE Robotics and Automation Letters (RA-L 2024) journal publication introducing the GoodsAD benchmark."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against IEEE RA-L 2024 publication (DOI: 10.1109/LRA.2024.3352358) and author GitHub repository."
+    },
+    "size": {
+      "file_formats": [
+        "jpg",
+        "png",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as downloadable zip archives across six merchandise categories via OneDrive and Baidu Disk."
+    },
+    "sample_count": {
+      "total": 6124,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2024-03-01"
+    },
+    "citation": {
+      "paper_title": "PKU-GoodsAD: A Supermarket Goods Dataset for Unsupervised Anomaly Detection and Segmentation",
+      "paper_url": "https://doi.org/10.1109/LRA.2024.3352358",
+      "authors": [
+        "Jian Zhang",
+        "Runwei Ding",
+        "Miaoju Ban",
+        "Linhui Dai"
+      ],
+      "doi": "10.1109/LRA.2024.3352358"
+    },
+    "geographic_coverage": [
+      "China"
+    ],
+    "provenance": {
+      "collection_method": "High-resolution industrial camera imaging consumer supermarket merchandise against clean retail backgrounds.",
+      "curation_notes": "Designed for product-quality inspection in automated retail environments. Features 484 merchandise items with authentic packaging flaws including structural deformation, surface tearing, and unsealed containers.",
+      "data_sources": [
+        "Peking University Shenzhen Graduate School Open Lab on Human-Robot Interaction"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "pku-market-pcb",
+    "slug": "pku-market-pcb",
+    "name": "PKU-Market-PCB: Printed Circuit Board Defect Dataset",
+    "description": "Public printed circuit board defect detection and classification dataset developed by Peking University Shenzhen Graduate School (Open Lab on Human-Robot Interaction). Contains 1,386 high-resolution synthetic defect images across six defect categories (missing hole, mouse-bite, open circuit, short, spur, and spurious copper) rendered from standard PCB layout templates with bounding box annotations.",
+    "homepage_url": "https://robotics.pkusz.edu.cn/resources/datasetENG/",
+    "publisher": {
+      "name": "Peking University (PKUSZ)",
+      "type": "academic",
+      "url": "https://robotics.pkusz.edu.cn/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "defect-detection",
+      "object-detection",
+      "image-classification"
+    ],
+    "tags": [
+      "pcb-inspection",
+      "circuit-board",
+      "defect-detection",
+      "electronics-manufacturing",
+      "image-registration",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
+      "spdx_id": null,
+      "url": "https://robotics.pkusz.edu.cn/resources/datasetENG/",
+      "commercial_use": "unknown",
+      "notes": "Hosted on Peking University Open Lab on Human-Robot Interaction portal for academic research without a formal open-source license declaration."
+    },
+    "source_references": [
+      {
+        "title": "PKUSZ Intelligent Robot Open Laboratory Dataset Portal",
+        "url": "https://robotics.pkusz.edu.cn/resources/datasetENG/",
+        "type": "official_website",
+        "notes": "Official university laboratory dataset repository providing original dataset archives and benchmark annotations."
+      },
+      {
+        "title": "A PCB dataset for defects detection and classification",
+        "url": "https://arxiv.org/abs/1901.08204",
+        "type": "original_paper",
+        "notes": "Original preprint introducing the 1,386 image synthetic PCB dataset and defect classification baseline."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against Peking University Shenzhen Graduate School repository and arXiv preprint 1901.08204."
+    },
+    "size": {
+      "file_formats": [
+        "jpg",
+        "xml",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as downloadable zip archives containing images and Pascal VOC XML annotations via Peking University servers."
+    },
+    "sample_count": {
+      "total": 1386,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-01-24"
+    },
+    "citation": {
+      "paper_title": "A PCB dataset for defects detection and classification",
+      "paper_url": "https://arxiv.org/abs/1901.08204",
+      "authors": [
+        "Weibo Huang",
+        "Peng Wei"
+      ],
+      "doi": "10.48550/arXiv.1901.08204"
+    },
+    "geographic_coverage": [
+      "China"
+    ],
+    "provenance": {
+      "collection_method": "Synthetic defect generation pipeline applying realistic physical defect patterns onto high-resolution master PCB templates.",
+      "curation_notes": "Annotated in Pascal VOC XML format with bounding boxes across 6 defect types: missing hole, mouse bite, open circuit, short, spur, and spurious copper.",
+      "data_sources": [
+        "Peking University Shenzhen Graduate School Open Lab on Human-Robot Interaction"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "pku-market-phone",
+    "slug": "pku-market-phone",
+    "name": "PKU-Market-Phone: Smartphone Screen Surface Defect Dataset",
+    "description": "Smartphone screen glass surface defect segmentation dataset collected with an industrial camera at 1920x1080 resolution by Peking University Shenzhen Graduate School. Comprises 1,200 images evenly distributed across three surface defect classes (oil stains: 400, scratches: 400, spots: 400) with pixel-precise PASCAL VOC ground truth segmentation masks for industrial automated optical inspection benchmarking.",
+    "homepage_url": "https://robotics.pkusz.edu.cn/resources/datasetENG/",
+    "publisher": {
+      "name": "Peking University (PKUSZ)",
+      "type": "academic",
+      "url": "https://robotics.pkusz.edu.cn/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "defect-detection",
+      "defect-segmentation",
+      "image-segmentation"
+    ],
+    "tags": [
+      "smartphone-screen",
+      "surface-defect",
+      "glass-inspection",
+      "industrial-inspection",
+      "defect-segmentation",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
+      "spdx_id": null,
+      "url": "https://robotics.pkusz.edu.cn/resources/datasetENG/",
+      "commercial_use": "unknown",
+      "notes": "Hosted on Peking University Open Lab on Human-Robot Interaction portal for academic research without a formal open-source license declaration."
+    },
+    "source_references": [
+      {
+        "title": "PKUSZ Intelligent Robot Open Laboratory Dataset Portal",
+        "url": "https://robotics.pkusz.edu.cn/resources/datasetENG/",
+        "type": "official_website",
+        "notes": "Official repository by Peking University Shenzhen Graduate School distributing phone screen defect images and masks."
+      },
+      {
+        "title": "FDSNet: An Accurate Real-Time Surface Defect Segmentation Network",
+        "url": "https://doi.org/10.1109/ICASSP43922.2022.9746358",
+        "type": "original_paper",
+        "notes": "IEEE ICASSP 2022 conference publication introducing the PKU-Market-Phone benchmark and FDSNet architecture."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against Peking University Shenzhen Graduate School repository and IEEE ICASSP 2022 proceedings (DOI: 10.1109/ICASSP43922.2022.9746358)."
+    },
+    "size": {
+      "file_formats": [
+        "jpg",
+        "png",
+        "xml",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as downloadable zip archive via Peking University Shenzhen Graduate School repository."
+    },
+    "sample_count": {
+      "total": 1200,
+      "splits": {
+        "oil_stains": 400,
+        "scratches": 400,
+        "spots": 400
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022-05-07"
+    },
+    "citation": {
+      "paper_title": "FDSNet: An Accurate Real-Time Surface Defect Segmentation Network",
+      "paper_url": "https://doi.org/10.1109/ICASSP43922.2022.9746358",
+      "authors": [
+        "Runwei Ding",
+        "Jian Zhang",
+        "Miaoju Ban",
+        "Tianyu Guo"
+      ],
+      "doi": "10.1109/ICASSP43922.2022.9746358"
+    },
+    "geographic_coverage": [
+      "China"
+    ],
+    "provenance": {
+      "collection_method": "Industrial high-definition camera capturing mobile phone touch screens under directional manufacturing inspection lighting.",
+      "curation_notes": "Ground-truth annotations formatted in standard Pascal VOC structure with pixel-precise color-indexed segmentation masks for oil stain, scratch, and spot defects.",
+      "data_sources": [
+        "Peking University Shenzhen Graduate School Open Lab on Human-Robot Interaction"
       ]
     }
   },
@@ -35506,6 +37647,217 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "real-iad",
+    "slug": "real-iad",
+    "name": "Real-IAD: Real-World Multi-View Industrial Anomaly Detection Dataset",
+    "description": "Large-scale, practical industrial anomaly detection dataset consisting of 150,000 high-resolution images across 30 real-world production objects captured from five synchronized camera viewpoints to simulate automated optical inspection (AOI) lines. Features diverse defect types (pits, deformation, abrasions, scratches, contamination, missing parts) with pixel-level ground truth masks, supporting unsupervised and fully unsupervised industrial anomaly detection (FUIAD).",
+    "homepage_url": "https://realiad4ad.github.io/Real-IAD/",
+    "publisher": {
+      "name": "Fudan University / Rongcheer Co., Ltd.",
+      "type": "academic",
+      "url": "https://realiad4ad.github.io/Real-IAD/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "image-segmentation"
+    ],
+    "tags": [
+      "industrial-inspection",
+      "multi-view",
+      "optical-inspection",
+      "manufacturing",
+      "anomaly-detection",
+      "defect-segmentation",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released under CC BY-NC-SA 4.0 for non-commercial scientific research purposes via Hugging Face conditions acceptance."
+    },
+    "source_references": [
+      {
+        "title": "Real-IAD Official Project Page",
+        "url": "https://realiad4ad.github.io/Real-IAD/",
+        "type": "official_website",
+        "notes": "Project landing page with documentation, object showcase, and benchmark metrics."
+      },
+      {
+        "title": "Real-IAD Hugging Face Repository",
+        "url": "https://huggingface.co/datasets/Real-IAD/Real-IAD",
+        "type": "repository",
+        "notes": "Author-maintained Hugging Face dataset repository distributing raw high-resolution and 1024x1024 packages."
+      },
+      {
+        "title": "Real-IAD: A Real-World Multi-View Dataset for Benchmarking Versatile Industrial Anomaly Detection",
+        "url": "https://doi.org/10.1109/CVPR52733.2024.01607",
+        "type": "original_paper",
+        "notes": "IEEE CVPR 2024 conference paper introducing the multi-view acquisition methodology and benchmarking suite."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against IEEE CVPR 2024 proceedings (DOI: 10.1109/CVPR52733.2024.01607) and author Hugging Face repository."
+    },
+    "size": {
+      "amount": 507.0,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "png",
+        "json",
+        "zip"
+      ],
+      "status": "verified",
+      "notes": "Full raw high-resolution dataset archive is ~507 GB; downsampled 1024x1024 version is ~53 GB."
+    },
+    "sample_count": {
+      "total": 150000,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2024-03-19",
+      "last_updated": "2024-06-17"
+    },
+    "citation": {
+      "paper_title": "Real-IAD: A Real-World Multi-View Dataset for Benchmarking Versatile Industrial Anomaly Detection",
+      "paper_url": "https://doi.org/10.1109/CVPR52733.2024.01607",
+      "authors": [
+        "Chengjie Wang",
+        "Wenbing Zhu",
+        "Bin-Bin Gao",
+        "Zhenye Gan",
+        "Jiangning Zhang",
+        "Zhihao Gu",
+        "Shuguang Qian",
+        "Mingang Chen",
+        "Lizhuang Ma"
+      ],
+      "doi": "10.1109/CVPR52733.2024.01607"
+    },
+    "geographic_coverage": [
+      "China"
+    ],
+    "provenance": {
+      "collection_method": "Multi-view industrial imaging rig using 5 synchronized cameras (C1–C5) capturing 30 diverse industrial objects under real factory line conditions.",
+      "curation_notes": "Annotated with precise pixel-level masks for defects covering various area ratios from subtle abrasions to severe structural deformations.",
+      "data_sources": [
+        "Rongcheer Co., Ltd. automated optical inspection production lines"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "real3d-ad",
+    "slug": "real3d-ad",
+    "name": "Real3D-AD: Point Cloud Anomaly Detection Dataset",
+    "description": "High-precision 3D point cloud anomaly detection dataset comprising 1,254 full 360-degree point cloud scans across 12 object categories acquired via an industrial optical 3D scanner with high resolution (0.0010mm–0.0015mm). Developed by M-3LAB, it addresses 3D industrial defect inspection with pixel-accurate anomaly localization on complex geometries under realistic manufacturing scenarios.",
+    "homepage_url": "https://github.com/M-3LAB/Real3D-AD",
+    "publisher": {
+      "name": "Southern University of Science and Technology (M-3LAB)",
+      "type": "academic",
+      "url": "https://github.com/M-3LAB"
+    },
+    "modalities": [
+      "vision",
+      "3d"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "3d-anomaly-detection"
+    ],
+    "tags": [
+      "3d-vision",
+      "point-cloud",
+      "optical-scanner",
+      "industrial-inspection",
+      "anomaly-detection",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
+      "spdx_id": null,
+      "url": "https://github.com/M-3LAB/Real3D-AD",
+      "commercial_use": "unknown",
+      "notes": "Distributed via Google Drive and Baidu Netdisk links in the author repository for academic research; no explicit open-source license file is provided."
+    },
+    "source_references": [
+      {
+        "title": "Real3D-AD Official GitHub Repository",
+        "url": "https://github.com/M-3LAB/Real3D-AD",
+        "type": "repository",
+        "notes": "Official repository with dataset download links (Google Drive and Baidu Netdisk), preprocessing scripts, and benchmark evaluation code."
+      },
+      {
+        "title": "Real3D-AD: A Dataset of Point Cloud Anomaly Detection",
+        "url": "https://arxiv.org/abs/2309.13226",
+        "type": "original_paper",
+        "notes": "NeurIPS 2023 Datasets and Benchmarks Track publication introducing Real3D-AD and the Reg3D-AD baseline."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against NeurIPS 2023 Datasets and Benchmarks Track proceedings, arXiv:2309.13226, and M-3LAB GitHub repository."
+    },
+    "size": {
+      "file_formats": [
+        "pcd",
+        "ply",
+        "zip"
+      ],
+      "status": "unknown",
+      "notes": "Distributed as downloadable zip packages containing PCD and PLY point cloud scans via Google Drive and Baidu Netdisk."
+    },
+    "sample_count": {
+      "total": 1254,
+      "unit": "scans",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023-09-23",
+      "last_updated": "2024-01-15"
+    },
+    "citation": {
+      "paper_title": "Real3D-AD: A Dataset of Point Cloud Anomaly Detection",
+      "paper_url": "https://arxiv.org/abs/2309.13226",
+      "authors": [
+        "Jiaqi Liu",
+        "Guoyang Xie",
+        "Ruitao Chen",
+        "Xinpeng Li",
+        "Jinbao Wang",
+        "Yong Liu",
+        "Feng Zheng"
+      ],
+      "doi": "10.48550/arXiv.2309.13226"
+    },
+    "geographic_coverage": [
+      "China"
+    ],
+    "provenance": {
+      "collection_method": "High-precision industrial optical 3D scanner capturing seamless 360-degree point clouds of real manufactured objects.",
+      "curation_notes": "Ground-truth annotations provide point-level binary labels indicating anomalous geometry (scratches, dents, deformations, and fractures).",
+      "data_sources": [
+        "Southern University of Science and Technology Multi-modal Machine Learning Laboratory (M-3LAB)"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "reben-bigearthnet-v2",
     "slug": "reben-bigearthnet-v2",
     "name": "reBEN: Refined BigEarthNet v2.0 Dataset for Remote Sensing Image Analysis",
@@ -37124,6 +39476,104 @@
       "data_sources": [
         "Seoul Open Data Plaza",
         "Korea Meteorological Administration"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "severstal-steel-defect-detection",
+    "slug": "severstal-steel-defect-detection",
+    "name": "Severstal: Steel Defect Detection",
+    "description": "Production-line flat sheet steel surface defect classification and segmentation benchmark consisting of 18,074 high-frequency camera images (1600x256 resolution) capturing sheet steel surfaces during active rolling. Features pixel-level run-length encoded annotations across four surface defect classes (pitted surface, crazing, scratches, and patches) alongside flawless surface regions.",
+    "homepage_url": "https://www.kaggle.com/competitions/severstal-steel-defect-detection",
+    "publisher": {
+      "name": "PAO Severstal",
+      "type": "industry",
+      "url": "https://www.severstal.com/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "defect-detection",
+      "image-segmentation",
+      "image-classification"
+    ],
+    "tags": [
+      "steel-manufacturing",
+      "surface-defect",
+      "industrial-inspection",
+      "defect-segmentation",
+      "kaggle-competition"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Kaggle Competition Rules",
+      "spdx_id": null,
+      "url": "https://www.kaggle.com/competitions/severstal-steel-defect-detection/rules",
+      "commercial_use": "forbidden",
+      "notes": "Subject to Kaggle competition rules; data is licensed for non-commercial research and educational participation."
+    },
+    "source_references": [
+      {
+        "title": "Severstal: Steel Defect Detection Kaggle Competition",
+        "url": "https://www.kaggle.com/competitions/severstal-steel-defect-detection",
+        "type": "official_website",
+        "notes": "Official competition platform hosting image files, run-length-encoded training labels, and rules."
+      },
+      {
+        "title": "Kaggle Competition Dataset Files Overview",
+        "url": "https://www.kaggle.com/competitions/severstal-steel-defect-detection/data",
+        "type": "documentation",
+        "notes": "Data description page detailing the four defect classes, image dimensions (1600x256), and submission format."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against official Kaggle competition platform and PAO Severstal contest documentation."
+    },
+    "size": {
+      "amount": 11.6,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "csv",
+        "zip"
+      ],
+      "status": "verified",
+      "notes": "Total download size across train_images.zip, test_images.zip, and CSV annotation files is approximately 11.6 GB."
+    },
+    "sample_count": {
+      "total": 18074,
+      "splits": {
+        "train": 12568,
+        "test": 5506
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-07-22",
+      "last_updated": "2019-10-24"
+    },
+    "citation": {
+      "paper_title": "Severstal: Steel Defect Detection Competition Benchmark",
+      "paper_url": "https://www.kaggle.com/competitions/severstal-steel-defect-detection",
+      "authors": [
+        "PAO Severstal Machine Learning Team",
+        "Kaggle Competition Team"
+      ]
+    },
+    "geographic_coverage": [
+      "Russia"
+    ],
+    "provenance": {
+      "collection_method": "High-frequency industrial inspection cameras continuously photographing moving steel sheets at high speed.",
+      "curation_notes": "Ground-truth annotations are provided in run-length encoding (RLE) across four distinct defect classes (ClassId 1 to 4). Evaluated using the mean Dice coefficient.",
+      "data_sources": [
+        "PAO Severstal industrial flat steel manufacturing facilities"
       ]
     }
   },
@@ -42827,6 +45277,112 @@
       ],
       "doi": "10.1038/s41597-023-02100-7",
       "bibtex": "@article{nguyen2023vindr,\n  title = {VinDr-Mammo: A large-scale benchmark dataset for computer-aided diagnosis in full-field digital mammography},\n  author = {Nguyen, Hieu T. and Nguyen, Ha Q. and Pham, Hieu H. and Lam, Khanh and Le, Linh T. and Ngo, Dat T. and Dao, Minh},\n  journal = {Scientific Data},\n  volume = {10},\n  number = {1},\n  pages = {211},\n  year = {2023}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "visa-visual-anomaly",
+    "slug": "visa-visual-anomaly",
+    "name": "VisA: Visual Anomaly Dataset",
+    "description": "Large-scale visual anomaly detection dataset of 10,821 high-resolution images across 12 industrial object subsets encompassing complex printed circuit boards (PCB1 to PCB4), multiple multi-instance objects (capsules, candle, macaroni, chewing gum), and single aligned products (cashew, fryum, pipe fryum). Includes 9,621 normal images and 1,200 anomalous images with pixel-precise ground truth defect masks.",
+    "homepage_url": "https://registry.opendata.aws/visa/",
+    "publisher": {
+      "name": "Amazon Research",
+      "type": "industry",
+      "url": "https://github.com/amazon-research/spot-diff"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "anomaly-localization",
+      "image-segmentation"
+    ],
+    "tags": [
+      "industrial-inspection",
+      "visual-anomaly",
+      "defect-detection",
+      "pcb-inspection",
+      "unsupervised-learning",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published under CC BY 4.0 in Registry of Open Data on AWS."
+    },
+    "source_references": [
+      {
+        "title": "Registry of Open Data on AWS: Visual Anomaly (VisA) Dataset",
+        "url": "https://registry.opendata.aws/visa/",
+        "type": "official_website",
+        "notes": "Open Data repository on AWS S3 providing public access to full-resolution images and masks."
+      },
+      {
+        "title": "Amazon Science Spot-the-Difference GitHub Repository",
+        "url": "https://github.com/amazon-research/spot-diff",
+        "type": "repository",
+        "notes": "Official open-source benchmark repository by Amazon AI Labs / Amazon Research."
+      },
+      {
+        "title": "Spot-the-Difference Self-Supervised Pre-training for Anomaly Detection and Segmentation",
+        "url": "https://doi.org/10.1007/978-3-031-19821-2_23",
+        "type": "original_paper",
+        "notes": "ECCV 2022 conference publication introducing the VisA benchmark and SPot-the-Difference pre-training methodology."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curatorial Team",
+      "verified_date": "2026-11-10",
+      "notes": "Verified against AWS Open Data Registry and Springer ECCV 2022 proceedings (DOI: 10.1007/978-3-031-19821-2_23)."
+    },
+    "size": {
+      "file_formats": [
+        "jpg",
+        "png",
+        "tar"
+      ],
+      "status": "unknown",
+      "notes": "Hosted on AWS Open Data Registry as individual objects and category tarballs; aggregate payload varies depending on downloaded subsets."
+    },
+    "sample_count": {
+      "total": 10821,
+      "splits": {
+        "normal": 9621,
+        "anomalous": 1200
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022-10-23"
+    },
+    "citation": {
+      "paper_title": "Spot-the-Difference Self-Supervised Pre-training for Anomaly Detection and Segmentation",
+      "paper_url": "https://doi.org/10.1007/978-3-031-19821-2_23",
+      "authors": [
+        "Yang Zou",
+        "Jongwon Jeong",
+        "Liyan Pemula",
+        "Dongqing Zhang",
+        "Onkar Dabeer"
+      ],
+      "doi": "10.1007/978-3-031-19821-2_23"
+    },
+    "geographic_coverage": [
+      "United States"
+    ],
+    "provenance": {
+      "collection_method": "High-resolution camera rigs capturing industrial objects across 12 subsets under three structural typologies: complex printed circuit boards, multiple loosely arranged items, and single isolated objects.",
+      "curation_notes": "Defect categories include scratch, dent, stain, crack, burn, foreign particle, and component misplacement with pixel-accurate binary masks.",
+      "data_sources": [
+        "Registry of Open Data on AWS (s3://amazon-visa-dataset)"
+      ]
     }
   },
   {

@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "id": "deeppcb",
+  "slug": "deeppcb",
+  "name": "DeepPCB: A Printed Circuit Board Defect Detection Dataset",
+  "description": "Printed circuit board defect detection dataset comprising 1,500 aligned image pairs (3,000 images total, each pair consisting of a defect-free template image and an aligned tested image at 640x640 resolution) obtained via industrial linear-scan CCD cameras at 48 pixels/mm. Features bounding-box annotations across six common PCB defect types: open circuit, short, mousebite, spur, pinhole, and spurious copper.",
+  "homepage_url": "https://github.com/tangsanli5201/DeepPCB",
+  "publisher": {
+    "name": "Tsinghua University",
+    "type": "academic",
+    "url": "https://www.tsinghua.edu.cn/en/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "defect-detection",
+    "object-detection"
+  ],
+  "tags": [
+    "pcb-inspection",
+    "electronics-manufacturing",
+    "defect-detection",
+    "circuit-board",
+    "image-registration",
+    "benchmark"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source",
+    "spdx_id": null,
+    "url": "https://github.com/tangsanli5201/DeepPCB",
+    "commercial_use": "forbidden",
+    "notes": "Code repository contains an MIT license file, but the author README explicitly restricts dataset usage: 'You can only use this dataset for research purpose.'"
+  },
+  "source_references": [
+    {
+      "title": "DeepPCB Official GitHub Repository",
+      "url": "https://github.com/tangsanli5201/DeepPCB",
+      "type": "repository",
+      "notes": "Official repository containing image pairs, ground truth annotation text files, and evaluation scripts."
+    },
+    {
+      "title": "On-line PCB Defect Detector On A New PCB Defect Dataset",
+      "url": "https://arxiv.org/abs/1902.06197",
+      "type": "original_paper",
+      "notes": "Original preprint introducing the 1,500 pair DeepPCB dataset, CCD collection pipeline, and real-time detection model."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against author GitHub repository and arXiv preprint 1902.06197."
+  },
+  "size": {
+    "file_formats": [
+      "jpg",
+      "txt",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as downloadable zip packages across repository directories containing aligned template and tested image pairs."
+  },
+  "sample_count": {
+    "total": 1500,
+    "splits": {
+      "train": 1000,
+      "test": 500
+    },
+    "unit": "image pairs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-02-17"
+  },
+  "citation": {
+    "paper_title": "On-line PCB Defect Detector On A New PCB Defect Dataset",
+    "paper_url": "https://arxiv.org/abs/1902.06197",
+    "authors": [
+      "Sanli Tang",
+      "Fang He",
+      "Xiaoqing Liu",
+      "Weihua Li"
+    ],
+    "doi": "10.48550/arXiv.1902.06197"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "High-precision linear scan CCD camera capturing 16k x 16k raw PCB images at 48 pixels/mm, cropped into aligned 640x640 binarized sub-images.",
+    "curation_notes": "Annotated with class-labeled axis-aligned bounding boxes for 6 defect categories: open, short, mousebite, spur, spurious copper, and pin-hole.",
+    "data_sources": [
+      "Tsinghua University Department of Automation"
+    ]
+  }
+}

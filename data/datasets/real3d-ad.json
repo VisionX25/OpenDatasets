@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "real3d-ad",
+  "slug": "real3d-ad",
+  "name": "Real3D-AD: Point Cloud Anomaly Detection Dataset",
+  "description": "High-precision 3D point cloud anomaly detection dataset comprising 1,254 full 360-degree point cloud scans across 12 object categories acquired via an industrial optical 3D scanner with high resolution (0.0010mm–0.0015mm). Developed by M-3LAB, it addresses 3D industrial defect inspection with pixel-accurate anomaly localization on complex geometries under realistic manufacturing scenarios.",
+  "homepage_url": "https://github.com/M-3LAB/Real3D-AD",
+  "publisher": {
+    "name": "Southern University of Science and Technology (M-3LAB)",
+    "type": "academic",
+    "url": "https://github.com/M-3LAB"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "3d-anomaly-detection"
+  ],
+  "tags": [
+    "3d-vision",
+    "point-cloud",
+    "optical-scanner",
+    "industrial-inspection",
+    "anomaly-detection",
+    "benchmark"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source",
+    "spdx_id": null,
+    "url": "https://github.com/M-3LAB/Real3D-AD",
+    "commercial_use": "unknown",
+    "notes": "Distributed via Google Drive and Baidu Netdisk links in the author repository for academic research; no explicit open-source license file is provided."
+  },
+  "source_references": [
+    {
+      "title": "Real3D-AD Official GitHub Repository",
+      "url": "https://github.com/M-3LAB/Real3D-AD",
+      "type": "repository",
+      "notes": "Official repository with dataset download links (Google Drive and Baidu Netdisk), preprocessing scripts, and benchmark evaluation code."
+    },
+    {
+      "title": "Real3D-AD: A Dataset of Point Cloud Anomaly Detection",
+      "url": "https://arxiv.org/abs/2309.13226",
+      "type": "original_paper",
+      "notes": "NeurIPS 2023 Datasets and Benchmarks Track publication introducing Real3D-AD and the Reg3D-AD baseline."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against NeurIPS 2023 Datasets and Benchmarks Track proceedings, arXiv:2309.13226, and M-3LAB GitHub repository."
+  },
+  "size": {
+    "file_formats": [
+      "pcd",
+      "ply",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Distributed as downloadable zip packages containing PCD and PLY point cloud scans via Google Drive and Baidu Netdisk."
+  },
+  "sample_count": {
+    "total": 1254,
+    "unit": "scans",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023-09-23",
+    "last_updated": "2024-01-15"
+  },
+  "citation": {
+    "paper_title": "Real3D-AD: A Dataset of Point Cloud Anomaly Detection",
+    "paper_url": "https://arxiv.org/abs/2309.13226",
+    "authors": [
+      "Jiaqi Liu",
+      "Guoyang Xie",
+      "Ruitao Chen",
+      "Xinpeng Li",
+      "Jinbao Wang",
+      "Yong Liu",
+      "Feng Zheng"
+    ],
+    "doi": "10.48550/arXiv.2309.13226"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "High-precision industrial optical 3D scanner capturing seamless 360-degree point clouds of real manufactured objects.",
+    "curation_notes": "Ground-truth annotations provide point-level binary labels indicating anomalous geometry (scratches, dents, deformations, and fractures).",
+    "data_sources": [
+      "Southern University of Science and Technology Multi-modal Machine Learning Laboratory (M-3LAB)"
+    ]
+  }
+}

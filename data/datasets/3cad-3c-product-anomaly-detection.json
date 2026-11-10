@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "3cad-3c-product-anomaly-detection",
+  "slug": "3cad-3c-product-anomaly-detection",
+  "name": "3CAD: Large-Scale Real-World 3C Product Dataset for Anomaly Detection",
+  "description": "Large-scale real-world industrial anomaly detection benchmark comprising 27,039 high-resolution images across eight categories of manufactured 3C product parts (Aluminum Camera Cover, Aluminum iPad, Aluminum Middle Frame, Aluminum New Middle Frame, Aluminum New iPad, Aluminum PC, Copper Stator, and Iron Stator). Accumulated from active industrial production lines, providing 10,493 normal training images and 16,546 test images (5,084 normal, 11,462 defective) annotated with pixel-precise masks for 47 defect types.",
+  "homepage_url": "https://github.com/ShuCvlab/3CAD",
+  "publisher": {
+    "name": "Shanghai University",
+    "type": "academic",
+    "url": "https://github.com/ShuCvlab"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "image-segmentation"
+  ],
+  "tags": [
+    "consumer-electronics",
+    "3c-manufacturing",
+    "industrial-inspection",
+    "anomaly-detection",
+    "defect-segmentation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source",
+    "spdx_id": null,
+    "url": "https://github.com/ShuCvlab/3CAD",
+    "commercial_use": "unknown",
+    "notes": "Shared via GitHub repository ShuCvlab/3CAD for academic research; no formal open-source license file is provided in the repository."
+  },
+  "source_references": [
+    {
+      "title": "3CAD Official GitHub Repository",
+      "url": "https://github.com/ShuCvlab/3CAD",
+      "type": "repository",
+      "notes": "Official repository with dataset download links (Google Drive and Baidu Netdisk), benchmark scripts, and documentation."
+    },
+    {
+      "title": "3CAD: A Large-Scale Real-World 3C Product Dataset for Unsupervised Anomaly Detection",
+      "url": "https://arxiv.org/abs/2502.05761",
+      "type": "original_paper",
+      "notes": "AAAI 2025 conference publication introducing the 3CAD dataset and the CFRG anomaly detection framework."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against AAAI 2025 proceedings, arXiv:2502.05761, and official ShuCvlab GitHub repository."
+  },
+  "size": {
+    "file_formats": [
+      "png",
+      "jpg",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Dataset is distributed across category-specific zip archives via Google Drive and Baidu Netdisk."
+  },
+  "sample_count": {
+    "total": 27039,
+    "splits": {
+      "train": 10493,
+      "test_normal": 5084,
+      "test_abnormal": 11462
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2025-02-09"
+  },
+  "citation": {
+    "paper_title": "3CAD: A Large-Scale Real-World 3C Product Dataset for Unsupervised Anomaly Detection",
+    "paper_url": "https://arxiv.org/abs/2502.05761",
+    "authors": [
+      "Enquan Yang",
+      "Peng Xing",
+      "Hanyang Sun",
+      "Wenbo Guo",
+      "Yuanwei Ma",
+      "Zechao Li",
+      "Dan Zeng"
+    ],
+    "doi": "10.48550/arXiv.2502.05761"
+  },
+  "geographic_coverage": [
+    "China"
+  ],
+  "provenance": {
+    "collection_method": "High-resolution machine vision cameras on active consumer electronics production lines inspecting metallic housings, covers, and stator coils.",
+    "curation_notes": "Defective images feature between 1 and 23 anomalous regions and up to 4 distinct coexisting defect classes per image, accompanied by pixel-precise segmentation masks.",
+    "data_sources": [
+      "Shanghai University Computer Vision Laboratory / 3C manufacturing production lines"
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mpdd-metal-parts-defect-detection",
+  "slug": "mpdd-metal-parts-defect-detection",
+  "name": "MPDD: Metal Parts Defect Detection Dataset",
+  "description": "Industrial defect detection benchmark comprising 1,346 high-resolution images across six painted and untreated metal manufacturing part categories (Bracket Black, Bracket Brown, Bracket White, Connector, Metal Plate, and Tubes). Captured under challenging industrial conditions with variable object positioning, multiple distances, and non-uniform backgrounds, providing pixel-precise defect annotation masks.",
+  "homepage_url": "https://github.com/stepanje/MPDD",
+  "publisher": {
+    "name": "Brno University of Technology",
+    "type": "academic",
+    "url": "https://www.vut.cz/en/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "image-segmentation"
+  ],
+  "tags": [
+    "metal-parts",
+    "defect-detection",
+    "manufacturing",
+    "surface-defect",
+    "anomaly-detection",
+    "defect-segmentation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source",
+    "spdx_id": null,
+    "url": "https://github.com/stepanje/MPDD",
+    "commercial_use": "unknown",
+    "notes": "Publicly hosted by Brno University of Technology under Technology Agency of the Czech Republic project FW03010273; no explicit open-source license file is provided in the repository."
+  },
+  "source_references": [
+    {
+      "title": "MPDD Official GitHub Repository",
+      "url": "https://github.com/stepanje/MPDD",
+      "type": "repository",
+      "notes": "Author repository with direct download links hosted on Brno University of Technology SharePoint."
+    },
+    {
+      "title": "Deep learning-based defect detection of metal parts: evaluating current methods in complex conditions",
+      "url": "https://doi.org/10.1109/ICUMT54235.2021.9631567",
+      "type": "original_paper",
+      "notes": "IEEE ICUMT 2021 conference publication detailing part acquisition, complex condition challenges, and defect types."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against IEEE ICUMT 2021 proceedings (DOI: 10.1109/ICUMT54235.2021.9631567) and Brno University of Technology repository."
+  },
+  "size": {
+    "file_formats": [
+      "png",
+      "zip"
+    ],
+    "status": "unknown",
+    "notes": "Distributed via university cloud storage links across six category archives; aggregate payload size is not authoritatively published."
+  },
+  "sample_count": {
+    "total": 1346,
+    "splits": {
+      "train": 888,
+      "test_normal": 176,
+      "test_abnormal": 282
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-10-26"
+  },
+  "citation": {
+    "paper_title": "Deep learning-based defect detection of metal parts: evaluating current methods in complex conditions",
+    "paper_url": "https://doi.org/10.1109/ICUMT54235.2021.9631567",
+    "authors": [
+      "Štěpán Ježek",
+      "Martin Jonák",
+      "Radim Burget",
+      "Pavel Dvořák",
+      "Miloš Skoták"
+    ],
+    "doi": "10.1109/ICUMT54235.2021.9631567"
+  },
+  "geographic_coverage": [
+    "Czech Republic"
+  ],
+  "provenance": {
+    "collection_method": "High-resolution camera imaging of real manufactured metal parts under variable illumination, spatial orientations, and background settings.",
+    "curation_notes": "Defect categories include surface scratches, missing paint, dents, holes, and edge deformations with pixel-precise binary ground truth masks.",
+    "data_sources": [
+      "Technology Agency of the Czech Republic Project FW03010273 / Brno University of Technology"
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "visa-visual-anomaly",
+  "slug": "visa-visual-anomaly",
+  "name": "VisA: Visual Anomaly Dataset",
+  "description": "Large-scale visual anomaly detection dataset of 10,821 high-resolution images across 12 industrial object subsets encompassing complex printed circuit boards (PCB1 to PCB4), multiple multi-instance objects (capsules, candle, macaroni, chewing gum), and single aligned products (cashew, fryum, pipe fryum). Includes 9,621 normal images and 1,200 anomalous images with pixel-precise ground truth defect masks.",
+  "homepage_url": "https://registry.opendata.aws/visa/",
+  "publisher": {
+    "name": "Amazon Research",
+    "type": "industry",
+    "url": "https://github.com/amazon-research/spot-diff"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "anomaly-localization",
+    "image-segmentation"
+  ],
+  "tags": [
+    "industrial-inspection",
+    "visual-anomaly",
+    "defect-detection",
+    "pcb-inspection",
+    "unsupervised-learning",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Published under CC BY 4.0 in Registry of Open Data on AWS."
+  },
+  "source_references": [
+    {
+      "title": "Registry of Open Data on AWS: Visual Anomaly (VisA) Dataset",
+      "url": "https://registry.opendata.aws/visa/",
+      "type": "official_website",
+      "notes": "Open Data repository on AWS S3 providing public access to full-resolution images and masks."
+    },
+    {
+      "title": "Amazon Science Spot-the-Difference GitHub Repository",
+      "url": "https://github.com/amazon-research/spot-diff",
+      "type": "repository",
+      "notes": "Official open-source benchmark repository by Amazon AI Labs / Amazon Research."
+    },
+    {
+      "title": "Spot-the-Difference Self-Supervised Pre-training for Anomaly Detection and Segmentation",
+      "url": "https://doi.org/10.1007/978-3-031-19821-2_23",
+      "type": "original_paper",
+      "notes": "ECCV 2022 conference publication introducing the VisA benchmark and SPot-the-Difference pre-training methodology."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curatorial Team",
+    "verified_date": "2026-11-10",
+    "notes": "Verified against AWS Open Data Registry and Springer ECCV 2022 proceedings (DOI: 10.1007/978-3-031-19821-2_23)."
+  },
+  "size": {
+    "file_formats": [
+      "jpg",
+      "png",
+      "tar"
+    ],
+    "status": "unknown",
+    "notes": "Hosted on AWS Open Data Registry as individual objects and category tarballs; aggregate payload varies depending on downloaded subsets."
+  },
+  "sample_count": {
+    "total": 10821,
+    "splits": {
+      "normal": 9621,
+      "anomalous": 1200
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022-10-23"
+  },
+  "citation": {
+    "paper_title": "Spot-the-Difference Self-Supervised Pre-training for Anomaly Detection and Segmentation",
+    "paper_url": "https://doi.org/10.1007/978-3-031-19821-2_23",
+    "authors": [
+      "Yang Zou",
+      "Jongwon Jeong",
+      "Liyan Pemula",
+      "Dongqing Zhang",
+      "Onkar Dabeer"
+    ],
+    "doi": "10.1007/978-3-031-19821-2_23"
+  },
+  "geographic_coverage": [
+    "United States"
+  ],
+  "provenance": {
+    "collection_method": "High-resolution camera rigs capturing industrial objects across 12 subsets under three structural typologies: complex printed circuit boards, multiple loosely arranged items, and single isolated objects.",
+    "curation_notes": "Defect categories include scratch, dent, stain, crack, burn, foreign particle, and component misplacement with pixel-accurate binary masks.",
+    "data_sources": [
+      "Registry of Open Data on AWS (s3://amazon-visa-dataset)"
+    ]
+  }
+}
