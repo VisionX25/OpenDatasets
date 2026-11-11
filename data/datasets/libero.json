@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "libero",
+  "slug": "libero",
+  "name": "LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning",
+  "description": "LIBERO (Lifelong Benchmark for Robot Learning) is a standardized benchmark and human demonstration dataset designed to evaluate lifelong robot learning and knowledge transfer. Developed by UT Austin and Sony AI, LIBERO encompasses 130 manipulation tasks across four distinct task suites implemented in robosuite: LIBERO-Spatial (10 tasks testing spatial variations), LIBERO-Object (10 tasks testing novel object instances), LIBERO-Goal (10 tasks testing distinct goals in fixed scenes), and LIBERO-100 (a long-horizon suite partitioned into LIBERO-10 and LIBERO-90). The dataset contains 6,500 high-quality human teleoperated demonstrations (exactly 50 demonstrations per task) with synchronized multi-camera RGB video, robot proprioception, and language instructions.",
+  "homepage_url": "https://libero-project.github.io/",
+  "publisher": {
+    "name": "UT Austin Robot Perception and Learning Lab",
+    "type": "academic",
+    "url": "https://robot-learning.cs.utexas.edu/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "lifelong-learning",
+    "knowledge-transfer",
+    "imitation-learning"
+  ],
+  "tags": [
+    "robotics",
+    "libero",
+    "lifelong-learning",
+    "imitation-learning",
+    "franka-panda",
+    "robosuite"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "commercial_use": "allowed",
+    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/LICENSE",
+    "notes": "The LIBERO benchmark suite and demonstration datasets are licensed under the MIT License."
+  },
+  "source_references": [
+    {
+      "title": "LIBERO Project Homepage",
+      "url": "https://libero-project.github.io/",
+      "type": "official_website"
+    },
+    {
+      "title": "LIBERO GitHub Repository",
+      "url": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+      "type": "repository"
+    },
+    {
+      "title": "LIBERO Datasets on Hugging Face",
+      "url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets",
+      "type": "dataset_card"
+    },
+    {
+      "title": "LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning (NeurIPS 2023 / arXiv:2306.03310)",
+      "url": "https://arxiv.org/abs/2306.03310",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against official GitHub repository, NeurIPS 2023 paper, and Hugging Face yifengzhu-hf/LIBERO-datasets. Confirmed 130 tasks with 50 demos each (6,500 total demonstrations), documented that LIBERO-10 and LIBERO-90 are partitions, and verified MIT license."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "hdf5"
+    ],
+    "notes": "Distributed as HDF5 files per task suite on Hugging Face (yifengzhu-hf/LIBERO-datasets)."
+  },
+  "sample_count": {
+    "total": 6500,
+    "unit": "demonstrations",
+    "status": "verified",
+    "splits": {
+      "libero_spatial": 500,
+      "libero_object": 500,
+      "libero_goal": 500,
+      "libero_10": 500,
+      "libero_90": 4500
+    }
+  },
+  "dates": {
+    "published": "2023-06-05",
+    "last_updated": "2023-11-20"
+  },
+  "citation": {
+    "paper_title": "LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning",
+    "paper_url": "https://arxiv.org/abs/2306.03310",
+    "doi": "10.48550/arXiv.2306.03310",
+    "authors": [
+      "Bo Liu",
+      "Yifeng Zhu",
+      "Chongkai Gao",
+      "Yihao Feng",
+      "Qiang Liu",
+      "Yuke Zhu",
+      "Peter Stone"
+    ],
+    "bibtex": "@inproceedings{liu2023libero,\n  title={LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning},\n  author={Liu, Bo and Zhu, Yifeng and Gao, Chongkai and Feng, Yihao and Liu, Qiang and Zhu, Yuke and Stone, Peter},\n  booktitle={Thirty-seventh Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year={2023}\n}"
+  },
+  "provenance": {
+    "collection_method": "Teleoperated human demonstrations using a 3Dconnexion SpaceMouse controlling a Franka Emika Panda arm in robosuite simulation environments.",
+    "curation_notes": "Features 130 standardized tasks with procedural variations. LIBERO-10 and LIBERO-90 are evaluation partitions of the long-horizon 100-task suite rather than independent datasets.",
+    "data_sources": [
+      "Original teleoperation at UT Austin Robot Perception and Learning Lab"
+    ]
+  }
+}

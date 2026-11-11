@@ -1111,6 +1111,101 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "agibot-world-2026",
+    "slug": "agibot-world-2026",
+    "name": "AgiBot World 2026: Real-World Embodied Intelligence Dataset",
+    "description": "AgiBot World 2026 is a large-scale real-world robotic demonstration dataset designed to advance embodied AI from laboratory settings into unconstrained commercial spaces, supermarkets, and domestic homes. Collected on the AGIBOT G2 dual-arm mobile platform, the dataset provides structured, multi-layer hierarchical annotations following the LeRobot v2.1 standard. It contains full-horizon restocking and shelf-organization demonstrations annotated across three complementary layers: subtask task frames, 2D interaction bounding boxes, and step-level primitive skill segments. The physical dataset is paired with 1:1 digital twin simulation environments released in the GenieSim project.",
+    "homepage_url": "https://agibot-world.com/",
+    "publisher": {
+      "name": "AgiBot World Team",
+      "type": "industry",
+      "url": "https://agibot-world.com/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "dual-arm-manipulation",
+      "imitation-learning",
+      "hierarchical-policy-learning"
+    ],
+    "tags": [
+      "robotics",
+      "agibot",
+      "agibot-world",
+      "g2",
+      "humanoid",
+      "dual-arm",
+      "lerobot",
+      "commercial-spaces"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "commercial_use": "forbidden",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "notes": "All dataset files, annotations, and tools are provided under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license."
+    },
+    "source_references": [
+      {
+        "title": "AgiBot World Official Website",
+        "url": "https://agibot-world.com/",
+        "type": "official_website"
+      },
+      {
+        "title": "AgiBot World 2026 on Hugging Face",
+        "url": "https://huggingface.co/datasets/agibot-world/AgiBotWorld2026",
+        "type": "dataset_card"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against agibot-world.com and Hugging Face repository agibot-world/AgiBotWorld2026. Documented LeRobot v2.1 structure, AGIBOT G2 dual-arm platform, GenieSim digital twin pairing, and CC BY-NC-SA 4.0 license. The collection spans thousands of episodes across hundreds of commercial task archives; individual Parquet rows represent sensor/action frames rather than discrete episodes, so aggregate episode totals are set to unknown status rather than conflated with row counts."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "parquet",
+        "mp4",
+        "jsonl",
+        "tar.gz"
+      ],
+      "notes": "Structured in LeRobot v2.1 format with per-episode Apache Parquet data files, multi-camera MP4 videos (top_head, hand_left, hand_right), and JSONL metadata. Individual tasks are packaged as 5-10 GB archives with a 7 GB standalone sample."
+    },
+    "sample_count": {
+      "unit": "episodes",
+      "status": "unknown"
+    },
+    "dates": {
+      "published": "2026-03-15",
+      "last_updated": "2026-03-15"
+    },
+    "citation": {
+      "paper_title": "AgiBot World 2026: Real-World Embodied Intelligence Dataset",
+      "paper_url": "https://huggingface.co/datasets/agibot-world/AgiBotWorld2026",
+      "authors": [
+        "AgiBot World Team"
+      ],
+      "bibtex": "@misc{agibotworld2026,\n  title={AgiBot World 2026},\n  author={AgiBot World Team},\n  howpublished={\\url{https://huggingface.co/datasets/agibot-world/AgiBotWorld2026}},\n  year={2026}\n}"
+    },
+    "provenance": {
+      "collection_method": "Free-form physical teleoperation on the AGIBOT G2 dual-arm mobile platform across authentic retail and commercial environments, with concurrent 1:1 simulation recording in GenieSim.",
+      "curation_notes": "Distinguishes from earlier AgiBot Alpha/Beta test collections by introducing full-length commercial retail tasks formatted to LeRobot v2.1 with comprehensive 3-tier annotations.",
+      "data_sources": [
+        "Original commercial and retail physical deployments by AgiBot"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "agriculture-vision",
     "slug": "agriculture-vision",
     "name": "Agriculture-Vision: Aerial Farmland Pattern Analysis Benchmark",
@@ -6110,6 +6205,128 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "behavior-1k-2026-demos",
+    "slug": "behavior-1k-2026-demos",
+    "name": "BEHAVIOR-1K 2026 Challenge Human Teleoperation Demonstrations",
+    "description": "The BEHAVIOR-1K 2026 Challenge Demonstrations dataset is a large-scale collection of 20,000 human-collected teleoperation demonstrations across 100 core household activities, released by the Stanford Vision and Learning Lab for the BEHAVIOR-1K 2026 Embodied AI Challenge. While the broader BEHAVIOR-1K benchmark defines a taxonomy of 1,000 human-centric everyday activities, this 2026 demonstration release provides the official training trajectories formatted to the LeRobot V3 standard (3.27 TB, including multi-camera RGB/depth video, proprioception, actions, and language descriptions) and original raw HDF5 replay files (1.44 TB) for physics simulation in OmniGibson.",
+    "homepage_url": "https://behavior.stanford.edu/",
+    "publisher": {
+      "name": "Stanford Vision and Learning Lab (SVL)",
+      "type": "academic",
+      "url": "https://svl.stanford.edu/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "household-robotics",
+      "long-horizon-manipulation",
+      "embodied-ai",
+      "imitation-learning"
+    ],
+    "tags": [
+      "robotics",
+      "behavior-1k",
+      "omnigibson",
+      "lerobot",
+      "household-tasks",
+      "teleoperation"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "commercial_use": "allowed",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "notes": "The 2026 challenge demonstration datasets are distributed on Hugging Face under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "BEHAVIOR-1K Official Project Homepage",
+        "url": "https://behavior.stanford.edu/",
+        "type": "official_website"
+      },
+      {
+        "title": "BEHAVIOR-1K 2026 Challenge Dataset Documentation",
+        "url": "https://github.com/StanfordVL/BEHAVIOR-1K/blob/main/docs/challenge/dataset.md",
+        "type": "documentation"
+      },
+      {
+        "title": "BEHAVIOR-1K 2026 Challenge Demonstrations on Hugging Face",
+        "url": "https://huggingface.co/datasets/behavior-1k/2026-challenge-demos",
+        "type": "dataset_card"
+      },
+      {
+        "title": "BEHAVIOR-1K: A Benchmark for Embodied AI with 1,000 Everyday Activities and Realistic Simulation (CoRL 2022 / arXiv:2208.02818)",
+        "url": "https://arxiv.org/abs/2208.02818",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against behavior.stanford.edu, GitHub repository documentation, and Hugging Face dataset cards. Distinguishes the 1,000 benchmark activity taxonomy from the 20,000 teleoperation demonstrations across 100 tasks in the 2026 release, and confirmed verified sizes (3.27 TB LeRobot V3, 1.44 TB raw HDF5) and CC BY 4.0 license."
+    },
+    "size": {
+      "amount": 3.27,
+      "unit": "TB",
+      "status": "verified",
+      "file_formats": [
+        "parquet",
+        "mp4",
+        "jsonl",
+        "hdf5"
+      ],
+      "notes": "The primary LeRobot V3 format dataset (2026-challenge-demos) is 3.27 TB. The companion raw HDF5 replay archive (2026-challenge-rawdata) is 1.44 TB."
+    },
+    "sample_count": {
+      "total": 20000,
+      "unit": "demonstrations",
+      "status": "verified",
+      "splits": {
+        "tasks": 100
+      }
+    },
+    "dates": {
+      "published": "2026-01-15",
+      "last_updated": "2026-03-20"
+    },
+    "citation": {
+      "paper_title": "BEHAVIOR-1K: A Benchmark for Embodied AI with 1,000 Everyday Activities and Realistic Simulation",
+      "paper_url": "https://arxiv.org/abs/2208.02818",
+      "doi": "10.48550/arXiv.2208.02818",
+      "authors": [
+        "Chengshu Li",
+        "Ruohan Zhang",
+        "Josiah Wong",
+        "Cem Gokmen",
+        "Sanjana Srivastava",
+        "Roberto Martín-Martín",
+        "Chen Wang",
+        "Gabriele Sun",
+        "Kevin Lin",
+        "Michael Lingelbach",
+        "Jiankai Sun",
+        "Jiajun Wu",
+        "Li Fei-Fei"
+      ],
+      "bibtex": "@inproceedings{li2022behavior1k,\n  title={BEHAVIOR-1K: A Benchmark for Embodied AI with 1,000 Everyday Activities and Realistic Simulation},\n  author={Li, Chengshu and Zhang, Ruohan and Wong, Josiah and Gokmen, Cem and Srivastava, Sanjana and Mart{\\i}n-Mart{\\i}n, Roberto and Wang, Chen and Sun, Gabriele and Lin, Kevin and Lingelbach, Michael and others},\n  booktitle={Conference on Robot Learning (CoRL)},\n  year={2022}\n}"
+    },
+    "provenance": {
+      "collection_method": "Human VR teleoperation inside OmniGibson photorealistic physics environments with interactive simulated articulated objects, liquids, and thermal states.",
+      "curation_notes": "Demonstrations are captured across 100 everyday household activities with synchronized egocentric and third-person camera views, depth maps, end-effector commands, and step-level natural language instructions.",
+      "data_sources": [
+        "Original recordings by Stanford Vision and Learning Lab for the BEHAVIOR-1K 2026 Challenge"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "behavioral-neural-measures-auditory-distracti",
     "slug": "behavioral-neural-measures-auditory-distracti",
     "name": "Behavioral and Neural Measures of Auditory Distraction in Participants with Tinnitus",
@@ -8362,6 +8579,113 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "bridgedata-v2",
+    "slug": "bridgedata-v2",
+    "name": "BridgeData V2: A Dataset for Robot Learning at Scale",
+    "description": "BridgeData V2 is a large-scale, multi-environment robotic manipulation dataset consisting of exactly 53,896 demonstration trajectories (over 60,000 total demonstrations including teleoperation trials) collected across 24 distinct tabletop environments. Developed by researchers at UC Berkeley to study cross-environment generalization, reusable visual representations, and language-conditioned manipulation, BridgeData V2 provides synchronized multi-camera RGB video, proprioceptive arm telemetry, gripper states, and natural language task annotations collected on low-cost WidowX 250 robot arms. It represents a major constituent of modern Vision-Language-Action pretraining corpuses including RT-X and Octo.",
+    "homepage_url": "https://bridgedata-v2.github.io/",
+    "publisher": {
+      "name": "Robotic AI & Learning (RAIL) Lab, UC Berkeley",
+      "type": "academic",
+      "url": "https://rail.eecs.berkeley.edu/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "language-conditioned-manipulation",
+      "imitation-learning",
+      "cross-environment-generalization"
+    ],
+    "tags": [
+      "robotics",
+      "bridgedata",
+      "widowx",
+      "manipulation",
+      "imitation-learning",
+      "vla"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "commercial_use": "allowed",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "notes": "Released under the Creative Commons Attribution 4.0 International (CC BY 4.0) license."
+    },
+    "source_references": [
+      {
+        "title": "BridgeData V2 Official Project Page",
+        "url": "https://bridgedata-v2.github.io/",
+        "type": "official_website"
+      },
+      {
+        "title": "BridgeData V2 GitHub Repository",
+        "url": "https://github.com/rail-berkeley/bridge_data_v2",
+        "type": "repository"
+      },
+      {
+        "title": "BridgeData V2: A Dataset for Robot Learning at Scale (CoRL 2023 / arXiv:2308.12952)",
+        "url": "https://arxiv.org/abs/2308.12952",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against official project page, CoRL 2023 published paper, and rail-berkeley repository. Confirmed exact count of 53,896 trajectories across 24 environments and CC BY 4.0 license."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "tfrecord",
+        "rlds",
+        "hdf5",
+        "jpg"
+      ],
+      "notes": "Distributed as TFDS/RLDS archives via Google Cloud Storage and Academic Torrents."
+    },
+    "sample_count": {
+      "total": 53896,
+      "unit": "trajectories",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023-08-24",
+      "last_updated": "2023-11-10"
+    },
+    "citation": {
+      "paper_title": "BridgeData V2: A Dataset for Robot Learning at Scale",
+      "paper_url": "https://arxiv.org/abs/2308.12952",
+      "doi": "10.48550/arXiv.2308.12952",
+      "authors": [
+        "Homer Walke",
+        "Kevin Black",
+        "Abraham Lee",
+        "Murtaza Dalal",
+        "Zheng Chen",
+        "Abhishek Gupta",
+        "Sergey Levine"
+      ],
+      "bibtex": "@inproceedings{walke2023bridgedata,\n  title={BridgeData V2: A Dataset for Robot Learning at Scale},\n  author={Walke, Homer and Black, Kevin and Lee, Abraham and Dalal, Murtaza and Chen, Zheng and Gupta, Abhishek and Levine, Sergey},\n  booktitle={Conference on Robot Learning (CoRL)},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Teleoperated human demonstrations using VR controllers driving low-cost WidowX 250 6-DoF robotic arms across 24 distinct tabletop environments.",
+      "curation_notes": "Subsumes BridgeData V1 and expands it with 3x additional multi-environment data, rigorous language annotations, and consistent multi-view camera calibration.",
+      "data_sources": [
+        "BridgeData V1",
+        "BridgeData V2 Extension Recordings across toy sinks, kitchens, laundry tables, and craft setups"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "btad-beantech-anomaly-detection",
     "slug": "btad-beantech-anomaly-detection",
     "name": "BTAD: beanTech Anomaly Detection Dataset",
@@ -9055,6 +9379,116 @@
       "curation_notes": "Objects are predominantly centered and oriented upright with minimal background occlusion.",
       "data_sources": [
         "Google Images"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "calvin-robot-manipulation",
+    "slug": "calvin-robot-manipulation",
+    "name": "CALVIN: A Benchmark for Language-Conditioned Policy Learning with Long-Horizon Robot Manipulation Tasks",
+    "description": "CALVIN (Composing Actions from Language and Vision with Unstructured Exploration) is an open-source robotic manipulation benchmark designed to evaluate language-conditioned policy learning over long horizons in multi-environment settings. Developed at the University of Freiburg, CALVIN provides 24 hours of teleoperated unstructured play data (6 hours each in 4 distinct tabletop environments A, B, C, and D) recorded on a simulated Franka Emika Panda manipulator. Each transition includes static and gripper-mounted RGB-D camera streams, proprioceptive arm telemetry, and tactile contact observations paired with offline human crowd-sourced language annotations.",
+    "homepage_url": "https://github.com/mees/calvin",
+    "publisher": {
+      "name": "University of Freiburg",
+      "type": "academic",
+      "url": "https://rl.uni-freiburg.de/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "nlp",
+      "multimodal"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "long-horizon-manipulation",
+      "language-conditioned-control",
+      "imitation-learning"
+    ],
+    "tags": [
+      "robotics",
+      "calvin",
+      "language-conditioned",
+      "long-horizon",
+      "play-data",
+      "franka-panda"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "commercial_use": "allowed",
+      "url": "https://github.com/mees/calvin/blob/main/LICENSE",
+      "notes": "The CALVIN benchmark, simulator environments, and data download scripts are released under the MIT License."
+    },
+    "source_references": [
+      {
+        "title": "CALVIN Official GitHub Repository",
+        "url": "https://github.com/mees/calvin",
+        "type": "repository"
+      },
+      {
+        "title": "CALVIN Dataset Guide and Download Manifest",
+        "url": "https://github.com/mees/calvin/blob/main/dataset/README.md",
+        "type": "documentation"
+      },
+      {
+        "title": "CALVIN Research Paper (IEEE RA-L 2022 / arXiv:2112.03227)",
+        "url": "https://arxiv.org/abs/2112.03227",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against official GitHub repository and IEEE RA-L 2022 paper. Confirmed 24 total hours of play data across 4 environments (6h each), verified ABCD archive size (656 GB), and MIT license."
+    },
+    "size": {
+      "amount": 656.0,
+      "unit": "GB",
+      "status": "verified",
+      "file_formats": [
+        "npz",
+        "json",
+        "zip"
+      ],
+      "notes": "The complete ABCD dataset archive (task_ABCD_D.zip) is 656 GB. The ABC subset (task_ABC_D.zip) is 517 GB and D single-environment subset (task_D_D.zip) is 166 GB."
+    },
+    "sample_count": {
+      "total": 24,
+      "unit": "hours",
+      "status": "verified",
+      "splits": {
+        "env_A_hours": 6,
+        "env_B_hours": 6,
+        "env_C_hours": 6,
+        "env_D_hours": 6
+      }
+    },
+    "dates": {
+      "published": "2021-12-06",
+      "last_updated": "2023-01-10"
+    },
+    "citation": {
+      "paper_title": "CALVIN: A Benchmark for Language-Conditioned Policy Learning with Long-Horizon Robot Manipulation Tasks",
+      "paper_url": "https://arxiv.org/abs/2112.03227",
+      "doi": "10.1109/LRA.2022.3155823",
+      "authors": [
+        "Oier Mees",
+        "Lukas Hermann",
+        "Erick Rosete-Beas",
+        "Wolfram Burgard"
+      ],
+      "bibtex": "@article{mees2022calvin,\n  title={CALVIN: A Benchmark for Language-Conditioned Policy Learning with Long-Horizon Robot Manipulation Tasks},\n  author={Mees, Oier and Hermann, Lukas and Rosete-Beas, Erick and Burgard, Wolfram},\n  journal={IEEE Robotics and Automation Letters (RA-L)},\n  volume={7},\n  number={3},\n  pages={7327--7334},\n  year={2022},\n  doi={10.1109/LRA.2022.3155823}\n}"
+    },
+    "provenance": {
+      "collection_method": "Unstructured teleoperated play data collection using VR controllers driving a simulated Franka Emika Panda arm in PyBullet, coupled with language instruction labeling.",
+      "curation_notes": "Provides 4 distinct tabletop environments (A, B, C, D) with varying table colors, textures, and object layouts to evaluate zero-shot multi-environment policy transfer.",
+      "data_sources": [
+        "Original simulation play collection at Autonomous Intelligent Systems Lab, University of Freiburg"
       ]
     }
   },
@@ -11667,6 +12101,112 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "contactpose",
+    "slug": "contactpose",
+    "name": "ContactPose: A Dataset of Grasps with Object Contact and Hand Pose",
+    "description": "ContactPose is a multimodal hand-object interaction dataset capturing dense contact surface maps and 3D hand poses for human grasps on everyday household objects. Jointly created by Meta AI and Georgia Tech, ContactPose encompasses 2,306 unique grasps across 50 human participants interacting with 25 3D-printed household objects (including tools, utensils, mugs, and personal items). Contact patterns were captured using high-resolution thermal imaging cameras immediately following physical grasps to record residual heat signatures, synchronized with multi-view RGB-D video and OptiTrack 3D hand kinematics fitted to the MANO model.",
+    "homepage_url": "https://github.com/facebookresearch/ContactPose",
+    "publisher": {
+      "name": "Meta AI and Georgia Institute of Technology",
+      "type": "academic",
+      "url": "https://contactpose.cc.gatech.edu"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "3d"
+    ],
+    "tasks": [
+      "contact-prediction",
+      "hand-pose-estimation",
+      "robotic-grasping",
+      "thermal-sensing"
+    ],
+    "tags": [
+      "robotics",
+      "contactpose",
+      "hand-grasp",
+      "thermal-contact",
+      "mano",
+      "rgbd"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Apache License 2.0 (Code) / Research Open (Data)",
+      "commercial_use": "allowed",
+      "url": "https://github.com/facebookresearch/ContactPose/blob/main/LICENSE",
+      "notes": "ContactPose code and utilities are distributed under the Apache 2.0 license. Complete dataset distribution is maintained on IEEE DataPort under DOI 10.21227/fb0w-gt48."
+    },
+    "source_references": [
+      {
+        "title": "ContactPose GitHub Repository",
+        "url": "https://github.com/facebookresearch/ContactPose",
+        "type": "repository"
+      },
+      {
+        "title": "ContactPose Dataset on IEEE DataPort (DOI: 10.21227/fb0w-gt48)",
+        "url": "https://dx.doi.org/10.21227/fb0w-gt48",
+        "type": "archive",
+        "notes": "Author-designated active repository replacing deprecated legacy Dropbox links."
+      },
+      {
+        "title": "ContactPose: A Dataset of Grasps with Object Contact and Hand Pose (ECCV 2020 / arXiv:2007.09545)",
+        "url": "https://arxiv.org/abs/2007.09545",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against repository, GitHub Issue 27 resolution, and ECCV 2020 paper. Documented broken legacy Dropbox links, confirmed IEEE DataPort DOI (10.21227/fb0w-gt48) and author Google Drive sample access, and confirmed 2,306 grasps across 50 participants."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "zip",
+        "png",
+        "npy",
+        "pkl"
+      ],
+      "notes": "Hosted across IEEE DataPort (~600 GB complete collection) and official Google Drive sample archive."
+    },
+    "sample_count": {
+      "total": 2306,
+      "unit": "grasps",
+      "status": "verified",
+      "splits": {
+        "participants": 50,
+        "objects": 25
+      }
+    },
+    "dates": {
+      "published": "2020-07-18",
+      "last_updated": "2022-09-10"
+    },
+    "citation": {
+      "paper_title": "ContactPose: A Dataset of Grasps with Object Contact and Hand Pose",
+      "paper_url": "https://arxiv.org/abs/2007.09545",
+      "doi": "10.1007/978-3-030-58580-8_33",
+      "authors": [
+        "Samarth Brahmbhatt",
+        "Chengcheng Tang",
+        "Christopher D. Twigg",
+        "Charles C. Kemp",
+        "James Hays"
+      ],
+      "bibtex": "@inproceedings{brahmbhatt2020contactpose,\n  title={ContactPose: A Dataset of Grasps with Object Contact and Hand Pose},\n  author={Brahmbhatt, Samarth and Tang, Chengcheng and Twigg, Christopher D and Kemp, Charles C and Hays, James},\n  booktitle={European Conference on Computer Vision (ECCV)},\n  pages={361--378},\n  year={2020},\n  doi={10.1007/978-3-030-58580-8_33}\n}"
+    },
+    "provenance": {
+      "collection_method": "Thermal camera imaging recording thermal dissipation on 3D printed objects immediately after hand release, registered with OptiTrack 3D hand tracking and multi-view RGB-D cameras.",
+      "curation_notes": "Captures two distinct grasp intents per object: functional use grasps (e.g., using a knife) and handover grasps (e.g., passing a knife).",
+      "data_sources": [
+        "Original recordings at Facebook Reality Labs and Georgia Institute of Technology"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "continuous-measurement-rare-earth-ion-concent",
     "slug": "continuous-measurement-rare-earth-ion-concent",
     "name": "Continuous Measurement of Rare-Earth Ion Concentrations Using Dynamic UV–Vis Absorption Spectroscopy and Adaptive Residual Correction [datas",
@@ -13817,6 +14357,120 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "dex-ycb",
+    "slug": "dex-ycb",
+    "name": "DexYCB: A Benchmark for Capturing Hand Grasping of Objects",
+    "description": "DexYCB is a multi-view video benchmark and dataset for capturing dexterous human hand grasping of everyday 3D objects. Developed by NVIDIA Research, DexYCB comprises 582,000 synchronized RGB-D video frames recorded across 1,000 grasp execution sequences of 10 human subjects grasping 20 objects from the YCB object set. Captured using an 8-camera multi-sensor calibrated rig, the dataset provides complete 3D hand mesh parameters (fitted to the MANO hand model), ground-truth 6D object poses, and multi-view 2D segmentations to advance 3D hand-object interaction modeling, pose estimation, and dexterous robotic imitation.",
+    "homepage_url": "https://dex-ycb.github.io/",
+    "publisher": {
+      "name": "NVIDIA Research",
+      "type": "industry",
+      "url": "https://www.nvidia.com/en-us/research/"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor"
+    ],
+    "tasks": [
+      "hand-pose-estimation",
+      "object-pose-estimation",
+      "dexterous-grasping",
+      "hand-object-interaction"
+    ],
+    "tags": [
+      "robotics",
+      "dexycb",
+      "dexterous-grasping",
+      "hand-pose",
+      "ycb-objects",
+      "rgbd"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "commercial_use": "forbidden",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "notes": "DexYCB is explicitly licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license."
+    },
+    "source_references": [
+      {
+        "title": "DexYCB Official Website",
+        "url": "https://dex-ycb.github.io/",
+        "type": "official_website"
+      },
+      {
+        "title": "DexYCB Toolkit Repository",
+        "url": "https://github.com/NVlabs/dex-ycb-toolkit",
+        "type": "repository"
+      },
+      {
+        "title": "DexYCB: A Benchmark for Capturing Hand Grasping of Objects (CVPR 2021 / arXiv:2104.04631)",
+        "url": "https://arxiv.org/abs/2104.04631",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against dex-ycb.github.io, NVlabs/dex-ycb-toolkit, and CVPR 2021 paper. Confirmed 582,000 frames over 1,000 sequences across 10 subjects, verified archive size of 119 GB, and CC BY-NC 4.0 license."
+    },
+    "size": {
+      "amount": 119.0,
+      "unit": "GB",
+      "status": "verified",
+      "file_formats": [
+        "tar.gz",
+        "png",
+        "npz"
+      ],
+      "notes": "The full dataset archive (dex-ycb-20210415.tar.gz) is 119 GB via Google Drive, or downloadable as 10 per-subject archives of ~12 GB each."
+    },
+    "sample_count": {
+      "total": 582000,
+      "unit": "frames",
+      "status": "verified",
+      "splits": {
+        "sequences": 1000,
+        "subjects": 10,
+        "objects": 20,
+        "camera_views": 8
+      }
+    },
+    "dates": {
+      "published": "2021-04-09",
+      "last_updated": "2021-04-15"
+    },
+    "citation": {
+      "paper_title": "DexYCB: A Benchmark for Capturing Hand Grasping of Objects",
+      "paper_url": "https://arxiv.org/abs/2104.04631",
+      "doi": "10.1109/CVPR42600.2021.01519",
+      "authors": [
+        "Yu-Wei Chao",
+        "Wei Yang",
+        "Yu Xiang",
+        "Pavlo Molchanov",
+        "Ankur Handa",
+        "Jonathan Tremblay",
+        "Yashraj S. Narang",
+        "Karl Van Wyk",
+        "Umar Iqbal",
+        "Dieter Fox"
+      ],
+      "bibtex": "@inproceedings{chao2021dexycb,\n  title={DexYCB: A Benchmark for Capturing Hand Grasping of Objects},\n  author={Chao, Yu-Wei and Yang, Wei and Xiang, Yu and Molchanov, Pavlo and Handa, Ankur and Tremblay, Jonathan and Narang, Yashraj S and Van Wyk, Karl and Iqbal, Umar and Fox, Dieter},\n  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year={2021},\n  doi={10.1109/CVPR42600.2021.01519}\n}"
+    },
+    "provenance": {
+      "collection_method": "Synchronized capture across 8 calibrated RGB-D cameras surrounding seated human subjects performing naturalistic grasps on 20 YCB objects.",
+      "curation_notes": "Standardized evaluation protocols include S0 (default), S1 (unseen subjects), S2 (unseen camera views), and S3 (unseen grasping trajectories).",
+      "data_sources": [
+        "Original multi-camera captures at NVIDIA Seattle Robotics Lab"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "diabetes-130-us-hospitals",
     "slug": "diabetes-130-us-hospitals",
     "name": "Diabetes 130-US Hospitals for Years 1999-2008: Readmission Prediction Benchmark",
@@ -14497,6 +15151,125 @@
       "curation_notes": "Ground-truth disparity is generated through a multi-frame LiDAR point cloud integration and occlusion-aware filtering pipeline. Includes specialized adverse weather subsets covering rain, fog, dusk, and highway scenarios.",
       "data_sources": [
         "Vehicle-mounted binocular cameras and 64-beam LiDAR"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "droid-robot-manipulation",
+    "slug": "droid-robot-manipulation",
+    "name": "DROID: A Large-Scale In-the-Wild Robot Manipulation Dataset",
+    "description": "DROID (Distributed Robot Interaction Dataset) is a diverse, open-source real-world robot manipulation dataset consisting of 76,000 demonstration trajectories (equivalent to 350 hours of physical interaction) collected across 564 naturalistic domestic and office scenes and 86 tasks. Gathered over a 12-month period across North America, Asia, and Europe using portable Franka Emika Panda arms equipped with two ZED 2 stereo cameras, an end-effector wrist camera, and VR teleoperation headsets, DROID provides rich multi-view stereo observations, proprioceptive telemetry, and updated camera calibration metadata. It serves as a primary benchmark for in-the-wild generalization and large-scale Vision-Language-Action (VLA) policy pretraining.",
+    "homepage_url": "https://droid-dataset.github.io/",
+    "publisher": {
+      "name": "DROID Dataset Consortium",
+      "type": "academic",
+      "url": "https://droid-dataset.github.io/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "in-the-wild-manipulation",
+      "imitation-learning",
+      "vision-language-action"
+    ],
+    "tags": [
+      "robotics",
+      "droid",
+      "franka-panda",
+      "in-the-wild",
+      "manipulation",
+      "rlds",
+      "vla"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "commercial_use": "allowed",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "notes": "The DROID dataset files and annotations are distributed under Creative Commons Attribution 4.0 International (CC BY 4.0). Associated devkit and policy learning software code is released under the MIT license."
+    },
+    "source_references": [
+      {
+        "title": "DROID Official Project Page",
+        "url": "https://droid-dataset.github.io/",
+        "type": "official_website"
+      },
+      {
+        "title": "DROID Policy Learning Repository",
+        "url": "https://github.com/droid-dataset/droid_policy_learning",
+        "type": "repository"
+      },
+      {
+        "title": "DROID Calibrations & Language Annotations on Hugging Face",
+        "url": "https://huggingface.co/KarlP/droid",
+        "type": "dataset_card",
+        "notes": "Provides improved camera calibrations for 36k episodes and 3 natural language descriptions for 75k episodes (95% of successful trajectories)."
+      },
+      {
+        "title": "DROID Research Paper (RSS 2024 / arXiv:2403.12945)",
+        "url": "https://arxiv.org/abs/2403.12945",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against project website, arXiv:2403.12945, Hugging Face KarlP/droid repository, and GCS bucket gs://gresearch/robotics/droid. Confirmed 76k trajectory count, 1.7 TB payload, and CC BY 4.0 license."
+    },
+    "size": {
+      "amount": 1.7,
+      "unit": "TB",
+      "status": "verified",
+      "file_formats": [
+        "rlds",
+        "tfrecord",
+        "hdf5",
+        "mp4"
+      ],
+      "notes": "Official RLDS distribution in Google Cloud Storage (gs://gresearch/robotics/droid) is 1.7 TB. Raw stereo full-HD footage is hosted at gs://gresearch/robotics/droid_raw."
+    },
+    "sample_count": {
+      "total": 76000,
+      "unit": "trajectories",
+      "status": "verified",
+      "splits": {
+        "successful_episodes": 75000,
+        "calibrated_episodes": 36000
+      }
+    },
+    "dates": {
+      "published": "2024-03-20",
+      "last_updated": "2025-04-22"
+    },
+    "citation": {
+      "paper_title": "DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset",
+      "paper_url": "https://arxiv.org/abs/2403.12945",
+      "doi": "10.48550/arXiv.2403.12945",
+      "authors": [
+        "Alexander Khazatsky",
+        "Karl Pertsch",
+        "Suraj Nair",
+        "Ashwin Balakrishna",
+        "Sudeep Dasari",
+        "Siddharth Karamcheti",
+        "et al."
+      ],
+      "bibtex": "@article{khazatsky2024droid,\n  title={DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset},\n  author={Khazatsky, Alexander and Pertsch, Karl and Nair, Suraj and Balakrishna, Ashwin and Dasari, Sudeep and Karamcheti, Siddharth and others},\n  journal={arXiv preprint arXiv:2403.12945},\n  year={2024}\n}"
+    },
+    "provenance": {
+      "collection_method": "Distributed real-world teleoperated demonstration collection using portable Franka Emika Panda arms equipped with dual ZED 2 stereo exterior cameras and an end-effector ZED Mini camera.",
+      "curation_notes": "Collected across 564 scenes in North America, Asia, and Europe across 86 manipulation tasks. Converted into standardized RLDS format compatible with Open X-Embodiment training pipelines.",
+      "data_sources": [
+        "Independent in-the-wild recordings across 50 data collectors in residential, lab, and commercial environments"
       ]
     }
   },
@@ -18191,6 +18964,114 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "furniture-bench",
+    "slug": "furniture-bench",
+    "name": "FurnitureBench: Reproducible Real-World Furniture Assembly Benchmark",
+    "description": "FurnitureBench is an open-source real-world and simulated manipulation benchmark for complex, long-horizon furniture assembly. Developed by the CLVR Lab across KAIST and USC, FurnitureBench tackles the high-precision insertion, alignment, and screw fastening required to assemble commercial furniture kits (including chairs, desks, tables, and cabinets) using a Franka Emika Panda arm. The dataset comprises 219.6 hours of 5,100 successful human teleoperated assembly demonstrations collected using an Oculus Quest 2 VR controller and keyboard. Each demonstration records synchronized wrist and front camera visual streams, proprioceptive joint states, and action sequences.",
+    "homepage_url": "https://clvrai.com/furniture-bench/",
+    "publisher": {
+      "name": "CLVR Lab, KAIST and USC",
+      "type": "academic",
+      "url": "https://clvrai.com/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "long-horizon-manipulation",
+      "assembly-manipulation",
+      "imitation-learning"
+    ],
+    "tags": [
+      "robotics",
+      "furniture-bench",
+      "furniture-assembly",
+      "teleoperation",
+      "franka-panda",
+      "long-horizon"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "commercial_use": "allowed",
+      "url": "https://github.com/clvrai/furniture-bench/blob/main/LICENSE",
+      "notes": "FurnitureBench robot control software, FurnitureSim, and teleoperation demonstration datasets are released under the MIT License."
+    },
+    "source_references": [
+      {
+        "title": "FurnitureBench Official Website",
+        "url": "https://clvrai.com/furniture-bench/",
+        "type": "official_website"
+      },
+      {
+        "title": "FurnitureBench Documentation and Dataset Guide",
+        "url": "https://clvrai.github.io/furniture-bench/docs/tutorials/dataset.html",
+        "type": "documentation"
+      },
+      {
+        "title": "FurnitureBench GitHub Repository",
+        "url": "https://github.com/clvrai/furniture-bench",
+        "type": "repository"
+      },
+      {
+        "title": "FurnitureBench: Reproducible Real-World Furniture Assembly Benchmark (NeurIPS 2023 / arXiv:2305.12821)",
+        "url": "https://arxiv.org/abs/2305.12821",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against documentation, NeurIPS 2023 paper, and clvrai/furniture-bench repository. Confirmed 219.6 hours across 5,100 successful demonstrations, verified download access via gdown/rclone, and verified MIT license."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "pkl",
+        "json"
+      ],
+      "notes": "Distributed as raw .pkl pickle files containing synchronized multi-view visual frames, end-effector poses, and rewards via Google Drive."
+    },
+    "sample_count": {
+      "total": 5100,
+      "unit": "demonstrations",
+      "status": "verified",
+      "splits": {
+        "hours": 219
+      }
+    },
+    "dates": {
+      "published": "2023-05-21",
+      "last_updated": "2023-11-15"
+    },
+    "citation": {
+      "paper_title": "FurnitureBench: Reproducible Real-World Furniture Assembly Benchmark",
+      "paper_url": "https://arxiv.org/abs/2305.12821",
+      "doi": "10.48550/arXiv.2305.12821",
+      "authors": [
+        "Minho Heo",
+        "Youngwoon Lee",
+        "Doohyun Lee",
+        "Joseph J. Lim"
+      ],
+      "bibtex": "@inproceedings{heo2023furniturebench,\n  title={FurnitureBench: Reproducible Real-World Furniture Assembly Benchmark},\n  author={Heo, Minho and Lee, Youngwoon and Lee, Doohyun and Lim, Joseph J},\n  booktitle={Thirty-seventh Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Teleoperation using an Oculus Quest 2 VR controller and keyboard interface driving a Franka Emika Panda arm assembling physical modular furniture.",
+      "curation_notes": "Demonstrations cover four commercial furniture assembly kits (cabinet, chair, desk, table). Includes paired FurnitureSim environment in Isaac Gym for sim-to-real transfer evaluation.",
+      "data_sources": [
+        "Original real-world recordings at CLVR Lab, KAIST"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "gazetypebd-synchronized-multimodal-error-resi",
     "slug": "gazetypebd-synchronized-multimodal-error-resi",
     "name": "GazeTypeBD: A Synchronized Multimodal Dataset for Error-Resilient Webcam-Based Bilingual Eye Typing.",
@@ -18813,6 +19694,111 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "graspnet-1billion",
+    "slug": "graspnet-1billion",
+    "name": "GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping",
+    "description": "GraspNet-1Billion is a large-scale real-world robotic grasping dataset and 6D grasp pose estimation benchmark developed by Shanghai Jiao Tong University. Captured across 190 dense, heavily cluttered scenes containing 88 common household and industrial objects, GraspNet-1Billion comprises 97,280 RGB-D images recorded with calibrated Intel RealSense D435 and Microsoft Azure Kinect sensors. Crucially, the dataset provides over 1.1 billion analytical 6D grasp pose annotations evaluated across diverse gripper widths and friction models—representing grasp annotations per image rather than 1 billion images—along with 6D object poses, dense object point clouds, and segmentation masks.",
+    "homepage_url": "https://graspnet.net/",
+    "publisher": {
+      "name": "Shanghai Jiao Tong University",
+      "type": "academic",
+      "url": "https://mvig.sjtu.edu.cn/"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor"
+    ],
+    "tasks": [
+      "robotic-grasping",
+      "6d-pose-estimation",
+      "point-cloud-segmentation",
+      "grasp-pose-detection"
+    ],
+    "tags": [
+      "robotics",
+      "graspnet",
+      "6d-grasp",
+      "rgbd",
+      "point-cloud",
+      "suction-grasp"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "GraspNet Terms of Use (Academic Non-Commercial Research)",
+      "commercial_use": "forbidden",
+      "url": "https://graspnet.net/datasets",
+      "notes": "The dataset is freely accessible for non-commercial academic research purposes upon registration on the official project portal."
+    },
+    "source_references": [
+      {
+        "title": "GraspNet-1Billion Official Website",
+        "url": "https://graspnet.net/",
+        "type": "official_website"
+      },
+      {
+        "title": "GraspNet Download Portal",
+        "url": "https://graspnet.net/datasets",
+        "type": "documentation"
+      },
+      {
+        "title": "GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping (CVPR 2020 / arXiv:2005.10984)",
+        "url": "https://arxiv.org/abs/2005.10984",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against graspnet.net, download manifest, and CVPR 2020 paper. Confirmed 97,280 RGB-D images across 190 scenes, verified that 1.1B refers to analytical grasp pose annotations, and verified academic non-commercial terms."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "png",
+        "npy",
+        "xml",
+        "ply"
+      ],
+      "notes": "Distributed as partitioned per-scene zip files containing RGB-D frames, depth maps, bounding boxes, camera intrinsics/extrinsics, and grasp labels."
+    },
+    "sample_count": {
+      "total": 97280,
+      "unit": "images",
+      "status": "verified",
+      "splits": {
+        "scenes": 190,
+        "grasp_annotations": 1100000000,
+        "objects": 88
+      }
+    },
+    "dates": {
+      "published": "2020-05-22",
+      "last_updated": "2022-06-18"
+    },
+    "citation": {
+      "paper_title": "GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping",
+      "paper_url": "https://arxiv.org/abs/2005.10984",
+      "doi": "10.1109/CVPR42600.2020.01146",
+      "authors": [
+        "Hao-Shu Fang",
+        "Chenxi Wang",
+        "Minghao Gou",
+        "Cewu Lu"
+      ],
+      "bibtex": "@inproceedings{fang2020graspnet,\n  title={GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping},\n  author={Fang, Hao-Shu and Wang, Chenxi and Gou, Minghao and Lu, Cewu},\n  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year={2020},\n  doi={10.1109/CVPR42600.2020.01146}\n}"
+    },
+    "provenance": {
+      "collection_method": "Robotic arm mounted multi-sensor scanning of physical tabletop object scenes using RealSense D435 and Kinect Azure sensors, followed by physics-based analytical grasp evaluation.",
+      "curation_notes": "Scenes are partitioned into training, test seen, test similar, and test novel splits to benchmark zero-shot 6D grasp generalization to unseen objects.",
+      "data_sources": [
+        "Original recordings at Machine Vision and Intelligence Group (MVIG), SJTU"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "grdc-river-discharge",
     "slug": "grdc-river-discharge",
     "name": "Global Runoff Data Centre (GRDC) River Discharge Database",
@@ -19281,6 +20267,121 @@
       ],
       "doi": "10.1109/ICRA.2019.8793914",
       "bibtex": "@inproceedings{patil2019h3d,\n  title={The H3D dataset for full-surround 3D multi-object detection and tracking in crowded urban scenes},\n  author={Patil, Abhishek and Malla, Srikanth and Gang, Haiming and Choi, Chiho},\n  booktitle={2019 International Conference on Robotics and Automation (ICRA)},\n  pages={9552--9557},\n  year={2019},\n  organization={IEEE},\n  doi={10.1109/ICRA.2019.8793914}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "habitat-matterport-3d",
+    "slug": "habitat-matterport-3d",
+    "name": "Habitat-Matterport 3D Research Dataset (HM3D)",
+    "description": "The Habitat-Matterport 3D Research Dataset (HM3D) is a large-scale collection of high-resolution 3D reconstructions of real-world indoor spaces created to advance embodied AI, indoor robot navigation, and visual-spatial reasoning. Developed collaboratively by Meta AI and Matterport, HM3D consists of 1,000 high-fidelity 3D building reconstructions spanning multi-floor private homes, offices, and commercial establishments. When compared to prior indoor scene datasets, HM3D offers significantly larger floor areas, richer clutter, and complete topological navigability optimized for the AI Habitat simulation engine.",
+    "homepage_url": "https://aihabitat.org/datasets/hm3d/",
+    "publisher": {
+      "name": "Meta AI and Matterport",
+      "type": "industry",
+      "url": "https://matterport.com/habitat-matterport-3d-research-dataset"
+    },
+    "modalities": [
+      "vision",
+      "3d",
+      "sensor"
+    ],
+    "tasks": [
+      "embodied-navigation",
+      "pointgoal-navigation",
+      "visual-slam",
+      "3d-scene-understanding"
+    ],
+    "tags": [
+      "robotics",
+      "hm3d",
+      "habitat",
+      "matterport",
+      "embodied-ai",
+      "indoor-navigation",
+      "3d-mesh"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Matterport End User License Agreement for Academic Non-Commercial Research",
+      "commercial_use": "forbidden",
+      "url": "https://matterport.com/habitat-matterport-3d-research-dataset",
+      "notes": "HM3D is freely accessible for non-commercial academic research upon executing the Matterport HM3D EULA."
+    },
+    "source_references": [
+      {
+        "title": "Habitat-Matterport 3D Official Project Page",
+        "url": "https://aihabitat.org/datasets/hm3d/",
+        "type": "official_website"
+      },
+      {
+        "title": "Matterport HM3D Research Access Portal",
+        "url": "https://matterport.com/habitat-matterport-3d-research-dataset",
+        "type": "documentation"
+      },
+      {
+        "title": "Habitat-Matterport 3D Dataset (HM3D): 1000 Large-scale 3D Environments for Embodied AI (NeurIPS 2021 / arXiv:2109.08238)",
+        "url": "https://arxiv.org/abs/2109.08238",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against aihabitat.org, matterport.com, and NeurIPS 2021 paper. Confirmed 1,000 3D scene environments (800 train / 100 val / 100 test), verified academic non-commercial license, and noted that derived Habitat navigation tasks are based on these core scene assets."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "glb",
+        "obj",
+        "mtl",
+        "json"
+      ],
+      "notes": "Distributed as per-scene GLB and OBJ textured mesh files optimized for the Habitat simulator engine."
+    },
+    "sample_count": {
+      "total": 1000,
+      "unit": "scenes",
+      "status": "verified",
+      "splits": {
+        "train": 800,
+        "val": 100,
+        "test": 100
+      }
+    },
+    "dates": {
+      "published": "2021-09-17",
+      "last_updated": "2022-03-30"
+    },
+    "citation": {
+      "paper_title": "Habitat-Matterport 3D Dataset (HM3D): 1000 Large-scale 3D Environments for Embodied AI",
+      "paper_url": "https://arxiv.org/abs/2109.08238",
+      "doi": "10.48550/arXiv.2109.08238",
+      "authors": [
+        "Santhosh K. Ramakrishnan",
+        "Aaron Gokaslan",
+        "Erik Wijmans",
+        "Oleksandr Maksymets",
+        "Alexander Clegg",
+        "John Turner",
+        "Eric Undersander",
+        "Wojciech Galuba",
+        "Andrew Westbury",
+        "Angel X. Chang",
+        "Manolis Savva",
+        "Yili Zhao",
+        "Dhruv Batra"
+      ],
+      "bibtex": "@inproceedings{ramakrishnan2021habitat,\n  title={Habitat-Matterport 3D Dataset (HM3D): 1000 Large-scale 3D Environments for Embodied AI},\n  author={Ramakrishnan, Santhosh K and Gokaslan, Aaron and Wijmans, Erik and Maksymets, Oleksandr and Clegg, Alexander and Turner, John and Undersander, Eric and Galuba, Wojciech and Westbury, Andrew and Chang, Angel X and others},\n  booktitle={Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year={2021}\n}"
+    },
+    "provenance": {
+      "collection_method": "High-density LiDAR and structured-light optical 3D scans collected with commercial Matterport Pro2 cameras deployed in 1,000 residential and commercial properties.",
+      "curation_notes": "3D textured meshes were processed and cleaned to reconstruct continuous navigable floors and remove rendering artifacts for physical simulation in Habitat.",
+      "data_sources": [
+        "Commercial Matterport 3D scanning corpus contributed under research partnership with Meta AI"
+      ]
     }
   },
   {
@@ -19996,6 +21097,125 @@
       ],
       "doi": "10.1109/ICCV.2011.6126543",
       "bibtex": "@inproceedings{kuehne2011hmdb,\n  title={HMDB: a large video database for human motion recognition},\n  author={Kuehne, Hildegard and Jhuang, Hueihan and Garrote, Est{\\'\\i}baliz and Poggio, Tomaso and Serre, Thomas},\n  booktitle={2011 International Conference on Computer Vision},\n  pages={2556--2563},\n  year={2011},\n  organization={IEEE},\n  doi={10.1109/ICCV.2011.6126543}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "homes-of-new-york-dobb-e",
+    "slug": "homes-of-new-york-dobb-e",
+    "name": "Homes of New York (HoNY) — Dobb·E Domestic Robot Learning Dataset",
+    "description": "Homes of New York (HoNY) is an in-the-wild domestic robotic manipulation dataset collected across 22 real-world homes and 216 environments in New York City as part of the open-source Dobb·E robot learning framework from New York University. Recorded using 'The Stick'—a low-cost reacher-grabber tool instrumented with an iPhone LiDAR sensor—HoNY comprises 5,620 demonstration trajectories spanning 1.5 million RGB-D frames. The dataset serves as the self-supervised pretraining foundation for Home Pretrained Representations (HPR), enabling lightweight downstream robots (such as Hello Robot Stretch) to adapt to novel household tasks with as few as five minutes of target-domain demonstrations.",
+    "homepage_url": "https://www.dobb-e.com/",
+    "publisher": {
+      "name": "New York University (NYU)",
+      "type": "academic",
+      "url": "https://nyu-robot-learning.github.io/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "3d",
+      "reinforcement-learning",
+      "multimodal"
+    ],
+    "tasks": [
+      "household-robotics",
+      "domestic-manipulation",
+      "imitation-learning",
+      "representation-learning"
+    ],
+    "tags": [
+      "robotics",
+      "dobb-e",
+      "hony",
+      "domestic-learning",
+      "reachy",
+      "rgbd",
+      "iphone-lidar"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "commercial_use": "allowed",
+      "url": "https://github.com/notmahi/dobb-e/blob/main/LICENSE",
+      "notes": "Hardware designs, data collection software, HPR models, and the HoNY dataset are published under the open MIT License."
+    },
+    "source_references": [
+      {
+        "title": "Dobb·E Official Project Website",
+        "url": "https://www.dobb-e.com/",
+        "type": "official_website"
+      },
+      {
+        "title": "Dobb·E Official Documentation and Dataset Setup Guide",
+        "url": "https://docs.dobb-e.com/software/readme-1/setting-up-the-datasets",
+        "type": "documentation"
+      },
+      {
+        "title": "Dobb·E GitHub Repository",
+        "url": "https://github.com/notmahi/dobb-e",
+        "type": "repository"
+      },
+      {
+        "title": "Dobb·E: An Open-Source Generalist Robot Learning Framework (arXiv:2311.13564)",
+        "url": "https://arxiv.org/abs/2311.13564",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against docs.dobb-e.com, notmahi/dobb-e repository, and arXiv:2311.13564. Confirmed 5,620 trajectories across 22 homes, verified download payloads (814 MB RGB, 77 GB RGB-D), and MIT license."
+    },
+    "size": {
+      "amount": 77.0,
+      "unit": "GB",
+      "status": "verified",
+      "file_formats": [
+        "zip",
+        "h5",
+        "r3d",
+        "mp4"
+      ],
+      "notes": "HoNY RGB-D + actions archive is 77 GB (HomesOfNewYorkWithDepth.zip via Google Drive). The lightweight RGB-only release is 814 MB (homes_of_new_york.zip via dl.dobb-e.com)."
+    },
+    "sample_count": {
+      "total": 5620,
+      "unit": "trajectories",
+      "status": "verified",
+      "splits": {
+        "homes": 22,
+        "environments": 216,
+        "rgbd_frames": 1500000
+      }
+    },
+    "dates": {
+      "published": "2023-11-21",
+      "last_updated": "2024-04-10"
+    },
+    "citation": {
+      "paper_title": "Dobb·E: An Open-Source Generalist Robot Learning Framework",
+      "paper_url": "https://arxiv.org/abs/2311.13564",
+      "doi": "10.48550/arXiv.2311.13564",
+      "authors": [
+        "Nur Muhammad Mahi Shafiullah",
+        "Anant Rai",
+        "Zichen Gordon Cui",
+        "Yiqian Qiu",
+        "Mustafa Mukadam",
+        "Arthur Szlam",
+        "Lerrel Pinto"
+      ],
+      "bibtex": "@article{shafiullah2023dobb_e,\n  title={Dobb·E: An Open-Source Generalist Robot Learning Framework},\n  author={Shafiullah, Nur Muhammad Mahi and Rai, Anant and Cui, Zichen Gordon and Qiu, Yiqian and Mukadam, Mustafa and Szlam, Arthur and Pinto, Lerrel},\n  journal={arXiv preprint arXiv:2311.13564},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Handheld physical interaction capture using 'The Stick'—an instrumented reacher-grabber tool fitted with an iPhone recording LiDAR depth and stereo RGB, calibrated with 6-DoF gripper motion.",
+      "curation_notes": "Features 216 distinct domestic environments across 22 private NYC residences. Also converted into an RLDS format for integration with Open X-Embodiment.",
+      "data_sources": [
+        "Original recordings by NYU Robot Learning Lab in NYC homes"
+      ]
     }
   },
   {
@@ -24234,6 +25454,115 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "language-table",
+    "slug": "language-table",
+    "name": "Language-Table: A Large-Scale Visuomotor Robot Learning Dataset",
+    "description": "Language-Table is a suite of human-collected datasets and a multi-task continuous control benchmark for open-vocabulary visuolinguomotor robot learning. Developed by Google Research, the benchmark centers on an xArm 2-DoF Cartesian manipulator moving blocks on a table surface equipped with a top-down camera. The release includes 442,226 real-robot demonstration episodes relabeled with free-form natural language instructions describing fine-grained continuous control goals, along with 181,020 simulated human episodes and 1,000,000 scripted oracle simulation episodes. It serves as a cornerstone dataset for language-conditioned imitation learning, real-time interactive language control, and multi-task robotic policy evaluation.",
+    "homepage_url": "https://github.com/google-research/language-table",
+    "publisher": {
+      "name": "Google Research",
+      "type": "industry",
+      "url": "https://research.google/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "nlp",
+      "reinforcement-learning",
+      "multimodal"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "language-conditioned-control",
+      "imitation-learning",
+      "continuous-control"
+    ],
+    "tags": [
+      "robotics",
+      "language-table",
+      "continuous-control",
+      "visuomotor",
+      "multimodal",
+      "open-vocabulary"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Apache 2.0 (Code) / CC BY 4.0 (Dataset)",
+      "commercial_use": "allowed",
+      "url": "https://github.com/google-research/language-table/blob/main/LICENSE",
+      "notes": "Software and environment code are licensed under Apache 2.0. The dataset is distributed via Google Cloud Storage and TFDS under the Creative Commons Attribution 4.0 International (CC BY 4.0) license."
+    },
+    "source_references": [
+      {
+        "title": "Language-Table GitHub Repository",
+        "url": "https://github.com/google-research/language-table",
+        "type": "repository"
+      },
+      {
+        "title": "Interactive Language: Talking to Robots in Real Time (IEEE RA-L / arXiv:2210.06407)",
+        "url": "https://arxiv.org/abs/2210.06407",
+        "type": "original_paper"
+      },
+      {
+        "title": "TFDS Language Table Catalog Entry",
+        "url": "https://www.tensorflow.org/datasets/catalog/language_table",
+        "type": "documentation"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against official GitHub repository, GCS bucket gs://gresearch/robotics/language_table/0.0.1/, and arXiv:2210.06407 paper. Confirmed 442,226 real-robot episodes and Apache 2.0 / CC BY 4.0 licenses."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "tfrecord",
+        "rlds"
+      ],
+      "notes": "Distributed via Google Cloud Storage buckets (gs://gresearch/robotics/language_table/0.0.1/)."
+    },
+    "sample_count": {
+      "total": 442226,
+      "unit": "episodes",
+      "status": "verified",
+      "splits": {
+        "real_robot_relabeled": 442226,
+        "simulation_human": 181020,
+        "simulation_oracle": 1000000
+      }
+    },
+    "dates": {
+      "published": "2022-10-12",
+      "last_updated": "2023-05-18"
+    },
+    "citation": {
+      "paper_title": "Interactive Language: Talking to Robots in Real Time",
+      "paper_url": "https://arxiv.org/abs/2210.06407",
+      "doi": "10.48550/arXiv.2210.06407",
+      "authors": [
+        "Corey Lynch",
+        "Ayzaan Wahid",
+        "Jonathan Tompson",
+        "Tianli Ding",
+        "James Betker",
+        "Robert Baruch",
+        "Michael Armstrong",
+        "Pete Florence"
+      ],
+      "bibtex": "@article{lynch2022interactive,\n  title={Interactive Language: Talking to Robots in Real Time},\n  author={Lynch, Corey and Wahid, Ayzaan and Tompson, Jonathan and Ding, Tianli and Betker, James and Baruch, Robert and Armstrong, Michael and Florence, Pete},\n  journal={IEEE Robotics and Automation Letters},\n  volume={8},\n  number={4},\n  pages={1960--1967},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Real-world teleoperation and autonomous playback using a Cartesian xArm manipulator with an overhead camera interacting with colored geometric blocks, paired with offline human crowd-sourced language relabeling.",
+      "curation_notes": "Encompasses real-robot, human simulation, and scripted oracle simulation collections. Only the real-robot 442,226 episode subset is counted as primary real-world samples.",
+      "data_sources": [
+        "Original robotic experimentation at Google Research"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "large-scale-12-lead-ecg-arrhythmia",
     "slug": "large-scale-12-lead-ecg-arrhythmia",
     "name": "Large-Scale 12-Lead Electrocardiogram Database for Arrhythmia Research",
@@ -24481,6 +25810,121 @@
         "Erik Learned-Miller"
       ],
       "bibtex": "@techreport{huang2007labeled,\n  title={Labeled Faces in the Wild: A Database for Studying Face Recognition in Unconstrained Environments},\n  author={Huang, Gary B. and Ramesh, Manu and Berg, Tamara and Learned-Miller, Erik},\n  institution={University of Massachusetts, Amherst},\n  number={07-49},\n  year={2007}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "libero",
+    "slug": "libero",
+    "name": "LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning",
+    "description": "LIBERO (Lifelong Benchmark for Robot Learning) is a standardized benchmark and human demonstration dataset designed to evaluate lifelong robot learning and knowledge transfer. Developed by UT Austin and Sony AI, LIBERO encompasses 130 manipulation tasks across four distinct task suites implemented in robosuite: LIBERO-Spatial (10 tasks testing spatial variations), LIBERO-Object (10 tasks testing novel object instances), LIBERO-Goal (10 tasks testing distinct goals in fixed scenes), and LIBERO-100 (a long-horizon suite partitioned into LIBERO-10 and LIBERO-90). The dataset contains 6,500 high-quality human teleoperated demonstrations (exactly 50 demonstrations per task) with synchronized multi-camera RGB video, robot proprioception, and language instructions.",
+    "homepage_url": "https://libero-project.github.io/",
+    "publisher": {
+      "name": "UT Austin Robot Perception and Learning Lab",
+      "type": "academic",
+      "url": "https://robot-learning.cs.utexas.edu/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "lifelong-learning",
+      "knowledge-transfer",
+      "imitation-learning"
+    ],
+    "tags": [
+      "robotics",
+      "libero",
+      "lifelong-learning",
+      "imitation-learning",
+      "franka-panda",
+      "robosuite"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "commercial_use": "allowed",
+      "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/LICENSE",
+      "notes": "The LIBERO benchmark suite and demonstration datasets are licensed under the MIT License."
+    },
+    "source_references": [
+      {
+        "title": "LIBERO Project Homepage",
+        "url": "https://libero-project.github.io/",
+        "type": "official_website"
+      },
+      {
+        "title": "LIBERO GitHub Repository",
+        "url": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+        "type": "repository"
+      },
+      {
+        "title": "LIBERO Datasets on Hugging Face",
+        "url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets",
+        "type": "dataset_card"
+      },
+      {
+        "title": "LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning (NeurIPS 2023 / arXiv:2306.03310)",
+        "url": "https://arxiv.org/abs/2306.03310",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against official GitHub repository, NeurIPS 2023 paper, and Hugging Face yifengzhu-hf/LIBERO-datasets. Confirmed 130 tasks with 50 demos each (6,500 total demonstrations), documented that LIBERO-10 and LIBERO-90 are partitions, and verified MIT license."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "hdf5"
+      ],
+      "notes": "Distributed as HDF5 files per task suite on Hugging Face (yifengzhu-hf/LIBERO-datasets)."
+    },
+    "sample_count": {
+      "total": 6500,
+      "unit": "demonstrations",
+      "status": "verified",
+      "splits": {
+        "libero_spatial": 500,
+        "libero_object": 500,
+        "libero_goal": 500,
+        "libero_10": 500,
+        "libero_90": 4500
+      }
+    },
+    "dates": {
+      "published": "2023-06-05",
+      "last_updated": "2023-11-20"
+    },
+    "citation": {
+      "paper_title": "LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning",
+      "paper_url": "https://arxiv.org/abs/2306.03310",
+      "doi": "10.48550/arXiv.2306.03310",
+      "authors": [
+        "Bo Liu",
+        "Yifeng Zhu",
+        "Chongkai Gao",
+        "Yihao Feng",
+        "Qiang Liu",
+        "Yuke Zhu",
+        "Peter Stone"
+      ],
+      "bibtex": "@inproceedings{liu2023libero,\n  title={LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning},\n  author={Liu, Bo and Zhu, Yifeng and Gao, Chongkai and Feng, Yihao and Liu, Qiang and Zhu, Yuke and Stone, Peter},\n  booktitle={Thirty-seventh Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Teleoperated human demonstrations using a 3Dconnexion SpaceMouse controlling a Franka Emika Panda arm in robosuite simulation environments.",
+      "curation_notes": "Features 130 standardized tasks with procedural variations. LIBERO-10 and LIBERO-90 are evaluation partitions of the long-horizon 100-task suite rather than independent datasets.",
+      "data_sources": [
+        "Original teleoperation at UT Austin Robot Perception and Learning Lab"
+      ]
     }
   },
   {
@@ -25598,6 +27042,116 @@
       "curation_notes": "Contains 1,800 distinct physical leaf photographs and 2,200 controlled geometric variants.",
       "data_sources": [
         "Field survey photographs from Bangladeshi mango orchards"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "maniskill-3-demos",
+    "slug": "maniskill-3-demos",
+    "name": "ManiSkill 3 Demonstrations: Large-Scale Trajectories for Embodied Manipulation",
+    "description": "ManiSkill 3 Demonstrations is an open-access robotic demonstration dataset accompanying the GPU-parallelized ManiSkill 3 manipulation benchmark. Developed by the Hao Su Lab at UC San Diego, this collection provides standardized demonstration trajectories across rigid-body and soft-body robotic manipulation tasks (including PickCube, StackCube, PegInsertionSide, PlugCharger, PushCube, PushT, AnymalC-Reach, and bimanual TwoRobotStackCube). Stored in HDF5 format, the demonstrations provide environment states, actions, and reset configurations that can be replayed across any observation mode (RGB, depth, point cloud, or state observations) and simulation backend.",
+    "homepage_url": "https://maniskill.readthedocs.io/en/latest/user_guide/datasets/demos.html",
+    "publisher": {
+      "name": "UC San Diego (Hao Su Lab)",
+      "type": "academic",
+      "url": "https://haosulab.github.io/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal",
+      "3d"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "reinforcement-learning",
+      "imitation-learning",
+      "trajectory-optimization"
+    ],
+    "tags": [
+      "robotics",
+      "maniskill",
+      "maniskill-3",
+      "gpu-parallel",
+      "simulation",
+      "hdf5",
+      "demonstrations"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "commercial_use": "allowed",
+      "url": "https://huggingface.co/datasets/haosulab/ManiSkill_Demonstrations",
+      "notes": "The ManiSkill demonstration datasets and simulation benchmark code are released under the Apache 2.0 license."
+    },
+    "source_references": [
+      {
+        "title": "ManiSkill 3 Demonstration Guide",
+        "url": "https://maniskill.readthedocs.io/en/latest/user_guide/datasets/demos.html",
+        "type": "documentation"
+      },
+      {
+        "title": "ManiSkill Demonstrations on Hugging Face",
+        "url": "https://huggingface.co/datasets/haosulab/ManiSkill_Demonstrations",
+        "type": "dataset_card"
+      },
+      {
+        "title": "ManiSkill GitHub Repository",
+        "url": "https://github.com/haosulab/ManiSkill",
+        "type": "repository"
+      },
+      {
+        "title": "ManiSkill3: GPU Parallelized Robotics Simulation and Benchmark (arXiv:2410.07080)",
+        "url": "https://arxiv.org/abs/2410.07080",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against readthedocs documentation, arXiv:2410.07080 paper, and Hugging Face haosulab/ManiSkill_Demonstrations repository. Confirmed 158 task demonstration archives, direct CLI download access, and Apache 2.0 license."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "h5",
+        "hdf5",
+        "json",
+        "zip"
+      ],
+      "notes": "Distributed as per-task zip packages containing HDF5 trajectory files directly downloadable from Hugging Face (haosulab/ManiSkill_Demonstrations) or via python -m mani_skill.utils.download_demo."
+    },
+    "sample_count": {
+      "total": 158,
+      "unit": "task_archives",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2024-10-09",
+      "last_updated": "2024-11-05"
+    },
+    "citation": {
+      "paper_title": "ManiSkill3: GPU Parallelized Robotics Simulation and Benchmark",
+      "paper_url": "https://arxiv.org/abs/2410.07080",
+      "doi": "10.48550/arXiv.2410.07080",
+      "authors": [
+        "Stone Tao",
+        "Fanbo Xiang",
+        "Yuzhe Qin",
+        "Jiayuan Gu",
+        "Hao Su"
+      ],
+      "bibtex": "@article{tao2024maniskill3,\n  title={ManiSkill3: GPU Parallelized Robotics Simulation and Benchmark},\n  author={Tao, Stone and Xiang, Fanbo and Qin, Yuzhe and Gu, Jiayuan and Su, Hao},\n  journal={arXiv preprint arXiv:2410.07080},\n  year={2024}\n}"
+    },
+    "provenance": {
+      "collection_method": "GPU-parallel motion planning algorithms and pre-trained reinforcement learning policy checkpoints across rigid and soft-body manipulation tasks in SAPIEN / PhysX.",
+      "curation_notes": "Trajectories store full simulator states and actions, allowing fast replay to generate RGB, depth, segmentation, and point cloud visual observations on demand.",
+      "data_sources": [
+        "Pre-packaged demonstration release by UCSD Hao Su Lab on Hugging Face"
       ]
     }
   },
@@ -27366,6 +28920,117 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "mimicgen",
+    "slug": "mimicgen",
+    "name": "MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations",
+    "description": "MimicGen is an automated demonstration generation system and large-scale synthetic robotic manipulation dataset developed by NVIDIA Research in collaboration with UT Austin and Stanford University. By applying kinematic transformations and adaptive motion planning to a small initial seed of human teleoperated demonstrations, MimicGen scales small datasets into thousands of varied, valid demonstration trajectories across novel object configurations. The official release contains over 48,000 task demonstrations across 12 manipulation tasks in robosuite (including coffee preparation, nut assembly, mug cleanup, and drawer rearrangement), providing a benchmark for large-scale imitation learning from synthetic data.",
+    "homepage_url": "https://mimicgen.github.io/",
+    "publisher": {
+      "name": "NVIDIA Research",
+      "type": "industry",
+      "url": "https://www.nvidia.com/en-us/research/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "data-generation",
+      "imitation-learning",
+      "trajectory-synthesis"
+    ],
+    "tags": [
+      "robotics",
+      "mimicgen",
+      "synthetic-data",
+      "data-scaling",
+      "robosuite",
+      "nvidia"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "commercial_use": "allowed",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "notes": "All released MimicGen datasets are explicitly licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). Software and data generation code are governed by the NVIDIA Source Code License / Apache 2.0."
+    },
+    "source_references": [
+      {
+        "title": "MimicGen Official Project Page",
+        "url": "https://mimicgen.github.io/",
+        "type": "official_website"
+      },
+      {
+        "title": "MimicGen GitHub Repository",
+        "url": "https://github.com/NVlabs/mimicgen",
+        "type": "repository"
+      },
+      {
+        "title": "MimicGen Datasets on Hugging Face",
+        "url": "https://huggingface.co/datasets/mimicgen",
+        "type": "dataset_card"
+      },
+      {
+        "title": "MimicGen Research Paper (CoRL 2023 / arXiv:2310.17596)",
+        "url": "https://arxiv.org/abs/2310.17596",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against official project page, CoRL 2023 paper, and NVlabs repository. Confirmed over 48,000 task demonstrations across 12 tasks, distinction between synthetic generation and seed demonstrations, and CC BY 4.0 dataset license."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "hdf5"
+      ],
+      "notes": "Hosted on Hugging Face as HDF5 trajectory files containing multi-view camera observations and robot states across 12 tasks."
+    },
+    "sample_count": {
+      "total": 48000,
+      "unit": "demonstrations",
+      "status": "verified",
+      "splits": {
+        "tasks": 12
+      }
+    },
+    "dates": {
+      "published": "2023-10-26",
+      "last_updated": "2024-09-19"
+    },
+    "citation": {
+      "paper_title": "MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations",
+      "paper_url": "https://arxiv.org/abs/2310.17596",
+      "doi": "10.48550/arXiv.2310.17596",
+      "authors": [
+        "Ajay Mandlekar",
+        "Soroush Nasiriany",
+        "Bowen Wen",
+        "Iretiayo Akinola",
+        "Yashraj Narang",
+        "Linxi Fan",
+        "Yuke Zhu",
+        "Dieter Fox"
+      ],
+      "bibtex": "@inproceedings{mandlekar2023mimicgen,\n  title={MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations},\n  author={Mandlekar, Ajay and Nasiriany, Soroush and Wen, Bowen and Akinola, Iretiayo and Narang, Yashraj and Fan, Linxi and Zhu, Yuke and Fox, Dieter},\n  booktitle={Conference on Robot Learning (CoRL)},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Automated demonstration generation adapting a small collection of human demonstration seeds (<200) to new object poses and scene configurations via subtask trajectory interpolation.",
+      "curation_notes": "Demonstrations are synthesized in robosuite simulation environments to train and benchmark policy scaling with synthetic demonstrations.",
+      "data_sources": [
+        "Initial human demonstration seeds from robomimic and newly collected Franka demonstrations"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "minneapple",
     "slug": "minneapple",
     "name": "MinneApple: Apple Detection and Segmentation Benchmark",
@@ -28328,6 +29993,126 @@
     "provenance": {
       "collection_method": "Constructed from NIST Special Database 3 (high school students) and Special Database 1 (Census Bureau employees).",
       "curation_notes": "Normalized to fit in a 20x20 pixel box while preserving aspect ratio, centered in a 28x28 field by computing the center of mass."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mobile-aloha",
+    "slug": "mobile-aloha",
+    "name": "Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation",
+    "description": "Mobile ALOHA is a robotic imitation learning benchmark and demonstration dataset for whole-body bimanual mobile manipulation. Developed at Stanford University, the platform mounts two ViperX 300 6-DoF robot arms onto an AgileX Tracer omnidirectional mobile base, controlled by a low-cost untethered teleoperation harness. The dataset consists of 320 real-world expert mobile manipulation demonstrations across 7 complex, long-horizon domestic tasks (including wiping spilled wine, cooking shrimp, rinsing pans, serving food, and navigating elevators). The dataset establishes a proven co-training methodology that integrates 825 existing static tabletop ALOHA demonstrations to bootstrap autonomous mobile manipulation with high data efficiency.",
+    "homepage_url": "https://mobile-aloha.github.io/",
+    "publisher": {
+      "name": "Stanford University",
+      "type": "academic",
+      "url": "https://src.stanford.edu/demo/moble-aloha"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal"
+    ],
+    "tasks": [
+      "mobile-manipulation",
+      "bimanual-manipulation",
+      "imitation-learning",
+      "whole-body-control"
+    ],
+    "tags": [
+      "robotics",
+      "mobile-aloha",
+      "bimanual",
+      "mobile-manipulation",
+      "teleoperation",
+      "act",
+      "aloha"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "MIT License (Code) / Open Research Permissive (Data)",
+      "spdx_id": "MIT",
+      "commercial_use": "allowed",
+      "url": "https://github.com/MarkFzp/mobile-aloha/blob/main/LICENSE",
+      "notes": "Teleoperation software and ACT++ imitation learning code are released under the MIT License. The 320 raw demonstration HDF5 files are openly distributed via author-hosted Google Drive links and Hugging Face mirrors for research use."
+    },
+    "source_references": [
+      {
+        "title": "Mobile ALOHA Project Landing Page",
+        "url": "https://mobile-aloha.github.io/",
+        "type": "official_website"
+      },
+      {
+        "title": "Mobile ALOHA Teleoperation Repository",
+        "url": "https://github.com/MarkFzp/mobile-aloha",
+        "type": "repository"
+      },
+      {
+        "title": "Mobile ALOHA Imitation Learning (ACT++) Repository",
+        "url": "https://github.com/MarkFzp/act-plus-plus",
+        "type": "repository"
+      },
+      {
+        "title": "Mobile ALOHA Research Paper (arXiv:2401.02117)",
+        "url": "https://arxiv.org/abs/2401.02117",
+        "type": "original_paper"
+      },
+      {
+        "title": "Mobile ALOHA Demonstration Dataset Mirror on Hugging Face",
+        "url": "https://huggingface.co/datasets/sumo43/mobile-aloha",
+        "type": "archive",
+        "notes": "Archive mirror of official author Google Drive HDF5 demonstration archives linked in the MarkFzp/act-plus-plus repository."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against mobile-aloha.github.io, src.stanford.edu showcase, and arXiv:2401.02117 paper. Confirmed 320 real mobile demonstrations across 7 tasks and co-training relationship with 825 static ALOHA demonstrations."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "hdf5"
+      ],
+      "notes": "Recorded as HDF5 files containing 4 camera video streams (overhead, front, left wrist, right wrist) and whole-body joint and velocity trajectories."
+    },
+    "sample_count": {
+      "total": 320,
+      "unit": "demonstrations",
+      "status": "verified",
+      "splits": {
+        "wipe_wine": 50,
+        "cook_shrimp": 50,
+        "rinse_pan": 50,
+        "serve_food": 50,
+        "push_chairs": 50,
+        "use_elevator": 50,
+        "high_five": 20
+      }
+    },
+    "dates": {
+      "published": "2024-01-03",
+      "last_updated": "2024-03-20"
+    },
+    "citation": {
+      "paper_title": "Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation",
+      "paper_url": "https://arxiv.org/abs/2401.02117",
+      "doi": "10.48550/arXiv.2401.02117",
+      "authors": [
+        "Zipeng Fu",
+        "Tony Z. Zhao",
+        "Chelsea Finn"
+      ],
+      "bibtex": "@article{fu2024mobile_aloha,\n  title={Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation},\n  author={Fu, Zipeng and Zhao, Tony Z. and Finn, Chelsea},\n  journal={arXiv preprint arXiv:2401.02117},\n  year={2024}\n}"
+    },
+    "provenance": {
+      "collection_method": "Direct physical whole-body teleoperation using an operator-strapped exoskeleton master controlling twin puppet arms and an omnidirectional base.",
+      "curation_notes": "Features 7 challenging mobile tasks. Uses a co-training pipeline where mini-batches are drawn equally from the 320 mobile demonstrations and the 825 static tabletop ALOHA demonstrations.",
+      "data_sources": [
+        "Original recordings at Stanford University Robotics Center",
+        "Static ALOHA dataset (825 demonstrations)"
+      ]
     }
   },
   {
@@ -33765,6 +35550,125 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "open-x-embodiment",
+    "slug": "open-x-embodiment",
+    "name": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models",
+    "description": "Open X-Embodiment is a foundational, cross-embodiment robotic learning dataset aggregating real-world demonstration data from 60 independently collected datasets across 22 robot embodiments. Coordinated by Google DeepMind in collaboration with 21 academic and industrial institutions, the collection encompasses over 1 million real-robot trajectories demonstrating 527 distinct robotic skills and over 160,000 language-annotated task descriptions. All constituent datasets are standardized into the unified RLDS (Reinforcement Learning Datasets) episodic format to facilitate the training and evaluation of generalist Vision-Language-Action (VLA) models such as RT-1-X and RT-2-X.",
+    "homepage_url": "https://robotics-transformer-x.github.io/",
+    "publisher": {
+      "name": "Open X-Embodiment Collaboration",
+      "type": "academic",
+      "url": "https://robotics-transformer-x.github.io/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "imitation-learning",
+      "vision-language-action",
+      "cross-embodiment-control"
+    ],
+    "tags": [
+      "robotics",
+      "open-x-embodiment",
+      "rt-x",
+      "rlds",
+      "manipulation",
+      "vla",
+      "cross-embodiment"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Dual Apache 2.0 (Software) and CC BY 4.0 / Multi-License (Data Pool)",
+      "commercial_use": "unknown",
+      "url": "https://github.com/google-deepmind/open_x_embodiment/blob/main/README.md#license-and-disclaimer",
+      "notes": "Software tools are distributed under the Apache 2.0 license. Unified metadata and RLDS episode formatting developed for Open X-Embodiment are released under CC BY 4.0. Individual constituent datasets retain their original respective institutional licenses (ranging from open commercial licenses to academic-only restrictions). Commercial usability depends on the specific constituent subset utilized."
+    },
+    "source_references": [
+      {
+        "title": "Open X-Embodiment Official Project Page",
+        "url": "https://robotics-transformer-x.github.io/",
+        "type": "official_website"
+      },
+      {
+        "title": "Open X-Embodiment GitHub Repository",
+        "url": "https://github.com/google-deepmind/open_x_embodiment",
+        "type": "repository"
+      },
+      {
+        "title": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models (arXiv:2310.08864)",
+        "url": "https://arxiv.org/abs/2310.08864",
+        "type": "original_paper"
+      },
+      {
+        "title": "Open X-Embodiment Dataset Manifest Spreadsheet",
+        "url": "https://docs.google.com/spreadsheets/d/1rPBD77tk60AEIGZrGSODwyyzs5FgCU9Uz3h-3_t2A9g/edit?usp=sharing",
+        "type": "documentation",
+        "notes": "Comprehensive spreadsheet documenting all 60 constituent datasets, robot embodiments, task descriptions, and institutional licenses."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against official GitHub repository, project page, and arXiv:2310.08864 paper. Documented cross-embodiment RLDS aggregation, constituent data lineage, and heterogeneous licensing across the 60 pooled datasets."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "rlds",
+        "tfrecord",
+        "npz"
+      ],
+      "notes": "Distributed as independent Google Cloud Storage buckets (e.g. gs://gdm-robotics-open-x-embodiment/{dataset_name}). Aggregate size spans multiple terabytes across all 60 contributing datasets."
+    },
+    "sample_count": {
+      "total": 1000000,
+      "unit": "trajectories",
+      "status": "estimated"
+    },
+    "dates": {
+      "published": "2023-10-13",
+      "last_updated": "2024-03-25"
+    },
+    "citation": {
+      "paper_title": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models",
+      "paper_url": "https://arxiv.org/abs/2310.08864",
+      "doi": "10.48550/arXiv.2310.08864",
+      "authors": [
+        "Open X-Embodiment Collaboration",
+        "Abhishek Padalkar",
+        "Acorn Pooley",
+        "Ajay Mandlekar",
+        "Ajay Sridhar",
+        "Anthony Simeonov",
+        "et al."
+      ],
+      "bibtex": "@article{open_x_embodiment_rt_x_2023,\n  title={Open X-Embodiment: Robotic Learning Datasets and RT-X Models},\n  author={Open X-Embodiment Collaboration and Padalkar, Abhishek and Pooley, Acorn and Mandlekar, Ajay and Sridhar, Ajay and others},\n  journal={arXiv preprint arXiv:2310.08864},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Multi-institutional robotic data pooling and RLDS standardization across 21 research laboratories.",
+      "curation_notes": "Pools 60 separate robotic demonstration datasets spanning 22 robot arms (including Franka Emika Panda, Google Robot, xArm, UR5, WidowX, Kuka iiwa, Sawyer). Overlaps with individually curated benchmark releases such as BridgeData V2, Language Table, RoboNet, and TACO-Play.",
+      "data_sources": [
+        "BridgeData V2",
+        "Language Table",
+        "RoboNet",
+        "TACO-Play",
+        "Stanford ALOHA",
+        "BC-Z",
+        "RT-1 Robot Dataset",
+        "Berkeley Cable Routing",
+        "CMU Stretch Manipulation"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "openlane-v2",
     "slug": "openlane-v2",
     "name": "OpenLane-V2 — 3D Lane and Traffic Topology Dataset",
@@ -38148,6 +40052,113 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "rh20t",
+    "slug": "rh20t",
+    "name": "RH20T: A Large-Scale Robotic Dataset for Contact-Rich Robot Manipulation",
+    "description": "RH20T is a large-scale real-world multimodal robot manipulation dataset containing over 110,000 contact-rich interaction sequences spanning diverse robotic skills, contexts, embodiments, and viewpoints. Recorded collaboratively by Shanghai Jiao Tong University and Flexiv Robotics across 147 tasks (including 48 from RLBench, 29 from MetaWorld, and 70 real-world tasks), each sequence provides synchronized multi-camera RGB-D video, high-frequency 6-axis force/torque measurements, audio streams, proprioceptive arm telemetry, and matching human video demonstrations. The dataset is specifically engineered to benchmark one-shot visual-tactile imitation learning and contact-rich policy generalization.",
+    "homepage_url": "https://rh20t.github.io/",
+    "publisher": {
+      "name": "Shanghai Jiao Tong University and Flexiv Robotics",
+      "type": "academic",
+      "url": "https://rh20t.github.io/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "audio",
+      "multimodal",
+      "reinforcement-learning"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "contact-rich-manipulation",
+      "multimodal-perception",
+      "imitation-learning"
+    ],
+    "tags": [
+      "robotics",
+      "rh20t",
+      "contact-rich",
+      "force-torque",
+      "multimodal",
+      "imitation-learning"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Dual License: CC BY-SA 4.0 (RH20T-C) and CC BY-NC 4.0 (RH20T-NC)",
+      "commercial_use": "unknown",
+      "url": "https://rh20t.github.io/#License",
+      "notes": "RH20T is divided into two distinct licensing subsets: RH20T-C (scenes 0001 to 0005) is licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) allowing commercial use; RH20T-NC (scenes 0006 to 0010) is licensed under Creative Commons Attribution 4.0 Non-Commercial (CC BY-NC 4.0) strictly forbidding commercial use."
+    },
+    "source_references": [
+      {
+        "title": "RH20T Official Project Website",
+        "url": "https://rh20t.github.io/",
+        "type": "official_website"
+      },
+      {
+        "title": "RH20T API & Data Decoding Repository",
+        "url": "https://github.com/rh20t/rh20t_api",
+        "type": "repository"
+      },
+      {
+        "title": "RH20T: A Comprehensive Robotic Dataset for Learning Diverse Skills in One-Shot (ICRA 2024)",
+        "url": "https://doi.org/10.1109/ICRA57147.2024.10611615",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against project landing page, IEEE ICRA 2024 paper (DOI: 10.1109/ICRA57147.2024.10611615), and rh20t_api repo. Verified >110k sequences, dual commercial (CC BY-SA 4.0) and non-commercial (CC BY-NC 4.0) subsets, and 5 TB resized distribution size."
+    },
+    "size": {
+      "amount": 5.0,
+      "unit": "TB",
+      "status": "verified",
+      "file_formats": [
+        "npy",
+        "json",
+        "mp4",
+        "zip"
+      ],
+      "notes": "The standard 640x360 resized RGB dataset is ~5 TB (~10 TB for RGB-D). Uncompressed raw high-definition source archives total 40 TB."
+    },
+    "sample_count": {
+      "total": 110000,
+      "unit": "sequences",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023-07-01",
+      "last_updated": "2024-05-15"
+    },
+    "citation": {
+      "paper_title": "RH20T: A Comprehensive Robotic Dataset for Learning Diverse Skills in One-Shot",
+      "paper_url": "https://doi.org/10.1109/ICRA57147.2024.10611615",
+      "doi": "10.1109/ICRA57147.2024.10611615",
+      "authors": [
+        "Hao-Shu Fang",
+        "Hongjie Fang",
+        "Zhenyu Tang",
+        "Jirong Liu",
+        "Jiaqi Chen",
+        "Haoyi Zhu",
+        "Cewu Lu"
+      ],
+      "bibtex": "@inproceedings{fang2024rh20t,\n  title={RH20T: A Comprehensive Robotic Dataset for Learning Diverse Skills in One-Shot},\n  author={Fang, Hao-Shu and Fang, Hongjie and Tang, Zhenyu and Liu, Jirong and Chen, Jiaqi and Zhu, Haoyi and Lu, Cewu},\n  booktitle={IEEE International Conference on Robotics and Automation (ICRA)},\n  year={2024},\n  doi={10.1109/ICRA57147.2024.10611615}\n}"
+    },
+    "provenance": {
+      "collection_method": "Real-world contact-rich robot teleoperation with calibrated multi-modal sensor rigs including force-torque sensors, multi-view cameras, and binaural microphones paired with human demonstration videos.",
+      "curation_notes": "Encompasses 147 tasks with detailed quality rating, calibration verification, and dual commercial/non-commercial partition tags.",
+      "data_sources": [
+        "Original physical recordings on Flexiv Rizon and Franka arms at SJTU and Flexiv Robotics"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "rice-leaf-disease-samples",
     "slug": "rice-leaf-disease-samples",
     "name": "Rice Leaf Disease Image Samples",
@@ -38227,6 +40238,554 @@
       "curation_notes": "Expert-verified labeling across Bacterial Blight, Blast, Brown Spot, and Tungro.",
       "data_sources": [
         "Agricultural rice cultivation fields"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "robocasa-365",
+    "slug": "robocasa-365",
+    "name": "RoboCasa365: Scaling Robot Learning in Everyday Environments",
+    "description": "RoboCasa365 is a large-scale simulation benchmark and demonstration dataset for training generally capable domestic robots in realistic everyday environments. Developed by UT Austin researchers, RoboCasa365 dramatically expands upon the original 2024 RoboCasa release, introducing 365 household tasks guided by large language models across more than 2,500 photorealistic kitchen scenes and 3,200 3D objects. The dataset provides over 2,200 hours of robot demonstration data—comprising 600+ hours of human teleoperated demonstrations and 1,600+ hours of automated demonstrations—accompanied by frame-level subtask annotations specifying atomic skills and stages to benchmark hierarchical policy learning.",
+    "homepage_url": "https://robocasa.ai/",
+    "publisher": {
+      "name": "UT Austin Robot Perception and Learning (RPL) Lab",
+      "type": "academic",
+      "url": "https://robot-learning.cs.utexas.edu/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "household-robotics",
+      "everyday-manipulation",
+      "large-scale-simulation",
+      "imitation-learning"
+    ],
+    "tags": [
+      "robotics",
+      "robocasa",
+      "robocasa365",
+      "kitchen-manipulation",
+      "simulation",
+      "robosuite",
+      "vla"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "commercial_use": "allowed",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "notes": "The RoboCasa simulation framework software is licensed under the MIT License, while all datasets, 3D assets, and kitchen environments are distributed under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "RoboCasa Official Project Website",
+        "url": "https://robocasa.ai/",
+        "type": "official_website"
+      },
+      {
+        "title": "RoboCasa GitHub Repository",
+        "url": "https://github.com/robocasa/robocasa",
+        "type": "repository"
+      },
+      {
+        "title": "RoboCasa365 Research Paper (ICLR 2026)",
+        "url": "https://robocasa.ai/assets/robocasa365_iclr26.pdf",
+        "type": "original_paper"
+      },
+      {
+        "title": "RoboCasa Official Benchmark Leaderboard",
+        "url": "https://robocasa.ai/leaderboard.html",
+        "type": "documentation"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against robocasa.ai, GitHub repository, and ICLR 2026 paper. Confirmed 365 tasks, 2,500+ kitchen scenes, 2,200+ hours of demonstrations (600h human + 1600h automated), and MIT license."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "hdf5",
+        "json",
+        "xml"
+      ],
+      "notes": "Demonstrations and asset packages are downloadable through python download_datasets.py scripts from Hugging Face and cloud mirrors."
+    },
+    "sample_count": {
+      "total": 2200,
+      "unit": "hours",
+      "status": "verified",
+      "splits": {
+        "human_demonstrations_hours": 600,
+        "automated_demonstrations_hours": 1600,
+        "tasks": 365,
+        "kitchen_scenes": 2500
+      }
+    },
+    "dates": {
+      "published": "2026-02-18",
+      "last_updated": "2026-10-28"
+    },
+    "citation": {
+      "paper_title": "RoboCasa365: Scaling Robot Learning in Everyday Environments",
+      "paper_url": "https://robocasa.ai/assets/robocasa365_iclr26.pdf",
+      "authors": [
+        "Soroush Nasiriany",
+        "Abhay Deshpande",
+        "Aryan Saha",
+        "Kaushik Shivakumar",
+        "et al."
+      ],
+      "bibtex": "@article{nasiriany2026robocasa365,\n  title={RoboCasa365: Scaling Robot Learning in Everyday Environments},\n  author={Nasiriany, Soroush and Deshpande, Abhay and Saha, Aryan and Shivakumar, Kaushik and others},\n  journal={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}"
+    },
+    "provenance": {
+      "collection_method": "Simulated human VR teleoperation and automated trajectory synthesis in robosuite kitchen environments powered by RoboSuite v1.5.",
+      "curation_notes": "Features 365 composite and atomic tasks. Builds upon the 2024 RSS release with subtask annotation labelers generating step-level instructions and stage markers directly from simulation states.",
+      "data_sources": [
+        "RoboCasa 2024 foundational environments",
+        "RoboCasa365 newly generated multi-kitchen demonstrations"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "robomimic",
+    "slug": "robomimic",
+    "name": "robomimic: Large-Scale Robot Learning from Offline Demonstrations",
+    "description": "robomimic is a comprehensive framework and demonstration benchmark suite for offline imitation learning and reinforcement learning in robot manipulation. Developed by the ARISE Initiative across Stanford University and UT Austin, the robomimic v0.1 benchmark provides 7,800 demonstrations across 5 simulated manipulation tasks (Lift, Can, Square, Transport, Tool Hang) and 2 real robot tasks (Lift Real, Can Real). The collection is uniquely stratified by operator proficiency—including Proficient-Human (PH), Multi-Human (MH with worse, okay, and better operators), Machine-Generated (MG rollouts from SAC policies), and Can-Paired good/bad trajectories—enabling systematic evaluation of algorithm robustness to sub-optimal, noisy, and mixed-quality human data.",
+    "homepage_url": "https://robomimic.github.io/",
+    "publisher": {
+      "name": "ARISE Initiative (Stanford and UT Austin)",
+      "type": "academic",
+      "url": "https://robomimic.github.io/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "offline-imitation-learning",
+      "suboptimal-data-learning",
+      "behavior-cloning"
+    ],
+    "tags": [
+      "robotics",
+      "robomimic",
+      "offline-rl",
+      "imitation-learning",
+      "robosuite",
+      "franka-panda"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "commercial_use": "allowed",
+      "url": "https://github.com/ARISE-Initiative/robomimic/blob/master/LICENSE",
+      "notes": "Framework code, dataset generation utilities, and benchmark demonstration datasets are released under the MIT License."
+    },
+    "source_references": [
+      {
+        "title": "robomimic Official Documentation & Project Page",
+        "url": "https://robomimic.github.io/",
+        "type": "official_website"
+      },
+      {
+        "title": "robomimic v0.1 Dataset Documentation",
+        "url": "https://robomimic.github.io/docs/datasets/robomimic_v0.1.html",
+        "type": "documentation"
+      },
+      {
+        "title": "robomimic GitHub Repository",
+        "url": "https://github.com/ARISE-Initiative/robomimic",
+        "type": "repository"
+      },
+      {
+        "title": "What Matters in Learning from Offline Human Demonstrations for Robot Manipulation (CoRL 2021 / arXiv:2108.03298)",
+        "url": "https://arxiv.org/abs/2108.03298",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against robomimic documentation, CoRL 2021 paper, and ARISE-Initiative repository. Confirmed 7,800 demonstrations across PH, MH, MG, and Paired splits, distinguishing robomimic's own dataset from external datasets supported by the framework, and verified MIT license."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "hdf5"
+      ],
+      "notes": "Available in both low-dimensional proprioceptive states and high-dimensional multi-camera image observation HDF5 files via download_datasets.py."
+    },
+    "sample_count": {
+      "total": 7800,
+      "unit": "demonstrations",
+      "status": "verified",
+      "splits": {
+        "proficient_human": 1000,
+        "multi_human": 1200,
+        "machine_generated": 5400,
+        "can_paired": 200
+      }
+    },
+    "dates": {
+      "published": "2021-08-06",
+      "last_updated": "2023-04-12"
+    },
+    "citation": {
+      "paper_title": "What Matters in Learning from Offline Human Demonstrations for Robot Manipulation",
+      "paper_url": "https://arxiv.org/abs/2108.03298",
+      "doi": "10.48550/arXiv.2108.03298",
+      "authors": [
+        "Ajay Mandlekar",
+        "Danfei Xu",
+        "Josiah Wong",
+        "Soroush Nasiriany",
+        "Chen Wang",
+        "Rohun Kulkarni",
+        "Li Fei-Fei",
+        "Silvio Savarese",
+        "Yuke Zhu",
+        "Roberto Martín-Martín"
+      ],
+      "bibtex": "@inproceedings{mandlekar2021whatmatters,\n  title={What Matters in Learning from Offline Human Demonstrations for Robot Manipulation},\n  author={Mandlekar, Ajay and Xu, Danfei and Wong, Josiah and Nasiriany, Soroush and Wang, Chen and Kulkarni, Rohun and Fei-Fei, Li and Savarese, Silvio and Zhu, Yuke and Mart{\\i}n-Mart{\\i}n, Roberto},\n  booktitle={Conference on Robot Learning (CoRL)},\n  year={2021}\n}"
+    },
+    "provenance": {
+      "collection_method": "Crowd-sourced human teleoperation via the RoboTurk smartphone platform and 3D controllers, combined with policy rollouts from soft actor-critic checkpoints.",
+      "curation_notes": "Specifically isolates the impact of demonstration quality, dataset size, and observation modalities across 5 robosuite tasks and 2 physical Franka robot tasks.",
+      "data_sources": [
+        "RoboTurk platform recordings at Stanford Vision and Learning Lab and UT Austin"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "robomind",
+    "slug": "robomind",
+    "name": "RoboMIND: Multi-embodiment Intelligence Normative Data for Robot Manipulation",
+    "description": "RoboMIND is a large-scale real-world multi-embodiment robotic manipulation dataset and benchmark comprising 107,000 demonstration trajectories collected across four distinct robotic embodiments: the Franka Emika Panda, Universal Robots UR5e, AgileX dual-arm platform, and a bipedal humanoid robot. Developed by the Beijing Innovation Center of Humanoid Robotics, RoboMIND spans 479 diverse manipulation tasks and 96 object classes. A defining contribution is the systematic capture of real-world failure demonstrations accompanied by detailed root-cause annotations, enabling research into failure reflection, self-correction, and generalist Vision-Language-Action (VLA) policy robustness.",
+    "homepage_url": "https://x-humanoid-robomind.github.io/",
+    "publisher": {
+      "name": "Beijing Innovation Center of Humanoid Robotics",
+      "type": "academic",
+      "url": "https://x-humanoid-robomind.github.io/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "multi-embodiment-learning",
+      "failure-reflection",
+      "imitation-learning"
+    ],
+    "tags": [
+      "robotics",
+      "robomind",
+      "multi-embodiment",
+      "humanoid",
+      "teleoperation",
+      "failure-reflection",
+      "vla"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "commercial_use": "allowed",
+      "url": "https://huggingface.co/datasets/x-humanoid-robomind/RoboMIND",
+      "notes": "Distributed under the Apache 2.0 license on Hugging Face and ModelScope."
+    },
+    "source_references": [
+      {
+        "title": "RoboMIND Official Project Page",
+        "url": "https://x-humanoid-robomind.github.io/",
+        "type": "official_website"
+      },
+      {
+        "title": "RoboMIND Dataset on Hugging Face",
+        "url": "https://huggingface.co/datasets/x-humanoid-robomind/RoboMIND",
+        "type": "dataset_card"
+      },
+      {
+        "title": "RoboMIND Research Paper (RSS 2025)",
+        "url": "https://www.roboticsproceedings.org/rss21/p152.pdf",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against project landing page, RSS 2025 paper, and Hugging Face repository. Confirmed expansion from original 55k preprint release to 107k v2.0 trajectories across 4 embodiments and Apache 2.0 license."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "hdf5",
+        "json",
+        "mp4"
+      ],
+      "notes": "Hosted across Hugging Face and ModelScope containing multi-view RGB videos, joint positions, gripper actions, and error-cause labels."
+    },
+    "sample_count": {
+      "total": 107000,
+      "unit": "trajectories",
+      "status": "verified",
+      "splits": {
+        "tasks": 479,
+        "object_classes": 96,
+        "embodiments": 4
+      }
+    },
+    "dates": {
+      "published": "2024-12-01",
+      "last_updated": "2025-06-15"
+    },
+    "citation": {
+      "paper_title": "RoboMIND: Benchmark on Multi-embodiment Intelligence Normative Data for Robot Manipulation",
+      "paper_url": "https://www.roboticsproceedings.org/rss21/p152.pdf",
+      "authors": [
+        "RoboMIND Team",
+        "Beijing Innovation Center of Humanoid Robotics"
+      ],
+      "bibtex": "@inproceedings{robomind2025,\n  title={RoboMIND: Benchmark on Multi-embodiment Intelligence Normative Data for Robot Manipulation},\n  author={RoboMIND Team},\n  booktitle={Robotics: Science and Systems (RSS)},\n  year={2025},\n  url={https://www.roboticsproceedings.org/rss21/p152.pdf}\n}"
+    },
+    "provenance": {
+      "collection_method": "Synchronized multi-view teleoperated demonstrations across four physical robotic platforms: Franka Emika Panda, Universal Robots UR5e, AgileX dual-arm robot, and a bipedal humanoid robot.",
+      "curation_notes": "Systematically records both task successes and natural failure rollouts tagged with root causes to support failure-aware policy training and recovery strategies.",
+      "data_sources": [
+        "Original recordings at Beijing Innovation Center of Humanoid Robotics"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "robonet",
+    "slug": "robonet",
+    "name": "RoboNet: Large-Scale Multi-Robot Learning Dataset",
+    "description": "RoboNet is a landmark multi-robot, multi-domain learning dataset consisting of 162,000 robotic manipulation trajectories spanning roughly 15 million video frames collected across 7 distinct robotic arm platforms operating in unconstrained tabletop environments. Developed collaboratively across UC Berkeley, University of Pennsylvania, and Stanford University, RoboNet was designed to study video prediction, self-supervised visual foresight, and multi-robot policy transfer. Each trajectory contains multi-view RGB video recordings, commanded end-effector actions, and camera calibration parameters.",
+    "homepage_url": "https://github.com/SudeepDasari/RoboNet",
+    "publisher": {
+      "name": "BAIR, UC Berkeley",
+      "type": "academic",
+      "url": "https://bair.berkeley.edu/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "visual-prediction",
+      "multi-robot-learning",
+      "inverse-dynamics-modeling"
+    ],
+    "tags": [
+      "robotics",
+      "robonet",
+      "multi-robot",
+      "visual-prediction",
+      "manipulation",
+      "video-prediction"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "commercial_use": "allowed",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "notes": "All RoboNet dataset files are explicitly provided under the Creative Commons Attribution 4.0 International (CC BY 4.0) license. Repository codebase is MIT licensed."
+    },
+    "source_references": [
+      {
+        "title": "RoboNet Official GitHub Repository",
+        "url": "https://github.com/SudeepDasari/RoboNet",
+        "type": "repository"
+      },
+      {
+        "title": "RoboNet Project Documentation and Download Guide",
+        "url": "https://github.com/SudeepDasari/RoboNet/wiki/Getting-Started",
+        "type": "documentation"
+      },
+      {
+        "title": "RoboNet: Large-Scale Multi-Robot Learning (CoRL 2019 / arXiv:1910.11215)",
+        "url": "https://arxiv.org/abs/1910.11215",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against official GitHub repository and CoRL 2019 paper. Confirmed 162k trajectory count across 7 robot arms and dataset CC BY 4.0 license."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "hdf5"
+      ],
+      "notes": "Distributed as partitioned HDF5 files through AWS S3 and Google Drive."
+    },
+    "sample_count": {
+      "total": 162000,
+      "unit": "trajectories",
+      "status": "verified",
+      "splits": {
+        "frames": 15000000
+      }
+    },
+    "dates": {
+      "published": "2019-10-24",
+      "last_updated": "2020-08-15"
+    },
+    "citation": {
+      "paper_title": "RoboNet: Large-Scale Multi-Robot Learning",
+      "paper_url": "https://arxiv.org/abs/1910.11215",
+      "doi": "10.48550/arXiv.1910.11215",
+      "authors": [
+        "Sudeep Dasari",
+        "Frederik Ebert",
+        "Stephen Tian",
+        "Suraj Nair",
+        "Bernadette Bucher",
+        "Karl Schmeckpeper",
+        "Siddharth Singh",
+        "Sergey Levine",
+        "Chelsea Finn"
+      ],
+      "bibtex": "@inproceedings{dasari2019robonet,\n  title={RoboNet: Large-Scale Multi-Robot Learning},\n  author={Dasari, Sudeep and Ebert, Frederik and Tian, Stephen and Nair, Suraj and Bucher, Bernadette and Schmeckpeper, Karl and Singh, Siddharth and Levine, Sergey and Finn, Chelsea},\n  booktitle={Conference on Robot Learning (CoRL)},\n  year={2019}\n}"
+    },
+    "provenance": {
+      "collection_method": "Autonomous interaction data collection across 7 physical robot platforms (Sawyer, Baxter, Franka Emika Panda, Kuka iiwa, Universal Robots UR3/UR5, and Fetch) interacting with cluttered tables.",
+      "curation_notes": "Incorporates multiple camera view angles, gripper orientations, and randomized tabletop object interactions.",
+      "data_sources": [
+        "Self-supervised autonomous robot collection across UC Berkeley, Penn, and Stanford labs"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "roboset",
+    "slug": "roboset",
+    "name": "RoboSet: Multi-Task Real-World Robotic Manipulation Dataset",
+    "description": "RoboSet is a large-scale real-world robotic manipulation dataset consisting of 28,500 trajectories collected on Franka Emika Panda arms across diverse daily kitchen activities. Developed under the RoboPen initiative at Carnegie Mellon University, RoboSet combines 9,500 teleoperated demonstration trajectories with 19,000 kinesthetic replay trajectories with scene variations. Each recorded demonstration includes synchronized 4-camera multi-view visual observations, proprioceptive joint states, and end-effector actions to evaluate imitation learning, multi-task transfer, and visual policy robustness under scene variations.",
+    "homepage_url": "https://robopen.github.io/roboset/",
+    "publisher": {
+      "name": "RoboPen Project, Carnegie Mellon University",
+      "type": "academic",
+      "url": "https://robopen.github.io/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "imitation-learning",
+      "multi-view-perception",
+      "household-robotics"
+    ],
+    "tags": [
+      "robotics",
+      "roboset",
+      "franka-panda",
+      "kinesthetic-teaching",
+      "teleoperation",
+      "kitchen-manipulation"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "commercial_use": "allowed",
+      "url": "https://mit-license.org/",
+      "notes": "Official website explicitly declares: 'This work is licensed under the MIT-License'."
+    },
+    "source_references": [
+      {
+        "title": "RoboSet Official Website",
+        "url": "https://robopen.github.io/roboset/",
+        "type": "official_website"
+      },
+      {
+        "title": "RoboSet Dataset Documentation and Access",
+        "url": "https://robopen.github.io/roboset/download/",
+        "type": "documentation"
+      },
+      {
+        "title": "RoboSet: A Large-Scale Robot Dataset for Learning Generalizable Manipulation Skills (arXiv:2311.00999)",
+        "url": "https://arxiv.org/abs/2311.00999",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against official project page, download manifest, and arXiv:2311.00999. Confirmed exact counts: 28,500 total trajectories (9,500 teleoperated + 19,000 kinesthetic replay) and MIT license."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "hdf5"
+      ],
+      "notes": "Distributed as HDF5 files per trajectory with 4-camera video streams via Google Drive and Hugging Face."
+    },
+    "sample_count": {
+      "total": 28500,
+      "unit": "trajectories",
+      "status": "verified",
+      "splits": {
+        "teleoperated_trajectories": 9500,
+        "kinesthetic_replay_trajectories": 19000
+      }
+    },
+    "dates": {
+      "published": "2023-11-01",
+      "last_updated": "2023-11-15"
+    },
+    "citation": {
+      "paper_title": "RoboSet: A Large-Scale Robot Dataset for Learning Generalizable Manipulation Skills",
+      "paper_url": "https://arxiv.org/abs/2311.00999",
+      "doi": "10.48550/arXiv.2311.00999",
+      "authors": [
+        "Homanga Bharadhwaj",
+        "Jay Vakil",
+        "Mohit Sharma",
+        "Abhinav Gupta",
+        "Shubham Tulsiani",
+        "Vikash Kumar"
+      ],
+      "bibtex": "@article{bharadhwaj2023roboset,\n  title={RoboSet: A Large-Scale Robot Dataset for Learning Generalizable Manipulation Skills},\n  author={Bharadhwaj, Homanga and Vakil, Jay and Sharma, Mohit and Gupta, Abhinav and Tulsiani, Shubham and Kumar, Vikash},\n  journal={arXiv preprint arXiv:2311.00999},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Combined human teleoperation and kinesthetic demonstration playback with scene variation on Franka Emika Panda arms across kitchen environments.",
+      "curation_notes": "Includes 4 synchronized camera viewpoints per frame with varied lighting, object poses, and kitchen backgrounds.",
+      "data_sources": [
+        "Original recordings at Carnegie Mellon University RoboPen laboratory"
       ]
     }
   },
@@ -42028,6 +44587,111 @@
       ],
       "doi": "10.48550/arXiv.2305.02997",
       "bibtex": "@inproceedings{mcelfresh2023when,\n  title={When Do Neural Nets Outperform Boosted Trees on Tabular Data?},\n  author={McElfresh, Duncan and Khandagale, Sujay and Valverde, Jonathan and Prasad C, Vishak and Feuer, Benjamin and Hegde, Chinmay and Ramakrishnan, Ganesh and Goldblum, Micah and White, Colin},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  volume={36},\n  pages={76891--77002},\n  year={2023}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "taco-play",
+    "slug": "taco-play",
+    "name": "TACO-Play: Robot Play and Visual Affordance Dataset",
+    "description": "TACO-Play (Task-Agnostic Continuous Offline Play) is an open-source robotic manipulation dataset designed to study visual affordance grounding and language-guided imitation learning from unstructured human play data. Recorded by University of Freiburg researchers, the dataset captures a Franka Emika Panda robot arm interacting with modular tabletop kitchen setups (including cabinet doors, drawers, sliding panels, and cooking props). The dataset contains 3,603 demonstration episodes (3,242 training and 361 testing) with synchronized multi-view RGB-D video, proprioceptive joint states, Cartesian actions, and natural language instruction annotations. TACO-Play is also incorporated as a constituent dataset in the Open X-Embodiment consortium.",
+    "homepage_url": "https://www.tensorflow.org/datasets/catalog/taco_play",
+    "publisher": {
+      "name": "University of Freiburg",
+      "type": "academic",
+      "url": "https://rl.uni-freiburg.de/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "reinforcement-learning",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "robot-manipulation",
+      "visual-affordance-grounding",
+      "imitation-learning",
+      "play-data"
+    ],
+    "tags": [
+      "robotics",
+      "taco-play",
+      "visual-affordances",
+      "franka-panda",
+      "rlds",
+      "kitchen-manipulation"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "commercial_use": "allowed",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "notes": "Distributed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license via TFDS and Kaggle."
+    },
+    "source_references": [
+      {
+        "title": "TFDS TACO-Play Catalog Entry",
+        "url": "https://www.tensorflow.org/datasets/catalog/taco_play",
+        "type": "official_website"
+      },
+      {
+        "title": "TACO Robot Dataset on Kaggle",
+        "url": "https://www.kaggle.com/datasets/oiermees/taco-robot",
+        "type": "repository"
+      },
+      {
+        "title": "Grounding Language with Visual Affordances over Unstructured Data (IEEE ICRA 2023 / arXiv:2210.01911)",
+        "url": "https://arxiv.org/abs/2210.01911",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against TFDS catalog entry, Kaggle repository, and IEEE ICRA 2023 paper (DOI: 10.1109/ICRA48855.2023.10161476). Confirmed exact splits: 3,242 train + 361 test = 3,603 episodes, CC BY 4.0 license, and Open X-Embodiment lineage."
+    },
+    "size": {
+      "status": "unknown",
+      "file_formats": [
+        "tfrecord",
+        "rlds",
+        "npz"
+      ],
+      "notes": "Distributed via TensorFlow Datasets and Kaggle archives in TFRecord and RLDS episode formats."
+    },
+    "sample_count": {
+      "total": 3603,
+      "unit": "episodes",
+      "status": "verified",
+      "splits": {
+        "train": 3242,
+        "test": 361
+      }
+    },
+    "dates": {
+      "published": "2022-10-04",
+      "last_updated": "2023-05-30"
+    },
+    "citation": {
+      "paper_title": "Grounding Language with Visual Affordances over Unstructured Data",
+      "paper_url": "https://arxiv.org/abs/2210.01911",
+      "doi": "10.1109/ICRA48855.2023.10161476",
+      "authors": [
+        "Oier Mees",
+        "Jessica Borja-Diaz",
+        "Wolfram Burgard"
+      ],
+      "bibtex": "@inproceedings{mees2023grounding,\n  title={Grounding Language with Visual Affordances over Unstructured Data},\n  author={Mees, Oier and Borja-Diaz, Jessica and Burgard, Wolfram},\n  booktitle={IEEE International Conference on Robotics and Automation (ICRA)},\n  pages={11223--11229},\n  year={2023},\n  doi={10.1109/ICRA48855.2023.10161476}\n}"
+    },
+    "provenance": {
+      "collection_method": "Unstructured teleoperated robot play using VR controllers driving a 7-DoF Franka Emika Panda manipulator interacting with complex kitchen environments, post-annotated with visual affordance masks.",
+      "curation_notes": "Features 3,603 total episodes. Distinct from taco-trash (which detects litter in urban environments). Integrates with Open X-Embodiment under key taco_play.",
+      "data_sources": [
+        "Original robotic experimentation at University of Freiburg"
+      ]
     }
   },
   {

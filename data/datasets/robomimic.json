@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "robomimic",
+  "slug": "robomimic",
+  "name": "robomimic: Large-Scale Robot Learning from Offline Demonstrations",
+  "description": "robomimic is a comprehensive framework and demonstration benchmark suite for offline imitation learning and reinforcement learning in robot manipulation. Developed by the ARISE Initiative across Stanford University and UT Austin, the robomimic v0.1 benchmark provides 7,800 demonstrations across 5 simulated manipulation tasks (Lift, Can, Square, Transport, Tool Hang) and 2 real robot tasks (Lift Real, Can Real). The collection is uniquely stratified by operator proficiency—including Proficient-Human (PH), Multi-Human (MH with worse, okay, and better operators), Machine-Generated (MG rollouts from SAC policies), and Can-Paired good/bad trajectories—enabling systematic evaluation of algorithm robustness to sub-optimal, noisy, and mixed-quality human data.",
+  "homepage_url": "https://robomimic.github.io/",
+  "publisher": {
+    "name": "ARISE Initiative (Stanford and UT Austin)",
+    "type": "academic",
+    "url": "https://robomimic.github.io/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "offline-imitation-learning",
+    "suboptimal-data-learning",
+    "behavior-cloning"
+  ],
+  "tags": [
+    "robotics",
+    "robomimic",
+    "offline-rl",
+    "imitation-learning",
+    "robosuite",
+    "franka-panda"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "commercial_use": "allowed",
+    "url": "https://github.com/ARISE-Initiative/robomimic/blob/master/LICENSE",
+    "notes": "Framework code, dataset generation utilities, and benchmark demonstration datasets are released under the MIT License."
+  },
+  "source_references": [
+    {
+      "title": "robomimic Official Documentation & Project Page",
+      "url": "https://robomimic.github.io/",
+      "type": "official_website"
+    },
+    {
+      "title": "robomimic v0.1 Dataset Documentation",
+      "url": "https://robomimic.github.io/docs/datasets/robomimic_v0.1.html",
+      "type": "documentation"
+    },
+    {
+      "title": "robomimic GitHub Repository",
+      "url": "https://github.com/ARISE-Initiative/robomimic",
+      "type": "repository"
+    },
+    {
+      "title": "What Matters in Learning from Offline Human Demonstrations for Robot Manipulation (CoRL 2021 / arXiv:2108.03298)",
+      "url": "https://arxiv.org/abs/2108.03298",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against robomimic documentation, CoRL 2021 paper, and ARISE-Initiative repository. Confirmed 7,800 demonstrations across PH, MH, MG, and Paired splits, distinguishing robomimic's own dataset from external datasets supported by the framework, and verified MIT license."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "hdf5"
+    ],
+    "notes": "Available in both low-dimensional proprioceptive states and high-dimensional multi-camera image observation HDF5 files via download_datasets.py."
+  },
+  "sample_count": {
+    "total": 7800,
+    "unit": "demonstrations",
+    "status": "verified",
+    "splits": {
+      "proficient_human": 1000,
+      "multi_human": 1200,
+      "machine_generated": 5400,
+      "can_paired": 200
+    }
+  },
+  "dates": {
+    "published": "2021-08-06",
+    "last_updated": "2023-04-12"
+  },
+  "citation": {
+    "paper_title": "What Matters in Learning from Offline Human Demonstrations for Robot Manipulation",
+    "paper_url": "https://arxiv.org/abs/2108.03298",
+    "doi": "10.48550/arXiv.2108.03298",
+    "authors": [
+      "Ajay Mandlekar",
+      "Danfei Xu",
+      "Josiah Wong",
+      "Soroush Nasiriany",
+      "Chen Wang",
+      "Rohun Kulkarni",
+      "Li Fei-Fei",
+      "Silvio Savarese",
+      "Yuke Zhu",
+      "Roberto Martín-Martín"
+    ],
+    "bibtex": "@inproceedings{mandlekar2021whatmatters,\n  title={What Matters in Learning from Offline Human Demonstrations for Robot Manipulation},\n  author={Mandlekar, Ajay and Xu, Danfei and Wong, Josiah and Nasiriany, Soroush and Wang, Chen and Kulkarni, Rohun and Fei-Fei, Li and Savarese, Silvio and Zhu, Yuke and Mart{\\i}n-Mart{\\i}n, Roberto},\n  booktitle={Conference on Robot Learning (CoRL)},\n  year={2021}\n}"
+  },
+  "provenance": {
+    "collection_method": "Crowd-sourced human teleoperation via the RoboTurk smartphone platform and 3D controllers, combined with policy rollouts from soft actor-critic checkpoints.",
+    "curation_notes": "Specifically isolates the impact of demonstration quality, dataset size, and observation modalities across 5 robosuite tasks and 2 physical Franka robot tasks.",
+    "data_sources": [
+      "RoboTurk platform recordings at Stanford Vision and Learning Lab and UT Austin"
+    ]
+  }
+}

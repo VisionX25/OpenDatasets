@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "robomind",
+  "slug": "robomind",
+  "name": "RoboMIND: Multi-embodiment Intelligence Normative Data for Robot Manipulation",
+  "description": "RoboMIND is a large-scale real-world multi-embodiment robotic manipulation dataset and benchmark comprising 107,000 demonstration trajectories collected across four distinct robotic embodiments: the Franka Emika Panda, Universal Robots UR5e, AgileX dual-arm platform, and a bipedal humanoid robot. Developed by the Beijing Innovation Center of Humanoid Robotics, RoboMIND spans 479 diverse manipulation tasks and 96 object classes. A defining contribution is the systematic capture of real-world failure demonstrations accompanied by detailed root-cause annotations, enabling research into failure reflection, self-correction, and generalist Vision-Language-Action (VLA) policy robustness.",
+  "homepage_url": "https://x-humanoid-robomind.github.io/",
+  "publisher": {
+    "name": "Beijing Innovation Center of Humanoid Robotics",
+    "type": "academic",
+    "url": "https://x-humanoid-robomind.github.io/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "multi-embodiment-learning",
+    "failure-reflection",
+    "imitation-learning"
+  ],
+  "tags": [
+    "robotics",
+    "robomind",
+    "multi-embodiment",
+    "humanoid",
+    "teleoperation",
+    "failure-reflection",
+    "vla"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "commercial_use": "allowed",
+    "url": "https://huggingface.co/datasets/x-humanoid-robomind/RoboMIND",
+    "notes": "Distributed under the Apache 2.0 license on Hugging Face and ModelScope."
+  },
+  "source_references": [
+    {
+      "title": "RoboMIND Official Project Page",
+      "url": "https://x-humanoid-robomind.github.io/",
+      "type": "official_website"
+    },
+    {
+      "title": "RoboMIND Dataset on Hugging Face",
+      "url": "https://huggingface.co/datasets/x-humanoid-robomind/RoboMIND",
+      "type": "dataset_card"
+    },
+    {
+      "title": "RoboMIND Research Paper (RSS 2025)",
+      "url": "https://www.roboticsproceedings.org/rss21/p152.pdf",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against project landing page, RSS 2025 paper, and Hugging Face repository. Confirmed expansion from original 55k preprint release to 107k v2.0 trajectories across 4 embodiments and Apache 2.0 license."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "hdf5",
+      "json",
+      "mp4"
+    ],
+    "notes": "Hosted across Hugging Face and ModelScope containing multi-view RGB videos, joint positions, gripper actions, and error-cause labels."
+  },
+  "sample_count": {
+    "total": 107000,
+    "unit": "trajectories",
+    "status": "verified",
+    "splits": {
+      "tasks": 479,
+      "object_classes": 96,
+      "embodiments": 4
+    }
+  },
+  "dates": {
+    "published": "2024-12-01",
+    "last_updated": "2025-06-15"
+  },
+  "citation": {
+    "paper_title": "RoboMIND: Benchmark on Multi-embodiment Intelligence Normative Data for Robot Manipulation",
+    "paper_url": "https://www.roboticsproceedings.org/rss21/p152.pdf",
+    "authors": [
+      "RoboMIND Team",
+      "Beijing Innovation Center of Humanoid Robotics"
+    ],
+    "bibtex": "@inproceedings{robomind2025,\n  title={RoboMIND: Benchmark on Multi-embodiment Intelligence Normative Data for Robot Manipulation},\n  author={RoboMIND Team},\n  booktitle={Robotics: Science and Systems (RSS)},\n  year={2025},\n  url={https://www.roboticsproceedings.org/rss21/p152.pdf}\n}"
+  },
+  "provenance": {
+    "collection_method": "Synchronized multi-view teleoperated demonstrations across four physical robotic platforms: Franka Emika Panda, Universal Robots UR5e, AgileX dual-arm robot, and a bipedal humanoid robot.",
+    "curation_notes": "Systematically records both task successes and natural failure rollouts tagged with root causes to support failure-aware policy training and recovery strategies.",
+    "data_sources": [
+      "Original recordings at Beijing Innovation Center of Humanoid Robotics"
+    ]
+  }
+}

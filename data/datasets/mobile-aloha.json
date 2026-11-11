@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mobile-aloha",
+  "slug": "mobile-aloha",
+  "name": "Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation",
+  "description": "Mobile ALOHA is a robotic imitation learning benchmark and demonstration dataset for whole-body bimanual mobile manipulation. Developed at Stanford University, the platform mounts two ViperX 300 6-DoF robot arms onto an AgileX Tracer omnidirectional mobile base, controlled by a low-cost untethered teleoperation harness. The dataset consists of 320 real-world expert mobile manipulation demonstrations across 7 complex, long-horizon domestic tasks (including wiping spilled wine, cooking shrimp, rinsing pans, serving food, and navigating elevators). The dataset establishes a proven co-training methodology that integrates 825 existing static tabletop ALOHA demonstrations to bootstrap autonomous mobile manipulation with high data efficiency.",
+  "homepage_url": "https://mobile-aloha.github.io/",
+  "publisher": {
+    "name": "Stanford University",
+    "type": "academic",
+    "url": "https://src.stanford.edu/demo/moble-aloha"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal"
+  ],
+  "tasks": [
+    "mobile-manipulation",
+    "bimanual-manipulation",
+    "imitation-learning",
+    "whole-body-control"
+  ],
+  "tags": [
+    "robotics",
+    "mobile-aloha",
+    "bimanual",
+    "mobile-manipulation",
+    "teleoperation",
+    "act",
+    "aloha"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT License (Code) / Open Research Permissive (Data)",
+    "spdx_id": "MIT",
+    "commercial_use": "allowed",
+    "url": "https://github.com/MarkFzp/mobile-aloha/blob/main/LICENSE",
+    "notes": "Teleoperation software and ACT++ imitation learning code are released under the MIT License. The 320 raw demonstration HDF5 files are openly distributed via author-hosted Google Drive links and Hugging Face mirrors for research use."
+  },
+  "source_references": [
+    {
+      "title": "Mobile ALOHA Project Landing Page",
+      "url": "https://mobile-aloha.github.io/",
+      "type": "official_website"
+    },
+    {
+      "title": "Mobile ALOHA Teleoperation Repository",
+      "url": "https://github.com/MarkFzp/mobile-aloha",
+      "type": "repository"
+    },
+    {
+      "title": "Mobile ALOHA Imitation Learning (ACT++) Repository",
+      "url": "https://github.com/MarkFzp/act-plus-plus",
+      "type": "repository"
+    },
+    {
+      "title": "Mobile ALOHA Research Paper (arXiv:2401.02117)",
+      "url": "https://arxiv.org/abs/2401.02117",
+      "type": "original_paper"
+    },
+    {
+      "title": "Mobile ALOHA Demonstration Dataset Mirror on Hugging Face",
+      "url": "https://huggingface.co/datasets/sumo43/mobile-aloha",
+      "type": "archive",
+      "notes": "Archive mirror of official author Google Drive HDF5 demonstration archives linked in the MarkFzp/act-plus-plus repository."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against mobile-aloha.github.io, src.stanford.edu showcase, and arXiv:2401.02117 paper. Confirmed 320 real mobile demonstrations across 7 tasks and co-training relationship with 825 static ALOHA demonstrations."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "hdf5"
+    ],
+    "notes": "Recorded as HDF5 files containing 4 camera video streams (overhead, front, left wrist, right wrist) and whole-body joint and velocity trajectories."
+  },
+  "sample_count": {
+    "total": 320,
+    "unit": "demonstrations",
+    "status": "verified",
+    "splits": {
+      "wipe_wine": 50,
+      "cook_shrimp": 50,
+      "rinse_pan": 50,
+      "serve_food": 50,
+      "push_chairs": 50,
+      "use_elevator": 50,
+      "high_five": 20
+    }
+  },
+  "dates": {
+    "published": "2024-01-03",
+    "last_updated": "2024-03-20"
+  },
+  "citation": {
+    "paper_title": "Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation",
+    "paper_url": "https://arxiv.org/abs/2401.02117",
+    "doi": "10.48550/arXiv.2401.02117",
+    "authors": [
+      "Zipeng Fu",
+      "Tony Z. Zhao",
+      "Chelsea Finn"
+    ],
+    "bibtex": "@article{fu2024mobile_aloha,\n  title={Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation},\n  author={Fu, Zipeng and Zhao, Tony Z. and Finn, Chelsea},\n  journal={arXiv preprint arXiv:2401.02117},\n  year={2024}\n}"
+  },
+  "provenance": {
+    "collection_method": "Direct physical whole-body teleoperation using an operator-strapped exoskeleton master controlling twin puppet arms and an omnidirectional base.",
+    "curation_notes": "Features 7 challenging mobile tasks. Uses a co-training pipeline where mini-batches are drawn equally from the 320 mobile demonstrations and the 825 static tabletop ALOHA demonstrations.",
+    "data_sources": [
+      "Original recordings at Stanford University Robotics Center",
+      "Static ALOHA dataset (825 demonstrations)"
+    ]
+  }
+}

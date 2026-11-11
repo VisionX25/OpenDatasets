@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "maniskill-3-demos",
+  "slug": "maniskill-3-demos",
+  "name": "ManiSkill 3 Demonstrations: Large-Scale Trajectories for Embodied Manipulation",
+  "description": "ManiSkill 3 Demonstrations is an open-access robotic demonstration dataset accompanying the GPU-parallelized ManiSkill 3 manipulation benchmark. Developed by the Hao Su Lab at UC San Diego, this collection provides standardized demonstration trajectories across rigid-body and soft-body robotic manipulation tasks (including PickCube, StackCube, PegInsertionSide, PlugCharger, PushCube, PushT, AnymalC-Reach, and bimanual TwoRobotStackCube). Stored in HDF5 format, the demonstrations provide environment states, actions, and reset configurations that can be replayed across any observation mode (RGB, depth, point cloud, or state observations) and simulation backend.",
+  "homepage_url": "https://maniskill.readthedocs.io/en/latest/user_guide/datasets/demos.html",
+  "publisher": {
+    "name": "UC San Diego (Hao Su Lab)",
+    "type": "academic",
+    "url": "https://haosulab.github.io/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal",
+    "3d"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "reinforcement-learning",
+    "imitation-learning",
+    "trajectory-optimization"
+  ],
+  "tags": [
+    "robotics",
+    "maniskill",
+    "maniskill-3",
+    "gpu-parallel",
+    "simulation",
+    "hdf5",
+    "demonstrations"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "commercial_use": "allowed",
+    "url": "https://huggingface.co/datasets/haosulab/ManiSkill_Demonstrations",
+    "notes": "The ManiSkill demonstration datasets and simulation benchmark code are released under the Apache 2.0 license."
+  },
+  "source_references": [
+    {
+      "title": "ManiSkill 3 Demonstration Guide",
+      "url": "https://maniskill.readthedocs.io/en/latest/user_guide/datasets/demos.html",
+      "type": "documentation"
+    },
+    {
+      "title": "ManiSkill Demonstrations on Hugging Face",
+      "url": "https://huggingface.co/datasets/haosulab/ManiSkill_Demonstrations",
+      "type": "dataset_card"
+    },
+    {
+      "title": "ManiSkill GitHub Repository",
+      "url": "https://github.com/haosulab/ManiSkill",
+      "type": "repository"
+    },
+    {
+      "title": "ManiSkill3: GPU Parallelized Robotics Simulation and Benchmark (arXiv:2410.07080)",
+      "url": "https://arxiv.org/abs/2410.07080",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against readthedocs documentation, arXiv:2410.07080 paper, and Hugging Face haosulab/ManiSkill_Demonstrations repository. Confirmed 158 task demonstration archives, direct CLI download access, and Apache 2.0 license."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "h5",
+      "hdf5",
+      "json",
+      "zip"
+    ],
+    "notes": "Distributed as per-task zip packages containing HDF5 trajectory files directly downloadable from Hugging Face (haosulab/ManiSkill_Demonstrations) or via python -m mani_skill.utils.download_demo."
+  },
+  "sample_count": {
+    "total": 158,
+    "unit": "task_archives",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2024-10-09",
+    "last_updated": "2024-11-05"
+  },
+  "citation": {
+    "paper_title": "ManiSkill3: GPU Parallelized Robotics Simulation and Benchmark",
+    "paper_url": "https://arxiv.org/abs/2410.07080",
+    "doi": "10.48550/arXiv.2410.07080",
+    "authors": [
+      "Stone Tao",
+      "Fanbo Xiang",
+      "Yuzhe Qin",
+      "Jiayuan Gu",
+      "Hao Su"
+    ],
+    "bibtex": "@article{tao2024maniskill3,\n  title={ManiSkill3: GPU Parallelized Robotics Simulation and Benchmark},\n  author={Tao, Stone and Xiang, Fanbo and Qin, Yuzhe and Gu, Jiayuan and Su, Hao},\n  journal={arXiv preprint arXiv:2410.07080},\n  year={2024}\n}"
+  },
+  "provenance": {
+    "collection_method": "GPU-parallel motion planning algorithms and pre-trained reinforcement learning policy checkpoints across rigid and soft-body manipulation tasks in SAPIEN / PhysX.",
+    "curation_notes": "Trajectories store full simulator states and actions, allowing fast replay to generate RGB, depth, segmentation, and point cloud visual observations on demand.",
+    "data_sources": [
+      "Pre-packaged demonstration release by UCSD Hao Su Lab on Hugging Face"
+    ]
+  }
+}

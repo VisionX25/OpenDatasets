@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mimicgen",
+  "slug": "mimicgen",
+  "name": "MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations",
+  "description": "MimicGen is an automated demonstration generation system and large-scale synthetic robotic manipulation dataset developed by NVIDIA Research in collaboration with UT Austin and Stanford University. By applying kinematic transformations and adaptive motion planning to a small initial seed of human teleoperated demonstrations, MimicGen scales small datasets into thousands of varied, valid demonstration trajectories across novel object configurations. The official release contains over 48,000 task demonstrations across 12 manipulation tasks in robosuite (including coffee preparation, nut assembly, mug cleanup, and drawer rearrangement), providing a benchmark for large-scale imitation learning from synthetic data.",
+  "homepage_url": "https://mimicgen.github.io/",
+  "publisher": {
+    "name": "NVIDIA Research",
+    "type": "industry",
+    "url": "https://www.nvidia.com/en-us/research/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "data-generation",
+    "imitation-learning",
+    "trajectory-synthesis"
+  ],
+  "tags": [
+    "robotics",
+    "mimicgen",
+    "synthetic-data",
+    "data-scaling",
+    "robosuite",
+    "nvidia"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "commercial_use": "allowed",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "notes": "All released MimicGen datasets are explicitly licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). Software and data generation code are governed by the NVIDIA Source Code License / Apache 2.0."
+  },
+  "source_references": [
+    {
+      "title": "MimicGen Official Project Page",
+      "url": "https://mimicgen.github.io/",
+      "type": "official_website"
+    },
+    {
+      "title": "MimicGen GitHub Repository",
+      "url": "https://github.com/NVlabs/mimicgen",
+      "type": "repository"
+    },
+    {
+      "title": "MimicGen Datasets on Hugging Face",
+      "url": "https://huggingface.co/datasets/mimicgen",
+      "type": "dataset_card"
+    },
+    {
+      "title": "MimicGen Research Paper (CoRL 2023 / arXiv:2310.17596)",
+      "url": "https://arxiv.org/abs/2310.17596",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against official project page, CoRL 2023 paper, and NVlabs repository. Confirmed over 48,000 task demonstrations across 12 tasks, distinction between synthetic generation and seed demonstrations, and CC BY 4.0 dataset license."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "hdf5"
+    ],
+    "notes": "Hosted on Hugging Face as HDF5 trajectory files containing multi-view camera observations and robot states across 12 tasks."
+  },
+  "sample_count": {
+    "total": 48000,
+    "unit": "demonstrations",
+    "status": "verified",
+    "splits": {
+      "tasks": 12
+    }
+  },
+  "dates": {
+    "published": "2023-10-26",
+    "last_updated": "2024-09-19"
+  },
+  "citation": {
+    "paper_title": "MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations",
+    "paper_url": "https://arxiv.org/abs/2310.17596",
+    "doi": "10.48550/arXiv.2310.17596",
+    "authors": [
+      "Ajay Mandlekar",
+      "Soroush Nasiriany",
+      "Bowen Wen",
+      "Iretiayo Akinola",
+      "Yashraj Narang",
+      "Linxi Fan",
+      "Yuke Zhu",
+      "Dieter Fox"
+    ],
+    "bibtex": "@inproceedings{mandlekar2023mimicgen,\n  title={MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations},\n  author={Mandlekar, Ajay and Nasiriany, Soroush and Wen, Bowen and Akinola, Iretiayo and Narang, Yashraj and Fan, Linxi and Zhu, Yuke and Fox, Dieter},\n  booktitle={Conference on Robot Learning (CoRL)},\n  year={2023}\n}"
+  },
+  "provenance": {
+    "collection_method": "Automated demonstration generation adapting a small collection of human demonstration seeds (<200) to new object poses and scene configurations via subtask trajectory interpolation.",
+    "curation_notes": "Demonstrations are synthesized in robosuite simulation environments to train and benchmark policy scaling with synthetic demonstrations.",
+    "data_sources": [
+      "Initial human demonstration seeds from robomimic and newly collected Franka demonstrations"
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "furniture-bench",
+  "slug": "furniture-bench",
+  "name": "FurnitureBench: Reproducible Real-World Furniture Assembly Benchmark",
+  "description": "FurnitureBench is an open-source real-world and simulated manipulation benchmark for complex, long-horizon furniture assembly. Developed by the CLVR Lab across KAIST and USC, FurnitureBench tackles the high-precision insertion, alignment, and screw fastening required to assemble commercial furniture kits (including chairs, desks, tables, and cabinets) using a Franka Emika Panda arm. The dataset comprises 219.6 hours of 5,100 successful human teleoperated assembly demonstrations collected using an Oculus Quest 2 VR controller and keyboard. Each demonstration records synchronized wrist and front camera visual streams, proprioceptive joint states, and action sequences.",
+  "homepage_url": "https://clvrai.com/furniture-bench/",
+  "publisher": {
+    "name": "CLVR Lab, KAIST and USC",
+    "type": "academic",
+    "url": "https://clvrai.com/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "long-horizon-manipulation",
+    "assembly-manipulation",
+    "imitation-learning"
+  ],
+  "tags": [
+    "robotics",
+    "furniture-bench",
+    "furniture-assembly",
+    "teleoperation",
+    "franka-panda",
+    "long-horizon"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "commercial_use": "allowed",
+    "url": "https://github.com/clvrai/furniture-bench/blob/main/LICENSE",
+    "notes": "FurnitureBench robot control software, FurnitureSim, and teleoperation demonstration datasets are released under the MIT License."
+  },
+  "source_references": [
+    {
+      "title": "FurnitureBench Official Website",
+      "url": "https://clvrai.com/furniture-bench/",
+      "type": "official_website"
+    },
+    {
+      "title": "FurnitureBench Documentation and Dataset Guide",
+      "url": "https://clvrai.github.io/furniture-bench/docs/tutorials/dataset.html",
+      "type": "documentation"
+    },
+    {
+      "title": "FurnitureBench GitHub Repository",
+      "url": "https://github.com/clvrai/furniture-bench",
+      "type": "repository"
+    },
+    {
+      "title": "FurnitureBench: Reproducible Real-World Furniture Assembly Benchmark (NeurIPS 2023 / arXiv:2305.12821)",
+      "url": "https://arxiv.org/abs/2305.12821",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against documentation, NeurIPS 2023 paper, and clvrai/furniture-bench repository. Confirmed 219.6 hours across 5,100 successful demonstrations, verified download access via gdown/rclone, and verified MIT license."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "pkl",
+      "json"
+    ],
+    "notes": "Distributed as raw .pkl pickle files containing synchronized multi-view visual frames, end-effector poses, and rewards via Google Drive."
+  },
+  "sample_count": {
+    "total": 5100,
+    "unit": "demonstrations",
+    "status": "verified",
+    "splits": {
+      "hours": 219
+    }
+  },
+  "dates": {
+    "published": "2023-05-21",
+    "last_updated": "2023-11-15"
+  },
+  "citation": {
+    "paper_title": "FurnitureBench: Reproducible Real-World Furniture Assembly Benchmark",
+    "paper_url": "https://arxiv.org/abs/2305.12821",
+    "doi": "10.48550/arXiv.2305.12821",
+    "authors": [
+      "Minho Heo",
+      "Youngwoon Lee",
+      "Doohyun Lee",
+      "Joseph J. Lim"
+    ],
+    "bibtex": "@inproceedings{heo2023furniturebench,\n  title={FurnitureBench: Reproducible Real-World Furniture Assembly Benchmark},\n  author={Heo, Minho and Lee, Youngwoon and Lee, Doohyun and Lim, Joseph J},\n  booktitle={Thirty-seventh Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year={2023}\n}"
+  },
+  "provenance": {
+    "collection_method": "Teleoperation using an Oculus Quest 2 VR controller and keyboard interface driving a Franka Emika Panda arm assembling physical modular furniture.",
+    "curation_notes": "Demonstrations cover four commercial furniture assembly kits (cabinet, chair, desk, table). Includes paired FurnitureSim environment in Isaac Gym for sim-to-real transfer evaluation.",
+    "data_sources": [
+      "Original real-world recordings at CLVR Lab, KAIST"
+    ]
+  }
+}

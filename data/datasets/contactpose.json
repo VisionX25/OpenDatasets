@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "contactpose",
+  "slug": "contactpose",
+  "name": "ContactPose: A Dataset of Grasps with Object Contact and Hand Pose",
+  "description": "ContactPose is a multimodal hand-object interaction dataset capturing dense contact surface maps and 3D hand poses for human grasps on everyday household objects. Jointly created by Meta AI and Georgia Tech, ContactPose encompasses 2,306 unique grasps across 50 human participants interacting with 25 3D-printed household objects (including tools, utensils, mugs, and personal items). Contact patterns were captured using high-resolution thermal imaging cameras immediately following physical grasps to record residual heat signatures, synchronized with multi-view RGB-D video and OptiTrack 3D hand kinematics fitted to the MANO model.",
+  "homepage_url": "https://github.com/facebookresearch/ContactPose",
+  "publisher": {
+    "name": "Meta AI and Georgia Institute of Technology",
+    "type": "academic",
+    "url": "https://contactpose.cc.gatech.edu"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "3d"
+  ],
+  "tasks": [
+    "contact-prediction",
+    "hand-pose-estimation",
+    "robotic-grasping",
+    "thermal-sensing"
+  ],
+  "tags": [
+    "robotics",
+    "contactpose",
+    "hand-grasp",
+    "thermal-contact",
+    "mano",
+    "rgbd"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Apache License 2.0 (Code) / Research Open (Data)",
+    "commercial_use": "allowed",
+    "url": "https://github.com/facebookresearch/ContactPose/blob/main/LICENSE",
+    "notes": "ContactPose code and utilities are distributed under the Apache 2.0 license. Complete dataset distribution is maintained on IEEE DataPort under DOI 10.21227/fb0w-gt48."
+  },
+  "source_references": [
+    {
+      "title": "ContactPose GitHub Repository",
+      "url": "https://github.com/facebookresearch/ContactPose",
+      "type": "repository"
+    },
+    {
+      "title": "ContactPose Dataset on IEEE DataPort (DOI: 10.21227/fb0w-gt48)",
+      "url": "https://dx.doi.org/10.21227/fb0w-gt48",
+      "type": "archive",
+      "notes": "Author-designated active repository replacing deprecated legacy Dropbox links."
+    },
+    {
+      "title": "ContactPose: A Dataset of Grasps with Object Contact and Hand Pose (ECCV 2020 / arXiv:2007.09545)",
+      "url": "https://arxiv.org/abs/2007.09545",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against repository, GitHub Issue 27 resolution, and ECCV 2020 paper. Documented broken legacy Dropbox links, confirmed IEEE DataPort DOI (10.21227/fb0w-gt48) and author Google Drive sample access, and confirmed 2,306 grasps across 50 participants."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "zip",
+      "png",
+      "npy",
+      "pkl"
+    ],
+    "notes": "Hosted across IEEE DataPort (~600 GB complete collection) and official Google Drive sample archive."
+  },
+  "sample_count": {
+    "total": 2306,
+    "unit": "grasps",
+    "status": "verified",
+    "splits": {
+      "participants": 50,
+      "objects": 25
+    }
+  },
+  "dates": {
+    "published": "2020-07-18",
+    "last_updated": "2022-09-10"
+  },
+  "citation": {
+    "paper_title": "ContactPose: A Dataset of Grasps with Object Contact and Hand Pose",
+    "paper_url": "https://arxiv.org/abs/2007.09545",
+    "doi": "10.1007/978-3-030-58580-8_33",
+    "authors": [
+      "Samarth Brahmbhatt",
+      "Chengcheng Tang",
+      "Christopher D. Twigg",
+      "Charles C. Kemp",
+      "James Hays"
+    ],
+    "bibtex": "@inproceedings{brahmbhatt2020contactpose,\n  title={ContactPose: A Dataset of Grasps with Object Contact and Hand Pose},\n  author={Brahmbhatt, Samarth and Tang, Chengcheng and Twigg, Christopher D and Kemp, Charles C and Hays, James},\n  booktitle={European Conference on Computer Vision (ECCV)},\n  pages={361--378},\n  year={2020},\n  doi={10.1007/978-3-030-58580-8_33}\n}"
+  },
+  "provenance": {
+    "collection_method": "Thermal camera imaging recording thermal dissipation on 3D printed objects immediately after hand release, registered with OptiTrack 3D hand tracking and multi-view RGB-D cameras.",
+    "curation_notes": "Captures two distinct grasp intents per object: functional use grasps (e.g., using a knife) and handover grasps (e.g., passing a knife).",
+    "data_sources": [
+      "Original recordings at Facebook Reality Labs and Georgia Institute of Technology"
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "id": "language-table",
+  "slug": "language-table",
+  "name": "Language-Table: A Large-Scale Visuomotor Robot Learning Dataset",
+  "description": "Language-Table is a suite of human-collected datasets and a multi-task continuous control benchmark for open-vocabulary visuolinguomotor robot learning. Developed by Google Research, the benchmark centers on an xArm 2-DoF Cartesian manipulator moving blocks on a table surface equipped with a top-down camera. The release includes 442,226 real-robot demonstration episodes relabeled with free-form natural language instructions describing fine-grained continuous control goals, along with 181,020 simulated human episodes and 1,000,000 scripted oracle simulation episodes. It serves as a cornerstone dataset for language-conditioned imitation learning, real-time interactive language control, and multi-task robotic policy evaluation.",
+  "homepage_url": "https://github.com/google-research/language-table",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "nlp",
+    "reinforcement-learning",
+    "multimodal"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "language-conditioned-control",
+    "imitation-learning",
+    "continuous-control"
+  ],
+  "tags": [
+    "robotics",
+    "language-table",
+    "continuous-control",
+    "visuomotor",
+    "multimodal",
+    "open-vocabulary"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Apache 2.0 (Code) / CC BY 4.0 (Dataset)",
+    "commercial_use": "allowed",
+    "url": "https://github.com/google-research/language-table/blob/main/LICENSE",
+    "notes": "Software and environment code are licensed under Apache 2.0. The dataset is distributed via Google Cloud Storage and TFDS under the Creative Commons Attribution 4.0 International (CC BY 4.0) license."
+  },
+  "source_references": [
+    {
+      "title": "Language-Table GitHub Repository",
+      "url": "https://github.com/google-research/language-table",
+      "type": "repository"
+    },
+    {
+      "title": "Interactive Language: Talking to Robots in Real Time (IEEE RA-L / arXiv:2210.06407)",
+      "url": "https://arxiv.org/abs/2210.06407",
+      "type": "original_paper"
+    },
+    {
+      "title": "TFDS Language Table Catalog Entry",
+      "url": "https://www.tensorflow.org/datasets/catalog/language_table",
+      "type": "documentation"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against official GitHub repository, GCS bucket gs://gresearch/robotics/language_table/0.0.1/, and arXiv:2210.06407 paper. Confirmed 442,226 real-robot episodes and Apache 2.0 / CC BY 4.0 licenses."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "tfrecord",
+      "rlds"
+    ],
+    "notes": "Distributed via Google Cloud Storage buckets (gs://gresearch/robotics/language_table/0.0.1/)."
+  },
+  "sample_count": {
+    "total": 442226,
+    "unit": "episodes",
+    "status": "verified",
+    "splits": {
+      "real_robot_relabeled": 442226,
+      "simulation_human": 181020,
+      "simulation_oracle": 1000000
+    }
+  },
+  "dates": {
+    "published": "2022-10-12",
+    "last_updated": "2023-05-18"
+  },
+  "citation": {
+    "paper_title": "Interactive Language: Talking to Robots in Real Time",
+    "paper_url": "https://arxiv.org/abs/2210.06407",
+    "doi": "10.48550/arXiv.2210.06407",
+    "authors": [
+      "Corey Lynch",
+      "Ayzaan Wahid",
+      "Jonathan Tompson",
+      "Tianli Ding",
+      "James Betker",
+      "Robert Baruch",
+      "Michael Armstrong",
+      "Pete Florence"
+    ],
+    "bibtex": "@article{lynch2022interactive,\n  title={Interactive Language: Talking to Robots in Real Time},\n  author={Lynch, Corey and Wahid, Ayzaan and Tompson, Jonathan and Ding, Tianli and Betker, James and Baruch, Robert and Armstrong, Michael and Florence, Pete},\n  journal={IEEE Robotics and Automation Letters},\n  volume={8},\n  number={4},\n  pages={1960--1967},\n  year={2023}\n}"
+  },
+  "provenance": {
+    "collection_method": "Real-world teleoperation and autonomous playback using a Cartesian xArm manipulator with an overhead camera interacting with colored geometric blocks, paired with offline human crowd-sourced language relabeling.",
+    "curation_notes": "Encompasses real-robot, human simulation, and scripted oracle simulation collections. Only the real-robot 442,226 episode subset is counted as primary real-world samples.",
+    "data_sources": [
+      "Original robotic experimentation at Google Research"
+    ]
+  }
+}

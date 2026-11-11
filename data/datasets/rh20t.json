@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "id": "rh20t",
+  "slug": "rh20t",
+  "name": "RH20T: A Large-Scale Robotic Dataset for Contact-Rich Robot Manipulation",
+  "description": "RH20T is a large-scale real-world multimodal robot manipulation dataset containing over 110,000 contact-rich interaction sequences spanning diverse robotic skills, contexts, embodiments, and viewpoints. Recorded collaboratively by Shanghai Jiao Tong University and Flexiv Robotics across 147 tasks (including 48 from RLBench, 29 from MetaWorld, and 70 real-world tasks), each sequence provides synchronized multi-camera RGB-D video, high-frequency 6-axis force/torque measurements, audio streams, proprioceptive arm telemetry, and matching human video demonstrations. The dataset is specifically engineered to benchmark one-shot visual-tactile imitation learning and contact-rich policy generalization.",
+  "homepage_url": "https://rh20t.github.io/",
+  "publisher": {
+    "name": "Shanghai Jiao Tong University and Flexiv Robotics",
+    "type": "academic",
+    "url": "https://rh20t.github.io/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "audio",
+    "multimodal",
+    "reinforcement-learning"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "contact-rich-manipulation",
+    "multimodal-perception",
+    "imitation-learning"
+  ],
+  "tags": [
+    "robotics",
+    "rh20t",
+    "contact-rich",
+    "force-torque",
+    "multimodal",
+    "imitation-learning"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Dual License: CC BY-SA 4.0 (RH20T-C) and CC BY-NC 4.0 (RH20T-NC)",
+    "commercial_use": "unknown",
+    "url": "https://rh20t.github.io/#License",
+    "notes": "RH20T is divided into two distinct licensing subsets: RH20T-C (scenes 0001 to 0005) is licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) allowing commercial use; RH20T-NC (scenes 0006 to 0010) is licensed under Creative Commons Attribution 4.0 Non-Commercial (CC BY-NC 4.0) strictly forbidding commercial use."
+  },
+  "source_references": [
+    {
+      "title": "RH20T Official Project Website",
+      "url": "https://rh20t.github.io/",
+      "type": "official_website"
+    },
+    {
+      "title": "RH20T API & Data Decoding Repository",
+      "url": "https://github.com/rh20t/rh20t_api",
+      "type": "repository"
+    },
+    {
+      "title": "RH20T: A Comprehensive Robotic Dataset for Learning Diverse Skills in One-Shot (ICRA 2024)",
+      "url": "https://doi.org/10.1109/ICRA57147.2024.10611615",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against project landing page, IEEE ICRA 2024 paper (DOI: 10.1109/ICRA57147.2024.10611615), and rh20t_api repo. Verified >110k sequences, dual commercial (CC BY-SA 4.0) and non-commercial (CC BY-NC 4.0) subsets, and 5 TB resized distribution size."
+  },
+  "size": {
+    "amount": 5.0,
+    "unit": "TB",
+    "status": "verified",
+    "file_formats": [
+      "npy",
+      "json",
+      "mp4",
+      "zip"
+    ],
+    "notes": "The standard 640x360 resized RGB dataset is ~5 TB (~10 TB for RGB-D). Uncompressed raw high-definition source archives total 40 TB."
+  },
+  "sample_count": {
+    "total": 110000,
+    "unit": "sequences",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2023-07-01",
+    "last_updated": "2024-05-15"
+  },
+  "citation": {
+    "paper_title": "RH20T: A Comprehensive Robotic Dataset for Learning Diverse Skills in One-Shot",
+    "paper_url": "https://doi.org/10.1109/ICRA57147.2024.10611615",
+    "doi": "10.1109/ICRA57147.2024.10611615",
+    "authors": [
+      "Hao-Shu Fang",
+      "Hongjie Fang",
+      "Zhenyu Tang",
+      "Jirong Liu",
+      "Jiaqi Chen",
+      "Haoyi Zhu",
+      "Cewu Lu"
+    ],
+    "bibtex": "@inproceedings{fang2024rh20t,\n  title={RH20T: A Comprehensive Robotic Dataset for Learning Diverse Skills in One-Shot},\n  author={Fang, Hao-Shu and Fang, Hongjie and Tang, Zhenyu and Liu, Jirong and Chen, Jiaqi and Zhu, Haoyi and Lu, Cewu},\n  booktitle={IEEE International Conference on Robotics and Automation (ICRA)},\n  year={2024},\n  doi={10.1109/ICRA57147.2024.10611615}\n}"
+  },
+  "provenance": {
+    "collection_method": "Real-world contact-rich robot teleoperation with calibrated multi-modal sensor rigs including force-torque sensors, multi-view cameras, and binaural microphones paired with human demonstration videos.",
+    "curation_notes": "Encompasses 147 tasks with detailed quality rating, calibration verification, and dual commercial/non-commercial partition tags.",
+    "data_sources": [
+      "Original physical recordings on Flexiv Rizon and Franka arms at SJTU and Flexiv Robotics"
+    ]
+  }
+}

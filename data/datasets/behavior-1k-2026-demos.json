@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "id": "behavior-1k-2026-demos",
+  "slug": "behavior-1k-2026-demos",
+  "name": "BEHAVIOR-1K 2026 Challenge Human Teleoperation Demonstrations",
+  "description": "The BEHAVIOR-1K 2026 Challenge Demonstrations dataset is a large-scale collection of 20,000 human-collected teleoperation demonstrations across 100 core household activities, released by the Stanford Vision and Learning Lab for the BEHAVIOR-1K 2026 Embodied AI Challenge. While the broader BEHAVIOR-1K benchmark defines a taxonomy of 1,000 human-centric everyday activities, this 2026 demonstration release provides the official training trajectories formatted to the LeRobot V3 standard (3.27 TB, including multi-camera RGB/depth video, proprioception, actions, and language descriptions) and original raw HDF5 replay files (1.44 TB) for physics simulation in OmniGibson.",
+  "homepage_url": "https://behavior.stanford.edu/",
+  "publisher": {
+    "name": "Stanford Vision and Learning Lab (SVL)",
+    "type": "academic",
+    "url": "https://svl.stanford.edu/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "household-robotics",
+    "long-horizon-manipulation",
+    "embodied-ai",
+    "imitation-learning"
+  ],
+  "tags": [
+    "robotics",
+    "behavior-1k",
+    "omnigibson",
+    "lerobot",
+    "household-tasks",
+    "teleoperation"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "commercial_use": "allowed",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "notes": "The 2026 challenge demonstration datasets are distributed on Hugging Face under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "BEHAVIOR-1K Official Project Homepage",
+      "url": "https://behavior.stanford.edu/",
+      "type": "official_website"
+    },
+    {
+      "title": "BEHAVIOR-1K 2026 Challenge Dataset Documentation",
+      "url": "https://github.com/StanfordVL/BEHAVIOR-1K/blob/main/docs/challenge/dataset.md",
+      "type": "documentation"
+    },
+    {
+      "title": "BEHAVIOR-1K 2026 Challenge Demonstrations on Hugging Face",
+      "url": "https://huggingface.co/datasets/behavior-1k/2026-challenge-demos",
+      "type": "dataset_card"
+    },
+    {
+      "title": "BEHAVIOR-1K: A Benchmark for Embodied AI with 1,000 Everyday Activities and Realistic Simulation (CoRL 2022 / arXiv:2208.02818)",
+      "url": "https://arxiv.org/abs/2208.02818",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against behavior.stanford.edu, GitHub repository documentation, and Hugging Face dataset cards. Distinguishes the 1,000 benchmark activity taxonomy from the 20,000 teleoperation demonstrations across 100 tasks in the 2026 release, and confirmed verified sizes (3.27 TB LeRobot V3, 1.44 TB raw HDF5) and CC BY 4.0 license."
+  },
+  "size": {
+    "amount": 3.27,
+    "unit": "TB",
+    "status": "verified",
+    "file_formats": [
+      "parquet",
+      "mp4",
+      "jsonl",
+      "hdf5"
+    ],
+    "notes": "The primary LeRobot V3 format dataset (2026-challenge-demos) is 3.27 TB. The companion raw HDF5 replay archive (2026-challenge-rawdata) is 1.44 TB."
+  },
+  "sample_count": {
+    "total": 20000,
+    "unit": "demonstrations",
+    "status": "verified",
+    "splits": {
+      "tasks": 100
+    }
+  },
+  "dates": {
+    "published": "2026-01-15",
+    "last_updated": "2026-03-20"
+  },
+  "citation": {
+    "paper_title": "BEHAVIOR-1K: A Benchmark for Embodied AI with 1,000 Everyday Activities and Realistic Simulation",
+    "paper_url": "https://arxiv.org/abs/2208.02818",
+    "doi": "10.48550/arXiv.2208.02818",
+    "authors": [
+      "Chengshu Li",
+      "Ruohan Zhang",
+      "Josiah Wong",
+      "Cem Gokmen",
+      "Sanjana Srivastava",
+      "Roberto Martín-Martín",
+      "Chen Wang",
+      "Gabriele Sun",
+      "Kevin Lin",
+      "Michael Lingelbach",
+      "Jiankai Sun",
+      "Jiajun Wu",
+      "Li Fei-Fei"
+    ],
+    "bibtex": "@inproceedings{li2022behavior1k,\n  title={BEHAVIOR-1K: A Benchmark for Embodied AI with 1,000 Everyday Activities and Realistic Simulation},\n  author={Li, Chengshu and Zhang, Ruohan and Wong, Josiah and Gokmen, Cem and Srivastava, Sanjana and Mart{\\i}n-Mart{\\i}n, Roberto and Wang, Chen and Sun, Gabriele and Lin, Kevin and Lingelbach, Michael and others},\n  booktitle={Conference on Robot Learning (CoRL)},\n  year={2022}\n}"
+  },
+  "provenance": {
+    "collection_method": "Human VR teleoperation inside OmniGibson photorealistic physics environments with interactive simulated articulated objects, liquids, and thermal states.",
+    "curation_notes": "Demonstrations are captured across 100 everyday household activities with synchronized egocentric and third-person camera views, depth maps, end-effector commands, and step-level natural language instructions.",
+    "data_sources": [
+      "Original recordings by Stanford Vision and Learning Lab for the BEHAVIOR-1K 2026 Challenge"
+    ]
+  }
+}

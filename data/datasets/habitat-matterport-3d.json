@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "habitat-matterport-3d",
+  "slug": "habitat-matterport-3d",
+  "name": "Habitat-Matterport 3D Research Dataset (HM3D)",
+  "description": "The Habitat-Matterport 3D Research Dataset (HM3D) is a large-scale collection of high-resolution 3D reconstructions of real-world indoor spaces created to advance embodied AI, indoor robot navigation, and visual-spatial reasoning. Developed collaboratively by Meta AI and Matterport, HM3D consists of 1,000 high-fidelity 3D building reconstructions spanning multi-floor private homes, offices, and commercial establishments. When compared to prior indoor scene datasets, HM3D offers significantly larger floor areas, richer clutter, and complete topological navigability optimized for the AI Habitat simulation engine.",
+  "homepage_url": "https://aihabitat.org/datasets/hm3d/",
+  "publisher": {
+    "name": "Meta AI and Matterport",
+    "type": "industry",
+    "url": "https://matterport.com/habitat-matterport-3d-research-dataset"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor"
+  ],
+  "tasks": [
+    "embodied-navigation",
+    "pointgoal-navigation",
+    "visual-slam",
+    "3d-scene-understanding"
+  ],
+  "tags": [
+    "robotics",
+    "hm3d",
+    "habitat",
+    "matterport",
+    "embodied-ai",
+    "indoor-navigation",
+    "3d-mesh"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Matterport End User License Agreement for Academic Non-Commercial Research",
+    "commercial_use": "forbidden",
+    "url": "https://matterport.com/habitat-matterport-3d-research-dataset",
+    "notes": "HM3D is freely accessible for non-commercial academic research upon executing the Matterport HM3D EULA."
+  },
+  "source_references": [
+    {
+      "title": "Habitat-Matterport 3D Official Project Page",
+      "url": "https://aihabitat.org/datasets/hm3d/",
+      "type": "official_website"
+    },
+    {
+      "title": "Matterport HM3D Research Access Portal",
+      "url": "https://matterport.com/habitat-matterport-3d-research-dataset",
+      "type": "documentation"
+    },
+    {
+      "title": "Habitat-Matterport 3D Dataset (HM3D): 1000 Large-scale 3D Environments for Embodied AI (NeurIPS 2021 / arXiv:2109.08238)",
+      "url": "https://arxiv.org/abs/2109.08238",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against aihabitat.org, matterport.com, and NeurIPS 2021 paper. Confirmed 1,000 3D scene environments (800 train / 100 val / 100 test), verified academic non-commercial license, and noted that derived Habitat navigation tasks are based on these core scene assets."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "glb",
+      "obj",
+      "mtl",
+      "json"
+    ],
+    "notes": "Distributed as per-scene GLB and OBJ textured mesh files optimized for the Habitat simulator engine."
+  },
+  "sample_count": {
+    "total": 1000,
+    "unit": "scenes",
+    "status": "verified",
+    "splits": {
+      "train": 800,
+      "val": 100,
+      "test": 100
+    }
+  },
+  "dates": {
+    "published": "2021-09-17",
+    "last_updated": "2022-03-30"
+  },
+  "citation": {
+    "paper_title": "Habitat-Matterport 3D Dataset (HM3D): 1000 Large-scale 3D Environments for Embodied AI",
+    "paper_url": "https://arxiv.org/abs/2109.08238",
+    "doi": "10.48550/arXiv.2109.08238",
+    "authors": [
+      "Santhosh K. Ramakrishnan",
+      "Aaron Gokaslan",
+      "Erik Wijmans",
+      "Oleksandr Maksymets",
+      "Alexander Clegg",
+      "John Turner",
+      "Eric Undersander",
+      "Wojciech Galuba",
+      "Andrew Westbury",
+      "Angel X. Chang",
+      "Manolis Savva",
+      "Yili Zhao",
+      "Dhruv Batra"
+    ],
+    "bibtex": "@inproceedings{ramakrishnan2021habitat,\n  title={Habitat-Matterport 3D Dataset (HM3D): 1000 Large-scale 3D Environments for Embodied AI},\n  author={Ramakrishnan, Santhosh K and Gokaslan, Aaron and Wijmans, Erik and Maksymets, Oleksandr and Clegg, Alexander and Turner, John and Undersander, Eric and Galuba, Wojciech and Westbury, Andrew and Chang, Angel X and others},\n  booktitle={Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year={2021}\n}"
+  },
+  "provenance": {
+    "collection_method": "High-density LiDAR and structured-light optical 3D scans collected with commercial Matterport Pro2 cameras deployed in 1,000 residential and commercial properties.",
+    "curation_notes": "3D textured meshes were processed and cleaned to reconstruct continuous navigable floors and remove rendering artifacts for physical simulation in Habitat.",
+    "data_sources": [
+      "Commercial Matterport 3D scanning corpus contributed under research partnership with Meta AI"
+    ]
+  }
+}

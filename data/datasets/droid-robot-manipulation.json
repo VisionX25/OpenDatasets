@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "id": "droid-robot-manipulation",
+  "slug": "droid-robot-manipulation",
+  "name": "DROID: A Large-Scale In-the-Wild Robot Manipulation Dataset",
+  "description": "DROID (Distributed Robot Interaction Dataset) is a diverse, open-source real-world robot manipulation dataset consisting of 76,000 demonstration trajectories (equivalent to 350 hours of physical interaction) collected across 564 naturalistic domestic and office scenes and 86 tasks. Gathered over a 12-month period across North America, Asia, and Europe using portable Franka Emika Panda arms equipped with two ZED 2 stereo cameras, an end-effector wrist camera, and VR teleoperation headsets, DROID provides rich multi-view stereo observations, proprioceptive telemetry, and updated camera calibration metadata. It serves as a primary benchmark for in-the-wild generalization and large-scale Vision-Language-Action (VLA) policy pretraining.",
+  "homepage_url": "https://droid-dataset.github.io/",
+  "publisher": {
+    "name": "DROID Dataset Consortium",
+    "type": "academic",
+    "url": "https://droid-dataset.github.io/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "in-the-wild-manipulation",
+    "imitation-learning",
+    "vision-language-action"
+  ],
+  "tags": [
+    "robotics",
+    "droid",
+    "franka-panda",
+    "in-the-wild",
+    "manipulation",
+    "rlds",
+    "vla"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "commercial_use": "allowed",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "notes": "The DROID dataset files and annotations are distributed under Creative Commons Attribution 4.0 International (CC BY 4.0). Associated devkit and policy learning software code is released under the MIT license."
+  },
+  "source_references": [
+    {
+      "title": "DROID Official Project Page",
+      "url": "https://droid-dataset.github.io/",
+      "type": "official_website"
+    },
+    {
+      "title": "DROID Policy Learning Repository",
+      "url": "https://github.com/droid-dataset/droid_policy_learning",
+      "type": "repository"
+    },
+    {
+      "title": "DROID Calibrations & Language Annotations on Hugging Face",
+      "url": "https://huggingface.co/KarlP/droid",
+      "type": "dataset_card",
+      "notes": "Provides improved camera calibrations for 36k episodes and 3 natural language descriptions for 75k episodes (95% of successful trajectories)."
+    },
+    {
+      "title": "DROID Research Paper (RSS 2024 / arXiv:2403.12945)",
+      "url": "https://arxiv.org/abs/2403.12945",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against project website, arXiv:2403.12945, Hugging Face KarlP/droid repository, and GCS bucket gs://gresearch/robotics/droid. Confirmed 76k trajectory count, 1.7 TB payload, and CC BY 4.0 license."
+  },
+  "size": {
+    "amount": 1.7,
+    "unit": "TB",
+    "status": "verified",
+    "file_formats": [
+      "rlds",
+      "tfrecord",
+      "hdf5",
+      "mp4"
+    ],
+    "notes": "Official RLDS distribution in Google Cloud Storage (gs://gresearch/robotics/droid) is 1.7 TB. Raw stereo full-HD footage is hosted at gs://gresearch/robotics/droid_raw."
+  },
+  "sample_count": {
+    "total": 76000,
+    "unit": "trajectories",
+    "status": "verified",
+    "splits": {
+      "successful_episodes": 75000,
+      "calibrated_episodes": 36000
+    }
+  },
+  "dates": {
+    "published": "2024-03-20",
+    "last_updated": "2025-04-22"
+  },
+  "citation": {
+    "paper_title": "DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset",
+    "paper_url": "https://arxiv.org/abs/2403.12945",
+    "doi": "10.48550/arXiv.2403.12945",
+    "authors": [
+      "Alexander Khazatsky",
+      "Karl Pertsch",
+      "Suraj Nair",
+      "Ashwin Balakrishna",
+      "Sudeep Dasari",
+      "Siddharth Karamcheti",
+      "et al."
+    ],
+    "bibtex": "@article{khazatsky2024droid,\n  title={DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset},\n  author={Khazatsky, Alexander and Pertsch, Karl and Nair, Suraj and Balakrishna, Ashwin and Dasari, Sudeep and Karamcheti, Siddharth and others},\n  journal={arXiv preprint arXiv:2403.12945},\n  year={2024}\n}"
+  },
+  "provenance": {
+    "collection_method": "Distributed real-world teleoperated demonstration collection using portable Franka Emika Panda arms equipped with dual ZED 2 stereo exterior cameras and an end-effector ZED Mini camera.",
+    "curation_notes": "Collected across 564 scenes in North America, Asia, and Europe across 86 manipulation tasks. Converted into standardized RLDS format compatible with Open X-Embodiment training pipelines.",
+    "data_sources": [
+      "Independent in-the-wild recordings across 50 data collectors in residential, lab, and commercial environments"
+    ]
+  }
+}
