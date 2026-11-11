@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "id": "robonet",
+  "slug": "robonet",
+  "name": "RoboNet: Large-Scale Multi-Robot Learning Dataset",
+  "description": "RoboNet is a landmark multi-robot, multi-domain learning dataset consisting of 162,000 robotic manipulation trajectories spanning roughly 15 million video frames collected across 7 distinct robotic arm platforms operating in unconstrained tabletop environments. Developed collaboratively across UC Berkeley, University of Pennsylvania, and Stanford University, RoboNet was designed to study video prediction, self-supervised visual foresight, and multi-robot policy transfer. Each trajectory contains multi-view RGB video recordings, commanded end-effector actions, and camera calibration parameters.",
+  "homepage_url": "https://github.com/SudeepDasari/RoboNet",
+  "publisher": {
+    "name": "BAIR, UC Berkeley",
+    "type": "academic",
+    "url": "https://bair.berkeley.edu/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "visual-prediction",
+    "multi-robot-learning",
+    "inverse-dynamics-modeling"
+  ],
+  "tags": [
+    "robotics",
+    "robonet",
+    "multi-robot",
+    "visual-prediction",
+    "manipulation",
+    "video-prediction"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "commercial_use": "allowed",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "notes": "All RoboNet dataset files are explicitly provided under the Creative Commons Attribution 4.0 International (CC BY 4.0) license. Repository codebase is MIT licensed."
+  },
+  "source_references": [
+    {
+      "title": "RoboNet Official GitHub Repository",
+      "url": "https://github.com/SudeepDasari/RoboNet",
+      "type": "repository"
+    },
+    {
+      "title": "RoboNet Project Documentation and Download Guide",
+      "url": "https://github.com/SudeepDasari/RoboNet/wiki/Getting-Started",
+      "type": "documentation"
+    },
+    {
+      "title": "RoboNet: Large-Scale Multi-Robot Learning (CoRL 2019 / arXiv:1910.11215)",
+      "url": "https://arxiv.org/abs/1910.11215",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against official GitHub repository and CoRL 2019 paper. Confirmed 162k trajectory count across 7 robot arms and dataset CC BY 4.0 license."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "hdf5"
+    ],
+    "notes": "Distributed as partitioned HDF5 files through AWS S3 and Google Drive."
+  },
+  "sample_count": {
+    "total": 162000,
+    "unit": "trajectories",
+    "status": "verified",
+    "splits": {
+      "frames": 15000000
+    }
+  },
+  "dates": {
+    "published": "2019-10-24",
+    "last_updated": "2020-08-15"
+  },
+  "citation": {
+    "paper_title": "RoboNet: Large-Scale Multi-Robot Learning",
+    "paper_url": "https://arxiv.org/abs/1910.11215",
+    "doi": "10.48550/arXiv.1910.11215",
+    "authors": [
+      "Sudeep Dasari",
+      "Frederik Ebert",
+      "Stephen Tian",
+      "Suraj Nair",
+      "Bernadette Bucher",
+      "Karl Schmeckpeper",
+      "Siddharth Singh",
+      "Sergey Levine",
+      "Chelsea Finn"
+    ],
+    "bibtex": "@inproceedings{dasari2019robonet,\n  title={RoboNet: Large-Scale Multi-Robot Learning},\n  author={Dasari, Sudeep and Ebert, Frederik and Tian, Stephen and Nair, Suraj and Bucher, Bernadette and Schmeckpeper, Karl and Singh, Siddharth and Levine, Sergey and Finn, Chelsea},\n  booktitle={Conference on Robot Learning (CoRL)},\n  year={2019}\n}"
+  },
+  "provenance": {
+    "collection_method": "Autonomous interaction data collection across 7 physical robot platforms (Sawyer, Baxter, Franka Emika Panda, Kuka iiwa, Universal Robots UR3/UR5, and Fetch) interacting with cluttered tables.",
+    "curation_notes": "Incorporates multiple camera view angles, gripper orientations, and randomized tabletop object interactions.",
+    "data_sources": [
+      "Self-supervised autonomous robot collection across UC Berkeley, Penn, and Stanford labs"
+    ]
+  }
+}

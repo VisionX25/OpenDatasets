@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "robocasa-365",
+  "slug": "robocasa-365",
+  "name": "RoboCasa365: Scaling Robot Learning in Everyday Environments",
+  "description": "RoboCasa365 is a large-scale simulation benchmark and demonstration dataset for training generally capable domestic robots in realistic everyday environments. Developed by UT Austin researchers, RoboCasa365 dramatically expands upon the original 2024 RoboCasa release, introducing 365 household tasks guided by large language models across more than 2,500 photorealistic kitchen scenes and 3,200 3D objects. The dataset provides over 2,200 hours of robot demonstration data—comprising 600+ hours of human teleoperated demonstrations and 1,600+ hours of automated demonstrations—accompanied by frame-level subtask annotations specifying atomic skills and stages to benchmark hierarchical policy learning.",
+  "homepage_url": "https://robocasa.ai/",
+  "publisher": {
+    "name": "UT Austin Robot Perception and Learning (RPL) Lab",
+    "type": "academic",
+    "url": "https://robot-learning.cs.utexas.edu/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "household-robotics",
+    "everyday-manipulation",
+    "large-scale-simulation",
+    "imitation-learning"
+  ],
+  "tags": [
+    "robotics",
+    "robocasa",
+    "robocasa365",
+    "kitchen-manipulation",
+    "simulation",
+    "robosuite",
+    "vla"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "commercial_use": "allowed",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "notes": "The RoboCasa simulation framework software is licensed under the MIT License, while all datasets, 3D assets, and kitchen environments are distributed under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "RoboCasa Official Project Website",
+      "url": "https://robocasa.ai/",
+      "type": "official_website"
+    },
+    {
+      "title": "RoboCasa GitHub Repository",
+      "url": "https://github.com/robocasa/robocasa",
+      "type": "repository"
+    },
+    {
+      "title": "RoboCasa365 Research Paper (ICLR 2026)",
+      "url": "https://robocasa.ai/assets/robocasa365_iclr26.pdf",
+      "type": "original_paper"
+    },
+    {
+      "title": "RoboCasa Official Benchmark Leaderboard",
+      "url": "https://robocasa.ai/leaderboard.html",
+      "type": "documentation"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against robocasa.ai, GitHub repository, and ICLR 2026 paper. Confirmed 365 tasks, 2,500+ kitchen scenes, 2,200+ hours of demonstrations (600h human + 1600h automated), and MIT license."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "hdf5",
+      "json",
+      "xml"
+    ],
+    "notes": "Demonstrations and asset packages are downloadable through python download_datasets.py scripts from Hugging Face and cloud mirrors."
+  },
+  "sample_count": {
+    "total": 2200,
+    "unit": "hours",
+    "status": "verified",
+    "splits": {
+      "human_demonstrations_hours": 600,
+      "automated_demonstrations_hours": 1600,
+      "tasks": 365,
+      "kitchen_scenes": 2500
+    }
+  },
+  "dates": {
+    "published": "2026-02-18",
+    "last_updated": "2026-10-28"
+  },
+  "citation": {
+    "paper_title": "RoboCasa365: Scaling Robot Learning in Everyday Environments",
+    "paper_url": "https://robocasa.ai/assets/robocasa365_iclr26.pdf",
+    "authors": [
+      "Soroush Nasiriany",
+      "Abhay Deshpande",
+      "Aryan Saha",
+      "Kaushik Shivakumar",
+      "et al."
+    ],
+    "bibtex": "@article{nasiriany2026robocasa365,\n  title={RoboCasa365: Scaling Robot Learning in Everyday Environments},\n  author={Nasiriany, Soroush and Deshpande, Abhay and Saha, Aryan and Shivakumar, Kaushik and others},\n  journal={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}"
+  },
+  "provenance": {
+    "collection_method": "Simulated human VR teleoperation and automated trajectory synthesis in robosuite kitchen environments powered by RoboSuite v1.5.",
+    "curation_notes": "Features 365 composite and atomic tasks. Builds upon the 2024 RSS release with subtask annotation labelers generating step-level instructions and stage markers directly from simulation states.",
+    "data_sources": [
+      "RoboCasa 2024 foundational environments",
+      "RoboCasa365 newly generated multi-kitchen demonstrations"
+    ]
+  }
+}

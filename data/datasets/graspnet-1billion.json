@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "graspnet-1billion",
+  "slug": "graspnet-1billion",
+  "name": "GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping",
+  "description": "GraspNet-1Billion is a large-scale real-world robotic grasping dataset and 6D grasp pose estimation benchmark developed by Shanghai Jiao Tong University. Captured across 190 dense, heavily cluttered scenes containing 88 common household and industrial objects, GraspNet-1Billion comprises 97,280 RGB-D images recorded with calibrated Intel RealSense D435 and Microsoft Azure Kinect sensors. Crucially, the dataset provides over 1.1 billion analytical 6D grasp pose annotations evaluated across diverse gripper widths and friction models—representing grasp annotations per image rather than 1 billion images—along with 6D object poses, dense object point clouds, and segmentation masks.",
+  "homepage_url": "https://graspnet.net/",
+  "publisher": {
+    "name": "Shanghai Jiao Tong University",
+    "type": "academic",
+    "url": "https://mvig.sjtu.edu.cn/"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor"
+  ],
+  "tasks": [
+    "robotic-grasping",
+    "6d-pose-estimation",
+    "point-cloud-segmentation",
+    "grasp-pose-detection"
+  ],
+  "tags": [
+    "robotics",
+    "graspnet",
+    "6d-grasp",
+    "rgbd",
+    "point-cloud",
+    "suction-grasp"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "GraspNet Terms of Use (Academic Non-Commercial Research)",
+    "commercial_use": "forbidden",
+    "url": "https://graspnet.net/datasets",
+    "notes": "The dataset is freely accessible for non-commercial academic research purposes upon registration on the official project portal."
+  },
+  "source_references": [
+    {
+      "title": "GraspNet-1Billion Official Website",
+      "url": "https://graspnet.net/",
+      "type": "official_website"
+    },
+    {
+      "title": "GraspNet Download Portal",
+      "url": "https://graspnet.net/datasets",
+      "type": "documentation"
+    },
+    {
+      "title": "GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping (CVPR 2020 / arXiv:2005.10984)",
+      "url": "https://arxiv.org/abs/2005.10984",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against graspnet.net, download manifest, and CVPR 2020 paper. Confirmed 97,280 RGB-D images across 190 scenes, verified that 1.1B refers to analytical grasp pose annotations, and verified academic non-commercial terms."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "png",
+      "npy",
+      "xml",
+      "ply"
+    ],
+    "notes": "Distributed as partitioned per-scene zip files containing RGB-D frames, depth maps, bounding boxes, camera intrinsics/extrinsics, and grasp labels."
+  },
+  "sample_count": {
+    "total": 97280,
+    "unit": "images",
+    "status": "verified",
+    "splits": {
+      "scenes": 190,
+      "grasp_annotations": 1100000000,
+      "objects": 88
+    }
+  },
+  "dates": {
+    "published": "2020-05-22",
+    "last_updated": "2022-06-18"
+  },
+  "citation": {
+    "paper_title": "GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping",
+    "paper_url": "https://arxiv.org/abs/2005.10984",
+    "doi": "10.1109/CVPR42600.2020.01146",
+    "authors": [
+      "Hao-Shu Fang",
+      "Chenxi Wang",
+      "Minghao Gou",
+      "Cewu Lu"
+    ],
+    "bibtex": "@inproceedings{fang2020graspnet,\n  title={GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping},\n  author={Fang, Hao-Shu and Wang, Chenxi and Gou, Minghao and Lu, Cewu},\n  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year={2020},\n  doi={10.1109/CVPR42600.2020.01146}\n}"
+  },
+  "provenance": {
+    "collection_method": "Robotic arm mounted multi-sensor scanning of physical tabletop object scenes using RealSense D435 and Kinect Azure sensors, followed by physics-based analytical grasp evaluation.",
+    "curation_notes": "Scenes are partitioned into training, test seen, test similar, and test novel splits to benchmark zero-shot 6D grasp generalization to unseen objects.",
+    "data_sources": [
+      "Original recordings at Machine Vision and Intelligence Group (MVIG), SJTU"
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "id": "dex-ycb",
+  "slug": "dex-ycb",
+  "name": "DexYCB: A Benchmark for Capturing Hand Grasping of Objects",
+  "description": "DexYCB is a multi-view video benchmark and dataset for capturing dexterous human hand grasping of everyday 3D objects. Developed by NVIDIA Research, DexYCB comprises 582,000 synchronized RGB-D video frames recorded across 1,000 grasp execution sequences of 10 human subjects grasping 20 objects from the YCB object set. Captured using an 8-camera multi-sensor calibrated rig, the dataset provides complete 3D hand mesh parameters (fitted to the MANO hand model), ground-truth 6D object poses, and multi-view 2D segmentations to advance 3D hand-object interaction modeling, pose estimation, and dexterous robotic imitation.",
+  "homepage_url": "https://dex-ycb.github.io/",
+  "publisher": {
+    "name": "NVIDIA Research",
+    "type": "industry",
+    "url": "https://www.nvidia.com/en-us/research/"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor"
+  ],
+  "tasks": [
+    "hand-pose-estimation",
+    "object-pose-estimation",
+    "dexterous-grasping",
+    "hand-object-interaction"
+  ],
+  "tags": [
+    "robotics",
+    "dexycb",
+    "dexterous-grasping",
+    "hand-pose",
+    "ycb-objects",
+    "rgbd"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "commercial_use": "forbidden",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "notes": "DexYCB is explicitly licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license."
+  },
+  "source_references": [
+    {
+      "title": "DexYCB Official Website",
+      "url": "https://dex-ycb.github.io/",
+      "type": "official_website"
+    },
+    {
+      "title": "DexYCB Toolkit Repository",
+      "url": "https://github.com/NVlabs/dex-ycb-toolkit",
+      "type": "repository"
+    },
+    {
+      "title": "DexYCB: A Benchmark for Capturing Hand Grasping of Objects (CVPR 2021 / arXiv:2104.04631)",
+      "url": "https://arxiv.org/abs/2104.04631",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against dex-ycb.github.io, NVlabs/dex-ycb-toolkit, and CVPR 2021 paper. Confirmed 582,000 frames over 1,000 sequences across 10 subjects, verified archive size of 119 GB, and CC BY-NC 4.0 license."
+  },
+  "size": {
+    "amount": 119.0,
+    "unit": "GB",
+    "status": "verified",
+    "file_formats": [
+      "tar.gz",
+      "png",
+      "npz"
+    ],
+    "notes": "The full dataset archive (dex-ycb-20210415.tar.gz) is 119 GB via Google Drive, or downloadable as 10 per-subject archives of ~12 GB each."
+  },
+  "sample_count": {
+    "total": 582000,
+    "unit": "frames",
+    "status": "verified",
+    "splits": {
+      "sequences": 1000,
+      "subjects": 10,
+      "objects": 20,
+      "camera_views": 8
+    }
+  },
+  "dates": {
+    "published": "2021-04-09",
+    "last_updated": "2021-04-15"
+  },
+  "citation": {
+    "paper_title": "DexYCB: A Benchmark for Capturing Hand Grasping of Objects",
+    "paper_url": "https://arxiv.org/abs/2104.04631",
+    "doi": "10.1109/CVPR42600.2021.01519",
+    "authors": [
+      "Yu-Wei Chao",
+      "Wei Yang",
+      "Yu Xiang",
+      "Pavlo Molchanov",
+      "Ankur Handa",
+      "Jonathan Tremblay",
+      "Yashraj S. Narang",
+      "Karl Van Wyk",
+      "Umar Iqbal",
+      "Dieter Fox"
+    ],
+    "bibtex": "@inproceedings{chao2021dexycb,\n  title={DexYCB: A Benchmark for Capturing Hand Grasping of Objects},\n  author={Chao, Yu-Wei and Yang, Wei and Xiang, Yu and Molchanov, Pavlo and Handa, Ankur and Tremblay, Jonathan and Narang, Yashraj S and Van Wyk, Karl and Iqbal, Umar and Fox, Dieter},\n  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year={2021},\n  doi={10.1109/CVPR42600.2021.01519}\n}"
+  },
+  "provenance": {
+    "collection_method": "Synchronized capture across 8 calibrated RGB-D cameras surrounding seated human subjects performing naturalistic grasps on 20 YCB objects.",
+    "curation_notes": "Standardized evaluation protocols include S0 (default), S1 (unseen subjects), S2 (unseen camera views), and S3 (unseen grasping trajectories).",
+    "data_sources": [
+      "Original multi-camera captures at NVIDIA Seattle Robotics Lab"
+    ]
+  }
+}

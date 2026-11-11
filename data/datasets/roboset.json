@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "roboset",
+  "slug": "roboset",
+  "name": "RoboSet: Multi-Task Real-World Robotic Manipulation Dataset",
+  "description": "RoboSet is a large-scale real-world robotic manipulation dataset consisting of 28,500 trajectories collected on Franka Emika Panda arms across diverse daily kitchen activities. Developed under the RoboPen initiative at Carnegie Mellon University, RoboSet combines 9,500 teleoperated demonstration trajectories with 19,000 kinesthetic replay trajectories with scene variations. Each recorded demonstration includes synchronized 4-camera multi-view visual observations, proprioceptive joint states, and end-effector actions to evaluate imitation learning, multi-task transfer, and visual policy robustness under scene variations.",
+  "homepage_url": "https://robopen.github.io/roboset/",
+  "publisher": {
+    "name": "RoboPen Project, Carnegie Mellon University",
+    "type": "academic",
+    "url": "https://robopen.github.io/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "imitation-learning",
+    "multi-view-perception",
+    "household-robotics"
+  ],
+  "tags": [
+    "robotics",
+    "roboset",
+    "franka-panda",
+    "kinesthetic-teaching",
+    "teleoperation",
+    "kitchen-manipulation"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "commercial_use": "allowed",
+    "url": "https://mit-license.org/",
+    "notes": "Official website explicitly declares: 'This work is licensed under the MIT-License'."
+  },
+  "source_references": [
+    {
+      "title": "RoboSet Official Website",
+      "url": "https://robopen.github.io/roboset/",
+      "type": "official_website"
+    },
+    {
+      "title": "RoboSet Dataset Documentation and Access",
+      "url": "https://robopen.github.io/roboset/download/",
+      "type": "documentation"
+    },
+    {
+      "title": "RoboSet: A Large-Scale Robot Dataset for Learning Generalizable Manipulation Skills (arXiv:2311.00999)",
+      "url": "https://arxiv.org/abs/2311.00999",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against official project page, download manifest, and arXiv:2311.00999. Confirmed exact counts: 28,500 total trajectories (9,500 teleoperated + 19,000 kinesthetic replay) and MIT license."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "hdf5"
+    ],
+    "notes": "Distributed as HDF5 files per trajectory with 4-camera video streams via Google Drive and Hugging Face."
+  },
+  "sample_count": {
+    "total": 28500,
+    "unit": "trajectories",
+    "status": "verified",
+    "splits": {
+      "teleoperated_trajectories": 9500,
+      "kinesthetic_replay_trajectories": 19000
+    }
+  },
+  "dates": {
+    "published": "2023-11-01",
+    "last_updated": "2023-11-15"
+  },
+  "citation": {
+    "paper_title": "RoboSet: A Large-Scale Robot Dataset for Learning Generalizable Manipulation Skills",
+    "paper_url": "https://arxiv.org/abs/2311.00999",
+    "doi": "10.48550/arXiv.2311.00999",
+    "authors": [
+      "Homanga Bharadhwaj",
+      "Jay Vakil",
+      "Mohit Sharma",
+      "Abhinav Gupta",
+      "Shubham Tulsiani",
+      "Vikash Kumar"
+    ],
+    "bibtex": "@article{bharadhwaj2023roboset,\n  title={RoboSet: A Large-Scale Robot Dataset for Learning Generalizable Manipulation Skills},\n  author={Bharadhwaj, Homanga and Vakil, Jay and Sharma, Mohit and Gupta, Abhinav and Tulsiani, Shubham and Kumar, Vikash},\n  journal={arXiv preprint arXiv:2311.00999},\n  year={2023}\n}"
+  },
+  "provenance": {
+    "collection_method": "Combined human teleoperation and kinesthetic demonstration playback with scene variation on Franka Emika Panda arms across kitchen environments.",
+    "curation_notes": "Includes 4 synchronized camera viewpoints per frame with varied lighting, object poses, and kitchen backgrounds.",
+    "data_sources": [
+      "Original recordings at Carnegie Mellon University RoboPen laboratory"
+    ]
+  }
+}

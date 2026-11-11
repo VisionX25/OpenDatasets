@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "calvin-robot-manipulation",
+  "slug": "calvin-robot-manipulation",
+  "name": "CALVIN: A Benchmark for Language-Conditioned Policy Learning with Long-Horizon Robot Manipulation Tasks",
+  "description": "CALVIN (Composing Actions from Language and Vision with Unstructured Exploration) is an open-source robotic manipulation benchmark designed to evaluate language-conditioned policy learning over long horizons in multi-environment settings. Developed at the University of Freiburg, CALVIN provides 24 hours of teleoperated unstructured play data (6 hours each in 4 distinct tabletop environments A, B, C, and D) recorded on a simulated Franka Emika Panda manipulator. Each transition includes static and gripper-mounted RGB-D camera streams, proprioceptive arm telemetry, and tactile contact observations paired with offline human crowd-sourced language annotations.",
+  "homepage_url": "https://github.com/mees/calvin",
+  "publisher": {
+    "name": "University of Freiburg",
+    "type": "academic",
+    "url": "https://rl.uni-freiburg.de/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "nlp",
+    "multimodal"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "long-horizon-manipulation",
+    "language-conditioned-control",
+    "imitation-learning"
+  ],
+  "tags": [
+    "robotics",
+    "calvin",
+    "language-conditioned",
+    "long-horizon",
+    "play-data",
+    "franka-panda"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "commercial_use": "allowed",
+    "url": "https://github.com/mees/calvin/blob/main/LICENSE",
+    "notes": "The CALVIN benchmark, simulator environments, and data download scripts are released under the MIT License."
+  },
+  "source_references": [
+    {
+      "title": "CALVIN Official GitHub Repository",
+      "url": "https://github.com/mees/calvin",
+      "type": "repository"
+    },
+    {
+      "title": "CALVIN Dataset Guide and Download Manifest",
+      "url": "https://github.com/mees/calvin/blob/main/dataset/README.md",
+      "type": "documentation"
+    },
+    {
+      "title": "CALVIN Research Paper (IEEE RA-L 2022 / arXiv:2112.03227)",
+      "url": "https://arxiv.org/abs/2112.03227",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against official GitHub repository and IEEE RA-L 2022 paper. Confirmed 24 total hours of play data across 4 environments (6h each), verified ABCD archive size (656 GB), and MIT license."
+  },
+  "size": {
+    "amount": 656.0,
+    "unit": "GB",
+    "status": "verified",
+    "file_formats": [
+      "npz",
+      "json",
+      "zip"
+    ],
+    "notes": "The complete ABCD dataset archive (task_ABCD_D.zip) is 656 GB. The ABC subset (task_ABC_D.zip) is 517 GB and D single-environment subset (task_D_D.zip) is 166 GB."
+  },
+  "sample_count": {
+    "total": 24,
+    "unit": "hours",
+    "status": "verified",
+    "splits": {
+      "env_A_hours": 6,
+      "env_B_hours": 6,
+      "env_C_hours": 6,
+      "env_D_hours": 6
+    }
+  },
+  "dates": {
+    "published": "2021-12-06",
+    "last_updated": "2023-01-10"
+  },
+  "citation": {
+    "paper_title": "CALVIN: A Benchmark for Language-Conditioned Policy Learning with Long-Horizon Robot Manipulation Tasks",
+    "paper_url": "https://arxiv.org/abs/2112.03227",
+    "doi": "10.1109/LRA.2022.3155823",
+    "authors": [
+      "Oier Mees",
+      "Lukas Hermann",
+      "Erick Rosete-Beas",
+      "Wolfram Burgard"
+    ],
+    "bibtex": "@article{mees2022calvin,\n  title={CALVIN: A Benchmark for Language-Conditioned Policy Learning with Long-Horizon Robot Manipulation Tasks},\n  author={Mees, Oier and Hermann, Lukas and Rosete-Beas, Erick and Burgard, Wolfram},\n  journal={IEEE Robotics and Automation Letters (RA-L)},\n  volume={7},\n  number={3},\n  pages={7327--7334},\n  year={2022},\n  doi={10.1109/LRA.2022.3155823}\n}"
+  },
+  "provenance": {
+    "collection_method": "Unstructured teleoperated play data collection using VR controllers driving a simulated Franka Emika Panda arm in PyBullet, coupled with language instruction labeling.",
+    "curation_notes": "Provides 4 distinct tabletop environments (A, B, C, D) with varying table colors, textures, and object layouts to evaluate zero-shot multi-environment policy transfer.",
+    "data_sources": [
+      "Original simulation play collection at Autonomous Intelligent Systems Lab, University of Freiburg"
+    ]
+  }
+}

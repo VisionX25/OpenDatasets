@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "id": "open-x-embodiment",
+  "slug": "open-x-embodiment",
+  "name": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models",
+  "description": "Open X-Embodiment is a foundational, cross-embodiment robotic learning dataset aggregating real-world demonstration data from 60 independently collected datasets across 22 robot embodiments. Coordinated by Google DeepMind in collaboration with 21 academic and industrial institutions, the collection encompasses over 1 million real-robot trajectories demonstrating 527 distinct robotic skills and over 160,000 language-annotated task descriptions. All constituent datasets are standardized into the unified RLDS (Reinforcement Learning Datasets) episodic format to facilitate the training and evaluation of generalist Vision-Language-Action (VLA) models such as RT-1-X and RT-2-X.",
+  "homepage_url": "https://robotics-transformer-x.github.io/",
+  "publisher": {
+    "name": "Open X-Embodiment Collaboration",
+    "type": "academic",
+    "url": "https://robotics-transformer-x.github.io/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "imitation-learning",
+    "vision-language-action",
+    "cross-embodiment-control"
+  ],
+  "tags": [
+    "robotics",
+    "open-x-embodiment",
+    "rt-x",
+    "rlds",
+    "manipulation",
+    "vla",
+    "cross-embodiment"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Dual Apache 2.0 (Software) and CC BY 4.0 / Multi-License (Data Pool)",
+    "commercial_use": "unknown",
+    "url": "https://github.com/google-deepmind/open_x_embodiment/blob/main/README.md#license-and-disclaimer",
+    "notes": "Software tools are distributed under the Apache 2.0 license. Unified metadata and RLDS episode formatting developed for Open X-Embodiment are released under CC BY 4.0. Individual constituent datasets retain their original respective institutional licenses (ranging from open commercial licenses to academic-only restrictions). Commercial usability depends on the specific constituent subset utilized."
+  },
+  "source_references": [
+    {
+      "title": "Open X-Embodiment Official Project Page",
+      "url": "https://robotics-transformer-x.github.io/",
+      "type": "official_website"
+    },
+    {
+      "title": "Open X-Embodiment GitHub Repository",
+      "url": "https://github.com/google-deepmind/open_x_embodiment",
+      "type": "repository"
+    },
+    {
+      "title": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models (arXiv:2310.08864)",
+      "url": "https://arxiv.org/abs/2310.08864",
+      "type": "original_paper"
+    },
+    {
+      "title": "Open X-Embodiment Dataset Manifest Spreadsheet",
+      "url": "https://docs.google.com/spreadsheets/d/1rPBD77tk60AEIGZrGSODwyyzs5FgCU9Uz3h-3_t2A9g/edit?usp=sharing",
+      "type": "documentation",
+      "notes": "Comprehensive spreadsheet documenting all 60 constituent datasets, robot embodiments, task descriptions, and institutional licenses."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against official GitHub repository, project page, and arXiv:2310.08864 paper. Documented cross-embodiment RLDS aggregation, constituent data lineage, and heterogeneous licensing across the 60 pooled datasets."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "rlds",
+      "tfrecord",
+      "npz"
+    ],
+    "notes": "Distributed as independent Google Cloud Storage buckets (e.g. gs://gdm-robotics-open-x-embodiment/{dataset_name}). Aggregate size spans multiple terabytes across all 60 contributing datasets."
+  },
+  "sample_count": {
+    "total": 1000000,
+    "unit": "trajectories",
+    "status": "estimated"
+  },
+  "dates": {
+    "published": "2023-10-13",
+    "last_updated": "2024-03-25"
+  },
+  "citation": {
+    "paper_title": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models",
+    "paper_url": "https://arxiv.org/abs/2310.08864",
+    "doi": "10.48550/arXiv.2310.08864",
+    "authors": [
+      "Open X-Embodiment Collaboration",
+      "Abhishek Padalkar",
+      "Acorn Pooley",
+      "Ajay Mandlekar",
+      "Ajay Sridhar",
+      "Anthony Simeonov",
+      "et al."
+    ],
+    "bibtex": "@article{open_x_embodiment_rt_x_2023,\n  title={Open X-Embodiment: Robotic Learning Datasets and RT-X Models},\n  author={Open X-Embodiment Collaboration and Padalkar, Abhishek and Pooley, Acorn and Mandlekar, Ajay and Sridhar, Ajay and others},\n  journal={arXiv preprint arXiv:2310.08864},\n  year={2023}\n}"
+  },
+  "provenance": {
+    "collection_method": "Multi-institutional robotic data pooling and RLDS standardization across 21 research laboratories.",
+    "curation_notes": "Pools 60 separate robotic demonstration datasets spanning 22 robot arms (including Franka Emika Panda, Google Robot, xArm, UR5, WidowX, Kuka iiwa, Sawyer). Overlaps with individually curated benchmark releases such as BridgeData V2, Language Table, RoboNet, and TACO-Play.",
+    "data_sources": [
+      "BridgeData V2",
+      "Language Table",
+      "RoboNet",
+      "TACO-Play",
+      "Stanford ALOHA",
+      "BC-Z",
+      "RT-1 Robot Dataset",
+      "Berkeley Cable Routing",
+      "CMU Stretch Manipulation"
+    ]
+  }
+}

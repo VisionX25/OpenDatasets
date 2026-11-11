@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "agibot-world-2026",
+  "slug": "agibot-world-2026",
+  "name": "AgiBot World 2026: Real-World Embodied Intelligence Dataset",
+  "description": "AgiBot World 2026 is a large-scale real-world robotic demonstration dataset designed to advance embodied AI from laboratory settings into unconstrained commercial spaces, supermarkets, and domestic homes. Collected on the AGIBOT G2 dual-arm mobile platform, the dataset provides structured, multi-layer hierarchical annotations following the LeRobot v2.1 standard. It contains full-horizon restocking and shelf-organization demonstrations annotated across three complementary layers: subtask task frames, 2D interaction bounding boxes, and step-level primitive skill segments. The physical dataset is paired with 1:1 digital twin simulation environments released in the GenieSim project.",
+  "homepage_url": "https://agibot-world.com/",
+  "publisher": {
+    "name": "AgiBot World Team",
+    "type": "industry",
+    "url": "https://agibot-world.com/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "dual-arm-manipulation",
+    "imitation-learning",
+    "hierarchical-policy-learning"
+  ],
+  "tags": [
+    "robotics",
+    "agibot",
+    "agibot-world",
+    "g2",
+    "humanoid",
+    "dual-arm",
+    "lerobot",
+    "commercial-spaces"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "commercial_use": "forbidden",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "notes": "All dataset files, annotations, and tools are provided under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license."
+  },
+  "source_references": [
+    {
+      "title": "AgiBot World Official Website",
+      "url": "https://agibot-world.com/",
+      "type": "official_website"
+    },
+    {
+      "title": "AgiBot World 2026 on Hugging Face",
+      "url": "https://huggingface.co/datasets/agibot-world/AgiBotWorld2026",
+      "type": "dataset_card"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against agibot-world.com and Hugging Face repository agibot-world/AgiBotWorld2026. Documented LeRobot v2.1 structure, AGIBOT G2 dual-arm platform, GenieSim digital twin pairing, and CC BY-NC-SA 4.0 license. The collection spans thousands of episodes across hundreds of commercial task archives; individual Parquet rows represent sensor/action frames rather than discrete episodes, so aggregate episode totals are set to unknown status rather than conflated with row counts."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "parquet",
+      "mp4",
+      "jsonl",
+      "tar.gz"
+    ],
+    "notes": "Structured in LeRobot v2.1 format with per-episode Apache Parquet data files, multi-camera MP4 videos (top_head, hand_left, hand_right), and JSONL metadata. Individual tasks are packaged as 5-10 GB archives with a 7 GB standalone sample."
+  },
+  "sample_count": {
+    "unit": "episodes",
+    "status": "unknown"
+  },
+  "dates": {
+    "published": "2026-03-15",
+    "last_updated": "2026-03-15"
+  },
+  "citation": {
+    "paper_title": "AgiBot World 2026: Real-World Embodied Intelligence Dataset",
+    "paper_url": "https://huggingface.co/datasets/agibot-world/AgiBotWorld2026",
+    "authors": [
+      "AgiBot World Team"
+    ],
+    "bibtex": "@misc{agibotworld2026,\n  title={AgiBot World 2026},\n  author={AgiBot World Team},\n  howpublished={\\url{https://huggingface.co/datasets/agibot-world/AgiBotWorld2026}},\n  year={2026}\n}"
+  },
+  "provenance": {
+    "collection_method": "Free-form physical teleoperation on the AGIBOT G2 dual-arm mobile platform across authentic retail and commercial environments, with concurrent 1:1 simulation recording in GenieSim.",
+    "curation_notes": "Distinguishes from earlier AgiBot Alpha/Beta test collections by introducing full-length commercial retail tasks formatted to LeRobot v2.1 with comprehensive 3-tier annotations.",
+    "data_sources": [
+      "Original commercial and retail physical deployments by AgiBot"
+    ]
+  }
+}

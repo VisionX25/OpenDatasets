@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "taco-play",
+  "slug": "taco-play",
+  "name": "TACO-Play: Robot Play and Visual Affordance Dataset",
+  "description": "TACO-Play (Task-Agnostic Continuous Offline Play) is an open-source robotic manipulation dataset designed to study visual affordance grounding and language-guided imitation learning from unstructured human play data. Recorded by University of Freiburg researchers, the dataset captures a Franka Emika Panda robot arm interacting with modular tabletop kitchen setups (including cabinet doors, drawers, sliding panels, and cooking props). The dataset contains 3,603 demonstration episodes (3,242 training and 361 testing) with synchronized multi-view RGB-D video, proprioceptive joint states, Cartesian actions, and natural language instruction annotations. TACO-Play is also incorporated as a constituent dataset in the Open X-Embodiment consortium.",
+  "homepage_url": "https://www.tensorflow.org/datasets/catalog/taco_play",
+  "publisher": {
+    "name": "University of Freiburg",
+    "type": "academic",
+    "url": "https://rl.uni-freiburg.de/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "reinforcement-learning",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "robot-manipulation",
+    "visual-affordance-grounding",
+    "imitation-learning",
+    "play-data"
+  ],
+  "tags": [
+    "robotics",
+    "taco-play",
+    "visual-affordances",
+    "franka-panda",
+    "rlds",
+    "kitchen-manipulation"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "commercial_use": "allowed",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "notes": "Distributed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license via TFDS and Kaggle."
+  },
+  "source_references": [
+    {
+      "title": "TFDS TACO-Play Catalog Entry",
+      "url": "https://www.tensorflow.org/datasets/catalog/taco_play",
+      "type": "official_website"
+    },
+    {
+      "title": "TACO Robot Dataset on Kaggle",
+      "url": "https://www.kaggle.com/datasets/oiermees/taco-robot",
+      "type": "repository"
+    },
+    {
+      "title": "Grounding Language with Visual Affordances over Unstructured Data (IEEE ICRA 2023 / arXiv:2210.01911)",
+      "url": "https://arxiv.org/abs/2210.01911",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against TFDS catalog entry, Kaggle repository, and IEEE ICRA 2023 paper (DOI: 10.1109/ICRA48855.2023.10161476). Confirmed exact splits: 3,242 train + 361 test = 3,603 episodes, CC BY 4.0 license, and Open X-Embodiment lineage."
+  },
+  "size": {
+    "status": "unknown",
+    "file_formats": [
+      "tfrecord",
+      "rlds",
+      "npz"
+    ],
+    "notes": "Distributed via TensorFlow Datasets and Kaggle archives in TFRecord and RLDS episode formats."
+  },
+  "sample_count": {
+    "total": 3603,
+    "unit": "episodes",
+    "status": "verified",
+    "splits": {
+      "train": 3242,
+      "test": 361
+    }
+  },
+  "dates": {
+    "published": "2022-10-04",
+    "last_updated": "2023-05-30"
+  },
+  "citation": {
+    "paper_title": "Grounding Language with Visual Affordances over Unstructured Data",
+    "paper_url": "https://arxiv.org/abs/2210.01911",
+    "doi": "10.1109/ICRA48855.2023.10161476",
+    "authors": [
+      "Oier Mees",
+      "Jessica Borja-Diaz",
+      "Wolfram Burgard"
+    ],
+    "bibtex": "@inproceedings{mees2023grounding,\n  title={Grounding Language with Visual Affordances over Unstructured Data},\n  author={Mees, Oier and Borja-Diaz, Jessica and Burgard, Wolfram},\n  booktitle={IEEE International Conference on Robotics and Automation (ICRA)},\n  pages={11223--11229},\n  year={2023},\n  doi={10.1109/ICRA48855.2023.10161476}\n}"
+  },
+  "provenance": {
+    "collection_method": "Unstructured teleoperated robot play using VR controllers driving a 7-DoF Franka Emika Panda manipulator interacting with complex kitchen environments, post-annotated with visual affordance masks.",
+    "curation_notes": "Features 3,603 total episodes. Distinct from taco-trash (which detects litter in urban environments). Integrates with Open X-Embodiment under key taco_play.",
+    "data_sources": [
+      "Original robotic experimentation at University of Freiburg"
+    ]
+  }
+}

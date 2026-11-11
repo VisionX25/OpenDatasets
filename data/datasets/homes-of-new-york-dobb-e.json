@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "id": "homes-of-new-york-dobb-e",
+  "slug": "homes-of-new-york-dobb-e",
+  "name": "Homes of New York (HoNY) — Dobb·E Domestic Robot Learning Dataset",
+  "description": "Homes of New York (HoNY) is an in-the-wild domestic robotic manipulation dataset collected across 22 real-world homes and 216 environments in New York City as part of the open-source Dobb·E robot learning framework from New York University. Recorded using 'The Stick'—a low-cost reacher-grabber tool instrumented with an iPhone LiDAR sensor—HoNY comprises 5,620 demonstration trajectories spanning 1.5 million RGB-D frames. The dataset serves as the self-supervised pretraining foundation for Home Pretrained Representations (HPR), enabling lightweight downstream robots (such as Hello Robot Stretch) to adapt to novel household tasks with as few as five minutes of target-domain demonstrations.",
+  "homepage_url": "https://www.dobb-e.com/",
+  "publisher": {
+    "name": "New York University (NYU)",
+    "type": "academic",
+    "url": "https://nyu-robot-learning.github.io/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "3d",
+    "reinforcement-learning",
+    "multimodal"
+  ],
+  "tasks": [
+    "household-robotics",
+    "domestic-manipulation",
+    "imitation-learning",
+    "representation-learning"
+  ],
+  "tags": [
+    "robotics",
+    "dobb-e",
+    "hony",
+    "domestic-learning",
+    "reachy",
+    "rgbd",
+    "iphone-lidar"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "commercial_use": "allowed",
+    "url": "https://github.com/notmahi/dobb-e/blob/main/LICENSE",
+    "notes": "Hardware designs, data collection software, HPR models, and the HoNY dataset are published under the open MIT License."
+  },
+  "source_references": [
+    {
+      "title": "Dobb·E Official Project Website",
+      "url": "https://www.dobb-e.com/",
+      "type": "official_website"
+    },
+    {
+      "title": "Dobb·E Official Documentation and Dataset Setup Guide",
+      "url": "https://docs.dobb-e.com/software/readme-1/setting-up-the-datasets",
+      "type": "documentation"
+    },
+    {
+      "title": "Dobb·E GitHub Repository",
+      "url": "https://github.com/notmahi/dobb-e",
+      "type": "repository"
+    },
+    {
+      "title": "Dobb·E: An Open-Source Generalist Robot Learning Framework (arXiv:2311.13564)",
+      "url": "https://arxiv.org/abs/2311.13564",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against docs.dobb-e.com, notmahi/dobb-e repository, and arXiv:2311.13564. Confirmed 5,620 trajectories across 22 homes, verified download payloads (814 MB RGB, 77 GB RGB-D), and MIT license."
+  },
+  "size": {
+    "amount": 77.0,
+    "unit": "GB",
+    "status": "verified",
+    "file_formats": [
+      "zip",
+      "h5",
+      "r3d",
+      "mp4"
+    ],
+    "notes": "HoNY RGB-D + actions archive is 77 GB (HomesOfNewYorkWithDepth.zip via Google Drive). The lightweight RGB-only release is 814 MB (homes_of_new_york.zip via dl.dobb-e.com)."
+  },
+  "sample_count": {
+    "total": 5620,
+    "unit": "trajectories",
+    "status": "verified",
+    "splits": {
+      "homes": 22,
+      "environments": 216,
+      "rgbd_frames": 1500000
+    }
+  },
+  "dates": {
+    "published": "2023-11-21",
+    "last_updated": "2024-04-10"
+  },
+  "citation": {
+    "paper_title": "Dobb·E: An Open-Source Generalist Robot Learning Framework",
+    "paper_url": "https://arxiv.org/abs/2311.13564",
+    "doi": "10.48550/arXiv.2311.13564",
+    "authors": [
+      "Nur Muhammad Mahi Shafiullah",
+      "Anant Rai",
+      "Zichen Gordon Cui",
+      "Yiqian Qiu",
+      "Mustafa Mukadam",
+      "Arthur Szlam",
+      "Lerrel Pinto"
+    ],
+    "bibtex": "@article{shafiullah2023dobb_e,\n  title={Dobb·E: An Open-Source Generalist Robot Learning Framework},\n  author={Shafiullah, Nur Muhammad Mahi and Rai, Anant and Cui, Zichen Gordon and Qiu, Yiqian and Mukadam, Mustafa and Szlam, Arthur and Pinto, Lerrel},\n  journal={arXiv preprint arXiv:2311.13564},\n  year={2023}\n}"
+  },
+  "provenance": {
+    "collection_method": "Handheld physical interaction capture using 'The Stick'—an instrumented reacher-grabber tool fitted with an iPhone recording LiDAR depth and stereo RGB, calibrated with 6-DoF gripper motion.",
+    "curation_notes": "Features 216 distinct domestic environments across 22 private NYC residences. Also converted into an RLDS format for integration with Open X-Embodiment.",
+    "data_sources": [
+      "Original recordings by NYU Robot Learning Lab in NYC homes"
+    ]
+  }
+}
