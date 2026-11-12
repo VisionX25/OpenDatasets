@@ -29,14 +29,19 @@
     "in-the-wild"
   ],
   "license": {
-    "status": "custom_permissive",
-    "name": "Apache 2.0 (Code) / Open Research Data",
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source",
     "spdx_id": null,
-    "commercial_use": "allowed",
-    "url": "https://github.com/open-mmlab/mmocr/blob/main/LICENSE",
-    "notes": "MMOCR framework tools and data processing recipes are released under Apache 2.0. The WildReceipt dataset images and annotations are distributed openly for research."
+    "commercial_use": "unknown",
+    "url": "https://mmocr.readthedocs.io/en/latest/user_guides/data_prepare/datasetzoo.html",
+    "notes": "MMOCR framework codebase is distributed under Apache 2.0, but MMOCR official dataset documentation explicitly records the WildReceipt dataset license as 'N/A'. The dataset was published by SenseTime (arXiv:2103.14470) without an independent open data license or commercial usage declaration. Commercial usability remains unverified."
   },
   "source_references": [
+    {
+      "title": "MMOCR Dataset Zoo Documentation (WildReceipt)",
+      "url": "https://mmocr.readthedocs.io/en/latest/user_guides/data_prepare/datasetzoo.html",
+      "type": "documentation"
+    },
     {
       "title": "MMOCR Dataset Documentation for WildReceipt",
       "url": "https://mmocr.readthedocs.io/en/latest/basic_concepts/datasets.html",
@@ -57,7 +62,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Curation Team",
     "verified_date": "2026-11-12",
-    "notes": "Verified against MMOCR official documentation and arXiv:2103.14470 paper. Confirmed 1,739 photographed receipts (1,267 train, 472 test), 25 semantic classes in closed-set annotation, and distinction from existing CORD (Indonesian) and SROIE (Malaysian) datasets."
+    "notes": "Verified against MMOCR official Dataset Zoo documentation and arXiv:2103.14470 paper. Confirmed 1,739 photographed receipts (1,267 train, 472 test), 25 semantic classes in closed-set annotation, MMOCR documentation listing dataset license as N/A, and distinction between MMOCR Apache 2.0 framework licensing and data licensing."
   },
   "size": {
     "amount": 150.0,

@@ -29,12 +29,12 @@
     "long-documents"
   ],
   "license": {
-    "status": "custom_permissive",
-    "name": "Public Domain (SEC EDGAR Data) / Open Research Manifests",
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source / Public Regulatory Filings",
     "spdx_id": null,
-    "commercial_use": "allowed",
+    "commercial_use": "unknown",
     "url": "https://github.com/applicaai/kleister-nda",
-    "notes": "Source NDA contract filings are public corporate disclosures retrieved from the US SEC EDGAR repository. Extraction ground truth manifests, OCR texts, and evaluation scripts are openly provided for research."
+    "notes": "Evaluation scripts and benchmark manifests are provided on GitHub under the MIT License. Source NDA contracts were obtained from public corporate disclosure filings on US SEC EDGAR. While regulatory filings are publicly accessible public records, individual corporate contracts and agreements may contain proprietary third-party content. The dataset publishers did not grant a blanket commercial redistribution license for the compiled PDF and OCR document corpus, so dataset-wide commercial usability remains unverified."
   },
   "source_references": [
     {
@@ -57,7 +57,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Curation Team",
     "verified_date": "2026-11-12",
-    "notes": "Verified against applicaai/kleister-nda repository and ICDAR 2021 proceedings (DOI: 10.1007/978-3-030-86540-5_37). Confirmed 540 documents (254 train, 83 dev-0, 203 test-A), multi-page layout characteristics, dual OCR text pipeline, and SEC EDGAR public provenance."
+    "notes": "Verified against applicaai/kleister-nda repository and ICDAR 2021 proceedings (DOI: 10.1007/978-3-030-86540-5_37). Confirmed 540 documents (254 train, 83 dev-0, 203 test-A), multi-page layout characteristics, dual OCR text pipeline, and SEC EDGAR public provenance. Distinguishes MIT evaluation code and open TSV manifests from underlying third-party contract PDFs and OCR text, with unverified dataset-wide commercial reuse rights."
   },
   "size": {
     "amount": 1.5,
@@ -102,7 +102,7 @@
   },
   "provenance": {
     "collection_method": "Harvested from public non-disclosure agreements submitted to the US Securities and Exchange Commission (SEC) EDGAR disclosure system, converted from HTML/text to PDF via Puppeteer.",
-    "curation_notes": "Measures full-document key information extraction performance rather than entity token classification. Documents are recorded separately from OCR word tokens.",
+    "curation_notes": "Measures full-document key information extraction performance rather than entity token classification. Documents are recorded separately from OCR word tokens. Distinguishes public SEC EDGAR regulatory disclosure accessibility from dataset-wide commercial reuse permissions.",
     "data_sources": [
       "US Securities and Exchange Commission (SEC) EDGAR public corporate disclosures"
     ]

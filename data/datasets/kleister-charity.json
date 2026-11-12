@@ -29,12 +29,12 @@
     "uk-government"
   ],
   "license": {
-    "status": "custom_permissive",
-    "name": "UK Open Government Licence (Source Reports) / Open Research Manifests",
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source / Public Charity Filings",
     "spdx_id": null,
-    "commercial_use": "allowed",
+    "commercial_use": "unknown",
     "url": "https://github.com/applicaai/kleister-charity",
-    "notes": "Original charity annual reports are public records published by the UK Charity Commission under the Open Government Licence (OGL). Ground truth manifests, pre-computed OCR transcripts, and evaluation scripts are openly provided."
+    "notes": "Evaluation scripts and benchmark manifests are provided on GitHub under the MIT License. Source PDF documents were collected from public annual reports filed by registered charities with the UK Charity Commission. While the Charity Commission maintains public registry records, individual charity annual reports and financial statements are authored by distinct third-party charitable entities and may contain proprietary material. The complete 12 GB dataset payload (PDFs and OCR representations) distributed via git-annex lacks an explicit dataset-wide commercial reuse license from the publishers, so commercial usability remains unverified."
   },
   "source_references": [
     {
@@ -57,7 +57,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Curation Team",
     "verified_date": "2026-11-12",
-    "notes": "Verified against applicaai/kleister-charity repository and ICDAR 2021 proceedings (DOI: 10.1007/978-3-030-86540-5_37). Confirmed 2,778 documents (1,729 train, 440 dev-0, 609 test-A), git-annex S3 remote storage configuration, and distinction from the separate Kleister NDA dataset."
+    "notes": "Verified against applicaai/kleister-charity repository and ICDAR 2021 proceedings (DOI: 10.1007/978-3-030-86540-5_37). Confirmed 2,778 documents (1,729 train, 440 dev-0, 609 test-A), git-annex S3 remote storage configuration, and distinction from the separate Kleister NDA dataset. Distinguishes MIT evaluation code and open TSV manifests from the 12 GB third-party PDF payload and OCR text, with unverified dataset-wide commercial reuse rights."
   },
   "size": {
     "amount": 12.0,
@@ -102,7 +102,7 @@
   },
   "provenance": {
     "collection_method": "Sourced from public annual reports filed by registered British charities to the UK Charity Commission.",
-    "curation_notes": "PDF binaries are managed via git-annex backed by public AWS S3 storage. Focuses on extracting key financial figures and administrative metadata from long multi-page layouts.",
+    "curation_notes": "PDF binaries are managed via git-annex backed by public AWS S3 storage. Focuses on extracting key financial figures and administrative metadata from long multi-page layouts. Distinguishes public charity filing accessibility from dataset-wide commercial reuse permissions.",
     "data_sources": [
       "UK Charity Commission annual report filings"
     ]
