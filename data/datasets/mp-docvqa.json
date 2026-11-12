@@ -3,7 +3,7 @@
   "id": "mp-docvqa",
   "slug": "mp-docvqa",
   "name": "MP-DocVQA: Multi-Page Document Visual Question Answering Benchmark",
-  "description": "MP-DocVQA is a multi-page document visual question answering benchmark designed to evaluate document understanding systems across long, multi-page contexts. Introduced by researchers from the Computer Vision Center (CVC) at Universitat Autònoma de Barcelona, MP-DocVQA systematically expands the Single Page DocVQA task to realistic multi-page document retrieval and reasoning. The dataset contains 46,436 questions over 5,929 multi-page documents comprising 47,952 document pages (ranging from 2 up to 20 pages per document). While single-page DocVQA provided only isolated cropped pages, MP-DocVQA provides the full document context, requiring models to simultaneously solve evidence-page retrieval, cross-page reasoning, and question answering.",
+  "description": "MP-DocVQA is a multi-page document visual question answering benchmark designed to evaluate document understanding systems across long, multi-page contexts. Introduced by researchers from the Computer Vision Center (CVC) at Universitat Autònoma de Barcelona, MP-DocVQA systematically expands the Single Page DocVQA task to realistic multi-page document retrieval and reasoning. The dataset contains 46,436 questions over 5,929 unique multi-page documents comprising 47,952 document pages (ranging from 2 up to 20 pages per document). While single-page DocVQA provided only isolated cropped pages, MP-DocVQA provides the full document context, requiring models to simultaneously solve evidence-page retrieval, cross-page reasoning, and question answering. Note that split document occurrences (5,131 train, 927 validation, 959 test) are not disjoint, as validation and test document subsets share overlapping documents.",
   "homepage_url": "https://rrc.cvc.uab.cat/?ch=17&com=downloads",
   "publisher": {
     "name": "Computer Vision Center (CVC) UAB",
@@ -57,7 +57,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Curation Team",
     "verified_date": "2026-11-12",
-    "notes": "Verified against RRC portal Challenge 17, Pattern Recognition publication (DOI: 10.1016/j.patcog.2023.109834), and rubentito/mp-docvqa dataset repository. Confirmed 46,436 questions over 5,929 documents (47,952 pages), multi-page evaluation paradigm, and explicit parent-child lineage to Single Page DocVQA."
+    "notes": "Verified against RRC portal Challenge 17, Pattern Recognition publication (DOI: 10.1016/j.patcog.2023.109834), and rubentito/mp-docvqa dataset repository. Confirmed 46,436 questions over 5,929 unique documents (47,952 pages), multi-page evaluation paradigm, and explicit parent-child lineage to Single Page DocVQA. Author documentation explicitly notes that split document counts (5,131 train, 927 validation, 959 test) are not disjoint due to document overlap between validation and test splits; the total unique document count is 5,929 rather than the sum of occurrences."
   },
   "size": {
     "amount": 12.5,
@@ -101,7 +101,7 @@
   },
   "provenance": {
     "collection_method": "Multi-page reconstruction of source document files from the UCSF Truth Tobacco Industry Documents archive corresponding to questions originally posed in Single Page DocVQA.",
-    "curation_notes": "An independently published multi-page evaluation benchmark. Reuses questions and target document images from Single Page DocVQA while embedding them within their complete multi-page document contexts (up to 20 pages per document).",
+    "curation_notes": "An independently published multi-page evaluation benchmark. Reuses questions and target document images from Single Page DocVQA while embedding them within their complete multi-page document contexts (up to 20 pages per document). Note that split document occurrences (5,131 train, 927 validation, 959 test) are not disjoint due to document overlap between evaluation splits; the total unique document count across the benchmark is 5,929.",
     "data_sources": [
       "Truth Tobacco Industry Documents archive via Single Page DocVQA"
     ]

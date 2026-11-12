@@ -30,11 +30,11 @@
   ],
   "license": {
     "status": "custom_permissive",
-    "name": "Apache 2.0 (Annotations) / Author Request EULA (Images)",
+    "name": "Apache 2.0 (Annotations) / Restricted Archival Copyright (Images)",
     "spdx_id": null,
-    "commercial_use": "allowed",
-    "url": "https://github.com/dell-research-harvard/HJDataset",
-    "notes": "Annotations and benchmark utilities are licensed under the Apache 2.0 License. The historical document page images are distributed upon completion of an academic request form due to source archival copyright constraints."
+    "commercial_use": "unknown",
+    "url": "https://dell-research-harvard.github.io/HJDataset/",
+    "notes": "The official project page explicitly states that annotations in the dataset are released under the Apache 2.0 License. The historical Japanese document page images cannot be publicly redistributed due to third-party archival copyright restrictions (held by Japanese archives and libraries); researchers must submit an individual data request form to the Dell Lab for image access. Software and annotation licensing does not authorize commercial reuse of the underlying copyrighted historical images."
   },
   "source_references": [
     {
@@ -57,7 +57,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Curation Team",
     "verified_date": "2026-11-12",
-    "notes": "Verified against dell-research-harvard.github.io/HJDataset and CVPRW 2020 paper (arXiv:2004.08686). Confirmed 250,000+ layout element annotations across 7 types, Apache 2.0 annotation licensing, and request-based image access."
+    "notes": "Verified against dell-research-harvard.github.io/HJDataset and CVPRW 2020 paper (arXiv:2004.08686). Confirmed 250,000+ layout element annotations across 7 types, Apache 2.0 annotation licensing, and request-based image access due to archival copyright constraints. Commercial use is marked unknown due to image copyright restrictions."
   },
   "size": {
     "amount": 3.5,
@@ -91,7 +91,7 @@
   },
   "provenance": {
     "collection_method": "Historical Japanese personnel directories and documents digitised from national library archives, segmented using rule-based algorithms with human verification.",
-    "curation_notes": "Measures hierarchical layout extraction and reading order sequencing. Explicitly distinguishes 250,000+ layout region instances from the underlying page count.",
+    "curation_notes": "Measures hierarchical layout extraction and reading order sequencing. Explicitly separates publicly accessible Apache 2.0 layout annotations from restricted archival page images requiring individual author requests, and distinguishes 250,000+ layout region instances from the underlying page count.",
     "data_sources": [
       "National Diet Library and Harvard Yenching historical Japanese document collections"
     ]

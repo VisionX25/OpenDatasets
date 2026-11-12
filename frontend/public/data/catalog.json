@@ -13552,12 +13552,12 @@
       "modelscope"
     ],
     "license": {
-      "status": "custom_permissive",
-      "name": "Alibaba Research Open License",
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
       "spdx_id": null,
-      "commercial_use": "allowed",
-      "url": "https://github.com/AlibabaResearch/AdvancedLiterateMachinery/tree/main/DocumentUnderstanding/VGT",
-      "notes": "Code and tools are released under the Apache 2.0 License. The underlying document images are derived from the open-access public domain IIT-CDIP collection with fine-grained layout annotations provided openly on ModelScope."
+      "commercial_use": "unknown",
+      "url": "https://modelscope.cn/datasets/iic/D4LA/summary",
+      "notes": "Code in the AlibabaResearch/AdvancedLiterateMachinery repository is released under Apache-2.0. The D4LA dataset distributed on ModelScope does not specify an explicit dataset-level open license or commercial reuse grant. Document images are sampled from the IIT-CDIP collection and downstream commercial usage permissions remain unverified."
     },
     "source_references": [
       {
@@ -13580,7 +13580,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Curation Team",
       "verified_date": "2026-11-12",
-      "notes": "Verified against Alibaba DAMO Academy ModelScope repository iic/D4LA and ICCV 2023 proceedings (DOI: 10.1109/ICCV51070.2023.01783). Confirmed 11,092 document pages (8,868 train, 2,224 test), 27 layout categories, and direct lineage to IIT-CDIP."
+      "notes": "Verified against Alibaba DAMO Academy ModelScope repository iic/D4LA, AdvancedLiterateMachinery codebase, and ICCV 2023 proceedings (DOI: 10.1109/ICCV51070.2023.01783). Confirmed 11,092 document pages (8,868 train, 2,224 test), 27 layout categories, verified citation authors (Cheng Da, Chuwei Luo, Qi Zheng, Cong Yao), and direct lineage to IIT-CDIP. Apache-2.0 applies to software; dataset licensing is unspecified by source with unknown commercial rights."
     },
     "size": {
       "amount": 4.8,
@@ -21700,11 +21700,11 @@
     ],
     "license": {
       "status": "custom_permissive",
-      "name": "Apache 2.0 (Annotations) / Author Request EULA (Images)",
+      "name": "Apache 2.0 (Annotations) / Restricted Archival Copyright (Images)",
       "spdx_id": null,
-      "commercial_use": "allowed",
-      "url": "https://github.com/dell-research-harvard/HJDataset",
-      "notes": "Annotations and benchmark utilities are licensed under the Apache 2.0 License. The historical document page images are distributed upon completion of an academic request form due to source archival copyright constraints."
+      "commercial_use": "unknown",
+      "url": "https://dell-research-harvard.github.io/HJDataset/",
+      "notes": "The official project page explicitly states that annotations in the dataset are released under the Apache 2.0 License. The historical Japanese document page images cannot be publicly redistributed due to third-party archival copyright restrictions (held by Japanese archives and libraries); researchers must submit an individual data request form to the Dell Lab for image access. Software and annotation licensing does not authorize commercial reuse of the underlying copyrighted historical images."
     },
     "source_references": [
       {
@@ -21727,7 +21727,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Curation Team",
       "verified_date": "2026-11-12",
-      "notes": "Verified against dell-research-harvard.github.io/HJDataset and CVPRW 2020 paper (arXiv:2004.08686). Confirmed 250,000+ layout element annotations across 7 types, Apache 2.0 annotation licensing, and request-based image access."
+      "notes": "Verified against dell-research-harvard.github.io/HJDataset and CVPRW 2020 paper (arXiv:2004.08686). Confirmed 250,000+ layout element annotations across 7 types, Apache 2.0 annotation licensing, and request-based image access due to archival copyright constraints. Commercial use is marked unknown due to image copyright restrictions."
     },
     "size": {
       "amount": 3.5,
@@ -21761,7 +21761,7 @@
     },
     "provenance": {
       "collection_method": "Historical Japanese personnel directories and documents digitised from national library archives, segmented using rule-based algorithms with human verification.",
-      "curation_notes": "Measures hierarchical layout extraction and reading order sequencing. Explicitly distinguishes 250,000+ layout region instances from the underlying page count.",
+      "curation_notes": "Measures hierarchical layout extraction and reading order sequencing. Explicitly separates publicly accessible Apache 2.0 layout annotations from restricted archival page images requiring individual author requests, and distinguishes 250,000+ layout region instances from the underlying page count.",
       "data_sources": [
         "National Diet Library and Harvard Yenching historical Japanese document collections"
       ]
@@ -26023,12 +26023,12 @@
       "uk-government"
     ],
     "license": {
-      "status": "custom_permissive",
-      "name": "UK Open Government Licence (Source Reports) / Open Research Manifests",
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source / Public Charity Filings",
       "spdx_id": null,
-      "commercial_use": "allowed",
+      "commercial_use": "unknown",
       "url": "https://github.com/applicaai/kleister-charity",
-      "notes": "Original charity annual reports are public records published by the UK Charity Commission under the Open Government Licence (OGL). Ground truth manifests, pre-computed OCR transcripts, and evaluation scripts are openly provided."
+      "notes": "Evaluation scripts and benchmark manifests are provided on GitHub under the MIT License. Source PDF documents were collected from public annual reports filed by registered charities with the UK Charity Commission. While the Charity Commission maintains public registry records, individual charity annual reports and financial statements are authored by distinct third-party charitable entities and may contain proprietary material. The complete 12 GB dataset payload (PDFs and OCR representations) distributed via git-annex lacks an explicit dataset-wide commercial reuse license from the publishers, so commercial usability remains unverified."
     },
     "source_references": [
       {
@@ -26051,7 +26051,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Curation Team",
       "verified_date": "2026-11-12",
-      "notes": "Verified against applicaai/kleister-charity repository and ICDAR 2021 proceedings (DOI: 10.1007/978-3-030-86540-5_37). Confirmed 2,778 documents (1,729 train, 440 dev-0, 609 test-A), git-annex S3 remote storage configuration, and distinction from the separate Kleister NDA dataset."
+      "notes": "Verified against applicaai/kleister-charity repository and ICDAR 2021 proceedings (DOI: 10.1007/978-3-030-86540-5_37). Confirmed 2,778 documents (1,729 train, 440 dev-0, 609 test-A), git-annex S3 remote storage configuration, and distinction from the separate Kleister NDA dataset. Distinguishes MIT evaluation code and open TSV manifests from the 12 GB third-party PDF payload and OCR text, with unverified dataset-wide commercial reuse rights."
     },
     "size": {
       "amount": 12.0,
@@ -26096,7 +26096,7 @@
     },
     "provenance": {
       "collection_method": "Sourced from public annual reports filed by registered British charities to the UK Charity Commission.",
-      "curation_notes": "PDF binaries are managed via git-annex backed by public AWS S3 storage. Focuses on extracting key financial figures and administrative metadata from long multi-page layouts.",
+      "curation_notes": "PDF binaries are managed via git-annex backed by public AWS S3 storage. Focuses on extracting key financial figures and administrative metadata from long multi-page layouts. Distinguishes public charity filing accessibility from dataset-wide commercial reuse permissions.",
       "data_sources": [
         "UK Charity Commission annual report filings"
       ]
@@ -26133,12 +26133,12 @@
       "long-documents"
     ],
     "license": {
-      "status": "custom_permissive",
-      "name": "Public Domain (SEC EDGAR Data) / Open Research Manifests",
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source / Public Regulatory Filings",
       "spdx_id": null,
-      "commercial_use": "allowed",
+      "commercial_use": "unknown",
       "url": "https://github.com/applicaai/kleister-nda",
-      "notes": "Source NDA contract filings are public corporate disclosures retrieved from the US SEC EDGAR repository. Extraction ground truth manifests, OCR texts, and evaluation scripts are openly provided for research."
+      "notes": "Evaluation scripts and benchmark manifests are provided on GitHub under the MIT License. Source NDA contracts were obtained from public corporate disclosure filings on US SEC EDGAR. While regulatory filings are publicly accessible public records, individual corporate contracts and agreements may contain proprietary third-party content. The dataset publishers did not grant a blanket commercial redistribution license for the compiled PDF and OCR document corpus, so dataset-wide commercial usability remains unverified."
     },
     "source_references": [
       {
@@ -26161,7 +26161,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Curation Team",
       "verified_date": "2026-11-12",
-      "notes": "Verified against applicaai/kleister-nda repository and ICDAR 2021 proceedings (DOI: 10.1007/978-3-030-86540-5_37). Confirmed 540 documents (254 train, 83 dev-0, 203 test-A), multi-page layout characteristics, dual OCR text pipeline, and SEC EDGAR public provenance."
+      "notes": "Verified against applicaai/kleister-nda repository and ICDAR 2021 proceedings (DOI: 10.1007/978-3-030-86540-5_37). Confirmed 540 documents (254 train, 83 dev-0, 203 test-A), multi-page layout characteristics, dual OCR text pipeline, and SEC EDGAR public provenance. Distinguishes MIT evaluation code and open TSV manifests from underlying third-party contract PDFs and OCR text, with unverified dataset-wide commercial reuse rights."
     },
     "size": {
       "amount": 1.5,
@@ -26206,7 +26206,7 @@
     },
     "provenance": {
       "collection_method": "Harvested from public non-disclosure agreements submitted to the US Securities and Exchange Commission (SEC) EDGAR disclosure system, converted from HTML/text to PDF via Puppeteer.",
-      "curation_notes": "Measures full-document key information extraction performance rather than entity token classification. Documents are recorded separately from OCR word tokens.",
+      "curation_notes": "Measures full-document key information extraction performance rather than entity token classification. Documents are recorded separately from OCR word tokens. Distinguishes public SEC EDGAR regulatory disclosure accessibility from dataset-wide commercial reuse permissions.",
       "data_sources": [
         "US Securities and Exchange Commission (SEC) EDGAR public corporate disclosures"
       ]
@@ -31935,7 +31935,7 @@
     "id": "mp-docvqa",
     "slug": "mp-docvqa",
     "name": "MP-DocVQA: Multi-Page Document Visual Question Answering Benchmark",
-    "description": "MP-DocVQA is a multi-page document visual question answering benchmark designed to evaluate document understanding systems across long, multi-page contexts. Introduced by researchers from the Computer Vision Center (CVC) at Universitat Autònoma de Barcelona, MP-DocVQA systematically expands the Single Page DocVQA task to realistic multi-page document retrieval and reasoning. The dataset contains 46,436 questions over 5,929 multi-page documents comprising 47,952 document pages (ranging from 2 up to 20 pages per document). While single-page DocVQA provided only isolated cropped pages, MP-DocVQA provides the full document context, requiring models to simultaneously solve evidence-page retrieval, cross-page reasoning, and question answering.",
+    "description": "MP-DocVQA is a multi-page document visual question answering benchmark designed to evaluate document understanding systems across long, multi-page contexts. Introduced by researchers from the Computer Vision Center (CVC) at Universitat Autònoma de Barcelona, MP-DocVQA systematically expands the Single Page DocVQA task to realistic multi-page document retrieval and reasoning. The dataset contains 46,436 questions over 5,929 unique multi-page documents comprising 47,952 document pages (ranging from 2 up to 20 pages per document). While single-page DocVQA provided only isolated cropped pages, MP-DocVQA provides the full document context, requiring models to simultaneously solve evidence-page retrieval, cross-page reasoning, and question answering. Note that split document occurrences (5,131 train, 927 validation, 959 test) are not disjoint, as validation and test document subsets share overlapping documents.",
     "homepage_url": "https://rrc.cvc.uab.cat/?ch=17&com=downloads",
     "publisher": {
       "name": "Computer Vision Center (CVC) UAB",
@@ -31989,7 +31989,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Curation Team",
       "verified_date": "2026-11-12",
-      "notes": "Verified against RRC portal Challenge 17, Pattern Recognition publication (DOI: 10.1016/j.patcog.2023.109834), and rubentito/mp-docvqa dataset repository. Confirmed 46,436 questions over 5,929 documents (47,952 pages), multi-page evaluation paradigm, and explicit parent-child lineage to Single Page DocVQA."
+      "notes": "Verified against RRC portal Challenge 17, Pattern Recognition publication (DOI: 10.1016/j.patcog.2023.109834), and rubentito/mp-docvqa dataset repository. Confirmed 46,436 questions over 5,929 unique documents (47,952 pages), multi-page evaluation paradigm, and explicit parent-child lineage to Single Page DocVQA. Author documentation explicitly notes that split document counts (5,131 train, 927 validation, 959 test) are not disjoint due to document overlap between validation and test splits; the total unique document count is 5,929 rather than the sum of occurrences."
     },
     "size": {
       "amount": 12.5,
@@ -32033,7 +32033,7 @@
     },
     "provenance": {
       "collection_method": "Multi-page reconstruction of source document files from the UCSF Truth Tobacco Industry Documents archive corresponding to questions originally posed in Single Page DocVQA.",
-      "curation_notes": "An independently published multi-page evaluation benchmark. Reuses questions and target document images from Single Page DocVQA while embedding them within their complete multi-page document contexts (up to 20 pages per document).",
+      "curation_notes": "An independently published multi-page evaluation benchmark. Reuses questions and target document images from Single Page DocVQA while embedding them within their complete multi-page document contexts (up to 20 pages per document). Note that split document occurrences (5,131 train, 927 validation, 959 test) are not disjoint due to document overlap between evaluation splits; the total unique document count across the benchmark is 5,929.",
       "data_sources": [
         "Truth Tobacco Industry Documents archive via Single Page DocVQA"
       ]
@@ -51854,14 +51854,19 @@
       "in-the-wild"
     ],
     "license": {
-      "status": "custom_permissive",
-      "name": "Apache 2.0 (Code) / Open Research Data",
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
       "spdx_id": null,
-      "commercial_use": "allowed",
-      "url": "https://github.com/open-mmlab/mmocr/blob/main/LICENSE",
-      "notes": "MMOCR framework tools and data processing recipes are released under Apache 2.0. The WildReceipt dataset images and annotations are distributed openly for research."
+      "commercial_use": "unknown",
+      "url": "https://mmocr.readthedocs.io/en/latest/user_guides/data_prepare/datasetzoo.html",
+      "notes": "MMOCR framework codebase is distributed under Apache 2.0, but MMOCR official dataset documentation explicitly records the WildReceipt dataset license as 'N/A'. The dataset was published by SenseTime (arXiv:2103.14470) without an independent open data license or commercial usage declaration. Commercial usability remains unverified."
     },
     "source_references": [
+      {
+        "title": "MMOCR Dataset Zoo Documentation (WildReceipt)",
+        "url": "https://mmocr.readthedocs.io/en/latest/user_guides/data_prepare/datasetzoo.html",
+        "type": "documentation"
+      },
       {
         "title": "MMOCR Dataset Documentation for WildReceipt",
         "url": "https://mmocr.readthedocs.io/en/latest/basic_concepts/datasets.html",
@@ -51882,7 +51887,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Curation Team",
       "verified_date": "2026-11-12",
-      "notes": "Verified against MMOCR official documentation and arXiv:2103.14470 paper. Confirmed 1,739 photographed receipts (1,267 train, 472 test), 25 semantic classes in closed-set annotation, and distinction from existing CORD (Indonesian) and SROIE (Malaysian) datasets."
+      "notes": "Verified against MMOCR official Dataset Zoo documentation and arXiv:2103.14470 paper. Confirmed 1,739 photographed receipts (1,267 train, 472 test), 25 semantic classes in closed-set annotation, MMOCR documentation listing dataset license as N/A, and distinction between MMOCR Apache 2.0 framework licensing and data licensing."
     },
     "size": {
       "amount": 150.0,
