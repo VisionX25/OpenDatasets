@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "kleister-nda",
+  "slug": "kleister-nda",
+  "name": "Kleister NDA: Key Information Extraction from Long Complex Legal Documents",
+  "description": "Kleister NDA is a challenging document key information extraction benchmark comprising 540 long, complex non-disclosure agreement (NDA) legal documents compiled from public SEC EDGAR regulatory filings by Applica.ai. Spanning a total of 1,770 pages (averaging 3.3 pages per document), Kleister NDA benchmarks extraction of critical contract entities—including involved parties, effective dates, agreement titles, and governing jurisdictions. In contrast to classic form understanding datasets that isolate short single-page layouts, Kleister NDA evaluates information extraction from multi-page documents containing extensive unconstrained text, legal prose, and diverse OCR rendering conditions.",
+  "homepage_url": "https://github.com/applicaai/kleister-nda",
+  "publisher": {
+    "name": "Applica.ai",
+    "type": "industry",
+    "url": "https://github.com/applicaai"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "key-information-extraction",
+    "document-understanding",
+    "legal-nlp"
+  ],
+  "tags": [
+    "document-ai",
+    "kleister",
+    "nda",
+    "legal",
+    "sec-edgar",
+    "long-documents"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Public Domain (SEC EDGAR Data) / Open Research Manifests",
+    "spdx_id": null,
+    "commercial_use": "allowed",
+    "url": "https://github.com/applicaai/kleister-nda",
+    "notes": "Source NDA contract filings are public corporate disclosures retrieved from the US SEC EDGAR repository. Extraction ground truth manifests, OCR texts, and evaluation scripts are openly provided for research."
+  },
+  "source_references": [
+    {
+      "title": "Kleister NDA GitHub Repository",
+      "url": "https://github.com/applicaai/kleister-nda",
+      "type": "repository"
+    },
+    {
+      "title": "Kleister: Key Information Extraction Datasets Involving Long Documents with Complex Layouts (ICDAR 2021)",
+      "url": "https://doi.org/10.1007/978-3-030-86540-5_37",
+      "type": "original_paper"
+    },
+    {
+      "title": "Kleister Research Preprint (arXiv:2103.04470)",
+      "url": "https://arxiv.org/abs/2103.04470",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against applicaai/kleister-nda repository and ICDAR 2021 proceedings (DOI: 10.1007/978-3-030-86540-5_37). Confirmed 540 documents (254 train, 83 dev-0, 203 test-A), multi-page layout characteristics, dual OCR text pipeline, and SEC EDGAR public provenance."
+  },
+  "size": {
+    "amount": 1.5,
+    "unit": "GB",
+    "file_formats": [
+      "pdf",
+      "tsv",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "PDF document scans paired with pre-computed OCR outputs from pdf2djvu/djvu2hocr and Tesseract."
+  },
+  "sample_count": {
+    "total": 540,
+    "unit": "documents",
+    "status": "verified",
+    "splits": {
+      "train": 254,
+      "dev": 83,
+      "test": 203
+    }
+  },
+  "dates": {
+    "published": "2021-03-08",
+    "last_updated": "2021-09-08"
+  },
+  "citation": {
+    "paper_title": "Kleister: Key Information Extraction Datasets Involving Long Documents with Complex Layouts",
+    "paper_url": "https://doi.org/10.1007/978-3-030-86540-5_37",
+    "doi": "10.1007/978-3-030-86540-5_37",
+    "authors": [
+      "Tomasz Stanisławek",
+      "Filip Graliński",
+      "Anna Wróblewska",
+      "Dawid Lipiński",
+      "Agnieszka Kaliska",
+      "Paulina Rosalska",
+      "Bartosz Topolski",
+      "Przemysław Biecek"
+    ],
+    "bibtex": "@inproceedings{stanislawek2021kleister,\n  title={Kleister: Key Information Extraction Datasets Involving Long Documents with Complex Layouts},\n  author={Stanis{\\l}awek, Tomasz and Grali{\\'n}ski, Filip and Wr{\\'o}blewska, Anna and Lipi{\\'n}ski, Dawid and Kaliska, Agnieszka and Rosalska, Paulina and Topolski, Bartosz and Biecek, Przemys{\\l}aw},\n  booktitle={2021 International Conference on Document Analysis and Recognition (ICDAR)},\n  pages={564--579},\n  year={2021},\n  publisher={Springer},\n  doi={10.1007/978-3-030-86540-5_37}\n}"
+  },
+  "provenance": {
+    "collection_method": "Harvested from public non-disclosure agreements submitted to the US Securities and Exchange Commission (SEC) EDGAR disclosure system, converted from HTML/text to PDF via Puppeteer.",
+    "curation_notes": "Measures full-document key information extraction performance rather than entity token classification. Documents are recorded separately from OCR word tokens.",
+    "data_sources": [
+      "US Securities and Exchange Commission (SEC) EDGAR public corporate disclosures"
+    ]
+  }
+}

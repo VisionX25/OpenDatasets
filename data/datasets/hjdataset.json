@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "id": "hjdataset",
+  "slug": "hjdataset",
+  "name": "HJDataset: Large Dataset of Historical Japanese Documents with Complex Layouts",
+  "description": "HJDataset is a large-scale benchmark dataset for document layout analysis, region segmentation, and reading order extraction in complex historical Japanese documents. Created by researchers from the Dell Lab at Harvard University and presented at the CVPR 2020 Workshop on Text and Documents in the Deep Learning Era, HJDataset contains over 250,000 layout element annotations of 7 distinct structural types. The dataset captures unique layout challenges in Asian document heritage—including vertical text orientations, mixed reading directions, dense multi-column tables, headers, and historical Kanji typography. In addition to bounding boxes and pixel-level masks, annotations encode hierarchical document structures and reading orders.",
+  "homepage_url": "https://dell-research-harvard.github.io/HJDataset/",
+  "publisher": {
+    "name": "Harvard University (Dell Lab)",
+    "type": "academic",
+    "url": "https://dell-research-harvard.github.io/"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "document-layout-analysis",
+    "document-understanding",
+    "reading-order-extraction"
+  ],
+  "tags": [
+    "document-ai",
+    "hjdataset",
+    "japanese",
+    "historical-documents",
+    "harvard",
+    "cvprw-2020"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Apache 2.0 (Annotations) / Author Request EULA (Images)",
+    "spdx_id": null,
+    "commercial_use": "allowed",
+    "url": "https://github.com/dell-research-harvard/HJDataset",
+    "notes": "Annotations and benchmark utilities are licensed under the Apache 2.0 License. The historical document page images are distributed upon completion of an academic request form due to source archival copyright constraints."
+  },
+  "source_references": [
+    {
+      "title": "HJDataset Official Project Page",
+      "url": "https://dell-research-harvard.github.io/HJDataset/",
+      "type": "official_website"
+    },
+    {
+      "title": "HJDataset GitHub Repository",
+      "url": "https://github.com/dell-research-harvard/HJDataset",
+      "type": "repository"
+    },
+    {
+      "title": "A Large Dataset of Historical Japanese Documents with Complex Layouts (CVPRW 2020 / arXiv:2004.08686)",
+      "url": "https://arxiv.org/abs/2004.08686",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against dell-research-harvard.github.io/HJDataset and CVPRW 2020 paper (arXiv:2004.08686). Confirmed 250,000+ layout element annotations across 7 types, Apache 2.0 annotation licensing, and request-based image access."
+  },
+  "size": {
+    "amount": 3.5,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Scanned archival Japanese document page images paired with COCO-style JSON annotation files detailing bounding boxes, masks, and reading orders."
+  },
+  "sample_count": {
+    "total": 2271,
+    "unit": "pages",
+    "status": "estimated"
+  },
+  "dates": {
+    "published": "2020-04-18",
+    "last_updated": "2020-06-15"
+  },
+  "citation": {
+    "paper_title": "A Large Dataset of Historical Japanese Documents with Complex Layouts",
+    "paper_url": "https://arxiv.org/abs/2004.08686",
+    "doi": "10.48550/arXiv.2004.08686",
+    "authors": [
+      "Zejiang Shen",
+      "Kaixuan Zhang",
+      "Melissa Dell"
+    ],
+    "bibtex": "@article{shen2020large,\n  title={A Large Dataset of Historical Japanese Documents with Complex Layouts},\n  author={Shen, Zejiang and Zhang, Kaixuan and Dell, Melissa},\n  journal={arXiv preprint arXiv:2004.08686},\n  year={2020}\n}"
+  },
+  "provenance": {
+    "collection_method": "Historical Japanese personnel directories and documents digitised from national library archives, segmented using rule-based algorithms with human verification.",
+    "curation_notes": "Measures hierarchical layout extraction and reading order sequencing. Explicitly distinguishes 250,000+ layout region instances from the underlying page count.",
+    "data_sources": [
+      "National Diet Library and Harvard Yenching historical Japanese document collections"
+    ]
+  }
+}

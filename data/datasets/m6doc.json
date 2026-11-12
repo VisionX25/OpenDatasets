@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "m6doc",
+  "slug": "m6doc",
+  "name": "M6Doc: Multi-Format Multi-Type Multi-Layout Multi-Language Dataset for Modern Document Layout Analysis",
+  "description": "M6Doc is a large-scale, fine-grained benchmark dataset for modern document layout analysis developed by the Deep Learning and Visual Computing (DLVC) Lab at South China University of Technology (SCUT) and IntSig. Covering both Chinese and English, M6Doc comprises 9,080 high-resolution modern document pages across 7 distinct content genres: textbooks (2,080), examination papers (2,000), magazines (2,000), scientific articles (1,000), newspapers (1,000), student notes (500), and books (500). Documents span PDF-generated (64%), scanned (31%), and photographed (5%) formats. The dataset features 237,116 manually verified bounding instances categorized into 74 detailed layout element classes.",
+  "homepage_url": "https://github.com/HCIILAB/M6Doc",
+  "publisher": {
+    "name": "South China University of Technology & IntSig",
+    "type": "academic",
+    "url": "https://github.com/HCIILAB"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "document-layout-analysis",
+    "document-understanding",
+    "object-detection"
+  ],
+  "tags": [
+    "document-ai",
+    "m6doc",
+    "layout-analysis",
+    "multilingual",
+    "chinese",
+    "fine-grained"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
+    "spdx_id": "CC-BY-NC-ND-4.0",
+    "commercial_use": "forbidden",
+    "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "notes": "The M6Doc dataset is distributed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) for non-commercial research purposes. The test split is openly accessible on Hugging Face, while the full dataset archive is password-protected and accessible via an institutional research agreement."
+  },
+  "source_references": [
+    {
+      "title": "M6Doc GitHub Repository",
+      "url": "https://github.com/HCIILAB/M6Doc",
+      "type": "repository"
+    },
+    {
+      "title": "M6Doc Research Paper (CVPR 2023)",
+      "url": "https://openaccess.thecvf.com/content/CVPR2023/html/Cheng_M6Doc_A_Large-Scale_Multi-Format_Multi-Type_Multi-Layout_Multi-Language_Multi-Annotation_Category_Dataset_CVPR_2023_paper.html",
+      "type": "original_paper"
+    },
+    {
+      "title": "M6Doc on Hugging Face",
+      "url": "https://huggingface.co/datasets/hiuyi/M6Doc",
+      "type": "dataset_card"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against HCIILAB/M6Doc repository and CVPR 2023 publication. Confirmed 9,080 document pages across 7 genres and 3 capture formats, 237,116 layout instances across 74 categories, CC BY-NC-ND 4.0 dataset license, and password-protected institutional research distribution."
+  },
+  "size": {
+    "amount": 15.0,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Full dataset distribution organized in COCO format with high-resolution JPG page images and JSON annotation files."
+  },
+  "sample_count": {
+    "total": 9080,
+    "unit": "pages",
+    "status": "verified",
+    "splits": {
+      "textbook": 2080,
+      "test_paper": 2000,
+      "magazine": 2000,
+      "scientific_article": 1000,
+      "newspaper": 1000,
+      "note": 500,
+      "book": 500
+    }
+  },
+  "dates": {
+    "published": "2023-06-18",
+    "last_updated": "2023-11-05"
+  },
+  "citation": {
+    "paper_title": "M6Doc: A Large-Scale Multi-Format, Multi-Type, Multi-Layout, Multi-Language, Multi-Annotation Category Dataset for Modern Document Layout Analysis",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Cheng_M6Doc_A_Large-Scale_Multi-Format_Multi-Type_Multi-Layout_Multi-Language_Multi-Annotation_Category_Dataset_CVPR_2023_paper.html",
+    "authors": [
+      "Hiuyi Cheng",
+      "Peirong Zhang",
+      "Sihang Wu",
+      "Jiaxin Zhang",
+      "Qiyuan Zhu",
+      "Zecheng Xie",
+      "Jing Li",
+      "Kai Ding",
+      "Lianwen Jin"
+    ],
+    "bibtex": "@inproceedings{cheng2023m6doc,\n  title={M6Doc: A Large-Scale Multi-Format, Multi-Type, Multi-Layout, Multi-Language, Multi-Annotation Category Dataset for Modern Document Layout Analysis},\n  author={Cheng, Hiuyi and Zhang, Peirong and Wu, Sihang and Zhang, Jiaxin and Zhu, Qiyuan and Xie, Zecheng and Li, Jing and Ding, Kai and Jin, Lianwen},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={15138--15147},\n  year={2023}\n}"
+  },
+  "provenance": {
+    "collection_method": "Multimodal collection from arXiv PDFs, People's Daily digital archives, and scanned/photographed physical textbooks, magazines, exam papers, and student notes in China and the US.",
+    "curation_notes": "47 annotators manually annotated 237,116 region instances across 74 classes under a 170-page standardized annotation protocol. The 74 classes are not counted as document samples.",
+    "data_sources": [
+      "arXiv scientific publications",
+      "People's Daily newspaper archives",
+      "Curriculum textbooks, exam papers, and consumer magazines"
+    ]
+  }
+}

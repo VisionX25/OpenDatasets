@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "khatt",
+  "slug": "khatt",
+  "name": "KHATT: Handwritten Arabic Text Database",
+  "description": "KHATT (KFUPM Handwritten Arabic Text Database) is a comprehensive offline Arabic handwriting database developed jointly by King Fahd University of Petroleum & Minerals (KFUPM), Technical University of Dortmund, and Braunschweig University of Technology, and distributed via the Linguistic Data Consortium (LDC2015T23). Collected from 1,000 distinct male and female writers spanning various age groups and educational backgrounds, KHATT consists of 4,000 document page forms (4 forms per writer: fixed text, paragraph free writing, and metadata forms) scanned at 200, 300, and 600 DPI, yielding over 9,300 segmented handwritten text lines. The collection provides verified ground-truth Unicode text and is stratified into standard train (70%), validation (15%), and test (15%) splits.",
+  "homepage_url": "https://catalog.ldc.upenn.edu/LDC2015T23",
+  "publisher": {
+    "name": "Linguistic Data Consortium & KFUPM",
+    "type": "academic",
+    "url": "https://catalog.ldc.upenn.edu/"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "handwriting-recognition",
+    "optical-character-recognition",
+    "writer-identification"
+  ],
+  "tags": [
+    "document-ai",
+    "khatt",
+    "arabic",
+    "handwriting",
+    "ldc",
+    "kfupm"
+  ],
+  "license": {
+    "status": "proprietary",
+    "name": "LDC User Agreement for Non-Members",
+    "spdx_id": null,
+    "commercial_use": "forbidden",
+    "url": "https://catalog.ldc.upenn.edu/LDC2015T23",
+    "notes": "Distributed by the Linguistic Data Consortium under the LDC User Agreement for Non-Members (LDC2015T23, ISBN: 1-58563-736-X). Access is restricted to LDC consortium members or purchasable for institutional non-commercial research."
+  },
+  "source_references": [
+    {
+      "title": "LDC Catalog Entry: KHATT Handwritten Arabic Text (LDC2015T23)",
+      "url": "https://catalog.ldc.upenn.edu/LDC2015T23",
+      "type": "official_website"
+    },
+    {
+      "title": "KHATT: An Open Arabic Offline Handwritten Text Database (Pattern Recognition 2014)",
+      "url": "https://doi.org/10.1016/j.patcog.2013.08.009",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against Linguistic Data Consortium catalog entry LDC2015T23 (DOI: 10.35111/vc52-tm53) and Pattern Recognition publication (DOI: 10.1016/j.patcog.2013.08.009). Confirmed 1,000 distinct writers, 4,000 document forms scanned at 200/300/600 DPI, proprietary LDC licensing terms, and separation from author preliminary web releases."
+  },
+  "size": {
+    "amount": 8.5,
+    "unit": "GB",
+    "file_formats": [
+      "tif",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "TIFF image scans (full forms and isolated text lines at 200, 300, and 600 DPI) accompanied by plain-text Unicode ground truth files."
+  },
+  "sample_count": {
+    "total": 4000,
+    "unit": "pages",
+    "status": "verified",
+    "splits": {
+      "writers": 1000,
+      "train_pages": 2800,
+      "val_pages": 600,
+      "test_pages": 600
+    }
+  },
+  "dates": {
+    "published": "2015-11-16",
+    "last_updated": "2015-11-16"
+  },
+  "citation": {
+    "paper_title": "KHATT: An Open Arabic Offline Handwritten Text Database",
+    "paper_url": "https://doi.org/10.1016/j.patcog.2013.08.009",
+    "doi": "10.1016/j.patcog.2013.08.009",
+    "authors": [
+      "Sabri A. Mahmoud",
+      "Irfan Ahmad",
+      "Wasfi G. Al-Khatib",
+      "Mohammad Alshayeb",
+      "Mohammad Tanvir Parvez",
+      "Volker Märgner",
+      "Gernot A. Fink"
+    ],
+    "bibtex": "@article{mahmoud2014khatt,\n  title={{KHATT}: An open Arabic offline handwritten text database},\n  author={Mahmoud, Sabri A. and Ahmad, Irfan and Al-Khatib, Wasfi G. and Alshayeb, Mohammad and Parvez, Mohammad Tanvir and M{\\\"a}rgner, Volker and Fink, Gernot A.},\n  journal={Pattern Recognition},\n  volume={47},\n  number={3},\n  pages={1096--1112},\n  year={2014},\n  publisher={Elsevier},\n  doi={10.1016/j.patcog.2013.08.009}\n}"
+  },
+  "provenance": {
+    "collection_method": "Handwritten forms completed by 1,000 volunteer participants writing freely on designated and unrestricted topics, digitised at high resolutions.",
+    "curation_notes": "Sourced through collaborative research by KFUPM and German partner universities and formally published by LDC. Documents the full official LDC2015T23 release rather than earlier author sample zips.",
+    "data_sources": [
+      "Field handwriting collections in Saudi Arabia and regional Middle Eastern universities"
+    ]
+  }
+}

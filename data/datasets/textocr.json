@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "textocr",
+  "slug": "textocr",
+  "name": "TextOCR: Large-Scale End-to-End Arbitrary-Shaped Scene Text Benchmark",
+  "description": "TextOCR is a large-scale scene text detection and recognition benchmark developed by Facebook AI Research (FAIR) and presented at CVPR 2021. Designed to address arbitrary-shaped, curved, oriented, and small text in complex real-world scenes, TextOCR provides fine-grained polygonal annotations for 900,000+ text instances across 28,134 high-resolution natural images from the Open Images dataset (v0.1: 21,778 train, 3,124 validation, 3,232 test). The dataset emphasizes full-scene reading with a high density of annotated text per image (averaging over 32 words per image), dramatically exceeding existing scene text benchmarks in word count, vocabulary breadth, and geometric distortion complexity.",
+  "homepage_url": "https://textvqa.org/textocr/dataset/",
+  "publisher": {
+    "name": "Meta AI (Facebook AI Research)",
+    "type": "industry",
+    "url": "https://ai.meta.com/"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "scene-text-detection",
+    "scene-text-recognition",
+    "optical-character-recognition"
+  ],
+  "tags": [
+    "document-ai",
+    "textocr",
+    "scene-text",
+    "ocr",
+    "fair",
+    "open-images"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "commercial_use": "allowed",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "notes": "TextOCR dataset annotations are published by Meta AI under the Creative Commons Attribution 4.0 International (CC BY 4.0) license."
+  },
+  "source_references": [
+    {
+      "title": "TextOCR Official Project Page",
+      "url": "https://textvqa.org/textocr/dataset/",
+      "type": "official_website"
+    },
+    {
+      "title": "TextOCR: Towards Large-Scale End-to-End Reasoning for Arbitrary-Shaped Scene Text (CVPR 2021)",
+      "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Singh_TextOCR_Towards_Large-Scale_End-to-End_Reasoning_for_Arbitrary-Shaped_Scene_Text_CVPR_2021_paper.html",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against textvqa.org/textocr and CVPR 2021 paper. Confirmed 28,134 images (21,778 train, 3,124 val, 3,232 test), 900,000+ arbitrary-shaped word annotations, CC BY 4.0 dataset license, and explicit separation from TextVQA and TextCaps."
+  },
+  "size": {
+    "amount": 14.0,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Natural scene JPEG images from Open Images alongside JSON polygon coordinate and text transcript annotations."
+  },
+  "sample_count": {
+    "total": 28134,
+    "unit": "images",
+    "status": "verified",
+    "splits": {
+      "train": 21778,
+      "val": 3124,
+      "test": 3232
+    }
+  },
+  "dates": {
+    "published": "2021-06-19",
+    "last_updated": "2021-06-19"
+  },
+  "citation": {
+    "paper_title": "TextOCR: Towards Large-Scale End-to-End Reasoning for Arbitrary-Shaped Scene Text",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2021/html/Singh_TextOCR_Towards_Large-Scale_End-to-End_Reasoning_for_Arbitrary-Shaped_Scene_Text_CVPR_2021_paper.html",
+    "authors": [
+      "Amanpreet Singh",
+      "Guan Pang",
+      "Mandy Toh",
+      "Jing Huang",
+      "Wojciech Galuba",
+      "Tal Hassner"
+    ],
+    "bibtex": "@inproceedings{singh2021textocr,\n  title={TextOCR: Towards large-scale end-to-end reasoning for arbitrary-shaped scene text},\n  author={Singh, Amanpreet and Pang, Guan and Toh, Mandy and Huang, Jing and Galuba, Wojciech and Hassner, Tal},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={16497--16506},\n  year={2021}\n}"
+  },
+  "provenance": {
+    "collection_method": "Selected from the Open Images dataset for natural scenes containing rich text. Manually annotated with fine-grained polygon bounding regions.",
+    "curation_notes": "Unit of observation is natural images (28,134 images), whereas word annotation count (~900k) reflects token instances. Not to be conflated with TextVQA or TextCaps.",
+    "data_sources": [
+      "Open Images v6 image collection"
+    ]
+  }
+}

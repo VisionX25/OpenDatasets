@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "infographicvqa",
+  "slug": "infographicvqa",
+  "name": "InfographicVQA: Visual Question Answering on Infographic Images",
+  "description": "InfographicVQA is a challenging visual question answering benchmark focused on information graphics (infographics). Presented at WACV 2022 by researchers from Computer Vision Center (CVC) UAB and IIIT Hyderabad, InfographicVQA contains 30,035 natural question-answer pairs grounded on 5,485 high-resolution infographic images. Infographics communicate complex narrative and quantitative messages by deeply integrating natural text, numeric data, data visualisations (pie charts, bar plots, graphs), maps, and illustrative icons. Answering questions requires multi-step reasoning, layout interpretation, visual element binding, and elementary arithmetic, going beyond standard single-word OCR matching.",
+  "homepage_url": "https://site.docvqa.org/datasets/infographicvqa",
+  "publisher": {
+    "name": "Computer Vision Center (CVC) UAB & IIIT Hyderabad",
+    "type": "academic",
+    "url": "https://site.docvqa.org/"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "document-visual-question-answering",
+    "document-understanding"
+  ],
+  "tags": [
+    "document-ai",
+    "infographicvqa",
+    "vqa",
+    "infographics",
+    "charts",
+    "wacv-2022"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "CC BY 4.0 (Annotations) / Academic Research EULA (Images)",
+    "spdx_id": null,
+    "commercial_use": "forbidden",
+    "url": "https://rrc.cvc.uab.cat/?ch=17&com=downloads",
+    "notes": "Question-answer annotations are provided under Creative Commons Attribution 4.0 International (CC BY 4.0). Full infographic image downloads require free account registration on the CVC UAB Robust Reading Competition portal for non-commercial academic research."
+  },
+  "source_references": [
+    {
+      "title": "InfographicVQA Official Dataset Page",
+      "url": "https://site.docvqa.org/datasets/infographicvqa",
+      "type": "official_website"
+    },
+    {
+      "title": "Robust Reading Competition Portal (Task 17 Download)",
+      "url": "https://rrc.cvc.uab.cat/?ch=17&com=downloads",
+      "type": "archive"
+    },
+    {
+      "title": "InfographicVQA Research Paper (WACV 2022)",
+      "url": "https://openaccess.thecvf.com/content/WACV2022/html/Mathew_InfographicVQA_WACV_2022_paper.html",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against site.docvqa.org, RRC portal Challenge 17, and WACV 2022 paper. Confirmed 30,035 question-answer pairs over 5,485 infographic images (train: 23,946 Qs / 4,406 imgs; val: 2,801 Qs / 500 imgs; test: 3,288 Qs / 579 imgs) and documented registration requirement on RRC portal."
+  },
+  "size": {
+    "amount": 4.5,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "High-resolution infographic images paired with JSON files containing question texts, bounding boxes, OCR tokens, and ground-truth answers."
+  },
+  "sample_count": {
+    "total": 30035,
+    "unit": "questions",
+    "status": "verified",
+    "splits": {
+      "train_questions": 23946,
+      "val_questions": 2801,
+      "test_questions": 3288,
+      "train_images": 4406,
+      "val_images": 500,
+      "test_images": 579,
+      "total_images": 5485
+    }
+  },
+  "dates": {
+    "published": "2022-01-04",
+    "last_updated": "2022-06-10"
+  },
+  "citation": {
+    "paper_title": "InfographicVQA",
+    "paper_url": "https://openaccess.thecvf.com/content/WACV2022/html/Mathew_InfographicVQA_WACV_2022_paper.html",
+    "authors": [
+      "Minesh Mathew",
+      "Viraj Bagal",
+      "Rubèn Tito",
+      "Dimosthenis Karatzas",
+      "Ernest Valveny",
+      "C. V. Jawahar"
+    ],
+    "bibtex": "@inproceedings{mathew2022infographicvqa,\n  title={InfographicVQA},\n  author={Mathew, Minesh and Bagal, Viraj and Tito, Rub{\\`e}n and Karatzas, Dimosthenis and Valveny, Ernest and Jawahar, C. V.},\n  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},\n  pages={1697--1706},\n  year={2022}\n}"
+  },
+  "provenance": {
+    "collection_method": "Internet harvesting of public infographic graphics created by diverse graphic designers, annotated by crowd workers with open-ended reasoning questions requiring visual-textual synthesis.",
+    "curation_notes": "Distinct from DocVQA (scanned documents) and ChartQA (standalone plotted charts). Evaluates joint perception of text, statistical diagrams, spatial layout, and graphical symbols.",
+    "data_sources": [
+      "Public domain and web-indexed infographic image collections"
+    ]
+  }
+}

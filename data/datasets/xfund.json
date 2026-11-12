@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "xfund",
+  "slug": "xfund",
+  "name": "XFUND: Multilingual Visually Rich Form Understanding Benchmark",
+  "description": "XFUND is a standardized human-annotated multilingual benchmark dataset for visually rich form understanding across 7 diverse languages: Chinese (ZH), Japanese (JA), Spanish (ES), French (FR), Italian (IT), German (DE), and Portuguese (PT). Developed by Microsoft Research Asia in conjunction with the LayoutXLM multimodal pre-training model, XFUND contains 1,393 authentic document forms. Each of the 7 languages comprises exactly 199 forms (149 training and 50 testing), annotated with word-level bounding boxes, transcription texts, key-value semantic entities (header, question, answer, other), and entity relation links for semantic entity recognition and relation extraction.",
+  "homepage_url": "https://github.com/doc-analysis/XFUND",
+  "publisher": {
+    "name": "Microsoft Research Asia",
+    "type": "industry",
+    "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "form-understanding",
+    "key-information-extraction",
+    "semantic-entity-recognition",
+    "relation-extraction"
+  ],
+  "tags": [
+    "document-ai",
+    "xfund",
+    "multilingual",
+    "forms",
+    "kie",
+    "layoutxlm"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "commercial_use": "forbidden",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "notes": "XFUND dataset files and annotations are released under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license."
+  },
+  "source_references": [
+    {
+      "title": "XFUND GitHub Repository",
+      "url": "https://github.com/doc-analysis/XFUND",
+      "type": "repository"
+    },
+    {
+      "title": "XFUND v1.0 Release Package",
+      "url": "https://github.com/doc-analysis/XFUND/releases/tag/v1.0",
+      "type": "archive"
+    },
+    {
+      "title": "XFUND Research Paper (Findings of ACL 2022)",
+      "url": "https://aclanthology.org/2022.findings-acl.253",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against doc-analysis/XFUND GitHub repository and ACL 2022 findings (DOI: 10.18653/v1/2022.findings-acl.253). Confirmed 1,393 total forms (199 forms in each of the 7 languages: 149 train, 50 test), CC BY-NC-SA 4.0 license, and key-value relation annotations."
+  },
+  "size": {
+    "amount": 1.1,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "ZIP archives per language in v1.0 release containing high-resolution JPG form scans and JSON annotation files with OCR and semantic relations."
+  },
+  "sample_count": {
+    "total": 1393,
+    "unit": "forms",
+    "status": "verified",
+    "splits": {
+      "train": 1043,
+      "test": 350,
+      "chinese": 199,
+      "japanese": 199,
+      "spanish": 199,
+      "french": 199,
+      "italian": 199,
+      "german": 199,
+      "portuguese": 199
+    }
+  },
+  "dates": {
+    "published": "2021-12-03",
+    "last_updated": "2022-05-22"
+  },
+  "citation": {
+    "paper_title": "XFUND: A Benchmark Dataset for Multilingual Visually Rich Form Understanding",
+    "paper_url": "https://aclanthology.org/2022.findings-acl.253",
+    "doi": "10.18653/v1/2022.findings-acl.253",
+    "authors": [
+      "Yiheng Xu",
+      "Tengchao Lv",
+      "Lei Cui",
+      "Guoxin Wang",
+      "Yijuan Lu",
+      "Dinei Florencio",
+      "Cha Zhang",
+      "Furu Wei"
+    ],
+    "bibtex": "@inproceedings{xu2022xfund,\n  title={{XFUND}: A Benchmark Dataset for Multilingual Visually Rich Form Understanding},\n  author={Xu, Yiheng and Lv, Tengchao and Cui, Lei and Wang, Guoxin and Lu, Yijuan and Florencio, Dinei and Zhang, Cha and Wei, Furu},\n  booktitle={Findings of the Association for Computational Linguistics: ACL 2022},\n  pages={3214--3224},\n  year={2022},\n  doi={10.18653/v1/2022.findings-acl.253}\n}"
+  },
+  "provenance": {
+    "collection_method": "Synthetic collection and human verification of diverse real-world forms across 7 global non-English languages, labeled with fine-grained OCR bounding boxes and key-value entity pairs.",
+    "curation_notes": "Extends the English-centric FUNSD benchmark methodology into a balanced 7-language multilingual evaluation suite. Samples count forms/pages rather than semantic word tokens.",
+    "data_sources": [
+      "Multilingual business, government, and commercial forms"
+    ]
+  }
+}

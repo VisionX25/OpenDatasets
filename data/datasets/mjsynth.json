@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mjsynth",
+  "slug": "mjsynth",
+  "name": "MJSynth: Synthetic Word Dataset for Scene Text Recognition",
+  "description": "MJSynth (also known as the Synthetic Word Dataset or Syn90k) is a foundational large-scale synthetic dataset for training deep learning models for natural scene text recognition. Created by the Visual Geometry Group (VGG) at the University of Oxford and introduced by Jaderberg et al. in 2014, MJSynth comprises approximately 8.9 million synthetically generated word image crops spanning an English vocabulary of 90,000 dictionary words. Images are generated through a sophisticated rendering pipeline that applies realistic fonts, border/shadow styling, 3D projective perspective distortion, natural background blending, and Gaussian blur, serving as the industry standard pre-training corpus for CRNN and attention-based scene text recognition models.",
+  "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/text/",
+  "publisher": {
+    "name": "Visual Geometry Group (VGG), University of Oxford",
+    "type": "academic",
+    "url": "https://www.robots.ox.ac.uk/~vgg/"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "scene-text-recognition",
+    "optical-character-recognition",
+    "word-recognition"
+  ],
+  "tags": [
+    "document-ai",
+    "mjsynth",
+    "syn90k",
+    "vgg-oxford",
+    "synthetic-text",
+    "crnn"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Oxford VGG Dataset Terms of Use",
+    "spdx_id": null,
+    "commercial_use": "forbidden",
+    "url": "https://www.robots.ox.ac.uk/~vgg/data/text/",
+    "notes": "Available free of charge for non-commercial academic research and evaluation with citation. Commercial exploitation requires institutional authorization."
+  },
+  "source_references": [
+    {
+      "title": "Oxford VGG Text Recognition Official Project Page",
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/text/",
+      "type": "official_website"
+    },
+    {
+      "title": "Synthetic Data and Artificial Neural Networks for Natural Scene Text Recognition (NeurIPS 2014)",
+      "url": "https://arxiv.org/abs/1406.2227",
+      "type": "original_paper"
+    },
+    {
+      "title": "MJSynth Dataset on Academic Torrents",
+      "url": "https://academictorrents.com/details/37ebe6d015243c5b5971a179fa4f0c40cf1d08e8",
+      "type": "archive"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against robots.ox.ac.uk/~vgg/data/text/ and arXiv:1406.2227 paper. Confirmed ~8.9M cropped word images, 90,000-word lexicon, 10.7 GB distribution payload on Academic Torrents, and Oxford VGG research licensing terms."
+  },
+  "size": {
+    "amount": 10.7,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "10.7 GB compressed tar archive (mjsynth.tar.gz) containing 8.9 million JPEG image crops and index text files."
+  },
+  "sample_count": {
+    "total": 8900000,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2014-06-09",
+    "last_updated": "2014-12-08"
+  },
+  "citation": {
+    "paper_title": "Synthetic Data and Artificial Neural Networks for Natural Scene Text Recognition",
+    "paper_url": "https://arxiv.org/abs/1406.2227",
+    "doi": "10.48550/arXiv.1406.2227",
+    "authors": [
+      "Max Jaderberg",
+      "Karen Simonyan",
+      "Andrea Vedaldi",
+      "Andrew Zisserman"
+    ],
+    "bibtex": "@article{jaderberg2014synthetic,\n  title={Synthetic data and artificial neural networks for natural scene text recognition},\n  author={Jaderberg, Max and Simonyan, Karen and Vedaldi, Andrea and Zisserman, Andrew},\n  journal={arXiv preprint arXiv:1406.2227},\n  year={2014}\n}"
+  },
+  "provenance": {
+    "collection_method": "Synthetic rendering pipeline integrating font generation, shading, 3D projective transformations, and composition with natural background images.",
+    "curation_notes": "Created specifically as a massive pre-training dataset for text recognition. Distinct from photographed scene text benchmarks.",
+    "data_sources": [
+      "90,000-word English dictionary",
+      "Curated open font libraries and natural image backgrounds"
+    ]
+  }
+}

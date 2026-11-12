@@ -45,13 +45,19 @@
       "url": "https://doi.org/10.1109/ICDAR.2015.7333910",
       "type": "original_paper",
       "notes": "Published in 2015 International Conference on Document Analysis and Recognition (ICDAR 2015)."
+    },
+    {
+      "title": "RVL-CDIP Author Dataset on Hugging Face",
+      "url": "https://huggingface.co/datasets/aharley/rvl_cdip",
+      "type": "dataset_card",
+      "notes": "Official author repository distribution on Hugging Face."
     }
   ],
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-10-30",
-    "notes": "Verified against author official homepage (Adam Harley) and IEEE ICDAR 2015 proceedings (DOI: 10.1109/ICDAR.2015.7333910)."
+    "notes": "Verified against author official homepage (Adam Harley), author Hugging Face dataset card, and IEEE ICDAR 2015 proceedings (DOI: 10.1109/ICDAR.2015.7333910)."
   },
   "size": {
     "amount": 37.7,
@@ -86,5 +92,12 @@
     ],
     "doi": "10.1109/ICDAR.2015.7333910",
     "bibtex": "@inproceedings{harley2015evaluation,\n  title={Evaluation of deep convolutional nets for document image classification and retrieval},\n  author={Harley, Adam W and Ufkes, Alex and Derpanis, Konstantinos G},\n  booktitle={2015 13th International Conference on Document Analysis and Recognition (ICDAR)},\n  pages={991--995},\n  year={2015},\n  organization={IEEE},\n  doi={10.1109/ICDAR.2015.7333910}\n}"
+  },
+  "provenance": {
+    "collection_method": "Sampled as a balanced 400,000-image subset from the IIT-CDIP Test Collection 1.0 (derived from the Legacy Tobacco Document Library / Truth Tobacco Industry Documents at UCSF).",
+    "curation_notes": "Contains exactly 25,000 document images across 16 classes. Sourced from public domain tobacco litigation records without inventing artificial permissive licenses.",
+    "data_sources": [
+      "IIT-CDIP Test Collection (Legacy Tobacco Document Library via UCSF)"
+    ]
   }
 }

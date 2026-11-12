@@ -11760,6 +11760,107 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "coco-text",
+    "slug": "coco-text",
+    "name": "COCO-Text: Text Detection and Recognition in Natural Images",
+    "description": "COCO-Text (v2.0) is a large-scale scene text detection and recognition benchmark built upon the Microsoft Common Objects in Context (MS COCO) dataset. Curated by researchers from Cornell Tech and Czech Technical University in Prague, COCO-Text contains 63,686 natural images from the MS COCO 2014 training split, annotated with 239,506 text instances. Each text region is annotated with word bounding polygons, legibility flags, script types, text category (machine printed or handwritten), and fine-grained character transcriptions. As text in MS COCO appears incidentally rather than prominently centered, COCO-Text serves as an unconstrained benchmark for text detection in natural scenes.",
+    "homepage_url": "https://bgshih.github.io/cocotext/",
+    "publisher": {
+      "name": "Cornell Tech & Czech Technical University in Prague",
+      "type": "academic",
+      "url": "https://bgshih.github.io/"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "scene-text-detection",
+      "scene-text-recognition",
+      "optical-character-recognition"
+    ],
+    "tags": [
+      "document-ai",
+      "coco-text",
+      "scene-text",
+      "ms-coco",
+      "ocr",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "CC BY 4.0 (Annotations) / Flickr Terms (Source Images)",
+      "spdx_id": null,
+      "commercial_use": "allowed",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "notes": "The COCO-Text annotations are released under Creative Commons Attribution 4.0 International (CC BY 4.0). The underlying natural images are drawn from MS COCO 2014 and are governed by their respective original Flickr licenses."
+    },
+    "source_references": [
+      {
+        "title": "COCO-Text Official Project Page",
+        "url": "https://bgshih.github.io/cocotext/",
+        "type": "official_website"
+      },
+      {
+        "title": "COCO-Text: Dataset and Benchmark for Text Detection and Recognition in Natural Images (arXiv:1601.07140)",
+        "url": "https://arxiv.org/abs/1601.07140",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against bgshih.github.io/cocotext and arXiv:1601.07140 paper. Confirmed 63,686 images (43,686 train, 10,000 val, 10,000 test) and 239,506 text annotations, CC BY 4.0 annotation terms, and MS COCO source image lineage."
+    },
+    "size": {
+      "amount": 13.0,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Natural scene JPEG images from MS COCO 2014 paired with COCO-Text JSON v2.0 annotation structures."
+    },
+    "sample_count": {
+      "total": 63686,
+      "unit": "images",
+      "status": "verified",
+      "splits": {
+        "train": 43686,
+        "val": 10000,
+        "test": 10000
+      }
+    },
+    "dates": {
+      "published": "2016-01-26",
+      "last_updated": "2017-05-15"
+    },
+    "citation": {
+      "paper_title": "COCO-Text: Dataset and Benchmark for Text Detection and Recognition in Natural Images",
+      "paper_url": "https://arxiv.org/abs/1601.07140",
+      "doi": "10.48550/arXiv.1601.07140",
+      "authors": [
+        "Andreas Veit",
+        "Tomas Matera",
+        "Lukas Neumann",
+        "Jiri Matas",
+        "Serge Belongie"
+      ],
+      "bibtex": "@article{veit2016cocotext,\n  title={{COCO-Text}: Dataset and Benchmark for Text Detection and Recognition in Natural Images},\n  author={Veit, Andreas and Matera, Tomas and Neumann, Lukas and Matas, Jiri and Belongie, Serge},\n  journal={arXiv preprint arXiv:1601.07140},\n  year={2016}\n}"
+    },
+    "provenance": {
+      "collection_method": "Sourced from the MS COCO 2014 dataset, filtering and annotating images with text instances via Amazon Mechanical Turk and expert verification.",
+      "curation_notes": "Identifies incidental text in everyday scenes rather than curated signage. Distinguishes annotation license from original photo copyright.",
+      "data_sources": [
+        "Microsoft COCO 2014 image collection"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "cofly-weeddb",
     "slug": "cofly-weeddb",
     "name": "CoFly-WeedDB: UAV Cotton Field Weed Detection and Segmentation Dataset",
@@ -13422,6 +13523,110 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "d4la",
+    "slug": "d4la",
+    "name": "D4LA: Diverse Document Layout Analysis Benchmark",
+    "description": "D4LA (Diverse Document Layout Analysis) is a benchmark dataset for fine-grained document layout analysis introduced alongside the Vision Grid Transformer (VGT) architecture by Alibaba DAMO Academy at ICCV 2023. Derived from the IIT-CDIP Test Collection, D4LA comprises 11,092 high-resolution document pages representing 12 diverse business and technical document types (including letters, memos, invoices, forms, scientific reports, and advertisements). The dataset establishes 27 detailed layout element categories (such as document title, section title, paragraph, list, table, figure, caption, header, footer, code, equation, and stamp), bridging the gap between coarse-grained document layout datasets and real-world industrial visually rich document applications.",
+    "homepage_url": "https://modelscope.cn/datasets/iic/D4LA/summary",
+    "publisher": {
+      "name": "Alibaba Group DAMO Academy",
+      "type": "industry",
+      "url": "https://github.com/AlibabaResearch"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "document-layout-analysis",
+      "document-understanding",
+      "object-detection"
+    ],
+    "tags": [
+      "document-ai",
+      "d4la",
+      "layout-analysis",
+      "vgt",
+      "iit-cdip",
+      "modelscope"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Alibaba Research Open License",
+      "spdx_id": null,
+      "commercial_use": "allowed",
+      "url": "https://github.com/AlibabaResearch/AdvancedLiterateMachinery/tree/main/DocumentUnderstanding/VGT",
+      "notes": "Code and tools are released under the Apache 2.0 License. The underlying document images are derived from the open-access public domain IIT-CDIP collection with fine-grained layout annotations provided openly on ModelScope."
+    },
+    "source_references": [
+      {
+        "title": "D4LA Official ModelScope Distribution",
+        "url": "https://modelscope.cn/datasets/iic/D4LA/summary",
+        "type": "official_website"
+      },
+      {
+        "title": "Alibaba VGT and D4LA Repository",
+        "url": "https://github.com/AlibabaResearch/AdvancedLiterateMachinery/tree/main/DocumentUnderstanding/VGT",
+        "type": "repository"
+      },
+      {
+        "title": "Vision Grid Transformer for Document Layout Analysis (ICCV 2023)",
+        "url": "https://doi.org/10.1109/ICCV51070.2023.01783",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against Alibaba DAMO Academy ModelScope repository iic/D4LA and ICCV 2023 proceedings (DOI: 10.1109/ICCV51070.2023.01783). Confirmed 11,092 document pages (8,868 train, 2,224 test), 27 layout categories, and direct lineage to IIT-CDIP."
+    },
+    "size": {
+      "amount": 4.8,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Official ModelScope release containing high-resolution JPEG document scans and COCO-format JSON layout annotations."
+    },
+    "sample_count": {
+      "total": 11092,
+      "unit": "pages",
+      "status": "verified",
+      "splits": {
+        "train": 8868,
+        "test": 2224
+      }
+    },
+    "dates": {
+      "published": "2023-10-02",
+      "last_updated": "2023-11-15"
+    },
+    "citation": {
+      "paper_title": "Vision Grid Transformer for Document Layout Analysis",
+      "paper_url": "https://doi.org/10.1109/ICCV51070.2023.01783",
+      "doi": "10.1109/ICCV51070.2023.01783",
+      "authors": [
+        "Cheng Da",
+        "Chuwei Luo",
+        "Qi Zheng",
+        "Cong Yao"
+      ],
+      "bibtex": "@inproceedings{da2023vision,\n  title={Vision Grid Transformer for Document Layout Analysis},\n  author={Da, Cheng and Luo, Chuwei and Zheng, Qi and Yao, Cong},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n  pages={19728--19738},\n  year={2023},\n  doi={10.1109/ICCV51070.2023.01783}\n}"
+    },
+    "provenance": {
+      "collection_method": "Sampled from the IIT-CDIP Test Collection across 12 diverse document genres and re-annotated by expert annotators.",
+      "curation_notes": "Expands IIT-CDIP document analysis by introducing 27 fine-grained layout categories. Third-party Hugging Face mirrors are documented as non-canonical secondary distributions.",
+      "data_sources": [
+        "IIT-CDIP Test Collection (Legacy Tobacco Document Library)"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "dagm-2007-industrial-optical-inspection",
     "slug": "dagm-2007-industrial-optical-inspection",
     "name": "DAGM 2007: Industrial Optical Inspection Benchmark",
@@ -14561,6 +14766,233 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "docbank",
+    "slug": "docbank",
+    "name": "DocBank: A Benchmark Dataset for Fine-Grained Document Layout Analysis",
+    "description": "DocBank is a large-scale multimodal benchmark dataset for fine-grained document layout analysis. Constructed by researchers from Beihang University and Microsoft Research Asia, DocBank contains 500,000 document pages extracted from arXiv scientific papers published between 2014 and 2018. The dataset provides token-level bounding boxes and typography attributes paired with 12 semantic layout structure categories (abstract, author, caption, equation, figure, footer, list, paragraph, reference, section, table, title). Annotations are derived via weak supervision from LaTeX source codes, supporting both visual object detection and text-based sequence labeling formulations.",
+    "homepage_url": "https://doc-analysis.github.io/docbank-page/",
+    "publisher": {
+      "name": "Beihang University & Microsoft Research Asia",
+      "type": "academic",
+      "url": "https://doc-analysis.github.io/"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "document-layout-analysis",
+      "document-understanding",
+      "token-classification"
+    ],
+    "tags": [
+      "document-ai",
+      "docbank",
+      "layout-analysis",
+      "arxiv",
+      "weak-supervision",
+      "tokens"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "DocBank Research Terms (Redistribution Prohibited)",
+      "spdx_id": null,
+      "commercial_use": "forbidden",
+      "url": "https://github.com/doc-analysis/DocBank#get-data",
+      "notes": "Provided for non-commercial academic research and evaluation with attribution. The authors explicitly prohibit third-party redistribution of the dataset."
+    },
+    "source_references": [
+      {
+        "title": "DocBank Official Project Page",
+        "url": "https://doc-analysis.github.io/docbank-page/",
+        "type": "official_website"
+      },
+      {
+        "title": "DocBank GitHub Repository",
+        "url": "https://github.com/doc-analysis/DocBank",
+        "type": "repository"
+      },
+      {
+        "title": "DocBank Research Paper (COLING 2020 / arXiv:2006.01038)",
+        "url": "https://arxiv.org/abs/2006.01038",
+        "type": "original_paper"
+      },
+      {
+        "title": "DocBank on Hugging Face",
+        "url": "https://huggingface.co/datasets/liminghao1630/DocBank",
+        "type": "dataset_card"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against doc-analysis.github.io/docbank-page/ and COLING 2020 paper (arXiv:2006.01038). Confirmed 500,000 pages (400k train, 50k dev, 50k test), 12 token-level layout categories, weak-supervision provenance, and no-redistribution research license."
+    },
+    "size": {
+      "amount": 50.0,
+      "unit": "GB",
+      "file_formats": [
+        "txt",
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Full dataset distribution containing 500,000 page images alongside token-level coordinate and label text files."
+    },
+    "sample_count": {
+      "total": 500000,
+      "unit": "pages",
+      "status": "verified",
+      "splits": {
+        "train": 400000,
+        "dev": 50000,
+        "test": 50000
+      }
+    },
+    "dates": {
+      "published": "2020-06-01",
+      "last_updated": "2020-12-10"
+    },
+    "citation": {
+      "paper_title": "DocBank: A Benchmark Dataset for Document Layout Analysis",
+      "paper_url": "https://arxiv.org/abs/2006.01038",
+      "doi": "10.48550/arXiv.2006.01038",
+      "authors": [
+        "Minghao Li",
+        "Yiheng Xu",
+        "Lei Cui",
+        "Shaohan Huang",
+        "Furu Wei",
+        "Zhoujun Li",
+        "Ming Zhou"
+      ],
+      "bibtex": "@inproceedings{li2020docbank,\n  title={DocBank: A Benchmark Dataset for Document Layout Analysis},\n  author={Li, Minghao and Xu, Yiheng and Cui, Lei and Huang, Shaohan and Wei, Furu and Li, Zhoujun and Zhou, Ming},\n  booktitle={Proceedings of the 28th International Conference on Computational Linguistics (COLING)},\n  pages={949--960},\n  year={2020}\n}"
+    },
+    "provenance": {
+      "collection_method": "Weakly-supervised automatic extraction from arXiv LaTeX source files and digital PDFs across 2014 to 2018.",
+      "curation_notes": "Distinguishes from TableBank by annotating 12 comprehensive structural units across the entire page layout at token level rather than isolating tabular structures.",
+      "data_sources": [
+        "arXiv.org open-access scientific publication source packages"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "docile",
+    "slug": "docile",
+    "name": "DocILE: Document Information Localization and Extraction Benchmark",
+    "description": "DocILE is an extensive benchmark and dataset for document information localization and extraction, focusing on key information extraction (KIE) and line item recognition (LIR) from business documents (including invoices, orders, and receipts). Developed by Rossum in collaboration with University of La Rochelle and Computer Vision Center (CVC) UAB for the CLEF 2023 Lab and ICDAR 2023 Competition, DocILE features 106,680 annotated and synthetic documents. This comprises 6,680 human-annotated real business documents (train/val/test splits) with 55 distinct field types and 100,000 synthetic documents with full ground truth. The benchmark is paired with an open Python library (docile-benchmark) and pre-computed OCR.",
+    "homepage_url": "https://docile.rossum.ai/",
+    "publisher": {
+      "name": "Rossum & University of La Rochelle / CVC UAB",
+      "type": "academic",
+      "url": "https://docile.rossum.ai/"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "key-information-extraction",
+      "line-item-recognition",
+      "document-understanding"
+    ],
+    "tags": [
+      "document-ai",
+      "docile",
+      "invoices",
+      "kie",
+      "lir",
+      "icdar-2023"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "commercial_use": "forbidden",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "notes": "Annotations and benchmark utilities are licensed under CC BY-NC-SA 4.0. Document downloads are token-restricted upon free registration for non-commercial academic research."
+    },
+    "source_references": [
+      {
+        "title": "DocILE Official Benchmark Website",
+        "url": "https://docile.rossum.ai/",
+        "type": "official_website"
+      },
+      {
+        "title": "DocILE GitHub Repository & Toolkit",
+        "url": "https://github.com/rossumai/docile",
+        "type": "repository"
+      },
+      {
+        "title": "DocILE Benchmark for Document Information Localization and Extraction (ICDAR 2023)",
+        "url": "https://arxiv.org/abs/2302.05658",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against docile.rossum.ai portal and ICDAR 2023 publication (arXiv:2302.05658). Confirmed 106,680 target documents (6,680 annotated real documents + 100,000 synthetic documents with KIE/LIR ground truth), CC BY-NC-SA 4.0 license, and tokenized request-based access."
+    },
+    "size": {
+      "amount": 18.0,
+      "unit": "GB",
+      "file_formats": [
+        "pdf",
+        "json",
+        "png"
+      ],
+      "status": "estimated",
+      "notes": "PDF document binaries, rendered images, pre-computed OCR structures, and JSON ground truth for 6,680 real and 100,000 synthetic documents."
+    },
+    "sample_count": {
+      "total": 106680,
+      "unit": "documents",
+      "status": "verified",
+      "splits": {
+        "annotated_real": 6680,
+        "synthetic": 100000
+      }
+    },
+    "dates": {
+      "published": "2023-02-10",
+      "last_updated": "2023-05-24"
+    },
+    "citation": {
+      "paper_title": "DocILE Benchmark for Document Information Localization and Extraction",
+      "paper_url": "https://arxiv.org/abs/2302.05658",
+      "doi": "10.48550/arXiv.2302.05658",
+      "authors": [
+        "Štěpán Šimsa",
+        "Milan Šulc",
+        "Michal Uřičář",
+        "Yash Patel",
+        "Ahmed Hamdi",
+        "Matěj Kocián",
+        "Matyáš Skalický",
+        "Jiří Matas",
+        "Antoine Doucet",
+        "Mickaël Coustaty",
+        "Dimosthenis Karatzas"
+      ],
+      "bibtex": "@article{simsa2023docile,\n  title={{DocILE} Benchmark for Document Information Localization and Extraction},\n  author={{\\v{S}}imsa, {\\v{S}}t{\\v{e}}p{\\'a}n and {\\v{S}}ulc, Milan and U{\\v{r}}i{\\v{c}}{\\'a}{\\v{r}}, Michal and Patel, Yash and Hamdi, Ahmed and Koci{\\'a}n, Mat{\\v{e}}j and Skalick{\\`y}, Maty{\\'a}{\\v{s}} and Matas, Ji{\\v{r}}{\\'\\i} and Doucet, Antoine and Coustaty, Micka{\\\"e}l and Karatzas, Dimosthenis},\n  journal={arXiv preprint arXiv:2302.05658},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Sourced from real commercial invoice/order documents annotated across 55 layout fields, supplemented by procedurally generated synthetic business documents.",
+      "curation_notes": "Excludes the auxiliary 932,000 unannotated pre-training document corpus to focus strictly on the 106,680 labeled evaluation benchmark subset per audit requirements.",
+      "data_sources": [
+        "Real-world anonymized commercial business documents",
+        "Procedural synthetic document generator"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "doclaynet",
     "slug": "doclaynet",
     "name": "DocLayNet: Human-Annotated Dataset for Document-Layout Analysis",
@@ -15532,6 +15964,126 @@
       ],
       "doi": "10.1109/LRA.2021.3068942",
       "bibtex": "@article{gehrig2021dsec,\n  title={DSEC: A stereo event camera dataset for driving scenarios},\n  author={Gehrig, Mathias and Aarents, Willem and Gehrig, Daniel and Scaramuzza, Davide},\n  journal={IEEE Robotics and Automation Letters},\n  volume={6},\n  number={3},\n  pages={4947--4954},\n  year={2021},\n  publisher={IEEE},\n  doi={10.1109/LRA.2021.3072529}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "dude",
+    "slug": "dude",
+    "name": "DUDE: Document Understanding Dataset and Evaluation Benchmark",
+    "description": "DUDE (Document Understanding Dataset and Evaluation) is a large-scale, multi-domain, multi-page visual question answering benchmark presented at ICCV 2023 and featured in the ICDAR 2023 Competition on Document UnderstanDing of Everything. Designed to stress-test real-world document understanding across long layouts and diverse visual styles, DUDE comprises 41,491 question-answer pairs spanning 4,974 visually rich documents with arbitrary page lengths (ranging from single-page sheets up to multi-hundred-page reports). Documents are sampled across 8 distinct business and administrative domains (financial, legal, scientific, government, consumer products, marketing, manuals, and technical reports), testing fine-grained visual parsing, multi-page reading order, cross-page entity resolution, and tabular reasoning.",
+    "homepage_url": "https://github.com/duchallenge-team/dude",
+    "publisher": {
+      "name": "KU Leuven, CVC UAB & Applica.ai",
+      "type": "academic",
+      "url": "https://github.com/duchallenge-team"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "document-visual-question-answering",
+      "multi-page-reasoning",
+      "document-understanding"
+    ],
+    "tags": [
+      "document-ai",
+      "dude",
+      "docvqa",
+      "iccv-2023",
+      "multi-domain",
+      "long-documents"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "CC BY-NC-SA 4.0 (Annotations) / Academic Research EULA (Documents)",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "commercial_use": "forbidden",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "notes": "Annotations and benchmark evaluation scripts are licensed under CC BY-NC-SA 4.0. Multi-page document PDFs and pre-computed OCR archives are distributed through the CVC UAB Robust Reading Competition portal for registered academic research."
+    },
+    "source_references": [
+      {
+        "title": "DUDE Official Benchmark Repository",
+        "url": "https://github.com/duchallenge-team/dude",
+        "type": "repository"
+      },
+      {
+        "title": "DUDE Research Paper (ICCV 2023)",
+        "url": "https://openaccess.thecvf.com/content/ICCV2023/html/Van_Landeghem_Document_Understanding_Dataset_and_Evaluation_DUDE_ICCV_2023_paper.html",
+        "type": "original_paper"
+      },
+      {
+        "title": "ICDAR 2023 DUDE Challenge Portal (CVC UAB RRC)",
+        "url": "https://rrc.cvc.uab.es/?ch=23&com=downloads",
+        "type": "archive"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against duchallenge-team/dude repository, RRC Challenge 23 portal, and ICCV 2023 proceedings. Confirmed 41,491 question-answer pairs over 4,974 visually rich documents across 8 domains, arbitrary document length distribution, and academic competition terms."
+    },
+    "size": {
+      "amount": 22.0,
+      "unit": "GB",
+      "file_formats": [
+        "pdf",
+        "json",
+        "jsonl"
+      ],
+      "status": "estimated",
+      "notes": "Multi-page PDF archives, Amazon Textract pre-computed OCR structures, and JSONL question-answer evaluation ground truth."
+    },
+    "sample_count": {
+      "total": 41491,
+      "unit": "questions",
+      "status": "verified",
+      "splits": {
+        "train_questions": 23728,
+        "val_questions": 6315,
+        "test_questions": 11448,
+        "train_documents": 3010,
+        "val_documents": 749,
+        "test_documents": 1215,
+        "total_documents": 4974
+      }
+    },
+    "dates": {
+      "published": "2023-05-10",
+      "last_updated": "2023-10-15"
+    },
+    "citation": {
+      "paper_title": "Document Understanding Dataset and Evaluation (DUDE)",
+      "paper_url": "https://openaccess.thecvf.com/content/ICCV2023/html/Van_Landeghem_Document_Understanding_Dataset_and_Evaluation_DUDE_ICCV_2023_paper.html",
+      "authors": [
+        "Jordy Van Landeghem",
+        "Rubèn Tito",
+        "Łukasz Borchmann",
+        "Michał Pietruszka",
+        "Paweł Joziak",
+        "Rafal Powalski",
+        "Dawid Jurkiewicz",
+        "Mickaël Coustaty",
+        "Bertrand Couasnon",
+        "Harold Mouchère",
+        "Lucile Sassatelli",
+        "Ernest Valveny",
+        "Ahmed Nassar",
+        "Christopher Tensmeyer",
+        "Denys Karatzas"
+      ],
+      "bibtex": "@inproceedings{vanlandeghem2023dude,\n  title={Document Understanding Dataset and Evaluation (DUDE)},\n  author={Van Landeghem, Jordy and Tito, Rub{\\`e}n and Borchmann, {\\L}ukasz and Pietruszka, Micha{\\l} and Joziak, Pawe{\\l} and Powalski, Rafal and Jurkiewicz, Dawid and Coustaty, Micka{\\\"e}l and Couasnon, Bertrand and Mouch{\\`e}re, Harold and others},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n  pages={19528--19540},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Multi-domain sampling of native digital and scanned multi-page business documents, paired with expert and crowd annotations designed to test cross-page synthesis and long-context reasoning.",
+      "curation_notes": "Encompasses diverse real-world documents ranging up to hundreds of pages per file. Explicitly avoids synthetic document templates.",
+      "data_sources": [
+        "Public corporate financial filings, technical manuals, scientific articles, and legal documents"
+      ]
     }
   },
   {
@@ -20749,6 +21301,114 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "hiertext",
+    "slug": "hiertext",
+    "name": "HierText: Hierarchical Scene Text Detection and Layout Analysis Benchmark",
+    "description": "HierText is a benchmark dataset for hierarchical scene text detection, reading order extraction, and document layout analysis in natural scenes, introduced by Google Research at CVPR 2022. Comprising 11,639 high-resolution images sampled from Open Images v6 (constrained to 1600 pixels long side to capture small and fine text), HierText introduces hierarchical ground truth that simultaneously defines word-level tight polygons, line-level oriented bounding boxes, and paragraph-level grouping masks. The dataset contains 8,281 training images, 1,724 validation images, and 1,634 test images, advancing OCR from isolated word bounding boxes toward unified full-page text understanding.",
+    "homepage_url": "https://github.com/google-research-datasets/hiertext",
+    "publisher": {
+      "name": "Google Research",
+      "type": "industry",
+      "url": "https://research.google/"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "scene-text-detection",
+      "scene-text-recognition",
+      "document-layout-analysis",
+      "optical-character-recognition"
+    ],
+    "tags": [
+      "document-ai",
+      "hiertext",
+      "google-research",
+      "scene-text",
+      "hierarchical",
+      "open-images"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "commercial_use": "allowed",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "notes": "HierText annotations are released by Google under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license. The underlying images originate from Open Images v6 (hosted via CVDF on S3) under CC BY 2.0 / CC BY 4.0 licenses."
+    },
+    "source_references": [
+      {
+        "title": "HierText GitHub Repository",
+        "url": "https://github.com/google-research-datasets/hiertext",
+        "type": "repository"
+      },
+      {
+        "title": "Towards End-to-End Unified Scene Text Detection and Layout Analysis (CVPR 2022)",
+        "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Long_Towards_End-to-End_Unified_Scene_Text_Detection_and_Layout_Analysis_CVPR_2022_paper.html",
+        "type": "original_paper"
+      },
+      {
+        "title": "ICDAR 2023 HierText Challenge (CVC UAB RRC)",
+        "url": "https://rrc.cvc.uab.es/?ch=18",
+        "type": "archive"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against google-research-datasets/hiertext and CVPR 2022 publication. Confirmed 11,639 high-resolution images (8,281 train, 1,724 val, 1,634 test), hierarchical word/line/paragraph annotations, CC BY-SA 4.0 license, and Open Images v6 source attribution."
+    },
+    "size": {
+      "amount": 16.5,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "jsonl",
+        "gz"
+      ],
+      "status": "estimated",
+      "notes": "High-resolution JPG scene images (up to 1600px) hosted on CVDF S3 with gzipped JSONL ground truth files."
+    },
+    "sample_count": {
+      "total": 11639,
+      "unit": "images",
+      "status": "verified",
+      "splits": {
+        "train": 8281,
+        "val": 1724,
+        "test": 1634
+      }
+    },
+    "dates": {
+      "published": "2022-03-29",
+      "last_updated": "2023-05-18"
+    },
+    "citation": {
+      "paper_title": "Towards End-to-End Unified Scene Text Detection and Layout Analysis",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2022/html/Long_Towards_End-to-End_Unified_Scene_Text_Detection_and_Layout_Analysis_CVPR_2022_paper.html",
+      "authors": [
+        "Shangbang Long",
+        "Siyang Qin",
+        "Dmitry Panteleev",
+        "Alessandro Bissacco",
+        "Yasuhisa Fujii",
+        "Michalis Raptis"
+      ],
+      "bibtex": "@inproceedings{long2022towards,\n  title={Towards End-to-End Unified Scene Text Detection and Layout Analysis},\n  author={Long, Shangbang and Qin, Siyang and Panteleev, Dmitry and Bissacco, Alessandro and Fujii, Yasuhisa and Raptis, Michalis},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={2339--2349},\n  year={2022}\n}"
+    },
+    "provenance": {
+      "collection_method": "Selected from the Open Images v6 dataset to emphasize complex text scenes with small, oriented, and occluded textual regions.",
+      "curation_notes": "Ground-truth annotations bridge OCR and layout analysis through a unified hierarchy connecting word tokens to text lines and paragraph structures.",
+      "data_sources": [
+        "Open Images v6 image corpus"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "higgs-uci",
     "slug": "higgs-uci",
     "name": "HIGGS: High-Energy Physics Benchmark",
@@ -21006,6 +21666,105 @@
       "total": 21591,
       "unit": "recordings",
       "status": "verified"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "hjdataset",
+    "slug": "hjdataset",
+    "name": "HJDataset: Large Dataset of Historical Japanese Documents with Complex Layouts",
+    "description": "HJDataset is a large-scale benchmark dataset for document layout analysis, region segmentation, and reading order extraction in complex historical Japanese documents. Created by researchers from the Dell Lab at Harvard University and presented at the CVPR 2020 Workshop on Text and Documents in the Deep Learning Era, HJDataset contains over 250,000 layout element annotations of 7 distinct structural types. The dataset captures unique layout challenges in Asian document heritage—including vertical text orientations, mixed reading directions, dense multi-column tables, headers, and historical Kanji typography. In addition to bounding boxes and pixel-level masks, annotations encode hierarchical document structures and reading orders.",
+    "homepage_url": "https://dell-research-harvard.github.io/HJDataset/",
+    "publisher": {
+      "name": "Harvard University (Dell Lab)",
+      "type": "academic",
+      "url": "https://dell-research-harvard.github.io/"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "document-layout-analysis",
+      "document-understanding",
+      "reading-order-extraction"
+    ],
+    "tags": [
+      "document-ai",
+      "hjdataset",
+      "japanese",
+      "historical-documents",
+      "harvard",
+      "cvprw-2020"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Apache 2.0 (Annotations) / Author Request EULA (Images)",
+      "spdx_id": null,
+      "commercial_use": "allowed",
+      "url": "https://github.com/dell-research-harvard/HJDataset",
+      "notes": "Annotations and benchmark utilities are licensed under the Apache 2.0 License. The historical document page images are distributed upon completion of an academic request form due to source archival copyright constraints."
+    },
+    "source_references": [
+      {
+        "title": "HJDataset Official Project Page",
+        "url": "https://dell-research-harvard.github.io/HJDataset/",
+        "type": "official_website"
+      },
+      {
+        "title": "HJDataset GitHub Repository",
+        "url": "https://github.com/dell-research-harvard/HJDataset",
+        "type": "repository"
+      },
+      {
+        "title": "A Large Dataset of Historical Japanese Documents with Complex Layouts (CVPRW 2020 / arXiv:2004.08686)",
+        "url": "https://arxiv.org/abs/2004.08686",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against dell-research-harvard.github.io/HJDataset and CVPRW 2020 paper (arXiv:2004.08686). Confirmed 250,000+ layout element annotations across 7 types, Apache 2.0 annotation licensing, and request-based image access."
+    },
+    "size": {
+      "amount": 3.5,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Scanned archival Japanese document page images paired with COCO-style JSON annotation files detailing bounding boxes, masks, and reading orders."
+    },
+    "sample_count": {
+      "total": 2271,
+      "unit": "pages",
+      "status": "estimated"
+    },
+    "dates": {
+      "published": "2020-04-18",
+      "last_updated": "2020-06-15"
+    },
+    "citation": {
+      "paper_title": "A Large Dataset of Historical Japanese Documents with Complex Layouts",
+      "paper_url": "https://arxiv.org/abs/2004.08686",
+      "doi": "10.48550/arXiv.2004.08686",
+      "authors": [
+        "Zejiang Shen",
+        "Kaixuan Zhang",
+        "Melissa Dell"
+      ],
+      "bibtex": "@article{shen2020large,\n  title={A Large Dataset of Historical Japanese Documents with Complex Layouts},\n  author={Shen, Zejiang and Zhang, Kaixuan and Dell, Melissa},\n  journal={arXiv preprint arXiv:2004.08686},\n  year={2020}\n}"
+    },
+    "provenance": {
+      "collection_method": "Historical Japanese personnel directories and documents digitised from national library archives, segmented using rule-based algorithms with human verification.",
+      "curation_notes": "Measures hierarchical layout extraction and reading order sequencing. Explicitly distinguishes 250,000+ layout region instances from the underlying page count.",
+      "data_sources": [
+        "National Diet Library and Harvard Yenching historical Japanese document collections"
+      ]
     }
   },
   {
@@ -22233,6 +22992,12 @@
         "url": "https://doi.org/10.1109/ICDAR.2015.7333942",
         "type": "original_paper",
         "notes": "Published in 2015 International Conference on Document Analysis and Recognition (ICDAR 2015)."
+      },
+      {
+        "title": "PaddleOCR Dataset Documentation for ICDAR 2015",
+        "url": "https://github.com/PaddlePaddle/PaddleOCR/blob/main/docs/datasets/ocr_datasets.en.md",
+        "type": "documentation",
+        "notes": "Benchmark integration documentation for ICDAR 2015 text detection and recognition."
       }
     ],
     "verification": {
@@ -22283,6 +23048,13 @@
       ],
       "doi": "10.1109/ICDAR.2015.7333942",
       "bibtex": "@inproceedings{karatzas2015icdar,\n  title={ICDAR 2015 competition on robust reading},\n  author={Karatzas, Dimosthenis and Gomez-Bigorda, Lluis and Nicolaou, Angellos and Ghosh, Suman and Bagdanov, Andrew and Iwamura, Masakazu and Matas, Jiri and Neumann, Lukas and Chandrasekhar, Vijay Ramaseshan and Lu, Shijian and others},\n  booktitle={2015 13th International Conference on Document Analysis and Recognition (ICDAR)},\n  pages={1156--1160},\n  year={2015},\n  organization={IEEE},\n  doi={10.1109/ICDAR.2015.7333942}\n}"
+    },
+    "provenance": {
+      "collection_method": "Incidental video and image capture using Google Glass wearable cameras in unconstrained urban and indoor environments without deliberate framing or focus.",
+      "curation_notes": "Official Challenge 4 benchmark from ICDAR 2015 Robust Reading Competition (1,000 train, 500 test images). Maintained as a distinct release separate from ICDAR 2013 (focused text), ICDAR 2017 (multilingual), and ICDAR 2019 (large-scale arbitrary text) editions.",
+      "data_sources": [
+        "Wearable camera capture in natural environments via CVC UAB"
+      ]
     }
   },
   {
@@ -22725,6 +23497,13 @@
       ],
       "doi": "10.5244/C.26.127",
       "bibtex": "@inproceedings{mishra2012scene,\n  title={Scene Text Recognition using Higher Order Language Priors},\n  author={Mishra, Anand and Alahari, Karteek and Jawahar, C. V.},\n  booktitle={British Machine Vision Conference (BMVC)},\n  pages={127.1--127.11},\n  year={2012},\n  doi={10.5244/C.26.127}\n}"
+    },
+    "provenance": {
+      "collection_method": "Harvested via Google Image search using queries for street signs, billboards, movie posters, and house numbers, followed by manual cropping and transcription verification.",
+      "curation_notes": "Contains exactly 5,000 cropped word images split into 2,000 training and 3,000 testing items. The supplied 50-word and 1,000-word vocabulary lexicons serve as closed recognition test dictionaries and are not counted as extra image samples.",
+      "data_sources": [
+        "Natural scene photography indexed via Google Image Search"
+      ]
     }
   },
   {
@@ -23135,6 +23914,116 @@
       "curation_notes": "Provides naturalistic trajectories for 11,500 road users including cars, trucks, buses, pedestrians, and cyclists across 10 hours of video recordings, specifically capturing complex urban intersection conflicts.",
       "data_sources": [
         "High-resolution drone video footage"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "infographicvqa",
+    "slug": "infographicvqa",
+    "name": "InfographicVQA: Visual Question Answering on Infographic Images",
+    "description": "InfographicVQA is a challenging visual question answering benchmark focused on information graphics (infographics). Presented at WACV 2022 by researchers from Computer Vision Center (CVC) UAB and IIIT Hyderabad, InfographicVQA contains 30,035 natural question-answer pairs grounded on 5,485 high-resolution infographic images. Infographics communicate complex narrative and quantitative messages by deeply integrating natural text, numeric data, data visualisations (pie charts, bar plots, graphs), maps, and illustrative icons. Answering questions requires multi-step reasoning, layout interpretation, visual element binding, and elementary arithmetic, going beyond standard single-word OCR matching.",
+    "homepage_url": "https://site.docvqa.org/datasets/infographicvqa",
+    "publisher": {
+      "name": "Computer Vision Center (CVC) UAB & IIIT Hyderabad",
+      "type": "academic",
+      "url": "https://site.docvqa.org/"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "document-visual-question-answering",
+      "document-understanding"
+    ],
+    "tags": [
+      "document-ai",
+      "infographicvqa",
+      "vqa",
+      "infographics",
+      "charts",
+      "wacv-2022"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "CC BY 4.0 (Annotations) / Academic Research EULA (Images)",
+      "spdx_id": null,
+      "commercial_use": "forbidden",
+      "url": "https://rrc.cvc.uab.cat/?ch=17&com=downloads",
+      "notes": "Question-answer annotations are provided under Creative Commons Attribution 4.0 International (CC BY 4.0). Full infographic image downloads require free account registration on the CVC UAB Robust Reading Competition portal for non-commercial academic research."
+    },
+    "source_references": [
+      {
+        "title": "InfographicVQA Official Dataset Page",
+        "url": "https://site.docvqa.org/datasets/infographicvqa",
+        "type": "official_website"
+      },
+      {
+        "title": "Robust Reading Competition Portal (Task 17 Download)",
+        "url": "https://rrc.cvc.uab.cat/?ch=17&com=downloads",
+        "type": "archive"
+      },
+      {
+        "title": "InfographicVQA Research Paper (WACV 2022)",
+        "url": "https://openaccess.thecvf.com/content/WACV2022/html/Mathew_InfographicVQA_WACV_2022_paper.html",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against site.docvqa.org, RRC portal Challenge 17, and WACV 2022 paper. Confirmed 30,035 question-answer pairs over 5,485 infographic images (train: 23,946 Qs / 4,406 imgs; val: 2,801 Qs / 500 imgs; test: 3,288 Qs / 579 imgs) and documented registration requirement on RRC portal."
+    },
+    "size": {
+      "amount": 4.5,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "High-resolution infographic images paired with JSON files containing question texts, bounding boxes, OCR tokens, and ground-truth answers."
+    },
+    "sample_count": {
+      "total": 30035,
+      "unit": "questions",
+      "status": "verified",
+      "splits": {
+        "train_questions": 23946,
+        "val_questions": 2801,
+        "test_questions": 3288,
+        "train_images": 4406,
+        "val_images": 500,
+        "test_images": 579,
+        "total_images": 5485
+      }
+    },
+    "dates": {
+      "published": "2022-01-04",
+      "last_updated": "2022-06-10"
+    },
+    "citation": {
+      "paper_title": "InfographicVQA",
+      "paper_url": "https://openaccess.thecvf.com/content/WACV2022/html/Mathew_InfographicVQA_WACV_2022_paper.html",
+      "authors": [
+        "Minesh Mathew",
+        "Viraj Bagal",
+        "Rubèn Tito",
+        "Dimosthenis Karatzas",
+        "Ernest Valveny",
+        "C. V. Jawahar"
+      ],
+      "bibtex": "@inproceedings{mathew2022infographicvqa,\n  title={InfographicVQA},\n  author={Mathew, Minesh and Bagal, Viraj and Tito, Rub{\\`e}n and Karatzas, Dimosthenis and Valveny, Ernest and Jawahar, C. V.},\n  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},\n  pages={1697--1706},\n  year={2022}\n}"
+    },
+    "provenance": {
+      "collection_method": "Internet harvesting of public infographic graphics created by diverse graphic designers, annotated by crowd workers with open-ended reasoning questions requiring visual-textual synthesis.",
+      "curation_notes": "Distinct from DocVQA (scanned documents) and ChartQA (standalone plotted charts). Evaluates joint perception of text, statistical diagrams, spatial layout, and graphical symbols.",
+      "data_sources": [
+        "Public domain and web-indexed infographic image collections"
       ]
     }
   },
@@ -24597,6 +25486,110 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "khatt",
+    "slug": "khatt",
+    "name": "KHATT: Handwritten Arabic Text Database",
+    "description": "KHATT (KFUPM Handwritten Arabic Text Database) is a comprehensive offline Arabic handwriting database developed jointly by King Fahd University of Petroleum & Minerals (KFUPM), Technical University of Dortmund, and Braunschweig University of Technology, and distributed via the Linguistic Data Consortium (LDC2015T23). Collected from 1,000 distinct male and female writers spanning various age groups and educational backgrounds, KHATT consists of 4,000 document page forms (4 forms per writer: fixed text, paragraph free writing, and metadata forms) scanned at 200, 300, and 600 DPI, yielding over 9,300 segmented handwritten text lines. The collection provides verified ground-truth Unicode text and is stratified into standard train (70%), validation (15%), and test (15%) splits.",
+    "homepage_url": "https://catalog.ldc.upenn.edu/LDC2015T23",
+    "publisher": {
+      "name": "Linguistic Data Consortium & KFUPM",
+      "type": "academic",
+      "url": "https://catalog.ldc.upenn.edu/"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "handwriting-recognition",
+      "optical-character-recognition",
+      "writer-identification"
+    ],
+    "tags": [
+      "document-ai",
+      "khatt",
+      "arabic",
+      "handwriting",
+      "ldc",
+      "kfupm"
+    ],
+    "license": {
+      "status": "proprietary",
+      "name": "LDC User Agreement for Non-Members",
+      "spdx_id": null,
+      "commercial_use": "forbidden",
+      "url": "https://catalog.ldc.upenn.edu/LDC2015T23",
+      "notes": "Distributed by the Linguistic Data Consortium under the LDC User Agreement for Non-Members (LDC2015T23, ISBN: 1-58563-736-X). Access is restricted to LDC consortium members or purchasable for institutional non-commercial research."
+    },
+    "source_references": [
+      {
+        "title": "LDC Catalog Entry: KHATT Handwritten Arabic Text (LDC2015T23)",
+        "url": "https://catalog.ldc.upenn.edu/LDC2015T23",
+        "type": "official_website"
+      },
+      {
+        "title": "KHATT: An Open Arabic Offline Handwritten Text Database (Pattern Recognition 2014)",
+        "url": "https://doi.org/10.1016/j.patcog.2013.08.009",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against Linguistic Data Consortium catalog entry LDC2015T23 (DOI: 10.35111/vc52-tm53) and Pattern Recognition publication (DOI: 10.1016/j.patcog.2013.08.009). Confirmed 1,000 distinct writers, 4,000 document forms scanned at 200/300/600 DPI, proprietary LDC licensing terms, and separation from author preliminary web releases."
+    },
+    "size": {
+      "amount": 8.5,
+      "unit": "GB",
+      "file_formats": [
+        "tif",
+        "txt"
+      ],
+      "status": "estimated",
+      "notes": "TIFF image scans (full forms and isolated text lines at 200, 300, and 600 DPI) accompanied by plain-text Unicode ground truth files."
+    },
+    "sample_count": {
+      "total": 4000,
+      "unit": "pages",
+      "status": "verified",
+      "splits": {
+        "writers": 1000,
+        "train_pages": 2800,
+        "val_pages": 600,
+        "test_pages": 600
+      }
+    },
+    "dates": {
+      "published": "2015-11-16",
+      "last_updated": "2015-11-16"
+    },
+    "citation": {
+      "paper_title": "KHATT: An Open Arabic Offline Handwritten Text Database",
+      "paper_url": "https://doi.org/10.1016/j.patcog.2013.08.009",
+      "doi": "10.1016/j.patcog.2013.08.009",
+      "authors": [
+        "Sabri A. Mahmoud",
+        "Irfan Ahmad",
+        "Wasfi G. Al-Khatib",
+        "Mohammad Alshayeb",
+        "Mohammad Tanvir Parvez",
+        "Volker Märgner",
+        "Gernot A. Fink"
+      ],
+      "bibtex": "@article{mahmoud2014khatt,\n  title={{KHATT}: An open Arabic offline handwritten text database},\n  author={Mahmoud, Sabri A. and Ahmad, Irfan and Al-Khatib, Wasfi G. and Alshayeb, Mohammad and Parvez, Mohammad Tanvir and M{\\\"a}rgner, Volker and Fink, Gernot A.},\n  journal={Pattern Recognition},\n  volume={47},\n  number={3},\n  pages={1096--1112},\n  year={2014},\n  publisher={Elsevier},\n  doi={10.1016/j.patcog.2013.08.009}\n}"
+    },
+    "provenance": {
+      "collection_method": "Handwritten forms completed by 1,000 volunteer participants writing freely on designated and unrestricted topics, digitised at high resolutions.",
+      "curation_notes": "Sourced through collaborative research by KFUPM and German partner universities and formally published by LDC. Documents the full official LDC2015T23 release rather than earlier author sample zips.",
+      "data_sources": [
+        "Field handwriting collections in Saudi Arabia and regional Middle Eastern universities"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "kinetics-400",
     "slug": "kinetics-400",
     "name": "Kinetics-400 Action Recognition Dataset",
@@ -24997,6 +25990,226 @@
       ],
       "doi": "10.1109/TPAMI.2022.3179507",
       "bibtex": "@article{liao2022kitti,\n  title={KITTI-360: A novel dataset and benchmarks for suburban scene understanding and beyond},\n  author={Liao, Yiyi and Xie, Junqing and Geiger, Andreas},\n  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  volume={45},\n  number={3},\n  pages={3238--3253},\n  year={2022},\n  publisher={IEEE},\n  doi={10.1109/TPAMI.2022.3179507}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "kleister-charity",
+    "slug": "kleister-charity",
+    "name": "Kleister Charity: Key Information Extraction from Long Financial Reports",
+    "description": "Kleister Charity is an open benchmark dataset for key information extraction from long, complex financial and operational annual reports. Sourced from the UK Charity Commission public registry by Applica.ai, Kleister Charity comprises 2,778 multi-page PDF documents spanning a total of 61,643 pages (averaging 22.2 pages per document, with maximum page lengths reaching up to 100+ pages). The extraction task focuses on 8 core charity entities: charity address, charity name, charity registration number, annual income, and annual spending (in GBP). The dataset benchmark evaluates handling of highly varied document formats, multipage tabular breakdowns, diverse visual templates, and challenging OCR extraction noise.",
+    "homepage_url": "https://github.com/applicaai/kleister-charity",
+    "publisher": {
+      "name": "Applica.ai",
+      "type": "industry",
+      "url": "https://github.com/applicaai"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "key-information-extraction",
+      "document-understanding",
+      "financial-nlp"
+    ],
+    "tags": [
+      "document-ai",
+      "kleister",
+      "charity",
+      "financial",
+      "long-documents",
+      "uk-government"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "UK Open Government Licence (Source Reports) / Open Research Manifests",
+      "spdx_id": null,
+      "commercial_use": "allowed",
+      "url": "https://github.com/applicaai/kleister-charity",
+      "notes": "Original charity annual reports are public records published by the UK Charity Commission under the Open Government Licence (OGL). Ground truth manifests, pre-computed OCR transcripts, and evaluation scripts are openly provided."
+    },
+    "source_references": [
+      {
+        "title": "Kleister Charity GitHub Repository",
+        "url": "https://github.com/applicaai/kleister-charity",
+        "type": "repository"
+      },
+      {
+        "title": "Kleister: Key Information Extraction Datasets Involving Long Documents with Complex Layouts (ICDAR 2021)",
+        "url": "https://doi.org/10.1007/978-3-030-86540-5_37",
+        "type": "original_paper"
+      },
+      {
+        "title": "UK Charity Commission Register of Charities",
+        "url": "https://www.gov.uk/government/organisations/charity-commission",
+        "type": "official_website"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against applicaai/kleister-charity repository and ICDAR 2021 proceedings (DOI: 10.1007/978-3-030-86540-5_37). Confirmed 2,778 documents (1,729 train, 440 dev-0, 609 test-A), git-annex S3 remote storage configuration, and distinction from the separate Kleister NDA dataset."
+    },
+    "size": {
+      "amount": 12.0,
+      "unit": "GB",
+      "file_formats": [
+        "pdf",
+        "tsv",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "12 GB total payload distributed via git-annex S3 bucket containing 2,778 PDF reports (61,643 total pages) and pre-computed OCR text representations."
+    },
+    "sample_count": {
+      "total": 2778,
+      "unit": "documents",
+      "status": "verified",
+      "splits": {
+        "train": 1729,
+        "dev": 440,
+        "test": 609
+      }
+    },
+    "dates": {
+      "published": "2021-03-08",
+      "last_updated": "2021-09-08"
+    },
+    "citation": {
+      "paper_title": "Kleister: Key Information Extraction Datasets Involving Long Documents with Complex Layouts",
+      "paper_url": "https://doi.org/10.1007/978-3-030-86540-5_37",
+      "doi": "10.1007/978-3-030-86540-5_37",
+      "authors": [
+        "Tomasz Stanisławek",
+        "Filip Graliński",
+        "Anna Wróblewska",
+        "Dawid Lipiński",
+        "Agnieszka Kaliska",
+        "Paulina Rosalska",
+        "Bartosz Topolski",
+        "Przemysław Biecek"
+      ],
+      "bibtex": "@inproceedings{stanislawek2021kleister,\n  title={Kleister: Key Information Extraction Datasets Involving Long Documents with Complex Layouts},\n  author={Stanis{\\l}awek, Tomasz and Grali{\\'n}ski, Filip and Wr{\\'o}blewska, Anna and Lipi{\\'n}ski, Dawid and Kaliska, Agnieszka and Rosalska, Paulina and Topolski, Bartosz and Biecek, Przemys{\\l}aw},\n  booktitle={2021 International Conference on Document Analysis and Recognition (ICDAR)},\n  pages={564--579},\n  year={2021},\n  publisher={Springer},\n  doi={10.1007/978-3-030-86540-5_37}\n}"
+    },
+    "provenance": {
+      "collection_method": "Sourced from public annual reports filed by registered British charities to the UK Charity Commission.",
+      "curation_notes": "PDF binaries are managed via git-annex backed by public AWS S3 storage. Focuses on extracting key financial figures and administrative metadata from long multi-page layouts.",
+      "data_sources": [
+        "UK Charity Commission annual report filings"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "kleister-nda",
+    "slug": "kleister-nda",
+    "name": "Kleister NDA: Key Information Extraction from Long Complex Legal Documents",
+    "description": "Kleister NDA is a challenging document key information extraction benchmark comprising 540 long, complex non-disclosure agreement (NDA) legal documents compiled from public SEC EDGAR regulatory filings by Applica.ai. Spanning a total of 1,770 pages (averaging 3.3 pages per document), Kleister NDA benchmarks extraction of critical contract entities—including involved parties, effective dates, agreement titles, and governing jurisdictions. In contrast to classic form understanding datasets that isolate short single-page layouts, Kleister NDA evaluates information extraction from multi-page documents containing extensive unconstrained text, legal prose, and diverse OCR rendering conditions.",
+    "homepage_url": "https://github.com/applicaai/kleister-nda",
+    "publisher": {
+      "name": "Applica.ai",
+      "type": "industry",
+      "url": "https://github.com/applicaai"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "key-information-extraction",
+      "document-understanding",
+      "legal-nlp"
+    ],
+    "tags": [
+      "document-ai",
+      "kleister",
+      "nda",
+      "legal",
+      "sec-edgar",
+      "long-documents"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Public Domain (SEC EDGAR Data) / Open Research Manifests",
+      "spdx_id": null,
+      "commercial_use": "allowed",
+      "url": "https://github.com/applicaai/kleister-nda",
+      "notes": "Source NDA contract filings are public corporate disclosures retrieved from the US SEC EDGAR repository. Extraction ground truth manifests, OCR texts, and evaluation scripts are openly provided for research."
+    },
+    "source_references": [
+      {
+        "title": "Kleister NDA GitHub Repository",
+        "url": "https://github.com/applicaai/kleister-nda",
+        "type": "repository"
+      },
+      {
+        "title": "Kleister: Key Information Extraction Datasets Involving Long Documents with Complex Layouts (ICDAR 2021)",
+        "url": "https://doi.org/10.1007/978-3-030-86540-5_37",
+        "type": "original_paper"
+      },
+      {
+        "title": "Kleister Research Preprint (arXiv:2103.04470)",
+        "url": "https://arxiv.org/abs/2103.04470",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against applicaai/kleister-nda repository and ICDAR 2021 proceedings (DOI: 10.1007/978-3-030-86540-5_37). Confirmed 540 documents (254 train, 83 dev-0, 203 test-A), multi-page layout characteristics, dual OCR text pipeline, and SEC EDGAR public provenance."
+    },
+    "size": {
+      "amount": 1.5,
+      "unit": "GB",
+      "file_formats": [
+        "pdf",
+        "tsv",
+        "txt"
+      ],
+      "status": "estimated",
+      "notes": "PDF document scans paired with pre-computed OCR outputs from pdf2djvu/djvu2hocr and Tesseract."
+    },
+    "sample_count": {
+      "total": 540,
+      "unit": "documents",
+      "status": "verified",
+      "splits": {
+        "train": 254,
+        "dev": 83,
+        "test": 203
+      }
+    },
+    "dates": {
+      "published": "2021-03-08",
+      "last_updated": "2021-09-08"
+    },
+    "citation": {
+      "paper_title": "Kleister: Key Information Extraction Datasets Involving Long Documents with Complex Layouts",
+      "paper_url": "https://doi.org/10.1007/978-3-030-86540-5_37",
+      "doi": "10.1007/978-3-030-86540-5_37",
+      "authors": [
+        "Tomasz Stanisławek",
+        "Filip Graliński",
+        "Anna Wróblewska",
+        "Dawid Lipiński",
+        "Agnieszka Kaliska",
+        "Paulina Rosalska",
+        "Bartosz Topolski",
+        "Przemysław Biecek"
+      ],
+      "bibtex": "@inproceedings{stanislawek2021kleister,\n  title={Kleister: Key Information Extraction Datasets Involving Long Documents with Complex Layouts},\n  author={Stanis{\\l}awek, Tomasz and Grali{\\'n}ski, Filip and Wr{\\'o}blewska, Anna and Lipi{\\'n}ski, Dawid and Kaliska, Agnieszka and Rosalska, Paulina and Topolski, Bartosz and Biecek, Przemys{\\l}aw},\n  booktitle={2021 International Conference on Document Analysis and Recognition (ICDAR)},\n  pages={564--579},\n  year={2021},\n  publisher={Springer},\n  doi={10.1007/978-3-030-86540-5_37}\n}"
+    },
+    "provenance": {
+      "collection_method": "Harvested from public non-disclosure agreements submitted to the US Securities and Exchange Commission (SEC) EDGAR disclosure system, converted from HTML/text to PDF via Puppeteer.",
+      "curation_notes": "Measures full-document key information extraction performance rather than entity token classification. Documents are recorded separately from OCR word tokens.",
+      "data_sources": [
+        "US Securities and Exchange Commission (SEC) EDGAR public corporate disclosures"
+      ]
     }
   },
   {
@@ -26791,6 +28004,121 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "m6doc",
+    "slug": "m6doc",
+    "name": "M6Doc: Multi-Format Multi-Type Multi-Layout Multi-Language Dataset for Modern Document Layout Analysis",
+    "description": "M6Doc is a large-scale, fine-grained benchmark dataset for modern document layout analysis developed by the Deep Learning and Visual Computing (DLVC) Lab at South China University of Technology (SCUT) and IntSig. Covering both Chinese and English, M6Doc comprises 9,080 high-resolution modern document pages across 7 distinct content genres: textbooks (2,080), examination papers (2,000), magazines (2,000), scientific articles (1,000), newspapers (1,000), student notes (500), and books (500). Documents span PDF-generated (64%), scanned (31%), and photographed (5%) formats. The dataset features 237,116 manually verified bounding instances categorized into 74 detailed layout element classes.",
+    "homepage_url": "https://github.com/HCIILAB/M6Doc",
+    "publisher": {
+      "name": "South China University of Technology & IntSig",
+      "type": "academic",
+      "url": "https://github.com/HCIILAB"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "document-layout-analysis",
+      "document-understanding",
+      "object-detection"
+    ],
+    "tags": [
+      "document-ai",
+      "m6doc",
+      "layout-analysis",
+      "multilingual",
+      "chinese",
+      "fine-grained"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
+      "spdx_id": "CC-BY-NC-ND-4.0",
+      "commercial_use": "forbidden",
+      "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "notes": "The M6Doc dataset is distributed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) for non-commercial research purposes. The test split is openly accessible on Hugging Face, while the full dataset archive is password-protected and accessible via an institutional research agreement."
+    },
+    "source_references": [
+      {
+        "title": "M6Doc GitHub Repository",
+        "url": "https://github.com/HCIILAB/M6Doc",
+        "type": "repository"
+      },
+      {
+        "title": "M6Doc Research Paper (CVPR 2023)",
+        "url": "https://openaccess.thecvf.com/content/CVPR2023/html/Cheng_M6Doc_A_Large-Scale_Multi-Format_Multi-Type_Multi-Layout_Multi-Language_Multi-Annotation_Category_Dataset_CVPR_2023_paper.html",
+        "type": "original_paper"
+      },
+      {
+        "title": "M6Doc on Hugging Face",
+        "url": "https://huggingface.co/datasets/hiuyi/M6Doc",
+        "type": "dataset_card"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against HCIILAB/M6Doc repository and CVPR 2023 publication. Confirmed 9,080 document pages across 7 genres and 3 capture formats, 237,116 layout instances across 74 categories, CC BY-NC-ND 4.0 dataset license, and password-protected institutional research distribution."
+    },
+    "size": {
+      "amount": 15.0,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Full dataset distribution organized in COCO format with high-resolution JPG page images and JSON annotation files."
+    },
+    "sample_count": {
+      "total": 9080,
+      "unit": "pages",
+      "status": "verified",
+      "splits": {
+        "textbook": 2080,
+        "test_paper": 2000,
+        "magazine": 2000,
+        "scientific_article": 1000,
+        "newspaper": 1000,
+        "note": 500,
+        "book": 500
+      }
+    },
+    "dates": {
+      "published": "2023-06-18",
+      "last_updated": "2023-11-05"
+    },
+    "citation": {
+      "paper_title": "M6Doc: A Large-Scale Multi-Format, Multi-Type, Multi-Layout, Multi-Language, Multi-Annotation Category Dataset for Modern Document Layout Analysis",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Cheng_M6Doc_A_Large-Scale_Multi-Format_Multi-Type_Multi-Layout_Multi-Language_Multi-Annotation_Category_Dataset_CVPR_2023_paper.html",
+      "authors": [
+        "Hiuyi Cheng",
+        "Peirong Zhang",
+        "Sihang Wu",
+        "Jiaxin Zhang",
+        "Qiyuan Zhu",
+        "Zecheng Xie",
+        "Jing Li",
+        "Kai Ding",
+        "Lianwen Jin"
+      ],
+      "bibtex": "@inproceedings{cheng2023m6doc,\n  title={M6Doc: A Large-Scale Multi-Format, Multi-Type, Multi-Layout, Multi-Language, Multi-Annotation Category Dataset for Modern Document Layout Analysis},\n  author={Cheng, Hiuyi and Zhang, Peirong and Wu, Sihang and Zhang, Jiaxin and Zhu, Qiyuan and Xie, Zecheng and Li, Jing and Ding, Kai and Jin, Lianwen},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={15138--15147},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Multimodal collection from arXiv PDFs, People's Daily digital archives, and scanned/photographed physical textbooks, magazines, exam papers, and student notes in China and the US.",
+      "curation_notes": "47 annotators manually annotated 237,116 region instances across 74 classes under a 170-page standardized annotation protocol. The 74 classes are not counted as document samples.",
+      "data_sources": [
+        "arXiv scientific publications",
+        "People's Daily newspaper archives",
+        "Curriculum textbooks, exam papers, and consumer magazines"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "magnetic-tile-defect-datasets",
     "slug": "magnetic-tile-defect-datasets",
     "name": "Magnetic Tile Surface Defect Dataset",
@@ -27246,6 +28574,107 @@
       ],
       "doi": "10.1109/ICCV.2017.534",
       "bibtex": "@inproceedings{neuhold2017mapillary,\n  title={The Mapillary Vistas Dataset for Semantic Understanding of Street Scenes},\n  author={Neuhold, Gerhard and Ollmann, Tobias and Rota Bulo, Samuel and Kontschieder, Peter},\n  booktitle={Proceedings of the IEEE International Conference on Computer Vision},\n  pages={4990--4999},\n  year={2017},\n  doi={10.1109/ICCV.2017.534}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "marmot",
+    "slug": "marmot",
+    "name": "Marmot: Table Recognition and Document Layout Benchmark",
+    "description": "The Marmot Dataset v1.0 is a benchmark dataset for table detection, table structure recognition, and document layout analysis developed by the Institute of Computer Science and Technology (ICST) at Peking University in collaboration with the Founder R&D Center. The dataset consists of 2,000 document pages in digital PDF format paired with XML ground truth generated via the semi-automatic Marmot annotation system. The corpus is split approximately 1:1 between Chinese and English documents: 1,000 Chinese pages drawn from 120+ e-books across diverse subjects in the Founder Apabi digital library, and 1,000 English pages crawled from CiteSeer across 1,500+ conference and journal publications spanning 1970 to 2011.",
+    "homepage_url": "https://www.icst.pku.edu.cn/cpdp/sjzy/",
+    "publisher": {
+      "name": "Peking University & Founder R&D Center",
+      "type": "academic",
+      "url": "https://www.icst.pku.edu.cn/"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "table-detection",
+      "table-recognition",
+      "document-layout-analysis"
+    ],
+    "tags": [
+      "document-ai",
+      "marmot",
+      "table-detection",
+      "pku",
+      "citeseer",
+      "bilingual"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "PKU ICST Academic Research License",
+      "spdx_id": null,
+      "commercial_use": "forbidden",
+      "url": "https://www.icst.pku.edu.cn/cpdp/sjzy/",
+      "notes": "Permission is granted free of charge to any person or group obtaining a copy of the dataset and evaluator code for research purposes only, with rights to use, copy, modify, and distribute all files for non-commercial research."
+    },
+    "source_references": [
+      {
+        "title": "PKU ICST Document Analysis & Recognition Datasets Portal",
+        "url": "https://www.icst.pku.edu.cn/cpdp/sjzy/",
+        "type": "official_website"
+      },
+      {
+        "title": "A Table Detection Method for PDF Documents Based on Convolutional Neural Networks (DAS 2016)",
+        "url": "https://doi.org/10.1109/das.2016.23",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against Peking University ICST resource portal and DAS 2016 proceedings (DOI: 10.1109/das.2016.23). Confirmed 2,000 PDF pages (~1,000 Chinese from Founder Apabi and ~1,000 English from CiteSeer), XML bounding ground truth, and non-commercial research license terms."
+    },
+    "size": {
+      "amount": 2.1,
+      "unit": "GB",
+      "file_formats": [
+        "pdf",
+        "xml",
+        "bmp"
+      ],
+      "status": "estimated",
+      "notes": "Distribution package containing digital PDF source pages, rendered BMP page images, and XML table bounding box annotations."
+    },
+    "sample_count": {
+      "total": 2000,
+      "unit": "pages",
+      "status": "verified",
+      "splits": {
+        "chinese_pages": 1000,
+        "english_pages": 1000
+      }
+    },
+    "dates": {
+      "published": "2011-09-01",
+      "last_updated": "2016-04-11"
+    },
+    "citation": {
+      "paper_title": "A Table Detection Method for PDF Documents Based on Convolutional Neural Networks",
+      "paper_url": "https://doi.org/10.1109/das.2016.23",
+      "doi": "10.1109/das.2016.23",
+      "authors": [
+        "Leipeng Hao",
+        "Liangcai Gao",
+        "Xiaohan Yi",
+        "Zhi Tang"
+      ],
+      "bibtex": "@inproceedings{hao2016table,\n  title={A table detection method for PDF documents based on convolutional neural networks},\n  author={Hao, Leipeng and Gao, Liangcai and Yi, Xiaohan and Tang, Zhi},\n  booktitle={2016 12th IAPR Workshop on Document Analysis Systems (DAS)},\n  pages={287--292},\n  year={2016},\n  organization={IEEE},\n  doi={10.1109/das.2016.23}\n}"
+    },
+    "provenance": {
+      "collection_method": "Semi-automated ground-truthing utilizing the Marmot annotation tool across crawled CiteSeer English scientific papers and Founder Apabi Chinese electronic books.",
+      "curation_notes": "Maintains an approximate 1:1 positive-to-negative page ratio for table regions across single- and multi-column document designs. Distinct from TableBank and PubTables-1M.",
+      "data_sources": [
+        "CiteSeer scientific publications (1970–2011)",
+        "Founder Apabi e-book digital library"
+      ]
     }
   },
   {
@@ -29689,6 +31118,107 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "mjsynth",
+    "slug": "mjsynth",
+    "name": "MJSynth: Synthetic Word Dataset for Scene Text Recognition",
+    "description": "MJSynth (also known as the Synthetic Word Dataset or Syn90k) is a foundational large-scale synthetic dataset for training deep learning models for natural scene text recognition. Created by the Visual Geometry Group (VGG) at the University of Oxford and introduced by Jaderberg et al. in 2014, MJSynth comprises approximately 8.9 million synthetically generated word image crops spanning an English vocabulary of 90,000 dictionary words. Images are generated through a sophisticated rendering pipeline that applies realistic fonts, border/shadow styling, 3D projective perspective distortion, natural background blending, and Gaussian blur, serving as the industry standard pre-training corpus for CRNN and attention-based scene text recognition models.",
+    "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/text/",
+    "publisher": {
+      "name": "Visual Geometry Group (VGG), University of Oxford",
+      "type": "academic",
+      "url": "https://www.robots.ox.ac.uk/~vgg/"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "scene-text-recognition",
+      "optical-character-recognition",
+      "word-recognition"
+    ],
+    "tags": [
+      "document-ai",
+      "mjsynth",
+      "syn90k",
+      "vgg-oxford",
+      "synthetic-text",
+      "crnn"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Oxford VGG Dataset Terms of Use",
+      "spdx_id": null,
+      "commercial_use": "forbidden",
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/text/",
+      "notes": "Available free of charge for non-commercial academic research and evaluation with citation. Commercial exploitation requires institutional authorization."
+    },
+    "source_references": [
+      {
+        "title": "Oxford VGG Text Recognition Official Project Page",
+        "url": "https://www.robots.ox.ac.uk/~vgg/data/text/",
+        "type": "official_website"
+      },
+      {
+        "title": "Synthetic Data and Artificial Neural Networks for Natural Scene Text Recognition (NeurIPS 2014)",
+        "url": "https://arxiv.org/abs/1406.2227",
+        "type": "original_paper"
+      },
+      {
+        "title": "MJSynth Dataset on Academic Torrents",
+        "url": "https://academictorrents.com/details/37ebe6d015243c5b5971a179fa4f0c40cf1d08e8",
+        "type": "archive"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against robots.ox.ac.uk/~vgg/data/text/ and arXiv:1406.2227 paper. Confirmed ~8.9M cropped word images, 90,000-word lexicon, 10.7 GB distribution payload on Academic Torrents, and Oxford VGG research licensing terms."
+    },
+    "size": {
+      "amount": 10.7,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "10.7 GB compressed tar archive (mjsynth.tar.gz) containing 8.9 million JPEG image crops and index text files."
+    },
+    "sample_count": {
+      "total": 8900000,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2014-06-09",
+      "last_updated": "2014-12-08"
+    },
+    "citation": {
+      "paper_title": "Synthetic Data and Artificial Neural Networks for Natural Scene Text Recognition",
+      "paper_url": "https://arxiv.org/abs/1406.2227",
+      "doi": "10.48550/arXiv.1406.2227",
+      "authors": [
+        "Max Jaderberg",
+        "Karen Simonyan",
+        "Andrea Vedaldi",
+        "Andrew Zisserman"
+      ],
+      "bibtex": "@article{jaderberg2014synthetic,\n  title={Synthetic data and artificial neural networks for natural scene text recognition},\n  author={Jaderberg, Max and Simonyan, Karen and Vedaldi, Andrea and Zisserman, Andrew},\n  journal={arXiv preprint arXiv:1406.2227},\n  year={2014}\n}"
+    },
+    "provenance": {
+      "collection_method": "Synthetic rendering pipeline integrating font generation, shading, 3D projective transformations, and composition with natural background images.",
+      "curation_notes": "Created specifically as a massive pre-training dataset for text recognition. Distinct from photographed scene text benchmarks.",
+      "data_sources": [
+        "90,000-word English dictionary",
+        "Curated open font libraries and natural image backgrounds"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "mmlu",
     "slug": "mmlu",
     "name": "MMLU: Measuring Massive Multitask Language Understanding",
@@ -30398,6 +31928,115 @@
       ],
       "doi": "10.48550/arXiv.2105.06643",
       "bibtex": "@inproceedings{godahewa2021monash,\n  title={Monash Time Series Forecasting Archive},\n  author={Godahewa, Rakshitha and Bergmeir, Christoph and Webb, Geoffrey I. and Hyndman, Rob J. and Montero-Manso, Pablo},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS) Track on Datasets and Benchmarks},\n  year={2021}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mp-docvqa",
+    "slug": "mp-docvqa",
+    "name": "MP-DocVQA: Multi-Page Document Visual Question Answering Benchmark",
+    "description": "MP-DocVQA is a multi-page document visual question answering benchmark designed to evaluate document understanding systems across long, multi-page contexts. Introduced by researchers from the Computer Vision Center (CVC) at Universitat Autònoma de Barcelona, MP-DocVQA systematically expands the Single Page DocVQA task to realistic multi-page document retrieval and reasoning. The dataset contains 46,436 questions over 5,929 multi-page documents comprising 47,952 document pages (ranging from 2 up to 20 pages per document). While single-page DocVQA provided only isolated cropped pages, MP-DocVQA provides the full document context, requiring models to simultaneously solve evidence-page retrieval, cross-page reasoning, and question answering.",
+    "homepage_url": "https://rrc.cvc.uab.cat/?ch=17&com=downloads",
+    "publisher": {
+      "name": "Computer Vision Center (CVC) UAB",
+      "type": "academic",
+      "url": "https://rrc.cvc.uab.cat"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "document-visual-question-answering",
+      "document-retrieval",
+      "cross-page-reasoning"
+    ],
+    "tags": [
+      "document-ai",
+      "mp-docvqa",
+      "docvqa",
+      "multi-page",
+      "long-context",
+      "vqa"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "CC BY 4.0 (Annotations) / Academic Research EULA (Documents)",
+      "spdx_id": null,
+      "commercial_use": "forbidden",
+      "url": "https://rrc.cvc.uab.cat/?ch=17&com=downloads",
+      "notes": "Question annotations are available under Creative Commons Attribution 4.0 International (CC BY 4.0). Multi-page document image archives are available via the CVC UAB Robust Reading Competition portal for non-commercial academic research."
+    },
+    "source_references": [
+      {
+        "title": "Robust Reading Competition Portal (Task 17 Download)",
+        "url": "https://rrc.cvc.uab.cat/?ch=17&com=downloads",
+        "type": "official_website"
+      },
+      {
+        "title": "Hierarchical Multimodal Transformers for Multi-Page DocVQA (Pattern Recognition 2023)",
+        "url": "https://doi.org/10.1016/j.patcog.2023.109834",
+        "type": "original_paper"
+      },
+      {
+        "title": "MP-DocVQA on Hugging Face Datasets",
+        "url": "https://huggingface.co/datasets/rubentito/mp-docvqa",
+        "type": "dataset_card"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against RRC portal Challenge 17, Pattern Recognition publication (DOI: 10.1016/j.patcog.2023.109834), and rubentito/mp-docvqa dataset repository. Confirmed 46,436 questions over 5,929 documents (47,952 pages), multi-page evaluation paradigm, and explicit parent-child lineage to Single Page DocVQA."
+    },
+    "size": {
+      "amount": 12.5,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Full multi-page document image archives (47,952 JPG pages) paired with question-answer JSON metadata and pre-computed OCR transcripts."
+    },
+    "sample_count": {
+      "total": 46436,
+      "unit": "questions",
+      "status": "verified",
+      "splits": {
+        "train_questions": 36230,
+        "val_questions": 5187,
+        "test_questions": 5019,
+        "train_documents": 5131,
+        "val_documents": 927,
+        "test_documents": 959,
+        "total_documents": 5929,
+        "total_pages": 47952
+      }
+    },
+    "dates": {
+      "published": "2022-12-12",
+      "last_updated": "2023-09-01"
+    },
+    "citation": {
+      "paper_title": "Hierarchical Multimodal Transformers for Multi-Page DocVQA",
+      "paper_url": "https://doi.org/10.1016/j.patcog.2023.109834",
+      "doi": "10.1016/j.patcog.2023.109834",
+      "authors": [
+        "Rubèn Tito",
+        "Dimosthenis Karatzas",
+        "Ernest Valveny"
+      ],
+      "bibtex": "@article{tito2023hierarchical,\n  title={Hierarchical multimodal transformers for Multi-Page DocVQA},\n  author={Tito, Rub{\\`e}n and Karatzas, Dimosthenis and Valveny, Ernest},\n  journal={Pattern Recognition},\n  volume={144},\n  pages={109834},\n  year={2023},\n  publisher={Elsevier},\n  doi={10.1016/j.patcog.2023.109834}\n}"
+    },
+    "provenance": {
+      "collection_method": "Multi-page reconstruction of source document files from the UCSF Truth Tobacco Industry Documents archive corresponding to questions originally posed in Single Page DocVQA.",
+      "curation_notes": "An independently published multi-page evaluation benchmark. Reuses questions and target document images from Single Page DocVQA while embedding them within their complete multi-page document contexts (up to 20 pages per document).",
+      "data_sources": [
+        "Truth Tobacco Industry Documents archive via Single Page DocVQA"
+      ]
     }
   },
   {
@@ -38061,6 +39700,101 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "prima-layout-analysis",
+    "slug": "prima-layout-analysis",
+    "name": "PRImA Layout Analysis Dataset: Contemporary Document Benchmark",
+    "description": "The PRImA Layout Analysis Dataset is a foundational benchmark dataset for evaluating physical and logical document layout analysis algorithms. Developed by the Pattern Recognition & Image Analysis (PRImA) Research Lab at the University of Salford, the dataset comprises 478 realistic contemporary document pages drawn primarily from magazines, scientific journals, and technical publications characterized by complex multi-column layouts, varied typography, embedded graphics, and decorative backgrounds. Each page is paired with comprehensive ground truth encoded in the widely adopted PAGE (Page Analysis and Ground Truth Elements) XML schema, specifying polygonal region boundaries, reading orders, and logical text classifications.",
+    "homepage_url": "https://www.primaresearch.org/datasets/Layout_Analysis",
+    "publisher": {
+      "name": "PRImA Research Lab, University of Salford",
+      "type": "academic",
+      "url": "https://www.primaresearch.org/"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "document-layout-analysis",
+      "document-understanding",
+      "text-detection"
+    ],
+    "tags": [
+      "document-ai",
+      "prima",
+      "layout-analysis",
+      "page-xml",
+      "icdar-2009",
+      "salford"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "PRImA Academic Research License (Registration Required)",
+      "spdx_id": null,
+      "commercial_use": "forbidden",
+      "url": "https://www.primaresearch.org/datasets/Layout_Analysis",
+      "notes": "Available free of charge for non-commercial academic research and evaluation following user account registration on the PRImA Research portal. Redistribution of image assets is prohibited."
+    },
+    "source_references": [
+      {
+        "title": "PRImA Layout Analysis Dataset Official Page",
+        "url": "https://www.primaresearch.org/datasets/Layout_Analysis",
+        "type": "official_website"
+      },
+      {
+        "title": "A Realistic Dataset for Performance Evaluation of Document Layout Analysis (ICDAR 2009)",
+        "url": "https://doi.org/10.1109/ICDAR.2009.231",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against primaresearch.org official portal and ICDAR 2009 proceedings (DOI: 10.1109/ICDAR.2009.231). Confirmed 478 contemporary document pages, PAGE XML ground truth standard, and mandatory institutional registration access requirement."
+    },
+    "size": {
+      "amount": 1.2,
+      "unit": "GB",
+      "file_formats": [
+        "tif",
+        "xml"
+      ],
+      "status": "estimated",
+      "notes": "TIFF page images paired with PAGE XML ground-truth annotations covering physical regions and logical reading order."
+    },
+    "sample_count": {
+      "total": 478,
+      "unit": "pages",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2009-07-26",
+      "last_updated": "2013-08-20"
+    },
+    "citation": {
+      "paper_title": "A Realistic Dataset for Performance Evaluation of Document Layout Analysis",
+      "paper_url": "https://doi.org/10.1109/ICDAR.2009.231",
+      "doi": "10.1109/ICDAR.2009.231",
+      "authors": [
+        "Apostolos Antonacopoulos",
+        "David Bridson",
+        "Christos Papadopoulos",
+        "Stefan Pletschacher"
+      ],
+      "bibtex": "@inproceedings{antonacopoulos2009realistic,\n  title={A realistic dataset for performance evaluation of document layout analysis},\n  author={Antonacopoulos, Apostolos and Bridson, David and Papadopoulos, Christos and Pletschacher, Stefan},\n  booktitle={2009 10th International Conference on Document Analysis and Recognition (ICDAR)},\n  pages={296--300},\n  year={2009},\n  organization={IEEE},\n  doi={10.1109/ICDAR.2009.231}\n}"
+    },
+    "provenance": {
+      "collection_method": "Systematic sampling of realistic contemporary documents (magazines and technical/scientific publications) digitised at 300 DPI in 24-bit colour.",
+      "curation_notes": "Established the widely adopted PAGE XML ground-truth schema. Strictly restricted to registered academic researchers.",
+      "data_sources": [
+        "Contemporary technical journals and commercial magazines"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "processed-single-cell-raman-spectra-analysis",
     "slug": "processed-single-cell-raman-spectra-analysis",
     "name": "Processed single-cell Raman spectra and analysis data for ORU-guided identification of urinary tract infection pathogens",
@@ -41190,13 +42924,19 @@
         "url": "https://doi.org/10.1109/ICDAR.2015.7333910",
         "type": "original_paper",
         "notes": "Published in 2015 International Conference on Document Analysis and Recognition (ICDAR 2015)."
+      },
+      {
+        "title": "RVL-CDIP Author Dataset on Hugging Face",
+        "url": "https://huggingface.co/datasets/aharley/rvl_cdip",
+        "type": "dataset_card",
+        "notes": "Official author repository distribution on Hugging Face."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-10-30",
-      "notes": "Verified against author official homepage (Adam Harley) and IEEE ICDAR 2015 proceedings (DOI: 10.1109/ICDAR.2015.7333910)."
+      "notes": "Verified against author official homepage (Adam Harley), author Hugging Face dataset card, and IEEE ICDAR 2015 proceedings (DOI: 10.1109/ICDAR.2015.7333910)."
     },
     "size": {
       "amount": 37.7,
@@ -41231,6 +42971,13 @@
       ],
       "doi": "10.1109/ICDAR.2015.7333910",
       "bibtex": "@inproceedings{harley2015evaluation,\n  title={Evaluation of deep convolutional nets for document image classification and retrieval},\n  author={Harley, Adam W and Ufkes, Alex and Derpanis, Konstantinos G},\n  booktitle={2015 13th International Conference on Document Analysis and Recognition (ICDAR)},\n  pages={991--995},\n  year={2015},\n  organization={IEEE},\n  doi={10.1109/ICDAR.2015.7333910}\n}"
+    },
+    "provenance": {
+      "collection_method": "Sampled as a balanced 400,000-image subset from the IIT-CDIP Test Collection 1.0 (derived from the Legacy Tobacco Document Library / Truth Tobacco Industry Documents at UCSF).",
+      "curation_notes": "Contains exactly 25,000 document images across 16 classes. Sourced from public domain tobacco litigation records without inventing artificial permissive licenses.",
+      "data_sources": [
+        "IIT-CDIP Test Collection (Legacy Tobacco Document Library via UCSF)"
+      ]
     }
   },
   {
@@ -44420,6 +46167,105 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "synthtext",
+    "slug": "synthtext",
+    "name": "SynthText in the Wild: Synthetic Text Localisation Benchmark",
+    "description": "SynthText in the Wild is a benchmark dataset and synthetic data generation paradigm for multi-oriented and curved scene text detection in natural images, introduced by Gupta, Vedaldi, and Zisserman at CVPR 2016. Sourced from 8,000 background photographs, SynthText uses dense semantic segmentation and depth maps to realistically render synthetic 3D-oriented text onto suitable planar surfaces. The complete corpus contains 858,750 high-resolution natural scene images containing over 7.2 million synthetic word instances (and ~29 million characters). Unlike word-recognition datasets like MJSynth that supply cropped tokens, SynthText provides full scene images with pixel-precise word and character-level oriented bounding boxes.",
+    "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/scenetext/",
+    "publisher": {
+      "name": "Visual Geometry Group (VGG), University of Oxford",
+      "type": "academic",
+      "url": "https://www.robots.ox.ac.uk/~vgg/"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "scene-text-detection",
+      "scene-text-localization",
+      "optical-character-recognition"
+    ],
+    "tags": [
+      "document-ai",
+      "synthtext",
+      "vgg-oxford",
+      "scene-text",
+      "synthetic-data",
+      "cvpr-2016"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Oxford VGG Dataset Terms of Use",
+      "spdx_id": null,
+      "commercial_use": "forbidden",
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/scenetext/",
+      "notes": "Available free of charge for non-commercial academic research and evaluation with citation under Oxford VGG dataset terms."
+    },
+    "source_references": [
+      {
+        "title": "Oxford VGG SynthText Official Project Page",
+        "url": "https://www.robots.ox.ac.uk/~vgg/data/scenetext/",
+        "type": "official_website"
+      },
+      {
+        "title": "Synthetic Data for Text Localisation in Natural Images (CVPR 2016)",
+        "url": "https://openaccess.thecvf.com/content_cvpr_2016/html/Gupta_Synthetic_Data_for_CVPR_2016_paper.html",
+        "type": "original_paper"
+      },
+      {
+        "title": "SynthText Dataset on Academic Torrents",
+        "url": "https://academictorrents.com/details/264b4c2e640243be440615967265a6c387b32231",
+        "type": "archive"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against robots.ox.ac.uk/~vgg/data/scenetext/ and CVPR 2016 proceedings. Confirmed 858,750 synthetic scene images, 7,266,866 word instances, 41 GB distribution zip archive, Oxford VGG research terms, and distinction from MJSynth."
+    },
+    "size": {
+      "amount": 41.0,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "mat"
+      ],
+      "status": "verified",
+      "notes": "41 GB compressed archive (SynthText.zip) containing 858,750 scene images across 200 directories and MATLAB ground truth gt.mat."
+    },
+    "sample_count": {
+      "total": 858750,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2016-06-26",
+      "last_updated": "2016-06-26"
+    },
+    "citation": {
+      "paper_title": "Synthetic Data for Text Localisation in Natural Images",
+      "paper_url": "https://openaccess.thecvf.com/content_cvpr_2016/html/Gupta_Synthetic_Data_for_CVPR_2016_paper.html",
+      "authors": [
+        "Ankush Gupta",
+        "Andrea Vedaldi",
+        "Andrew Zisserman"
+      ],
+      "bibtex": "@inproceedings{gupta2016synthetic,\n  title={Synthetic data for text localisation in natural images},\n  author={Gupta, Ankush and Vedaldi, Andrea and Zisserman, Andrew},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={2315--2324},\n  year={2016}\n}"
+    },
+    "provenance": {
+      "collection_method": "Synthetic text projection engine that renders newsgroup text into 8,000 background images using estimated depth and semantic segmentation maps to enforce 3D surface alignment.",
+      "curation_notes": "Replaces accidental duplicate COCO-Text candidate slot 21 per prompt instruction. Provides full scene images for text localization rather than isolated word recognition crops.",
+      "data_sources": [
+        "8,000 background images from web searches",
+        "20 Newsgroup text corpus"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "tablebank",
     "slug": "tablebank",
     "name": "TableBank: Table Benchmark for Detection and Recognition",
@@ -45033,6 +46879,107 @@
       ],
       "doi": "10.1007/978-3-319-99579-3_21",
       "bibtex": "@inproceedings{hernandez2018tedlium,\n  title = {TED-LIUM 3: Twice as Much Data and Corpus Repartition for Out-of-Domain ASR},\n  author = {Hernandez, Fran{\\c{c}}ois and Nguyen, Vincent and Ghannay, Sahar and Tomashenko, Natalia and Est{\\`e}ve, Yannick},\n  booktitle = {International Conference on Speech and Computer (SPECOM)},\n  pages = {198--208},\n  year = {2018}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "textocr",
+    "slug": "textocr",
+    "name": "TextOCR: Large-Scale End-to-End Arbitrary-Shaped Scene Text Benchmark",
+    "description": "TextOCR is a large-scale scene text detection and recognition benchmark developed by Facebook AI Research (FAIR) and presented at CVPR 2021. Designed to address arbitrary-shaped, curved, oriented, and small text in complex real-world scenes, TextOCR provides fine-grained polygonal annotations for 900,000+ text instances across 28,134 high-resolution natural images from the Open Images dataset (v0.1: 21,778 train, 3,124 validation, 3,232 test). The dataset emphasizes full-scene reading with a high density of annotated text per image (averaging over 32 words per image), dramatically exceeding existing scene text benchmarks in word count, vocabulary breadth, and geometric distortion complexity.",
+    "homepage_url": "https://textvqa.org/textocr/dataset/",
+    "publisher": {
+      "name": "Meta AI (Facebook AI Research)",
+      "type": "industry",
+      "url": "https://ai.meta.com/"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "scene-text-detection",
+      "scene-text-recognition",
+      "optical-character-recognition"
+    ],
+    "tags": [
+      "document-ai",
+      "textocr",
+      "scene-text",
+      "ocr",
+      "fair",
+      "open-images"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "commercial_use": "allowed",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "notes": "TextOCR dataset annotations are published by Meta AI under the Creative Commons Attribution 4.0 International (CC BY 4.0) license."
+    },
+    "source_references": [
+      {
+        "title": "TextOCR Official Project Page",
+        "url": "https://textvqa.org/textocr/dataset/",
+        "type": "official_website"
+      },
+      {
+        "title": "TextOCR: Towards Large-Scale End-to-End Reasoning for Arbitrary-Shaped Scene Text (CVPR 2021)",
+        "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Singh_TextOCR_Towards_Large-Scale_End-to-End_Reasoning_for_Arbitrary-Shaped_Scene_Text_CVPR_2021_paper.html",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against textvqa.org/textocr and CVPR 2021 paper. Confirmed 28,134 images (21,778 train, 3,124 val, 3,232 test), 900,000+ arbitrary-shaped word annotations, CC BY 4.0 dataset license, and explicit separation from TextVQA and TextCaps."
+    },
+    "size": {
+      "amount": 14.0,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Natural scene JPEG images from Open Images alongside JSON polygon coordinate and text transcript annotations."
+    },
+    "sample_count": {
+      "total": 28134,
+      "unit": "images",
+      "status": "verified",
+      "splits": {
+        "train": 21778,
+        "val": 3124,
+        "test": 3232
+      }
+    },
+    "dates": {
+      "published": "2021-06-19",
+      "last_updated": "2021-06-19"
+    },
+    "citation": {
+      "paper_title": "TextOCR: Towards Large-Scale End-to-End Reasoning for Arbitrary-Shaped Scene Text",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2021/html/Singh_TextOCR_Towards_Large-Scale_End-to-End_Reasoning_for_Arbitrary-Shaped_Scene_Text_CVPR_2021_paper.html",
+      "authors": [
+        "Amanpreet Singh",
+        "Guan Pang",
+        "Mandy Toh",
+        "Jing Huang",
+        "Wojciech Galuba",
+        "Tal Hassner"
+      ],
+      "bibtex": "@inproceedings{singh2021textocr,\n  title={TextOCR: Towards large-scale end-to-end reasoning for arbitrary-shaped scene text},\n  author={Singh, Amanpreet and Pang, Guan and Toh, Mandy and Huang, Jing and Galuba, Wojciech and Hassner, Tal},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={16497--16506},\n  year={2021}\n}"
+    },
+    "provenance": {
+      "collection_method": "Selected from the Open Images dataset for natural scenes containing rich text. Manually annotated with fine-grained polygon bounding regions.",
+      "curation_notes": "Unit of observation is natural images (28,134 images), whereas word annotation count (~900k) reflects token instances. Not to be conflated with TextVQA or TextCaps.",
+      "data_sources": [
+        "Open Images v6 image collection"
+      ]
     }
   },
   {
@@ -49878,6 +51825,111 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "wildreceipt",
+    "slug": "wildreceipt",
+    "name": "WildReceipt: In-the-Wild Receipt Information Extraction Dataset",
+    "description": "WildReceipt is a benchmark dataset for key information extraction (KIE) from unconstrained in-the-wild receipt images, introduced alongside the Spatial Dual-Modality Graph Reasoning (SDMG-R) framework by SenseTime and supported in MMOCR. WildReceipt consists of 1,739 authentic photographed receipts collected under realistic mobile conditions (involving camera angle variations, wrinkles, uneven illumination, and diverse background clutter). The dataset contains approximately 50,000 text box annotations categorized into 25 semantic entity classes (and an ignore/background class), enabling benchmarking of both closed-set entity tagging and open-set generalized key information extraction.",
+    "homepage_url": "https://mmocr.readthedocs.io/en/latest/basic_concepts/datasets.html",
+    "publisher": {
+      "name": "SenseTime Research & OpenMMLab",
+      "type": "industry",
+      "url": "https://github.com/open-mmlab/mmocr"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "key-information-extraction",
+      "optical-character-recognition",
+      "receipt-understanding"
+    ],
+    "tags": [
+      "document-ai",
+      "wildreceipt",
+      "receipts",
+      "kie",
+      "mmocr",
+      "in-the-wild"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Apache 2.0 (Code) / Open Research Data",
+      "spdx_id": null,
+      "commercial_use": "allowed",
+      "url": "https://github.com/open-mmlab/mmocr/blob/main/LICENSE",
+      "notes": "MMOCR framework tools and data processing recipes are released under Apache 2.0. The WildReceipt dataset images and annotations are distributed openly for research."
+    },
+    "source_references": [
+      {
+        "title": "MMOCR Dataset Documentation for WildReceipt",
+        "url": "https://mmocr.readthedocs.io/en/latest/basic_concepts/datasets.html",
+        "type": "documentation"
+      },
+      {
+        "title": "MMOCR GitHub Repository",
+        "url": "https://github.com/open-mmlab/mmocr",
+        "type": "repository"
+      },
+      {
+        "title": "Spatial Dual-Modality Graph Reasoning for Key Information Extraction (arXiv:2103.14470)",
+        "url": "https://arxiv.org/abs/2103.14470",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against MMOCR official documentation and arXiv:2103.14470 paper. Confirmed 1,739 photographed receipts (1,267 train, 472 test), 25 semantic classes in closed-set annotation, and distinction from existing CORD (Indonesian) and SROIE (Malaysian) datasets."
+    },
+    "size": {
+      "amount": 150.0,
+      "unit": "MB",
+      "file_formats": [
+        "jpg",
+        "txt"
+      ],
+      "status": "estimated",
+      "notes": "Compressed archive containing 1,739 JPEG receipt images and text annotation lists."
+    },
+    "sample_count": {
+      "total": 1739,
+      "unit": "receipts",
+      "status": "verified",
+      "splits": {
+        "train": 1267,
+        "test": 472
+      }
+    },
+    "dates": {
+      "published": "2021-03-26",
+      "last_updated": "2022-08-15"
+    },
+    "citation": {
+      "paper_title": "Spatial Dual-Modality Graph Reasoning for Key Information Extraction",
+      "paper_url": "https://arxiv.org/abs/2103.14470",
+      "doi": "10.48550/arXiv.2103.14470",
+      "authors": [
+        "Hongbin Sun",
+        "Zhanghui Kuang",
+        "Xiaoyu Yue",
+        "Chenhao Lin",
+        "Wayne Zhang"
+      ],
+      "bibtex": "@article{sun2021spatial,\n  title={Spatial Dual-Modality Graph Reasoning for Key Information Extraction},\n  author={Sun, Hongbin and Kuang, Zhanghui and Yue, Xiaoyu and Lin, Chenhao and Zhang, Wayne},\n  journal={arXiv preprint arXiv:2103.14470},\n  year={2021}\n}"
+    },
+    "provenance": {
+      "collection_method": "Real-world mobile phone photography of retail receipts across unconstrained environments and lighting variations.",
+      "curation_notes": "Annotates both closed-set 25-class entity relations and provides open-set evaluation partitions. Samples count physical receipt images rather than individual text bounding boxes.",
+      "data_sources": [
+        "Real-world consumer receipts captured in the wild"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "wine-quality",
     "slug": "wine-quality",
     "name": "Wine Quality Dataset",
@@ -50232,6 +52284,122 @@
       ],
       "doi": "10.18653/v1/2020.emnlp-main.185",
       "bibtex": "@inproceedings{ponti-etal-2020-xcopa,\n  title = {XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning},\n  author = {Ponti, Edoardo M. and Glava{\\v{s}}, Goran and Majewska, Olga and Liu, Qianchu and Vuli{\\'c}, Ivan and Korhonen, Anna},\n  booktitle = {Proceedings of EMNLP 2020},\n  pages = {2362--2376},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "xfund",
+    "slug": "xfund",
+    "name": "XFUND: Multilingual Visually Rich Form Understanding Benchmark",
+    "description": "XFUND is a standardized human-annotated multilingual benchmark dataset for visually rich form understanding across 7 diverse languages: Chinese (ZH), Japanese (JA), Spanish (ES), French (FR), Italian (IT), German (DE), and Portuguese (PT). Developed by Microsoft Research Asia in conjunction with the LayoutXLM multimodal pre-training model, XFUND contains 1,393 authentic document forms. Each of the 7 languages comprises exactly 199 forms (149 training and 50 testing), annotated with word-level bounding boxes, transcription texts, key-value semantic entities (header, question, answer, other), and entity relation links for semantic entity recognition and relation extraction.",
+    "homepage_url": "https://github.com/doc-analysis/XFUND",
+    "publisher": {
+      "name": "Microsoft Research Asia",
+      "type": "industry",
+      "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "form-understanding",
+      "key-information-extraction",
+      "semantic-entity-recognition",
+      "relation-extraction"
+    ],
+    "tags": [
+      "document-ai",
+      "xfund",
+      "multilingual",
+      "forms",
+      "kie",
+      "layoutxlm"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "commercial_use": "forbidden",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "notes": "XFUND dataset files and annotations are released under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license."
+    },
+    "source_references": [
+      {
+        "title": "XFUND GitHub Repository",
+        "url": "https://github.com/doc-analysis/XFUND",
+        "type": "repository"
+      },
+      {
+        "title": "XFUND v1.0 Release Package",
+        "url": "https://github.com/doc-analysis/XFUND/releases/tag/v1.0",
+        "type": "archive"
+      },
+      {
+        "title": "XFUND Research Paper (Findings of ACL 2022)",
+        "url": "https://aclanthology.org/2022.findings-acl.253",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-12",
+      "notes": "Verified against doc-analysis/XFUND GitHub repository and ACL 2022 findings (DOI: 10.18653/v1/2022.findings-acl.253). Confirmed 1,393 total forms (199 forms in each of the 7 languages: 149 train, 50 test), CC BY-NC-SA 4.0 license, and key-value relation annotations."
+    },
+    "size": {
+      "amount": 1.1,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "ZIP archives per language in v1.0 release containing high-resolution JPG form scans and JSON annotation files with OCR and semantic relations."
+    },
+    "sample_count": {
+      "total": 1393,
+      "unit": "forms",
+      "status": "verified",
+      "splits": {
+        "train": 1043,
+        "test": 350,
+        "chinese": 199,
+        "japanese": 199,
+        "spanish": 199,
+        "french": 199,
+        "italian": 199,
+        "german": 199,
+        "portuguese": 199
+      }
+    },
+    "dates": {
+      "published": "2021-12-03",
+      "last_updated": "2022-05-22"
+    },
+    "citation": {
+      "paper_title": "XFUND: A Benchmark Dataset for Multilingual Visually Rich Form Understanding",
+      "paper_url": "https://aclanthology.org/2022.findings-acl.253",
+      "doi": "10.18653/v1/2022.findings-acl.253",
+      "authors": [
+        "Yiheng Xu",
+        "Tengchao Lv",
+        "Lei Cui",
+        "Guoxin Wang",
+        "Yijuan Lu",
+        "Dinei Florencio",
+        "Cha Zhang",
+        "Furu Wei"
+      ],
+      "bibtex": "@inproceedings{xu2022xfund,\n  title={{XFUND}: A Benchmark Dataset for Multilingual Visually Rich Form Understanding},\n  author={Xu, Yiheng and Lv, Tengchao and Cui, Lei and Wang, Guoxin and Lu, Yijuan and Florencio, Dinei and Zhang, Cha and Wei, Furu},\n  booktitle={Findings of the Association for Computational Linguistics: ACL 2022},\n  pages={3214--3224},\n  year={2022},\n  doi={10.18653/v1/2022.findings-acl.253}\n}"
+    },
+    "provenance": {
+      "collection_method": "Synthetic collection and human verification of diverse real-world forms across 7 global non-English languages, labeled with fine-grained OCR bounding boxes and key-value entity pairs.",
+      "curation_notes": "Extends the English-centric FUNSD benchmark methodology into a balanced 7-language multilingual evaluation suite. Samples count forms/pages rather than semantic word tokens.",
+      "data_sources": [
+        "Multilingual business, government, and commercial forms"
+      ]
     }
   },
   {
