@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "hiertext",
+  "slug": "hiertext",
+  "name": "HierText: Hierarchical Scene Text Detection and Layout Analysis Benchmark",
+  "description": "HierText is a benchmark dataset for hierarchical scene text detection, reading order extraction, and document layout analysis in natural scenes, introduced by Google Research at CVPR 2022. Comprising 11,639 high-resolution images sampled from Open Images v6 (constrained to 1600 pixels long side to capture small and fine text), HierText introduces hierarchical ground truth that simultaneously defines word-level tight polygons, line-level oriented bounding boxes, and paragraph-level grouping masks. The dataset contains 8,281 training images, 1,724 validation images, and 1,634 test images, advancing OCR from isolated word bounding boxes toward unified full-page text understanding.",
+  "homepage_url": "https://github.com/google-research-datasets/hiertext",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google/"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "scene-text-detection",
+    "scene-text-recognition",
+    "document-layout-analysis",
+    "optical-character-recognition"
+  ],
+  "tags": [
+    "document-ai",
+    "hiertext",
+    "google-research",
+    "scene-text",
+    "hierarchical",
+    "open-images"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "commercial_use": "allowed",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "notes": "HierText annotations are released by Google under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license. The underlying images originate from Open Images v6 (hosted via CVDF on S3) under CC BY 2.0 / CC BY 4.0 licenses."
+  },
+  "source_references": [
+    {
+      "title": "HierText GitHub Repository",
+      "url": "https://github.com/google-research-datasets/hiertext",
+      "type": "repository"
+    },
+    {
+      "title": "Towards End-to-End Unified Scene Text Detection and Layout Analysis (CVPR 2022)",
+      "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Long_Towards_End-to-End_Unified_Scene_Text_Detection_and_Layout_Analysis_CVPR_2022_paper.html",
+      "type": "original_paper"
+    },
+    {
+      "title": "ICDAR 2023 HierText Challenge (CVC UAB RRC)",
+      "url": "https://rrc.cvc.uab.es/?ch=18",
+      "type": "archive"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against google-research-datasets/hiertext and CVPR 2022 publication. Confirmed 11,639 high-resolution images (8,281 train, 1,724 val, 1,634 test), hierarchical word/line/paragraph annotations, CC BY-SA 4.0 license, and Open Images v6 source attribution."
+  },
+  "size": {
+    "amount": 16.5,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "jsonl",
+      "gz"
+    ],
+    "status": "estimated",
+    "notes": "High-resolution JPG scene images (up to 1600px) hosted on CVDF S3 with gzipped JSONL ground truth files."
+  },
+  "sample_count": {
+    "total": 11639,
+    "unit": "images",
+    "status": "verified",
+    "splits": {
+      "train": 8281,
+      "val": 1724,
+      "test": 1634
+    }
+  },
+  "dates": {
+    "published": "2022-03-29",
+    "last_updated": "2023-05-18"
+  },
+  "citation": {
+    "paper_title": "Towards End-to-End Unified Scene Text Detection and Layout Analysis",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2022/html/Long_Towards_End-to-End_Unified_Scene_Text_Detection_and_Layout_Analysis_CVPR_2022_paper.html",
+    "authors": [
+      "Shangbang Long",
+      "Siyang Qin",
+      "Dmitry Panteleev",
+      "Alessandro Bissacco",
+      "Yasuhisa Fujii",
+      "Michalis Raptis"
+    ],
+    "bibtex": "@inproceedings{long2022towards,\n  title={Towards End-to-End Unified Scene Text Detection and Layout Analysis},\n  author={Long, Shangbang and Qin, Siyang and Panteleev, Dmitry and Bissacco, Alessandro and Fujii, Yasuhisa and Raptis, Michalis},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={2339--2349},\n  year={2022}\n}"
+  },
+  "provenance": {
+    "collection_method": "Selected from the Open Images v6 dataset to emphasize complex text scenes with small, oriented, and occluded textual regions.",
+    "curation_notes": "Ground-truth annotations bridge OCR and layout analysis through a unified hierarchy connecting word tokens to text lines and paragraph structures.",
+    "data_sources": [
+      "Open Images v6 image corpus"
+    ]
+  }
+}

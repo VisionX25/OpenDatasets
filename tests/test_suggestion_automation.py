@@ -80,7 +80,7 @@ Donated in 2012 by Volker Lohweg. Binary class label: 0 for genuine, 1 for forge
 def catalog_datasets() -> list[dict[str, Any]]:
     """Load all published catalog datasets."""
     datasets = load_catalog_datasets(DEFAULT_DATA_DIR)
-    assert len(datasets) == 564, f"Expected exactly 564 datasets, found {len(datasets)}"
+    assert len(datasets) == 584, f"Expected exactly 584 datasets, found {len(datasets)}"
     return datasets
 
 
@@ -455,19 +455,19 @@ def test_scenario_9_schema_compatibility_modalities(category: str, task: str, mo
 
 
 # ==============================================================================
-# Scenario 10: Preservation of the existing catalog (564 datasets)
+# Scenario 10: Preservation of the existing catalog (584 datasets)
 # ==============================================================================
 def test_scenario_10_catalog_preservation(catalog_datasets: list[dict[str, Any]]):
     """Verify that all published datasets remain intact and valid with zero regressions."""
-    assert len(catalog_datasets) == 564
+    assert len(catalog_datasets) == 584
 
-    # Validate all 564 dataset files using the project validator
+    # Validate all 584 dataset files using the project validator
     data_dir = REPO_ROOT / "data" / "datasets"
     schema_path = REPO_ROOT / "schemas" / "dataset.v1.schema.json"
 
     total_checked, total_passed, errors = validate_all_datasets(data_dir=data_dir, schema_path=schema_path)
-    assert total_checked == 564
-    assert total_passed == 564
+    assert total_checked == 584
+    assert total_passed == 584
     assert len(errors) == 0
 
     # Ensure no duplicates exist in current catalog

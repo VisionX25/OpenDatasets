@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wildreceipt",
+  "slug": "wildreceipt",
+  "name": "WildReceipt: In-the-Wild Receipt Information Extraction Dataset",
+  "description": "WildReceipt is a benchmark dataset for key information extraction (KIE) from unconstrained in-the-wild receipt images, introduced alongside the Spatial Dual-Modality Graph Reasoning (SDMG-R) framework by SenseTime and supported in MMOCR. WildReceipt consists of 1,739 authentic photographed receipts collected under realistic mobile conditions (involving camera angle variations, wrinkles, uneven illumination, and diverse background clutter). The dataset contains approximately 50,000 text box annotations categorized into 25 semantic entity classes (and an ignore/background class), enabling benchmarking of both closed-set entity tagging and open-set generalized key information extraction.",
+  "homepage_url": "https://mmocr.readthedocs.io/en/latest/basic_concepts/datasets.html",
+  "publisher": {
+    "name": "SenseTime Research & OpenMMLab",
+    "type": "industry",
+    "url": "https://github.com/open-mmlab/mmocr"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "key-information-extraction",
+    "optical-character-recognition",
+    "receipt-understanding"
+  ],
+  "tags": [
+    "document-ai",
+    "wildreceipt",
+    "receipts",
+    "kie",
+    "mmocr",
+    "in-the-wild"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Apache 2.0 (Code) / Open Research Data",
+    "spdx_id": null,
+    "commercial_use": "allowed",
+    "url": "https://github.com/open-mmlab/mmocr/blob/main/LICENSE",
+    "notes": "MMOCR framework tools and data processing recipes are released under Apache 2.0. The WildReceipt dataset images and annotations are distributed openly for research."
+  },
+  "source_references": [
+    {
+      "title": "MMOCR Dataset Documentation for WildReceipt",
+      "url": "https://mmocr.readthedocs.io/en/latest/basic_concepts/datasets.html",
+      "type": "documentation"
+    },
+    {
+      "title": "MMOCR GitHub Repository",
+      "url": "https://github.com/open-mmlab/mmocr",
+      "type": "repository"
+    },
+    {
+      "title": "Spatial Dual-Modality Graph Reasoning for Key Information Extraction (arXiv:2103.14470)",
+      "url": "https://arxiv.org/abs/2103.14470",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against MMOCR official documentation and arXiv:2103.14470 paper. Confirmed 1,739 photographed receipts (1,267 train, 472 test), 25 semantic classes in closed-set annotation, and distinction from existing CORD (Indonesian) and SROIE (Malaysian) datasets."
+  },
+  "size": {
+    "amount": 150.0,
+    "unit": "MB",
+    "file_formats": [
+      "jpg",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "Compressed archive containing 1,739 JPEG receipt images and text annotation lists."
+  },
+  "sample_count": {
+    "total": 1739,
+    "unit": "receipts",
+    "status": "verified",
+    "splits": {
+      "train": 1267,
+      "test": 472
+    }
+  },
+  "dates": {
+    "published": "2021-03-26",
+    "last_updated": "2022-08-15"
+  },
+  "citation": {
+    "paper_title": "Spatial Dual-Modality Graph Reasoning for Key Information Extraction",
+    "paper_url": "https://arxiv.org/abs/2103.14470",
+    "doi": "10.48550/arXiv.2103.14470",
+    "authors": [
+      "Hongbin Sun",
+      "Zhanghui Kuang",
+      "Xiaoyu Yue",
+      "Chenhao Lin",
+      "Wayne Zhang"
+    ],
+    "bibtex": "@article{sun2021spatial,\n  title={Spatial Dual-Modality Graph Reasoning for Key Information Extraction},\n  author={Sun, Hongbin and Kuang, Zhanghui and Yue, Xiaoyu and Lin, Chenhao and Zhang, Wayne},\n  journal={arXiv preprint arXiv:2103.14470},\n  year={2021}\n}"
+  },
+  "provenance": {
+    "collection_method": "Real-world mobile phone photography of retail receipts across unconstrained environments and lighting variations.",
+    "curation_notes": "Annotates both closed-set 25-class entity relations and provides open-set evaluation partitions. Samples count physical receipt images rather than individual text bounding boxes.",
+    "data_sources": [
+      "Real-world consumer receipts captured in the wild"
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mp-docvqa",
+  "slug": "mp-docvqa",
+  "name": "MP-DocVQA: Multi-Page Document Visual Question Answering Benchmark",
+  "description": "MP-DocVQA is a multi-page document visual question answering benchmark designed to evaluate document understanding systems across long, multi-page contexts. Introduced by researchers from the Computer Vision Center (CVC) at Universitat Autònoma de Barcelona, MP-DocVQA systematically expands the Single Page DocVQA task to realistic multi-page document retrieval and reasoning. The dataset contains 46,436 questions over 5,929 multi-page documents comprising 47,952 document pages (ranging from 2 up to 20 pages per document). While single-page DocVQA provided only isolated cropped pages, MP-DocVQA provides the full document context, requiring models to simultaneously solve evidence-page retrieval, cross-page reasoning, and question answering.",
+  "homepage_url": "https://rrc.cvc.uab.cat/?ch=17&com=downloads",
+  "publisher": {
+    "name": "Computer Vision Center (CVC) UAB",
+    "type": "academic",
+    "url": "https://rrc.cvc.uab.cat"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "document-visual-question-answering",
+    "document-retrieval",
+    "cross-page-reasoning"
+  ],
+  "tags": [
+    "document-ai",
+    "mp-docvqa",
+    "docvqa",
+    "multi-page",
+    "long-context",
+    "vqa"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "CC BY 4.0 (Annotations) / Academic Research EULA (Documents)",
+    "spdx_id": null,
+    "commercial_use": "forbidden",
+    "url": "https://rrc.cvc.uab.cat/?ch=17&com=downloads",
+    "notes": "Question annotations are available under Creative Commons Attribution 4.0 International (CC BY 4.0). Multi-page document image archives are available via the CVC UAB Robust Reading Competition portal for non-commercial academic research."
+  },
+  "source_references": [
+    {
+      "title": "Robust Reading Competition Portal (Task 17 Download)",
+      "url": "https://rrc.cvc.uab.cat/?ch=17&com=downloads",
+      "type": "official_website"
+    },
+    {
+      "title": "Hierarchical Multimodal Transformers for Multi-Page DocVQA (Pattern Recognition 2023)",
+      "url": "https://doi.org/10.1016/j.patcog.2023.109834",
+      "type": "original_paper"
+    },
+    {
+      "title": "MP-DocVQA on Hugging Face Datasets",
+      "url": "https://huggingface.co/datasets/rubentito/mp-docvqa",
+      "type": "dataset_card"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against RRC portal Challenge 17, Pattern Recognition publication (DOI: 10.1016/j.patcog.2023.109834), and rubentito/mp-docvqa dataset repository. Confirmed 46,436 questions over 5,929 documents (47,952 pages), multi-page evaluation paradigm, and explicit parent-child lineage to Single Page DocVQA."
+  },
+  "size": {
+    "amount": 12.5,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Full multi-page document image archives (47,952 JPG pages) paired with question-answer JSON metadata and pre-computed OCR transcripts."
+  },
+  "sample_count": {
+    "total": 46436,
+    "unit": "questions",
+    "status": "verified",
+    "splits": {
+      "train_questions": 36230,
+      "val_questions": 5187,
+      "test_questions": 5019,
+      "train_documents": 5131,
+      "val_documents": 927,
+      "test_documents": 959,
+      "total_documents": 5929,
+      "total_pages": 47952
+    }
+  },
+  "dates": {
+    "published": "2022-12-12",
+    "last_updated": "2023-09-01"
+  },
+  "citation": {
+    "paper_title": "Hierarchical Multimodal Transformers for Multi-Page DocVQA",
+    "paper_url": "https://doi.org/10.1016/j.patcog.2023.109834",
+    "doi": "10.1016/j.patcog.2023.109834",
+    "authors": [
+      "Rubèn Tito",
+      "Dimosthenis Karatzas",
+      "Ernest Valveny"
+    ],
+    "bibtex": "@article{tito2023hierarchical,\n  title={Hierarchical multimodal transformers for Multi-Page DocVQA},\n  author={Tito, Rub{\\`e}n and Karatzas, Dimosthenis and Valveny, Ernest},\n  journal={Pattern Recognition},\n  volume={144},\n  pages={109834},\n  year={2023},\n  publisher={Elsevier},\n  doi={10.1016/j.patcog.2023.109834}\n}"
+  },
+  "provenance": {
+    "collection_method": "Multi-page reconstruction of source document files from the UCSF Truth Tobacco Industry Documents archive corresponding to questions originally posed in Single Page DocVQA.",
+    "curation_notes": "An independently published multi-page evaluation benchmark. Reuses questions and target document images from Single Page DocVQA while embedding them within their complete multi-page document contexts (up to 20 pages per document).",
+    "data_sources": [
+      "Truth Tobacco Industry Documents archive via Single Page DocVQA"
+    ]
+  }
+}

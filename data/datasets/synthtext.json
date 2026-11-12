@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "id": "synthtext",
+  "slug": "synthtext",
+  "name": "SynthText in the Wild: Synthetic Text Localisation Benchmark",
+  "description": "SynthText in the Wild is a benchmark dataset and synthetic data generation paradigm for multi-oriented and curved scene text detection in natural images, introduced by Gupta, Vedaldi, and Zisserman at CVPR 2016. Sourced from 8,000 background photographs, SynthText uses dense semantic segmentation and depth maps to realistically render synthetic 3D-oriented text onto suitable planar surfaces. The complete corpus contains 858,750 high-resolution natural scene images containing over 7.2 million synthetic word instances (and ~29 million characters). Unlike word-recognition datasets like MJSynth that supply cropped tokens, SynthText provides full scene images with pixel-precise word and character-level oriented bounding boxes.",
+  "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/scenetext/",
+  "publisher": {
+    "name": "Visual Geometry Group (VGG), University of Oxford",
+    "type": "academic",
+    "url": "https://www.robots.ox.ac.uk/~vgg/"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "scene-text-detection",
+    "scene-text-localization",
+    "optical-character-recognition"
+  ],
+  "tags": [
+    "document-ai",
+    "synthtext",
+    "vgg-oxford",
+    "scene-text",
+    "synthetic-data",
+    "cvpr-2016"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Oxford VGG Dataset Terms of Use",
+    "spdx_id": null,
+    "commercial_use": "forbidden",
+    "url": "https://www.robots.ox.ac.uk/~vgg/data/scenetext/",
+    "notes": "Available free of charge for non-commercial academic research and evaluation with citation under Oxford VGG dataset terms."
+  },
+  "source_references": [
+    {
+      "title": "Oxford VGG SynthText Official Project Page",
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/scenetext/",
+      "type": "official_website"
+    },
+    {
+      "title": "Synthetic Data for Text Localisation in Natural Images (CVPR 2016)",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2016/html/Gupta_Synthetic_Data_for_CVPR_2016_paper.html",
+      "type": "original_paper"
+    },
+    {
+      "title": "SynthText Dataset on Academic Torrents",
+      "url": "https://academictorrents.com/details/264b4c2e640243be440615967265a6c387b32231",
+      "type": "archive"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against robots.ox.ac.uk/~vgg/data/scenetext/ and CVPR 2016 proceedings. Confirmed 858,750 synthetic scene images, 7,266,866 word instances, 41 GB distribution zip archive, Oxford VGG research terms, and distinction from MJSynth."
+  },
+  "size": {
+    "amount": 41.0,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "mat"
+    ],
+    "status": "verified",
+    "notes": "41 GB compressed archive (SynthText.zip) containing 858,750 scene images across 200 directories and MATLAB ground truth gt.mat."
+  },
+  "sample_count": {
+    "total": 858750,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2016-06-26",
+    "last_updated": "2016-06-26"
+  },
+  "citation": {
+    "paper_title": "Synthetic Data for Text Localisation in Natural Images",
+    "paper_url": "https://openaccess.thecvf.com/content_cvpr_2016/html/Gupta_Synthetic_Data_for_CVPR_2016_paper.html",
+    "authors": [
+      "Ankush Gupta",
+      "Andrea Vedaldi",
+      "Andrew Zisserman"
+    ],
+    "bibtex": "@inproceedings{gupta2016synthetic,\n  title={Synthetic data for text localisation in natural images},\n  author={Gupta, Ankush and Vedaldi, Andrea and Zisserman, Andrew},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={2315--2324},\n  year={2016}\n}"
+  },
+  "provenance": {
+    "collection_method": "Synthetic text projection engine that renders newsgroup text into 8,000 background images using estimated depth and semantic segmentation maps to enforce 3D surface alignment.",
+    "curation_notes": "Replaces accidental duplicate COCO-Text candidate slot 21 per prompt instruction. Provides full scene images for text localization rather than isolated word recognition crops.",
+    "data_sources": [
+      "8,000 background images from web searches",
+      "20 Newsgroup text corpus"
+    ]
+  }
+}

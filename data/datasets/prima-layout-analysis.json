@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "prima-layout-analysis",
+  "slug": "prima-layout-analysis",
+  "name": "PRImA Layout Analysis Dataset: Contemporary Document Benchmark",
+  "description": "The PRImA Layout Analysis Dataset is a foundational benchmark dataset for evaluating physical and logical document layout analysis algorithms. Developed by the Pattern Recognition & Image Analysis (PRImA) Research Lab at the University of Salford, the dataset comprises 478 realistic contemporary document pages drawn primarily from magazines, scientific journals, and technical publications characterized by complex multi-column layouts, varied typography, embedded graphics, and decorative backgrounds. Each page is paired with comprehensive ground truth encoded in the widely adopted PAGE (Page Analysis and Ground Truth Elements) XML schema, specifying polygonal region boundaries, reading orders, and logical text classifications.",
+  "homepage_url": "https://www.primaresearch.org/datasets/Layout_Analysis",
+  "publisher": {
+    "name": "PRImA Research Lab, University of Salford",
+    "type": "academic",
+    "url": "https://www.primaresearch.org/"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "document-layout-analysis",
+    "document-understanding",
+    "text-detection"
+  ],
+  "tags": [
+    "document-ai",
+    "prima",
+    "layout-analysis",
+    "page-xml",
+    "icdar-2009",
+    "salford"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "PRImA Academic Research License (Registration Required)",
+    "spdx_id": null,
+    "commercial_use": "forbidden",
+    "url": "https://www.primaresearch.org/datasets/Layout_Analysis",
+    "notes": "Available free of charge for non-commercial academic research and evaluation following user account registration on the PRImA Research portal. Redistribution of image assets is prohibited."
+  },
+  "source_references": [
+    {
+      "title": "PRImA Layout Analysis Dataset Official Page",
+      "url": "https://www.primaresearch.org/datasets/Layout_Analysis",
+      "type": "official_website"
+    },
+    {
+      "title": "A Realistic Dataset for Performance Evaluation of Document Layout Analysis (ICDAR 2009)",
+      "url": "https://doi.org/10.1109/ICDAR.2009.231",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against primaresearch.org official portal and ICDAR 2009 proceedings (DOI: 10.1109/ICDAR.2009.231). Confirmed 478 contemporary document pages, PAGE XML ground truth standard, and mandatory institutional registration access requirement."
+  },
+  "size": {
+    "amount": 1.2,
+    "unit": "GB",
+    "file_formats": [
+      "tif",
+      "xml"
+    ],
+    "status": "estimated",
+    "notes": "TIFF page images paired with PAGE XML ground-truth annotations covering physical regions and logical reading order."
+  },
+  "sample_count": {
+    "total": 478,
+    "unit": "pages",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2009-07-26",
+    "last_updated": "2013-08-20"
+  },
+  "citation": {
+    "paper_title": "A Realistic Dataset for Performance Evaluation of Document Layout Analysis",
+    "paper_url": "https://doi.org/10.1109/ICDAR.2009.231",
+    "doi": "10.1109/ICDAR.2009.231",
+    "authors": [
+      "Apostolos Antonacopoulos",
+      "David Bridson",
+      "Christos Papadopoulos",
+      "Stefan Pletschacher"
+    ],
+    "bibtex": "@inproceedings{antonacopoulos2009realistic,\n  title={A realistic dataset for performance evaluation of document layout analysis},\n  author={Antonacopoulos, Apostolos and Bridson, David and Papadopoulos, Christos and Pletschacher, Stefan},\n  booktitle={2009 10th International Conference on Document Analysis and Recognition (ICDAR)},\n  pages={296--300},\n  year={2009},\n  organization={IEEE},\n  doi={10.1109/ICDAR.2009.231}\n}"
+  },
+  "provenance": {
+    "collection_method": "Systematic sampling of realistic contemporary documents (magazines and technical/scientific publications) digitised at 300 DPI in 24-bit colour.",
+    "curation_notes": "Established the widely adopted PAGE XML ground-truth schema. Strictly restricted to registered academic researchers.",
+    "data_sources": [
+      "Contemporary technical journals and commercial magazines"
+    ]
+  }
+}

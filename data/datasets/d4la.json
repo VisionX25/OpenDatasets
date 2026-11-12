@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "d4la",
+  "slug": "d4la",
+  "name": "D4LA: Diverse Document Layout Analysis Benchmark",
+  "description": "D4LA (Diverse Document Layout Analysis) is a benchmark dataset for fine-grained document layout analysis introduced alongside the Vision Grid Transformer (VGT) architecture by Alibaba DAMO Academy at ICCV 2023. Derived from the IIT-CDIP Test Collection, D4LA comprises 11,092 high-resolution document pages representing 12 diverse business and technical document types (including letters, memos, invoices, forms, scientific reports, and advertisements). The dataset establishes 27 detailed layout element categories (such as document title, section title, paragraph, list, table, figure, caption, header, footer, code, equation, and stamp), bridging the gap between coarse-grained document layout datasets and real-world industrial visually rich document applications.",
+  "homepage_url": "https://modelscope.cn/datasets/iic/D4LA/summary",
+  "publisher": {
+    "name": "Alibaba Group DAMO Academy",
+    "type": "industry",
+    "url": "https://github.com/AlibabaResearch"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "document-layout-analysis",
+    "document-understanding",
+    "object-detection"
+  ],
+  "tags": [
+    "document-ai",
+    "d4la",
+    "layout-analysis",
+    "vgt",
+    "iit-cdip",
+    "modelscope"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Alibaba Research Open License",
+    "spdx_id": null,
+    "commercial_use": "allowed",
+    "url": "https://github.com/AlibabaResearch/AdvancedLiterateMachinery/tree/main/DocumentUnderstanding/VGT",
+    "notes": "Code and tools are released under the Apache 2.0 License. The underlying document images are derived from the open-access public domain IIT-CDIP collection with fine-grained layout annotations provided openly on ModelScope."
+  },
+  "source_references": [
+    {
+      "title": "D4LA Official ModelScope Distribution",
+      "url": "https://modelscope.cn/datasets/iic/D4LA/summary",
+      "type": "official_website"
+    },
+    {
+      "title": "Alibaba VGT and D4LA Repository",
+      "url": "https://github.com/AlibabaResearch/AdvancedLiterateMachinery/tree/main/DocumentUnderstanding/VGT",
+      "type": "repository"
+    },
+    {
+      "title": "Vision Grid Transformer for Document Layout Analysis (ICCV 2023)",
+      "url": "https://doi.org/10.1109/ICCV51070.2023.01783",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against Alibaba DAMO Academy ModelScope repository iic/D4LA and ICCV 2023 proceedings (DOI: 10.1109/ICCV51070.2023.01783). Confirmed 11,092 document pages (8,868 train, 2,224 test), 27 layout categories, and direct lineage to IIT-CDIP."
+  },
+  "size": {
+    "amount": 4.8,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Official ModelScope release containing high-resolution JPEG document scans and COCO-format JSON layout annotations."
+  },
+  "sample_count": {
+    "total": 11092,
+    "unit": "pages",
+    "status": "verified",
+    "splits": {
+      "train": 8868,
+      "test": 2224
+    }
+  },
+  "dates": {
+    "published": "2023-10-02",
+    "last_updated": "2023-11-15"
+  },
+  "citation": {
+    "paper_title": "Vision Grid Transformer for Document Layout Analysis",
+    "paper_url": "https://doi.org/10.1109/ICCV51070.2023.01783",
+    "doi": "10.1109/ICCV51070.2023.01783",
+    "authors": [
+      "Cheng Da",
+      "Chuwei Luo",
+      "Qi Zheng",
+      "Cong Yao"
+    ],
+    "bibtex": "@inproceedings{da2023vision,\n  title={Vision Grid Transformer for Document Layout Analysis},\n  author={Da, Cheng and Luo, Chuwei and Zheng, Qi and Yao, Cong},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n  pages={19728--19738},\n  year={2023},\n  doi={10.1109/ICCV51070.2023.01783}\n}"
+  },
+  "provenance": {
+    "collection_method": "Sampled from the IIT-CDIP Test Collection across 12 diverse document genres and re-annotated by expert annotators.",
+    "curation_notes": "Expands IIT-CDIP document analysis by introducing 27 fine-grained layout categories. Third-party Hugging Face mirrors are documented as non-canonical secondary distributions.",
+    "data_sources": [
+      "IIT-CDIP Test Collection (Legacy Tobacco Document Library)"
+    ]
+  }
+}

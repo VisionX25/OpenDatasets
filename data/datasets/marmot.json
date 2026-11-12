@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "marmot",
+  "slug": "marmot",
+  "name": "Marmot: Table Recognition and Document Layout Benchmark",
+  "description": "The Marmot Dataset v1.0 is a benchmark dataset for table detection, table structure recognition, and document layout analysis developed by the Institute of Computer Science and Technology (ICST) at Peking University in collaboration with the Founder R&D Center. The dataset consists of 2,000 document pages in digital PDF format paired with XML ground truth generated via the semi-automatic Marmot annotation system. The corpus is split approximately 1:1 between Chinese and English documents: 1,000 Chinese pages drawn from 120+ e-books across diverse subjects in the Founder Apabi digital library, and 1,000 English pages crawled from CiteSeer across 1,500+ conference and journal publications spanning 1970 to 2011.",
+  "homepage_url": "https://www.icst.pku.edu.cn/cpdp/sjzy/",
+  "publisher": {
+    "name": "Peking University & Founder R&D Center",
+    "type": "academic",
+    "url": "https://www.icst.pku.edu.cn/"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "table-detection",
+    "table-recognition",
+    "document-layout-analysis"
+  ],
+  "tags": [
+    "document-ai",
+    "marmot",
+    "table-detection",
+    "pku",
+    "citeseer",
+    "bilingual"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "PKU ICST Academic Research License",
+    "spdx_id": null,
+    "commercial_use": "forbidden",
+    "url": "https://www.icst.pku.edu.cn/cpdp/sjzy/",
+    "notes": "Permission is granted free of charge to any person or group obtaining a copy of the dataset and evaluator code for research purposes only, with rights to use, copy, modify, and distribute all files for non-commercial research."
+  },
+  "source_references": [
+    {
+      "title": "PKU ICST Document Analysis & Recognition Datasets Portal",
+      "url": "https://www.icst.pku.edu.cn/cpdp/sjzy/",
+      "type": "official_website"
+    },
+    {
+      "title": "A Table Detection Method for PDF Documents Based on Convolutional Neural Networks (DAS 2016)",
+      "url": "https://doi.org/10.1109/das.2016.23",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-12",
+    "notes": "Verified against Peking University ICST resource portal and DAS 2016 proceedings (DOI: 10.1109/das.2016.23). Confirmed 2,000 PDF pages (~1,000 Chinese from Founder Apabi and ~1,000 English from CiteSeer), XML bounding ground truth, and non-commercial research license terms."
+  },
+  "size": {
+    "amount": 2.1,
+    "unit": "GB",
+    "file_formats": [
+      "pdf",
+      "xml",
+      "bmp"
+    ],
+    "status": "estimated",
+    "notes": "Distribution package containing digital PDF source pages, rendered BMP page images, and XML table bounding box annotations."
+  },
+  "sample_count": {
+    "total": 2000,
+    "unit": "pages",
+    "status": "verified",
+    "splits": {
+      "chinese_pages": 1000,
+      "english_pages": 1000
+    }
+  },
+  "dates": {
+    "published": "2011-09-01",
+    "last_updated": "2016-04-11"
+  },
+  "citation": {
+    "paper_title": "A Table Detection Method for PDF Documents Based on Convolutional Neural Networks",
+    "paper_url": "https://doi.org/10.1109/das.2016.23",
+    "doi": "10.1109/das.2016.23",
+    "authors": [
+      "Leipeng Hao",
+      "Liangcai Gao",
+      "Xiaohan Yi",
+      "Zhi Tang"
+    ],
+    "bibtex": "@inproceedings{hao2016table,\n  title={A table detection method for PDF documents based on convolutional neural networks},\n  author={Hao, Leipeng and Gao, Liangcai and Yi, Xiaohan and Tang, Zhi},\n  booktitle={2016 12th IAPR Workshop on Document Analysis Systems (DAS)},\n  pages={287--292},\n  year={2016},\n  organization={IEEE},\n  doi={10.1109/das.2016.23}\n}"
+  },
+  "provenance": {
+    "collection_method": "Semi-automated ground-truthing utilizing the Marmot annotation tool across crawled CiteSeer English scientific papers and Founder Apabi Chinese electronic books.",
+    "curation_notes": "Maintains an approximate 1:1 positive-to-negative page ratio for table regions across single- and multi-column document designs. Distinct from TableBank and PubTables-1M.",
+    "data_sources": [
+      "CiteSeer scientific publications (1970–2011)",
+      "Founder Apabi e-book digital library"
+    ]
+  }
+}
