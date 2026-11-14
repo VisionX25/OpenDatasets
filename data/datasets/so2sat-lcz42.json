@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "id": "so2sat-lcz42",
+  "slug": "so2sat-lcz42",
+  "name": "So2Sat LCZ42: A Benchmark Dataset for Global Local Climate Zones Classification",
+  "description": "So2Sat LCZ42 is a global benchmark dataset for Local Climate Zone (LCZ) classification curated by the Technical University of Munich (TUM) and the German Aerospace Center (DLR). Designed to provide standardized global urban morphology and land-use mapping, it comprises 400,673 co-registered image patch pairs from Copernicus Sentinel-1 SAR and Sentinel-2 multispectral sensors across 52 global metropolitan areas on all inhabited continents. Each patch has dimensions of 32x32 pixels at 10m spatial resolution and is labeled with one of 17 Local Climate Zone classes (10 built types and 7 natural land-cover types) according to the Stewart and Oke classification scheme. The official release is divided into 352,366 training pairs across 42 urban regions and a strictly independent geographical evaluation split of 24,119 validation and 24,188 test patch pairs from 10 distinct evaluation cities. All versions (v1-v4) represent iterations of this single canonical dataset identity.",
+  "homepage_url": "https://mediatum.ub.tum.de/1454690",
+  "publisher": {
+    "name": "Technical University of Munich (TUM) & DLR",
+    "type": "academic",
+    "url": "https://mediatum.ub.tum.de"
+  },
+  "modalities": [
+    "vision",
+    "sensor"
+  ],
+  "tasks": [
+    "climate-zone-classification",
+    "land-cover-classification",
+    "multimodal-fusion",
+    "remote-sensing"
+  ],
+  "tags": [
+    "sentinel-1",
+    "sentinel-2",
+    "local-climate-zones",
+    "urban-climate",
+    "sar",
+    "multispectral",
+    "so2sat",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed under CC BY 4.0 via Technical University of Munich's mediaTUM data archive."
+  },
+  "source_references": [
+    {
+      "title": "mediaTUM Institutional Archive (So2Sat LCZ42)",
+      "url": "https://mediatum.ub.tum.de/1454690",
+      "type": "archive",
+      "notes": "Official data repository hosted by the Technical University of Munich (DOI: 10.14459/2018MP1454690)."
+    },
+    {
+      "title": "So2Sat LCZ42 Author Repository",
+      "url": "https://github.com/zhu-xlab/So2Sat-LCZ42",
+      "type": "repository",
+      "notes": "Official code repository and benchmark evaluation scripts."
+    },
+    {
+      "title": "So2Sat LCZ42: A Benchmark Dataset for Global Local Climate Zones Classification (IEEE GRSM 2020)",
+      "url": "https://doi.org/10.1109/MGRS.2020.2964708",
+      "type": "original_paper",
+      "notes": "Peer-reviewed foundational journal paper in IEEE Geoscience and Remote Sensing Magazine."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-14",
+    "notes": "Verified against mediaTUM archive (1454690) and IEEE GRSM DOI: 10.1109/MGRS.2020.2964708. Confirmed 400,673 patch pairs (352,366 train, 24,119 val, 24,188 test), 17 LCZ classes, 52 cities, CC BY 4.0 license, and unified v1-v4 dataset identity."
+  },
+  "size": {
+    "amount": 56.0,
+    "unit": "GB",
+    "file_formats": [
+      "h5"
+    ],
+    "status": "verified",
+    "notes": "Distributed as HDF5 (.h5) archives containing Sentinel-1 (VV, VH, real/imaginary) and Sentinel-2 (10 optical bands) 32x32 patches with LCZ class labels."
+  },
+  "sample_count": {
+    "total": 400673,
+    "splits": {
+      "train": 352366,
+      "validation": 24119,
+      "test": 24188
+    },
+    "unit": "patch pairs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-08-01",
+    "last_updated": "2020-03-01"
+  },
+  "citation": {
+    "paper_title": "So2Sat LCZ42: A Benchmark Dataset for Global Local Climate Zones Classification",
+    "paper_url": "https://doi.org/10.1109/MGRS.2020.2964708",
+    "doi": "10.1109/MGRS.2020.2964708",
+    "authors": [
+      "Xiao Xiang Zhu",
+      "Jingyan Hu",
+      "Chunping Qiu",
+      "Yilei Shi",
+      "Jian Kang",
+      "Lieven Gaudry",
+      "Xiaoxiang Li",
+      "Gabriel Tsagkatakis",
+      "Gencer Sumbul",
+      "Begüm Demir"
+    ],
+    "bibtex": "@article{zhu2020so2sat,\n  title={So2Sat LCZ42: A Benchmark Dataset for Global Local Climate Zones Classification},\n  author={Zhu, Xiao Xiang and Hu, Jingyan and Qiu, Chunping and Shi, Yilei and Kang, Jian and Gaudry, Lieven and Li, Xiaoxiang and Tsagkatakis, Gabriel and Sumbul, Gencer and Demir, Beg{\\\"u}m},\n  journal={IEEE Geoscience and Remote Sensing Magazine},\n  volume={8},\n  number={3},\n  pages={76--89},\n  year={2020},\n  doi={10.1109/MGRS.2020.2964708}\n}"
+  },
+  "geographic_coverage": [
+    "Global",
+    "Europe",
+    "North America",
+    "South America",
+    "Asia",
+    "Africa",
+    "Australia"
+  ],
+  "provenance": {
+    "collection_method": "Curated from European Space Agency Sentinel-1 dual-polarization SAR and Sentinel-2 Level-1C multispectral imagery across 52 global metropolitan areas.",
+    "curation_notes": "Labeling conducted by 15 domain experts following the World Urban Database and Access Portal Tools (WUDAPT) methodology, achieving a 95% confidence rating through multi-stage consensus.",
+    "data_sources": [
+      "Copernicus Sentinel-1 SAR",
+      "Copernicus Sentinel-2 MSI"
+    ]
+  }
+}

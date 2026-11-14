@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sen12-flood",
+  "slug": "sen12-flood",
+  "name": "SEN12-FLOOD: SAR and Multispectral Dataset for Flood Detection",
+  "description": "SEN12-FLOOD is an earth observation benchmark dataset specifically curated for flood event detection from paired Sentinel-1 SAR and Sentinel-2 multispectral satellite imagery, created by researchers from the Conservatoire National des Arts et Métiers (CNAM), ONERA, and the European Space Agency (ESA). The dataset comprises 336 co-registered observation sequences (totaling 1,947 image-date time slices) capturing major historical flooding events between December 2018 and May 2019 across flood-prone areas in Southern/West Africa, the Middle East (Iran), and Australia. Each tile has a spatial footprint of 512x512 pixels at 10m spatial resolution. By pairing cloud-penetrating synthetic aperture radar (SAR) with optical multispectral bands, SEN12-FLOOD enables all-weather disaster monitoring and multi-modal fusion. Sentinel-1 and Sentinel-2 pairs represent co-registered observations of the same flood events.",
+  "homepage_url": "https://source.coop/esa/sen12flood",
+  "publisher": {
+    "name": "European Space Agency (ESA) & CNAM / ONERA",
+    "type": "government",
+    "url": "https://source.coop/esa/sen12flood"
+  },
+  "modalities": [
+    "vision",
+    "sensor"
+  ],
+  "tasks": [
+    "flood-detection",
+    "disaster-damage-assessment",
+    "multimodal-fusion",
+    "remote-sensing"
+  ],
+  "tags": [
+    "flood-detection",
+    "sentinel-1",
+    "sentinel-2",
+    "sar",
+    "multispectral",
+    "esa",
+    "disaster-response",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Released under CC BY 4.0 via Source Cooperative and IEEE DataPort."
+  },
+  "source_references": [
+    {
+      "title": "Source Cooperative ESA SEN12-FLOOD Distribution",
+      "url": "https://source.coop/esa/sen12flood",
+      "type": "official_website",
+      "notes": "Official European Space Agency distribution on Source Cooperative."
+    },
+    {
+      "title": "SEN12-FLOOD IEEE DataPort Archive",
+      "url": "https://doi.org/10.21227/w6xz-s898",
+      "type": "archive",
+      "notes": "Original IEEE DataPort repository (DOI: 10.21227/w6xz-s898)."
+    },
+    {
+      "title": "Flood Detection in Time Series of Optical and SAR Images (ISPRS Archives 2020)",
+      "url": "https://doi.org/10.5194/isprs-archives-XLIII-B2-2020-1343-2020",
+      "type": "original_paper",
+      "notes": "Published in ISPRS Archives XLIII-B2-2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-14",
+    "notes": "Verified against Source Cooperative (esa/sen12flood), IEEE DataPort (DOI: 10.21227/w6xz-s898), and ISPRS Archives paper. Verified 336 paired observation sequences (1,947 time slices), 512x512 tiles, CC BY 4.0 license, and unified S1/S2 event pairs."
+  },
+  "size": {
+    "amount": 65.0,
+    "unit": "GB",
+    "file_formats": [
+      "tif",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Compressed archive payload containing 512x512 GeoTIFF patches for Sentinel-1 (VV, VH) and Sentinel-2 (Level-2A BOA reflectance) with JSON classification labels."
+  },
+  "sample_count": {
+    "total": 336,
+    "splits": {
+      "train": 235,
+      "test": 101
+    },
+    "unit": "paired sequences",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-08-12",
+    "last_updated": "2023-05-10"
+  },
+  "citation": {
+    "paper_title": "Flood Detection in Time Series of Optical and SAR Images",
+    "paper_url": "https://doi.org/10.5194/isprs-archives-XLIII-B2-2020-1343-2020",
+    "doi": "10.5194/isprs-archives-XLIII-B2-2020-1343-2020",
+    "authors": [
+      "Clément Rambour",
+      "Nicolas Audebert",
+      "Elise Koeniguer",
+      "Bertrand Le Saux",
+      "Michel Crucianu",
+      "Mihai Datcu"
+    ],
+    "bibtex": "@article{rambour2020flood,\n  title={Flood Detection in Time Series of Optical and SAR Images},\n  author={Rambour, Cl{\\'e}ment and Audebert, Nicolas and Koeniguer, Elise and Le Saux, Bertrand and Crucianu, Michel and Datcu, Mihai},\n  journal={The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences},\n  volume={43},\n  pages={1343--1346},\n  year={2020},\n  doi={10.5194/isprs-archives-XLIII-B2-2020-1343-2020}\n}"
+  },
+  "geographic_coverage": [
+    "Africa",
+    "Middle East",
+    "Australia",
+    "Iran",
+    "Mozambique",
+    "Nigeria"
+  ],
+  "provenance": {
+    "collection_method": "Co-registered time series assembled from Copernicus Sentinel-1 C-band synthetic aperture radar and Sentinel-2 multispectral imager observations during recorded flood events.",
+    "curation_notes": "Each sequence pairs SAR and optical observations covering the same geographic region; patches are 512x512 pixels at 10m resolution. Labeled for image-level and pixel-level flood presence.",
+    "data_sources": [
+      "Copernicus Sentinel-1 SAR",
+      "Copernicus Sentinel-2 MSI"
+    ]
+  }
+}

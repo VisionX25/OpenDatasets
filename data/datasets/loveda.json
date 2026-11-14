@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "loveda",
+  "slug": "loveda",
+  "name": "LoveDA: Land-Cover Domain Adaptive Semantic Segmentation Dataset",
+  "description": "LoveDA is a high-spatial-resolution remote sensing land-cover dataset constructed by the RSIDEA research group at Wuhan University. Designed to benchmark semantic segmentation and domain adaptation algorithms across varying geographical distributions, LoveDA contains 5,987 images of 1024x1024 pixels at 0.3-meter ground resolution, featuring 166,768 annotated objects across 7 categories (background, building, road, water, barren, forest, agricultural). The dataset captures stark domain shifts between dense urban (2,713 images) and sparse rural (3,274 images) landscapes across three Chinese cities (Nanjing, Changzhou, and Wuhan). The standard benchmark partition comprises 2,522 training images, 1,669 validation images, and 1,796 held-out test images.",
+  "homepage_url": "https://github.com/Junjue-Wang/LoveDA",
+  "publisher": {
+    "name": "Wuhan University (RSIDEA)",
+    "type": "academic",
+    "url": "http://rsidea.whu.edu.cn"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "domain-adaptation",
+    "land-cover-classification",
+    "remote-sensing"
+  ],
+  "tags": [
+    "land-cover",
+    "domain-adaptation",
+    "remote-sensing",
+    "urban-rural",
+    "loveda",
+    "semantic-segmentation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "LoveDA Research License / CC BY-NC-SA 4.0",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://doi.org/10.5281/zenodo.5706578",
+    "commercial_use": "forbidden",
+    "notes": "Available for academic and research purposes only. Commercial use is strictly prohibited. Users must also comply with Google Earth terms of service."
+  },
+  "source_references": [
+    {
+      "title": "LoveDA GitHub Repository",
+      "url": "https://github.com/Junjue-Wang/LoveDA",
+      "type": "repository",
+      "notes": "Official dataset repository with code and evaluation instructions."
+    },
+    {
+      "title": "LoveDA Zenodo Data Archive",
+      "url": "https://doi.org/10.5281/zenodo.5706578",
+      "type": "archive",
+      "notes": "Official permanent research data archive on Zenodo."
+    },
+    {
+      "title": "LoveDA: A Remote Sensing Land-Cover Dataset for Domain Adaptive Semantic Segmentation (NeurIPS 2021)",
+      "url": "https://doi.org/10.48550/arXiv.2110.08733",
+      "type": "original_paper",
+      "notes": "Published in NeurIPS 2021 Track on Datasets and Benchmarks."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-14",
+    "notes": "Verified against Zenodo archive (DOI: 10.5281/zenodo.5706578) and NeurIPS 2021 publication (arXiv:2110.08733). Confirmed 5,987 total images. Standard benchmark partition: 2,522 training, 1,669 validation, and 1,796 test images. Orthogonal geographic domain partition: 2,713 urban images (1,156 train, 677 val, 880 test) and 3,274 rural images (1,366 train, 992 val, 916 test). Confirmed non-commercial terms under CC BY-NC-SA 4.0."
+  },
+  "size": {
+    "amount": 14.5,
+    "unit": "GB",
+    "file_formats": [
+      "tif",
+      "png"
+    ],
+    "status": "verified",
+    "notes": "5,987 1024x1024 RGB TIFF images paired with PNG semantic segmentation masks. Standard evaluation split: 2,522 train, 1,669 val, 1,796 test; domain distribution: 2,713 urban, 3,274 rural."
+  },
+  "sample_count": {
+    "total": 5987,
+    "splits": {
+      "train": 2522,
+      "validation": 1669,
+      "test": 1796
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-10-18",
+    "last_updated": "2021-11-17"
+  },
+  "citation": {
+    "paper_title": "LoveDA: A Remote Sensing Land-Cover Dataset for Domain Adaptive Semantic Segmentation",
+    "paper_url": "https://doi.org/10.48550/arXiv.2110.08733",
+    "doi": "10.48550/arXiv.2110.08733",
+    "authors": [
+      "Junjue Wang",
+      "Zhuo Zheng",
+      "Ailong Ma",
+      "Xiaoyan Lu",
+      "Yanfei Zhong"
+    ],
+    "bibtex": "@article{wang2021loveda,\n  title={LoveDA: A Remote Sensing Land-Cover Dataset for Domain Adaptive Semantic Segmentation},\n  author={Wang, Junjue and Zheng, Zhuo and Ma, Ailong and Lu, Xiaoyan and Zhong, Yanfei},\n  journal={arXiv preprint arXiv:2110.08733},\n  year={2021},\n  doi={10.48550/arXiv.2110.08733}\n}"
+  },
+  "geographic_coverage": [
+    "China",
+    "Nanjing",
+    "Changzhou",
+    "Wuhan"
+  ],
+  "provenance": {
+    "collection_method": "Extracted from Google Earth high-resolution imagery covering 18 rural and urban areas in Nanjing, Changzhou, and Wuhan.",
+    "curation_notes": "Pixel-level annotation for 7 categories performed with cross-validation. Explicitly distinguishes urban from rural distributions for unsupervised domain adaptation benchmarking.",
+    "data_sources": [
+      "Google Earth high-resolution imagery"
+    ]
+  }
+}

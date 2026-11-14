@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bijie-landslide",
+  "slug": "bijie-landslide",
+  "name": "Bijie Landslide Dataset: Satellite Optical Imagery and Digital Elevation Models",
+  "description": "The Bijie Landslide Dataset is a specialized remote sensing geohazard detection and segmentation benchmark curated by the Photogrammetry and Computer Vision (GPCV) Lab at Wuhan University and the State Key Laboratory of Geohazard Prevention at Chengdu University of Technology. Covering mountainous terrain in Bijie City, Guizhou Province, China, the dataset integrates TripleSat optical satellite imagery (0.8-meter ground resolution) and corresponding Digital Elevation Models (DEM, 2-meter resolution). It comprises 2,773 image samples, consisting of 770 landslide-positive samples and 2,003 non-landslide background samples. For all 770 landslide occurrences, the dataset provides optical image patches, DEM elevation rasters, binary segmentation mask images, and precise boundary coordinate polygons. The sample count reflects verified image-DEM sample units rather than isolated polygon vertices.",
+  "homepage_url": "https://gpcv.whu.edu.cn/data/Bijie_pages.html",
+  "publisher": {
+    "name": "Wuhan University (GPCV Lab) & SKLGP CDUT",
+    "type": "academic",
+    "url": "https://gpcv.whu.edu.cn"
+  },
+  "modalities": [
+    "vision",
+    "sensor"
+  ],
+  "tasks": [
+    "landslide-detection",
+    "semantic-segmentation",
+    "geohazard-assessment",
+    "remote-sensing"
+  ],
+  "tags": [
+    "landslide-detection",
+    "triplesat",
+    "dem",
+    "geohazard",
+    "remote-sensing",
+    "bijie",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Bijie Dataset Academic Research License",
+    "url": "https://gpcv.whu.edu.cn/data/Bijie_pages.html",
+    "commercial_use": "forbidden",
+    "notes": "Freely distributed for academic research and non-commercial educational use. Commercial application is prohibited. Proper citation of the foundational Landslides journal paper is required."
+  },
+  "source_references": [
+    {
+      "title": "Bijie Landslide Dataset Official Homepage",
+      "url": "https://gpcv.whu.edu.cn/data/Bijie_pages.html",
+      "type": "official_website",
+      "notes": "Official Wuhan University GPCV dataset landing page."
+    },
+    {
+      "title": "Landslide Detection From an Open Satellite Imagery and DEM Dataset (Landslides 2020)",
+      "url": "https://doi.org/10.1007/s10346-020-01353-2",
+      "type": "original_paper",
+      "notes": "Original peer-reviewed publication in Springer Landslides journal."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-14",
+    "notes": "Verified against gpcv.whu.edu.cn/data/Bijie_pages.html and Springer Landslides paper (DOI: 10.1007/s10346-020-01353-2). Confirmed 2,773 total samples (770 landslide, 2,003 non-landslide), TripleSat optical and DEM modalities, binary masks, and non-commercial terms."
+  },
+  "size": {
+    "amount": 1.2,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "2,773 optical PNG image patches, corresponding 2m DEM PNG patches, binary mask PNGs, and boundary coordinate text files."
+  },
+  "sample_count": {
+    "total": 2773,
+    "splits": {
+      "landslide": 770,
+      "non_landslide": 2003
+    },
+    "unit": "samples",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-02-14",
+    "last_updated": "2020-08-01"
+  },
+  "citation": {
+    "paper_title": "Landslide detection from an open satellite imagery and digital elevation model dataset using attention boosted convolutional neural networks",
+    "paper_url": "https://doi.org/10.1007/s10346-020-01353-2",
+    "doi": "10.1007/s10346-020-01353-2",
+    "authors": [
+      "Shunping Ji",
+      "Dawei Yu",
+      "Chao Shen",
+      "Weixing Li",
+      "Qiang Xu"
+    ],
+    "bibtex": "@article{ji2020landslide,\n  title={Landslide detection from an open satellite imagery and digital elevation model dataset using attention boosted convolutional neural networks},\n  author={Ji, Shunping and Yu, Dawei and Shen, Chao and Li, Weixing and Xu, Qiang},\n  journal={Landslides},\n  volume={17},\n  number={6},\n  pages={1337--1352},\n  year={2020},\n  doi={10.1007/s10346-020-01353-2}\n}"
+  },
+  "geographic_coverage": [
+    "China",
+    "Guizhou",
+    "Bijie"
+  ],
+  "provenance": {
+    "collection_method": "Extracted from TripleSat optical satellite constellation (0.8m) captured between May and August 2018 paired with an airborne/satellite Digital Elevation Model (2m) in Bijie City, Guizhou Province.",
+    "curation_notes": "Annotated by geological remote sensing experts. Contains 770 verified landslide occurrences with pixel masks and polygon coordinates, and 2,003 negative background samples.",
+    "data_sources": [
+      "TripleSat optical satellite imagery",
+      "Digital Elevation Models (DEM)"
+    ]
+  }
+}

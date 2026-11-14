@@ -7504,6 +7504,114 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "bijie-landslide",
+    "slug": "bijie-landslide",
+    "name": "Bijie Landslide Dataset: Satellite Optical Imagery and Digital Elevation Models",
+    "description": "The Bijie Landslide Dataset is a specialized remote sensing geohazard detection and segmentation benchmark curated by the Photogrammetry and Computer Vision (GPCV) Lab at Wuhan University and the State Key Laboratory of Geohazard Prevention at Chengdu University of Technology. Covering mountainous terrain in Bijie City, Guizhou Province, China, the dataset integrates TripleSat optical satellite imagery (0.8-meter ground resolution) and corresponding Digital Elevation Models (DEM, 2-meter resolution). It comprises 2,773 image samples, consisting of 770 landslide-positive samples and 2,003 non-landslide background samples. For all 770 landslide occurrences, the dataset provides optical image patches, DEM elevation rasters, binary segmentation mask images, and precise boundary coordinate polygons. The sample count reflects verified image-DEM sample units rather than isolated polygon vertices.",
+    "homepage_url": "https://gpcv.whu.edu.cn/data/Bijie_pages.html",
+    "publisher": {
+      "name": "Wuhan University (GPCV Lab) & SKLGP CDUT",
+      "type": "academic",
+      "url": "https://gpcv.whu.edu.cn"
+    },
+    "modalities": [
+      "vision",
+      "sensor"
+    ],
+    "tasks": [
+      "landslide-detection",
+      "semantic-segmentation",
+      "geohazard-assessment",
+      "remote-sensing"
+    ],
+    "tags": [
+      "landslide-detection",
+      "triplesat",
+      "dem",
+      "geohazard",
+      "remote-sensing",
+      "bijie",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Bijie Dataset Academic Research License",
+      "url": "https://gpcv.whu.edu.cn/data/Bijie_pages.html",
+      "commercial_use": "forbidden",
+      "notes": "Freely distributed for academic research and non-commercial educational use. Commercial application is prohibited. Proper citation of the foundational Landslides journal paper is required."
+    },
+    "source_references": [
+      {
+        "title": "Bijie Landslide Dataset Official Homepage",
+        "url": "https://gpcv.whu.edu.cn/data/Bijie_pages.html",
+        "type": "official_website",
+        "notes": "Official Wuhan University GPCV dataset landing page."
+      },
+      {
+        "title": "Landslide Detection From an Open Satellite Imagery and DEM Dataset (Landslides 2020)",
+        "url": "https://doi.org/10.1007/s10346-020-01353-2",
+        "type": "original_paper",
+        "notes": "Original peer-reviewed publication in Springer Landslides journal."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against gpcv.whu.edu.cn/data/Bijie_pages.html and Springer Landslides paper (DOI: 10.1007/s10346-020-01353-2). Confirmed 2,773 total samples (770 landslide, 2,003 non-landslide), TripleSat optical and DEM modalities, binary masks, and non-commercial terms."
+    },
+    "size": {
+      "amount": 1.2,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "2,773 optical PNG image patches, corresponding 2m DEM PNG patches, binary mask PNGs, and boundary coordinate text files."
+    },
+    "sample_count": {
+      "total": 2773,
+      "splits": {
+        "landslide": 770,
+        "non_landslide": 2003
+      },
+      "unit": "samples",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-02-14",
+      "last_updated": "2020-08-01"
+    },
+    "citation": {
+      "paper_title": "Landslide detection from an open satellite imagery and digital elevation model dataset using attention boosted convolutional neural networks",
+      "paper_url": "https://doi.org/10.1007/s10346-020-01353-2",
+      "doi": "10.1007/s10346-020-01353-2",
+      "authors": [
+        "Shunping Ji",
+        "Dawei Yu",
+        "Chao Shen",
+        "Weixing Li",
+        "Qiang Xu"
+      ],
+      "bibtex": "@article{ji2020landslide,\n  title={Landslide detection from an open satellite imagery and digital elevation model dataset using attention boosted convolutional neural networks},\n  author={Ji, Shunping and Yu, Dawei and Shen, Chao and Li, Weixing and Xu, Qiang},\n  journal={Landslides},\n  volume={17},\n  number={6},\n  pages={1337--1352},\n  year={2020},\n  doi={10.1007/s10346-020-01353-2}\n}"
+    },
+    "geographic_coverage": [
+      "China",
+      "Guizhou",
+      "Bijie"
+    ],
+    "provenance": {
+      "collection_method": "Extracted from TripleSat optical satellite constellation (0.8m) captured between May and August 2018 paired with an airborne/satellite Digital Elevation Model (2m) in Bijie City, Guizhou Province.",
+      "curation_notes": "Annotated by geological remote sensing experts. Contains 770 verified landslide occurrences with pixel masks and polygon coordinates, and 2,003 negative background samples.",
+      "data_sources": [
+        "TripleSat optical satellite imagery",
+        "Digital Elevation Models (DEM)"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bike-sharing",
     "slug": "bike-sharing",
     "name": "Bike Sharing Dataset",
@@ -19111,6 +19219,130 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "fmow",
+    "slug": "fmow",
+    "name": "Functional Map of the World (fMoW)",
+    "description": "The Functional Map of the World (fMoW) is a large-scale satellite imagery dataset developed by the Intelligence Advanced Research Projects Activity (IARPA), DigitalGlobe, and Johns Hopkins University Applied Physics Laboratory (JHU/APL). Created to evaluate machine learning models for predicting the functional purpose of buildings and land use, fMoW features 1,047,691 satellite images spanning more than 200 countries across 63 total categories, consisting of 62 fine-grained real-world functional categories (e.g., educational institution, airport, hospital, recreational facility) and 1 additional false-detection category (representing non-functional overhead background false alarms) with 83,412 multi-temporal facility sequences. The dataset is distributed via AWS in two format variants: fMoW-full (approx. 3.5 TB, containing 4-band and 8-band multispectral TIFF images hosted at s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-full/) and fMoW-rgb (approx. 200 GB, containing 3-band JPEG images hosted at s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-rgb/). fMoW-full and fMoW-rgb represent format variants of the same canonical research dataset.",
+    "homepage_url": "https://github.com/fMoW/dataset",
+    "publisher": {
+      "name": "IARPA & DigitalGlobe / Johns Hopkins APL",
+      "type": "government",
+      "url": "https://www.iarpa.gov"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "object-detection",
+      "land-use-classification",
+      "remote-sensing"
+    ],
+    "tags": [
+      "satellite-imagery",
+      "multispectral",
+      "land-use",
+      "fmow",
+      "iarpa",
+      "temporal-sequences",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Functional Map of the World Challenge Public License",
+      "url": "https://github.com/fMoW/dataset/blob/master/LICENSE",
+      "commercial_use": "forbidden",
+      "notes": "Governed by the Functional Map of the World Challenge Public License, which explicitly restricts use to non-commercial research and evaluation. Commercial use is strictly prohibited without express permission. Trained machine learning models/weights are clarified as not constituting adapted material under Section 2."
+    },
+    "source_references": [
+      {
+        "title": "fMoW GitHub Dataset Repository",
+        "url": "https://github.com/fMoW/dataset",
+        "type": "repository",
+        "notes": "Official code and dataset metadata repository with AWS download instructions."
+      },
+      {
+        "title": "fMoW-full AWS S3 Bucket Archive",
+        "url": "https://spacenet.ai/datasets/",
+        "type": "archive",
+        "notes": "AWS S3 endpoint: s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-full/ (~3.5 TB multispectral TIFF format with manifest.json.bz2)."
+      },
+      {
+        "title": "fMoW-rgb AWS S3 Bucket Archive",
+        "url": "https://spacenet.ai/datasets/",
+        "type": "archive",
+        "notes": "AWS S3 endpoint: s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-rgb/ (~200 GB 3-band JPEG format with manifest.json.bz2)."
+      },
+      {
+        "title": "Functional Map of the World (CVPR 2018)",
+        "url": "https://doi.org/10.1109/CVPR.2018.00646",
+        "type": "original_paper",
+        "notes": "Official CVPR 2018 conference paper describing dataset structure, metadata attributes, and baselines."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against fMoW GitHub repository, SpaceNet dataset portal, and CVPR 2018 paper (DOI: 10.1109/CVPR.2018.00646). Confirmed 1,047,691 images across 63 categories (62 real-world functional categories + 1 false-detection label), distinct S3 download endpoints (s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-full/ and s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-rgb/ with manifest.json.bz2), and non-commercial license."
+    },
+    "size": {
+      "amount": 3.5,
+      "unit": "TB",
+      "file_formats": [
+        "tif",
+        "jpg",
+        "json"
+      ],
+      "status": "verified",
+      "notes": "Available in two official format variants on AWS: fMoW-full at s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-full/ (~3.5 TB multispectral TIFF) and fMoW-rgb at s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-rgb/ (~200 GB JPEG), each cataloged with manifest.json.bz2."
+    },
+    "sample_count": {
+      "total": 1047691,
+      "splits": {
+        "train": 712872,
+        "val": 84939,
+        "test_public": 84939,
+        "test_seq": 164941
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018-06-18",
+      "last_updated": "2018-09-01"
+    },
+    "citation": {
+      "paper_title": "Functional Map of the World",
+      "paper_url": "https://doi.org/10.1109/CVPR.2018.00646",
+      "doi": "10.1109/CVPR.2018.00646",
+      "authors": [
+        "Gordon Christie",
+        "Neil Fendley",
+        "James Wilson",
+        "Ryan Mukherjee"
+      ],
+      "bibtex": "@inproceedings{christie2018functional,\n  title={Functional Map of the World},\n  author={Christie, Gordon and Fendley, Neil and Wilson, James and Mukherjee, Ryan},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={6172--6180},\n  year={2018},\n  doi={10.1109/CVPR.2018.00646}\n}"
+    },
+    "geographic_coverage": [
+      "Global",
+      "North America",
+      "South America",
+      "Europe",
+      "Asia",
+      "Africa",
+      "Oceania"
+    ],
+    "provenance": {
+      "collection_method": "High-resolution satellite imagery gathered by DigitalGlobe satellites over 200 countries paired with rich metadata including sun angles, GSD, and timestamps.",
+      "curation_notes": "Annotated across 63 categories (62 fine-grained functional categories plus 1 false-detection label). fMoW-full provides raw 4-band and 8-band multispectral TIFFs; fMoW-rgb provides down-sampled 3-band JPEG representations of the exact same images.",
+      "data_sources": [
+        "DigitalGlobe satellite constellation (WorldView-2, WorldView-3, GeoEye-1)"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "food-101",
     "slug": "food-101",
     "name": "Food-101",
@@ -24099,6 +24331,123 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "inria-aerial",
+    "slug": "inria-aerial",
+    "name": "Inria Aerial Image Labeling Dataset",
+    "description": "The Inria Aerial Image Labeling Dataset is a widely adopted benchmark for automated building footprint extraction and semantic segmentation generalization, published by the Titane research team at Inria Sophia Antipolis - Méditerranée. The dataset covers 810 km² of diverse urban and rural settlements across ten international cities and regions in the United States and Europe. It contains 360 high-resolution orthorectified RGB image tiles (each 5000x5000 pixels at 0.3-meter spatial resolution, covering 1.5x1.5 km² per tile). The benchmark is divided into 180 training tiles (36 tiles each for Austin, Chicago, Kitsap County, West Tyrol, and Vienna) with public building footprint masks, and 180 test tiles (36 tiles each for Bellingham, Bloomington, Innsbruck, San Francisco, and Eastern Tyrol) held out for generalization assessment. The underlying aerial imagery and official footprints originate from public domain GIS services.",
+    "homepage_url": "https://project.inria.fr/aerialimagelabeling/",
+    "publisher": {
+      "name": "Inria Sophia Antipolis - Méditerranée",
+      "type": "academic",
+      "url": "https://project.inria.fr/aerialimagelabeling/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "building-footprint-extraction",
+      "semantic-segmentation",
+      "domain-generalization",
+      "aerial-image-analysis"
+    ],
+    "tags": [
+      "aerial-imagery",
+      "building-footprint",
+      "semantic-segmentation",
+      "inria",
+      "urban-mapping",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source (Open Data / Public Domain GIS Source Inputs)",
+      "spdx_id": null,
+      "url": "https://project.inria.fr/aerialimagelabeling/",
+      "commercial_use": "unknown",
+      "notes": "The assembled benchmark dataset is distributed by Inria via its official project website without an explicit commercial use authorization or standardized open data license. While the source aerial photography and cadastral building footprints originate from public domain and open government GIS programs (e.g., USGS National Map, City of Austin, Land Vorarlberg, and Stadt Wien), the assembled benchmark's commercial terms are not formally specified by Inria and are cataloged as unknown."
+    },
+    "source_references": [
+      {
+        "title": "Inria Aerial Image Labeling Project Portal",
+        "url": "https://project.inria.fr/aerialimagelabeling/",
+        "type": "official_website",
+        "notes": "Official project homepage and documentation."
+      },
+      {
+        "title": "Inria Aerial Dataset Official Download Portal",
+        "url": "https://project.inria.fr/aerialimagelabeling/download/",
+        "type": "official_website",
+        "notes": "Official file download portal and getAerial.sh retrieval script."
+      },
+      {
+        "title": "Can Semantic Labeling Methods Generalize to Any City? The Inria Aerial Image Labeling Benchmark (IGARSS 2017)",
+        "url": "https://doi.org/10.1109/IGARSS.2017.8127684",
+        "type": "original_paper",
+        "notes": "Original foundational IGARSS 2017 paper."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against project.inria.fr/aerialimagelabeling/ and IGARSS 2017 paper (DOI: 10.1109/IGARSS.2017.8127684). Verified 360 tiles of 5000x5000 pixels (180 train, 180 test) across 10 regions, official download script (files.inria.fr/aerialimagelabeling/getAerial.sh), and confirmed that commercial usage is not explicitly authorized for the compiled benchmark, cataloging it under schema-valid unspecified/unknown status."
+    },
+    "size": {
+      "amount": 48.0,
+      "unit": "GB",
+      "file_formats": [
+        "tif"
+      ],
+      "status": "verified",
+      "notes": "360 3-band 8-bit uncompressed GeoTIFF images (5000x5000 pixels) and binary TIFF building footprint masks."
+    },
+    "sample_count": {
+      "total": 360,
+      "splits": {
+        "train": 180,
+        "test": 180
+      },
+      "unit": "tiles",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2017-07-23",
+      "last_updated": "2018-03-01"
+    },
+    "citation": {
+      "paper_title": "Can Semantic Labeling Methods Generalize to Any City? The Inria Aerial Image Labeling Benchmark",
+      "paper_url": "https://doi.org/10.1109/IGARSS.2017.8127684",
+      "doi": "10.1109/IGARSS.2017.8127684",
+      "authors": [
+        "Emmanuel Maggiori",
+        "Yuliya Tarabalka",
+        "Guillaume Charpiat",
+        "Pierre Alliez"
+      ],
+      "bibtex": "@inproceedings{maggiori2017can,\n  title={Can Semantic Labeling Methods Generalize to Any City? The Inria Aerial Image Labeling Benchmark},\n  author={Maggiori, Emmanuel and Tarabalka, Yuliya and Charpiat, Guillaume and Alliez, Pierre},\n  booktitle={IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},\n  pages={3222--3225},\n  year={2017},\n  doi={10.1109/IGARSS.2017.8127684}\n}"
+    },
+    "geographic_coverage": [
+      "United States",
+      "Austria",
+      "Austin",
+      "Chicago",
+      "San Francisco",
+      "Vienna",
+      "Innsbruck"
+    ],
+    "provenance": {
+      "collection_method": "Curated from open-access public domain orthorectified aerial photography and open government cadastral GIS building vector footprints.",
+      "curation_notes": "Pre-processed into uniform 5000x5000 pixel tiles at 0.3m ground resolution. Training and test splits use disjoint geographic regions to benchmark cross-city model generalization.",
+      "data_sources": [
+        "USGS National Map",
+        "City of Austin GIS",
+        "Land Vorarlberg Geodaten",
+        "Stadt Wien Geodaten"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "interaction-dataset",
     "slug": "interaction-dataset",
     "name": "INTERACTION: Interactive Trajectories in Dense Traffic Dataset",
@@ -24469,6 +24818,123 @@
     "provenance": {
       "collection_method": "Specimens collected by Dr. Edgar Anderson from two neighboring colonies in Gaspé Peninsula, Quebec, Canada.",
       "curation_notes": "One class (Setosa) is linearly separable from the other two; Versicolour and Virginica have slight statistical overlap."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "isaid",
+    "slug": "isaid",
+    "name": "iSAID: A Large-scale Dataset for Instance Segmentation in Aerial Images",
+    "description": "iSAID is an aerial instance segmentation benchmark dataset developed collaboratively by the CAPTAIN Lab at Wuhan University and the Inception Institute of Artificial Intelligence (IIAI). Built upon the source imagery of the DOTA-v1.0 dataset, iSAID provides high-quality pixel-level polygonal masks for 655,451 object instances across 15 categories (including plane, ship, storage tank, baseball diamond, tennis court, swimming pool, ground track field, harbor, bridge, large vehicle, small vehicle, helicopter, roundabout, soccer ball field, and basketball court). The dataset contains 2,806 high-resolution aerial images ranging from 800x800 to 4000x13000 pixels with a standard split of 1,411 training, 458 validation, and 937 test images. Crucially, iSAID shares identical source aerial imagery with DOTA-v1.0 but establishes an independent, fine-grained instance segmentation benchmark.",
+    "homepage_url": "https://captain-whu.github.io/iSAID/dataset.html",
+    "publisher": {
+      "name": "Wuhan University (CAPTAIN Lab) & IIAI",
+      "type": "academic",
+      "url": "https://captain-whu.github.io/iSAID/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "instance-segmentation",
+      "object-detection",
+      "aerial-image-analysis"
+    ],
+    "tags": [
+      "aerial-imaging",
+      "instance-segmentation",
+      "remote-sensing",
+      "isaid",
+      "dota",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "iSAID Academic Research License",
+      "url": "https://captain-whu.github.io/iSAID/dataset.html",
+      "commercial_use": "forbidden",
+      "notes": "Available for academic and non-commercial research purposes only. Commercial application is strictly prohibited. Users must also respect source Google Earth and satellite imagery terms."
+    },
+    "source_references": [
+      {
+        "title": "iSAID Official Portal",
+        "url": "https://captain-whu.github.io/iSAID/dataset.html",
+        "type": "official_website",
+        "notes": "Official project homepage and dataset documentation."
+      },
+      {
+        "title": "iSAID: A Large-scale Dataset for Instance Segmentation in Aerial Images (CVPRW 2019)",
+        "url": "https://doi.org/10.48550/arXiv.1905.12886",
+        "type": "original_paper",
+        "notes": "Official CVPR 2019 Workshop publication."
+      },
+      {
+        "title": "iSAID Official GitHub Repository",
+        "url": "https://github.com/CAPTAIN-WHU/iSAID_DevKit",
+        "type": "repository",
+        "notes": "Development toolkit and evaluation scripts."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against captain-whu.github.io/iSAID/ and arXiv:1905.12886. Confirmed 2,806 images (1,411 train, 458 val, 937 test), 655,451 instance masks, shared DOTA-v1.0 source imagery lineage, and non-commercial terms."
+    },
+    "size": {
+      "amount": 37.0,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Full-resolution aerial images with pixel-level segmentation mask annotations in COCO-format JSON."
+    },
+    "sample_count": {
+      "total": 2806,
+      "splits": {
+        "train": 1411,
+        "val": 458,
+        "test": 937
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-05-30",
+      "last_updated": "2020-04-10"
+    },
+    "citation": {
+      "paper_title": "iSAID: A Large-scale Dataset for Instance Segmentation in Aerial Images",
+      "paper_url": "https://doi.org/10.48550/arXiv.1905.12886",
+      "doi": "10.48550/arXiv.1905.12886",
+      "authors": [
+        "Syed Waqas Zamir",
+        "Aditya Arora",
+        "Akshita Gupta",
+        "Salman Khan",
+        "Guolei Sun",
+        "Fahad Shahbaz Khan",
+        "Fan Zhu",
+        "Ling Shao",
+        "Gui-Song Xia",
+        "Xiang Bai"
+      ],
+      "bibtex": "@inproceedings{zamir2019isaid,\n  title={iSAID: A Large-scale Dataset for Instance Segmentation in Aerial Images},\n  author={Zamir, Syed Waqas and Arora, Aditya and Gupta, Akshita and Khan, Salman and Sun, Guolei and Khan, Fahad Shahbaz and Zhu, Fan and Shao, Ling and Xia, Gui-Song and Bai, Xiang},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},\n  pages={28--37},\n  year={2019},\n  doi={10.48550/arXiv.1905.12886}\n}"
+    },
+    "geographic_coverage": [
+      "Global",
+      "Asia",
+      "North America",
+      "Europe"
+    ],
+    "provenance": {
+      "collection_method": "Directly reuses the 2,806 source aerial image files originally collected for DOTA-v1.0 from Google Earth and satellite sensors (JL-1, GF-2).",
+      "curation_notes": "Replaces DOTA's oriented bounding boxes with professional polygon segmentations outlining 655,451 object boundaries across 15 categories. Explicitly shared source imagery with DOTA (catalog ID: dota).",
+      "data_sources": [
+        "DOTA-v1.0 source aerial imagery (Google Earth, JL-1, GF-2)"
+      ]
     }
   },
   {
@@ -26938,6 +27404,109 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "levir-cd",
+    "slug": "levir-cd",
+    "name": "LEVIR-CD: A Large-Scale Remote Sensing Building Change Detection Dataset",
+    "description": "LEVIR-CD is a large-scale, high-resolution remote sensing building change detection benchmark dataset introduced by the Image Processing Center at Beihang University. Containing 637 bi-temporal image patch pairs of size 1024x1024 pixels at 0.5-meter ground sample distance collected from Google Earth, the dataset spans 20 different regions across several cities in Texas, USA between 2002 and 2018. It annotates 31,333 individual building change instances (such as new building construction, demolition, and expansion) with pixel-level binary change masks while accounting for seasonal changes, lighting variations, and soil differences. The canonical benchmark partition comprises 445 training pairs, 64 validation pairs, and 128 testing pairs. LEVIR-CD and its related LEVIR-CD+ expansion are unified under this canonical dataset identity.",
+    "homepage_url": "https://github.com/justchenhao/LEVIR",
+    "publisher": {
+      "name": "Beihang University (LEVIR Lab)",
+      "type": "academic",
+      "url": "http://levir.buaa.edu.cn"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "change-detection",
+      "building-footprint-extraction",
+      "semantic-segmentation",
+      "remote-sensing"
+    ],
+    "tags": [
+      "change-detection",
+      "building-change",
+      "bi-temporal",
+      "google-earth",
+      "levir-cd",
+      "remote-sensing",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "LEVIR-CD Academic Research License",
+      "url": "https://github.com/justchenhao/LEVIR",
+      "commercial_use": "forbidden",
+      "notes": "Available free of charge for non-commercial academic research only. Commercial exploitation is prohibited without explicit authorization. Google Earth terms of service apply to source imagery."
+    },
+    "source_references": [
+      {
+        "title": "LEVIR-CD GitHub Repository",
+        "url": "https://github.com/justchenhao/LEVIR",
+        "type": "repository",
+        "notes": "Official author repository with benchmark models (STANet, BIT) and data download links."
+      },
+      {
+        "title": "A Spatial-Temporal Attention-Based Method and a New Dataset for Remote Sensing Image Change Detection (Remote Sensing 2020)",
+        "url": "https://doi.org/10.3390/rs12101662",
+        "type": "original_paper",
+        "notes": "Original open-access peer-reviewed publication in Remote Sensing (MDPI)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against justchenhao/LEVIR repository and MDPI Remote Sensing paper (DOI: 10.3390/rs12101662). Confirmed 637 image pairs (445 train, 64 val, 128 test), 31,333 building change instances, non-commercial terms, and unified LEVIR-CD identity."
+    },
+    "size": {
+      "amount": 3.8,
+      "unit": "GB",
+      "file_formats": [
+        "png"
+      ],
+      "status": "verified",
+      "notes": "637 pairs of 1024x1024 RGB PNG images (T1, T2) and corresponding binary change ground truth masks."
+    },
+    "sample_count": {
+      "total": 637,
+      "splits": {
+        "train": 445,
+        "validation": 64,
+        "test": 128
+      },
+      "unit": "image pairs",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-05-22",
+      "last_updated": "2021-08-15"
+    },
+    "citation": {
+      "paper_title": "A Spatial-Temporal Attention-Based Method and a New Dataset for Remote Sensing Image Change Detection",
+      "paper_url": "https://doi.org/10.3390/rs12101662",
+      "doi": "10.3390/rs12101662",
+      "authors": [
+        "Hao Chen",
+        "Zhenwei Shi"
+      ],
+      "bibtex": "@article{chen2020spatial,\n  title={A Spatial-Temporal Attention-Based Method and a New Dataset for Remote Sensing Image Change Detection},\n  author={Chen, Hao and Shi, Zhenwei},\n  journal={Remote Sensing},\n  volume={12},\n  number={10},\n  pages={1662},\n  year={2020},\n  doi={10.3390/rs12101662}\n}"
+    },
+    "geographic_coverage": [
+      "United States",
+      "Texas",
+      "Austin"
+    ],
+    "provenance": {
+      "collection_method": "Extracted from Google Earth very-high-resolution historical satellite and aerial orthophotos spanning 2002 to 2018 across Texas.",
+      "curation_notes": "Annotated by remote sensing image interpretation experts to identify human-made structural building changes while disregarding natural seasonal surface variations. LEVIR-CD+ expanded this to 985 pairs; both share the same foundational lineage.",
+      "data_sources": [
+        "Google Earth historical high-resolution imagery"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "lfw",
     "slug": "lfw",
     "name": "Labeled Faces in the Wild (LFW)",
@@ -27684,6 +28253,121 @@
       ],
       "doi": "10.13026/C2G01T",
       "bibtex": "@article{jager2003long,\n  title={Long-term ST database: a reference for the development and evaluation of automated ischaemia detectors and for the study of the dynamics of myocardial ischaemia},\n  author={Jager, Franc and Taddei, Alessandro and Moody, George B and Emdin, Michele and Antolic, Gorazd and Dorn, Roman and Smrdel, Ales and Marchesi, Carlo and Mark, Roger G},\n  journal={Circulation},\n  volume={107},\n  number={2},\n  pages={247--254},\n  year={2003},\n  publisher={Am Heart Assoc},\n  doi={10.13026/C2G01T}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "loveda",
+    "slug": "loveda",
+    "name": "LoveDA: Land-Cover Domain Adaptive Semantic Segmentation Dataset",
+    "description": "LoveDA is a high-spatial-resolution remote sensing land-cover dataset constructed by the RSIDEA research group at Wuhan University. Designed to benchmark semantic segmentation and domain adaptation algorithms across varying geographical distributions, LoveDA contains 5,987 images of 1024x1024 pixels at 0.3-meter ground resolution, featuring 166,768 annotated objects across 7 categories (background, building, road, water, barren, forest, agricultural). The dataset captures stark domain shifts between dense urban (2,713 images) and sparse rural (3,274 images) landscapes across three Chinese cities (Nanjing, Changzhou, and Wuhan). The standard benchmark partition comprises 2,522 training images, 1,669 validation images, and 1,796 held-out test images.",
+    "homepage_url": "https://github.com/Junjue-Wang/LoveDA",
+    "publisher": {
+      "name": "Wuhan University (RSIDEA)",
+      "type": "academic",
+      "url": "http://rsidea.whu.edu.cn"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "domain-adaptation",
+      "land-cover-classification",
+      "remote-sensing"
+    ],
+    "tags": [
+      "land-cover",
+      "domain-adaptation",
+      "remote-sensing",
+      "urban-rural",
+      "loveda",
+      "semantic-segmentation",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "LoveDA Research License / CC BY-NC-SA 4.0",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://doi.org/10.5281/zenodo.5706578",
+      "commercial_use": "forbidden",
+      "notes": "Available for academic and research purposes only. Commercial use is strictly prohibited. Users must also comply with Google Earth terms of service."
+    },
+    "source_references": [
+      {
+        "title": "LoveDA GitHub Repository",
+        "url": "https://github.com/Junjue-Wang/LoveDA",
+        "type": "repository",
+        "notes": "Official dataset repository with code and evaluation instructions."
+      },
+      {
+        "title": "LoveDA Zenodo Data Archive",
+        "url": "https://doi.org/10.5281/zenodo.5706578",
+        "type": "archive",
+        "notes": "Official permanent research data archive on Zenodo."
+      },
+      {
+        "title": "LoveDA: A Remote Sensing Land-Cover Dataset for Domain Adaptive Semantic Segmentation (NeurIPS 2021)",
+        "url": "https://doi.org/10.48550/arXiv.2110.08733",
+        "type": "original_paper",
+        "notes": "Published in NeurIPS 2021 Track on Datasets and Benchmarks."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against Zenodo archive (DOI: 10.5281/zenodo.5706578) and NeurIPS 2021 publication (arXiv:2110.08733). Confirmed 5,987 total images. Standard benchmark partition: 2,522 training, 1,669 validation, and 1,796 test images. Orthogonal geographic domain partition: 2,713 urban images (1,156 train, 677 val, 880 test) and 3,274 rural images (1,366 train, 992 val, 916 test). Confirmed non-commercial terms under CC BY-NC-SA 4.0."
+    },
+    "size": {
+      "amount": 14.5,
+      "unit": "GB",
+      "file_formats": [
+        "tif",
+        "png"
+      ],
+      "status": "verified",
+      "notes": "5,987 1024x1024 RGB TIFF images paired with PNG semantic segmentation masks. Standard evaluation split: 2,522 train, 1,669 val, 1,796 test; domain distribution: 2,713 urban, 3,274 rural."
+    },
+    "sample_count": {
+      "total": 5987,
+      "splits": {
+        "train": 2522,
+        "validation": 1669,
+        "test": 1796
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021-10-18",
+      "last_updated": "2021-11-17"
+    },
+    "citation": {
+      "paper_title": "LoveDA: A Remote Sensing Land-Cover Dataset for Domain Adaptive Semantic Segmentation",
+      "paper_url": "https://doi.org/10.48550/arXiv.2110.08733",
+      "doi": "10.48550/arXiv.2110.08733",
+      "authors": [
+        "Junjue Wang",
+        "Zhuo Zheng",
+        "Ailong Ma",
+        "Xiaoyan Lu",
+        "Yanfei Zhong"
+      ],
+      "bibtex": "@article{wang2021loveda,\n  title={LoveDA: A Remote Sensing Land-Cover Dataset for Domain Adaptive Semantic Segmentation},\n  author={Wang, Junjue and Zheng, Zhuo and Ma, Ailong and Lu, Xiaoyan and Zhong, Yanfei},\n  journal={arXiv preprint arXiv:2110.08733},\n  year={2021},\n  doi={10.48550/arXiv.2110.08733}\n}"
+    },
+    "geographic_coverage": [
+      "China",
+      "Nanjing",
+      "Changzhou",
+      "Wuhan"
+    ],
+    "provenance": {
+      "collection_method": "Extracted from Google Earth high-resolution imagery covering 18 rural and urban areas in Nanjing, Changzhou, and Wuhan.",
+      "curation_notes": "Pixel-level annotation for 7 categories performed with cross-validation. Explicitly distinguishes urban from rural distributions for unsupervised domain adaptation benchmarking.",
+      "data_sources": [
+        "Google Earth high-resolution imagery"
+      ]
     }
   },
   {
@@ -37417,6 +38101,121 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "oscd",
+    "slug": "oscd",
+    "name": "OSCD: Onera Satellite Change Detection Dataset",
+    "description": "The Onera Satellite Change Detection (OSCD) dataset is a specialized remote sensing benchmark for urban change detection using multispectral satellite imagery, created by researchers at ONERA (The French Aerospace Lab) and Telecom ParisTech. OSCD features 24 registered Sentinel-2 image pairs captured between 2015 and 2018 across globally diverse metropolitan areas (including Paris, Montpellier, Madrid, Beirut, Dubai, Rio de Janeiro, Las Vegas, and Hong Kong). The imagery contains all 13 Sentinel-2 spectral bands at 10m, 20m, and 60m spatial resolutions, annotated with pixel-level binary ground truth masks indicating urban development and structural modifications while ignoring seasonal or natural variations. The official dataset is divided into 14 training pairs and 10 testing pairs.",
+    "homepage_url": "https://rcdaudt.github.io/oscd/",
+    "publisher": {
+      "name": "ONERA & Telecom ParisTech",
+      "type": "academic",
+      "url": "https://rcdaudt.github.io/oscd/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "change-detection",
+      "semantic-segmentation",
+      "remote-sensing",
+      "urban-growth-monitoring"
+    ],
+    "tags": [
+      "sentinel-2",
+      "multispectral",
+      "change-detection",
+      "urban-monitoring",
+      "remote-sensing",
+      "oscd",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Hosted on IEEE DataPort under Open Access terms (CC BY 4.0)."
+    },
+    "source_references": [
+      {
+        "title": "OSCD Project Homepage",
+        "url": "https://rcdaudt.github.io/oscd/",
+        "type": "official_website",
+        "notes": "Official OSCD landing page with documentation and benchmark results."
+      },
+      {
+        "title": "OSCD IEEE DataPort Archive",
+        "url": "https://doi.org/10.21227/asqe-7s69",
+        "type": "archive",
+        "notes": "Official open-access dataset archive on IEEE DataPort (DOI: 10.21227/asqe-7s69)."
+      },
+      {
+        "title": "Urban Change Detection for Multispectral Earth Observation Using CNNs (IGARSS 2018)",
+        "url": "https://doi.org/10.1109/IGARSS.2018.8518015",
+        "type": "original_paper",
+        "notes": "Foundational IGARSS 2018 paper introducing the dataset."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against rcdaudt.github.io/oscd/ and IEEE DataPort (DOI: 10.21227/asqe-7s69). Confirmed 24 registered Sentinel-2 pairs (14 train, 10 test), pixel-level binary masks, and CC BY 4.0 open access terms."
+    },
+    "size": {
+      "amount": 3.4,
+      "unit": "GB",
+      "file_formats": [
+        "tif",
+        "png"
+      ],
+      "status": "verified",
+      "notes": "24 pairs of 13-band Sentinel-2 GeoTIFFs with PNG change masks."
+    },
+    "sample_count": {
+      "total": 24,
+      "splits": {
+        "train": 14,
+        "test": 10
+      },
+      "unit": "image pairs",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018-07-22",
+      "last_updated": "2018-10-23"
+    },
+    "citation": {
+      "paper_title": "Urban Change Detection for Multispectral Earth Observation Using Convolutional Neural Networks",
+      "paper_url": "https://doi.org/10.1109/IGARSS.2018.8518015",
+      "doi": "10.1109/IGARSS.2018.8518015",
+      "authors": [
+        "Rodrigo Caye Daudt",
+        "Bertrand Le Saux",
+        "Alexandre Boulch",
+        "Yann Gousseau"
+      ],
+      "bibtex": "@inproceedings{daudt2018urban,\n  title={Urban Change Detection for Multispectral Earth Observation Using Convolutional Neural Networks},\n  author={Daudt, Rodrigo Caye and Le Saux, Bertrand and Boulch, Alexandre and Gousseau, Yann},\n  booktitle={IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},\n  pages={2115--2118},\n  year={2018},\n  doi={10.1109/IGARSS.2018.8518015}\n}"
+    },
+    "geographic_coverage": [
+      "Global",
+      "Europe",
+      "Middle East",
+      "South America",
+      "North America",
+      "Asia"
+    ],
+    "provenance": {
+      "collection_method": "Sourced from Copernicus Sentinel-2 Top-of-Atmosphere (Level-1C) reflectance products covering global urban areas.",
+      "curation_notes": "Coregistered image pairs annotated with focus on newly built infrastructure while ignoring seasonal vegetation and illumination changes.",
+      "data_sources": [
+        "Copernicus Sentinel-2 Level-1C MSI"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "oxford-flowers-102",
     "slug": "oxford-flowers-102",
     "name": "Oxford Flowers 102",
@@ -43622,6 +44421,234 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "sen12-flood",
+    "slug": "sen12-flood",
+    "name": "SEN12-FLOOD: SAR and Multispectral Dataset for Flood Detection",
+    "description": "SEN12-FLOOD is an earth observation benchmark dataset specifically curated for flood event detection from paired Sentinel-1 SAR and Sentinel-2 multispectral satellite imagery, created by researchers from the Conservatoire National des Arts et Métiers (CNAM), ONERA, and the European Space Agency (ESA). The dataset comprises 336 co-registered observation sequences (totaling 1,947 image-date time slices) capturing major historical flooding events between December 2018 and May 2019 across flood-prone areas in Southern/West Africa, the Middle East (Iran), and Australia. Each tile has a spatial footprint of 512x512 pixels at 10m spatial resolution. By pairing cloud-penetrating synthetic aperture radar (SAR) with optical multispectral bands, SEN12-FLOOD enables all-weather disaster monitoring and multi-modal fusion. Sentinel-1 and Sentinel-2 pairs represent co-registered observations of the same flood events.",
+    "homepage_url": "https://source.coop/esa/sen12flood",
+    "publisher": {
+      "name": "European Space Agency (ESA) & CNAM / ONERA",
+      "type": "government",
+      "url": "https://source.coop/esa/sen12flood"
+    },
+    "modalities": [
+      "vision",
+      "sensor"
+    ],
+    "tasks": [
+      "flood-detection",
+      "disaster-damage-assessment",
+      "multimodal-fusion",
+      "remote-sensing"
+    ],
+    "tags": [
+      "flood-detection",
+      "sentinel-1",
+      "sentinel-2",
+      "sar",
+      "multispectral",
+      "esa",
+      "disaster-response",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Released under CC BY 4.0 via Source Cooperative and IEEE DataPort."
+    },
+    "source_references": [
+      {
+        "title": "Source Cooperative ESA SEN12-FLOOD Distribution",
+        "url": "https://source.coop/esa/sen12flood",
+        "type": "official_website",
+        "notes": "Official European Space Agency distribution on Source Cooperative."
+      },
+      {
+        "title": "SEN12-FLOOD IEEE DataPort Archive",
+        "url": "https://doi.org/10.21227/w6xz-s898",
+        "type": "archive",
+        "notes": "Original IEEE DataPort repository (DOI: 10.21227/w6xz-s898)."
+      },
+      {
+        "title": "Flood Detection in Time Series of Optical and SAR Images (ISPRS Archives 2020)",
+        "url": "https://doi.org/10.5194/isprs-archives-XLIII-B2-2020-1343-2020",
+        "type": "original_paper",
+        "notes": "Published in ISPRS Archives XLIII-B2-2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against Source Cooperative (esa/sen12flood), IEEE DataPort (DOI: 10.21227/w6xz-s898), and ISPRS Archives paper. Verified 336 paired observation sequences (1,947 time slices), 512x512 tiles, CC BY 4.0 license, and unified S1/S2 event pairs."
+    },
+    "size": {
+      "amount": 65.0,
+      "unit": "GB",
+      "file_formats": [
+        "tif",
+        "json"
+      ],
+      "status": "verified",
+      "notes": "Compressed archive payload containing 512x512 GeoTIFF patches for Sentinel-1 (VV, VH) and Sentinel-2 (Level-2A BOA reflectance) with JSON classification labels."
+    },
+    "sample_count": {
+      "total": 336,
+      "splits": {
+        "train": 235,
+        "test": 101
+      },
+      "unit": "paired sequences",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-08-12",
+      "last_updated": "2023-05-10"
+    },
+    "citation": {
+      "paper_title": "Flood Detection in Time Series of Optical and SAR Images",
+      "paper_url": "https://doi.org/10.5194/isprs-archives-XLIII-B2-2020-1343-2020",
+      "doi": "10.5194/isprs-archives-XLIII-B2-2020-1343-2020",
+      "authors": [
+        "Clément Rambour",
+        "Nicolas Audebert",
+        "Elise Koeniguer",
+        "Bertrand Le Saux",
+        "Michel Crucianu",
+        "Mihai Datcu"
+      ],
+      "bibtex": "@article{rambour2020flood,\n  title={Flood Detection in Time Series of Optical and SAR Images},\n  author={Rambour, Cl{\\'e}ment and Audebert, Nicolas and Koeniguer, Elise and Le Saux, Bertrand and Crucianu, Michel and Datcu, Mihai},\n  journal={The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences},\n  volume={43},\n  pages={1343--1346},\n  year={2020},\n  doi={10.5194/isprs-archives-XLIII-B2-2020-1343-2020}\n}"
+    },
+    "geographic_coverage": [
+      "Africa",
+      "Middle East",
+      "Australia",
+      "Iran",
+      "Mozambique",
+      "Nigeria"
+    ],
+    "provenance": {
+      "collection_method": "Co-registered time series assembled from Copernicus Sentinel-1 C-band synthetic aperture radar and Sentinel-2 multispectral imager observations during recorded flood events.",
+      "curation_notes": "Each sequence pairs SAR and optical observations covering the same geographic region; patches are 512x512 pixels at 10m resolution. Labeled for image-level and pixel-level flood presence.",
+      "data_sources": [
+        "Copernicus Sentinel-1 SAR",
+        "Copernicus Sentinel-2 MSI"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "sen12ms",
+    "slug": "sen12ms",
+    "name": "SEN12MS: A Multi-Sensor Earth Observation Dataset for Fusion and Land Cover Mapping",
+    "description": "SEN12MS is a large-scale curated benchmark dataset for multi-sensor earth observation and deep learning, published by the Technical University of Munich (TUM) and the German Aerospace Center (DLR). It comprises 180,662 georeferenced patch triplets of corresponding Sentinel-1 dual-polarimetric SAR imagery (VV, VH backscatter), Sentinel-2 multi-spectral optical imagery (all 13 spectral bands from visible to shortwave infrared), and MODIS-derived land cover maps (IGBP and LCCS classification schemes). Collected across 252 globally distributed geographic locations spanning all four meteorological seasons, each patch has a spatial dimension of 256x256 pixels at 10m nominal ground resolution. Patch triplets serve as the primary sample unit.",
+    "homepage_url": "https://mediatum.ub.tum.de/1474000",
+    "publisher": {
+      "name": "Technical University of Munich (TUM) & DLR",
+      "type": "academic",
+      "url": "https://www.tum.de"
+    },
+    "modalities": [
+      "vision",
+      "sensor"
+    ],
+    "tasks": [
+      "land-cover-classification",
+      "multimodal-fusion",
+      "semantic-segmentation",
+      "remote-sensing"
+    ],
+    "tags": [
+      "sentinel-1",
+      "sentinel-2",
+      "modis",
+      "sar-optical-fusion",
+      "land-cover",
+      "remote-sensing",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed under Creative Commons Attribution 4.0 International (CC BY 4.0). Section 4.2 of the foundational ISPRS Annals publication explicitly confirms the dataset is released under CC-BY without ShareAlike conditions. Hosted via Technical University of Munich's mediaTUM archive (1474000)."
+    },
+    "source_references": [
+      {
+        "title": "mediaTUM Institutional Archive (SEN12MS)",
+        "url": "https://mediatum.ub.tum.de/1474000",
+        "type": "archive",
+        "notes": "Official data repository hosted by the Technical University of Munich."
+      },
+      {
+        "title": "SEN12MS ISPRS Annals Publication",
+        "url": "https://doi.org/10.5194/isprs-annals-IV-2-W7-153-2019",
+        "type": "original_paper",
+        "notes": "Peer-reviewed publication in ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences (2019)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against mediaTUM repository (1474000) and ISPRS Annals DOI: 10.5194/isprs-annals-IV-2-W7-153-2019. Section 4.2 of the original paper explicitly declares CC BY 4.0 (Creative Commons Attribution) without ShareAlike restrictions. Confirmed 180,662 patch triplets (Sentinel-1 SAR, Sentinel-2 MSI, MODIS land cover) as the primary sample unit."
+    },
+    "size": {
+      "amount": 375.0,
+      "unit": "GB",
+      "file_formats": [
+        "tif"
+      ],
+      "status": "verified",
+      "notes": "Total compressed volume of Sentinel-1, Sentinel-2, and MODIS GeoTIFF patches."
+    },
+    "sample_count": {
+      "total": 180662,
+      "unit": "patch triplets",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-05-28",
+      "last_updated": "2020-01-15"
+    },
+    "citation": {
+      "paper_title": "SEN12MS -- A Curated Dataset of Georeferenced Multi-Spectral Sentinel-1/2 Imagery for Deep Learning and Data Fusion",
+      "paper_url": "https://doi.org/10.5194/isprs-annals-IV-2-W7-153-2019",
+      "doi": "10.5194/isprs-annals-IV-2-W7-153-2019",
+      "authors": [
+        "Michael Schmitt",
+        "Lloyd Haydn Hughes",
+        "Chunping Qiu",
+        "Xiao Xiang Zhu"
+      ],
+      "bibtex": "@article{schmitt2019sen12ms,\n  title={SEN12MS -- A Curated Dataset of Georeferenced Multi-Spectral Sentinel-1/2 Imagery for Deep Learning and Data Fusion},\n  author={Schmitt, Michael and Hughes, Lloyd Haydn and Qiu, Chunping and Zhu, Xiao Xiang},\n  journal={ISPRS Annals of Photogrammetry, Remote Sensing and Spatial Information Sciences},\n  volume={IV-2/W7},\n  pages={153--160},\n  year={2019},\n  doi={10.5194/isprs-annals-IV-2-W7-153-2019}\n}"
+    },
+    "geographic_coverage": [
+      "Global",
+      "Europe",
+      "North America",
+      "South America",
+      "Asia",
+      "Africa",
+      "Oceania"
+    ],
+    "provenance": {
+      "collection_method": "Extracted from European Space Agency Copernicus Sentinel-1 and Sentinel-2 constellations, paired with MODIS Terra/Aqua Land Cover Climate Modeling Grid.",
+      "curation_notes": "Triple-stream data: each observation triplet contains Sentinel-1 SAR (VV/VH), Sentinel-2 all 13 multispectral bands, and MODIS land-cover raster masks.",
+      "data_sources": [
+        "Copernicus Sentinel-1 SAR",
+        "Copernicus Sentinel-2 MSI",
+        "NASA MODIS Land Cover (MCD12Q1)"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "sen4agrinet",
     "slug": "sen4agrinet",
     "name": "Sen4AgriNet: Multi-Country Agricultural Satellite Benchmark",
@@ -44396,6 +45423,131 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "so2sat-lcz42",
+    "slug": "so2sat-lcz42",
+    "name": "So2Sat LCZ42: A Benchmark Dataset for Global Local Climate Zones Classification",
+    "description": "So2Sat LCZ42 is a global benchmark dataset for Local Climate Zone (LCZ) classification curated by the Technical University of Munich (TUM) and the German Aerospace Center (DLR). Designed to provide standardized global urban morphology and land-use mapping, it comprises 400,673 co-registered image patch pairs from Copernicus Sentinel-1 SAR and Sentinel-2 multispectral sensors across 52 global metropolitan areas on all inhabited continents. Each patch has dimensions of 32x32 pixels at 10m spatial resolution and is labeled with one of 17 Local Climate Zone classes (10 built types and 7 natural land-cover types) according to the Stewart and Oke classification scheme. The official release is divided into 352,366 training pairs across 42 urban regions and a strictly independent geographical evaluation split of 24,119 validation and 24,188 test patch pairs from 10 distinct evaluation cities. All versions (v1-v4) represent iterations of this single canonical dataset identity.",
+    "homepage_url": "https://mediatum.ub.tum.de/1454690",
+    "publisher": {
+      "name": "Technical University of Munich (TUM) & DLR",
+      "type": "academic",
+      "url": "https://mediatum.ub.tum.de"
+    },
+    "modalities": [
+      "vision",
+      "sensor"
+    ],
+    "tasks": [
+      "climate-zone-classification",
+      "land-cover-classification",
+      "multimodal-fusion",
+      "remote-sensing"
+    ],
+    "tags": [
+      "sentinel-1",
+      "sentinel-2",
+      "local-climate-zones",
+      "urban-climate",
+      "sar",
+      "multispectral",
+      "so2sat",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed under CC BY 4.0 via Technical University of Munich's mediaTUM data archive."
+    },
+    "source_references": [
+      {
+        "title": "mediaTUM Institutional Archive (So2Sat LCZ42)",
+        "url": "https://mediatum.ub.tum.de/1454690",
+        "type": "archive",
+        "notes": "Official data repository hosted by the Technical University of Munich (DOI: 10.14459/2018MP1454690)."
+      },
+      {
+        "title": "So2Sat LCZ42 Author Repository",
+        "url": "https://github.com/zhu-xlab/So2Sat-LCZ42",
+        "type": "repository",
+        "notes": "Official code repository and benchmark evaluation scripts."
+      },
+      {
+        "title": "So2Sat LCZ42: A Benchmark Dataset for Global Local Climate Zones Classification (IEEE GRSM 2020)",
+        "url": "https://doi.org/10.1109/MGRS.2020.2964708",
+        "type": "original_paper",
+        "notes": "Peer-reviewed foundational journal paper in IEEE Geoscience and Remote Sensing Magazine."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against mediaTUM archive (1454690) and IEEE GRSM DOI: 10.1109/MGRS.2020.2964708. Confirmed 400,673 patch pairs (352,366 train, 24,119 val, 24,188 test), 17 LCZ classes, 52 cities, CC BY 4.0 license, and unified v1-v4 dataset identity."
+    },
+    "size": {
+      "amount": 56.0,
+      "unit": "GB",
+      "file_formats": [
+        "h5"
+      ],
+      "status": "verified",
+      "notes": "Distributed as HDF5 (.h5) archives containing Sentinel-1 (VV, VH, real/imaginary) and Sentinel-2 (10 optical bands) 32x32 patches with LCZ class labels."
+    },
+    "sample_count": {
+      "total": 400673,
+      "splits": {
+        "train": 352366,
+        "validation": 24119,
+        "test": 24188
+      },
+      "unit": "patch pairs",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018-08-01",
+      "last_updated": "2020-03-01"
+    },
+    "citation": {
+      "paper_title": "So2Sat LCZ42: A Benchmark Dataset for Global Local Climate Zones Classification",
+      "paper_url": "https://doi.org/10.1109/MGRS.2020.2964708",
+      "doi": "10.1109/MGRS.2020.2964708",
+      "authors": [
+        "Xiao Xiang Zhu",
+        "Jingyan Hu",
+        "Chunping Qiu",
+        "Yilei Shi",
+        "Jian Kang",
+        "Lieven Gaudry",
+        "Xiaoxiang Li",
+        "Gabriel Tsagkatakis",
+        "Gencer Sumbul",
+        "Begüm Demir"
+      ],
+      "bibtex": "@article{zhu2020so2sat,\n  title={So2Sat LCZ42: A Benchmark Dataset for Global Local Climate Zones Classification},\n  author={Zhu, Xiao Xiang and Hu, Jingyan and Qiu, Chunping and Shi, Yilei and Kang, Jian and Gaudry, Lieven and Li, Xiaoxiang and Tsagkatakis, Gabriel and Sumbul, Gencer and Demir, Beg{\\\"u}m},\n  journal={IEEE Geoscience and Remote Sensing Magazine},\n  volume={8},\n  number={3},\n  pages={76--89},\n  year={2020},\n  doi={10.1109/MGRS.2020.2964708}\n}"
+    },
+    "geographic_coverage": [
+      "Global",
+      "Europe",
+      "North America",
+      "South America",
+      "Asia",
+      "Africa",
+      "Australia"
+    ],
+    "provenance": {
+      "collection_method": "Curated from European Space Agency Sentinel-1 dual-polarization SAR and Sentinel-2 Level-1C multispectral imagery across 52 global metropolitan areas.",
+      "curation_notes": "Labeling conducted by 15 domain experts following the World Urban Database and Access Portal Tools (WUDAPT) methodology, achieving a 95% confidence rating through multi-stage consensus.",
+      "data_sources": [
+        "Copernicus Sentinel-1 SAR",
+        "Copernicus Sentinel-2 MSI"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "south-africa-crop-type",
     "slug": "south-africa-crop-type",
     "name": "Crop Type Classification Dataset for Western Cape, South Africa",
@@ -44643,6 +45795,376 @@
       "total": 765,
       "unit": "records",
       "status": "verified"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "spacenet-2",
+    "slug": "spacenet-2",
+    "name": "SpaceNet 2: Building Footprint Extraction Challenge Dataset",
+    "description": "SpaceNet 2 (Building Detection v2) is a specialized high-resolution satellite imagery benchmark created by SpaceNet LLC (a collaboration between In-Q-Tel CosmiQ Works, Maxar Technologies, and AWS) to evaluate automated building footprint extraction algorithms across diverse geographic and architectural typologies. Sourced from DigitalGlobe WorldView-3 satellite imagery at 0.3-meter ground sample distance, the dataset spans four distinct Areas of Interest (AOIs): Las Vegas (AOI 2, ~216 km²), Paris (AOI 3, ~1,030 km²), Shanghai (AOI 4, ~1,000 km²), and Khartoum (AOI 5, ~765 km²). It contains 10,593 orthorectified image tiles (each 200m x 200m, provided in panchromatic, multispectral, and pansharpened RGB formats) accompanied by 302,701 meticulously annotated polygonal building footprint labels in GeoJSON format. Full release comprises 6,940 training tiles and 3,653 testing tiles hosted on AWS Open Data under CC BY-SA 4.0.",
+    "homepage_url": "https://spacenet.ai/spacenet-buildings-dataset-v2/",
+    "publisher": {
+      "name": "SpaceNet LLC (CosmiQ Works, Maxar, AWS)",
+      "type": "industry",
+      "url": "https://spacenet.ai"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "building-footprint-extraction",
+      "semantic-segmentation",
+      "remote-sensing"
+    ],
+    "tags": [
+      "satellite-imagery",
+      "worldview-3",
+      "building-footprint",
+      "spacenet",
+      "spacenet-2",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Released under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) by SpaceNet Partners on the AWS Open Data registry. Commercial use permitted under attribution and share-alike terms."
+    },
+    "source_references": [
+      {
+        "title": "SpaceNet 2 Official Challenge Page",
+        "url": "https://spacenet.ai/spacenet-buildings-dataset-v2/",
+        "type": "official_website",
+        "notes": "Official challenge landing page and dataset specification."
+      },
+      {
+        "title": "SpaceNet Datasets Portal",
+        "url": "https://spacenet.ai/datasets/",
+        "type": "documentation",
+        "notes": "SpaceNet repository catalog and AWS S3 bucket listing (s3://spacenet-dataset/spacenet/SN2_buildings/)."
+      },
+      {
+        "title": "SpaceNet Registry of Open Data on AWS",
+        "url": "https://registry.opendata.aws/spacenet/",
+        "type": "archive",
+        "notes": "Official AWS Registry of Open Data listing for SpaceNet."
+      },
+      {
+        "title": "SpaceNet: A Remote Sensing Dataset and Challenge Series (arXiv:1807.01232)",
+        "url": "https://doi.org/10.48550/arXiv.1807.01232",
+        "type": "original_paper",
+        "notes": "Foundational overview paper detailing SpaceNet 1-4 challenge methodologies and evaluation metrics."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against spacenet.ai/spacenet-buildings-dataset-v2/, registry.opendata.aws/spacenet/, arXiv:1807.01232, and TorchGeo documentation. Reconciled sample counts: 6,940 training tiles and 3,653 public testing tiles (10,593 full release tiles). Each 200m x 200m geographic footprint provides 4 distinct raster product formats: PAN, MS, PS-MS, and PS-RGB. Single-modality loaders like TorchGeo (SpaceNet2) index one product type (e.g., 6,940 PS-RGB training chips), whereas full file manifests across all 4 products yield 42,372 GeoTIFF files. Verified 302,701 building footprints (Vegas: 151,367; Paris: 23,816; Shanghai: 92,015; Khartoum: 35,503), download payloads (56.4 GB train + 19.1 GB test = 75.5 GB total), and CC BY-SA 4.0 terms."
+    },
+    "size": {
+      "amount": 75.5,
+      "unit": "GB",
+      "file_formats": [
+        "tif",
+        "geojson"
+      ],
+      "status": "verified",
+      "notes": "Full release payload totals 75.5 GB on AWS S3 (`s3://spacenet-dataset/spacenet/SN2_buildings/`): 56.4 GB training data (AOI 2: 23 GB, AOI 3: 5.3 GB, AOI 4: 23.4 GB, AOI 5: 4.7 GB) and 19.1 GB testing data (AOI 2: 7.9 GB, AOI 3: 1.9 GB, AOI 4: 7.7 GB, AOI 5: 1.6 GB). Contains 10,593 geographic tile footprints, each provided in pansharpened RGB (PS-RGB), 8-band multispectral (MS), pansharpened multispectral (PS-MS), and panchromatic (PAN) GeoTIFF formats with GeoJSON building polygons."
+    },
+    "sample_count": {
+      "total": 10593,
+      "splits": {
+        "train": 6940,
+        "test": 3653
+      },
+      "unit": "tiles",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2017-03-15",
+      "last_updated": "2018-05-01"
+    },
+    "citation": {
+      "paper_title": "SpaceNet: A Remote Sensing Dataset and Challenge Series",
+      "paper_url": "https://doi.org/10.48550/arXiv.1807.01232",
+      "doi": "10.48550/arXiv.1807.01232",
+      "authors": [
+        "Adam Van Etten",
+        "Dave Lindenbaum",
+        "Todd M. Bacastow"
+      ],
+      "bibtex": "@article{vanetten2018spacenet,\n  title={SpaceNet: A Remote Sensing Dataset and Challenge Series},\n  author={Van Etten, Adam and Lindenbaum, Dave and Bacastow, Todd M.},\n  journal={arXiv preprint arXiv:1807.01232},\n  year={2018},\n  doi={10.48550/arXiv.1807.01232}\n}"
+    },
+    "geographic_coverage": [
+      "United States",
+      "France",
+      "China",
+      "Sudan",
+      "Las Vegas",
+      "Paris",
+      "Shanghai",
+      "Khartoum"
+    ],
+    "provenance": {
+      "collection_method": "Collected from DigitalGlobe WorldView-3 satellite at 0.3m resolution across four diverse urban environments.",
+      "curation_notes": "Each tile is 200m x 200m. Contains 302,701 polygon building footprints labeled by professional mapping annotators. S3 path: s3://spacenet-dataset/spacenet/SN2_buildings/.",
+      "data_sources": [
+        "DigitalGlobe WorldView-3 satellite imagery"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "spacenet-6",
+    "slug": "spacenet-6",
+    "name": "SpaceNet 6: Multi-Sensor All-Weather Mapping (SAR & Optical)",
+    "description": "SpaceNet 6 is an advanced multimodal remote sensing challenge dataset developed by SpaceNet LLC, Capella Space, and Maxar Technologies to benchmark building footprint extraction under all-weather conditions using synthetic aperture radar (SAR) and electro-optical (EO) satellite imagery. Focused over the port of Rotterdam, Netherlands (AOI 11, covering roughly 120 km²), the dataset contains 4,251 tiles of 900x900 pixels (~450m x 450m), divided into 3,401 training tiles (39.0 GB, containing paired SAR, optical, and building labels) and approximately 850 testing tiles (16.9 GB, containing SAR-only imagery). Sensor modalities include 0.5-meter X-band quad-polarization SAR (HH, HV, VH, VV) provided by Capella Space aerial sensor platforms and 0.5-meter optical imagery from Maxar's WorldView-2 satellite. Ground truth provides polygon annotations for approximately 48,000 building footprints in GeoJSON format.",
+    "homepage_url": "https://spacenet.ai/sn6-challenge/",
+    "publisher": {
+      "name": "SpaceNet LLC (Capella Space, Maxar, CosmiQ)",
+      "type": "industry",
+      "url": "https://spacenet.ai"
+    },
+    "modalities": [
+      "vision",
+      "sensor"
+    ],
+    "tasks": [
+      "building-footprint-extraction",
+      "multimodal-fusion",
+      "sar-optical-fusion",
+      "remote-sensing"
+    ],
+    "tags": [
+      "sar",
+      "capella-space",
+      "worldview-2",
+      "building-footprint",
+      "spacenet",
+      "spacenet-6",
+      "all-weather",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed under CC BY-SA 4.0 as part of the AWS Public Dataset program."
+    },
+    "source_references": [
+      {
+        "title": "SpaceNet 6 Official Challenge Page",
+        "url": "https://spacenet.ai/sn6-challenge/",
+        "type": "official_website",
+        "notes": "Official challenge portal and dataset release details."
+      },
+      {
+        "title": "SpaceNet Datasets Portal",
+        "url": "https://spacenet.ai/datasets/",
+        "type": "documentation",
+        "notes": "Dataset catalog with AWS S3 download instructions (s3://spacenet-dataset/spacenet/SN6_buildings/)."
+      },
+      {
+        "title": "SpaceNet Registry of Open Data on AWS",
+        "url": "https://registry.opendata.aws/spacenet/",
+        "type": "archive",
+        "notes": "Official AWS Registry of Open Data listing for SpaceNet."
+      },
+      {
+        "title": "SpaceNet 6: Multi-Sensor All Weather Mapping Dataset (CVPRW 2020)",
+        "url": "https://doi.org/10.48550/arXiv.2004.06500",
+        "type": "original_paper",
+        "notes": "Official CVPR 2020 EarthVision Workshop publication."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against spacenet.ai/sn6-challenge/, registry.opendata.aws/spacenet/, arXiv:2004.06500, and TorchGeo documentation. Reconciled sample breakdown: 3,401 training tiles (paired Capella SAR + WorldView-2 EO + building labels, 39.0 GB) and ~850 public testing tiles (SAR-only, 16.9 GB) totaling 4,251 public release tiles (55.9 GB payload). Challenge organizers held out a private test set (~850 tiles) for leaderboard scoring. Single-modality loaders like TorchGeo (SpaceNet6) filter by imagery type (e.g. SAR-Intensity or optical PS-RGB). Verified ~48,000 building footprint polygons over Rotterdam (AOI 11) and CC BY-SA 4.0 terms."
+    },
+    "size": {
+      "amount": 55.9,
+      "unit": "GB",
+      "file_formats": [
+        "tif",
+        "geojson"
+      ],
+      "status": "verified",
+      "notes": "Full release payload totals 55.9 GB on AWS S3 (`s3://spacenet-dataset/spacenet/SN6_buildings/`): 39.0 GB training data (3,401 paired SAR and EO tiles with GeoJSON labels) and 16.9 GB public testing data (~850 SAR-only tiles). Also includes an untiled WorldView-2 optical image spanning ~92 km² at 0.5m GSD."
+    },
+    "sample_count": {
+      "total": 4251,
+      "splits": {
+        "train": 3401,
+        "test": 850
+      },
+      "unit": "tiles",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-03-16",
+      "last_updated": "2020-06-15"
+    },
+    "citation": {
+      "paper_title": "SpaceNet 6: Multi-Sensor All Weather Mapping Dataset",
+      "paper_url": "https://doi.org/10.48550/arXiv.2004.06500",
+      "doi": "10.48550/arXiv.2004.06500",
+      "authors": [
+        "Jacob Shermeyer",
+        "Daniel Hogan",
+        "Jason Brown",
+        "Adam Van Etten",
+        "Nicholas Weir",
+        "Fabio Pacifici",
+        "Ronny Hansch",
+        "Alexei Bastidas",
+        "Scott Soenen",
+        "Todd M. Bacastow",
+        "Ryan Lewis"
+      ],
+      "bibtex": "@inproceedings{shermeyer2020spacenet,\n  title={SpaceNet 6: Multi-Sensor All Weather Mapping Dataset},\n  author={Shermeyer, Jacob and Hogan, Daniel and Brown, Jason and Van Etten, Adam and Weir, Nicholas and Pacifici, Fabio and Hansch, Ronny and Bastidas, Alexei and Soenen, Scott and Bacastow, Todd M. and Lewis, Ryan},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},\n  pages={196--197},\n  year={2020},\n  doi={10.48550/arXiv.2004.06500}\n}"
+    },
+    "geographic_coverage": [
+      "Netherlands",
+      "Rotterdam"
+    ],
+    "provenance": {
+      "collection_method": "Co-registered aerial X-band quad-polarimetric SAR from Capella Space and Maxar WorldView-2 optical satellite imagery over Rotterdam.",
+      "curation_notes": "Each paired tile is 900x900 pixels at 0.5m GSD. Vector polygons outline ~48,000 buildings. S3 path: s3://spacenet-dataset/spacenet/SN6_buildings/.",
+      "data_sources": [
+        "Capella Space Airborne X-band SAR",
+        "Maxar WorldView-2 optical imagery"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "spacenet-8",
+    "slug": "spacenet-8",
+    "name": "SpaceNet 8: Flood Detection and Road Network Mapping Dataset",
+    "description": "SpaceNet 8 is a multi-task post-disaster remote sensing benchmark created by SpaceNet LLC in partnership with Maxar Technologies and AWS to evaluate automated flood detection, building footprint extraction, and road network accessibility. Covering approximately 850 km² across regions affected by major flooding events (including the July 2021 floods in Germany and Hurricane Ida in Louisiana in August 2021), the dataset pairs co-registered pre-disaster and post-disaster Maxar WorldView satellite imagery. The public training release comprises 801 geographic tile locations (202 in Germany, 599 in Louisiana-East), each providing corresponding 1300x1300 pixel pre-event and post-event optical GeoTIFF images (1,602 training images). Ground truth features vector annotations for approximately 32,000 buildings (3,723 in Germany, 18,892 in Louisiana-East) and 1,300 km of road networks, with explicit attributes denoting flood extent, impassable roads, and submerged structures. SpaceNet 8 establishes an end-to-end benchmark combining building damage segmentation and network graph routing for disaster response, distinct from UAV-based FloodNet and building-only xBD.",
+    "homepage_url": "https://spacenet.ai/sn8-challenge/",
+    "publisher": {
+      "name": "SpaceNet LLC (CosmiQ Works, Maxar, AWS)",
+      "type": "industry",
+      "url": "https://spacenet.ai"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "flood-detection",
+      "road-network-extraction",
+      "building-footprint-extraction",
+      "disaster-damage-assessment",
+      "remote-sensing"
+    ],
+    "tags": [
+      "flood-detection",
+      "road-network",
+      "building-footprint",
+      "satellite-imagery",
+      "spacenet",
+      "spacenet-8",
+      "disaster-response",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed under CC BY-SA 4.0 as part of the AWS Public Dataset program."
+    },
+    "source_references": [
+      {
+        "title": "SpaceNet 8 Official Challenge Page",
+        "url": "https://spacenet.ai/sn8-challenge/",
+        "type": "official_website",
+        "notes": "Official challenge landing page and task specifications."
+      },
+      {
+        "title": "SpaceNet Datasets Portal",
+        "url": "https://spacenet.ai/datasets/",
+        "type": "documentation",
+        "notes": "SpaceNet dataset catalog and AWS S3 bucket listing (s3://spacenet-dataset/spacenet/SN8_floods/)."
+      },
+      {
+        "title": "SpaceNet Registry of Open Data on AWS",
+        "url": "https://registry.opendata.aws/spacenet/",
+        "type": "archive",
+        "notes": "Official AWS Registry of Open Data listing for SpaceNet."
+      },
+      {
+        "title": "SpaceNet 8 — The Detection of Flooded Roads and Buildings (CVPRW 2022)",
+        "url": "https://doi.org/10.1109/CVPRW56347.2022.00153",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (2022)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against spacenet.ai/sn8-challenge/, registry.opendata.aws/spacenet/, TorchGeo documentation, and IEEE CVPRW DOI: 10.1109/CVPRW56347.2022.00153. Reconciled sample counts: public training release contains 801 geographic tile pairs (202 in Germany_Training_Public and 599 in Louisiana-East_Training_Public), with each pair providing 1300x1300 PRE-event and POST-event GeoTIFF images (1,602 images). Because public test (Louisiana-West_Test_Public) and hidden evaluation cities are held out without a unified public tile count, total image sample count is cataloged with unknown status. Vector annotation metrics (~32,000 buildings: 3,723 in Germany, 18,892 in Louisiana-East; and ~1,300 km of road networks) are documented as feature instances rather than image sample units. CC BY-SA 4.0 terms verified."
+    },
+    "size": {
+      "amount": 42.0,
+      "unit": "GB",
+      "file_formats": [
+        "tif",
+        "geojson"
+      ],
+      "status": "verified",
+      "notes": "Hosted on AWS S3 (`s3://spacenet-dataset/spacenet/SN8_floods/tarballs/`) partitioned into training archives (Germany_Training_Public.tar.gz [202 tile pairs], Louisiana-East_Training_Public.tar.gz [599 tile pairs]) and public testing archives (Louisiana-West_Test_Public.tar.gz), totaling ~42.0 GB. Each geographic tile pair contains co-registered 1300x1300 pixel PRE-event and POST-event GeoTIFF optical images (1,602 training images total) with GeoJSON vector road and building annotations."
+    },
+    "sample_count": {
+      "splits": {
+        "train": 801
+      },
+      "unit": "tile_pairs",
+      "status": "unknown"
+    },
+    "dates": {
+      "published": "2022-06-19",
+      "last_updated": "2022-09-01"
+    },
+    "citation": {
+      "paper_title": "SpaceNet 8 — The Detection of Flooded Roads and Buildings",
+      "paper_url": "https://doi.org/10.1109/CVPRW56347.2022.00153",
+      "doi": "10.1109/CVPRW56347.2022.00153",
+      "authors": [
+        "Ronny Hänsch",
+        "Jacob Arndt",
+        "Dalton Lunga",
+        "Matthew Gibb",
+        "Tyler Pedelose",
+        "Arnold Boedihardjo",
+        "Desiree Petrie",
+        "Todd M. Bacastow"
+      ],
+      "bibtex": "@inproceedings{hansch2022spacenet,\n  title={SpaceNet 8 -- The Detection of Flooded Roads and Buildings},\n  author={H{\\\"a}nsch, Ronny and Arndt, Jacob and Lunga, Dalton and Gibb, Matthew and Pedelose, Tyler and Boedihardjo, Arnold and Petrie, Desiree and Bacastow, Todd M.},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},\n  pages={1472--1480},\n  year={2022},\n  doi={10.1109/CVPRW56347.2022.00153}\n}"
+    },
+    "geographic_coverage": [
+      "Germany",
+      "United States",
+      "Louisiana",
+      "Ahr Valley"
+    ],
+    "provenance": {
+      "collection_method": "Pre- and post-event high-resolution satellite imagery from Maxar constellations captured over disaster areas in Germany and Louisiana.",
+      "curation_notes": "Annotates both structural building polygons and network road graph centerlines with flooded/non-flooded attribute flags. S3 path: s3://spacenet-dataset/spacenet/SN8_floods/.",
+      "data_sources": [
+        "Maxar WorldView satellite constellation"
+      ]
     }
   },
   {
@@ -51637,6 +53159,121 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "whu-building",
+    "slug": "whu-building",
+    "name": "WHU Building Dataset: Aerial and Satellite Building Footprint Benchmark",
+    "description": "The WHU Building Dataset is an authoritative benchmark for automated building footprint extraction and building change detection developed by the Photogrammetry and Computer Vision (GPCV) research group at Wuhan University. Covering both aerial and satellite domains, the primary aerial dataset encompasses Christchurch, New Zealand (over 450 km² containing 220,000 individual buildings), down-sampled to 0.3m ground resolution and cropped into 8,189 tiles of 512x512 pixels (documented partition: 4,736 train, 1,036 validation, 2,416 test; split sum totals 8,188 tiles). The collection additionally provides satellite subsets (QuickBird, WorldView, IKONOS, ZY-3) and a related building change detection subset (WHU-CD) covering a 20.5 km² Christchurch reconstruction area with bitemporal aerial imagery from 2012 and 2016. Raster tiles and building instance counts are tracked distinctly.",
+    "homepage_url": "https://gpcv.whu.edu.cn/data/building_dataset.html",
+    "publisher": {
+      "name": "Wuhan University (GPCV Lab)",
+      "type": "academic",
+      "url": "https://gpcv.whu.edu.cn"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "building-footprint-extraction",
+      "semantic-segmentation",
+      "change-detection",
+      "aerial-image-analysis"
+    ],
+    "tags": [
+      "building-footprint",
+      "aerial-imagery",
+      "satellite-imagery",
+      "semantic-segmentation",
+      "change-detection",
+      "whu-building",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source (WHU GPCV Academic Research)",
+      "spdx_id": null,
+      "url": "https://gpcv.whu.edu.cn/data/building_dataset.html",
+      "commercial_use": "unknown",
+      "notes": "Hosted by Wuhan University GPCV Lab with direct downloads for academic research and benchmarking. The primary publisher website does not declare a standardized open data license (such as CC BY 4.0) or explicit commercial use authorization. Although secondary repositories (e.g. Figshare) apply CC BY 4.0, commercial permissions are not established by the primary source."
+    },
+    "source_references": [
+      {
+        "title": "WHU Building Dataset Official Homepage",
+        "url": "https://gpcv.whu.edu.cn/data/building_dataset.html",
+        "type": "official_website",
+        "notes": "Official Wuhan University GPCV repository page."
+      },
+      {
+        "title": "Fully Convolutional Networks for Multisource Building Extraction (IEEE TGRS 2019)",
+        "url": "https://doi.org/10.1109/TGRS.2018.2858817",
+        "type": "original_paper",
+        "notes": "Foundational IEEE Transactions on Geoscience and Remote Sensing paper."
+      },
+      {
+        "title": "WHU Building Dataset Figshare Repository",
+        "url": "https://doi.org/10.6084/m9.figshare.12933938",
+        "type": "archive",
+        "notes": "Figshare secondary mirror of the processed tiles and shapefiles."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against gpcv.whu.edu.cn/data/building_dataset.html and IEEE TGRS DOI: 10.1109/TGRS.2018.2858817. Confirmed publisher's reported total of 8,189 aerial tiles of 512x512 pixels against documented split dimensions (train: 64x74=4,736; validation: 14x74=1,036; test: 17x42+23x74=2,416). Noted that the split sum equals 8,188 tiles (a 1-tile discrepancy with the headline 8,189 count); documented splits are preserved without inventing an assignment for the missing tile. Rechecked primary licensing: CC BY 4.0 from third-party mirrors was removed in favor of primary publisher terms with unknown commercial use."
+    },
+    "size": {
+      "amount": 12.0,
+      "unit": "GB",
+      "file_formats": [
+        "tif",
+        "png",
+        "shp"
+      ],
+      "status": "verified",
+      "notes": "8,189 512x512 RGB TIFF tiles with binary raster masks and vector shapefile building polygons."
+    },
+    "sample_count": {
+      "total": 8189,
+      "splits": {
+        "train": 4736,
+        "validation": 1036,
+        "test": 2416
+      },
+      "unit": "tiles",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-01-01",
+      "last_updated": "2020-09-08"
+    },
+    "citation": {
+      "paper_title": "Fully Convolutional Networks for Multisource Building Extraction From an Open Aerial and Satellite Imagery Data Set",
+      "paper_url": "https://doi.org/10.1109/TGRS.2018.2858817",
+      "doi": "10.1109/TGRS.2018.2858817",
+      "authors": [
+        "Shunping Ji",
+        "Shiqing Wei",
+        "Meng Lu"
+      ],
+      "bibtex": "@article{ji2019fully,\n  title={Fully Convolutional Networks for Multisource Building Extraction From an Open Aerial and Satellite Imagery Data Set},\n  author={Ji, Shunping and Wei, Shiqing and Lu, Meng},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={57},\n  number={1},\n  pages={574--586},\n  year={2019},\n  doi={10.1109/TGRS.2018.2858817}\n}"
+    },
+    "geographic_coverage": [
+      "New Zealand",
+      "Global",
+      "East Asia"
+    ],
+    "provenance": {
+      "collection_method": "Aerial imagery covering Christchurch, New Zealand provided by Land Information New Zealand (LINZ), combined with high-resolution satellite imagery from WorldView-2, IKONOS, and ZY-3.",
+      "curation_notes": "Building instances (>220,000) manually digitized and verified. Aerial tiles down-sampled to 0.3m. The WHU-CD subset uses a 20.5 km² overlapping section of Christchurch to benchmark 2012-2016 post-earthquake reconstruction.",
+      "data_sources": [
+        "Land Information New Zealand (LINZ)",
+        "DigitalGlobe WorldView-2",
+        "Spaceborne ZY-3"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "wider-face",
     "slug": "wider-face",
     "name": "WIDER FACE: A Face Detection Benchmark",
@@ -52201,6 +53838,132 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "xbd",
+    "slug": "xbd",
+    "name": "xBD / xView2: A Large-Scale Satellite Dataset for Post-Disaster Building Damage Assessment",
+    "description": "xBD (the foundational dataset for the xView2 Challenge) is a large-scale, high-resolution satellite imagery dataset created to assess building damage from natural disasters. Curated by the Defense Innovation Unit (DIU) and the Carnegie Mellon University Software Engineering Institute (CMU SEI), xBD contains 22,068 orthorectified satellite images (1024x1024 pixels, comprising 11,034 co-registered pre- and post-disaster image pairs) covering over 45,362 km² across 19 disaster events worldwide (earthquakes, hurricanes, tsunamis, floods, volcanic eruptions, and wildfires). It provides polygonal footprint outlines for 850,736 buildings, each graded on a four-level ordinal damage scale: no damage, minor damage, major damage, and destroyed. xBD and xView2 constitute a single unified research dataset identity.",
+    "homepage_url": "https://xview2.org/",
+    "publisher": {
+      "name": "Defense Innovation Unit & CMU Software Engineering Institute",
+      "type": "government",
+      "url": "https://xview2.org"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "disaster-damage-assessment",
+      "building-damage-classification",
+      "building-footprint-extraction",
+      "change-detection",
+      "semantic-segmentation"
+    ],
+    "tags": [
+      "satellite-imagery",
+      "disaster-response",
+      "xbd",
+      "xview2",
+      "building-damage",
+      "change-detection",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Distributed under CC BY-NC-SA 4.0 in accordance with xView2 challenge terms and Maxar Open Data Program non-commercial humanitarian license conditions."
+    },
+    "source_references": [
+      {
+        "title": "xView2 Challenge Homepage",
+        "url": "https://xview2.org/",
+        "type": "official_website",
+        "notes": "Official xView2 disaster recovery challenge portal."
+      },
+      {
+        "title": "xView2 Dataset Download Page",
+        "url": "https://xview2.org/dataset",
+        "type": "official_website",
+        "notes": "Official xBD dataset download portal requiring challenge registration."
+      },
+      {
+        "title": "xBD: A Dataset for Assessing Building Damage from Satellite Imagery (CVPRW 2019)",
+        "url": "https://doi.org/10.48550/arXiv.1911.09296",
+        "type": "original_paper",
+        "notes": "Foundational publication detailing disaster events, annotation taxonomy, and damage scales."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against xview2.org and arXiv:1911.09296. Confirmed 22,068 total image tiles (11,034 pre/post pairs), 850,736 building polygons, 19 natural disasters, CC BY-NC-SA 4.0 terms, and treated xBD and xView2 as a single original dataset identity."
+    },
+    "size": {
+      "amount": 32.5,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "json"
+      ],
+      "status": "verified",
+      "notes": "22,068 1024x1024 RGB PNG images paired with GeoJSON building polygons and damage labels."
+    },
+    "sample_count": {
+      "total": 22068,
+      "splits": {
+        "train": 18660,
+        "test": 1866,
+        "holdout": 1542
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-11-20",
+      "last_updated": "2020-03-01"
+    },
+    "citation": {
+      "paper_title": "xBD: A Dataset for Assessing Building Damage from Satellite Imagery",
+      "paper_url": "https://doi.org/10.48550/arXiv.1911.09296",
+      "doi": "10.48550/arXiv.1911.09296",
+      "authors": [
+        "Ritwik Gupta",
+        "Richard Hosfelt",
+        "Sandra Sajeev",
+        "Nirav Patel",
+        "Bryce Goodman",
+        "Jigar Doshi",
+        "Eric Heim",
+        "Howie Choset",
+        "Matthew Gaston"
+      ],
+      "bibtex": "@inproceedings{gupta2019xbd,\n  title={xBD: A Dataset for Assessing Building Damage from Satellite Imagery},\n  author={Gupta, Ritwik and Hosfelt, Richard and Sajeev, Sandra and Patel, Nirav and Goodman, Bryce and Doshi, Jigar and Heim, Eric and Choset, Howie and Gaston, Matthew},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},\n  pages={10--17},\n  year={2019},\n  doi={10.48550/arXiv.1911.09296}\n}"
+    },
+    "geographic_coverage": [
+      "Global",
+      "United States",
+      "Mexico",
+      "Guatemala",
+      "Indonesia",
+      "India",
+      "Nepal",
+      "Nigeria",
+      "Portugal",
+      "New Zealand"
+    ],
+    "provenance": {
+      "collection_method": "High-resolution satellite imagery captured before and after 19 disaster events by Maxar WorldView and GeoEye constellations.",
+      "curation_notes": "Building footprints were annotated as polygons and verified against Joint Damage Scale definitions. Pre- and post-disaster images are co-registered.",
+      "data_sources": [
+        "Maxar Open Data Program satellite imagery"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "xcopa",
     "slug": "xcopa",
     "name": "XCOPA: Cross-Lingual Choice of Plausible Alternatives",
@@ -52493,6 +54256,125 @@
       "data_sources": [
         "BBC News",
         "Internet Archive Wayback Machine"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "xview1",
+    "slug": "xview1",
+    "name": "xView1: Large-Scale Overhead Object Detection Challenge Dataset",
+    "description": "xView1 is a large-scale overhead and satellite imagery dataset for object detection released by the Defense Innovation Unit (DIU) and the National Geospatial-Intelligence Agency (NGA). Spanning more than 1,415 km² across globally diverse areas, it features 0.3-meter ground sample distance (GSD) imagery collected from DigitalGlobe WorldView-3 satellites. The dataset contains over one million bounding box annotations across 60 fine-grained object categories hierarchically organized into passenger vehicles, maritime vessels, aircraft, railway equipment, trucks, and engineering infrastructure. The official public release comprises 847 large training satellite scenes with public ground-truth annotations and 282 held-out validation scenes (1,129 scenes total), specifically targeting small and dense object detection in complex overhead context.",
+    "homepage_url": "https://www.diu.mil/ai-xview-challenge",
+    "publisher": {
+      "name": "Defense Innovation Unit & National Geospatial-Intelligence Agency",
+      "type": "government",
+      "url": "https://www.diu.mil"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection",
+      "satellite-imagery-analysis",
+      "overhead-object-detection"
+    ],
+    "tags": [
+      "satellite-imagery",
+      "worldview-3",
+      "overhead-detection",
+      "remote-sensing",
+      "bounding-boxes",
+      "xview",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) by DIU and NGA. Commercial exploitation is prohibited without explicit authorization."
+    },
+    "source_references": [
+      {
+        "title": "DIU xView Challenge Homepage",
+        "url": "https://www.diu.mil/ai-xview-challenge",
+        "type": "official_website",
+        "notes": "Official challenge landing page hosted by the Defense Innovation Unit."
+      },
+      {
+        "title": "xView: Objects in Context in Overhead Imagery (arXiv:1802.07856)",
+        "url": "https://doi.org/10.48550/arXiv.1802.07856",
+        "type": "original_paper",
+        "notes": "Original foundational paper describing dataset collection, sensor characteristics, and annotation taxonomy."
+      },
+      {
+        "title": "DIUx-xView GitHub Repository",
+        "url": "https://github.com/DIUx-xView/data_utilities",
+        "type": "repository",
+        "notes": "Official challenge data processing utilities and conversion scripts."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-14",
+      "notes": "Verified against DIU xView challenge portal, official DIUx GitHub repository (DIUx-xView/data_utilities), and foundational arXiv:1802.07856 paper. Confirmed original release composition of 847 training scenes and 282 validation scenes (1,129 large GeoTIFF satellite scenes total) spanning 1,415 km² of geographic area with >1M bounding boxes across 60 classes under CC BY-NC-SA 4.0. Clarified that 1,415 reflects square kilometers of geographic surface coverage rather than an image or tile count."
+    },
+    "size": {
+      "amount": 21.0,
+      "unit": "GB",
+      "file_formats": [
+        "tif",
+        "geojson"
+      ],
+      "status": "estimated",
+      "notes": "Compressed archive payload containing 1,129 large 3-band 8-bit GeoTIFF scenes (847 training scenes, 282 validation scenes, typically ~3300x3300 pixels) and GeoJSON bounding box annotations, covering >1,415 km² of geographic area. 1,415 represents square kilometers of geographic surface coverage, not the scene or tile count."
+    },
+    "sample_count": {
+      "total": 1129,
+      "splits": {
+        "train": 847,
+        "validation": 282
+      },
+      "unit": "scenes",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018-02-21",
+      "last_updated": "2018-08-01"
+    },
+    "citation": {
+      "paper_title": "xView: Objects in Context in Overhead Imagery",
+      "paper_url": "https://doi.org/10.48550/arXiv.1802.07856",
+      "doi": "10.48550/arXiv.1802.07856",
+      "authors": [
+        "Darius Lam",
+        "Richard Kuzma",
+        "Kevin McGee",
+        "Samuel Dooley",
+        "Michael Laielli",
+        "Matthew Klaric",
+        "Yaroslav Bulatov",
+        "Brendan McCord"
+      ],
+      "bibtex": "@article{lam2018xview,\n  title={xView: Objects in Context in Overhead Imagery},\n  author={Lam, Darius and Kuzma, Richard and McGee, Kevin and Dooley, Samuel and Laielli, Michael and Klaric, Matthew and Bulatov, Yaroslav and McCord, Brendan},\n  journal={arXiv preprint arXiv:1802.07856},\n  year={2018},\n  doi={10.48550/arXiv.1802.07856}\n}"
+    },
+    "geographic_coverage": [
+      "Global",
+      "North America",
+      "Europe",
+      "Asia",
+      "Africa",
+      "South America",
+      "Oceania"
+    ],
+    "provenance": {
+      "collection_method": "Collected from DigitalGlobe WorldView-3 satellite sensors at 0.3m ground sample distance spanning over 1,415 km² globally.",
+      "curation_notes": "Annotated by professional imagery analysts. Bounding boxes are formatted as pixel coordinates within large GeoTIFF scenes; sample count tracks original multi-kilometer satellite scenes rather than cropped network chips.",
+      "data_sources": [
+        "DigitalGlobe WorldView-3 satellite imagery"
       ]
     }
   },

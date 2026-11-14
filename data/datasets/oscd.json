@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "oscd",
+  "slug": "oscd",
+  "name": "OSCD: Onera Satellite Change Detection Dataset",
+  "description": "The Onera Satellite Change Detection (OSCD) dataset is a specialized remote sensing benchmark for urban change detection using multispectral satellite imagery, created by researchers at ONERA (The French Aerospace Lab) and Telecom ParisTech. OSCD features 24 registered Sentinel-2 image pairs captured between 2015 and 2018 across globally diverse metropolitan areas (including Paris, Montpellier, Madrid, Beirut, Dubai, Rio de Janeiro, Las Vegas, and Hong Kong). The imagery contains all 13 Sentinel-2 spectral bands at 10m, 20m, and 60m spatial resolutions, annotated with pixel-level binary ground truth masks indicating urban development and structural modifications while ignoring seasonal or natural variations. The official dataset is divided into 14 training pairs and 10 testing pairs.",
+  "homepage_url": "https://rcdaudt.github.io/oscd/",
+  "publisher": {
+    "name": "ONERA & Telecom ParisTech",
+    "type": "academic",
+    "url": "https://rcdaudt.github.io/oscd/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "change-detection",
+    "semantic-segmentation",
+    "remote-sensing",
+    "urban-growth-monitoring"
+  ],
+  "tags": [
+    "sentinel-2",
+    "multispectral",
+    "change-detection",
+    "urban-monitoring",
+    "remote-sensing",
+    "oscd",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Hosted on IEEE DataPort under Open Access terms (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "OSCD Project Homepage",
+      "url": "https://rcdaudt.github.io/oscd/",
+      "type": "official_website",
+      "notes": "Official OSCD landing page with documentation and benchmark results."
+    },
+    {
+      "title": "OSCD IEEE DataPort Archive",
+      "url": "https://doi.org/10.21227/asqe-7s69",
+      "type": "archive",
+      "notes": "Official open-access dataset archive on IEEE DataPort (DOI: 10.21227/asqe-7s69)."
+    },
+    {
+      "title": "Urban Change Detection for Multispectral Earth Observation Using CNNs (IGARSS 2018)",
+      "url": "https://doi.org/10.1109/IGARSS.2018.8518015",
+      "type": "original_paper",
+      "notes": "Foundational IGARSS 2018 paper introducing the dataset."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-14",
+    "notes": "Verified against rcdaudt.github.io/oscd/ and IEEE DataPort (DOI: 10.21227/asqe-7s69). Confirmed 24 registered Sentinel-2 pairs (14 train, 10 test), pixel-level binary masks, and CC BY 4.0 open access terms."
+  },
+  "size": {
+    "amount": 3.4,
+    "unit": "GB",
+    "file_formats": [
+      "tif",
+      "png"
+    ],
+    "status": "verified",
+    "notes": "24 pairs of 13-band Sentinel-2 GeoTIFFs with PNG change masks."
+  },
+  "sample_count": {
+    "total": 24,
+    "splits": {
+      "train": 14,
+      "test": 10
+    },
+    "unit": "image pairs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-07-22",
+    "last_updated": "2018-10-23"
+  },
+  "citation": {
+    "paper_title": "Urban Change Detection for Multispectral Earth Observation Using Convolutional Neural Networks",
+    "paper_url": "https://doi.org/10.1109/IGARSS.2018.8518015",
+    "doi": "10.1109/IGARSS.2018.8518015",
+    "authors": [
+      "Rodrigo Caye Daudt",
+      "Bertrand Le Saux",
+      "Alexandre Boulch",
+      "Yann Gousseau"
+    ],
+    "bibtex": "@inproceedings{daudt2018urban,\n  title={Urban Change Detection for Multispectral Earth Observation Using Convolutional Neural Networks},\n  author={Daudt, Rodrigo Caye and Le Saux, Bertrand and Boulch, Alexandre and Gousseau, Yann},\n  booktitle={IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},\n  pages={2115--2118},\n  year={2018},\n  doi={10.1109/IGARSS.2018.8518015}\n}"
+  },
+  "geographic_coverage": [
+    "Global",
+    "Europe",
+    "Middle East",
+    "South America",
+    "North America",
+    "Asia"
+  ],
+  "provenance": {
+    "collection_method": "Sourced from Copernicus Sentinel-2 Top-of-Atmosphere (Level-1C) reflectance products covering global urban areas.",
+    "curation_notes": "Coregistered image pairs annotated with focus on newly built infrastructure while ignoring seasonal vegetation and illumination changes.",
+    "data_sources": [
+      "Copernicus Sentinel-2 Level-1C MSI"
+    ]
+  }
+}

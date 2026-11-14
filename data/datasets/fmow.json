@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fmow",
+  "slug": "fmow",
+  "name": "Functional Map of the World (fMoW)",
+  "description": "The Functional Map of the World (fMoW) is a large-scale satellite imagery dataset developed by the Intelligence Advanced Research Projects Activity (IARPA), DigitalGlobe, and Johns Hopkins University Applied Physics Laboratory (JHU/APL). Created to evaluate machine learning models for predicting the functional purpose of buildings and land use, fMoW features 1,047,691 satellite images spanning more than 200 countries across 63 total categories, consisting of 62 fine-grained real-world functional categories (e.g., educational institution, airport, hospital, recreational facility) and 1 additional false-detection category (representing non-functional overhead background false alarms) with 83,412 multi-temporal facility sequences. The dataset is distributed via AWS in two format variants: fMoW-full (approx. 3.5 TB, containing 4-band and 8-band multispectral TIFF images hosted at s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-full/) and fMoW-rgb (approx. 200 GB, containing 3-band JPEG images hosted at s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-rgb/). fMoW-full and fMoW-rgb represent format variants of the same canonical research dataset.",
+  "homepage_url": "https://github.com/fMoW/dataset",
+  "publisher": {
+    "name": "IARPA & DigitalGlobe / Johns Hopkins APL",
+    "type": "government",
+    "url": "https://www.iarpa.gov"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "object-detection",
+    "land-use-classification",
+    "remote-sensing"
+  ],
+  "tags": [
+    "satellite-imagery",
+    "multispectral",
+    "land-use",
+    "fmow",
+    "iarpa",
+    "temporal-sequences",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Functional Map of the World Challenge Public License",
+    "url": "https://github.com/fMoW/dataset/blob/master/LICENSE",
+    "commercial_use": "forbidden",
+    "notes": "Governed by the Functional Map of the World Challenge Public License, which explicitly restricts use to non-commercial research and evaluation. Commercial use is strictly prohibited without express permission. Trained machine learning models/weights are clarified as not constituting adapted material under Section 2."
+  },
+  "source_references": [
+    {
+      "title": "fMoW GitHub Dataset Repository",
+      "url": "https://github.com/fMoW/dataset",
+      "type": "repository",
+      "notes": "Official code and dataset metadata repository with AWS download instructions."
+    },
+    {
+      "title": "fMoW-full AWS S3 Bucket Archive",
+      "url": "https://spacenet.ai/datasets/",
+      "type": "archive",
+      "notes": "AWS S3 endpoint: s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-full/ (~3.5 TB multispectral TIFF format with manifest.json.bz2)."
+    },
+    {
+      "title": "fMoW-rgb AWS S3 Bucket Archive",
+      "url": "https://spacenet.ai/datasets/",
+      "type": "archive",
+      "notes": "AWS S3 endpoint: s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-rgb/ (~200 GB 3-band JPEG format with manifest.json.bz2)."
+    },
+    {
+      "title": "Functional Map of the World (CVPR 2018)",
+      "url": "https://doi.org/10.1109/CVPR.2018.00646",
+      "type": "original_paper",
+      "notes": "Official CVPR 2018 conference paper describing dataset structure, metadata attributes, and baselines."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-14",
+    "notes": "Verified against fMoW GitHub repository, SpaceNet dataset portal, and CVPR 2018 paper (DOI: 10.1109/CVPR.2018.00646). Confirmed 1,047,691 images across 63 categories (62 real-world functional categories + 1 false-detection label), distinct S3 download endpoints (s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-full/ and s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-rgb/ with manifest.json.bz2), and non-commercial license."
+  },
+  "size": {
+    "amount": 3.5,
+    "unit": "TB",
+    "file_formats": [
+      "tif",
+      "jpg",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Available in two official format variants on AWS: fMoW-full at s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-full/ (~3.5 TB multispectral TIFF) and fMoW-rgb at s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-rgb/ (~200 GB JPEG), each cataloged with manifest.json.bz2."
+  },
+  "sample_count": {
+    "total": 1047691,
+    "splits": {
+      "train": 712872,
+      "val": 84939,
+      "test_public": 84939,
+      "test_seq": 164941
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-06-18",
+    "last_updated": "2018-09-01"
+  },
+  "citation": {
+    "paper_title": "Functional Map of the World",
+    "paper_url": "https://doi.org/10.1109/CVPR.2018.00646",
+    "doi": "10.1109/CVPR.2018.00646",
+    "authors": [
+      "Gordon Christie",
+      "Neil Fendley",
+      "James Wilson",
+      "Ryan Mukherjee"
+    ],
+    "bibtex": "@inproceedings{christie2018functional,\n  title={Functional Map of the World},\n  author={Christie, Gordon and Fendley, Neil and Wilson, James and Mukherjee, Ryan},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={6172--6180},\n  year={2018},\n  doi={10.1109/CVPR.2018.00646}\n}"
+  },
+  "geographic_coverage": [
+    "Global",
+    "North America",
+    "South America",
+    "Europe",
+    "Asia",
+    "Africa",
+    "Oceania"
+  ],
+  "provenance": {
+    "collection_method": "High-resolution satellite imagery gathered by DigitalGlobe satellites over 200 countries paired with rich metadata including sun angles, GSD, and timestamps.",
+    "curation_notes": "Annotated across 63 categories (62 fine-grained functional categories plus 1 false-detection label). fMoW-full provides raw 4-band and 8-band multispectral TIFFs; fMoW-rgb provides down-sampled 3-band JPEG representations of the exact same images.",
+    "data_sources": [
+      "DigitalGlobe satellite constellation (WorldView-2, WorldView-3, GeoEye-1)"
+    ]
+  }
+}

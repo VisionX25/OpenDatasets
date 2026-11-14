@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "isaid",
+  "slug": "isaid",
+  "name": "iSAID: A Large-scale Dataset for Instance Segmentation in Aerial Images",
+  "description": "iSAID is an aerial instance segmentation benchmark dataset developed collaboratively by the CAPTAIN Lab at Wuhan University and the Inception Institute of Artificial Intelligence (IIAI). Built upon the source imagery of the DOTA-v1.0 dataset, iSAID provides high-quality pixel-level polygonal masks for 655,451 object instances across 15 categories (including plane, ship, storage tank, baseball diamond, tennis court, swimming pool, ground track field, harbor, bridge, large vehicle, small vehicle, helicopter, roundabout, soccer ball field, and basketball court). The dataset contains 2,806 high-resolution aerial images ranging from 800x800 to 4000x13000 pixels with a standard split of 1,411 training, 458 validation, and 937 test images. Crucially, iSAID shares identical source aerial imagery with DOTA-v1.0 but establishes an independent, fine-grained instance segmentation benchmark.",
+  "homepage_url": "https://captain-whu.github.io/iSAID/dataset.html",
+  "publisher": {
+    "name": "Wuhan University (CAPTAIN Lab) & IIAI",
+    "type": "academic",
+    "url": "https://captain-whu.github.io/iSAID/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "instance-segmentation",
+    "object-detection",
+    "aerial-image-analysis"
+  ],
+  "tags": [
+    "aerial-imaging",
+    "instance-segmentation",
+    "remote-sensing",
+    "isaid",
+    "dota",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "iSAID Academic Research License",
+    "url": "https://captain-whu.github.io/iSAID/dataset.html",
+    "commercial_use": "forbidden",
+    "notes": "Available for academic and non-commercial research purposes only. Commercial application is strictly prohibited. Users must also respect source Google Earth and satellite imagery terms."
+  },
+  "source_references": [
+    {
+      "title": "iSAID Official Portal",
+      "url": "https://captain-whu.github.io/iSAID/dataset.html",
+      "type": "official_website",
+      "notes": "Official project homepage and dataset documentation."
+    },
+    {
+      "title": "iSAID: A Large-scale Dataset for Instance Segmentation in Aerial Images (CVPRW 2019)",
+      "url": "https://doi.org/10.48550/arXiv.1905.12886",
+      "type": "original_paper",
+      "notes": "Official CVPR 2019 Workshop publication."
+    },
+    {
+      "title": "iSAID Official GitHub Repository",
+      "url": "https://github.com/CAPTAIN-WHU/iSAID_DevKit",
+      "type": "repository",
+      "notes": "Development toolkit and evaluation scripts."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-14",
+    "notes": "Verified against captain-whu.github.io/iSAID/ and arXiv:1905.12886. Confirmed 2,806 images (1,411 train, 458 val, 937 test), 655,451 instance masks, shared DOTA-v1.0 source imagery lineage, and non-commercial terms."
+  },
+  "size": {
+    "amount": 37.0,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Full-resolution aerial images with pixel-level segmentation mask annotations in COCO-format JSON."
+  },
+  "sample_count": {
+    "total": 2806,
+    "splits": {
+      "train": 1411,
+      "val": 458,
+      "test": 937
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-05-30",
+    "last_updated": "2020-04-10"
+  },
+  "citation": {
+    "paper_title": "iSAID: A Large-scale Dataset for Instance Segmentation in Aerial Images",
+    "paper_url": "https://doi.org/10.48550/arXiv.1905.12886",
+    "doi": "10.48550/arXiv.1905.12886",
+    "authors": [
+      "Syed Waqas Zamir",
+      "Aditya Arora",
+      "Akshita Gupta",
+      "Salman Khan",
+      "Guolei Sun",
+      "Fahad Shahbaz Khan",
+      "Fan Zhu",
+      "Ling Shao",
+      "Gui-Song Xia",
+      "Xiang Bai"
+    ],
+    "bibtex": "@inproceedings{zamir2019isaid,\n  title={iSAID: A Large-scale Dataset for Instance Segmentation in Aerial Images},\n  author={Zamir, Syed Waqas and Arora, Aditya and Gupta, Akshita and Khan, Salman and Sun, Guolei and Khan, Fahad Shahbaz and Zhu, Fan and Shao, Ling and Xia, Gui-Song and Bai, Xiang},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},\n  pages={28--37},\n  year={2019},\n  doi={10.48550/arXiv.1905.12886}\n}"
+  },
+  "geographic_coverage": [
+    "Global",
+    "Asia",
+    "North America",
+    "Europe"
+  ],
+  "provenance": {
+    "collection_method": "Directly reuses the 2,806 source aerial image files originally collected for DOTA-v1.0 from Google Earth and satellite sensors (JL-1, GF-2).",
+    "curation_notes": "Replaces DOTA's oriented bounding boxes with professional polygon segmentations outlining 655,451 object boundaries across 15 categories. Explicitly shared source imagery with DOTA (catalog ID: dota).",
+    "data_sources": [
+      "DOTA-v1.0 source aerial imagery (Google Earth, JL-1, GF-2)"
+    ]
+  }
+}

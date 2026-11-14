@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "whu-building",
+  "slug": "whu-building",
+  "name": "WHU Building Dataset: Aerial and Satellite Building Footprint Benchmark",
+  "description": "The WHU Building Dataset is an authoritative benchmark for automated building footprint extraction and building change detection developed by the Photogrammetry and Computer Vision (GPCV) research group at Wuhan University. Covering both aerial and satellite domains, the primary aerial dataset encompasses Christchurch, New Zealand (over 450 km² containing 220,000 individual buildings), down-sampled to 0.3m ground resolution and cropped into 8,189 tiles of 512x512 pixels (documented partition: 4,736 train, 1,036 validation, 2,416 test; split sum totals 8,188 tiles). The collection additionally provides satellite subsets (QuickBird, WorldView, IKONOS, ZY-3) and a related building change detection subset (WHU-CD) covering a 20.5 km² Christchurch reconstruction area with bitemporal aerial imagery from 2012 and 2016. Raster tiles and building instance counts are tracked distinctly.",
+  "homepage_url": "https://gpcv.whu.edu.cn/data/building_dataset.html",
+  "publisher": {
+    "name": "Wuhan University (GPCV Lab)",
+    "type": "academic",
+    "url": "https://gpcv.whu.edu.cn"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "building-footprint-extraction",
+    "semantic-segmentation",
+    "change-detection",
+    "aerial-image-analysis"
+  ],
+  "tags": [
+    "building-footprint",
+    "aerial-imagery",
+    "satellite-imagery",
+    "semantic-segmentation",
+    "change-detection",
+    "whu-building",
+    "benchmark"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source (WHU GPCV Academic Research)",
+    "spdx_id": null,
+    "url": "https://gpcv.whu.edu.cn/data/building_dataset.html",
+    "commercial_use": "unknown",
+    "notes": "Hosted by Wuhan University GPCV Lab with direct downloads for academic research and benchmarking. The primary publisher website does not declare a standardized open data license (such as CC BY 4.0) or explicit commercial use authorization. Although secondary repositories (e.g. Figshare) apply CC BY 4.0, commercial permissions are not established by the primary source."
+  },
+  "source_references": [
+    {
+      "title": "WHU Building Dataset Official Homepage",
+      "url": "https://gpcv.whu.edu.cn/data/building_dataset.html",
+      "type": "official_website",
+      "notes": "Official Wuhan University GPCV repository page."
+    },
+    {
+      "title": "Fully Convolutional Networks for Multisource Building Extraction (IEEE TGRS 2019)",
+      "url": "https://doi.org/10.1109/TGRS.2018.2858817",
+      "type": "original_paper",
+      "notes": "Foundational IEEE Transactions on Geoscience and Remote Sensing paper."
+    },
+    {
+      "title": "WHU Building Dataset Figshare Repository",
+      "url": "https://doi.org/10.6084/m9.figshare.12933938",
+      "type": "archive",
+      "notes": "Figshare secondary mirror of the processed tiles and shapefiles."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-14",
+    "notes": "Verified against gpcv.whu.edu.cn/data/building_dataset.html and IEEE TGRS DOI: 10.1109/TGRS.2018.2858817. Confirmed publisher's reported total of 8,189 aerial tiles of 512x512 pixels against documented split dimensions (train: 64x74=4,736; validation: 14x74=1,036; test: 17x42+23x74=2,416). Noted that the split sum equals 8,188 tiles (a 1-tile discrepancy with the headline 8,189 count); documented splits are preserved without inventing an assignment for the missing tile. Rechecked primary licensing: CC BY 4.0 from third-party mirrors was removed in favor of primary publisher terms with unknown commercial use."
+  },
+  "size": {
+    "amount": 12.0,
+    "unit": "GB",
+    "file_formats": [
+      "tif",
+      "png",
+      "shp"
+    ],
+    "status": "verified",
+    "notes": "8,189 512x512 RGB TIFF tiles with binary raster masks and vector shapefile building polygons."
+  },
+  "sample_count": {
+    "total": 8189,
+    "splits": {
+      "train": 4736,
+      "validation": 1036,
+      "test": 2416
+    },
+    "unit": "tiles",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-01-01",
+    "last_updated": "2020-09-08"
+  },
+  "citation": {
+    "paper_title": "Fully Convolutional Networks for Multisource Building Extraction From an Open Aerial and Satellite Imagery Data Set",
+    "paper_url": "https://doi.org/10.1109/TGRS.2018.2858817",
+    "doi": "10.1109/TGRS.2018.2858817",
+    "authors": [
+      "Shunping Ji",
+      "Shiqing Wei",
+      "Meng Lu"
+    ],
+    "bibtex": "@article{ji2019fully,\n  title={Fully Convolutional Networks for Multisource Building Extraction From an Open Aerial and Satellite Imagery Data Set},\n  author={Ji, Shunping and Wei, Shiqing and Lu, Meng},\n  journal={IEEE Transactions on Geoscience and Remote Sensing},\n  volume={57},\n  number={1},\n  pages={574--586},\n  year={2019},\n  doi={10.1109/TGRS.2018.2858817}\n}"
+  },
+  "geographic_coverage": [
+    "New Zealand",
+    "Global",
+    "East Asia"
+  ],
+  "provenance": {
+    "collection_method": "Aerial imagery covering Christchurch, New Zealand provided by Land Information New Zealand (LINZ), combined with high-resolution satellite imagery from WorldView-2, IKONOS, and ZY-3.",
+    "curation_notes": "Building instances (>220,000) manually digitized and verified. Aerial tiles down-sampled to 0.3m. The WHU-CD subset uses a 20.5 km² overlapping section of Christchurch to benchmark 2012-2016 post-earthquake reconstruction.",
+    "data_sources": [
+      "Land Information New Zealand (LINZ)",
+      "DigitalGlobe WorldView-2",
+      "Spaceborne ZY-3"
+    ]
+  }
+}
