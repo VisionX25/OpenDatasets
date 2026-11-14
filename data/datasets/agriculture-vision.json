@@ -3,7 +3,7 @@
   "id": "agriculture-vision",
   "slug": "agriculture-vision",
   "name": "Agriculture-Vision: Aerial Farmland Pattern Analysis Benchmark",
-  "description": "A pioneering large-scale aerial image database curated by the University of Illinois Urbana-Champaign (UIUC) and Syngenta. Contains 94,986 multi-spectral aerial image patches (512x512 pixels in RGB and near-infrared) harvested from high-resolution agricultural surveys across farmland throughout the United States. Densely annotated with pixel-level semantic masks across 9 distinct agricultural anomaly patterns including nutrient deficiency, waterlogging, weed cluster, and endrow.",
+  "description": "A pioneering large-scale aerial image database curated by the University of Illinois Urbana-Champaign (UIUC) and Syngenta, representing the foundational 2020 benchmark release (distinguished from subsequent annual challenge iterations). Contains 94,986 multi-spectral aerial image patches (512x512 pixels in RGB and near-infrared) harvested from high-resolution agricultural surveys across farmland throughout the United States. Densely annotated with pixel-level semantic masks across 9 distinct agricultural anomaly patterns including nutrient deficiency, waterlogging, weed cluster, and endrow.",
   "homepage_url": "https://www.agriculture-vision.com/",
   "publisher": {
     "name": "University of Illinois Urbana-Champaign & Syngenta",
@@ -30,11 +30,17 @@
     "status": "verified_non_commercial",
     "name": "Agriculture-Vision Challenge Research Agreement",
     "spdx_id": null,
-    "url": "https://www.agriculture-vision.com/dataset",
+    "url": "https://www.agriculture-vision.com/dataset-terms",
     "commercial_use": "forbidden",
-    "notes": "Available for academic research and educational competition use under the Agriculture-Vision DUA."
+    "notes": "Subject to IntelinAir Agriculture-Vision Dataset Terms. Permitted use is strictly limited to internal non-commercial academic research and participation in the Agriculture-Vision Challenge/creating a submission. Commercial use, developing commercial products/services, or creating derivative works other than the challenge submission is strictly forbidden. The agreement requires users to delete all copies of the dataset within ninety (90) days after the completion date of the Challenge, or immediately upon termination. The terms do not grant permanent unrestricted academic use."
   },
   "source_references": [
+    {
+      "title": "Agriculture-Vision 2020 Original Dataset Release",
+      "url": "https://www.agriculture-vision.com/agriculture-vision-2020/dataset",
+      "type": "repository",
+      "notes": "Official repository for the original 2020 benchmark release (94,986 patches)."
+    },
     {
       "title": "Agriculture-Vision Challenge Official Portal",
       "url": "https://www.agriculture-vision.com/",
@@ -51,8 +57,8 @@
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
-    "verified_date": "2026-10-30",
-    "notes": "Verified against IEEE CVPR 2020 proceedings (DOI: 10.1109/CVPR42600.2020.00290) and official Agriculture-Vision platform."
+    "verified_date": "2026-11-14",
+    "notes": "Verified against IEEE CVPR 2020 proceedings (DOI: 10.1109/CVPR42600.2020.00290), original 2020 benchmark repository, and official Agriculture-Vision platform dataset terms."
   },
   "size": {
     "amount": 35.0,

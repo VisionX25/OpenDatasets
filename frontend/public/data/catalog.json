@@ -454,16 +454,16 @@
         "type": "repository"
       },
       {
-        "title": "Jezewski et al. IEEE Transactions on Biomedical Engineering 2012 Publication",
-        "url": "https://doi.org/10.1109/TBME.2011.2179934",
+        "title": "Jezewski et al. Biomedizinische Technik / Biomedical Engineering 2012 Publication",
+        "url": "https://doi.org/10.1515/bmt-2011-0130",
         "type": "original_paper"
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Curatorial Team",
-      "verified_date": "2026-11-08",
-      "notes": "Audited against PhysioNet repository 10.13026/C2RP4B and Jezewski et al. (IEEE TBME 2012)."
+      "verified_date": "2026-11-14",
+      "notes": "Audited against PhysioNet repository 10.13026/C2RP4B and Jezewski et al. (Biomedizinische Technik / Biomedical Engineering 2012, DOI: 10.1515/bmt-2011-0130)."
     },
     "sample_count": {
       "total": 5,
@@ -474,8 +474,8 @@
       "published": "2012"
     },
     "citation": {
-      "paper_title": "Determination of the fetal heart rate from abdominal signals: evaluation of beat-to-beat accuracy in relation to the direct fetal electrocardiogram",
-      "paper_url": "https://doi.org/10.1109/TBME.2011.2179934",
+      "paper_title": "Determination of fetal heart rate from abdominal signals: evaluation of beat-to-beat accuracy in relation to the direct fetal electrocardiogram",
+      "paper_url": "https://doi.org/10.1515/bmt-2011-0130",
       "authors": [
         "Janusz Jezewski",
         "Adam Matonia",
@@ -483,8 +483,8 @@
         "Dawid Roj",
         "Robert Czabanski"
       ],
-      "doi": "10.13026/C2RP4B",
-      "bibtex": "@article{jezewski2012determination,\n  title={Determination of the fetal heart rate from abdominal signals: evaluation of beat-to-beat accuracy in relation to the direct fetal electrocardiogram},\n  author={Jezewski, Janusz and Matonia, Adam and Kupka, Tomasz and Roj, Dawid and Czabanski, Robert},\n  journal={IEEE Transactions on Biomedical Engineering},\n  volume={59},\n  number={3},\n  pages={686--694},\n  year={2012},\n  publisher={IEEE},\n  doi={10.13026/C2RP4B}\n}"
+      "doi": "10.1515/bmt-2011-0130",
+      "bibtex": "@article{jezewski2012determination,\n  title={Determination of fetal heart rate from abdominal signals: evaluation of beat-to-beat accuracy in relation to the direct fetal electrocardiogram},\n  author={Jezewski, Janusz and Matonia, Adam and Kupka, Tomasz and Roj, Dawid and Czabanski, Robert},\n  journal={Biomedizinische Technik / Biomedical Engineering},\n  volume={57},\n  number={5},\n  pages={383--394},\n  year={2012},\n  publisher={De Gruyter},\n  doi={10.1515/bmt-2011-0130}\n}"
     }
   },
   {
@@ -780,11 +780,17 @@
       "status": "proprietary",
       "name": "ADNI Data Use Agreement",
       "spdx_id": null,
-      "url": "https://adni.loni.usc.edu/data-samples/access-data/",
+      "url": "https://adni.loni.usc.edu/data-samples/adni-data/",
       "commercial_use": "forbidden",
-      "notes": "Access requires a formal data access application and acceptance of the ADNI Data Use Agreement via the LONI IDA platform. Redistribution of raw participant-level data is prohibited. Access is restricted to scientific investigation and research purposes."
+      "notes": "Access requires a formal data access application and acceptance of the ADNI Data Use Agreement via the LONI IDA platform. Redistribution of raw participant-level data is strictly prohibited. Access is restricted to scientific investigation and research purposes."
     },
     "source_references": [
+      {
+        "title": "ADNI Data Access Application & Portal (LONI IDA)",
+        "url": "https://adni.loni.usc.edu/data-samples/adni-data/",
+        "type": "official_website",
+        "notes": "Official instructions and online application for ADNI Data Use Agreement approval."
+      },
       {
         "title": "ADNI Official Portal (LONI IDA)",
         "url": "https://adni.loni.usc.edu/",
@@ -804,8 +810,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Curatorial Team",
-      "verified_date": "2026-11-08",
-      "notes": "Audited against LONI IDA portal and Mueller et al. (Neuroimaging Clin N Am 2005)."
+      "verified_date": "2026-11-14",
+      "notes": "Audited against LONI IDA portal, active ADNI data access application path (adni-data), and Mueller et al. (Neuroimaging Clin N Am 2005)."
     },
     "sample_count": {
       "total": 2800,
@@ -1209,7 +1215,7 @@
     "id": "agriculture-vision",
     "slug": "agriculture-vision",
     "name": "Agriculture-Vision: Aerial Farmland Pattern Analysis Benchmark",
-    "description": "A pioneering large-scale aerial image database curated by the University of Illinois Urbana-Champaign (UIUC) and Syngenta. Contains 94,986 multi-spectral aerial image patches (512x512 pixels in RGB and near-infrared) harvested from high-resolution agricultural surveys across farmland throughout the United States. Densely annotated with pixel-level semantic masks across 9 distinct agricultural anomaly patterns including nutrient deficiency, waterlogging, weed cluster, and endrow.",
+    "description": "A pioneering large-scale aerial image database curated by the University of Illinois Urbana-Champaign (UIUC) and Syngenta, representing the foundational 2020 benchmark release (distinguished from subsequent annual challenge iterations). Contains 94,986 multi-spectral aerial image patches (512x512 pixels in RGB and near-infrared) harvested from high-resolution agricultural surveys across farmland throughout the United States. Densely annotated with pixel-level semantic masks across 9 distinct agricultural anomaly patterns including nutrient deficiency, waterlogging, weed cluster, and endrow.",
     "homepage_url": "https://www.agriculture-vision.com/",
     "publisher": {
       "name": "University of Illinois Urbana-Champaign & Syngenta",
@@ -1236,11 +1242,17 @@
       "status": "verified_non_commercial",
       "name": "Agriculture-Vision Challenge Research Agreement",
       "spdx_id": null,
-      "url": "https://www.agriculture-vision.com/dataset",
+      "url": "https://www.agriculture-vision.com/dataset-terms",
       "commercial_use": "forbidden",
-      "notes": "Available for academic research and educational competition use under the Agriculture-Vision DUA."
+      "notes": "Subject to IntelinAir Agriculture-Vision Dataset Terms. Permitted use is strictly limited to internal non-commercial academic research and participation in the Agriculture-Vision Challenge/creating a submission. Commercial use, developing commercial products/services, or creating derivative works other than the challenge submission is strictly forbidden. The agreement requires users to delete all copies of the dataset within ninety (90) days after the completion date of the Challenge, or immediately upon termination. The terms do not grant permanent unrestricted academic use."
     },
     "source_references": [
+      {
+        "title": "Agriculture-Vision 2020 Original Dataset Release",
+        "url": "https://www.agriculture-vision.com/agriculture-vision-2020/dataset",
+        "type": "repository",
+        "notes": "Official repository for the original 2020 benchmark release (94,986 patches)."
+      },
       {
         "title": "Agriculture-Vision Challenge Official Portal",
         "url": "https://www.agriculture-vision.com/",
@@ -1257,8 +1269,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-10-30",
-      "notes": "Verified against IEEE CVPR 2020 proceedings (DOI: 10.1109/CVPR42600.2020.00290) and official Agriculture-Vision platform."
+      "verified_date": "2026-11-14",
+      "notes": "Verified against IEEE CVPR 2020 proceedings (DOI: 10.1109/CVPR42600.2020.00290), original 2020 benchmark repository, and official Agriculture-Vision platform dataset terms."
     },
     "size": {
       "amount": 35.0,
@@ -12586,11 +12598,11 @@
       "benchmark"
     ],
     "license": {
-      "status": "custom_permissive",
-      "name": "Open Academic Research Use",
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source (LINQS Academic Research)",
       "url": "https://linqs.org/datasets/#cora",
-      "commercial_use": "allowed",
-      "notes": "Freely available for academic research and evaluation."
+      "commercial_use": "unknown",
+      "notes": "Hosted by LINQS (UC Santa Cruz / University of Maryland) for academic research and citation network benchmarking. The primary publisher website does not declare a standardized open data license or explicit commercial use authorization; commercial usability is cataloged as unknown."
     },
     "source_references": [
       {
@@ -33556,7 +33568,7 @@
       "spdx_id": "CC-BY-SA-4.0",
       "url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "commercial_use": "allowed",
-      "notes": "Freely available under CC BY 4.0 for commercial and non-commercial research and development."
+      "notes": "Freely available under CC BY-SA 4.0 for commercial and non-commercial research and development."
     },
     "source_references": [
       {
@@ -50090,11 +50102,11 @@
       "uc-riverside"
     ],
     "license": {
-      "status": "custom_permissive",
-      "name": "Open Academic Research Use",
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source (UCR / UEA Academic Research Archive)",
       "url": "https://www.timeseriesclassification.com/",
-      "commercial_use": "allowed",
-      "notes": "Freely provided to the research community for algorithmic benchmarking and evaluation."
+      "commercial_use": "unknown",
+      "notes": "Hosted at timeseriesclassification.com for academic research benchmarking and reproducibility. The archive aggregates diverse time-series datasets from various domain donors without an explicit universal commercial use authorization; commercial usability is cataloged as unknown."
     },
     "source_references": [
       {
