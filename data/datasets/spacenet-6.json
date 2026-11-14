@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "id": "spacenet-6",
+  "slug": "spacenet-6",
+  "name": "SpaceNet 6: Multi-Sensor All-Weather Mapping (SAR & Optical)",
+  "description": "SpaceNet 6 is an advanced multimodal remote sensing challenge dataset developed by SpaceNet LLC, Capella Space, and Maxar Technologies to benchmark building footprint extraction under all-weather conditions using synthetic aperture radar (SAR) and electro-optical (EO) satellite imagery. Focused over the port of Rotterdam, Netherlands (AOI 11, covering roughly 120 km²), the dataset contains 4,251 tiles of 900x900 pixels (~450m x 450m), divided into 3,401 training tiles (39.0 GB, containing paired SAR, optical, and building labels) and approximately 850 testing tiles (16.9 GB, containing SAR-only imagery). Sensor modalities include 0.5-meter X-band quad-polarization SAR (HH, HV, VH, VV) provided by Capella Space aerial sensor platforms and 0.5-meter optical imagery from Maxar's WorldView-2 satellite. Ground truth provides polygon annotations for approximately 48,000 building footprints in GeoJSON format.",
+  "homepage_url": "https://spacenet.ai/sn6-challenge/",
+  "publisher": {
+    "name": "SpaceNet LLC (Capella Space, Maxar, CosmiQ)",
+    "type": "industry",
+    "url": "https://spacenet.ai"
+  },
+  "modalities": [
+    "vision",
+    "sensor"
+  ],
+  "tasks": [
+    "building-footprint-extraction",
+    "multimodal-fusion",
+    "sar-optical-fusion",
+    "remote-sensing"
+  ],
+  "tags": [
+    "sar",
+    "capella-space",
+    "worldview-2",
+    "building-footprint",
+    "spacenet",
+    "spacenet-6",
+    "all-weather",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed under CC BY-SA 4.0 as part of the AWS Public Dataset program."
+  },
+  "source_references": [
+    {
+      "title": "SpaceNet 6 Official Challenge Page",
+      "url": "https://spacenet.ai/sn6-challenge/",
+      "type": "official_website",
+      "notes": "Official challenge portal and dataset release details."
+    },
+    {
+      "title": "SpaceNet Datasets Portal",
+      "url": "https://spacenet.ai/datasets/",
+      "type": "documentation",
+      "notes": "Dataset catalog with AWS S3 download instructions (s3://spacenet-dataset/spacenet/SN6_buildings/)."
+    },
+    {
+      "title": "SpaceNet Registry of Open Data on AWS",
+      "url": "https://registry.opendata.aws/spacenet/",
+      "type": "archive",
+      "notes": "Official AWS Registry of Open Data listing for SpaceNet."
+    },
+    {
+      "title": "SpaceNet 6: Multi-Sensor All Weather Mapping Dataset (CVPRW 2020)",
+      "url": "https://doi.org/10.48550/arXiv.2004.06500",
+      "type": "original_paper",
+      "notes": "Official CVPR 2020 EarthVision Workshop publication."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-14",
+    "notes": "Verified against spacenet.ai/sn6-challenge/, registry.opendata.aws/spacenet/, arXiv:2004.06500, and TorchGeo documentation. Reconciled sample breakdown: 3,401 training tiles (paired Capella SAR + WorldView-2 EO + building labels, 39.0 GB) and ~850 public testing tiles (SAR-only, 16.9 GB) totaling 4,251 public release tiles (55.9 GB payload). Challenge organizers held out a private test set (~850 tiles) for leaderboard scoring. Single-modality loaders like TorchGeo (SpaceNet6) filter by imagery type (e.g. SAR-Intensity or optical PS-RGB). Verified ~48,000 building footprint polygons over Rotterdam (AOI 11) and CC BY-SA 4.0 terms."
+  },
+  "size": {
+    "amount": 55.9,
+    "unit": "GB",
+    "file_formats": [
+      "tif",
+      "geojson"
+    ],
+    "status": "verified",
+    "notes": "Full release payload totals 55.9 GB on AWS S3 (`s3://spacenet-dataset/spacenet/SN6_buildings/`): 39.0 GB training data (3,401 paired SAR and EO tiles with GeoJSON labels) and 16.9 GB public testing data (~850 SAR-only tiles). Also includes an untiled WorldView-2 optical image spanning ~92 km² at 0.5m GSD."
+  },
+  "sample_count": {
+    "total": 4251,
+    "splits": {
+      "train": 3401,
+      "test": 850
+    },
+    "unit": "tiles",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-03-16",
+    "last_updated": "2020-06-15"
+  },
+  "citation": {
+    "paper_title": "SpaceNet 6: Multi-Sensor All Weather Mapping Dataset",
+    "paper_url": "https://doi.org/10.48550/arXiv.2004.06500",
+    "doi": "10.48550/arXiv.2004.06500",
+    "authors": [
+      "Jacob Shermeyer",
+      "Daniel Hogan",
+      "Jason Brown",
+      "Adam Van Etten",
+      "Nicholas Weir",
+      "Fabio Pacifici",
+      "Ronny Hansch",
+      "Alexei Bastidas",
+      "Scott Soenen",
+      "Todd M. Bacastow",
+      "Ryan Lewis"
+    ],
+    "bibtex": "@inproceedings{shermeyer2020spacenet,\n  title={SpaceNet 6: Multi-Sensor All Weather Mapping Dataset},\n  author={Shermeyer, Jacob and Hogan, Daniel and Brown, Jason and Van Etten, Adam and Weir, Nicholas and Pacifici, Fabio and Hansch, Ronny and Bastidas, Alexei and Soenen, Scott and Bacastow, Todd M. and Lewis, Ryan},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},\n  pages={196--197},\n  year={2020},\n  doi={10.48550/arXiv.2004.06500}\n}"
+  },
+  "geographic_coverage": [
+    "Netherlands",
+    "Rotterdam"
+  ],
+  "provenance": {
+    "collection_method": "Co-registered aerial X-band quad-polarimetric SAR from Capella Space and Maxar WorldView-2 optical satellite imagery over Rotterdam.",
+    "curation_notes": "Each paired tile is 900x900 pixels at 0.5m GSD. Vector polygons outline ~48,000 buildings. S3 path: s3://spacenet-dataset/spacenet/SN6_buildings/.",
+    "data_sources": [
+      "Capella Space Airborne X-band SAR",
+      "Maxar WorldView-2 optical imagery"
+    ]
+  }
+}

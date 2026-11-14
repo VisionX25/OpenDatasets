@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "id": "xbd",
+  "slug": "xbd",
+  "name": "xBD / xView2: A Large-Scale Satellite Dataset for Post-Disaster Building Damage Assessment",
+  "description": "xBD (the foundational dataset for the xView2 Challenge) is a large-scale, high-resolution satellite imagery dataset created to assess building damage from natural disasters. Curated by the Defense Innovation Unit (DIU) and the Carnegie Mellon University Software Engineering Institute (CMU SEI), xBD contains 22,068 orthorectified satellite images (1024x1024 pixels, comprising 11,034 co-registered pre- and post-disaster image pairs) covering over 45,362 km² across 19 disaster events worldwide (earthquakes, hurricanes, tsunamis, floods, volcanic eruptions, and wildfires). It provides polygonal footprint outlines for 850,736 buildings, each graded on a four-level ordinal damage scale: no damage, minor damage, major damage, and destroyed. xBD and xView2 constitute a single unified research dataset identity.",
+  "homepage_url": "https://xview2.org/",
+  "publisher": {
+    "name": "Defense Innovation Unit & CMU Software Engineering Institute",
+    "type": "government",
+    "url": "https://xview2.org"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "disaster-damage-assessment",
+    "building-damage-classification",
+    "building-footprint-extraction",
+    "change-detection",
+    "semantic-segmentation"
+  ],
+  "tags": [
+    "satellite-imagery",
+    "disaster-response",
+    "xbd",
+    "xview2",
+    "building-damage",
+    "change-detection",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Distributed under CC BY-NC-SA 4.0 in accordance with xView2 challenge terms and Maxar Open Data Program non-commercial humanitarian license conditions."
+  },
+  "source_references": [
+    {
+      "title": "xView2 Challenge Homepage",
+      "url": "https://xview2.org/",
+      "type": "official_website",
+      "notes": "Official xView2 disaster recovery challenge portal."
+    },
+    {
+      "title": "xView2 Dataset Download Page",
+      "url": "https://xview2.org/dataset",
+      "type": "official_website",
+      "notes": "Official xBD dataset download portal requiring challenge registration."
+    },
+    {
+      "title": "xBD: A Dataset for Assessing Building Damage from Satellite Imagery (CVPRW 2019)",
+      "url": "https://doi.org/10.48550/arXiv.1911.09296",
+      "type": "original_paper",
+      "notes": "Foundational publication detailing disaster events, annotation taxonomy, and damage scales."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-14",
+    "notes": "Verified against xview2.org and arXiv:1911.09296. Confirmed 22,068 total image tiles (11,034 pre/post pairs), 850,736 building polygons, 19 natural disasters, CC BY-NC-SA 4.0 terms, and treated xBD and xView2 as a single original dataset identity."
+  },
+  "size": {
+    "amount": 32.5,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "22,068 1024x1024 RGB PNG images paired with GeoJSON building polygons and damage labels."
+  },
+  "sample_count": {
+    "total": 22068,
+    "splits": {
+      "train": 18660,
+      "test": 1866,
+      "holdout": 1542
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-11-20",
+    "last_updated": "2020-03-01"
+  },
+  "citation": {
+    "paper_title": "xBD: A Dataset for Assessing Building Damage from Satellite Imagery",
+    "paper_url": "https://doi.org/10.48550/arXiv.1911.09296",
+    "doi": "10.48550/arXiv.1911.09296",
+    "authors": [
+      "Ritwik Gupta",
+      "Richard Hosfelt",
+      "Sandra Sajeev",
+      "Nirav Patel",
+      "Bryce Goodman",
+      "Jigar Doshi",
+      "Eric Heim",
+      "Howie Choset",
+      "Matthew Gaston"
+    ],
+    "bibtex": "@inproceedings{gupta2019xbd,\n  title={xBD: A Dataset for Assessing Building Damage from Satellite Imagery},\n  author={Gupta, Ritwik and Hosfelt, Richard and Sajeev, Sandra and Patel, Nirav and Goodman, Bryce and Doshi, Jigar and Heim, Eric and Choset, Howie and Gaston, Matthew},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},\n  pages={10--17},\n  year={2019},\n  doi={10.48550/arXiv.1911.09296}\n}"
+  },
+  "geographic_coverage": [
+    "Global",
+    "United States",
+    "Mexico",
+    "Guatemala",
+    "Indonesia",
+    "India",
+    "Nepal",
+    "Nigeria",
+    "Portugal",
+    "New Zealand"
+  ],
+  "provenance": {
+    "collection_method": "High-resolution satellite imagery captured before and after 19 disaster events by Maxar WorldView and GeoEye constellations.",
+    "curation_notes": "Building footprints were annotated as polygons and verified against Joint Damage Scale definitions. Pre- and post-disaster images are co-registered.",
+    "data_sources": [
+      "Maxar Open Data Program satellite imagery"
+    ]
+  }
+}

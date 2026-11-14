@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "id": "spacenet-8",
+  "slug": "spacenet-8",
+  "name": "SpaceNet 8: Flood Detection and Road Network Mapping Dataset",
+  "description": "SpaceNet 8 is a multi-task post-disaster remote sensing benchmark created by SpaceNet LLC in partnership with Maxar Technologies and AWS to evaluate automated flood detection, building footprint extraction, and road network accessibility. Covering approximately 850 km² across regions affected by major flooding events (including the July 2021 floods in Germany and Hurricane Ida in Louisiana in August 2021), the dataset pairs co-registered pre-disaster and post-disaster Maxar WorldView satellite imagery. The public training release comprises 801 geographic tile locations (202 in Germany, 599 in Louisiana-East), each providing corresponding 1300x1300 pixel pre-event and post-event optical GeoTIFF images (1,602 training images). Ground truth features vector annotations for approximately 32,000 buildings (3,723 in Germany, 18,892 in Louisiana-East) and 1,300 km of road networks, with explicit attributes denoting flood extent, impassable roads, and submerged structures. SpaceNet 8 establishes an end-to-end benchmark combining building damage segmentation and network graph routing for disaster response, distinct from UAV-based FloodNet and building-only xBD.",
+  "homepage_url": "https://spacenet.ai/sn8-challenge/",
+  "publisher": {
+    "name": "SpaceNet LLC (CosmiQ Works, Maxar, AWS)",
+    "type": "industry",
+    "url": "https://spacenet.ai"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "flood-detection",
+    "road-network-extraction",
+    "building-footprint-extraction",
+    "disaster-damage-assessment",
+    "remote-sensing"
+  ],
+  "tags": [
+    "flood-detection",
+    "road-network",
+    "building-footprint",
+    "satellite-imagery",
+    "spacenet",
+    "spacenet-8",
+    "disaster-response",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed under CC BY-SA 4.0 as part of the AWS Public Dataset program."
+  },
+  "source_references": [
+    {
+      "title": "SpaceNet 8 Official Challenge Page",
+      "url": "https://spacenet.ai/sn8-challenge/",
+      "type": "official_website",
+      "notes": "Official challenge landing page and task specifications."
+    },
+    {
+      "title": "SpaceNet Datasets Portal",
+      "url": "https://spacenet.ai/datasets/",
+      "type": "documentation",
+      "notes": "SpaceNet dataset catalog and AWS S3 bucket listing (s3://spacenet-dataset/spacenet/SN8_floods/)."
+    },
+    {
+      "title": "SpaceNet Registry of Open Data on AWS",
+      "url": "https://registry.opendata.aws/spacenet/",
+      "type": "archive",
+      "notes": "Official AWS Registry of Open Data listing for SpaceNet."
+    },
+    {
+      "title": "SpaceNet 8 — The Detection of Flooded Roads and Buildings (CVPRW 2022)",
+      "url": "https://doi.org/10.1109/CVPRW56347.2022.00153",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (2022)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-14",
+    "notes": "Verified against spacenet.ai/sn8-challenge/, registry.opendata.aws/spacenet/, TorchGeo documentation, and IEEE CVPRW DOI: 10.1109/CVPRW56347.2022.00153. Reconciled sample counts: public training release contains 801 geographic tile pairs (202 in Germany_Training_Public and 599 in Louisiana-East_Training_Public), with each pair providing 1300x1300 PRE-event and POST-event GeoTIFF images (1,602 images). Because public test (Louisiana-West_Test_Public) and hidden evaluation cities are held out without a unified public tile count, total image sample count is cataloged with unknown status. Vector annotation metrics (~32,000 buildings: 3,723 in Germany, 18,892 in Louisiana-East; and ~1,300 km of road networks) are documented as feature instances rather than image sample units. CC BY-SA 4.0 terms verified."
+  },
+  "size": {
+    "amount": 42.0,
+    "unit": "GB",
+    "file_formats": [
+      "tif",
+      "geojson"
+    ],
+    "status": "verified",
+    "notes": "Hosted on AWS S3 (`s3://spacenet-dataset/spacenet/SN8_floods/tarballs/`) partitioned into training archives (Germany_Training_Public.tar.gz [202 tile pairs], Louisiana-East_Training_Public.tar.gz [599 tile pairs]) and public testing archives (Louisiana-West_Test_Public.tar.gz), totaling ~42.0 GB. Each geographic tile pair contains co-registered 1300x1300 pixel PRE-event and POST-event GeoTIFF optical images (1,602 training images total) with GeoJSON vector road and building annotations."
+  },
+  "sample_count": {
+    "splits": {
+      "train": 801
+    },
+    "unit": "tile_pairs",
+    "status": "unknown"
+  },
+  "dates": {
+    "published": "2022-06-19",
+    "last_updated": "2022-09-01"
+  },
+  "citation": {
+    "paper_title": "SpaceNet 8 — The Detection of Flooded Roads and Buildings",
+    "paper_url": "https://doi.org/10.1109/CVPRW56347.2022.00153",
+    "doi": "10.1109/CVPRW56347.2022.00153",
+    "authors": [
+      "Ronny Hänsch",
+      "Jacob Arndt",
+      "Dalton Lunga",
+      "Matthew Gibb",
+      "Tyler Pedelose",
+      "Arnold Boedihardjo",
+      "Desiree Petrie",
+      "Todd M. Bacastow"
+    ],
+    "bibtex": "@inproceedings{hansch2022spacenet,\n  title={SpaceNet 8 -- The Detection of Flooded Roads and Buildings},\n  author={H{\\\"a}nsch, Ronny and Arndt, Jacob and Lunga, Dalton and Gibb, Matthew and Pedelose, Tyler and Boedihardjo, Arnold and Petrie, Desiree and Bacastow, Todd M.},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},\n  pages={1472--1480},\n  year={2022},\n  doi={10.1109/CVPRW56347.2022.00153}\n}"
+  },
+  "geographic_coverage": [
+    "Germany",
+    "United States",
+    "Louisiana",
+    "Ahr Valley"
+  ],
+  "provenance": {
+    "collection_method": "Pre- and post-event high-resolution satellite imagery from Maxar constellations captured over disaster areas in Germany and Louisiana.",
+    "curation_notes": "Annotates both structural building polygons and network road graph centerlines with flooded/non-flooded attribute flags. S3 path: s3://spacenet-dataset/spacenet/SN8_floods/.",
+    "data_sources": [
+      "Maxar WorldView satellite constellation"
+    ]
+  }
+}

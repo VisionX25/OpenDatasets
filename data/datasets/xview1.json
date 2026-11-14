@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "id": "xview1",
+  "slug": "xview1",
+  "name": "xView1: Large-Scale Overhead Object Detection Challenge Dataset",
+  "description": "xView1 is a large-scale overhead and satellite imagery dataset for object detection released by the Defense Innovation Unit (DIU) and the National Geospatial-Intelligence Agency (NGA). Spanning more than 1,415 km² across globally diverse areas, it features 0.3-meter ground sample distance (GSD) imagery collected from DigitalGlobe WorldView-3 satellites. The dataset contains over one million bounding box annotations across 60 fine-grained object categories hierarchically organized into passenger vehicles, maritime vessels, aircraft, railway equipment, trucks, and engineering infrastructure. The official public release comprises 847 large training satellite scenes with public ground-truth annotations and 282 held-out validation scenes (1,129 scenes total), specifically targeting small and dense object detection in complex overhead context.",
+  "homepage_url": "https://www.diu.mil/ai-xview-challenge",
+  "publisher": {
+    "name": "Defense Innovation Unit & National Geospatial-Intelligence Agency",
+    "type": "government",
+    "url": "https://www.diu.mil"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "satellite-imagery-analysis",
+    "overhead-object-detection"
+  ],
+  "tags": [
+    "satellite-imagery",
+    "worldview-3",
+    "overhead-detection",
+    "remote-sensing",
+    "bounding-boxes",
+    "xview",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) by DIU and NGA. Commercial exploitation is prohibited without explicit authorization."
+  },
+  "source_references": [
+    {
+      "title": "DIU xView Challenge Homepage",
+      "url": "https://www.diu.mil/ai-xview-challenge",
+      "type": "official_website",
+      "notes": "Official challenge landing page hosted by the Defense Innovation Unit."
+    },
+    {
+      "title": "xView: Objects in Context in Overhead Imagery (arXiv:1802.07856)",
+      "url": "https://doi.org/10.48550/arXiv.1802.07856",
+      "type": "original_paper",
+      "notes": "Original foundational paper describing dataset collection, sensor characteristics, and annotation taxonomy."
+    },
+    {
+      "title": "DIUx-xView GitHub Repository",
+      "url": "https://github.com/DIUx-xView/data_utilities",
+      "type": "repository",
+      "notes": "Official challenge data processing utilities and conversion scripts."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-14",
+    "notes": "Verified against DIU xView challenge portal, official DIUx GitHub repository (DIUx-xView/data_utilities), and foundational arXiv:1802.07856 paper. Confirmed original release composition of 847 training scenes and 282 validation scenes (1,129 large GeoTIFF satellite scenes total) spanning 1,415 km² of geographic area with >1M bounding boxes across 60 classes under CC BY-NC-SA 4.0. Clarified that 1,415 reflects square kilometers of geographic surface coverage rather than an image or tile count."
+  },
+  "size": {
+    "amount": 21.0,
+    "unit": "GB",
+    "file_formats": [
+      "tif",
+      "geojson"
+    ],
+    "status": "estimated",
+    "notes": "Compressed archive payload containing 1,129 large 3-band 8-bit GeoTIFF scenes (847 training scenes, 282 validation scenes, typically ~3300x3300 pixels) and GeoJSON bounding box annotations, covering >1,415 km² of geographic area. 1,415 represents square kilometers of geographic surface coverage, not the scene or tile count."
+  },
+  "sample_count": {
+    "total": 1129,
+    "splits": {
+      "train": 847,
+      "validation": 282
+    },
+    "unit": "scenes",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-02-21",
+    "last_updated": "2018-08-01"
+  },
+  "citation": {
+    "paper_title": "xView: Objects in Context in Overhead Imagery",
+    "paper_url": "https://doi.org/10.48550/arXiv.1802.07856",
+    "doi": "10.48550/arXiv.1802.07856",
+    "authors": [
+      "Darius Lam",
+      "Richard Kuzma",
+      "Kevin McGee",
+      "Samuel Dooley",
+      "Michael Laielli",
+      "Matthew Klaric",
+      "Yaroslav Bulatov",
+      "Brendan McCord"
+    ],
+    "bibtex": "@article{lam2018xview,\n  title={xView: Objects in Context in Overhead Imagery},\n  author={Lam, Darius and Kuzma, Richard and McGee, Kevin and Dooley, Samuel and Laielli, Michael and Klaric, Matthew and Bulatov, Yaroslav and McCord, Brendan},\n  journal={arXiv preprint arXiv:1802.07856},\n  year={2018},\n  doi={10.48550/arXiv.1802.07856}\n}"
+  },
+  "geographic_coverage": [
+    "Global",
+    "North America",
+    "Europe",
+    "Asia",
+    "Africa",
+    "South America",
+    "Oceania"
+  ],
+  "provenance": {
+    "collection_method": "Collected from DigitalGlobe WorldView-3 satellite sensors at 0.3m ground sample distance spanning over 1,415 km² globally.",
+    "curation_notes": "Annotated by professional imagery analysts. Bounding boxes are formatted as pixel coordinates within large GeoTIFF scenes; sample count tracks original multi-kilometer satellite scenes rather than cropped network chips.",
+    "data_sources": [
+      "DigitalGlobe WorldView-3 satellite imagery"
+    ]
+  }
+}

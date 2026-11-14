@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "levir-cd",
+  "slug": "levir-cd",
+  "name": "LEVIR-CD: A Large-Scale Remote Sensing Building Change Detection Dataset",
+  "description": "LEVIR-CD is a large-scale, high-resolution remote sensing building change detection benchmark dataset introduced by the Image Processing Center at Beihang University. Containing 637 bi-temporal image patch pairs of size 1024x1024 pixels at 0.5-meter ground sample distance collected from Google Earth, the dataset spans 20 different regions across several cities in Texas, USA between 2002 and 2018. It annotates 31,333 individual building change instances (such as new building construction, demolition, and expansion) with pixel-level binary change masks while accounting for seasonal changes, lighting variations, and soil differences. The canonical benchmark partition comprises 445 training pairs, 64 validation pairs, and 128 testing pairs. LEVIR-CD and its related LEVIR-CD+ expansion are unified under this canonical dataset identity.",
+  "homepage_url": "https://github.com/justchenhao/LEVIR",
+  "publisher": {
+    "name": "Beihang University (LEVIR Lab)",
+    "type": "academic",
+    "url": "http://levir.buaa.edu.cn"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "change-detection",
+    "building-footprint-extraction",
+    "semantic-segmentation",
+    "remote-sensing"
+  ],
+  "tags": [
+    "change-detection",
+    "building-change",
+    "bi-temporal",
+    "google-earth",
+    "levir-cd",
+    "remote-sensing",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "LEVIR-CD Academic Research License",
+    "url": "https://github.com/justchenhao/LEVIR",
+    "commercial_use": "forbidden",
+    "notes": "Available free of charge for non-commercial academic research only. Commercial exploitation is prohibited without explicit authorization. Google Earth terms of service apply to source imagery."
+  },
+  "source_references": [
+    {
+      "title": "LEVIR-CD GitHub Repository",
+      "url": "https://github.com/justchenhao/LEVIR",
+      "type": "repository",
+      "notes": "Official author repository with benchmark models (STANet, BIT) and data download links."
+    },
+    {
+      "title": "A Spatial-Temporal Attention-Based Method and a New Dataset for Remote Sensing Image Change Detection (Remote Sensing 2020)",
+      "url": "https://doi.org/10.3390/rs12101662",
+      "type": "original_paper",
+      "notes": "Original open-access peer-reviewed publication in Remote Sensing (MDPI)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-14",
+    "notes": "Verified against justchenhao/LEVIR repository and MDPI Remote Sensing paper (DOI: 10.3390/rs12101662). Confirmed 637 image pairs (445 train, 64 val, 128 test), 31,333 building change instances, non-commercial terms, and unified LEVIR-CD identity."
+  },
+  "size": {
+    "amount": 3.8,
+    "unit": "GB",
+    "file_formats": [
+      "png"
+    ],
+    "status": "verified",
+    "notes": "637 pairs of 1024x1024 RGB PNG images (T1, T2) and corresponding binary change ground truth masks."
+  },
+  "sample_count": {
+    "total": 637,
+    "splits": {
+      "train": 445,
+      "validation": 64,
+      "test": 128
+    },
+    "unit": "image pairs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-05-22",
+    "last_updated": "2021-08-15"
+  },
+  "citation": {
+    "paper_title": "A Spatial-Temporal Attention-Based Method and a New Dataset for Remote Sensing Image Change Detection",
+    "paper_url": "https://doi.org/10.3390/rs12101662",
+    "doi": "10.3390/rs12101662",
+    "authors": [
+      "Hao Chen",
+      "Zhenwei Shi"
+    ],
+    "bibtex": "@article{chen2020spatial,\n  title={A Spatial-Temporal Attention-Based Method and a New Dataset for Remote Sensing Image Change Detection},\n  author={Chen, Hao and Shi, Zhenwei},\n  journal={Remote Sensing},\n  volume={12},\n  number={10},\n  pages={1662},\n  year={2020},\n  doi={10.3390/rs12101662}\n}"
+  },
+  "geographic_coverage": [
+    "United States",
+    "Texas",
+    "Austin"
+  ],
+  "provenance": {
+    "collection_method": "Extracted from Google Earth very-high-resolution historical satellite and aerial orthophotos spanning 2002 to 2018 across Texas.",
+    "curation_notes": "Annotated by remote sensing image interpretation experts to identify human-made structural building changes while disregarding natural seasonal surface variations. LEVIR-CD+ expanded this to 985 pairs; both share the same foundational lineage.",
+    "data_sources": [
+      "Google Earth historical high-resolution imagery"
+    ]
+  }
+}

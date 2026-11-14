@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "id": "spacenet-2",
+  "slug": "spacenet-2",
+  "name": "SpaceNet 2: Building Footprint Extraction Challenge Dataset",
+  "description": "SpaceNet 2 (Building Detection v2) is a specialized high-resolution satellite imagery benchmark created by SpaceNet LLC (a collaboration between In-Q-Tel CosmiQ Works, Maxar Technologies, and AWS) to evaluate automated building footprint extraction algorithms across diverse geographic and architectural typologies. Sourced from DigitalGlobe WorldView-3 satellite imagery at 0.3-meter ground sample distance, the dataset spans four distinct Areas of Interest (AOIs): Las Vegas (AOI 2, ~216 km²), Paris (AOI 3, ~1,030 km²), Shanghai (AOI 4, ~1,000 km²), and Khartoum (AOI 5, ~765 km²). It contains 10,593 orthorectified image tiles (each 200m x 200m, provided in panchromatic, multispectral, and pansharpened RGB formats) accompanied by 302,701 meticulously annotated polygonal building footprint labels in GeoJSON format. Full release comprises 6,940 training tiles and 3,653 testing tiles hosted on AWS Open Data under CC BY-SA 4.0.",
+  "homepage_url": "https://spacenet.ai/spacenet-buildings-dataset-v2/",
+  "publisher": {
+    "name": "SpaceNet LLC (CosmiQ Works, Maxar, AWS)",
+    "type": "industry",
+    "url": "https://spacenet.ai"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "building-footprint-extraction",
+    "semantic-segmentation",
+    "remote-sensing"
+  ],
+  "tags": [
+    "satellite-imagery",
+    "worldview-3",
+    "building-footprint",
+    "spacenet",
+    "spacenet-2",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Released under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) by SpaceNet Partners on the AWS Open Data registry. Commercial use permitted under attribution and share-alike terms."
+  },
+  "source_references": [
+    {
+      "title": "SpaceNet 2 Official Challenge Page",
+      "url": "https://spacenet.ai/spacenet-buildings-dataset-v2/",
+      "type": "official_website",
+      "notes": "Official challenge landing page and dataset specification."
+    },
+    {
+      "title": "SpaceNet Datasets Portal",
+      "url": "https://spacenet.ai/datasets/",
+      "type": "documentation",
+      "notes": "SpaceNet repository catalog and AWS S3 bucket listing (s3://spacenet-dataset/spacenet/SN2_buildings/)."
+    },
+    {
+      "title": "SpaceNet Registry of Open Data on AWS",
+      "url": "https://registry.opendata.aws/spacenet/",
+      "type": "archive",
+      "notes": "Official AWS Registry of Open Data listing for SpaceNet."
+    },
+    {
+      "title": "SpaceNet: A Remote Sensing Dataset and Challenge Series (arXiv:1807.01232)",
+      "url": "https://doi.org/10.48550/arXiv.1807.01232",
+      "type": "original_paper",
+      "notes": "Foundational overview paper detailing SpaceNet 1-4 challenge methodologies and evaluation metrics."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-14",
+    "notes": "Verified against spacenet.ai/spacenet-buildings-dataset-v2/, registry.opendata.aws/spacenet/, arXiv:1807.01232, and TorchGeo documentation. Reconciled sample counts: 6,940 training tiles and 3,653 public testing tiles (10,593 full release tiles). Each 200m x 200m geographic footprint provides 4 distinct raster product formats: PAN, MS, PS-MS, and PS-RGB. Single-modality loaders like TorchGeo (SpaceNet2) index one product type (e.g., 6,940 PS-RGB training chips), whereas full file manifests across all 4 products yield 42,372 GeoTIFF files. Verified 302,701 building footprints (Vegas: 151,367; Paris: 23,816; Shanghai: 92,015; Khartoum: 35,503), download payloads (56.4 GB train + 19.1 GB test = 75.5 GB total), and CC BY-SA 4.0 terms."
+  },
+  "size": {
+    "amount": 75.5,
+    "unit": "GB",
+    "file_formats": [
+      "tif",
+      "geojson"
+    ],
+    "status": "verified",
+    "notes": "Full release payload totals 75.5 GB on AWS S3 (`s3://spacenet-dataset/spacenet/SN2_buildings/`): 56.4 GB training data (AOI 2: 23 GB, AOI 3: 5.3 GB, AOI 4: 23.4 GB, AOI 5: 4.7 GB) and 19.1 GB testing data (AOI 2: 7.9 GB, AOI 3: 1.9 GB, AOI 4: 7.7 GB, AOI 5: 1.6 GB). Contains 10,593 geographic tile footprints, each provided in pansharpened RGB (PS-RGB), 8-band multispectral (MS), pansharpened multispectral (PS-MS), and panchromatic (PAN) GeoTIFF formats with GeoJSON building polygons."
+  },
+  "sample_count": {
+    "total": 10593,
+    "splits": {
+      "train": 6940,
+      "test": 3653
+    },
+    "unit": "tiles",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2017-03-15",
+    "last_updated": "2018-05-01"
+  },
+  "citation": {
+    "paper_title": "SpaceNet: A Remote Sensing Dataset and Challenge Series",
+    "paper_url": "https://doi.org/10.48550/arXiv.1807.01232",
+    "doi": "10.48550/arXiv.1807.01232",
+    "authors": [
+      "Adam Van Etten",
+      "Dave Lindenbaum",
+      "Todd M. Bacastow"
+    ],
+    "bibtex": "@article{vanetten2018spacenet,\n  title={SpaceNet: A Remote Sensing Dataset and Challenge Series},\n  author={Van Etten, Adam and Lindenbaum, Dave and Bacastow, Todd M.},\n  journal={arXiv preprint arXiv:1807.01232},\n  year={2018},\n  doi={10.48550/arXiv.1807.01232}\n}"
+  },
+  "geographic_coverage": [
+    "United States",
+    "France",
+    "China",
+    "Sudan",
+    "Las Vegas",
+    "Paris",
+    "Shanghai",
+    "Khartoum"
+  ],
+  "provenance": {
+    "collection_method": "Collected from DigitalGlobe WorldView-3 satellite at 0.3m resolution across four diverse urban environments.",
+    "curation_notes": "Each tile is 200m x 200m. Contains 302,701 polygon building footprints labeled by professional mapping annotators. S3 path: s3://spacenet-dataset/spacenet/SN2_buildings/.",
+    "data_sources": [
+      "DigitalGlobe WorldView-3 satellite imagery"
+    ]
+  }
+}
