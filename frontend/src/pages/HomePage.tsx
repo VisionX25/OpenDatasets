@@ -36,6 +36,9 @@ export const HomePage: React.FC = () => {
           <p className="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Find machine learning datasets with structured metadata, source references, and documented license information.
           </p>
+          <p className="mt-4 text-sm font-medium text-indigo-700 dark:text-indigo-300">
+            Milestone reached: 600 research dataset records · November 2026
+          </p>
 
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
