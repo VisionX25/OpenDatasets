@@ -31,6 +31,7 @@ This roadmap clearly separates delivered and verified features from planned futu
 
 ### Metadata Quality & Architecture
 - [x] **Strict JSON Schema (Draft-7)**: Versioned schema (`schemas/dataset.v1.schema.json`) with automated offline validation.
+- [x] **Automated Source-Link Health Monitoring**: Weekly rotating background GitHub Actions workflow verifying external metadata URLs, tracking rotation state, and generating structured health reports.
 - [x] **Static GitHub Pages Deployment**: Fully static architecture with `scripts/prepare_pages.py` generating deep-link entry points for client-side routing.
 - [x] **Automated CI/CD**: GitHub Actions workflow verifying schemas, catalog synchronization, Python tests, Vitest frontend tests, ESLint, and production builds.
 
@@ -39,7 +40,6 @@ This roadmap clearly separates delivered and verified features from planned futu
 ## 2. Planned & Future Milestones
 
 ### Metadata Depth & Automation
-- [ ] **Automated Source-Link Health Monitoring**: Periodic background workflow to detect dead links or domain changes across original publisher pages.
 - [ ] **Dataset Versioning & Changelogs**: Document minor revisions and upstream dataset splits over time.
 - [ ] **Extended Research Metadata**: Deeper documentation of curation protocols, annotation guidelines, and known demographic/linguistic coverage.
 
