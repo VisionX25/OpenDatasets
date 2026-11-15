@@ -70,7 +70,7 @@ from scripts.audit_source_links import (
     is_ip_restricted,
 )
 
-DEFAULT_BATCH_SIZE = 100
+DEFAULT_BATCH_SIZE = 50
 MIN_BATCH_SIZE = 1
 MAX_BATCH_SIZE = 250
 DEFAULT_MAX_RUNTIME = 600.0  # 10 minutes maximum runtime
@@ -981,10 +981,28 @@ def generate_monitoring_reports(
     return report_payload
 
 
-def sync_branch_pull(state_branch: str, state_file: Path, repo_root: Path) -> bool:
-    """Fetch state and durable backup from isolated git branch without checking out or dirtying main."""
+def sync_branch_pull(
+    state_branch: str,
+    state_file: Path,
+    repo_root: Path,
+    allow_reset: bool = False,
+) -> bool:
+    """Fetch and validate state and durable backup from isolated git branch without checking out or dirtying main.
+
+    Durable Safety Invariants:
+      1. Missing branch on remote: ONLY this condition represents genuine first-time initialization.
+         Returns True without error and guarantees clean slate for initial state creation.
+      2. Remote query failure (network / auth / permission error): Raises RuntimeError and fails loudly.
+      3. Git fetch failure: Raises RuntimeError and fails loudly.
+      4. Missing state files on existing branch: Raises UnrecoverableStateError and fails loudly.
+      5. Corrupted state with valid backup: Prepares state and backup on disk for transparent recovery on state load.
+      6. Corrupted state with invalid/missing backup: Raises UnrecoverableStateError and fails loudly (unless allow_reset=True).
+      7. Unsupported schema version: Raises UnrecoverableStateError and fails loudly (unless allow_reset=True).
+    """
+    backup_file = state_file.with_suffix(".bak")
+
+    # 1. Query remote head for state_branch
     try:
-        # Check if remote has state_branch
         res = subprocess.run(
             ["git", "ls-remote", "--heads", "origin", state_branch],
             cwd=repo_root,
@@ -992,10 +1010,33 @@ def sync_branch_pull(state_branch: str, state_file: Path, repo_root: Path) -> bo
             text=True,
             check=True,
         )
-        if not res.stdout.strip():
-            logging.info("Remote branch '%s' does not exist yet. Will initialize on push.", state_branch)
-            return False
+    except subprocess.CalledProcessError as exc:
+        err_msg = (exc.stderr or "").strip() or str(exc)
+        logging.error(
+            "Failed to query remote branch '%s' via git ls-remote (network, auth, or permission error): %s",
+            state_branch,
+            err_msg,
+        )
+        raise RuntimeError(
+            f"Failed to query remote branch '{state_branch}' via git ls-remote (network, auth, or permission error): {err_msg}"
+        ) from exc
 
+    # 2. Check if remote branch genuinely does not exist
+    if not res.stdout.strip():
+        # Remote branch genuinely does not exist yet on origin
+        if state_file.exists():
+            state_file.unlink()
+        if backup_file.exists():
+            backup_file.unlink()
+        logging.info(
+            "Remote branch '%s' does not exist yet on origin. Genuine first-time initialization; fresh state will be created on execution.",
+            state_branch,
+        )
+        print(f"  ✓ Remote branch '{state_branch}' does not exist on origin. Genuine first-time initialization.")
+        return True
+
+    # 3. Branch exists on origin: Fetch refs
+    try:
         subprocess.run(
             ["git", "fetch", "origin", f"{state_branch}:refs/remotes/origin/{state_branch}"],
             cwd=repo_root,
@@ -1003,39 +1044,117 @@ def sync_branch_pull(state_branch: str, state_file: Path, repo_root: Path) -> bo
             text=True,
             check=True,
         )
-
-        state_file.parent.mkdir(parents=True, exist_ok=True)
-        pulled_any = False
-
-        # 1. Pull primary state.json
-        show_state = subprocess.run(
-            ["git", "show", f"refs/remotes/origin/{state_branch}:state.json"],
-            cwd=repo_root,
-            capture_output=True,
-            text=True,
-        )
-        if show_state.returncode == 0:
-            state_file.write_text(show_state.stdout, encoding="utf-8")
-            pulled_any = True
-            logging.info("Successfully retrieved state.json from remote branch '%s'", state_branch)
-
-        # 2. Pull durable remote backup state.bak if present
-        backup_file = state_file.with_suffix(".bak")
-        show_bak = subprocess.run(
-            ["git", "show", f"refs/remotes/origin/{state_branch}:state.bak"],
-            cwd=repo_root,
-            capture_output=True,
-            text=True,
-        )
-        if show_bak.returncode == 0 and show_bak.stdout.strip():
-            backup_file.write_text(show_bak.stdout, encoding="utf-8")
-            pulled_any = True
-            logging.info("Successfully retrieved durable backup state.bak from remote branch '%s'", state_branch)
-
-        return pulled_any
     except subprocess.CalledProcessError as exc:
-        logging.warning("Could not pull state from branch '%s': %s", state_branch, exc)
-        return False
+        err_msg = (exc.stderr or "").strip() or str(exc)
+        logging.error("Failed to fetch remote branch '%s' from origin: %s", state_branch, err_msg)
+        raise RuntimeError(
+            f"Failed to fetch branch '{state_branch}' from origin (network, permission, or fetch error): {err_msg}"
+        ) from exc
+
+    # 4. Extract state.json and state.bak from fetched tree
+    state_file.parent.mkdir(parents=True, exist_ok=True)
+
+    show_state = subprocess.run(
+        ["git", "show", f"refs/remotes/origin/{state_branch}:state.json"],
+        cwd=repo_root,
+        capture_output=True,
+        text=True,
+    )
+    show_bak = subprocess.run(
+        ["git", "show", f"refs/remotes/origin/{state_branch}:state.bak"],
+        cwd=repo_root,
+        capture_output=True,
+        text=True,
+    )
+
+    state_content = show_state.stdout if show_state.returncode == 0 else None
+    bak_content = show_bak.stdout if show_bak.returncode == 0 else None
+
+    if state_content is None and bak_content is None:
+        raise UnrecoverableStateError(
+            f"Remote branch '{state_branch}' exists but contains neither state.json nor state.bak."
+        )
+
+    # Helper to validate a JSON string payload
+    def _is_valid_payload(text: str | None) -> tuple[bool, str]:
+        if text is None:
+            return False, "file does not exist"
+        if not text.strip():
+            return False, "file is empty (0 bytes)"
+        try:
+            data = json.loads(text)
+        except Exception as j_exc:
+            return False, f"corrupted JSON ({j_exc})"
+        if not isinstance(data, dict):
+            return False, "root JSON entity is not an object"
+        ver = str(data.get("version", ""))
+        if ver not in SUPPORTED_STATE_VERSIONS:
+            return False, f"unsupported schema version '{ver}' (supported: {SUPPORTED_STATE_VERSIONS})"
+        if "history" not in data or not isinstance(data.get("history"), dict):
+            return False, "missing or invalid 'history' mapping"
+        return True, ""
+
+    state_valid, state_reason = _is_valid_payload(state_content)
+    bak_valid, bak_reason = _is_valid_payload(bak_content)
+
+    # Write backup file to disk if present
+    if bak_content is not None and bak_content.strip():
+        backup_file.write_text(bak_content, encoding="utf-8")
+    elif backup_file.exists():
+        backup_file.unlink()
+
+    # Write primary state file to disk if present
+    if state_content is not None:
+        state_file.write_text(state_content, encoding="utf-8")
+    elif state_file.exists():
+        state_file.unlink()
+
+    if state_valid:
+        logging.info("Successfully retrieved and validated state.json from remote branch '%s'", state_branch)
+        print(f"  ✓ Successfully retrieved and validated state.json from remote branch '{state_branch}'.")
+        return True
+
+    # Primary state is invalid or corrupted, but valid backup is present
+    if bak_valid:
+        logging.warning(
+            "Primary state.json on remote branch '%s' is invalid (%s), but valid backup state.bak is present. Recovery will occur on state load.",
+            state_branch,
+            state_reason,
+        )
+        print(f"  ⚠ Remote state.json is invalid ({state_reason}), but valid backup state.bak is present.")
+        return True
+
+    # Both primary and backup are invalid
+    if allow_reset:
+        logging.warning(
+            "State on remote branch '%s' is unrecoverable (primary: %s, backup: %s); explicit reset requested.",
+            state_branch,
+            state_reason,
+            bak_reason,
+        )
+        print(f"  ⚠ Remote state is unrecoverable; resetting state as explicitly requested.")
+        if state_file.exists():
+            state_file.unlink()
+        if backup_file.exists():
+            backup_file.unlink()
+        return True
+
+    # Preserve evidence locally if possible
+    ts = int(time.time())
+    corrupt_evidence = state_file.with_suffix(f".corrupt.{ts}.json")
+    if state_content is not None:
+        try:
+            corrupt_evidence.write_text(state_content, encoding="utf-8")
+            logging.error("Preserved corrupted remote state evidence to %s", corrupt_evidence)
+        except Exception as e:
+            logging.error("Could not preserve corrupted state file: %s", e)
+
+    evidence_note = f" Preserved evidence to '{corrupt_evidence}'." if state_content is not None else ""
+    raise UnrecoverableStateError(
+        f"Remote branch '{state_branch}' has unrecoverable state: primary state.json is invalid ({state_reason}) "
+        f"and backup state.bak is invalid or missing ({bak_reason}).{evidence_note} "
+        f"Re-run with --reset-state to explicitly reinitialize."
+    )
 
 
 def merge_monitoring_histories(
@@ -1335,7 +1454,7 @@ def main() -> int:
         "--batch-size",
         type=str,
         default=None,
-        help="Number of unique URLs to check in this run (1 to 250).",
+        help="Number of unique URLs to check in this run (1 to 250, default 50).",
     )
     parser.add_argument(
         "--summary-file",
@@ -1392,18 +1511,14 @@ def main() -> int:
         default="monitoring-state",
         help="Git branch name for persistent monitoring state.",
     )
+    parser.add_argument(
+        "--repo-root",
+        type=Path,
+        default=None,
+        help="Path to git repository root (defaults to current working directory).",
+    )
 
     args = parser.parse_args()
-
-    # Handle branch sync pull if requested
-    if args.sync_branch_pull:
-        success = sync_branch_pull(args.state_branch, args.state_file, REPO_ROOT)
-        return 0 if success else 1
-
-    # Handle branch sync push if requested
-    if args.sync_branch_push:
-        success = sync_branch_push(args.state_branch, args.state_file, REPO_ROOT)
-        return 0 if success else 1
 
     # Parse inputs from CLI or environment variables
     raw_batch = args.batch_size if args.batch_size is not None else os.environ.get("INPUT_BATCH_SIZE")
@@ -1419,6 +1534,26 @@ def main() -> int:
     except ValueError as val_err:
         print(f"::error::Input validation failed: {val_err}", file=sys.stderr)
         return 2
+
+    repo_root = args.repo_root or Path.cwd()
+
+    # Handle branch sync pull if requested
+    if args.sync_branch_pull:
+        try:
+            success = sync_branch_pull(args.state_branch, args.state_file, repo_root, allow_reset=reset_state)
+            return 0 if success else 1
+        except Exception as exc:
+            print(f"::error::{exc}", file=sys.stderr)
+            return 1
+
+    # Handle branch sync push if requested
+    if args.sync_branch_push:
+        try:
+            success = sync_branch_push(args.state_branch, args.state_file, repo_root)
+            return 0 if success else 1
+        except Exception as exc:
+            print(f"::error::{exc}", file=sys.stderr)
+            return 1
 
     print("=======================================================")
     print(" [MONITOR] OpenDatasets Automated Source-Link Monitor  ")

@@ -133,7 +133,7 @@ def run_edge_case_simulations() -> None:
 def run_simulation(
     num_cycles: int = 25,
     catalog_size: int = 1832,
-    batch_size: int = 100,
+    batch_size: int = 50,
 ) -> dict[str, Any]:
     print("=======================================================")
     print(" [SIMULATION] 25-Cycle Source-Link Monitoring Runner   ")
@@ -162,7 +162,7 @@ def run_simulation(
 
     start_sim_time = time.monotonic()
 
-    while state.current_cycle <= num_cycles and total_batches < (num_cycles * 35):
+    while state.current_cycle <= num_cycles and total_batches < (num_cycles * 50):
         total_batches += 1
         active_urls = sorted(catalog.keys())
 
@@ -248,7 +248,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Run 25-cycle offline monitoring simulation.")
     parser.add_argument("--cycles", type=int, default=25, help="Number of cycles to simulate (default 25).")
     parser.add_argument("--catalog-size", type=int, default=1832, help="Synthetic catalog size (default 1832).")
-    parser.add_argument("--batch-size", type=int, default=100, help="Batch size per run (default 100).")
+    parser.add_argument("--batch-size", type=int, default=50, help="Batch size per run (default 50).")
     args = parser.parse_args()
 
     results = run_simulation(

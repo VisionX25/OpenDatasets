@@ -22,6 +22,7 @@ import io
 import json
 import socket
 import subprocess
+import sys
 import threading
 import time
 from pathlib import Path
@@ -555,6 +556,14 @@ class TestAlertClassification:
 
 
 class TestInputSanitization:
+    def test_default_inputs(self):
+        b, r, off, dry, res = validate_and_sanitize_inputs(None, None, None, None, None)
+        assert b == 50
+        assert r == 600.0
+        assert off is False
+        assert dry is False
+        assert res is False
+
     def test_valid_inputs(self):
         b, r, off, dry, res = validate_and_sanitize_inputs("50", "300", "true", "false", "0")
         assert b == 50
@@ -969,6 +978,250 @@ class TestGitPlumbingSync:
 
         # 4. Cycle is max(2, 1) = 2
         assert merged["current_cycle"] == 2
+
+
+class TestStateRetrievalPlumbing:
+    """Regression tests for missing branch versus corrupted or inaccessible existing state.
+
+    Safety Invariants:
+      1. Missing branch on remote: ONLY genuine first-time initialization, succeeds cleanly (exit 0).
+      2. Remote query failure (network / auth / permission): Fails loudly with RuntimeError (exit 1).
+      3. Git fetch failure: Fails loudly with RuntimeError (exit 1).
+      4. Missing state files on existing branch: Fails loudly with UnrecoverableStateError (exit 1).
+      5. Corrupted state with valid backup: Prepares files for recovery on load, succeeds cleanly (exit 0).
+      6. Corrupted state with invalid/missing backup: Fails loudly with UnrecoverableStateError (exit 1).
+      7. Unsupported schema version: Fails loudly with UnrecoverableStateError (exit 1).
+      8. Explicit reset requested: Cleans state for reinitialization when allow_reset=True.
+    """
+
+    def _setup_bare_remote_and_clone(self, tmp_path: Path) -> tuple[Path, Path]:
+        bare_remote = tmp_path / "remote.git"
+        subprocess.run(["git", "init", "--bare", "-b", "main", str(bare_remote)], check=True, capture_output=True)
+
+        seed_repo = tmp_path / "seed"
+        seed_repo.mkdir()
+        subprocess.run(["git", "init", "-b", "main"], cwd=seed_repo, check=True, capture_output=True)
+        subprocess.run(["git", "config", "user.name", "Seed Bot"], cwd=seed_repo, check=True)
+        subprocess.run(["git", "config", "user.email", "seed@example.com"], cwd=seed_repo, check=True)
+        (seed_repo / "README.md").write_text("# Seed\n", encoding="utf-8")
+        subprocess.run(["git", "add", "README.md"], cwd=seed_repo, check=True)
+        subprocess.run(["git", "commit", "-m", "init main"], cwd=seed_repo, check=True, capture_output=True)
+        subprocess.run(["git", "remote", "add", "origin", str(bare_remote)], cwd=seed_repo, check=True)
+        subprocess.run(["git", "push", "origin", "main"], cwd=seed_repo, check=True, capture_output=True)
+
+        local_repo = tmp_path / "local"
+        subprocess.run(["git", "clone", str(bare_remote), str(local_repo)], check=True, capture_output=True)
+        subprocess.run(["git", "config", "user.name", "Local Bot"], cwd=local_repo, check=True)
+        subprocess.run(["git", "config", "user.email", "local@example.com"], cwd=local_repo, check=True)
+
+        return bare_remote, local_repo
+
+    def test_sync_branch_pull_genuine_missing_branch(self, tmp_path: Path):
+        bare_remote, local_repo = self._setup_bare_remote_and_clone(tmp_path)
+        state_file = local_repo / ".monitoring_state" / "state.json"
+
+        # Call sync_branch_pull on branch that genuinely does not exist on origin
+        success = sync_branch_pull("monitoring-state", state_file, local_repo)
+        assert success is True
+        assert state_file.exists() is False
+        assert state_file.with_suffix(".bak").exists() is False
+
+        # Verify load_monitoring_state handles this cleanly as first-time initialization
+        state, is_rec = load_monitoring_state(state_file, ["https://example.org/url1"], allow_reset=False)
+        assert state.current_cycle == 1
+        assert state.history == {}
+        assert is_rec is False
+
+    def test_sync_branch_pull_stale_local_files_cleaned_on_missing_branch(self, tmp_path: Path):
+        bare_remote, local_repo = self._setup_bare_remote_and_clone(tmp_path)
+        state_file = local_repo / ".monitoring_state" / "state.json"
+        state_file.parent.mkdir(parents=True, exist_ok=True)
+        state_file.write_text("{\"stale\": true}", encoding="utf-8")
+        state_file.with_suffix(".bak").write_text("{\"stale_bak\": true}", encoding="utf-8")
+
+        success = sync_branch_pull("monitoring-state", state_file, local_repo)
+        assert success is True
+        assert state_file.exists() is False
+        assert state_file.with_suffix(".bak").exists() is False
+
+    def test_sync_branch_pull_ls_remote_network_failure(self, tmp_path: Path):
+        bare_remote, local_repo = self._setup_bare_remote_and_clone(tmp_path)
+        state_file = local_repo / ".monitoring_state" / "state.json"
+
+        # Point origin to a broken non-existent socket / directory
+        subprocess.run(["git", "remote", "set-url", "origin", "/nonexistent/socket/remote.git"], cwd=local_repo, check=True)
+
+        with pytest.raises(RuntimeError, match="Failed to query remote branch.*via git ls-remote"):
+            sync_branch_pull("monitoring-state", state_file, local_repo)
+
+    def test_sync_branch_pull_git_fetch_failure(self, tmp_path: Path, monkeypatch):
+        bare_remote, local_repo = self._setup_bare_remote_and_clone(tmp_path)
+        state_file = local_repo / ".monitoring_state" / "state.json"
+
+        # Create monitoring-state branch on origin
+        subprocess.run(["git", "push", "origin", "main:refs/heads/monitoring-state"], cwd=local_repo, check=True, capture_output=True)
+
+        real_run = subprocess.run
+
+        def mock_subprocess_run(cmd, *args, **kwargs):
+            if isinstance(cmd, list) and len(cmd) > 1 and cmd[1] == "fetch":
+                raise subprocess.CalledProcessError(128, cmd, stderr="fatal: connection reset by peer")
+            return real_run(cmd, *args, **kwargs)
+
+        monkeypatch.setattr(subprocess, "run", mock_subprocess_run)
+
+        with pytest.raises(RuntimeError, match="Failed to fetch branch 'monitoring-state' from origin.*connection reset by peer"):
+            sync_branch_pull("monitoring-state", state_file, local_repo)
+
+    def test_sync_branch_pull_existing_branch_empty_tree(self, tmp_path: Path):
+        bare_remote, local_repo = self._setup_bare_remote_and_clone(tmp_path)
+        state_file = local_repo / ".monitoring_state" / "state.json"
+
+        # Create monitoring-state branch on origin with only a dummy file (no state.json, no state.bak)
+        empty_tree = subprocess.check_output(["git", "mktree"], input="", cwd=local_repo, text=True).strip()
+        dummy_commit = subprocess.check_output(
+            ["git", "commit-tree", empty_tree, "-m", "empty branch commit"], cwd=local_repo, text=True
+        ).strip()
+        subprocess.run(["git", "push", "origin", f"{dummy_commit}:refs/heads/monitoring-state"], cwd=local_repo, check=True, capture_output=True)
+
+        with pytest.raises(UnrecoverableStateError, match="exists but contains neither state.json nor state.bak"):
+            sync_branch_pull("monitoring-state", state_file, local_repo)
+
+    def test_sync_branch_pull_existing_branch_valid_state(self, tmp_path: Path):
+        bare_remote, local_repo = self._setup_bare_remote_and_clone(tmp_path)
+        state_file = local_repo / ".monitoring_state" / "state.json"
+
+        # Push valid state.json to monitoring-state branch
+        valid_json = json.dumps({
+            "version": "1.0",
+            "current_cycle": 3,
+            "total_catalog_urls": 10,
+            "history": {"https://example.org/test": {"alert_status": "healthy", "consecutive_failures": 0}},
+        })
+        blob = subprocess.check_output(["git", "hash-object", "-w", "--stdin"], input=valid_json, cwd=local_repo, text=True).strip()
+        tree = subprocess.check_output(["git", "mktree"], input=f"100644 blob {blob}\tstate.json\n", cwd=local_repo, text=True).strip()
+        commit = subprocess.check_output(["git", "commit-tree", tree, "-m", "valid state"], cwd=local_repo, text=True).strip()
+        subprocess.run(["git", "push", "origin", f"{commit}:refs/heads/monitoring-state"], cwd=local_repo, check=True, capture_output=True)
+
+        success = sync_branch_pull("monitoring-state", state_file, local_repo)
+        assert success is True
+        assert state_file.exists()
+        loaded = json.loads(state_file.read_text(encoding="utf-8"))
+        assert loaded["current_cycle"] == 3
+        assert "https://example.org/test" in loaded["history"]
+
+    def test_sync_branch_pull_corrupted_state_recovers_from_backup(self, tmp_path: Path):
+        bare_remote, local_repo = self._setup_bare_remote_and_clone(tmp_path)
+        state_file = local_repo / ".monitoring_state" / "state.json"
+
+        corrupt_blob = subprocess.check_output(["git", "hash-object", "-w", "--stdin"], input="{CORRUPT_JSON", cwd=local_repo, text=True).strip()
+        valid_bak_json = json.dumps({
+            "version": "1.0",
+            "current_cycle": 2,
+            "history": {"https://example.org/url1": {"alert_status": "healthy"}},
+        })
+        bak_blob = subprocess.check_output(["git", "hash-object", "-w", "--stdin"], input=valid_bak_json, cwd=local_repo, text=True).strip()
+        tree = subprocess.check_output(
+            ["git", "mktree"],
+            input=f"100644 blob {corrupt_blob}\tstate.json\n100644 blob {bak_blob}\tstate.bak\n",
+            cwd=local_repo,
+            text=True,
+        ).strip()
+        commit = subprocess.check_output(["git", "commit-tree", tree, "-m", "corrupt with backup"], cwd=local_repo, text=True).strip()
+        subprocess.run(["git", "push", "origin", f"{commit}:refs/heads/monitoring-state"], cwd=local_repo, check=True, capture_output=True)
+
+        # Pull succeeds because valid backup exists on the branch
+        success = sync_branch_pull("monitoring-state", state_file, local_repo)
+        assert success is True
+        assert state_file.exists()
+        assert state_file.with_suffix(".bak").exists()
+
+        # When rotation loads the state, it recovers from the backup
+        state, is_rec = load_monitoring_state(state_file, ["https://example.org/url1"], allow_reset=False)
+        assert is_rec is True
+        assert state.current_cycle == 2
+        assert "https://example.org/url1" in state.history
+
+    def test_sync_branch_pull_corrupted_state_without_backup_fails(self, tmp_path: Path):
+        bare_remote, local_repo = self._setup_bare_remote_and_clone(tmp_path)
+        state_file = local_repo / ".monitoring_state" / "state.json"
+
+        corrupt_blob = subprocess.check_output(["git", "hash-object", "-w", "--stdin"], input="{CORRUPT_JSON", cwd=local_repo, text=True).strip()
+        tree = subprocess.check_output(
+            ["git", "mktree"], input=f"100644 blob {corrupt_blob}\tstate.json\n", cwd=local_repo, text=True
+        ).strip()
+        commit = subprocess.check_output(["git", "commit-tree", tree, "-m", "corrupt no backup"], cwd=local_repo, text=True).strip()
+        subprocess.run(["git", "push", "origin", f"{commit}:refs/heads/monitoring-state"], cwd=local_repo, check=True, capture_output=True)
+
+        with pytest.raises(UnrecoverableStateError, match="has unrecoverable state.*primary state.json is invalid"):
+            sync_branch_pull("monitoring-state", state_file, local_repo, allow_reset=False)
+
+        # Confirm evidence was preserved locally
+        corrupt_files = list(state_file.parent.glob("state.corrupt.*.json"))
+        assert len(corrupt_files) >= 1
+
+    def test_sync_branch_pull_invalid_schema_version_fails(self, tmp_path: Path):
+        bare_remote, local_repo = self._setup_bare_remote_and_clone(tmp_path)
+        state_file = local_repo / ".monitoring_state" / "state.json"
+
+        v2_json = json.dumps({"version": "2.0", "current_cycle": 1, "history": {}})
+        blob = subprocess.check_output(["git", "hash-object", "-w", "--stdin"], input=v2_json, cwd=local_repo, text=True).strip()
+        tree = subprocess.check_output(
+            ["git", "mktree"], input=f"100644 blob {blob}\tstate.json\n", cwd=local_repo, text=True
+        ).strip()
+        commit = subprocess.check_output(["git", "commit-tree", tree, "-m", "v2 schema"], cwd=local_repo, text=True).strip()
+        subprocess.run(["git", "push", "origin", f"{commit}:refs/heads/monitoring-state"], cwd=local_repo, check=True, capture_output=True)
+
+        with pytest.raises(UnrecoverableStateError, match="unsupported schema version '2.0'"):
+            sync_branch_pull("monitoring-state", state_file, local_repo, allow_reset=False)
+
+    def test_sync_branch_pull_corrupt_allows_reset_when_explicit(self, tmp_path: Path):
+        bare_remote, local_repo = self._setup_bare_remote_and_clone(tmp_path)
+        state_file = local_repo / ".monitoring_state" / "state.json"
+
+        corrupt_blob = subprocess.check_output(["git", "hash-object", "-w", "--stdin"], input="{CORRUPT_JSON", cwd=local_repo, text=True).strip()
+        tree = subprocess.check_output(
+            ["git", "mktree"], input=f"100644 blob {corrupt_blob}\tstate.json\n", cwd=local_repo, text=True
+        ).strip()
+        commit = subprocess.check_output(["git", "commit-tree", tree, "-m", "corrupt reset test"], cwd=local_repo, text=True).strip()
+        subprocess.run(["git", "push", "origin", f"{commit}:refs/heads/monitoring-state"], cwd=local_repo, check=True, capture_output=True)
+
+        success = sync_branch_pull("monitoring-state", state_file, local_repo, allow_reset=True)
+        assert success is True
+        assert state_file.exists() is False
+
+    def test_cli_sync_branch_pull_exit_codes(self, tmp_path: Path):
+        bare_remote, local_repo = self._setup_bare_remote_and_clone(tmp_path)
+        state_file = local_repo / ".monitoring_state" / "state.json"
+        script_path = Path(__file__).resolve().parent.parent / "scripts" / "monitor_source_links.py"
+
+        # Case 1: Missing branch -> exit 0
+        res = subprocess.run(
+            [sys.executable, str(script_path), "--sync-branch-pull", "--state-file", str(state_file)],
+            cwd=local_repo,
+            capture_output=True,
+            text=True,
+        )
+        assert res.returncode == 0
+        assert "Remote branch 'monitoring-state' does not exist on origin" in res.stdout
+
+        # Case 2: Corrupted state on branch without backup -> exit 1
+        corrupt_blob = subprocess.check_output(["git", "hash-object", "-w", "--stdin"], input="{CORRUPT_JSON", cwd=local_repo, text=True).strip()
+        tree = subprocess.check_output(
+            ["git", "mktree"], input=f"100644 blob {corrupt_blob}\tstate.json\n", cwd=local_repo, text=True
+        ).strip()
+        commit = subprocess.check_output(["git", "commit-tree", tree, "-m", "corrupt cli test"], cwd=local_repo, text=True).strip()
+        subprocess.run(["git", "push", "origin", f"{commit}:refs/heads/monitoring-state"], cwd=local_repo, check=True, capture_output=True)
+
+        res_corrupt = subprocess.run(
+            [sys.executable, str(script_path), "--sync-branch-pull", "--state-file", str(state_file)],
+            cwd=local_repo,
+            capture_output=True,
+            text=True,
+        )
+        assert res_corrupt.returncode == 1
+        assert "::error::" in res_corrupt.stderr
+        assert "has unrecoverable state" in res_corrupt.stderr
 
 
 class TestEndToEndSimulation25Cycles:
