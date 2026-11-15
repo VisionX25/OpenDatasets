@@ -127,6 +127,11 @@ jobs:
           name: source-link-monitoring-${{ github.run_id }}
           path: artifact_download/
 
+      - name: Configure Git identity for state persistence
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Persist updated state to monitoring-state branch
         run: |
           mkdir -p .monitoring_state

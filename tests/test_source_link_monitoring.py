@@ -20,6 +20,7 @@ from __future__ import annotations
 import csv
 import io
 import json
+import os
 import socket
 import subprocess
 import sys
@@ -742,11 +743,14 @@ class TestGitPlumbingSync:
         assert "https://example.org/remote-checked" in final_remote_data["history"]
         assert "https://example.org/local-checked" in final_remote_data["history"]
 
-    def test_sync_branch_push_auth_failure_diagnostics(self, tmp_path: Path):
+    def test_sync_branch_push_auth_failure_diagnostics(self, tmp_path: Path, monkeypatch):
         repo_dir = tmp_path / "repo_auth"
         repo_dir.mkdir()
         state_file = repo_dir / "state.json"
         state_file.write_text(json.dumps({"version": "1.0"}), encoding="utf-8")
+
+        monkeypatch.setenv("GIT_AUTHOR_NAME", "Test Bot")
+        monkeypatch.setenv("GIT_AUTHOR_EMAIL", "bot@example.com")
 
         with patch("subprocess.run") as mock_run:
             mock_res = MagicMock()
@@ -757,6 +761,99 @@ class TestGitPlumbingSync:
             # When branch protection rejects push, sync_branch_push returns False immediately
             success = sync_branch_push("monitoring-state", state_file, repo_dir)
             assert success is False
+
+    def test_sync_branch_push_missing_identity_fails(self, tmp_path: Path, monkeypatch):
+        """Verify that attempting to commit state without a valid Git author identity raises an error."""
+        bare_remote = tmp_path / "remote.git"
+        subprocess.run(["git", "init", "--bare", "-b", "main", str(bare_remote)], check=True, capture_output=True)
+
+        repo_dir = tmp_path / "repo_no_id"
+        subprocess.run(["git", "clone", str(bare_remote), str(repo_dir)], check=True, capture_output=True)
+
+        state_file = repo_dir / "state.json"
+        state_file.write_text(json.dumps({"version": "1.0", "current_cycle": 1, "history": {}}), encoding="utf-8")
+
+        # Isolate environment from global Git config and ambient GIT_* environment variables
+        monkeypatch.setenv("GIT_CONFIG_GLOBAL", "/dev/null")
+        monkeypatch.setenv("GIT_CONFIG_SYSTEM", "/dev/null")
+        monkeypatch.delenv("GIT_AUTHOR_NAME", raising=False)
+        monkeypatch.delenv("GIT_AUTHOR_EMAIL", raising=False)
+        monkeypatch.delenv("GIT_COMMITTER_NAME", raising=False)
+        monkeypatch.delenv("GIT_COMMITTER_EMAIL", raising=False)
+
+        with pytest.raises(RuntimeError, match="Git identity missing"):
+            sync_branch_push("monitoring-state", state_file, repo_dir)
+
+    def test_sync_branch_push_configured_identity_sets_author_and_committer(self, tmp_path: Path, monkeypatch):
+        """Verify that commit-tree receives and records valid author and committer identities when configured."""
+        bare_remote = tmp_path / "remote.git"
+        subprocess.run(["git", "init", "--bare", "-b", "main", str(bare_remote)], check=True, capture_output=True)
+
+        repo_dir = tmp_path / "repo_with_id"
+        subprocess.run(["git", "clone", str(bare_remote), str(repo_dir)], check=True, capture_output=True)
+
+        # Configure repository-local identity matching GitHub Actions bot
+        bot_name = "github-actions[bot]"
+        bot_email = "41898282+github-actions[bot]@users.noreply.github.com"
+        subprocess.run(["git", "config", "--local", "user.name", bot_name], cwd=repo_dir, check=True)
+        subprocess.run(["git", "config", "--local", "user.email", bot_email], cwd=repo_dir, check=True)
+
+        state_file = repo_dir / "state.json"
+        state_file.write_text(json.dumps({"version": "1.0", "current_cycle": 1, "history": {}}), encoding="utf-8")
+
+        # Isolate from global config
+        monkeypatch.setenv("GIT_CONFIG_GLOBAL", "/dev/null")
+        monkeypatch.setenv("GIT_CONFIG_SYSTEM", "/dev/null")
+        monkeypatch.delenv("GIT_AUTHOR_NAME", raising=False)
+        monkeypatch.delenv("GIT_AUTHOR_EMAIL", raising=False)
+        monkeypatch.delenv("GIT_COMMITTER_NAME", raising=False)
+        monkeypatch.delenv("GIT_COMMITTER_EMAIL", raising=False)
+
+        success = sync_branch_push("monitoring-state", state_file, repo_dir)
+        assert success is True
+
+        # Verify the commit on remote branch records valid author and committer identities
+        commit_hash = subprocess.check_output(
+            ["git", "rev-parse", "refs/remotes/origin/monitoring-state"], cwd=repo_dir, text=True
+        ).strip()
+        commit_cat = subprocess.check_output(
+            ["git", "cat-file", "-p", commit_hash], cwd=repo_dir, text=True
+        )
+
+        assert f"author {bot_name} <{bot_email}>" in commit_cat
+        assert f"committer {bot_name} <{bot_email}>" in commit_cat
+
+    def test_cli_sync_branch_push_missing_identity_exit_code(self, tmp_path: Path):
+        """Verify that CLI --sync-branch-push exits with code 1 and logs ::error:: when Git identity is missing."""
+        bare_remote = tmp_path / "remote.git"
+        subprocess.run(["git", "init", "--bare", "-b", "main", str(bare_remote)], check=True, capture_output=True)
+
+        repo_dir = tmp_path / "repo_cli_no_id"
+        subprocess.run(["git", "clone", str(bare_remote), str(repo_dir)], check=True, capture_output=True)
+
+        state_file = repo_dir / "state.json"
+        state_file.write_text(json.dumps({"version": "1.0", "current_cycle": 1, "history": {}}), encoding="utf-8")
+
+        script_path = Path(__file__).resolve().parent.parent / "scripts" / "monitor_source_links.py"
+
+        clean_env = os.environ.copy()
+        clean_env["GIT_CONFIG_GLOBAL"] = "/dev/null"
+        clean_env["GIT_CONFIG_SYSTEM"] = "/dev/null"
+        clean_env.pop("GIT_AUTHOR_NAME", None)
+        clean_env.pop("GIT_AUTHOR_EMAIL", None)
+        clean_env.pop("GIT_COMMITTER_NAME", None)
+        clean_env.pop("GIT_COMMITTER_EMAIL", None)
+
+        res = subprocess.run(
+            [sys.executable, str(script_path), "--sync-branch-push", "--state-file", str(state_file), "--repo-root", str(repo_dir)],
+            cwd=repo_dir,
+            capture_output=True,
+            text=True,
+            env=clean_env,
+        )
+        assert res.returncode == 1
+        assert "::error::" in res.stderr
+        assert "Git identity missing" in res.stderr
 
     def test_cross_runner_backup_recovery_two_workspaces(self, tmp_path: Path):
         """Simulate two completely separate ephemeral GitHub Actions runners.
