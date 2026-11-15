@@ -141,11 +141,11 @@ A catalog-wide census identified exactly 17 dataset records where partition spli
 > [!IMPORTANT]
 > None of these cases are confirmed source errors. In accordance with Task 40 change control, **no metadata was modified**. Primary-source citations from benchmark publications are required before applying any adjustments.
 
-### 2. Shared URL Multi-Role References (5 datasets)
-The 5 datasets flagged for duplicate URLs represent legitimate semantic multi-role reuse rather than broken duplicate links, distinguishing dataset landing page, dataset DOI, original research publication, and repository mirror without modifying catalog metadata:
+### 2. Shared URL Multi-Role References (4 datasets)
+The 4 datasets flagged for duplicate URLs represent legitimate semantic multi-role reuse rather than broken duplicate links, distinguishing dataset landing page, dataset DOI, original research publication, and repository mirror without modifying catalog metadata:
 - `fmow`: Two distinct archive flavors (fMoW-full ~3.5 TB multispectral TIFF vs fMoW-rgb ~200 GB JPEG) using the same SpaceNet portal landing page as their HTTP resolver with distinct S3 bucket paths in notes.
 - `cebs-database`, `mit-bih-atrial-fibrillation`, `mit-bih-noise-stress-test`: PhysioNet dataset DOI shared as both repository URL and canonical citation for historic pre-DOI conference papers.
-- `iris`: Canonical UCI repository landing page (`https://archive.ics.uci.edu/dataset/53/iris`) shared as both repository URL and Fisher (1936) publication reference. The catalog record preserves the original paper citation details (Fisher 1936, DOI `10.1111/j.1469-1809.1936.tb02137.x`), while the source reference links to the UCI repository landing page rather than an external journal resolver.
+- *(Note on Iris):* Previously flagged in Task 40 when the original Fisher (1936) paper linked to the UCI repository landing page. Corrected in Task 41 to resolve directly to the publication DOI (`10.1111/j.1469-1809.1936.tb02137.x`), successfully clearing the duplicate-reference flag.
 
 ---
 
@@ -218,12 +218,11 @@ To guide future catalog curation, candidate records are grouped into prioritized
 | `sroie` | 1000 | `receipts` | Verify exact split partitions against original paper benchmarks table or official repository manifest. | Exact page/table citation from original paper or archive manifest confirming partition sums. |
 | *...and 1 more records in report.json* | | | | |
 
-### Priority 3: Duplicate Source References (5 records)
+### Priority 3: Duplicate Source References (4 records)
 | Dataset ID | Category | Recommended Action | Evidence Requirement |
 | :--- | :--- | :--- | :--- |
 | `cebs-database` | `tabular-time-series` | Consolidate duplicate source references into single canonical entry with comprehensive notes. | Verify whether duplicate URLs represent distinct endpoints or accidental redundant curation entries. |
 | `fmow` | `computer-vision` | Consolidate duplicate source references into single canonical entry with comprehensive notes. | Verify whether duplicate URLs represent distinct endpoints or accidental redundant curation entries. |
-| `iris` | `tabular-time-series` | Consolidate duplicate source references into single canonical entry with comprehensive notes. | Verify whether duplicate URLs represent distinct endpoints or accidental redundant curation entries. |
 | `mit-bih-atrial-fibrillation` | `tabular-time-series` | Consolidate duplicate source references into single canonical entry with comprehensive notes. | Verify whether duplicate URLs represent distinct endpoints or accidental redundant curation entries. |
 | `mit-bih-noise-stress-test` | `tabular-time-series` | Consolidate duplicate source references into single canonical entry with comprehensive notes. | Verify whether duplicate URLs represent distinct endpoints or accidental redundant curation entries. |
 

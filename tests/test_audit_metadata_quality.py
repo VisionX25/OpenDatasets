@@ -600,7 +600,7 @@ def test_duplicate_reference_semantics():
     from pathlib import Path
 
     catalog_dir = Path("data/datasets")
-    dup_ids = ["cebs-database", "fmow", "iris", "mit-bih-atrial-fibrillation", "mit-bih-noise-stress-test"]
+    dup_ids = ["cebs-database", "fmow", "mit-bih-atrial-fibrillation", "mit-bih-noise-stress-test"]
     
     for did in dup_ids:
         p = catalog_dir / f"{did}.json"
@@ -609,15 +609,17 @@ def test_duplicate_reference_semantics():
         res = evaluate_scientific_consistency(d)
         assert "duplicate_source_reference_urls" in res["flags"], f"{did} should be flagged for duplicate URL reuse"
 
-    # Specific semantic checks for Iris
+    # Iris has distinct dataset and original-paper URLs after Task 41 correction.
     iris_data = json.loads((catalog_dir / "iris.json").read_text())
+    iris_flags = evaluate_scientific_consistency(iris_data)["flags"]
+    assert "duplicate_source_reference_urls" not in iris_flags
     assert iris_data["citation"]["paper_title"] == "The Use of Multiple Measurements in Taxonomic Problems"
     assert "R. A. Fisher" in iris_data["citation"]["authors"]
     assert iris_data["citation"]["doi"] == "10.1111/j.1469-1809.1936.tb02137.x"
-    assert iris_data["citation"]["paper_url"] == "https://archive.ics.uci.edu/dataset/53/iris"
+    assert iris_data["citation"]["paper_url"] == "https://doi.org/10.1111/j.1469-1809.1936.tb02137.x"
     # Source references retain the UCI repository URL
     urls = [r["url"] for r in iris_data["source_references"]]
-    assert urls == ["https://archive.ics.uci.edu/dataset/53/iris", "https://archive.ics.uci.edu/dataset/53/iris"]
+    assert urls == ["https://archive.ics.uci.edu/dataset/53/iris", "https://doi.org/10.1111/j.1469-1809.1936.tb02137.x"]
 
 
 def test_readiness_tier_counts_reconciliation():
