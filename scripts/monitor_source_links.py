@@ -1344,6 +1344,34 @@ def sync_branch_push(state_branch: str, state_file: Path, repo_root: Path, max_r
                 text=True,
             ).strip()
 
+            # Verify and ensure valid Git author and committer identities for commit-tree
+            commit_env = os.environ.copy()
+            author_name = commit_env.get("GIT_AUTHOR_NAME")
+            author_email = commit_env.get("GIT_AUTHOR_EMAIL")
+
+            if not author_name or not author_email:
+                name_proc = subprocess.run(["git", "config", "user.name"], cwd=repo_root, capture_output=True, text=True)
+                email_proc = subprocess.run(["git", "config", "user.email"], cwd=repo_root, capture_output=True, text=True)
+                cfg_name = name_proc.stdout.strip() if name_proc.returncode == 0 else ""
+                cfg_email = email_proc.stdout.strip() if email_proc.returncode == 0 else ""
+                author_name = author_name or cfg_name
+                author_email = author_email or cfg_email
+
+            if not author_name or not author_email:
+                err_msg = (
+                    f"Git identity missing (user.name='{author_name}', user.email='{author_email}'). "
+                    "Configure git identity via 'git config --local user.name ...' and 'git config --local user.email ...' "
+                    "or set GIT_AUTHOR_NAME and GIT_AUTHOR_EMAIL environment variables before persisting state."
+                )
+                logging.error("%s", err_msg)
+                raise RuntimeError(err_msg)
+
+            # Explicitly set environment to guarantee commit-tree receives valid identities
+            commit_env["GIT_AUTHOR_NAME"] = author_name
+            commit_env["GIT_AUTHOR_EMAIL"] = author_email
+            commit_env["GIT_COMMITTER_NAME"] = commit_env.get("GIT_COMMITTER_NAME") or author_name
+            commit_env["GIT_COMMITTER_EMAIL"] = commit_env.get("GIT_COMMITTER_EMAIL") or author_email
+
             commit_args = ["git", "commit-tree", tree_hash, "-m", "chore(monitoring): update source-link state [skip ci]"]
             if parent_commit:
                 commit_args.extend(["-p", parent_commit])
@@ -1351,6 +1379,7 @@ def sync_branch_push(state_branch: str, state_file: Path, repo_root: Path, max_r
             commit_hash = subprocess.check_output(
                 commit_args,
                 cwd=repo_root,
+                env=commit_env,
                 text=True,
             ).strip()
 
@@ -1379,6 +1408,10 @@ def sync_branch_push(state_branch: str, state_file: Path, repo_root: Path, max_r
 
             logging.warning("Push to '%s' rejected (attempt %d/%d): %s", state_branch, attempt, max_retries, stderr)
             time.sleep(1.0 * attempt)
+        except RuntimeError as r_err:
+            logging.error("Failed to commit state to branch '%s': %s", state_branch, r_err)
+            print(f"::error::{r_err}", file=sys.stderr)
+            raise
         except Exception as exc:
             logging.warning("Error pushing state to branch '%s' (attempt %d/%d): %s", state_branch, attempt, max_retries, exc)
             time.sleep(1.0 * attempt)
