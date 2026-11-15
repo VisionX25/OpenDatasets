@@ -26,6 +26,7 @@ import argparse
 import csv
 import datetime
 import http.client
+import ipaddress
 import json
 import logging
 import os
@@ -120,6 +121,129 @@ class NoRedirectHandler(urllib.request.HTTPRedirectHandler):
         return None
 
 
+class SSRFSecurityError(OSError):
+    """Raised when an outbound connection attempts to reach a loopback, private, link-local, or restricted address."""
+    pass
+
+
+RESTRICTED_HOSTNAMES = {
+    "localhost",
+    "metadata.google.internal",
+    "instance-data",
+    "metadata.azure.com",
+    "169.254.169.254",
+}
+
+
+def is_ip_restricted(ip_str: str) -> tuple[bool, str]:
+    """Check if an IP string is private, loopback, link-local, cloud metadata, or reserved."""
+    try:
+        ip = ipaddress.ip_address(ip_str)
+        if (
+            ip.is_private
+            or ip.is_loopback
+            or ip.is_link_local
+            or ip.is_reserved
+            or ip.is_multicast
+            or ip.is_unspecified
+        ):
+            return True, f"Restricted IP address: {ip_str}"
+        return False, ""
+    except ValueError:
+        return True, f"Invalid IP address format: {ip_str}"
+
+
+def create_safe_connection(
+    address: tuple[str, int],
+    timeout: float = socket._GLOBAL_DEFAULT_TIMEOUT,
+    source_address: tuple[str, int] | None = None,
+) -> socket.socket:
+    """Create a TCP socket connection while validating target IP at connection time.
+
+    Mitigates DNS rebinding / TOCTOU vulnerabilities by resolving DNS at socket creation time
+    and verifying the destination IP before initiating TCP handshake (connect).
+    """
+    host, port = address
+    host_clean = host.lower().strip(".")
+    if host_clean in RESTRICTED_HOSTNAMES or host_clean.endswith(".localhost"):
+        raise SSRFSecurityError(f"Connection blocked: host '{host}' is restricted")
+
+    try:
+        addr_infos = socket.getaddrinfo(host, port, 0, socket.SOCK_STREAM)
+    except socket.gaierror as exc:
+        raise OSError(f"DNS resolution failed for '{host}': {exc}") from exc
+
+    if not addr_infos:
+        raise OSError(f"DNS returned no addresses for '{host}'")
+
+    err = None
+    for res in addr_infos:
+        af, socktype, proto, canonname, sa = res
+        sock_ip = sa[0]
+        if sock_ip in RESTRICTED_HOSTNAMES:
+            raise SSRFSecurityError(f"Connection blocked: host '{host}' resolved to restricted IP {sock_ip}")
+
+        is_restr, reason = is_ip_restricted(sock_ip)
+        if is_restr:
+            raise SSRFSecurityError(f"Connection blocked: host '{host}' resolved to {reason}")
+
+        sock = None
+        try:
+            sock = socket.socket(af, socktype, proto)
+            if timeout is not socket._GLOBAL_DEFAULT_TIMEOUT:
+                sock.settimeout(timeout)
+            if source_address:
+                sock.bind(source_address)
+            sock.connect(sa)
+            return sock
+        except Exception as exc:
+            err = exc
+            if sock is not None:
+                sock.close()
+
+    if err is not None:
+        raise err
+    raise OSError(f"Could not connect to any address for '{host}'")
+
+
+class SafeHTTPConnection(http.client.HTTPConnection):
+    def __init__(self, *args: Any, **kwargs: Any):
+        super().__init__(*args, **kwargs)
+        self._create_connection = create_safe_connection
+
+
+class SafeHTTPSConnection(http.client.HTTPSConnection):
+    def __init__(self, *args: Any, **kwargs: Any):
+        super().__init__(*args, **kwargs)
+        self._create_connection = create_safe_connection
+
+
+class SafeHTTPHandler(urllib.request.HTTPHandler):
+    def http_open(self, req: urllib.request.Request) -> http.client.HTTPResponse:
+        return self.do_open(SafeHTTPConnection, req)
+
+
+class SafeHTTPSHandler(urllib.request.HTTPSHandler):
+    def https_open(self, req: urllib.request.Request) -> http.client.HTTPResponse:
+        return self.do_open(SafeHTTPSConnection, req)
+
+
+def build_safe_opener(
+    ssl_context: ssl.SSLContext | None = None,
+    trust_env_proxy: bool = False,
+) -> urllib.request.OpenerDirector:
+    """Build an OpenerDirector with NoRedirectHandler, connection-time IP validation, and proxy control."""
+    handlers: list[Any] = [NoRedirectHandler, SafeHTTPHandler]
+    if not trust_env_proxy:
+        # Enforce direct connection; prevent ambient proxy hijacking of connection-time IP validation
+        handlers.append(urllib.request.ProxyHandler({}))
+    if ssl_context is not None:
+        handlers.append(SafeHTTPSHandler(context=ssl_context))
+    else:
+        handlers.append(SafeHTTPSHandler)
+    return urllib.request.build_opener(*handlers)
+
+
 def extract_dataset_urls(data_dir: Path, dataset_filter: set[str] | None = None) -> list[URLReference]:
     """Scan dataset JSON files and extract all URL references."""
     references: list[URLReference] = []
@@ -193,6 +317,7 @@ def check_single_url(
     retries: int = DEFAULT_RETRIES,
     offline: bool = False,
     ssl_context: ssl.SSLContext | None = None,
+    opener: urllib.request.OpenerDirector | None = None,
 ) -> CheckResult:
     """Check the health of a single URL using HEAD followed by streaming GET fallback.
 
@@ -218,6 +343,7 @@ def check_single_url(
 
     last_error: Exception | None = None
     start_time = time.monotonic()
+    active_opener = opener if opener is not None else urllib.request.build_opener(NoRedirectHandler)
 
     for attempt in range(retries + 1):
         if attempt > 0:
@@ -233,10 +359,8 @@ def check_single_url(
             method="HEAD",
         )
 
-        opener = urllib.request.build_opener(NoRedirectHandler)
-
         try:
-            with opener.open(req, timeout=timeout) as response:
+            with active_opener.open(req, timeout=timeout) as response:
                 elapsed_ms = int((time.monotonic() - start_time) * 1000)
                 code = getattr(response, "status", getattr(response, "code", 200))
                 classification = classify_http_status(code)
@@ -271,7 +395,7 @@ def check_single_url(
             # 405 Method Not Allowed, 501 Not Implemented, or 403 Forbidden on HEAD:
             # Many servers/WAFs reject HEAD requests or require GET. Fall back to minimal streaming GET.
             if code in (400, 403, 405, 501):
-                return _check_streaming_get(url, timeout, user_agent, start_time, opener)
+                return _check_streaming_get(url, timeout, user_agent, start_time, active_opener)
 
             classification = classify_http_status(code)
             return CheckResult(
@@ -282,9 +406,18 @@ def check_single_url(
                 elapsed_ms=elapsed_ms,
             )
 
-        except urllib.error.URLError as url_err:
+        except (SSRFSecurityError, urllib.error.URLError) as url_err:
             last_error = url_err
-            reason = getattr(url_err, "reason", None)
+            reason = getattr(url_err, "reason", url_err)
+
+            if isinstance(url_err, SSRFSecurityError) or isinstance(reason, SSRFSecurityError):
+                elapsed_ms = int((time.monotonic() - start_time) * 1000)
+                return CheckResult(
+                    url=url,
+                    classification=CLASSIFICATION_FORBIDDEN,
+                    error_message=f"SSRF protection blocked target: {reason}",
+                    elapsed_ms=elapsed_ms,
+                )
 
             if isinstance(reason, socket.timeout) or "timed out" in str(url_err).lower():
                 continue  # Retry on timeout
@@ -392,6 +525,22 @@ def _check_streaming_get(
             classification=classification,
             status_code=code,
             error_message=str(http_err),
+            elapsed_ms=elapsed_ms,
+        )
+    except (SSRFSecurityError, urllib.error.URLError) as url_err:
+        elapsed_ms = int((time.monotonic() - start_time) * 1000)
+        reason = getattr(url_err, "reason", url_err)
+        if isinstance(url_err, SSRFSecurityError) or isinstance(reason, SSRFSecurityError):
+            return CheckResult(
+                url=url,
+                classification=CLASSIFICATION_FORBIDDEN,
+                error_message=f"SSRF protection blocked target: {reason}",
+                elapsed_ms=elapsed_ms,
+            )
+        return CheckResult(
+            url=url,
+            classification=CLASSIFICATION_INCONCLUSIVE,
+            error_message=f"GET fallback failed: {url_err}",
             elapsed_ms=elapsed_ms,
         )
     except Exception as exc:
