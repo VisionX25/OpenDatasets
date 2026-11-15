@@ -111,7 +111,7 @@ To prevent silent data loss or history destruction:
   "updated_at": "2026-11-15T03:00:00Z",
   "current_cycle": 1,
   "total_catalog_urls": 1832,
-  "batch_size_last_run": 100,
+  "batch_size_last_run": 50,
   "history": {
     "https://doi.org/10.1000/182": {
       "url": "https://doi.org/10.1000/182",
@@ -225,11 +225,18 @@ To prevent overwhelming academic repositories or triggering denial-of-service pr
 All manual inputs in `.github/workflows/source-link-monitor.yml` are passed exclusively via environment variables (`INPUT_BATCH_SIZE`, `INPUT_MAX_RUNTIME`, `INPUT_OFFLINE`, `INPUT_DRY_RUN`, `INPUT_RESET_STATE`), completely eliminating shell expansion or command injection vulnerabilities.
 
 ### Input Bounds & Validation
-* `batch_size`: Validated integer between `1` and `250` (default `100`).
+* `batch_size`: Validated integer between `1` and `250` (default `50` URLs per run).
 * `max_runtime`: Validated positive float between `10` and `1800` seconds (default `600`).
 * `offline`: Boolean flag (`true`/`false`).
 * `dry_run`: Boolean flag (`true`/`false`).
 * `reset_state`: Boolean flag (`true`/`false`).
+
+### Rotation Cadence & Batch Sizing
+The scheduled weekly monitor defaults to a conservative **50 URLs per batch** to minimize external domain load and stay well below runner timeouts. With 1,832 unique catalog URLs, a full rotation cycle completes in approximately 37 weekly runs (~8.5 months).
+
+### State Retrieval Failure Safety Invariants
+1. **Genuine Missing Branch:** When the `monitoring-state` branch does not exist on origin (`git ls-remote` returns empty), the workflow treats this strictly as first-time initialization and creates fresh state upon execution.
+2. **Explicit Failure on Errors:** Git network failures, authentication/permission denials, fetch failures, corrupted state without backup, and unsupported schema versions raise explicit errors and halt the workflow. Under no circumstances is existing state silently reset on transient or unrecoverable errors.
 
 ### Manual Workflow Dispatch
 Maintainers can trigger runs via GitHub Actions UI with custom settings:
@@ -245,6 +252,6 @@ Maintainers can verify the reliability and fairness of the rotation algorithm lo
 
 ```bash
 # Run 25-cycle offline simulation across 1,832 synthetic URLs
-python3 scripts/simulate_monitoring.py --cycles 25 --catalog-size 1832 --batch-size 100
+python3 scripts/simulate_monitoring.py --cycles 25 --catalog-size 1832 --batch-size 50
 ```
 This utility simulates catalog URL additions, deletions, runtime cutoffs, state corruptions, and git conflict retries, reporting 100% coverage and zero starvation.
