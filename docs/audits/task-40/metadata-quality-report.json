@@ -132,7 +132,7 @@
       "heterogeneous_splits_structure": 115,
       "split_unit_or_hierarchy_mismatch": 2,
       "vague_sample_unit": 8,
-      "duplicate_source_reference_urls": 5,
+      "duplicate_source_reference_urls": 4,
       "partition_split_count_mismatch": 11,
       "multi_task_or_overlapping_splits": 2,
       "benchmark_subset_partition": 2
@@ -142,7 +142,7 @@
     "multi_task_or_overlapping_splits_count": 2,
     "split_unit_or_hierarchy_mismatches_count": 2,
     "heterogeneous_splits_structure_count": 115,
-    "duplicate_source_reference_urls_count": 5
+    "duplicate_source_reference_urls_count": 4
   },
   "research_readiness_summary": {
     "tier_distribution": {
@@ -670,13 +670,6 @@
         "id": "fmow",
         "name": "Functional Map of the World (fMoW)",
         "category": "computer-vision",
-        "recommended_action": "Consolidate duplicate source references into single canonical entry with comprehensive notes.",
-        "evidence_requirement": "Verify whether duplicate URLs represent distinct endpoints or accidental redundant curation entries."
-      },
-      {
-        "id": "iris",
-        "name": "Iris Plants Database",
-        "category": "tabular-time-series",
         "recommended_action": "Consolidate duplicate source references into single canonical entry with comprehensive notes.",
         "evidence_requirement": "Verify whether duplicate URLs represent distinct endpoints or accidental redundant curation entries."
       },
@@ -4249,12 +4242,10 @@
       "commercial_use": "allowed",
       "access": "open",
       "flags": [
-        "duplicate_source_reference_urls",
         "heterogeneous_splits_structure"
       ],
       "issues": [
-        "Splits contain non-partition entities (e.g. ['total']) alongside or instead of sample splits",
-        "Duplicate source reference URLs found: ['https://archive.ics.uci.edu/dataset/53/iris']"
+        "Splits contain non-partition entities (e.g. ['total']) alongside or instead of sample splits"
       ]
     },
     {
