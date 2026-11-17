@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "checksent-bn",
+  "slug": "checksent-bn",
+  "name": "CheckSent-BN: Bengali Multi-Task Dataset for Claim Checkworthiness and Sentiment Classification",
+  "description": "CheckSent-BN is a multi-task dataset of 11,500 Bengali news headlines annotated for claim checkworthiness detection and sentiment analysis. Introduced at BLP-2025, the dataset addresses fact-checking and automated content verification in Bengali media through combined LLM-annotation and native-speaker human verification.",
+  "homepage_url": "https://github.com/pritampal98/check-sent-bn",
+  "publisher": {
+    "name": "CheckSent-BN Research Team",
+    "type": "academic",
+    "url": "https://github.com/pritampal98/check-sent-bn"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "sentiment-analysis"
+  ],
+  "tags": [
+    "bengali",
+    "bangla",
+    "fact-checking",
+    "checkworthiness",
+    "sentiment-analysis",
+    "news"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source",
+    "commercial_use": "unknown",
+    "notes": "Repository provides open academic access to headlines and labels without an explicit standalone license file."
+  },
+  "source_references": [
+    {
+      "title": "CheckSent-BN Official GitHub Repository",
+      "url": "https://github.com/pritampal98/check-sent-bn",
+      "type": "repository",
+      "notes": "Official repository containing the 11.5k annotated headline corpus and baseline scripts."
+    },
+    {
+      "title": "CheckSent-BN Research Publication",
+      "url": "https://aclanthology.org/2025.banglalp-1.10/",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against GitHub repository and ACL Anthology BLP-2025 publication."
+  },
+  "sample_count": {
+    "total": 11500,
+    "unit": "headlines",
+    "status": "verified"
+  },
+  "languages": [
+    "ben"
+  ],
+  "dates": {
+    "published": "2025-12"
+  },
+  "citation": {
+    "paper_title": "CheckSent-BN: A Bengali Multi-Task Dataset for Claim Checkworthiness and Sentiment Classification from News Headlines",
+    "paper_url": "https://aclanthology.org/2025.banglalp-1.10/",
+    "authors": [
+      "Pritam Pal",
+      "Md. Arid Hasan",
+      "Fahim Shahriar",
+      "Md. Saiful Islam"
+    ],
+    "bibtex": "@inproceedings{pal2025checksentbn,\n  title={CheckSent-BN: A Bengali Multi-Task Dataset for Claim Checkworthiness and Sentiment Classification from News Headlines},\n  author={Pal, Pritam and Hasan, Md. Arid and Shahriar, Fahim and Islam, Md. Saiful},\n  booktitle={Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)},\n  year={2025}\n}"
+  }
+}

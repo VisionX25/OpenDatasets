@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "id": "physionet-cinc-2020",
+  "slug": "physionet-cinc-2020",
+  "name": "PhysioNet/CinC Challenge 2020: Classification of 12-lead ECGs",
+  "description": "PhysioNet/Computing in Cardiology (CinC) Challenge 2020 is a multi-center electrocardiogram benchmark comprising 43,101 12-lead clinical ECG recordings aggregated from 6 diverse hospital and clinical sources worldwide. Recordings are annotated with SNOMED-CT clinical diagnostic codes to advance automated detection of cardiac arrhythmias and heart conditions.",
+  "homepage_url": "https://physionet.org/content/challenge-2020/1.0.2/",
+  "publisher": {
+    "name": "PhysioNet (MIT LCP) & Computing in Cardiology",
+    "type": "academic",
+    "url": "https://physionet.org/"
+  },
+  "modalities": [
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "ecg-classification",
+    "arrhythmia-detection"
+  ],
+  "tags": [
+    "ecg",
+    "cardiology",
+    "arrhythmia",
+    "12-lead-ecg",
+    "physionet",
+    "clinical",
+    "sensor"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset records distributed on PhysioNet under CC BY 4.0 Public License."
+  },
+  "source_references": [
+    {
+      "title": "PhysioNet Challenge 2020 Record",
+      "url": "https://physionet.org/content/challenge-2020/1.0.2/",
+      "type": "official_website",
+      "notes": "Official PhysioNet repository with 12-lead waveform records and header annotations."
+    },
+    {
+      "title": "PhysioNet CinC 2020 Publication",
+      "url": "https://doi.org/10.22489/CinC.2020.236",
+      "type": "original_paper",
+      "notes": "Published in Computing in Cardiology (CinC 2020), volume 47."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against PhysioNet official archive and CinC 2020 publication."
+  },
+  "sample_count": {
+    "total": 43101,
+    "unit": "12-lead ECG recordings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-09-16"
+  },
+  "citation": {
+    "paper_title": "Classification of 12-lead ECGs: the PhysioNet/Computing in Cardiology Challenge 2020",
+    "paper_url": "https://doi.org/10.22489/CinC.2020.236",
+    "doi": "10.22489/CinC.2020.236",
+    "authors": [
+      "Matthew A. Reyna",
+      "Erick Andres Perez Alday",
+      "Annie Gu",
+      "Chengyu Liu",
+      "Salman Seyedi",
+      "Ali Bahrami Rad",
+      "Andoni Elola",
+      "Qiao Li",
+      "Amit Sharma",
+      "Gari D. Clifford"
+    ],
+    "bibtex": "@inproceedings{reyna2020classification,\n  title={Classification of 12-lead ECGs: the PhysioNet/Computing in Cardiology Challenge 2020},\n  author={Reyna, Matthew A. and Perez Alday, Erick Andres and Gu, Annie and Liu, Chengyu and Seyedi, Salman and Bahrami Rad, Ali and Elola, Andoni and Li, Qiao and Sharma, Amit and Clifford, Gari D.},\n  booktitle={2020 Computing in Cardiology},\n  volume={47},\n  year={2020},\n  doi={10.22489/CinC.2020.236}\n}"
+  }
+}

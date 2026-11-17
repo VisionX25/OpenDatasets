@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "voxceleb1",
+  "slug": "voxceleb1",
+  "name": "VoxCeleb1: Large-Scale Speaker Identification Dataset",
+  "description": "VoxCeleb1 is a large-scale audio-visual dataset containing over 100,000 utterances for 1,251 celebrities, extracted from videos uploaded to YouTube. Introduced at Interspeech 2017 by Oxford's Visual Geometry Group, the dataset spans diverse acoustic environments, accents, and recording conditions, serving as a landmark global benchmark for speaker identification, speaker verification, and emotion recognition.",
+  "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/voxceleb/",
+  "publisher": {
+    "name": "Visual Geometry Group, University of Oxford",
+    "type": "academic",
+    "url": "https://www.robots.ox.ac.uk/~vgg/"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speaker-identification",
+    "speaker-verification"
+  ],
+  "tags": [
+    "speaker-recognition",
+    "speaker-verification",
+    "audio",
+    "voice",
+    "speech",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution 4.0 International (Annotations Only)",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "unknown",
+    "notes": "Metadata and annotations are licensed under CC BY 4.0 for research use. Oxford VGG explicitly notes that copyright for original and cropped video/audio extracts remains with the original YouTube uploaders."
+  },
+  "source_references": [
+    {
+      "title": "VoxCeleb Official Project Page",
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/voxceleb/",
+      "type": "official_website",
+      "notes": "Official Oxford VGG portal with dataset downloads and evaluation protocols."
+    },
+    {
+      "title": "VoxCeleb Original Publication",
+      "url": "https://doi.org/10.21437/Interspeech.2017-950",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of Interspeech 2017, pages 2616-2620."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against Oxford VGG documentation and Interspeech 2017 publication."
+  },
+  "sample_count": {
+    "total": 153516,
+    "unit": "utterances",
+    "status": "verified"
+  },
+  "languages": [
+    "eng"
+  ],
+  "dates": {
+    "published": "2017-08-20"
+  },
+  "citation": {
+    "paper_title": "VoxCeleb: a large-scale speaker identification dataset",
+    "paper_url": "https://doi.org/10.21437/Interspeech.2017-950",
+    "doi": "10.21437/Interspeech.2017-950",
+    "authors": [
+      "Arsha Nagrani",
+      "Joon Son Chung",
+      "Andrew Zisserman"
+    ],
+    "bibtex": "@inproceedings{nagrani2017voxceleb,\n  title={VoxCeleb: a large-scale speaker identification dataset},\n  author={Nagrani, Arsha and Chung, Joon Son and Zisserman, Andrew},\n  booktitle={Interspeech 2017},\n  pages={2616--2620},\n  year={2017},\n  doi={10.21437/Interspeech.2017-950}\n}"
+  }
+}

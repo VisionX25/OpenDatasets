@@ -520,3 +520,113 @@ def test_task_20a_noaa_dataset_version_and_doi_accuracy() -> None:
     with open(gsod_file, "r", encoding="utf-8") as f:
         gsod = json.load(f)
     assert "Integrated Surface Database (ISD)" in gsod.get("provenance", {}).get("data_sources", [])
+
+
+def test_task_42b_fix_citation_doi_and_url_accuracy() -> None:
+    """Regression test: verify corrected publication DOIs, citations, and repository URLs for Task 42B-Fix."""
+    data_dir = DEFAULT_DATA_DIR
+
+    checks = [
+        {
+            "filename": "clotho.json",
+            "expected_doi": "10.1109/ICASSP40776.2020.9052990",
+            "forbidden_doi": "10.1109/ICASSP40776.2020.9053589",
+            "required_str": "audio-captioning/clotho-dataset",
+            "forbidden_str": "dr-costas/clotho-dataset",
+        },
+        {
+            "filename": "gqa.json",
+            "expected_doi": "10.1109/CVPR.2019.00686",
+            "forbidden_doi": "10.1109/CVPR.2019.00684",
+            "required_str": "10.1109/CVPR.2019.00686",
+            "forbidden_str": "10.1109/CVPR.2019.00684",
+        },
+        {
+            "filename": "fluent-speech-commands.json",
+            "expected_doi": "10.21437/Interspeech.2019-2396",
+            "forbidden_doi": "10.21437/Interspeech.2019-1433",
+            "required_str": "10.21437/Interspeech.2019-2396",
+            "forbidden_str": "10.21437/Interspeech.2019-1433",
+        },
+        {
+            "filename": "mmbench.json",
+            "expected_doi": "10.1007/978-3-031-72658-3_13",
+            "forbidden_doi": "10.1007/978-3-031-72949-2_14",
+            "required_str": "10.1007/978-3-031-72658-3_13",
+            "forbidden_str": "10.1007/978-3-031-72949-2_14",
+        },
+        {
+            "filename": "msp-podcast.json",
+            "expected_doi": "10.1109/TAFFC.2017.2736999",
+            "forbidden_doi": "10.1109/TAFFC.2017.2737989",
+            "required_str": "Building Naturalistic Emotionally Balanced Speech Corpus",
+            "forbidden_str": "10.1109/TAFFC.2017.2737989",
+        },
+        {
+            "filename": "covost-2.json",
+            "expected_doi": "10.21437/Interspeech.2021-2027",
+            "forbidden_doi": "10.21437/Interspeech.2020-2244",
+            "required_str": "2021-08-30",
+            "forbidden_str": "10.21437/Interspeech.2020-2244",
+        },
+        {
+            "filename": "refcoco.json",
+            "expected_doi": "10.1007/978-3-319-46475-6_5",
+            "forbidden_doi": "10.1007/978-3-319-46478-7_5",
+            "required_str": "10.1007/978-3-319-46475-6_5",
+            "forbidden_str": "10.1007/978-3-319-46478-7_5",
+        },
+        {
+            "filename": "physionet-cinc-2020.json",
+            "expected_doi": "10.22489/CinC.2020.236",
+            "forbidden_doi": "10.22489/CinC.2020.378",
+            "required_str": "Matthew A. Reyna",
+            "forbidden_str": "10.22489/CinC.2020.378",
+        },
+        {
+            "filename": "tau-urban-acoustic-scenes-2020.json",
+            "expected_doi": "10.5281/zenodo.3819968",
+            "forbidden_doi": "10.5281/zenodo.3819959",
+            "required_str": "zenodo.org/records/3819968",
+            "forbidden_str": "3819959",
+        },
+        {
+            "filename": "wisdm.json",
+            "expected_doi": "10.1109/ACCESS.2019.2940729",
+            "forbidden_doi": "10.1109/ACCESS.2019.2942718",
+            "required_str": "10.1109/ACCESS.2019.2940729",
+            "forbidden_str": "10.1109/ACCESS.2019.2942718",
+        },
+        {
+            "filename": "bangla-sgp.json",
+            "expected_doi": None,
+            "forbidden_doi": None,
+            "required_str": "https://github.com/SharifMAbdullah/breaking-the-silence",
+            "forbidden_str": "abdul1326/Bangla-SGP",
+        },
+    ]
+
+    for item in checks:
+        file_path = data_dir / item["filename"]
+        assert file_path.exists(), f"Missing dataset file: {item['filename']}"
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        data_str = json.dumps(data)
+
+        if item["expected_doi"]:
+            assert data.get("citation", {}).get("doi") == item["expected_doi"], (
+                f"{item['filename']} citation DOI mismatch: expected {item['expected_doi']}, "
+                f"got {data.get('citation', {}).get('doi')}"
+            )
+        if item["forbidden_doi"]:
+            assert item["forbidden_doi"] not in data_str, (
+                f"{item['filename']} contains forbidden incorrect DOI: {item['forbidden_doi']}"
+            )
+        if item["required_str"]:
+            assert item["required_str"] in data_str, (
+                f"{item['filename']} missing required string: {item['required_str']}"
+            )
+        if item["forbidden_str"]:
+            assert item["forbidden_str"] not in data_str, (
+                f"{item['filename']} contains forbidden string: {item['forbidden_str']}"
+            )

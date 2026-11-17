@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bluck",
+  "slug": "bluck",
+  "name": "BLUCK: A Benchmark Dataset for Bengali Linguistic Understanding and Cultural Knowledge",
+  "description": "BLUCK is a comprehensive benchmark dataset designed to evaluate language models on Bengali linguistic understanding, cultural knowledge, history, phonetics, and semantics. Developed by researchers at KAIST and published at BLP-2025, it comprises 2,366 multiple-choice questions across 23 subcategories that capture regional cultural heritage and linguistic nuances.",
+  "homepage_url": "https://github.com/minhaj1403/bluck",
+  "publisher": {
+    "name": "KAIST (Korea Advanced Institute of Science and Technology)",
+    "type": "academic",
+    "url": "https://github.com/minhaj1403/bluck"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "language-understanding"
+  ],
+  "tags": [
+    "bengali",
+    "bangla",
+    "benchmark",
+    "cultural-knowledge",
+    "evaluation",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset distributed under CC BY-SA 4.0 as documented in the arXiv preprint and repository."
+  },
+  "source_references": [
+    {
+      "title": "BLUCK Official GitHub Repository",
+      "url": "https://github.com/minhaj1403/bluck",
+      "type": "repository",
+      "notes": "Official repository containing question sets, category divisions, and evaluation code."
+    },
+    {
+      "title": "BLUCK Research Publication",
+      "url": "https://arxiv.org/abs/2505.21092",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against KAIST research repository and BLP-2025 / arXiv:2505.21092 publication."
+  },
+  "sample_count": {
+    "total": 2366,
+    "unit": "multiple-choice questions",
+    "status": "verified"
+  },
+  "languages": [
+    "ben"
+  ],
+  "dates": {
+    "published": "2025-05-27"
+  },
+  "citation": {
+    "paper_title": "BLUCK: A Benchmark Dataset for Bengali Linguistic Understanding and Cultural Knowledge",
+    "paper_url": "https://arxiv.org/abs/2505.21092",
+    "authors": [
+      "Daeen Kabir",
+      "Minhajur Rahman Chowdhury Mahim",
+      "Sheikh Shafayat",
+      "Adnan Sadik",
+      "Arian Ahmed",
+      "Eunsu Kim",
+      "Alice Oh"
+    ],
+    "bibtex": "@inproceedings{kabir2025bluck,\n  title={BLUCK: A Benchmark Dataset for Bengali Linguistic Understanding and Cultural Knowledge},\n  author={Kabir, Daeen and Mahim, Minhajur Rahman Chowdhury and Shafayat, Sheikh and Sadik, Adnan and Ahmed, Arian and Kim, Eunsu and Oh, Alice},\n  booktitle={Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)},\n  year={2025}\n}"
+  },
+  "provenance": {
+    "collection_method": "Curated by native speakers across four primary domains (Culture, History, Phonetics, Semantics) spanning 23 subcategories.",
+    "curation_notes": "Expert-verified multiple-choice questions designed to mitigate English-centric bias in LLM evaluation."
+  }
+}

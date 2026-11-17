@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gqa",
+  "slug": "gqa",
+  "name": "GQA: Visual Reasoning and Compositional Question Answering",
+  "description": "GQA is a visual reasoning benchmark containing compositional question-answering pairs grounded in dense scene graphs over 113,018 real-world images from Visual Genome. Developed by Stanford University and presented at CVPR 2019, the balanced release features 1,721,561 questions with reduced linguistic and prior biases to measure relational and multi-step visual reasoning.",
+  "homepage_url": "https://cs.stanford.edu/people/dorarad/gqa/",
+  "publisher": {
+    "name": "Stanford University",
+    "type": "academic",
+    "url": "https://cs.stanford.edu/people/dorarad/gqa/"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "visual-reasoning"
+  ],
+  "tags": [
+    "visual-question-answering",
+    "scene-graphs",
+    "visual-reasoning",
+    "compositional-reasoning",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "GQA question annotations, scene graphs, and functional programs are released under CC BY 4.0; underlying images originate from Visual Genome."
+  },
+  "source_references": [
+    {
+      "title": "GQA Official Stanford Portal",
+      "url": "https://cs.stanford.edu/people/dorarad/gqa/",
+      "type": "official_website",
+      "notes": "Official Stanford research homepage with downloads and evaluation specifications."
+    },
+    {
+      "title": "GQA CVPR Publication",
+      "url": "https://doi.org/10.1109/CVPR.2019.00686",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of IEEE/CVF CVPR 2019, pages 6700-6709."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against Stanford research portal and CVPR 2019 publication."
+  },
+  "sample_count": {
+    "total": 1721561,
+    "unit": "question-answer pairs",
+    "status": "verified"
+  },
+  "languages": [
+    "eng"
+  ],
+  "dates": {
+    "published": "2019-06-16"
+  },
+  "citation": {
+    "paper_title": "GQA: A New Dataset for Real-World Visual Reasoning and Compositional Question Answering",
+    "paper_url": "https://doi.org/10.1109/CVPR.2019.00686",
+    "doi": "10.1109/CVPR.2019.00686",
+    "authors": [
+      "Drew A. Hudson",
+      "Christopher D. Manning"
+    ],
+    "bibtex": "@inproceedings{hudson2019gqa,\n  title={GQA: A New Dataset for Real-World Visual Reasoning and Compositional Question Answering},\n  author={Hudson, Drew A. and Manning, Christopher D.},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={6700--6709},\n  year={2019},\n  doi={10.1109/CVPR.2019.00686}\n}"
+  }
+}

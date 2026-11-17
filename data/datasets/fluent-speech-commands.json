@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fluent-speech-commands",
+  "slug": "fluent-speech-commands",
+  "name": "Fluent Speech Commands: Spoken Language Understanding Dataset",
+  "description": "Fluent Speech Commands is an audio spoken language understanding benchmark comprising 30,043 English utterances spoken by 97 native and non-native speakers. Published at Interspeech 2019 by Fluent.ai, each voice command is recorded at 16 kHz and annotated with three slot arguments: action, object, and location.",
+  "homepage_url": "https://fluent.ai/fluent-speech-commands-a-dataset-for-spoken-language-understanding-research/",
+  "publisher": {
+    "name": "Fluent.ai",
+    "type": "industry",
+    "url": "https://fluent.ai/"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "spoken-language-understanding",
+    "intent-classification"
+  ],
+  "tags": [
+    "spoken-language-understanding",
+    "intent-classification",
+    "voice-assistant",
+    "speech",
+    "smart-home",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
+    "spdx_id": "CC-BY-NC-ND-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Fluent.ai distributes the dataset for non-commercial research under CC BY-NC-ND 4.0."
+  },
+  "source_references": [
+    {
+      "title": "Fluent Speech Commands Official Overview",
+      "url": "https://fluent.ai/fluent-speech-commands-a-dataset-for-spoken-language-understanding-research/",
+      "type": "official_website",
+      "notes": "Official Fluent.ai research portal documenting the dataset."
+    },
+    {
+      "title": "Fluent Speech Commands Interspeech Publication",
+      "url": "https://doi.org/10.21437/Interspeech.2019-2396",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of Interspeech 2019, pages 814-818."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against Fluent.ai research portal and Interspeech 2019 publication."
+  },
+  "sample_count": {
+    "total": 30043,
+    "splits": {
+      "train": 23132,
+      "validation": 3118,
+      "test": 3793
+    },
+    "unit": "utterances",
+    "status": "verified"
+  },
+  "languages": [
+    "eng"
+  ],
+  "dates": {
+    "published": "2019-09-15"
+  },
+  "citation": {
+    "paper_title": "Speech Model Pre-Training for End-to-End Spoken Language Understanding",
+    "paper_url": "https://doi.org/10.21437/Interspeech.2019-2396",
+    "doi": "10.21437/Interspeech.2019-2396",
+    "authors": [
+      "Loren Lugosch",
+      "Mirco Ravanelli",
+      "Patrick Ignoto",
+      "Vikrant Singh Tomar",
+      "Yoshua Bengio"
+    ],
+    "bibtex": "@inproceedings{lugosch2019speech,\n  title={Speech Model Pre-Training for End-to-End Spoken Language Understanding},\n  author={Lugosch, Loren and Ravanelli, Mirco and Ignoto, Patrick and Tomar, Vikrant Singh and Bengio, Yoshua},\n  booktitle={Interspeech 2019},\n  pages={814--818},\n  year={2019},\n  doi={10.21437/Interspeech.2019-2396}\n}"
+  }
+}

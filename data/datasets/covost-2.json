@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "covost-2",
+  "slug": "covost-2",
+  "name": "CoVoST 2: Massively Multilingual Speech-to-Text Translation Benchmark",
+  "description": "CoVoST 2 is a massively multilingual speech-to-text translation corpus spanning 2,880 hours of speech across 22 source languages. Created by Meta AI and published at Interspeech 2020, it covers 43 translation directions from non-English languages into English and from English into 15 target languages, built on Common Voice recordings.",
+  "homepage_url": "https://github.com/facebookresearch/covost",
+  "publisher": {
+    "name": "Meta AI Research",
+    "type": "industry",
+    "url": "https://ai.meta.com/"
+  },
+  "modalities": [
+    "audio",
+    "nlp"
+  ],
+  "tasks": [
+    "speech-translation",
+    "automatic-speech-recognition"
+  ],
+  "tags": [
+    "speech-translation",
+    "multilingual",
+    "speech",
+    "translation",
+    "common-voice",
+    "benchmark"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Creative Commons Zero v1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Translations and split annotations created by Meta are dedicated to the public domain under CC0 1.0 Universal. Sourced audio is governed by Common Voice (CC0) or Tatoeba source licenses indicated in the audio_license column."
+  },
+  "source_references": [
+    {
+      "title": "CoVoST 2 Official GitHub Repository",
+      "url": "https://github.com/facebookresearch/covost",
+      "type": "repository",
+      "notes": "Official repository with translation metadata, splits, and loading code."
+    },
+    {
+      "title": "CoVoST 2 Interspeech Publication",
+      "url": "https://doi.org/10.21437/Interspeech.2021-2027",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of Interspeech 2021, pages 2247-2251."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against Meta GitHub repository LICENSE file and Interspeech 2021 paper."
+  },
+  "sample_count": {
+    "total": 2880,
+    "unit": "hours",
+    "status": "verified"
+  },
+  "languages": [
+    "ara",
+    "cat",
+    "ces",
+    "cym",
+    "deu",
+    "eng",
+    "fas",
+    "fra",
+    "ind",
+    "ita",
+    "jpn",
+    "lav",
+    "mon",
+    "nld",
+    "por",
+    "rus",
+    "spa",
+    "swe",
+    "tam",
+    "tur",
+    "zho"
+  ],
+  "dates": {
+    "published": "2021-08-30"
+  },
+  "citation": {
+    "paper_title": "CoVoST 2 and Massively Multilingual Speech Translation",
+    "paper_url": "https://doi.org/10.21437/Interspeech.2021-2027",
+    "doi": "10.21437/Interspeech.2021-2027",
+    "authors": [
+      "Changhan Wang",
+      "Anne Wu",
+      "Jiatao Gu",
+      "Juan Pino"
+    ],
+    "bibtex": "@inproceedings{wang2021covost2,\n  title={CoVoST 2 and Massively Multilingual Speech Translation},\n  author={Wang, Changhan and Wu, Anne and Gu, Jiatao and Pino, Juan},\n  booktitle={Interspeech 2021},\n  pages={2247--2251},\n  year={2021},\n  doi={10.21437/Interspeech.2021-2027}\n}"
+  }
+}

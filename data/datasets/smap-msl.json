@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "smap-msl",
+  "slug": "smap-msl",
+  "name": "NASA Spacecraft Telemetry Anomaly Datasets (SMAP & MSL)",
+  "description": "NASA Spacecraft Telemetry Anomaly Datasets comprise 82 incident telemetry time-series streams with 107 expert-labeled anomalous episodes from the Soil Moisture Active Passive (SMAP) satellite and Mars Science Laboratory (MSL) Curiosity rover. Published at ACM SIGKDD 2018 by NASA Jet Propulsion Laboratory, it provides a real-world benchmark for multivariate telemetry anomaly detection.",
+  "homepage_url": "https://github.com/khundman/telemanom",
+  "publisher": {
+    "name": "NASA Jet Propulsion Laboratory",
+    "type": "government",
+    "url": "https://www.jpl.nasa.gov/"
+  },
+  "modalities": [
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "time-series-anomaly-detection",
+    "anomaly-detection"
+  ],
+  "tags": [
+    "anomaly-detection",
+    "telemetry",
+    "spacecraft",
+    "nasa",
+    "mars-rover",
+    "satellite",
+    "sensor"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Repository and dataset distributed under Apache License 2.0 by NASA JPL."
+  },
+  "source_references": [
+    {
+      "title": "NASA Telemanom Official GitHub Repository",
+      "url": "https://github.com/khundman/telemanom",
+      "type": "repository",
+      "notes": "Official NASA JPL repository distributing SMAP and MSL telemetry channels and labels."
+    },
+    {
+      "title": "NASA Spacecraft Anomaly KDD Publication",
+      "url": "https://doi.org/10.1145/3219819.3219845",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of ACM SIGKDD 2018, pages 387-395."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against NASA JPL telemanom repository and ACM SIGKDD 2018 paper."
+  },
+  "sample_count": {
+    "total": 82,
+    "unit": "telemetry channels",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-08-19"
+  },
+  "citation": {
+    "paper_title": "Detecting Spacecraft Anomalies Using LSTMs and Non-Parametric Dynamic Thresholding",
+    "paper_url": "https://doi.org/10.1145/3219819.3219845",
+    "doi": "10.1145/3219819.3219845",
+    "authors": [
+      "Kyle Hundman",
+      "Valentino Constantinou",
+      "Christopher Laporte",
+      "Ian Colwell",
+      "Tom Soderstrom"
+    ],
+    "bibtex": "@inproceedings{hundman2018detecting,\n  title={Detecting Spacecraft Anomalies Using LSTMs and Non-Parametric Dynamic Thresholding},\n  author={Hundman, Kyle and Constantinou, Valentino and Laporte, Christopher and Colwell, Ian and Soderstrom, Tom},\n  booktitle={Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery \\& Data Mining},\n  pages={387--395},\n  year={2018},\n  doi={10.1145/3219819.3219845}\n}"
+  }
+}
