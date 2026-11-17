@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ok-vqa",
+  "slug": "ok-vqa",
+  "name": "OK-VQA: Outside Knowledge Visual Question Answering",
+  "description": "OK-VQA is a visual question-answering benchmark requiring external world knowledge beyond image contents to answer. Presented at CVPR 2019 by Allen Institute for AI, it features 14,055 questions covering 14,031 images from MS COCO, spanning 11 knowledge categories including history, science, geography, and culture.",
+  "homepage_url": "https://okvqa.allenai.org/",
+  "publisher": {
+    "name": "Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org/"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "knowledge-based-vqa"
+  ],
+  "tags": [
+    "visual-question-answering",
+    "external-knowledge",
+    "knowledge-retrieval",
+    "coco",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Question annotations distributed under CC BY 4.0; underlying images governed by MS COCO terms."
+  },
+  "source_references": [
+    {
+      "title": "OK-VQA Official Portal",
+      "url": "https://okvqa.allenai.org/",
+      "type": "official_website",
+      "notes": "Official Allen AI portal with JSON splits and evaluation metrics."
+    },
+    {
+      "title": "OK-VQA CVPR Publication",
+      "url": "https://doi.org/10.1109/CVPR.2019.00331",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of IEEE/CVF CVPR 2019, pages 3195-3204."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against Allen AI portal and CVPR 2019 publication."
+  },
+  "sample_count": {
+    "total": 14055,
+    "splits": {
+      "train": 9009,
+      "test": 5046
+    },
+    "unit": "questions",
+    "status": "verified"
+  },
+  "languages": [
+    "eng"
+  ],
+  "dates": {
+    "published": "2019-06-16"
+  },
+  "citation": {
+    "paper_title": "OK-VQA: A Visual Question Answering Benchmark Requiring External Knowledge",
+    "paper_url": "https://doi.org/10.1109/CVPR.2019.00331",
+    "doi": "10.1109/CVPR.2019.00331",
+    "authors": [
+      "Kenneth Marino",
+      "Mohammad Rastegari",
+      "Ali Farhadi",
+      "Roozbeh Mottaghi"
+    ],
+    "bibtex": "@inproceedings{marino2019okvqa,\n  title={OK-VQA: A Visual Question Answering Benchmark Requiring External Knowledge},\n  author={Marino, Kenneth and Rastegari, Mohammad and Farhadi, Ali and Mottaghi, Roozbeh},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={3195--3204},\n  year={2019},\n  doi={10.1109/CVPR.2019.00331}\n}"
+  }
+}

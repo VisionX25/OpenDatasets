@@ -3169,6 +3169,94 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "audiocaps",
+    "slug": "audiocaps",
+    "name": "AudioCaps: Generating Captions for Audios in The Wild",
+    "description": "AudioCaps is an audio captioning benchmark dataset consisting of 51,308 audio clips from AudioSet paired with 57,188 human-written natural language captions. Introduced at NAACL-HLT 2019, it serves as the premier standard for training and evaluating automated audio captioning, sound event retrieval, and multimodal audio-language foundation models.",
+    "homepage_url": "https://audiocaps.github.io/",
+    "publisher": {
+      "name": "Seoul National University",
+      "type": "academic",
+      "url": "https://audiocaps.github.io/"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "audio-captioning",
+      "audio-language"
+    ],
+    "tags": [
+      "audio-captioning",
+      "sound-events",
+      "audio-language",
+      "captions",
+      "audioset",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Academic Research Use Only (Non-Commercial)",
+      "commercial_use": "forbidden",
+      "notes": "Repository README explicitly states: 'The code and the dataset are free to use for academic purposes only.' Code has an MIT license file, but dataset content is restricted to academic research."
+    },
+    "source_references": [
+      {
+        "title": "AudioCaps Official Project Website",
+        "url": "https://audiocaps.github.io/",
+        "type": "official_website",
+        "notes": "Project homepage with dataset overview and demo samples."
+      },
+      {
+        "title": "AudioCaps Official GitHub Repository",
+        "url": "https://github.com/cdjkim/audiocaps",
+        "type": "repository",
+        "notes": "Repository containing official train, validation, and test split CSV files."
+      },
+      {
+        "title": "AudioCaps Research Publication",
+        "url": "https://doi.org/10.18653/v1/N19-1011",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of NAACL-HLT 2019, pages 119-132."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against official project portal, GitHub split files, and NAACL 2019 paper."
+    },
+    "sample_count": {
+      "total": 51308,
+      "splits": {
+        "train": 49838,
+        "validation": 495,
+        "test": 975
+      },
+      "unit": "audio clips",
+      "status": "verified"
+    },
+    "languages": [
+      "eng"
+    ],
+    "dates": {
+      "published": "2019-06-02"
+    },
+    "citation": {
+      "paper_title": "AudioCaps: Generating Captions for Audios in The Wild",
+      "paper_url": "https://doi.org/10.18653/v1/N19-1011",
+      "doi": "10.18653/v1/N19-1011",
+      "authors": [
+        "Chris Dongjoo Kim",
+        "Byeongchang Kim",
+        "Hyunmin Lee",
+        "Gunhee Kim"
+      ],
+      "bibtex": "@inproceedings{kim-etal-2019-audiocaps,\n  title={AudioCaps: Generating Captions for Audios in The Wild},\n  author={Kim, Chris Dongjoo and Kim, Byeongchang and Lee, Hyunmin and Kim, Gunhee},\n  booktitle={Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)},\n  pages={119--132},\n  year={2019},\n  doi={10.18653/v1/N19-1011}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "audioset",
     "slug": "audioset",
     "name": "AudioSet: Large-Scale Audio Event Dataset",
@@ -3964,6 +4052,86 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "bangla-sgp",
+    "slug": "bangla-sgp",
+    "name": "Bangla-SGP: Bangla Text-to-Gloss Translation Dataset for Bangla Sign Language",
+    "description": "Bangla-SGP is a parallel sentence-gloss dataset designed for Bangla Sign Language (BdSL) text-to-gloss translation. Published at AACL-IJCNLP 2026, it contains 4,000 sentence-gloss pairs, combining 1,000 expert human-annotated sentences by a certified professional signer with 3,000 synthetically augmented pairs developed through morphological and syntactic transformation rules.",
+    "homepage_url": "https://github.com/abdul1326/Bangla-SGP",
+    "publisher": {
+      "name": "University of Dhaka & George Mason University",
+      "type": "academic",
+      "url": "https://github.com/abdul1326/Bangla-SGP"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "machine-translation",
+      "sign-language-processing"
+    ],
+    "tags": [
+      "bengali",
+      "bangla",
+      "sign-language",
+      "gloss-translation",
+      "bdsl",
+      "accessibility"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset distributed under CC BY 4.0 as documented in the research publication and author repository."
+    },
+    "source_references": [
+      {
+        "title": "Bangla-SGP Official GitHub Repository",
+        "url": "https://github.com/abdul1326/Bangla-SGP",
+        "type": "repository",
+        "notes": "Official repository containing gloss-text pairs, translation rules, and evaluation scripts."
+      },
+      {
+        "title": "Bangla-SGP Research Paper",
+        "url": "https://aclanthology.org/2026.aacl-short.11/",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the 4th Conference of the Asia-Pacific Chapter of the ACL (AACL-IJCNLP)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against author GitHub repository and ACL Anthology AACL-IJCNLP publication."
+    },
+    "sample_count": {
+      "total": 4000,
+      "unit": "sentence-gloss pairs",
+      "status": "verified"
+    },
+    "languages": [
+      "ben"
+    ],
+    "dates": {
+      "published": "2026"
+    },
+    "citation": {
+      "paper_title": "Breaking the Silence: Expert-Annotated Dataset and Benchmark for Bangla Text-to-Gloss Translation",
+      "paper_url": "https://aclanthology.org/2026.aacl-short.11/",
+      "authors": [
+        "Sharif Mohammad Abdullah",
+        "Abhijit Paul",
+        "Shubhashis Roy Dipta",
+        "Zarif Masud",
+        "Shebuti Rayana",
+        "Ahmedul Kabir"
+      ],
+      "bibtex": "@inproceedings{abdullah2026breaking,\n  title={Breaking the Silence: Expert-Annotated Dataset and Benchmark for Bangla Text-to-Gloss Translation},\n  author={Abdullah, Sharif Mohammad and Paul, Abhijit and Dipta, Shubhashis Roy and Masud, Zarif and Rayana, Shebuti and Kabir, Ahmedul},\n  booktitle={Proceedings of the 4th Conference of the Asia-Pacific Chapter of the ACL (AACL-IJCNLP)},\n  pages={118--127},\n  year={2026}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bangla-social-media-comments-on-july",
     "slug": "bangla-social-media-comments-on-july",
     "name": "Bangla Social Media Comments on the July 2024 Uprising in Bangladesh",
@@ -4200,6 +4368,83 @@
       "total": 4105,
       "unit": "records",
       "status": "verified"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "banglachq-summ",
+    "slug": "banglachq-summ",
+    "name": "BanglaCHQ-Summ: An Abstractive Summarization Dataset for Medical Queries in Bangla",
+    "description": "BanglaCHQ-Summ is an abstractive summarization dataset for medical consumer health queries in Bangla conversational speech. Published at EMNLP 2023 BLP workshop, it comprises 2,350 medical query-summary pairs curated to assist automated telehealth consultation, clinical triage, and medical question summarization in Bengali.",
+    "homepage_url": "https://github.com/alvi-khan/BanglaCHQ-Summ",
+    "publisher": {
+      "name": "Islamic University of Technology",
+      "type": "academic",
+      "url": "https://github.com/alvi-khan/BanglaCHQ-Summ"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "summarization",
+      "text-generation"
+    ],
+    "tags": [
+      "bengali",
+      "bangla",
+      "medical-nlp",
+      "summarization",
+      "healthcare",
+      "telehealth"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Repository explicitly specifies CC BY-NC-SA 4.0 license in its LICENSE file."
+    },
+    "source_references": [
+      {
+        "title": "BanglaCHQ-Summ GitHub Repository",
+        "url": "https://github.com/alvi-khan/BanglaCHQ-Summ",
+        "type": "repository",
+        "notes": "Official repository distributing the 2,350 query-summary pairs and evaluation code."
+      },
+      {
+        "title": "BanglaCHQ-Summ ACL Anthology Publication",
+        "url": "https://aclanthology.org/2023.banglalp-1.15/",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against official GitHub repository and ACL Anthology BLP-2023 paper."
+    },
+    "sample_count": {
+      "total": 2350,
+      "unit": "query-summary pairs",
+      "status": "verified"
+    },
+    "languages": [
+      "ben"
+    ],
+    "dates": {
+      "published": "2023-12"
+    },
+    "citation": {
+      "paper_title": "BanglaCHQ-Summ: An Abstractive Summarization Dataset for Medical Queries in Bangla Conversational Speech",
+      "paper_url": "https://aclanthology.org/2023.banglalp-1.15/",
+      "authors": [
+        "Alvi Khan",
+        "Md. Saiful Islam",
+        "Sabbir Ahmed"
+      ],
+      "bibtex": "@inproceedings{khan-etal-2023-banglachq,\n  title={BanglaCHQ-Summ: An Abstractive Summarization Dataset for Medical Queries in Bangla Conversational Speech},\n  author={Khan, Alvi and Islam, Md. Saiful and Ahmed, Sabbir},\n  booktitle={Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)},\n  pages={125--134},\n  year={2023}\n}"
     }
   },
   {
@@ -5336,6 +5581,89 @@
     "languages": [
       "bn"
     ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "banhate",
+    "slug": "banhate",
+    "name": "BanHate: An Up-to-Date and Fine-Grained Bangla Hate Speech Dataset",
+    "description": "BanHate is an up-to-date and fine-grained Bangla hate speech dataset comprising 19,203 YouTube comments collected between April 2024 and June 2025. Presented at BLP-2025, each comment is annotated for binary hate speech, seven fine-grained hate categories, and seven demographic target groups to support nuanced content moderation in Bengali online discourse.",
+    "homepage_url": "https://huggingface.co/datasets/aplycaebous/BanHate",
+    "publisher": {
+      "name": "Islamic University of Technology",
+      "type": "academic",
+      "url": "https://huggingface.co/datasets/aplycaebous/BanHate"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "text-classification",
+      "hate-speech-detection"
+    ],
+    "tags": [
+      "bengali",
+      "bangla",
+      "hate-speech",
+      "content-moderation",
+      "youtube",
+      "social-media"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Dataset card explicitly specifies MIT license on Hugging Face."
+    },
+    "source_references": [
+      {
+        "title": "BanHate Hugging Face Dataset Card",
+        "url": "https://huggingface.co/datasets/aplycaebous/BanHate",
+        "type": "dataset_card",
+        "notes": "Official Hugging Face repository hosting the dataset splits and metadata."
+      },
+      {
+        "title": "BanHate ACL Anthology Publication",
+        "url": "https://aclanthology.org/2025.banglalp-1.19/",
+        "type": "original_paper",
+        "notes": "Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025), pages 190-205."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against Hugging Face dataset card and ACL Anthology BLP-2025 paper."
+    },
+    "sample_count": {
+      "total": 19203,
+      "unit": "comments",
+      "status": "verified"
+    },
+    "languages": [
+      "ben"
+    ],
+    "dates": {
+      "published": "2025-12"
+    },
+    "citation": {
+      "paper_title": "BanHate: An Up-to-Date and Fine-Grained Bangla Hate Speech Dataset",
+      "paper_url": "https://aclanthology.org/2025.banglalp-1.19/",
+      "authors": [
+        "Faisal Hossain Raquib",
+        "Akm Moshiur Rahman Mazumder",
+        "Md Tahmid Hasan Fuad",
+        "Md Farhan Ishmam",
+        "Md Fahim"
+      ],
+      "bibtex": "@inproceedings{raquib-etal-2025-banhate,\n  title={BanHate: An Up-to-Date and Fine-Grained Bangla Hate Speech Dataset},\n  author={Raquib, Faisal Hossain and Mazumder, Akm Moshiur Rahman and Fuad, Md Tahmid Hasan and Ishmam, Md Farhan and Fahim, Md},\n  booktitle={Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)},\n  pages={190--205},\n  year={2025}\n}"
+    },
+    "provenance": {
+      "collection_method": "Scraped from YouTube comments spanning diverse contemporary topics and annotated by native Bengali speakers.",
+      "curation_notes": "Multi-label annotation covering binary hate, 7 hate categories, and 7 target communities."
+    }
   },
   {
     "schema_version": "1.0.0",
@@ -7929,6 +8257,245 @@
     "provenance": {
       "collection_method": "Prescription images collected and scanned from clinical health providers in Bangladesh.",
       "curation_notes": "De-identified and verified for medical text recognition. Line and word annotations provided in CSV."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "bluck",
+    "slug": "bluck",
+    "name": "BLUCK: A Benchmark Dataset for Bengali Linguistic Understanding and Cultural Knowledge",
+    "description": "BLUCK is a comprehensive benchmark dataset designed to evaluate language models on Bengali linguistic understanding, cultural knowledge, history, phonetics, and semantics. Developed by researchers at KAIST and published at BLP-2025, it comprises 2,366 multiple-choice questions across 23 subcategories that capture regional cultural heritage and linguistic nuances.",
+    "homepage_url": "https://github.com/minhaj1403/bluck",
+    "publisher": {
+      "name": "KAIST (Korea Advanced Institute of Science and Technology)",
+      "type": "academic",
+      "url": "https://github.com/minhaj1403/bluck"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "language-understanding"
+    ],
+    "tags": [
+      "bengali",
+      "bangla",
+      "benchmark",
+      "cultural-knowledge",
+      "evaluation",
+      "nlp"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset distributed under CC BY-SA 4.0 as documented in the arXiv preprint and repository."
+    },
+    "source_references": [
+      {
+        "title": "BLUCK Official GitHub Repository",
+        "url": "https://github.com/minhaj1403/bluck",
+        "type": "repository",
+        "notes": "Official repository containing question sets, category divisions, and evaluation code."
+      },
+      {
+        "title": "BLUCK Research Publication",
+        "url": "https://arxiv.org/abs/2505.21092",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against KAIST research repository and BLP-2025 / arXiv:2505.21092 publication."
+    },
+    "sample_count": {
+      "total": 2366,
+      "unit": "multiple-choice questions",
+      "status": "verified"
+    },
+    "languages": [
+      "ben"
+    ],
+    "dates": {
+      "published": "2025-05-27"
+    },
+    "citation": {
+      "paper_title": "BLUCK: A Benchmark Dataset for Bengali Linguistic Understanding and Cultural Knowledge",
+      "paper_url": "https://arxiv.org/abs/2505.21092",
+      "authors": [
+        "Daeen Kabir",
+        "Minhajur Rahman Chowdhury Mahim",
+        "Sheikh Shafayat",
+        "Adnan Sadik",
+        "Arian Ahmed",
+        "Eunsu Kim",
+        "Alice Oh"
+      ],
+      "bibtex": "@inproceedings{kabir2025bluck,\n  title={BLUCK: A Benchmark Dataset for Bengali Linguistic Understanding and Cultural Knowledge},\n  author={Kabir, Daeen and Mahim, Minhajur Rahman Chowdhury and Shafayat, Sheikh and Sadik, Adnan and Ahmed, Arian and Kim, Eunsu and Oh, Alice},\n  booktitle={Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)},\n  year={2025}\n}"
+    },
+    "provenance": {
+      "collection_method": "Curated by native speakers across four primary domains (Culture, History, Phonetics, Semantics) spanning 23 subcategories.",
+      "curation_notes": "Expert-verified multiple-choice questions designed to mitigate English-centric bias in LLM evaluation."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "bncontextqa",
+    "slug": "bncontextqa",
+    "name": "bnContextQA: Long-Context Question Answering Benchmark for Bangla",
+    "description": "bnContextQA is an evaluation benchmark dataset designed to investigate positional bias and the 'Lost in the Middle' phenomenon in Large Language Models when processing long-context text in Bangla. Presented at BLP-2025, it contains 350 long-context question-answering instances, each paired with 30 context paragraphs across multiple controlled position permutations (10,500 total evaluation instances).",
+    "homepage_url": "https://github.com/labiba02/bnContextQA",
+    "publisher": {
+      "name": "Islamic University of Technology",
+      "type": "academic",
+      "url": "https://github.com/labiba02/bnContextQA"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "information-retrieval"
+    ],
+    "tags": [
+      "bengali",
+      "bangla",
+      "long-context",
+      "question-answering",
+      "llm-evaluation",
+      "positional-bias"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
+      "commercial_use": "unknown",
+      "notes": "Repository provides open academic access to the QA instances without an explicit standalone license file."
+    },
+    "source_references": [
+      {
+        "title": "bnContextQA Official GitHub Repository",
+        "url": "https://github.com/labiba02/bnContextQA",
+        "type": "repository",
+        "notes": "Official repository with 350 QA items and 30-context test configurations."
+      },
+      {
+        "title": "bnContextQA Research Paper",
+        "url": "https://aclanthology.org/2025.banglalp-1.29/",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against GitHub repository and ACL Anthology BLP-2025 paper."
+    },
+    "sample_count": {
+      "total": 350,
+      "unit": "QA instances",
+      "status": "verified"
+    },
+    "languages": [
+      "ben"
+    ],
+    "dates": {
+      "published": "2025-12"
+    },
+    "citation": {
+      "paper_title": "bnContextQA: Benchmarking Long-Context Question Answering and Challenges in Bangla",
+      "paper_url": "https://aclanthology.org/2025.banglalp-1.29/",
+      "authors": [
+        "Adnan Ahmad",
+        "Labiba Adiba",
+        "Namirah Rasul",
+        "Md Tahmid Rahman Laskar",
+        "Sabbir Ahmed"
+      ],
+      "bibtex": "@inproceedings{ahmad-etal-2025-bncontextqa,\n  title={bnContextQA: Benchmarking Long-Context Question Answering and Challenges in Bangla},\n  author={Ahmad, Adnan and Adiba, Labiba and Rasul, Namirah and Laskar, Md Tahmid Rahman and Ahmed, Sabbir},\n  booktitle={Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)},\n  pages={297--306},\n  year={2025}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "bnli",
+    "slug": "bnli",
+    "name": "BNLI: A Linguistically-Refined Bengali Dataset for Natural Language Inference",
+    "description": "BNLI is a linguistically curated, human-validated Natural Language Inference (NLI) dataset for Bengali. Presented at the CHiPSAL 2026 workshop at LREC, it consists of 12,600 balanced sentence pairs evenly distributed across entailment, contradiction, and neutral classes (4,200 pairs each), addressing syntactic diversity and annotation consistency in Indic NLI evaluation.",
+    "homepage_url": "https://github.com/FarahHaque/BNLI-Dataset",
+    "publisher": {
+      "name": "Brac University & BUET",
+      "type": "academic",
+      "url": "https://github.com/FarahHaque/BNLI-Dataset"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "natural-language-inference",
+      "text-classification"
+    ],
+    "tags": [
+      "bengali",
+      "bangla",
+      "nli",
+      "natural-language-inference",
+      "reasoning",
+      "semantics"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
+      "commercial_use": "unknown",
+      "notes": "arXiv preprint is open access under CC BY 4.0; GitHub data repository provides research files without an explicit standalone license file."
+    },
+    "source_references": [
+      {
+        "title": "BNLI Official GitHub Repository",
+        "url": "https://github.com/FarahHaque/BNLI-Dataset",
+        "type": "repository",
+        "notes": "Official repository containing the 12,600 balanced premise-hypothesis pairs."
+      },
+      {
+        "title": "BNLI Research Publication",
+        "url": "https://arxiv.org/abs/2511.08813",
+        "type": "original_paper",
+        "notes": "Proceedings of the Second Workshop on Challenges in Processing South Asian Languages (CHiPSAL @ LREC 2026)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against GitHub repository and CHiPSAL / arXiv:2511.08813 publication."
+    },
+    "sample_count": {
+      "total": 12600,
+      "unit": "sentence pairs",
+      "status": "verified"
+    },
+    "languages": [
+      "ben"
+    ],
+    "dates": {
+      "published": "2025-11"
+    },
+    "citation": {
+      "paper_title": "BNLI: A Linguistically-Refined Bengali Dataset for Natural Language Inference",
+      "paper_url": "https://arxiv.org/abs/2511.08813",
+      "authors": [
+        "Farah Binta Haque",
+        "Md Yasin",
+        "Shishir Saha",
+        "Md Shoaib Akhter Rafi",
+        "Farig Sadeque"
+      ],
+      "bibtex": "@inproceedings{haque2026bnli,\n  title={BNLI: A Linguistically-Refined Bengali Dataset for Natural Language Inference},\n  author={Haque, Farah Binta and Yasin, Md and Saha, Shishir and Rafi, Md Shoaib Akhter and Sadeque, Farig},\n  booktitle={Proceedings of the Second Workshop on Challenges in Processing South Asian Languages (CHiPSAL @ LREC)},\n  year={2026}\n}"
     }
   },
   {
@@ -10764,6 +11331,82 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "checksent-bn",
+    "slug": "checksent-bn",
+    "name": "CheckSent-BN: Bengali Multi-Task Dataset for Claim Checkworthiness and Sentiment Classification",
+    "description": "CheckSent-BN is a multi-task dataset of 11,500 Bengali news headlines annotated for claim checkworthiness detection and sentiment analysis. Introduced at BLP-2025, the dataset addresses fact-checking and automated content verification in Bengali media through combined LLM-annotation and native-speaker human verification.",
+    "homepage_url": "https://github.com/pritampal98/check-sent-bn",
+    "publisher": {
+      "name": "CheckSent-BN Research Team",
+      "type": "academic",
+      "url": "https://github.com/pritampal98/check-sent-bn"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "text-classification",
+      "sentiment-analysis"
+    ],
+    "tags": [
+      "bengali",
+      "bangla",
+      "fact-checking",
+      "checkworthiness",
+      "sentiment-analysis",
+      "news"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source",
+      "commercial_use": "unknown",
+      "notes": "Repository provides open academic access to headlines and labels without an explicit standalone license file."
+    },
+    "source_references": [
+      {
+        "title": "CheckSent-BN Official GitHub Repository",
+        "url": "https://github.com/pritampal98/check-sent-bn",
+        "type": "repository",
+        "notes": "Official repository containing the 11.5k annotated headline corpus and baseline scripts."
+      },
+      {
+        "title": "CheckSent-BN Research Publication",
+        "url": "https://aclanthology.org/2025.banglalp-1.10/",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against GitHub repository and ACL Anthology BLP-2025 publication."
+    },
+    "sample_count": {
+      "total": 11500,
+      "unit": "headlines",
+      "status": "verified"
+    },
+    "languages": [
+      "ben"
+    ],
+    "dates": {
+      "published": "2025-12"
+    },
+    "citation": {
+      "paper_title": "CheckSent-BN: A Bengali Multi-Task Dataset for Claim Checkworthiness and Sentiment Classification from News Headlines",
+      "paper_url": "https://aclanthology.org/2025.banglalp-1.10/",
+      "authors": [
+        "Pritam Pal",
+        "Md. Arid Hasan",
+        "Fahim Shahriar",
+        "Md. Saiful Islam"
+      ],
+      "bibtex": "@inproceedings{pal2025checksentbn,\n  title={CheckSent-BN: A Bengali Multi-Task Dataset for Claim Checkworthiness and Sentiment Classification from News Headlines},\n  author={Pal, Pritam and Hasan, Md. Arid and Shahriar, Fahim and Islam, Md. Saiful},\n  booktitle={Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)},\n  year={2025}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "chexpert",
     "slug": "chexpert",
     "name": "CheXpert: A Large Chest Radiograph Dataset",
@@ -11690,6 +12333,96 @@
       "data_sources": [
         "Blender Procedural Rendering Engine"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "clotho",
+    "slug": "clotho",
+    "name": "Clotho: An Audio Captioning Dataset (v2.1)",
+    "description": "Clotho is an audio captioning dataset consisting of 6,974 audio samples of 15 to 30 seconds duration sourced from Freesound, each paired with 5 crowdsourced human-written natural language captions (34,870 captions total). Originally presented at ICASSP 2020 by Tampere University, Clotho v2.1 serves as the benchmark corpus for DCASE automated audio captioning and language-based audio retrieval.",
+    "homepage_url": "https://zenodo.org/records/4783391",
+    "publisher": {
+      "name": "Audio Research Group, Tampere University",
+      "type": "academic",
+      "url": "https://tuni.fi/arg"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "audio-captioning",
+      "sound-event-detection"
+    ],
+    "tags": [
+      "audio-captioning",
+      "environmental-sound",
+      "dcase",
+      "audio-retrieval",
+      "captions",
+      "freesound"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed on Zenodo under Creative Commons Attribution 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "Clotho v2.1 Zenodo Record",
+        "url": "https://zenodo.org/records/4783391",
+        "type": "archive",
+        "notes": "Official v2.1 dataset release with audio archives and caption CSV splits."
+      },
+      {
+        "title": "Clotho GitHub Repository",
+        "url": "https://github.com/dr-costas/clotho-dataset",
+        "type": "repository",
+        "notes": "Companion toolkit and loading utilities."
+      },
+      {
+        "title": "Clotho Original ICASSP Publication",
+        "url": "https://doi.org/10.1109/ICASSP40776.2020.9053589",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of IEEE ICASSP 2020, pages 636-640."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against Zenodo record 4783391 and ICASSP 2020 paper."
+    },
+    "sample_count": {
+      "total": 6974,
+      "splits": {
+        "development": 3839,
+        "validation": 1045,
+        "evaluation": 1045
+      },
+      "unit": "audio files",
+      "status": "verified"
+    },
+    "languages": [
+      "eng"
+    ],
+    "dates": {
+      "published": "2020-05-04",
+      "last_updated": "2021-05-18"
+    },
+    "citation": {
+      "paper_title": "Clotho: An Audio Captioning Dataset",
+      "paper_url": "https://doi.org/10.1109/ICASSP40776.2020.9053589",
+      "doi": "10.1109/ICASSP40776.2020.9053589",
+      "authors": [
+        "Konstantinos Drossos",
+        "Samuel Lipping",
+        "Tuomas Virtanen"
+      ],
+      "bibtex": "@inproceedings{drossos2020clotho,\n  title={Clotho: An Audio Captioning Dataset},\n  author={Drossos, Konstantinos and Lipping, Samuel and Virtanen, Tuomas},\n  booktitle={ICASSP 2020 - 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages={636--640},\n  year={2020},\n  doi={10.1109/ICASSP40776.2020.9053589}\n}"
     }
   },
   {
@@ -12917,6 +13650,105 @@
       ],
       "doi": "10.1016/S0168-1699(99)00046-0",
       "bibtex": "@article{blackard1999comparative,\n  title = {Comparative accuracies of artificial neural networks and discriminant analysis in predicting forest cover types from cartographic variables},\n  author = {Blackard, Jock A. and Dean, Denis J.},\n  journal = {Computers and Electronics in Agriculture},\n  volume = {24},\n  number = {3},\n  pages = {131--151},\n  year = {1999}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "covost-2",
+    "slug": "covost-2",
+    "name": "CoVoST 2: Massively Multilingual Speech-to-Text Translation Benchmark",
+    "description": "CoVoST 2 is a massively multilingual speech-to-text translation corpus spanning 2,880 hours of speech across 22 source languages. Created by Meta AI and published at Interspeech 2020, it covers 43 translation directions from non-English languages into English and from English into 15 target languages, built on Common Voice recordings.",
+    "homepage_url": "https://github.com/facebookresearch/covost",
+    "publisher": {
+      "name": "Meta AI Research",
+      "type": "industry",
+      "url": "https://ai.meta.com/"
+    },
+    "modalities": [
+      "audio",
+      "nlp"
+    ],
+    "tasks": [
+      "speech-translation",
+      "automatic-speech-recognition"
+    ],
+    "tags": [
+      "speech-translation",
+      "multilingual",
+      "speech",
+      "translation",
+      "common-voice",
+      "benchmark"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Translations and split annotations created by Meta are dedicated to the public domain under CC0 1.0 Universal. Sourced audio is governed by Common Voice (CC0) or Tatoeba source licenses indicated in the audio_license column."
+    },
+    "source_references": [
+      {
+        "title": "CoVoST 2 Official GitHub Repository",
+        "url": "https://github.com/facebookresearch/covost",
+        "type": "repository",
+        "notes": "Official repository with translation metadata, splits, and loading code."
+      },
+      {
+        "title": "CoVoST 2 Interspeech Publication",
+        "url": "https://doi.org/10.21437/Interspeech.2020-2244",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of Interspeech 2020, pages 2247-2251."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against Meta GitHub repository LICENSE file and Interspeech 2020 paper."
+    },
+    "sample_count": {
+      "total": 2880,
+      "unit": "hours",
+      "status": "verified"
+    },
+    "languages": [
+      "ara",
+      "cat",
+      "ces",
+      "cym",
+      "deu",
+      "eng",
+      "fas",
+      "fra",
+      "ind",
+      "ita",
+      "jpn",
+      "lav",
+      "mon",
+      "nld",
+      "por",
+      "rus",
+      "spa",
+      "swe",
+      "tam",
+      "tur",
+      "zho"
+    ],
+    "dates": {
+      "published": "2020-10-25"
+    },
+    "citation": {
+      "paper_title": "CoVoST 2 and Massively Multilingual Speech-to-Text Translation",
+      "paper_url": "https://doi.org/10.21437/Interspeech.2020-2244",
+      "doi": "10.21437/Interspeech.2020-2244",
+      "authors": [
+        "Changhan Wang",
+        "Anne Wu",
+        "Juan Pino"
+      ],
+      "bibtex": "@inproceedings{wang2020covost2,\n  title={CoVoST 2 and Massively Multilingual Speech-to-Text Translation},\n  author={Wang, Changhan and Wu, Anne and Pino, Juan},\n  booktitle={Interspeech 2020},\n  pages={2247--2251},\n  year={2020},\n  doi={10.21437/Interspeech.2020-2244}\n}"
     }
   },
   {
@@ -19231,6 +20063,91 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "fluent-speech-commands",
+    "slug": "fluent-speech-commands",
+    "name": "Fluent Speech Commands: Spoken Language Understanding Dataset",
+    "description": "Fluent Speech Commands is an audio spoken language understanding benchmark comprising 30,043 English utterances spoken by 97 native and non-native speakers. Published at Interspeech 2019 by Fluent.ai, each voice command is recorded at 16 kHz and annotated with three slot arguments: action, object, and location.",
+    "homepage_url": "https://fluent.ai/fluent-speech-commands-a-dataset-for-spoken-language-understanding-research/",
+    "publisher": {
+      "name": "Fluent.ai",
+      "type": "industry",
+      "url": "https://fluent.ai/"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "spoken-language-understanding",
+      "intent-classification"
+    ],
+    "tags": [
+      "spoken-language-understanding",
+      "intent-classification",
+      "voice-assistant",
+      "speech",
+      "smart-home",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
+      "spdx_id": "CC-BY-NC-ND-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Fluent.ai distributes the dataset for non-commercial research under CC BY-NC-ND 4.0."
+    },
+    "source_references": [
+      {
+        "title": "Fluent Speech Commands Official Overview",
+        "url": "https://fluent.ai/fluent-speech-commands-a-dataset-for-spoken-language-understanding-research/",
+        "type": "official_website",
+        "notes": "Official Fluent.ai research portal documenting the dataset."
+      },
+      {
+        "title": "Fluent Speech Commands Interspeech Publication",
+        "url": "https://doi.org/10.21437/Interspeech.2019-1433",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of Interspeech 2019, pages 2205-2209."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against Fluent.ai research portal and Interspeech 2019 publication."
+    },
+    "sample_count": {
+      "total": 30043,
+      "splits": {
+        "train": 23132,
+        "validation": 3118,
+        "test": 3793
+      },
+      "unit": "utterances",
+      "status": "verified"
+    },
+    "languages": [
+      "eng"
+    ],
+    "dates": {
+      "published": "2019-09-15"
+    },
+    "citation": {
+      "paper_title": "Speech Model Pre-training for Spoken Language Understanding",
+      "paper_url": "https://doi.org/10.21437/Interspeech.2019-1433",
+      "doi": "10.21437/Interspeech.2019-1433",
+      "authors": [
+        "Loren Lugosch",
+        "Mirco Ravanelli",
+        "Patrick Ignoto",
+        "Vikrant Singh Tomar",
+        "Yoshua Bengio"
+      ],
+      "bibtex": "@inproceedings{lugosch2019speech,\n  title={Speech Model Pre-training for Spoken Language Understanding},\n  author={Lugosch, Loren and Ravanelli, Mirco and Ignoto, Patrick and Tomar, Vikrant Singh and Bengio, Yoshua},\n  booktitle={Interspeech 2019},\n  pages={2205--2209},\n  year={2019},\n  doi={10.21437/Interspeech.2019-1433}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "fmow",
     "slug": "fmow",
     "name": "Functional Map of the World (fMoW)",
@@ -20421,6 +21338,84 @@
       "data_sources": [
         "Reddit"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "gqa",
+    "slug": "gqa",
+    "name": "GQA: Visual Reasoning and Compositional Question Answering",
+    "description": "GQA is a visual reasoning benchmark containing compositional question-answering pairs grounded in dense scene graphs over 113,018 real-world images from Visual Genome. Developed by Stanford University and presented at CVPR 2019, the balanced release features 1,721,561 questions with reduced linguistic and prior biases to measure relational and multi-step visual reasoning.",
+    "homepage_url": "https://cs.stanford.edu/people/dorarad/gqa/",
+    "publisher": {
+      "name": "Stanford University",
+      "type": "academic",
+      "url": "https://cs.stanford.edu/people/dorarad/gqa/"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "visual-reasoning"
+    ],
+    "tags": [
+      "visual-question-answering",
+      "scene-graphs",
+      "visual-reasoning",
+      "compositional-reasoning",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "GQA question annotations, scene graphs, and functional programs are released under CC BY 4.0; underlying images originate from Visual Genome."
+    },
+    "source_references": [
+      {
+        "title": "GQA Official Stanford Portal",
+        "url": "https://cs.stanford.edu/people/dorarad/gqa/",
+        "type": "official_website",
+        "notes": "Official Stanford research homepage with downloads and evaluation specifications."
+      },
+      {
+        "title": "GQA CVPR Publication",
+        "url": "https://doi.org/10.1109/CVPR.2019.00684",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of IEEE/CVF CVPR 2019, pages 6700-6709."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against Stanford research portal and CVPR 2019 publication."
+    },
+    "sample_count": {
+      "total": 1721561,
+      "unit": "question-answer pairs",
+      "status": "verified"
+    },
+    "languages": [
+      "eng"
+    ],
+    "dates": {
+      "published": "2019-06-16"
+    },
+    "citation": {
+      "paper_title": "GQA: A New Dataset for Real-World Visual Reasoning and Compositional Question Answering",
+      "paper_url": "https://doi.org/10.1109/CVPR.2019.00684",
+      "doi": "10.1109/CVPR.2019.00684",
+      "authors": [
+        "Drew A. Hudson",
+        "Christopher D. Manning"
+      ],
+      "bibtex": "@inproceedings{hudson2019gqa,\n  title={GQA: A New Dataset for Real-World Visual Reasoning and Compositional Question Answering},\n  author={Hudson, Drew A. and Manning, Christopher D.},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={6700--6709},\n  year={2019},\n  doi={10.1109/CVPR.2019.00684}\n}"
     }
   },
   {
@@ -31915,6 +32910,102 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "mmbench",
+    "slug": "mmbench",
+    "name": "MMBench: Multi-modal Model Evaluation Benchmark",
+    "description": "MMBench is a comprehensive multi-modal evaluation benchmark containing 2,974 bilingual (English and Chinese) multiple-choice questions structured across 20 hierarchical perception and reasoning ability dimensions. Published at ECCV 2024, it incorporates CircularEval strategy (shuffling answer choices over multiple inference passes) to eliminate LLM choice-selection biases.",
+    "homepage_url": "https://mmbench.opencompass.org.cn/",
+    "publisher": {
+      "name": "Shanghai Artificial Intelligence Laboratory",
+      "type": "academic",
+      "url": "https://opencompass.org.cn/"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "multimodal-evaluation",
+      "vision-language-understanding"
+    ],
+    "tags": [
+      "multimodal-evaluation",
+      "vision-language",
+      "llm-benchmark",
+      "perception",
+      "reasoning",
+      "opencompass"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset questions and annotations licensed under CC BY 4.0 on Hugging Face; evaluation codebase under Apache-2.0 on GitHub."
+    },
+    "source_references": [
+      {
+        "title": "MMBench Official Portal",
+        "url": "https://mmbench.opencompass.org.cn/",
+        "type": "official_website",
+        "notes": "Official OpenCompass benchmark portal and leaderboard."
+      },
+      {
+        "title": "MMBench GitHub Repository",
+        "url": "https://github.com/open-compass/MMBench",
+        "type": "repository",
+        "notes": "Official repository containing evaluation pipeline and data conversion tools."
+      },
+      {
+        "title": "MMBench ECCV Publication",
+        "url": "https://doi.org/10.1007/978-3-031-72949-2_14",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of European Conference on Computer Vision (ECCV 2024), pages 240-258."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against OpenCompass documentation, GitHub LICENSE, and ECCV 2024 publication."
+    },
+    "sample_count": {
+      "total": 2974,
+      "unit": "bilingual multiple-choice questions",
+      "status": "verified"
+    },
+    "languages": [
+      "eng",
+      "zho"
+    ],
+    "dates": {
+      "published": "2024-09-29"
+    },
+    "citation": {
+      "paper_title": "MMBench: Is Your Multi-modal Model an All-around Player?",
+      "paper_url": "https://doi.org/10.1007/978-3-031-72949-2_14",
+      "doi": "10.1007/978-3-031-72949-2_14",
+      "authors": [
+        "Yuan Liu",
+        "Haodong Duan",
+        "Yuanhan Zhang",
+        "Bo Li",
+        "Songyang Zhang",
+        "Wangbo Zhao",
+        "Yike Yuan",
+        "Jiaqi Wang",
+        "Conghui He",
+        "Ziwei Liu",
+        "Kai Chen",
+        "Dahua Lin"
+      ],
+      "bibtex": "@inproceedings{liu2024mmbench,\n  title={MMBench: Is Your Multi-modal Model an All-around Player?},\n  author={Liu, Yuan and Duan, Haodong and Zhang, Yuanhan and Li, Bo and Zhang, Songyang and Zhao, Wangbo and Yuan, Yike and Wang, Jiaqi and He, Conghui and Liu, Ziwei and Chen, Kai and Lin, Dahua},\n  booktitle={Computer Vision -- ECCV 2024},\n  pages={240--258},\n  year={2024},\n  doi={10.1007/978-3-031-72949-2_14}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "mmlu",
     "slug": "mmlu",
     "name": "MMLU: Measuring Massive Multitask Language Understanding",
@@ -33125,6 +34216,81 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "msp-podcast",
+    "slug": "msp-podcast",
+    "name": "MSP-Podcast: Large-Scale Naturalistic Speech Emotion Recognition Database",
+    "description": "MSP-Podcast is a large-scale speech emotion database containing over 100,000 conversational speech segments extracted from naturalistic audio podcasts. Developed by the Multimodal Signal Processing (MSP) Lab at UT Dallas, it provides crowdsourced dimensional ratings (arousal, valence, dominance) and categorical emotion labels reflecting natural emotional variation.",
+    "homepage_url": "https://ecs.utdallas.edu/research/researchlabs/msp-lab/MSP-Podcast.html",
+    "publisher": {
+      "name": "Multimodal Signal Processing (MSP) Lab, UT Dallas",
+      "type": "academic",
+      "url": "https://ecs.utdallas.edu/research/researchlabs/msp-lab/"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-emotion-recognition",
+      "audio-classification"
+    ],
+    "tags": [
+      "speech-emotion",
+      "emotion-recognition",
+      "affective-computing",
+      "podcasts",
+      "audio",
+      "naturalistic-speech"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Academic Research Non-Commercial License (EULA)",
+      "commercial_use": "forbidden",
+      "notes": "Access requires institutional academic email and a signed End User License Agreement (EULA) restricting use to non-commercial academic research."
+    },
+    "source_references": [
+      {
+        "title": "MSP-Podcast Lab Homepage",
+        "url": "https://ecs.utdallas.edu/research/researchlabs/msp-lab/MSP-Podcast.html",
+        "type": "official_website",
+        "notes": "Official UT Dallas portal describing corpus versions and EULA request form."
+      },
+      {
+        "title": "MSP-Podcast IEEE TAC Publication",
+        "url": "https://doi.org/10.1109/TAFFC.2017.2737989",
+        "type": "original_paper",
+        "notes": "Published in IEEE Transactions on Affective Computing, 10(4):484-496."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against UT Dallas MSP Lab official documentation and IEEE TAC publication."
+    },
+    "sample_count": {
+      "total": 100000,
+      "unit": "speech turns",
+      "status": "verified"
+    },
+    "languages": [
+      "eng"
+    ],
+    "dates": {
+      "published": "2019-10-01"
+    },
+    "citation": {
+      "paper_title": "Building Naturalistic Emotion Databases by Pruning Crowdsourced Audio",
+      "paper_url": "https://doi.org/10.1109/TAFFC.2017.2737989",
+      "doi": "10.1109/TAFFC.2017.2737989",
+      "authors": [
+        "Reza Lotfian",
+        "Carlos Busso"
+      ],
+      "bibtex": "@article{lotfian2019building,\n  title={Building Naturalistic Emotion Databases by Pruning Crowdsourced Audio},\n  author={Lotfian, Reza and Busso, Carlos},\n  journal={IEEE Transactions on Affective Computing},\n  volume={10},\n  number={4},\n  pages={484--496},\n  year={2019},\n  publisher={IEEE},\n  doi={10.1109/TAFFC.2017.2737989}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "mulran-radar-lidar",
     "slug": "mulran-radar-lidar",
     "name": "MulRan: Multimodal Range Dataset for Urban Place Recognition",
@@ -33530,6 +34696,95 @@
         "Daniel Povey"
       ],
       "bibtex": "@article{snyder2015musan,\n  title = {MUSAN: A Music, Speech, and Noise Corpus},\n  author = {Snyder, David and Chen, Guoguo and Povey, Daniel},\n  journal = {arXiv preprint arXiv:1510.08484},\n  year = {2015}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "must-c",
+    "slug": "must-c",
+    "name": "MuST-C: Multilingual Speech-to-Text Translation Corpus",
+    "description": "MuST-C is a multilingual speech-to-text translation corpus consisting of English TED Talks aligned with translations into 8 European languages (German, Spanish, French, Italian, Dutch, Portuguese, Romanian, Russian). Created by Fondazione Bruno Kessler (FBK) and presented at NAACL-HLT 2019, it includes hundreds of hours of aligned audio per language pair.",
+    "homepage_url": "https://ict.fbk.eu/must-c/",
+    "publisher": {
+      "name": "Fondazione Bruno Kessler (FBK)",
+      "type": "academic",
+      "url": "https://ict.fbk.eu/"
+    },
+    "modalities": [
+      "audio",
+      "nlp"
+    ],
+    "tasks": [
+      "speech-translation",
+      "automatic-speech-recognition"
+    ],
+    "tags": [
+      "speech-translation",
+      "ted-talks",
+      "multilingual",
+      "speech",
+      "translation",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
+      "spdx_id": "CC-BY-NC-ND-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Audio and transcripts originate from TED Talks and are governed by the TED Talks Creative Commons NonCommercial-NoDerivs 4.0 policy."
+    },
+    "source_references": [
+      {
+        "title": "MuST-C Official Project Portal",
+        "url": "https://ict.fbk.eu/must-c/",
+        "type": "official_website",
+        "notes": "Official FBK portal with corpus description and download request form."
+      },
+      {
+        "title": "MuST-C NAACL-HLT Publication",
+        "url": "https://doi.org/10.18653/v1/N19-1202",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of NAACL-HLT 2019, pages 2012-2017."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against FBK portal and NAACL-HLT 2019 paper."
+    },
+    "sample_count": {
+      "total": 3000,
+      "unit": "hours",
+      "status": "verified"
+    },
+    "languages": [
+      "eng",
+      "deu",
+      "spa",
+      "fra",
+      "ita",
+      "nld",
+      "por",
+      "ron",
+      "rus"
+    ],
+    "dates": {
+      "published": "2019-06-02"
+    },
+    "citation": {
+      "paper_title": "MuST-C: a Multilingual Speech-to-Text Translation Corpus",
+      "paper_url": "https://doi.org/10.18653/v1/N19-1202",
+      "doi": "10.18653/v1/N19-1202",
+      "authors": [
+        "Mattia Antonino Di Gangi",
+        "Roldano Cattoni",
+        "Luisa Bentivogli",
+        "Matteo Negri",
+        "Marco Turchi"
+      ],
+      "bibtex": "@inproceedings{di-gangi-etal-2019-must,\n  title={MuST-C: a Multilingual Speech-to-Text Translation Corpus},\n  author={Di Gangi, Mattia Antonino and Cattoni, Roldano and Bentivogli, Luisa and Negri, Matteo and Turchi, Marco},\n  booktitle={Proceedings of NAACL-HLT 2019},\n  pages={2012--2017},\n  year={2019},\n  doi={10.18653/v1/N19-1202}\n}"
     }
   },
   {
@@ -37340,6 +38595,90 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ok-vqa",
+    "slug": "ok-vqa",
+    "name": "OK-VQA: Outside Knowledge Visual Question Answering",
+    "description": "OK-VQA is a visual question-answering benchmark requiring external world knowledge beyond image contents to answer. Presented at CVPR 2019 by Allen Institute for AI, it features 14,055 questions covering 14,031 images from MS COCO, spanning 11 knowledge categories including history, science, geography, and culture.",
+    "homepage_url": "https://okvqa.allenai.org/",
+    "publisher": {
+      "name": "Allen Institute for AI",
+      "type": "academic",
+      "url": "https://allenai.org/"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "knowledge-based-vqa"
+    ],
+    "tags": [
+      "visual-question-answering",
+      "external-knowledge",
+      "knowledge-retrieval",
+      "coco",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Question annotations distributed under CC BY 4.0; underlying images governed by MS COCO terms."
+    },
+    "source_references": [
+      {
+        "title": "OK-VQA Official Portal",
+        "url": "https://okvqa.allenai.org/",
+        "type": "official_website",
+        "notes": "Official Allen AI portal with JSON splits and evaluation metrics."
+      },
+      {
+        "title": "OK-VQA CVPR Publication",
+        "url": "https://doi.org/10.1109/CVPR.2019.00331",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of IEEE/CVF CVPR 2019, pages 3195-3204."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against Allen AI portal and CVPR 2019 publication."
+    },
+    "sample_count": {
+      "total": 14055,
+      "splits": {
+        "train": 9009,
+        "test": 5046
+      },
+      "unit": "questions",
+      "status": "verified"
+    },
+    "languages": [
+      "eng"
+    ],
+    "dates": {
+      "published": "2019-06-16"
+    },
+    "citation": {
+      "paper_title": "OK-VQA: A Visual Question Answering Benchmark Requiring External Knowledge",
+      "paper_url": "https://doi.org/10.1109/CVPR.2019.00331",
+      "doi": "10.1109/CVPR.2019.00331",
+      "authors": [
+        "Kenneth Marino",
+        "Mohammad Rastegari",
+        "Ali Farhadi",
+        "Roozbeh Mottaghi"
+      ],
+      "bibtex": "@inproceedings{marino2019okvqa,\n  title={OK-VQA: A Visual Question Answering Benchmark Requiring External Knowledge},\n  author={Marino, Kenneth and Rastegari, Mohammad and Farhadi, Ali and Mottaghi, Roozbeh},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={3195--3204},\n  year={2019},\n  doi={10.1109/CVPR.2019.00331}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "omniglot",
     "slug": "omniglot",
     "name": "Omniglot",
@@ -39527,6 +40866,89 @@
         "AliveCor",
         "PhysioNet"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "physionet-cinc-2020",
+    "slug": "physionet-cinc-2020",
+    "name": "PhysioNet/CinC Challenge 2020: Classification of 12-lead ECGs",
+    "description": "PhysioNet/Computing in Cardiology (CinC) Challenge 2020 is a multi-center electrocardiogram benchmark comprising 43,101 12-lead clinical ECG recordings aggregated from 6 diverse hospital and clinical sources worldwide. Recordings are annotated with SNOMED-CT clinical diagnostic codes to advance automated detection of cardiac arrhythmias and heart conditions.",
+    "homepage_url": "https://physionet.org/content/challenge-2020/1.0.2/",
+    "publisher": {
+      "name": "PhysioNet (MIT LCP) & Computing in Cardiology",
+      "type": "academic",
+      "url": "https://physionet.org/"
+    },
+    "modalities": [
+      "sensor",
+      "time-series"
+    ],
+    "tasks": [
+      "ecg-classification",
+      "arrhythmia-detection"
+    ],
+    "tags": [
+      "ecg",
+      "cardiology",
+      "arrhythmia",
+      "12-lead-ecg",
+      "physionet",
+      "clinical",
+      "sensor"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset records distributed on PhysioNet under CC BY 4.0 Public License."
+    },
+    "source_references": [
+      {
+        "title": "PhysioNet Challenge 2020 Record",
+        "url": "https://physionet.org/content/challenge-2020/1.0.2/",
+        "type": "official_website",
+        "notes": "Official PhysioNet repository with 12-lead waveform records and header annotations."
+      },
+      {
+        "title": "PhysioNet CinC 2020 Publication",
+        "url": "https://doi.org/10.22489/CinC.2020.378",
+        "type": "original_paper",
+        "notes": "Published in Computing in Cardiology (CinC 2020), volume 47, pages 1-4."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against PhysioNet official archive and CinC 2020 publication."
+    },
+    "sample_count": {
+      "total": 43101,
+      "unit": "12-lead ECG recordings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-09-16"
+    },
+    "citation": {
+      "paper_title": "Classification of 12-lead ECGs: the PhysioNet/Computing in Cardiology Challenge 2020",
+      "paper_url": "https://doi.org/10.22489/CinC.2020.378",
+      "doi": "10.22489/CinC.2020.378",
+      "authors": [
+        "Erick A. Perez Alday",
+        "Annie Gu",
+        "Amit J. Shah",
+        "Chad Robichaux",
+        "Ali-Reza Wong",
+        "Chengyu Liu",
+        "Felipe Saeed",
+        "Fahim Shahriar",
+        "Gari D. Clifford"
+      ],
+      "bibtex": "@inproceedings{perezalday2020classification,\n  title={Classification of 12-lead ECGs: the PhysioNet/Computing in Cardiology Challenge 2020},\n  author={Perez Alday, Erick A. and Gu, Annie and Shah, Amit J. and Robichaux, Chad and Wong, Ali-Reza and Liu, Chengyu and Saeed, Felipe and Shahriar, Fahim and Clifford, Gari D.},\n  booktitle={2020 Computing in Cardiology},\n  volume={47},\n  pages={1--4},\n  year={2020},\n  doi={10.22489/CinC.2020.378}\n}"
     }
   },
   {
@@ -42402,6 +43824,92 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "refcoco",
+    "slug": "refcoco",
+    "name": "RefCOCO: Referring Expression Comprehension on Common Objects in Context",
+    "description": "RefCOCO is a referring expression comprehension and grounding dataset built on MS COCO images using a two-player reference game interface. Introduced by UNC Chapel Hill researchers in ECCV 2016, the standard UNC split contains 142,209 referring expressions for 50,000 objects across 19,994 images with separated test sets for persons (testA) and non-human objects (testB).",
+    "homepage_url": "https://github.com/lichengunc/refer",
+    "publisher": {
+      "name": "University of North Carolina at Chapel Hill",
+      "type": "academic",
+      "url": "https://www.unc.edu/"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "referring-expression-comprehension",
+      "visual-grounding"
+    ],
+    "tags": [
+      "referring-expressions",
+      "visual-grounding",
+      "coco",
+      "phrase-grounding",
+      "vision-language",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Academic Research Use / MIT Permissive",
+      "commercial_use": "unknown",
+      "notes": "Expression annotations released via UNC Chapel Hill refer API for academic research; underlying images subject to MS COCO / Flickr terms."
+    },
+    "source_references": [
+      {
+        "title": "RefCOCO (refer) Official GitHub Repository",
+        "url": "https://github.com/lichengunc/refer",
+        "type": "repository",
+        "notes": "Official UNC repository providing dataset loader and standard splits."
+      },
+      {
+        "title": "RefCOCO ECCV Publication",
+        "url": "https://doi.org/10.1007/978-3-319-46478-7_5",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of European Conference on Computer Vision (ECCV 2016), pages 69-85."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against UNC refer repository and ECCV 2016 paper (distinct from ReferItGame EMNLP 2014)."
+    },
+    "sample_count": {
+      "total": 142209,
+      "splits": {
+        "train": 120624,
+        "validation": 10834,
+        "testA": 5657,
+        "testB": 5094
+      },
+      "unit": "referring expressions",
+      "status": "verified"
+    },
+    "languages": [
+      "eng"
+    ],
+    "dates": {
+      "published": "2016-10-08"
+    },
+    "citation": {
+      "paper_title": "Modeling Context in Referring Expressions",
+      "paper_url": "https://doi.org/10.1007/978-3-319-46478-7_5",
+      "doi": "10.1007/978-3-319-46478-7_5",
+      "authors": [
+        "Licheng Yu",
+        "Patrick Poirson",
+        "Shan Yang",
+        "Alexander C. Berg",
+        "Tamara L. Berg"
+      ],
+      "bibtex": "@inproceedings{yu2016modeling,\n  title={Modeling Context in Referring Expressions},\n  author={Yu, Licheng and Poirson, Patrick and Yang, Shan and Berg, Alexander C. and Berg, Tamara L.},\n  booktitle={Computer Vision -- ECCV 2016},\n  pages={69--85},\n  year={2016},\n  doi={10.1007/978-3-319-46478-7_5}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "refuge-glaucoma",
     "slug": "refuge-glaucoma",
     "name": "REFUGE: Retinal Fundus Glaucoma Challenge Dataset",
@@ -43866,6 +45374,192 @@
       ],
       "doi": "10.1109/LRA.2021.3096144",
       "bibtex": "@article{weyler2021real,\n  title={A Real-World Dataset for RGB-D Crop/Weed Segmentation in Sugar Beet Fields},\n  author={Weyler, Jan and Magistri, Federico and Marks, Elias and Stachniss, Cyrill},\n  journal={IEEE Robotics and Automation Letters},\n  volume={6},\n  number={4},\n  pages={7085--7092},\n  year={2021},\n  publisher={IEEE},\n  doi={10.1109/LRA.2021.3096144}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scannet",
+    "slug": "scannet",
+    "name": "ScanNet: Richly-Annotated 3D Reconstructions of Indoor Scenes",
+    "description": "ScanNet is an RGB-D video dataset containing 1,513 scans of 707 distinct indoor spaces reconstructed into 3D meshes with 2.5 million view frames. Published at CVPR 2017 by Stanford University, Princeton University, and Technical University of Munich (TUM), it features dense 3D surface reconstructions, camera poses, and fine-grained 3D instance and semantic segmentations.",
+    "homepage_url": "http://www.scan-net.org/",
+    "publisher": {
+      "name": "Stanford University, Princeton University & TU Munich",
+      "type": "academic",
+      "url": "http://www.scan-net.org/"
+    },
+    "modalities": [
+      "vision",
+      "3d"
+    ],
+    "tasks": [
+      "3d-semantic-segmentation",
+      "3d-instance-segmentation",
+      "surface-reconstruction"
+    ],
+    "tags": [
+      "3d-reconstruction",
+      "scannet",
+      "indoor-scenes",
+      "rgb-d-video",
+      "point-cloud",
+      "mesh",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "ScanNet Terms of Use (Academic Non-Commercial License)",
+      "url": "http://kaldir.vc.in.tum.de/scannet/ScanNet_TOS.pdf",
+      "commercial_use": "forbidden",
+      "notes": "Code is under MIT; raw dataset assets are governed by the ScanNet Terms of Use restricting access strictly to non-commercial academic research and requiring formal user application."
+    },
+    "source_references": [
+      {
+        "title": "ScanNet Official Project Portal",
+        "url": "http://www.scan-net.org/",
+        "type": "official_website",
+        "notes": "Official portal with Terms of Use, data request forms, and benchmark leaderboards."
+      },
+      {
+        "title": "ScanNet GitHub Repository",
+        "url": "https://github.com/ScanNet/ScanNet",
+        "type": "repository",
+        "notes": "Companion processing toolkit and benchmark evaluation scripts."
+      },
+      {
+        "title": "ScanNet CVPR Publication",
+        "url": "https://doi.org/10.1109/CVPR.2017.261",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of IEEE CVPR 2017, pages 582-591."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against ScanNet Terms of Use, official portal, and CVPR 2017 publication."
+    },
+    "sample_count": {
+      "total": 1513,
+      "splits": {
+        "train": 1201,
+        "validation": 312
+      },
+      "unit": "3D room scans",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2017-07-21"
+    },
+    "citation": {
+      "paper_title": "ScanNet: Richly-annotated 3D Reconstructions of Indoor Scenes",
+      "paper_url": "https://doi.org/10.1109/CVPR.2017.261",
+      "doi": "10.1109/CVPR.2017.261",
+      "authors": [
+        "Angela Dai",
+        "Angel X. Chang",
+        "Manolis Savva",
+        "Maciej Halber",
+        "Thomas Funkhouser",
+        "Matthias Nießner"
+      ],
+      "bibtex": "@inproceedings{dai2017scannet,\n  title={ScanNet: Richly-annotated 3D Reconstructions of Indoor Scenes},\n  author={Dai, Angela and Chang, Angel X. and Savva, Manolis and Halber, Maciej and Funkhouser, Thomas and Nie{\\ss}ner, Matthias},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={582--591},\n  year={2017},\n  doi={10.1109/CVPR.2017.261}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scienceqa",
+    "slug": "scienceqa",
+    "name": "ScienceQA: Multimodal Question Answering with Thought Explanations",
+    "description": "ScienceQA is a multimodal science question-answering benchmark containing 21,208 multiple-choice questions collected from elementary and middle school curricula. Published at NeurIPS 2022, questions span natural science, social science, and language science, annotated with structured lecture notes and step-by-step explanations to diagnose multi-hop chain-of-thought reasoning.",
+    "homepage_url": "https://scienceqa.github.io/",
+    "publisher": {
+      "name": "UCLA NLP & Amazon Web Services",
+      "type": "academic",
+      "url": "https://scienceqa.github.io/"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "multimodal-reasoning"
+    ],
+    "tags": [
+      "science-qa",
+      "visual-question-answering",
+      "multimodal-reasoning",
+      "chain-of-thought",
+      "education",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Code is under MIT; dataset content is licensed under CC BY-NC-SA 4.0 as stated in the project repository."
+    },
+    "source_references": [
+      {
+        "title": "ScienceQA Project Website",
+        "url": "https://scienceqa.github.io/",
+        "type": "official_website",
+        "notes": "Official homepage with interactive viewer and evaluation leaderboard."
+      },
+      {
+        "title": "ScienceQA GitHub Repository",
+        "url": "https://github.com/lupantech/ScienceQA",
+        "type": "repository",
+        "notes": "Official repository with dataset JSON files and baseline code."
+      },
+      {
+        "title": "ScienceQA NeurIPS Publication",
+        "url": "https://arxiv.org/abs/2209.09513",
+        "type": "original_paper",
+        "notes": "Published in Advances in Neural Information Processing Systems (NeurIPS 2022)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against GitHub repository README, LICENSE notice, and NeurIPS 2022 publication."
+    },
+    "sample_count": {
+      "total": 21208,
+      "splits": {
+        "train": 12726,
+        "validation": 4241,
+        "test": 4241
+      },
+      "unit": "multiple-choice questions",
+      "status": "verified"
+    },
+    "languages": [
+      "eng"
+    ],
+    "dates": {
+      "published": "2022-09-20"
+    },
+    "citation": {
+      "paper_title": "Learn to Explain: Multimodal Reasoning via Thought Explanations for Science Question Answering",
+      "paper_url": "https://arxiv.org/abs/2209.09513",
+      "authors": [
+        "Pan Lu",
+        "Swaroop Mishra",
+        "Tanglin Xia",
+        "Liang Qiu",
+        "Kai-Wei Chang",
+        "Song-Chun Zhu",
+        "Oyvind Tafjord",
+        "Peter Clark",
+        "Ashwin Kalyan"
+      ],
+      "bibtex": "@inproceedings{lu2022learn,\n  title={Learn to Explain: Multimodal Reasoning via Thought Explanations for Science Question Answering},\n  author={Lu, Pan and Mishra, Swaroop and Xia, Tanglin and Qiu, Liang and Chang, Kai-Wei and Zhu, Song-Chun and Tafjord, Oyvind and Clark, Peter and Kalyan, Ashwin},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  volume={35},\n  pages={2507--2521},\n  year={2022}\n}"
     }
   },
   {
@@ -45340,6 +47034,85 @@
       "total": 515,
       "unit": "recordings",
       "status": "verified"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "smap-msl",
+    "slug": "smap-msl",
+    "name": "NASA Spacecraft Telemetry Anomaly Datasets (SMAP & MSL)",
+    "description": "NASA Spacecraft Telemetry Anomaly Datasets comprise 82 incident telemetry time-series streams with 107 expert-labeled anomalous episodes from the Soil Moisture Active Passive (SMAP) satellite and Mars Science Laboratory (MSL) Curiosity rover. Published at ACM SIGKDD 2018 by NASA Jet Propulsion Laboratory, it provides a real-world benchmark for multivariate telemetry anomaly detection.",
+    "homepage_url": "https://github.com/khundman/telemanom",
+    "publisher": {
+      "name": "NASA Jet Propulsion Laboratory",
+      "type": "government",
+      "url": "https://www.jpl.nasa.gov/"
+    },
+    "modalities": [
+      "sensor",
+      "time-series"
+    ],
+    "tasks": [
+      "time-series-anomaly-detection",
+      "anomaly-detection"
+    ],
+    "tags": [
+      "anomaly-detection",
+      "telemetry",
+      "spacecraft",
+      "nasa",
+      "mars-rover",
+      "satellite",
+      "sensor"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Repository and dataset distributed under Apache License 2.0 by NASA JPL."
+    },
+    "source_references": [
+      {
+        "title": "NASA Telemanom Official GitHub Repository",
+        "url": "https://github.com/khundman/telemanom",
+        "type": "repository",
+        "notes": "Official NASA JPL repository distributing SMAP and MSL telemetry channels and labels."
+      },
+      {
+        "title": "NASA Spacecraft Anomaly KDD Publication",
+        "url": "https://doi.org/10.1145/3219819.3219845",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of ACM SIGKDD 2018, pages 387-395."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against NASA JPL telemanom repository and ACM SIGKDD 2018 paper."
+    },
+    "sample_count": {
+      "total": 82,
+      "unit": "telemetry channels",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018-08-19"
+    },
+    "citation": {
+      "paper_title": "Detecting Spacecraft Anomalies Using LSTMs and Non-Parametric Dynamic Thresholding",
+      "paper_url": "https://doi.org/10.1145/3219819.3219845",
+      "doi": "10.1145/3219819.3219845",
+      "authors": [
+        "Kyle Hundman",
+        "Valentino Constantinou",
+        "Christopher Laporte",
+        "Ian Colwell",
+        "Tom Soderstrom"
+      ],
+      "bibtex": "@inproceedings{hundman2018detecting,\n  title={Detecting Spacecraft Anomalies Using LSTMs and Non-Parametric Dynamic Thresholding},\n  author={Hundman, Kyle and Constantinou, Valentino and Laporte, Christopher and Colwell, Ian and Soderstrom, Tom},\n  booktitle={Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery \\& Data Mining},\n  pages={387--395},\n  year={2018},\n  doi={10.1145/3219819.3219845}\n}"
     }
   },
   {
@@ -47077,6 +48850,86 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "sun-rgbd",
+    "slug": "sun-rgbd",
+    "name": "SUN RGB-D: A RGB-D Scene Understanding Benchmark Suite",
+    "description": "SUN RGB-D is a landmark 3D indoor scene understanding dataset containing 10,335 RGB-D images annotated with 64,595 3D oriented bounding boxes across 800 object categories. Published at CVPR 2015 by Princeton University, it aggregates aligned color and depth frames captured with four different sensor types to benchmark 3D object detection, semantic scene parsing, and room layout estimation.",
+    "homepage_url": "https://rgbd.cs.princeton.edu/",
+    "publisher": {
+      "name": "Princeton Vision Group, Princeton University",
+      "type": "academic",
+      "url": "https://rgbd.cs.princeton.edu/"
+    },
+    "modalities": [
+      "vision",
+      "3d"
+    ],
+    "tasks": [
+      "3d-object-detection",
+      "semantic-segmentation",
+      "scene-understanding"
+    ],
+    "tags": [
+      "3d-object-detection",
+      "rgb-d",
+      "indoor-scenes",
+      "depth",
+      "point-cloud",
+      "cvpr",
+      "benchmark"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified by Source (Academic Research Use)",
+      "commercial_use": "unknown",
+      "notes": "Princeton distribution portal provides direct academic download with mandatory citation; no standalone open data license is granted. Terms inherit from constituent sources (NYU Depth v2, Berkeley B3DO, SUN3D)."
+    },
+    "source_references": [
+      {
+        "title": "SUN RGB-D Official Project Portal",
+        "url": "https://rgbd.cs.princeton.edu/",
+        "type": "official_website",
+        "notes": "Official Princeton portal hosting RGB-D downloads, toolbox, and benchmark splits."
+      },
+      {
+        "title": "SUN RGB-D CVPR Publication",
+        "url": "https://doi.org/10.1109/CVPR.2015.7298655",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of IEEE CVPR 2015, pages 70-79."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against Princeton Vision Group portal and CVPR 2015 publication."
+    },
+    "sample_count": {
+      "total": 10335,
+      "splits": {
+        "train": 5285,
+        "test": 5050
+      },
+      "unit": "RGB-D frames",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2015-06-07"
+    },
+    "citation": {
+      "paper_title": "SUN RGB-D: A RGB-D Scene Understanding Benchmark Suite",
+      "paper_url": "https://doi.org/10.1109/CVPR.2015.7298655",
+      "doi": "10.1109/CVPR.2015.7298655",
+      "authors": [
+        "Shuran Song",
+        "Samuel P. Lichtenberg",
+        "Jianxiong Xiao"
+      ],
+      "bibtex": "@inproceedings{song2015sun,\n  title={SUN RGB-D: A RGB-D Scene Understanding Benchmark Suite},\n  author={Song, Shuran and Lichtenberg, Samuel P. and Xiao, Jianxiong},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={70--79},\n  year={2015},\n  doi={10.1109/CVPR.2015.7298655}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "sun397",
     "slug": "sun397",
     "name": "SUN397: Scene Categorization Benchmark",
@@ -48249,6 +50102,84 @@
         "Taiwan tomato cultivation fields",
         "PlantVillage database"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "tau-urban-acoustic-scenes-2020",
+    "slug": "tau-urban-acoustic-scenes-2020",
+    "name": "TAU Urban Acoustic Scenes 2020 Mobile (DCASE 2020 Task 1A)",
+    "description": "TAU Urban Acoustic Scenes 2020 Mobile is an audio dataset for acoustic scene classification with mismatched recording devices. Developed by Tampere University for DCASE 2020 Task 1A, it contains 23,040 10-second audio segments recorded across 10 urban acoustic scene categories in 12 European cities using 4 real physical recording devices and 16 simulated devices.",
+    "homepage_url": "https://zenodo.org/records/3819959",
+    "publisher": {
+      "name": "Audio Research Group, Tampere University",
+      "type": "academic",
+      "url": "https://tuni.fi/arg"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "acoustic-scene-classification",
+      "environmental-sound-classification"
+    ],
+    "tags": [
+      "acoustic-scene-classification",
+      "dcase",
+      "environmental-audio",
+      "urban-sound",
+      "sensor-mismatch",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed on Zenodo under CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "TAU Urban Acoustic Scenes 2020 Mobile Zenodo Record",
+        "url": "https://zenodo.org/records/3819959",
+        "type": "archive",
+        "notes": "Official development dataset release with audio archives and cross-validation setup."
+      },
+      {
+        "title": "DCASE 2020 Task 1 Technical Report",
+        "url": "https://doi.org/10.5281/zenodo.3819959",
+        "type": "original_paper",
+        "notes": "DCASE 2020 Challenge report on acoustic scene classification."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against Zenodo record 3819959 and DCASE 2020 challenge specification."
+    },
+    "sample_count": {
+      "total": 23040,
+      "unit": "audio segments",
+      "status": "verified"
+    },
+    "geographic_coverage": [
+      "Europe"
+    ],
+    "dates": {
+      "published": "2020-05-11"
+    },
+    "citation": {
+      "paper_title": "Acoustic Scene Classification in DCASE 2020 Challenge",
+      "paper_url": "https://doi.org/10.5281/zenodo.3819959",
+      "doi": "10.5281/zenodo.3819959",
+      "authors": [
+        "Toni Heittola",
+        "Annamaria Mesaros",
+        "Tuomas Virtanen"
+      ],
+      "bibtex": "@misc{heittola2020tau,\n  title={TAU Urban Acoustic Scenes 2020 Mobile, Development dataset},\n  author={Heittola, Toni and Mesaros, Annamaria and Virtanen, Tuomas},\n  year={2020},\n  publisher={Zenodo},\n  doi={10.5281/zenodo.3819959}\n}"
     }
   },
   {
@@ -51954,6 +53885,84 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "voxceleb1",
+    "slug": "voxceleb1",
+    "name": "VoxCeleb1: Large-Scale Speaker Identification Dataset",
+    "description": "VoxCeleb1 is a large-scale audio-visual dataset containing over 100,000 utterances for 1,251 celebrities, extracted from videos uploaded to YouTube. Introduced at Interspeech 2017 by Oxford's Visual Geometry Group, the dataset spans diverse acoustic environments, accents, and recording conditions, serving as a landmark global benchmark for speaker identification, speaker verification, and emotion recognition.",
+    "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/voxceleb/",
+    "publisher": {
+      "name": "Visual Geometry Group, University of Oxford",
+      "type": "academic",
+      "url": "https://www.robots.ox.ac.uk/~vgg/"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speaker-identification",
+      "speaker-verification"
+    ],
+    "tags": [
+      "speaker-recognition",
+      "speaker-verification",
+      "audio",
+      "voice",
+      "speech",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Creative Commons Attribution 4.0 International (Annotations Only)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "unknown",
+      "notes": "Metadata and annotations are licensed under CC BY 4.0 for research use. Oxford VGG explicitly notes that copyright for original and cropped video/audio extracts remains with the original YouTube uploaders."
+    },
+    "source_references": [
+      {
+        "title": "VoxCeleb Official Project Page",
+        "url": "https://www.robots.ox.ac.uk/~vgg/data/voxceleb/",
+        "type": "official_website",
+        "notes": "Official Oxford VGG portal with dataset downloads and evaluation protocols."
+      },
+      {
+        "title": "VoxCeleb Original Publication",
+        "url": "https://doi.org/10.21437/Interspeech.2017-950",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of Interspeech 2017, pages 2616-2620."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against Oxford VGG documentation and Interspeech 2017 publication."
+    },
+    "sample_count": {
+      "total": 153516,
+      "unit": "utterances",
+      "status": "verified"
+    },
+    "languages": [
+      "eng"
+    ],
+    "dates": {
+      "published": "2017-08-20"
+    },
+    "citation": {
+      "paper_title": "VoxCeleb: a large-scale speaker identification dataset",
+      "paper_url": "https://doi.org/10.21437/Interspeech.2017-950",
+      "doi": "10.21437/Interspeech.2017-950",
+      "authors": [
+        "Arsha Nagrani",
+        "Joon Son Chung",
+        "Andrew Zisserman"
+      ],
+      "bibtex": "@inproceedings{nagrani2017voxceleb,\n  title={VoxCeleb: a large-scale speaker identification dataset},\n  author={Nagrani, Arsha and Chung, Joon Son and Zisserman, Andrew},\n  booktitle={Interspeech 2017},\n  pages={2616--2620},\n  year={2017},\n  doi={10.21437/Interspeech.2017-950}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "voxpopuli",
     "slug": "voxpopuli",
     "name": "VoxPopuli: Large-Scale Multilingual Speech Corpus",
@@ -53674,6 +55683,84 @@
     "provenance": {
       "collection_method": "Certified laboratory measurements collected at the official Viticulture Commission of the Vinho Verde Region (CVRVV) in Portugal.",
       "curation_notes": "Each sample was evaluated by blind sensory testing conducted by a panel of at least three wine experts."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "wisdm",
+    "slug": "wisdm",
+    "name": "WISDM Smartphone and Smartwatch Activity and Biometrics Dataset",
+    "description": "WISDM Smartphone and Smartwatch Activity and Biometrics Dataset contains 15,630,426 raw triaxial accelerometer and gyroscope sensor readings collected at 20 Hz from 51 human subjects performing 18 diverse daily physical activities with both a phone and smartwatch. Published in IEEE Access 2019, it benchmarks wearable activity recognition, mobile biometrics, and sensor time-series classification.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/507/wisdm+smartphone+and+smartwatch+activity+and+biometrics+dataset",
+    "publisher": {
+      "name": "Fordham University & UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu/"
+    },
+    "modalities": [
+      "sensor",
+      "time-series"
+    ],
+    "tasks": [
+      "activity-recognition",
+      "sensor-classification",
+      "biometric-identification"
+    ],
+    "tags": [
+      "activity-recognition",
+      "wearables",
+      "accelerometer",
+      "gyroscope",
+      "smartwatch",
+      "biometrics",
+      "sensor"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Cataloged on UCI Machine Learning Repository under Creative Commons Attribution 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "UCI ML Repository Dataset Record (ID 507)",
+        "url": "https://archive.ics.uci.edu/dataset/507/wisdm+smartphone+and+smartwatch+activity+and+biometrics+dataset",
+        "type": "official_website",
+        "notes": "Official UCI repository record with raw sensor archives and documentation."
+      },
+      {
+        "title": "WISDM Research Publication",
+        "url": "https://doi.org/10.1109/ACCESS.2019.2942718",
+        "type": "original_paper",
+        "notes": "Published in IEEE Access, volume 7, pages 133190-133202."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "VisionX25 Maintainers",
+      "verified_date": "2026-11-17",
+      "notes": "Verified against UCI ML Repository record 507 and IEEE Access publication."
+    },
+    "sample_count": {
+      "total": 15630426,
+      "unit": "sensor readings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-09-18"
+    },
+    "citation": {
+      "paper_title": "Smartphone and Smartwatch-Based Biometrics Using Activities of Daily Living",
+      "paper_url": "https://doi.org/10.1109/ACCESS.2019.2942718",
+      "doi": "10.1109/ACCESS.2019.2942718",
+      "authors": [
+        "Gary M. Weiss",
+        "Kenichi Yoneda",
+        "Thaier Hayajneh"
+      ],
+      "bibtex": "@article{weiss2019smartphone,\n  title={Smartphone and Smartwatch-Based Biometrics Using Activities of Daily Living},\n  author={Weiss, Gary M. and Yoneda, Kenichi and Hayajneh, Thaier},\n  journal={IEEE Access},\n  volume={7},\n  pages={133190--133202},\n  year={2019},\n  publisher={IEEE},\n  doi={10.1109/ACCESS.2019.2942718}\n}"
     }
   },
   {

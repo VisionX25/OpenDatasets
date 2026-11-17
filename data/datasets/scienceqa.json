@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "scienceqa",
+  "slug": "scienceqa",
+  "name": "ScienceQA: Multimodal Question Answering with Thought Explanations",
+  "description": "ScienceQA is a multimodal science question-answering benchmark containing 21,208 multiple-choice questions collected from elementary and middle school curricula. Published at NeurIPS 2022, questions span natural science, social science, and language science, annotated with structured lecture notes and step-by-step explanations to diagnose multi-hop chain-of-thought reasoning.",
+  "homepage_url": "https://scienceqa.github.io/",
+  "publisher": {
+    "name": "UCLA NLP & Amazon Web Services",
+    "type": "academic",
+    "url": "https://scienceqa.github.io/"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "multimodal-reasoning"
+  ],
+  "tags": [
+    "science-qa",
+    "visual-question-answering",
+    "multimodal-reasoning",
+    "chain-of-thought",
+    "education",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Code is under MIT; dataset content is licensed under CC BY-NC-SA 4.0 as stated in the project repository."
+  },
+  "source_references": [
+    {
+      "title": "ScienceQA Project Website",
+      "url": "https://scienceqa.github.io/",
+      "type": "official_website",
+      "notes": "Official homepage with interactive viewer and evaluation leaderboard."
+    },
+    {
+      "title": "ScienceQA GitHub Repository",
+      "url": "https://github.com/lupantech/ScienceQA",
+      "type": "repository",
+      "notes": "Official repository with dataset JSON files and baseline code."
+    },
+    {
+      "title": "ScienceQA NeurIPS Publication",
+      "url": "https://arxiv.org/abs/2209.09513",
+      "type": "original_paper",
+      "notes": "Published in Advances in Neural Information Processing Systems (NeurIPS 2022)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against GitHub repository README, LICENSE notice, and NeurIPS 2022 publication."
+  },
+  "sample_count": {
+    "total": 21208,
+    "splits": {
+      "train": 12726,
+      "validation": 4241,
+      "test": 4241
+    },
+    "unit": "multiple-choice questions",
+    "status": "verified"
+  },
+  "languages": [
+    "eng"
+  ],
+  "dates": {
+    "published": "2022-09-20"
+  },
+  "citation": {
+    "paper_title": "Learn to Explain: Multimodal Reasoning via Thought Explanations for Science Question Answering",
+    "paper_url": "https://arxiv.org/abs/2209.09513",
+    "authors": [
+      "Pan Lu",
+      "Swaroop Mishra",
+      "Tanglin Xia",
+      "Liang Qiu",
+      "Kai-Wei Chang",
+      "Song-Chun Zhu",
+      "Oyvind Tafjord",
+      "Peter Clark",
+      "Ashwin Kalyan"
+    ],
+    "bibtex": "@inproceedings{lu2022learn,\n  title={Learn to Explain: Multimodal Reasoning via Thought Explanations for Science Question Answering},\n  author={Lu, Pan and Mishra, Swaroop and Xia, Tanglin and Qiu, Liang and Chang, Kai-Wei and Zhu, Song-Chun and Tafjord, Oyvind and Clark, Peter and Kalyan, Ashwin},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  volume={35},\n  pages={2507--2521},\n  year={2022}\n}"
+  }
+}

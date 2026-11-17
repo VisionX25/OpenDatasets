@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "scannet",
+  "slug": "scannet",
+  "name": "ScanNet: Richly-Annotated 3D Reconstructions of Indoor Scenes",
+  "description": "ScanNet is an RGB-D video dataset containing 1,513 scans of 707 distinct indoor spaces reconstructed into 3D meshes with 2.5 million view frames. Published at CVPR 2017 by Stanford University, Princeton University, and Technical University of Munich (TUM), it features dense 3D surface reconstructions, camera poses, and fine-grained 3D instance and semantic segmentations.",
+  "homepage_url": "http://www.scan-net.org/",
+  "publisher": {
+    "name": "Stanford University, Princeton University & TU Munich",
+    "type": "academic",
+    "url": "http://www.scan-net.org/"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "3d-semantic-segmentation",
+    "3d-instance-segmentation",
+    "surface-reconstruction"
+  ],
+  "tags": [
+    "3d-reconstruction",
+    "scannet",
+    "indoor-scenes",
+    "rgb-d-video",
+    "point-cloud",
+    "mesh",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "ScanNet Terms of Use (Academic Non-Commercial License)",
+    "url": "http://kaldir.vc.in.tum.de/scannet/ScanNet_TOS.pdf",
+    "commercial_use": "forbidden",
+    "notes": "Code is under MIT; raw dataset assets are governed by the ScanNet Terms of Use restricting access strictly to non-commercial academic research and requiring formal user application."
+  },
+  "source_references": [
+    {
+      "title": "ScanNet Official Project Portal",
+      "url": "http://www.scan-net.org/",
+      "type": "official_website",
+      "notes": "Official portal with Terms of Use, data request forms, and benchmark leaderboards."
+    },
+    {
+      "title": "ScanNet GitHub Repository",
+      "url": "https://github.com/ScanNet/ScanNet",
+      "type": "repository",
+      "notes": "Companion processing toolkit and benchmark evaluation scripts."
+    },
+    {
+      "title": "ScanNet CVPR Publication",
+      "url": "https://doi.org/10.1109/CVPR.2017.261",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of IEEE CVPR 2017, pages 582-591."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against ScanNet Terms of Use, official portal, and CVPR 2017 publication."
+  },
+  "sample_count": {
+    "total": 1513,
+    "splits": {
+      "train": 1201,
+      "validation": 312
+    },
+    "unit": "3D room scans",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2017-07-21"
+  },
+  "citation": {
+    "paper_title": "ScanNet: Richly-annotated 3D Reconstructions of Indoor Scenes",
+    "paper_url": "https://doi.org/10.1109/CVPR.2017.261",
+    "doi": "10.1109/CVPR.2017.261",
+    "authors": [
+      "Angela Dai",
+      "Angel X. Chang",
+      "Manolis Savva",
+      "Maciej Halber",
+      "Thomas Funkhouser",
+      "Matthias Nießner"
+    ],
+    "bibtex": "@inproceedings{dai2017scannet,\n  title={ScanNet: Richly-annotated 3D Reconstructions of Indoor Scenes},\n  author={Dai, Angela and Chang, Angel X. and Savva, Manolis and Halber, Maciej and Funkhouser, Thomas and Nie{\\ss}ner, Matthias},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={582--591},\n  year={2017},\n  doi={10.1109/CVPR.2017.261}\n}"
+  }
+}

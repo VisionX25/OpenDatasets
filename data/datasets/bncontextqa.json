@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bncontextqa",
+  "slug": "bncontextqa",
+  "name": "bnContextQA: Long-Context Question Answering Benchmark for Bangla",
+  "description": "bnContextQA is an evaluation benchmark dataset designed to investigate positional bias and the 'Lost in the Middle' phenomenon in Large Language Models when processing long-context text in Bangla. Presented at BLP-2025, it contains 350 long-context question-answering instances, each paired with 30 context paragraphs across multiple controlled position permutations (10,500 total evaluation instances).",
+  "homepage_url": "https://github.com/labiba02/bnContextQA",
+  "publisher": {
+    "name": "Islamic University of Technology",
+    "type": "academic",
+    "url": "https://github.com/labiba02/bnContextQA"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "information-retrieval"
+  ],
+  "tags": [
+    "bengali",
+    "bangla",
+    "long-context",
+    "question-answering",
+    "llm-evaluation",
+    "positional-bias"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source",
+    "commercial_use": "unknown",
+    "notes": "Repository provides open academic access to the QA instances without an explicit standalone license file."
+  },
+  "source_references": [
+    {
+      "title": "bnContextQA Official GitHub Repository",
+      "url": "https://github.com/labiba02/bnContextQA",
+      "type": "repository",
+      "notes": "Official repository with 350 QA items and 30-context test configurations."
+    },
+    {
+      "title": "bnContextQA Research Paper",
+      "url": "https://aclanthology.org/2025.banglalp-1.29/",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against GitHub repository and ACL Anthology BLP-2025 paper."
+  },
+  "sample_count": {
+    "total": 350,
+    "unit": "QA instances",
+    "status": "verified"
+  },
+  "languages": [
+    "ben"
+  ],
+  "dates": {
+    "published": "2025-12"
+  },
+  "citation": {
+    "paper_title": "bnContextQA: Benchmarking Long-Context Question Answering and Challenges in Bangla",
+    "paper_url": "https://aclanthology.org/2025.banglalp-1.29/",
+    "authors": [
+      "Adnan Ahmad",
+      "Labiba Adiba",
+      "Namirah Rasul",
+      "Md Tahmid Rahman Laskar",
+      "Sabbir Ahmed"
+    ],
+    "bibtex": "@inproceedings{ahmad-etal-2025-bncontextqa,\n  title={bnContextQA: Benchmarking Long-Context Question Answering and Challenges in Bangla},\n  author={Ahmad, Adnan and Adiba, Labiba and Rasul, Namirah and Laskar, Md Tahmid Rahman and Ahmed, Sabbir},\n  booktitle={Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)},\n  pages={297--306},\n  year={2025}\n}"
+  }
+}

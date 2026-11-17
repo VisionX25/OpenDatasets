@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "clotho",
+  "slug": "clotho",
+  "name": "Clotho: An Audio Captioning Dataset (v2.1)",
+  "description": "Clotho is an audio captioning dataset consisting of 6,974 audio samples of 15 to 30 seconds duration sourced from Freesound, each paired with 5 crowdsourced human-written natural language captions (34,870 captions total). Originally presented at ICASSP 2020 by Tampere University, Clotho v2.1 serves as the benchmark corpus for DCASE automated audio captioning and language-based audio retrieval.",
+  "homepage_url": "https://zenodo.org/records/4783391",
+  "publisher": {
+    "name": "Audio Research Group, Tampere University",
+    "type": "academic",
+    "url": "https://tuni.fi/arg"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "audio-captioning",
+    "sound-event-detection"
+  ],
+  "tags": [
+    "audio-captioning",
+    "environmental-sound",
+    "dcase",
+    "audio-retrieval",
+    "captions",
+    "freesound"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed on Zenodo under Creative Commons Attribution 4.0 International."
+  },
+  "source_references": [
+    {
+      "title": "Clotho v2.1 Zenodo Record",
+      "url": "https://zenodo.org/records/4783391",
+      "type": "archive",
+      "notes": "Official v2.1 dataset release with audio archives and caption CSV splits."
+    },
+    {
+      "title": "Clotho GitHub Repository",
+      "url": "https://github.com/dr-costas/clotho-dataset",
+      "type": "repository",
+      "notes": "Companion toolkit and loading utilities."
+    },
+    {
+      "title": "Clotho Original ICASSP Publication",
+      "url": "https://doi.org/10.1109/ICASSP40776.2020.9053589",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of IEEE ICASSP 2020, pages 636-640."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against Zenodo record 4783391 and ICASSP 2020 paper."
+  },
+  "sample_count": {
+    "total": 6974,
+    "splits": {
+      "development": 3839,
+      "validation": 1045,
+      "evaluation": 1045
+    },
+    "unit": "audio files",
+    "status": "verified"
+  },
+  "languages": [
+    "eng"
+  ],
+  "dates": {
+    "published": "2020-05-04",
+    "last_updated": "2021-05-18"
+  },
+  "citation": {
+    "paper_title": "Clotho: An Audio Captioning Dataset",
+    "paper_url": "https://doi.org/10.1109/ICASSP40776.2020.9053589",
+    "doi": "10.1109/ICASSP40776.2020.9053589",
+    "authors": [
+      "Konstantinos Drossos",
+      "Samuel Lipping",
+      "Tuomas Virtanen"
+    ],
+    "bibtex": "@inproceedings{drossos2020clotho,\n  title={Clotho: An Audio Captioning Dataset},\n  author={Drossos, Konstantinos and Lipping, Samuel and Virtanen, Tuomas},\n  booktitle={ICASSP 2020 - 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages={636--640},\n  year={2020},\n  doi={10.1109/ICASSP40776.2020.9053589}\n}"
+  }
+}

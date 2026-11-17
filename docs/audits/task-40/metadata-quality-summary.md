@@ -1,23 +1,23 @@
 # OpenDatasets Metadata Quality & Research Readiness Audit
 
-> **Audit Task:** Task 40  
-> **Audit Date:** 2026-11-15  
-> **Total Datasets Audited:** 600  
-> **Catalog Documentation Completeness:** 81.1%  
-> **Methodology:** Offline, evidence-based, reproducible metadata inspection across canonical JSON Schema v1 definitions.  
+> **Audit Task:** Task 40<br>
+> **Audit Date:** 2026-11-15<br>
+> **Total Datasets Audited:** 625<br>
+> **Catalog Documentation Completeness:** 80.8%<br>
+> **Methodology:** Offline, evidence-based, reproducible metadata inspection across canonical JSON Schema v1 definitions.
 
 ---
 
 ## Executive Summary
 
-This audit establishes a rigorous, evidence-based quality baseline across all 600 datasets in the OpenDatasets catalog. The evaluation assesses metadata documentation completeness, licensing clarity, scientific arithmetic consistency, and research readiness without fabricating claims, assigning arbitrary weighted scores, or confusing metadata completeness with scientific dataset validity.
+This audit establishes a rigorous, evidence-based quality baseline across all 625 datasets in the OpenDatasets catalog. The evaluation assesses metadata documentation completeness, licensing clarity, scientific arithmetic consistency, and research readiness without fabricating claims, assigning arbitrary weighted scores, or confusing metadata completeness with scientific dataset validity.
 
 ### Key Catalog Highlights
-- **100% Core Schema Compliance:** All 600 datasets strictly adhere to `dataset.v1.schema.json` with valid unique IDs, slugs, names, descriptions, homepages, publishers, modalities, tasks, tags, licenses, source references, and verification blocks.
-- **Catalog Documentation Completeness:** Average of **81.1%** across applicable core and optional metadata attributes.
-- **Licensing Transparency:** 318 verified open datasets, 123 verified non-commercial, 91 custom permissive, and 35 public domain datasets. Only 30 datasets are unspecified by source and 1 is unknown from source (`mnist`).
-- **Access Requirements:** 552 datasets offer open/direct download, while **43** datasets require user registration, formal data use agreements (DUAs), or institutional credentialing (e.g. ADNI, PhysioNet, MIMIC).
-- **Academic Citation Coverage:** **592 / 600 (98.7%)** include structured academic citations. Datasets without citations represent authoritative government or institutional repositories (e.g. NOAA, NASA, Canadian Open Government).
+- **100% Core Schema Compliance:** All 625 datasets strictly adhere to `dataset.v1.schema.json` with valid unique IDs, slugs, names, descriptions, homepages, publishers, modalities, tasks, tags, licenses, source references, and verification blocks.
+- **Catalog Documentation Completeness:** Average of **80.8%** across applicable core and optional metadata attributes.
+- **Licensing Transparency:** 329 verified open datasets, 130 verified non-commercial, 93 custom permissive, and 36 public domain datasets. Only 34 datasets are unspecified by source and 1 is unknown from source (`mnist`).
+- **Access Requirements:** 574 datasets offer open/direct download, while **44** datasets require user registration, formal data use agreements (DUAs), or institutional credentialing (e.g. ADNI, PhysioNet, MIMIC).
+- **Academic Citation Coverage:** **617 / 625 (98.7%)** include structured academic citations. Datasets without citations represent authoritative government or institutional repositories (e.g. NOAA, NASA, Canadian Open Government).
 - **Zero Critical Fatalities:** Zero malformed DOIs, zero unbalanced BibTeX braces, and zero broken JSON syntax across the catalog.
 
 ---
@@ -29,23 +29,23 @@ The canonical schema defines required top-level attributes and structured option
 
 | Metadata Field | Present Count | Catalog Coverage (%) | Evaluation Context |
 | :--- | :--- | :--- | :--- |
-| **Published Milestone Date** (`dates.published`) | 600 | 100.0% | Complete across all 600 catalog records |
-| **Academic Citation** (`citation`) | 592 | 98.7% | Comprehensive for benchmark datasets |
-| **Sample Count Breakdown** (`sample_count`) | 559 | 93.2% | 41 missing, 25 documented as unknown |
-| **Publisher URL** (`publisher.url`) | 560 | 93.3% | Institutional/lab homepage provided |
-| **Physical Storage Size** (`size`) | 293 | 48.8% | 199 with exact bytes, 94 documented as unknown |
-| **Provenance & Lineage** (`provenance`) | 250 | 41.7% | Documented collection & curation protocols |
-| **Updated Milestone Date** (`dates.last_updated`) | 264 | 44.0% | Historical revisions or dataset maintenance dates |
-| **Geographic Coverage** (`geographic_coverage`) | 145 | 24.2% | Applicable to remote sensing, climate, transit |
-| **Language Identifiers** (`languages`) | 93 | 15.5% | Applicable to text and speech modalities |
+| **Published Milestone Date** (`dates.published`) | 625 | 100.0% | Complete across all 625 catalog records |
+| **Academic Citation** (`citation`) | 617 | 98.7% | Comprehensive for benchmark datasets |
+| **Sample Count Breakdown** (`sample_count`) | 584 | 93.4% | 41 missing, 25 documented as unknown |
+| **Publisher URL** (`publisher.url`) | 585 | 93.6% | Institutional/lab homepage provided |
+| **Physical Storage Size** (`size`) | 293 | 46.9% | 199 with exact bytes, 94 documented as unknown |
+| **Provenance & Lineage** (`provenance`) | 252 | 40.3% | Documented collection & curation protocols |
+| **Updated Milestone Date** (`dates.last_updated`) | 265 | 42.4% | Historical revisions or dataset maintenance dates |
+| **Geographic Coverage** (`geographic_coverage`) | 146 | 23.4% | Applicable to remote sensing, climate, transit |
+| **Language Identifiers** (`languages`) | 112 | 17.9% | Applicable to text and speech modalities |
 
-### Mathematical Derivation of the 81.1% Completeness Value
-The catalog documentation completeness average of **81.1%** (exact: `81.0897%`) is an unweighted arithmetic mean of per-dataset completeness scores across all 600 records:
+### Mathematical Derivation of the 80.8% Completeness Value
+The catalog documentation completeness average of **80.8%** (exact: `80.8294%`) is an unweighted arithmetic mean of per-dataset completeness scores across all 625 records:
 
 - **Evaluation Attributes per Dataset:** Each record is scored against 13 core attributes plus up to 2 domain-applicable contextual attributes (`geographic_coverage` and `languages`).
 - **Denominator Distribution:**
-  - **13 attributes (320 datasets):** Pure vision, tabular, or general benchmarks where neither geographic nor spoken language coverage is applicable.
-  - **14 attributes (279 datasets):** Datasets where either geographic coverage (e.g. remote sensing, climate, transit) or language coverage (e.g. NLP, audio corpora) is applicable.
+  - **13 attributes (324 datasets):** Pure vision, tabular, or general benchmarks where neither geographic nor spoken language coverage is applicable.
+  - **14 attributes (300 datasets):** Datasets where either geographic coverage (e.g. remote sensing, climate, transit) or language coverage (e.g. NLP, audio corpora) is applicable.
   - **15 attributes (1 dataset):** Multimodal geospatial/audio-visual datasets where both geographic and language attributes apply.
 - **Treatment of Missing vs. Unknown vs. N/A:**
   - *Missing Applicable Attribute:* Scores `0` in numerator, counted in denominator (e.g. an NLP dataset missing language tags).
@@ -60,29 +60,29 @@ Metadata completeness and research readiness vary naturally across disciplines d
 
 | Research Category | Total Datasets | Avg Doc Completeness (%) | Ready for Evaluation | Documented with Caveats | Needs Info Review |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **computer-vision** | 339 | 83.8% | 226 | 86 | 27 |
-| **natural-language-processing** | 137 | 82.2% | 79 | 43 | 15 |
-| **audio-speech** | 31 | 74.0% | 22 | 9 | 0 |
-| **tabular-time-series** | 172 | 78.6% | 137 | 33 | 2 |
-| **multimodal-generative** | 90 | 83.6% | 52 | 33 | 5 |
-| **evaluation-benchmarks** | 238 | 84.7% | 169 | 39 | 30 |
+| **computer-vision** | 346 | 83.7% | 231 | 87 | 28 |
+| **natural-language-processing** | 151 | 81.3% | 88 | 45 | 18 |
+| **audio-speech** | 39 | 74.7% | 27 | 12 | 0 |
+| **tabular-time-series** | 175 | 78.5% | 140 | 33 | 2 |
+| **multimodal-generative** | 95 | 83.3% | 56 | 34 | 5 |
+| **evaluation-benchmarks** | 253 | 84.2% | 179 | 42 | 32 |
 
 ### Multi-Category Accounting Breakdown
-The sum of category totals is **1,007**, which exceeds 600 because OpenDatasets allows multi-category discovery membership:
-- **0 Categories (7 datasets):** Highly specialized point cloud and physiological sensor records (`bonnbeetclouds3d`, `semantic-kitti`, `semanticposs`, `h3d-honda`, `behavioral-neural-measures-auditory-distracti`, `eeg-based-lie-detection-using-14`, `raw-preprocessed-eeg-ils-screened-verbal`). In the web portal, these appear under search and 'All Categories'.
-- **1 Category:** 262 datasets (single-domain records).
-- **2 Categories:** 261 datasets (e.g., computer vision benchmarks matching both `computer-vision` and `evaluation-benchmarks`).
-- **3 Categories:** 57 datasets (e.g., multimodal generative benchmarks).
-- **4 Categories:** 13 datasets (complex multi-modal evaluation suites).
-- **Total Category Assignments:** `(262 × 1) + (261 × 2) + (57 × 3) + (13 × 4) = 262 + 522 + 171 + 52 = 1,007` across exactly 600 unique dataset records.
+The sum of category totals is **1,059**, which exceeds 625 because OpenDatasets allows multi-category discovery membership:
+- **0 Categories (7 datasets):** Highly specialized point cloud and physiological sensor records (`behavioral-neural-measures-auditory-distracti`, `bonnbeetclouds3d`, `eeg-based-lie-detection-using-14`, `h3d-honda`, `raw-preprocessed-eeg-ils-screened-verbal`, `semantic-kitti`, `semanticposs`). In the web portal, these appear under search and 'All Categories'.
+- **1 Category:** 272 datasets (single-domain records).
+- **2 Categories:** 269 datasets (e.g., computer vision benchmarks matching both `computer-vision` and `evaluation-benchmarks`).
+- **3 Categories:** 59 datasets (e.g., multimodal generative benchmarks).
+- **4 Categories:** 18 datasets (complex multi-modal evaluation suites).
+- **Total Category Assignments:** `(272 × 1) + (269 × 2) + (59 × 3) + (18 × 4) = 272 + 538 + 177 + 72 = 1,059` across exactly 625 unique dataset records.
 
 ---
 
 ## 3. Common Missing Information & Documentation Gaps
 
-1. **Physical Storage Size (`size`):** 307 datasets lack a `size` block. When physical size is known from publisher documentation, it provides valuable guidance for local compute provisioning.
-2. **Data Provenance & Lineage (`provenance`):** 350 datasets lack explicit `provenance` blocks detailing collection instrumentation, annotation guidelines, and raw data lineage.
-3. **Explicit Sub-Split Details:** While 559 datasets document sample counts, 74 datasets feature split descriptions that mix sample counts with non-partition quantities (e.g. class counts, patient counts, hours of video), creating ambiguities in automated evaluation frameworks.
+1. **Physical Storage Size (`size`):** 332 datasets lack a `size` block. When physical size is known from publisher documentation, it provides valuable guidance for local compute provisioning.
+2. **Data Provenance & Lineage (`provenance`):** 373 datasets lack explicit `provenance` blocks detailing collection instrumentation, annotation guidelines, and raw data lineage.
+3. **Explicit Sub-Split Details:** While 584 datasets document sample counts, 74 datasets feature split descriptions that mix sample counts with non-partition quantities (e.g. class counts, patient counts, hours of video), creating ambiguities in automated evaluation frameworks.
 4. **Publisher URLs:** 40 datasets specify a publisher name and type (e.g., academic, government) but omit an institutional landing page URL.
 
 ---
@@ -90,18 +90,18 @@ The sum of category totals is **1,007**, which exceeds 600 because OpenDatasets 
 ## 4. Licensing and Access Documentation Gaps
 
 ### Licensing Classification Breakdown
-- **Verified Open:** 318 datasets (53.0%)
-- **Verified Non-Commercial:** 123 datasets (20.5%)
-- **Custom Permissive:** 91 datasets (15.2%)
-- **Public Domain:** 35 datasets (5.8%)
-- **Unspecified by Source:** 30 datasets (5.0%)
+- **Verified Open:** 329 datasets (52.6%)
+- **Verified Non-Commercial:** 130 datasets (20.8%)
+- **Custom Permissive:** 93 datasets (14.9%)
+- **Public Domain:** 36 datasets (5.8%)
+- **Unspecified by Source:** 34 datasets (5.4%)
 - **Proprietary:** 2 datasets (`adni`, `khatt`)
 - **Unknown:** 1 dataset (`mnist`)
 
 ### Commercial Use Permissions
-- **Allowed:** 379 datasets
-- **Forbidden:** 158 datasets
-- **Unknown / Ambiguous:** 63 datasets
+- **Allowed:** 391 datasets
+- **Forbidden:** 165 datasets
+- **Unknown / Ambiguous:** 69 datasets
 
 ### Key Licensing Observations & False-Positive Analysis
 1. **Custom Permissive Non-Commercial Research Licenses (31 datasets):** 31 datasets marked `custom_permissive` document strict non-commercial research terms in their notes (e.g. Waymo Open Dataset, ApolloScape, levelXData, Matterport HM3D). These are **not curatorial errors**; they accurately reflect custom publisher terms that are permissive for academic research but forbid commercial redistribution. They remain categorized for potential future alignment under a unified non-commercial rubric.
@@ -154,33 +154,33 @@ The 4 datasets flagged for duplicate URLs represent legitimate semantic multi-ro
 ### Deterministic Classification Rules
 Every dataset in OpenDatasets is classified into **exactly one** of three mutually exclusive descriptive tiers based on deterministic criteria:
 
-1. **Needs Information Review (40 datasets):**
+1. **Needs Information Review (44 datasets):**
    - *Rule:* Triggered if `license.status` is `unknown` or `unspecified_by_source`, OR if a genuine `partition_split_count_mismatch` exists.
    - *Meaning:* Requires maintainer review of source terms or split arithmetic before researchers can reliably cite or partition the dataset.
-2. **Ready for Evaluation (402 datasets):**
+2. **Ready for Evaluation (419 datasets):**
    - *Rule:* Triggered if Source Traceability is `High`, License Clarity is `High` (`verified_open`, `verified_non_commercial`, or `public_domain` with explicit commercial terms), Scale Documentation is `High` or `Medium`, Access Clarity is `Explicit_Open` or `Explicit_Gated`, and no Needs Information Review triggers are present.
    - *Meaning:* The record provides complete metadata (traceable publisher, explicit license, standardized modalities/tasks, and sample counts) enabling a researcher to immediately evaluate its applicability.
    - *Clarification:* **'Ready for Evaluation' DOES NOT imply unrestricted access, commercial permission, scientific validity, or benchmark accuracy.** It strictly evaluates documentation availability.
-3. **Documented with Caveats (158 datasets):**
+3. **Documented with Caveats (162 datasets):**
    - *Rule:* All remaining datasets that are traceable and defined, but have operational caveats (e.g. credentialed/DUA access requirements, custom permissive non-commercial licenses, or omitted physical download byte sizes).
 
 ```
-Total Audited: 402 (Ready) + 158 (Caveats) + 40 (Needs Review) = 600 datasets (100% accounted for)
+Total Audited: 419 (Ready) + 162 (Caveats) + 44 (Needs Review) = 625 datasets (100% accounted for)
 ```
 
 | Readiness Dimension | High | Medium / Explicit | Low / Ambiguous | Authoritative / N/A |
 | :--- | :--- | :--- | :--- | :--- |
-| **Source Traceability** | 560 | 40 | 0 | — |
-| **Access Clarity** | 552 (Open) | 43 (Gated) | 5 | — |
-| **License Clarity** | 473 | 96 | 31 | — |
-| **Task & Modality Clarity** | 600 | 0 | 0 | — |
-| **Scale Documentation** | 335 | 219 | 46 | — |
-| **Citation Completeness** | 418 | 174 | 0 | 6 |
+| **Source Traceability** | 585 | 40 | 0 | — |
+| **Access Clarity** | 574 (Open) | 44 (Gated) | 7 | — |
+| **License Clarity** | 492 | 98 | 35 | — |
+| **Task & Modality Clarity** | 625 | 0 | 0 | — |
+| **Scale Documentation** | 343 | 236 | 46 | — |
+| **Citation Completeness** | 435 | 182 | 0 | 6 |
 
 ### Catalog Readiness Tiers
-- **Ready for Evaluation (402 datasets):** Full provenance, verifiable license, unambiguous task/modality classifications, and documented sample scale. Ready for immediate experimental benchmarking.
-- **Documented with Caveats (158 datasets):** Traceable source documentation with explicit task definitions, but subject to operational caveats (e.g. credentialed/DUA access requirements, custom license clauses, or absent byte-size statistics).
-- **Needs Information Review (40 datasets):** Unspecified license from source, or mathematical partition split count discrepancy requiring primary source verification.
+- **Ready for Evaluation (419 datasets):** Full provenance, verifiable license, unambiguous task/modality classifications, and documented sample scale. Ready for immediate experimental benchmarking.
+- **Documented with Caveats (162 datasets):** Traceable source documentation with explicit task definitions, but subject to operational caveats (e.g. credentialed/DUA access requirements, custom license clauses, or absent byte-size statistics).
+- **Needs Information Review (44 datasets):** Unspecified license from source, or mathematical partition split count discrepancy requiring primary source verification.
 
 ---
 
@@ -188,20 +188,20 @@ Total Audited: 402 (Ready) + 158 (Caveats) + 40 (Needs Review) = 600 datasets (1
 
 To guide future catalog curation, candidate records are grouped into prioritized buckets with mandatory primary-source evidence requirements:
 
-### Priority 1: Licensing Ambiguity & Discrepancies (32 records)
+### Priority 1: Licensing Ambiguity & Discrepancies (36 records)
 | Dataset ID | License Status | Commercial Use | Recommended Review | Evidence Requirement |
 | :--- | :--- | :--- | :--- | :--- |
 | `3cad-3c-product-anomaly-detection` | `unspecified_by_source` | `unknown` | Verify license grant or terms of use against canonical primary source documentation. | Direct URL or excerpt from publisher's primary license declaration, terms of service, or repository LICENSE. |
 | `ag-news` | `unspecified_by_source` | `unknown` | Verify license grant or terms of use against canonical primary source documentation. | Direct URL or excerpt from publisher's primary license declaration, terms of service, or repository LICENSE. |
+| `bncontextqa` | `unspecified_by_source` | `unknown` | Verify license grant or terms of use against canonical primary source documentation. | Direct URL or excerpt from publisher's primary license declaration, terms of service, or repository LICENSE. |
+| `bnli` | `unspecified_by_source` | `unknown` | Verify license grant or terms of use against canonical primary source documentation. | Direct URL or excerpt from publisher's primary license declaration, terms of service, or repository LICENSE. |
 | `california-housing` | `unspecified_by_source` | `unknown` | Verify license grant or terms of use against canonical primary source documentation. | Direct URL or excerpt from publisher's primary license declaration, terms of service, or repository LICENSE. |
+| `checksent-bn` | `unspecified_by_source` | `unknown` | Verify license grant or terms of use against canonical primary source documentation. | Direct URL or excerpt from publisher's primary license declaration, terms of service, or repository LICENSE. |
 | `cifar-10` | `unspecified_by_source` | `unknown` | Verify license grant or terms of use against canonical primary source documentation. | Direct URL or excerpt from publisher's primary license declaration, terms of service, or repository LICENSE. |
 | `cifar-100` | `unspecified_by_source` | `unknown` | Verify license grant or terms of use against canonical primary source documentation. | Direct URL or excerpt from publisher's primary license declaration, terms of service, or repository LICENSE. |
 | `cnn-dailymail` | `unspecified_by_source` | `unknown` | Verify license grant or terms of use against canonical primary source documentation. | Direct URL or excerpt from publisher's primary license declaration, terms of service, or repository LICENSE. |
 | `cora-citation-network` | `unspecified_by_source` | `unknown` | Verify license grant or terms of use against canonical primary source documentation. | Direct URL or excerpt from publisher's primary license declaration, terms of service, or repository LICENSE. |
-| `d4la` | `unspecified_by_source` | `unknown` | Verify license grant or terms of use against canonical primary source documentation. | Direct URL or excerpt from publisher's primary license declaration, terms of service, or repository LICENSE. |
-| `dagm-2007-industrial-optical-inspection` | `unspecified_by_source` | `unknown` | Verify license grant or terms of use against canonical primary source documentation. | Direct URL or excerpt from publisher's primary license declaration, terms of service, or repository LICENSE. |
-| `deeppcb` | `unspecified_by_source` | `forbidden` | Verify license grant or terms of use against canonical primary source documentation. | Direct URL or excerpt from publisher's primary license declaration, terms of service, or repository LICENSE. |
-| *...and 22 more records in report.json* | | | | |
+| *...and 26 more records in report.json* | | | | |
 
 ### Priority 2: Partition Split Arithmetic Discrepancies (11 records)
 | Dataset ID | Declared Total | Sample Unit | Recommended Review | Evidence Requirement |

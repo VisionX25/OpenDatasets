@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "must-c",
+  "slug": "must-c",
+  "name": "MuST-C: Multilingual Speech-to-Text Translation Corpus",
+  "description": "MuST-C is a multilingual speech-to-text translation corpus consisting of English TED Talks aligned with translations into 8 European languages (German, Spanish, French, Italian, Dutch, Portuguese, Romanian, Russian). Created by Fondazione Bruno Kessler (FBK) and presented at NAACL-HLT 2019, it includes hundreds of hours of aligned audio per language pair.",
+  "homepage_url": "https://ict.fbk.eu/must-c/",
+  "publisher": {
+    "name": "Fondazione Bruno Kessler (FBK)",
+    "type": "academic",
+    "url": "https://ict.fbk.eu/"
+  },
+  "modalities": [
+    "audio",
+    "nlp"
+  ],
+  "tasks": [
+    "speech-translation",
+    "automatic-speech-recognition"
+  ],
+  "tags": [
+    "speech-translation",
+    "ted-talks",
+    "multilingual",
+    "speech",
+    "translation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
+    "spdx_id": "CC-BY-NC-ND-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Audio and transcripts originate from TED Talks and are governed by the TED Talks Creative Commons NonCommercial-NoDerivs 4.0 policy."
+  },
+  "source_references": [
+    {
+      "title": "MuST-C Official Project Portal",
+      "url": "https://ict.fbk.eu/must-c/",
+      "type": "official_website",
+      "notes": "Official FBK portal with corpus description and download request form."
+    },
+    {
+      "title": "MuST-C NAACL-HLT Publication",
+      "url": "https://doi.org/10.18653/v1/N19-1202",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of NAACL-HLT 2019, pages 2012-2017."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against FBK portal and NAACL-HLT 2019 paper."
+  },
+  "sample_count": {
+    "total": 3000,
+    "unit": "hours",
+    "status": "verified"
+  },
+  "languages": [
+    "eng",
+    "deu",
+    "spa",
+    "fra",
+    "ita",
+    "nld",
+    "por",
+    "ron",
+    "rus"
+  ],
+  "dates": {
+    "published": "2019-06-02"
+  },
+  "citation": {
+    "paper_title": "MuST-C: a Multilingual Speech-to-Text Translation Corpus",
+    "paper_url": "https://doi.org/10.18653/v1/N19-1202",
+    "doi": "10.18653/v1/N19-1202",
+    "authors": [
+      "Mattia Antonino Di Gangi",
+      "Roldano Cattoni",
+      "Luisa Bentivogli",
+      "Matteo Negri",
+      "Marco Turchi"
+    ],
+    "bibtex": "@inproceedings{di-gangi-etal-2019-must,\n  title={MuST-C: a Multilingual Speech-to-Text Translation Corpus},\n  author={Di Gangi, Mattia Antonino and Cattoni, Roldano and Bentivogli, Luisa and Negri, Matteo and Turchi, Marco},\n  booktitle={Proceedings of NAACL-HLT 2019},\n  pages={2012--2017},\n  year={2019},\n  doi={10.18653/v1/N19-1202}\n}"
+  }
+}

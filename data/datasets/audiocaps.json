@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "audiocaps",
+  "slug": "audiocaps",
+  "name": "AudioCaps: Generating Captions for Audios in The Wild",
+  "description": "AudioCaps is an audio captioning benchmark dataset consisting of 51,308 audio clips from AudioSet paired with 57,188 human-written natural language captions. Introduced at NAACL-HLT 2019, it serves as the premier standard for training and evaluating automated audio captioning, sound event retrieval, and multimodal audio-language foundation models.",
+  "homepage_url": "https://audiocaps.github.io/",
+  "publisher": {
+    "name": "Seoul National University",
+    "type": "academic",
+    "url": "https://audiocaps.github.io/"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "audio-captioning",
+    "audio-language"
+  ],
+  "tags": [
+    "audio-captioning",
+    "sound-events",
+    "audio-language",
+    "captions",
+    "audioset",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Academic Research Use Only (Non-Commercial)",
+    "commercial_use": "forbidden",
+    "notes": "Repository README explicitly states: 'The code and the dataset are free to use for academic purposes only.' Code has an MIT license file, but dataset content is restricted to academic research."
+  },
+  "source_references": [
+    {
+      "title": "AudioCaps Official Project Website",
+      "url": "https://audiocaps.github.io/",
+      "type": "official_website",
+      "notes": "Project homepage with dataset overview and demo samples."
+    },
+    {
+      "title": "AudioCaps Official GitHub Repository",
+      "url": "https://github.com/cdjkim/audiocaps",
+      "type": "repository",
+      "notes": "Repository containing official train, validation, and test split CSV files."
+    },
+    {
+      "title": "AudioCaps Research Publication",
+      "url": "https://doi.org/10.18653/v1/N19-1011",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of NAACL-HLT 2019, pages 119-132."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against official project portal, GitHub split files, and NAACL 2019 paper."
+  },
+  "sample_count": {
+    "total": 51308,
+    "splits": {
+      "train": 49838,
+      "validation": 495,
+      "test": 975
+    },
+    "unit": "audio clips",
+    "status": "verified"
+  },
+  "languages": [
+    "eng"
+  ],
+  "dates": {
+    "published": "2019-06-02"
+  },
+  "citation": {
+    "paper_title": "AudioCaps: Generating Captions for Audios in The Wild",
+    "paper_url": "https://doi.org/10.18653/v1/N19-1011",
+    "doi": "10.18653/v1/N19-1011",
+    "authors": [
+      "Chris Dongjoo Kim",
+      "Byeongchang Kim",
+      "Hyunmin Lee",
+      "Gunhee Kim"
+    ],
+    "bibtex": "@inproceedings{kim-etal-2019-audiocaps,\n  title={AudioCaps: Generating Captions for Audios in The Wild},\n  author={Kim, Chris Dongjoo and Kim, Byeongchang and Lee, Hyunmin and Kim, Gunhee},\n  booktitle={Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)},\n  pages={119--132},\n  year={2019},\n  doi={10.18653/v1/N19-1011}\n}"
+  }
+}

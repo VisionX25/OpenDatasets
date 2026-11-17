@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "id": "refcoco",
+  "slug": "refcoco",
+  "name": "RefCOCO: Referring Expression Comprehension on Common Objects in Context",
+  "description": "RefCOCO is a referring expression comprehension and grounding dataset built on MS COCO images using a two-player reference game interface. Introduced by UNC Chapel Hill researchers in ECCV 2016, the standard UNC split contains 142,209 referring expressions for 50,000 objects across 19,994 images with separated test sets for persons (testA) and non-human objects (testB).",
+  "homepage_url": "https://github.com/lichengunc/refer",
+  "publisher": {
+    "name": "University of North Carolina at Chapel Hill",
+    "type": "academic",
+    "url": "https://www.unc.edu/"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "referring-expression-comprehension",
+    "visual-grounding"
+  ],
+  "tags": [
+    "referring-expressions",
+    "visual-grounding",
+    "coco",
+    "phrase-grounding",
+    "vision-language",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Academic Research Use / MIT Permissive",
+    "commercial_use": "unknown",
+    "notes": "Expression annotations released via UNC Chapel Hill refer API for academic research; underlying images subject to MS COCO / Flickr terms."
+  },
+  "source_references": [
+    {
+      "title": "RefCOCO (refer) Official GitHub Repository",
+      "url": "https://github.com/lichengunc/refer",
+      "type": "repository",
+      "notes": "Official UNC repository providing dataset loader and standard splits."
+    },
+    {
+      "title": "RefCOCO ECCV Publication",
+      "url": "https://doi.org/10.1007/978-3-319-46478-7_5",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of European Conference on Computer Vision (ECCV 2016), pages 69-85."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against UNC refer repository and ECCV 2016 paper (distinct from ReferItGame EMNLP 2014)."
+  },
+  "sample_count": {
+    "total": 142209,
+    "splits": {
+      "train": 120624,
+      "validation": 10834,
+      "testA": 5657,
+      "testB": 5094
+    },
+    "unit": "referring expressions",
+    "status": "verified"
+  },
+  "languages": [
+    "eng"
+  ],
+  "dates": {
+    "published": "2016-10-08"
+  },
+  "citation": {
+    "paper_title": "Modeling Context in Referring Expressions",
+    "paper_url": "https://doi.org/10.1007/978-3-319-46478-7_5",
+    "doi": "10.1007/978-3-319-46478-7_5",
+    "authors": [
+      "Licheng Yu",
+      "Patrick Poirson",
+      "Shan Yang",
+      "Alexander C. Berg",
+      "Tamara L. Berg"
+    ],
+    "bibtex": "@inproceedings{yu2016modeling,\n  title={Modeling Context in Referring Expressions},\n  author={Yu, Licheng and Poirson, Patrick and Yang, Shan and Berg, Alexander C. and Berg, Tamara L.},\n  booktitle={Computer Vision -- ECCV 2016},\n  pages={69--85},\n  year={2016},\n  doi={10.1007/978-3-319-46478-7_5}\n}"
+  }
+}

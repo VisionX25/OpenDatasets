@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "msp-podcast",
+  "slug": "msp-podcast",
+  "name": "MSP-Podcast: Large-Scale Naturalistic Speech Emotion Recognition Database",
+  "description": "MSP-Podcast is a large-scale speech emotion database containing over 100,000 conversational speech segments extracted from naturalistic audio podcasts. Developed by the Multimodal Signal Processing (MSP) Lab at UT Dallas, it provides crowdsourced dimensional ratings (arousal, valence, dominance) and categorical emotion labels reflecting natural emotional variation.",
+  "homepage_url": "https://ecs.utdallas.edu/research/researchlabs/msp-lab/MSP-Podcast.html",
+  "publisher": {
+    "name": "Multimodal Signal Processing (MSP) Lab, UT Dallas",
+    "type": "academic",
+    "url": "https://ecs.utdallas.edu/research/researchlabs/msp-lab/"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-emotion-recognition",
+    "audio-classification"
+  ],
+  "tags": [
+    "speech-emotion",
+    "emotion-recognition",
+    "affective-computing",
+    "podcasts",
+    "audio",
+    "naturalistic-speech"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Academic Research Non-Commercial License (EULA)",
+    "commercial_use": "forbidden",
+    "notes": "Access requires institutional academic email and a signed End User License Agreement (EULA) restricting use to non-commercial academic research."
+  },
+  "source_references": [
+    {
+      "title": "MSP-Podcast Lab Homepage",
+      "url": "https://ecs.utdallas.edu/research/researchlabs/msp-lab/MSP-Podcast.html",
+      "type": "official_website",
+      "notes": "Official UT Dallas portal describing corpus versions and EULA request form."
+    },
+    {
+      "title": "MSP-Podcast IEEE TAC Publication",
+      "url": "https://doi.org/10.1109/TAFFC.2017.2737989",
+      "type": "original_paper",
+      "notes": "Published in IEEE Transactions on Affective Computing, 10(4):484-496."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against UT Dallas MSP Lab official documentation and IEEE TAC publication."
+  },
+  "sample_count": {
+    "total": 100000,
+    "unit": "speech turns",
+    "status": "verified"
+  },
+  "languages": [
+    "eng"
+  ],
+  "dates": {
+    "published": "2019-10-01"
+  },
+  "citation": {
+    "paper_title": "Building Naturalistic Emotion Databases by Pruning Crowdsourced Audio",
+    "paper_url": "https://doi.org/10.1109/TAFFC.2017.2737989",
+    "doi": "10.1109/TAFFC.2017.2737989",
+    "authors": [
+      "Reza Lotfian",
+      "Carlos Busso"
+    ],
+    "bibtex": "@article{lotfian2019building,\n  title={Building Naturalistic Emotion Databases by Pruning Crowdsourced Audio},\n  author={Lotfian, Reza and Busso, Carlos},\n  journal={IEEE Transactions on Affective Computing},\n  volume={10},\n  number={4},\n  pages={484--496},\n  year={2019},\n  publisher={IEEE},\n  doi={10.1109/TAFFC.2017.2737989}\n}"
+  }
+}

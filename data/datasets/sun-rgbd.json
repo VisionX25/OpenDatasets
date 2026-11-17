@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sun-rgbd",
+  "slug": "sun-rgbd",
+  "name": "SUN RGB-D: A RGB-D Scene Understanding Benchmark Suite",
+  "description": "SUN RGB-D is a landmark 3D indoor scene understanding dataset containing 10,335 RGB-D images annotated with 64,595 3D oriented bounding boxes across 800 object categories. Published at CVPR 2015 by Princeton University, it aggregates aligned color and depth frames captured with four different sensor types to benchmark 3D object detection, semantic scene parsing, and room layout estimation.",
+  "homepage_url": "https://rgbd.cs.princeton.edu/",
+  "publisher": {
+    "name": "Princeton Vision Group, Princeton University",
+    "type": "academic",
+    "url": "https://rgbd.cs.princeton.edu/"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "3d-object-detection",
+    "semantic-segmentation",
+    "scene-understanding"
+  ],
+  "tags": [
+    "3d-object-detection",
+    "rgb-d",
+    "indoor-scenes",
+    "depth",
+    "point-cloud",
+    "cvpr",
+    "benchmark"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified by Source (Academic Research Use)",
+    "commercial_use": "unknown",
+    "notes": "Princeton distribution portal provides direct academic download with mandatory citation; no standalone open data license is granted. Terms inherit from constituent sources (NYU Depth v2, Berkeley B3DO, SUN3D)."
+  },
+  "source_references": [
+    {
+      "title": "SUN RGB-D Official Project Portal",
+      "url": "https://rgbd.cs.princeton.edu/",
+      "type": "official_website",
+      "notes": "Official Princeton portal hosting RGB-D downloads, toolbox, and benchmark splits."
+    },
+    {
+      "title": "SUN RGB-D CVPR Publication",
+      "url": "https://doi.org/10.1109/CVPR.2015.7298655",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of IEEE CVPR 2015, pages 70-79."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "VisionX25 Maintainers",
+    "verified_date": "2026-11-17",
+    "notes": "Verified against Princeton Vision Group portal and CVPR 2015 publication."
+  },
+  "sample_count": {
+    "total": 10335,
+    "splits": {
+      "train": 5285,
+      "test": 5050
+    },
+    "unit": "RGB-D frames",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2015-06-07"
+  },
+  "citation": {
+    "paper_title": "SUN RGB-D: A RGB-D Scene Understanding Benchmark Suite",
+    "paper_url": "https://doi.org/10.1109/CVPR.2015.7298655",
+    "doi": "10.1109/CVPR.2015.7298655",
+    "authors": [
+      "Shuran Song",
+      "Samuel P. Lichtenberg",
+      "Jianxiong Xiao"
+    ],
+    "bibtex": "@inproceedings{song2015sun,\n  title={SUN RGB-D: A RGB-D Scene Understanding Benchmark Suite},\n  author={Song, Shuran and Lichtenberg, Samuel P. and Xiao, Jianxiong},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={70--79},\n  year={2015},\n  doi={10.1109/CVPR.2015.7298655}\n}"
+  }
+}
