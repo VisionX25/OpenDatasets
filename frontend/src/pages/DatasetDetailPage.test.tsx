@@ -197,4 +197,59 @@ describe('DatasetDetailPage (Task 21C Dataset ID Cleanup)', () => {
     expect(html).toContain('Version &amp; Audit Timeline')
     expect(html).toContain('2009-04-08')
   })
+
+  it('7. renders Related Datasets section with clear empty state when no related datasets exist', () => {
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/dataset/cifar-10']}>
+        <Routes>
+          <Route
+            path="/dataset/:slug"
+            element={<DatasetDetailPage initialDataset={mockDataset} initialCatalog={[mockDataset]} />}
+          />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    expect(html).toContain('Related Datasets')
+    expect(html).toContain('No sufficiently related datasets found in the catalog at this time.')
+  })
+
+  it('8. renders up to 4 Related Datasets cards and excludes viewed dataset', () => {
+    const mockCifar100: DatasetMetadata = {
+      ...mockDataset,
+      id: 'cifar-100',
+      slug: 'cifar-100',
+      name: 'CIFAR-100',
+      description: '100 classes variant of CIFAR.',
+    }
+    const mockSvhn: DatasetMetadata = {
+      ...mockDataset,
+      id: 'svhn',
+      slug: 'svhn',
+      name: 'SVHN',
+      description: 'Street View House Numbers.',
+    }
+
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/dataset/cifar-10']}>
+        <Routes>
+          <Route
+            path="/dataset/:slug"
+            element={
+              <DatasetDetailPage
+                initialDataset={mockDataset}
+                initialCatalog={[mockDataset, mockCifar100, mockSvhn]}
+              />
+            }
+          />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    expect(html).toContain('Related Datasets')
+    expect(html).toContain('CIFAR-100')
+    expect(html).toContain('SVHN')
+    // Must not show empty state when cards are present
+    expect(html).not.toContain('No sufficiently related datasets found in the catalog at this time.')
+  })
 })

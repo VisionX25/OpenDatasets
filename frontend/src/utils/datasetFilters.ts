@@ -278,11 +278,23 @@ export function matchesCategory(
 }
 
 /**
- * Case-insensitive search across name, description, publisher, tasks, and tags.
+ * Case-insensitive search across name, ID, slug, description, publisher, tasks, and tags.
+ * Also handles hyphenated and non-hyphenated variants reasonably.
  */
 export function matchesSearch(dataset: DatasetMetadata, query: string): boolean {
   const cleanQuery = query.trim().toLowerCase()
   if (!cleanQuery) {
+    return true
+  }
+
+  // ID and slug matches
+  const id = typeof dataset.id === 'string' ? dataset.id.toLowerCase() : ''
+  if (id.includes(cleanQuery)) {
+    return true
+  }
+
+  const slug = typeof dataset.slug === 'string' ? dataset.slug.toLowerCase() : ''
+  if (slug.includes(cleanQuery)) {
     return true
   }
 
@@ -312,6 +324,32 @@ export function matchesSearch(dataset: DatasetMetadata, query: string): boolean 
   const tags = Array.isArray(dataset.tags) ? dataset.tags : []
   if (tags.some((tag) => typeof tag === 'string' && tag.toLowerCase().includes(cleanQuery))) {
     return true
+  }
+
+  // Handle hyphenated and non-hyphenated terms reasonably (e.g. "cifar10" vs "cifar-10")
+  const cleanNorm = cleanQuery.replace(/[-_\s]+/g, '')
+  if (cleanNorm.length >= 3) {
+    if (id.replace(/[-_\s]+/g, '').includes(cleanNorm)) return true
+    if (slug.replace(/[-_\s]+/g, '').includes(cleanNorm)) return true
+    if (name.toLowerCase().replace(/[-_\s]+/g, '').includes(cleanNorm)) return true
+    if (
+      tasks.some(
+        (task) =>
+          typeof task === 'string' &&
+          task.toLowerCase().replace(/[-_\s]+/g, '').includes(cleanNorm),
+      )
+    ) {
+      return true
+    }
+    if (
+      tags.some(
+        (tag) =>
+          typeof tag === 'string' &&
+          tag.toLowerCase().replace(/[-_\s]+/g, '').includes(cleanNorm),
+      )
+    ) {
+      return true
+    }
   }
 
   return false
@@ -764,15 +802,178 @@ export function getDatasetSampleCount(dataset: DatasetMetadata): number | null {
 }
 
 /**
+ * Compute relevance score for a dataset given a user search query.
+ *
+ * Priority hierarchy:
+ * 1. Exact dataset name or ID match
+ * 2. Dataset name or ID prefix match
+ * 3. Dataset name or ID partial match
+ * 4. Research tasks and tags match
+ * 5. Description and publisher match
+ *
+ * Rules:
+ * - Case-insensitive comparisons
+ * - Strip surrounding whitespace
+ * - Treat hyphenated and non-hyphenated terms reasonably
+ */
+export function computeSearchRelevance(dataset: DatasetMetadata, query: string): number {
+  const clean = query.trim().toLowerCase()
+  if (!clean) {
+    return 0
+  }
+
+  const qNorm = clean.replace(/[-_\s]+/g, '')
+  const name = typeof dataset.name === 'string' ? dataset.name.trim().toLowerCase() : ''
+  const id = typeof dataset.id === 'string' ? dataset.id.trim().toLowerCase() : ''
+  const slug = typeof dataset.slug === 'string' ? dataset.slug.trim().toLowerCase() : ''
+
+  const nameNorm = name.replace(/[-_\s]+/g, '')
+  const idNorm = id.replace(/[-_\s]+/g, '')
+  const slugNorm = slug.replace(/[-_\s]+/g, '')
+
+  let score = 0
+
+  // 1. Exact dataset name or ID match (Priority 1)
+  if (name === clean || id === clean || slug === clean) {
+    score = Math.max(score, 10000)
+  } else if (qNorm.length > 0 && (nameNorm === qNorm || idNorm === qNorm || slugNorm === qNorm)) {
+    score = Math.max(score, 9000)
+  }
+
+  // 2. Dataset name or ID prefix match (Priority 2)
+  if (name.startsWith(clean) || id.startsWith(clean) || slug.startsWith(clean)) {
+    score = Math.max(score, 5000)
+  } else if (
+    qNorm.length > 0 &&
+    (nameNorm.startsWith(qNorm) || idNorm.startsWith(qNorm) || slugNorm.startsWith(qNorm))
+  ) {
+    score = Math.max(score, 4500)
+  } else {
+    // Word prefix match in name (e.g. query "cifar" matches word boundary in "The CIFAR Dataset")
+    const words = name.split(/[\s-_]+/)
+    if (
+      words.some(
+        (w) => w.startsWith(clean) || (qNorm.length > 0 && w.replace(/[-_\s]+/g, '').startsWith(qNorm)),
+      )
+    ) {
+      score = Math.max(score, 4000)
+    }
+  }
+
+  // 3. Dataset name or ID partial match (Priority 3)
+  if (name.includes(clean) || id.includes(clean) || slug.includes(clean)) {
+    score = Math.max(score, 2000)
+  } else if (
+    qNorm.length > 0 &&
+    (nameNorm.includes(qNorm) || idNorm.includes(qNorm) || slugNorm.includes(qNorm))
+  ) {
+    score = Math.max(score, 1800)
+  }
+
+  // 4. Research tasks and tags match (Priority 4)
+  const tasks = Array.isArray(dataset.tasks) ? dataset.tasks : []
+  const tags = Array.isArray(dataset.tags) ? dataset.tags : []
+
+  let taskTagScore = 0
+  const hasExactTask = tasks.some(
+    (t) =>
+      typeof t === 'string' &&
+      (t.toLowerCase() === clean ||
+        (qNorm.length > 0 && t.toLowerCase().replace(/[-_\s]+/g, '') === qNorm)),
+  )
+  const hasExactTag = tags.some(
+    (t) =>
+      typeof t === 'string' &&
+      (t.toLowerCase() === clean ||
+        (qNorm.length > 0 && t.toLowerCase().replace(/[-_\s]+/g, '') === qNorm)),
+  )
+
+  if (hasExactTask) {
+    taskTagScore = Math.max(taskTagScore, 800)
+  } else if (hasExactTag) {
+    taskTagScore = Math.max(taskTagScore, 700)
+  } else {
+    const hasPrefixTask = tasks.some(
+      (t) => typeof t === 'string' && t.toLowerCase().startsWith(clean),
+    )
+    const hasPrefixTag = tags.some(
+      (t) => typeof t === 'string' && t.toLowerCase().startsWith(clean),
+    )
+    if (hasPrefixTask || hasPrefixTag) {
+      taskTagScore = Math.max(taskTagScore, 500)
+    } else {
+      const hasPartialTask = tasks.some(
+        (t) =>
+          typeof t === 'string' &&
+          (t.toLowerCase().includes(clean) ||
+            (qNorm.length >= 3 && t.toLowerCase().replace(/[-_\s]+/g, '').includes(qNorm))),
+      )
+      const hasPartialTag = tags.some(
+        (t) =>
+          typeof t === 'string' &&
+          (t.toLowerCase().includes(clean) ||
+            (qNorm.length >= 3 && t.toLowerCase().replace(/[-_\s]+/g, '').includes(qNorm))),
+      )
+      if (hasPartialTask || hasPartialTag) {
+        taskTagScore = Math.max(taskTagScore, 300)
+      }
+    }
+  }
+
+  // 5. Description and publisher match (Priority 5)
+  let descPubScore = 0
+  const pubName =
+    dataset.publisher && typeof dataset.publisher.name === 'string'
+      ? dataset.publisher.name.toLowerCase()
+      : ''
+  const desc = typeof dataset.description === 'string' ? dataset.description.toLowerCase() : ''
+
+  if (pubName === clean || (qNorm.length > 0 && pubName.replace(/[-_\s]+/g, '') === qNorm)) {
+    descPubScore = Math.max(descPubScore, 150)
+  } else if (pubName.startsWith(clean)) {
+    descPubScore = Math.max(descPubScore, 120)
+  } else if (
+    pubName.includes(clean) ||
+    (qNorm.length >= 3 && pubName.replace(/[-_\s]+/g, '').includes(qNorm))
+  ) {
+    descPubScore = Math.max(descPubScore, 100)
+  }
+
+  if (desc.includes(clean) || (qNorm.length >= 3 && desc.replace(/[-_\s]+/g, '').includes(qNorm))) {
+    descPubScore = Math.max(descPubScore, 50)
+  }
+
+  return score + taskTagScore + descPubScore
+}
+
+/**
  * Sorts datasets according to requested SortOption.
  * Non-mutating, stable tie-breaking, with missing values placed last.
+ * When sort is 'default' and a non-empty searchQuery is provided, sorts by relevance descending.
  */
 export function sortDatasets(
   datasets: DatasetMetadata[],
   sort: SortOption = 'default',
+  searchQuery?: string,
 ): DatasetMetadata[] {
+  const cleanQuery = searchQuery?.trim() || ''
+
   if (sort === 'default') {
-    return datasets.slice()
+    if (!cleanQuery) {
+      return datasets.slice()
+    }
+
+    // Default sort with non-empty search query: order by search relevance descending,
+    // with deterministic tie-breaking (alphabetically by name, then slug).
+    return [...datasets].sort((a, b) => {
+      const scoreA = computeSearchRelevance(a, cleanQuery)
+      const scoreB = computeSearchRelevance(b, cleanQuery)
+      if (scoreB !== scoreA) {
+        return scoreB - scoreA
+      }
+      const cmp = a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
+      return cmp !== 0 ? cmp : a.slug.localeCompare(b.slug)
+    })
   }
 
   return [...datasets].sort((a, b) => {

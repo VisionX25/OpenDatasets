@@ -2,6 +2,7 @@ import type { DatasetMetadata, LicenseStatus, CategoryId } from '../types/datase
 import { fetchCatalog } from './catalogService'
 import {
   filterDatasets,
+  sortDatasets,
   getAvailableModalities,
   getAvailableTasks,
   getAvailableLicenseStatuses,
@@ -49,10 +50,13 @@ export async function queryDatasets(
   const sortedCatalog = [...catalog].sort((a, b) => a.name.localeCompare(b.name))
 
   const filtered = filterDatasets(sortedCatalog, options.criteria)
+  const ranked = options.criteria.searchQuery
+    ? sortDatasets(filtered, 'default', options.criteria.searchQuery)
+    : filtered
   const offset = options.offset ?? 0
   const limit = options.limit ?? 24
 
-  const items = filtered.slice(offset, offset + limit)
+  const items = ranked.slice(offset, offset + limit)
   const hasMore = offset + items.length < filtered.length
 
   const facets: SearchFacetOptions = {

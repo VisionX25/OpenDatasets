@@ -252,7 +252,7 @@ export const DatasetsPage: React.FC<DatasetsPageProps> = ({ initialCatalog }) =>
       year: activeFilters.year || null,
     })
     const list = isSavedOnly ? base.filter((d) => bookmarkedSlugs.includes(d.slug)) : base
-    return sortDatasets(list, activeFilters.sort || 'default')
+    return sortDatasets(list, activeFilters.sort || 'default', activeFilters.searchQuery)
   }, [catalog, activeFilters, effectiveCategory, isSavedOnly, bookmarkedSlugs])
 
   const displayedDatasets = useMemo(() => {
