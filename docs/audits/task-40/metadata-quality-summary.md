@@ -15,8 +15,8 @@ This audit establishes a rigorous, evidence-based quality baseline across all 62
 ### Key Catalog Highlights
 - **100% Core Schema Compliance:** All 625 datasets strictly adhere to `dataset.v1.schema.json` with valid unique IDs, slugs, names, descriptions, homepages, publishers, modalities, tasks, tags, licenses, source references, and verification blocks.
 - **Catalog Documentation Completeness:** Average of **80.8%** across applicable core and optional metadata attributes.
-- **Licensing Transparency:** 329 verified open datasets, 130 verified non-commercial, 93 custom permissive, and 36 public domain datasets. Only 34 datasets are unspecified by source and 1 is unknown from source (`mnist`).
-- **Access Requirements:** 574 datasets offer open/direct download, while **44** datasets require user registration, formal data use agreements (DUAs), or institutional credentialing (e.g. ADNI, PhysioNet, MIMIC).
+- **Licensing Transparency:** 329 verified open datasets, 129 verified non-commercial, 93 custom permissive, and 36 public domain datasets. Only 36 datasets are unspecified by source and 0 are unknown from source.
+- **Access Requirements:** 573 datasets offer open/direct download, while **44** datasets require user registration, formal data use agreements (DUAs), or institutional credentialing (e.g. ADNI, PhysioNet, MIMIC).
 - **Academic Citation Coverage:** **617 / 625 (98.7%)** include structured academic citations. Datasets without citations represent authoritative government or institutional repositories (e.g. NOAA, NASA, Canadian Open Government).
 - **Zero Critical Fatalities:** Zero malformed DOIs, zero unbalanced BibTeX braces, and zero broken JSON syntax across the catalog.
 
@@ -60,12 +60,12 @@ Metadata completeness and research readiness vary naturally across disciplines d
 
 | Research Category | Total Datasets | Avg Doc Completeness (%) | Ready for Evaluation | Documented with Caveats | Needs Info Review |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **computer-vision** | 346 | 83.7% | 231 | 87 | 28 |
+| **computer-vision** | 346 | 83.7% | 231 | 86 | 29 |
 | **natural-language-processing** | 151 | 81.3% | 88 | 45 | 18 |
 | **audio-speech** | 39 | 74.7% | 27 | 12 | 0 |
 | **tabular-time-series** | 175 | 78.5% | 140 | 33 | 2 |
 | **multimodal-generative** | 95 | 83.3% | 56 | 34 | 5 |
-| **evaluation-benchmarks** | 253 | 84.2% | 179 | 42 | 32 |
+| **evaluation-benchmarks** | 253 | 84.2% | 179 | 41 | 33 |
 
 ### Multi-Category Accounting Breakdown
 The sum of category totals is **1,059**, which exceeds 625 because OpenDatasets allows multi-category discovery membership:
@@ -91,12 +91,12 @@ The sum of category totals is **1,059**, which exceeds 625 because OpenDatasets 
 
 ### Licensing Classification Breakdown
 - **Verified Open:** 329 datasets (52.6%)
-- **Verified Non-Commercial:** 130 datasets (20.8%)
+- **Verified Non-Commercial:** 129 datasets (20.6%)
 - **Custom Permissive:** 93 datasets (14.9%)
 - **Public Domain:** 36 datasets (5.8%)
-- **Unspecified by Source:** 34 datasets (5.4%)
+- **Unspecified by Source:** 36 datasets (5.8%)
 - **Proprietary:** 2 datasets (`adni`, `khatt`)
-- **Unknown:** 1 dataset (`mnist`)
+- **Unknown:** 0 datasets
 
 ### Commercial Use Permissions
 - **Allowed:** 391 datasets
@@ -105,8 +105,8 @@ The sum of category totals is **1,059**, which exceeds 625 because OpenDatasets 
 
 ### Key Licensing Observations & False-Positive Analysis
 1. **Custom Permissive Non-Commercial Research Licenses (31 datasets):** 31 datasets marked `custom_permissive` document strict non-commercial research terms in their notes (e.g. Waymo Open Dataset, ApolloScape, levelXData, Matterport HM3D). These are **not curatorial errors**; they accurately reflect custom publisher terms that are permissive for academic research but forbid commercial redistribution. They remain categorized for potential future alignment under a unified non-commercial rubric.
-2. **Unspecified by Source (30 datasets):** 30 datasets originate from academic repositories where authors did not attach a formal license text. Commercial use is conservatively recorded as `unknown` (29) or `forbidden` (1). In accordance with Task 40 principles, OpenDatasets does not infer permissive rights from public availability.
-3. **Consistency Discrepancy Flag (`lfw`):** In `lfw`, the license status is `verified_non_commercial` while `commercial_use` is marked `unknown`. Because non-commercial research terms explicitly forbid commercial exploitation, `commercial_use` should be aligned to `forbidden` upon primary-source review.
+2. **Unspecified by Source (36 datasets):** Datasets originating from academic repositories where authors did not attach a formal license text. Commercial use is conservatively recorded as `unknown` (35) or `forbidden` (1, e.g. `deeppcb`). In accordance with Task 40 principles, OpenDatasets does not infer permissive rights from public availability.
+3. **Consistency Discrepancy Flag (`lfw`):** In `lfw`, the license status was historically marked `verified_non_commercial` while `commercial_use` was `unknown`. Primary-source review against UMass Technical Report 07-49 and web archives established that no formal research use agreement was published, resolving this to `unspecified_by_source`.
 
 ---
 
@@ -154,33 +154,33 @@ The 4 datasets flagged for duplicate URLs represent legitimate semantic multi-ro
 ### Deterministic Classification Rules
 Every dataset in OpenDatasets is classified into **exactly one** of three mutually exclusive descriptive tiers based on deterministic criteria:
 
-1. **Needs Information Review (44 datasets):**
+1. **Needs Information Review (45 datasets):**
    - *Rule:* Triggered if `license.status` is `unknown` or `unspecified_by_source`, OR if a genuine `partition_split_count_mismatch` exists.
    - *Meaning:* Requires maintainer review of source terms or split arithmetic before researchers can reliably cite or partition the dataset.
 2. **Ready for Evaluation (419 datasets):**
    - *Rule:* Triggered if Source Traceability is `High`, License Clarity is `High` (`verified_open`, `verified_non_commercial`, or `public_domain` with explicit commercial terms), Scale Documentation is `High` or `Medium`, Access Clarity is `Explicit_Open` or `Explicit_Gated`, and no Needs Information Review triggers are present.
    - *Meaning:* The record provides complete metadata (traceable publisher, explicit license, standardized modalities/tasks, and sample counts) enabling a researcher to immediately evaluate its applicability.
    - *Clarification:* **'Ready for Evaluation' DOES NOT imply unrestricted access, commercial permission, scientific validity, or benchmark accuracy.** It strictly evaluates documentation availability.
-3. **Documented with Caveats (162 datasets):**
+3. **Documented with Caveats (161 datasets):**
    - *Rule:* All remaining datasets that are traceable and defined, but have operational caveats (e.g. credentialed/DUA access requirements, custom permissive non-commercial licenses, or omitted physical download byte sizes).
 
 ```
-Total Audited: 419 (Ready) + 162 (Caveats) + 44 (Needs Review) = 625 datasets (100% accounted for)
+Total Audited: 419 (Ready) + 161 (Caveats) + 45 (Needs Review) = 625 datasets (100% accounted for)
 ```
 
 | Readiness Dimension | High | Medium / Explicit | Low / Ambiguous | Authoritative / N/A |
 | :--- | :--- | :--- | :--- | :--- |
 | **Source Traceability** | 585 | 40 | 0 | — |
-| **Access Clarity** | 574 (Open) | 44 (Gated) | 7 | — |
-| **License Clarity** | 492 | 98 | 35 | — |
+| **Access Clarity** | 573 (Open) | 44 (Gated) | 8 | — |
+| **License Clarity** | 492 | 97 | 36 | — |
 | **Task & Modality Clarity** | 625 | 0 | 0 | — |
 | **Scale Documentation** | 343 | 236 | 46 | — |
 | **Citation Completeness** | 435 | 182 | 0 | 6 |
 
 ### Catalog Readiness Tiers
 - **Ready for Evaluation (419 datasets):** Full provenance, verifiable license, unambiguous task/modality classifications, and documented sample scale. Ready for immediate experimental benchmarking.
-- **Documented with Caveats (162 datasets):** Traceable source documentation with explicit task definitions, but subject to operational caveats (e.g. credentialed/DUA access requirements, custom license clauses, or absent byte-size statistics).
-- **Needs Information Review (44 datasets):** Unspecified license from source, or mathematical partition split count discrepancy requiring primary source verification.
+- **Documented with Caveats (161 datasets):** Traceable source documentation with explicit task definitions, but subject to operational caveats (e.g. credentialed/DUA access requirements, custom license clauses, or absent byte-size statistics).
+- **Needs Information Review (45 datasets):** Unspecified license from source, or mathematical partition split count discrepancy requiring primary source verification.
 
 ---
 

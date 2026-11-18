@@ -26,10 +26,10 @@
   ],
   "license": {
     "status": "unspecified_by_source",
-    "name": "Unspecified by Source (Data) / Hugging Face Tagged Apache-2.0",
+    "name": "License not specified by source (Repository MIT for software)",
     "commercial_use": "unknown",
-    "url": "https://huggingface.co/datasets/medmcqa",
-    "notes": "The official GitHub repository lacks a formal license file, and the questions are derived from AIIMS and NEET-PG Indian medical entrance examinations owned by the respective examination authorities. Although the Hugging Face dataset card specifies Apache-2.0, the primary data source provides no explicit commercial license. Commercial permission is unknown."
+    "url": "https://github.com/medmcqa/medmcqa",
+    "notes": "The official MedMCQA GitHub repository (github.com/medmcqa/medmcqa) contains an MIT License (LICENSE.md) governing repository software. However, the 194,000+ multiple-choice questions are sourced from Indian medical entrance examinations (AIIMS and NEET-PG) owned by their respective examination authorities. The authors did not establish a separate dataset content license, and the software license cannot be assumed to cover third-party examination materials. Hugging Face tags the dataset as Apache-2.0, which represents secondary aggregator metadata. Commercial usability remains unknown."
   },
   "source_references": [
     {
@@ -37,6 +37,12 @@
       "url": "https://github.com/medmcqa/medmcqa",
       "type": "repository",
       "notes": "Official repository containing data partitions and rationales."
+    },
+    {
+      "title": "MedMCQA Repository Software License (MIT)",
+      "url": "https://github.com/medmcqa/medmcqa/blob/master/LICENSE.md",
+      "type": "documentation",
+      "notes": "MIT License in official repository governing software code."
     },
     {
       "title": "PMLR CHIL 2022 Publication",
@@ -48,8 +54,8 @@
   "verification": {
     "status": "provisional",
     "verified_by": "OpenDatasets Curatorial Team",
-    "verified_date": "2026-11-03",
-    "notes": "Provisional verification: primary source repository lacks a license file, and underlying Indian medical entrance exam questions are subject to third-party testing board copyright."
+    "verified_date": "2026-11-18",
+    "notes": "2026-11-18 licensing review: Corrected repository license notes to reflect the presence of LICENSE.md (MIT) in the official repository while recognizing that the multiple-choice questions remain subject to third-party Indian medical entrance examination authority rights."
   },
   "dates": {
     "published": "2022-03-30"
