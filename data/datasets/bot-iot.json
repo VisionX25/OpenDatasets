@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bot-iot",
+  "slug": "bot-iot",
+  "name": "BoT-IoT: Internet of Things Botnet Attack Dataset",
+  "description": "The BoT-IoT dataset was created by the Cyber Range Lab of UNSW Canberra Cyber to evaluate machine learning and deep learning anomaly detection models in Internet of Things (IoT) network environments. Simulating a realistic smart-home IoT testbed with simulated sensor nodes (Node-RED, MQTT, smart fridges, thermostats) and virtualized attacking machines, it captures over 72 million network flow records across benign conditions and malicious attacks, including DDoS, DoS, OS/service scan reconnaissance, keylogging, and data exfiltration. Provided in raw PCAPs, argus network flow files, and selected CSV subsets.",
+  "homepage_url": "https://research.unsw.edu.au/projects/bot-iot-dataset",
+  "publisher": {
+    "name": "UNSW Canberra Cyber / University of New South Wales",
+    "type": "academic",
+    "url": "https://www.unsw.edu.au/canberra/our-research/research-centres-institutes/cyber"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "tabular-classification"
+  ],
+  "tags": [
+    "cybersecurity",
+    "iot",
+    "botnet",
+    "network-security",
+    "mqtt",
+    "ddos",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "UNSW Canberra Academic Free License / Academic Research License",
+    "url": "https://research.unsw.edu.au/projects/bot-iot-dataset",
+    "commercial_use": "forbidden",
+    "notes": "Available freely for academic and educational research. Commercial exploitation requires explicit written permission from UNSW Canberra."
+  },
+  "source_references": [
+    {
+      "title": "Official UNSW Research Page",
+      "url": "https://research.unsw.edu.au/projects/bot-iot-dataset",
+      "type": "official_website"
+    },
+    {
+      "title": "Future Generation Computer Systems Paper",
+      "url": "https://doi.org/10.1016/j.future.2019.05.041",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 72M+ network flows, Node-RED/MQTT smart home topology, and non-commercial academic licensing."
+  },
+  "sample_count": {
+    "total": 72000000,
+    "unit": "network_flows",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-05-18"
+  },
+  "citation": {
+    "paper_title": "Towards the development of realistic botnet dataset in the Internet of Things for network forensic analysis: The BoT-IoT dataset",
+    "paper_url": "https://doi.org/10.1016/j.future.2019.05.041",
+    "doi": "10.1016/j.future.2019.05.041",
+    "authors": [
+      "Nickolaos Koroniotis",
+      "Nour Moustafa",
+      "Elena Sitnikova",
+      "Benjamin Turnbull"
+    ]
+  }
+}

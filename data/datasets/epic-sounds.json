@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "id": "epic-sounds",
+  "slug": "epic-sounds",
+  "name": "EPIC-SOUNDS: Audio-Oriented Actions in Egocentric Video",
+  "description": "EPIC-SOUNDS is a large-scale audio-oriented dataset for egocentric video understanding from the University of Bristol. Built on top of the 100 hours of unscripted egocentric video from EPIC-KITCHENS-100, EPIC-SOUNDS provides 115,704 temporal audio event annotations across 44 audio classes. Annotations capture acoustic interactions (chopping, sizzling, running water, pouring, scraping) with precise start and end timestamps and audio-action labels, establishing a rigorous benchmark for egocentric audio-visual and audio-only action recognition.",
+  "homepage_url": "https://epic-kitchens.github.io/epic-sounds/",
+  "publisher": {
+    "name": "University of Bristol",
+    "type": "academic",
+    "url": "https://www.bristol.ac.uk/"
+  },
+  "modalities": [
+    "audio",
+    "vision",
+    "multimodal"
+  ],
+  "tasks": [
+    "audio-classification",
+    "sound-event-detection",
+    "action-recognition"
+  ],
+  "tags": [
+    "audio",
+    "egocentric-vision",
+    "sound-events",
+    "kitchen",
+    "audio-visual",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Dataset and annotations are provided under CC BY-NC 4.0 for non-commercial academic research."
+  },
+  "source_references": [
+    {
+      "title": "Official EPIC-SOUNDS Website",
+      "url": "https://epic-kitchens.github.io/epic-sounds/",
+      "type": "official_website"
+    },
+    {
+      "title": "ICCV 2023 Research Paper",
+      "url": "https://doi.org/10.1109/ICCV51070.2023.01890",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 115,704 temporal audio event annotations across 44 audio classes, ICCV 2023 paper, and CC BY-NC 4.0 terms."
+  },
+  "sample_count": {
+    "total": 115704,
+    "unit": "audio_segments",
+    "status": "verified",
+    "splits": {
+      "train": 78207,
+      "val": 16904,
+      "test": 20593
+    }
+  },
+  "dates": {
+    "published": "2023-10-02"
+  },
+  "citation": {
+    "paper_title": "EPIC-SOUNDS: An Audio-Oriented Dataset of Actions",
+    "paper_url": "https://doi.org/10.1109/ICCV51070.2023.01890",
+    "doi": "10.1109/ICCV51070.2023.01890",
+    "authors": [
+      "Jaesung Huh",
+      "Jacob Chalk",
+      "Evangelos Kazakos",
+      "Dima Damen",
+      "Andrew Zisserman"
+    ]
+  }
+}

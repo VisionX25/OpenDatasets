@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ogbn-papers100m",
+  "slug": "ogbn-papers100m",
+  "name": "ogbn-papers100m: Microsoft Academic Graph Citation Network",
+  "description": "The ogbn-papers100m dataset is a massive-scale directed citation network of 111,059,956 academic papers indexed by Microsoft Academic Graph (MAG) up to October 2019, connected by 1,615,685,872 directed citation edges. Each paper is associated with a 128-dimensional Word2Vec feature vector extracted from titles and abstracts. The task is to predict the primary subject area among 172 arXiv subject categories for indexed arXiv papers, evaluated under a realistic chronological split (train up to 2017, validation in 2018, test in 2019).",
+  "homepage_url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-papers100M",
+  "publisher": {
+    "name": "Stanford University (OGB Team)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu/"
+  },
+  "modalities": [
+    "graph"
+  ],
+  "tasks": [
+    "node-classification",
+    "graph-representation-learning"
+  ],
+  "tags": [
+    "graph",
+    "node-property-prediction",
+    "ogb",
+    "citation-network",
+    "microsoft-academic-graph",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License (ODC-By) / MIT",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Underlying Microsoft Academic Graph citation data is released under ODC-By 1.0; OGB benchmark scripts and packaging are licensed under MIT."
+  },
+  "source_references": [
+    {
+      "title": "Official OGB Documentation",
+      "url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-papers100M",
+      "type": "official_website"
+    },
+    {
+      "title": "NeurIPS 2020 OGB Paper",
+      "url": "https://arxiv.org/abs/2005.00687",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified node count (111M), edge count (1.61B), 172 classes, and NeurIPS 2020 benchmark publication."
+  },
+  "sample_count": {
+    "total": 111059956,
+    "unit": "nodes",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-05-01"
+  },
+  "citation": {
+    "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "paper_url": "https://arxiv.org/abs/2005.00687",
+    "doi": "10.48550/arXiv.2005.00687",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Marinka Zitnik",
+      "Yuxiao Dong",
+      "Hongyu Ren",
+      "Bowen Liu",
+      "Michele Catasta",
+      "Jure Leskovec"
+    ]
+  }
+}

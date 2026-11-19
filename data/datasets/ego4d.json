@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ego4d",
+  "slug": "ego4d",
+  "name": "Ego4D: Massive-Scale Egocentric Video Benchmark",
+  "description": "Ego4D is a massive-scale egocentric video dataset and benchmark suite created by a consortium of 13 academic institutions and Meta AI. It comprises 3,670 hours of daily-life activity video recorded from a first-person viewpoint across 74 locations in 9 countries by 931 participants wearing wearable cameras (GoPro, camera glasses). Ego4D defines five benchmark tasks: Episodic Memory, Hands and Objects, Forecasting, Audio-Visual Diarization, and Social Interaction, providing multimodal annotations including 3D meshes, gaze tracking, narration streams, and stereo audio.",
+  "homepage_url": "https://ego4d-data.org/",
+  "publisher": {
+    "name": "Ego4D Consortium / Meta AI",
+    "type": "academic",
+    "url": "https://ego4d-data.org/"
+  },
+  "modalities": [
+    "vision",
+    "audio",
+    "multimodal",
+    "3d"
+  ],
+  "tasks": [
+    "action-recognition",
+    "video-understanding",
+    "audio-visual-diarization"
+  ],
+  "tags": [
+    "egocentric-vision",
+    "video",
+    "first-person",
+    "audio-visual",
+    "meta-ai",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Ego4D License Agreement",
+    "url": "https://ego4d-data.org/docs/license/",
+    "commercial_use": "forbidden",
+    "notes": "Available via a click-through Data License Agreement for non-commercial research and educational evaluation."
+  },
+  "source_references": [
+    {
+      "title": "Official Ego4D Website",
+      "url": "https://ego4d-data.org/",
+      "type": "official_website"
+    },
+    {
+      "title": "CVPR 2022 Paper",
+      "url": "https://doi.org/10.1109/CVPR52688.2022.01842",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 3,670 hours across 9 countries, 931 participants, 5 core challenge benchmarks, and Ego4D License Agreement."
+  },
+  "sample_count": {
+    "total": 3670,
+    "unit": "video_hours",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-10-14"
+  },
+  "citation": {
+    "paper_title": "Ego4D: Around the World in 3,000 Hours of Egocentric Video",
+    "paper_url": "https://doi.org/10.1109/CVPR52688.2022.01842",
+    "doi": "10.1109/CVPR52688.2022.01842",
+    "authors": [
+      "Kristen Grauman",
+      "Andrew Westbury",
+      "Eugene Byrne",
+      "Zachary Chavis",
+      "Antonino Furnari",
+      "Rohit Girdhar",
+      "Jackson Hamburger",
+      "Hao Jiang",
+      "Miao Liu",
+      "Xingyu Liu",
+      "Stella X. Yu",
+      "Jitendra Malik"
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ogbg-ppa",
+  "slug": "ogbg-ppa",
+  "name": "ogbg-ppa: Protein-Protein Association Graph Classification",
+  "description": "The ogbg-ppa dataset is a graph classification benchmark composed of 158,100 protein-protein association (PPA) subgraphs extracted from the STRING database across 1,581 species. Each graph corresponds to a protein network where nodes represent proteins and edges represent biological associations with 7-dimensional weight features. The task is 37-way multi-class classification to identify the taxonomic group/species from which each protein network was sampled, evaluated under a scaffold/taxonomic out-of-distribution split.",
+  "homepage_url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-ppa",
+  "publisher": {
+    "name": "Stanford University (OGB Team)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu/"
+  },
+  "modalities": [
+    "graph"
+  ],
+  "tasks": [
+    "graph-classification",
+    "graph-representation-learning"
+  ],
+  "tags": [
+    "graph",
+    "graph-property-prediction",
+    "ogb",
+    "biology",
+    "string-database",
+    "proteins",
+    "benchmark"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Creative Commons Zero v1.0 Universal / MIT",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Underlying STRING biological association networks are in the public domain under CC0; OGB benchmark scripts are MIT."
+  },
+  "source_references": [
+    {
+      "title": "Official OGB Documentation",
+      "url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-ppa",
+      "type": "official_website"
+    },
+    {
+      "title": "NeurIPS 2020 OGB Paper",
+      "url": "https://arxiv.org/abs/2005.00687",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 158,100 graphs, 37 classes, taxonomic split, and CC0/MIT licensing."
+  },
+  "sample_count": {
+    "total": 158100,
+    "unit": "graphs",
+    "status": "verified",
+    "splits": {
+      "train": 78864,
+      "val": 39324,
+      "test": 39912
+    }
+  },
+  "dates": {
+    "published": "2020-05-01"
+  },
+  "citation": {
+    "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "paper_url": "https://arxiv.org/abs/2005.00687",
+    "doi": "10.48550/arXiv.2005.00687",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Marinka Zitnik",
+      "Yuxiao Dong",
+      "Hongyu Ren",
+      "Bowen Liu",
+      "Michele Catasta",
+      "Jure Leskovec"
+    ]
+  }
+}

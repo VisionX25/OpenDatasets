@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "vggsound",
+  "slug": "vggsound",
+  "name": "VGGSound: Large-Scale Audio-Visual Video Dataset",
+  "description": "VGGSound is a large-scale audio-visual dataset containing 200,000 video clips (each 10 seconds long, totaling 550 hours) across 300 diverse sound categories collected from YouTube. Curated using automated visual and audio verification pipelines followed by human validation to ensure audio-visual correspondence (where the audio source is visually manifested within the video frame). Categories span human actions, animal vocalizations, musical instruments, vehicles, home appliances, and environmental sounds.",
+  "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/vggsound/",
+  "publisher": {
+    "name": "Visual Geometry Group (VGG), University of Oxford",
+    "type": "academic",
+    "url": "https://www.robots.ox.ac.uk/~vgg/"
+  },
+  "modalities": [
+    "audio",
+    "vision",
+    "multimodal"
+  ],
+  "tasks": [
+    "audio-classification",
+    "sound-event-detection"
+  ],
+  "tags": [
+    "audio",
+    "video",
+    "audio-visual",
+    "oxford-vgg",
+    "sound-classification",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution 4.0 International / YouTube Terms",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "unknown",
+    "notes": "Annotation metadata is licensed under CC BY 4.0. Underlying YouTube videos remain the copyright of their original uploaders."
+  },
+  "source_references": [
+    {
+      "title": "Official Oxford VGG Page",
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/vggsound/",
+      "type": "official_website"
+    },
+    {
+      "title": "ICASSP 2020 Paper",
+      "url": "https://doi.org/10.1109/ICASSP40776.2020.9053174",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 200,000 clips across 300 sound classes, audio-visual correspondence filtering, and CC BY 4.0 annotations."
+  },
+  "sample_count": {
+    "total": 200000,
+    "unit": "video_clips",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-05-04"
+  },
+  "citation": {
+    "paper_title": "VGGSound: A Large-scale Audio-Visual Dataset",
+    "paper_url": "https://doi.org/10.1109/ICASSP40776.2020.9053174",
+    "doi": "10.1109/ICASSP40776.2020.9053174",
+    "authors": [
+      "Honglie Chen",
+      "Weidi Xie",
+      "Andrea Vedaldi",
+      "Andrew Zisserman"
+    ]
+  }
+}

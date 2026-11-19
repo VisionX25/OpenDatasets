@@ -649,6 +649,82 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "activitynet",
+    "slug": "activitynet",
+    "name": "ActivityNet: Large-Scale Video Benchmark for Human Activity Understanding",
+    "description": "ActivityNet (v1.3) is a benchmark dataset for human activity recognition and temporal action localization in untrimmed video. Comprising 19,994 YouTube video recordings totaling over 648 hours across 200 activity categories organized into a rich hierarchical taxonomy (e.g., sports, household chores, social interactions), each video contains on average 1.5 activity instances annotated with high-precision temporal start and end timestamps.",
+    "homepage_url": "http://activity-net.org/",
+    "publisher": {
+      "name": "Universidad San Francisco de Quito / Stanford University",
+      "type": "academic",
+      "url": "http://activity-net.org/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "action-recognition",
+      "video-understanding"
+    ],
+    "tags": [
+      "video",
+      "action-recognition",
+      "temporal-localization",
+      "human-activity",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "ActivityNet Terms of Use / Academic Permissive",
+      "url": "http://activity-net.org/download.html",
+      "commercial_use": "unknown",
+      "notes": "Annotations are freely provided for research and academic use. Source YouTube videos remain the intellectual property of their original uploaders."
+    },
+    "source_references": [
+      {
+        "title": "Official ActivityNet Website",
+        "url": "http://activity-net.org/",
+        "type": "official_website"
+      },
+      {
+        "title": "CVPR 2015 Paper",
+        "url": "https://doi.org/10.1109/CVPR.2015.7298698",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 19,994 untrimmed videos across 200 complex activity classes, CVPR 2015 publication, and annotation terms."
+    },
+    "sample_count": {
+      "total": 19994,
+      "unit": "untrimmed_videos",
+      "status": "verified",
+      "splits": {
+        "train": 10024,
+        "val": 4926,
+        "test": 5044
+      }
+    },
+    "dates": {
+      "published": "2015-06-07"
+    },
+    "citation": {
+      "paper_title": "ActivityNet: A Large-Scale Video Benchmark for Human Activity Understanding",
+      "paper_url": "https://doi.org/10.1109/CVPR.2015.7298698",
+      "doi": "10.1109/CVPR.2015.7298698",
+      "authors": [
+        "Fabian Caba Heilbron",
+        "Victor Escorcia",
+        "Bernard Ghanem",
+        "Juan Carlos Niebles"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ade20k",
     "slug": "ade20k",
     "name": "ADE20K: Scene Parsing and Segmentation Benchmark",
@@ -1814,6 +1890,87 @@
       "curation_notes": "Encompasses 12 defect classes: broken ends, broken picks, weft curling, fuzzyballs, cut selvage, creases, warp balls, knots, contamination, neps, and weft cracks.",
       "data_sources": [
         "AITEX Textile Industry Research Association laboratory looms"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "americasnlp-2021",
+    "slug": "americasnlp-2021",
+    "name": "AmericasNLP 2021 Shared Task: Translation for Indigenous Americas Languages",
+    "description": "AmericasNLP 2021 Shared Task dataset provides parallel corpora for machine translation between Spanish and 10 indigenous languages of the Americas: Ashaninka, Aymara, Bribri, Guarani, Hnahnu (Otomi), Nahuatl, Quechua, Raramuri (Tarahumara), Shipibo-Konibo, and Wixarika (Huichol). The benchmark provides clean training, development, and evaluation splits to advance natural language processing on extremely low-resource, endangered languages native to North, Central, and South America.",
+    "homepage_url": "https://github.com/AmericasNLP/americasnlp2021",
+    "publisher": {
+      "name": "AmericasNLP Research Group",
+      "type": "academic",
+      "url": "http://americasnlp.org/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "machine-translation"
+    ],
+    "tags": [
+      "nlp",
+      "machine-translation",
+      "indigenous-languages",
+      "americasnlp",
+      "low-resource",
+      "parallel-corpus"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "AmericasNLP Shared Task Research License",
+      "url": "https://github.com/AmericasNLP/americasnlp2021/blob/main/LICENSE",
+      "commercial_use": "allowed",
+      "notes": "Permits non-exclusive, royalty-free distribution and use for research and academic evaluation, respecting community language rights."
+    },
+    "source_references": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/AmericasNLP/americasnlp2021",
+        "type": "repository"
+      },
+      {
+        "title": "NAACL 2021 Workshop Paper",
+        "url": "https://doi.org/10.18653/v1/2021.americasnlp-1.23",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 10 indigenous languages paired with Spanish, 88,511 parallel sentences, and open research licensing."
+    },
+    "sample_count": {
+      "total": 88511,
+      "unit": "parallel_sentence_pairs",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021-06-11"
+    },
+    "citation": {
+      "paper_title": "Findings of the AmericasNLP 2021 Shared Task on Open Machine Translation for Indigenous Languages of the Americas",
+      "paper_url": "https://doi.org/10.18653/v1/2021.americasnlp-1.23",
+      "doi": "10.18653/v1/2021.americasnlp-1.23",
+      "authors": [
+        "Manuel Mager",
+        "Arturo Oncevay",
+        "Abteen Ebrahimi",
+        "John E. Ortega",
+        "Annette Rios",
+        "Angela Fan",
+        "Ximena Gutierrez-Vasques",
+        "Luis Chiruzzo",
+        "Alexis Gimenez-Lugo",
+        "Ricardo Ramos",
+        "Ivan Vladimir Meza Ruiz",
+        "Rolando Coto-Solano",
+        "Frankie Robertson",
+        "Alexis Palmer"
       ]
     }
   },
@@ -9082,6 +9239,81 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "bot-iot",
+    "slug": "bot-iot",
+    "name": "BoT-IoT: Internet of Things Botnet Attack Dataset",
+    "description": "The BoT-IoT dataset was created by the Cyber Range Lab of UNSW Canberra Cyber to evaluate machine learning and deep learning anomaly detection models in Internet of Things (IoT) network environments. Simulating a realistic smart-home IoT testbed with simulated sensor nodes (Node-RED, MQTT, smart fridges, thermostats) and virtualized attacking machines, it captures over 72 million network flow records across benign conditions and malicious attacks, including DDoS, DoS, OS/service scan reconnaissance, keylogging, and data exfiltration. Provided in raw PCAPs, argus network flow files, and selected CSV subsets.",
+    "homepage_url": "https://research.unsw.edu.au/projects/bot-iot-dataset",
+    "publisher": {
+      "name": "UNSW Canberra Cyber / University of New South Wales",
+      "type": "academic",
+      "url": "https://www.unsw.edu.au/canberra/our-research/research-centres-institutes/cyber"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "tabular-classification"
+    ],
+    "tags": [
+      "cybersecurity",
+      "iot",
+      "botnet",
+      "network-security",
+      "mqtt",
+      "ddos",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "UNSW Canberra Academic Free License / Academic Research License",
+      "url": "https://research.unsw.edu.au/projects/bot-iot-dataset",
+      "commercial_use": "forbidden",
+      "notes": "Available freely for academic and educational research. Commercial exploitation requires explicit written permission from UNSW Canberra."
+    },
+    "source_references": [
+      {
+        "title": "Official UNSW Research Page",
+        "url": "https://research.unsw.edu.au/projects/bot-iot-dataset",
+        "type": "official_website"
+      },
+      {
+        "title": "Future Generation Computer Systems Paper",
+        "url": "https://doi.org/10.1016/j.future.2019.05.041",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 72M+ network flows, Node-RED/MQTT smart home topology, and non-commercial academic licensing."
+    },
+    "sample_count": {
+      "total": 72000000,
+      "unit": "network_flows",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-05-18"
+    },
+    "citation": {
+      "paper_title": "Towards the development of realistic botnet dataset in the Internet of Things for network forensic analysis: The BoT-IoT dataset",
+      "paper_url": "https://doi.org/10.1016/j.future.2019.05.041",
+      "doi": "10.1016/j.future.2019.05.041",
+      "authors": [
+        "Nickolaos Koroniotis",
+        "Nour Moustafa",
+        "Elena Sitnikova",
+        "Benjamin Turnbull"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bracol-coffee-leaf",
     "slug": "bracol-coffee-leaf",
     "name": "BRACOL: A Brazilian Arabica Coffee Leaf Images Dataset for Identification and Quantification of Diseases and Pests",
@@ -11317,6 +11549,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "charades",
+    "slug": "charades",
+    "name": "Charades: Daily Life Indoor Activity Video Dataset",
+    "description": "Charades is a dataset of 9,848 untrimmed daily-life indoor videos recorded by 267 crowd-sourced workers acting out prescribed composite activity scripts in their own homes. Totaling 82 hours of video, it contains 66,500 annotated temporal activity intervals covering 157 multi-label action classes and 46 object classes interacting across 15 indoor locations. It supports both multi-label action classification and fine-grained temporal action localization.",
+    "homepage_url": "https://prior.allenai.org/projects/charades",
+    "publisher": {
+      "name": "Allen Institute for AI (AI2)",
+      "type": "academic",
+      "url": "https://allenai.org/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "action-recognition",
+      "video-understanding"
+    ],
+    "tags": [
+      "video",
+      "action-recognition",
+      "allen-institute",
+      "daily-activities",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "AI2 Non-Commercial Use License",
+      "url": "https://allenai.org/terms",
+      "commercial_use": "forbidden",
+      "notes": "Dataset and video frames distributed by AI2 under non-commercial research terms."
+    },
+    "source_references": [
+      {
+        "title": "Official Project Page",
+        "url": "https://prior.allenai.org/projects/charades",
+        "type": "official_website"
+      },
+      {
+        "title": "ECCV 2016 Paper",
+        "url": "https://doi.org/10.1007/978-3-319-46448-0_31",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 9,848 indoor videos, 66,500 action instances across 157 classes, and AI2 non-commercial license."
+    },
+    "sample_count": {
+      "total": 9848,
+      "unit": "videos",
+      "status": "verified",
+      "splits": {
+        "train": 7985,
+        "test": 1863
+      }
+    },
+    "dates": {
+      "published": "2016-10-08"
+    },
+    "citation": {
+      "paper_title": "Hollywood in Homes: Crowdsourcing Data Collection for Activity Understanding",
+      "paper_url": "https://doi.org/10.1007/978-3-319-46448-0_31",
+      "doi": "10.1007/978-3-319-46448-0_31",
+      "authors": [
+        "Gunnar A. Sigurdsson",
+        "Gul Varol",
+        "Xiaolong Wang",
+        "Ali Farhadi",
+        "Ivan Laptev",
+        "Abhinav Gupta"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "chartqa",
     "slug": "chartqa",
     "name": "ChartQA: Benchmark for Question Answering about Charts",
@@ -12042,6 +12351,81 @@
       ],
       "doi": "10.1109/TMI.2016.2593957",
       "bibtex": "@article{twinanda2016endonet,\n  title={EndoNet: A Deep Architecture for Recognition Tasks on Laparoscopic Videos},\n  author={Twinanda, Andru P and Shehata, Sherif and Mutter, Didier and Marescaux, Jacques and de Mathelin, Michel and Padoy, Nicolas},\n  journal={IEEE Transactions on Medical Imaging},\n  volume={36},\n  number={1},\n  pages={86--97},\n  year={2017},\n  publisher={IEEE}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cic-ddos2019",
+    "slug": "cic-ddos2019",
+    "name": "CIC-DDoS2019: Distributed Denial of Service Attack Dataset",
+    "description": "CIC-DDoS2019 is a specialized network security dataset developed by the Canadian Institute for Cybersecurity (CIC) containing realistic benign traffic and 12 contemporary Distributed Denial of Service (DDoS) attack families. Attacks encompass reflection-based protocols (NTP, DNS, LDAP, MSSQL, NetBIOS, SNMP, SSDP, TFTP, CharGen) and exploitation-based protocols (SYN flood, UDP flood, UDP-Lag). Captured in a controlled B-Profile topology over two days (training day and testing day), it provides raw PCAP files and over 50 million flow records with 80 statistical features generated using CICFlowMeter.",
+    "homepage_url": "https://www.unb.ca/cic/datasets/ddos-2019.html",
+    "publisher": {
+      "name": "Canadian Institute for Cybersecurity (CIC) / University of New Brunswick",
+      "type": "academic",
+      "url": "https://www.unb.ca/cic/"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "tabular-classification"
+    ],
+    "tags": [
+      "cybersecurity",
+      "ddos",
+      "network-traffic",
+      "pcap",
+      "cicflowmeter",
+      "dos-attacks",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "UNB Open Data Terms of Use",
+      "url": "https://www.unb.ca/cic/datasets/ddos-2019.html",
+      "commercial_use": "allowed",
+      "notes": "CIC allows free redistribution and research usage under required attribution to UNB CIC and the published study."
+    },
+    "source_references": [
+      {
+        "title": "Official UNB CIC Portal",
+        "url": "https://www.unb.ca/cic/datasets/ddos-2019.html",
+        "type": "official_website"
+      },
+      {
+        "title": "IEEE ICCST 2019 Paper",
+        "url": "https://doi.org/10.1109/CCST.2019.8888419",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 12 DDoS attack types across 2 collection days, 50M+ network flows, and UNB Open Data terms."
+    },
+    "sample_count": {
+      "total": 50063112,
+      "unit": "network_flows",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-10-01"
+    },
+    "citation": {
+      "paper_title": "Developing Realistic Distributed Denial of Service (DDoS) Attack Dataset and Taxonomy",
+      "paper_url": "https://doi.org/10.1109/CCST.2019.8888419",
+      "doi": "10.1109/CCST.2019.8888419",
+      "authors": [
+        "Iman Sharafaldin",
+        "Amirhossein H. Lashkari",
+        "Saqib Hakak",
+        "Ali A. Ghorbani"
+      ]
     }
   },
   {
@@ -14163,6 +14547,85 @@
         "Hannah Kerner"
       ],
       "bibtex": "@inproceedings{tseng2021cropharvest,\n  title={CropHarvest: A Global Dataset for Crop-Type Classification},\n  author={Tseng, Gabriel and Zvonkov, Ivan and Nakalembe, Catherine and Kerner, Hannah},\n  booktitle={Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 2)},\n  year={2021},\n  url={https://openreview.net/forum?id=JtjzUXPEaCu}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "cse-cic-ids2018",
+    "slug": "cse-cic-ids2018",
+    "name": "CSE-CIC-IDS2018: Collaborative Network Intrusion Detection Dataset",
+    "description": "CSE-CIC-IDS2018 is a large-scale cybersecurity network intrusion detection dataset generated collaboratively by the Communications Security Establishment (CSE) and the Canadian Institute for Cybersecurity (CIC) at the University of New Brunswick. Captured on an AWS cloud testbed comprising 500 victim machines and 50 attacking machines over 10 days, it captures realistic benign background traffic alongside diverse attack scenarios: Brute Force, Heartbleed, Botnet, DoS, DDoS, Web Attacks, and Network Infiltration. Provided as raw PCAP captures (~400 GB) and extracted CICFlowMeter bidirectional network flow CSVs (~16 million flow records with 80 statistical features).",
+    "homepage_url": "https://www.unb.ca/cic/datasets/ids-2018.html",
+    "publisher": {
+      "name": "Canadian Institute for Cybersecurity (CIC) / University of New Brunswick",
+      "type": "academic",
+      "url": "https://www.unb.ca/cic/"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "tabular-classification"
+    ],
+    "tags": [
+      "cybersecurity",
+      "intrusion-detection",
+      "network-traffic",
+      "pcap",
+      "cicflowmeter",
+      "aws",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "UNB Open Data Terms of Use",
+      "url": "https://www.unb.ca/cic/datasets/ids-2018.html",
+      "commercial_use": "allowed",
+      "notes": "Freely available for research and commercial exploration with mandatory academic attribution and citation to CIC."
+    },
+    "source_references": [
+      {
+        "title": "Official UNB CIC Dataset Portal",
+        "url": "https://www.unb.ca/cic/datasets/ids-2018.html",
+        "type": "official_website"
+      },
+      {
+        "title": "Registry of Open Data on AWS",
+        "url": "https://registry.opendata.aws/cse-cic-ids2018/",
+        "type": "repository"
+      },
+      {
+        "title": "Original Research Paper",
+        "url": "https://doi.org/10.5220/0006639801080116",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified AWS infrastructure, 16.2M network flow records across 14 attack profiles, and UNB Open Data terms."
+    },
+    "sample_count": {
+      "total": 16233002,
+      "unit": "network_flows",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018-03-01"
+    },
+    "citation": {
+      "paper_title": "Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization",
+      "paper_url": "https://doi.org/10.5220/0006639801080116",
+      "doi": "10.5220/0006639801080116",
+      "authors": [
+        "Iman Sharafaldin",
+        "Arash Habibi Lashkari",
+        "Ali A. Ghorbani"
+      ]
     }
   },
   {
@@ -17281,6 +17744,87 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "dynamicearthnet",
+    "slug": "dynamicearthnet",
+    "name": "DynamicEarthNet: Daily PlanetScope Multi-Spectral Satellite Time-Series",
+    "description": "DynamicEarthNet is a daily multi-spectral satellite benchmark for monitoring Earth surface dynamics over time. Covering 75 areas of interest (AOIs) of 9 km² each across all seven continents, it provides daily 3-meter resolution PlanetScope imagery (4 bands: RGB and Near-Infrared) collected continuously over two full years (2018–2019, totaling over 55,000 observations). The dataset includes monthly pixel-level semantic change segmentation masks annotated across 7 land use and land cover (LULC) classes to evaluate spatio-temporal change detection and multi-temporal segmentation.",
+    "homepage_url": "https://mediatum.ub.tum.de/1657358",
+    "publisher": {
+      "name": "Technical University of Munich (TUM) / Planet Labs",
+      "type": "academic",
+      "url": "https://www.tum.de/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "time-series"
+    ],
+    "tasks": [
+      "change-detection",
+      "semantic-segmentation",
+      "remote-sensing"
+    ],
+    "tags": [
+      "satellite-imagery",
+      "earth-observation",
+      "planetscope",
+      "change-detection",
+      "time-series",
+      "daily-imagery",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset annotations and curated mosaics distributed under CC BY-SA 4.0 on TUM mediaTUM."
+    },
+    "source_references": [
+      {
+        "title": "TUM mediaTUM Landing Page",
+        "url": "https://mediatum.ub.tum.de/1657358",
+        "type": "repository"
+      },
+      {
+        "title": "CVPR 2022 Paper",
+        "url": "https://doi.org/10.1109/CVPR52688.2022.02048",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 75 global AOIs, 2-year daily PlanetScope imagery, 7 LULC change classes, and CC BY-SA 4.0 terms."
+    },
+    "sample_count": {
+      "total": 75,
+      "unit": "areas_of_interest",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022-06-20"
+    },
+    "citation": {
+      "paper_title": "DynamicEarthNet: Daily Multi-Spectral Satellite Dataset for Semantic Change Segmentation",
+      "paper_url": "https://doi.org/10.1109/CVPR52688.2022.02048",
+      "doi": "10.1109/CVPR52688.2022.02048",
+      "authors": [
+        "Aysim Toker",
+        "Lukas Kondmann",
+        "Mark Hauswirth",
+        "Raffaele Contreras",
+        "Antonio Giganti",
+        "Christian Fischer",
+        "Mikhail Tsalicoglou",
+        "Laura Leal-Taixé"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "e2e-nlg",
     "slug": "e2e-nlg",
     "name": "The E2E NLG Challenge Dataset",
@@ -17730,6 +18274,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "edge-iiotset",
+    "slug": "edge-iiotset",
+    "name": "Edge-IIoTset: Industrial IoT Cybersecurity Dataset",
+    "description": "Edge-IIoTset is a comprehensive cybersecurity dataset designed specifically for Industrial Internet of Things (IIoT) edge computing architectures, developed by the IEEE Internet of Things laboratory. Deployed on a physical multi-tier testbed comprising 10+ types of IoT devices (water quality, temperature, flame, sound, soil moisture sensors), edge computing gateways, and cloud servers, it incorporates 14 distinct attack types grouped into 5 categories: DoS/DDoS, Information Gathering, Man-in-the-Middle, Injection, and Malware/Ransomware. Features 61 extracted flow and protocol features across Modbus, MQTT, HTTP, and TCP/IP telemetry.",
+    "homepage_url": "https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications",
+    "publisher": {
+      "name": "Concordia University / IEEE Dataport",
+      "type": "academic",
+      "url": "https://www.concordia.ca/"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "tabular-classification"
+    ],
+    "tags": [
+      "cybersecurity",
+      "industrial-iot",
+      "iiot",
+      "edge-computing",
+      "modbus",
+      "mqtt",
+      "intrusion-detection",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "IEEE Open Data / Academic Non-Commercial Terms",
+      "url": "https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications",
+      "commercial_use": "forbidden",
+      "notes": "Available via IEEE Dataport for academic research and educational evaluation with citation requirements."
+    },
+    "source_references": [
+      {
+        "title": "IEEE Dataport Page",
+        "url": "https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications",
+        "type": "official_website"
+      },
+      {
+        "title": "IEEE Access Paper",
+        "url": "https://doi.org/10.1109/ACCESS.2022.3165809",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 20.95M sensor and telemetry flow records, 14 attack types across Modbus/MQTT/HTTP, and IEEE terms."
+    },
+    "sample_count": {
+      "total": 20952691,
+      "unit": "sensor_records",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022-04-08"
+    },
+    "citation": {
+      "paper_title": "Edge-IIoTset: A New Comprehensive Realistic Cyber Security Dataset of IoT and IIoT Applications for Centralized and Federated Learning",
+      "paper_url": "https://doi.org/10.1109/ACCESS.2022.3165809",
+      "doi": "10.1109/ACCESS.2022.3165809",
+      "authors": [
+        "Mohamed Amine Ferrag",
+        "Othmane Friha",
+        "Djamel Hamouda",
+        "Leandros A. Maglaras",
+        "Helge Janicke"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "eeg-based-lie-detection-using-14",
     "slug": "eeg-based-lie-detection-using-14",
     "name": "EEG-Based Lie Detection Dataset using 14-Channel Emotiv EPOC+: Instructed-Response and Free-Response Protocols",
@@ -17971,6 +18592,90 @@
       ],
       "doi": "10.48550/arXiv.2311.18259",
       "bibtex": "@inproceedings{grauman2024egoexo4d,\n  title={Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives},\n  author={Grauman, Kristen and Westbury, Andrew and Torresani, Lorenzo and Kitani, Kris and Malik, Jitendra},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  year={2024}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ego4d",
+    "slug": "ego4d",
+    "name": "Ego4D: Massive-Scale Egocentric Video Benchmark",
+    "description": "Ego4D is a massive-scale egocentric video dataset and benchmark suite created by a consortium of 13 academic institutions and Meta AI. It comprises 3,670 hours of daily-life activity video recorded from a first-person viewpoint across 74 locations in 9 countries by 931 participants wearing wearable cameras (GoPro, camera glasses). Ego4D defines five benchmark tasks: Episodic Memory, Hands and Objects, Forecasting, Audio-Visual Diarization, and Social Interaction, providing multimodal annotations including 3D meshes, gaze tracking, narration streams, and stereo audio.",
+    "homepage_url": "https://ego4d-data.org/",
+    "publisher": {
+      "name": "Ego4D Consortium / Meta AI",
+      "type": "academic",
+      "url": "https://ego4d-data.org/"
+    },
+    "modalities": [
+      "vision",
+      "audio",
+      "multimodal",
+      "3d"
+    ],
+    "tasks": [
+      "action-recognition",
+      "video-understanding",
+      "audio-visual-diarization"
+    ],
+    "tags": [
+      "egocentric-vision",
+      "video",
+      "first-person",
+      "audio-visual",
+      "meta-ai",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Ego4D License Agreement",
+      "url": "https://ego4d-data.org/docs/license/",
+      "commercial_use": "forbidden",
+      "notes": "Available via a click-through Data License Agreement for non-commercial research and educational evaluation."
+    },
+    "source_references": [
+      {
+        "title": "Official Ego4D Website",
+        "url": "https://ego4d-data.org/",
+        "type": "official_website"
+      },
+      {
+        "title": "CVPR 2022 Paper",
+        "url": "https://doi.org/10.1109/CVPR52688.2022.01842",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 3,670 hours across 9 countries, 931 participants, 5 core challenge benchmarks, and Ego4D License Agreement."
+    },
+    "sample_count": {
+      "total": 3670,
+      "unit": "video_hours",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021-10-14"
+    },
+    "citation": {
+      "paper_title": "Ego4D: Around the World in 3,000 Hours of Egocentric Video",
+      "paper_url": "https://doi.org/10.1109/CVPR52688.2022.01842",
+      "doi": "10.1109/CVPR52688.2022.01842",
+      "authors": [
+        "Kristen Grauman",
+        "Andrew Westbury",
+        "Eugene Byrne",
+        "Zachary Chavis",
+        "Antonino Furnari",
+        "Rohit Girdhar",
+        "Jackson Hamburger",
+        "Hao Jiang",
+        "Miao Liu",
+        "Xingyu Liu",
+        "Stella X. Yu",
+        "Jitendra Malik"
+      ]
     }
   },
   {
@@ -18375,6 +19080,88 @@
         "Toby Perrett",
         "Will Price",
         "Michael Wray"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "epic-sounds",
+    "slug": "epic-sounds",
+    "name": "EPIC-SOUNDS: Audio-Oriented Actions in Egocentric Video",
+    "description": "EPIC-SOUNDS is a large-scale audio-oriented dataset for egocentric video understanding from the University of Bristol. Built on top of the 100 hours of unscripted egocentric video from EPIC-KITCHENS-100, EPIC-SOUNDS provides 115,704 temporal audio event annotations across 44 audio classes. Annotations capture acoustic interactions (chopping, sizzling, running water, pouring, scraping) with precise start and end timestamps and audio-action labels, establishing a rigorous benchmark for egocentric audio-visual and audio-only action recognition.",
+    "homepage_url": "https://epic-kitchens.github.io/epic-sounds/",
+    "publisher": {
+      "name": "University of Bristol",
+      "type": "academic",
+      "url": "https://www.bristol.ac.uk/"
+    },
+    "modalities": [
+      "audio",
+      "vision",
+      "multimodal"
+    ],
+    "tasks": [
+      "audio-classification",
+      "sound-event-detection",
+      "action-recognition"
+    ],
+    "tags": [
+      "audio",
+      "egocentric-vision",
+      "sound-events",
+      "kitchen",
+      "audio-visual",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Dataset and annotations are provided under CC BY-NC 4.0 for non-commercial academic research."
+    },
+    "source_references": [
+      {
+        "title": "Official EPIC-SOUNDS Website",
+        "url": "https://epic-kitchens.github.io/epic-sounds/",
+        "type": "official_website"
+      },
+      {
+        "title": "ICCV 2023 Research Paper",
+        "url": "https://doi.org/10.1109/ICCV51070.2023.01890",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 115,704 temporal audio event annotations across 44 audio classes, ICCV 2023 paper, and CC BY-NC 4.0 terms."
+    },
+    "sample_count": {
+      "total": 115704,
+      "unit": "audio_segments",
+      "status": "verified",
+      "splits": {
+        "train": 78207,
+        "val": 16904,
+        "test": 20593
+      }
+    },
+    "dates": {
+      "published": "2023-10-02"
+    },
+    "citation": {
+      "paper_title": "EPIC-SOUNDS: An Audio-Oriented Dataset of Actions",
+      "paper_url": "https://doi.org/10.1109/ICCV51070.2023.01890",
+      "doi": "10.1109/ICCV51070.2023.01890",
+      "authors": [
+        "Jaesung Huh",
+        "Jacob Chalk",
+        "Evangelos Kazakos",
+        "Dima Damen",
+        "Andrew Zisserman"
       ]
     }
   },
@@ -22669,6 +23456,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "hai",
+    "slug": "hai",
+    "name": "HAI: Hardware-in-the-Loop Anomaly Detection Dataset",
+    "description": "The HAI (Hardware-in-the-Loop Anomaly Detection) dataset was collected on a realistic industrial control system (ICS) testbed by the Cybersecurity and Telecommunications Research Division at Korea Information Security Agency (KISA) and Affiliated Institute of ETRI. The testbed models physical thermal power generation and pump-and-storage hydroelectric plants controlled via GE, Emerson, and Siemens PLCs and DCS. It comprises time-series sensor measurements from 78 to 86 variables (pressures, flows, temperatures, valve positions) sampled every 1 second, with benign operations and 50+ sophisticated cyber-physical injection and manipulation attack scenarios.",
+    "homepage_url": "https://github.com/icsdataset/hai",
+    "publisher": {
+      "name": "Affiliated Institute of ETRI / KISA",
+      "type": "government",
+      "url": "https://github.com/icsdataset/hai"
+    },
+    "modalities": [
+      "time-series",
+      "sensor",
+      "tabular"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "time-series-forecasting"
+    ],
+    "tags": [
+      "cybersecurity",
+      "industrial-control-systems",
+      "ics",
+      "scada",
+      "anomaly-detection",
+      "time-series",
+      "plc",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Released under CC BY 4.0 by ETRI and KISA for academic and industry research."
+    },
+    "source_references": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/icsdataset/hai",
+        "type": "repository"
+      },
+      {
+        "title": "CSET 2021 Paper",
+        "url": "https://doi.org/10.1145/3474718.3474719",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified GE/Emerson/Siemens testbed topology, 2.47M 1-second timestamps, 86 sensor variables, and CC BY 4.0 license."
+    },
+    "sample_count": {
+      "total": 2470000,
+      "unit": "time_series_timestamps",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-02-28"
+    },
+    "citation": {
+      "paper_title": "HAI 1.0: Hardware-In-the-Loop Anomaly Detection Dataset",
+      "paper_url": "https://doi.org/10.1145/3474718.3474719",
+      "doi": "10.1145/3474718.3474719",
+      "authors": [
+        "Hyeok-Ki Shin",
+        "Woomyo Lee",
+        "Je-Hyun Yun",
+        "HyoungChun Kim"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ham10000",
     "slug": "ham10000",
     "name": "HAM10000: Human Against Machine 10000 Dermatoscopic Skin Lesion Benchmark",
@@ -25554,6 +26418,81 @@
       "curation_notes": "Provides naturalistic trajectories for 11,500 road users including cars, trucks, buses, pedestrians, and cyclists across 10 hours of video recordings, specifically capturing complex urban intersection conflicts.",
       "data_sources": [
         "High-resolution drone video footage"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "indicxnli",
+    "slug": "indicxnli",
+    "name": "IndicXNLI: Natural Language Inference for Indic Languages",
+    "description": "IndicXNLI is a natural language inference benchmark covering 11 major Indic languages (Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu) as part of the IndicGLUE benchmark. It contains human-translated cross-lingual NLI test sets (2,247 test examples per language, totaling 24,717 test instances) and machine-translated training data (392,702 examples per language) aligned with XNLI premises and hypotheses to evaluate cross-lingual sentence comprehension.",
+    "homepage_url": "https://indicnlp.ai4bharat.org/indicglue/",
+    "publisher": {
+      "name": "AI4Bharat",
+      "type": "academic",
+      "url": "https://ai4bharat.org/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "natural-language-inference"
+    ],
+    "tags": [
+      "nlp",
+      "nli",
+      "indic-languages",
+      "multilingual",
+      "indicglue",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "AI4Bharat distributes IndicGLUE datasets under CC BY-NC 4.0 for non-commercial research use."
+    },
+    "source_references": [
+      {
+        "title": "AI4Bharat IndicGLUE Portal",
+        "url": "https://indicnlp.ai4bharat.org/indicglue/",
+        "type": "official_website"
+      },
+      {
+        "title": "EMNLP 2022 Paper",
+        "url": "https://doi.org/10.18653/v1/2022.emnlp-main.755",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 11 Indic languages, 24,717 human-translated test evaluation pairs, and CC BY-NC 4.0 terms."
+    },
+    "sample_count": {
+      "total": 24717,
+      "unit": "test_pairs",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022-12-07"
+    },
+    "citation": {
+      "paper_title": "IndicGLUE: A Natural Language Understanding Benchmark for Indian Languages",
+      "paper_url": "https://doi.org/10.18653/v1/2022.emnlp-main.755",
+      "doi": "10.18653/v1/2022.emnlp-main.755",
+      "authors": [
+        "Divyanshu Kakwani",
+        "Anoop Kunchukuttan",
+        "Satish Golla",
+        "Gokul N.C.",
+        "Avik Bhattacharyya",
+        "Mitesh M. Khapra",
+        "Pratyush Kumar"
       ]
     }
   },
@@ -33721,6 +34660,78 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "mkqa",
+    "slug": "mkqa",
+    "name": "MKQA: Multilingual Knowledge Questions & Answers",
+    "description": "MKQA is an open-domain multilingual question-answering benchmark comprising 10,000 question-answer pairs aligned across 26 typologically diverse languages (260,000 query-answer pairs total). Sourced from the Natural Questions dataset and manually translated by human translators, MKQA evaluates knowledge retrieval and answering independent of English passage bias, featuring independent human-curated language-specific answer spans and long/short answer types.",
+    "homepage_url": "https://github.com/apple/ml-mkqa",
+    "publisher": {
+      "name": "Apple",
+      "type": "industry",
+      "url": "https://machinelearning.apple.com/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "information-retrieval"
+    ],
+    "tags": [
+      "nlp",
+      "multilingual",
+      "question-answering",
+      "cross-lingual-qa",
+      "knowledge-retrieval",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "spdx_id": "CC-BY-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset released under CC BY-SA 3.0; source code licensed under Apple Sample Code License."
+    },
+    "source_references": [
+      {
+        "title": "Official Repository",
+        "url": "https://github.com/apple/ml-mkqa",
+        "type": "repository"
+      },
+      {
+        "title": "TACL 2021 Paper",
+        "url": "https://doi.org/10.1162/tacl_a_00433",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 26 languages, 10,000 QA pairs per language (260,000 total), and CC BY-SA 3.0 license."
+    },
+    "sample_count": {
+      "total": 260000,
+      "unit": "question_answer_pairs",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-07-30"
+    },
+    "citation": {
+      "paper_title": "MKQA: A Linguistically Diverse Benchmark for Multilingual Open-Domain Question Answering",
+      "paper_url": "https://doi.org/10.1162/tacl_a_00433",
+      "doi": "10.1162/tacl_a_00433",
+      "authors": [
+        "Shayne Longpre",
+        "Yi Lu",
+        "Zhucheng Tu"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "mlqa",
     "slug": "mlqa",
     "name": "MLQA: MultiLingual Question Answering",
@@ -35362,6 +36373,84 @@
       "total": 6989,
       "unit": "images",
       "status": "verified"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "multi-eurlex",
+    "slug": "multi-eurlex",
+    "name": "MultiEURLEX: Multilingual Legal Document Classification",
+    "description": "MultiEURLEX is a comprehensive multilingual legal dataset comprising 65,000 European Union legislative acts published in the Official Journal of the EU, translated into all 23 official EU languages (1.5 million document-language pairs total). Each document is annotated with EUROVOC concepts categorized into three granular levels of the EuroVoc taxonomy (level 1 with 21 labels, level 2 with 127 labels, and level 3 with 567 labels) to benchmark cross-lingual multi-label legal text classification.",
+    "homepage_url": "https://github.com/iliaschalkidis/multi-eurlex",
+    "publisher": {
+      "name": "Athens University of Economics and Business",
+      "type": "academic",
+      "url": "https://github.com/iliaschalkidis/multi-eurlex"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "text-classification",
+      "multi-label-classification"
+    ],
+    "tags": [
+      "nlp",
+      "legal-nlp",
+      "multilingual",
+      "eurovoc",
+      "european-union",
+      "multi-label",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset released under CC BY-SA 4.0; underlying EU law texts reusable under EU law open reuse policy (Decision 2011/833/EU)."
+    },
+    "source_references": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/iliaschalkidis/multi-eurlex",
+        "type": "repository"
+      },
+      {
+        "title": "EMNLP 2021 Paper",
+        "url": "https://doi.org/10.18653/v1/2021.emnlp-main.559",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 23 EU languages, 65,000 documents with EuroVoc taxonomy levels 1-3, and CC BY-SA 4.0 license."
+    },
+    "sample_count": {
+      "total": 65000,
+      "unit": "eu_acts",
+      "status": "verified",
+      "splits": {
+        "train": 55000,
+        "val": 5000,
+        "test": 5000
+      }
+    },
+    "dates": {
+      "published": "2021-11-07"
+    },
+    "citation": {
+      "paper_title": "MultiEURLEX -- A multi-lingual and multi-label legal document classification dataset for zero-shot cross-lingual transfer",
+      "paper_url": "https://doi.org/10.18653/v1/2021.emnlp-main.559",
+      "doi": "10.18653/v1/2021.emnlp-main.559",
+      "authors": [
+        "Ilias Chalkidis",
+        "Manos Fergadiotis",
+        "Ion Androutsopoulos"
+      ]
     }
   },
   {
@@ -39651,6 +40740,243 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ogbg-ppa",
+    "slug": "ogbg-ppa",
+    "name": "ogbg-ppa: Protein-Protein Association Graph Classification",
+    "description": "The ogbg-ppa dataset is a graph classification benchmark composed of 158,100 protein-protein association (PPA) subgraphs extracted from the STRING database across 1,581 species. Each graph corresponds to a protein network where nodes represent proteins and edges represent biological associations with 7-dimensional weight features. The task is 37-way multi-class classification to identify the taxonomic group/species from which each protein network was sampled, evaluated under a scaffold/taxonomic out-of-distribution split.",
+    "homepage_url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-ppa",
+    "publisher": {
+      "name": "Stanford University (OGB Team)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph"
+    ],
+    "tasks": [
+      "graph-classification",
+      "graph-representation-learning"
+    ],
+    "tags": [
+      "graph",
+      "graph-property-prediction",
+      "ogb",
+      "biology",
+      "string-database",
+      "proteins",
+      "benchmark"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "Creative Commons Zero v1.0 Universal / MIT",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Underlying STRING biological association networks are in the public domain under CC0; OGB benchmark scripts are MIT."
+    },
+    "source_references": [
+      {
+        "title": "Official OGB Documentation",
+        "url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-ppa",
+        "type": "official_website"
+      },
+      {
+        "title": "NeurIPS 2020 OGB Paper",
+        "url": "https://arxiv.org/abs/2005.00687",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 158,100 graphs, 37 classes, taxonomic split, and CC0/MIT licensing."
+    },
+    "sample_count": {
+      "total": 158100,
+      "unit": "graphs",
+      "status": "verified",
+      "splits": {
+        "train": 78864,
+        "val": 39324,
+        "test": 39912
+      }
+    },
+    "dates": {
+      "published": "2020-05-01"
+    },
+    "citation": {
+      "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2005.00687",
+      "doi": "10.48550/arXiv.2005.00687",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Marinka Zitnik",
+        "Yuxiao Dong",
+        "Hongyu Ren",
+        "Bowen Liu",
+        "Michele Catasta",
+        "Jure Leskovec"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ogbl-citation2",
+    "slug": "ogbl-citation2",
+    "name": "ogbl-citation2: Academic Citation Network Link Prediction",
+    "description": "The ogbl-citation2 dataset is a directed graph representing the academic paper citation network extracted from the Microsoft Academic Graph (MAG). It contains 2,927,963 paper nodes and 30,561,187 directed citation edges. Each node features a 128-dimensional Word2Vec feature vector extracted from paper titles and abstracts. The task is to predict missing citation links (which paper cites which paper) evaluated by Mean Reciprocal Rank (MRR), partitioned chronologically: papers published until 2018 for training, 2019 for validation, and 2019 for test.",
+    "homepage_url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-citation2",
+    "publisher": {
+      "name": "Stanford University (OGB Team)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph"
+    ],
+    "tasks": [
+      "link-prediction",
+      "graph-representation-learning"
+    ],
+    "tags": [
+      "graph",
+      "link-property-prediction",
+      "ogb",
+      "citation-network",
+      "microsoft-academic-graph",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License (ODC-By) / MIT",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Microsoft Academic Graph citation data licensed under ODC-By 1.0; OGB benchmark evaluation code is MIT."
+    },
+    "source_references": [
+      {
+        "title": "Official OGB Documentation",
+        "url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-citation2",
+        "type": "official_website"
+      },
+      {
+        "title": "NeurIPS 2020 OGB Paper",
+        "url": "https://arxiv.org/abs/2005.00687",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 2.93M paper nodes, 30.56M directed edges, chronological split, and ODC-By/MIT licensing."
+    },
+    "sample_count": {
+      "total": 2927963,
+      "unit": "nodes",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-05-01"
+    },
+    "citation": {
+      "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2005.00687",
+      "doi": "10.48550/arXiv.2005.00687",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Marinka Zitnik",
+        "Yuxiao Dong",
+        "Hongyu Ren",
+        "Bowen Liu",
+        "Michele Catasta",
+        "Jure Leskovec"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ogbl-collab",
+    "slug": "ogbl-collab",
+    "name": "ogbl-collab: Academic Collaboration Link Prediction",
+    "description": "The ogbl-collab dataset is an undirected, weighted graph representing an author collaboration network extracted from the Microsoft Academic Graph (MAG). Nodes represent 235,868 authors, and edges represent 1,285,465 collaboration relationships between authors who have co-authored at least one paper. Edge features include the number of co-authored papers and publication year. The task is to predict future collaborations (link prediction) evaluated by Hits@50 under a chronological split: collaborations before 2017 for training, 2018 for validation, and 2019 for testing.",
+    "homepage_url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-collab",
+    "publisher": {
+      "name": "Stanford University (OGB Team)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph"
+    ],
+    "tasks": [
+      "link-prediction",
+      "graph-representation-learning"
+    ],
+    "tags": [
+      "graph",
+      "link-property-prediction",
+      "ogb",
+      "collaboration-network",
+      "microsoft-academic-graph",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License (ODC-By) / MIT",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Microsoft Academic Graph data licensed under ODC-By 1.0; OGB benchmark tools under MIT."
+    },
+    "source_references": [
+      {
+        "title": "Official OGB Documentation",
+        "url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-collab",
+        "type": "official_website"
+      },
+      {
+        "title": "NeurIPS 2020 OGB Paper",
+        "url": "https://arxiv.org/abs/2005.00687",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 235,868 author nodes, 1.285M collaboration edges, chronological split, and ODC-By/MIT licensing."
+    },
+    "sample_count": {
+      "total": 235868,
+      "unit": "nodes",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-05-01"
+    },
+    "citation": {
+      "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2005.00687",
+      "doi": "10.48550/arXiv.2005.00687",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Marinka Zitnik",
+        "Yuxiao Dong",
+        "Hongyu Ren",
+        "Bowen Liu",
+        "Michele Catasta",
+        "Jure Leskovec"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ogbn-arxiv",
     "slug": "ogbn-arxiv",
     "name": "ogbn-arxiv: Citation Network Benchmark",
@@ -39730,6 +41056,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ogbn-papers100m",
+    "slug": "ogbn-papers100m",
+    "name": "ogbn-papers100m: Microsoft Academic Graph Citation Network",
+    "description": "The ogbn-papers100m dataset is a massive-scale directed citation network of 111,059,956 academic papers indexed by Microsoft Academic Graph (MAG) up to October 2019, connected by 1,615,685,872 directed citation edges. Each paper is associated with a 128-dimensional Word2Vec feature vector extracted from titles and abstracts. The task is to predict the primary subject area among 172 arXiv subject categories for indexed arXiv papers, evaluated under a realistic chronological split (train up to 2017, validation in 2018, test in 2019).",
+    "homepage_url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-papers100M",
+    "publisher": {
+      "name": "Stanford University (OGB Team)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph"
+    ],
+    "tasks": [
+      "node-classification",
+      "graph-representation-learning"
+    ],
+    "tags": [
+      "graph",
+      "node-property-prediction",
+      "ogb",
+      "citation-network",
+      "microsoft-academic-graph",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License (ODC-By) / MIT",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Underlying Microsoft Academic Graph citation data is released under ODC-By 1.0; OGB benchmark scripts and packaging are licensed under MIT."
+    },
+    "source_references": [
+      {
+        "title": "Official OGB Documentation",
+        "url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-papers100M",
+        "type": "official_website"
+      },
+      {
+        "title": "NeurIPS 2020 OGB Paper",
+        "url": "https://arxiv.org/abs/2005.00687",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified node count (111M), edge count (1.61B), 172 classes, and NeurIPS 2020 benchmark publication."
+    },
+    "sample_count": {
+      "total": 111059956,
+      "unit": "nodes",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-05-01"
+    },
+    "citation": {
+      "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2005.00687",
+      "doi": "10.48550/arXiv.2005.00687",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Marinka Zitnik",
+        "Yuxiao Dong",
+        "Hongyu Ren",
+        "Bowen Liu",
+        "Michele Catasta",
+        "Jure Leskovec"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ogbn-products",
     "slug": "ogbn-products",
     "name": "ogbn-products: Amazon Product Co-purchasing Network",
@@ -39787,6 +41190,89 @@
         "train": 196615,
         "val": 39323,
         "test": 2213091
+      }
+    },
+    "dates": {
+      "published": "2020-05-01"
+    },
+    "citation": {
+      "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2005.00687",
+      "doi": "10.48550/arXiv.2005.00687",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Marinka Zitnik",
+        "Yuxiao Dong",
+        "Hongyu Ren",
+        "Bowen Liu",
+        "Michele Catasta",
+        "Jure Leskovec"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ogbn-proteins",
+    "slug": "ogbn-proteins",
+    "name": "ogbn-proteins: Protein-Protein Association Network",
+    "description": "The ogbn-proteins dataset is an undirected, weighted, multi-relational graph representing protein-protein associations across 8 species extracted from the STRING database. Nodes represent proteins (132,534 nodes), and edges represent 8 types of biological associations (totaling 39,561,252 edges) with 8-dimensional edge features reflecting interaction confidence. The task is multi-label protein function prediction across 112 Gene Ontology (GO) terms, evaluated by average ROC-AUC under a species-based out-of-distribution split.",
+    "homepage_url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-proteins",
+    "publisher": {
+      "name": "Stanford University (OGB Team)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph"
+    ],
+    "tasks": [
+      "node-classification",
+      "graph-representation-learning"
+    ],
+    "tags": [
+      "graph",
+      "node-property-prediction",
+      "ogb",
+      "biology",
+      "string-database",
+      "proteins",
+      "benchmark"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "Creative Commons Zero v1.0 Universal / MIT",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "STRING database association data is dedicated to the public domain under CC0; OGB evaluator code is MIT."
+    },
+    "source_references": [
+      {
+        "title": "Official OGB Documentation",
+        "url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-proteins",
+        "type": "official_website"
+      },
+      {
+        "title": "NeurIPS 2020 OGB Paper",
+        "url": "https://arxiv.org/abs/2005.00687",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified node count (132,534), edge count (39.56M), 112 GO terms, and CC0/MIT licensing."
+    },
+    "sample_count": {
+      "total": 132534,
+      "unit": "nodes",
+      "status": "verified",
+      "splits": {
+        "train": 86638,
+        "val": 21236,
+        "test": 24660
       }
     },
     "dates": {
@@ -47586,6 +49072,81 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "sen1-2",
+    "slug": "sen1-2",
+    "name": "SEN1-2: Co-registered Sentinel-1 and Sentinel-2 Satellite Image Pairs",
+    "description": "SEN1-2 is a dataset comprising 282,384 co-registered pairs of synthetic aperture radar (SAR, Sentinel-1) and optical (Sentinel-2) satellite image patches collected from around the world across all meteorological seasons. Created by the Technical University of Munich (TUM), each patch is 256x256 pixels at 10m ground resolution, specifically curated to train and evaluate deep neural networks for SAR-optical data fusion, SAR-to-optical image translation, and cloud-robust Earth observation.",
+    "homepage_url": "https://mediatum.ub.tum.de/1437045",
+    "publisher": {
+      "name": "Technical University of Munich (TUM)",
+      "type": "academic",
+      "url": "https://www.tum.de/"
+    },
+    "modalities": [
+      "vision",
+      "sensor"
+    ],
+    "tasks": [
+      "image-to-image-translation",
+      "remote-sensing"
+    ],
+    "tags": [
+      "satellite-imagery",
+      "earth-observation",
+      "sentinel-1",
+      "sentinel-2",
+      "sar",
+      "optical",
+      "tum",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset released under CC BY 4.0 on TUM mediaTUM; source Sentinel data provided openly under Copernicus Open Access Hub policy."
+    },
+    "source_references": [
+      {
+        "title": "Official TUM mediaTUM Repository",
+        "url": "https://mediatum.ub.tum.de/1437045",
+        "type": "repository"
+      },
+      {
+        "title": "ISPRS 2018 Paper",
+        "url": "https://doi.org/10.5194/isprs-annals-IV-1-141-2018",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 282,384 paired SAR-optical patches across 4 seasons, mediaTUM persistence, and CC BY 4.0 license."
+    },
+    "sample_count": {
+      "total": 282384,
+      "unit": "paired_patches",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018-05-15"
+    },
+    "citation": {
+      "paper_title": "SEN1-2 -- A Dataset of Corresponding Sentinel-1 and Sentinel-2 Image Patches for Cloud-Free Optical Image Reconstruction",
+      "paper_url": "https://doi.org/10.5194/isprs-annals-IV-1-141-2018",
+      "doi": "10.5194/isprs-annals-IV-1-141-2018",
+      "authors": [
+        "Michael Schmitt",
+        "Lloyd Haydn Hughes",
+        "Xiao Xiang Zhu"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "sen12-flood",
     "slug": "sen12-flood",
     "name": "SEN12-FLOOD: SAR and Multispectral Dataset for Flood Detection",
@@ -48145,6 +49706,86 @@
     "languages": [
       "bn"
     ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "sib-200",
+    "slug": "sib-200",
+    "name": "SIB-200: Simple Inclusive Benchmark for 200+ Languages",
+    "description": "SIB-200 is a massively multilingual topic classification benchmark covering 205 languages and dialects, derived from the Flores-200 translation benchmark. It contains 204,181 sentences annotated across 7 semantic categories: science/technology, travel, politics, sports, health, entertainment, and business. Designed to evaluate zero-shot and few-shot cross-lingual generalization on high, medium, and extremely low-resource languages across diverse geographic regions.",
+    "homepage_url": "https://github.com/dadelani/sib-200",
+    "publisher": {
+      "name": "University College London",
+      "type": "academic",
+      "url": "https://www.ucl.ac.uk/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "text-classification",
+      "topic-classification"
+    ],
+    "tags": [
+      "nlp",
+      "multilingual",
+      "topic-classification",
+      "low-resource",
+      "african-languages",
+      "flores-200",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Released under CC BY-SA 4.0, inherited from FLORES-200."
+    },
+    "source_references": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/dadelani/sib-200",
+        "type": "repository"
+      },
+      {
+        "title": "EACL 2024 Research Paper",
+        "url": "https://doi.org/10.18653/v1/2024.eacl-long.98",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 205 languages, 204,181 sentences across 7 topic categories, and CC BY-SA 4.0 license."
+    },
+    "sample_count": {
+      "total": 204181,
+      "unit": "sentences",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023-09-18"
+    },
+    "citation": {
+      "paper_title": "SIB-200: A Simple, Inclusive Benchmark for Cross-Lingual Topic Classification",
+      "paper_url": "https://doi.org/10.18653/v1/2024.eacl-long.98",
+      "doi": "10.18653/v1/2024.eacl-long.98",
+      "authors": [
+        "David Ifeoluwa Adelani",
+        "Marek Masiak",
+        "Israel Abebe Azime",
+        "Jesujoba Oluwadara Alabi",
+        "Atnafu Lambebo Tonja",
+        "Ayodele Awokoya",
+        "Mofetoluwa Adeyemi",
+        "Ruqayya Iro Nasir",
+        "Bilkisu Shehu",
+        "Sara Hooker"
+      ]
+    }
   },
   {
     "schema_version": "1.0.0",
@@ -49458,6 +51099,90 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "spacenet-7",
+    "slug": "spacenet-7",
+    "name": "SpaceNet 7: Multi-Temporal Urban Development Satellite Benchmark",
+    "description": "SpaceNet 7 (The Multi-Temporal Urban Development Challenge) tracks building construction and urban change over monthly time series of satellite imagery. It comprises deep multi-temporal imagery stacks collected monthly over 24 months (2018–2020) across ~100 distinct geographic areas of interest (AOIs) covering 40,000 km² worldwide. Each AOI includes monthly PlanetScope 3.0m optical imagery and detailed polygon annotations for over 10 million building footprints tracked individually with unique persistence IDs across time to evaluate spatio-temporal object tracking and footprint extraction.",
+    "homepage_url": "https://spacenet.ai/sn7-challenge/",
+    "publisher": {
+      "name": "SpaceNet / Maxar Technologies / Radiant Earth Foundation",
+      "type": "academic",
+      "url": "https://spacenet.ai/"
+    },
+    "modalities": [
+      "vision",
+      "sensor",
+      "time-series"
+    ],
+    "tasks": [
+      "instance-segmentation",
+      "change-detection",
+      "remote-sensing"
+    ],
+    "tags": [
+      "satellite-imagery",
+      "earth-observation",
+      "building-footprints",
+      "multi-temporal",
+      "spacenet",
+      "planetscope",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Imagery and annotations are distributed freely under CC BY-SA 4.0 via AWS Open Data."
+    },
+    "source_references": [
+      {
+        "title": "SpaceNet 7 Official Portal",
+        "url": "https://spacenet.ai/sn7-challenge/",
+        "type": "official_website"
+      },
+      {
+        "title": "Registry of Open Data on AWS",
+        "url": "https://registry.opendata.aws/spacenet/",
+        "type": "repository"
+      },
+      {
+        "title": "CVPRW 2021 Paper",
+        "url": "https://doi.org/10.1109/CVPRW53098.2021.00111",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 100 global AOIs, 24-month time-series PlanetScope cubes, 10M+ building footprints, and CC BY-SA 4.0 terms."
+    },
+    "sample_count": {
+      "total": 100,
+      "unit": "time_series_aois",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021-06-25"
+    },
+    "citation": {
+      "paper_title": "The Multi-Temporal Urban Development SpaceNet 7 Dataset",
+      "paper_url": "https://doi.org/10.1109/CVPRW53098.2021.00111",
+      "doi": "10.1109/CVPRW53098.2021.00111",
+      "authors": [
+        "Adam Van Etten",
+        "Daniel Hogan",
+        "Jesus Martinez Manso",
+        "Jacob Shermeyer",
+        "Nicholas Weir",
+        "Ryan Lewis"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "spacenet-8",
     "slug": "spacenet-8",
     "name": "SpaceNet 8: Flood Detection and Road Network Mapping Dataset",
@@ -50076,6 +51801,85 @@
       ],
       "doi": "10.1109/ICDAR.2019.00244",
       "bibtex": "@inproceedings{huang2019icdar2019,\n  title={ICDAR2019 competition on scanned receipts information extraction and optical character recognition (SROIE)},\n  author={Huang, Zheng and Chen, Kai and He, Jianhua and Bai, Xiang and Karatzas, Dimosthenis and Shan, Shiguang and Lyu, Michael R},\n  booktitle={2019 International Conference on Document Analysis and Recognition (ICDAR)},\n  pages={1516--1520},\n  year={2019},\n  organization={IEEE},\n  doi={10.1109/ICDAR.2019.00244}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ssl4eo-s12",
+    "slug": "ssl4eo-s12",
+    "name": "SSL4EO-S12: Self-Supervised Learning for Earth Observation with Sentinel-1/2",
+    "description": "SSL4EO-S12 is a global, multi-modal satellite imagery dataset created by the Technical University of Munich (TUM) to benchmark self-supervised pre-training algorithms for Earth observation. Sourced across 251,079 globally sampled locations, each location includes multi-temporal patches (4 seasons) from Sentinel-1 (C-band dual-polarization SAR) and Sentinel-2 (Level-1C top-of-atmosphere and Level-2A bottom-of-atmosphere multi-spectral bands), providing over 3 million multi-spectral satellite image patches (264x264 pixels) spanning 14 spectral bands.",
+    "homepage_url": "https://github.com/zhu-xlab/SSL4EO-S12",
+    "publisher": {
+      "name": "Technical University of Munich (TUM)",
+      "type": "academic",
+      "url": "https://www.tum.de/"
+    },
+    "modalities": [
+      "vision",
+      "sensor"
+    ],
+    "tasks": [
+      "self-supervised-learning",
+      "representation-learning",
+      "remote-sensing"
+    ],
+    "tags": [
+      "earth-observation",
+      "satellite-imagery",
+      "sentinel-1",
+      "sentinel-2",
+      "self-supervised-learning",
+      "sar",
+      "multispectral",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset metadata and curated collections released under CC BY 4.0 on TUM mediaTUM."
+    },
+    "source_references": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/zhu-xlab/SSL4EO-S12",
+        "type": "repository"
+      },
+      {
+        "title": "IEEE GRSM 2023 Paper",
+        "url": "https://doi.org/10.1109/MGRS.2023.3281651",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 251,079 locations worldwide, 4 seasons, Sentinel-1/2 pairings, and CC BY 4.0 license."
+    },
+    "sample_count": {
+      "total": 251079,
+      "unit": "geographic_locations",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2022-11-10"
+    },
+    "citation": {
+      "paper_title": "SSL4EO-S12: A Large-Scale Multimodal, Multitemporal Dataset for Self-Supervised Representation Learning in Earth Observation",
+      "paper_url": "https://doi.org/10.1109/MGRS.2023.3281651",
+      "doi": "10.1109/MGRS.2023.3281651",
+      "authors": [
+        "Yi Wang",
+        "Nassim Ait Ali Braham",
+        "Zhitong Xiong",
+        "Chenying Liu",
+        "Conrad M. Albrecht",
+        "Xiao Xiang Zhu"
+      ]
     }
   },
   {
@@ -54887,6 +56691,81 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "vggsound",
+    "slug": "vggsound",
+    "name": "VGGSound: Large-Scale Audio-Visual Video Dataset",
+    "description": "VGGSound is a large-scale audio-visual dataset containing 200,000 video clips (each 10 seconds long, totaling 550 hours) across 300 diverse sound categories collected from YouTube. Curated using automated visual and audio verification pipelines followed by human validation to ensure audio-visual correspondence (where the audio source is visually manifested within the video frame). Categories span human actions, animal vocalizations, musical instruments, vehicles, home appliances, and environmental sounds.",
+    "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/vggsound/",
+    "publisher": {
+      "name": "Visual Geometry Group (VGG), University of Oxford",
+      "type": "academic",
+      "url": "https://www.robots.ox.ac.uk/~vgg/"
+    },
+    "modalities": [
+      "audio",
+      "vision",
+      "multimodal"
+    ],
+    "tasks": [
+      "audio-classification",
+      "sound-event-detection"
+    ],
+    "tags": [
+      "audio",
+      "video",
+      "audio-visual",
+      "oxford-vgg",
+      "sound-classification",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Creative Commons Attribution 4.0 International / YouTube Terms",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "unknown",
+      "notes": "Annotation metadata is licensed under CC BY 4.0. Underlying YouTube videos remain the copyright of their original uploaders."
+    },
+    "source_references": [
+      {
+        "title": "Official Oxford VGG Page",
+        "url": "https://www.robots.ox.ac.uk/~vgg/data/vggsound/",
+        "type": "official_website"
+      },
+      {
+        "title": "ICASSP 2020 Paper",
+        "url": "https://doi.org/10.1109/ICASSP40776.2020.9053174",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 200,000 clips across 300 sound classes, audio-visual correspondence filtering, and CC BY 4.0 annotations."
+    },
+    "sample_count": {
+      "total": 200000,
+      "unit": "video_clips",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-05-04"
+    },
+    "citation": {
+      "paper_title": "VGGSound: A Large-scale Audio-Visual Dataset",
+      "paper_url": "https://doi.org/10.1109/ICASSP40776.2020.9053174",
+      "doi": "10.1109/ICASSP40776.2020.9053174",
+      "authors": [
+        "Honglie Chen",
+        "Weidi Xie",
+        "Andrea Vedaldi",
+        "Andrew Zisserman"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "vindr-cxr",
     "slug": "vindr-cxr",
     "name": "VinDr-CXR: Open Dataset of Chest X-rays with Radiologist Annotations",
@@ -58517,6 +60396,91 @@
       "curation_notes": "Annotated by professional imagery analysts. Bounding boxes are formatted as pixel coordinates within large GeoTIFF scenes; sample count tracks original multi-kilometer satellite scenes rather than cropped network chips.",
       "data_sources": [
         "DigitalGlobe WorldView-3 satellite imagery"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "xview3-sar",
+    "slug": "xview3-sar",
+    "name": "xView3-SAR: Global Maritime Illegal Fishing Detection Benchmark",
+    "description": "The xView3-SAR dataset was created by the Defence Innovation Unit (DIU) and Global Fishing Watch to combat Illegal, Unreported, and Unregulated (IUU) fishing through automated machine learning on synthetic aperture radar (SAR). It comprises nearly 1,000 co-registered Sentinel-1 SAR scenes covering over 12 million km² of ocean surface, paired with bathymetry, wind speed, and sea state data. The dataset features ~150,000 verified vessel and maritime offshore infrastructure annotations correlated with Automatic Identification System (AIS) transponder broadcast data to detect vessels, estimate length, and identify dark targets operating with AIS disabled.",
+    "homepage_url": "https://iuu.xview.us/",
+    "publisher": {
+      "name": "Defense Innovation Unit (DIU) / Global Fishing Watch",
+      "type": "government",
+      "url": "https://globalfishingwatch.org/"
+    },
+    "modalities": [
+      "vision",
+      "sensor"
+    ],
+    "tasks": [
+      "object-detection",
+      "remote-sensing"
+    ],
+    "tags": [
+      "satellite-imagery",
+      "sar",
+      "sentinel-1",
+      "maritime",
+      "vessel-detection",
+      "illegal-fishing",
+      "ais",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Released under CC BY 4.0 for non-commercial and commercial application, open for public download."
+    },
+    "source_references": [
+      {
+        "title": "Official xView3 Portal",
+        "url": "https://iuu.xview.us/",
+        "type": "official_website"
+      },
+      {
+        "title": "NeurIPS 2022 Datasets and Benchmarks Paper",
+        "url": "https://doi.org/10.52202/068431-2726",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 981 Sentinel-1 SAR scenes, 150K maritime object labels, AIS correlation, and CC BY 4.0 terms."
+    },
+    "sample_count": {
+      "total": 981,
+      "unit": "sar_scenes",
+      "status": "verified",
+      "splits": {
+        "train": 557,
+        "val": 208,
+        "test": 216
+      }
+    },
+    "dates": {
+      "published": "2022-11-28"
+    },
+    "citation": {
+      "paper_title": "xView3-SAR: Detecting Dark Fishing Activity Using Synthetic Aperture Radar Imagery",
+      "paper_url": "https://doi.org/10.52202/068431-2726",
+      "doi": "10.52202/068431-2726",
+      "authors": [
+        "Nathan Paull",
+        "Fernando Crema",
+        "Gabriel Gasparin",
+        "Tyler Huntington",
+        "Gia Delic",
+        "Victoria Rivera",
+        "Paul Woods",
+        "David Kroodsma"
       ]
     }
   },

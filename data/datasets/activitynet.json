@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "activitynet",
+  "slug": "activitynet",
+  "name": "ActivityNet: Large-Scale Video Benchmark for Human Activity Understanding",
+  "description": "ActivityNet (v1.3) is a benchmark dataset for human activity recognition and temporal action localization in untrimmed video. Comprising 19,994 YouTube video recordings totaling over 648 hours across 200 activity categories organized into a rich hierarchical taxonomy (e.g., sports, household chores, social interactions), each video contains on average 1.5 activity instances annotated with high-precision temporal start and end timestamps.",
+  "homepage_url": "http://activity-net.org/",
+  "publisher": {
+    "name": "Universidad San Francisco de Quito / Stanford University",
+    "type": "academic",
+    "url": "http://activity-net.org/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "action-recognition",
+    "video-understanding"
+  ],
+  "tags": [
+    "video",
+    "action-recognition",
+    "temporal-localization",
+    "human-activity",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "ActivityNet Terms of Use / Academic Permissive",
+    "url": "http://activity-net.org/download.html",
+    "commercial_use": "unknown",
+    "notes": "Annotations are freely provided for research and academic use. Source YouTube videos remain the intellectual property of their original uploaders."
+  },
+  "source_references": [
+    {
+      "title": "Official ActivityNet Website",
+      "url": "http://activity-net.org/",
+      "type": "official_website"
+    },
+    {
+      "title": "CVPR 2015 Paper",
+      "url": "https://doi.org/10.1109/CVPR.2015.7298698",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 19,994 untrimmed videos across 200 complex activity classes, CVPR 2015 publication, and annotation terms."
+  },
+  "sample_count": {
+    "total": 19994,
+    "unit": "untrimmed_videos",
+    "status": "verified",
+    "splits": {
+      "train": 10024,
+      "val": 4926,
+      "test": 5044
+    }
+  },
+  "dates": {
+    "published": "2015-06-07"
+  },
+  "citation": {
+    "paper_title": "ActivityNet: A Large-Scale Video Benchmark for Human Activity Understanding",
+    "paper_url": "https://doi.org/10.1109/CVPR.2015.7298698",
+    "doi": "10.1109/CVPR.2015.7298698",
+    "authors": [
+      "Fabian Caba Heilbron",
+      "Victor Escorcia",
+      "Bernard Ghanem",
+      "Juan Carlos Niebles"
+    ]
+  }
+}

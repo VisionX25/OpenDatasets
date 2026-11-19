@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ssl4eo-s12",
+  "slug": "ssl4eo-s12",
+  "name": "SSL4EO-S12: Self-Supervised Learning for Earth Observation with Sentinel-1/2",
+  "description": "SSL4EO-S12 is a global, multi-modal satellite imagery dataset created by the Technical University of Munich (TUM) to benchmark self-supervised pre-training algorithms for Earth observation. Sourced across 251,079 globally sampled locations, each location includes multi-temporal patches (4 seasons) from Sentinel-1 (C-band dual-polarization SAR) and Sentinel-2 (Level-1C top-of-atmosphere and Level-2A bottom-of-atmosphere multi-spectral bands), providing over 3 million multi-spectral satellite image patches (264x264 pixels) spanning 14 spectral bands.",
+  "homepage_url": "https://github.com/zhu-xlab/SSL4EO-S12",
+  "publisher": {
+    "name": "Technical University of Munich (TUM)",
+    "type": "academic",
+    "url": "https://www.tum.de/"
+  },
+  "modalities": [
+    "vision",
+    "sensor"
+  ],
+  "tasks": [
+    "self-supervised-learning",
+    "representation-learning",
+    "remote-sensing"
+  ],
+  "tags": [
+    "earth-observation",
+    "satellite-imagery",
+    "sentinel-1",
+    "sentinel-2",
+    "self-supervised-learning",
+    "sar",
+    "multispectral",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset metadata and curated collections released under CC BY 4.0 on TUM mediaTUM."
+  },
+  "source_references": [
+    {
+      "title": "GitHub Repository",
+      "url": "https://github.com/zhu-xlab/SSL4EO-S12",
+      "type": "repository"
+    },
+    {
+      "title": "IEEE GRSM 2023 Paper",
+      "url": "https://doi.org/10.1109/MGRS.2023.3281651",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 251,079 locations worldwide, 4 seasons, Sentinel-1/2 pairings, and CC BY 4.0 license."
+  },
+  "sample_count": {
+    "total": 251079,
+    "unit": "geographic_locations",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022-11-10"
+  },
+  "citation": {
+    "paper_title": "SSL4EO-S12: A Large-Scale Multimodal, Multitemporal Dataset for Self-Supervised Representation Learning in Earth Observation",
+    "paper_url": "https://doi.org/10.1109/MGRS.2023.3281651",
+    "doi": "10.1109/MGRS.2023.3281651",
+    "authors": [
+      "Yi Wang",
+      "Nassim Ait Ali Braham",
+      "Zhitong Xiong",
+      "Chenying Liu",
+      "Conrad M. Albrecht",
+      "Xiao Xiang Zhu"
+    ]
+  }
+}

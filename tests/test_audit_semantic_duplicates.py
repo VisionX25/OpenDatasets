@@ -353,14 +353,14 @@ def test_audit_catalog_deterministic_output() -> None:
     """Verify that auditing the published catalog is completely deterministic across repeated executions."""
     data_dir = DEFAULT_DATASETS_DIR
     files = sorted(data_dir.glob("*.json"))
-    assert len(files) == 650
+    assert len(files) == 675
 
     datasets = [json.loads(f.read_text(encoding="utf-8")) for f in files]
 
     res_1 = audit_catalog_semantic_duplicates(datasets)
     res_2 = audit_catalog_semantic_duplicates(datasets)
 
-    assert res_1["audit_metadata"]["total_records_scanned"] == 650
+    assert res_1["audit_metadata"]["total_records_scanned"] == 675
     assert res_1["audit_metadata"]["total_candidate_pairs"] == res_2["audit_metadata"]["total_candidate_pairs"]
     assert res_1["audit_metadata"]["confidence_distribution"] == res_2["audit_metadata"]["confidence_distribution"]
 
@@ -387,5 +387,5 @@ def test_cli_main_generates_reports(tmp_path: Path) -> None:
 
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
-    assert data["audit_metadata"]["total_records_scanned"] == 650
+    assert data["audit_metadata"]["total_records_scanned"] == 675
     assert data["audit_metadata"]["confidence_distribution"]["high"] == 0

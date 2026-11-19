@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mkqa",
+  "slug": "mkqa",
+  "name": "MKQA: Multilingual Knowledge Questions & Answers",
+  "description": "MKQA is an open-domain multilingual question-answering benchmark comprising 10,000 question-answer pairs aligned across 26 typologically diverse languages (260,000 query-answer pairs total). Sourced from the Natural Questions dataset and manually translated by human translators, MKQA evaluates knowledge retrieval and answering independent of English passage bias, featuring independent human-curated language-specific answer spans and long/short answer types.",
+  "homepage_url": "https://github.com/apple/ml-mkqa",
+  "publisher": {
+    "name": "Apple",
+    "type": "industry",
+    "url": "https://machinelearning.apple.com/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "information-retrieval"
+  ],
+  "tags": [
+    "nlp",
+    "multilingual",
+    "question-answering",
+    "cross-lingual-qa",
+    "knowledge-retrieval",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+    "spdx_id": "CC-BY-SA-3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under CC BY-SA 3.0; source code licensed under Apple Sample Code License."
+  },
+  "source_references": [
+    {
+      "title": "Official Repository",
+      "url": "https://github.com/apple/ml-mkqa",
+      "type": "repository"
+    },
+    {
+      "title": "TACL 2021 Paper",
+      "url": "https://doi.org/10.1162/tacl_a_00433",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 26 languages, 10,000 QA pairs per language (260,000 total), and CC BY-SA 3.0 license."
+  },
+  "sample_count": {
+    "total": 260000,
+    "unit": "question_answer_pairs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-07-30"
+  },
+  "citation": {
+    "paper_title": "MKQA: A Linguistically Diverse Benchmark for Multilingual Open-Domain Question Answering",
+    "paper_url": "https://doi.org/10.1162/tacl_a_00433",
+    "doi": "10.1162/tacl_a_00433",
+    "authors": [
+      "Shayne Longpre",
+      "Yi Lu",
+      "Zhucheng Tu"
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "hai",
+  "slug": "hai",
+  "name": "HAI: Hardware-in-the-Loop Anomaly Detection Dataset",
+  "description": "The HAI (Hardware-in-the-Loop Anomaly Detection) dataset was collected on a realistic industrial control system (ICS) testbed by the Cybersecurity and Telecommunications Research Division at Korea Information Security Agency (KISA) and Affiliated Institute of ETRI. The testbed models physical thermal power generation and pump-and-storage hydroelectric plants controlled via GE, Emerson, and Siemens PLCs and DCS. It comprises time-series sensor measurements from 78 to 86 variables (pressures, flows, temperatures, valve positions) sampled every 1 second, with benign operations and 50+ sophisticated cyber-physical injection and manipulation attack scenarios.",
+  "homepage_url": "https://github.com/icsdataset/hai",
+  "publisher": {
+    "name": "Affiliated Institute of ETRI / KISA",
+    "type": "government",
+    "url": "https://github.com/icsdataset/hai"
+  },
+  "modalities": [
+    "time-series",
+    "sensor",
+    "tabular"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "time-series-forecasting"
+  ],
+  "tags": [
+    "cybersecurity",
+    "industrial-control-systems",
+    "ics",
+    "scada",
+    "anomaly-detection",
+    "time-series",
+    "plc",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Released under CC BY 4.0 by ETRI and KISA for academic and industry research."
+  },
+  "source_references": [
+    {
+      "title": "GitHub Repository",
+      "url": "https://github.com/icsdataset/hai",
+      "type": "repository"
+    },
+    {
+      "title": "CSET 2021 Paper",
+      "url": "https://doi.org/10.1145/3474718.3474719",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified GE/Emerson/Siemens testbed topology, 2.47M 1-second timestamps, 86 sensor variables, and CC BY 4.0 license."
+  },
+  "sample_count": {
+    "total": 2470000,
+    "unit": "time_series_timestamps",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-02-28"
+  },
+  "citation": {
+    "paper_title": "HAI 1.0: Hardware-In-the-Loop Anomaly Detection Dataset",
+    "paper_url": "https://doi.org/10.1145/3474718.3474719",
+    "doi": "10.1145/3474718.3474719",
+    "authors": [
+      "Hyeok-Ki Shin",
+      "Woomyo Lee",
+      "Je-Hyun Yun",
+      "HyoungChun Kim"
+    ]
+  }
+}

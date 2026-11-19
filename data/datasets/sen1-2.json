@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sen1-2",
+  "slug": "sen1-2",
+  "name": "SEN1-2: Co-registered Sentinel-1 and Sentinel-2 Satellite Image Pairs",
+  "description": "SEN1-2 is a dataset comprising 282,384 co-registered pairs of synthetic aperture radar (SAR, Sentinel-1) and optical (Sentinel-2) satellite image patches collected from around the world across all meteorological seasons. Created by the Technical University of Munich (TUM), each patch is 256x256 pixels at 10m ground resolution, specifically curated to train and evaluate deep neural networks for SAR-optical data fusion, SAR-to-optical image translation, and cloud-robust Earth observation.",
+  "homepage_url": "https://mediatum.ub.tum.de/1437045",
+  "publisher": {
+    "name": "Technical University of Munich (TUM)",
+    "type": "academic",
+    "url": "https://www.tum.de/"
+  },
+  "modalities": [
+    "vision",
+    "sensor"
+  ],
+  "tasks": [
+    "image-to-image-translation",
+    "remote-sensing"
+  ],
+  "tags": [
+    "satellite-imagery",
+    "earth-observation",
+    "sentinel-1",
+    "sentinel-2",
+    "sar",
+    "optical",
+    "tum",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under CC BY 4.0 on TUM mediaTUM; source Sentinel data provided openly under Copernicus Open Access Hub policy."
+  },
+  "source_references": [
+    {
+      "title": "Official TUM mediaTUM Repository",
+      "url": "https://mediatum.ub.tum.de/1437045",
+      "type": "repository"
+    },
+    {
+      "title": "ISPRS 2018 Paper",
+      "url": "https://doi.org/10.5194/isprs-annals-IV-1-141-2018",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 282,384 paired SAR-optical patches across 4 seasons, mediaTUM persistence, and CC BY 4.0 license."
+  },
+  "sample_count": {
+    "total": 282384,
+    "unit": "paired_patches",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-05-15"
+  },
+  "citation": {
+    "paper_title": "SEN1-2 -- A Dataset of Corresponding Sentinel-1 and Sentinel-2 Image Patches for Cloud-Free Optical Image Reconstruction",
+    "paper_url": "https://doi.org/10.5194/isprs-annals-IV-1-141-2018",
+    "doi": "10.5194/isprs-annals-IV-1-141-2018",
+    "authors": [
+      "Michael Schmitt",
+      "Lloyd Haydn Hughes",
+      "Xiao Xiang Zhu"
+    ]
+  }
+}
