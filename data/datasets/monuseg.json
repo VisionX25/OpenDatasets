@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "monuseg",
+  "slug": "monuseg",
+  "name": "MoNuSeg: Multi-Organ Nucleus Segmentation Benchmark",
+  "description": "MoNuSeg is a foundational computational pathology benchmark for generalized nucleus boundary segmentation in digitized whole-slide images (WSIs). It contains 44 Hematoxylin and Eosin (H&E) stained tissue image patches of 1,000x1,000 pixels captured at 40x magnification across 7 organs (breast, liver, kidney, prostate, bladder, colon, stomach) from The Cancer Genome Atlas (TCGA). Approximately 21,623 individual nuclei boundaries were manually delineated by pathologists. The benchmark evaluates model generalizability across diverse organ types and staining variations under a 30-image training and 14-image testing partition.",
+  "homepage_url": "https://monuseg.grand-challenge.org/",
+  "publisher": {
+    "name": "Indian Institute of Technology Bombay",
+    "type": "academic",
+    "url": "https://www.iitb.ac.in/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "instance-segmentation",
+    "cell-segmentation"
+  ],
+  "tags": [
+    "medical-imaging",
+    "computational-pathology",
+    "histopathology",
+    "nuclear-segmentation",
+    "tcga",
+    "grand-challenge",
+    "tmi"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Grand Challenge Academic Research License",
+    "spdx_id": null,
+    "url": "https://monuseg.grand-challenge.org/Data/",
+    "commercial_use": "forbidden",
+    "notes": "MoNuSeg challenge images and annotations are provided for non-commercial academic research and benchmarking under Grand Challenge terms and TCGA data access policies."
+  },
+  "sample_count": {
+    "total": 44,
+    "unit": "images",
+    "status": "verified",
+    "splits": {
+      "train": 30,
+      "test": 14
+    }
+  },
+  "citation": {
+    "paper_title": "A Dataset and a Technique for Generalized Nuclear Segmentation for Computational Pathology",
+    "paper_url": "https://doi.org/10.1109/TMI.2017.2677499",
+    "authors": [
+      "Neeraj Kumar",
+      "Ruchika Verma",
+      "Sanuj Sharma",
+      "Surabhi Bhargava",
+      "Abhishek Vahadane",
+      "Amit Sethi"
+    ],
+    "bibtex": "@article{kumar2017dataset,\n  title={A Dataset and a Technique for Generalized Nuclear Segmentation for Computational Pathology},\n  author={Kumar, Neeraj and Verma, Ruchika and Sharma, Sanuj and Bhargava, Surabhi and Vahadane, Abhishek and Sethi, Amit},\n  journal={IEEE Transactions on Medical Imaging},\n  volume={36},\n  number={7},\n  pages={1550--1560},\n  year={2017},\n  doi={10.1109/TMI.2017.2677499}\n}",
+    "doi": "10.1109/TMI.2017.2677499"
+  },
+  "source_references": [
+    {
+      "title": "MoNuSeg Grand Challenge Portal",
+      "url": "https://monuseg.grand-challenge.org/",
+      "type": "official_website"
+    },
+    {
+      "title": "IEEE TMI 2017 Paper",
+      "url": "https://doi.org/10.1109/TMI.2017.2677499",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Grand Challenge portal and IEEE TMI publication. Contains 44 1000x1000 images (30 train, 14 test) and ~21,623 annotated nuclear boundaries across 7 organs."
+  }
+}

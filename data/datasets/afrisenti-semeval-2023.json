@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "id": "afrisenti-semeval-2023",
+  "slug": "afrisenti-semeval-2023",
+  "name": "AfriSenti-SemEval 2023: African Sentiment Analysis Benchmark",
+  "description": "AfriSenti-SemEval 2023 (SemEval-2023 Task 12) is a multilingual sentiment analysis benchmark covering 14 African languages across 4 distinct language families: Hausa, Yoruba, Igbo, Nigerian Pidgin, Amharic, Algerian Arabic, Moroccan Arabic, Swahili, Kinyarwanda, Twi, Mozambican Portuguese, Oromo, Tigrinya, and Xitsonga. Collected from Twitter/X and annotated by native speakers into positive, negative, and neutral sentiments, the benchmark comprises 111,718 tweets partitioned into 63,685 train, 13,726 dev, and 34,307 test examples across monolingual, multilingual, and zero-shot evaluation tracks.",
+  "homepage_url": "https://github.com/afrisenti-semeval/afrisent-semeval-2023",
+  "publisher": {
+    "name": "AfriSenti Consortium",
+    "type": "community",
+    "url": "https://afrisenti-semeval.github.io/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "sentiment-analysis",
+    "text-classification"
+  ],
+  "tags": [
+    "nlp",
+    "sentiment-analysis",
+    "african-languages",
+    "twitter",
+    "low-resource",
+    "multilingual",
+    "semeval"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution 4.0 International & Twitter Terms of Service",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "unknown",
+    "notes": "Sentiment annotations are licensed under CC BY 4.0; underlying tweet texts are redistributed subject to Twitter/X Developer Terms of Service and content restrictions."
+  },
+  "sample_count": {
+    "total": 111718,
+    "unit": "tweets",
+    "status": "verified",
+    "splits": {
+      "train": 63685,
+      "dev": 13726,
+      "test": 34307
+    }
+  },
+  "citation": {
+    "paper_title": "SemEval-2023 Task 12: Sentiment Analysis for African Languages (AfriSenti-SemEval)",
+    "paper_url": "https://aclanthology.org/2023.semeval-1.315/",
+    "authors": [
+      "Shamsuddeen Hassan Muhammad",
+      "Idris Abdulmumin",
+      "Seid Muhie Yimam",
+      "David Ifeoluwa Adelani",
+      "Ibrahim Said Ahmad",
+      "Nedjma Ousidhoum",
+      "Abinew Ali Ayele",
+      "Saheed Abdullahi Salahudeen",
+      "Tajuddeen R. Gwadabe",
+      "Ukpabio God'swill",
+      "Bhairav Sharma",
+      "Cheikh M. Bamba Dione",
+      "Socrates Doamekpor",
+      "Rooweither Mabuya",
+      "Praise Leona",
+      "Tadesse Destaw Belay",
+      "Falalu Ibrahim",
+      "Alhassan Mumuni",
+      "Moussa Oumarou",
+      "Rachel Bawden",
+      "Bonaventure F. P. Dossou"
+    ],
+    "bibtex": "@inproceedings{muhammad-etal-2023-semeval,\n  title = \"{S}em{E}val-2023 Task 12: Sentiment Analysis for {A}frican Languages ({A}fri{S}enti-{S}em{E}val)\",\n  author = \"Muhammad, Shamsuddeen Hassan and Abdulmumin, Idris and Yimam, Seid Muhie and Adelani, David Ifeoluwa and Ahmad, Ibrahim Said and Ousidhoum, Nedjma and Ayele, Abinew Ali and Salahudeen, Saheed Abdullahi and Gwadabe, Tajuddeen R. and God'swill, Ukpabio and Sharma, Bhairav and Dione, Cheikh M. Bamba and Doamekpor, Socrates and Mabuya, Rooweither and Leona, Praise and Belay, Tadesse Destaw and Ibrahim, Falalu and Mumuni, Alhassan and Oumarou, Moussa and Bawden, Rachel and Dossou, Bonaventure F. P.\",\n  booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n  pages = \"2264--2279\",\n  year = \"2023\",\n  doi = \"10.18653/v1/2023.semeval-1.315\"\n}",
+    "doi": "10.18653/v1/2023.semeval-1.315"
+  },
+  "source_references": [
+    {
+      "title": "AfriSenti GitHub Repository",
+      "url": "https://github.com/afrisenti-semeval/afrisent-semeval-2023",
+      "type": "repository"
+    },
+    {
+      "title": "AfriSenti-SemEval 2023 Paper",
+      "url": "https://aclanthology.org/2023.semeval-1.315/",
+      "type": "original_paper"
+    },
+    {
+      "title": "AfriSenti Website",
+      "url": "https://afrisenti-semeval.github.io/",
+      "type": "official_website"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against GitHub raw data files and SemEval 2023 paper. Sum of rows across all 14 languages is exactly 111,718 tweets (63,685 train, 13,726 dev, 34,307 test)."
+  }
+}

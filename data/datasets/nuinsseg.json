@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nuinsseg",
+  "slug": "nuinsseg",
+  "name": "NuInsSeg: Multi-Organ Multi-Species Nuclei Instance Segmentation Benchmark",
+  "description": "NuInsSeg is a fully annotated histology benchmark for nuclei instance segmentation in Hematoxylin and Eosin (H&E) stained images. It comprises 665 image patches (512x512 pixels) containing over 30,000 manually segmented nuclei sourced from 31 human and mouse organs spanning diverse healthy and pathological tissue variations. A defining feature of NuInsSeg is the provision of ground-truth ambiguous area masks covering regions where deterministic boundaries cannot be delineated even by human pathology experts, providing a rigorous benchmark for evaluating boundary calibration and uncertain region handling.",
+  "homepage_url": "https://github.com/masih4/NuInsSeg",
+  "publisher": {
+    "name": "Medical University of Vienna",
+    "type": "academic",
+    "url": "https://www.meduniwien.ac.at/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "instance-segmentation",
+    "semantic-segmentation",
+    "cell-segmentation"
+  ],
+  "tags": [
+    "medical-imaging",
+    "computational-pathology",
+    "nuclei-segmentation",
+    "histopathology",
+    "multi-organ",
+    "multi-species",
+    "zenodo",
+    "nature-scientific-data"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "NuInsSeg dataset archive on Zenodo and GitHub is licensed under CC BY 4.0."
+  },
+  "sample_count": {
+    "total": 665,
+    "unit": "patches",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "NuInsSeg: A fully annotated dataset for nuclei instance segmentation in H&E-stained histological images",
+    "paper_url": "https://doi.org/10.1038/s41597-024-03117-2",
+    "authors": [
+      "Amirreza Mahbod",
+      "Christine Polak",
+      "Katharina Feldmann",
+      "Rumsha Khan",
+      "Katharina Gelles",
+      "Georg Dorffner",
+      "Ramona Woitek",
+      "Sepideh Hatamikia",
+      "Isabella Ellinger"
+    ],
+    "bibtex": "@article{mahbod2024nuinsseg,\n  title={NuInsSeg: A fully annotated dataset for nuclei instance segmentation in H&E-stained histological images},\n  author={Mahbod, Amirreza and Polak, Christine and Feldmann, Katharina and Khan, Rumsha and Gelles, Katharina and Dorffner, Georg and Woitek, Ramona and Hatamikia, Sepideh and Ellinger, Isabella},\n  journal={Scientific Data},\n  volume={11},\n  number={1},\n  pages={293},\n  year={2024},\n  doi={10.1038/s41597-024-03117-2}\n}",
+    "doi": "10.1038/s41597-024-03117-2"
+  },
+  "source_references": [
+    {
+      "title": "NuInsSeg GitHub Repository",
+      "url": "https://github.com/masih4/NuInsSeg",
+      "type": "repository"
+    },
+    {
+      "title": "Zenodo Data Archive (Record 10518968)",
+      "url": "https://zenodo.org/records/10518968",
+      "type": "archive"
+    },
+    {
+      "title": "Scientific Data 2024 Paper",
+      "url": "https://doi.org/10.1038/s41597-024-03117-2",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Nature Scientific Data publication and Zenodo record 10518968. Exactly 665 image patches (512x512) and >30,000 nuclei across 31 human and mouse organs. Licensed under CC BY 4.0."
+  }
+}

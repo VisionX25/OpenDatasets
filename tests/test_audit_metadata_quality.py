@@ -513,7 +513,7 @@ def test_catalog_split_discrepancy_census():
 
     catalog_dir = Path("data/datasets")
     records = [json.loads(p.read_text()) for p in sorted(catalog_dir.glob("*.json"))]
-    assert len(records) == 675
+    assert len(records) == 700
 
     cat_a = []  # partition_split_count_mismatch
     cat_b = []  # benchmark_subset_partition
@@ -623,7 +623,7 @@ def test_duplicate_reference_semantics():
 
 
 def test_readiness_tier_counts_reconciliation():
-    """Verify that catalog-wide readiness tiers sum to exactly 675 records."""
+    """Verify that catalog-wide readiness tiers sum to exactly 700 records."""
     import json
     from pathlib import Path
 
@@ -632,9 +632,9 @@ def test_readiness_tier_counts_reconciliation():
     audit_data = audit_catalog_metadata_quality(records)
     tier_dist = audit_data["research_readiness_summary"]["tier_distribution"]
 
-    assert tier_dist["Ready for Evaluation"] == 460
-    assert tier_dist["Documented with Caveats"] == 169
+    assert tier_dist["Ready for Evaluation"] == 482
+    assert tier_dist["Documented with Caveats"] == 172
     assert tier_dist["Needs Information Review"] == 46
-    assert sum(tier_dist.values()) == 675
+    assert sum(tier_dist.values()) == 700
 
 

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sportsmot",
+  "slug": "sportsmot",
+  "name": "SportsMOT: Multi-Actor Tracking in Sports Scenes",
+  "description": "SportsMOT is a multi-object tracking benchmark focused on fast-paced, multi-actor movements in team sports broadcasts. It consists of 240 video clips (average 485 frames per clip, totaling ~116,400 frames) collected across three sports categories: basketball, football (soccer), and volleyball. The dataset captures key challenges in athletic tracking, including high-speed player movements, non-linear trajectories, abrupt direction reversals, shared team jerseys, and rapid pan-tilt-zoom camera motion. Annotated with full bounding boxes and identities following the MOT Challenge format, partitioned into 45 train, 45 validation, and 150 test clips.",
+  "homepage_url": "https://github.com/MCG-NJU/SportsMOT",
+  "publisher": {
+    "name": "Nanjing University & ByteDance",
+    "type": "academic",
+    "url": "https://mcg.nju.edu.cn/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "multi-object-tracking",
+    "sports-analytics"
+  ],
+  "tags": [
+    "computer-vision",
+    "multi-object-tracking",
+    "sports",
+    "video-tracking",
+    "basketball",
+    "football",
+    "volleyball",
+    "iccv"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Annotations and benchmark distributed under CC BY-NC 4.0 strictly for non-commercial academic research."
+  },
+  "sample_count": {
+    "total": 240,
+    "unit": "clips",
+    "status": "verified",
+    "splits": {
+      "train": 45,
+      "validation": 45,
+      "test": 150
+    }
+  },
+  "citation": {
+    "paper_title": "SportsMOT: A Large Multi-Object Tracking Dataset in Multiple Sports Scenes",
+    "paper_url": "https://doi.org/10.1109/ICCV51070.2023.00911",
+    "authors": [
+      "Yutao Cui",
+      "Chenkai Zeng",
+      "Xiaoyu Zhao",
+      "Yichun Yang",
+      "Gangshan Wu",
+      "Limin Wang"
+    ],
+    "bibtex": "@inproceedings{cui2023sportsmot,\n  title={SportsMOT: A Large Multi-Object Tracking Dataset in Multiple Sports Scenes},\n  author={Cui, Yutao and Zeng, Chenkai and Zhao, Xiaoyu and Yang, Yichun and Wu, Gangshan and Wang, Limin},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},\n  pages={9921--9931},\n  year={2023},\n  doi={10.1109/ICCV51070.2023.00911}\n}",
+    "doi": "10.1109/ICCV51070.2023.00911"
+  },
+  "source_references": [
+    {
+      "title": "SportsMOT GitHub Repository",
+      "url": "https://github.com/MCG-NJU/SportsMOT",
+      "type": "repository"
+    },
+    {
+      "title": "ICCV 2023 Paper",
+      "url": "https://doi.org/10.1109/ICCV51070.2023.00911",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against GitHub repository and ICCV 2023 paper. Contains 240 video clips (45 train, 45 val, 150 test) with ~116,400 frames across 3 sports."
+  }
+}

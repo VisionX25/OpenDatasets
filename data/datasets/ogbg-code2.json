@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ogbg-code2",
+  "slug": "ogbg-code2",
+  "name": "OGBG-Code2: Method Abstract Syntax Tree Graph Benchmark",
+  "description": "OGBG-Code2 is a large-scale graph property prediction benchmark for source code representation learning derived from 13,587 popular open-source Python repositories on GitHub. It contains 452,741 Abstract Syntax Tree (AST) graphs extracted from distinct Python methods, with an average of 125.2 nodes and 124.2 edges per graph. The task is to predict the sub-tokens of each method name (code summarization / semantic method naming) evaluated by F1 score over predicted sub-tokens. The dataset uses a project-based split (Train: 407,976 graphs, Validation: 22,817 graphs, Test: 21,948 graphs) ensuring that methods in test and validation sets come from completely disjoint git projects.",
+  "homepage_url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-code2",
+  "publisher": {
+    "name": "Stanford Network Analysis Platform (SNAP)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu/"
+  },
+  "modalities": [
+    "graph"
+  ],
+  "tasks": [
+    "graph-classification",
+    "code-summarization",
+    "graph-machine-learning"
+  ],
+  "tags": [
+    "graph-machine-learning",
+    "ast-graphs",
+    "source-code",
+    "python",
+    "code-understanding",
+    "graph-classification",
+    "ogb-benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Processed AST graphs derived from permissively licensed open-source GitHub repositories via CodeSearchNet under MIT; OGB benchmark software released under MIT."
+  },
+  "sample_count": {
+    "total": 452741,
+    "unit": "graphs",
+    "status": "verified",
+    "splits": {
+      "train": 407976,
+      "validation": 22817,
+      "test": 21948
+    }
+  },
+  "citation": {
+    "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "paper_url": "https://arxiv.org/abs/2005.00687",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Marinka Zitnik",
+      "Yuxiao Dong",
+      "Hongyu Ren",
+      "Bowen Liu",
+      "Michele Catasta",
+      "Jure Leskovec"
+    ],
+    "bibtex": "@article{hu2020ogb,\n  title={Open Graph Benchmark: Datasets for Machine Learning on Graphs},\n  author={Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},\n  journal={Advances in Neural Information Processing Systems},\n  volume={33},\n  pages={22118--22133},\n  year={2020}\n}",
+    "doi": "10.48550/arXiv.2005.00687"
+  },
+  "source_references": [
+    {
+      "title": "OGB OGBG-Code2 Official Documentation",
+      "url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-code2",
+      "type": "documentation"
+    },
+    {
+      "title": "Open Graph Benchmark Paper",
+      "url": "https://arxiv.org/abs/2005.00687",
+      "type": "original_paper"
+    },
+    {
+      "title": "OGB GitHub Repository",
+      "url": "https://github.com/snap-stanford/ogb",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Stanford OGB documentation and remote zip inspection. Exactly 452,741 method AST graphs across 13,587 GitHub projects (407,976 train, 22,817 validation, 21,948 test graphs)."
+  }
+}

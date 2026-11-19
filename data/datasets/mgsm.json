@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mgsm",
+  "slug": "mgsm",
+  "name": "MGSM: Multilingual Grade School Math Benchmark",
+  "description": "MGSM (Multilingual Grade School Math) is an evaluation benchmark designed to assess multilingual mathematical reasoning and chain-of-thought prompting across 11 diverse, typologically distinct languages: English (en), Bengali (bn), German (de), Spanish (es), French (fr), Japanese (ja), Russian (ru), Swahili (sw), Telugu (te), Thai (th), and Chinese (zh). It contains 250 grade-school math word problems selected from the GSM8K test set, professionally translated into 10 target languages (yielding 2,750 translated problem items total) plus 8 few-shot exemplars with culturally adapted step-by-step chain-of-thought reasoning paths per language.",
+  "homepage_url": "https://github.com/google-research/url-nlp/tree/main/mgsm",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "mathematical-reasoning",
+    "multilingual-evaluation"
+  ],
+  "tags": [
+    "nlp",
+    "math-reasoning",
+    "chain-of-thought",
+    "gsm8k",
+    "multilingual",
+    "llm-benchmark",
+    "iclr"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Released by Google Research under CC BY 4.0; derived from GSM8K (MIT License)."
+  },
+  "sample_count": {
+    "total": 2750,
+    "unit": "problems",
+    "status": "verified",
+    "splits": {
+      "test": 2750
+    }
+  },
+  "citation": {
+    "paper_title": "Language Models are Multilingual Chain-of-Thought Reasoners",
+    "paper_url": "https://arxiv.org/abs/2210.03057",
+    "authors": [
+      "Freda Shi",
+      "Mirac Suzgun",
+      "Markus Freitag",
+      "Xuezhi Wang",
+      "Suraj Srivats",
+      "Soroush Vosoughi",
+      "Hyung Won Chung",
+      "Yi Tay",
+      "Sebastian Ruder",
+      "Denny Zhou",
+      "Dipanjan Das",
+      "Jason Wei"
+    ],
+    "bibtex": "@inproceedings{shi2023language,\n  title={Language Models are Multilingual Chain-of-Thought Reasoners},\n  author={Shi, Freda and Suzgun, Mirac and Freitag, Markus and Wang, Xuezhi and Srivats, Suraj and Vosoughi, Soroush and Chung, Hyung Won and Tay, Yi and Ruder, Sebastian and Zhou, Denny and Das, Dipanjan and Wei, Jason},\n  booktitle={The Eleventh International Conference on Learning Representations},\n  year={2023}\n}",
+    "doi": "10.48550/arXiv.2210.03057"
+  },
+  "source_references": [
+    {
+      "title": "MGSM Official GitHub Repository",
+      "url": "https://github.com/google-research/url-nlp/tree/main/mgsm",
+      "type": "repository"
+    },
+    {
+      "title": "ICLR 2023 Paper",
+      "url": "https://arxiv.org/abs/2210.03057",
+      "type": "original_paper"
+    },
+    {
+      "title": "Hugging Face MGSM Dataset Card",
+      "url": "https://huggingface.co/datasets/juletxara/mgsm",
+      "type": "dataset_card"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Google Research repository and ICLR 2023 publication. Exactly 250 problems across 11 languages (2,750 items) + 8 few-shot exemplars per language."
+  }
+}

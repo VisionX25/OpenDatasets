@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ogbg-moltox21",
+  "slug": "ogbg-moltox21",
+  "name": "OGBG-MolTox21: Tox21 Molecular Graph Property Prediction Benchmark",
+  "description": "OGBG-MolTox21 is a molecular graph property prediction benchmark derived from the NIH Tox21 Data Challenge and MoleculeNet, containing 7,831 small molecules with an average of 18.6 atoms and 19.3 chemical bonds per molecule. Molecules are represented as 2D graphs with rich atom and bond features. The dataset comprises 12 binary classification targets measuring toxicity against nuclear receptor signaling pathways and cellular stress response pathways. Evaluated under a scaffold split (Train: 6,264, Validation: 783, Test: 784 molecules) using average ROC-AUC across all 12 tasks.",
+  "homepage_url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-moltox21",
+  "publisher": {
+    "name": "Stanford Network Analysis Platform (SNAP)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu/"
+  },
+  "modalities": [
+    "graph",
+    "tabular"
+  ],
+  "tasks": [
+    "graph-classification",
+    "molecular-property-prediction",
+    "graph-machine-learning"
+  ],
+  "tags": [
+    "graph-machine-learning",
+    "molecular-ai",
+    "chemistry",
+    "toxicology",
+    "moleculenet",
+    "tox21",
+    "ogb-benchmark"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Public Domain / CC0 1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Tox21 Challenge biological screening assay data produced by NIH NCATS (US Government work in the public domain); OGB benchmark software released under MIT."
+  },
+  "sample_count": {
+    "total": 7831,
+    "unit": "molecules",
+    "status": "verified",
+    "splits": {
+      "train": 6264,
+      "validation": 783,
+      "test": 784
+    }
+  },
+  "citation": {
+    "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "paper_url": "https://arxiv.org/abs/2005.00687",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Marinka Zitnik",
+      "Yuxiao Dong",
+      "Hongyu Ren",
+      "Bowen Liu",
+      "Michele Catasta",
+      "Jure Leskovec"
+    ],
+    "bibtex": "@article{hu2020ogb,\n  title={Open Graph Benchmark: Datasets for Machine Learning on Graphs},\n  author={Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},\n  journal={Advances in Neural Information Processing Systems},\n  volume={33},\n  pages={22118--22133},\n  year={2020}\n}",
+    "doi": "10.48550/arXiv.2005.00687"
+  },
+  "source_references": [
+    {
+      "title": "OGB OGBG-MolTox21 Official Documentation",
+      "url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-moltox21",
+      "type": "documentation"
+    },
+    {
+      "title": "Open Graph Benchmark Paper",
+      "url": "https://arxiv.org/abs/2005.00687",
+      "type": "original_paper"
+    },
+    {
+      "title": "Tox21 Data Challenge",
+      "url": "https://tripod.nih.gov/tox21/challenge/",
+      "type": "official_website"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Stanford OGB documentation and remote zip inspection. Exactly 7,831 molecules (6,264 train, 783 validation, 784 test) with 12 binary toxicity targets under scaffold split."
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "crowdhuman",
+  "slug": "crowdhuman",
+  "name": "CrowdHuman: Benchmark for Human Detection in Crowded Scenes",
+  "description": "CrowdHuman is a large-scale object detection benchmark specifically designed to address crowded pedestrian detection and occlusion challenges. It comprises 24,370 images collected from Google image search (15,000 train, 4,370 validation, and 5,000 test images) containing approximately 470,000 human instances (an average of 22.6 persons per image). Each human instance is annotated with three bounding boxes: head bounding box, visible-body bounding box, and estimated full-body bounding box, enabling fine-grained occluded pedestrian detection, instance parsing, and robust crowd density estimation.",
+  "homepage_url": "https://www.crowdhuman.net/",
+  "publisher": {
+    "name": "Megvii Technology (Face++) & Tsinghua University",
+    "type": "industry",
+    "url": "https://www.megvii.com/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "pedestrian-detection"
+  ],
+  "tags": [
+    "computer-vision",
+    "pedestrian-detection",
+    "crowded-scenes",
+    "object-detection",
+    "bounding-boxes",
+    "occlusion-handling"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "CrowdHuman Non-Commercial Research License",
+    "spdx_id": null,
+    "url": "https://www.crowdhuman.net/",
+    "commercial_use": "forbidden",
+    "notes": "CrowdHuman images and annotations are restricted to non-commercial research and educational use only; commercial use and redistribution are strictly prohibited."
+  },
+  "sample_count": {
+    "total": 24370,
+    "unit": "images",
+    "status": "verified",
+    "splits": {
+      "train": 15000,
+      "validation": 4370,
+      "test": 5000
+    }
+  },
+  "citation": {
+    "paper_title": "CrowdHuman: A Benchmark for Detecting Human in a Crowd",
+    "paper_url": "https://arxiv.org/abs/1805.00123",
+    "authors": [
+      "Shuai Shao",
+      "Zijian Zhao",
+      "Boxun Li",
+      "Tete Xiao",
+      "Gang Yu",
+      "Xiangyu Zhang",
+      "Jian Sun"
+    ],
+    "bibtex": "@article{shao2018crowdhuman,\n  title={CrowdHuman: A Benchmark for Detecting Human in a Crowd},\n  author={Shao, Shuai and Zhao, Zijian and Li, Boxun and Xiao, Tete and Yu, Gang and Zhang, Xiangyu and Sun, Jian},\n  journal={arXiv preprint arXiv:1805.00123},\n  year={2018}\n}",
+    "doi": "10.48550/arXiv.1805.00123"
+  },
+  "source_references": [
+    {
+      "title": "CrowdHuman Official Website",
+      "url": "https://www.crowdhuman.net/",
+      "type": "official_website"
+    },
+    {
+      "title": "CrowdHuman arXiv Paper",
+      "url": "https://arxiv.org/abs/1805.00123",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against CrowdHuman official site and arXiv publication. Exactly 24,370 images (15,000 train, 4,370 val, 5,000 test) containing ~470,000 human instances annotated with 3 boxes per person."
+  }
+}

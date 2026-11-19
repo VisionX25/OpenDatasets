@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "id": "monusac-2020",
+  "slug": "monusac-2020",
+  "name": "MoNuSAC 2020: Multi-Organ Nuclei Segmentation and Classification Challenge",
+  "description": "MoNuSAC 2020 (ISBI 2020 Challenge) is an advanced computational pathology benchmark extending generalized nuclear segmentation to multi-class cell sub-typing. Curated from 71 patients across 37 hospitals and 4 organs (breast, kidney, lung, prostate), it comprises over 46,000 nuclei manually delineated and classified into 4 cell types: epithelial, lymphocyte, neutrophil, and macrophage. Tissue sections in .svs and .tif format at 40x magnification contain ~31,000 training nuclei annotations and ~15,000 testing nuclei annotations, alongside binary masks identifying ambiguous histological areas with faint or fuzzy cell boundaries.",
+  "homepage_url": "https://monusac-2020.grand-challenge.org/",
+  "publisher": {
+    "name": "Indian Institute of Technology Bombay & Tata Memorial Centre",
+    "type": "academic",
+    "url": "https://monusac-2020.grand-challenge.org/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "instance-segmentation",
+    "cell-classification"
+  ],
+  "tags": [
+    "medical-imaging",
+    "computational-pathology",
+    "histopathology",
+    "cell-classification",
+    "nuclear-segmentation",
+    "isbi-challenge",
+    "tmi"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "The MoNuSAC 2020 challenge data is explicitly released under CC BY-NC-SA 4.0 for non-commercial academic research."
+  },
+  "sample_count": {
+    "total": 46144,
+    "unit": "nuclei",
+    "status": "verified",
+    "splits": {
+      "train": 31000,
+      "test": 15144
+    }
+  },
+  "citation": {
+    "paper_title": "MoNuSAC2020: A Multi-Organ Nuclei Segmentation and Classification Challenge",
+    "paper_url": "https://doi.org/10.1109/TMI.2021.3085712",
+    "authors": [
+      "Ruchika Verma",
+      "Neeraj Kumar",
+      "Abhijeet Patil",
+      "Nikhil Cherian Kurian",
+      "Swapnil Rane",
+      "Simon Graham",
+      "Quoc Dang Vu",
+      "Mieke Zwager",
+      "Shan E. Ahmed Raza",
+      "Nasir Rajpoot",
+      "Amit Sethi"
+    ],
+    "bibtex": "@article{verma2021monusac,\n  title={MoNuSAC2020: A Multi-Organ Nuclei Segmentation and Classification Challenge},\n  author={Verma, Ruchika and Kumar, Neeraj and Patil, Abhijeet and Kurian, Nikhil Cherian and Rane, Swapnil and Graham, Simon and Vu, Quoc Dang and Zwager, Mieke and Raza, Shan E. Ahmed and Rajpoot, Nasir and Sethi, Amit},\n  journal={IEEE Transactions on Medical Imaging},\n  volume={40},\n  number={12},\n  pages={3459--3470},\n  year={2021},\n  doi={10.1109/TMI.2021.3085712}\n}",
+    "doi": "10.1109/TMI.2021.3085712"
+  },
+  "source_references": [
+    {
+      "title": "MoNuSAC 2020 Grand Challenge Portal",
+      "url": "https://monusac-2020.grand-challenge.org/",
+      "type": "official_website"
+    },
+    {
+      "title": "IEEE TMI 2021 Paper",
+      "url": "https://doi.org/10.1109/TMI.2021.3085712",
+      "type": "original_paper"
+    },
+    {
+      "title": "PubMed Record (PMID: 34086562)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34086562/",
+      "type": "documentation"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against IEEE TMI publication and Grand Challenge data page. Derived from 71 patients across 37 hospitals and 4 organs. Contains over 46,000 nuclei across 4 cell types. Licensed under CC BY-NC-SA 4.0."
+  }
+}

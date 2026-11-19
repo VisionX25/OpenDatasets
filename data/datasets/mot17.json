@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mot17",
+  "slug": "mot17",
+  "name": "MOT17: Multiple Object Tracking Benchmark 2017",
+  "description": "MOT17 is a standard multi-object tracking benchmark from the MOTChallenge consortium for tracking pedestrians in unconstrained urban environments. It comprises 14 physical video sequences (7 training and 7 test sequences) with 11,235 frames total (5,316 train, 5,919 test) captured from both moving and static cameras in crowded streets and public squares. Ground-truth pedestrian trajectories are annotated with high precision, including occlusion and visibility ratios. For benchmark standardization, each sequence is paired with public detections from 3 baseline detectors: DPM, Faster R-CNN, and SDP, yielding 42 detector-specific evaluation subsets.",
+  "homepage_url": "https://motchallenge.net/data/MOT17/",
+  "publisher": {
+    "name": "MOTChallenge Consortium",
+    "type": "academic",
+    "url": "https://motchallenge.net/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "multi-object-tracking",
+    "object-detection"
+  ],
+  "tags": [
+    "computer-vision",
+    "video-tracking",
+    "multi-object-tracking",
+    "mot-challenge",
+    "pedestrian-tracking"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "MOTChallenge Non-Commercial Academic License",
+    "spdx_id": null,
+    "url": "https://motchallenge.net/",
+    "commercial_use": "forbidden",
+    "notes": "MOTChallenge datasets are available strictly for non-commercial academic research purposes."
+  },
+  "sample_count": {
+    "total": 14,
+    "unit": "sequences",
+    "status": "verified",
+    "splits": {
+      "train": 7,
+      "test": 7
+    }
+  },
+  "citation": {
+    "paper_title": "MOT16: A Benchmark for Multi-Object Tracking",
+    "paper_url": "https://arxiv.org/abs/1603.00831",
+    "authors": [
+      "Anton Milan",
+      "Laura Leal-Taixé",
+      "Ian Reid",
+      "Stefan Roth",
+      "Konrad Schindler"
+    ],
+    "bibtex": "@article{milan2016mot16,\n  title={MOT16: A Benchmark for Multi-Object Tracking},\n  author={Milan, Anton and Leal-Taix{\\'e}, Laura and Reid, Ian and Roth, Stefan and Schindler, Konrad},\n  journal={arXiv preprint arXiv:1603.00831},\n  year={2016}\n}",
+    "doi": "10.48550/arXiv.1603.00831"
+  },
+  "source_references": [
+    {
+      "title": "MOTChallenge MOT17 Page",
+      "url": "https://motchallenge.net/data/MOT17/",
+      "type": "official_website"
+    },
+    {
+      "title": "MOTChallenge Foundation Paper",
+      "url": "https://arxiv.org/abs/1603.00831",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against MOTChallenge website. Contains 14 physical video sequences (7 train, 7 test) totaling 11,235 frames. Avoiding detector-subset multiplication which inflates sequence count to 42."
+  }
+}

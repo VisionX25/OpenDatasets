@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0.0",
+  "id": "masakhaner2",
+  "slug": "masakhaner2",
+  "name": "MasakhaNER 2.0: Africa-Centric Named Entity Recognition Benchmark",
+  "description": "MasakhaNER 2.0 is a large-scale, high-quality human-annotated named entity recognition (NER) benchmark covering 20 diverse African languages spanning Southern, Western, Eastern, and Central Africa: Bambara (bam), Ghomala (bbj), Ewe (ewe), Fon (fon), Hausa (hau), Igbo (ibo), Kinyarwanda (kin), Luganda (lug), Luo (luo), Mossi (mos), Chichewa (nya), Nigerian Pidgin (pcm), Shona (sna), Swahili (swa), Setswana (tsn), Twi (twi), Wolof (wol), isiXhosa (xho), Yoruba (yor), and isiZulu (zul). The official Hugging Face dataset collection contains 152,786 sentences (106,964 train, 15,284 validation, 30,538 test examples) annotated for 4 entity categories: Personal name (PER), Location (LOC), Organization (ORG), and Date (DATE).",
+  "homepage_url": "https://github.com/masakhane-io/masakhane-ner",
+  "publisher": {
+    "name": "Masakhane",
+    "type": "community",
+    "url": "https://www.masakhane.io/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "named-entity-recognition",
+    "token-classification"
+  ],
+  "tags": [
+    "nlp",
+    "african-languages",
+    "named-entity-recognition",
+    "low-resource",
+    "multilingual",
+    "benchmark"
+  ],
+  "languages": [
+    "bam",
+    "bbj",
+    "ewe",
+    "fon",
+    "hau",
+    "ibo",
+    "kin",
+    "lug",
+    "luo",
+    "mos",
+    "nya",
+    "pcm",
+    "sna",
+    "swa",
+    "tsn",
+    "twi",
+    "wol",
+    "xho",
+    "yor",
+    "zul"
+  ],
+  "geographic_coverage": [
+    "Africa",
+    "Nigeria",
+    "Kenya",
+    "South Africa",
+    "Rwanda",
+    "Uganda",
+    "Ghana",
+    "Senegal",
+    "Mali",
+    "Cameroon",
+    "Benin",
+    "Burkina Faso",
+    "Zimbabwe",
+    "Botswana",
+    "Malawi"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Dataset annotations and text are released by Masakhane under CC BY-NC 4.0 as explicitly documented in the official dataset card licensing section. Code repository is released under Apache-2.0."
+  },
+  "sample_count": {
+    "total": 152786,
+    "unit": "sentences",
+    "status": "verified",
+    "splits": {
+      "train": 106964,
+      "validation": 15284,
+      "test": 30538
+    }
+  },
+  "citation": {
+    "paper_title": "MasakhaNER 2.0: Africa-centric Transfer Learning for Named Entity Recognition",
+    "paper_url": "https://aclanthology.org/2022.emnlp-main.298/",
+    "authors": [
+      "David Ifeoluwa Adelani",
+      "Graham Neubig",
+      "Sebastian Ruder",
+      "Shruti Rijhwani",
+      "Michael Beukman",
+      "Chester Palen-Michel",
+      "Constantine Lignos",
+      "Jesujoba O. Alabi",
+      "Shamsuddeen H. Muhammad",
+      "Peter Nabende",
+      "Cheikh M. Bamba Dione",
+      "Andiswa Bukula",
+      "Rooweither Mabuya",
+      "Bonaventure F. P. Dossou",
+      "Blessing Sibanda",
+      "Happy Buzaaba",
+      "Jonathan Mukiibi",
+      "Godson Kalipe",
+      "Derguene Mbaye",
+      "Amelia Taylor",
+      "Fatoumata Kabore",
+      "Chris Chinenye Emezue",
+      "Anuoluwapo Aremu",
+      "Ayodele Awokoya"
+    ],
+    "bibtex": "@inproceedings{adelani-etal-2022-masakhaner,\n  title = \"{M}asakha{NER} 2.0: {A}frica-centric Transfer Learning for Named Entity Recognition\",\n  author = \"Adelani, David Ifeoluwa and Neubig, Graham and Ruder, Sebastian and Rijhwani, Shruti and Beukman, Michael and Palen-Michel, Chester and Lignos, Constantine and Alabi, Jesujoba O. and Muhammad, Shamsuddeen H. and Nabende, Peter and Dione, Cheikh M. Bamba and Bukula, Andiswa and Mabuya, Rooweither and Dossou, Bonaventure F. P. and Sibanda, Blessing and Buzaaba, Happy and Mukiibi, Jonathan and Kalipe, Godson and Mbaye, Derguene and Taylor, Amelia and Kabore, Fatoumata and Emezue, Chris Chinenye and Aremu, Anuoluwapo and Awokoya, Ayodele\",\n  booktitle = \"Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing\",\n  pages = \"4488--4508\",\n  year = \"2022\",\n  doi = \"10.18653/v1/2022.emnlp-main.298\"\n}",
+    "doi": "10.18653/v1/2022.emnlp-main.298"
+  },
+  "source_references": [
+    {
+      "title": "MasakhaNER GitHub Repository",
+      "url": "https://github.com/masakhane-io/masakhane-ner",
+      "type": "repository"
+    },
+    {
+      "title": "MasakhaNER 2.0 Hugging Face Dataset Card",
+      "url": "https://huggingface.co/datasets/masakhane/masakhaner2",
+      "type": "dataset_card"
+    },
+    {
+      "title": "EMNLP 2022 Paper",
+      "url": "https://aclanthology.org/2022.emnlp-main.298/",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Hugging Face dataset card and EMNLP 2022 publication. Exactly 152,786 rows across 20 language configurations (106,964 train, 15,284 validation, 30,538 test). License is CC BY-NC 4.0 as documented by publisher; commercial use is forbidden."
+  }
+}

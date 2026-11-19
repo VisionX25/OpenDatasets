@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "multi3woz",
+  "slug": "multi3woz",
+  "name": "Multi3WOZ: Multilingual Multi-Domain Wizard-of-Oz Dialogue Benchmark",
+  "description": "Multi3WOZ is a multilingual, multi-domain, multi-parallel task-oriented dialogue (ToD) benchmark derived from MultiWOZ 2.1, providing culturally adapted dialogues in 4 typologically diverse languages: Arabic, English, French, and Turkish. Each language contains exactly 9,160 multi-parallel dialogues (7,406 train, 877 validation, 877 test; 36,640 dialogues total) spanning over 100,000 dialogue turns across 7 domains (attraction, hotel, restaurant, taxi, train, hospital, police). Dialogues feature turn-level natural language understanding (NLU), dialogue state tracking (DST), natural language generation (NLG), and end-to-end task-oriented modelling annotations.",
+  "homepage_url": "https://github.com/cambridgeltl/multi3woz",
+  "publisher": {
+    "name": "Cambridge Language Technology Lab",
+    "type": "academic",
+    "url": "https://ltl.fitz.cam.ac.uk/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "task-oriented-dialogue",
+    "dialogue-state-tracking",
+    "natural-language-generation",
+    "natural-language-understanding"
+  ],
+  "tags": [
+    "nlp",
+    "dialogue-systems",
+    "task-oriented-dialogue",
+    "multilingual",
+    "multiwoz",
+    "cambridge",
+    "tacl"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Released by Cambridge Language Technology Lab under MIT License, covering both code and dataset data.zip."
+  },
+  "sample_count": {
+    "total": 36640,
+    "unit": "dialogues",
+    "status": "verified",
+    "splits": {
+      "train": 29624,
+      "validation": 3508,
+      "test": 3508
+    }
+  },
+  "citation": {
+    "paper_title": "Multi3WOZ: A Multilingual, Multi-Domain, Multi-Parallel Dataset for Training and Evaluating Culturally Adapted Task-Oriented Dialog Systems",
+    "paper_url": "https://doi.org/10.1162/tacl_a_00609",
+    "authors": [
+      "Songbo Hu",
+      "Han Zhou",
+      "Mete Hergul",
+      "Milan Gritta",
+      "Guchun Zhang",
+      "Ignacio Iacobacci",
+      "Ivan Vulić",
+      "Anna Korhonen"
+    ],
+    "bibtex": "@article{hu-etal-2023-multi3woz,\n  title = \"{M}ulti3{WOZ}: A Multilingual, Multi-Domain, Multi-Parallel Dataset for Training and Evaluating Culturally Adapted Task-Oriented Dialog Systems\",\n  author = \"Hu, Songbo and Zhou, Han and Hergul, Mete and Gritta, Milan and Zhang, Guchun and Iacobacci, Ignacio and Vuli{\\'c}, Ivan and Korhonen, Anna\",\n  journal = \"Transactions of the Association for Computational Linguistics\",\n  volume = \"11\",\n  pages = \"1342--1360\",\n  year = \"2023\",\n  doi = \"10.1162/tacl_a_00609\"\n}",
+    "doi": "10.1162/tacl_a_00609"
+  },
+  "source_references": [
+    {
+      "title": "Cambridge LTL Multi3WOZ Official Repository",
+      "url": "https://github.com/cambridgeltl/multi3woz",
+      "type": "repository"
+    },
+    {
+      "title": "Multi3WOZ Annotation Guidelines",
+      "url": "https://cambridgeltl.github.io/multi3woz/",
+      "type": "documentation"
+    },
+    {
+      "title": "TACL 2023 Paper",
+      "url": "https://doi.org/10.1162/tacl_a_00609",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Cambridge LTL repository (2023-12-15 corrected release) and TACL 2023 publication. Exactly 9,160 multi-parallel dialogues across 4 languages = 36,640 total dialogue instances (29,624 train, 3,508 val, 3,508 test). MIT license covers both code and data."
+  }
+}

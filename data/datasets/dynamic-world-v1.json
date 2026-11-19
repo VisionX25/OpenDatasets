@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "dynamic-world-v1",
+  "slug": "dynamic-world-v1",
+  "name": "Dynamic World V1: Near Real-Time Global 10m Land Use Land Cover Mapping",
+  "description": "Dynamic World V1 is a near real-time (NRT) global 10-meter resolution Land Use and Land Cover (LULC) dataset produced through a partnership between Google, the World Resources Institute (WRI), and the National Geographic Society. Continuously generated in parallel with every Sentinel-2 L1C acquisition globally from June 2015 to the present, it outputs per-pixel probability distributions and categorical argmax classifications across 9 land cover classes: water, trees, grass, flooded_vegetation, crops, shrub_and_scrub, built, bare, and snow_and_ice. The underlying deep learning model was trained and validated on a globally distributed dataset of over 24,000 expert-annotated Sentinel-2 tiles.",
+  "homepage_url": "https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_DYNAMICWORLD_V1",
+  "publisher": {
+    "name": "Google, World Resources Institute & National Geographic Society",
+    "type": "industry",
+    "url": "https://dynamicworld.app/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "land-cover-mapping",
+    "change-detection"
+  ],
+  "tags": [
+    "remote-sensing",
+    "geospatial",
+    "earth-engine",
+    "sentinel-2",
+    "near-real-time",
+    "land-cover",
+    "global-scale",
+    "nature-scientific-data"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dynamic World V1 is licensed under CC BY 4.0 with required attribution: 'This dataset is produced for the Dynamic World Project by Google in partnership with National Geographic Society and the World Resources Institute.' Contains modified Copernicus Sentinel data."
+  },
+  "sample_count": {
+    "status": "unknown",
+    "unit": "continuous near-real-time Sentinel-2 L1C scenes (2015-present)"
+  },
+  "citation": {
+    "paper_title": "Dynamic World, Near real-time global 10 m land use land cover mapping",
+    "paper_url": "https://doi.org/10.1038/s41597-022-01307-4",
+    "authors": [
+      "Christopher F. Brown",
+      "Steven P. Brumby",
+      "Brookie Guzder-Williams",
+      "Tanya Birch",
+      "Samantha Brooks Hyde",
+      "Joseph Mazzariello",
+      "Wanda Czerwinski",
+      "Valerie J. Pasquarella",
+      "Robert Haertel",
+      "Simon Ilyushchenko",
+      "Kurt Schwehr",
+      "Mikaela Weisse",
+      "Fred Stolle",
+      "Craig Hanson",
+      "Oliver Guinan",
+      "Rebecca Moore",
+      "Alexander M. Tait"
+    ],
+    "bibtex": "@article{brown2022dynamic,\n  title={Dynamic World, Near real-time global 10 m land use land cover mapping},\n  author={Brown, Christopher F. and Brumby, Steven P. and Guzder-Williams, Brookie and Birch, Tanya and Hyde, Samantha Brooks and Mazzariello, Joseph and Czerwinski, Wanda and Pasquarella, Valerie J. and Haertel, Robert and Ilyushchenko, Simon and Schwehr, Kurt and Weisse, Mikaela and Stolle, Fred and Hanson, Craig and Guinan, Oliver and Moore, Rebecca and Tait, Alexander M.},\n  journal={Scientific Data},\n  volume={9},\n  number={1},\n  pages={251},\n  year={2022},\n  doi={10.1038/s41597-022-01307-4}\n}",
+    "doi": "10.1038/s41597-022-01307-4"
+  },
+  "source_references": [
+    {
+      "title": "Google Earth Engine Dynamic World V1 Catalog",
+      "url": "https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_DYNAMICWORLD_V1",
+      "type": "official_website"
+    },
+    {
+      "title": "Dynamic World App",
+      "url": "https://dynamicworld.app/",
+      "type": "official_website"
+    },
+    {
+      "title": "Scientific Data 2022 Paper",
+      "url": "https://doi.org/10.1038/s41597-022-01307-4",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Google Earth Engine catalog and Nature Scientific Data publication. Dynamic World is an open-ended, continuous streaming product (2015-present) across 9 land classes. Sample count status marked unknown to avoid fabricating a fixed count. Model trained on 24,000+ expert tiles."
+  }
+}

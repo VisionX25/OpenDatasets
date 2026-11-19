@@ -1100,6 +1100,105 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "afrisenti-semeval-2023",
+    "slug": "afrisenti-semeval-2023",
+    "name": "AfriSenti-SemEval 2023: African Sentiment Analysis Benchmark",
+    "description": "AfriSenti-SemEval 2023 (SemEval-2023 Task 12) is a multilingual sentiment analysis benchmark covering 14 African languages across 4 distinct language families: Hausa, Yoruba, Igbo, Nigerian Pidgin, Amharic, Algerian Arabic, Moroccan Arabic, Swahili, Kinyarwanda, Twi, Mozambican Portuguese, Oromo, Tigrinya, and Xitsonga. Collected from Twitter/X and annotated by native speakers into positive, negative, and neutral sentiments, the benchmark comprises 111,718 tweets partitioned into 63,685 train, 13,726 dev, and 34,307 test examples across monolingual, multilingual, and zero-shot evaluation tracks.",
+    "homepage_url": "https://github.com/afrisenti-semeval/afrisent-semeval-2023",
+    "publisher": {
+      "name": "AfriSenti Consortium",
+      "type": "community",
+      "url": "https://afrisenti-semeval.github.io/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "sentiment-analysis",
+      "text-classification"
+    ],
+    "tags": [
+      "nlp",
+      "sentiment-analysis",
+      "african-languages",
+      "twitter",
+      "low-resource",
+      "multilingual",
+      "semeval"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Creative Commons Attribution 4.0 International & Twitter Terms of Service",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "unknown",
+      "notes": "Sentiment annotations are licensed under CC BY 4.0; underlying tweet texts are redistributed subject to Twitter/X Developer Terms of Service and content restrictions."
+    },
+    "sample_count": {
+      "total": 111718,
+      "unit": "tweets",
+      "status": "verified",
+      "splits": {
+        "train": 63685,
+        "dev": 13726,
+        "test": 34307
+      }
+    },
+    "citation": {
+      "paper_title": "SemEval-2023 Task 12: Sentiment Analysis for African Languages (AfriSenti-SemEval)",
+      "paper_url": "https://aclanthology.org/2023.semeval-1.315/",
+      "authors": [
+        "Shamsuddeen Hassan Muhammad",
+        "Idris Abdulmumin",
+        "Seid Muhie Yimam",
+        "David Ifeoluwa Adelani",
+        "Ibrahim Said Ahmad",
+        "Nedjma Ousidhoum",
+        "Abinew Ali Ayele",
+        "Saheed Abdullahi Salahudeen",
+        "Tajuddeen R. Gwadabe",
+        "Ukpabio God'swill",
+        "Bhairav Sharma",
+        "Cheikh M. Bamba Dione",
+        "Socrates Doamekpor",
+        "Rooweither Mabuya",
+        "Praise Leona",
+        "Tadesse Destaw Belay",
+        "Falalu Ibrahim",
+        "Alhassan Mumuni",
+        "Moussa Oumarou",
+        "Rachel Bawden",
+        "Bonaventure F. P. Dossou"
+      ],
+      "bibtex": "@inproceedings{muhammad-etal-2023-semeval,\n  title = \"{S}em{E}val-2023 Task 12: Sentiment Analysis for {A}frican Languages ({A}fri{S}enti-{S}em{E}val)\",\n  author = \"Muhammad, Shamsuddeen Hassan and Abdulmumin, Idris and Yimam, Seid Muhie and Adelani, David Ifeoluwa and Ahmad, Ibrahim Said and Ousidhoum, Nedjma and Ayele, Abinew Ali and Salahudeen, Saheed Abdullahi and Gwadabe, Tajuddeen R. and God'swill, Ukpabio and Sharma, Bhairav and Dione, Cheikh M. Bamba and Doamekpor, Socrates and Mabuya, Rooweither and Leona, Praise and Belay, Tadesse Destaw and Ibrahim, Falalu and Mumuni, Alhassan and Oumarou, Moussa and Bawden, Rachel and Dossou, Bonaventure F. P.\",\n  booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n  pages = \"2264--2279\",\n  year = \"2023\",\n  doi = \"10.18653/v1/2023.semeval-1.315\"\n}",
+      "doi": "10.18653/v1/2023.semeval-1.315"
+    },
+    "source_references": [
+      {
+        "title": "AfriSenti GitHub Repository",
+        "url": "https://github.com/afrisenti-semeval/afrisent-semeval-2023",
+        "type": "repository"
+      },
+      {
+        "title": "AfriSenti-SemEval 2023 Paper",
+        "url": "https://aclanthology.org/2023.semeval-1.315/",
+        "type": "original_paper"
+      },
+      {
+        "title": "AfriSenti Website",
+        "url": "https://afrisenti-semeval.github.io/",
+        "type": "official_website"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against GitHub raw data files and SemEval 2023 paper. Sum of rows across all 14 languages is exactly 111,718 tweets (63,685 train, 13,726 dev, 34,307 test)."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ag-news",
     "slug": "ag-news",
     "name": "AG News: News Topic Classification Benchmark",
@@ -14551,6 +14650,85 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "crowdhuman",
+    "slug": "crowdhuman",
+    "name": "CrowdHuman: Benchmark for Human Detection in Crowded Scenes",
+    "description": "CrowdHuman is a large-scale object detection benchmark specifically designed to address crowded pedestrian detection and occlusion challenges. It comprises 24,370 images collected from Google image search (15,000 train, 4,370 validation, and 5,000 test images) containing approximately 470,000 human instances (an average of 22.6 persons per image). Each human instance is annotated with three bounding boxes: head bounding box, visible-body bounding box, and estimated full-body bounding box, enabling fine-grained occluded pedestrian detection, instance parsing, and robust crowd density estimation.",
+    "homepage_url": "https://www.crowdhuman.net/",
+    "publisher": {
+      "name": "Megvii Technology (Face++) & Tsinghua University",
+      "type": "industry",
+      "url": "https://www.megvii.com/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection",
+      "pedestrian-detection"
+    ],
+    "tags": [
+      "computer-vision",
+      "pedestrian-detection",
+      "crowded-scenes",
+      "object-detection",
+      "bounding-boxes",
+      "occlusion-handling"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "CrowdHuman Non-Commercial Research License",
+      "spdx_id": null,
+      "url": "https://www.crowdhuman.net/",
+      "commercial_use": "forbidden",
+      "notes": "CrowdHuman images and annotations are restricted to non-commercial research and educational use only; commercial use and redistribution are strictly prohibited."
+    },
+    "sample_count": {
+      "total": 24370,
+      "unit": "images",
+      "status": "verified",
+      "splits": {
+        "train": 15000,
+        "validation": 4370,
+        "test": 5000
+      }
+    },
+    "citation": {
+      "paper_title": "CrowdHuman: A Benchmark for Detecting Human in a Crowd",
+      "paper_url": "https://arxiv.org/abs/1805.00123",
+      "authors": [
+        "Shuai Shao",
+        "Zijian Zhao",
+        "Boxun Li",
+        "Tete Xiao",
+        "Gang Yu",
+        "Xiangyu Zhang",
+        "Jian Sun"
+      ],
+      "bibtex": "@article{shao2018crowdhuman,\n  title={CrowdHuman: A Benchmark for Detecting Human in a Crowd},\n  author={Shao, Shuai and Zhao, Zijian and Li, Boxun and Xiao, Tete and Yu, Gang and Zhang, Xiangyu and Sun, Jian},\n  journal={arXiv preprint arXiv:1805.00123},\n  year={2018}\n}",
+      "doi": "10.48550/arXiv.1805.00123"
+    },
+    "source_references": [
+      {
+        "title": "CrowdHuman Official Website",
+        "url": "https://www.crowdhuman.net/",
+        "type": "official_website"
+      },
+      {
+        "title": "CrowdHuman arXiv Paper",
+        "url": "https://arxiv.org/abs/1805.00123",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against CrowdHuman official site and arXiv publication. Exactly 24,370 images (15,000 train, 4,370 val, 5,000 test) containing ~470,000 human instances annotated with 3 boxes per person."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "cse-cic-ids2018",
     "slug": "cse-cic-ids2018",
     "name": "CSE-CIC-IDS2018: Collaborative Network Intrusion Detection Dataset",
@@ -15409,6 +15587,91 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "dancetrack",
+    "slug": "dancetrack",
+    "name": "DanceTrack: Multi-Object Tracking in Uniform Appearance and Diverse Motion",
+    "description": "DanceTrack is a multi-human object tracking benchmark specifically constructed to evaluate tracking algorithms when appearance is not discriminative. It comprises 100 group dancing video sequences totaling 105,855 frames (40 train, 25 validation, 35 test) recorded at 20 FPS with 990 total tracks. Dancers frequently wear matching uniforms or stage costumes, execute extreme body articulations, and undergo dynamic crossovers and mutual occlusions, preventing trackers from relying purely on visual Re-ID and necessitating spatiotemporal motion analysis. Annotations provide frame-level bounding boxes and persistent identity IDs following MOT Challenge standards.",
+    "homepage_url": "https://dancetrack.github.io/",
+    "publisher": {
+      "name": "The University of Hong Kong & Carnegie Mellon University",
+      "type": "academic",
+      "url": "https://dancetrack.github.io/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "multi-object-tracking",
+      "human-tracking"
+    ],
+    "tags": [
+      "computer-vision",
+      "multi-object-tracking",
+      "dance",
+      "motion-analysis",
+      "uniform-appearance",
+      "video-tracking",
+      "cvpr"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "DanceTrack Non-Commercial Research License",
+      "spdx_id": null,
+      "url": "https://github.com/DanceTrack/DanceTrack",
+      "commercial_use": "forbidden",
+      "notes": "The DanceTrack repository agreement explicitly states that the complete dataset is available for non-commercial research purposes only. The annotations are licensed under CC BY 4.0, benchmark evaluation code is under MIT, and underlying videos were harvested from the Internet under fair use."
+    },
+    "sample_count": {
+      "total": 100,
+      "unit": "sequences",
+      "status": "verified",
+      "splits": {
+        "train": 40,
+        "validation": 25,
+        "test": 35
+      }
+    },
+    "citation": {
+      "paper_title": "DanceTrack: Multi-Object Tracking in Uniform Appearance and Diverse Motion",
+      "paper_url": "https://doi.org/10.1109/CVPR52688.2022.02032",
+      "authors": [
+        "Peize Sun",
+        "Jinkun Cao",
+        "Yi Jiang",
+        "Zehuan Yuan",
+        "Song Bai",
+        "Kris Kitani",
+        "Ping Luo"
+      ],
+      "bibtex": "@inproceedings{sun2022dancetrack,\n  title={DanceTrack: Multi-Object Tracking in Uniform Appearance and Diverse Motion},\n  author={Sun, Peize and Cao, Jinkun and Jiang, Yi and Yuan, Zehuan and Bai, Song and Kitani, Kris and Luo, Ping},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={20993--21002},\n  year={2022},\n  doi={10.1109/CVPR52688.2022.02032}\n}",
+      "doi": "10.1109/CVPR52688.2022.02032"
+    },
+    "source_references": [
+      {
+        "title": "DanceTrack Official Project Page",
+        "url": "https://dancetrack.github.io/",
+        "type": "official_website"
+      },
+      {
+        "title": "DanceTrack GitHub Repository",
+        "url": "https://github.com/DanceTrack/DanceTrack",
+        "type": "repository"
+      },
+      {
+        "title": "CVPR 2022 Paper",
+        "url": "https://doi.org/10.1109/CVPR52688.2022.02032",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against DanceTrack official GitHub repository agreement and CVPR 2022 publication. Verified DOI: 10.1109/CVPR52688.2022.02032. Exactly 100 videos (40 train, 25 val, 35 test) and 105,855 frames. Dataset restricted to non-commercial research use."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "dart-tof-ms-spectral-fingerprint-rubroshorea",
     "slug": "dart-tof-ms-spectral-fingerprint-rubroshorea",
     "name": "DART–TOF MS Spectral Fingerprint Dataset of Rubroshorea leprosula with a Data Preparation and Processing Toolkit for Chemometric Analysis",
@@ -16214,6 +16477,89 @@
       "data_sources": [
         "Inria Acoustic Recording Campaigns"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "desed",
+    "slug": "desed",
+    "name": "DESED: Domestic Environment Sound Event Detection Benchmark",
+    "description": "DESED (Domestic Environment Sound Event Detection) is a benchmark for recognizing sound events in domestic environments using weak labels and synthetic audio mixtures (featured as DCASE Task 4). It comprises 10 domestic sound classes: alarm/bell, blender, cat, dog, dishes, frying, electric shaver/toothbrush, running water, speech, and vacuum cleaner. It incorporates real recordings from AudioSet (14,412 unlabelled in-domain, 1,578 weakly labelled train, 1,168 strongly labelled validation, and 692 public evaluation clips) together with a soundbank of 3,395 isolated background/foreground sound events and 2,584 pre-rendered synthetic domestic soundscapes with precise timestamp onset/offset annotations generated via Scaper.",
+    "homepage_url": "https://project.inria.fr/desed/",
+    "publisher": {
+      "name": "Inria & Université de Lorraine",
+      "type": "academic",
+      "url": "https://project.inria.fr/desed/"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "sound-event-detection",
+      "weakly-supervised-learning"
+    ],
+    "tags": [
+      "audio",
+      "sound-event-detection",
+      "domestic-environment",
+      "weakly-supervised",
+      "synthetic-audio",
+      "dcase",
+      "inria"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "MIT License, Creative Commons Attribution 4.0, and YouTube Terms of Service",
+      "spdx_id": "MIT",
+      "url": "https://github.com/turpaultn/DESED/blob/master/LICENSE",
+      "commercial_use": "unknown",
+      "notes": "Code utilities and synthetic soundscapes on Zenodo are released under MIT and CC BY 4.0; real recordings derive from YouTube AudioSet subject to YouTube terms of service."
+    },
+    "sample_count": {
+      "total": 17850,
+      "unit": "recordings",
+      "status": "verified",
+      "splits": {
+        "unlabeled_in_domain": 14412,
+        "weakly_labeled_train": 1578,
+        "validation_strong": 1168,
+        "public_eval": 692
+      }
+    },
+    "citation": {
+      "paper_title": "Sound Event Detection in Domestic Environments with Weakly Labeled Data and Soundscape Synthesis",
+      "paper_url": "https://doi.org/10.33682/006b-jx26",
+      "authors": [
+        "Nicolas Turpault",
+        "Romain Serizel",
+        "Justin Salamon",
+        "Ankit Parag Shah"
+      ],
+      "bibtex": "@inproceedings{turpault2019sound,\n  title={Sound Event Detection in Domestic Environments with Weakly Labeled Data and Soundscape Synthesis},\n  author={Turpault, Nicolas and Serizel, Romain and Salamon, Justin and Shah, Ankit Parag},\n  booktitle={Proceedings of the Detection and Classification of Acoustic Scenes and Events 2019 Workshop (DCASE2019)},\n  pages={255--259},\n  year={2019},\n  doi={10.33682/006b-jx26}\n}",
+      "doi": "10.33682/006b-jx26"
+    },
+    "source_references": [
+      {
+        "title": "DESED Project Official Website",
+        "url": "https://project.inria.fr/desed/",
+        "type": "official_website"
+      },
+      {
+        "title": "DESED GitHub Repository",
+        "url": "https://github.com/turpaultn/DESED",
+        "type": "repository"
+      },
+      {
+        "title": "DCASE 2019 Workshop Paper",
+        "url": "https://doi.org/10.33682/006b-jx26",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Inria DESED project page and GitHub repository. Real recordings comprise 17,850 files (14,412 unlabelled, 1,578 weak train, 1,168 strong val, 692 eval) plus synthetic soundscapes. 10 domestic sound classes."
     }
   },
   {
@@ -17740,6 +18086,97 @@
       "data_sources": [
         "Public corporate financial filings, technical manuals, scientific articles, and legal documents"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "dynamic-world-v1",
+    "slug": "dynamic-world-v1",
+    "name": "Dynamic World V1: Near Real-Time Global 10m Land Use Land Cover Mapping",
+    "description": "Dynamic World V1 is a near real-time (NRT) global 10-meter resolution Land Use and Land Cover (LULC) dataset produced through a partnership between Google, the World Resources Institute (WRI), and the National Geographic Society. Continuously generated in parallel with every Sentinel-2 L1C acquisition globally from June 2015 to the present, it outputs per-pixel probability distributions and categorical argmax classifications across 9 land cover classes: water, trees, grass, flooded_vegetation, crops, shrub_and_scrub, built, bare, and snow_and_ice. The underlying deep learning model was trained and validated on a globally distributed dataset of over 24,000 expert-annotated Sentinel-2 tiles.",
+    "homepage_url": "https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_DYNAMICWORLD_V1",
+    "publisher": {
+      "name": "Google, World Resources Institute & National Geographic Society",
+      "type": "industry",
+      "url": "https://dynamicworld.app/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "land-cover-mapping",
+      "change-detection"
+    ],
+    "tags": [
+      "remote-sensing",
+      "geospatial",
+      "earth-engine",
+      "sentinel-2",
+      "near-real-time",
+      "land-cover",
+      "global-scale",
+      "nature-scientific-data"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dynamic World V1 is licensed under CC BY 4.0 with required attribution: 'This dataset is produced for the Dynamic World Project by Google in partnership with National Geographic Society and the World Resources Institute.' Contains modified Copernicus Sentinel data."
+    },
+    "sample_count": {
+      "status": "unknown",
+      "unit": "continuous near-real-time Sentinel-2 L1C scenes (2015-present)"
+    },
+    "citation": {
+      "paper_title": "Dynamic World, Near real-time global 10 m land use land cover mapping",
+      "paper_url": "https://doi.org/10.1038/s41597-022-01307-4",
+      "authors": [
+        "Christopher F. Brown",
+        "Steven P. Brumby",
+        "Brookie Guzder-Williams",
+        "Tanya Birch",
+        "Samantha Brooks Hyde",
+        "Joseph Mazzariello",
+        "Wanda Czerwinski",
+        "Valerie J. Pasquarella",
+        "Robert Haertel",
+        "Simon Ilyushchenko",
+        "Kurt Schwehr",
+        "Mikaela Weisse",
+        "Fred Stolle",
+        "Craig Hanson",
+        "Oliver Guinan",
+        "Rebecca Moore",
+        "Alexander M. Tait"
+      ],
+      "bibtex": "@article{brown2022dynamic,\n  title={Dynamic World, Near real-time global 10 m land use land cover mapping},\n  author={Brown, Christopher F. and Brumby, Steven P. and Guzder-Williams, Brookie and Birch, Tanya and Hyde, Samantha Brooks and Mazzariello, Joseph and Czerwinski, Wanda and Pasquarella, Valerie J. and Haertel, Robert and Ilyushchenko, Simon and Schwehr, Kurt and Weisse, Mikaela and Stolle, Fred and Hanson, Craig and Guinan, Oliver and Moore, Rebecca and Tait, Alexander M.},\n  journal={Scientific Data},\n  volume={9},\n  number={1},\n  pages={251},\n  year={2022},\n  doi={10.1038/s41597-022-01307-4}\n}",
+      "doi": "10.1038/s41597-022-01307-4"
+    },
+    "source_references": [
+      {
+        "title": "Google Earth Engine Dynamic World V1 Catalog",
+        "url": "https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_DYNAMICWORLD_V1",
+        "type": "official_website"
+      },
+      {
+        "title": "Dynamic World App",
+        "url": "https://dynamicworld.app/",
+        "type": "official_website"
+      },
+      {
+        "title": "Scientific Data 2022 Paper",
+        "url": "https://doi.org/10.1038/s41597-022-01307-4",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Google Earth Engine catalog and Nature Scientific Data publication. Dynamic World is an open-ended, continuous streaming product (2015-present) across 9 land classes. Sample count status marked unknown to avoid fabricating a fixed count. Model trained on 24,000+ expert tiles."
     }
   },
   {
@@ -29686,6 +30123,87 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "lasot",
+    "slug": "lasot",
+    "name": "LaSOT: Large-Scale Single Object Tracking Benchmark",
+    "description": "LaSOT (Large-scale Single Object Tracking) is a dedicated long-term visual tracking benchmark comprising 1,400 video sequences across 70 object categories in its CVPR 2019 release, totaling over 3.52 million frames (extended to 1,550 sequences and 3.87M frames across 85 categories in IJCV 2021). The average sequence length exceeds 2,500 frames (~83 seconds). Every frame is manually annotated with tightly fitted bounding boxes and 14 challenging attribute flags (e.g., occlusion, illumination variation, viewpoint change, deformation). Protocol II splits provide 1,120 training sequences (2.81M frames) and 280 test sequences (685K frames).",
+    "homepage_url": "https://vision.cs.stonybrook.edu/~lasot/",
+    "publisher": {
+      "name": "Stony Brook University & Temple University",
+      "type": "academic",
+      "url": "https://vision.cs.stonybrook.edu/~lasot/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "single-object-tracking",
+      "visual-tracking"
+    ],
+    "tags": [
+      "computer-vision",
+      "single-object-tracking",
+      "visual-tracking",
+      "long-term-tracking",
+      "bounding-boxes",
+      "cvpr"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "LaSOT Personal, Academic, and Educational Research License",
+      "spdx_id": null,
+      "url": "https://vision.cs.stonybrook.edu/~lasot/download.html",
+      "commercial_use": "forbidden",
+      "notes": "Data is restricted to personal, academic, or educational use only. Commercial use is explicitly prohibited."
+    },
+    "sample_count": {
+      "total": 1400,
+      "unit": "sequences",
+      "status": "verified",
+      "splits": {
+        "train": 1120,
+        "test": 280
+      }
+    },
+    "citation": {
+      "paper_title": "LaSOT: A High-Quality Benchmark for Large-Scale Single Object Tracking",
+      "paper_url": "https://doi.org/10.1109/CVPR.2019.00552",
+      "authors": [
+        "Heng Fan",
+        "Liting Lin",
+        "Fan Yang",
+        "Peng Chu",
+        "Ge Deng",
+        "Sijia Yu",
+        "Hexin Bai",
+        "Yong Xu",
+        "Chunyuan Liao",
+        "Haibin Ling"
+      ],
+      "bibtex": "@inproceedings{fan2019lasot,\n  title={LaSOT: A High-Quality Benchmark for Large-Scale Single Object Tracking},\n  author={Fan, Heng and Lin, Liting and Yang, Fan and Chu, Peng and Deng, Ge and Yu, Sijia and Bai, Hexin and Xu, Yong and Liao, Chunyuan and Ling, Haibin},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={5374--5383},\n  year={2019},\n  doi={10.1109/CVPR.2019.00552}\n}",
+      "doi": "10.1109/CVPR.2019.00552"
+    },
+    "source_references": [
+      {
+        "title": "LaSOT Official Website",
+        "url": "https://vision.cs.stonybrook.edu/~lasot/",
+        "type": "official_website"
+      },
+      {
+        "title": "CVPR 2019 Paper",
+        "url": "https://doi.org/10.1109/CVPR.2019.00552",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against CVPR 2019 publication and Stony Brook dataset site. DOI confirmed as 10.1109/CVPR.2019.00552 (resolved collision with LVIS 10.1109/CVPR.2019.00550). Exactly 1,400 sequences in CVPR benchmark (1,120 train, 280 test)."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ldir-spectra-micron-sized-particles-using",
     "slug": "ldir-spectra-micron-sized-particles-using",
     "name": "LDIR spectra of micron sized particles using Agilant LDIR spectrometer",
@@ -32024,6 +32542,146 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "masakhaner2",
+    "slug": "masakhaner2",
+    "name": "MasakhaNER 2.0: Africa-Centric Named Entity Recognition Benchmark",
+    "description": "MasakhaNER 2.0 is a large-scale, high-quality human-annotated named entity recognition (NER) benchmark covering 20 diverse African languages spanning Southern, Western, Eastern, and Central Africa: Bambara (bam), Ghomala (bbj), Ewe (ewe), Fon (fon), Hausa (hau), Igbo (ibo), Kinyarwanda (kin), Luganda (lug), Luo (luo), Mossi (mos), Chichewa (nya), Nigerian Pidgin (pcm), Shona (sna), Swahili (swa), Setswana (tsn), Twi (twi), Wolof (wol), isiXhosa (xho), Yoruba (yor), and isiZulu (zul). The official Hugging Face dataset collection contains 152,786 sentences (106,964 train, 15,284 validation, 30,538 test examples) annotated for 4 entity categories: Personal name (PER), Location (LOC), Organization (ORG), and Date (DATE).",
+    "homepage_url": "https://github.com/masakhane-io/masakhane-ner",
+    "publisher": {
+      "name": "Masakhane",
+      "type": "community",
+      "url": "https://www.masakhane.io/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "named-entity-recognition",
+      "token-classification"
+    ],
+    "tags": [
+      "nlp",
+      "african-languages",
+      "named-entity-recognition",
+      "low-resource",
+      "multilingual",
+      "benchmark"
+    ],
+    "languages": [
+      "bam",
+      "bbj",
+      "ewe",
+      "fon",
+      "hau",
+      "ibo",
+      "kin",
+      "lug",
+      "luo",
+      "mos",
+      "nya",
+      "pcm",
+      "sna",
+      "swa",
+      "tsn",
+      "twi",
+      "wol",
+      "xho",
+      "yor",
+      "zul"
+    ],
+    "geographic_coverage": [
+      "Africa",
+      "Nigeria",
+      "Kenya",
+      "South Africa",
+      "Rwanda",
+      "Uganda",
+      "Ghana",
+      "Senegal",
+      "Mali",
+      "Cameroon",
+      "Benin",
+      "Burkina Faso",
+      "Zimbabwe",
+      "Botswana",
+      "Malawi"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Dataset annotations and text are released by Masakhane under CC BY-NC 4.0 as explicitly documented in the official dataset card licensing section. Code repository is released under Apache-2.0."
+    },
+    "sample_count": {
+      "total": 152786,
+      "unit": "sentences",
+      "status": "verified",
+      "splits": {
+        "train": 106964,
+        "validation": 15284,
+        "test": 30538
+      }
+    },
+    "citation": {
+      "paper_title": "MasakhaNER 2.0: Africa-centric Transfer Learning for Named Entity Recognition",
+      "paper_url": "https://aclanthology.org/2022.emnlp-main.298/",
+      "authors": [
+        "David Ifeoluwa Adelani",
+        "Graham Neubig",
+        "Sebastian Ruder",
+        "Shruti Rijhwani",
+        "Michael Beukman",
+        "Chester Palen-Michel",
+        "Constantine Lignos",
+        "Jesujoba O. Alabi",
+        "Shamsuddeen H. Muhammad",
+        "Peter Nabende",
+        "Cheikh M. Bamba Dione",
+        "Andiswa Bukula",
+        "Rooweither Mabuya",
+        "Bonaventure F. P. Dossou",
+        "Blessing Sibanda",
+        "Happy Buzaaba",
+        "Jonathan Mukiibi",
+        "Godson Kalipe",
+        "Derguene Mbaye",
+        "Amelia Taylor",
+        "Fatoumata Kabore",
+        "Chris Chinenye Emezue",
+        "Anuoluwapo Aremu",
+        "Ayodele Awokoya"
+      ],
+      "bibtex": "@inproceedings{adelani-etal-2022-masakhaner,\n  title = \"{M}asakha{NER} 2.0: {A}frica-centric Transfer Learning for Named Entity Recognition\",\n  author = \"Adelani, David Ifeoluwa and Neubig, Graham and Ruder, Sebastian and Rijhwani, Shruti and Beukman, Michael and Palen-Michel, Chester and Lignos, Constantine and Alabi, Jesujoba O. and Muhammad, Shamsuddeen H. and Nabende, Peter and Dione, Cheikh M. Bamba and Bukula, Andiswa and Mabuya, Rooweither and Dossou, Bonaventure F. P. and Sibanda, Blessing and Buzaaba, Happy and Mukiibi, Jonathan and Kalipe, Godson and Mbaye, Derguene and Taylor, Amelia and Kabore, Fatoumata and Emezue, Chris Chinenye and Aremu, Anuoluwapo and Awokoya, Ayodele\",\n  booktitle = \"Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing\",\n  pages = \"4488--4508\",\n  year = \"2022\",\n  doi = \"10.18653/v1/2022.emnlp-main.298\"\n}",
+      "doi": "10.18653/v1/2022.emnlp-main.298"
+    },
+    "source_references": [
+      {
+        "title": "MasakhaNER GitHub Repository",
+        "url": "https://github.com/masakhane-io/masakhane-ner",
+        "type": "repository"
+      },
+      {
+        "title": "MasakhaNER 2.0 Hugging Face Dataset Card",
+        "url": "https://huggingface.co/datasets/masakhane/masakhaner2",
+        "type": "dataset_card"
+      },
+      {
+        "title": "EMNLP 2022 Paper",
+        "url": "https://aclanthology.org/2022.emnlp-main.298/",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Hugging Face dataset card and EMNLP 2022 publication. Exactly 152,786 rows across 20 language configurations (106,964 train, 15,284 validation, 30,538 test). License is CC BY-NC 4.0 as documented by publisher; commercial use is forbidden."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "massive",
     "slug": "massive",
     "name": "MASSIVE: A 1M-Example Multilingual Natural Language Understanding Dataset",
@@ -33062,6 +33720,94 @@
       ],
       "doi": "10.13026/C26K5Q",
       "bibtex": "@inproceedings{welch1991massachusetts,\n  title={The Massachusetts General Hospital-Marquette Foundation Hemodynamic and Electrocardiographic Database--Comprehensive collection of critical care waveforms},\n  author={Welch, JP and Ford, PJ and Teplick, RS and Rubsamen, RM},\n  booktitle={Computers in Cardiology 1991},\n  pages={389--392},\n  year={1991},\n  organization={IEEE},\n  doi={10.13026/C26K5Q}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mgsm",
+    "slug": "mgsm",
+    "name": "MGSM: Multilingual Grade School Math Benchmark",
+    "description": "MGSM (Multilingual Grade School Math) is an evaluation benchmark designed to assess multilingual mathematical reasoning and chain-of-thought prompting across 11 diverse, typologically distinct languages: English (en), Bengali (bn), German (de), Spanish (es), French (fr), Japanese (ja), Russian (ru), Swahili (sw), Telugu (te), Thai (th), and Chinese (zh). It contains 250 grade-school math word problems selected from the GSM8K test set, professionally translated into 10 target languages (yielding 2,750 translated problem items total) plus 8 few-shot exemplars with culturally adapted step-by-step chain-of-thought reasoning paths per language.",
+    "homepage_url": "https://github.com/google-research/url-nlp/tree/main/mgsm",
+    "publisher": {
+      "name": "Google Research",
+      "type": "industry",
+      "url": "https://research.google/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "mathematical-reasoning",
+      "multilingual-evaluation"
+    ],
+    "tags": [
+      "nlp",
+      "math-reasoning",
+      "chain-of-thought",
+      "gsm8k",
+      "multilingual",
+      "llm-benchmark",
+      "iclr"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Released by Google Research under CC BY 4.0; derived from GSM8K (MIT License)."
+    },
+    "sample_count": {
+      "total": 2750,
+      "unit": "problems",
+      "status": "verified",
+      "splits": {
+        "test": 2750
+      }
+    },
+    "citation": {
+      "paper_title": "Language Models are Multilingual Chain-of-Thought Reasoners",
+      "paper_url": "https://arxiv.org/abs/2210.03057",
+      "authors": [
+        "Freda Shi",
+        "Mirac Suzgun",
+        "Markus Freitag",
+        "Xuezhi Wang",
+        "Suraj Srivats",
+        "Soroush Vosoughi",
+        "Hyung Won Chung",
+        "Yi Tay",
+        "Sebastian Ruder",
+        "Denny Zhou",
+        "Dipanjan Das",
+        "Jason Wei"
+      ],
+      "bibtex": "@inproceedings{shi2023language,\n  title={Language Models are Multilingual Chain-of-Thought Reasoners},\n  author={Shi, Freda and Suzgun, Mirac and Freitag, Markus and Wang, Xuezhi and Srivats, Suraj and Vosoughi, Soroush and Chung, Hyung Won and Tay, Yi and Ruder, Sebastian and Zhou, Denny and Das, Dipanjan and Wei, Jason},\n  booktitle={The Eleventh International Conference on Learning Representations},\n  year={2023}\n}",
+      "doi": "10.48550/arXiv.2210.03057"
+    },
+    "source_references": [
+      {
+        "title": "MGSM Official GitHub Repository",
+        "url": "https://github.com/google-research/url-nlp/tree/main/mgsm",
+        "type": "repository"
+      },
+      {
+        "title": "ICLR 2023 Paper",
+        "url": "https://arxiv.org/abs/2210.03057",
+        "type": "original_paper"
+      },
+      {
+        "title": "Hugging Face MGSM Dataset Card",
+        "url": "https://huggingface.co/datasets/juletxara/mgsm",
+        "type": "dataset_card"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Google Research repository and ICLR 2023 publication. Exactly 250 problems across 11 languages (2,750 items) + 8 few-shot exemplars per language."
     }
   },
   {
@@ -35628,6 +36374,249 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "monusac-2020",
+    "slug": "monusac-2020",
+    "name": "MoNuSAC 2020: Multi-Organ Nuclei Segmentation and Classification Challenge",
+    "description": "MoNuSAC 2020 (ISBI 2020 Challenge) is an advanced computational pathology benchmark extending generalized nuclear segmentation to multi-class cell sub-typing. Curated from 71 patients across 37 hospitals and 4 organs (breast, kidney, lung, prostate), it comprises over 46,000 nuclei manually delineated and classified into 4 cell types: epithelial, lymphocyte, neutrophil, and macrophage. Tissue sections in .svs and .tif format at 40x magnification contain ~31,000 training nuclei annotations and ~15,000 testing nuclei annotations, alongside binary masks identifying ambiguous histological areas with faint or fuzzy cell boundaries.",
+    "homepage_url": "https://monusac-2020.grand-challenge.org/",
+    "publisher": {
+      "name": "Indian Institute of Technology Bombay & Tata Memorial Centre",
+      "type": "academic",
+      "url": "https://monusac-2020.grand-challenge.org/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "instance-segmentation",
+      "cell-classification"
+    ],
+    "tags": [
+      "medical-imaging",
+      "computational-pathology",
+      "histopathology",
+      "cell-classification",
+      "nuclear-segmentation",
+      "isbi-challenge",
+      "tmi"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "The MoNuSAC 2020 challenge data is explicitly released under CC BY-NC-SA 4.0 for non-commercial academic research."
+    },
+    "sample_count": {
+      "total": 46144,
+      "unit": "nuclei",
+      "status": "verified",
+      "splits": {
+        "train": 31000,
+        "test": 15144
+      }
+    },
+    "citation": {
+      "paper_title": "MoNuSAC2020: A Multi-Organ Nuclei Segmentation and Classification Challenge",
+      "paper_url": "https://doi.org/10.1109/TMI.2021.3085712",
+      "authors": [
+        "Ruchika Verma",
+        "Neeraj Kumar",
+        "Abhijeet Patil",
+        "Nikhil Cherian Kurian",
+        "Swapnil Rane",
+        "Simon Graham",
+        "Quoc Dang Vu",
+        "Mieke Zwager",
+        "Shan E. Ahmed Raza",
+        "Nasir Rajpoot",
+        "Amit Sethi"
+      ],
+      "bibtex": "@article{verma2021monusac,\n  title={MoNuSAC2020: A Multi-Organ Nuclei Segmentation and Classification Challenge},\n  author={Verma, Ruchika and Kumar, Neeraj and Patil, Abhijeet and Kurian, Nikhil Cherian and Rane, Swapnil and Graham, Simon and Vu, Quoc Dang and Zwager, Mieke and Raza, Shan E. Ahmed and Rajpoot, Nasir and Sethi, Amit},\n  journal={IEEE Transactions on Medical Imaging},\n  volume={40},\n  number={12},\n  pages={3459--3470},\n  year={2021},\n  doi={10.1109/TMI.2021.3085712}\n}",
+      "doi": "10.1109/TMI.2021.3085712"
+    },
+    "source_references": [
+      {
+        "title": "MoNuSAC 2020 Grand Challenge Portal",
+        "url": "https://monusac-2020.grand-challenge.org/",
+        "type": "official_website"
+      },
+      {
+        "title": "IEEE TMI 2021 Paper",
+        "url": "https://doi.org/10.1109/TMI.2021.3085712",
+        "type": "original_paper"
+      },
+      {
+        "title": "PubMed Record (PMID: 34086562)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34086562/",
+        "type": "documentation"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against IEEE TMI publication and Grand Challenge data page. Derived from 71 patients across 37 hospitals and 4 organs. Contains over 46,000 nuclei across 4 cell types. Licensed under CC BY-NC-SA 4.0."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "monuseg",
+    "slug": "monuseg",
+    "name": "MoNuSeg: Multi-Organ Nucleus Segmentation Benchmark",
+    "description": "MoNuSeg is a foundational computational pathology benchmark for generalized nucleus boundary segmentation in digitized whole-slide images (WSIs). It contains 44 Hematoxylin and Eosin (H&E) stained tissue image patches of 1,000x1,000 pixels captured at 40x magnification across 7 organs (breast, liver, kidney, prostate, bladder, colon, stomach) from The Cancer Genome Atlas (TCGA). Approximately 21,623 individual nuclei boundaries were manually delineated by pathologists. The benchmark evaluates model generalizability across diverse organ types and staining variations under a 30-image training and 14-image testing partition.",
+    "homepage_url": "https://monuseg.grand-challenge.org/",
+    "publisher": {
+      "name": "Indian Institute of Technology Bombay",
+      "type": "academic",
+      "url": "https://www.iitb.ac.in/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "instance-segmentation",
+      "cell-segmentation"
+    ],
+    "tags": [
+      "medical-imaging",
+      "computational-pathology",
+      "histopathology",
+      "nuclear-segmentation",
+      "tcga",
+      "grand-challenge",
+      "tmi"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Grand Challenge Academic Research License",
+      "spdx_id": null,
+      "url": "https://monuseg.grand-challenge.org/Data/",
+      "commercial_use": "forbidden",
+      "notes": "MoNuSeg challenge images and annotations are provided for non-commercial academic research and benchmarking under Grand Challenge terms and TCGA data access policies."
+    },
+    "sample_count": {
+      "total": 44,
+      "unit": "images",
+      "status": "verified",
+      "splits": {
+        "train": 30,
+        "test": 14
+      }
+    },
+    "citation": {
+      "paper_title": "A Dataset and a Technique for Generalized Nuclear Segmentation for Computational Pathology",
+      "paper_url": "https://doi.org/10.1109/TMI.2017.2677499",
+      "authors": [
+        "Neeraj Kumar",
+        "Ruchika Verma",
+        "Sanuj Sharma",
+        "Surabhi Bhargava",
+        "Abhishek Vahadane",
+        "Amit Sethi"
+      ],
+      "bibtex": "@article{kumar2017dataset,\n  title={A Dataset and a Technique for Generalized Nuclear Segmentation for Computational Pathology},\n  author={Kumar, Neeraj and Verma, Ruchika and Sharma, Sanuj and Bhargava, Surabhi and Vahadane, Abhishek and Sethi, Amit},\n  journal={IEEE Transactions on Medical Imaging},\n  volume={36},\n  number={7},\n  pages={1550--1560},\n  year={2017},\n  doi={10.1109/TMI.2017.2677499}\n}",
+      "doi": "10.1109/TMI.2017.2677499"
+    },
+    "source_references": [
+      {
+        "title": "MoNuSeg Grand Challenge Portal",
+        "url": "https://monuseg.grand-challenge.org/",
+        "type": "official_website"
+      },
+      {
+        "title": "IEEE TMI 2017 Paper",
+        "url": "https://doi.org/10.1109/TMI.2017.2677499",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Grand Challenge portal and IEEE TMI publication. Contains 44 1000x1000 images (30 train, 14 test) and ~21,623 annotated nuclear boundaries across 7 organs."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mot17",
+    "slug": "mot17",
+    "name": "MOT17: Multiple Object Tracking Benchmark 2017",
+    "description": "MOT17 is a standard multi-object tracking benchmark from the MOTChallenge consortium for tracking pedestrians in unconstrained urban environments. It comprises 14 physical video sequences (7 training and 7 test sequences) with 11,235 frames total (5,316 train, 5,919 test) captured from both moving and static cameras in crowded streets and public squares. Ground-truth pedestrian trajectories are annotated with high precision, including occlusion and visibility ratios. For benchmark standardization, each sequence is paired with public detections from 3 baseline detectors: DPM, Faster R-CNN, and SDP, yielding 42 detector-specific evaluation subsets.",
+    "homepage_url": "https://motchallenge.net/data/MOT17/",
+    "publisher": {
+      "name": "MOTChallenge Consortium",
+      "type": "academic",
+      "url": "https://motchallenge.net/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "multi-object-tracking",
+      "object-detection"
+    ],
+    "tags": [
+      "computer-vision",
+      "video-tracking",
+      "multi-object-tracking",
+      "mot-challenge",
+      "pedestrian-tracking"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "MOTChallenge Non-Commercial Academic License",
+      "spdx_id": null,
+      "url": "https://motchallenge.net/",
+      "commercial_use": "forbidden",
+      "notes": "MOTChallenge datasets are available strictly for non-commercial academic research purposes."
+    },
+    "sample_count": {
+      "total": 14,
+      "unit": "sequences",
+      "status": "verified",
+      "splits": {
+        "train": 7,
+        "test": 7
+      }
+    },
+    "citation": {
+      "paper_title": "MOT16: A Benchmark for Multi-Object Tracking",
+      "paper_url": "https://arxiv.org/abs/1603.00831",
+      "authors": [
+        "Anton Milan",
+        "Laura Leal-Taixé",
+        "Ian Reid",
+        "Stefan Roth",
+        "Konrad Schindler"
+      ],
+      "bibtex": "@article{milan2016mot16,\n  title={MOT16: A Benchmark for Multi-Object Tracking},\n  author={Milan, Anton and Leal-Taix{\\'e}, Laura and Reid, Ian and Roth, Stefan and Schindler, Konrad},\n  journal={arXiv preprint arXiv:1603.00831},\n  year={2016}\n}",
+      "doi": "10.48550/arXiv.1603.00831"
+    },
+    "source_references": [
+      {
+        "title": "MOTChallenge MOT17 Page",
+        "url": "https://motchallenge.net/data/MOT17/",
+        "type": "official_website"
+      },
+      {
+        "title": "MOTChallenge Foundation Paper",
+        "url": "https://arxiv.org/abs/1603.00831",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against MOTChallenge website. Contains 14 physical video sequences (7 train, 7 test) totaling 11,235 frames. Avoiding detector-subset multiplication which inflates sequence count to 42."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "mp-docvqa",
     "slug": "mp-docvqa",
     "name": "MP-DocVQA: Multi-Page Document Visual Question Answering Benchmark",
@@ -36518,6 +37507,94 @@
         "TAHAMID , AHNAF  "
       ],
       "doi": "10.17632/hw2dnyj3r7.2"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "multi3woz",
+    "slug": "multi3woz",
+    "name": "Multi3WOZ: Multilingual Multi-Domain Wizard-of-Oz Dialogue Benchmark",
+    "description": "Multi3WOZ is a multilingual, multi-domain, multi-parallel task-oriented dialogue (ToD) benchmark derived from MultiWOZ 2.1, providing culturally adapted dialogues in 4 typologically diverse languages: Arabic, English, French, and Turkish. Each language contains exactly 9,160 multi-parallel dialogues (7,406 train, 877 validation, 877 test; 36,640 dialogues total) spanning over 100,000 dialogue turns across 7 domains (attraction, hotel, restaurant, taxi, train, hospital, police). Dialogues feature turn-level natural language understanding (NLU), dialogue state tracking (DST), natural language generation (NLG), and end-to-end task-oriented modelling annotations.",
+    "homepage_url": "https://github.com/cambridgeltl/multi3woz",
+    "publisher": {
+      "name": "Cambridge Language Technology Lab",
+      "type": "academic",
+      "url": "https://ltl.fitz.cam.ac.uk/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "task-oriented-dialogue",
+      "dialogue-state-tracking",
+      "natural-language-generation",
+      "natural-language-understanding"
+    ],
+    "tags": [
+      "nlp",
+      "dialogue-systems",
+      "task-oriented-dialogue",
+      "multilingual",
+      "multiwoz",
+      "cambridge",
+      "tacl"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Released by Cambridge Language Technology Lab under MIT License, covering both code and dataset data.zip."
+    },
+    "sample_count": {
+      "total": 36640,
+      "unit": "dialogues",
+      "status": "verified",
+      "splits": {
+        "train": 29624,
+        "validation": 3508,
+        "test": 3508
+      }
+    },
+    "citation": {
+      "paper_title": "Multi3WOZ: A Multilingual, Multi-Domain, Multi-Parallel Dataset for Training and Evaluating Culturally Adapted Task-Oriented Dialog Systems",
+      "paper_url": "https://doi.org/10.1162/tacl_a_00609",
+      "authors": [
+        "Songbo Hu",
+        "Han Zhou",
+        "Mete Hergul",
+        "Milan Gritta",
+        "Guchun Zhang",
+        "Ignacio Iacobacci",
+        "Ivan Vulić",
+        "Anna Korhonen"
+      ],
+      "bibtex": "@article{hu-etal-2023-multi3woz,\n  title = \"{M}ulti3{WOZ}: A Multilingual, Multi-Domain, Multi-Parallel Dataset for Training and Evaluating Culturally Adapted Task-Oriented Dialog Systems\",\n  author = \"Hu, Songbo and Zhou, Han and Hergul, Mete and Gritta, Milan and Zhang, Guchun and Iacobacci, Ignacio and Vuli{\\'c}, Ivan and Korhonen, Anna\",\n  journal = \"Transactions of the Association for Computational Linguistics\",\n  volume = \"11\",\n  pages = \"1342--1360\",\n  year = \"2023\",\n  doi = \"10.1162/tacl_a_00609\"\n}",
+      "doi": "10.1162/tacl_a_00609"
+    },
+    "source_references": [
+      {
+        "title": "Cambridge LTL Multi3WOZ Official Repository",
+        "url": "https://github.com/cambridgeltl/multi3woz",
+        "type": "repository"
+      },
+      {
+        "title": "Multi3WOZ Annotation Guidelines",
+        "url": "https://cambridgeltl.github.io/multi3woz/",
+        "type": "documentation"
+      },
+      {
+        "title": "TACL 2023 Paper",
+        "url": "https://doi.org/10.1162/tacl_a_00609",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Cambridge LTL repository (2023-12-15 corrected release) and TACL 2023 publication. Exactly 9,160 multi-parallel dialogues across 4 languages = 36,640 total dialogue instances (29,624 train, 3,508 val, 3,508 test). MIT license covers both code and data."
     }
   },
   {
@@ -39924,6 +41001,90 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "nuinsseg",
+    "slug": "nuinsseg",
+    "name": "NuInsSeg: Multi-Organ Multi-Species Nuclei Instance Segmentation Benchmark",
+    "description": "NuInsSeg is a fully annotated histology benchmark for nuclei instance segmentation in Hematoxylin and Eosin (H&E) stained images. It comprises 665 image patches (512x512 pixels) containing over 30,000 manually segmented nuclei sourced from 31 human and mouse organs spanning diverse healthy and pathological tissue variations. A defining feature of NuInsSeg is the provision of ground-truth ambiguous area masks covering regions where deterministic boundaries cannot be delineated even by human pathology experts, providing a rigorous benchmark for evaluating boundary calibration and uncertain region handling.",
+    "homepage_url": "https://github.com/masih4/NuInsSeg",
+    "publisher": {
+      "name": "Medical University of Vienna",
+      "type": "academic",
+      "url": "https://www.meduniwien.ac.at/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "instance-segmentation",
+      "semantic-segmentation",
+      "cell-segmentation"
+    ],
+    "tags": [
+      "medical-imaging",
+      "computational-pathology",
+      "nuclei-segmentation",
+      "histopathology",
+      "multi-organ",
+      "multi-species",
+      "zenodo",
+      "nature-scientific-data"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "NuInsSeg dataset archive on Zenodo and GitHub is licensed under CC BY 4.0."
+    },
+    "sample_count": {
+      "total": 665,
+      "unit": "patches",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "NuInsSeg: A fully annotated dataset for nuclei instance segmentation in H&E-stained histological images",
+      "paper_url": "https://doi.org/10.1038/s41597-024-03117-2",
+      "authors": [
+        "Amirreza Mahbod",
+        "Christine Polak",
+        "Katharina Feldmann",
+        "Rumsha Khan",
+        "Katharina Gelles",
+        "Georg Dorffner",
+        "Ramona Woitek",
+        "Sepideh Hatamikia",
+        "Isabella Ellinger"
+      ],
+      "bibtex": "@article{mahbod2024nuinsseg,\n  title={NuInsSeg: A fully annotated dataset for nuclei instance segmentation in H&E-stained histological images},\n  author={Mahbod, Amirreza and Polak, Christine and Feldmann, Katharina and Khan, Rumsha and Gelles, Katharina and Dorffner, Georg and Woitek, Ramona and Hatamikia, Sepideh and Ellinger, Isabella},\n  journal={Scientific Data},\n  volume={11},\n  number={1},\n  pages={293},\n  year={2024},\n  doi={10.1038/s41597-024-03117-2}\n}",
+      "doi": "10.1038/s41597-024-03117-2"
+    },
+    "source_references": [
+      {
+        "title": "NuInsSeg GitHub Repository",
+        "url": "https://github.com/masih4/NuInsSeg",
+        "type": "repository"
+      },
+      {
+        "title": "Zenodo Data Archive (Record 10518968)",
+        "url": "https://zenodo.org/records/10518968",
+        "type": "archive"
+      },
+      {
+        "title": "Scientific Data 2024 Paper",
+        "url": "https://doi.org/10.1038/s41597-024-03117-2",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Nature Scientific Data publication and Zenodo record 10518968. Exactly 665 image patches (512x512) and >30,000 nuclei across 31 human and mouse organs. Licensed under CC BY 4.0."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "numenta-anomaly-benchmark",
     "slug": "numenta-anomaly-benchmark",
     "name": "Numenta Anomaly Benchmark (NAB)",
@@ -40101,6 +41262,99 @@
       ],
       "doi": "10.48550/arXiv.2106.11810",
       "bibtex": "@article{caesar2021nuplan,\n  title={nuPlan: A closed-loop ML-based planning benchmark for autonomous vehicles},\n  author={Caesar, Holger and Kabzan, Juraj and Tan, Kok Seang and Fong, Whye Kit and Wolff, Eric and Lang, Alex and Fletcher, Luke and Beijbom, Oscar and Omari, Sammy},\n  journal={arXiv preprint arXiv:2106.11810},\n  year={2021}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "nusax-senti",
+    "slug": "nusax-senti",
+    "name": "NusaX-Senti: Multilingual Sentiment Analysis Benchmark for Indonesian Local Languages",
+    "description": "NusaX-Senti is a high-quality multi-parallel sentiment analysis benchmark spanning 10 Indonesian local languages (Acehnese, Balinese, Banjarese, Buginese, Madurese, Minangkabau, Javanese, Ngaju, Sundanese, Toba Batak) along with Indonesian and English (12 languages total). It contains exactly 1,000 parallel sentences per language (12,000 sentences total) translated and verified by professional native-speaker linguists into positive, neutral, and negative labels. Standard evaluation splits provide 500 train, 100 validation, and 400 test sentences per language (Train: 6,000, Validation: 1,200, Test: 4,800).",
+    "homepage_url": "https://github.com/IndoNLP/nusax",
+    "publisher": {
+      "name": "IndoNLP",
+      "type": "community",
+      "url": "https://github.com/IndoNLP"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "sentiment-analysis",
+      "text-classification"
+    ],
+    "tags": [
+      "nlp",
+      "sentiment-analysis",
+      "indonesian-languages",
+      "multilingual",
+      "parallel-corpus",
+      "low-resource",
+      "eacl"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Released by IndoNLP under CC BY-SA 4.0."
+    },
+    "sample_count": {
+      "total": 12000,
+      "unit": "sentences",
+      "status": "verified",
+      "splits": {
+        "train": 6000,
+        "validation": 1200,
+        "test": 4800
+      }
+    },
+    "citation": {
+      "paper_title": "NusaX: Multilingual Parallel Sentiment Analysis Dataset on 10 Indonesian Local Languages",
+      "paper_url": "https://aclanthology.org/2023.eacl-main.57/",
+      "authors": [
+        "Genta Indra Winata",
+        "Alham Fikri Aji",
+        "Samuel Cahyawijaya",
+        "Rahmad Mahendra",
+        "Fajri Koto",
+        "Sebastian Ruder",
+        "Zhi Yuan Neoh",
+        "Bhaskara Hanun",
+        "Christina Soetono",
+        "Radityo Eko Prasojo",
+        "Jie Gu",
+        "Bryan Wilie",
+        "Karissa Vincentio",
+        "Suryani Lim",
+        "NusaX Team"
+      ],
+      "bibtex": "@inproceedings{winata-etal-2023-nusax,\n  title = \"{N}usa{X}: Multilingual Parallel Sentiment Analysis Dataset on 10 {I}ndonesian Local Languages\",\n  author = \"Winata, Genta Indra and Aji, Alham Fikri and Cahyawijaya, Samuel and Mahendra, Rahmad and Koto, Fajri and Ruder, Sebastian and Neoh, Zhi Yuan and Hanun, Bhaskara and Soetono, Christina and Prasojo, Radityo Eko and Gu, Jie and Wilie, Bryan and Vincentio, Karissa and Lim, Suryani and Team, NusaX\",\n  booktitle = \"Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics\",\n  pages = \"815--834\",\n  year = \"2023\",\n  doi = \"10.18653/v1/2023.eacl-main.57\"\n}",
+      "doi": "10.18653/v1/2023.eacl-main.57"
+    },
+    "source_references": [
+      {
+        "title": "NusaX GitHub Repository",
+        "url": "https://github.com/IndoNLP/nusax",
+        "type": "repository"
+      },
+      {
+        "title": "EACL 2023 Paper",
+        "url": "https://aclanthology.org/2023.eacl-main.57/",
+        "type": "original_paper"
+      },
+      {
+        "title": "NusaX Hugging Face Dataset Card",
+        "url": "https://huggingface.co/datasets/indonlp/nusax",
+        "type": "dataset_card"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against GitHub raw data and EACL 2023 paper. Exactly 1,000 parallel sentences per language across 12 languages = 12,000 sentences (6,000 train, 1,200 val, 4,800 test)."
     }
   },
   {
@@ -40580,6 +41834,93 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ogbg-code2",
+    "slug": "ogbg-code2",
+    "name": "OGBG-Code2: Method Abstract Syntax Tree Graph Benchmark",
+    "description": "OGBG-Code2 is a large-scale graph property prediction benchmark for source code representation learning derived from 13,587 popular open-source Python repositories on GitHub. It contains 452,741 Abstract Syntax Tree (AST) graphs extracted from distinct Python methods, with an average of 125.2 nodes and 124.2 edges per graph. The task is to predict the sub-tokens of each method name (code summarization / semantic method naming) evaluated by F1 score over predicted sub-tokens. The dataset uses a project-based split (Train: 407,976 graphs, Validation: 22,817 graphs, Test: 21,948 graphs) ensuring that methods in test and validation sets come from completely disjoint git projects.",
+    "homepage_url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-code2",
+    "publisher": {
+      "name": "Stanford Network Analysis Platform (SNAP)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph"
+    ],
+    "tasks": [
+      "graph-classification",
+      "code-summarization",
+      "graph-machine-learning"
+    ],
+    "tags": [
+      "graph-machine-learning",
+      "ast-graphs",
+      "source-code",
+      "python",
+      "code-understanding",
+      "graph-classification",
+      "ogb-benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Processed AST graphs derived from permissively licensed open-source GitHub repositories via CodeSearchNet under MIT; OGB benchmark software released under MIT."
+    },
+    "sample_count": {
+      "total": 452741,
+      "unit": "graphs",
+      "status": "verified",
+      "splits": {
+        "train": 407976,
+        "validation": 22817,
+        "test": 21948
+      }
+    },
+    "citation": {
+      "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2005.00687",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Marinka Zitnik",
+        "Yuxiao Dong",
+        "Hongyu Ren",
+        "Bowen Liu",
+        "Michele Catasta",
+        "Jure Leskovec"
+      ],
+      "bibtex": "@article{hu2020ogb,\n  title={Open Graph Benchmark: Datasets for Machine Learning on Graphs},\n  author={Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},\n  journal={Advances in Neural Information Processing Systems},\n  volume={33},\n  pages={22118--22133},\n  year={2020}\n}",
+      "doi": "10.48550/arXiv.2005.00687"
+    },
+    "source_references": [
+      {
+        "title": "OGB OGBG-Code2 Official Documentation",
+        "url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-code2",
+        "type": "documentation"
+      },
+      {
+        "title": "Open Graph Benchmark Paper",
+        "url": "https://arxiv.org/abs/2005.00687",
+        "type": "original_paper"
+      },
+      {
+        "title": "OGB GitHub Repository",
+        "url": "https://github.com/snap-stanford/ogb",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Stanford OGB documentation and remote zip inspection. Exactly 452,741 method AST graphs across 13,587 GitHub projects (407,976 train, 22,817 validation, 21,948 test graphs)."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ogbg-molhiv",
     "slug": "ogbg-molhiv",
     "name": "ogbg-molhiv: Molecular Property Prediction",
@@ -40736,6 +42077,94 @@
         "Michele Catasta",
         "Jure Leskovec"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ogbg-moltox21",
+    "slug": "ogbg-moltox21",
+    "name": "OGBG-MolTox21: Tox21 Molecular Graph Property Prediction Benchmark",
+    "description": "OGBG-MolTox21 is a molecular graph property prediction benchmark derived from the NIH Tox21 Data Challenge and MoleculeNet, containing 7,831 small molecules with an average of 18.6 atoms and 19.3 chemical bonds per molecule. Molecules are represented as 2D graphs with rich atom and bond features. The dataset comprises 12 binary classification targets measuring toxicity against nuclear receptor signaling pathways and cellular stress response pathways. Evaluated under a scaffold split (Train: 6,264, Validation: 783, Test: 784 molecules) using average ROC-AUC across all 12 tasks.",
+    "homepage_url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-moltox21",
+    "publisher": {
+      "name": "Stanford Network Analysis Platform (SNAP)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph",
+      "tabular"
+    ],
+    "tasks": [
+      "graph-classification",
+      "molecular-property-prediction",
+      "graph-machine-learning"
+    ],
+    "tags": [
+      "graph-machine-learning",
+      "molecular-ai",
+      "chemistry",
+      "toxicology",
+      "moleculenet",
+      "tox21",
+      "ogb-benchmark"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "Public Domain / CC0 1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Tox21 Challenge biological screening assay data produced by NIH NCATS (US Government work in the public domain); OGB benchmark software released under MIT."
+    },
+    "sample_count": {
+      "total": 7831,
+      "unit": "molecules",
+      "status": "verified",
+      "splits": {
+        "train": 6264,
+        "validation": 783,
+        "test": 784
+      }
+    },
+    "citation": {
+      "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2005.00687",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Marinka Zitnik",
+        "Yuxiao Dong",
+        "Hongyu Ren",
+        "Bowen Liu",
+        "Michele Catasta",
+        "Jure Leskovec"
+      ],
+      "bibtex": "@article{hu2020ogb,\n  title={Open Graph Benchmark: Datasets for Machine Learning on Graphs},\n  author={Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},\n  journal={Advances in Neural Information Processing Systems},\n  volume={33},\n  pages={22118--22133},\n  year={2020}\n}",
+      "doi": "10.48550/arXiv.2005.00687"
+    },
+    "source_references": [
+      {
+        "title": "OGB OGBG-MolTox21 Official Documentation",
+        "url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-moltox21",
+        "type": "documentation"
+      },
+      {
+        "title": "Open Graph Benchmark Paper",
+        "url": "https://arxiv.org/abs/2005.00687",
+        "type": "original_paper"
+      },
+      {
+        "title": "Tox21 Data Challenge",
+        "url": "https://tripod.nih.gov/tox21/challenge/",
+        "type": "official_website"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Stanford OGB documentation and remote zip inspection. Exactly 7,831 molecules (6,264 train, 783 validation, 784 test) with 12 binary toxicity targets under scaffold split."
     }
   },
   {
@@ -40977,6 +42406,175 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ogbl-ppa",
+    "slug": "ogbl-ppa",
+    "name": "OGBL-PPA: Protein-Protein Association Link Prediction Benchmark",
+    "description": "OGBL-PPA is a biological link property prediction benchmark constructed from protein-protein association networks across 58 distinct species in the STRING database. It contains 576,289 protein nodes and 30,326,273 undirected association edges. Each node is annotated with a 58-dimensional one-hot vector indicating its species identity. The task is to predict whether two proteins associate or interact based on a high-throughput biological data split, testing model capability to identify protein interactions not previously detected by low-throughput experiments, evaluated via Hits@100 against 3,000,000 negative edges per split.",
+    "homepage_url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-ppa",
+    "publisher": {
+      "name": "Stanford Network Analysis Platform (SNAP)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph",
+      "tabular"
+    ],
+    "tasks": [
+      "link-prediction",
+      "protein-protein-interaction",
+      "graph-machine-learning"
+    ],
+    "tags": [
+      "graph-machine-learning",
+      "bioinformatics",
+      "protein-protein-interaction",
+      "link-prediction",
+      "biological-networks",
+      "ogb-benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "STRING database protein network data is available under CC BY 4.0; OGB benchmark software is released under MIT."
+    },
+    "sample_count": {
+      "total": 576289,
+      "unit": "nodes",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2005.00687",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Marinka Zitnik",
+        "Yuxiao Dong",
+        "Hongyu Ren",
+        "Bowen Liu",
+        "Michele Catasta",
+        "Jure Leskovec"
+      ],
+      "bibtex": "@article{hu2020ogb,\n  title={Open Graph Benchmark: Datasets for Machine Learning on Graphs},\n  author={Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},\n  journal={Advances in Neural Information Processing Systems},\n  volume={33},\n  pages={22118--22133},\n  year={2020}\n}",
+      "doi": "10.48550/arXiv.2005.00687"
+    },
+    "source_references": [
+      {
+        "title": "OGB OGBL-PPA Official Documentation",
+        "url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-ppa",
+        "type": "documentation"
+      },
+      {
+        "title": "Open Graph Benchmark Paper",
+        "url": "https://arxiv.org/abs/2005.00687",
+        "type": "original_paper"
+      },
+      {
+        "title": "OGB GitHub Repository",
+        "url": "https://github.com/snap-stanford/ogb",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Stanford OGB documentation and primary publication. Total protein nodes: 576,289; total association edges: 30,326,273 (25,207,706 train, 2,260,840 validation, 2,857,727 test edges)."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ogbl-wikikg2",
+    "slug": "ogbl-wikikg2",
+    "name": "OGBL-WikiKG2: Wikidata Knowledge Graph Completion Benchmark",
+    "description": "OGBL-WikiKG2 is a large-scale knowledge graph benchmark extracted from Wikidata, consisting of 2,500,604 entities, 535 relation types, and 17,137,181 relational triplets. It is designed to evaluate link property prediction (knowledge graph completion) by predicting tail or head entities given an entity and a relation (h, r, ?). Evaluated under a time-stamped split where validation and test sets contain facts that emerged later in time than training triplets (Train: 16,109,182 triplets, Validation: 429,456 triplets, Test: 598,543 triplets), evaluating the model's ability to extrapolate to newly emerging facts using 1,000 negative candidates per test query.",
+    "homepage_url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-wikikg2",
+    "publisher": {
+      "name": "Stanford Network Analysis Platform (SNAP)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph",
+      "tabular"
+    ],
+    "tasks": [
+      "link-prediction",
+      "knowledge-graph-completion",
+      "graph-machine-learning"
+    ],
+    "tags": [
+      "graph-machine-learning",
+      "knowledge-graph",
+      "link-prediction",
+      "wikidata",
+      "knowledge-base-completion",
+      "ogb-benchmark"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "Creative Commons Zero 1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Wikidata factual triples are dedicated to the public domain under CC0 1.0; OGB benchmark code is licensed under MIT."
+    },
+    "sample_count": {
+      "total": 17137181,
+      "unit": "triplets",
+      "status": "verified",
+      "splits": {
+        "train": 16109182,
+        "validation": 429456,
+        "test": 598543
+      }
+    },
+    "citation": {
+      "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2005.00687",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Marinka Zitnik",
+        "Yuxiao Dong",
+        "Hongyu Ren",
+        "Bowen Liu",
+        "Michele Catasta",
+        "Jure Leskovec"
+      ],
+      "bibtex": "@article{hu2020ogb,\n  title={Open Graph Benchmark: Datasets for Machine Learning on Graphs},\n  author={Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},\n  journal={Advances in Neural Information Processing Systems},\n  volume={33},\n  pages={22118--22133},\n  year={2020}\n}",
+      "doi": "10.48550/arXiv.2005.00687"
+    },
+    "source_references": [
+      {
+        "title": "OGB OGBL-WikiKG2 Official Documentation",
+        "url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-wikikg2",
+        "type": "documentation"
+      },
+      {
+        "title": "Open Graph Benchmark Paper",
+        "url": "https://arxiv.org/abs/2005.00687",
+        "type": "original_paper"
+      },
+      {
+        "title": "OGB GitHub Repository",
+        "url": "https://github.com/snap-stanford/ogb",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Stanford OGB documentation and primary NeurIPS 2020 paper. Entity count: 2,500,604; relations: 535; triplets: 17,137,181 (16,109,182 train, 429,456 val, 598,543 test)."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ogbn-arxiv",
     "slug": "ogbn-arxiv",
     "name": "ogbn-arxiv: Citation Network Benchmark",
@@ -41052,6 +42650,87 @@
         "Jure Leskovec"
       ],
       "bibtex": "@article{hu2020ogb,\n  title = {Open Graph Benchmark: Datasets for Machine Learning on Graphs},\n  author = {Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},\n  journal = {Advances in Neural Information Processing Systems},\n  volume = {33},\n  pages = {22118--22133},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ogbn-mag",
+    "slug": "ogbn-mag",
+    "name": "OGBN-MAG: Microsoft Academic Graph Heterogeneous Node Classification Benchmark",
+    "description": "OGBN-MAG is a large-scale heterogeneous network benchmark extracted from the Microsoft Academic Graph (MAG), comprising 1,939,743 nodes across 4 entity types (736,389 papers, 1,134,649 authors, 8,740 institutions, and 59,965 fields of study) and 21,111,007 directed relation edges (paper cites paper, author writes paper, author affiliated with institution, and paper has topic field of study). Each paper node is equipped with a 128-dimensional Word2Vec feature vector extracted from paper titles and abstracts. The task is to predict the publication venue (349 venue classes) of papers published in 2019 given the heterogeneous relational context, evaluated under a realistic temporal split (papers before 2018 for train, 2018 for validation, 2019 for test).",
+    "homepage_url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-mag",
+    "publisher": {
+      "name": "Stanford Network Analysis Platform (SNAP)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph",
+      "tabular"
+    ],
+    "tasks": [
+      "node-classification",
+      "graph-machine-learning"
+    ],
+    "tags": [
+      "graph-machine-learning",
+      "heterogeneous-graph",
+      "node-classification",
+      "academic-graph",
+      "citation-network",
+      "ogb-benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License (ODC-By v1.0)",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "OGBN-MAG is derived from Microsoft Academic Graph under ODC-By v1.0; OGB benchmark software and loaders are released under MIT."
+    },
+    "sample_count": {
+      "total": 1939743,
+      "unit": "nodes",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2005.00687",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Marinka Zitnik",
+        "Yuxiao Dong",
+        "Hongyu Ren",
+        "Bowen Liu",
+        "Michele Catasta",
+        "Jure Leskovec"
+      ],
+      "bibtex": "@article{hu2020ogb,\n  title={Open Graph Benchmark: Datasets for Machine Learning on Graphs},\n  author={Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},\n  journal={Advances in Neural Information Processing Systems},\n  volume={33},\n  pages={22118--22133},\n  year={2020}\n}",
+      "doi": "10.48550/arXiv.2005.00687"
+    },
+    "source_references": [
+      {
+        "title": "OGB OGBN-MAG Official Documentation",
+        "url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-mag",
+        "type": "documentation"
+      },
+      {
+        "title": "Open Graph Benchmark Paper",
+        "url": "https://arxiv.org/abs/2005.00687",
+        "type": "original_paper"
+      },
+      {
+        "title": "OGB GitHub Repository",
+        "url": "https://github.com/snap-stanford/ogb",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Stanford OGB documentation and primary NeurIPS 2020 paper. Node counts: 1,939,743 nodes (736,389 papers, 1,134,649 authors, 8,740 institutions, 59,965 fields) and 21,111,007 edges. Paper target splits: 629,571 train, 64,879 validation, 41,939 test."
     }
   },
   {
@@ -42044,6 +43723,84 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "openearthmap",
+    "slug": "openearthmap",
+    "name": "OpenEarthMap: Benchmark for Global High-Resolution Land Cover Mapping",
+    "description": "OpenEarthMap is a benchmark dataset for global high-resolution land cover mapping from high-resolution optical remote sensing imagery. It contains 5,000 aerial and satellite images of 1,000x1,000 pixels at 0.25–0.5 meter ground sampling distance (GSD), manually annotated with dense pixel-level raster labels across 8 land-cover classes: Bareland, Rangeland, Developed space, Road, Tree, Water, Agriculture land, and Building. The dataset spans 97 regions across 44 countries on six continents, capturing substantial geographic, biome, urban-structure, and seasonal diversity to evaluate global out-of-domain model generalizability.",
+    "homepage_url": "https://open-earth-map.org/",
+    "publisher": {
+      "name": "RIKEN Center for Advanced Intelligence Project & The University of Tokyo",
+      "type": "academic",
+      "url": "https://open-earth-map.org/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "land-cover-mapping"
+    ],
+    "tags": [
+      "remote-sensing",
+      "geospatial",
+      "land-cover",
+      "high-resolution-imagery",
+      "satellite-imagery",
+      "aerial-imagery",
+      "semantic-segmentation",
+      "wacv"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "OpenEarthMap dataset on Zenodo (Record 7223446) is released under CC BY 4.0."
+    },
+    "sample_count": {
+      "total": 5000,
+      "unit": "images",
+      "status": "verified"
+    },
+    "citation": {
+      "paper_title": "OpenEarthMap: A Benchmark Dataset for Global High-Resolution Land Cover Mapping",
+      "paper_url": "https://doi.org/10.1109/WACV56688.2023.00619",
+      "authors": [
+        "Junshi Xia",
+        "Naoto Yokoya",
+        "Bruno Adriano",
+        "Clifford Broni-Bediako"
+      ],
+      "bibtex": "@inproceedings{xia2023openearthmap,\n  title={OpenEarthMap: A Benchmark Dataset for Global High-Resolution Land Cover Mapping},\n  author={Xia, Junshi and Yokoya, Naoto and Adriano, Bruno and Broni-Bediako, Clifford},\n  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},\n  pages={6254--6264},\n  year={2023},\n  doi={10.1109/WACV56688.2023.00619}\n}",
+      "doi": "10.1109/WACV56688.2023.00619"
+    },
+    "source_references": [
+      {
+        "title": "OpenEarthMap Official Website",
+        "url": "https://open-earth-map.org/",
+        "type": "official_website"
+      },
+      {
+        "title": "OpenEarthMap Zenodo Archive (Record 7223446)",
+        "url": "https://zenodo.org/records/7223446",
+        "type": "archive"
+      },
+      {
+        "title": "WACV 2023 Paper",
+        "url": "https://doi.org/10.1109/WACV56688.2023.00619",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against WACV 2023 publication and Zenodo record 7223446. Exactly 5,000 1000x1000 images (0.25-0.5m GSD) across 97 regions in 44 countries. 8 land cover classes. Licensed under CC BY 4.0."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "openlane-v2",
     "slug": "openlane-v2",
     "name": "OpenLane-V2 — 3D Lane and Traffic Topology Dataset",
@@ -42777,6 +44534,90 @@
       "data_sources": [
         "Scale AI & Hesai Technology autonomous vehicle sensor platform"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "pannuke",
+    "slug": "pannuke",
+    "name": "PanNuke: Open Pan-Cancer Histology Dataset for Nuclei Instance Segmentation and Classification",
+    "description": "PanNuke is a comprehensive pan-cancer histology benchmark for nuclear instance segmentation and classification across 19 human tissue types (including adrenal gland, bile duct, bladder, breast, cervix, colon, esophagus, head & neck, kidney, liver, lung, ovary, pancreas, prostate, skin, stomach, testis, thyroid, and uterus). It contains 7,901 visual field patches of 256x256 pixels at 40x magnification, with 189,744 exhaustively annotated nuclei classified into 5 clinical categories: neoplastic, non-neoplastic epithelial, inflammatory, connective tissue, and dead. Distributed with 3 standardized randomized cross-validation folds (Fold 1: 2,656 patches, Fold 2: 2,523 patches, Fold 3: 2,722 patches).",
+    "homepage_url": "https://warwick.ac.uk/fac/cross_fac/tia/data/pannuke",
+    "publisher": {
+      "name": "Tissue Image Analytics (TIA) Centre, University of Warwick",
+      "type": "academic",
+      "url": "https://warwick.ac.uk/fac/cross_fac/tia/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "instance-segmentation",
+      "cell-classification",
+      "cell-segmentation"
+    ],
+    "tags": [
+      "medical-imaging",
+      "computational-pathology",
+      "pan-cancer",
+      "nuclei-segmentation",
+      "histopathology",
+      "cell-classification",
+      "warwick-tia"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "PanNuke is released by the University of Warwick TIA Centre under CC BY-NC-SA 4.0 strictly for research purposes; commercial uses are explicitly prohibited."
+    },
+    "sample_count": {
+      "total": 7901,
+      "unit": "patches",
+      "status": "verified",
+      "splits": {
+        "fold1": 2656,
+        "fold2": 2523,
+        "fold3": 2722
+      }
+    },
+    "citation": {
+      "paper_title": "PanNuke: An Open Pan-Cancer Histology Dataset for Nuclei Instance Segmentation and Classification",
+      "paper_url": "https://doi.org/10.1007/978-3-030-23937-4_2",
+      "authors": [
+        "Jevgenij Gamper",
+        "Navid Alemi Koohbanani",
+        "Ksenija Benet",
+        "Ali Khuram",
+        "Nasir Rajpoot"
+      ],
+      "bibtex": "@inproceedings{gamper2019pannuke,\n  title={PanNuke: An Open Pan-Cancer Histology Dataset for Nuclei Instance Segmentation and Classification},\n  author={Gamper, Jevgenij and Koohbanani, Navid Alemi and Benet, Ksenija and Khuram, Ali and Rajpoot, Nasir},\n  booktitle={European Congress on Digital Pathology},\n  pages={11--19},\n  year={2019},\n  doi={10.1007/978-3-030-23937-4_2}\n}",
+      "doi": "10.1007/978-3-030-23937-4_2"
+    },
+    "source_references": [
+      {
+        "title": "PanNuke Official Portal at Warwick TIA Centre",
+        "url": "https://warwick.ac.uk/fac/cross_fac/tia/data/pannuke",
+        "type": "official_website"
+      },
+      {
+        "title": "ECDP 2019 Paper",
+        "url": "https://doi.org/10.1007/978-3-030-23937-4_2",
+        "type": "original_paper"
+      },
+      {
+        "title": "PanNuke Metrics GitHub Repository",
+        "url": "https://github.com/TIA-Lab/PanNuke-metrics",
+        "type": "repository"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Warwick TIA Centre official portal. Exactly 7,901 patches (Fold 1: 2,656, Fold 2: 2,523, Fold 3: 2,722) and 189,744 annotated nuclei across 19 tissues. Licensed under CC BY-NC-SA 4.0; commercial use forbidden."
     }
   },
   {
@@ -44713,6 +46554,99 @@
       ],
       "doi": "10.1109/WACV45572.2020.9093523",
       "bibtex": "@inproceedings{methani2020plotqa,\n  title={PlotQA: Reasoning over Scientific Plots},\n  author={Methani, Nitesh and Ganguly, Pritha and Khapra, Mitesh M. and Kumar, Pratyush},\n  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},\n  pages={2171--2180},\n  year={2020},\n  doi={10.1109/WACV45572.2020.9093523}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "polypgen",
+    "slug": "polypgen",
+    "name": "PolypGen: Multi-Centre Polyp Detection and Segmentation Benchmark",
+    "description": "PolypGen is a multi-centre colonoscopy benchmark specifically designed to assess domain generalization for colorectal polyp detection and segmentation. Curated across 6 clinical centres in Norway, France, the United Kingdom, Egypt, and Italy (>300 patients), it contains 8,037 frames: 3,762 positive frames (1,537 still images and 2,225 positive video sequence frames) and 4,275 negative sequence frames. Verified by 6 senior gastroenterologists, the dataset includes pixel-level segmentation masks and bounding boxes covering wide variations in polyp morphology, flat lesions, and resection artifacts across different endoscopic camera systems.",
+    "homepage_url": "https://github.com/DebeshJha/PolypGen",
+    "publisher": {
+      "name": "Simula Research Laboratory & University of Oxford",
+      "type": "academic",
+      "url": "https://www.simula.no/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "object-detection",
+      "polyp-segmentation"
+    ],
+    "tags": [
+      "medical-imaging",
+      "endoscopy",
+      "colonoscopy",
+      "polyp-segmentation",
+      "generalization-assessment",
+      "multi-center",
+      "nature-scientific-data"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Released under CC BY 4.0 as explicitly documented in Nature Scientific Data publication."
+    },
+    "sample_count": {
+      "total": 8037,
+      "unit": "frames",
+      "status": "verified",
+      "splits": {
+        "positive_frames": 3762,
+        "negative_frames": 4275
+      }
+    },
+    "citation": {
+      "paper_title": "A multi-centre polyp detection and segmentation dataset for generalisability assessment",
+      "paper_url": "https://doi.org/10.1038/s41597-023-01981-y",
+      "authors": [
+        "Sharib Ali",
+        "Debesh Jha",
+        "Noha Ghatwary",
+        "Stefano Realdon",
+        "Renato Cannizzaro",
+        "Osama E. Salem",
+        "Dominique Lamarque",
+        "Christian Daul",
+        "Michael A. Riegler",
+        "Kim V. Anonsen",
+        "Andreas Petlund",
+        "Pål Halvorsen",
+        "Jens Rittscher",
+        "Thomas de Lange",
+        "James E. East"
+      ],
+      "bibtex": "@article{ali2023multi,\n  title={A multi-centre polyp detection and segmentation dataset for generalisability assessment},\n  author={Ali, Sharib and Jha, Debesh and Ghatwary, Noha and Realdon, Stefano and Cannizzaro, Renato and Salem, Osama E. and Lamarque, Dominique and Daul, Christian and Riegler, Michael A. and Anonsen, Kim V. and Petlund, Andreas and Halvorsen, P{\\aa}l and Rittscher, Jens and de Lange, Thomas and East, James E.},\n  journal={Scientific Data},\n  volume={10},\n  number={1},\n  pages={75},\n  year={2023},\n  doi={10.1038/s41597-023-01981-y}\n}",
+      "doi": "10.1038/s41597-023-01981-y"
+    },
+    "source_references": [
+      {
+        "title": "PolypGen GitHub Repository",
+        "url": "https://github.com/DebeshJha/PolypGen",
+        "type": "repository"
+      },
+      {
+        "title": "Scientific Data 2023 Paper",
+        "url": "https://doi.org/10.1038/s41597-023-01981-y",
+        "type": "original_paper"
+      },
+      {
+        "title": "Synapse Project syn26376615",
+        "url": "https://www.synapse.org/#!Synapse:syn26376615/wiki/613312",
+        "type": "archive"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Nature Scientific Data publication and GitHub README. Exactly 8,037 total frames (3,762 positive frames and 4,275 negative frames) from 6 centres (>300 patients). Licensed under CC BY 4.0."
     }
   },
   {
@@ -50604,6 +52538,97 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "sonyc-ust",
+    "slug": "sonyc-ust",
+    "name": "SONYC-UST: SONYC Urban Sound Tagging Benchmark",
+    "description": "SONYC Urban Sound Tagging (SONYC-UST) is a multi-label acoustic monitoring benchmark gathered from an urban acoustic sensor network of over 60 physical nodes deployed across New York City. SONYC-UST v2.3 comprises 18,510 10-second audio recordings (13,538 train, 4,308 validation, 664 test) captured with identical microphones. Audio is tagged with a two-level hierarchical taxonomy developed with the NYC Department of Environmental Protection, encompassing 8 coarse classes and 23 fine-grained urban noise categories (including engine, machinery-impact, alert-signal, human-voice, music, dog, powered-saw). Annotated by Zooniverse volunteers and verified by expert acoustic engineers, with spatiotemporal metadata.",
+    "homepage_url": "https://wp.nyu.edu/sonyc/resources/",
+    "publisher": {
+      "name": "Music and Audio Research Lab (MARL) & CUSP, New York University",
+      "type": "academic",
+      "url": "https://wp.nyu.edu/sonyc/"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "audio-classification",
+      "sound-event-detection",
+      "urban-sound-tagging"
+    ],
+    "tags": [
+      "audio",
+      "sound-event-detection",
+      "urban-acoustics",
+      "noise-monitoring",
+      "multi-label-classification",
+      "zenodo",
+      "dcase"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "SONYC-UST v2.3 is released on Zenodo under CC BY 4.0."
+    },
+    "sample_count": {
+      "total": 18510,
+      "unit": "recordings",
+      "status": "verified",
+      "splits": {
+        "train": 13538,
+        "validation": 4308,
+        "test": 664
+      }
+    },
+    "citation": {
+      "paper_title": "SONYC-UST-V2: An Urban Sound Tagging Dataset with Spatiotemporal Context",
+      "paper_url": "https://arxiv.org/abs/2009.05188",
+      "authors": [
+        "Mark Cartwright",
+        "Jason Cramer",
+        "Ana Elisa Mendez Mendez",
+        "Yu Wang",
+        "Ho-Hsiang Wu",
+        "Vincent Lostanlen",
+        "Magdalena Fuentes",
+        "Graham Dove",
+        "Charlie Mydlarz",
+        "Justin Salamon",
+        "Oded Nov",
+        "Juan Pablo Bello"
+      ],
+      "bibtex": "@inproceedings{cartwright2020sonyc,\n  title={SONYC-UST-V2: An Urban Sound Tagging Dataset with Spatiotemporal Context},\n  author={Cartwright, Mark and Cramer, Jason and Mendez, Ana Elisa Mendez and Wang, Yu and Wu, Ho-Hsiang and Lostanlen, Vincent and Fuentes, Magdalena and Dove, Graham and Mydlarz, Charlie and Salamon, Justin and Nov, Oded and Bello, Juan Pablo},\n  booktitle={Proceedings of the Workshop on Detection and Classification of Acoustic Scenes and Events (DCASE)},\n  pages={35--39},\n  year={2020}\n}",
+      "doi": "10.5281/zenodo.3966543"
+    },
+    "source_references": [
+      {
+        "title": "SONYC Resources Page",
+        "url": "https://wp.nyu.edu/sonyc/resources/",
+        "type": "official_website"
+      },
+      {
+        "title": "Zenodo Record 3966543 (SONYC-UST v2.3)",
+        "url": "https://zenodo.org/records/3966543",
+        "type": "archive"
+      },
+      {
+        "title": "DCASE 2020 Paper",
+        "url": "https://arxiv.org/abs/2009.05188",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against Zenodo record 3966543 (v2.3) and DCASE 2020 paper. Exactly 18,510 10-second recordings (13,538 train, 4,308 val, 664 test) across 8 coarse and 23 fine classes. CC BY 4.0 license."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "south-africa-crop-type",
     "slug": "south-africa-crop-type",
     "name": "Crop Type Classification Dataset for Western Cape, South Africa",
@@ -51476,6 +53501,86 @@
       ],
       "doi": "10.18653/v1/D18-1425",
       "bibtex": "@inproceedings{yu-etal-2018-spider,\n  title = {Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task},\n  author = {Yu, Tao and Zhang, Rui and Yang, Kai and Yasunaga, Michihiro and Wang, Dongxu and Li, Zifan and Ma, James and Li, Irene and Yao, Qingning and Roman, Shanelle and Zhang, Zilin and Chen, Tao and Yin, Peter and Peng, Hao and Yan, Shiyan and Smith, Noah and Phang, Jason and Tang, Xiangru and Zettlemoyer, Luke and Radev, Dragomir},\n  booktitle = {Proceedings of EMNLP 2018},\n  pages = {3911--3921},\n  year = {2018}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "sportsmot",
+    "slug": "sportsmot",
+    "name": "SportsMOT: Multi-Actor Tracking in Sports Scenes",
+    "description": "SportsMOT is a multi-object tracking benchmark focused on fast-paced, multi-actor movements in team sports broadcasts. It consists of 240 video clips (average 485 frames per clip, totaling ~116,400 frames) collected across three sports categories: basketball, football (soccer), and volleyball. The dataset captures key challenges in athletic tracking, including high-speed player movements, non-linear trajectories, abrupt direction reversals, shared team jerseys, and rapid pan-tilt-zoom camera motion. Annotated with full bounding boxes and identities following the MOT Challenge format, partitioned into 45 train, 45 validation, and 150 test clips.",
+    "homepage_url": "https://github.com/MCG-NJU/SportsMOT",
+    "publisher": {
+      "name": "Nanjing University & ByteDance",
+      "type": "academic",
+      "url": "https://mcg.nju.edu.cn/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "multi-object-tracking",
+      "sports-analytics"
+    ],
+    "tags": [
+      "computer-vision",
+      "multi-object-tracking",
+      "sports",
+      "video-tracking",
+      "basketball",
+      "football",
+      "volleyball",
+      "iccv"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Annotations and benchmark distributed under CC BY-NC 4.0 strictly for non-commercial academic research."
+    },
+    "sample_count": {
+      "total": 240,
+      "unit": "clips",
+      "status": "verified",
+      "splits": {
+        "train": 45,
+        "validation": 45,
+        "test": 150
+      }
+    },
+    "citation": {
+      "paper_title": "SportsMOT: A Large Multi-Object Tracking Dataset in Multiple Sports Scenes",
+      "paper_url": "https://doi.org/10.1109/ICCV51070.2023.00911",
+      "authors": [
+        "Yutao Cui",
+        "Chenkai Zeng",
+        "Xiaoyu Zhao",
+        "Yichun Yang",
+        "Gangshan Wu",
+        "Limin Wang"
+      ],
+      "bibtex": "@inproceedings{cui2023sportsmot,\n  title={SportsMOT: A Large Multi-Object Tracking Dataset in Multiple Sports Scenes},\n  author={Cui, Yutao and Zeng, Chenkai and Zhao, Xiaoyu and Yang, Yichun and Wu, Gangshan and Wang, Limin},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},\n  pages={9921--9931},\n  year={2023},\n  doi={10.1109/ICCV51070.2023.00911}\n}",
+      "doi": "10.1109/ICCV51070.2023.00911"
+    },
+    "source_references": [
+      {
+        "title": "SportsMOT GitHub Repository",
+        "url": "https://github.com/MCG-NJU/SportsMOT",
+        "type": "repository"
+      },
+      {
+        "title": "ICCV 2023 Paper",
+        "url": "https://doi.org/10.1109/ICCV51070.2023.00911",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against GitHub repository and ICCV 2023 paper. Contains 240 video clips (45 train, 45 val, 150 test) with ~116,400 frames across 3 sports."
     }
   },
   {
@@ -57905,6 +60010,96 @@
       ],
       "doi": "10.1111/1752-1688.12532",
       "bibtex": "@article{read2017wqp,\n  title={Water Quality Portal as a collaborative data hub for national water quality data},\n  author={Read, Emily K and Falcone, James M and Kovach, Charles P and Welty, Timothy S and Leonard, Lorne G and others},\n  journal={JAWRA Journal of the American Water Resources Association},\n  volume={53},\n  number={3},\n  pages={700--712},\n  year={2017},\n  publisher={Wiley Online Library},\n  doi={10.1111/1752-1688.12532}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "wavcaps",
+    "slug": "wavcaps",
+    "name": "WavCaps: Weakly-Labelled Audio Captioning Benchmark",
+    "description": "WavCaps is a large-scale audio-language multimodal dataset comprising 403,050 audio clips paired with ChatGPT-assisted descriptive captions. The audio is sourced from 4 distinct collections: FreeSound (262,300 clips), AudioSet strongly-labelled subset (108,317 clips), BBC Sound Effects (31,201 clips), and SoundBible (1,232 clips). Sourced descriptions were filtered and re-written using ChatGPT into natural language captions describing acoustic events, spatial scene properties, and sound sources, supporting audio-language retrieval, automated audio captioning (AAC), and zero-shot sound classification.",
+    "homepage_url": "https://github.com/XinhaoMei/WavCaps",
+    "publisher": {
+      "name": "Centre for Vision, Speech and Signal Processing (CVSSP), University of Surrey",
+      "type": "academic",
+      "url": "https://www.surrey.ac.uk/centre-vision-speech-signal-processing"
+    },
+    "modalities": [
+      "audio",
+      "nlp"
+    ],
+    "tasks": [
+      "audio-captioning",
+      "audio-retrieval",
+      "zero-shot-audio-classification"
+    ],
+    "tags": [
+      "audio",
+      "audio-captioning",
+      "audio-language",
+      "chatgpt",
+      "weakly-supervised",
+      "sound-events",
+      "taslp"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "WavCaps Academic Research Agreement & Multi-Source Audio Terms",
+      "spdx_id": null,
+      "url": "https://github.com/XinhaoMei/WavCaps#license",
+      "commercial_use": "forbidden",
+      "notes": "The WavCaps dataset is strictly restricted to academic research purposes. Audio recordings derive from 4 external sources subject to their respective terms: BBC Sound Effects (non-commercial research only), AudioSet (YouTube Terms of Service), FreeSound (individual CC licenses), and SoundBible. Commercial use is forbidden."
+    },
+    "sample_count": {
+      "total": 403050,
+      "unit": "audio_clips",
+      "status": "verified",
+      "splits": {
+        "freesound": 262300,
+        "audioset_strong": 108317,
+        "bbc_sound_effects": 31201,
+        "soundbible": 1232
+      }
+    },
+    "citation": {
+      "paper_title": "WavCaps: A ChatGPT-Assisted Weakly-Labelled Audio Captioning Dataset for Audio-Language Multimodal Research",
+      "paper_url": "https://doi.org/10.1109/TASLP.2024.3419446",
+      "authors": [
+        "Xinhao Mei",
+        "Chutong Meng",
+        "Haohe Liu",
+        "Qiuqiang Kong",
+        "Tom Ko",
+        "Chengqi Zhao",
+        "Mark D. Plumbley",
+        "Yuexian Zou",
+        "Wenwu Wang"
+      ],
+      "bibtex": "@article{mei2024wavcaps,\n  title={WavCaps: A ChatGPT-Assisted Weakly-Labelled Audio Captioning Dataset for Audio-Language Multimodal Research},\n  author={Mei, Xinhao and Meng, Chutong and Liu, Haohe and Kong, Qiuqiang and Ko, Tom and Zhao, Chengqi and Plumbley, Mark D. and Zou, Yuexian and Wang, Wenwu},\n  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  volume={32},\n  pages={3348--3361},\n  year={2024},\n  doi={10.1109/TASLP.2024.3419446}\n}",
+      "doi": "10.1109/TASLP.2024.3419446"
+    },
+    "source_references": [
+      {
+        "title": "WavCaps GitHub Repository",
+        "url": "https://github.com/XinhaoMei/WavCaps",
+        "type": "repository"
+      },
+      {
+        "title": "WavCaps Hugging Face Dataset Card",
+        "url": "https://huggingface.co/datasets/cvssp/WavCaps",
+        "type": "dataset_card"
+      },
+      {
+        "title": "IEEE/ACM TASLP 2024 Paper",
+        "url": "https://doi.org/10.1109/TASLP.2024.3419446",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Data Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified against IEEE/ACM TASLP publication and GitHub README. Exactly 403,050 audio-caption pairs across 4 subsets: FreeSound (262,300), AudioSet (108,317), BBC SFX (31,201), SoundBible (1,232). Non-commercial academic research use only."
     }
   },
   {
