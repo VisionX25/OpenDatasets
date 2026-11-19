@@ -1,7 +1,7 @@
 # OpenDatasets Metadata Quality & Research Readiness Audit
 
-> **Audit Task:** Task 40<br>
-> **Audit Date:** 2026-11-15<br>
+> **Audit Task:** Task 49 — 700-Record Metadata Quality Audit<br>
+> **Audit Date:** 2026-11-20<br>
 > **Total Datasets Audited:** 700<br>
 > **Catalog Documentation Completeness:** 79.8%<br>
 > **Methodology:** Offline, evidence-based, reproducible metadata inspection across canonical JSON Schema v1 definitions.
@@ -29,7 +29,7 @@ The canonical schema defines required top-level attributes and structured option
 
 | Metadata Field | Present Count | Catalog Coverage (%) | Evaluation Context |
 | :--- | :--- | :--- | :--- |
-| **Published Milestone Date** (`dates.published`) | 675 | 96.4% | Complete across all 700 catalog records |
+| **Published Milestone Date** (`dates.published`) | 675 | 96.4% | Documented across 675/700 catalog records (25 undated) |
 | **Academic Citation** (`citation`) | 692 | 98.9% | Comprehensive for benchmark datasets |
 | **Sample Count Breakdown** (`sample_count`) | 659 | 94.1% | 41 missing, 25 documented as unknown |
 | **Publisher URL** (`publisher.url`) | 660 | 94.3% | Institutional/lab homepage provided |
@@ -104,8 +104,8 @@ The sum of category totals is **1,175**, which exceeds 700 because OpenDatasets 
 - **Unknown / Ambiguous:** 75 datasets
 
 ### Key Licensing Observations & False-Positive Analysis
-1. **Custom Permissive Non-Commercial Research Licenses (31 datasets):** 31 datasets marked `custom_permissive` document strict non-commercial research terms in their notes (e.g. Waymo Open Dataset, ApolloScape, levelXData, Matterport HM3D). These are **not curatorial errors**; they accurately reflect custom publisher terms that are permissive for academic research but forbid commercial redistribution. They remain categorized for potential future alignment under a unified non-commercial rubric.
-2. **Unspecified by Source (36 datasets):** Datasets originating from academic repositories where authors did not attach a formal license text. Commercial use is conservatively recorded as `unknown` (35) or `forbidden` (1, e.g. `deeppcb`). In accordance with Task 40 principles, OpenDatasets does not infer permissive rights from public availability.
+1. **Custom Permissive Non-Commercial Research Licenses (32 datasets):** 32 datasets marked `custom_permissive` document strict non-commercial research terms in their notes (e.g. Waymo Open Dataset, ApolloScape, levelXData, Matterport HM3D). These are **not curatorial errors**; they accurately reflect custom publisher terms that are permissive for academic research but forbid commercial redistribution. They remain categorized for potential future alignment under a unified non-commercial rubric.
+2. **Unspecified by Source (37 datasets):** Datasets originating from academic repositories where authors did not attach a formal license text. Commercial use is conservatively recorded as `unknown` (36) or `forbidden` (1, e.g. `deeppcb`). In accordance with catalog governance principles, OpenDatasets does not infer permissive rights from public availability.
 3. **Consistency Discrepancy Flag (`lfw`):** In `lfw`, the license status was historically marked `verified_non_commercial` while `commercial_use` was `unknown`. Primary-source review against UMass Technical Report 07-49 and web archives established that no formal research use agreement was published, resolving this to `unspecified_by_source`.
 
 ---
@@ -139,7 +139,7 @@ A catalog-wide census identified exactly 17 dataset records where partition spli
   - `pubmed-200k-rct`: Declared total is 195,654 abstracts (from PubMed 200k RCT), while split dictionary records sentence counts from the 20k version (`train: 180,000`, `dev: 28,712`, `test: 28,978` = 237,690 sentences).
 
 > [!IMPORTANT]
-> None of these cases are confirmed source errors. In accordance with Task 40 change control, **no metadata was modified**. Primary-source citations from benchmark publications are required before applying any adjustments.
+> None of these cases are confirmed source errors. In accordance with Task 49 — 700-Record Metadata Quality Audit change control, **no metadata was modified**. Primary-source citations from benchmark publications are required before applying any adjustments.
 
 ### 2. Shared URL Multi-Role References (4 datasets)
 The 4 datasets flagged for duplicate URLs represent legitimate semantic multi-role reuse rather than broken duplicate links, distinguishing dataset landing page, dataset DOI, original research publication, and repository mirror without modifying catalog metadata:
@@ -267,7 +267,7 @@ To guide future catalog curation, candidate records are grouped into prioritized
 1. **Offline Review Safeguard:** This audit was conducted 100% offline using local metadata records and schema specifications. No external HTTP requests were performed during execution.
 2. **Zero Fabrication Policy:** Missing metadata was not synthesized or inferred. If a publisher omitted physical payload sizes or exact split counts, the audit records them as missing or unknown.
 3. **Completeness vs Scientific Quality Distinction:** A high documentation completeness score does not imply superior machine learning utility or benchmark validity. Authoritative governmental and institutional repositories (e.g., NOAA, NASA, PhysioNet) often lack traditional conference citations or fixed train/test splits due to their continuous monitoring nature, yet represent gold-standard scientific resources.
-4. **Change Control Integrity:** No catalog JSON files, licenses, or splits were modified during Task 40. All identified findings are reported for transparent review and deliberate future curation.
+4. **Change Control Integrity:** No catalog JSON files, licenses, or splits were modified during Task 49 — 700-Record Metadata Quality Audit. All identified findings are reported for transparent review and deliberate future curation.
 
 ---
 *Report generated automatically by `scripts/audit_metadata_quality.py`.*

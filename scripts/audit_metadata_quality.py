@@ -631,7 +631,11 @@ def evaluate_research_readiness(dataset: dict[str, Any], completeness: dict[str,
     }
 
 
-def audit_catalog_metadata_quality(datasets: list[dict[str, Any]]) -> dict[str, Any]:
+def audit_catalog_metadata_quality(
+    datasets: list[dict[str, Any]],
+    audit_task: str = "Task 40",
+    audit_date: str = AUDIT_DATE,
+) -> dict[str, Any]:
     """Run comprehensive metadata quality and research readiness audit across all datasets."""
     datasets_sorted = sorted(datasets, key=lambda d: d.get("id", ""))
     total_datasets = len(datasets_sorted)
@@ -837,8 +841,8 @@ def audit_catalog_metadata_quality(datasets: list[dict[str, Any]]) -> dict[str, 
 
     return {
         "audit_metadata": {
-            "audit_task": "Task 40",
-            "audit_date": AUDIT_DATE,
+            "audit_task": audit_task,
+            "audit_date": audit_date,
             "schema_version": "1.0.0",
             "total_datasets_audited": total_datasets,
             "catalog_average_documentation_completeness_pct": catalog_avg_completeness,
@@ -926,10 +930,23 @@ def generate_markdown_summary(audit_data: dict[str, Any]) -> str:
     p5 = reviews["priority_5_missing_or_ambiguous_sample_units"]
     p6 = reviews["priority_6_missing_academic_citations"]
 
+    unspec_items = [item for item in p1 if item.get("license_status") == "unspecified_by_source"]
+    unspec_unknown = sum(1 for item in unspec_items if item.get("commercial_use") == "unknown")
+    unspec_forbidden = sum(1 for item in unspec_items if item.get("commercial_use") == "forbidden")
+    unspec_comm_note = f"`unknown` ({unspec_unknown})"
+    if unspec_forbidden:
+        unspec_comm_note += f" or `forbidden` ({unspec_forbidden}, e.g. `deeppcb`)"
+
+    dates_published_note = (
+        f"Complete across all {total} catalog records"
+        if opt["dates_published"]["present_count"] == total
+        else f"Documented across {opt['dates_published']['present_count']}/{total} catalog records ({total - opt['dates_published']['present_count']} undated)"
+    )
+
     lines = [
         "# OpenDatasets Metadata Quality & Research Readiness Audit",
         "",
-        "> **Audit Task:** Task 40<br>",
+        f"> **Audit Task:** {meta['audit_task']}<br>",
         f"> **Audit Date:** {meta['audit_date']}<br>",
         f"> **Total Datasets Audited:** {total}<br>",
         f"> **Catalog Documentation Completeness:** {meta['catalog_average_documentation_completeness_pct']}%<br>",
@@ -958,7 +975,7 @@ def generate_markdown_summary(audit_data: dict[str, Any]) -> str:
         "",
         "| Metadata Field | Present Count | Catalog Coverage (%) | Evaluation Context |",
         "| :--- | :--- | :--- | :--- |",
-        f"| **Published Milestone Date** (`dates.published`) | {opt['dates_published']['present_count']} | {opt['dates_published']['percentage']}% | Complete across all {total} catalog records |",
+        f"| **Published Milestone Date** (`dates.published`) | {opt['dates_published']['present_count']} | {opt['dates_published']['percentage']}% | {dates_published_note} |",
         f"| **Academic Citation** (`citation`) | {opt['citation']['present_count']} | {opt['citation']['percentage']}% | Comprehensive for benchmark datasets |",
         f"| **Sample Count Breakdown** (`sample_count`) | {opt['sample_count']['present_count']} | {opt['sample_count']['percentage']}% | 41 missing, 25 documented as unknown |",
         f"| **Publisher URL** (`publisher.url`) | {opt['publisher_url']['present_count']} | {opt['publisher_url']['percentage']}% | Institutional/lab homepage provided |",
@@ -1038,8 +1055,8 @@ def generate_markdown_summary(audit_data: dict[str, Any]) -> str:
         f"- **Unknown / Ambiguous:** {lic['commercial_use_breakdown'].get('unknown', 0)} datasets",
         "",
         "### Key Licensing Observations & False-Positive Analysis",
-        "1. **Custom Permissive Non-Commercial Research Licenses (31 datasets):** 31 datasets marked `custom_permissive` document strict non-commercial research terms in their notes (e.g. Waymo Open Dataset, ApolloScape, levelXData, Matterport HM3D). These are **not curatorial errors**; they accurately reflect custom publisher terms that are permissive for academic research but forbid commercial redistribution. They remain categorized for potential future alignment under a unified non-commercial rubric.",
-        "2. **Unspecified by Source (36 datasets):** Datasets originating from academic repositories where authors did not attach a formal license text. Commercial use is conservatively recorded as `unknown` (35) or `forbidden` (1, e.g. `deeppcb`). In accordance with Task 40 principles, OpenDatasets does not infer permissive rights from public availability.",
+        f"1. **Custom Permissive Non-Commercial Research Licenses ({len(p4)} datasets):** {len(p4)} datasets marked `custom_permissive` document strict non-commercial research terms in their notes (e.g. Waymo Open Dataset, ApolloScape, levelXData, Matterport HM3D). These are **not curatorial errors**; they accurately reflect custom publisher terms that are permissive for academic research but forbid commercial redistribution. They remain categorized for potential future alignment under a unified non-commercial rubric.",
+        f"2. **Unspecified by Source ({lic['unspecified_by_source_count']} datasets):** Datasets originating from academic repositories where authors did not attach a formal license text. Commercial use is conservatively recorded as {unspec_comm_note}. In accordance with catalog governance principles, OpenDatasets does not infer permissive rights from public availability.",
         "3. **Consistency Discrepancy Flag (`lfw`):** In `lfw`, the license status was historically marked `verified_non_commercial` while `commercial_use` was `unknown`. Primary-source review against UMass Technical Report 07-49 and web archives established that no formal research use agreement was published, resolving this to `unspecified_by_source`.",
         "",
         "---",
@@ -1073,7 +1090,7 @@ def generate_markdown_summary(audit_data: dict[str, Any]) -> str:
         "  - `pubmed-200k-rct`: Declared total is 195,654 abstracts (from PubMed 200k RCT), while split dictionary records sentence counts from the 20k version (`train: 180,000`, `dev: 28,712`, `test: 28,978` = 237,690 sentences).",
         "",
         "> [!IMPORTANT]",
-        "> None of these cases are confirmed source errors. In accordance with Task 40 change control, **no metadata was modified**. Primary-source citations from benchmark publications are required before applying any adjustments.",
+        f"> None of these cases are confirmed source errors. In accordance with {meta['audit_task']} change control, **no metadata was modified**. Primary-source citations from benchmark publications are required before applying any adjustments.",
         "",
         f"### 2. Shared URL Multi-Role References ({len(p3)} datasets)",
         f"The {len(p3)} datasets flagged for duplicate URLs represent legitimate semantic multi-role reuse rather than broken duplicate links, distinguishing dataset landing page, dataset DOI, original research publication, and repository mirror without modifying catalog metadata:",
@@ -1198,7 +1215,7 @@ def generate_markdown_summary(audit_data: dict[str, Any]) -> str:
         "1. **Offline Review Safeguard:** This audit was conducted 100% offline using local metadata records and schema specifications. No external HTTP requests were performed during execution.",
         "2. **Zero Fabrication Policy:** Missing metadata was not synthesized or inferred. If a publisher omitted physical payload sizes or exact split counts, the audit records them as missing or unknown.",
         "3. **Completeness vs Scientific Quality Distinction:** A high documentation completeness score does not imply superior machine learning utility or benchmark validity. Authoritative governmental and institutional repositories (e.g., NOAA, NASA, PhysioNet) often lack traditional conference citations or fixed train/test splits due to their continuous monitoring nature, yet represent gold-standard scientific resources.",
-        "4. **Change Control Integrity:** No catalog JSON files, licenses, or splits were modified during Task 40. All identified findings are reported for transparent review and deliberate future curation.",
+        f"4. **Change Control Integrity:** No catalog JSON files, licenses, or splits were modified during {meta['audit_task']}. All identified findings are reported for transparent review and deliberate future curation.",
         "",
         "---",
         "*Report generated automatically by `scripts/audit_metadata_quality.py`.*",
@@ -1230,6 +1247,18 @@ def main() -> int:
         default=DEFAULT_OUTPUT_MD,
         help="Path for Markdown summary report",
     )
+    parser.add_argument(
+        "--audit-task",
+        type=str,
+        default="Task 40",
+        help="Audit task title / identifier",
+    )
+    parser.add_argument(
+        "--audit-date",
+        type=str,
+        default=AUDIT_DATE,
+        help="Audit execution date (YYYY-MM-DD)",
+    )
     args = parser.parse_args()
 
     print("=======================================================")
@@ -1238,6 +1267,8 @@ def main() -> int:
     print(f" Datasets Directory: {args.datasets_dir}")
     print(f" Output JSON:        {args.output_json}")
     print(f" Output Markdown:    {args.output_md}")
+    print(f" Audit Task:         {args.audit_task}")
+    print(f" Audit Date:         {args.audit_date}")
     print("=======================================================")
 
     if not args.datasets_dir.exists():
@@ -1256,7 +1287,11 @@ def main() -> int:
             datasets.append(json.load(fp))
 
     # Run comprehensive quality audit
-    audit_results = audit_catalog_metadata_quality(datasets)
+    audit_results = audit_catalog_metadata_quality(
+        datasets,
+        audit_task=args.audit_task,
+        audit_date=args.audit_date,
+    )
 
     # Ensure output directories exist
     args.output_json.parent.mkdir(parents=True, exist_ok=True)

@@ -1,7 +1,7 @@
 # OpenDatasets Cross-Dataset Semantic Duplicate Audit Summary
 
-> **Audit Task:** Task 43 — Cross-Dataset Semantic Duplicate Detection<br>
-> **Audit Date:** 2026-11-18<br>
+> **Audit Task:** Task 49 — Cross-Dataset Semantic Duplicate Detection<br>
+> **Audit Date:** 2026-11-20<br>
 > **Total Records Scanned:** 700<br>
 > **Total Candidate Pairs Flagged:** 118<br>
 > **Confidence Breakdown:** High: **0**, Medium: **84**, Low: **34**<br>
@@ -14,7 +14,7 @@
 This audit performs a systematic, reproducible semantic duplicate inspection across all **700** dataset records in the OpenDatasets catalog. It analyzes exact identifiers, normalized titles, acronyms, canonical URLs, citation DOIs, repository endpoints, and multi-attribute metadata alignments.
 
 ### Key Audit Findings
-- **Zero High-Confidence True Duplicates (0):** There are no exact duplicate records, no identical copy-paste dataset definitions, and no unverified duplicate registrations in the catalog.
+- **Zero High-Confidence Duplicate Flags (0):** Algorithmic screening identified zero exact duplicate records, identical copy-paste dataset definitions, or unverified duplicate registrations in the catalog. Note that zero algorithmic flags does not guarantee the complete absence of subtle semantic overlap across all domains; ongoing manual curation remains essential.
 - **Medium-Confidence Candidate Pairs (84):** Represent legitimate multi-track benchmark suites (e.g., Argoverse 2, Waymo Open), classic split variants (CIFAR-10 vs CIFAR-100), chronological annual challenge iterations (ISIC 2018 vs 2019, Plant Pathology 2020 vs 2021), and major version evolutions (KolektorSDD vs KolektorSDD2, MIMIC-III vs MIMIC-IV).
 - **Low-Confidence Overlaps (34):** Represent shared foundational research publications, shared institutional portals (SpaceNet, NOAA), or coincidental lexical task phrasing across independent organizations.
 - **Preservation of Scientific Lineage:** Subsets, variants, and chronological versions are preserved as distinct records with cross-referencing rather than destructive merging or automatic deletion.
@@ -28,7 +28,7 @@ This audit performs a systematic, reproducible semantic duplicate inspection acr
 | **High Confidence** | **0** | Strong evidence of identical duplicate dataset | Deprecate or merge redundant record |
 | **Medium Confidence** | **84** | Valid benchmark subsets, versions, or shared suite landing pages | Maintain separate records; document lineage & cross-references |
 | **Low Confidence** | **34** | Shared foundational paper or coincidental phrasing | No action required; independent benchmarks |
-| **Total Evaluated** | **118** | Out of 195,000 evaluated pairs (625 × 624 / 2) | Deterministic review complete |
+| **Total Evaluated** | **118** | Evaluated across all 244,650 exhaustive pairwise comparisons (700 × 699 / 2) | Deterministic review complete |
 
 ---
 
@@ -36,13 +36,13 @@ This audit performs a systematic, reproducible semantic duplicate inspection acr
 
 **No high-confidence duplicate pairs detected.**
 
-All 625 dataset records have distinct identities, unique IDs/slugs, distinct official release targets, and legitimate research motivations.
+Algorithmic screening identified zero candidate pairs meeting high-confidence duplicate thresholds across all 700 dataset records.
 
 ---
 
 ## 3. Medium-Confidence Candidate Pairs (Maintainer Review Candidates)
 
-Medium-confidence pairs require maintainer review to confirm that coexistence is scientifically justified. Every pair in this tier has been reviewed against primary publisher records and confirmed to represent a valid benchmark suite, multi-modal track, or chronological release.
+Medium-confidence candidate pairs require manual review to establish scientific distinctness. Pairs in this tier share significant title, URL, repository, or citation tokens, and typically represent valid benchmark suites, multi-modal task tracks, parent project landing pages, or chronological releases, but require individual verification against primary publisher documentation before making any metadata adjustments.
 
 | Pair ID | Dataset A | Dataset B | Shared Signal | Distinguishing Factors | Potential False-Positive Reason | Action |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |

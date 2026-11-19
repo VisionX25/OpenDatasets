@@ -755,10 +755,13 @@ def audit_catalog_semantic_duplicates(
     datasets: list[dict[str, Any]],
     fuzzy_threshold: float = 0.80,
     token_threshold: float = 0.65,
+    audit_task: str = "Task 43 — Cross-Dataset Semantic Duplicate Detection",
+    audit_date: str = AUDIT_DATE,
 ) -> dict[str, Any]:
     """Execute pairwise semantic duplicate audit across all provided dataset records."""
     total_records = len(datasets)
     sorted_datasets = sorted(datasets, key=lambda d: d.get("id", ""))
+    total_possible_pairs = total_records * (total_records - 1) // 2
 
     candidate_pairs: list[CandidatePairMatch] = []
 
@@ -787,9 +790,10 @@ def audit_catalog_semantic_duplicates(
 
     return {
         "audit_metadata": {
-            "audit_task": "Task 43 — Cross-Dataset Semantic Duplicate Detection",
-            "audit_date": AUDIT_DATE,
+            "audit_task": audit_task,
+            "audit_date": audit_date,
             "total_records_scanned": total_records,
+            "total_possible_pairs": total_possible_pairs,
             "total_candidate_pairs": len(candidate_pairs),
             "confidence_distribution": {
                 "high": confidence_counts.get("high", 0),
@@ -820,6 +824,8 @@ def generate_markdown_summary(audit_results: dict[str, Any]) -> str:
     high_pairs = audit_results["candidate_groups_by_confidence"]["high_confidence_candidates"]
     medium_pairs = audit_results["candidate_groups_by_confidence"]["medium_confidence_candidates"]
     low_pairs = audit_results["candidate_groups_by_confidence"]["low_confidence_candidates"]
+    total_scanned = meta["total_records_scanned"]
+    total_possible_pairs = meta.get("total_possible_pairs", total_scanned * (total_scanned - 1) // 2)
 
     lines: list[str] = [
         "# OpenDatasets Cross-Dataset Semantic Duplicate Audit Summary",
@@ -840,8 +846,9 @@ def generate_markdown_summary(audit_results: dict[str, Any]) -> str:
         "citation DOIs, repository endpoints, and multi-attribute metadata alignments.",
         "",
         "### Key Audit Findings",
-        f"- **Zero High-Confidence True Duplicates ({dist['high']}):** There are no exact duplicate records, no identical copy-paste "
-        "dataset definitions, and no unverified duplicate registrations in the catalog.",
+        f"- **Zero High-Confidence Duplicate Flags ({dist['high']}):** Algorithmic screening identified zero exact duplicate records, "
+        "identical copy-paste dataset definitions, or unverified duplicate registrations in the catalog. Note that zero algorithmic flags "
+        "does not guarantee the complete absence of subtle semantic overlap across all domains; ongoing manual curation remains essential.",
         f"- **Medium-Confidence Candidate Pairs ({dist['medium']}):** Represent legitimate multi-track benchmark suites "
         "(e.g., Argoverse 2, Waymo Open), classic split variants (CIFAR-10 vs CIFAR-100), chronological annual challenge iterations "
         "(ISIC 2018 vs 2019, Plant Pathology 2020 vs 2021), and major version evolutions (KolektorSDD vs KolektorSDD2, MIMIC-III vs MIMIC-IV).",
@@ -859,7 +866,7 @@ def generate_markdown_summary(audit_results: dict[str, Any]) -> str:
         f"| **High Confidence** | **{dist['high']}** | Strong evidence of identical duplicate dataset | Deprecate or merge redundant record |",
         f"| **Medium Confidence** | **{dist['medium']}** | Valid benchmark subsets, versions, or shared suite landing pages | Maintain separate records; document lineage & cross-references |",
         f"| **Low Confidence** | **{dist['low']}** | Shared foundational paper or coincidental phrasing | No action required; independent benchmarks |",
-        f"| **Total Evaluated** | **{meta['total_candidate_pairs']}** | Out of 195,000 evaluated pairs (625 × 624 / 2) | Deterministic review complete |",
+        f"| **Total Evaluated** | **{meta['total_candidate_pairs']}** | Evaluated across all {total_possible_pairs:,} exhaustive pairwise comparisons ({total_scanned} × {total_scanned - 1} / 2) | Deterministic review complete |",
         "",
         "---",
         "",
@@ -871,8 +878,7 @@ def generate_markdown_summary(audit_results: dict[str, Any]) -> str:
         lines.extend([
             "**No high-confidence duplicate pairs detected.**",
             "",
-            "All 625 dataset records have distinct identities, unique IDs/slugs, distinct official release targets, "
-            "and legitimate research motivations.",
+            f"Algorithmic screening identified zero candidate pairs meeting high-confidence duplicate thresholds across all {total_scanned} dataset records.",
             "",
         ])
     else:
@@ -892,9 +898,10 @@ def generate_markdown_summary(audit_results: dict[str, Any]) -> str:
         "",
         "## 3. Medium-Confidence Candidate Pairs (Maintainer Review Candidates)",
         "",
-        "Medium-confidence pairs require maintainer review to confirm that coexistence is scientifically justified. "
-        "Every pair in this tier has been reviewed against primary publisher records and confirmed to represent a valid "
-        "benchmark suite, multi-modal track, or chronological release.",
+        "Medium-confidence candidate pairs require manual review to establish scientific distinctness. "
+        "Pairs in this tier share significant title, URL, repository, or citation tokens, and typically represent "
+        "valid benchmark suites, multi-modal task tracks, parent project landing pages, or chronological releases, "
+        "but require individual verification against primary publisher documentation before making any metadata adjustments.",
         "",
         "| Pair ID | Dataset A | Dataset B | Shared Signal | Distinguishing Factors | Potential False-Positive Reason | Action |",
         "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |",
@@ -1017,6 +1024,18 @@ def main(argv: list[str] | None = None) -> int:
         help="Token Jaccard similarity threshold for titles (default: 0.65)",
     )
     parser.add_argument(
+        "--audit-task",
+        type=str,
+        default="Task 43 — Cross-Dataset Semantic Duplicate Detection",
+        help="Audit task title / identifier",
+    )
+    parser.add_argument(
+        "--audit-date",
+        type=str,
+        default=AUDIT_DATE,
+        help="Audit execution date (YYYY-MM-DD)",
+    )
+    parser.add_argument(
         "--quiet",
         action="store_true",
         help="Suppress detailed console logging",
@@ -1055,6 +1074,8 @@ def main(argv: list[str] | None = None) -> int:
         datasets=datasets,
         fuzzy_threshold=args.threshold_fuzzy,
         token_threshold=args.threshold_token,
+        audit_task=args.audit_task,
+        audit_date=args.audit_date,
     )
 
     # Ensure output directories exist
