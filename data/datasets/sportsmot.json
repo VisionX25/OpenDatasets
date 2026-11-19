@@ -3,7 +3,7 @@
   "id": "sportsmot",
   "slug": "sportsmot",
   "name": "SportsMOT: Multi-Actor Tracking in Sports Scenes",
-  "description": "SportsMOT is a multi-object tracking benchmark focused on fast-paced, multi-actor movements in team sports broadcasts. It consists of 240 video clips (average 485 frames per clip, totaling ~116,400 frames) collected across three sports categories: basketball, football (soccer), and volleyball. The dataset captures key challenges in athletic tracking, including high-speed player movements, non-linear trajectories, abrupt direction reversals, shared team jerseys, and rapid pan-tilt-zoom camera motion. Annotated with full bounding boxes and identities following the MOT Challenge format, partitioned into 45 train, 45 validation, and 150 test clips.",
+  "description": "SportsMOT is a large-scale multi-object tracking benchmark focused on fast-paced, multi-actor movements in team sports broadcasts. It comprises 240 video clips across three sports categories: basketball, football (soccer), and volleyball. While informal README estimates cite ~485 frames/clip (~116,400 frames), the official sequence metadata and ICCV 2023 publication report exactly 150,379 frames (average 626.6 frames/clip) and 1,629,490 bounding boxes. The dataset captures key challenges in athletic tracking, including high-speed player movements, non-linear trajectories, abrupt direction reversals, shared team jerseys, and rapid pan-tilt-zoom camera motion. Annotated with bounding boxes and identities following the MOT Challenge format, partitioned into 45 train clips (28,574 frames), 45 validation clips (26,970 frames), and 150 test clips (94,835 frames).",
   "homepage_url": "https://github.com/MCG-NJU/SportsMOT",
   "publisher": {
     "name": "Nanjing University & ByteDance",
@@ -47,7 +47,7 @@
   },
   "citation": {
     "paper_title": "SportsMOT: A Large Multi-Object Tracking Dataset in Multiple Sports Scenes",
-    "paper_url": "https://doi.org/10.1109/ICCV51070.2023.00911",
+    "paper_url": "https://doi.org/10.1109/ICCV51070.2023.00910",
     "authors": [
       "Yutao Cui",
       "Chenkai Zeng",
@@ -56,8 +56,8 @@
       "Gangshan Wu",
       "Limin Wang"
     ],
-    "bibtex": "@inproceedings{cui2023sportsmot,\n  title={SportsMOT: A Large Multi-Object Tracking Dataset in Multiple Sports Scenes},\n  author={Cui, Yutao and Zeng, Chenkai and Zhao, Xiaoyu and Yang, Yichun and Wu, Gangshan and Wang, Limin},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},\n  pages={9921--9931},\n  year={2023},\n  doi={10.1109/ICCV51070.2023.00911}\n}",
-    "doi": "10.1109/ICCV51070.2023.00911"
+    "bibtex": "@inproceedings{cui2023sportsmot,\n  title={SportsMOT: A Large Multi-Object Tracking Dataset in Multiple Sports Scenes},\n  author={Cui, Yutao and Zeng, Chenkai and Zhao, Xiaoyu and Yang, Yichun and Wu, Gangshan and Wang, Limin},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},\n  pages={9887--9897},\n  year={2023},\n  doi={10.1109/ICCV51070.2023.00910}\n}",
+    "doi": "10.1109/ICCV51070.2023.00910"
   },
   "source_references": [
     {
@@ -66,8 +66,13 @@
       "type": "repository"
     },
     {
-      "title": "ICCV 2023 Paper",
-      "url": "https://doi.org/10.1109/ICCV51070.2023.00911",
+      "title": "ICCV 2023 Paper (IEEE Xplore)",
+      "url": "https://doi.org/10.1109/ICCV51070.2023.00910",
+      "type": "original_paper"
+    },
+    {
+      "title": "ICCV 2023 Open Access (CVF)",
+      "url": "https://openaccess.thecvf.com/content/ICCV2023/html/Cui_SportsMOT_A_Large_Multi-Object_Tracking_Dataset_in_Multiple_Sports_Scenes_ICCV_2023_paper.html",
       "type": "original_paper"
     }
   ],
@@ -75,6 +80,6 @@
     "status": "verified",
     "verified_by": "OpenDatasets Data Curation Team",
     "verified_date": "2026-11-19",
-    "notes": "Verified against GitHub repository and ICCV 2023 paper. Contains 240 video clips (45 train, 45 val, 150 test) with ~116,400 frames across 3 sports."
+    "notes": "Verified against GitHub repository, official sequence metadata, and ICCV 2023 paper (DOI: 10.1109/ICCV51070.2023.00910). Contains 240 video clips (45 train, 45 val, 150 test). While initial README approximations cite ~485 frames/clip (~116,400 frames), the official sequence metadata and published ICCV 2023 Table 1 confirm exactly 150,379 frames (train: 28,574; val: 26,970; test: 94,835) and 1,629,490 bounding boxes across 3 sports (reconciling earlier unverified counts of 1,629,664). Distributed under CC BY-NC 4.0 for non-commercial research."
   }
 }
