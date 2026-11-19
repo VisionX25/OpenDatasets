@@ -3,7 +3,7 @@
   "id": "libri-light",
   "slug": "libri-light",
   "name": "Libri-Light: A Benchmark for ASR with Limited or No Supervision",
-  "description": "Libri-Light is a massive speech dataset for self-supervised learning, unsupervised representations, and automatic speech recognition (ASR) with minimal supervision. Sourced from LibriVox public-domain audiobooks, it provides 60,000+ hours of unsegmented English speech audio alongside standard subsets (60k hours, 6k hours, 600 hours) and small supervision splits (10 hours, 1 hour, 10 minutes), establishing a benchmark for foundation acoustic models like wav2vec 2.0.",
+  "description": "Libri-Light is a massive speech dataset for self-supervised learning, unsupervised representations, and automatic speech recognition (ASR) with minimal supervision. Sourced from LibriVox public-domain audiobooks, it provides 60,000+ hours of unsegmented English speech audio organized into three nested subsets of increasing scale (small ~600h, medium ~6,000h, large ~60,000h) alongside small supervision splits (10 hours, 1 hour, 10 minutes), establishing a benchmark for foundation acoustic models like wav2vec 2.0.",
   "homepage_url": "https://github.com/facebookresearch/libri-light",
   "publisher": {
     "name": "Meta AI (FAIR)",
@@ -32,10 +32,10 @@
   "license": {
     "status": "public_domain",
     "name": "Public Domain (LibriVox) / MIT (Code)",
-    "spdx_id": "CC0-1.0",
+    "spdx_id": null,
     "url": "https://librivox.org/",
     "commercial_use": "allowed",
-    "notes": "Audio sourced from public domain LibriVox recordings; extraction toolkit released under MIT."
+    "notes": "Audio sourced from public domain LibriVox recordings; extraction toolkit released under MIT. Audio is organized into three nested subsets of increasing scale (small ~600h, medium ~6,000h, large ~60,000h), rather than disjoint additive splits."
   },
   "source_references": [
     {
@@ -58,12 +58,7 @@
   "sample_count": {
     "total": 60000,
     "unit": "hours",
-    "status": "verified",
-    "splits": {
-      "unlabeled_large": 60000,
-      "unlabeled_medium": 6000,
-      "unlabeled_small": 600
-    }
+    "status": "verified"
   },
   "dates": {
     "published": "2020-05-04"

@@ -20478,7 +20478,7 @@
     "id": "fma",
     "slug": "fma",
     "name": "FMA: A Dataset for Music Analysis",
-    "description": "FMA (Free Music Archive) is an open music analysis and information retrieval benchmark. Comprising 106,574 full-length audio tracks (343 days of audio) from 16,341 artists across 161 musical genres, it includes pre-extracted audio features, full track metadata, tags, and hierarchical genre labels. Provided in standard subsets (fma_small: 8,000 clips; fma_medium: 25,000 clips; fma_large: 106,574 clips; and fma_full), it benchmarks music genre classification, retrieval, and auto-tagging.",
+    "description": "FMA (Free Music Archive) is an open music analysis and information retrieval benchmark. Comprising 106,574 full-length audio tracks (343 days of audio) from 16,341 artists across 161 musical genres, it includes pre-extracted audio features, full track metadata, tags, and hierarchical genre labels. Provided in nested subsets of increasing scale (fma_small: 8,000 clips; fma_medium: 25,000 clips; fma_large and fma_full: 106,574 tracks), it benchmarks music genre classification, retrieval, and auto-tagging.",
     "homepage_url": "https://github.com/mdeff/fma",
     "publisher": {
       "name": "EPFL",
@@ -20502,12 +20502,12 @@
       "benchmark"
     ],
     "license": {
-      "status": "verified_open",
-      "name": "Creative Commons Attribution 4.0 International",
-      "spdx_id": "CC-BY-4.0",
+      "status": "custom_permissive",
+      "name": "CC BY 4.0 (Metadata) / Varied Creative Commons (Audio)",
+      "spdx_id": null,
       "url": "https://creativecommons.org/licenses/by/4.0/",
-      "commercial_use": "allowed",
-      "notes": "Dataset metadata and features licensed under CC BY 4.0; audio tracks individually licensed under various Creative Commons licenses."
+      "commercial_use": "unknown",
+      "notes": "Dataset metadata and features are licensed under CC BY 4.0 and code under MIT; underlying audio tracks are subject to diverse artist-selected Creative Commons and public domain licenses (including non-commercial and no-derivatives variants), so commercial usability depends on individual track terms."
     },
     "source_references": [
       {
@@ -20530,12 +20530,7 @@
     "sample_count": {
       "total": 106574,
       "unit": "audio_tracks",
-      "status": "verified",
-      "splits": {
-        "small": 8000,
-        "medium": 25000,
-        "large": 106574
-      }
+      "status": "verified"
     },
     "dates": {
       "published": "2017-10-23"
@@ -29127,7 +29122,7 @@
     "id": "libri-light",
     "slug": "libri-light",
     "name": "Libri-Light: A Benchmark for ASR with Limited or No Supervision",
-    "description": "Libri-Light is a massive speech dataset for self-supervised learning, unsupervised representations, and automatic speech recognition (ASR) with minimal supervision. Sourced from LibriVox public-domain audiobooks, it provides 60,000+ hours of unsegmented English speech audio alongside standard subsets (60k hours, 6k hours, 600 hours) and small supervision splits (10 hours, 1 hour, 10 minutes), establishing a benchmark for foundation acoustic models like wav2vec 2.0.",
+    "description": "Libri-Light is a massive speech dataset for self-supervised learning, unsupervised representations, and automatic speech recognition (ASR) with minimal supervision. Sourced from LibriVox public-domain audiobooks, it provides 60,000+ hours of unsegmented English speech audio organized into three nested subsets of increasing scale (small ~600h, medium ~6,000h, large ~60,000h) alongside small supervision splits (10 hours, 1 hour, 10 minutes), establishing a benchmark for foundation acoustic models like wav2vec 2.0.",
     "homepage_url": "https://github.com/facebookresearch/libri-light",
     "publisher": {
       "name": "Meta AI (FAIR)",
@@ -29156,10 +29151,10 @@
     "license": {
       "status": "public_domain",
       "name": "Public Domain (LibriVox) / MIT (Code)",
-      "spdx_id": "CC0-1.0",
+      "spdx_id": null,
       "url": "https://librivox.org/",
       "commercial_use": "allowed",
-      "notes": "Audio sourced from public domain LibriVox recordings; extraction toolkit released under MIT."
+      "notes": "Audio sourced from public domain LibriVox recordings; extraction toolkit released under MIT. Audio is organized into three nested subsets of increasing scale (small ~600h, medium ~6,000h, large ~60,000h), rather than disjoint additive splits."
     },
     "source_references": [
       {
@@ -29182,12 +29177,7 @@
     "sample_count": {
       "total": 60000,
       "unit": "hours",
-      "status": "verified",
-      "splits": {
-        "unlabeled_large": 60000,
-        "unlabeled_medium": 6000,
-        "unlabeled_small": 600
-      }
+      "status": "verified"
     },
     "dates": {
       "published": "2020-05-04"
@@ -39605,11 +39595,12 @@
       "chemistry"
     ],
     "license": {
-      "status": "public_domain",
-      "name": "Public Domain / MIT",
-      "url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-molpcba",
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
       "commercial_use": "allowed",
-      "notes": "Underlying PubChem data is US public domain; OGB benchmark utilities under MIT."
+      "notes": "Curated from public-domain PubChem BioAssay data; OGB benchmark utilities, evaluators, and dataset distribution licensed under MIT."
     },
     "source_references": [
       {
@@ -46713,13 +46704,19 @@
       "name": "SA-1B Dataset Research License Agreement",
       "url": "https://ai.meta.com/datasets/segment-anything",
       "commercial_use": "forbidden",
-      "notes": "The SA-1B dataset is restricted to non-commercial research purposes under the SA-1B Research License; model code/weights are under Apache 2.0."
+      "notes": "The SA-1B dataset is restricted strictly to non-commercial research purposes under the SA-1B Dataset Research License Agreement; access requires reviewing and accepting terms on the download portal; model code and weights are under Apache 2.0."
     },
     "source_references": [
       {
         "title": "Meta AI Segment Anything Portal",
         "url": "https://ai.meta.com/datasets/segment-anything",
         "type": "official_website"
+      },
+      {
+        "title": "Meta AI Segment Anything Downloads Portal",
+        "url": "https://ai.meta.com/datasets/segment-anything-downloads/",
+        "type": "official_website",
+        "notes": "Requires reviewing and accepting the SA-1B Dataset Research License Agreement to access chunk download links."
       },
       {
         "title": "ICCV 2023 Research Paper",
@@ -46731,7 +46728,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Curation Team",
       "verified_date": "2026-11-19",
-      "notes": "Verified download availability via research agreement, 11M image and 1.1B mask count, and ICCV 2023 publication."
+      "notes": "Verified download availability via research agreement on the downloads portal, 11M image and 1.1B mask count, and ICCV 2023 publication."
     },
     "sample_count": {
       "total": 11000000,

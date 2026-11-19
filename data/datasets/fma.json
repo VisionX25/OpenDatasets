@@ -3,7 +3,7 @@
   "id": "fma",
   "slug": "fma",
   "name": "FMA: A Dataset for Music Analysis",
-  "description": "FMA (Free Music Archive) is an open music analysis and information retrieval benchmark. Comprising 106,574 full-length audio tracks (343 days of audio) from 16,341 artists across 161 musical genres, it includes pre-extracted audio features, full track metadata, tags, and hierarchical genre labels. Provided in standard subsets (fma_small: 8,000 clips; fma_medium: 25,000 clips; fma_large: 106,574 clips; and fma_full), it benchmarks music genre classification, retrieval, and auto-tagging.",
+  "description": "FMA (Free Music Archive) is an open music analysis and information retrieval benchmark. Comprising 106,574 full-length audio tracks (343 days of audio) from 16,341 artists across 161 musical genres, it includes pre-extracted audio features, full track metadata, tags, and hierarchical genre labels. Provided in nested subsets of increasing scale (fma_small: 8,000 clips; fma_medium: 25,000 clips; fma_large and fma_full: 106,574 tracks), it benchmarks music genre classification, retrieval, and auto-tagging.",
   "homepage_url": "https://github.com/mdeff/fma",
   "publisher": {
     "name": "EPFL",
@@ -27,12 +27,12 @@
     "benchmark"
   ],
   "license": {
-    "status": "verified_open",
-    "name": "Creative Commons Attribution 4.0 International",
-    "spdx_id": "CC-BY-4.0",
+    "status": "custom_permissive",
+    "name": "CC BY 4.0 (Metadata) / Varied Creative Commons (Audio)",
+    "spdx_id": null,
     "url": "https://creativecommons.org/licenses/by/4.0/",
-    "commercial_use": "allowed",
-    "notes": "Dataset metadata and features licensed under CC BY 4.0; audio tracks individually licensed under various Creative Commons licenses."
+    "commercial_use": "unknown",
+    "notes": "Dataset metadata and features are licensed under CC BY 4.0 and code under MIT; underlying audio tracks are subject to diverse artist-selected Creative Commons and public domain licenses (including non-commercial and no-derivatives variants), so commercial usability depends on individual track terms."
   },
   "source_references": [
     {
@@ -55,12 +55,7 @@
   "sample_count": {
     "total": 106574,
     "unit": "audio_tracks",
-    "status": "verified",
-    "splits": {
-      "small": 8000,
-      "medium": 25000,
-      "large": 106574
-    }
+    "status": "verified"
   },
   "dates": {
     "published": "2017-10-23"
