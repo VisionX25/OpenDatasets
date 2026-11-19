@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ogbn-mag",
+  "slug": "ogbn-mag",
+  "name": "OGBN-MAG: Microsoft Academic Graph Heterogeneous Node Classification Benchmark",
+  "description": "OGBN-MAG is a large-scale heterogeneous network benchmark extracted from the Microsoft Academic Graph (MAG), comprising 1,939,743 nodes across 4 entity types (736,389 papers, 1,134,649 authors, 8,740 institutions, and 59,965 fields of study) and 21,111,007 directed relation edges (paper cites paper, author writes paper, author affiliated with institution, and paper has topic field of study). Each paper node is equipped with a 128-dimensional Word2Vec feature vector extracted from paper titles and abstracts. The task is to predict the publication venue (349 venue classes) of papers published in 2019 given the heterogeneous relational context, evaluated under a realistic temporal split (papers before 2018 for train, 2018 for validation, 2019 for test).",
+  "homepage_url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-mag",
+  "publisher": {
+    "name": "Stanford Network Analysis Platform (SNAP)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu/"
+  },
+  "modalities": [
+    "graph",
+    "tabular"
+  ],
+  "tasks": [
+    "node-classification",
+    "graph-machine-learning"
+  ],
+  "tags": [
+    "graph-machine-learning",
+    "heterogeneous-graph",
+    "node-classification",
+    "academic-graph",
+    "citation-network",
+    "ogb-benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License (ODC-By v1.0)",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "OGBN-MAG is derived from Microsoft Academic Graph under ODC-By v1.0; OGB benchmark software and loaders are released under MIT."
+  },
+  "sample_count": {
+    "total": 1939743,
+    "unit": "nodes",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "paper_url": "https://arxiv.org/abs/2005.00687",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Marinka Zitnik",
+      "Yuxiao Dong",
+      "Hongyu Ren",
+      "Bowen Liu",
+      "Michele Catasta",
+      "Jure Leskovec"
+    ],
+    "bibtex": "@article{hu2020ogb,\n  title={Open Graph Benchmark: Datasets for Machine Learning on Graphs},\n  author={Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},\n  journal={Advances in Neural Information Processing Systems},\n  volume={33},\n  pages={22118--22133},\n  year={2020}\n}",
+    "doi": "10.48550/arXiv.2005.00687"
+  },
+  "source_references": [
+    {
+      "title": "OGB OGBN-MAG Official Documentation",
+      "url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-mag",
+      "type": "documentation"
+    },
+    {
+      "title": "Open Graph Benchmark Paper",
+      "url": "https://arxiv.org/abs/2005.00687",
+      "type": "original_paper"
+    },
+    {
+      "title": "OGB GitHub Repository",
+      "url": "https://github.com/snap-stanford/ogb",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Stanford OGB documentation and primary NeurIPS 2020 paper. Node counts: 1,939,743 nodes (736,389 papers, 1,134,649 authors, 8,740 institutions, 59,965 fields) and 21,111,007 edges. Paper target splits: 629,571 train, 64,879 validation, 41,939 test."
+  }
+}

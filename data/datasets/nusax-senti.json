@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nusax-senti",
+  "slug": "nusax-senti",
+  "name": "NusaX-Senti: Multilingual Sentiment Analysis Benchmark for Indonesian Local Languages",
+  "description": "NusaX-Senti is a high-quality multi-parallel sentiment analysis benchmark spanning 10 Indonesian local languages (Acehnese, Balinese, Banjarese, Buginese, Madurese, Minangkabau, Javanese, Ngaju, Sundanese, Toba Batak) along with Indonesian and English (12 languages total). It contains exactly 1,000 parallel sentences per language (12,000 sentences total) translated and verified by professional native-speaker linguists into positive, neutral, and negative labels. Standard evaluation splits provide 500 train, 100 validation, and 400 test sentences per language (Train: 6,000, Validation: 1,200, Test: 4,800).",
+  "homepage_url": "https://github.com/IndoNLP/nusax",
+  "publisher": {
+    "name": "IndoNLP",
+    "type": "community",
+    "url": "https://github.com/IndoNLP"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "sentiment-analysis",
+    "text-classification"
+  ],
+  "tags": [
+    "nlp",
+    "sentiment-analysis",
+    "indonesian-languages",
+    "multilingual",
+    "parallel-corpus",
+    "low-resource",
+    "eacl"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Released by IndoNLP under CC BY-SA 4.0."
+  },
+  "sample_count": {
+    "total": 12000,
+    "unit": "sentences",
+    "status": "verified",
+    "splits": {
+      "train": 6000,
+      "validation": 1200,
+      "test": 4800
+    }
+  },
+  "citation": {
+    "paper_title": "NusaX: Multilingual Parallel Sentiment Analysis Dataset on 10 Indonesian Local Languages",
+    "paper_url": "https://aclanthology.org/2023.eacl-main.57/",
+    "authors": [
+      "Genta Indra Winata",
+      "Alham Fikri Aji",
+      "Samuel Cahyawijaya",
+      "Rahmad Mahendra",
+      "Fajri Koto",
+      "Sebastian Ruder",
+      "Zhi Yuan Neoh",
+      "Bhaskara Hanun",
+      "Christina Soetono",
+      "Radityo Eko Prasojo",
+      "Jie Gu",
+      "Bryan Wilie",
+      "Karissa Vincentio",
+      "Suryani Lim",
+      "NusaX Team"
+    ],
+    "bibtex": "@inproceedings{winata-etal-2023-nusax,\n  title = \"{N}usa{X}: Multilingual Parallel Sentiment Analysis Dataset on 10 {I}ndonesian Local Languages\",\n  author = \"Winata, Genta Indra and Aji, Alham Fikri and Cahyawijaya, Samuel and Mahendra, Rahmad and Koto, Fajri and Ruder, Sebastian and Neoh, Zhi Yuan and Hanun, Bhaskara and Soetono, Christina and Prasojo, Radityo Eko and Gu, Jie and Wilie, Bryan and Vincentio, Karissa and Lim, Suryani and Team, NusaX\",\n  booktitle = \"Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics\",\n  pages = \"815--834\",\n  year = \"2023\",\n  doi = \"10.18653/v1/2023.eacl-main.57\"\n}",
+    "doi": "10.18653/v1/2023.eacl-main.57"
+  },
+  "source_references": [
+    {
+      "title": "NusaX GitHub Repository",
+      "url": "https://github.com/IndoNLP/nusax",
+      "type": "repository"
+    },
+    {
+      "title": "EACL 2023 Paper",
+      "url": "https://aclanthology.org/2023.eacl-main.57/",
+      "type": "original_paper"
+    },
+    {
+      "title": "NusaX Hugging Face Dataset Card",
+      "url": "https://huggingface.co/datasets/indonlp/nusax",
+      "type": "dataset_card"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against GitHub raw data and EACL 2023 paper. Exactly 1,000 parallel sentences per language across 12 languages = 12,000 sentences (6,000 train, 1,200 val, 4,800 test)."
+  }
+}

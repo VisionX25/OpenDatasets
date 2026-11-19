@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ogbl-wikikg2",
+  "slug": "ogbl-wikikg2",
+  "name": "OGBL-WikiKG2: Wikidata Knowledge Graph Completion Benchmark",
+  "description": "OGBL-WikiKG2 is a large-scale knowledge graph benchmark extracted from Wikidata, consisting of 2,500,604 entities, 535 relation types, and 17,137,181 relational triplets. It is designed to evaluate link property prediction (knowledge graph completion) by predicting tail or head entities given an entity and a relation (h, r, ?). Evaluated under a time-stamped split where validation and test sets contain facts that emerged later in time than training triplets (Train: 16,109,182 triplets, Validation: 429,456 triplets, Test: 598,543 triplets), evaluating the model's ability to extrapolate to newly emerging facts using 1,000 negative candidates per test query.",
+  "homepage_url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-wikikg2",
+  "publisher": {
+    "name": "Stanford Network Analysis Platform (SNAP)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu/"
+  },
+  "modalities": [
+    "graph",
+    "tabular"
+  ],
+  "tasks": [
+    "link-prediction",
+    "knowledge-graph-completion",
+    "graph-machine-learning"
+  ],
+  "tags": [
+    "graph-machine-learning",
+    "knowledge-graph",
+    "link-prediction",
+    "wikidata",
+    "knowledge-base-completion",
+    "ogb-benchmark"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Creative Commons Zero 1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Wikidata factual triples are dedicated to the public domain under CC0 1.0; OGB benchmark code is licensed under MIT."
+  },
+  "sample_count": {
+    "total": 17137181,
+    "unit": "triplets",
+    "status": "verified",
+    "splits": {
+      "train": 16109182,
+      "validation": 429456,
+      "test": 598543
+    }
+  },
+  "citation": {
+    "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "paper_url": "https://arxiv.org/abs/2005.00687",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Marinka Zitnik",
+      "Yuxiao Dong",
+      "Hongyu Ren",
+      "Bowen Liu",
+      "Michele Catasta",
+      "Jure Leskovec"
+    ],
+    "bibtex": "@article{hu2020ogb,\n  title={Open Graph Benchmark: Datasets for Machine Learning on Graphs},\n  author={Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},\n  journal={Advances in Neural Information Processing Systems},\n  volume={33},\n  pages={22118--22133},\n  year={2020}\n}",
+    "doi": "10.48550/arXiv.2005.00687"
+  },
+  "source_references": [
+    {
+      "title": "OGB OGBL-WikiKG2 Official Documentation",
+      "url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-wikikg2",
+      "type": "documentation"
+    },
+    {
+      "title": "Open Graph Benchmark Paper",
+      "url": "https://arxiv.org/abs/2005.00687",
+      "type": "original_paper"
+    },
+    {
+      "title": "OGB GitHub Repository",
+      "url": "https://github.com/snap-stanford/ogb",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Stanford OGB documentation and primary NeurIPS 2020 paper. Entity count: 2,500,604; relations: 535; triplets: 17,137,181 (16,109,182 train, 429,456 val, 598,543 test)."
+  }
+}

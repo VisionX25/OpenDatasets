@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "id": "desed",
+  "slug": "desed",
+  "name": "DESED: Domestic Environment Sound Event Detection Benchmark",
+  "description": "DESED (Domestic Environment Sound Event Detection) is a benchmark for recognizing sound events in domestic environments using weak labels and synthetic audio mixtures (featured as DCASE Task 4). It comprises 10 domestic sound classes: alarm/bell, blender, cat, dog, dishes, frying, electric shaver/toothbrush, running water, speech, and vacuum cleaner. It incorporates real recordings from AudioSet (14,412 unlabelled in-domain, 1,578 weakly labelled train, 1,168 strongly labelled validation, and 692 public evaluation clips) together with a soundbank of 3,395 isolated background/foreground sound events and 2,584 pre-rendered synthetic domestic soundscapes with precise timestamp onset/offset annotations generated via Scaper.",
+  "homepage_url": "https://project.inria.fr/desed/",
+  "publisher": {
+    "name": "Inria & Université de Lorraine",
+    "type": "academic",
+    "url": "https://project.inria.fr/desed/"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "sound-event-detection",
+    "weakly-supervised-learning"
+  ],
+  "tags": [
+    "audio",
+    "sound-event-detection",
+    "domestic-environment",
+    "weakly-supervised",
+    "synthetic-audio",
+    "dcase",
+    "inria"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT License, Creative Commons Attribution 4.0, and YouTube Terms of Service",
+    "spdx_id": "MIT",
+    "url": "https://github.com/turpaultn/DESED/blob/master/LICENSE",
+    "commercial_use": "unknown",
+    "notes": "Code utilities and synthetic soundscapes on Zenodo are released under MIT and CC BY 4.0; real recordings derive from YouTube AudioSet subject to YouTube terms of service."
+  },
+  "sample_count": {
+    "total": 17850,
+    "unit": "recordings",
+    "status": "verified",
+    "splits": {
+      "unlabeled_in_domain": 14412,
+      "weakly_labeled_train": 1578,
+      "validation_strong": 1168,
+      "public_eval": 692
+    }
+  },
+  "citation": {
+    "paper_title": "Sound Event Detection in Domestic Environments with Weakly Labeled Data and Soundscape Synthesis",
+    "paper_url": "https://doi.org/10.33682/006b-jx26",
+    "authors": [
+      "Nicolas Turpault",
+      "Romain Serizel",
+      "Justin Salamon",
+      "Ankit Parag Shah"
+    ],
+    "bibtex": "@inproceedings{turpault2019sound,\n  title={Sound Event Detection in Domestic Environments with Weakly Labeled Data and Soundscape Synthesis},\n  author={Turpault, Nicolas and Serizel, Romain and Salamon, Justin and Shah, Ankit Parag},\n  booktitle={Proceedings of the Detection and Classification of Acoustic Scenes and Events 2019 Workshop (DCASE2019)},\n  pages={255--259},\n  year={2019},\n  doi={10.33682/006b-jx26}\n}",
+    "doi": "10.33682/006b-jx26"
+  },
+  "source_references": [
+    {
+      "title": "DESED Project Official Website",
+      "url": "https://project.inria.fr/desed/",
+      "type": "official_website"
+    },
+    {
+      "title": "DESED GitHub Repository",
+      "url": "https://github.com/turpaultn/DESED",
+      "type": "repository"
+    },
+    {
+      "title": "DCASE 2019 Workshop Paper",
+      "url": "https://doi.org/10.33682/006b-jx26",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Inria DESED project page and GitHub repository. Real recordings comprise 17,850 files (14,412 unlabelled, 1,578 weak train, 1,168 strong val, 692 eval) plus synthetic soundscapes. 10 domestic sound classes."
+  }
+}

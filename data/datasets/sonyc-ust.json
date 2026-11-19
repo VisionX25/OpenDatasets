@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sonyc-ust",
+  "slug": "sonyc-ust",
+  "name": "SONYC-UST: SONYC Urban Sound Tagging Benchmark",
+  "description": "SONYC Urban Sound Tagging (SONYC-UST) is a multi-label acoustic monitoring benchmark gathered from an urban acoustic sensor network of over 60 physical nodes deployed across New York City. SONYC-UST v2.3 comprises 18,510 10-second audio recordings (13,538 train, 4,308 validation, 664 test) captured with identical microphones. Audio is tagged with a two-level hierarchical taxonomy developed with the NYC Department of Environmental Protection, encompassing 8 coarse classes and 23 fine-grained urban noise categories (including engine, machinery-impact, alert-signal, human-voice, music, dog, powered-saw). Annotated by Zooniverse volunteers and verified by expert acoustic engineers, with spatiotemporal metadata.",
+  "homepage_url": "https://wp.nyu.edu/sonyc/resources/",
+  "publisher": {
+    "name": "Music and Audio Research Lab (MARL) & CUSP, New York University",
+    "type": "academic",
+    "url": "https://wp.nyu.edu/sonyc/"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "audio-classification",
+    "sound-event-detection",
+    "urban-sound-tagging"
+  ],
+  "tags": [
+    "audio",
+    "sound-event-detection",
+    "urban-acoustics",
+    "noise-monitoring",
+    "multi-label-classification",
+    "zenodo",
+    "dcase"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "SONYC-UST v2.3 is released on Zenodo under CC BY 4.0."
+  },
+  "sample_count": {
+    "total": 18510,
+    "unit": "recordings",
+    "status": "verified",
+    "splits": {
+      "train": 13538,
+      "validation": 4308,
+      "test": 664
+    }
+  },
+  "citation": {
+    "paper_title": "SONYC-UST-V2: An Urban Sound Tagging Dataset with Spatiotemporal Context",
+    "paper_url": "https://arxiv.org/abs/2009.05188",
+    "authors": [
+      "Mark Cartwright",
+      "Jason Cramer",
+      "Ana Elisa Mendez Mendez",
+      "Yu Wang",
+      "Ho-Hsiang Wu",
+      "Vincent Lostanlen",
+      "Magdalena Fuentes",
+      "Graham Dove",
+      "Charlie Mydlarz",
+      "Justin Salamon",
+      "Oded Nov",
+      "Juan Pablo Bello"
+    ],
+    "bibtex": "@inproceedings{cartwright2020sonyc,\n  title={SONYC-UST-V2: An Urban Sound Tagging Dataset with Spatiotemporal Context},\n  author={Cartwright, Mark and Cramer, Jason and Mendez, Ana Elisa Mendez and Wang, Yu and Wu, Ho-Hsiang and Lostanlen, Vincent and Fuentes, Magdalena and Dove, Graham and Mydlarz, Charlie and Salamon, Justin and Nov, Oded and Bello, Juan Pablo},\n  booktitle={Proceedings of the Workshop on Detection and Classification of Acoustic Scenes and Events (DCASE)},\n  pages={35--39},\n  year={2020}\n}",
+    "doi": "10.5281/zenodo.3966543"
+  },
+  "source_references": [
+    {
+      "title": "SONYC Resources Page",
+      "url": "https://wp.nyu.edu/sonyc/resources/",
+      "type": "official_website"
+    },
+    {
+      "title": "Zenodo Record 3966543 (SONYC-UST v2.3)",
+      "url": "https://zenodo.org/records/3966543",
+      "type": "archive"
+    },
+    {
+      "title": "DCASE 2020 Paper",
+      "url": "https://arxiv.org/abs/2009.05188",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Zenodo record 3966543 (v2.3) and DCASE 2020 paper. Exactly 18,510 10-second recordings (13,538 train, 4,308 val, 664 test) across 8 coarse and 23 fine classes. CC BY 4.0 license."
+  }
+}

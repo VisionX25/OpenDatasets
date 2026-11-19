@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "openearthmap",
+  "slug": "openearthmap",
+  "name": "OpenEarthMap: Benchmark for Global High-Resolution Land Cover Mapping",
+  "description": "OpenEarthMap is a benchmark dataset for global high-resolution land cover mapping from high-resolution optical remote sensing imagery. It contains 5,000 aerial and satellite images of 1,000x1,000 pixels at 0.25–0.5 meter ground sampling distance (GSD), manually annotated with dense pixel-level raster labels across 8 land-cover classes: Bareland, Rangeland, Developed space, Road, Tree, Water, Agriculture land, and Building. The dataset spans 97 regions across 44 countries on six continents, capturing substantial geographic, biome, urban-structure, and seasonal diversity to evaluate global out-of-domain model generalizability.",
+  "homepage_url": "https://open-earth-map.org/",
+  "publisher": {
+    "name": "RIKEN Center for Advanced Intelligence Project & The University of Tokyo",
+    "type": "academic",
+    "url": "https://open-earth-map.org/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "land-cover-mapping"
+  ],
+  "tags": [
+    "remote-sensing",
+    "geospatial",
+    "land-cover",
+    "high-resolution-imagery",
+    "satellite-imagery",
+    "aerial-imagery",
+    "semantic-segmentation",
+    "wacv"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "OpenEarthMap dataset on Zenodo (Record 7223446) is released under CC BY 4.0."
+  },
+  "sample_count": {
+    "total": 5000,
+    "unit": "images",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "OpenEarthMap: A Benchmark Dataset for Global High-Resolution Land Cover Mapping",
+    "paper_url": "https://doi.org/10.1109/WACV56688.2023.00619",
+    "authors": [
+      "Junshi Xia",
+      "Naoto Yokoya",
+      "Bruno Adriano",
+      "Clifford Broni-Bediako"
+    ],
+    "bibtex": "@inproceedings{xia2023openearthmap,\n  title={OpenEarthMap: A Benchmark Dataset for Global High-Resolution Land Cover Mapping},\n  author={Xia, Junshi and Yokoya, Naoto and Adriano, Bruno and Broni-Bediako, Clifford},\n  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},\n  pages={6254--6264},\n  year={2023},\n  doi={10.1109/WACV56688.2023.00619}\n}",
+    "doi": "10.1109/WACV56688.2023.00619"
+  },
+  "source_references": [
+    {
+      "title": "OpenEarthMap Official Website",
+      "url": "https://open-earth-map.org/",
+      "type": "official_website"
+    },
+    {
+      "title": "OpenEarthMap Zenodo Archive (Record 7223446)",
+      "url": "https://zenodo.org/records/7223446",
+      "type": "archive"
+    },
+    {
+      "title": "WACV 2023 Paper",
+      "url": "https://doi.org/10.1109/WACV56688.2023.00619",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against WACV 2023 publication and Zenodo record 7223446. Exactly 5,000 1000x1000 images (0.25-0.5m GSD) across 97 regions in 44 countries. 8 land cover classes. Licensed under CC BY 4.0."
+  }
+}

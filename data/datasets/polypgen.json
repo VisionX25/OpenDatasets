@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "polypgen",
+  "slug": "polypgen",
+  "name": "PolypGen: Multi-Centre Polyp Detection and Segmentation Benchmark",
+  "description": "PolypGen is a multi-centre colonoscopy benchmark specifically designed to assess domain generalization for colorectal polyp detection and segmentation. Curated across 6 clinical centres in Norway, France, the United Kingdom, Egypt, and Italy (>300 patients), it contains 8,037 frames: 3,762 positive frames (1,537 still images and 2,225 positive video sequence frames) and 4,275 negative sequence frames. Verified by 6 senior gastroenterologists, the dataset includes pixel-level segmentation masks and bounding boxes covering wide variations in polyp morphology, flat lesions, and resection artifacts across different endoscopic camera systems.",
+  "homepage_url": "https://github.com/DebeshJha/PolypGen",
+  "publisher": {
+    "name": "Simula Research Laboratory & University of Oxford",
+    "type": "academic",
+    "url": "https://www.simula.no/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "object-detection",
+    "polyp-segmentation"
+  ],
+  "tags": [
+    "medical-imaging",
+    "endoscopy",
+    "colonoscopy",
+    "polyp-segmentation",
+    "generalization-assessment",
+    "multi-center",
+    "nature-scientific-data"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Released under CC BY 4.0 as explicitly documented in Nature Scientific Data publication."
+  },
+  "sample_count": {
+    "total": 8037,
+    "unit": "frames",
+    "status": "verified",
+    "splits": {
+      "positive_frames": 3762,
+      "negative_frames": 4275
+    }
+  },
+  "citation": {
+    "paper_title": "A multi-centre polyp detection and segmentation dataset for generalisability assessment",
+    "paper_url": "https://doi.org/10.1038/s41597-023-01981-y",
+    "authors": [
+      "Sharib Ali",
+      "Debesh Jha",
+      "Noha Ghatwary",
+      "Stefano Realdon",
+      "Renato Cannizzaro",
+      "Osama E. Salem",
+      "Dominique Lamarque",
+      "Christian Daul",
+      "Michael A. Riegler",
+      "Kim V. Anonsen",
+      "Andreas Petlund",
+      "Pål Halvorsen",
+      "Jens Rittscher",
+      "Thomas de Lange",
+      "James E. East"
+    ],
+    "bibtex": "@article{ali2023multi,\n  title={A multi-centre polyp detection and segmentation dataset for generalisability assessment},\n  author={Ali, Sharib and Jha, Debesh and Ghatwary, Noha and Realdon, Stefano and Cannizzaro, Renato and Salem, Osama E. and Lamarque, Dominique and Daul, Christian and Riegler, Michael A. and Anonsen, Kim V. and Petlund, Andreas and Halvorsen, P{\\aa}l and Rittscher, Jens and de Lange, Thomas and East, James E.},\n  journal={Scientific Data},\n  volume={10},\n  number={1},\n  pages={75},\n  year={2023},\n  doi={10.1038/s41597-023-01981-y}\n}",
+    "doi": "10.1038/s41597-023-01981-y"
+  },
+  "source_references": [
+    {
+      "title": "PolypGen GitHub Repository",
+      "url": "https://github.com/DebeshJha/PolypGen",
+      "type": "repository"
+    },
+    {
+      "title": "Scientific Data 2023 Paper",
+      "url": "https://doi.org/10.1038/s41597-023-01981-y",
+      "type": "original_paper"
+    },
+    {
+      "title": "Synapse Project syn26376615",
+      "url": "https://www.synapse.org/#!Synapse:syn26376615/wiki/613312",
+      "type": "archive"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Nature Scientific Data publication and GitHub README. Exactly 8,037 total frames (3,762 positive frames and 4,275 negative frames) from 6 centres (>300 patients). Licensed under CC BY 4.0."
+  }
+}

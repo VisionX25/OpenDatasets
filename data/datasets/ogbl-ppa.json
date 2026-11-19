@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ogbl-ppa",
+  "slug": "ogbl-ppa",
+  "name": "OGBL-PPA: Protein-Protein Association Link Prediction Benchmark",
+  "description": "OGBL-PPA is a biological link property prediction benchmark constructed from protein-protein association networks across 58 distinct species in the STRING database. It contains 576,289 protein nodes and 30,326,273 undirected association edges. Each node is annotated with a 58-dimensional one-hot vector indicating its species identity. The task is to predict whether two proteins associate or interact based on a high-throughput biological data split, testing model capability to identify protein interactions not previously detected by low-throughput experiments, evaluated via Hits@100 against 3,000,000 negative edges per split.",
+  "homepage_url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-ppa",
+  "publisher": {
+    "name": "Stanford Network Analysis Platform (SNAP)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu/"
+  },
+  "modalities": [
+    "graph",
+    "tabular"
+  ],
+  "tasks": [
+    "link-prediction",
+    "protein-protein-interaction",
+    "graph-machine-learning"
+  ],
+  "tags": [
+    "graph-machine-learning",
+    "bioinformatics",
+    "protein-protein-interaction",
+    "link-prediction",
+    "biological-networks",
+    "ogb-benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "STRING database protein network data is available under CC BY 4.0; OGB benchmark software is released under MIT."
+  },
+  "sample_count": {
+    "total": 576289,
+    "unit": "nodes",
+    "status": "verified"
+  },
+  "citation": {
+    "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "paper_url": "https://arxiv.org/abs/2005.00687",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Marinka Zitnik",
+      "Yuxiao Dong",
+      "Hongyu Ren",
+      "Bowen Liu",
+      "Michele Catasta",
+      "Jure Leskovec"
+    ],
+    "bibtex": "@article{hu2020ogb,\n  title={Open Graph Benchmark: Datasets for Machine Learning on Graphs},\n  author={Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},\n  journal={Advances in Neural Information Processing Systems},\n  volume={33},\n  pages={22118--22133},\n  year={2020}\n}",
+    "doi": "10.48550/arXiv.2005.00687"
+  },
+  "source_references": [
+    {
+      "title": "OGB OGBL-PPA Official Documentation",
+      "url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-ppa",
+      "type": "documentation"
+    },
+    {
+      "title": "Open Graph Benchmark Paper",
+      "url": "https://arxiv.org/abs/2005.00687",
+      "type": "original_paper"
+    },
+    {
+      "title": "OGB GitHub Repository",
+      "url": "https://github.com/snap-stanford/ogb",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Stanford OGB documentation and primary publication. Total protein nodes: 576,289; total association edges: 30,326,273 (25,207,706 train, 2,260,840 validation, 2,857,727 test edges)."
+  }
+}

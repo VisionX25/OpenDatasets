@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "dancetrack",
+  "slug": "dancetrack",
+  "name": "DanceTrack: Multi-Object Tracking in Uniform Appearance and Diverse Motion",
+  "description": "DanceTrack is a multi-human object tracking benchmark specifically constructed to evaluate tracking algorithms when appearance is not discriminative. It comprises 100 group dancing video sequences totaling 105,855 frames (40 train, 25 validation, 35 test) recorded at 20 FPS with 990 total tracks. Dancers frequently wear matching uniforms or stage costumes, execute extreme body articulations, and undergo dynamic crossovers and mutual occlusions, preventing trackers from relying purely on visual Re-ID and necessitating spatiotemporal motion analysis. Annotations provide frame-level bounding boxes and persistent identity IDs following MOT Challenge standards.",
+  "homepage_url": "https://dancetrack.github.io/",
+  "publisher": {
+    "name": "The University of Hong Kong & Carnegie Mellon University",
+    "type": "academic",
+    "url": "https://dancetrack.github.io/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "multi-object-tracking",
+    "human-tracking"
+  ],
+  "tags": [
+    "computer-vision",
+    "multi-object-tracking",
+    "dance",
+    "motion-analysis",
+    "uniform-appearance",
+    "video-tracking",
+    "cvpr"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "DanceTrack Non-Commercial Research License",
+    "spdx_id": null,
+    "url": "https://github.com/DanceTrack/DanceTrack",
+    "commercial_use": "forbidden",
+    "notes": "The DanceTrack repository agreement explicitly states that the complete dataset is available for non-commercial research purposes only. The annotations are licensed under CC BY 4.0, benchmark evaluation code is under MIT, and underlying videos were harvested from the Internet under fair use."
+  },
+  "sample_count": {
+    "total": 100,
+    "unit": "sequences",
+    "status": "verified",
+    "splits": {
+      "train": 40,
+      "validation": 25,
+      "test": 35
+    }
+  },
+  "citation": {
+    "paper_title": "DanceTrack: Multi-Object Tracking in Uniform Appearance and Diverse Motion",
+    "paper_url": "https://doi.org/10.1109/CVPR52688.2022.02032",
+    "authors": [
+      "Peize Sun",
+      "Jinkun Cao",
+      "Yi Jiang",
+      "Zehuan Yuan",
+      "Song Bai",
+      "Kris Kitani",
+      "Ping Luo"
+    ],
+    "bibtex": "@inproceedings{sun2022dancetrack,\n  title={DanceTrack: Multi-Object Tracking in Uniform Appearance and Diverse Motion},\n  author={Sun, Peize and Cao, Jinkun and Jiang, Yi and Yuan, Zehuan and Bai, Song and Kitani, Kris and Luo, Ping},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={20993--21002},\n  year={2022},\n  doi={10.1109/CVPR52688.2022.02032}\n}",
+    "doi": "10.1109/CVPR52688.2022.02032"
+  },
+  "source_references": [
+    {
+      "title": "DanceTrack Official Project Page",
+      "url": "https://dancetrack.github.io/",
+      "type": "official_website"
+    },
+    {
+      "title": "DanceTrack GitHub Repository",
+      "url": "https://github.com/DanceTrack/DanceTrack",
+      "type": "repository"
+    },
+    {
+      "title": "CVPR 2022 Paper",
+      "url": "https://doi.org/10.1109/CVPR52688.2022.02032",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against DanceTrack official GitHub repository agreement and CVPR 2022 publication. Verified DOI: 10.1109/CVPR52688.2022.02032. Exactly 100 videos (40 train, 25 val, 35 test) and 105,855 frames. Dataset restricted to non-commercial research use."
+  }
+}

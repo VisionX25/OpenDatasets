@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "lasot",
+  "slug": "lasot",
+  "name": "LaSOT: Large-Scale Single Object Tracking Benchmark",
+  "description": "LaSOT (Large-scale Single Object Tracking) is a dedicated long-term visual tracking benchmark comprising 1,400 video sequences across 70 object categories in its CVPR 2019 release, totaling over 3.52 million frames (extended to 1,550 sequences and 3.87M frames across 85 categories in IJCV 2021). The average sequence length exceeds 2,500 frames (~83 seconds). Every frame is manually annotated with tightly fitted bounding boxes and 14 challenging attribute flags (e.g., occlusion, illumination variation, viewpoint change, deformation). Protocol II splits provide 1,120 training sequences (2.81M frames) and 280 test sequences (685K frames).",
+  "homepage_url": "https://vision.cs.stonybrook.edu/~lasot/",
+  "publisher": {
+    "name": "Stony Brook University & Temple University",
+    "type": "academic",
+    "url": "https://vision.cs.stonybrook.edu/~lasot/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "single-object-tracking",
+    "visual-tracking"
+  ],
+  "tags": [
+    "computer-vision",
+    "single-object-tracking",
+    "visual-tracking",
+    "long-term-tracking",
+    "bounding-boxes",
+    "cvpr"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "LaSOT Personal, Academic, and Educational Research License",
+    "spdx_id": null,
+    "url": "https://vision.cs.stonybrook.edu/~lasot/download.html",
+    "commercial_use": "forbidden",
+    "notes": "Data is restricted to personal, academic, or educational use only. Commercial use is explicitly prohibited."
+  },
+  "sample_count": {
+    "total": 1400,
+    "unit": "sequences",
+    "status": "verified",
+    "splits": {
+      "train": 1120,
+      "test": 280
+    }
+  },
+  "citation": {
+    "paper_title": "LaSOT: A High-Quality Benchmark for Large-Scale Single Object Tracking",
+    "paper_url": "https://doi.org/10.1109/CVPR.2019.00552",
+    "authors": [
+      "Heng Fan",
+      "Liting Lin",
+      "Fan Yang",
+      "Peng Chu",
+      "Ge Deng",
+      "Sijia Yu",
+      "Hexin Bai",
+      "Yong Xu",
+      "Chunyuan Liao",
+      "Haibin Ling"
+    ],
+    "bibtex": "@inproceedings{fan2019lasot,\n  title={LaSOT: A High-Quality Benchmark for Large-Scale Single Object Tracking},\n  author={Fan, Heng and Lin, Liting and Yang, Fan and Chu, Peng and Deng, Ge and Yu, Sijia and Bai, Hexin and Xu, Yong and Liao, Chunyuan and Ling, Haibin},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={5374--5383},\n  year={2019},\n  doi={10.1109/CVPR.2019.00552}\n}",
+    "doi": "10.1109/CVPR.2019.00552"
+  },
+  "source_references": [
+    {
+      "title": "LaSOT Official Website",
+      "url": "https://vision.cs.stonybrook.edu/~lasot/",
+      "type": "official_website"
+    },
+    {
+      "title": "CVPR 2019 Paper",
+      "url": "https://doi.org/10.1109/CVPR.2019.00552",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against CVPR 2019 publication and Stony Brook dataset site. DOI confirmed as 10.1109/CVPR.2019.00552 (resolved collision with LVIS 10.1109/CVPR.2019.00550). Exactly 1,400 sequences in CVPR benchmark (1,120 train, 280 test)."
+  }
+}

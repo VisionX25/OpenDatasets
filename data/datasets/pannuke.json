@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pannuke",
+  "slug": "pannuke",
+  "name": "PanNuke: Open Pan-Cancer Histology Dataset for Nuclei Instance Segmentation and Classification",
+  "description": "PanNuke is a comprehensive pan-cancer histology benchmark for nuclear instance segmentation and classification across 19 human tissue types (including adrenal gland, bile duct, bladder, breast, cervix, colon, esophagus, head & neck, kidney, liver, lung, ovary, pancreas, prostate, skin, stomach, testis, thyroid, and uterus). It contains 7,901 visual field patches of 256x256 pixels at 40x magnification, with 189,744 exhaustively annotated nuclei classified into 5 clinical categories: neoplastic, non-neoplastic epithelial, inflammatory, connective tissue, and dead. Distributed with 3 standardized randomized cross-validation folds (Fold 1: 2,656 patches, Fold 2: 2,523 patches, Fold 3: 2,722 patches).",
+  "homepage_url": "https://warwick.ac.uk/fac/cross_fac/tia/data/pannuke",
+  "publisher": {
+    "name": "Tissue Image Analytics (TIA) Centre, University of Warwick",
+    "type": "academic",
+    "url": "https://warwick.ac.uk/fac/cross_fac/tia/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "instance-segmentation",
+    "cell-classification",
+    "cell-segmentation"
+  ],
+  "tags": [
+    "medical-imaging",
+    "computational-pathology",
+    "pan-cancer",
+    "nuclei-segmentation",
+    "histopathology",
+    "cell-classification",
+    "warwick-tia"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "PanNuke is released by the University of Warwick TIA Centre under CC BY-NC-SA 4.0 strictly for research purposes; commercial uses are explicitly prohibited."
+  },
+  "sample_count": {
+    "total": 7901,
+    "unit": "patches",
+    "status": "verified",
+    "splits": {
+      "fold1": 2656,
+      "fold2": 2523,
+      "fold3": 2722
+    }
+  },
+  "citation": {
+    "paper_title": "PanNuke: An Open Pan-Cancer Histology Dataset for Nuclei Instance Segmentation and Classification",
+    "paper_url": "https://doi.org/10.1007/978-3-030-23937-4_2",
+    "authors": [
+      "Jevgenij Gamper",
+      "Navid Alemi Koohbanani",
+      "Ksenija Benet",
+      "Ali Khuram",
+      "Nasir Rajpoot"
+    ],
+    "bibtex": "@inproceedings{gamper2019pannuke,\n  title={PanNuke: An Open Pan-Cancer Histology Dataset for Nuclei Instance Segmentation and Classification},\n  author={Gamper, Jevgenij and Koohbanani, Navid Alemi and Benet, Ksenija and Khuram, Ali and Rajpoot, Nasir},\n  booktitle={European Congress on Digital Pathology},\n  pages={11--19},\n  year={2019},\n  doi={10.1007/978-3-030-23937-4_2}\n}",
+    "doi": "10.1007/978-3-030-23937-4_2"
+  },
+  "source_references": [
+    {
+      "title": "PanNuke Official Portal at Warwick TIA Centre",
+      "url": "https://warwick.ac.uk/fac/cross_fac/tia/data/pannuke",
+      "type": "official_website"
+    },
+    {
+      "title": "ECDP 2019 Paper",
+      "url": "https://doi.org/10.1007/978-3-030-23937-4_2",
+      "type": "original_paper"
+    },
+    {
+      "title": "PanNuke Metrics GitHub Repository",
+      "url": "https://github.com/TIA-Lab/PanNuke-metrics",
+      "type": "repository"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against Warwick TIA Centre official portal. Exactly 7,901 patches (Fold 1: 2,656, Fold 2: 2,523, Fold 3: 2,722) and 189,744 annotated nuclei across 19 tissues. Licensed under CC BY-NC-SA 4.0; commercial use forbidden."
+  }
+}

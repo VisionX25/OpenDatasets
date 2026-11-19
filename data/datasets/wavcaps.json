@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wavcaps",
+  "slug": "wavcaps",
+  "name": "WavCaps: Weakly-Labelled Audio Captioning Benchmark",
+  "description": "WavCaps is a large-scale audio-language multimodal dataset comprising 403,050 audio clips paired with ChatGPT-assisted descriptive captions. The audio is sourced from 4 distinct collections: FreeSound (262,300 clips), AudioSet strongly-labelled subset (108,317 clips), BBC Sound Effects (31,201 clips), and SoundBible (1,232 clips). Sourced descriptions were filtered and re-written using ChatGPT into natural language captions describing acoustic events, spatial scene properties, and sound sources, supporting audio-language retrieval, automated audio captioning (AAC), and zero-shot sound classification.",
+  "homepage_url": "https://github.com/XinhaoMei/WavCaps",
+  "publisher": {
+    "name": "Centre for Vision, Speech and Signal Processing (CVSSP), University of Surrey",
+    "type": "academic",
+    "url": "https://www.surrey.ac.uk/centre-vision-speech-signal-processing"
+  },
+  "modalities": [
+    "audio",
+    "nlp"
+  ],
+  "tasks": [
+    "audio-captioning",
+    "audio-retrieval",
+    "zero-shot-audio-classification"
+  ],
+  "tags": [
+    "audio",
+    "audio-captioning",
+    "audio-language",
+    "chatgpt",
+    "weakly-supervised",
+    "sound-events",
+    "taslp"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "WavCaps Academic Research Agreement & Multi-Source Audio Terms",
+    "spdx_id": null,
+    "url": "https://github.com/XinhaoMei/WavCaps#license",
+    "commercial_use": "forbidden",
+    "notes": "The WavCaps dataset is strictly restricted to academic research purposes. Audio recordings derive from 4 external sources subject to their respective terms: BBC Sound Effects (non-commercial research only), AudioSet (YouTube Terms of Service), FreeSound (individual CC licenses), and SoundBible. Commercial use is forbidden."
+  },
+  "sample_count": {
+    "total": 403050,
+    "unit": "audio_clips",
+    "status": "verified",
+    "splits": {
+      "freesound": 262300,
+      "audioset_strong": 108317,
+      "bbc_sound_effects": 31201,
+      "soundbible": 1232
+    }
+  },
+  "citation": {
+    "paper_title": "WavCaps: A ChatGPT-Assisted Weakly-Labelled Audio Captioning Dataset for Audio-Language Multimodal Research",
+    "paper_url": "https://doi.org/10.1109/TASLP.2024.3419446",
+    "authors": [
+      "Xinhao Mei",
+      "Chutong Meng",
+      "Haohe Liu",
+      "Qiuqiang Kong",
+      "Tom Ko",
+      "Chengqi Zhao",
+      "Mark D. Plumbley",
+      "Yuexian Zou",
+      "Wenwu Wang"
+    ],
+    "bibtex": "@article{mei2024wavcaps,\n  title={WavCaps: A ChatGPT-Assisted Weakly-Labelled Audio Captioning Dataset for Audio-Language Multimodal Research},\n  author={Mei, Xinhao and Meng, Chutong and Liu, Haohe and Kong, Qiuqiang and Ko, Tom and Zhao, Chengqi and Plumbley, Mark D. and Zou, Yuexian and Wang, Wenwu},\n  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  volume={32},\n  pages={3348--3361},\n  year={2024},\n  doi={10.1109/TASLP.2024.3419446}\n}",
+    "doi": "10.1109/TASLP.2024.3419446"
+  },
+  "source_references": [
+    {
+      "title": "WavCaps GitHub Repository",
+      "url": "https://github.com/XinhaoMei/WavCaps",
+      "type": "repository"
+    },
+    {
+      "title": "WavCaps Hugging Face Dataset Card",
+      "url": "https://huggingface.co/datasets/cvssp/WavCaps",
+      "type": "dataset_card"
+    },
+    {
+      "title": "IEEE/ACM TASLP 2024 Paper",
+      "url": "https://doi.org/10.1109/TASLP.2024.3419446",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Data Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified against IEEE/ACM TASLP publication and GitHub README. Exactly 403,050 audio-caption pairs across 4 subsets: FreeSound (262,300), AudioSet (108,317), BBC SFX (31,201), SoundBible (1,232). Non-commercial academic research use only."
+  }
+}
