@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import { useParams, Link, useLocation, useNavigate } from 'react-router-dom'
 import {
   ArrowLeft,
@@ -23,24 +23,31 @@ import {
   Download,
 } from 'lucide-react'
 import type { DatasetMetadata } from '../types/dataset'
-import { getDatasetBySlug } from '../services/catalogService'
+import { getDatasetBySlug, fetchCatalog } from '../services/catalogService'
 import { copyTextToClipboard } from '../utils/clipboard'
 import {
   formatCitation,
   downloadCitationFile,
   type CitationFormat,
 } from '../utils/citationUtils'
+import { getRelatedDatasets } from '../utils/relatedDatasets'
+import { DatasetCard } from '../components/DatasetCard'
 
 export interface DatasetDetailPageProps {
   initialDataset?: DatasetMetadata | null
+  initialCatalog?: DatasetMetadata[]
 }
 
-export const DatasetDetailPage: React.FC<DatasetDetailPageProps> = ({ initialDataset }) => {
+export const DatasetDetailPage: React.FC<DatasetDetailPageProps> = ({
+  initialDataset,
+  initialCatalog,
+}) => {
   const { slug, param } = useParams<{ slug?: string; param?: string }>()
   const effectiveSlug = (slug || param || '').trim()
   const location = useLocation()
   const navigate = useNavigate()
   const [dataset, setDataset] = useState<DatasetMetadata | null>(() => initialDataset ?? null)
+  const [catalog, setCatalog] = useState<DatasetMetadata[]>(() => initialCatalog ?? [])
   const [loading, setLoading] = useState(() => initialDataset === undefined)
   const [error, setError] = useState<string | null>(null)
   const [citationFormat, setCitationFormat] = useState<CitationFormat>('bibtex')
@@ -48,6 +55,32 @@ export const DatasetDetailPage: React.FC<DatasetDetailPageProps> = ({ initialDat
   const [copyCitationError, setCopyCitationError] = useState(false)
   const [copiedId, setCopiedId] = useState(false)
   const [copiedSlug, setCopiedSlug] = useState(false)
+
+  useEffect(() => {
+    if (initialCatalog !== undefined && initialCatalog.length > 0) {
+      return
+    }
+    let ignore = false
+    fetchCatalog()
+      .then((cat) => {
+        if (!ignore) {
+          setCatalog(cat)
+        }
+      })
+      .catch(() => {
+        // Fallback gracefully if catalog fails to load
+      })
+    return () => {
+      ignore = true
+    }
+  }, [initialCatalog])
+
+  const relatedDatasets = useMemo(() => {
+    if (!dataset || catalog.length === 0) {
+      return []
+    }
+    return getRelatedDatasets(dataset, catalog, 4)
+  }, [dataset, catalog])
 
   useEffect(() => {
     // If accessed via legacy /datasets/:slug, smoothly canonicalize URL to /dataset/:slug
@@ -924,6 +957,38 @@ export const DatasetDetailPage: React.FC<DatasetDetailPageProps> = ({ initialDat
             </div>
           </div>
         </div>
+
+        {/* Related Datasets Section */}
+        <section
+          aria-labelledby="related-datasets-heading"
+          className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800"
+        >
+          <div className="mb-6">
+            <h2
+              id="related-datasets-heading"
+              className="text-2xl font-bold text-slate-900 dark:text-white"
+            >
+              Related Datasets
+            </h2>
+            <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+              Explore similar datasets matching research tasks, modalities, and dataset families.
+            </p>
+          </div>
+
+          {relatedDatasets.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {relatedDatasets.map((related) => (
+                <DatasetCard key={related.id} dataset={related} />
+              ))}
+            </div>
+          ) : (
+            <div className="p-8 rounded-xl border border-dashed border-slate-300 dark:border-slate-800 text-center bg-slate-50/50 dark:bg-slate-900/30">
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                No sufficiently related datasets found in the catalog at this time.
+              </p>
+            </div>
+          )}
+        </section>
       </div>
     </div>
   )

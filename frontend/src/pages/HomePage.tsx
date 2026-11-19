@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowRight,
@@ -11,8 +11,34 @@ import {
   FileCheck,
   CheckCircle2,
 } from 'lucide-react'
+import { fetchCatalog } from '../services/catalogService'
 
-export const HomePage: React.FC = () => {
+export interface HomePageProps {
+  initialCount?: number
+}
+
+export const HomePage: React.FC<HomePageProps> = ({ initialCount }) => {
+  const [datasetCount, setDatasetCount] = useState<number | null>(() => initialCount ?? null)
+
+  useEffect(() => {
+    if (initialCount !== undefined) {
+      return
+    }
+    let isMounted = true
+    fetchCatalog()
+      .then((catalog) => {
+        if (isMounted) {
+          setDatasetCount(catalog.length)
+        }
+      })
+      .catch(() => {
+        // Fall back gracefully if catalog fails to load
+      })
+    return () => {
+      isMounted = false
+    }
+  }, [initialCount])
+
   return (
     <div className="flex-1">
       {/* Hero Section */}
@@ -37,7 +63,9 @@ export const HomePage: React.FC = () => {
             Find machine learning datasets with structured metadata, source references, and documented license information.
           </p>
           <p className="mt-4 text-sm font-medium text-indigo-700 dark:text-indigo-300">
-            Milestone reached: 600 research dataset records · November 2026
+            {datasetCount !== null
+              ? `Milestone reached: ${datasetCount} research dataset records · November 2026`
+              : 'Milestone reached: research dataset records · November 2026'}
           </p>
 
           {/* CTA Buttons */}

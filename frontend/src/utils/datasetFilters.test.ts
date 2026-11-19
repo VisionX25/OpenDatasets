@@ -22,6 +22,7 @@ import {
   sortDatasets,
   SORT_OPTIONS,
   VALID_SORT_OPTIONS,
+  computeSearchRelevance,
 } from './datasetFilters'
 
 const mockCifar: DatasetMetadata = {
@@ -1091,6 +1092,170 @@ describe('Category Selection Visual Refinement (Task 06.2)', () => {
       const params2 = serializeFilterParams({ sort: 'default' }, 'sort=samples-desc&q=vision')
       expect(params2.get('sort')).toBeNull()
       expect(params2.get('q')).toBe('vision')
+    })
+  })
+
+  describe('Task 45: Search Relevance Ranking & ID Matching', () => {
+    const dsExact = {
+      ...mockCifar,
+      id: 'cifar-10',
+      slug: 'cifar-10',
+      name: 'CIFAR-10',
+      description: 'Vision benchmark with 60000 images.',
+      publisher: { name: 'University of Toronto', type: 'academic' as const },
+      tasks: ['image-classification'],
+      tags: ['benchmark'],
+    }
+
+    const dsPrefix = {
+      ...mockCifar,
+      id: 'cifar-100',
+      slug: 'cifar-100',
+      name: 'CIFAR-100 Dataset',
+      description: 'Another vision dataset with 100 classes.',
+      publisher: { name: 'University of Toronto', type: 'academic' as const },
+      tasks: ['image-classification'],
+      tags: ['benchmark'],
+    }
+
+    const dsPartial = {
+      ...mockCifar,
+      id: 'tiny-cifar-10-subset',
+      slug: 'tiny-cifar-10-subset',
+      name: 'Tiny CIFAR-10 Subset',
+      description: 'Miniature version of CIFAR-10.',
+      publisher: { name: 'Community Lab', type: 'academic' as const },
+      tasks: ['image-classification'],
+      tags: ['vision'],
+    }
+
+    const dsTaskOnly = {
+      ...mockCifar,
+      id: 'imagenet-1k',
+      slug: 'imagenet-1k',
+      name: 'ImageNet-1K',
+      description: 'A large-scale visual recognition benchmark.',
+      publisher: { name: 'Stanford Vision Lab', type: 'academic' as const },
+      tasks: ['cifar-10'],
+      tags: ['benchmark'],
+    }
+
+    const dsDescOnly = {
+      ...mockCifar,
+      id: 'mnist',
+      slug: 'mnist',
+      name: 'MNIST',
+      description: 'Often compared alongside CIFAR-10 in machine learning experiments.',
+      publisher: { name: 'NYU', type: 'academic' as const },
+      tasks: ['digit-recognition'],
+      tags: ['digits'],
+    }
+
+    const dsUnrelated = {
+      ...mockCifar,
+      id: 'librispeech',
+      slug: 'librispeech',
+      name: 'LibriSpeech',
+      description: 'Audio speech dataset for ASR.',
+      publisher: { name: 'OpenSLR', type: 'community' as const },
+      tasks: ['speech-recognition'],
+      tags: ['audio'],
+    }
+
+    it('matchesSearch matches dataset id and slug in addition to other fields', () => {
+      expect(matchesSearch(dsExact, 'cifar-10')).toBe(true)
+      expect(matchesSearch(dsExact, 'cifar')).toBe(true)
+      expect(matchesSearch(dsExact, 'librispeech')).toBe(false)
+    })
+
+    it('matchesSearch handles hyphenated vs non-hyphenated search terms reasonably', () => {
+      expect(matchesSearch(dsExact, 'cifar10')).toBe(true)
+      expect(matchesSearch(dsExact, 'cifar 10')).toBe(true)
+      expect(matchesSearch(dsPrefix, 'cifar100')).toBe(true)
+    })
+
+    it('computeSearchRelevance enforces strict priority tiers', () => {
+      const q = 'cifar-10'
+      const scoreExact = computeSearchRelevance(dsExact, q)
+      const scorePrefix = computeSearchRelevance(dsPrefix, q)
+      const scorePartial = computeSearchRelevance(dsPartial, q)
+      const scoreTask = computeSearchRelevance(dsTaskOnly, q)
+      const scoreDesc = computeSearchRelevance(dsDescOnly, q)
+
+      // Priority 1 (Exact name/ID) > Priority 2 (Prefix)
+      expect(scoreExact).toBeGreaterThanOrEqual(9000)
+      expect(scoreExact).toBeGreaterThan(scorePrefix)
+
+      // Priority 2 (Prefix name/ID) > Priority 3 (Partial)
+      expect(scorePrefix).toBeGreaterThanOrEqual(4000)
+      expect(scorePrefix).toBeGreaterThan(scorePartial)
+
+      // Priority 3 (Partial name/ID) > Priority 4 (Task/Tag)
+      expect(scorePartial).toBeGreaterThanOrEqual(1800)
+      expect(scorePartial).toBeGreaterThan(scoreTask)
+
+      // Priority 4 (Task/Tag) > Priority 5 (Desc/Publisher)
+      expect(scoreTask).toBeGreaterThanOrEqual(700)
+      expect(scoreTask).toBeGreaterThan(scoreDesc)
+    })
+
+    it('computeSearchRelevance is case-insensitive and trims whitespace', () => {
+      const score1 = computeSearchRelevance(dsExact, 'cifar-10')
+      const score2 = computeSearchRelevance(dsExact, '   CIFAR-10   ')
+      expect(score1).toBe(score2)
+      expect(score1).toBeGreaterThanOrEqual(10000)
+    })
+
+    it('sortDatasets with default sort orders by search relevance descending', () => {
+      const candidates = [dsUnrelated, dsDescOnly, dsPrefix, dsExact, dsPartial]
+      const sorted = sortDatasets(candidates, 'default', 'cifar-10')
+
+      // Exact match must be first
+      expect(sorted[0].id).toBe('cifar-10')
+      // Followed by prefix/partial
+      expect(sorted[1].id).toBe('cifar-100')
+      expect(sorted[2].id).toBe('tiny-cifar-10-subset')
+    })
+
+    it('sortDatasets applies deterministic alphabetical tie-breaking when scores are equal', () => {
+      const dsA = {
+        ...mockCifar,
+        id: 'alpha-same-score',
+        slug: 'alpha-same-score',
+        name: 'Alpha Dataset',
+        tasks: ['benchmark-task'],
+      }
+      const dsB = {
+        ...mockCifar,
+        id: 'beta-same-score',
+        slug: 'beta-same-score',
+        name: 'Beta Dataset',
+        tasks: ['benchmark-task'],
+      }
+
+      const sorted = sortDatasets([dsB, dsA], 'default', 'benchmark-task')
+      expect(sorted[0].name).toBe('Alpha Dataset')
+      expect(sorted[1].name).toBe('Beta Dataset')
+    })
+
+    it('sortDatasets preserves explicit user sorting regardless of search query', () => {
+      const candidates = [dsExact, dsPrefix, dsPartial]
+      // Explicit name-desc sort
+      const sorted = sortDatasets(candidates, 'name-desc', 'cifar-10')
+      expect(sorted.map((d) => d.name)).toEqual([
+        'Tiny CIFAR-10 Subset',
+        'CIFAR-100 Dataset',
+        'CIFAR-10',
+      ])
+    })
+
+    it('sortDatasets preserves original list when search query is empty or whitespace', () => {
+      const candidates = [dsUnrelated, dsExact, dsPrefix]
+      const sortedEmpty = sortDatasets(candidates, 'default', '')
+      const sortedWhitespace = sortDatasets(candidates, 'default', '   ')
+
+      expect(sortedEmpty.map((d) => d.id)).toEqual(['librispeech', 'cifar-10', 'cifar-100'])
+      expect(sortedWhitespace.map((d) => d.id)).toEqual(['librispeech', 'cifar-10', 'cifar-100'])
     })
   })
 })
