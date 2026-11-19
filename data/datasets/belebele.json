@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "belebele",
+  "slug": "belebele",
+  "name": "Belebele: A Parallel Reading Comprehension Dataset in 122 Language Variants",
+  "description": "Belebele is a massively multilingual machine reading comprehension benchmark covering 122 language variants across 115 distinct languages, 27 language families, and 29 scripts. Derived from FLORES-200 passages, each language variant contains 900 4-way multiple-choice reading comprehension questions based on 488 passages, enabling precise evaluation of language models across high-, medium-, and low-resource languages in a fully parallel evaluation setting.",
+  "homepage_url": "https://github.com/facebookresearch/belebele",
+  "publisher": {
+    "name": "Meta AI",
+    "type": "industry",
+    "url": "https://ai.meta.com/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "reading-comprehension",
+    "question-answering",
+    "language-modeling-evaluation"
+  ],
+  "tags": [
+    "multilingual",
+    "reading-comprehension",
+    "benchmark",
+    "flores-200",
+    "low-resource"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Evaluation dataset released under CC BY-SA 4.0 matching FLORES-200 upstream license."
+  },
+  "source_references": [
+    {
+      "title": "Official GitHub Repository",
+      "url": "https://github.com/facebookresearch/belebele",
+      "type": "repository"
+    },
+    {
+      "title": "ACL 2024 Research Paper",
+      "url": "https://aclanthology.org/2024.acl-long.44/",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified primary source repository, 122 language variant coverage, and ACL 2024 publication."
+  },
+  "sample_count": {
+    "total": 109800,
+    "unit": "multiple_choice_questions",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2024-08-11"
+  },
+  "citation": {
+    "paper_title": "The Belebele Benchmark: a Parallel Reading Comprehension Dataset in 122 Language Variants",
+    "paper_url": "https://aclanthology.org/2024.acl-long.44/",
+    "doi": "10.18653/v1/2024.acl-long.44",
+    "authors": [
+      "Lucas Bandarkar",
+      "Davis Liang",
+      "Benjamin Muller",
+      "Mikel Artetxe",
+      "Satya Narayan Shukla",
+      "Donald Husa",
+      "Naman Goyal",
+      "Abhinandan Krishnan",
+      "Luke Zettlemoyer",
+      "Madian Khabsa"
+    ]
+  }
+}

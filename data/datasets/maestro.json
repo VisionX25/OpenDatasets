@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "id": "maestro",
+  "slug": "maestro",
+  "name": "MAESTRO: MIDI and Audio Edited for Synchronous TRacks and Organization",
+  "description": "MAESTRO (MIDI and Audio Edited for Synchronous TRacks and Organization) is a virtuosic piano performance dataset developed by Google Magenta. It contains 1,276 performances (~198.7 hours) of classical piano music from 10 years of the International Piano-e-Competition, featuring paired, finely aligned CD-quality audio and MIDI recordings with sub-millisecond precision, providing a gold standard for automatic music transcription and expressive piano performance modeling.",
+  "homepage_url": "https://magenta.withgoogle.com/datasets/maestro",
+  "publisher": {
+    "name": "Google Magenta (Google LLC)",
+    "type": "industry",
+    "url": "https://magenta.withgoogle.com/"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "music-transcription",
+    "audio-generation",
+    "music-information-retrieval"
+  ],
+  "tags": [
+    "audio",
+    "music",
+    "piano",
+    "midi",
+    "transcription",
+    "magenta"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released by Google under CC BY-NC-SA 4.0."
+  },
+  "source_references": [
+    {
+      "title": "Official Google Magenta MAESTRO Portal",
+      "url": "https://magenta.withgoogle.com/datasets/maestro",
+      "type": "official_website"
+    },
+    {
+      "title": "ICLR 2019 Research Paper",
+      "url": "https://arxiv.org/abs/1810.12247",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified v3.0.0 release (1,276 performances, ~198.7 hours), CC BY-NC-SA 4.0 license, and ICLR 2019 publication."
+  },
+  "sample_count": {
+    "total": 1276,
+    "unit": "performances",
+    "status": "verified",
+    "splits": {
+      "train": 962,
+      "validation": 137,
+      "test": 177
+    }
+  },
+  "dates": {
+    "published": "2019-05-06"
+  },
+  "citation": {
+    "paper_title": "Enabling Factorized Piano Music Modeling and Generation with the MAESTRO Dataset",
+    "paper_url": "https://arxiv.org/abs/1810.12247",
+    "doi": "10.48550/arXiv.1810.12247",
+    "authors": [
+      "Curtis Hawthorne",
+      "Andriy Stasyuk",
+      "Adam Roberts",
+      "Ian Simon",
+      "Cheng-Zhi Anna Huang",
+      "Sander Dieleman",
+      "Erich Elsen",
+      "Jesse Engel",
+      "Douglas Eck"
+    ]
+  }
+}

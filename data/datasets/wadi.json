@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wadi",
+  "slug": "wadi",
+  "name": "WADI: Water Distribution Testbed Dataset",
+  "description": "The WADI (Water Distribution) dataset is an industrial cyber-physical benchmark collected from a scaled physical water distribution network testbed at SUTD iTrust. Consisting of 16 days of continuous operation (14 days of normal operation and 2 days under 15 distinct cyber and physical attack scenarios) sampled every second, it monitors 127 sensor and actuator measurements (flow meters, pressure transmitters, water quality analyzers, motorized valves), providing realistic ICS attack telemetry.",
+  "homepage_url": "https://www.sutd.edu.sg/itrust/itrust-labs/datasets/dataset-characteristics/wadi/",
+  "publisher": {
+    "name": "iTrust (Singapore University of Technology and Design)",
+    "type": "academic",
+    "url": "https://itrust.sutd.edu.sg/"
+  },
+  "modalities": [
+    "time-series",
+    "sensor",
+    "tabular"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "time-series-anomaly-detection",
+    "intrusion-detection"
+  ],
+  "tags": [
+    "cybersecurity",
+    "industrial-iot",
+    "scada",
+    "water-distribution",
+    "anomaly-detection"
+  ],
+  "license": {
+    "status": "proprietary",
+    "name": "iTrust Academic Research Data Agreement",
+    "url": "https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info/",
+    "commercial_use": "forbidden",
+    "notes": "Requires application request through iTrust portal; restricted to non-commercial academic research."
+  },
+  "source_references": [
+    {
+      "title": "Official iTrust Dataset Page",
+      "url": "https://www.sutd.edu.sg/itrust/itrust-labs/datasets/dataset-characteristics/wadi/",
+      "type": "official_website"
+    },
+    {
+      "title": "CySWater 2017 Research Paper",
+      "url": "https://doi.org/10.1145/3055366.3055375",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 16-day operational timeline, 127 measurement tags, application process, and CySWater 2017 paper DOI."
+  },
+  "sample_count": {
+    "total": 1382402,
+    "unit": "sensor_records",
+    "status": "verified",
+    "splits": {
+      "normal": 1209601,
+      "attack": 172801
+    }
+  },
+  "dates": {
+    "published": "2017-04-21"
+  },
+  "citation": {
+    "paper_title": "WADI: A Water Distribution Testbed for Research in the Design of Secure Cyber Physical Systems",
+    "paper_url": "https://doi.org/10.1145/3055366.3055375",
+    "doi": "10.1145/3055366.3055375",
+    "authors": [
+      "Chuadhry Mujeeb Ahmed",
+      "Venkata Reddy Palleti",
+      "Aditya P. Mathur"
+    ]
+  }
+}

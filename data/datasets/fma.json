@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fma",
+  "slug": "fma",
+  "name": "FMA: A Dataset for Music Analysis",
+  "description": "FMA (Free Music Archive) is an open music analysis and information retrieval benchmark. Comprising 106,574 full-length audio tracks (343 days of audio) from 16,341 artists across 161 musical genres, it includes pre-extracted audio features, full track metadata, tags, and hierarchical genre labels. Provided in standard subsets (fma_small: 8,000 clips; fma_medium: 25,000 clips; fma_large: 106,574 clips; and fma_full), it benchmarks music genre classification, retrieval, and auto-tagging.",
+  "homepage_url": "https://github.com/mdeff/fma",
+  "publisher": {
+    "name": "EPFL",
+    "type": "academic",
+    "url": "https://www.epfl.ch/"
+  },
+  "modalities": [
+    "audio",
+    "tabular"
+  ],
+  "tasks": [
+    "audio-classification",
+    "music-genre-classification",
+    "music-information-retrieval"
+  ],
+  "tags": [
+    "audio",
+    "music",
+    "fma",
+    "genre-classification",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset metadata and features licensed under CC BY 4.0; audio tracks individually licensed under various Creative Commons licenses."
+  },
+  "source_references": [
+    {
+      "title": "Official GitHub Repository",
+      "url": "https://github.com/mdeff/fma",
+      "type": "repository"
+    },
+    {
+      "title": "ISMIR 2017 Research Paper",
+      "url": "https://arxiv.org/abs/1612.01840",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified official GitHub repo, track subsets, CC BY 4.0 metadata terms, and ISMIR 2017 publication."
+  },
+  "sample_count": {
+    "total": 106574,
+    "unit": "audio_tracks",
+    "status": "verified",
+    "splits": {
+      "small": 8000,
+      "medium": 25000,
+      "large": 106574
+    }
+  },
+  "dates": {
+    "published": "2017-10-23"
+  },
+  "citation": {
+    "paper_title": "FMA: A Dataset For Music Analysis",
+    "paper_url": "https://arxiv.org/abs/1612.01840",
+    "doi": "10.48550/arXiv.1612.01840",
+    "authors": [
+      "Michaël Defferrard",
+      "Kirell Benzi",
+      "Pierre Vandergheynst",
+      "Xavier Bresson"
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mlqa",
+  "slug": "mlqa",
+  "name": "MLQA: MultiLingual Question Answering",
+  "description": "MLQA (MultiLingual Question Answering) is a multi-way parallel benchmark for evaluating cross-lingual question answering performance. It contains extractive QA instances gathered from Wikipedia articles across 7 languages: English, Arabic, German, Spanish, Hindi, Vietnamese, and Simplified Chinese. The dataset contains 12,738 QA instances in English and over 5,000 QA instances in each other language, with high parallel alignment allowing cross-lingual evaluation where questions and context paragraphs are in different languages.",
+  "homepage_url": "https://github.com/facebookresearch/MLQA",
+  "publisher": {
+    "name": "Meta AI",
+    "type": "industry",
+    "url": "https://ai.meta.com/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "reading-comprehension",
+    "cross-lingual-transfer"
+  ],
+  "tags": [
+    "multilingual",
+    "qa",
+    "reading-comprehension",
+    "benchmark",
+    "wikipedia"
+  ],
+  "languages": [
+    "en",
+    "ar",
+    "de",
+    "es",
+    "hi",
+    "vi",
+    "zh"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+    "spdx_id": "CC-BY-SA-3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "commercial_use": "allowed",
+    "notes": "Derived from Wikipedia and licensed under CC BY-SA 3.0."
+  },
+  "source_references": [
+    {
+      "title": "Official GitHub Repository",
+      "url": "https://github.com/facebookresearch/MLQA",
+      "type": "repository"
+    },
+    {
+      "title": "ACL 2020 Research Paper",
+      "url": "https://aclanthology.org/2020.acl-main.653/",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified primary GitHub repository, 7 language coverage, Wikipedia provenance, and CC BY-SA 3.0 license."
+  },
+  "sample_count": {
+    "total": 46545,
+    "unit": "question_answer_instances",
+    "status": "verified",
+    "splits": {
+      "dev": 8027,
+      "test": 38518
+    }
+  },
+  "dates": {
+    "published": "2020-07-05"
+  },
+  "citation": {
+    "paper_title": "MLQA: Evaluating Cross-lingual Extractive Question Answering",
+    "paper_url": "https://aclanthology.org/2020.acl-main.653/",
+    "doi": "10.18653/v1/2020.acl-main.653",
+    "authors": [
+      "Patrick Lewis",
+      "Barlas Oğuz",
+      "Ruty Rinott",
+      "Sebastian Riedel",
+      "Holger Schwenk"
+    ]
+  }
+}

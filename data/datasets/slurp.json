@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "slurp",
+  "slug": "slurp",
+  "name": "SLURP: Spoken Language Understanding Resource Package",
+  "description": "SLURP (Spoken Language Understanding Resource Package) is a multi-modal dataset for task-oriented spoken language understanding (SLU). It contains 72,396 audio recordings (57.5 hours of speech from 177 speakers) mapped to 16,521 text sentences across 18 home-assistant domains (e.g. email, calendar, music, alarm). Utterances are annotated with 69 scenarios, 91 actions, and 56 entity types, enabling end-to-end and pipeline SLU benchmarking.",
+  "homepage_url": "https://github.com/pswietojanski/slurp",
+  "publisher": {
+    "name": "Heriot-Watt University & Emotech",
+    "type": "academic",
+    "url": "https://github.com/pswietojanski/slurp"
+  },
+  "modalities": [
+    "audio",
+    "nlp"
+  ],
+  "tasks": [
+    "spoken-language-understanding",
+    "intent-classification",
+    "slot-filling"
+  ],
+  "tags": [
+    "audio",
+    "speech",
+    "slu",
+    "voice-assistant",
+    "dialogue"
+  ],
+  "languages": [
+    "en"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "CC BY-NC 4.0 (Audio) / CC BY 4.0 (Text)",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Audio files are licensed under CC BY-NC 4.0; text annotations are under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "Official GitHub Repository",
+      "url": "https://github.com/pswietojanski/slurp",
+      "type": "repository"
+    },
+    {
+      "title": "EMNLP 2020 Research Paper",
+      "url": "https://aclanthology.org/2020.emnlp-main.588/",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 72,396 audio recordings, 16,521 text utterances, CC BY-NC 4.0 audio license, and EMNLP 2020 paper."
+  },
+  "sample_count": {
+    "total": 72396,
+    "unit": "audio_recordings",
+    "status": "verified",
+    "splits": {
+      "train": 50628,
+      "dev": 8690,
+      "test": 13078
+    }
+  },
+  "dates": {
+    "published": "2020-11-16"
+  },
+  "citation": {
+    "paper_title": "SLURP: A Spoken Language Understanding Resource Package",
+    "paper_url": "https://aclanthology.org/2020.emnlp-main.588/",
+    "doi": "10.18653/v1/2020.emnlp-main.588",
+    "authors": [
+      "Emanuele Bastianelli",
+      "Andrea Vanzo",
+      "Pawel Swietojanski",
+      "Verena Rieser"
+    ]
+  }
+}

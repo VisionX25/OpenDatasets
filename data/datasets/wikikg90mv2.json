@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wikikg90mv2",
+  "slug": "wikikg90mv2",
+  "name": "WikiKG90Mv2: Large-Scale Knowledge Graph Completion",
+  "description": "WikiKG90Mv2 is a massive knowledge graph benchmark from the OGB Large-Scale Challenge (OGB-LSC), extracted from a complete dump of Wikidata. Containing 91,230,610 entities, 1,387 relations, and 601,062,811 factual triplets, it is an order of magnitude larger than previous knowledge graph benchmarks. The task is link prediction (predicting head or tail entities for triplets), evaluated by Mean Reciprocal Rank (MRR) across diverse domain facts.",
+  "homepage_url": "https://ogb.stanford.edu/docs/lsc/wikikg90mv2/",
+  "publisher": {
+    "name": "Stanford University (OGB Team)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu/"
+  },
+  "modalities": [
+    "graph"
+  ],
+  "tasks": [
+    "link-prediction",
+    "knowledge-graph-completion"
+  ],
+  "tags": [
+    "knowledge-graph",
+    "wikidata",
+    "ogb-lsc",
+    "link-prediction",
+    "triplets"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "CC0 1.0 Universal Public Domain Dedication",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Extracted from Wikidata and distributed under CC0 1.0 Universal."
+  },
+  "source_references": [
+    {
+      "title": "Official OGB-LSC Documentation",
+      "url": "https://ogb.stanford.edu/docs/lsc/wikikg90mv2/",
+      "type": "official_website"
+    },
+    {
+      "title": "NeurIPS 2021 OGB-LSC Paper",
+      "url": "https://arxiv.org/abs/2103.09430",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified entity count (91.2M), relation count (1,387), triplet count (601M), and CC0 status."
+  },
+  "sample_count": {
+    "total": 601062811,
+    "unit": "triplets",
+    "status": "verified",
+    "splits": {
+      "train": 501062811,
+      "val": 50000000,
+      "test": 50000000
+    }
+  },
+  "dates": {
+    "published": "2021-03-17"
+  },
+  "citation": {
+    "paper_title": "OGB-LSC: A Large-Scale Challenge for Machine Learning on Graphs",
+    "paper_url": "https://arxiv.org/abs/2103.09430",
+    "doi": "10.48550/arXiv.2103.09430",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Hongyu Ren",
+      "Maho Nakata",
+      "Yuxiao Dong",
+      "Jure Leskovec"
+    ]
+  }
+}

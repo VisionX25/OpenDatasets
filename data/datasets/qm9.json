@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "qm9",
+  "slug": "qm9",
+  "name": "QM9: Quantum Chemistry Structures and Properties of 134k Molecules",
+  "description": "QM9 is a benchmark dataset in quantum chemistry and machine learning on molecular graphs. It contains 133,885 stable small organic molecules consisting of up to 9 heavy atoms (C, O, N, F) drawn from the GDB-17 chemical universe. For each molecule, geometric, thermodynamic, electronic, and energetic properties (19 physical properties including dipole moment, polarizability, HOMO, LUMO, and atomization energy) are calculated at the B3LYP/6-31G(2df,p) level of density functional theory.",
+  "homepage_url": "https://www.quantum-machine.org/datasets/",
+  "publisher": {
+    "name": "University of Basel / Quantum-Machine Consortium",
+    "type": "academic",
+    "url": "https://www.quantum-machine.org/"
+  },
+  "modalities": [
+    "graph",
+    "tabular",
+    "3d"
+  ],
+  "tasks": [
+    "molecular-property-prediction",
+    "graph-regression",
+    "quantum-chemistry"
+  ],
+  "tags": [
+    "quantum-chemistry",
+    "dft",
+    "molecules",
+    "benchmark",
+    "graph-neural-networks"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "CC0 1.0 Universal Public Domain Dedication",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Dedicated to the public domain under CC0 1.0 Universal."
+  },
+  "source_references": [
+    {
+      "title": "Quantum-Machine Datasets Portal",
+      "url": "https://www.quantum-machine.org/datasets/",
+      "type": "official_website"
+    },
+    {
+      "title": "Scientific Data 2014 Research Paper",
+      "url": "https://doi.org/10.1038/sdata.2014.22",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 133,885 molecule count, CC0 public domain status, and Nature Scientific Data publication."
+  },
+  "sample_count": {
+    "total": 133885,
+    "unit": "molecules",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2014-07-29"
+  },
+  "citation": {
+    "paper_title": "Quantum chemistry structures and properties of 134 kilo molecules",
+    "paper_url": "https://doi.org/10.1038/sdata.2014.22",
+    "doi": "10.1038/sdata.2014.22",
+    "authors": [
+      "Raghunathan Ramakrishnan",
+      "Pavlo O. Dral",
+      "Matthias Rupp",
+      "O. Anatole von Lilienfeld"
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "xnli",
+  "slug": "xnli",
+  "name": "XNLI: Cross-Lingual Natural Language Inference",
+  "description": "The Cross-lingual Natural Language Inference (XNLI) corpus is a benchmark for evaluating cross-lingual sentence representations and zero-shot cross-lingual transfer. It extends the MultiNLI dataset by providing professionally translated development and test sets into 15 languages: English, French, Spanish, German, Greek, Bulgarian, Russian, Turkish, Arabic, Vietnamese, Thai, Chinese, Hindi, Swahili, and Urdu. Each language contains 2,490 development and 5,010 test sentence pairs annotated with premise, hypothesis, and textual entailment labels (entailment, neutral, contradiction).",
+  "homepage_url": "https://github.com/facebookresearch/XNLI",
+  "publisher": {
+    "name": "Meta AI",
+    "type": "industry",
+    "url": "https://ai.meta.com/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "natural-language-inference",
+    "text-classification",
+    "zero-shot-cross-lingual-transfer"
+  ],
+  "tags": [
+    "multilingual",
+    "nli",
+    "benchmark",
+    "cross-lingual",
+    "evaluation"
+  ],
+  "languages": [
+    "en",
+    "fr",
+    "es",
+    "de",
+    "el",
+    "bg",
+    "ru",
+    "tr",
+    "ar",
+    "vi",
+    "th",
+    "zh",
+    "hi",
+    "sw",
+    "ur"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under CC BY-NC 4.0 based on MultiNLI source terms."
+  },
+  "source_references": [
+    {
+      "title": "Official GitHub Repository",
+      "url": "https://github.com/facebookresearch/XNLI",
+      "type": "repository"
+    },
+    {
+      "title": "Original EMNLP 2018 Paper",
+      "url": "https://aclanthology.org/D18-1269/",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified primary source repository, 15 language splits, sample counts, and CC BY-NC 4.0 license."
+  },
+  "sample_count": {
+    "total": 112500,
+    "unit": "sentence_pairs",
+    "status": "verified",
+    "splits": {
+      "dev": 37350,
+      "test": 75150
+    }
+  },
+  "dates": {
+    "published": "2018-10-31"
+  },
+  "citation": {
+    "paper_title": "XNLI: Evaluating Cross-lingual Sentence Representations",
+    "paper_url": "https://aclanthology.org/D18-1269/",
+    "doi": "10.18653/v1/D18-1269",
+    "authors": [
+      "Alexis Conneau",
+      "Ruty Rinott",
+      "Guillaume Lample",
+      "Adina Williams",
+      "Samuel R. Bowman",
+      "Holger Schwenk",
+      "Veselin Stoyanov"
+    ]
+  }
+}
