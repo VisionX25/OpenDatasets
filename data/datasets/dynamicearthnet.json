@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "dynamicearthnet",
+  "slug": "dynamicearthnet",
+  "name": "DynamicEarthNet: Daily PlanetScope Multi-Spectral Satellite Time-Series",
+  "description": "DynamicEarthNet is a daily multi-spectral satellite benchmark for monitoring Earth surface dynamics over time. Covering 75 areas of interest (AOIs) of 9 km² each across all seven continents, it provides daily 3-meter resolution PlanetScope imagery (4 bands: RGB and Near-Infrared) collected continuously over two full years (2018–2019, totaling over 55,000 observations). The dataset includes monthly pixel-level semantic change segmentation masks annotated across 7 land use and land cover (LULC) classes to evaluate spatio-temporal change detection and multi-temporal segmentation.",
+  "homepage_url": "https://mediatum.ub.tum.de/1657358",
+  "publisher": {
+    "name": "Technical University of Munich (TUM) / Planet Labs",
+    "type": "academic",
+    "url": "https://www.tum.de/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "change-detection",
+    "semantic-segmentation",
+    "remote-sensing"
+  ],
+  "tags": [
+    "satellite-imagery",
+    "earth-observation",
+    "planetscope",
+    "change-detection",
+    "time-series",
+    "daily-imagery",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset annotations and curated mosaics distributed under CC BY-SA 4.0 on TUM mediaTUM."
+  },
+  "source_references": [
+    {
+      "title": "TUM mediaTUM Landing Page",
+      "url": "https://mediatum.ub.tum.de/1657358",
+      "type": "repository"
+    },
+    {
+      "title": "CVPR 2022 Paper",
+      "url": "https://doi.org/10.1109/CVPR52688.2022.02048",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 75 global AOIs, 2-year daily PlanetScope imagery, 7 LULC change classes, and CC BY-SA 4.0 terms."
+  },
+  "sample_count": {
+    "total": 75,
+    "unit": "areas_of_interest",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022-06-20"
+  },
+  "citation": {
+    "paper_title": "DynamicEarthNet: Daily Multi-Spectral Satellite Dataset for Semantic Change Segmentation",
+    "paper_url": "https://doi.org/10.1109/CVPR52688.2022.02048",
+    "doi": "10.1109/CVPR52688.2022.02048",
+    "authors": [
+      "Aysim Toker",
+      "Lukas Kondmann",
+      "Mark Hauswirth",
+      "Raffaele Contreras",
+      "Antonio Giganti",
+      "Christian Fischer",
+      "Mikhail Tsalicoglou",
+      "Laura Leal-Taixé"
+    ]
+  }
+}

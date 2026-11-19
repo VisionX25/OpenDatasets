@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ogbn-proteins",
+  "slug": "ogbn-proteins",
+  "name": "ogbn-proteins: Protein-Protein Association Network",
+  "description": "The ogbn-proteins dataset is an undirected, weighted, multi-relational graph representing protein-protein associations across 8 species extracted from the STRING database. Nodes represent proteins (132,534 nodes), and edges represent 8 types of biological associations (totaling 39,561,252 edges) with 8-dimensional edge features reflecting interaction confidence. The task is multi-label protein function prediction across 112 Gene Ontology (GO) terms, evaluated by average ROC-AUC under a species-based out-of-distribution split.",
+  "homepage_url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-proteins",
+  "publisher": {
+    "name": "Stanford University (OGB Team)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu/"
+  },
+  "modalities": [
+    "graph"
+  ],
+  "tasks": [
+    "node-classification",
+    "graph-representation-learning"
+  ],
+  "tags": [
+    "graph",
+    "node-property-prediction",
+    "ogb",
+    "biology",
+    "string-database",
+    "proteins",
+    "benchmark"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Creative Commons Zero v1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Underlying STRING database association data is dedicated to the public domain under CC0 1.0 Universal. The OGB software package and benchmark evaluator scripts are licensed under MIT."
+  },
+  "source_references": [
+    {
+      "title": "Official OGB Documentation",
+      "url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-proteins",
+      "type": "official_website"
+    },
+    {
+      "title": "NeurIPS 2020 OGB Paper",
+      "url": "https://arxiv.org/abs/2005.00687",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified node count (132,534), edge count (39.56M), 112 GO terms, and CC0/MIT licensing."
+  },
+  "sample_count": {
+    "total": 132534,
+    "unit": "nodes",
+    "status": "verified",
+    "splits": {
+      "train": 86638,
+      "val": 21236,
+      "test": 24660
+    }
+  },
+  "dates": {
+    "published": "2020-05-01"
+  },
+  "citation": {
+    "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "paper_url": "https://arxiv.org/abs/2005.00687",
+    "doi": "10.48550/arXiv.2005.00687",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Marinka Zitnik",
+      "Yuxiao Dong",
+      "Hongyu Ren",
+      "Bowen Liu",
+      "Michele Catasta",
+      "Jure Leskovec"
+    ]
+  }
+}

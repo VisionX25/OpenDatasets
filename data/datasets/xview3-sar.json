@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "xview3-sar",
+  "slug": "xview3-sar",
+  "name": "xView3-SAR: Global Maritime Illegal Fishing Detection Benchmark",
+  "description": "The xView3-SAR dataset was created by the Defence Innovation Unit (DIU) and Global Fishing Watch to combat Illegal, Unreported, and Unregulated (IUU) fishing through automated machine learning on synthetic aperture radar (SAR). It comprises 991 full-size analysis-ready Sentinel-1 SAR scenes (averaging 29,400 x 24,400 pixels) covering over 43 million km² of ocean surface, paired with bathymetry, wind speed, and sea state rasters. The dataset features 243,018 maritime object annotations correlated with Automatic Identification System (AIS) transponder broadcast data to detect vessels, estimate length, and identify dark targets operating with AIS disabled.",
+  "homepage_url": "https://iuu.xview.us/",
+  "publisher": {
+    "name": "Defense Innovation Unit (DIU) / Global Fishing Watch",
+    "type": "government",
+    "url": "https://globalfishingwatch.org/"
+  },
+  "modalities": [
+    "vision",
+    "sensor"
+  ],
+  "tasks": [
+    "object-detection",
+    "remote-sensing"
+  ],
+  "tags": [
+    "satellite-imagery",
+    "sar",
+    "sentinel-1",
+    "maritime",
+    "vessel-detection",
+    "illegal-fishing",
+    "ais",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Released under CC BY 4.0 for non-commercial and commercial application, open for public download."
+  },
+  "source_references": [
+    {
+      "title": "Official xView3 Portal",
+      "url": "https://iuu.xview.us/",
+      "type": "official_website"
+    },
+    {
+      "title": "NeurIPS 2022 Datasets and Benchmarks Paper",
+      "url": "https://papers.neurips.cc/paper_files/paper/2022/hash/f4d4a021f9051a6c18183b059117e8b5-Abstract-Datasets_and_Benchmarks.html",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 991 full-size Sentinel-1 SAR scenes (554 train, 50 val, 387 test [150 public + 237 holdout]), 243,018 maritime object labels, AIS correlation, NeurIPS 2022 proceedings, and CC BY 4.0 terms."
+  },
+  "sample_count": {
+    "total": 991,
+    "unit": "sar_scenes",
+    "status": "verified",
+    "splits": {
+      "train": 554,
+      "val": 50,
+      "test": 387
+    }
+  },
+  "dates": {
+    "published": "2022-11-28"
+  },
+  "citation": {
+    "paper_title": "xView3-SAR: Detecting Dark Fishing Activity Using Synthetic Aperture Radar Imagery",
+    "paper_url": "https://doi.org/10.52202/068431-2726",
+    "doi": "10.52202/068431-2726",
+    "authors": [
+      "Fernando Paolo",
+      "Tsu-ting Tim Lin",
+      "Ritwik Gupta",
+      "Bryce Goodman",
+      "Nirav Patel",
+      "Daniel Kuster",
+      "David Kroodsma",
+      "Jared Dunnmon"
+    ]
+  }
+}

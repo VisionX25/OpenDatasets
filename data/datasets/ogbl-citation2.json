@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ogbl-citation2",
+  "slug": "ogbl-citation2",
+  "name": "ogbl-citation2: Academic Citation Network Link Prediction",
+  "description": "The ogbl-citation2 dataset is a directed graph representing the academic paper citation network extracted from the Microsoft Academic Graph (MAG). It contains 2,927,963 paper nodes and 30,561,187 directed citation edges. Each node features a 128-dimensional Word2Vec feature vector extracted from paper titles and abstracts. The task is to predict missing citation links (which paper cites which paper) evaluated by Mean Reciprocal Rank (MRR), partitioned chronologically: papers published until 2018 for training, 2019 for validation, and 2019 for test.",
+  "homepage_url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-citation2",
+  "publisher": {
+    "name": "Stanford University (OGB Team)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu/"
+  },
+  "modalities": [
+    "graph"
+  ],
+  "tasks": [
+    "link-prediction",
+    "graph-representation-learning"
+  ],
+  "tags": [
+    "graph",
+    "link-property-prediction",
+    "ogb",
+    "citation-network",
+    "microsoft-academic-graph",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License (ODC-By) v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Underlying academic citation graph from Microsoft Academic Graph is licensed under the Open Data Commons Attribution License (ODC-By v1.0). The OGB software package and benchmark evaluator scripts are licensed under MIT."
+  },
+  "source_references": [
+    {
+      "title": "Official OGB Documentation",
+      "url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-citation2",
+      "type": "official_website"
+    },
+    {
+      "title": "NeurIPS 2020 OGB Paper",
+      "url": "https://arxiv.org/abs/2005.00687",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 2.93M paper nodes, 30.56M directed edges, chronological split, and ODC-By/MIT licensing."
+  },
+  "sample_count": {
+    "total": 2927963,
+    "unit": "nodes",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-05-01"
+  },
+  "citation": {
+    "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "paper_url": "https://arxiv.org/abs/2005.00687",
+    "doi": "10.48550/arXiv.2005.00687",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Marinka Zitnik",
+      "Yuxiao Dong",
+      "Hongyu Ren",
+      "Bowen Liu",
+      "Michele Catasta",
+      "Jure Leskovec"
+    ]
+  }
+}

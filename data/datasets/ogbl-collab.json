@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ogbl-collab",
+  "slug": "ogbl-collab",
+  "name": "ogbl-collab: Academic Collaboration Link Prediction",
+  "description": "The ogbl-collab dataset is an undirected, weighted graph representing an author collaboration network extracted from the Microsoft Academic Graph (MAG). Nodes represent 235,868 authors, and edges represent 1,285,465 collaboration relationships between authors who have co-authored at least one paper. Edge features include the number of co-authored papers and publication year. The task is to predict future collaborations (link prediction) evaluated by Hits@50 under a chronological split: collaborations before 2017 for training, 2018 for validation, and 2019 for testing.",
+  "homepage_url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-collab",
+  "publisher": {
+    "name": "Stanford University (OGB Team)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu/"
+  },
+  "modalities": [
+    "graph"
+  ],
+  "tasks": [
+    "link-prediction",
+    "graph-representation-learning"
+  ],
+  "tags": [
+    "graph",
+    "link-property-prediction",
+    "ogb",
+    "collaboration-network",
+    "microsoft-academic-graph",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License (ODC-By) v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Underlying author collaboration graph from Microsoft Academic Graph is licensed under the Open Data Commons Attribution License (ODC-By v1.0). The OGB software package and benchmark evaluator scripts are licensed under MIT."
+  },
+  "source_references": [
+    {
+      "title": "Official OGB Documentation",
+      "url": "https://ogb.stanford.edu/docs/linkprop/#ogbl-collab",
+      "type": "official_website"
+    },
+    {
+      "title": "NeurIPS 2020 OGB Paper",
+      "url": "https://arxiv.org/abs/2005.00687",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 235,868 author nodes, 1.285M collaboration edges, chronological split, and ODC-By/MIT licensing."
+  },
+  "sample_count": {
+    "total": 235868,
+    "unit": "nodes",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-05-01"
+  },
+  "citation": {
+    "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "paper_url": "https://arxiv.org/abs/2005.00687",
+    "doi": "10.48550/arXiv.2005.00687",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Marinka Zitnik",
+      "Yuxiao Dong",
+      "Hongyu Ren",
+      "Bowen Liu",
+      "Michele Catasta",
+      "Jure Leskovec"
+    ]
+  }
+}

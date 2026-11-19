@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cic-ddos2019",
+  "slug": "cic-ddos2019",
+  "name": "CIC-DDoS2019: Distributed Denial of Service Attack Dataset",
+  "description": "CIC-DDoS2019 is a specialized network security dataset developed by the Canadian Institute for Cybersecurity (CIC) containing realistic benign traffic and 12 contemporary Distributed Denial of Service (DDoS) attack families. Attacks encompass reflection-based protocols (NTP, DNS, LDAP, MSSQL, NetBIOS, SNMP, SSDP, TFTP, CharGen) and exploitation-based protocols (SYN flood, UDP flood, UDP-Lag). Captured in a controlled B-Profile topology over two days (training day and testing day), it provides raw PCAP files and over 50 million flow records with 80 statistical features generated using CICFlowMeter.",
+  "homepage_url": "https://www.unb.ca/cic/datasets/ddos-2019.html",
+  "publisher": {
+    "name": "Canadian Institute for Cybersecurity (CIC) / University of New Brunswick",
+    "type": "academic",
+    "url": "https://www.unb.ca/cic/"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "tabular-classification"
+  ],
+  "tags": [
+    "cybersecurity",
+    "ddos",
+    "network-traffic",
+    "pcap",
+    "cicflowmeter",
+    "dos-attacks",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "UNB Open Data Terms of Use",
+    "url": "https://www.unb.ca/cic/datasets/ddos-2019.html",
+    "commercial_use": "allowed",
+    "notes": "CIC allows free redistribution and research usage under required attribution to UNB CIC and the published study."
+  },
+  "source_references": [
+    {
+      "title": "Official UNB CIC Portal",
+      "url": "https://www.unb.ca/cic/datasets/ddos-2019.html",
+      "type": "official_website"
+    },
+    {
+      "title": "IEEE ICCST 2019 Paper",
+      "url": "https://doi.org/10.1109/CCST.2019.8888419",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 12 DDoS attack types across 2 collection days, 50M+ network flows, and UNB Open Data terms."
+  },
+  "sample_count": {
+    "total": 50063112,
+    "unit": "network_flows",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-10-01"
+  },
+  "citation": {
+    "paper_title": "Developing Realistic Distributed Denial of Service (DDoS) Attack Dataset and Taxonomy",
+    "paper_url": "https://doi.org/10.1109/CCST.2019.8888419",
+    "doi": "10.1109/CCST.2019.8888419",
+    "authors": [
+      "Iman Sharafaldin",
+      "Amirhossein H. Lashkari",
+      "Saqib Hakak",
+      "Ali A. Ghorbani"
+    ]
+  }
+}

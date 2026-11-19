@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "edge-iiotset",
+  "slug": "edge-iiotset",
+  "name": "Edge-IIoTset: Industrial IoT Cybersecurity Dataset",
+  "description": "Edge-IIoTset is a comprehensive cybersecurity dataset designed specifically for Industrial Internet of Things (IIoT) edge computing architectures, developed by the IEEE Internet of Things laboratory. Deployed on a physical multi-tier testbed comprising 10+ types of IoT devices (water quality, temperature, flame, sound, soil moisture sensors), edge computing gateways, and cloud servers, it incorporates 14 distinct attack types grouped into 5 categories: DoS/DDoS, Information Gathering, Man-in-the-Middle, Injection, and Malware/Ransomware. Features 61 extracted flow and protocol features across Modbus, MQTT, HTTP, and TCP/IP telemetry.",
+  "homepage_url": "https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications",
+  "publisher": {
+    "name": "Concordia University / IEEE Dataport",
+    "type": "academic",
+    "url": "https://www.concordia.ca/"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "tabular-classification"
+  ],
+  "tags": [
+    "cybersecurity",
+    "industrial-iot",
+    "iiot",
+    "edge-computing",
+    "modbus",
+    "mqtt",
+    "intrusion-detection",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "IEEE Open Data / Academic Non-Commercial Terms",
+    "url": "https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications",
+    "commercial_use": "forbidden",
+    "notes": "Available via IEEE Dataport for academic research and educational evaluation with citation requirements."
+  },
+  "source_references": [
+    {
+      "title": "IEEE Dataport Page",
+      "url": "https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications",
+      "type": "official_website"
+    },
+    {
+      "title": "IEEE Access Paper",
+      "url": "https://doi.org/10.1109/ACCESS.2022.3165809",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 20.95M sensor and telemetry flow records, 14 attack types across Modbus/MQTT/HTTP, and IEEE terms."
+  },
+  "sample_count": {
+    "total": 20952691,
+    "unit": "sensor_records",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022-04-08"
+  },
+  "citation": {
+    "paper_title": "Edge-IIoTset: A New Comprehensive Realistic Cyber Security Dataset of IoT and IIoT Applications for Centralized and Federated Learning",
+    "paper_url": "https://doi.org/10.1109/ACCESS.2022.3165809",
+    "doi": "10.1109/ACCESS.2022.3165809",
+    "authors": [
+      "Mohamed Amine Ferrag",
+      "Othmane Friha",
+      "Djamel Hamouda",
+      "Leandros A. Maglaras",
+      "Helge Janicke"
+    ]
+  }
+}

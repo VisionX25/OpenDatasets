@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sib-200",
+  "slug": "sib-200",
+  "name": "SIB-200: Simple Inclusive Benchmark for 200+ Languages",
+  "description": "SIB-200 is a massively multilingual topic classification benchmark covering 205 languages and dialects, derived from the Flores-200 translation benchmark. It contains 205,820 sentences annotated across 7 semantic categories: science/technology, travel, politics, sports, health, entertainment, and business (each language features 1,004 sentences partitioned into 701 train, 99 validation, and 204 test). Designed to evaluate zero-shot and few-shot cross-lingual generalization on high, medium, and extremely low-resource languages across diverse geographic regions.",
+  "homepage_url": "https://github.com/dadelani/sib-200",
+  "publisher": {
+    "name": "University College London",
+    "type": "academic",
+    "url": "https://www.ucl.ac.uk/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "text-classification",
+    "topic-classification"
+  ],
+  "tags": [
+    "nlp",
+    "multilingual",
+    "topic-classification",
+    "low-resource",
+    "african-languages",
+    "flores-200",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Released under CC BY-SA 4.0, inherited from FLORES-200."
+  },
+  "source_references": [
+    {
+      "title": "GitHub Repository",
+      "url": "https://github.com/dadelani/sib-200",
+      "type": "repository"
+    },
+    {
+      "title": "EACL 2024 Research Paper",
+      "url": "https://aclanthology.org/2024.eacl-long.14/",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 205 languages, 205,820 sentences across 7 topic categories (1,004 per language: 701 train, 99 val, 204 test), EACL 2024 DOI (10.18653/v1/2024.eacl-long.14), and CC BY-SA 4.0 license."
+  },
+  "sample_count": {
+    "total": 205820,
+    "unit": "sentences",
+    "status": "verified",
+    "splits": {
+      "train": 143705,
+      "val": 20295,
+      "test": 41820
+    }
+  },
+  "dates": {
+    "published": "2023-09-18"
+  },
+  "citation": {
+    "paper_title": "SIB-200: A Simple, Inclusive, and Big Evaluation Dataset for Topic Classification in 200+ Languages and Dialects",
+    "paper_url": "https://aclanthology.org/2024.eacl-long.14/",
+    "doi": "10.18653/v1/2024.eacl-long.14",
+    "authors": [
+      "David Ifeoluwa Adelani",
+      "Hannah Liu",
+      "Xiaoyu Shen",
+      "Nikita Vassilyev",
+      "Jesujoba O. Alabi",
+      "Yanke Mao",
+      "Haonan Gao",
+      "En-Shiun Annie Lee"
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "id": "indicxnli",
+  "slug": "indicxnli",
+  "name": "IndicXNLI: Natural Language Inference for Indic Languages",
+  "description": "IndicXNLI is a natural language inference benchmark covering 11 major Indic languages (Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu) as part of the IndicGLUE benchmark. It contains human-translated cross-lingual NLI test sets (2,247 test examples per language, totaling 24,717 test instances) and machine-translated training data (392,702 examples per language) aligned with XNLI premises and hypotheses to evaluate cross-lingual sentence comprehension.",
+  "homepage_url": "https://indicnlp.ai4bharat.org/indicglue/",
+  "publisher": {
+    "name": "AI4Bharat",
+    "type": "academic",
+    "url": "https://ai4bharat.org/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "natural-language-inference"
+  ],
+  "tags": [
+    "nlp",
+    "nli",
+    "indic-languages",
+    "multilingual",
+    "indicglue",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "AI4Bharat distributes IndicGLUE datasets under CC BY-NC 4.0 for non-commercial research use."
+  },
+  "source_references": [
+    {
+      "title": "AI4Bharat IndicGLUE Portal",
+      "url": "https://indicnlp.ai4bharat.org/indicglue/",
+      "type": "official_website"
+    },
+    {
+      "title": "EMNLP 2022 IndicXNLI Paper",
+      "url": "https://aclanthology.org/2022.emnlp-main.755/",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 11 Indic languages, 24,717 human-translated test evaluation pairs, EMNLP 2022 paper by Aggarwal et al. (DOI: 10.18653/v1/2022.emnlp-main.755), and CC BY-NC 4.0 terms."
+  },
+  "sample_count": {
+    "total": 24717,
+    "unit": "test_pairs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2022-12-07"
+  },
+  "citation": {
+    "paper_title": "IndicXNLI: Evaluating Multilingual Inference for Indian Languages",
+    "paper_url": "https://aclanthology.org/2022.emnlp-main.755/",
+    "doi": "10.18653/v1/2022.emnlp-main.755",
+    "authors": [
+      "Divyanshu Aggarwal",
+      "Vivek Gupta",
+      "Anoop Kunchukuttan"
+    ]
+  }
+}

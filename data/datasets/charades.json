@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "id": "charades",
+  "slug": "charades",
+  "name": "Charades: Daily Life Indoor Activity Video Dataset",
+  "description": "Charades is a dataset of 9,848 untrimmed daily-life indoor videos recorded by 267 crowd-sourced workers acting out prescribed composite activity scripts in their own homes. Totaling 82 hours of video, it contains 66,500 annotated temporal activity intervals covering 157 multi-label action classes and 46 object classes interacting across 15 indoor locations. It supports both multi-label action classification and fine-grained temporal action localization.",
+  "homepage_url": "https://prior.allenai.org/projects/charades",
+  "publisher": {
+    "name": "Allen Institute for AI (AI2)",
+    "type": "academic",
+    "url": "https://allenai.org/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "action-recognition",
+    "video-understanding"
+  ],
+  "tags": [
+    "video",
+    "action-recognition",
+    "allen-institute",
+    "daily-activities",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "AI2 Non-Commercial Use License",
+    "url": "https://allenai.org/terms",
+    "commercial_use": "forbidden",
+    "notes": "Dataset and video frames distributed by AI2 under non-commercial research terms."
+  },
+  "source_references": [
+    {
+      "title": "Official Project Page",
+      "url": "https://prior.allenai.org/projects/charades",
+      "type": "official_website"
+    },
+    {
+      "title": "ECCV 2016 Paper",
+      "url": "https://doi.org/10.1007/978-3-319-46448-0_31",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 9,848 indoor videos, 66,500 action instances across 157 classes, and AI2 non-commercial license."
+  },
+  "sample_count": {
+    "total": 9848,
+    "unit": "videos",
+    "status": "verified",
+    "splits": {
+      "train": 7985,
+      "test": 1863
+    }
+  },
+  "dates": {
+    "published": "2016-10-08"
+  },
+  "citation": {
+    "paper_title": "Hollywood in Homes: Crowdsourcing Data Collection for Activity Understanding",
+    "paper_url": "https://doi.org/10.1007/978-3-319-46448-0_31",
+    "doi": "10.1007/978-3-319-46448-0_31",
+    "authors": [
+      "Gunnar A. Sigurdsson",
+      "Gul Varol",
+      "Xiaolong Wang",
+      "Ali Farhadi",
+      "Ivan Laptev",
+      "Abhinav Gupta"
+    ]
+  }
+}

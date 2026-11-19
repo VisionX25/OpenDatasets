@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "id": "spacenet-7",
+  "slug": "spacenet-7",
+  "name": "SpaceNet 7: Multi-Temporal Urban Development Satellite Benchmark",
+  "description": "SpaceNet 7 (The Multi-Temporal Urban Development Challenge) tracks building construction and urban change over monthly time series of satellite imagery. It comprises deep multi-temporal imagery stacks collected monthly over 24 months (2018–2020) across 101 distinct geographic areas of interest (AOIs) covering 41,000 km² worldwide. Each AOI includes monthly PlanetScope 3.0m optical imagery and detailed polygon annotations for over 10 million building footprints tracked individually with unique persistence IDs across time to evaluate spatio-temporal object tracking and footprint extraction.",
+  "homepage_url": "https://spacenet.ai/sn7-challenge/",
+  "publisher": {
+    "name": "SpaceNet / Maxar Technologies / Radiant Earth Foundation",
+    "type": "academic",
+    "url": "https://spacenet.ai/"
+  },
+  "modalities": [
+    "vision",
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "instance-segmentation",
+    "change-detection",
+    "remote-sensing"
+  ],
+  "tags": [
+    "satellite-imagery",
+    "earth-observation",
+    "building-footprints",
+    "multi-temporal",
+    "spacenet",
+    "planetscope",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Imagery and annotations are distributed freely under CC BY-SA 4.0 via AWS Open Data."
+  },
+  "source_references": [
+    {
+      "title": "SpaceNet 7 Official Portal",
+      "url": "https://spacenet.ai/sn7-challenge/",
+      "type": "official_website"
+    },
+    {
+      "title": "Registry of Open Data on AWS",
+      "url": "https://registry.opendata.aws/spacenet/",
+      "type": "repository"
+    },
+    {
+      "title": "CVPR 2021 Research Paper",
+      "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Van_Etten_The_Multi-Temporal_Urban_Development_SpaceNet_Dataset_CVPR_2021_paper.html",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 101 global AOIs covering 41,000 km², 24-month time-series PlanetScope cubes, 10M+ building footprints, CVPR 2021 main conference proceedings, and CC BY-SA 4.0 terms."
+  },
+  "sample_count": {
+    "total": 101,
+    "unit": "time_series_aois",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2021-06-25"
+  },
+  "citation": {
+    "paper_title": "The Multi-Temporal Urban Development SpaceNet Dataset",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2021/html/Van_Etten_The_Multi-Temporal_Urban_Development_SpaceNet_Dataset_CVPR_2021_paper.html",
+    "doi": "10.1109/CVPR46437.2021.00633",
+    "authors": [
+      "Adam Van Etten",
+      "Daniel Hogan",
+      "Jesus Martinez Manso",
+      "Jacob Shermeyer",
+      "Nicholas Weir",
+      "Ryan Lewis"
+    ]
+  }
+}
