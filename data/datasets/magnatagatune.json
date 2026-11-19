@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "magnatagatune",
+  "slug": "magnatagatune",
+  "name": "MagnaTagATune Dataset",
+  "description": "MagnaTagATune is a music audio auto-tagging and classification benchmark consisting of 25,863 30-second audio clips sourced from Magnatune independent music. Annotated by players through the TagATune online two-player game, it provides binary tag vectors across 188 verified labels (instruments, genres, moods, tempo, and vocal traits), serving as a standard benchmark in music information retrieval (MIR).",
+  "homepage_url": "https://mirg.city.ac.uk/codeapps/the-magnatagatune-dataset",
+  "publisher": {
+    "name": "Carnegie Mellon University / City University London MIRG",
+    "type": "academic",
+    "url": "https://mirg.city.ac.uk/"
+  },
+  "modalities": [
+    "audio",
+    "tabular"
+  ],
+  "tasks": [
+    "audio-tagging",
+    "music-information-retrieval",
+    "audio-classification"
+  ],
+  "tags": [
+    "audio",
+    "music",
+    "auto-tagging",
+    "mir",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 / Magnatune",
+    "spdx_id": "CC-BY-NC-SA-3.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+    "commercial_use": "forbidden",
+    "notes": "Distributed for non-commercial music information retrieval research under Magnatune terms."
+  },
+  "source_references": [
+    {
+      "title": "Official MIRG Portal",
+      "url": "https://mirg.city.ac.uk/codeapps/the-magnatagatune-dataset",
+      "type": "official_website"
+    },
+    {
+      "title": "CHI 2009 Research Paper",
+      "url": "https://doi.org/10.1145/1518701.1518880",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 25,863 clip count, 188 tags, non-commercial research terms, and CHI 2009 publication DOI."
+  },
+  "sample_count": {
+    "total": 25863,
+    "unit": "audio_clips",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2009-04-09"
+  },
+  "citation": {
+    "paper_title": "Input-agreement: a new mechanism for collecting data using human computation games",
+    "paper_url": "https://doi.org/10.1145/1518701.1518880",
+    "doi": "10.1145/1518701.1518880",
+    "authors": [
+      "Edith Law",
+      "Luis von Ahn"
+    ]
+  }
+}

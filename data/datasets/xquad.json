@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "xquad",
+  "slug": "xquad",
+  "name": "XQuAD: Cross-Lingual Question Answering Dataset",
+  "description": "XQuAD (Cross-lingual Question Answering Dataset) is a multilingual question answering benchmark consisting of 240 context paragraphs and 1,190 question-answer pairs from SQuAD v1.1, professionally translated into 10 target languages (Spanish, German, Greek, Russian, Turkish, Arabic, Vietnamese, Thai, Chinese, Hindi) alongside original English. Designed to evaluate zero-shot cross-lingual transfer for extractive reading comprehension, every example is aligned across languages.",
+  "homepage_url": "https://github.com/google-deepmind/xquad",
+  "publisher": {
+    "name": "Google DeepMind",
+    "type": "industry",
+    "url": "https://deepmind.google/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "reading-comprehension",
+    "zero-shot-cross-lingual-transfer"
+  ],
+  "tags": [
+    "multilingual",
+    "qa",
+    "reading-comprehension",
+    "benchmark",
+    "squad"
+  ],
+  "languages": [
+    "en",
+    "es",
+    "de",
+    "el",
+    "ru",
+    "tr",
+    "ar",
+    "vi",
+    "th",
+    "zh",
+    "hi"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed under CC BY-SA 4.0 adhering to SQuAD upstream license."
+  },
+  "source_references": [
+    {
+      "title": "Official GitHub Repository",
+      "url": "https://github.com/google-deepmind/xquad",
+      "type": "repository"
+    },
+    {
+      "title": "ACL 2020 Research Paper",
+      "url": "https://aclanthology.org/2020.acl-main.421/",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified primary GitHub repository, CC BY-SA 4.0 license, and ACL Anthology citation."
+  },
+  "sample_count": {
+    "total": 13090,
+    "unit": "question_answer_pairs",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-07-05"
+  },
+  "citation": {
+    "paper_title": "On the Cross-lingual Transferability of Monolingual Representations",
+    "paper_url": "https://aclanthology.org/2020.acl-main.421/",
+    "doi": "10.18653/v1/2020.acl-main.421",
+    "authors": [
+      "Mikel Artetxe",
+      "Sebastian Ruder",
+      "Dani Yogatama"
+    ]
+  }
+}

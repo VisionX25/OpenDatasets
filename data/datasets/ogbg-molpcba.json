@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ogbg-molpcba",
+  "slug": "ogbg-molpcba",
+  "name": "ogbg-molpcba: Molecular Property Prediction",
+  "description": "The ogbg-molpcba dataset is a large molecular property prediction benchmark from the Open Graph Benchmark (OGB), curated from PubChem BioAssay. It contains 437,929 chemical molecules represented as 2D graphs where nodes are atoms and edges are chemical bonds. The task is multi-task binary classification predicting biological assay activities across 128 distinct bioassays, using scaffold splitting to evaluate structural generalization.",
+  "homepage_url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-molpcba",
+  "publisher": {
+    "name": "Stanford University (OGB Team)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu/"
+  },
+  "modalities": [
+    "graph"
+  ],
+  "tasks": [
+    "graph-classification",
+    "molecular-property-prediction"
+  ],
+  "tags": [
+    "graph",
+    "molecules",
+    "bioassay",
+    "ogb",
+    "chemistry"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Curated from public-domain PubChem BioAssay data; OGB benchmark utilities, evaluators, and dataset distribution licensed under MIT."
+  },
+  "source_references": [
+    {
+      "title": "Official OGB Documentation",
+      "url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-molpcba",
+      "type": "official_website"
+    },
+    {
+      "title": "NeurIPS 2020 OGB Paper",
+      "url": "https://arxiv.org/abs/2005.00687",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified graph count (437,929), 128 bioassay tasks, and scaffold split protocol."
+  },
+  "sample_count": {
+    "total": 437929,
+    "unit": "graphs",
+    "status": "verified",
+    "splits": {
+      "train": 350343,
+      "val": 43793,
+      "test": 43793
+    }
+  },
+  "dates": {
+    "published": "2020-05-01"
+  },
+  "citation": {
+    "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "paper_url": "https://arxiv.org/abs/2005.00687",
+    "doi": "10.48550/arXiv.2005.00687",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Marinka Zitnik",
+      "Yuxiao Dong",
+      "Hongyu Ren",
+      "Bowen Liu",
+      "Michele Catasta",
+      "Jure Leskovec"
+    ]
+  }
+}

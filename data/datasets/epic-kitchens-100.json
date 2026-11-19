@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "id": "epic-kitchens-100",
+  "slug": "epic-kitchens-100",
+  "name": "EPIC-KITCHENS-100",
+  "description": "EPIC-KITCHENS-100 is a large-scale egocentric video benchmark capturing daily activities in domestic kitchens. Recorded unscripted using head-mounted cameras across 45 kitchens in 4 cities by 37 participants, it provides 100 hours of continuous high-resolution video (~20 million frames) across 700 recordings. The dataset features 89,977 finely segmented action annotations labeled with 97 verb classes and 300 noun classes, expanding on the original EPIC-KITCHENS-55 release.",
+  "homepage_url": "https://epic-kitchens.github.io/",
+  "publisher": {
+    "name": "University of Bristol",
+    "type": "academic",
+    "url": "https://www.bristol.ac.uk/"
+  },
+  "modalities": [
+    "vision",
+    "audio"
+  ],
+  "tasks": [
+    "action-recognition",
+    "action-detection",
+    "action-anticipation"
+  ],
+  "tags": [
+    "egocentric-vision",
+    "video",
+    "action-recognition",
+    "kitchen",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under CC BY-NC 4.0 for non-commercial research."
+  },
+  "source_references": [
+    {
+      "title": "Official Website",
+      "url": "https://epic-kitchens.github.io/",
+      "type": "official_website"
+    },
+    {
+      "title": "IJCV 2022 Research Paper",
+      "url": "https://doi.org/10.1007/s11263-021-01531-2",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified version expansion over EPIC-KITCHENS-55, CC BY-NC 4.0 license, and IJCV paper DOI."
+  },
+  "sample_count": {
+    "total": 700,
+    "unit": "video_recordings",
+    "status": "verified",
+    "splits": {
+      "train": 495,
+      "val": 138,
+      "test": 67
+    }
+  },
+  "dates": {
+    "published": "2020-06-30"
+  },
+  "citation": {
+    "paper_title": "Rescaling Egocentric Vision: Collection, Pipeline and Challenges for EPIC-KITCHENS-100",
+    "paper_url": "https://doi.org/10.1007/s11263-021-01531-2",
+    "doi": "10.1007/s11263-021-01531-2",
+    "authors": [
+      "Dima Damen",
+      "Hazel Doughty",
+      "Giovanni Maria Farinella",
+      "Antonino Furnari",
+      "Jian Ma",
+      "Evangelos Kazakos",
+      "Davide Moltisanti",
+      "Jonathan Munro",
+      "Toby Perrett",
+      "Will Price",
+      "Michael Wray"
+    ]
+  }
+}

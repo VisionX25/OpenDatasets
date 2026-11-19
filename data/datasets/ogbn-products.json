@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ogbn-products",
+  "slug": "ogbn-products",
+  "name": "ogbn-products: Amazon Product Co-purchasing Network",
+  "description": "The ogbn-products dataset is an undirected, unweighted graph representing an Amazon product co-purchasing network from the Open Graph Benchmark (OGB). Nodes represent individual products sold on Amazon (2,449,029 nodes), and edges represent products frequently purchased together (61,859,140 edges). Each node features a 100-dimensional feature vector extracted from text descriptions via Bag-of-Words and PCA. The task is to predict the top-level product category across 47 classes with realistic sales-rank out-of-distribution splits.",
+  "homepage_url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-products",
+  "publisher": {
+    "name": "Stanford University (OGB Team)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu/"
+  },
+  "modalities": [
+    "graph"
+  ],
+  "tasks": [
+    "node-classification",
+    "graph-representation-learning"
+  ],
+  "tags": [
+    "graph",
+    "node-property-prediction",
+    "ogb",
+    "benchmark",
+    "amazon"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Amazon Product Data License / MIT",
+    "url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-products",
+    "commercial_use": "forbidden",
+    "notes": "Derived from Amazon product data under Amazon research terms; OGB benchmark scripts under MIT."
+  },
+  "source_references": [
+    {
+      "title": "Official OGB Documentation",
+      "url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-products",
+      "type": "official_website"
+    },
+    {
+      "title": "NeurIPS 2020 OGB Paper",
+      "url": "https://arxiv.org/abs/2005.00687",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified node count (2.45M), edge count (61.9M), 47 classes, and NeurIPS 2020 benchmark publication."
+  },
+  "sample_count": {
+    "total": 2449029,
+    "unit": "nodes",
+    "status": "verified",
+    "splits": {
+      "train": 196615,
+      "val": 39323,
+      "test": 2213091
+    }
+  },
+  "dates": {
+    "published": "2020-05-01"
+  },
+  "citation": {
+    "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "paper_url": "https://arxiv.org/abs/2005.00687",
+    "doi": "10.48550/arXiv.2005.00687",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Marinka Zitnik",
+      "Yuxiao Dong",
+      "Hongyu Ren",
+      "Bowen Liu",
+      "Michele Catasta",
+      "Jure Leskovec"
+    ]
+  }
+}

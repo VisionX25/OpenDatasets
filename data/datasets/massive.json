@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "massive",
+  "slug": "massive",
+  "name": "MASSIVE: A 1M-Example Multilingual Natural Language Understanding Dataset",
+  "description": "MASSIVE (Multilingual Amazon Slu resource package) is a massively multilingual spoken language understanding dataset spanning 51 typologically diverse languages across 18 domains. It contains 19,521 realistic user utterances per language (totaling 995,571 examples) annotated for intent classification (60 intents) and slot-filling (55 slot types), allowing robust cross-lingual evaluation and benchmarking of task-oriented dialog models.",
+  "homepage_url": "https://github.com/alexa/massive",
+  "publisher": {
+    "name": "Amazon (Alexa AI)",
+    "type": "industry",
+    "url": "https://www.amazon.science/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "intent-classification",
+    "slot-filling",
+    "spoken-language-understanding"
+  ],
+  "tags": [
+    "multilingual",
+    "nlu",
+    "dialogue",
+    "benchmark",
+    "intent-detection"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Released by Amazon under Creative Commons Attribution 4.0 International."
+  },
+  "source_references": [
+    {
+      "title": "Official GitHub Repository",
+      "url": "https://github.com/alexa/massive",
+      "type": "repository"
+    },
+    {
+      "title": "ACL 2023 Research Paper",
+      "url": "https://aclanthology.org/2023.acl-long.235/",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified primary GitHub repository, 51 languages, CC BY 4.0 license, and ACL Anthology citation."
+  },
+  "sample_count": {
+    "total": 995571,
+    "unit": "utterances",
+    "status": "verified",
+    "splits": {
+      "train": 587214,
+      "dev": 103734,
+      "test": 304623
+    }
+  },
+  "dates": {
+    "published": "2023-07-09"
+  },
+  "citation": {
+    "paper_title": "MASSIVE: A 1M-Example Multilingual Natural Language Understanding Dataset with 51 Typologically-Diverse Languages",
+    "paper_url": "https://aclanthology.org/2023.acl-long.235/",
+    "doi": "10.18653/v1/2023.acl-long.235",
+    "authors": [
+      "Jack FitzGerald",
+      "Christopher Hench",
+      "Charith Peris",
+      "Scott Mackie",
+      "Kay Rottmann",
+      "Ana Sanchez",
+      "Aaron Nash",
+      "Liam Urbach",
+      "Vishesh Kakarala",
+      "Richa Singh",
+      "Swetha Ranganath",
+      "Laurie Crist",
+      "Misha Britan",
+      "Wouter Leeuwis",
+      "Gokhan Tur",
+      "Prem Natarajan"
+    ]
+  }
+}

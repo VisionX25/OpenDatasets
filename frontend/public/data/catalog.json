@@ -6898,6 +6898,85 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "belebele",
+    "slug": "belebele",
+    "name": "Belebele: A Parallel Reading Comprehension Dataset in 122 Language Variants",
+    "description": "Belebele is a massively multilingual machine reading comprehension benchmark covering 122 language variants across 115 distinct languages, 27 language families, and 29 scripts. Derived from FLORES-200 passages, each language variant contains 900 4-way multiple-choice reading comprehension questions based on 488 passages, enabling precise evaluation of language models across high-, medium-, and low-resource languages in a fully parallel evaluation setting.",
+    "homepage_url": "https://github.com/facebookresearch/belebele",
+    "publisher": {
+      "name": "Meta AI",
+      "type": "industry",
+      "url": "https://ai.meta.com/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "reading-comprehension",
+      "question-answering",
+      "language-modeling-evaluation"
+    ],
+    "tags": [
+      "multilingual",
+      "reading-comprehension",
+      "benchmark",
+      "flores-200",
+      "low-resource"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Evaluation dataset released under CC BY-SA 4.0 matching FLORES-200 upstream license."
+    },
+    "source_references": [
+      {
+        "title": "Official GitHub Repository",
+        "url": "https://github.com/facebookresearch/belebele",
+        "type": "repository"
+      },
+      {
+        "title": "ACL 2024 Research Paper",
+        "url": "https://aclanthology.org/2024.acl-long.44/",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified primary source repository, 122 language variant coverage, and ACL 2024 publication."
+    },
+    "sample_count": {
+      "total": 109800,
+      "unit": "multiple_choice_questions",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2024-08-11"
+    },
+    "citation": {
+      "paper_title": "The Belebele Benchmark: a Parallel Reading Comprehension Dataset in 122 Language Variants",
+      "paper_url": "https://aclanthology.org/2024.acl-long.44/",
+      "doi": "10.18653/v1/2024.acl-long.44",
+      "authors": [
+        "Lucas Bandarkar",
+        "Davis Liang",
+        "Benjamin Muller",
+        "Mikel Artetxe",
+        "Satya Narayan Shukla",
+        "Donald Husa",
+        "Naman Goyal",
+        "Abhinandan Krishnan",
+        "Luke Zettlemoyer",
+        "Madian Khabsa"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bengali-hate-speech-dataset",
     "slug": "bengali-hate-speech-dataset",
     "name": "Bengali Hate Speech Dataset",
@@ -7401,6 +7480,85 @@
       ],
       "doi": "10.5194/essd-12-3469-2020",
       "bibtex": "@article{rohde2020berkeley,\n  title={The Berkeley Earth land/ocean temperature record},\n  author={Rohde, Robert A and Hausfather, Zeke},\n  journal={Earth System Science Data},\n  volume={12},\n  number={4},\n  pages={3469--3479},\n  year={2020},\n  publisher={Copernicus GmbH},\n  doi={10.5194/essd-12-3469-2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "berlin-emodb-2",
+    "slug": "berlin-emodb-2",
+    "name": "Berlin EmoDB 2.0: Database of Emotional Speech",
+    "description": "Berlin EmoDB 2.0 is an expanded release of the Berlin Database of Emotional Speech. Featuring German utterances spoken by 10 professional actors simulating 7 emotions (anger, joy, sadness, fear, disgust, boredom, neutral), version 2.0 introduces electro-glottogram (EGG) measurements alongside 16 kHz audio and incorporates ambiguous utterances where human raters disagreed, providing a standardized testbed for aleatoric uncertainty and Speech Emotion Recognition (SER) in audformat.",
+    "homepage_url": "https://zenodo.org/records/16273947",
+    "publisher": {
+      "name": "Technische Universität Berlin / audEERING",
+      "type": "academic",
+      "url": "https://zenodo.org/records/16273947"
+    },
+    "modalities": [
+      "audio",
+      "sensor"
+    ],
+    "tasks": [
+      "speech-emotion-recognition",
+      "audio-classification"
+    ],
+    "tags": [
+      "speech",
+      "emotion-recognition",
+      "audio",
+      "egg",
+      "german"
+    ],
+    "languages": [
+      "de"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Published on Zenodo under CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "Zenodo Record 16273947",
+        "url": "https://zenodo.org/records/16273947",
+        "type": "repository"
+      },
+      {
+        "title": "Interspeech 2025 Paper Announcement",
+        "url": "https://doi.org/10.5281/zenodo.16273947",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified distinct 2.0 release with EGG signals, ambiguous labels, Zenodo DOI 10.5281/zenodo.16273947, and CC BY 4.0 license."
+    },
+    "sample_count": {
+      "total": 800,
+      "unit": "audio_utterances",
+      "status": "estimated"
+    },
+    "dates": {
+      "published": "2025-01-15"
+    },
+    "citation": {
+      "paper_title": "EmoDB 2.0: A Database of Emotional Speech in a World that is not Black or White but Grey",
+      "paper_url": "https://doi.org/10.5281/zenodo.16273947",
+      "doi": "10.5281/zenodo.16273947",
+      "authors": [
+        "Felix Burkhardt",
+        "Oliver Schrüfer",
+        "Uwe Reichel",
+        "Hagen Wierstorf",
+        "Alexander Derington",
+        "Florian Eyben",
+        "Björn Schuller"
+      ]
     }
   },
   {
@@ -14859,6 +15017,88 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "davis-2017",
+    "slug": "davis-2017",
+    "name": "DAVIS 2017: Densely Annotated Video Segmentation",
+    "description": "DAVIS 2017 (Densely Annotated VIdeo Segmentation) is the standard benchmark for multi-object video segmentation. Extending the original single-object DAVIS 2016 dataset, DAVIS 2017 features 150 high-definition video sequences comprising 10,459 frames with pixel-accurate per-frame segmentation masks for 376 distinct object instances. It benchmarks semi-supervised (one-shot initialization) and unsupervised video object segmentation.",
+    "homepage_url": "https://davischallenge.org/davis2017/code.html",
+    "publisher": {
+      "name": "Pontificia Universidad Católica de Chile / ETH Zurich",
+      "type": "academic",
+      "url": "https://davischallenge.org/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "video-object-segmentation",
+      "instance-segmentation",
+      "video-tracking"
+    ],
+    "tags": [
+      "video",
+      "segmentation",
+      "video-object-segmentation",
+      "benchmark",
+      "pixel-level"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 / BSD 3-Clause",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset annotations licensed under CC BY 4.0; companion evaluation software provided under BSD 3-Clause."
+    },
+    "source_references": [
+      {
+        "title": "Official Challenge Website",
+        "url": "https://davischallenge.org/davis2017/code.html",
+        "type": "official_website"
+      },
+      {
+        "title": "ArXiv Research Paper",
+        "url": "https://arxiv.org/abs/1704.00675",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified official challenge website, sequence/frame breakdown, CC BY 4.0 annotations, and BSD evaluation code."
+    },
+    "sample_count": {
+      "total": 150,
+      "unit": "video_sequences",
+      "status": "verified",
+      "splits": {
+        "train": 60,
+        "val": 30,
+        "test-dev": 30,
+        "test-challenge": 30
+      }
+    },
+    "dates": {
+      "published": "2017-04-03"
+    },
+    "citation": {
+      "paper_title": "The 2017 DAVIS Challenge on Video Object Segmentation",
+      "paper_url": "https://arxiv.org/abs/1704.00675",
+      "doi": "10.48550/arXiv.1704.00675",
+      "authors": [
+        "Jordi Pont-Tuset",
+        "Federico Perazzi",
+        "Sergi Caelles",
+        "Alberto Montes",
+        "Kevis-Kokitsi Maninis",
+        "Michael Tschannen",
+        "Luc Van Gool"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ddad-dense-depth",
     "slug": "ddad-dense-depth",
     "name": "DDAD: Dense Depth for Autonomous Driving",
@@ -18054,6 +18294,92 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "epic-kitchens-100",
+    "slug": "epic-kitchens-100",
+    "name": "EPIC-KITCHENS-100",
+    "description": "EPIC-KITCHENS-100 is a large-scale egocentric video benchmark capturing daily activities in domestic kitchens. Recorded unscripted using head-mounted cameras across 45 kitchens in 4 cities by 37 participants, it provides 100 hours of continuous high-resolution video (~20 million frames) across 700 recordings. The dataset features 89,977 finely segmented action annotations labeled with 97 verb classes and 300 noun classes, expanding on the original EPIC-KITCHENS-55 release.",
+    "homepage_url": "https://epic-kitchens.github.io/",
+    "publisher": {
+      "name": "University of Bristol",
+      "type": "academic",
+      "url": "https://www.bristol.ac.uk/"
+    },
+    "modalities": [
+      "vision",
+      "audio"
+    ],
+    "tasks": [
+      "action-recognition",
+      "action-detection",
+      "action-anticipation"
+    ],
+    "tags": [
+      "egocentric-vision",
+      "video",
+      "action-recognition",
+      "kitchen",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released under CC BY-NC 4.0 for non-commercial research."
+    },
+    "source_references": [
+      {
+        "title": "Official Website",
+        "url": "https://epic-kitchens.github.io/",
+        "type": "official_website"
+      },
+      {
+        "title": "IJCV 2022 Research Paper",
+        "url": "https://doi.org/10.1007/s11263-021-01531-2",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified version expansion over EPIC-KITCHENS-55, CC BY-NC 4.0 license, and IJCV paper DOI."
+    },
+    "sample_count": {
+      "total": 700,
+      "unit": "video_recordings",
+      "status": "verified",
+      "splits": {
+        "train": 495,
+        "val": 138,
+        "test": 67
+      }
+    },
+    "dates": {
+      "published": "2020-06-30"
+    },
+    "citation": {
+      "paper_title": "Rescaling Egocentric Vision: Collection, Pipeline and Challenges for EPIC-KITCHENS-100",
+      "paper_url": "https://doi.org/10.1007/s11263-021-01531-2",
+      "doi": "10.1007/s11263-021-01531-2",
+      "authors": [
+        "Dima Damen",
+        "Hazel Doughty",
+        "Giovanni Maria Farinella",
+        "Antonino Furnari",
+        "Jian Ma",
+        "Evangelos Kazakos",
+        "Davide Moltisanti",
+        "Jonathan Munro",
+        "Toby Perrett",
+        "Will Price",
+        "Michael Wray"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "era5-atmospheric-reanalysis",
     "slug": "era5-atmospheric-reanalysis",
     "name": "ERA5 Global Atmospheric Reanalysis",
@@ -20145,6 +20471,80 @@
         "Yoshua Bengio"
       ],
       "bibtex": "@inproceedings{lugosch2019speech,\n  title={Speech Model Pre-Training for End-to-End Spoken Language Understanding},\n  author={Lugosch, Loren and Ravanelli, Mirco and Ignoto, Patrick and Tomar, Vikrant Singh and Bengio, Yoshua},\n  booktitle={Interspeech 2019},\n  pages={814--818},\n  year={2019},\n  doi={10.21437/Interspeech.2019-2396}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "fma",
+    "slug": "fma",
+    "name": "FMA: A Dataset for Music Analysis",
+    "description": "FMA (Free Music Archive) is an open music analysis and information retrieval benchmark. Comprising 106,574 full-length audio tracks (343 days of audio) from 16,341 artists across 161 musical genres, it includes pre-extracted audio features, full track metadata, tags, and hierarchical genre labels. Provided in nested subsets of increasing scale (fma_small: 8,000 clips; fma_medium: 25,000 clips; fma_large and fma_full: 106,574 tracks), it benchmarks music genre classification, retrieval, and auto-tagging.",
+    "homepage_url": "https://github.com/mdeff/fma",
+    "publisher": {
+      "name": "EPFL",
+      "type": "academic",
+      "url": "https://www.epfl.ch/"
+    },
+    "modalities": [
+      "audio",
+      "tabular"
+    ],
+    "tasks": [
+      "audio-classification",
+      "music-genre-classification",
+      "music-information-retrieval"
+    ],
+    "tags": [
+      "audio",
+      "music",
+      "fma",
+      "genre-classification",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "CC BY 4.0 (Metadata) / Varied Creative Commons (Audio)",
+      "spdx_id": null,
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "unknown",
+      "notes": "Dataset metadata and features are licensed under CC BY 4.0 and code under MIT; underlying audio tracks are subject to diverse artist-selected Creative Commons and public domain licenses (including non-commercial and no-derivatives variants), so commercial usability depends on individual track terms."
+    },
+    "source_references": [
+      {
+        "title": "Official GitHub Repository",
+        "url": "https://github.com/mdeff/fma",
+        "type": "repository"
+      },
+      {
+        "title": "ISMIR 2017 Research Paper",
+        "url": "https://arxiv.org/abs/1612.01840",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified official GitHub repo, track subsets, CC BY 4.0 metadata terms, and ISMIR 2017 publication."
+    },
+    "sample_count": {
+      "total": 106574,
+      "unit": "audio_tracks",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2017-10-23"
+    },
+    "citation": {
+      "paper_title": "FMA: A Dataset For Music Analysis",
+      "paper_url": "https://arxiv.org/abs/1612.01840",
+      "doi": "10.48550/arXiv.1612.01840",
+      "authors": [
+        "Michaël Defferrard",
+        "Kirell Benzi",
+        "Pierre Vandergheynst",
+        "Xavier Bresson"
+      ]
     }
   },
   {
@@ -28719,6 +29119,90 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "libri-light",
+    "slug": "libri-light",
+    "name": "Libri-Light: A Benchmark for ASR with Limited or No Supervision",
+    "description": "Libri-Light is a massive speech dataset for self-supervised learning, unsupervised representations, and automatic speech recognition (ASR) with minimal supervision. Sourced from LibriVox public-domain audiobooks, it provides 60,000+ hours of unsegmented English speech audio organized into three nested subsets of increasing scale (small ~600h, medium ~6,000h, large ~60,000h) alongside small supervision splits (10 hours, 1 hour, 10 minutes), establishing a benchmark for foundation acoustic models like wav2vec 2.0.",
+    "homepage_url": "https://github.com/facebookresearch/libri-light",
+    "publisher": {
+      "name": "Meta AI (FAIR)",
+      "type": "industry",
+      "url": "https://ai.meta.com/"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-recognition",
+      "self-supervised-learning",
+      "acoustic-representation-learning"
+    ],
+    "tags": [
+      "speech",
+      "audio",
+      "asr",
+      "wav2vec",
+      "librivox",
+      "large-scale"
+    ],
+    "languages": [
+      "en"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "Public Domain (LibriVox) / MIT (Code)",
+      "spdx_id": null,
+      "url": "https://librivox.org/",
+      "commercial_use": "allowed",
+      "notes": "Audio sourced from public domain LibriVox recordings; extraction toolkit released under MIT. Audio is organized into three nested subsets of increasing scale (small ~600h, medium ~6,000h, large ~60,000h), rather than disjoint additive splits."
+    },
+    "source_references": [
+      {
+        "title": "Official GitHub Repository",
+        "url": "https://github.com/facebookresearch/libri-light",
+        "type": "repository"
+      },
+      {
+        "title": "ICASSP 2020 Research Paper",
+        "url": "https://doi.org/10.1109/ICASSP40776.2020.9052942",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 60,000+ hours of audio, LibriVox public domain terms, and ICASSP 2020 publication DOI."
+    },
+    "sample_count": {
+      "total": 60000,
+      "unit": "hours",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-05-04"
+    },
+    "citation": {
+      "paper_title": "Libri-Light: A Benchmark for ASR with Limited or No Supervision",
+      "paper_url": "https://doi.org/10.1109/ICASSP40776.2020.9052942",
+      "doi": "10.1109/ICASSP40776.2020.9052942",
+      "authors": [
+        "Jacob Kahn",
+        "Morgane Rivière",
+        "Weiyi Zheng",
+        "Ewan Dunbar",
+        "Pierre Zhou",
+        "Valentin Vlado",
+        "Qiantong Xu",
+        "Abdelrahman Mohamed",
+        "Kamiar Sajadi",
+        "Gabriel Synnaeve",
+        "Emmanuel Dupoux"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "librispeech",
     "slug": "librispeech",
     "name": "LibriSpeech ASR Corpus",
@@ -29811,6 +30295,236 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "maestro",
+    "slug": "maestro",
+    "name": "MAESTRO: MIDI and Audio Edited for Synchronous TRacks and Organization",
+    "description": "MAESTRO (MIDI and Audio Edited for Synchronous TRacks and Organization) is a virtuosic piano performance dataset developed by Google Magenta. It contains 1,276 performances (~198.7 hours) of classical piano music from 10 years of the International Piano-e-Competition, featuring paired, finely aligned CD-quality audio and MIDI recordings with sub-millisecond precision, providing a gold standard for automatic music transcription and expressive piano performance modeling.",
+    "homepage_url": "https://magenta.withgoogle.com/datasets/maestro",
+    "publisher": {
+      "name": "Google Magenta (Google LLC)",
+      "type": "industry",
+      "url": "https://magenta.withgoogle.com/"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "music-transcription",
+      "audio-generation",
+      "music-information-retrieval"
+    ],
+    "tags": [
+      "audio",
+      "music",
+      "piano",
+      "midi",
+      "transcription",
+      "magenta"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released by Google under CC BY-NC-SA 4.0."
+    },
+    "source_references": [
+      {
+        "title": "Official Google Magenta MAESTRO Portal",
+        "url": "https://magenta.withgoogle.com/datasets/maestro",
+        "type": "official_website"
+      },
+      {
+        "title": "ICLR 2019 Research Paper",
+        "url": "https://arxiv.org/abs/1810.12247",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified v3.0.0 release (1,276 performances, ~198.7 hours), CC BY-NC-SA 4.0 license, and ICLR 2019 publication."
+    },
+    "sample_count": {
+      "total": 1276,
+      "unit": "performances",
+      "status": "verified",
+      "splits": {
+        "train": 962,
+        "validation": 137,
+        "test": 177
+      }
+    },
+    "dates": {
+      "published": "2019-05-06"
+    },
+    "citation": {
+      "paper_title": "Enabling Factorized Piano Music Modeling and Generation with the MAESTRO Dataset",
+      "paper_url": "https://arxiv.org/abs/1810.12247",
+      "doi": "10.48550/arXiv.1810.12247",
+      "authors": [
+        "Curtis Hawthorne",
+        "Andriy Stasyuk",
+        "Adam Roberts",
+        "Ian Simon",
+        "Cheng-Zhi Anna Huang",
+        "Sander Dieleman",
+        "Erich Elsen",
+        "Jesse Engel",
+        "Douglas Eck"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mag240m",
+    "slug": "mag240m",
+    "name": "MAG240M: Large-Scale Heterogeneous Academic Graph",
+    "description": "MAG240M is a massive heterogeneous academic graph benchmark extracted from the Microsoft Academic Graph (MAG) as part of the OGB-LSC initiative. It consists of 244,160,499 nodes (121.7M papers, 122.4M authors, 25.7K institutions) and 1,728,364,232 directed edges representing paper-cites-paper, author-writes-paper, and author-affiliated-with-institution relations. Each paper features a 768-dimensional RoBERTa embedding of its title and abstract. The task is to predict the primary arXiv subject category of target papers across 153 classes with a temporal split.",
+    "homepage_url": "https://ogb.stanford.edu/docs/lsc/mag240m/",
+    "publisher": {
+      "name": "Stanford University (OGB Team)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph"
+    ],
+    "tasks": [
+      "node-classification",
+      "heterogeneous-graph-learning"
+    ],
+    "tags": [
+      "graph",
+      "heterogeneous-graph",
+      "ogb-lsc",
+      "academic-graph",
+      "billion-scale"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License (ODC-By v1.0)",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Released under the ODC-By license inheriting Microsoft Academic Graph terms."
+    },
+    "source_references": [
+      {
+        "title": "Official OGB-LSC Documentation",
+        "url": "https://ogb.stanford.edu/docs/lsc/mag240m/",
+        "type": "official_website"
+      },
+      {
+        "title": "NeurIPS 2021 OGB-LSC Paper",
+        "url": "https://arxiv.org/abs/2103.09430",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified node count (244.16M), edge count (1.73B), ODC-By license, and 153 subject classes."
+    },
+    "sample_count": {
+      "total": 244160499,
+      "unit": "nodes",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2021-03-17"
+    },
+    "citation": {
+      "paper_title": "OGB-LSC: A Large-Scale Challenge for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2103.09430",
+      "doi": "10.48550/arXiv.2103.09430",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Hongyu Ren",
+        "Maho Nakata",
+        "Yuxiao Dong",
+        "Jure Leskovec"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "magnatagatune",
+    "slug": "magnatagatune",
+    "name": "MagnaTagATune Dataset",
+    "description": "MagnaTagATune is a music audio auto-tagging and classification benchmark consisting of 25,863 30-second audio clips sourced from Magnatune independent music. Annotated by players through the TagATune online two-player game, it provides binary tag vectors across 188 verified labels (instruments, genres, moods, tempo, and vocal traits), serving as a standard benchmark in music information retrieval (MIR).",
+    "homepage_url": "https://mirg.city.ac.uk/codeapps/the-magnatagatune-dataset",
+    "publisher": {
+      "name": "Carnegie Mellon University / City University London MIRG",
+      "type": "academic",
+      "url": "https://mirg.city.ac.uk/"
+    },
+    "modalities": [
+      "audio",
+      "tabular"
+    ],
+    "tasks": [
+      "audio-tagging",
+      "music-information-retrieval",
+      "audio-classification"
+    ],
+    "tags": [
+      "audio",
+      "music",
+      "auto-tagging",
+      "mir",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 / Magnatune",
+      "spdx_id": "CC-BY-NC-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "commercial_use": "forbidden",
+      "notes": "Distributed for non-commercial music information retrieval research under Magnatune terms."
+    },
+    "source_references": [
+      {
+        "title": "Official MIRG Portal",
+        "url": "https://mirg.city.ac.uk/codeapps/the-magnatagatune-dataset",
+        "type": "official_website"
+      },
+      {
+        "title": "CHI 2009 Research Paper",
+        "url": "https://doi.org/10.1145/1518701.1518880",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 25,863 clip count, 188 tags, non-commercial research terms, and CHI 2009 publication DOI."
+    },
+    "sample_count": {
+      "total": 25863,
+      "unit": "audio_clips",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2009-04-09"
+    },
+    "citation": {
+      "paper_title": "Input-agreement: a new mechanism for collecting data using human computation games",
+      "paper_url": "https://doi.org/10.1145/1518701.1518880",
+      "doi": "10.1145/1518701.1518880",
+      "authors": [
+        "Edith Law",
+        "Luis von Ahn"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "magnetic-tile-defect-datasets",
     "slug": "magnetic-tile-defect-datasets",
     "name": "Magnetic Tile Surface Defect Dataset",
@@ -30366,6 +31080,96 @@
       "data_sources": [
         "CiteSeer scientific publications (1970–2011)",
         "Founder Apabi e-book digital library"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "massive",
+    "slug": "massive",
+    "name": "MASSIVE: A 1M-Example Multilingual Natural Language Understanding Dataset",
+    "description": "MASSIVE (Multilingual Amazon Slu resource package) is a massively multilingual spoken language understanding dataset spanning 51 typologically diverse languages across 18 domains. It contains 19,521 realistic user utterances per language (totaling 995,571 examples) annotated for intent classification (60 intents) and slot-filling (55 slot types), allowing robust cross-lingual evaluation and benchmarking of task-oriented dialog models.",
+    "homepage_url": "https://github.com/alexa/massive",
+    "publisher": {
+      "name": "Amazon (Alexa AI)",
+      "type": "industry",
+      "url": "https://www.amazon.science/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "intent-classification",
+      "slot-filling",
+      "spoken-language-understanding"
+    ],
+    "tags": [
+      "multilingual",
+      "nlu",
+      "dialogue",
+      "benchmark",
+      "intent-detection"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Released by Amazon under Creative Commons Attribution 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "Official GitHub Repository",
+        "url": "https://github.com/alexa/massive",
+        "type": "repository"
+      },
+      {
+        "title": "ACL 2023 Research Paper",
+        "url": "https://aclanthology.org/2023.acl-long.235/",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified primary GitHub repository, 51 languages, CC BY 4.0 license, and ACL Anthology citation."
+    },
+    "sample_count": {
+      "total": 995571,
+      "unit": "utterances",
+      "status": "verified",
+      "splits": {
+        "train": 587214,
+        "dev": 103734,
+        "test": 304623
+      }
+    },
+    "dates": {
+      "published": "2023-07-09"
+    },
+    "citation": {
+      "paper_title": "MASSIVE: A 1M-Example Multilingual Natural Language Understanding Dataset with 51 Typologically-Diverse Languages",
+      "paper_url": "https://aclanthology.org/2023.acl-long.235/",
+      "doi": "10.18653/v1/2023.acl-long.235",
+      "authors": [
+        "Jack FitzGerald",
+        "Christopher Hench",
+        "Charith Peris",
+        "Scott Mackie",
+        "Kay Rottmann",
+        "Ana Sanchez",
+        "Aaron Nash",
+        "Liam Urbach",
+        "Vishesh Kakarala",
+        "Richa Singh",
+        "Swetha Ranganath",
+        "Laurie Crist",
+        "Misha Britan",
+        "Wouter Leeuwis",
+        "Gokhan Tur",
+        "Prem Natarajan"
       ]
     }
   },
@@ -32912,6 +33716,93 @@
       "data_sources": [
         "90,000-word English dictionary",
         "Curated open font libraries and natural image backgrounds"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mlqa",
+    "slug": "mlqa",
+    "name": "MLQA: MultiLingual Question Answering",
+    "description": "MLQA (MultiLingual Question Answering) is a multi-way parallel benchmark for evaluating cross-lingual question answering performance. It contains extractive QA instances gathered from Wikipedia articles across 7 languages: English, Arabic, German, Spanish, Hindi, Vietnamese, and Simplified Chinese. The dataset contains 12,738 QA instances in English and over 5,000 QA instances in each other language, with high parallel alignment allowing cross-lingual evaluation where questions and context paragraphs are in different languages.",
+    "homepage_url": "https://github.com/facebookresearch/MLQA",
+    "publisher": {
+      "name": "Meta AI",
+      "type": "industry",
+      "url": "https://ai.meta.com/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "reading-comprehension",
+      "cross-lingual-transfer"
+    ],
+    "tags": [
+      "multilingual",
+      "qa",
+      "reading-comprehension",
+      "benchmark",
+      "wikipedia"
+    ],
+    "languages": [
+      "en",
+      "ar",
+      "de",
+      "es",
+      "hi",
+      "vi",
+      "zh"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "spdx_id": "CC-BY-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "commercial_use": "allowed",
+      "notes": "Derived from Wikipedia and licensed under CC BY-SA 3.0."
+    },
+    "source_references": [
+      {
+        "title": "Official GitHub Repository",
+        "url": "https://github.com/facebookresearch/MLQA",
+        "type": "repository"
+      },
+      {
+        "title": "ACL 2020 Research Paper",
+        "url": "https://aclanthology.org/2020.acl-main.653/",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified primary GitHub repository, 7 language coverage, Wikipedia provenance, and CC BY-SA 3.0 license."
+    },
+    "sample_count": {
+      "total": 46545,
+      "unit": "question_answer_instances",
+      "status": "verified",
+      "splits": {
+        "dev": 8027,
+        "test": 38518
+      }
+    },
+    "dates": {
+      "published": "2020-07-05"
+    },
+    "citation": {
+      "paper_title": "MLQA: Evaluating Cross-lingual Extractive Question Answering",
+      "paper_url": "https://aclanthology.org/2020.acl-main.653/",
+      "doi": "10.18653/v1/2020.acl-main.653",
+      "authors": [
+        "Patrick Lewis",
+        "Barlas Oğuz",
+        "Ruty Rinott",
+        "Sebastian Riedel",
+        "Holger Schwenk"
       ]
     }
   },
@@ -37658,6 +38549,87 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "nsynth",
+    "slug": "nsynth",
+    "name": "NSynth: Neural Audio Synthesis Dataset",
+    "description": "NSynth (Neural Audio Synthesis) is an audio dataset of musical notes developed by Google Magenta. It contains 305,979 four-second musical notes sampled at 16 kHz across 1,006 individual acoustic, electronic, and synthetic musical instruments. Each note is annotated with pitch, velocity, instrument family, source type, and acoustic qualities (brightness, distortion, multiphonics), providing a standard benchmark for neural audio synthesis and pitch/timbre modeling.",
+    "homepage_url": "https://magenta.withgoogle.com/datasets/nsynth",
+    "publisher": {
+      "name": "Google Magenta (Google LLC)",
+      "type": "industry",
+      "url": "https://magenta.withgoogle.com/"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "audio-generation",
+      "neural-audio-synthesis",
+      "pitch-detection"
+    ],
+    "tags": [
+      "audio",
+      "music",
+      "synthesizer",
+      "sound-synthesis",
+      "magenta"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Released by Google under the Creative Commons Attribution 4.0 International license."
+    },
+    "source_references": [
+      {
+        "title": "Official Google Magenta Dataset Portal",
+        "url": "https://magenta.withgoogle.com/datasets/nsynth",
+        "type": "official_website"
+      },
+      {
+        "title": "ICML 2017 Research Paper",
+        "url": "https://arxiv.org/abs/1704.01279",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 305,979 notes, CC BY 4.0 license, and ICML 2017 publication."
+    },
+    "sample_count": {
+      "total": 305979,
+      "unit": "audio_samples",
+      "status": "verified",
+      "splits": {
+        "train": 289205,
+        "val": 12678,
+        "test": 4096
+      }
+    },
+    "dates": {
+      "published": "2017-04-05"
+    },
+    "citation": {
+      "paper_title": "Neural Audio Synthesis of Musical Notes with WaveNet Autoencoders",
+      "paper_url": "https://arxiv.org/abs/1704.01279",
+      "doi": "10.48550/arXiv.1704.01279",
+      "authors": [
+        "Jesse Engel",
+        "Cinjon Resnick",
+        "Adam Roberts",
+        "Sander Dieleman",
+        "Douglas Eck",
+        "Karen Simonyan",
+        "Mohammad Norouzi"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ntu-rgbd",
     "slug": "ntu-rgbd",
     "name": "NTU RGB+D: 3D Action Recognition Dataset",
@@ -38444,6 +39416,81 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "objects365",
+    "slug": "objects365",
+    "name": "Objects365: A Large-Scale, High-Quality Dataset for Object Detection",
+    "description": "Objects365 is a benchmark dataset for large-scale object detection and localization in the wild. Its second release (v2) features over 2 million natural images annotated with more than 30 million bounding boxes across 365 finely defined object categories. With an average of 15.8 object instances per image, it serves as a pretraining standard for general object detectors and vision foundation models.",
+    "homepage_url": "https://www.objects365.org/download.html",
+    "publisher": {
+      "name": "MEGVII Technology / Objects365 Consortium",
+      "type": "industry",
+      "url": "https://www.objects365.org/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection",
+      "bounding-box-localization"
+    ],
+    "tags": [
+      "computer-vision",
+      "object-detection",
+      "benchmark",
+      "large-scale",
+      "bounding-boxes"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Objects365 Terms of Use / CC BY 4.0 Annotations",
+      "url": "https://www.objects365.org/",
+      "commercial_use": "forbidden",
+      "notes": "Annotations released under CC BY 4.0 by the Consortium; images sourced from Flickr for non-commercial academic research only."
+    },
+    "source_references": [
+      {
+        "title": "Official Download Website",
+        "url": "https://www.objects365.org/download.html",
+        "type": "official_website"
+      },
+      {
+        "title": "Original ICCV 2019 Paper",
+        "url": "https://openaccess.thecvf.com/content_ICCV_2019/html/Shao_Objects365_A_Large-Scale_High-Quality_Dataset_for_Object_Detection_ICCV_2019_paper.html",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified official website, ICCV 2019 publication DOI, scale, and non-commercial research terms."
+    },
+    "sample_count": {
+      "total": 2000000,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-10-27"
+    },
+    "citation": {
+      "paper_title": "Objects365: A Large-Scale, High-Quality Dataset for Object Detection",
+      "paper_url": "https://openaccess.thecvf.com/content_ICCV_2019/html/Shao_Objects365_A_Large-Scale_High-Quality_Dataset_for_Object_Detection_ICCV_2019_paper.html",
+      "doi": "10.1109/ICCV.2019.00852",
+      "authors": [
+        "Shuai Shao",
+        "Zemirui Li",
+        "Tianyuan Zhang",
+        "Chao Peng",
+        "Gang Yu",
+        "Xiangyu Zhang",
+        "Jing Li",
+        "Jian Sun"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ogbg-molhiv",
     "slug": "ogbg-molhiv",
     "name": "ogbg-molhiv: Molecular Property Prediction",
@@ -38523,6 +39570,87 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ogbg-molpcba",
+    "slug": "ogbg-molpcba",
+    "name": "ogbg-molpcba: Molecular Property Prediction",
+    "description": "The ogbg-molpcba dataset is a large molecular property prediction benchmark from the Open Graph Benchmark (OGB), curated from PubChem BioAssay. It contains 437,929 chemical molecules represented as 2D graphs where nodes are atoms and edges are chemical bonds. The task is multi-task binary classification predicting biological assay activities across 128 distinct bioassays, using scaffold splitting to evaluate structural generalization.",
+    "homepage_url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-molpcba",
+    "publisher": {
+      "name": "Stanford University (OGB Team)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph"
+    ],
+    "tasks": [
+      "graph-classification",
+      "molecular-property-prediction"
+    ],
+    "tags": [
+      "graph",
+      "molecules",
+      "bioassay",
+      "ogb",
+      "chemistry"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Curated from public-domain PubChem BioAssay data; OGB benchmark utilities, evaluators, and dataset distribution licensed under MIT."
+    },
+    "source_references": [
+      {
+        "title": "Official OGB Documentation",
+        "url": "https://ogb.stanford.edu/docs/graphprop/#ogbg-molpcba",
+        "type": "official_website"
+      },
+      {
+        "title": "NeurIPS 2020 OGB Paper",
+        "url": "https://arxiv.org/abs/2005.00687",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified graph count (437,929), 128 bioassay tasks, and scaffold split protocol."
+    },
+    "sample_count": {
+      "total": 437929,
+      "unit": "graphs",
+      "status": "verified",
+      "splits": {
+        "train": 350343,
+        "val": 43793,
+        "test": 43793
+      }
+    },
+    "dates": {
+      "published": "2020-05-01"
+    },
+    "citation": {
+      "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2005.00687",
+      "doi": "10.48550/arXiv.2005.00687",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Marinka Zitnik",
+        "Yuxiao Dong",
+        "Hongyu Ren",
+        "Bowen Liu",
+        "Michele Catasta",
+        "Jure Leskovec"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ogbn-arxiv",
     "slug": "ogbn-arxiv",
     "name": "ogbn-arxiv: Citation Network Benchmark",
@@ -38598,6 +39726,86 @@
         "Jure Leskovec"
       ],
       "bibtex": "@article{hu2020ogb,\n  title = {Open Graph Benchmark: Datasets for Machine Learning on Graphs},\n  author = {Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},\n  journal = {Advances in Neural Information Processing Systems},\n  volume = {33},\n  pages = {22118--22133},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ogbn-products",
+    "slug": "ogbn-products",
+    "name": "ogbn-products: Amazon Product Co-purchasing Network",
+    "description": "The ogbn-products dataset is an undirected, unweighted graph representing an Amazon product co-purchasing network from the Open Graph Benchmark (OGB). Nodes represent individual products sold on Amazon (2,449,029 nodes), and edges represent products frequently purchased together (61,859,140 edges). Each node features a 100-dimensional feature vector extracted from text descriptions via Bag-of-Words and PCA. The task is to predict the top-level product category across 47 classes with realistic sales-rank out-of-distribution splits.",
+    "homepage_url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-products",
+    "publisher": {
+      "name": "Stanford University (OGB Team)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph"
+    ],
+    "tasks": [
+      "node-classification",
+      "graph-representation-learning"
+    ],
+    "tags": [
+      "graph",
+      "node-property-prediction",
+      "ogb",
+      "benchmark",
+      "amazon"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Amazon Product Data License / MIT",
+      "url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-products",
+      "commercial_use": "forbidden",
+      "notes": "Derived from Amazon product data under Amazon research terms; OGB benchmark scripts under MIT."
+    },
+    "source_references": [
+      {
+        "title": "Official OGB Documentation",
+        "url": "https://ogb.stanford.edu/docs/nodeprop/#ogbn-products",
+        "type": "official_website"
+      },
+      {
+        "title": "NeurIPS 2020 OGB Paper",
+        "url": "https://arxiv.org/abs/2005.00687",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified node count (2.45M), edge count (61.9M), 47 classes, and NeurIPS 2020 benchmark publication."
+    },
+    "sample_count": {
+      "total": 2449029,
+      "unit": "nodes",
+      "status": "verified",
+      "splits": {
+        "train": 196615,
+        "val": 39323,
+        "test": 2213091
+      }
+    },
+    "dates": {
+      "published": "2020-05-01"
+    },
+    "citation": {
+      "paper_title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2005.00687",
+      "doi": "10.48550/arXiv.2005.00687",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Marinka Zitnik",
+        "Yuxiao Dong",
+        "Hongyu Ren",
+        "Bowen Liu",
+        "Michele Catasta",
+        "Jure Leskovec"
+      ]
     }
   },
   {
@@ -40500,6 +41708,88 @@
       ],
       "doi": "10.18653/v1/D19-1382",
       "bibtex": "@inproceedings{yang-etal-2019-paws,\n  title = {PAWS-X: A Cross-lingual Adversarial Dataset for Paraphrase Identification},\n  author = {Yang, Yinfei and Zhang, Yuan and Tar, Chris and Baldridge, Jason},\n  booktitle = {Proceedings of EMNLP 2019},\n  pages = {3687--3692},\n  year = {2019}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "pcqm4mv2",
+    "slug": "pcqm4mv2",
+    "name": "PCQM4Mv2: Quantum Chemical Property Prediction",
+    "description": "PCQM4Mv2 is a quantum chemistry molecular benchmark from the OGB Large-Scale Challenge (OGB-LSC). Sourced from PubChemQC, it contains 3,746,619 organic molecules with 2D graph structures and 3D relaxed equilibrium conformers for training instances. The benchmark task is regression predicting the HOMO-LUMO energy gap calculated by Density Functional Theory (DFT), evaluated using Mean Absolute Error (MAE).",
+    "homepage_url": "https://ogb.stanford.edu/docs/lsc/pcqm4mv2/",
+    "publisher": {
+      "name": "Stanford University (OGB Team)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph",
+      "3d"
+    ],
+    "tasks": [
+      "graph-regression",
+      "quantum-chemistry",
+      "molecular-property-prediction"
+    ],
+    "tags": [
+      "graph",
+      "quantum-chemistry",
+      "ogb-lsc",
+      "molecules",
+      "homo-lumo"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset released under CC BY 4.0 as part of the OGB-LSC initiative."
+    },
+    "source_references": [
+      {
+        "title": "Official OGB-LSC Documentation",
+        "url": "https://ogb.stanford.edu/docs/lsc/pcqm4mv2/",
+        "type": "official_website"
+      },
+      {
+        "title": "NeurIPS 2021 OGB-LSC Paper",
+        "url": "https://arxiv.org/abs/2103.09430",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 3.75M molecule count, DFT HOMO-LUMO target, CC BY 4.0 license, and OGB-LSC paper."
+    },
+    "sample_count": {
+      "total": 3746619,
+      "unit": "molecules",
+      "status": "verified",
+      "splits": {
+        "train": 3378606,
+        "val": 73545,
+        "test-dev": 147037,
+        "test-challenge": 147431
+      }
+    },
+    "dates": {
+      "published": "2021-03-17"
+    },
+    "citation": {
+      "paper_title": "OGB-LSC: A Large-Scale Challenge for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2103.09430",
+      "doi": "10.48550/arXiv.2103.09430",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Hongyu Ren",
+        "Maho Nakata",
+        "Yuxiao Dong",
+        "Jure Leskovec"
+      ]
     }
   },
   {
@@ -42861,6 +44151,81 @@
     "languages": [
       "bn"
     ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "qm9",
+    "slug": "qm9",
+    "name": "QM9: Quantum Chemistry Structures and Properties of 134k Molecules",
+    "description": "QM9 is a benchmark dataset in quantum chemistry and machine learning on molecular graphs. It contains 133,885 stable small organic molecules consisting of up to 9 heavy atoms (C, O, N, F) drawn from the GDB-17 chemical universe. For each molecule, geometric, thermodynamic, electronic, and energetic properties (19 physical properties including dipole moment, polarizability, HOMO, LUMO, and atomization energy) are calculated at the B3LYP/6-31G(2df,p) level of density functional theory.",
+    "homepage_url": "https://www.quantum-machine.org/datasets/",
+    "publisher": {
+      "name": "University of Basel / Quantum-Machine Consortium",
+      "type": "academic",
+      "url": "https://www.quantum-machine.org/"
+    },
+    "modalities": [
+      "graph",
+      "tabular",
+      "3d"
+    ],
+    "tasks": [
+      "molecular-property-prediction",
+      "graph-regression",
+      "quantum-chemistry"
+    ],
+    "tags": [
+      "quantum-chemistry",
+      "dft",
+      "molecules",
+      "benchmark",
+      "graph-neural-networks"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "CC0 1.0 Universal Public Domain Dedication",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Dedicated to the public domain under CC0 1.0 Universal."
+    },
+    "source_references": [
+      {
+        "title": "Quantum-Machine Datasets Portal",
+        "url": "https://www.quantum-machine.org/datasets/",
+        "type": "official_website"
+      },
+      {
+        "title": "Scientific Data 2014 Research Paper",
+        "url": "https://doi.org/10.1038/sdata.2014.22",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 133,885 molecule count, CC0 public domain status, and Nature Scientific Data publication."
+    },
+    "sample_count": {
+      "total": 133885,
+      "unit": "molecules",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2014-07-29"
+    },
+    "citation": {
+      "paper_title": "Quantum chemistry structures and properties of 134 kilo molecules",
+      "paper_url": "https://doi.org/10.1038/sdata.2014.22",
+      "doi": "10.1038/sdata.2014.22",
+      "authors": [
+        "Raghunathan Ramakrishnan",
+        "Pavlo O. Dral",
+        "Matthias Rupp",
+        "O. Anatole von Lilienfeld"
+      ]
+    }
   },
   {
     "schema_version": "1.0.0",
@@ -45309,6 +46674,92 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "sa-1b",
+    "slug": "sa-1b",
+    "name": "SA-1B: Segment Anything 1-Billion Dataset",
+    "description": "SA-1B (Segment Anything 1-Billion) is the largest segmentation dataset ever compiled, featuring 11 million high-resolution, privacy-protected natural images and 1.1 billion high-quality segmentation masks generated by Meta's Segment Anything Model (SAM) with human-in-the-loop validation. Spanning diverse geographic regions and complex natural scenes, it serves as the foundational pretraining resource for promptable visual segmentation.",
+    "homepage_url": "https://ai.meta.com/datasets/segment-anything",
+    "publisher": {
+      "name": "Meta AI",
+      "type": "industry",
+      "url": "https://ai.meta.com/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "instance-segmentation",
+      "semantic-segmentation",
+      "foundation-model-pretraining"
+    ],
+    "tags": [
+      "segmentation",
+      "foundation-model",
+      "computer-vision",
+      "billion-scale",
+      "masks"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "SA-1B Dataset Research License Agreement",
+      "url": "https://ai.meta.com/datasets/segment-anything",
+      "commercial_use": "forbidden",
+      "notes": "The SA-1B dataset is restricted strictly to non-commercial research purposes under the SA-1B Dataset Research License Agreement; access requires reviewing and accepting terms on the download portal; model code and weights are under Apache 2.0."
+    },
+    "source_references": [
+      {
+        "title": "Meta AI Segment Anything Portal",
+        "url": "https://ai.meta.com/datasets/segment-anything",
+        "type": "official_website"
+      },
+      {
+        "title": "Meta AI Segment Anything Downloads Portal",
+        "url": "https://ai.meta.com/datasets/segment-anything-downloads/",
+        "type": "official_website",
+        "notes": "Requires reviewing and accepting the SA-1B Dataset Research License Agreement to access chunk download links."
+      },
+      {
+        "title": "ICCV 2023 Research Paper",
+        "url": "https://doi.org/10.1109/ICCV51070.2023.00371",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified download availability via research agreement on the downloads portal, 11M image and 1.1B mask count, and ICCV 2023 publication."
+    },
+    "sample_count": {
+      "total": 11000000,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2023-04-05"
+    },
+    "citation": {
+      "paper_title": "Segment Anything",
+      "paper_url": "https://doi.org/10.1109/ICCV51070.2023.00371",
+      "doi": "10.1109/ICCV51070.2023.00371",
+      "authors": [
+        "Alexander Kirillov",
+        "Eric Mintun",
+        "Nikhila Ravi",
+        "Hanzi Mao",
+        "Chloe Rolland",
+        "Laura Gustafson",
+        "Tete Xiao",
+        "Spencer Whitehead",
+        "Alexander C. Berg",
+        "Wan-Yen Lo",
+        "Piotr Dollár",
+        "Ross Girshick"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "sb20-sugar-beet",
     "slug": "sb20-sugar-beet",
     "name": "SB20: RGB-D Crop and Weed Segmentation Dataset",
@@ -46977,6 +48428,87 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "slurp",
+    "slug": "slurp",
+    "name": "SLURP: Spoken Language Understanding Resource Package",
+    "description": "SLURP (Spoken Language Understanding Resource Package) is a multi-modal dataset for task-oriented spoken language understanding (SLU). It contains 72,396 audio recordings (57.5 hours of speech from 177 speakers) mapped to 16,521 text sentences across 18 home-assistant domains (e.g. email, calendar, music, alarm). Utterances are annotated with 69 scenarios, 91 actions, and 56 entity types, enabling end-to-end and pipeline SLU benchmarking.",
+    "homepage_url": "https://github.com/pswietojanski/slurp",
+    "publisher": {
+      "name": "Heriot-Watt University & Emotech",
+      "type": "academic",
+      "url": "https://github.com/pswietojanski/slurp"
+    },
+    "modalities": [
+      "audio",
+      "nlp"
+    ],
+    "tasks": [
+      "spoken-language-understanding",
+      "intent-classification",
+      "slot-filling"
+    ],
+    "tags": [
+      "audio",
+      "speech",
+      "slu",
+      "voice-assistant",
+      "dialogue"
+    ],
+    "languages": [
+      "en"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "CC BY-NC 4.0 (Audio) / CC BY 4.0 (Text)",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Audio files are licensed under CC BY-NC 4.0; text annotations are under CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "Official GitHub Repository",
+        "url": "https://github.com/pswietojanski/slurp",
+        "type": "repository"
+      },
+      {
+        "title": "EMNLP 2020 Research Paper",
+        "url": "https://aclanthology.org/2020.emnlp-main.588/",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 72,396 audio recordings, 16,521 text utterances, CC BY-NC 4.0 audio license, and EMNLP 2020 paper."
+    },
+    "sample_count": {
+      "total": 72396,
+      "unit": "audio_recordings",
+      "status": "verified",
+      "splits": {
+        "train": 50628,
+        "dev": 8690,
+        "test": 13078
+      }
+    },
+    "dates": {
+      "published": "2020-11-16"
+    },
+    "citation": {
+      "paper_title": "SLURP: A Spoken Language Understanding Resource Package",
+      "paper_url": "https://aclanthology.org/2020.emnlp-main.588/",
+      "doi": "10.18653/v1/2020.emnlp-main.588",
+      "authors": [
+        "Emanuele Bastianelli",
+        "Andrea Vanzo",
+        "Pawel Swietojanski",
+        "Verena Rieser"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "small-fast-falling-object-lidar-rgb",
     "slug": "small-fast-falling-object-lidar-rgb",
     "name": "Small and Fast Falling object LiDAR and RGB Dataset",
@@ -47336,6 +48868,93 @@
       "data_sources": [
         "Copernicus Sentinel-1 SAR",
         "Copernicus Sentinel-2 MSI"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "something-something-v2",
+    "slug": "something-something-v2",
+    "name": "20BN-Something-Something-V2",
+    "description": "The 20BN-Something-Something-V2 dataset is a video action benchmark designed for learning fine-grained physical object interactions and visual common sense. It contains 220,847 short video clips showing humans performing predefined physical actions with everyday objects across 174 action classes (such as 'Pushing something so that it falls off the table'). Sourced via crowdsourced acting and hosted by Qualcomm, it tests temporal reasoning rather than static scene recognition.",
+    "homepage_url": "https://www.qualcomm.com/developer/software/something-something-v-2-dataset",
+    "publisher": {
+      "name": "TwentyBN / Qualcomm",
+      "type": "industry",
+      "url": "https://www.qualcomm.com/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "action-recognition",
+      "temporal-reasoning",
+      "video-classification"
+    ],
+    "tags": [
+      "video",
+      "action-recognition",
+      "human-object-interaction",
+      "benchmark",
+      "visual-common-sense"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Qualcomm Research License Agreement",
+      "url": "https://www.qualcomm.com/developer/software/something-something-v-2-dataset",
+      "commercial_use": "forbidden",
+      "notes": "Free for academic and non-commercial research; download requires creating a Qualcomm developer account."
+    },
+    "source_references": [
+      {
+        "title": "Official Qualcomm Portal",
+        "url": "https://www.qualcomm.com/developer/software/something-something-v-2-dataset",
+        "type": "official_website"
+      },
+      {
+        "title": "Original ICCV 2017 Paper",
+        "url": "https://doi.org/10.1109/ICCV.2017.622",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified Qualcomm hosting portal, ICCV paper DOI, sample split counts, and research-only license."
+    },
+    "sample_count": {
+      "total": 220847,
+      "unit": "video_clips",
+      "status": "verified",
+      "splits": {
+        "train": 168913,
+        "val": 24777,
+        "test": 27157
+      }
+    },
+    "dates": {
+      "published": "2018-06-12"
+    },
+    "citation": {
+      "paper_title": "The 'Something Something' Video Database for Learning and Evaluating Visual Common Sense",
+      "paper_url": "https://doi.org/10.1109/ICCV.2017.622",
+      "doi": "10.1109/ICCV.2017.622",
+      "authors": [
+        "Raghav Goyal",
+        "Samira Ebrahimi Kahou",
+        "Vincent Michalski",
+        "Joanna Materzynska",
+        "Susanne Westphal",
+        "Heuna Kim",
+        "Valentin Haenel",
+        "Ingo Fruend",
+        "Peter Yianilos",
+        "Moritz Mueller-Freitag",
+        "Florian Hoppe",
+        "Christian Thurau",
+        "Ingo Bax",
+        "Roland Memisevic"
       ]
     }
   },
@@ -49294,6 +50913,84 @@
         "Andrew Y. Ng"
       ],
       "bibtex": "@inproceedings{netzer2011reading,\n  title = {Reading Digits in Natural Images with Unsupervised Feature Learning},\n  author = {Netzer, Yuval and Wang, Tao and Coates, Adam and Bissacco, Alessandro and Wu, Bo and Ng, Andrew Y.},\n  booktitle = {NIPS Workshop on Deep Learning and Unsupervised Feature Learning},\n  year = {2011}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "swat",
+    "slug": "swat",
+    "name": "SWaT: Secure Water Treatment Testbed Dataset",
+    "description": "The SWaT (Secure Water Treatment) dataset is an industrial cybersecurity and anomaly detection benchmark collected from a fully operational, six-stage water treatment testbed by iTrust at SUTD. Spanning 11 continuous days of operation (7 days normal, 4 days under 36 systematic cyber and physical attacks) recorded at 1-second intervals, it tracks continuous readings across 51 sensors and actuators along with network traffic, serving as a standard benchmark for industrial control system (ICS) defense.",
+    "homepage_url": "https://www.sutd.edu.sg/itrust/itrust-labs/datasets/dataset-characteristics/swat/",
+    "publisher": {
+      "name": "iTrust (Singapore University of Technology and Design)",
+      "type": "academic",
+      "url": "https://itrust.sutd.edu.sg/"
+    },
+    "modalities": [
+      "time-series",
+      "sensor",
+      "tabular"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "time-series-anomaly-detection",
+      "intrusion-detection"
+    ],
+    "tags": [
+      "cybersecurity",
+      "industrial-iot",
+      "scada",
+      "water-treatment",
+      "anomaly-detection"
+    ],
+    "license": {
+      "status": "proprietary",
+      "name": "iTrust Academic Research Data Agreement",
+      "url": "https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info/",
+      "commercial_use": "forbidden",
+      "notes": "Available to researchers upon submitting a request application form; non-commercial research and educational use only."
+    },
+    "source_references": [
+      {
+        "title": "Official iTrust Dataset Page",
+        "url": "https://www.sutd.edu.sg/itrust/itrust-labs/datasets/dataset-characteristics/swat/",
+        "type": "official_website"
+      },
+      {
+        "title": "CRITIS 2016 Research Paper",
+        "url": "https://doi.org/10.1007/978-3-319-71368-7_8",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified iTrust SUTD host, 11-day operational duration, 51 sensor/actuator tags, and CRITIS 2016 paper DOI."
+    },
+    "sample_count": {
+      "total": 946719,
+      "unit": "sensor_records",
+      "status": "verified",
+      "splits": {
+        "normal": 496800,
+        "attack": 449919
+      }
+    },
+    "dates": {
+      "published": "2016-10-10"
+    },
+    "citation": {
+      "paper_title": "A Dataset to Support Research in the Design of Secure Water Treatment Systems",
+      "paper_url": "https://doi.org/10.1007/978-3-319-71368-7_8",
+      "doi": "10.1007/978-3-319-71368-7_8",
+      "authors": [
+        "Jonathan Goh",
+        "Sridhar Adepu",
+        "Khurum Nazir Junejo",
+        "Aditya Mathur"
+      ]
     }
   },
   {
@@ -54148,6 +55845,83 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "wadi",
+    "slug": "wadi",
+    "name": "WADI: Water Distribution Testbed Dataset",
+    "description": "The WADI (Water Distribution) dataset is an industrial cyber-physical benchmark collected from a scaled physical water distribution network testbed at SUTD iTrust. Consisting of 16 days of continuous operation (14 days of normal operation and 2 days under 15 distinct cyber and physical attack scenarios) sampled every second, it monitors 127 sensor and actuator measurements (flow meters, pressure transmitters, water quality analyzers, motorized valves), providing realistic ICS attack telemetry.",
+    "homepage_url": "https://www.sutd.edu.sg/itrust/itrust-labs/datasets/dataset-characteristics/wadi/",
+    "publisher": {
+      "name": "iTrust (Singapore University of Technology and Design)",
+      "type": "academic",
+      "url": "https://itrust.sutd.edu.sg/"
+    },
+    "modalities": [
+      "time-series",
+      "sensor",
+      "tabular"
+    ],
+    "tasks": [
+      "anomaly-detection",
+      "time-series-anomaly-detection",
+      "intrusion-detection"
+    ],
+    "tags": [
+      "cybersecurity",
+      "industrial-iot",
+      "scada",
+      "water-distribution",
+      "anomaly-detection"
+    ],
+    "license": {
+      "status": "proprietary",
+      "name": "iTrust Academic Research Data Agreement",
+      "url": "https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info/",
+      "commercial_use": "forbidden",
+      "notes": "Requires application request through iTrust portal; restricted to non-commercial academic research."
+    },
+    "source_references": [
+      {
+        "title": "Official iTrust Dataset Page",
+        "url": "https://www.sutd.edu.sg/itrust/itrust-labs/datasets/dataset-characteristics/wadi/",
+        "type": "official_website"
+      },
+      {
+        "title": "CySWater 2017 Research Paper",
+        "url": "https://doi.org/10.1145/3055366.3055375",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified 16-day operational timeline, 127 measurement tags, application process, and CySWater 2017 paper DOI."
+    },
+    "sample_count": {
+      "total": 1382402,
+      "unit": "sensor_records",
+      "status": "verified",
+      "splits": {
+        "normal": 1209601,
+        "attack": 172801
+      }
+    },
+    "dates": {
+      "published": "2017-04-21"
+    },
+    "citation": {
+      "paper_title": "WADI: A Water Distribution Testbed for Research in the Design of Secure Cyber Physical Systems",
+      "paper_url": "https://doi.org/10.1145/3055366.3055375",
+      "doi": "10.1145/3055366.3055375",
+      "authors": [
+        "Chuadhry Mujeeb Ahmed",
+        "Venkata Reddy Palleti",
+        "Aditya P. Mathur"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "water-quality-portal",
     "slug": "water-quality-portal",
     "name": "USGS/EPA Water Quality Portal (WQP)",
@@ -55397,6 +57171,85 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "wikikg90mv2",
+    "slug": "wikikg90mv2",
+    "name": "WikiKG90Mv2: Large-Scale Knowledge Graph Completion",
+    "description": "WikiKG90Mv2 is a massive knowledge graph benchmark from the OGB Large-Scale Challenge (OGB-LSC), extracted from a complete dump of Wikidata. Containing 91,230,610 entities, 1,387 relations, and 601,062,811 factual triplets, it is an order of magnitude larger than previous knowledge graph benchmarks. The task is link prediction (predicting head or tail entities for triplets), evaluated by Mean Reciprocal Rank (MRR) across diverse domain facts.",
+    "homepage_url": "https://ogb.stanford.edu/docs/lsc/wikikg90mv2/",
+    "publisher": {
+      "name": "Stanford University (OGB Team)",
+      "type": "academic",
+      "url": "https://ogb.stanford.edu/"
+    },
+    "modalities": [
+      "graph"
+    ],
+    "tasks": [
+      "link-prediction",
+      "knowledge-graph-completion"
+    ],
+    "tags": [
+      "knowledge-graph",
+      "wikidata",
+      "ogb-lsc",
+      "link-prediction",
+      "triplets"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "CC0 1.0 Universal Public Domain Dedication",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Extracted from Wikidata and distributed under CC0 1.0 Universal."
+    },
+    "source_references": [
+      {
+        "title": "Official OGB-LSC Documentation",
+        "url": "https://ogb.stanford.edu/docs/lsc/wikikg90mv2/",
+        "type": "official_website"
+      },
+      {
+        "title": "NeurIPS 2021 OGB-LSC Paper",
+        "url": "https://arxiv.org/abs/2103.09430",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified entity count (91.2M), relation count (1,387), triplet count (601M), and CC0 status."
+    },
+    "sample_count": {
+      "total": 601062811,
+      "unit": "triplets",
+      "status": "verified",
+      "splits": {
+        "train": 501062811,
+        "val": 50000000,
+        "test": 50000000
+      }
+    },
+    "dates": {
+      "published": "2021-03-17"
+    },
+    "citation": {
+      "paper_title": "OGB-LSC: A Large-Scale Challenge for Machine Learning on Graphs",
+      "paper_url": "https://arxiv.org/abs/2103.09430",
+      "doi": "10.48550/arXiv.2103.09430",
+      "authors": [
+        "Weihua Hu",
+        "Matthias Fey",
+        "Hongyu Ren",
+        "Maho Nakata",
+        "Yuxiao Dong",
+        "Jure Leskovec"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "wikitext-103",
     "slug": "wikitext-103",
     "name": "WikiText-103: Language Modeling Dataset",
@@ -56274,6 +58127,188 @@
       "curation_notes": "Extends the English-centric FUNSD benchmark methodology into a balanced 7-language multilingual evaluation suite. Samples count forms/pages rather than semantic word tokens.",
       "data_sources": [
         "Multilingual business, government, and commercial forms"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "xnli",
+    "slug": "xnli",
+    "name": "XNLI: Cross-Lingual Natural Language Inference",
+    "description": "The Cross-lingual Natural Language Inference (XNLI) corpus is a benchmark for evaluating cross-lingual sentence representations and zero-shot cross-lingual transfer. It extends the MultiNLI dataset by providing professionally translated development and test sets into 15 languages: English, French, Spanish, German, Greek, Bulgarian, Russian, Turkish, Arabic, Vietnamese, Thai, Chinese, Hindi, Swahili, and Urdu. Each language contains 2,490 development and 5,010 test sentence pairs annotated with premise, hypothesis, and textual entailment labels (entailment, neutral, contradiction).",
+    "homepage_url": "https://github.com/facebookresearch/XNLI",
+    "publisher": {
+      "name": "Meta AI",
+      "type": "industry",
+      "url": "https://ai.meta.com/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "natural-language-inference",
+      "text-classification",
+      "zero-shot-cross-lingual-transfer"
+    ],
+    "tags": [
+      "multilingual",
+      "nli",
+      "benchmark",
+      "cross-lingual",
+      "evaluation"
+    ],
+    "languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "el",
+      "bg",
+      "ru",
+      "tr",
+      "ar",
+      "vi",
+      "th",
+      "zh",
+      "hi",
+      "sw",
+      "ur"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released under CC BY-NC 4.0 based on MultiNLI source terms."
+    },
+    "source_references": [
+      {
+        "title": "Official GitHub Repository",
+        "url": "https://github.com/facebookresearch/XNLI",
+        "type": "repository"
+      },
+      {
+        "title": "Original EMNLP 2018 Paper",
+        "url": "https://aclanthology.org/D18-1269/",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified primary source repository, 15 language splits, sample counts, and CC BY-NC 4.0 license."
+    },
+    "sample_count": {
+      "total": 112500,
+      "unit": "sentence_pairs",
+      "status": "verified",
+      "splits": {
+        "dev": 37350,
+        "test": 75150
+      }
+    },
+    "dates": {
+      "published": "2018-10-31"
+    },
+    "citation": {
+      "paper_title": "XNLI: Evaluating Cross-lingual Sentence Representations",
+      "paper_url": "https://aclanthology.org/D18-1269/",
+      "doi": "10.18653/v1/D18-1269",
+      "authors": [
+        "Alexis Conneau",
+        "Ruty Rinott",
+        "Guillaume Lample",
+        "Adina Williams",
+        "Samuel R. Bowman",
+        "Holger Schwenk",
+        "Veselin Stoyanov"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "xquad",
+    "slug": "xquad",
+    "name": "XQuAD: Cross-Lingual Question Answering Dataset",
+    "description": "XQuAD (Cross-lingual Question Answering Dataset) is a multilingual question answering benchmark consisting of 240 context paragraphs and 1,190 question-answer pairs from SQuAD v1.1, professionally translated into 10 target languages (Spanish, German, Greek, Russian, Turkish, Arabic, Vietnamese, Thai, Chinese, Hindi) alongside original English. Designed to evaluate zero-shot cross-lingual transfer for extractive reading comprehension, every example is aligned across languages.",
+    "homepage_url": "https://github.com/google-deepmind/xquad",
+    "publisher": {
+      "name": "Google DeepMind",
+      "type": "industry",
+      "url": "https://deepmind.google/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "reading-comprehension",
+      "zero-shot-cross-lingual-transfer"
+    ],
+    "tags": [
+      "multilingual",
+      "qa",
+      "reading-comprehension",
+      "benchmark",
+      "squad"
+    ],
+    "languages": [
+      "en",
+      "es",
+      "de",
+      "el",
+      "ru",
+      "tr",
+      "ar",
+      "vi",
+      "th",
+      "zh",
+      "hi"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed under CC BY-SA 4.0 adhering to SQuAD upstream license."
+    },
+    "source_references": [
+      {
+        "title": "Official GitHub Repository",
+        "url": "https://github.com/google-deepmind/xquad",
+        "type": "repository"
+      },
+      {
+        "title": "ACL 2020 Research Paper",
+        "url": "https://aclanthology.org/2020.acl-main.421/",
+        "type": "original_paper"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Curation Team",
+      "verified_date": "2026-11-19",
+      "notes": "Verified primary GitHub repository, CC BY-SA 4.0 license, and ACL Anthology citation."
+    },
+    "sample_count": {
+      "total": 13090,
+      "unit": "question_answer_pairs",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-07-05"
+    },
+    "citation": {
+      "paper_title": "On the Cross-lingual Transferability of Monolingual Representations",
+      "paper_url": "https://aclanthology.org/2020.acl-main.421/",
+      "doi": "10.18653/v1/2020.acl-main.421",
+      "authors": [
+        "Mikel Artetxe",
+        "Sebastian Ruder",
+        "Dani Yogatama"
       ]
     }
   },

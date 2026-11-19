@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "swat",
+  "slug": "swat",
+  "name": "SWaT: Secure Water Treatment Testbed Dataset",
+  "description": "The SWaT (Secure Water Treatment) dataset is an industrial cybersecurity and anomaly detection benchmark collected from a fully operational, six-stage water treatment testbed by iTrust at SUTD. Spanning 11 continuous days of operation (7 days normal, 4 days under 36 systematic cyber and physical attacks) recorded at 1-second intervals, it tracks continuous readings across 51 sensors and actuators along with network traffic, serving as a standard benchmark for industrial control system (ICS) defense.",
+  "homepage_url": "https://www.sutd.edu.sg/itrust/itrust-labs/datasets/dataset-characteristics/swat/",
+  "publisher": {
+    "name": "iTrust (Singapore University of Technology and Design)",
+    "type": "academic",
+    "url": "https://itrust.sutd.edu.sg/"
+  },
+  "modalities": [
+    "time-series",
+    "sensor",
+    "tabular"
+  ],
+  "tasks": [
+    "anomaly-detection",
+    "time-series-anomaly-detection",
+    "intrusion-detection"
+  ],
+  "tags": [
+    "cybersecurity",
+    "industrial-iot",
+    "scada",
+    "water-treatment",
+    "anomaly-detection"
+  ],
+  "license": {
+    "status": "proprietary",
+    "name": "iTrust Academic Research Data Agreement",
+    "url": "https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info/",
+    "commercial_use": "forbidden",
+    "notes": "Available to researchers upon submitting a request application form; non-commercial research and educational use only."
+  },
+  "source_references": [
+    {
+      "title": "Official iTrust Dataset Page",
+      "url": "https://www.sutd.edu.sg/itrust/itrust-labs/datasets/dataset-characteristics/swat/",
+      "type": "official_website"
+    },
+    {
+      "title": "CRITIS 2016 Research Paper",
+      "url": "https://doi.org/10.1007/978-3-319-71368-7_8",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified iTrust SUTD host, 11-day operational duration, 51 sensor/actuator tags, and CRITIS 2016 paper DOI."
+  },
+  "sample_count": {
+    "total": 946719,
+    "unit": "sensor_records",
+    "status": "verified",
+    "splits": {
+      "normal": 496800,
+      "attack": 449919
+    }
+  },
+  "dates": {
+    "published": "2016-10-10"
+  },
+  "citation": {
+    "paper_title": "A Dataset to Support Research in the Design of Secure Water Treatment Systems",
+    "paper_url": "https://doi.org/10.1007/978-3-319-71368-7_8",
+    "doi": "10.1007/978-3-319-71368-7_8",
+    "authors": [
+      "Jonathan Goh",
+      "Sridhar Adepu",
+      "Khurum Nazir Junejo",
+      "Aditya Mathur"
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nsynth",
+  "slug": "nsynth",
+  "name": "NSynth: Neural Audio Synthesis Dataset",
+  "description": "NSynth (Neural Audio Synthesis) is an audio dataset of musical notes developed by Google Magenta. It contains 305,979 four-second musical notes sampled at 16 kHz across 1,006 individual acoustic, electronic, and synthetic musical instruments. Each note is annotated with pitch, velocity, instrument family, source type, and acoustic qualities (brightness, distortion, multiphonics), providing a standard benchmark for neural audio synthesis and pitch/timbre modeling.",
+  "homepage_url": "https://magenta.withgoogle.com/datasets/nsynth",
+  "publisher": {
+    "name": "Google Magenta (Google LLC)",
+    "type": "industry",
+    "url": "https://magenta.withgoogle.com/"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "audio-generation",
+    "neural-audio-synthesis",
+    "pitch-detection"
+  ],
+  "tags": [
+    "audio",
+    "music",
+    "synthesizer",
+    "sound-synthesis",
+    "magenta"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Released by Google under the Creative Commons Attribution 4.0 International license."
+  },
+  "source_references": [
+    {
+      "title": "Official Google Magenta Dataset Portal",
+      "url": "https://magenta.withgoogle.com/datasets/nsynth",
+      "type": "official_website"
+    },
+    {
+      "title": "ICML 2017 Research Paper",
+      "url": "https://arxiv.org/abs/1704.01279",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 305,979 notes, CC BY 4.0 license, and ICML 2017 publication."
+  },
+  "sample_count": {
+    "total": 305979,
+    "unit": "audio_samples",
+    "status": "verified",
+    "splits": {
+      "train": 289205,
+      "val": 12678,
+      "test": 4096
+    }
+  },
+  "dates": {
+    "published": "2017-04-05"
+  },
+  "citation": {
+    "paper_title": "Neural Audio Synthesis of Musical Notes with WaveNet Autoencoders",
+    "paper_url": "https://arxiv.org/abs/1704.01279",
+    "doi": "10.48550/arXiv.1704.01279",
+    "authors": [
+      "Jesse Engel",
+      "Cinjon Resnick",
+      "Adam Roberts",
+      "Sander Dieleman",
+      "Douglas Eck",
+      "Karen Simonyan",
+      "Mohammad Norouzi"
+    ]
+  }
+}

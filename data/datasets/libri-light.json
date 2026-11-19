@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "id": "libri-light",
+  "slug": "libri-light",
+  "name": "Libri-Light: A Benchmark for ASR with Limited or No Supervision",
+  "description": "Libri-Light is a massive speech dataset for self-supervised learning, unsupervised representations, and automatic speech recognition (ASR) with minimal supervision. Sourced from LibriVox public-domain audiobooks, it provides 60,000+ hours of unsegmented English speech audio organized into three nested subsets of increasing scale (small ~600h, medium ~6,000h, large ~60,000h) alongside small supervision splits (10 hours, 1 hour, 10 minutes), establishing a benchmark for foundation acoustic models like wav2vec 2.0.",
+  "homepage_url": "https://github.com/facebookresearch/libri-light",
+  "publisher": {
+    "name": "Meta AI (FAIR)",
+    "type": "industry",
+    "url": "https://ai.meta.com/"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-recognition",
+    "self-supervised-learning",
+    "acoustic-representation-learning"
+  ],
+  "tags": [
+    "speech",
+    "audio",
+    "asr",
+    "wav2vec",
+    "librivox",
+    "large-scale"
+  ],
+  "languages": [
+    "en"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Public Domain (LibriVox) / MIT (Code)",
+    "spdx_id": null,
+    "url": "https://librivox.org/",
+    "commercial_use": "allowed",
+    "notes": "Audio sourced from public domain LibriVox recordings; extraction toolkit released under MIT. Audio is organized into three nested subsets of increasing scale (small ~600h, medium ~6,000h, large ~60,000h), rather than disjoint additive splits."
+  },
+  "source_references": [
+    {
+      "title": "Official GitHub Repository",
+      "url": "https://github.com/facebookresearch/libri-light",
+      "type": "repository"
+    },
+    {
+      "title": "ICASSP 2020 Research Paper",
+      "url": "https://doi.org/10.1109/ICASSP40776.2020.9052942",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 60,000+ hours of audio, LibriVox public domain terms, and ICASSP 2020 publication DOI."
+  },
+  "sample_count": {
+    "total": 60000,
+    "unit": "hours",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-05-04"
+  },
+  "citation": {
+    "paper_title": "Libri-Light: A Benchmark for ASR with Limited or No Supervision",
+    "paper_url": "https://doi.org/10.1109/ICASSP40776.2020.9052942",
+    "doi": "10.1109/ICASSP40776.2020.9052942",
+    "authors": [
+      "Jacob Kahn",
+      "Morgane Rivière",
+      "Weiyi Zheng",
+      "Ewan Dunbar",
+      "Pierre Zhou",
+      "Valentin Vlado",
+      "Qiantong Xu",
+      "Abdelrahman Mohamed",
+      "Kamiar Sajadi",
+      "Gabriel Synnaeve",
+      "Emmanuel Dupoux"
+    ]
+  }
+}

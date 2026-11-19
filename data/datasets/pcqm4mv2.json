@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pcqm4mv2",
+  "slug": "pcqm4mv2",
+  "name": "PCQM4Mv2: Quantum Chemical Property Prediction",
+  "description": "PCQM4Mv2 is a quantum chemistry molecular benchmark from the OGB Large-Scale Challenge (OGB-LSC). Sourced from PubChemQC, it contains 3,746,619 organic molecules with 2D graph structures and 3D relaxed equilibrium conformers for training instances. The benchmark task is regression predicting the HOMO-LUMO energy gap calculated by Density Functional Theory (DFT), evaluated using Mean Absolute Error (MAE).",
+  "homepage_url": "https://ogb.stanford.edu/docs/lsc/pcqm4mv2/",
+  "publisher": {
+    "name": "Stanford University (OGB Team)",
+    "type": "academic",
+    "url": "https://ogb.stanford.edu/"
+  },
+  "modalities": [
+    "graph",
+    "3d"
+  ],
+  "tasks": [
+    "graph-regression",
+    "quantum-chemistry",
+    "molecular-property-prediction"
+  ],
+  "tags": [
+    "graph",
+    "quantum-chemistry",
+    "ogb-lsc",
+    "molecules",
+    "homo-lumo"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under CC BY 4.0 as part of the OGB-LSC initiative."
+  },
+  "source_references": [
+    {
+      "title": "Official OGB-LSC Documentation",
+      "url": "https://ogb.stanford.edu/docs/lsc/pcqm4mv2/",
+      "type": "official_website"
+    },
+    {
+      "title": "NeurIPS 2021 OGB-LSC Paper",
+      "url": "https://arxiv.org/abs/2103.09430",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified 3.75M molecule count, DFT HOMO-LUMO target, CC BY 4.0 license, and OGB-LSC paper."
+  },
+  "sample_count": {
+    "total": 3746619,
+    "unit": "molecules",
+    "status": "verified",
+    "splits": {
+      "train": 3378606,
+      "val": 73545,
+      "test-dev": 147037,
+      "test-challenge": 147431
+    }
+  },
+  "dates": {
+    "published": "2021-03-17"
+  },
+  "citation": {
+    "paper_title": "OGB-LSC: A Large-Scale Challenge for Machine Learning on Graphs",
+    "paper_url": "https://arxiv.org/abs/2103.09430",
+    "doi": "10.48550/arXiv.2103.09430",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Hongyu Ren",
+      "Maho Nakata",
+      "Yuxiao Dong",
+      "Jure Leskovec"
+    ]
+  }
+}

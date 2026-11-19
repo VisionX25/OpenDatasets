@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "id": "davis-2017",
+  "slug": "davis-2017",
+  "name": "DAVIS 2017: Densely Annotated Video Segmentation",
+  "description": "DAVIS 2017 (Densely Annotated VIdeo Segmentation) is the standard benchmark for multi-object video segmentation. Extending the original single-object DAVIS 2016 dataset, DAVIS 2017 features 150 high-definition video sequences comprising 10,459 frames with pixel-accurate per-frame segmentation masks for 376 distinct object instances. It benchmarks semi-supervised (one-shot initialization) and unsupervised video object segmentation.",
+  "homepage_url": "https://davischallenge.org/davis2017/code.html",
+  "publisher": {
+    "name": "Pontificia Universidad Católica de Chile / ETH Zurich",
+    "type": "academic",
+    "url": "https://davischallenge.org/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "video-object-segmentation",
+    "instance-segmentation",
+    "video-tracking"
+  ],
+  "tags": [
+    "video",
+    "segmentation",
+    "video-object-segmentation",
+    "benchmark",
+    "pixel-level"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 / BSD 3-Clause",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset annotations licensed under CC BY 4.0; companion evaluation software provided under BSD 3-Clause."
+  },
+  "source_references": [
+    {
+      "title": "Official Challenge Website",
+      "url": "https://davischallenge.org/davis2017/code.html",
+      "type": "official_website"
+    },
+    {
+      "title": "ArXiv Research Paper",
+      "url": "https://arxiv.org/abs/1704.00675",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified official challenge website, sequence/frame breakdown, CC BY 4.0 annotations, and BSD evaluation code."
+  },
+  "sample_count": {
+    "total": 150,
+    "unit": "video_sequences",
+    "status": "verified",
+    "splits": {
+      "train": 60,
+      "val": 30,
+      "test-dev": 30,
+      "test-challenge": 30
+    }
+  },
+  "dates": {
+    "published": "2017-04-03"
+  },
+  "citation": {
+    "paper_title": "The 2017 DAVIS Challenge on Video Object Segmentation",
+    "paper_url": "https://arxiv.org/abs/1704.00675",
+    "doi": "10.48550/arXiv.1704.00675",
+    "authors": [
+      "Jordi Pont-Tuset",
+      "Federico Perazzi",
+      "Sergi Caelles",
+      "Alberto Montes",
+      "Kevis-Kokitsi Maninis",
+      "Michael Tschannen",
+      "Luc Van Gool"
+    ]
+  }
+}

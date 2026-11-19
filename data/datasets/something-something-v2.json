@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "id": "something-something-v2",
+  "slug": "something-something-v2",
+  "name": "20BN-Something-Something-V2",
+  "description": "The 20BN-Something-Something-V2 dataset is a video action benchmark designed for learning fine-grained physical object interactions and visual common sense. It contains 220,847 short video clips showing humans performing predefined physical actions with everyday objects across 174 action classes (such as 'Pushing something so that it falls off the table'). Sourced via crowdsourced acting and hosted by Qualcomm, it tests temporal reasoning rather than static scene recognition.",
+  "homepage_url": "https://www.qualcomm.com/developer/software/something-something-v-2-dataset",
+  "publisher": {
+    "name": "TwentyBN / Qualcomm",
+    "type": "industry",
+    "url": "https://www.qualcomm.com/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "action-recognition",
+    "temporal-reasoning",
+    "video-classification"
+  ],
+  "tags": [
+    "video",
+    "action-recognition",
+    "human-object-interaction",
+    "benchmark",
+    "visual-common-sense"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Qualcomm Research License Agreement",
+    "url": "https://www.qualcomm.com/developer/software/something-something-v-2-dataset",
+    "commercial_use": "forbidden",
+    "notes": "Free for academic and non-commercial research; download requires creating a Qualcomm developer account."
+  },
+  "source_references": [
+    {
+      "title": "Official Qualcomm Portal",
+      "url": "https://www.qualcomm.com/developer/software/something-something-v-2-dataset",
+      "type": "official_website"
+    },
+    {
+      "title": "Original ICCV 2017 Paper",
+      "url": "https://doi.org/10.1109/ICCV.2017.622",
+      "type": "original_paper"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Curation Team",
+    "verified_date": "2026-11-19",
+    "notes": "Verified Qualcomm hosting portal, ICCV paper DOI, sample split counts, and research-only license."
+  },
+  "sample_count": {
+    "total": 220847,
+    "unit": "video_clips",
+    "status": "verified",
+    "splits": {
+      "train": 168913,
+      "val": 24777,
+      "test": 27157
+    }
+  },
+  "dates": {
+    "published": "2018-06-12"
+  },
+  "citation": {
+    "paper_title": "The 'Something Something' Video Database for Learning and Evaluating Visual Common Sense",
+    "paper_url": "https://doi.org/10.1109/ICCV.2017.622",
+    "doi": "10.1109/ICCV.2017.622",
+    "authors": [
+      "Raghav Goyal",
+      "Samira Ebrahimi Kahou",
+      "Vincent Michalski",
+      "Joanna Materzynska",
+      "Susanne Westphal",
+      "Heuna Kim",
+      "Valentin Haenel",
+      "Ingo Fruend",
+      "Peter Yianilos",
+      "Moritz Mueller-Freitag",
+      "Florian Hoppe",
+      "Christian Thurau",
+      "Ingo Bax",
+      "Roland Memisevic"
+    ]
+  }
+}
