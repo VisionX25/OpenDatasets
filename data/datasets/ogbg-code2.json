@@ -33,7 +33,7 @@
     "spdx_id": "MIT",
     "url": "https://opensource.org/licenses/MIT",
     "commercial_use": "allowed",
-    "notes": "Processed AST graphs derived from permissively licensed open-source GitHub repositories via CodeSearchNet under MIT; OGB benchmark software released under MIT."
+    "notes": "The OGB benchmark documentation explicitly designates ogbg-code2 under the MIT license, and the OGB library software is released under MIT. However, the underlying Python method source code originates from 13,587 open-source GitHub repositories collected via CodeSearchNet; these source repositories are not all under MIT, but are individually governed by their respective upstream open-source licenses as cataloged by CodeSearchNet. Downstream users extracting or reusing the raw source-code fragments must respect each upstream project's specific license terms."
   },
   "sample_count": {
     "total": 452741,
@@ -76,12 +76,17 @@
       "title": "OGB GitHub Repository",
       "url": "https://github.com/snap-stanford/ogb",
       "type": "repository"
+    },
+    {
+      "title": "CodeSearchNet GitHub Repository",
+      "url": "https://github.com/github/CodeSearchNet",
+      "type": "repository"
     }
   ],
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Data Curation Team",
     "verified_date": "2026-11-19",
-    "notes": "Verified against Stanford OGB documentation and remote zip inspection. Exactly 452,741 method AST graphs across 13,587 GitHub projects (407,976 train, 22,817 validation, 21,948 test graphs)."
+    "notes": "Verified against Stanford OGB documentation and remote zip inspection. Exactly 452,741 method AST graphs across 13,587 GitHub projects (407,976 train, 22,817 validation, 21,948 test graphs). Processed benchmark AST graphs designated MIT by OGB publisher; third-party source repository code remains subject to respective upstream open-source licenses."
   }
 }
