@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """OpenDatasets Dataset Metadata Quality & Research Readiness Audit Runner.
 
-Analyzes all 600 dataset metadata records in data/datasets/ for:
+Analyzes all dataset metadata records in data/datasets/ for:
   1. Metadata Completeness & Field Coverage (required vs optional vs N/A)
   2. Licensing & Access Clarity (open, non-commercial, gated, DUA, commercial-use)
   3. Scientific Metadata Consistency (sample units, split integrity, duplicates, DOIs)

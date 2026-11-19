@@ -8,7 +8,7 @@ An open-source catalog for discovering machine learning datasets and inspecting 
 
 OpenDatasets is an academic, open-source initiative by [VisionX25](https://github.com/VisionX25) built for researchers, machine learning engineers, data scientists, and students. The platform provides clean, standardized dataset metadata across multiple modalities with documented access terms and authoritative citations.
 
-In November 2026, the catalog reached the **600 research dataset records** milestone across six core machine learning domains. Users can explore records, search and filter facets, compare datasets side-by-side within categories, save datasets locally, and export academic citations.
+The catalog currently provides **700 verified research dataset records** across six core machine learning domains (expanding upon the historical 600-dataset milestone established in November 2026). Users can explore records, search and filter facets, compare datasets side-by-side within categories, save datasets locally, and export academic citations.
 
 > **Note on Data Hosting**: OpenDatasets catalogs structured metadata and links to original publishers and papers. It does not host or redistribute the underlying binary data files.
 
