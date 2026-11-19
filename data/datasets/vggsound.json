@@ -3,7 +3,7 @@
   "id": "vggsound",
   "slug": "vggsound",
   "name": "VGGSound: Large-Scale Audio-Visual Video Dataset",
-  "description": "VGGSound is a large-scale audio-visual dataset containing 200,000 video clips (each 10 seconds long, totaling 550 hours) across 300 diverse sound categories collected from YouTube. Curated using automated visual and audio verification pipelines followed by human validation to ensure audio-visual correspondence (where the audio source is visually manifested within the video frame). Categories span human actions, animal vocalizations, musical instruments, vehicles, home appliances, and environmental sounds.",
+  "description": "VGGSound is a large-scale audio-visual dataset comprising over 200,000 video clips (199,467 clips in the official repository release, each 10 seconds long, totaling ~550 hours) across 310 diverse sound categories collected from YouTube. Curated using automated visual and audio verification pipelines followed by human validation to ensure audio-visual correspondence (where the audio source is visually manifested within the video frame). Categories span human actions, animal vocalizations, musical instruments, vehicles, home appliances, and environmental sounds.",
   "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/vggsound/",
   "publisher": {
     "name": "Visual Geometry Group (VGG), University of Oxford",
@@ -33,13 +33,18 @@
     "spdx_id": "CC-BY-4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "commercial_use": "unknown",
-    "notes": "Annotation metadata is licensed under CC BY 4.0. Underlying YouTube videos remain the copyright of their original uploaders."
+    "notes": "Dataset annotation metadata and split assignments are licensed under CC BY 4.0 for commercial and research purposes. Underlying YouTube videos remain the copyright and intellectual property of original uploaders under YouTube Terms of Service, so commercial permissions for downloaded video clips cannot be guaranteed without individual rights clearance."
   },
   "source_references": [
     {
       "title": "Official Oxford VGG Page",
       "url": "https://www.robots.ox.ac.uk/~vgg/data/vggsound/",
       "type": "official_website"
+    },
+    {
+      "title": "Official VGGSound Code and Annotations Repository",
+      "url": "https://github.com/hche11/VGGSound",
+      "type": "repository"
     },
     {
       "title": "ICASSP 2020 Paper",
@@ -51,12 +56,16 @@
     "status": "verified",
     "verified_by": "OpenDatasets Curation Team",
     "verified_date": "2026-11-19",
-    "notes": "Verified 200,000 clips across 300 sound classes, audio-visual correspondence filtering, and CC BY 4.0 annotations."
+    "notes": "Verified 199,467 video clips (183,971 train, 15,496 test) across 310 sound classes in the official repository release CSV (hche11/VGGSound), ICASSP 2020 paper, and CC BY 4.0 metadata terms. Access limitation: Oxford VGG website states download links are no longer available from the site; users must use annotation metadata to independently download video clips from YouTube subject to platform availability and Terms of Service. Third-party video copyrights belong to original uploaders."
   },
   "sample_count": {
-    "total": 200000,
+    "total": 199467,
     "unit": "video_clips",
-    "status": "verified"
+    "status": "verified",
+    "splits": {
+      "train": 183971,
+      "test": 15496
+    }
   },
   "dates": {
     "published": "2020-05-04"
