@@ -633,8 +633,8 @@ def test_readiness_tier_counts_reconciliation():
     tier_dist = audit_data["research_readiness_summary"]["tier_distribution"]
 
     assert tier_dist["Ready for Evaluation"] == 460
-    assert tier_dist["Documented with Caveats"] == 170
-    assert tier_dist["Needs Information Review"] == 45
+    assert tier_dist["Documented with Caveats"] == 169
+    assert tier_dist["Needs Information Review"] == 46
     assert sum(tier_dist.values()) == 675
 
 

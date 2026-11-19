@@ -1920,11 +1920,11 @@
       "parallel-corpus"
     ],
     "license": {
-      "status": "custom_permissive",
-      "name": "AmericasNLP Shared Task Research License",
-      "url": "https://github.com/AmericasNLP/americasnlp2021/blob/main/LICENSE",
-      "commercial_use": "allowed",
-      "notes": "Permits non-exclusive, royalty-free distribution and use for research and academic evaluation, respecting community language rights."
+      "status": "unspecified_by_source",
+      "name": "Multiple / Unspecified Source Terms",
+      "url": "https://github.com/AmericasNLP/americasnlp2021#data-sources",
+      "commercial_use": "unknown",
+      "notes": "The shared task compiles parallel corpora from multiple independent source projects (Axolotl, Tsunkua, JW300, OPUS GlobalVoices, and original publications). No unified license file exists in the repository; individual source corpora carry distinct or unspecified terms. Commercial permissions cannot be verified without independent clearance for each source subcorpus."
     },
     "source_references": [
       {
@@ -1942,7 +1942,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Curation Team",
       "verified_date": "2026-11-19",
-      "notes": "Verified 10 indigenous languages paired with Spanish, 88,511 parallel sentences, and open research licensing."
+      "notes": "Verified 10 indigenous languages paired with Spanish, 88,511 parallel sentences across source corpora, and documented lack of unified repository license (heterogeneous/unspecified source terms with unknown commercial permission)."
     },
     "sample_count": {
       "total": 88511,
@@ -19087,8 +19087,8 @@
     "schema_version": "1.0.0",
     "id": "epic-sounds",
     "slug": "epic-sounds",
-    "name": "EPIC-SOUNDS: Audio-Oriented Actions in Egocentric Video",
-    "description": "EPIC-SOUNDS is a large-scale audio-oriented dataset for egocentric video understanding from the University of Bristol. Built on top of the 100 hours of unscripted egocentric video from EPIC-KITCHENS-100, EPIC-SOUNDS provides 115,704 temporal audio event annotations across 44 audio classes. Annotations capture acoustic interactions (chopping, sizzling, running water, pouring, scraping) with precise start and end timestamps and audio-action labels, establishing a rigorous benchmark for egocentric audio-visual and audio-only action recognition.",
+    "name": "EPIC-SOUNDS: A Large-Scale Dataset of Actions That Sound",
+    "description": "EPIC-SOUNDS is a large-scale audio dataset of actions that sound, independently annotated on the audio streams of 100 hours of unscripted egocentric video from EPIC-KITCHENS-100. It comprises approximately 117.6K annotated audio event segments (117,553 segments total), distinguishing 78,366 categorized segments across 44 audio classes from 39,187 non-categorized audible segments described with free-form vocabulary. The dataset provides standardized partitions for audio recognition (including 60,055 training segments, 8,035 validation segments, and 5,131 recognition test timestamps) and sound event detection.",
     "homepage_url": "https://epic-kitchens.github.io/epic-sounds/",
     "publisher": {
       "name": "University of Bristol",
@@ -19123,13 +19123,18 @@
     },
     "source_references": [
       {
-        "title": "Official EPIC-SOUNDS Website",
+        "title": "Official EPIC-SOUNDS Portal",
         "url": "https://epic-kitchens.github.io/epic-sounds/",
         "type": "official_website"
       },
       {
-        "title": "ICCV 2023 Research Paper",
-        "url": "https://doi.org/10.1109/ICCV51070.2023.01890",
+        "title": "Official Annotations Repository",
+        "url": "https://github.com/epic-kitchens/epic-sounds-annotations",
+        "type": "repository"
+      },
+      {
+        "title": "ICASSP 2023 Research Paper",
+        "url": "https://doi.org/10.1109/ICASSP49357.2023.10096198",
         "type": "original_paper"
       }
     ],
@@ -19137,25 +19142,20 @@
       "status": "verified",
       "verified_by": "OpenDatasets Curation Team",
       "verified_date": "2026-11-19",
-      "notes": "Verified 115,704 temporal audio event annotations across 44 audio classes, ICCV 2023 paper, and CC BY-NC 4.0 terms."
+      "notes": "Verified independently annotated benchmark derived from EPIC-KITCHENS-100; reconciled 117.6K segments (78,366 categorized across 44 classes + 39,187 uncategorized) against official annotations repo (train 60,055, val 8,035, rec test 5,131, det test 5,145); verified ICASSP 2023 paper and CC BY-NC 4.0 terms."
     },
     "sample_count": {
-      "total": 115704,
+      "total": 117553,
       "unit": "audio_segments",
-      "status": "verified",
-      "splits": {
-        "train": 78207,
-        "val": 16904,
-        "test": 20593
-      }
+      "status": "verified"
     },
     "dates": {
-      "published": "2023-10-02"
+      "published": "2023-05-05"
     },
     "citation": {
-      "paper_title": "EPIC-SOUNDS: An Audio-Oriented Dataset of Actions",
-      "paper_url": "https://doi.org/10.1109/ICCV51070.2023.01890",
-      "doi": "10.1109/ICCV51070.2023.01890",
+      "paper_title": "EPIC-SOUNDS: A Large-Scale Dataset of Actions That Sound",
+      "paper_url": "https://doi.org/10.1109/ICASSP49357.2023.10096198",
+      "doi": "10.1109/ICASSP49357.2023.10096198",
       "authors": [
         "Jaesung Huh",
         "Jacob Chalk",
@@ -26462,8 +26462,8 @@
         "type": "official_website"
       },
       {
-        "title": "EMNLP 2022 Paper",
-        "url": "https://doi.org/10.18653/v1/2022.emnlp-main.755",
+        "title": "EMNLP 2022 IndicXNLI Paper",
+        "url": "https://aclanthology.org/2022.emnlp-main.755/",
         "type": "original_paper"
       }
     ],
@@ -26471,7 +26471,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Curation Team",
       "verified_date": "2026-11-19",
-      "notes": "Verified 11 Indic languages, 24,717 human-translated test evaluation pairs, and CC BY-NC 4.0 terms."
+      "notes": "Verified 11 Indic languages, 24,717 human-translated test evaluation pairs, EMNLP 2022 paper by Aggarwal et al. (DOI: 10.18653/v1/2022.emnlp-main.755), and CC BY-NC 4.0 terms."
     },
     "sample_count": {
       "total": 24717,
@@ -26482,17 +26482,13 @@
       "published": "2022-12-07"
     },
     "citation": {
-      "paper_title": "IndicGLUE: A Natural Language Understanding Benchmark for Indian Languages",
-      "paper_url": "https://doi.org/10.18653/v1/2022.emnlp-main.755",
+      "paper_title": "IndicXNLI: Evaluating Multilingual Inference for Indian Languages",
+      "paper_url": "https://aclanthology.org/2022.emnlp-main.755/",
       "doi": "10.18653/v1/2022.emnlp-main.755",
       "authors": [
-        "Divyanshu Kakwani",
-        "Anoop Kunchukuttan",
-        "Satish Golla",
-        "Gokul N.C.",
-        "Avik Bhattacharyya",
-        "Mitesh M. Khapra",
-        "Pratyush Kumar"
+        "Divyanshu Aggarwal",
+        "Vivek Gupta",
+        "Anoop Kunchukuttan"
       ]
     }
   },
@@ -40768,11 +40764,11 @@
     ],
     "license": {
       "status": "public_domain",
-      "name": "Creative Commons Zero v1.0 Universal / MIT",
+      "name": "Creative Commons Zero v1.0 Universal",
       "spdx_id": "CC0-1.0",
       "url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "commercial_use": "allowed",
-      "notes": "Underlying STRING biological association networks are in the public domain under CC0; OGB benchmark scripts are MIT."
+      "notes": "Underlying STRING biological association networks are dedicated to the public domain under CC0 1.0 Universal. The OGB software package and benchmark evaluator scripts are licensed under MIT."
     },
     "source_references": [
       {
@@ -40850,11 +40846,11 @@
     ],
     "license": {
       "status": "verified_open",
-      "name": "Open Data Commons Attribution License (ODC-By) / MIT",
+      "name": "Open Data Commons Attribution License (ODC-By) v1.0",
       "spdx_id": "ODC-By-1.0",
       "url": "https://opendatacommons.org/licenses/by/1-0/",
       "commercial_use": "allowed",
-      "notes": "Microsoft Academic Graph citation data licensed under ODC-By 1.0; OGB benchmark evaluation code is MIT."
+      "notes": "Underlying academic citation graph from Microsoft Academic Graph is licensed under the Open Data Commons Attribution License (ODC-By v1.0). The OGB software package and benchmark evaluator scripts are licensed under MIT."
     },
     "source_references": [
       {
@@ -40927,11 +40923,11 @@
     ],
     "license": {
       "status": "verified_open",
-      "name": "Open Data Commons Attribution License (ODC-By) / MIT",
+      "name": "Open Data Commons Attribution License (ODC-By) v1.0",
       "spdx_id": "ODC-By-1.0",
       "url": "https://opendatacommons.org/licenses/by/1-0/",
       "commercial_use": "allowed",
-      "notes": "Microsoft Academic Graph data licensed under ODC-By 1.0; OGB benchmark tools under MIT."
+      "notes": "Underlying author collaboration graph from Microsoft Academic Graph is licensed under the Open Data Commons Attribution License (ODC-By v1.0). The OGB software package and benchmark evaluator scripts are licensed under MIT."
     },
     "source_references": [
       {
@@ -41083,11 +41079,11 @@
     ],
     "license": {
       "status": "verified_open",
-      "name": "Open Data Commons Attribution License (ODC-By) / MIT",
+      "name": "Open Data Commons Attribution License (ODC-By) v1.0",
       "spdx_id": "ODC-By-1.0",
       "url": "https://opendatacommons.org/licenses/by/1-0/",
       "commercial_use": "allowed",
-      "notes": "Underlying Microsoft Academic Graph citation data is released under ODC-By 1.0; OGB benchmark scripts and packaging are licensed under MIT."
+      "notes": "Underlying Microsoft Academic Graph citation graph is licensed under the Open Data Commons Attribution License (ODC-By v1.0). The OGB software package, loader scripts, and benchmark evaluators are licensed under MIT."
     },
     "source_references": [
       {
@@ -41241,11 +41237,11 @@
     ],
     "license": {
       "status": "public_domain",
-      "name": "Creative Commons Zero v1.0 Universal / MIT",
+      "name": "Creative Commons Zero v1.0 Universal",
       "spdx_id": "CC0-1.0",
       "url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "commercial_use": "allowed",
-      "notes": "STRING database association data is dedicated to the public domain under CC0; OGB evaluator code is MIT."
+      "notes": "Underlying STRING database association data is dedicated to the public domain under CC0 1.0 Universal. The OGB software package and benchmark evaluator scripts are licensed under MIT."
     },
     "source_references": [
       {
@@ -49712,7 +49708,7 @@
     "id": "sib-200",
     "slug": "sib-200",
     "name": "SIB-200: Simple Inclusive Benchmark for 200+ Languages",
-    "description": "SIB-200 is a massively multilingual topic classification benchmark covering 205 languages and dialects, derived from the Flores-200 translation benchmark. It contains 204,181 sentences annotated across 7 semantic categories: science/technology, travel, politics, sports, health, entertainment, and business. Designed to evaluate zero-shot and few-shot cross-lingual generalization on high, medium, and extremely low-resource languages across diverse geographic regions.",
+    "description": "SIB-200 is a massively multilingual topic classification benchmark covering 205 languages and dialects, derived from the Flores-200 translation benchmark. It contains 205,820 sentences annotated across 7 semantic categories: science/technology, travel, politics, sports, health, entertainment, and business (each language features 1,004 sentences partitioned into 701 train, 99 validation, and 204 test). Designed to evaluate zero-shot and few-shot cross-lingual generalization on high, medium, and extremely low-resource languages across diverse geographic regions.",
     "homepage_url": "https://github.com/dadelani/sib-200",
     "publisher": {
       "name": "University College London",
@@ -49751,7 +49747,7 @@
       },
       {
         "title": "EACL 2024 Research Paper",
-        "url": "https://doi.org/10.18653/v1/2024.eacl-long.98",
+        "url": "https://aclanthology.org/2024.eacl-long.14/",
         "type": "original_paper"
       }
     ],
@@ -49759,31 +49755,34 @@
       "status": "verified",
       "verified_by": "OpenDatasets Curation Team",
       "verified_date": "2026-11-19",
-      "notes": "Verified 205 languages, 204,181 sentences across 7 topic categories, and CC BY-SA 4.0 license."
+      "notes": "Verified 205 languages, 205,820 sentences across 7 topic categories (1,004 per language: 701 train, 99 val, 204 test), EACL 2024 DOI (10.18653/v1/2024.eacl-long.14), and CC BY-SA 4.0 license."
     },
     "sample_count": {
-      "total": 204181,
+      "total": 205820,
       "unit": "sentences",
-      "status": "verified"
+      "status": "verified",
+      "splits": {
+        "train": 143705,
+        "val": 20295,
+        "test": 41820
+      }
     },
     "dates": {
       "published": "2023-09-18"
     },
     "citation": {
-      "paper_title": "SIB-200: A Simple, Inclusive Benchmark for Cross-Lingual Topic Classification",
-      "paper_url": "https://doi.org/10.18653/v1/2024.eacl-long.98",
-      "doi": "10.18653/v1/2024.eacl-long.98",
+      "paper_title": "SIB-200: A Simple, Inclusive, and Big Evaluation Dataset for Topic Classification in 200+ Languages and Dialects",
+      "paper_url": "https://aclanthology.org/2024.eacl-long.14/",
+      "doi": "10.18653/v1/2024.eacl-long.14",
       "authors": [
         "David Ifeoluwa Adelani",
-        "Marek Masiak",
-        "Israel Abebe Azime",
-        "Jesujoba Oluwadara Alabi",
-        "Atnafu Lambebo Tonja",
-        "Ayodele Awokoya",
-        "Mofetoluwa Adeyemi",
-        "Ruqayya Iro Nasir",
-        "Bilkisu Shehu",
-        "Sara Hooker"
+        "Hannah Liu",
+        "Xiaoyu Shen",
+        "Nikita Vassilyev",
+        "Jesujoba O. Alabi",
+        "Yanke Mao",
+        "Haonan Gao",
+        "En-Shiun Annie Lee"
       ]
     }
   },
@@ -51102,7 +51101,7 @@
     "id": "spacenet-7",
     "slug": "spacenet-7",
     "name": "SpaceNet 7: Multi-Temporal Urban Development Satellite Benchmark",
-    "description": "SpaceNet 7 (The Multi-Temporal Urban Development Challenge) tracks building construction and urban change over monthly time series of satellite imagery. It comprises deep multi-temporal imagery stacks collected monthly over 24 months (2018–2020) across ~100 distinct geographic areas of interest (AOIs) covering 40,000 km² worldwide. Each AOI includes monthly PlanetScope 3.0m optical imagery and detailed polygon annotations for over 10 million building footprints tracked individually with unique persistence IDs across time to evaluate spatio-temporal object tracking and footprint extraction.",
+    "description": "SpaceNet 7 (The Multi-Temporal Urban Development Challenge) tracks building construction and urban change over monthly time series of satellite imagery. It comprises deep multi-temporal imagery stacks collected monthly over 24 months (2018–2020) across 101 distinct geographic areas of interest (AOIs) covering 41,000 km² worldwide. Each AOI includes monthly PlanetScope 3.0m optical imagery and detailed polygon annotations for over 10 million building footprints tracked individually with unique persistence IDs across time to evaluate spatio-temporal object tracking and footprint extraction.",
     "homepage_url": "https://spacenet.ai/sn7-challenge/",
     "publisher": {
       "name": "SpaceNet / Maxar Technologies / Radiant Earth Foundation",
@@ -51157,10 +51156,10 @@
       "status": "verified",
       "verified_by": "OpenDatasets Curation Team",
       "verified_date": "2026-11-19",
-      "notes": "Verified 100 global AOIs, 24-month time-series PlanetScope cubes, 10M+ building footprints, and CC BY-SA 4.0 terms."
+      "notes": "Verified 101 global AOIs covering 41,000 km², 24-month time-series PlanetScope cubes, 10M+ building footprints, and CC BY-SA 4.0 terms."
     },
     "sample_count": {
-      "total": 100,
+      "total": 101,
       "unit": "time_series_aois",
       "status": "verified"
     },
@@ -60404,7 +60403,7 @@
     "id": "xview3-sar",
     "slug": "xview3-sar",
     "name": "xView3-SAR: Global Maritime Illegal Fishing Detection Benchmark",
-    "description": "The xView3-SAR dataset was created by the Defence Innovation Unit (DIU) and Global Fishing Watch to combat Illegal, Unreported, and Unregulated (IUU) fishing through automated machine learning on synthetic aperture radar (SAR). It comprises nearly 1,000 co-registered Sentinel-1 SAR scenes covering over 12 million km² of ocean surface, paired with bathymetry, wind speed, and sea state data. The dataset features ~150,000 verified vessel and maritime offshore infrastructure annotations correlated with Automatic Identification System (AIS) transponder broadcast data to detect vessels, estimate length, and identify dark targets operating with AIS disabled.",
+    "description": "The xView3-SAR dataset was created by the Defence Innovation Unit (DIU) and Global Fishing Watch to combat Illegal, Unreported, and Unregulated (IUU) fishing through automated machine learning on synthetic aperture radar (SAR). It comprises 991 full-size analysis-ready Sentinel-1 SAR scenes (averaging 29,400 x 24,400 pixels) covering over 43 million km² of ocean surface, paired with bathymetry, wind speed, and sea state rasters. The dataset features 243,018 maritime object annotations correlated with Automatic Identification System (AIS) transponder broadcast data to detect vessels, estimate length, and identify dark targets operating with AIS disabled.",
     "homepage_url": "https://iuu.xview.us/",
     "publisher": {
       "name": "Defense Innovation Unit (DIU) / Global Fishing Watch",
@@ -60445,7 +60444,7 @@
       },
       {
         "title": "NeurIPS 2022 Datasets and Benchmarks Paper",
-        "url": "https://doi.org/10.52202/068431-2726",
+        "url": "https://papers.neurips.cc/paper_files/paper/2022/hash/f4d4a021f9051a6c18183b059117e8b5-Abstract-Datasets_and_Benchmarks.html",
         "type": "original_paper"
       }
     ],
@@ -60453,16 +60452,16 @@
       "status": "verified",
       "verified_by": "OpenDatasets Curation Team",
       "verified_date": "2026-11-19",
-      "notes": "Verified 981 Sentinel-1 SAR scenes, 150K maritime object labels, AIS correlation, and CC BY 4.0 terms."
+      "notes": "Verified 991 full-size Sentinel-1 SAR scenes (554 train, 50 val, 387 test [150 public + 237 holdout]), 243,018 maritime object labels, AIS correlation, NeurIPS 2022 proceedings, and CC BY 4.0 terms."
     },
     "sample_count": {
-      "total": 981,
+      "total": 991,
       "unit": "sar_scenes",
       "status": "verified",
       "splits": {
-        "train": 557,
-        "val": 208,
-        "test": 216
+        "train": 554,
+        "val": 50,
+        "test": 387
       }
     },
     "dates": {
