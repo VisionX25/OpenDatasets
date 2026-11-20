@@ -389,3 +389,35 @@ def test_cli_main_generates_reports(tmp_path: Path) -> None:
         data = json.load(f)
     assert data["audit_metadata"]["total_records_scanned"] == 700
     assert data["audit_metadata"]["confidence_distribution"]["high"] == 0
+
+
+def test_audit_semantic_duplicates_dynamic_counts_and_provenance(tmp_path: Path) -> None:
+    """Verify dynamic pair counts, custom task/date provenance, and updated text claims."""
+    from scripts.audit_semantic_duplicates import generate_markdown_summary
+
+    files = sorted(DEFAULT_DATASETS_DIR.glob("*.json"))
+    datasets = [json.loads(f.read_text(encoding="utf-8")) for f in files]
+
+    audit_task = "Task 49 — Cross-Dataset Semantic Duplicate Detection"
+    audit_date = "2026-11-20"
+    results = audit_catalog_semantic_duplicates(
+        datasets,
+        audit_task=audit_task,
+        audit_date=audit_date,
+    )
+
+    meta = results["audit_metadata"]
+    assert meta["audit_task"] == audit_task
+    assert meta["audit_date"] == audit_date
+    assert meta["total_records_scanned"] == 700
+    assert meta["total_possible_pairs"] == 700 * 699 // 2  # 244,650
+
+    md = generate_markdown_summary(results)
+    assert f"> **Audit Task:** {audit_task}" in md
+    assert f"> **Audit Date:** {audit_date}" in md
+    assert "244,650" in md
+    assert "195,000" not in md
+    assert "625 dataset records" not in md
+    assert "All 625 dataset records" not in md
+    assert "Medium-confidence candidate pairs require manual review to establish scientific distinctness." in md
+    assert "All medium-confidence candidate pairs have been reviewed and verified" not in md

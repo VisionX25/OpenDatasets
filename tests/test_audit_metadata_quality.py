@@ -30,6 +30,7 @@ from scripts.audit_metadata_quality import (
     evaluate_licensing_and_access,
     evaluate_research_readiness,
     evaluate_scientific_consistency,
+    generate_markdown_summary,
     is_geographic_coverage_applicable,
     is_language_applicable,
 )
@@ -636,5 +637,35 @@ def test_readiness_tier_counts_reconciliation():
     assert tier_dist["Documented with Caveats"] == 172
     assert tier_dist["Needs Information Review"] == 46
     assert sum(tier_dist.values()) == 700
+
+
+def test_audit_metadata_quality_provenance_and_dynamic_counts():
+    """Verify custom task provenance, dynamic licensing counts, and non-contradictory dates coverage."""
+    import json
+    from pathlib import Path
+
+    catalog_dir = Path("data/datasets")
+    records = [json.loads(p.read_text()) for p in sorted(catalog_dir.glob("*.json"))]
+
+    audit_task = "Task 49 — 700-Record Metadata Quality Audit"
+    audit_date = "2026-11-20"
+    audit_data = audit_catalog_metadata_quality(
+        records,
+        audit_task=audit_task,
+        audit_date=audit_date,
+    )
+
+    meta = audit_data["audit_metadata"]
+    assert meta["audit_task"] == audit_task
+    assert meta["audit_date"] == audit_date
+
+    md = generate_markdown_summary(audit_data)
+    assert f"> **Audit Task:** {audit_task}" in md
+    assert f"> **Audit Date:** {audit_date}" in md
+    assert "Complete across all 700 catalog records" not in md
+    assert "Documented across 675/700 catalog records (25 undated)" in md
+    assert f"modified during {audit_task}" in md
+    assert "modified during Task 40" not in md
+
 
 
