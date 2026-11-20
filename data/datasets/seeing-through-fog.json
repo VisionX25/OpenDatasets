@@ -31,11 +31,10 @@
   ],
   "license": {
     "status": "custom_permissive",
-    "name": "Seeing Through Fog Research License",
-    "spdx_id": null,
+    "name": "Custom Non-Commercial Research License",
     "url": "https://www.uni-ulm.de/en/in/institute-of-measurement-control-and-microtechnology/research/data-sets/dense-datasets/",
     "commercial_use": "forbidden",
-    "notes": "Freely available for non-commercial research upon registration; commercial use prohibited without explicit licensing."
+    "notes": "Dataset access requires registration via the Ulm University DENSE project portal and is restricted strictly to non-commercial academic research. Associated evaluation and fusion toolkit code is released under the MIT License."
   },
   "source_references": [
     {
@@ -60,8 +59,8 @@
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
-    "verified_date": "2026-11-09",
-    "notes": "Verified against Ulm University DENSE portal and CVPR 2020 proceedings (DOI: 10.1109/CVPR42600.2020.01351)."
+    "verified_date": "2026-11-20",
+    "notes": "Verified against CVPR 2020 paper (Bijelic et al.) and Ulm University DENSE portal. Clarified atomic counting unit as 'synchronized multimodal frames' (rather than individual sensor files) and confirmed non-commercial research registration terms distinguishing dataset terms from code MIT license."
   },
   "size": {
     "amount": 100.0,
@@ -77,10 +76,10 @@
   "sample_count": {
     "total": 12000,
     "splits": {
-      "annotated_samples": 12000,
-      "fog_chamber_samples": 1500
+      "annotated_frames": 12000,
+      "fog_chamber_frames": 1500
     },
-    "unit": "samples",
+    "unit": "synchronized multimodal frames",
     "status": "verified"
   },
   "dates": {
