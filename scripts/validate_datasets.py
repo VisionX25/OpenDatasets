@@ -254,41 +254,79 @@ def check_duplicate_records(
                 f"Duplicate normalized dataset name '{norm_name}' ({', '.join(names)}) found across multiple files: {', '.join(paths)}"
             )
 
-    # 4. Shared DOI check (Differentiate hard duplicate vs legitimate benchmark family)
+    # 4. Shared DOI check (Differentiate hard duplicate vs alternative title candidate vs legitimate benchmark family)
     for doi, entries in sorted(doi_map.items()):
         if len(entries) > 1:
             for i in range(len(entries)):
                 for j in range(i + 1, len(entries)):
                     p1, d1 = entries[i]
                     p2, d2 = entries[j]
-                    same_name = normalize_dataset_name(d1.get("name", "")) == normalize_dataset_name(d2.get("name", ""))
+                    id1 = d1.get("id", "")
+                    id2 = d2.get("id", "")
+                    name1 = d1.get("name", "")
+                    name2 = d2.get("name", "")
+                    same_name = normalize_dataset_name(name1) == normalize_dataset_name(name2)
                     disc = extract_discriminating_features(d1, d2)
                     if same_name:
                         errors.append(
-                            f"Identical duplicate dataset sharing citation DOI '{doi}': '{d1.get('id')}' ({p1}) and '{d2.get('id')}' ({p2})"
+                            f"Identical duplicate dataset sharing citation DOI '{doi}': '{id1}' ({p1}) and '{id2}' ({p2})"
+                        )
+                    elif not disc:
+                        warnings.append(
+                            f"Ambiguous collision / possible duplicate (alternative title candidate) sharing citation DOI '{doi}': '{id1}' ('{name1}') and '{id2}' ('{name2}') lack discriminating features — unresolved human review required"
                         )
                     else:
-                        warnings.append(
-                            f"Legitimate benchmark family sharing DOI '{doi}': '{d1.get('id')}' and '{d2.get('id')}'"
-                        )
+                        mods1 = set(d1.get("modalities", []))
+                        mods2 = set(d2.get("modalities", []))
+                        pub1 = d1.get("publisher", {}).get("name", "")
+                        pub2 = d2.get("publisher", {}).get("name", "")
+                        is_same_pub = bool(pub1 and pub2 and pub1.strip().lower() == pub2.strip().lower())
+                        shares_domain = bool(mods1 & mods2)
+                        if is_same_pub or shares_domain:
+                            warnings.append(
+                                f"Legitimate benchmark family sharing DOI '{doi}': '{id1}' and '{id2}' (differentiating features: {', '.join(disc)})"
+                            )
+                        else:
+                            warnings.append(
+                                f"Shared publication / paper reference for distinct datasets sharing DOI '{doi}': '{id1}' and '{id2}' (differentiating features: {', '.join(disc)})"
+                            )
 
-    # 5. Shared Homepage check (Differentiate hard duplicate vs legitimate benchmark family)
+    # 5. Shared Homepage check (Differentiate hard duplicate vs alternative title candidate vs legitimate benchmark family)
     for url, entries in sorted(url_map.items()):
         if len(entries) > 1:
             for i in range(len(entries)):
                 for j in range(i + 1, len(entries)):
                     p1, d1 = entries[i]
                     p2, d2 = entries[j]
-                    same_name = normalize_dataset_name(d1.get("name", "")) == normalize_dataset_name(d2.get("name", ""))
+                    id1 = d1.get("id", "")
+                    id2 = d2.get("id", "")
+                    name1 = d1.get("name", "")
+                    name2 = d2.get("name", "")
+                    same_name = normalize_dataset_name(name1) == normalize_dataset_name(name2)
                     disc = extract_discriminating_features(d1, d2)
                     if same_name:
                         errors.append(
-                            f"Identical duplicate dataset sharing homepage URL '{url}': '{d1.get('id')}' ({p1}) and '{d2.get('id')}' ({p2})"
+                            f"Identical duplicate dataset sharing homepage URL '{url}': '{id1}' ({p1}) and '{id2}' ({p2})"
+                        )
+                    elif not disc:
+                        warnings.append(
+                            f"Ambiguous collision / possible duplicate (alternative title candidate) sharing homepage URL '{url}': '{id1}' ('{name1}') and '{id2}' ('{name2}') lack discriminating features — unresolved human review required"
                         )
                     else:
-                        warnings.append(
-                            f"Legitimate benchmark family sharing homepage '{url}': '{d1.get('id')}' and '{d2.get('id')}'"
-                        )
+                        mods1 = set(d1.get("modalities", []))
+                        mods2 = set(d2.get("modalities", []))
+                        pub1 = d1.get("publisher", {}).get("name", "")
+                        pub2 = d2.get("publisher", {}).get("name", "")
+                        is_same_pub = bool(pub1 and pub2 and pub1.strip().lower() == pub2.strip().lower())
+                        shares_domain = bool(mods1 & mods2)
+                        if is_same_pub or shares_domain:
+                            warnings.append(
+                                f"Legitimate benchmark family sharing homepage '{url}': '{id1}' and '{id2}' (differentiating features: {', '.join(disc)})"
+                            )
+                        else:
+                            warnings.append(
+                                f"Shared homepage reference for distinct datasets sharing '{url}': '{id1}' and '{id2}' (differentiating features: {', '.join(disc)})"
+                            )
 
     return errors, warnings
 

@@ -332,18 +332,99 @@ def test_duplicate_records_detects_identical_duplicate_shared_doi(tmp_path: Path
 
 
 def test_duplicate_records_allows_legitimate_benchmark_family_with_warnings(tmp_path: Path) -> None:
-    """Ensure legitimate benchmark families sharing DOI or homepage trigger warnings, NOT errors."""
+    """Ensure legitimate benchmark families sharing DOI or homepage trigger benchmark family warnings, NOT errors."""
     f1 = tmp_path / "cifar10.json"
     f2 = tmp_path / "cifar100.json"
     shared_hp = "https://cs.toronto.edu/~kriz/cifar.html"
     ds_list = [
-        (f1, {"id": "cifar-10", "slug": "cifar-10", "name": "CIFAR-10", "homepage_url": shared_hp}),
-        (f2, {"id": "cifar-100", "slug": "cifar-100", "name": "CIFAR-100", "homepage_url": shared_hp}),
+        (f1, {"id": "cifar-10", "slug": "cifar-10", "name": "CIFAR-10", "homepage_url": shared_hp, "modalities": ["vision"]}),
+        (f2, {"id": "cifar-100", "slug": "cifar-100", "name": "CIFAR-100", "homepage_url": shared_hp, "modalities": ["vision"]}),
     ]
     errors, warnings = check_duplicate_records(ds_list)
     assert len(errors) == 0, f"Expected 0 errors for legitimate CIFAR family, got: {errors}"
     assert len(warnings) >= 1
-    assert any("cifar-10" in w and "cifar-100" in w for w in warnings)
+    assert any("Legitimate benchmark family" in w and "cifar-10" in w and "cifar-100" in w for w in warnings)
+
+
+def test_duplicate_records_detects_alternative_name_candidate_with_warning(tmp_path: Path) -> None:
+    """Ensure datasets submitted under alternative titles sharing DOI without discriminating features trigger human-review warning."""
+    f1 = tmp_path / "ilsvrc2012.json"
+    f2 = tmp_path / "imagenet2012.json"
+    shared_doi = "10.1007/s11263-015-0816-y"
+    ds_list = [
+        (
+            f1,
+            {
+                "id": "ilsvrc-2012",
+                "slug": "ilsvrc-2012",
+                "name": "ILSVRC 2012 Visual Recognition Benchmark",
+                "modalities": ["vision"],
+                "tasks": ["image-classification"],
+                "citation": {"doi": shared_doi},
+            },
+        ),
+        (
+            f2,
+            {
+                "id": "imagenet-2012",
+                "slug": "imagenet-2012",
+                "name": "ImageNet 2012 Visual Recognition Challenge",
+                "modalities": ["vision"],
+                "tasks": ["image-classification"],
+                "citation": {"doi": shared_doi},
+            },
+        ),
+    ]
+    errors, warnings = check_duplicate_records(ds_list)
+    # Does not fail CI as hard error, but flags ambiguous collision for human review
+    assert len(errors) == 0
+    assert any(
+        "possible duplicate (alternative title candidate)" in w
+        and "ilsvrc-2012" in w
+        and "imagenet-2012" in w
+        for w in warnings
+    )
+
+
+def test_duplicate_records_identifies_shared_paper_false_positives(tmp_path: Path) -> None:
+    """Ensure distinct independent datasets citing the same foundational publication are flagged as shared papers, not duplicates."""
+    f1 = tmp_path / "vision_ds.json"
+    f2 = tmp_path / "audio_ds.json"
+    survey_doi = "10.1016/j.aiopen.2023.01.001"
+    ds_list = [
+        (
+            f1,
+            {
+                "id": "multimodal-vision-bench",
+                "slug": "multimodal-vision-bench",
+                "name": "Multimodal Vision Benchmark",
+                "modalities": ["vision"],
+                "tasks": ["object-detection"],
+                "publisher": {"name": "Vision AI Lab"},
+                "citation": {"doi": survey_doi},
+            },
+        ),
+        (
+            f2,
+            {
+                "id": "speech-audio-corpus",
+                "slug": "speech-audio-corpus",
+                "name": "Acoustic Speech Corpus",
+                "modalities": ["audio"],
+                "tasks": ["speech-recognition"],
+                "publisher": {"name": "Acoustics Institute"},
+                "citation": {"doi": survey_doi},
+            },
+        ),
+    ]
+    errors, warnings = check_duplicate_records(ds_list)
+    assert len(errors) == 0
+    assert any(
+        "Shared publication / paper reference for distinct datasets" in w
+        and "multimodal-vision-bench" in w
+        and "speech-audio-corpus" in w
+        for w in warnings
+    )
 
 
 def test_duplicate_records_performance_scales_sub_second_for_1000_records(tmp_path: Path) -> None:
