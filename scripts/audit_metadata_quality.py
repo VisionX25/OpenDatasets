@@ -62,6 +62,9 @@ BENCHMARK_TAGS = {
     "generalization",
     "robustness",
     "safety",
+    "ogb",
+    "ogb-benchmark",
+    "ogb-lsc",
 }
 
 # Regex pattern for standard Digital Object Identifier (DOI)
@@ -119,7 +122,7 @@ def derive_dataset_categories(dataset: dict[str, Any]) -> list[str]:
     tags = dataset.get("tags", []) or []
     tasks = dataset.get("tasks", []) or []
 
-    if "vision" in modalities:
+    if "vision" in modalities or "3d" in modalities:
         matched.append("computer-vision")
     if "nlp" in modalities:
         matched.append("natural-language-processing")
@@ -130,7 +133,16 @@ def derive_dataset_categories(dataset: dict[str, Any]) -> list[str]:
     if "multimodal" in modalities:
         matched.append("multimodal-generative")
 
-    has_bench_tag = any(isinstance(t, str) and t.lower() in BENCHMARK_TAGS for t in tags)
+    has_bench_tag = any(
+        isinstance(t, str)
+        and (
+            t.lower() in BENCHMARK_TAGS
+            or t.lower().endswith("-benchmark")
+            or t.lower().endswith("-challenge")
+            or t.lower().startswith("benchmark-")
+        )
+        for t in tags
+    )
     has_bench_task = any(
         isinstance(t, str)
         and (

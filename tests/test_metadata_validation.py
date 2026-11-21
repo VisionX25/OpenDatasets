@@ -16,6 +16,7 @@ from scripts.validate_datasets import (
     DEFAULT_DATA_DIR,
     DEFAULT_SCHEMA_PATH,
     check_duplicate_ids_and_slugs,
+    check_duplicate_records,
     is_valid_http_url,
     load_json_file,
     load_schema,
@@ -301,6 +302,76 @@ def test_check_duplicate_slugs(tmp_path: Path) -> None:
     assert "Duplicate dataset slug 'shared-slug'" in errors[0]
     assert str(file1) in errors[0]
     assert str(file2) in errors[0]
+
+
+def test_duplicate_records_detects_normalized_name_collision(tmp_path: Path) -> None:
+    """Ensure check_duplicate_records flags case and punctuation name collisions as hard errors."""
+    f1 = tmp_path / "ds1.json"
+    f2 = tmp_path / "ds2.json"
+    ds_list = [
+        (f1, {"id": "cifar-10", "slug": "cifar-10", "name": "CIFAR-10"}),
+        (f2, {"id": "cifar-ten", "slug": "cifar-ten", "name": "cifar 10"}),
+    ]
+    errors, warnings = check_duplicate_records(ds_list)
+    assert len(errors) == 1
+    assert "Duplicate normalized dataset name 'cifar10'" in errors[0]
+
+
+def test_duplicate_records_detects_identical_duplicate_shared_doi(tmp_path: Path) -> None:
+    """Ensure duplicate records sharing DOI with identical title fail with hard error."""
+    f1 = tmp_path / "ds1.json"
+    f2 = tmp_path / "ds2.json"
+    doi = "10.1234/identical.paper"
+    ds_list = [
+        (f1, {"id": "paper-ds-1", "slug": "paper-ds-1", "name": "DeepLearning Corpus", "citation": {"doi": doi}}),
+        (f2, {"id": "paper-ds-2", "slug": "paper-ds-2", "name": "Deep Learning Corpus", "citation": {"doi": doi}}),
+    ]
+    errors, warnings = check_duplicate_records(ds_list)
+    # Triggers both normalized name duplicate and identical duplicate sharing DOI
+    assert any("Identical duplicate dataset sharing citation DOI" in e for e in errors)
+
+
+def test_duplicate_records_allows_legitimate_benchmark_family_with_warnings(tmp_path: Path) -> None:
+    """Ensure legitimate benchmark families sharing DOI or homepage trigger warnings, NOT errors."""
+    f1 = tmp_path / "cifar10.json"
+    f2 = tmp_path / "cifar100.json"
+    shared_hp = "https://cs.toronto.edu/~kriz/cifar.html"
+    ds_list = [
+        (f1, {"id": "cifar-10", "slug": "cifar-10", "name": "CIFAR-10", "homepage_url": shared_hp}),
+        (f2, {"id": "cifar-100", "slug": "cifar-100", "name": "CIFAR-100", "homepage_url": shared_hp}),
+    ]
+    errors, warnings = check_duplicate_records(ds_list)
+    assert len(errors) == 0, f"Expected 0 errors for legitimate CIFAR family, got: {errors}"
+    assert len(warnings) >= 1
+    assert any("cifar-10" in w and "cifar-100" in w for w in warnings)
+
+
+def test_duplicate_records_performance_scales_sub_second_for_1000_records(tmp_path: Path) -> None:
+    """Ensure duplicate detection easily scales beyond 1,000 records in sub-second time."""
+    import time
+
+    # Generate 1,000 synthetic distinct records
+    records = []
+    for i in range(1000):
+        records.append(
+            (
+                tmp_path / f"synth_{i}.json",
+                {
+                    "id": f"synth-ds-{i}",
+                    "slug": f"synth-ds-{i}",
+                    "name": f"Synthetic Research Benchmark {i}",
+                    "homepage_url": f"https://example.org/dataset-{i}",
+                    "citation": {"doi": f"10.1000/synth.{i}"},
+                },
+            )
+        )
+
+    t0 = time.perf_counter()
+    errors, warnings = check_duplicate_records(records)
+    elapsed = time.perf_counter() - t0
+
+    assert not errors
+    assert elapsed < 1.0, f"Duplicate check for 1,000 records took {elapsed:.3f}s (must be < 1.0s)"
 
 
 # ==============================================================================
