@@ -3,7 +3,7 @@
   "id": "seeing-through-fog",
   "slug": "seeing-through-fog",
   "name": "Seeing Through Fog — Adverse Weather Sensor Benchmark",
-  "description": "Multimodal automotive sensor dataset created by Ulm University, Princeton University, and Mercedes-Benz AG to benchmark perception under extreme weather. Collected over 10,000 km of driving across Northern Europe and in controlled fog chambers. Pairs high-resolution gated near-infrared active cameras with stereo RGB cameras, Velodyne scanning LiDAR, Continental radar, and thermal sensors, offering 12,000 multi-modal samples with 2D and 3D bounding boxes in dense fog, rain, and snow.",
+  "description": "Multimodal automotive sensor dataset created by Ulm University, Princeton University, and Mercedes-Benz AG to benchmark perception under extreme weather. Collected over 10,000 km of driving across Northern Europe and in controlled fog chambers. Pairs high-resolution gated near-infrared active cameras with stereo RGB cameras, Velodyne scanning LiDAR, Continental radar, and thermal sensors, offering 12,000 synchronized multimodal driving frames annotated with 2D and 3D bounding boxes in dense fog, rain, and snow, complemented by 1,500 additional controlled fog-chamber measurements.",
   "homepage_url": "https://www.uni-ulm.de/en/in/institute-of-measurement-control-and-microtechnology/research/data-sets/dense-datasets/",
   "publisher": {
     "name": "Ulm University & Mercedes-Benz AG",
@@ -31,11 +31,10 @@
   ],
   "license": {
     "status": "custom_permissive",
-    "name": "Seeing Through Fog Research License",
-    "spdx_id": null,
+    "name": "Custom Non-Commercial Research License",
     "url": "https://www.uni-ulm.de/en/in/institute-of-measurement-control-and-microtechnology/research/data-sets/dense-datasets/",
     "commercial_use": "forbidden",
-    "notes": "Freely available for non-commercial research upon registration; commercial use prohibited without explicit licensing."
+    "notes": "Dataset access requires registration via the Ulm University DENSE project portal and is restricted strictly to non-commercial academic research. Associated evaluation and fusion toolkit code is released under the MIT License."
   },
   "source_references": [
     {
@@ -45,8 +44,8 @@
       "notes": "Official portal providing dataset description, access requests, and benchmark documentation."
     },
     {
-      "title": "Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Foggy Weather",
-      "url": "https://doi.org/10.1109/CVPR42600.2020.01351",
+      "title": "Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Unseen Adverse Weather",
+      "url": "https://doi.org/10.1109/CVPR42600.2020.01170",
       "type": "original_paper",
       "notes": "Conference paper published in the 2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)."
     },
@@ -60,8 +59,8 @@
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
-    "verified_date": "2026-11-09",
-    "notes": "Verified against Ulm University DENSE portal and CVPR 2020 proceedings (DOI: 10.1109/CVPR42600.2020.01351)."
+    "verified_date": "2026-11-21",
+    "notes": "Verified against CVPR 2020 paper (DOI: 10.1109/CVPR42600.2020.01170) and Ulm University DENSE portal. Corrected publication title to 'Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Unseen Adverse Weather', DOI to 10.1109/CVPR42600.2020.01170, and page range to 11679–11689. Reconciled sample count to 12,000 primary real-world driving frames, documenting 1,500 controlled fog-chamber measurements separately rather than as conflicting partition splits."
   },
   "size": {
     "amount": 100.0,
@@ -76,19 +75,15 @@
   },
   "sample_count": {
     "total": 12000,
-    "splits": {
-      "annotated_samples": 12000,
-      "fog_chamber_samples": 1500
-    },
-    "unit": "samples",
+    "unit": "synchronized multimodal frames",
     "status": "verified"
   },
   "dates": {
     "published": "2020-06-16"
   },
   "citation": {
-    "paper_title": "Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Foggy Weather",
-    "paper_url": "https://doi.org/10.1109/CVPR42600.2020.01351",
+    "paper_title": "Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Unseen Adverse Weather",
+    "paper_url": "https://doi.org/10.1109/CVPR42600.2020.01170",
     "authors": [
       "Mario Bijelic",
       "Tobias Gruber",
@@ -98,7 +93,7 @@
       "Klaus Dietmayer",
       "Felix Heide"
     ],
-    "doi": "10.1109/CVPR42600.2020.01351",
-    "bibtex": "@inproceedings{bijelic2020seeing,\n  title={Seeing through fog without seeing fog: Deep multimodal sensor fusion in foggy weather},\n  author={Bijelic, Mario and Gruber, Tobias and Mannan, Fahim and Kraus, Florian and Ritter, Werner and Dietmayer, Klaus and Heide, Felix},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={13482--13491},\n  year={2020},\n  doi={10.1109/CVPR42600.2020.01351}\n}"
+    "doi": "10.1109/CVPR42600.2020.01170",
+    "bibtex": "@inproceedings{bijelic2020seeing,\n  title = {Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Unseen Adverse Weather},\n  author = {Bijelic, Mario and Gruber, Tobias and Mannan, Fahim and Kraus, Florian and Ritter, Werner and Dietmayer, Klaus and Heide, Felix},\n  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages = {11679--11689},\n  year = {2020},\n  doi = {10.1109/CVPR42600.2020.01170}\n}"
   }
 }
