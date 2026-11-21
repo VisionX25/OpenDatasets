@@ -633,9 +633,9 @@ def test_readiness_tier_counts_reconciliation():
     audit_data = audit_catalog_metadata_quality(records)
     tier_dist = audit_data["research_readiness_summary"]["tier_distribution"]
 
-    assert tier_dist["Ready for Evaluation"] == 482
-    assert tier_dist["Documented with Caveats"] == 172
-    assert tier_dist["Needs Information Review"] == 46
+    assert tier_dist["Ready for Evaluation"] == 484
+    assert tier_dist["Documented with Caveats"] == 171
+    assert tier_dist["Needs Information Review"] == 45
     assert sum(tier_dist.values()) == 700
 
 

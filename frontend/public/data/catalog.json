@@ -133,17 +133,17 @@
         "notes": "Official repository with dataset download links (Google Drive and Baidu Netdisk), benchmark scripts, and documentation."
       },
       {
-        "title": "3CAD: A Large-Scale Real-World 3C Product Dataset for Unsupervised Anomaly Detection",
-        "url": "https://arxiv.org/abs/2502.05761",
+        "title": "3CAD: A Large-Scale Real-World 3C Product Dataset for Unsupervised Anomaly Detection (AAAI 2025)",
+        "url": "https://doi.org/10.1609/aaai.v39i9.32993",
         "type": "original_paper",
-        "notes": "AAAI 2025 conference publication introducing the 3CAD dataset and the CFRG anomaly detection framework."
+        "notes": "Official conference publication in Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 39 No. 9)."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Curatorial Team",
-      "verified_date": "2026-11-10",
-      "notes": "Verified against AAAI 2025 proceedings, arXiv:2502.05761, and official ShuCvlab GitHub repository."
+      "verified_date": "2026-11-20",
+      "notes": "Verified against AAAI 2025 proceedings (DOI: 10.1609/aaai.v39i9.32993) and official ShuCvlab GitHub repository; updated DOI to official AAAI publication and added complete conference BibTeX citation."
     },
     "size": {
       "file_formats": [
@@ -169,7 +169,7 @@
     },
     "citation": {
       "paper_title": "3CAD: A Large-Scale Real-World 3C Product Dataset for Unsupervised Anomaly Detection",
-      "paper_url": "https://arxiv.org/abs/2502.05761",
+      "paper_url": "https://doi.org/10.1609/aaai.v39i9.32993",
       "authors": [
         "Enquan Yang",
         "Peng Xing",
@@ -179,7 +179,8 @@
         "Zechao Li",
         "Dan Zeng"
       ],
-      "doi": "10.48550/arXiv.2502.05761"
+      "doi": "10.1609/aaai.v39i9.32993",
+      "bibtex": "@inproceedings{yang20253cad,\n  title = {3CAD: A Large-Scale Real-World 3C Product Dataset for Unsupervised Anomaly Detection},\n  author = {Yang, Enquan and Xing, Peng and Sun, Hanyang and Guo, Wenbo and Ma, Yuanwei and Li, Zechao and Zeng, Dan},\n  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume = {39},\n  number = {9},\n  pages = {9175--9183},\n  year = {2025},\n  doi = {10.1609/aaai.v39i9.32993}\n}"
     },
     "geographic_coverage": [
       "China"
@@ -4002,8 +4003,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-10-29",
-      "notes": "Verified against Mendeley Data v1 and DataCite DOI 10.17632/tvtm9tkvdn.1."
+      "verified_date": "2026-11-20",
+      "notes": "Verified against Mendeley Data v1 repository (DOI 10.17632/tvtm9tkvdn.1). Replaced generic unit 'samples' with 'text passages', reflecting the 6,000 balanced Bangla human/AI input text passages (3,000 human-written texts, 3,000 AI-generated texts) recorded in the dataset."
     },
     "size": {
       "file_formats": [
@@ -4018,7 +4019,7 @@
         "human": 3000,
         "ai_generated": 3000
       },
-      "unit": "samples",
+      "unit": "text passages",
       "status": "verified"
     },
     "languages": [
@@ -6923,7 +6924,8 @@
       "url": "https://data.mendeley.com"
     },
     "modalities": [
-      "sensor"
+      "sensor",
+      "time-series"
     ],
     "tasks": [
       "signal-classification",
@@ -8300,8 +8302,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Curation Team",
-      "verified_date": "2026-11-14",
-      "notes": "Verified against gpcv.whu.edu.cn/data/Bijie_pages.html and Springer Landslides paper (DOI: 10.1007/s10346-020-01353-2). Confirmed 2,773 total samples (770 landslide, 2,003 non-landslide), TripleSat optical and DEM modalities, binary masks, and non-commercial terms."
+      "verified_date": "2026-11-20",
+      "notes": "Verified against gpcv.whu.edu.cn/data/Bijie_pages.html and Springer Landslides paper (DOI: 10.1007/s10346-020-01353-2). Confirmed that 2,773 refers to synchronized optical image and DEM patch pairs (770 landslide, 2,003 non-landslide), updating sample_count unit from generic 'samples' to 'image-DEM pairs'."
     },
     "size": {
       "amount": 1.2,
@@ -8319,7 +8321,7 @@
         "landslide": 770,
         "non_landslide": 2003
       },
-      "unit": "samples",
+      "unit": "image-DEM pairs",
       "status": "verified"
     },
     "dates": {
@@ -14575,12 +14577,12 @@
       "landsat"
     ],
     "license": {
-      "status": "custom_permissive",
-      "name": "Creative Commons Attribution 4.0 International",
-      "spdx_id": "CC-BY-4.0",
-      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "commercial_use": "allowed",
-      "notes": "Dataset licensed under CC BY 4.0; software toolkit licensed under Apache 2.0."
+      "notes": "Dataset and code repository are published under CC BY-SA 4.0, hosted on Zenodo (DOI: 10.5281/zenodo.10251170) and GitHub; constituent regional datasets carry their own attribution/share-alike terms."
     },
     "source_references": [
       {
@@ -14599,8 +14601,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-10-30",
-      "notes": "Verified against NeurIPS 2021 Datasets and Benchmarks Track proceedings on OpenReview (forum ID: JtjzUXPEaCu)."
+      "verified_date": "2026-11-20",
+      "notes": "Verified against Zenodo repository (DOI: 10.5281/zenodo.10251170) and NeurIPS 2021 publication. Reclassified license to verified_open under CC BY-SA 4.0, separating dataset terms from software licensing, and specified sample unit as 'geographic points'."
     },
     "size": {
       "amount": 14.5,
@@ -14619,7 +14621,7 @@
         "geographical_tiles": 2279,
         "countries": 35
       },
-      "unit": "points",
+      "unit": "geographic points",
       "status": "verified"
     },
     "dates": {
@@ -16215,12 +16217,11 @@
       "benchmark"
     ],
     "license": {
-      "status": "unspecified_by_source",
-      "name": "Unspecified by Source",
-      "spdx_id": null,
+      "status": "custom_permissive",
+      "name": "Custom Research-Only License",
       "url": "https://github.com/tangsanli5201/DeepPCB",
       "commercial_use": "forbidden",
-      "notes": "Code repository contains an MIT license file, but the author README explicitly restricts dataset usage: 'You can only use this dataset for research purpose.'"
+      "notes": "Repository source code is licensed under the MIT License, but the author's README explicitly restricts dataset usage: 'You can only use this dataset for research purpose.' Commercial use is forbidden."
     },
     "source_references": [
       {
@@ -16239,8 +16240,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Curatorial Team",
-      "verified_date": "2026-11-10",
-      "notes": "Verified against author GitHub repository and arXiv preprint 1902.06197."
+      "verified_date": "2026-11-20",
+      "notes": "Verified against author GitHub repository README and LICENSE file. Separates codebase MIT license from dataset's explicit research-only restriction ('You can only use this dataset for research purpose'), classifying dataset under custom_permissive with commercial_use forbidden."
     },
     "size": {
       "file_formats": [
@@ -18787,7 +18788,8 @@
       "type": "academic"
     },
     "modalities": [
-      "sensor"
+      "sensor",
+      "time-series"
     ],
     "tasks": [
       "signal-processing",
@@ -21912,11 +21914,10 @@
     ],
     "license": {
       "status": "custom_permissive",
-      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0",
-      "spdx_id": "CC-BY-NC-SA-3.0",
-      "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "name": "Foodspotting Terms of Use / Scientific Fair Use",
+      "url": "https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/",
       "commercial_use": "forbidden",
-      "notes": "Verified non-commercial academic license stated on ETH Zurich CVL portal."
+      "notes": "Images in the Food-101 dataset were downloaded from Foodspotting and are not the property of ETH Zurich. ETH Zurich provides the collection for academic research under principles of scientific fair use, which does not constitute an automatically granted blanket non-commercial license. In accordance with Foodspotting terms of use, any use of the dataset beyond scientific fair use must be negotiated directly with the original image owners; commercial use without individual rights clearance is strictly forbidden."
     },
     "source_references": [
       {
@@ -21935,8 +21936,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Maintainers",
-      "verified_date": "2026-11-02",
-      "notes": "Verified against ECCV 2014 publication and ETH Zurich dataset page."
+      "verified_date": "2026-11-21",
+      "notes": "Verified against ETH Zurich CVL portal (https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/) and ECCV 2014 paper. Clarified that source images are not ETH Zurich property and scientific fair use is not an automatically granted blanket dataset license; rights for any use beyond scientific fair use must be negotiated directly with original Foodspotting image owners, preserving a conservative commercial_use: forbidden classification."
     },
     "sample_count": {
       "status": "verified",
@@ -43901,7 +43902,7 @@
       "spdx_id": null,
       "url": "https://github.com/OpenDriveLab/OpenLane-V2/blob/master/LICENSE",
       "commercial_use": "forbidden",
-      "notes": "Dataset annotations available under CC BY-NC-SA 4.0 for non-commercial research; devkit software licensed under Apache 2.0."
+      "notes": "Dataset annotations are licensed under CC BY-NC-SA 4.0; devkit source code is licensed under Apache 2.0. Users must also comply with the non-commercial terms of use for underlying sensor data from nuScenes and Argoverse 2."
     },
     "source_references": [
       {
@@ -43926,8 +43927,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-11-09",
-      "notes": "Verified against OpenDriveLab GitHub repository and NeurIPS 2023 paper (DOI: 10.48550/arXiv.2304.10440)."
+      "verified_date": "2026-11-20",
+      "notes": "Verified against OpenDriveLab GitHub repository LICENSE and README. Preserves composite licensing: CC BY-NC-SA 4.0 for dataset annotations, Apache 2.0 for devkit code, subject to upstream nuScenes and Argoverse 2 non-commercial terms of use."
     },
     "size": {
       "amount": 35.0,
@@ -48223,7 +48224,8 @@
       "type": "academic"
     },
     "modalities": [
-      "sensor"
+      "sensor",
+      "time-series"
     ],
     "tasks": [
       "signal-processing",
@@ -50765,7 +50767,7 @@
     "id": "seeing-through-fog",
     "slug": "seeing-through-fog",
     "name": "Seeing Through Fog — Adverse Weather Sensor Benchmark",
-    "description": "Multimodal automotive sensor dataset created by Ulm University, Princeton University, and Mercedes-Benz AG to benchmark perception under extreme weather. Collected over 10,000 km of driving across Northern Europe and in controlled fog chambers. Pairs high-resolution gated near-infrared active cameras with stereo RGB cameras, Velodyne scanning LiDAR, Continental radar, and thermal sensors, offering 12,000 multi-modal samples with 2D and 3D bounding boxes in dense fog, rain, and snow.",
+    "description": "Multimodal automotive sensor dataset created by Ulm University, Princeton University, and Mercedes-Benz AG to benchmark perception under extreme weather. Collected over 10,000 km of driving across Northern Europe and in controlled fog chambers. Pairs high-resolution gated near-infrared active cameras with stereo RGB cameras, Velodyne scanning LiDAR, Continental radar, and thermal sensors, offering 12,000 synchronized multimodal driving frames annotated with 2D and 3D bounding boxes in dense fog, rain, and snow, complemented by 1,500 additional controlled fog-chamber measurements.",
     "homepage_url": "https://www.uni-ulm.de/en/in/institute-of-measurement-control-and-microtechnology/research/data-sets/dense-datasets/",
     "publisher": {
       "name": "Ulm University & Mercedes-Benz AG",
@@ -50793,11 +50795,10 @@
     ],
     "license": {
       "status": "custom_permissive",
-      "name": "Seeing Through Fog Research License",
-      "spdx_id": null,
+      "name": "Custom Non-Commercial Research License",
       "url": "https://www.uni-ulm.de/en/in/institute-of-measurement-control-and-microtechnology/research/data-sets/dense-datasets/",
       "commercial_use": "forbidden",
-      "notes": "Freely available for non-commercial research upon registration; commercial use prohibited without explicit licensing."
+      "notes": "Dataset access requires registration via the Ulm University DENSE project portal and is restricted strictly to non-commercial academic research. Associated evaluation and fusion toolkit code is released under the MIT License."
     },
     "source_references": [
       {
@@ -50807,8 +50808,8 @@
         "notes": "Official portal providing dataset description, access requests, and benchmark documentation."
       },
       {
-        "title": "Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Foggy Weather",
-        "url": "https://doi.org/10.1109/CVPR42600.2020.01351",
+        "title": "Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Unseen Adverse Weather",
+        "url": "https://doi.org/10.1109/CVPR42600.2020.01170",
         "type": "original_paper",
         "notes": "Conference paper published in the 2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)."
       },
@@ -50822,8 +50823,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-11-09",
-      "notes": "Verified against Ulm University DENSE portal and CVPR 2020 proceedings (DOI: 10.1109/CVPR42600.2020.01351)."
+      "verified_date": "2026-11-21",
+      "notes": "Verified against CVPR 2020 paper (DOI: 10.1109/CVPR42600.2020.01170) and Ulm University DENSE portal. Corrected publication title to 'Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Unseen Adverse Weather', DOI to 10.1109/CVPR42600.2020.01170, and page range to 11679–11689. Reconciled sample count to 12,000 primary real-world driving frames, documenting 1,500 controlled fog-chamber measurements separately rather than as conflicting partition splits."
     },
     "size": {
       "amount": 100.0,
@@ -50838,19 +50839,15 @@
     },
     "sample_count": {
       "total": 12000,
-      "splits": {
-        "annotated_samples": 12000,
-        "fog_chamber_samples": 1500
-      },
-      "unit": "samples",
+      "unit": "synchronized multimodal frames",
       "status": "verified"
     },
     "dates": {
       "published": "2020-06-16"
     },
     "citation": {
-      "paper_title": "Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Foggy Weather",
-      "paper_url": "https://doi.org/10.1109/CVPR42600.2020.01351",
+      "paper_title": "Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Unseen Adverse Weather",
+      "paper_url": "https://doi.org/10.1109/CVPR42600.2020.01170",
       "authors": [
         "Mario Bijelic",
         "Tobias Gruber",
@@ -50860,8 +50857,8 @@
         "Klaus Dietmayer",
         "Felix Heide"
       ],
-      "doi": "10.1109/CVPR42600.2020.01351",
-      "bibtex": "@inproceedings{bijelic2020seeing,\n  title={Seeing through fog without seeing fog: Deep multimodal sensor fusion in foggy weather},\n  author={Bijelic, Mario and Gruber, Tobias and Mannan, Fahim and Kraus, Florian and Ritter, Werner and Dietmayer, Klaus and Heide, Felix},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={13482--13491},\n  year={2020},\n  doi={10.1109/CVPR42600.2020.01351}\n}"
+      "doi": "10.1109/CVPR42600.2020.01170",
+      "bibtex": "@inproceedings{bijelic2020seeing,\n  title = {Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Unseen Adverse Weather},\n  author = {Bijelic, Mario and Gruber, Tobias and Mannan, Fahim and Kraus, Florian and Ritter, Werner and Dietmayer, Klaus and Heide, Felix},\n  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages = {11679--11689},\n  year = {2020},\n  doi = {10.1109/CVPR42600.2020.01170}\n}"
     }
   },
   {
@@ -50890,7 +50887,8 @@
       "lidar",
       "semantic-segmentation",
       "point-cloud",
-      "kitti"
+      "kitti",
+      "benchmark"
     ],
     "license": {
       "status": "verified_non_commercial",
@@ -55213,8 +55211,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Curatorial Team",
-      "verified_date": "2026-11-01",
-      "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/n9xttk45df.2."
+      "verified_date": "2026-11-20",
+      "notes": "Verified against Mendeley Data v2 release DOI 10.17632/n9xttk45df.2. Corrected sample count from 800 (test split only) to 8,004 total recordings with predefined partitions: 6,403 training, 801 validation, and 800 test recordings."
     },
     "dates": {
       "published": "2026-01-01"
@@ -55235,8 +55233,13 @@
       "bn"
     ],
     "sample_count": {
-      "total": 800,
-      "unit": "samples",
+      "total": 8004,
+      "splits": {
+        "train": 6403,
+        "validation": 801,
+        "test": 800
+      },
+      "unit": "recordings",
       "status": "verified"
     }
   },
@@ -59763,11 +59766,12 @@
       "meta-ai"
     ],
     "license": {
-      "status": "custom_permissive",
-      "name": "Creative Commons CC0 / CC BY-NC 4.0",
-      "url": "https://github.com/facebookresearch/voxpopuli#license",
-      "commercial_use": "forbidden",
-      "notes": "Audio is sourced from European Parliament under non-commercial reuse guidelines; code is MIT licensed."
+      "status": "public_domain",
+      "name": "Creative Commons CC0 1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "VoxPopuli speech data and transcripts are released by Meta AI under Creative Commons CC0 1.0 Universal, subject to European Parliament raw recording reuse guidelines and legal notice. Code and pre-trained models are separately licensed under CC BY-NC 4.0."
     },
     "source_references": [
       {
@@ -59786,8 +59790,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Maintainers",
-      "verified_date": "2026-11-02",
-      "notes": "Verified against ACL 2021 publication and Meta AI repository."
+      "verified_date": "2026-11-20",
+      "notes": "Verified against Meta AI VoxPopuli repository README (#license) and ACL 2021 publication. Reclassified data license to CC0 1.0 Universal with European Parliament raw recording legal notice caveat; code and pretrained models are licensed under CC BY-NC 4.0 and not applied to the dataset."
     },
     "sample_count": {
       "status": "verified",

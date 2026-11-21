@@ -31,6 +31,16 @@ except ImportError:
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from scripts.audit_semantic_duplicates import (
+    normalize_title,
+    normalize_url,
+    normalize_doi,
+    is_generic_hosting_url,
+    extract_discriminating_features,
+)
 
 DEFAULT_SCHEMA_PATH = (
     Path("schemas/dataset.v1.schema.json")
@@ -162,34 +172,170 @@ def validate_dataset_file(
     return data, validation_errors
 
 
-def check_duplicate_ids_and_slugs(
+def normalize_dataset_name(name: str) -> str:
+    """Normalize a dataset name for uniqueness check (lowercased, stripped of punctuation and whitespace)."""
+    if not name or not isinstance(name, str):
+        return ""
+    return re.sub(r"[^\w]", "", name.lower())
+
+
+def check_duplicate_records(
     datasets: list[tuple[Path, dict[str, Any]]]
-) -> list[str]:
-    """Ensure dataset IDs and slugs are unique across the repository."""
+) -> tuple[list[str], list[str]]:
+    """Ensure dataset records are unique across the repository.
+
+    Returns:
+        (errors, warnings)
+
+    Hard Errors (must fail CI):
+        - Duplicate dataset ID across multiple files
+        - Duplicate dataset slug across multiple files
+        - Duplicate normalized dataset name across multiple files
+        - Unambiguous identical duplicate dataset (shared canonical DOI/URL with identical normalized name)
+
+    Warnings (for maintainer human review, does not fail CI):
+        - Legitimate related benchmark families sharing DOI or homepage with distinguishing features
+        - High fuzzy title similarity (> 0.85) between distinct benchmark iterations (e.g., ISIC 2018 vs 2019)
+    """
     errors: list[str] = []
+    warnings: list[str] = []
     id_map: dict[str, list[str]] = defaultdict(list)
     slug_map: dict[str, list[str]] = defaultdict(list)
+    name_map: dict[str, list[tuple[str, str]]] = defaultdict(list)
+    doi_map: dict[str, list[tuple[Path, dict[str, Any]]]] = defaultdict(list)
+    url_map: dict[str, list[tuple[Path, dict[str, Any]]]] = defaultdict(list)
 
     for path, data in datasets:
         ds_id = data.get("id")
         ds_slug = data.get("slug")
-        if ds_id and isinstance(ds_id, str):
-            id_map[ds_id].append(str(path))
-        if ds_slug and isinstance(ds_slug, str):
-            slug_map[ds_slug].append(str(path))
+        ds_name = data.get("name")
+        path_str = str(path)
 
-    for ds_id, paths in id_map.items():
+        if ds_id and isinstance(ds_id, str):
+            id_map[ds_id].append(path_str)
+        if ds_slug and isinstance(ds_slug, str):
+            slug_map[ds_slug].append(path_str)
+        if ds_name and isinstance(ds_name, str):
+            norm_name = normalize_dataset_name(ds_name)
+            if norm_name:
+                name_map[norm_name].append((path_str, ds_name))
+
+        cit = data.get("citation") or {}
+        doi = normalize_doi(cit.get("doi", ""))
+        if doi:
+            doi_map[doi].append((path, data))
+
+        hp = data.get("homepage_url", "")
+        if hp and not is_generic_hosting_url(hp):
+            norm_hp = normalize_url(hp)
+            if norm_hp:
+                url_map[norm_hp].append((path, data))
+
+    # 1. Duplicate ID check (Hard error)
+    for ds_id, paths in sorted(id_map.items()):
         if len(paths) > 1:
             errors.append(
                 f"Duplicate dataset ID '{ds_id}' found across multiple files: {', '.join(paths)}"
             )
 
-    for ds_slug, paths in slug_map.items():
+    # 2. Duplicate slug check (Hard error)
+    for ds_slug, paths in sorted(slug_map.items()):
         if len(paths) > 1:
             errors.append(
                 f"Duplicate dataset slug '{ds_slug}' found across multiple files: {', '.join(paths)}"
             )
 
+    # 3. Duplicate normalized name check (Hard error)
+    for norm_name, items in sorted(name_map.items()):
+        if len(items) > 1:
+            paths = [it[0] for it in items]
+            names = [f"'{it[1]}'" for it in items]
+            errors.append(
+                f"Duplicate normalized dataset name '{norm_name}' ({', '.join(names)}) found across multiple files: {', '.join(paths)}"
+            )
+
+    # 4. Shared DOI check (Differentiate hard duplicate vs alternative title candidate vs legitimate benchmark family)
+    for doi, entries in sorted(doi_map.items()):
+        if len(entries) > 1:
+            for i in range(len(entries)):
+                for j in range(i + 1, len(entries)):
+                    p1, d1 = entries[i]
+                    p2, d2 = entries[j]
+                    id1 = d1.get("id", "")
+                    id2 = d2.get("id", "")
+                    name1 = d1.get("name", "")
+                    name2 = d2.get("name", "")
+                    same_name = normalize_dataset_name(name1) == normalize_dataset_name(name2)
+                    disc = extract_discriminating_features(d1, d2)
+                    if same_name:
+                        errors.append(
+                            f"Identical duplicate dataset sharing citation DOI '{doi}': '{id1}' ({p1}) and '{id2}' ({p2})"
+                        )
+                    elif not disc:
+                        warnings.append(
+                            f"Ambiguous collision / possible duplicate (alternative title candidate) sharing citation DOI '{doi}': '{id1}' ('{name1}') and '{id2}' ('{name2}') lack discriminating features — unresolved human review required"
+                        )
+                    else:
+                        mods1 = set(d1.get("modalities", []))
+                        mods2 = set(d2.get("modalities", []))
+                        pub1 = d1.get("publisher", {}).get("name", "")
+                        pub2 = d2.get("publisher", {}).get("name", "")
+                        is_same_pub = bool(pub1 and pub2 and pub1.strip().lower() == pub2.strip().lower())
+                        shares_domain = bool(mods1 & mods2)
+                        if is_same_pub or shares_domain:
+                            warnings.append(
+                                f"Legitimate benchmark family sharing DOI '{doi}': '{id1}' and '{id2}' (differentiating features: {', '.join(disc)})"
+                            )
+                        else:
+                            warnings.append(
+                                f"Shared publication / paper reference for distinct datasets sharing DOI '{doi}': '{id1}' and '{id2}' (differentiating features: {', '.join(disc)})"
+                            )
+
+    # 5. Shared Homepage check (Differentiate hard duplicate vs alternative title candidate vs legitimate benchmark family)
+    for url, entries in sorted(url_map.items()):
+        if len(entries) > 1:
+            for i in range(len(entries)):
+                for j in range(i + 1, len(entries)):
+                    p1, d1 = entries[i]
+                    p2, d2 = entries[j]
+                    id1 = d1.get("id", "")
+                    id2 = d2.get("id", "")
+                    name1 = d1.get("name", "")
+                    name2 = d2.get("name", "")
+                    same_name = normalize_dataset_name(name1) == normalize_dataset_name(name2)
+                    disc = extract_discriminating_features(d1, d2)
+                    if same_name:
+                        errors.append(
+                            f"Identical duplicate dataset sharing homepage URL '{url}': '{id1}' ({p1}) and '{id2}' ({p2})"
+                        )
+                    elif not disc:
+                        warnings.append(
+                            f"Ambiguous collision / possible duplicate (alternative title candidate) sharing homepage URL '{url}': '{id1}' ('{name1}') and '{id2}' ('{name2}') lack discriminating features — unresolved human review required"
+                        )
+                    else:
+                        mods1 = set(d1.get("modalities", []))
+                        mods2 = set(d2.get("modalities", []))
+                        pub1 = d1.get("publisher", {}).get("name", "")
+                        pub2 = d2.get("publisher", {}).get("name", "")
+                        is_same_pub = bool(pub1 and pub2 and pub1.strip().lower() == pub2.strip().lower())
+                        shares_domain = bool(mods1 & mods2)
+                        if is_same_pub or shares_domain:
+                            warnings.append(
+                                f"Legitimate benchmark family sharing homepage '{url}': '{id1}' and '{id2}' (differentiating features: {', '.join(disc)})"
+                            )
+                        else:
+                            warnings.append(
+                                f"Shared homepage reference for distinct datasets sharing '{url}': '{id1}' and '{id2}' (differentiating features: {', '.join(disc)})"
+                            )
+
+    return errors, warnings
+
+
+def check_duplicate_ids_and_slugs(
+    datasets: list[tuple[Path, dict[str, Any]]]
+) -> list[str]:
+    """Ensure dataset IDs and slugs are unique across the repository (backwards compatibility)."""
+    errors, _ = check_duplicate_records(datasets)
     return errors
 
 
@@ -234,9 +380,13 @@ def validate_all_datasets(
                 loaded_datasets.append((file_path, data))
 
     # Cross-dataset checks (duplicates across all files)
-    dup_errors = check_duplicate_ids_and_slugs(loaded_datasets)
+    dup_errors, dup_warnings = check_duplicate_records(loaded_datasets)
     if dup_errors:
         all_errors.extend(dup_errors)
+
+    if verbose and dup_warnings:
+        for w in dup_warnings:
+            print(f"  [WARN] {w}")
 
     return len(files), total_passed, all_errors
 

@@ -48,8 +48,8 @@
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Curatorial Team",
-    "verified_date": "2026-11-01",
-    "notes": "Independently verified against DataCite scholarly repository record DOI 10.17632/n9xttk45df.2."
+    "verified_date": "2026-11-20",
+    "notes": "Verified against Mendeley Data v2 release DOI 10.17632/n9xttk45df.2. Corrected sample count from 800 (test split only) to 8,004 total recordings with predefined partitions: 6,403 training, 801 validation, and 800 test recordings."
   },
   "dates": {
     "published": "2026-01-01"
@@ -70,8 +70,13 @@
     "bn"
   ],
   "sample_count": {
-    "total": 800,
-    "unit": "samples",
+    "total": 8004,
+    "splits": {
+      "train": 6403,
+      "validation": 801,
+      "test": 800
+    },
+    "unit": "recordings",
     "status": "verified"
   }
 }
