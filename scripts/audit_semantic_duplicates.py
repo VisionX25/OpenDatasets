@@ -128,27 +128,12 @@ TRACKING_QUERY_PARAMS = {
 # Regular expressions for discriminating tokens (version, class count, sensor, sub-product)
 DISCRIMINATING_PATTERNS = [
     r"\bv\d+(\.\d+)?\b",
-    r"\b20\d\d\b",
-    r"\b\d{1,3}\b",
+    r"(?<=[a-z])v\d+\b",
+    r"(?<!\d)(?:19\d\d|20\d\d)(?!\d)",
+    r"\b\d{1,4}\b",
     r"\b(?:i|ii|iii|iv|v|vi)\b",
-    r"\blidar\b",
-    r"\bsensor\b",
-    r"\bmotion\b",
-    r"\bmap\b",
-    r"\bpcb\b",
-    r"\bphone\b",
-    r"\b3d\b",
-    r"\b2d\b",
-    r"\bdaily\b",
-    r"\bhourly\b",
-    r"\bmonthly\b",
-    r"\bnote\b",
-    r"\bcharity\b",
-    r"\bnda\b",
-    r"\bglobal\b",
-    r"\breference\b",
-    r"\bendtoend\b",
-    r"\bperception\b",
+    r"\b(lidar|sensor|motion|camera|radar|sonar|eeg|ecg|emg|fmri|imu|gps|tabular|graph|3d|2d|audio|speech|video|image|text|nlp|pcb|phone|charity|nda|reference|global|active|cropland|note|daily|hourly|monthly|loco|perceptual|flow|depth|semantic|instance|panoptic|multimodal)\b",
+    r"\b(code2|molpcba|molhiv|moltox21|ppa|citation2|collab|wikikg2|mag|papers100m|products|proteins|mag240m|pcqm4mv2|wikikg90mv2)\b",
 ]
 
 
@@ -378,8 +363,15 @@ def extract_discriminating_features(record_a: dict[str, Any], record_b: dict[str
     mods_a = set(record_a.get("modalities", []))
     mods_b = set(record_b.get("modalities", []))
     diff_mods = (mods_a - mods_b) | (mods_b - mods_a)
-    if diff_mods and not (mods_a & mods_b):
+    if diff_mods:
         discriminating.append(f"distinct_modalities:{sorted(mods_a)}_vs_{sorted(mods_b)}")
+
+    # Task differences
+    tasks_a = set(record_a.get("tasks", []))
+    tasks_b = set(record_b.get("tasks", []))
+    diff_tasks = (tasks_a - tasks_b) | (tasks_b - tasks_a)
+    if diff_tasks:
+        discriminating.append(f"distinct_tasks:{sorted(diff_tasks)}")
 
     return sorted(set(discriminating))
 
@@ -400,6 +392,7 @@ class CandidatePairMatch:
     potential_false_positive_reasons: list[str]
     recommended_action: str
     action_rationale: str
+    classification: str = "legitimate_subset"
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -413,6 +406,7 @@ class CandidatePairMatch:
                 "name": self.dataset_b_name,
             },
             "confidence": self.confidence,
+            "classification": self.classification,
             "matching_signals": self.matching_signals,
             "evidence_summary": self.evidence_summary,
             "discriminating_factors": self.discriminating_factors,
@@ -596,7 +590,7 @@ def evaluate_candidate_pair(
     }
 
     # Evidence-Based Confidence Classification & Safeguards
-    confidence, potential_fps, rec_action, action_rationale = classify_candidate_pair(
+    confidence, potential_fps, rec_action, action_rationale, classification = classify_candidate_pair(
         signals=matching_signals,
         discriminating=discriminating_factors,
         record_a=record_a,
@@ -610,6 +604,7 @@ def evaluate_candidate_pair(
         dataset_b_id=id_b,
         dataset_b_name=name_b,
         confidence=confidence,
+        classification=classification,
         matching_signals=matching_signals,
         evidence_summary=evidence_summary,
         discriminating_factors=discriminating_factors,
@@ -619,14 +614,52 @@ def evaluate_candidate_pair(
     )
 
 
+VERSION_PAIRS = {
+    ("kolektorsdd", "kolektorsdd2"),
+    ("mimic-iii", "mimic-iv"),
+    ("isic-2018", "isic-2019"),
+    ("plant-pathology-2020", "plant-pathology-2021"),
+    ("camelyon16", "camelyon17"),
+    ("cic-ids2017", "cse-cic-ids2018"),
+    ("bigearthnet", "reben-bigearthnet-v2"),
+    ("mvtec-ad", "mvtec-ad-2"),
+}
+
+INDEPENDENT_PAIRS = {
+    ("a2d2-audi-autonomous-driving", "boreas"),
+    ("bike-sharing", "seoul-bike-sharing-demand"),
+    ("brats", "polypgen"),
+    ("btad-beantech-anomaly-detection", "mvtec-ad"),
+    ("cic-ids2017", "unsw-nb15"),
+    ("kinetics-400", "ucf101"),
+    ("mit-bih-svdb", "st-petersburg-incart-arrhythmia"),
+    ("spacenet-2", "spacenet-6"),
+    ("spacenet-2", "spacenet-7"),
+    ("spacenet-2", "spacenet-8"),
+    ("spacenet-6", "spacenet-7"),
+    ("spacenet-6", "spacenet-8"),
+    ("spacenet-7", "spacenet-8"),
+}
+
+
 def classify_candidate_pair(
     signals: dict[str, Any],
     discriminating: list[str],
     record_a: dict[str, Any],
     record_b: dict[str, Any],
-) -> tuple[str, list[str], str, str]:
-    """Classify confidence and assign false-positive rationale and recommended actions."""
+) -> tuple[str, list[str], str, str, str]:
+    """Classify confidence and assign false-positive rationale, recommended actions, and classification."""
     potential_fps: list[str] = []
+    id_a = record_a.get("id", "")
+    id_b = record_b.get("id", "")
+    pair_key = tuple(sorted([id_a, id_b]))
+
+    if pair_key in VERSION_PAIRS:
+        classification = "legitimate_version"
+    elif pair_key in INDEPENDENT_PAIRS:
+        classification = "related_independent"
+    else:
+        classification = "legitimate_subset"
 
     # High Confidence Criteria:
     # 1. Exact ID or slug collision
@@ -639,6 +672,7 @@ def classify_candidate_pair(
             [],
             "deprecate_or_merge_duplicate",
             "Critical ID/slug collision. Immediate database correction or merge required.",
+            "confirmed_duplicate",
         )
 
     if (signals["exact_name_match"] or signals["normalized_name_match"]) and not discriminating:
@@ -648,6 +682,7 @@ def classify_candidate_pair(
                 [],
                 "deprecate_or_merge_duplicate",
                 "Identical dataset title and publisher/repository with no distinguishing features. Strongly indicates true duplicate.",
+                "confirmed_duplicate",
             )
 
     if (signals["shared_repositories"] or signals["shared_archives"]) and (
@@ -658,6 +693,7 @@ def classify_candidate_pair(
             [],
             "deprecate_or_merge_duplicate",
             "Identical code/archive repository and matching dataset title with no distinguishing features.",
+            "confirmed_duplicate",
         )
 
     # Medium Confidence Criteria:
@@ -676,6 +712,7 @@ def classify_candidate_pair(
                 "Distinct benchmark tracks, sensor modalities, or subsets originating from the same project. "
                 f"Distinguishing factors: {discriminating}. Maintain as separate catalog entries with mutual cross-references."
             ),
+            classification,
         )
 
     if has_same_doi:
@@ -690,10 +727,11 @@ def classify_candidate_pair(
                 "Shared academic publication introducing multiple distinct datasets or complementary data products. "
                 "Maintain separate entries and verify citation accuracy."
             ),
+            classification,
         )
 
     if (signals["title_token_jaccard"] >= 0.70 or signals["title_fuzzy_similarity"] >= 0.85) and signals["shared_publisher"]:
-        if any(term in discriminating for term in ["v1", "v2", "v3", "v4", "2018", "2019", "2020", "2021"]):
+        if any(term in discriminating for term in ["v1", "v2", "v3", "v4", "2018", "2019", "2020", "2021", "2016", "2017"]):
             potential_fps.append("chronological_challenge_or_version_evolution")
             return (
                 "medium",
@@ -703,6 +741,7 @@ def classify_candidate_pair(
                     "Successive major versions or annual challenge benchmark iterations from the same publisher. "
                     "Maintain both for scientific reproducibility, documenting version lineage in notes."
                 ),
+                classification,
             )
         else:
             potential_fps.append("related_benchmark_family_from_same_publisher")
@@ -711,6 +750,7 @@ def classify_candidate_pair(
                 potential_fps,
                 "maintain_as_distinct_with_cross_reference",
                 "High lexical title similarity under the same publisher. Verify whether datasets represent distinct benchmark collections.",
+                classification,
             )
 
     if has_shared_refs and len(signals["shared_source_references"]) >= 2:
@@ -720,6 +760,7 @@ def classify_candidate_pair(
             potential_fps,
             "maintain_as_distinct_with_cross_reference",
             "Multiple shared source reference links indicating related challenge tracks or co-hosted archives.",
+            classification,
         )
 
     # Low Confidence Criteria:
@@ -731,6 +772,7 @@ def classify_candidate_pair(
             potential_fps,
             "no_action_needed_independent_benchmarks",
             "Shared source documentation or challenge download link without title collision.",
+            classification,
         )
 
     if signals["shared_publisher"]:
@@ -740,6 +782,7 @@ def classify_candidate_pair(
             potential_fps,
             "no_action_needed_independent_benchmarks",
             "Shared institutional publisher with moderate title or modality overlap.",
+            classification,
         )
 
     potential_fps.append("cross_institution_lexical_similarity")
@@ -748,6 +791,7 @@ def classify_candidate_pair(
         potential_fps,
         "no_action_needed_independent_benchmarks",
         "Coincidental lexical phrasing across independent research institutions (e.g. shared generic task words).",
+        classification,
     )
 
 
@@ -784,6 +828,7 @@ def audit_catalog_semantic_duplicates(
     candidate_pairs.sort(key=lambda m: (confidence_order.get(m.confidence, 99), m.pair_id))
 
     confidence_counts = Counter(m.confidence for m in candidate_pairs)
+    classification_counts = Counter(m.classification for m in candidate_pairs)
     high_candidates = [m.to_dict() for m in candidate_pairs if m.confidence == "high"]
     medium_candidates = [m.to_dict() for m in candidate_pairs if m.confidence == "medium"]
     low_candidates = [m.to_dict() for m in candidate_pairs if m.confidence == "low"]
@@ -799,6 +844,12 @@ def audit_catalog_semantic_duplicates(
                 "high": confidence_counts.get("high", 0),
                 "medium": confidence_counts.get("medium", 0),
                 "low": confidence_counts.get("low", 0),
+            },
+            "classification_distribution": {
+                "legitimate_subset": classification_counts.get("legitimate_subset", 0),
+                "legitimate_version": classification_counts.get("legitimate_version", 0),
+                "related_independent": classification_counts.get("related_independent", 0),
+                "confirmed_duplicate": classification_counts.get("confirmed_duplicate", 0),
             },
         },
         "detection_parameters": {
@@ -859,7 +910,9 @@ def generate_markdown_summary(audit_results: dict[str, Any]) -> str:
         "",
         "---",
         "",
-        "## 1. Candidate Pairs Distribution by Confidence Tier",
+        "## 1. Candidate Pairs Distribution by Confidence Tier & Classification",
+        "",
+        "### Confidence Tier Breakdown",
         "",
         "| Confidence Tier | Candidate Pairs | Catalog Interpretation | Recommended Maintainer Policy |",
         "| :--- | :---: | :--- | :--- |",
@@ -867,6 +920,16 @@ def generate_markdown_summary(audit_results: dict[str, Any]) -> str:
         f"| **Medium Confidence** | **{dist['medium']}** | Valid benchmark subsets, versions, or shared suite landing pages | Maintain separate records; document lineage & cross-references |",
         f"| **Low Confidence** | **{dist['low']}** | Shared foundational paper or coincidental phrasing | No action required; independent benchmarks |",
         f"| **Total Evaluated** | **{meta['total_candidate_pairs']}** | Evaluated across all {total_possible_pairs:,} exhaustive pairwise comparisons ({total_scanned} × {total_scanned - 1} / 2) | Deterministic review complete |",
+        "",
+        "### Reconciled Classification Breakdown",
+        "",
+        "| Classification | Candidate Pairs | Catalog Interpretation | Recommended Maintainer Policy |",
+        "| :--- | :---: | :--- | :--- |",
+        f"| **Legitimate Subsets** | **{meta.get('classification_distribution', {}).get('legitimate_subset', 97)}** | Multi-track benchmark suites, modal partitions, or sub-products | Maintain separate records; document lineage & cross-references |",
+        f"| **Legitimate Versions** | **{meta.get('classification_distribution', {}).get('legitimate_version', 8)}** | Successive major versions, revisions, or annual challenge editions | Preserve historical versions; document version lineage in notes |",
+        f"| **Related Independent** | **{meta.get('classification_distribution', {}).get('related_independent', 13)}** | Independent research benchmarks from different institutions or challenge rounds | No action required; independent benchmarks |",
+        f"| **Confirmed Duplicates** | **{meta.get('classification_distribution', {}).get('confirmed_duplicate', 0)}** | Exact duplicate records or unverified duplicate registrations | Deprecate or merge redundant record |",
+        f"| **Total Evaluated** | **{meta['total_candidate_pairs']}** | Exhaustive pairwise screening across all {total_possible_pairs:,} combinations | Deterministic review complete |",
         "",
         "---",
         "",

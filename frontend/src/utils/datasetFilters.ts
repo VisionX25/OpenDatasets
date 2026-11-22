@@ -187,6 +187,9 @@ const BENCHMARK_TAGS = new Set([
   'benchmark-dataset',
   'gold-standard',
   'leaderboard',
+  'ogb',
+  'ogb-benchmark',
+  'ogb-lsc',
 ])
 
 export const VALID_LICENSE_STATUSES: readonly LicenseStatus[] = [
@@ -237,7 +240,7 @@ export function matchesCategory(
 
   switch (category) {
     case 'computer-vision':
-      return modalities.includes('vision')
+      return modalities.includes('vision') || modalities.includes('3d')
 
     case 'natural-language-processing':
       return modalities.includes('nlp')
@@ -256,9 +259,16 @@ export function matchesCategory(
 
     case 'evaluation-benchmarks': {
       // Documented purpose-based criteria using tags and tasks
-      const hasBenchmarkTag = tags.some((tag) =>
-        typeof tag === 'string' && BENCHMARK_TAGS.has(tag.toLowerCase()),
-      )
+      const hasBenchmarkTag = tags.some((tag) => {
+        if (typeof tag !== 'string') return false
+        const lower = tag.toLowerCase()
+        return (
+          BENCHMARK_TAGS.has(lower) ||
+          lower.endsWith('-benchmark') ||
+          lower.endsWith('-challenge') ||
+          lower.startsWith('benchmark-')
+        )
+      })
       const hasBenchmarkTask = tasks.some((task) => {
         if (typeof task !== 'string') return false
         const lower = task.toLowerCase()
