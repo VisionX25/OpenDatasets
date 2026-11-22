@@ -66,10 +66,6 @@
   },
   "sample_count": {
     "total": 590326,
-    "splits": {
-      "sentinel2_patches": 590326,
-      "corine_labels": 43
-    },
     "unit": "patches",
     "status": "verified"
   },
@@ -87,5 +83,17 @@
     ],
     "doi": "10.1109/IGARSS.2019.8900532",
     "bibtex": "@inproceedings{sumbul2019bigearthnet,\n  title={BigEarthNet: A large-scale benchmark archive for remote sensing image understanding},\n  author={Sumbul, Gencer and Charfuelan, Marcela and Demir, Beg{\\\"u}m and Markl, Volker},\n  booktitle={IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},\n  pages={5901--5904},\n  year={2019},\n  doi={10.1109/IGARSS.2019.8900532}\n}"
-  }
+  },
+  "breakdown": [
+    {
+      "label": "Sentinel-2 image patches",
+      "value": 590326,
+      "unit": "patches"
+    },
+    {
+      "label": "CORINE land cover classes",
+      "value": 43,
+      "unit": "classes"
+    }
+  ]
 }

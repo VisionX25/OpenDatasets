@@ -75,10 +75,6 @@
   },
   "sample_count": {
     "total": 95000,
-    "splits": {
-      "sequential_perception_frames": 95000,
-      "trajectory_forecasting_scenarios": 15000
-    },
     "unit": "frames",
     "status": "verified"
   },
@@ -106,5 +102,17 @@
     "data_sources": [
       "DAIR-V2X sensor vehicle and roadside infrastructure platform"
     ]
-  }
+  },
+  "breakdown": [
+    {
+      "label": "sequential perception frames",
+      "value": 95000,
+      "unit": "frames"
+    },
+    {
+      "label": "trajectory forecasting scenarios",
+      "value": 15000,
+      "unit": "scenarios"
+    }
+  ]
 }

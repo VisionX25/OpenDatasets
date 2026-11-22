@@ -296,4 +296,98 @@ describe('ComparePage component', () => {
     expect(html).toContain('aria-label="Remove CIFAR-10 from comparison"')
     expect(html).toContain('aria-label="Remove MNIST from comparison"')
   })
+
+  it('9. renders Dataset Splits and Quantitative Breakdown with units', () => {
+    const datasetWithBreakdown: DatasetMetadata = {
+      ...mockDatasetA,
+      id: 'boreas',
+      slug: 'boreas',
+      name: 'Boreas',
+      sample_count: {
+        total: 44,
+        unit: 'sequences',
+        status: 'verified',
+        splits: {
+          train: 34,
+          test: 10,
+        },
+      },
+      breakdown: [
+        {
+          label: 'total driving distance',
+          value: 350,
+          unit: 'km',
+        },
+      ],
+    }
+
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/compare?datasets=cifar-10,boreas']}>
+        <Routes>
+          <Route
+            path="/compare"
+            element={<ComparePage initialCatalog={[mockDatasetA, datasetWithBreakdown]} />}
+          />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    // Heading rows present
+    expect(html).toContain('Dataset Splits')
+    expect(html).toContain('Quantitative Breakdown')
+
+    // Units clearly visible
+    expect(html).toContain('total driving distance')
+    expect(html).toContain('350')
+    expect(html).toContain('km')
+    expect(html).toContain('sequences')
+
+    // CIFAR-10 has no breakdown, displays "None declared"
+    expect(html).toContain('None declared')
+  })
+
+  it('10. renders both root-level and sample_count breakdown items in comparison without hiding data', () => {
+    const datasetWithBoth: DatasetMetadata = {
+      ...mockDatasetA,
+      id: 'cityscapes-test',
+      slug: 'cityscapes-test',
+      name: 'Cityscapes Test',
+      sample_count: {
+        total: 25000,
+        unit: 'images',
+        status: 'verified',
+        breakdown: [
+          {
+            label: 'fine annotations',
+            value: 5000,
+            unit: 'images',
+          },
+        ],
+      },
+      breakdown: [
+        {
+          label: 'coarse annotations',
+          value: 20000,
+          unit: 'images',
+        },
+      ],
+    }
+
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/compare?datasets=cifar-10,cityscapes-test']}>
+        <Routes>
+          <Route
+            path="/compare"
+            element={<ComparePage initialCatalog={[mockDatasetA, datasetWithBoth]} />}
+          />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    expect(html).toContain('Quantitative Breakdown')
+    expect(html).toContain('fine annotations')
+    expect(html).toContain('5,000')
+    expect(html).toContain('coarse annotations')
+    expect(html).toContain('20,000')
+  })
 })

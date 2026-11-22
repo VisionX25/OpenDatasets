@@ -83,12 +83,7 @@
   "sample_count": {
     "total": 5620,
     "unit": "trajectories",
-    "status": "verified",
-    "splits": {
-      "homes": 22,
-      "environments": 216,
-      "rgbd_frames": 1500000
-    }
+    "status": "verified"
   },
   "dates": {
     "published": "2023-11-21",
@@ -115,5 +110,22 @@
     "data_sources": [
       "Original recordings by NYU Robot Learning Lab in NYC homes"
     ]
-  }
+  },
+  "breakdown": [
+    {
+      "label": "homes",
+      "value": 22,
+      "unit": "homes"
+    },
+    {
+      "label": "environments",
+      "value": 216,
+      "unit": "environments"
+    },
+    {
+      "label": "RGB-D frames",
+      "value": 1500000,
+      "unit": "frames"
+    }
+  ]
 }

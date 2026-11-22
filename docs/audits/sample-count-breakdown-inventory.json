@@ -1,0 +1,1282 @@
+{
+  "audit_metadata": {
+    "task": "Phase 1A \u2014 Sample Count Split & Breakdown Migration",
+    "dry_run": false,
+    "total_datasets_scanned": 725,
+    "pre_migration_baseline": {
+      "total_with_splits": 328,
+      "standard_partitions_count": 208,
+      "nonstandard_split_count": 120,
+      "safely_migrated_count": 56,
+      "needs_manual_review_count": 64,
+      "no_splits_count": 397
+    },
+    "post_migration_state": {
+      "total_datasets": 725,
+      "datasets_with_splits": 284,
+      "clean_standard_partitions": 220,
+      "remaining_manual_review_cases": 64,
+      "datasets_without_splits": 441,
+      "datasets_with_structured_breakdown": 54
+    },
+    "total_with_splits": 328,
+    "standard_partitions_count": 208,
+    "nonstandard_split_count": 120,
+    "safely_migrated_count": 56,
+    "needs_manual_review_count": 64,
+    "no_splits_count": 397
+  },
+  "safely_migrated": [
+    {
+      "id": "a2d2-audi-autonomous-driving",
+      "file": "a2d2-audi-autonomous-driving.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: a2d2-audi-autonomous-driving (Already safely migrated) ==="
+    },
+    {
+      "id": "aflw",
+      "file": "aflw.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: aflw (Already safely migrated) ==="
+    },
+    {
+      "id": "apolloscape",
+      "file": "apolloscape.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: apolloscape (Already safely migrated) ==="
+    },
+    {
+      "id": "behavior-1k-2026-demos",
+      "file": "behavior-1k-2026-demos.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: behavior-1k-2026-demos (Already safely migrated) ==="
+    },
+    {
+      "id": "betel-leaf-bangladesh",
+      "file": "betel-leaf-bangladesh.json",
+      "classification": "mixed_partitions_and_metrics",
+      "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
+      "diff": "=== Dataset: betel-leaf-bangladesh (Already safely migrated) ==="
+    },
+    {
+      "id": "bigearthnet",
+      "file": "bigearthnet.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: bigearthnet (Already safely migrated) ==="
+    },
+    {
+      "id": "boreas",
+      "file": "boreas.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: boreas (Already safely migrated) ==="
+    },
+    {
+      "id": "cadc-snow",
+      "file": "cadc-snow.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: cadc-snow (Already safely migrated) ==="
+    },
+    {
+      "id": "california-housing",
+      "file": "california-housing.json",
+      "classification": "redundant_total",
+      "reason": "Split key 'total' redundantly duplicates sample_count.total; removed from splits",
+      "diff": "=== Dataset: california-housing (Already safely migrated) ==="
+    },
+    {
+      "id": "cityscapes",
+      "file": "cityscapes.json",
+      "classification": "mixed_partitions_and_metrics",
+      "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
+      "diff": "=== Dataset: cityscapes (Already safely migrated) ==="
+    },
+    {
+      "id": "contactpose",
+      "file": "contactpose.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: contactpose (Already safely migrated) ==="
+    },
+    {
+      "id": "cropharvest",
+      "file": "cropharvest.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: cropharvest (Already safely migrated) ==="
+    },
+    {
+      "id": "deepweeds",
+      "file": "deepweeds.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: deepweeds (Already safely migrated) ==="
+    },
+    {
+      "id": "dex-ycb",
+      "file": "dex-ycb.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: dex-ycb (Already safely migrated) ==="
+    },
+    {
+      "id": "docvqa",
+      "file": "docvqa.json",
+      "classification": "mixed_partitions_and_metrics",
+      "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
+      "diff": "=== Dataset: docvqa (Already safely migrated) ==="
+    },
+    {
+      "id": "dsec-stereo-event",
+      "file": "dsec-stereo-event.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: dsec-stereo-event (Already safely migrated) ==="
+    },
+    {
+      "id": "dude",
+      "file": "dude.json",
+      "classification": "mixed_partitions_and_metrics",
+      "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
+      "diff": "=== Dataset: dude (Already safely migrated) ==="
+    },
+    {
+      "id": "eurosat",
+      "file": "eurosat.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: eurosat (Already safely migrated) ==="
+    },
+    {
+      "id": "furniture-bench",
+      "file": "furniture-bench.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: furniture-bench (Already safely migrated) ==="
+    },
+    {
+      "id": "graspnet-1billion",
+      "file": "graspnet-1billion.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: graspnet-1billion (Already safely migrated) ==="
+    },
+    {
+      "id": "h3d-honda",
+      "file": "h3d-honda.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: h3d-honda (Already safely migrated) ==="
+    },
+    {
+      "id": "hmdb51",
+      "file": "hmdb51.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: hmdb51 (Already safely migrated) ==="
+    },
+    {
+      "id": "homes-of-new-york-dobb-e",
+      "file": "homes-of-new-york-dobb-e.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: homes-of-new-york-dobb-e (Already safely migrated) ==="
+    },
+    {
+      "id": "iam-handwriting",
+      "file": "iam-handwriting.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: iam-handwriting (Already safely migrated) ==="
+    },
+    {
+      "id": "inaturalist-2021",
+      "file": "inaturalist-2021.json",
+      "classification": "mixed_partitions_and_metrics",
+      "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
+      "diff": "=== Dataset: inaturalist-2021 (Already safely migrated) ==="
+    },
+    {
+      "id": "infographicvqa",
+      "file": "infographicvqa.json",
+      "classification": "mixed_partitions_and_metrics",
+      "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
+      "diff": "=== Dataset: infographicvqa (Already safely migrated) ==="
+    },
+    {
+      "id": "iris",
+      "file": "iris.json",
+      "classification": "redundant_total",
+      "reason": "Split key 'total' redundantly duplicates sample_count.total; removed from splits",
+      "diff": "=== Dataset: iris (Already safely migrated) ==="
+    },
+    {
+      "id": "khatt",
+      "file": "khatt.json",
+      "classification": "mixed_partitions_and_metrics",
+      "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
+      "diff": "=== Dataset: khatt (Already safely migrated) ==="
+    },
+    {
+      "id": "kitti-360",
+      "file": "kitti-360.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: kitti-360 (Already safely migrated) ==="
+    },
+    {
+      "id": "lfw",
+      "file": "lfw.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: lfw (Already safely migrated) ==="
+    },
+    {
+      "id": "mbpp",
+      "file": "mbpp.json",
+      "classification": "mixed_partitions_and_metrics",
+      "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
+      "diff": "=== Dataset: mbpp (Already safely migrated) ==="
+    },
+    {
+      "id": "milk10k",
+      "file": "milk10k.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: milk10k (Already safely migrated) ==="
+    },
+    {
+      "id": "mimic-iii",
+      "file": "mimic-iii.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: mimic-iii (Already safely migrated) ==="
+    },
+    {
+      "id": "mimic-iv-ecg",
+      "file": "mimic-iv-ecg.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: mimic-iv-ecg (Already safely migrated) ==="
+    },
+    {
+      "id": "mimic-iv-ed",
+      "file": "mimic-iv-ed.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: mimic-iv-ed (Already safely migrated) ==="
+    },
+    {
+      "id": "mimicgen",
+      "file": "mimicgen.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: mimicgen (Already safely migrated) ==="
+    },
+    {
+      "id": "mp-docvqa",
+      "file": "mp-docvqa.json",
+      "classification": "mixed_partitions_and_metrics",
+      "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
+      "diff": "=== Dataset: mp-docvqa (Already safely migrated) ==="
+    },
+    {
+      "id": "ntu-rgbd",
+      "file": "ntu-rgbd.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: ntu-rgbd (Already safely migrated) ==="
+    },
+    {
+      "id": "oasis-3",
+      "file": "oasis-3.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: oasis-3 (Already safely migrated) ==="
+    },
+    {
+      "id": "openlane-v2",
+      "file": "openlane-v2.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: openlane-v2 (Already safely migrated) ==="
+    },
+    {
+      "id": "pandaset",
+      "file": "pandaset.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: pandaset (Already safely migrated) ==="
+    },
+    {
+      "id": "plantdoc",
+      "file": "plantdoc.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: plantdoc (Already safely migrated) ==="
+    },
+    {
+      "id": "plantvillage",
+      "file": "plantvillage.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: plantvillage (Already safely migrated) ==="
+    },
+    {
+      "id": "radiate",
+      "file": "radiate.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: radiate (Already safely migrated) ==="
+    },
+    {
+      "id": "rellis-3d",
+      "file": "rellis-3d.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: rellis-3d (Already safely migrated) ==="
+    },
+    {
+      "id": "robocasa-365",
+      "file": "robocasa-365.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: robocasa-365 (Already safely migrated) ==="
+    },
+    {
+      "id": "robomind",
+      "file": "robomind.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: robomind (Already safely migrated) ==="
+    },
+    {
+      "id": "robonet",
+      "file": "robonet.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: robonet (Already safely migrated) ==="
+    },
+    {
+      "id": "semanticposs",
+      "file": "semanticposs.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: semanticposs (Already safely migrated) ==="
+    },
+    {
+      "id": "st-petersburg-incart-arrhythmia",
+      "file": "st-petersburg-incart-arrhythmia.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: st-petersburg-incart-arrhythmia (Already safely migrated) ==="
+    },
+    {
+      "id": "total-text",
+      "file": "total-text.json",
+      "classification": "mixed_partitions_and_metrics",
+      "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
+      "diff": "=== Dataset: total-text (Already safely migrated) ==="
+    },
+    {
+      "id": "ucf101",
+      "file": "ucf101.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: ucf101 (Already safely migrated) ==="
+    },
+    {
+      "id": "v2x-seq",
+      "file": "v2x-seq.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: v2x-seq (Already safely migrated) ==="
+    },
+    {
+      "id": "waymo-open-perception",
+      "file": "waymo-open-perception.json",
+      "classification": "mixed_partitions_and_metrics",
+      "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
+      "diff": "=== Dataset: waymo-open-perception (Already safely migrated) ==="
+    },
+    {
+      "id": "xfund",
+      "file": "xfund.json",
+      "classification": "mixed_partitions_and_metrics",
+      "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
+      "diff": "=== Dataset: xfund (Already safely migrated) ==="
+    },
+    {
+      "id": "zod-zenseact",
+      "file": "zod-zenseact.json",
+      "classification": "pure_metric_in_splits",
+      "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+      "diff": "=== Dataset: zod-zenseact (Already safely migrated) ==="
+    }
+  ],
+  "needs_manual_review": [
+    {
+      "id": "ai2-arc",
+      "file": "ai2-arc.json",
+      "keys": [
+        "easy",
+        "challenge"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "aitex-fabric-image-database",
+      "file": "aitex-fabric-image-database.json",
+      "keys": [
+        "defect_free",
+        "defective"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "ava-action",
+      "file": "ava-action.json",
+      "keys": [
+        "train_clips",
+        "val_clips",
+        "test_clips"
+      ],
+      "reason": "Unit mismatch: declared total is 1.62M action labels, while splits represent 430 movie clips"
+    },
+    {
+      "id": "bangla-human-ai-text-classification",
+      "file": "bangla-human-ai-text-classification.json",
+      "keys": [
+        "human",
+        "ai_generated"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "bangla-nlp-multi-task",
+      "file": "bangla-nlp-multi-task.json",
+      "keys": [
+        "sentiment_analysis",
+        "topic_classification",
+        "hate_speech_detection"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "bangla-tense",
+      "file": "bangla-tense.json",
+      "keys": [
+        "past",
+        "present",
+        "future"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "bangladeshi-currency-recognition",
+      "file": "bangladeshi-currency-recognition.json",
+      "keys": [
+        "taka_2",
+        "taka_5",
+        "taka_10",
+        "taka_20",
+        "taka_50",
+        "taka_100",
+        "taka_200",
+        "taka_500",
+        "taka_1000"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "bangladeshi-medicinal-plant-leaves-7",
+      "file": "bangladeshi-medicinal-plant-leaves-7.json",
+      "keys": [
+        "raw_images",
+        "preprocessed_images"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "bangladigit",
+      "file": "bangladigit.json",
+      "keys": [
+        "bangladigit_20k",
+        "bangladigit_60k"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "banknote-authentication",
+      "file": "banknote-authentication.json",
+      "keys": [
+        "genuine",
+        "forged"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "bijie-landslide",
+      "file": "bijie-landslide.json",
+      "keys": [
+        "landslide",
+        "non_landslide"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "bracol-coffee-leaf",
+      "file": "bracol-coffee-leaf.json",
+      "keys": [
+        "full_leaves",
+        "symptom_patches"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "btad-beantech-anomaly-detection",
+      "file": "btad-beantech-anomaly-detection.json",
+      "keys": [
+        "train",
+        "test",
+        "train_01",
+        "test_01",
+        "train_02",
+        "test_02",
+        "train_03",
+        "test_03"
+      ],
+      "reason": "Multi-subset benchmark: splits include both aggregate train/test and per-product subsets train_01..03, test_01..03"
+    },
+    {
+      "id": "bus-bra",
+      "file": "bus-bra.json",
+      "keys": [
+        "benign",
+        "malignant"
+      ],
+      "reason": "Splits represent class label frequencies rather than train/test partitions"
+    },
+    {
+      "id": "calvin-robot-manipulation",
+      "file": "calvin-robot-manipulation.json",
+      "keys": [
+        "env_A_hours",
+        "env_B_hours",
+        "env_C_hours",
+        "env_D_hours"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "cap-sleep-database",
+      "file": "cap-sleep-database.json",
+      "keys": [
+        "normal",
+        "pathological"
+      ],
+      "reason": "Splits represent class label frequencies rather than train/test partitions"
+    },
+    {
+      "id": "dagm-2007-industrial-optical-inspection",
+      "file": "dagm-2007-industrial-optical-inspection.json",
+      "keys": [
+        "development_classes_1_to_6",
+        "competition_classes_7_to_10"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "dair-v2x",
+      "file": "dair-v2x.json",
+      "keys": [
+        "vehicle_infrastructure_pairs",
+        "infrastructure_only",
+        "vehicle_only"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "deepglobe",
+      "file": "deepglobe.json",
+      "keys": [
+        "road_tiles",
+        "building_tiles",
+        "landcover_tiles"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "docile",
+      "file": "docile.json",
+      "keys": [
+        "annotated_real",
+        "synthetic"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "droid-robot-manipulation",
+      "file": "droid-robot-manipulation.json",
+      "keys": [
+        "successful_episodes",
+        "calibrated_episodes"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "early-stage-diabetes-bangladesh",
+      "file": "early-stage-diabetes-bangladesh.json",
+      "keys": [
+        "positive",
+        "negative"
+      ],
+      "reason": "Splits represent class label frequencies rather than train/test partitions"
+    },
+    {
+      "id": "hotpotqa",
+      "file": "hotpotqa.json",
+      "keys": [
+        "train",
+        "dev_distractor",
+        "dev_fullwiki",
+        "test"
+      ],
+      "reason": "Multi-evaluation benchmark: splits include both dev_distractor and dev_fullwiki evaluation settings"
+    },
+    {
+      "id": "human-vs-ai-rewritten-bengali-text",
+      "file": "human-vs-ai-rewritten-bengali-text.json",
+      "keys": [
+        "human",
+        "ai_rewritten"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "hyperkvasir",
+      "file": "hyperkvasir.json",
+      "keys": [
+        "labeled_images",
+        "unlabeled_images",
+        "segmented_images",
+        "videos"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "isic-2018",
+      "file": "isic-2018.json",
+      "keys": [
+        "task1_train",
+        "task1_val",
+        "task1_test",
+        "task2_train",
+        "task3_train",
+        "task3_val",
+        "task3_test"
+      ],
+      "reason": "Multi-task benchmark: splits represent task1, task2, and task3 subsets with overlapping sample images"
+    },
+    {
+      "id": "ithaca365",
+      "file": "ithaca365.json",
+      "keys": [
+        "repeat_route_runs",
+        "labeled_cam_frames",
+        "labeled_lidar_frames"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "jaaltaka",
+      "file": "jaaltaka.json",
+      "keys": [
+        "genuine",
+        "counterfeit"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "kolektorsdd",
+      "file": "kolektorsdd.json",
+      "keys": [
+        "defective",
+        "non_defective"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "kvasir-capsule",
+      "file": "kvasir-capsule.json",
+      "keys": [
+        "labeled_frames",
+        "video_sequences"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "language-table",
+      "file": "language-table.json",
+      "keys": [
+        "real_robot_relabeled",
+        "simulation_human",
+        "simulation_oracle"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "libero",
+      "file": "libero.json",
+      "keys": [
+        "libero_spatial",
+        "libero_object",
+        "libero_goal",
+        "libero_10",
+        "libero_90"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "m6doc",
+      "file": "m6doc.json",
+      "keys": [
+        "textbook",
+        "test_paper",
+        "magazine",
+        "scientific_article",
+        "newspaper",
+        "note",
+        "book"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "magnetic-tile-defect-datasets",
+      "file": "magnetic-tile-defect-datasets.json",
+      "keys": [
+        "blowhole",
+        "crack",
+        "fray",
+        "break",
+        "uneven",
+        "free"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "marmot",
+      "file": "marmot.json",
+      "keys": [
+        "chinese_pages",
+        "english_pages"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "medqa-medical-exam-qa",
+      "file": "medqa-medical-exam-qa.json",
+      "keys": [
+        "usmle_english",
+        "mcmqe_simplified_chinese",
+        "twmle_traditional_chinese"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "mimic-iv-note",
+      "file": "mimic-iv-note.json",
+      "keys": [
+        "discharge",
+        "radiology"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "mobile-aloha",
+      "file": "mobile-aloha.json",
+      "keys": [
+        "wipe_wine",
+        "cook_shrimp",
+        "rinse_pan",
+        "serve_food",
+        "push_chairs",
+        "use_elevator",
+        "high_five"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "ms-coco",
+      "file": "ms-coco.json",
+      "keys": [
+        "train",
+        "validation",
+        "test"
+      ],
+      "reason": "Benchmark subset partition: splits represent 2017 detection train/val/test subset (163,957 images) of 330k raw archive"
+    },
+    {
+      "id": "mvsec-event-camera",
+      "file": "mvsec-event-camera.json",
+      "keys": [
+        "car_sequences",
+        "drone_sequences",
+        "motorcycle_sequences"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "neu-surface-defect-database",
+      "file": "neu-surface-defect-database.json",
+      "keys": [
+        "crazing",
+        "inclusion",
+        "patches",
+        "pitted_surface",
+        "rolled_in_scale",
+        "scratches"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "once-autonomous-driving",
+      "file": "once-autonomous-driving.json",
+      "keys": [
+        "annotated_frames",
+        "unlabeled_frames"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "physionet-cinc-2017-af",
+      "file": "physionet-cinc-2017-af.json",
+      "keys": [
+        "normal",
+        "af",
+        "other",
+        "noisy"
+      ],
+      "reason": "Splits represent class label frequencies rather than train/test partitions"
+    },
+    {
+      "id": "pku-market-phone",
+      "file": "pku-market-phone.json",
+      "keys": [
+        "oil_stains",
+        "scratches",
+        "spots"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "polypgen",
+      "file": "polypgen.json",
+      "keys": [
+        "positive_frames",
+        "negative_frames"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "pubmed-200k-rct",
+      "file": "pubmed-200k-rct.json",
+      "keys": [
+        "train",
+        "dev",
+        "test"
+      ],
+      "reason": "Unit/version mismatch: declared total is abstracts (195,654) while splits record sentences (237,690) from 20k subset"
+    },
+    {
+      "id": "pubmedqa",
+      "file": "pubmedqa.json",
+      "keys": [
+        "labeled",
+        "unlabeled",
+        "artificial"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "robomimic",
+      "file": "robomimic.json",
+      "keys": [
+        "proficient_human",
+        "multi_human",
+        "machine_generated",
+        "can_paired"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "roboset",
+      "file": "roboset.json",
+      "keys": [
+        "teleoperated_trajectories",
+        "kinesthetic_replay_trajectories"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "skin-disease-classification",
+      "file": "skin-disease-classification.json",
+      "keys": [
+        "sjs_ten",
+        "nail_psoriasis",
+        "vitiligo",
+        "acne",
+        "hyperpigmentation"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "soybean-leaf-pest-damage",
+      "file": "soybean-leaf-pest-damage.json",
+      "keys": [
+        "caterpillar",
+        "diabrotica_speciosa",
+        "healthy"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "sunflower-disease-dataset",
+      "file": "sunflower-disease-dataset.json",
+      "keys": [
+        "original",
+        "augmented"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "swat",
+      "file": "swat.json",
+      "keys": [
+        "normal",
+        "attack"
+      ],
+      "reason": "Splits represent class label frequencies rather than train/test partitions"
+    },
+    {
+      "id": "sweet-pumpkin-disease",
+      "file": "sweet-pumpkin-disease.json",
+      "keys": [
+        "original",
+        "augmented"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "taiwan-tomato-leaves",
+      "file": "taiwan-tomato-leaves.json",
+      "keys": [
+        "taiwan_field_original",
+        "taiwan_field_augmented",
+        "plantvillage_benchmark"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "uci-chronic-kidney-disease",
+      "file": "uci-chronic-kidney-disease.json",
+      "keys": [
+        "ckd",
+        "not_ckd"
+      ],
+      "reason": "Splits represent class label frequencies rather than train/test partitions"
+    },
+    {
+      "id": "uci-raisin-classification",
+      "file": "uci-raisin-classification.json",
+      "keys": [
+        "kecimen",
+        "besni"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "uci-rice-leaf-diseases",
+      "file": "uci-rice-leaf-diseases.json",
+      "keys": [
+        "bacterial_leaf_blight",
+        "brown_spot",
+        "leaf_smut"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "uci-seeds-wheat-kernels",
+      "file": "uci-seeds-wheat-kernels.json",
+      "keys": [
+        "kama",
+        "rosa",
+        "canadian"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "unsw-nb15",
+      "file": "unsw-nb15.json",
+      "keys": [
+        "train",
+        "test"
+      ],
+      "reason": "Benchmark subset partition: splits represent official partitioned subset (257,673 flows) of raw archive (2,540,044 flows)"
+    },
+    {
+      "id": "visa-visual-anomaly",
+      "file": "visa-visual-anomaly.json",
+      "keys": [
+        "normal",
+        "anomalous"
+      ],
+      "reason": "Splits represent class label frequencies rather than train/test partitions"
+    },
+    {
+      "id": "wadi",
+      "file": "wadi.json",
+      "keys": [
+        "normal",
+        "attack"
+      ],
+      "reason": "Splits represent class label frequencies rather than train/test partitions"
+    },
+    {
+      "id": "wavcaps",
+      "file": "wavcaps.json",
+      "keys": [
+        "freesound",
+        "audioset_strong",
+        "bbc_sound_effects",
+        "soundbible"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    },
+    {
+      "id": "wine-quality",
+      "file": "wine-quality.json",
+      "keys": [
+        "red",
+        "white"
+      ],
+      "reason": "Uncertain split semantics or class/subset distribution; requires primary source confirmation"
+    }
+  ],
+  "standard_partitions": [
+    "300-w",
+    "3cad-3c-product-anomaly-detection",
+    "acdc-cardiac",
+    "activitynet",
+    "ade20k",
+    "adult-census-income",
+    "afrisenti-semeval-2023",
+    "ag-news",
+    "agriculture-vision",
+    "aishell-1",
+    "amos22",
+    "apnea-ecg",
+    "aptos-2019-blindness-detection",
+    "arc-agi-1",
+    "argoverse-2-sensor",
+    "audiocaps",
+    "banglalekha-isolated",
+    "bc5cdr",
+    "bdd100k",
+    "bhasaanuvaad",
+    "boolq",
+    "camelyon16",
+    "camelyon17",
+    "cbis-ddsm",
+    "celeba",
+    "charades",
+    "chexpert",
+    "cholec80",
+    "cifar-10",
+    "cifar-100",
+    "clevr",
+    "clotho",
+    "cnn-dailymail",
+    "coco-text",
+    "conll-2003",
+    "cord",
+    "crowdhuman",
+    "d4la",
+    "dancetrack",
+    "davis-2017",
+    "ddad-dense-depth",
+    "deeplesion",
+    "deeppcb",
+    "desed",
+    "dior",
+    "docbank",
+    "doclaynet",
+    "dota",
+    "drive",
+    "drivingstereo",
+    "drop",
+    "e2e-nlg",
+    "echonet-dynamic",
+    "ego-exo4d",
+    "epic-kitchens-100",
+    "eyecandies",
+    "fashion-mnist",
+    "fgvc-aircraft",
+    "floodnet",
+    "fluent-speech-commands",
+    "fmow",
+    "food-101",
+    "funsd",
+    "goemotions",
+    "gsm8k",
+    "habitat-matterport-3d",
+    "hai",
+    "hellaswag",
+    "hiertext",
+    "higgs-uci",
+    "human-activity-recognition-smartphones",
+    "human-eval",
+    "human36m",
+    "humanitys-last-exam",
+    "icdar-2015",
+    "idd-driving",
+    "idrid",
+    "iiit-5k-word",
+    "imagenet-1k",
+    "imdb-reviews",
+    "inria-aerial",
+    "ip102",
+    "isaid",
+    "isic-2019",
+    "isic-2020",
+    "isic-2024-slice-3d",
+    "k-radar",
+    "kinetics-400",
+    "kits23",
+    "kitti",
+    "kleister-charity",
+    "kleister-nda",
+    "kolektorsdd2",
+    "kuzushiji-mnist",
+    "lasot",
+    "levir-cd",
+    "librispeech",
+    "livecodebench",
+    "loveda",
+    "lvis",
+    "maestro",
+    "mapillary-vistas",
+    "masakhaner2",
+    "massive",
+    "mathvista",
+    "medical-segmentation-decathlon",
+    "medmcqa",
+    "meld",
+    "mgsm",
+    "mlqa",
+    "mmlu",
+    "mmmu",
+    "mnist",
+    "monusac-2020",
+    "monuseg",
+    "mot17",
+    "mpdd-metal-parts-defect-detection",
+    "mpii-human-pose",
+    "multi-eurlex",
+    "multi3woz",
+    "mura",
+    "mvtec-3d-ad",
+    "mvtec-ad-2",
+    "mvtec-ad",
+    "mvtec-loco-ad",
+    "natural-questions",
+    "nsynth",
+    "nuimages",
+    "nuplan",
+    "nusax-senti",
+    "nuscenes",
+    "ogbg-code2",
+    "ogbg-molpcba",
+    "ogbg-moltox21",
+    "ogbg-ppa",
+    "ogbl-wikikg2",
+    "ogbn-products",
+    "ogbn-proteins",
+    "ok-vqa",
+    "open-industry",
+    "oscd",
+    "pannuke",
+    "pascal-voc",
+    "patchcamelyon",
+    "pcqm4mv2",
+    "physionet-challenge-2012",
+    "physionet-challenge-2019",
+    "plant-pathology-2020",
+    "plotqa",
+    "prostatex",
+    "pubtables-1m",
+    "quac",
+    "race",
+    "rctw-17",
+    "reben-bigearthnet-v2",
+    "refcoco",
+    "refuge-glaucoma",
+    "rsna-pneumonia-detection",
+    "rvl-cdip",
+    "scannet",
+    "scienceqa",
+    "scifact",
+    "sciq",
+    "semantic-kitti",
+    "sen12-flood",
+    "severstal-steel-defect-detection",
+    "sib-200",
+    "siim-acr-pneumothorax",
+    "slurp",
+    "snli",
+    "so2sat-lcz42",
+    "something-something-v2",
+    "sonyc-ust",
+    "spacenet-2",
+    "spacenet-6",
+    "spacenet-8",
+    "spgispeech",
+    "sportsmot",
+    "squad-2",
+    "sroie",
+    "stl-10",
+    "sun-rgbd",
+    "svhn",
+    "swe-bench",
+    "synchronized-chittagonian-speech-corpus-diale",
+    "taco-play",
+    "taco-trash",
+    "textocr",
+    "trec-question-classification",
+    "tumtraf-v2x",
+    "ultrachat-200k",
+    "verse-2020",
+    "vggsound",
+    "vindr-cxr",
+    "visdrone",
+    "vizwiz-vqa",
+    "vqa-rad",
+    "weatherbench-2",
+    "whu-building",
+    "wider-face",
+    "wikikg90mv2",
+    "wikitext-103",
+    "wildreceipt",
+    "xbd",
+    "xnli",
+    "xsum",
+    "xview1",
+    "xview3-sar"
+  ]
+}

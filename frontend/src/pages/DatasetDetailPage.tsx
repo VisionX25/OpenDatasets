@@ -22,7 +22,7 @@ import {
   Terminal,
   Download,
 } from 'lucide-react'
-import type { DatasetMetadata } from '../types/dataset'
+import { getDatasetBreakdowns, type DatasetMetadata } from '../types/dataset'
 import { getDatasetBySlug, fetchCatalog } from '../services/catalogService'
 import { copyTextToClipboard } from '../utils/clipboard'
 import {
@@ -866,28 +866,60 @@ export const DatasetDetailPage: React.FC<DatasetDetailPageProps> = ({
                 {/* Sample count */}
                 <div>
                   <span className="text-xs text-slate-500">Sample Count {dataset.sample_count?.status === 'estimated' ? '(estimated)' : ''}</span>
-                  {dataset.sample_count ? (
+                  {dataset.sample_count && dataset.sample_count.total !== undefined ? (
                     <div>
                       <p className="text-xl font-extrabold text-slate-900 dark:text-white">
-                        {dataset.sample_count.total?.toLocaleString() ?? 'Unspecified'}{' '}
+                        {dataset.sample_count.total.toLocaleString()}{' '}
                         <span className="text-xs font-normal text-slate-500">
                           {dataset.sample_count.unit || 'items'}
                         </span>
                       </p>
-                      {dataset.sample_count.splits && (
-                        <div className="mt-1 flex flex-wrap gap-2 text-xs text-slate-600 dark:text-slate-400">
-                          {Object.entries(dataset.sample_count.splits).map(([split, count]) => (
-                            <span key={split} className="bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">
-                              {split}: {count.toLocaleString()}
-                            </span>
-                          ))}
-                        </div>
-                      )}
                     </div>
                   ) : (
                     <p className="text-xs text-slate-500 italic">Unspecified</p>
                   )}
                 </div>
+
+                {/* Dataset Splits */}
+                {dataset.sample_count?.splits && Object.keys(dataset.sample_count.splits).length > 0 && (
+                  <div className="pt-3 border-t border-slate-100 dark:border-slate-800">
+                    <span className="text-xs font-semibold text-slate-500 block mb-1.5">Dataset Splits</span>
+                    <div className="flex flex-wrap gap-2 text-xs text-slate-600 dark:text-slate-400">
+                      {Object.entries(dataset.sample_count.splits).map(([split, count]) => (
+                        <span key={split} className="bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">
+                          <span className="font-medium text-slate-700 dark:text-slate-300">{`${split}:`}</span>{' '}
+                          {count !== undefined && count !== null ? (
+                            <span>{count.toLocaleString()} {dataset.sample_count?.unit ? <span className="text-2xs text-slate-500">{dataset.sample_count.unit}</span> : null}</span>
+                          ) : (
+                            <span className="italic text-slate-400">Unspecified</span>
+                          )}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Quantitative Breakdown */}
+                {(() => {
+                  const breakdowns = getDatasetBreakdowns(dataset);
+                  if (!breakdowns || breakdowns.length === 0) return null;
+                  return (
+                    <div className="pt-3 border-t border-slate-100 dark:border-slate-800">
+                      <span className="text-xs font-semibold text-slate-500 block mb-1.5">Quantitative Breakdown</span>
+                      <div className="space-y-1.5">
+                        {breakdowns.map((item, idx) => (
+                          <div key={idx} className="flex items-center justify-between text-xs px-2 py-1 rounded bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
+                            <span className="text-slate-600 dark:text-slate-400 capitalize">{item.label}</span>
+                            <span className="font-semibold text-slate-900 dark:text-white font-mono">
+                              {item.value !== undefined && item.value !== null ? item.value.toLocaleString() : 'Unspecified'}{' '}
+                              {item.unit && <span className="text-2xs font-normal text-slate-500 ml-0.5">{item.unit}</span>}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })()}
 
                 {/* Size */}
                 <div className="pt-3 border-t border-slate-100 dark:border-slate-800">

@@ -252,4 +252,145 @@ describe('DatasetDetailPage (Task 21C Dataset ID Cleanup)', () => {
     // Must not show empty state when cards are present
     expect(html).not.toContain('No sufficiently related datasets found in the catalog at this time.')
   })
+
+  it('9. renders Dataset Splits under their own heading with unit', () => {
+    const datasetWithSplits: DatasetMetadata = {
+      ...mockDataset,
+      sample_count: {
+        total: 60000,
+        unit: 'images',
+        status: 'verified',
+        splits: {
+          train: 50000,
+          test: 10000,
+        },
+      },
+    }
+
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/dataset/cifar-10']}>
+        <Routes>
+          <Route
+            path="/dataset/:slug"
+            element={<DatasetDetailPage initialDataset={datasetWithSplits} />}
+          />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    expect(html).toContain('Dataset Splits')
+    expect(html).toContain('train:')
+    expect(html).toContain('50,000')
+    expect(html).toContain('test:')
+    expect(html).toContain('10,000')
+    expect(html).toContain('images')
+  })
+
+  it('10. renders Quantitative Breakdown separately with labels, values and units', () => {
+    const datasetWithBreakdown: DatasetMetadata = {
+      ...mockDataset,
+      sample_count: {
+        total: 44,
+        unit: 'sequences',
+        status: 'verified',
+      },
+      breakdown: [
+        {
+          label: 'total driving distance',
+          value: 350,
+          unit: 'km',
+        },
+        {
+          label: 'driving sequences',
+          value: 44,
+          unit: 'sequences',
+        },
+      ],
+    }
+
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/dataset/cifar-10']}>
+        <Routes>
+          <Route
+            path="/dataset/:slug"
+            element={<DatasetDetailPage initialDataset={datasetWithBreakdown} />}
+          />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    expect(html).toContain('Quantitative Breakdown')
+    expect(html).toContain('total driving distance')
+    expect(html).toContain('350')
+    expect(html).toContain('km')
+    expect(html).toContain('driving sequences')
+    expect(html).toContain('44')
+    expect(html).toContain('sequences')
+  })
+
+  it('11. does not render missing sample count or breakdown information as zero', () => {
+    const datasetWithMissingCount: DatasetMetadata = {
+      ...mockDataset,
+      sample_count: {
+        status: 'unknown',
+      },
+    }
+
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/dataset/cifar-10']}>
+        <Routes>
+          <Route
+            path="/dataset/:slug"
+            element={<DatasetDetailPage initialDataset={datasetWithMissingCount} />}
+          />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    expect(html).toContain('Unspecified')
+    // Must not display "0 items" or "0"
+    expect(html).not.toContain('<p className="text-xl font-extrabold text-slate-900 dark:text-white">0')
+  })
+
+  it('12. renders both root-level and sample_count breakdown items without silently hiding data', () => {
+    const datasetWithBothBreakdowns: DatasetMetadata = {
+      ...mockDataset,
+      sample_count: {
+        total: 5000,
+        unit: 'images',
+        status: 'verified',
+        breakdown: [
+          {
+            label: 'fine annotations',
+            value: 5000,
+            unit: 'images',
+          },
+        ],
+      },
+      breakdown: [
+        {
+          label: 'coarse annotations',
+          value: 20000,
+          unit: 'images',
+        },
+      ],
+    }
+
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/dataset/cifar-10']}>
+        <Routes>
+          <Route
+            path="/dataset/:slug"
+            element={<DatasetDetailPage initialDataset={datasetWithBothBreakdowns} />}
+          />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    expect(html).toContain('Quantitative Breakdown')
+    expect(html).toContain('fine annotations')
+    expect(html).toContain('5,000')
+    expect(html).toContain('coarse annotations')
+    expect(html).toContain('20,000')
+  })
 })

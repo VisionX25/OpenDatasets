@@ -55,10 +55,6 @@
   },
   "sample_count": {
     "total": 425087,
-    "splits": {
-      "stays": 425087,
-      "patients": 215699
-    },
     "unit": "stays",
     "status": "verified"
   },
@@ -81,5 +77,17 @@
     ],
     "doi": "10.1097/CCE.0000000000000843",
     "bibtex": "@misc{johnson2023mimic_iv_ed,\n  title={MIMIC-IV-ED: Emergency Department Database (version 2.2)},\n  author={Johnson, Alistair EW and Pollard, Tom J and Horng, Steven and Celi, Leo Anthony and Mark, Roger G},\n  year={2023},\n  publisher={PhysioNet},\n  doi={10.13026/v99p-4334}\n}"
-  }
+  },
+  "breakdown": [
+    {
+      "label": "emergency department stays",
+      "value": 425087,
+      "unit": "stays"
+    },
+    {
+      "label": "unique patients",
+      "value": 215699,
+      "unit": "patients"
+    }
+  ]
 }

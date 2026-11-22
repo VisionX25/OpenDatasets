@@ -66,10 +66,6 @@
   },
   "sample_count": {
     "total": 27000,
-    "splits": {
-      "classes": 10,
-      "samples_per_class": 2700
-    },
     "unit": "patches",
     "status": "verified"
   },
@@ -87,5 +83,17 @@
     ],
     "doi": "10.1109/JSTARS.2019.2918242",
     "bibtex": "@article{helber2019eurosat,\n  title={EuroSAT: A novel dataset and deep learning benchmark for land use and land cover classification},\n  author={Helber, Patrick and Bischke, Benjamin and Dengel, Andreas and Borth, Damian},\n  journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},\n  volume={12},\n  number={7},\n  pages={2217--2226},\n  year={2019},\n  publisher={IEEE},\n  doi={10.1109/JSTARS.2019.2918242}\n}"
-  }
+  },
+  "breakdown": [
+    {
+      "label": "classes",
+      "value": 10,
+      "unit": "classes"
+    },
+    {
+      "label": "samples per class",
+      "value": 2700,
+      "unit": "patches"
+    }
+  ]
 }

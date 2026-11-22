@@ -376,10 +376,6 @@
     },
     "sample_count": {
       "total": 41277,
-      "splits": {
-        "semantic_segmentation": 41277,
-        "3d_bounding_boxes": 12497
-      },
       "unit": "annotated frames",
       "status": "verified"
     },
@@ -409,7 +405,19 @@
       ],
       "doi": "10.48550/arXiv.2004.06320",
       "bibtex": "@article{geyer2020a2d2,\n  title={A2D2: Audi Autonomous Driving Dataset},\n  author={Geyer, Jakob and Kassahun, Yohannes and Bambach, Mentari and Mauer, Markus and Schlicht, Peter and Wang, Xin and Walleth, Jeremy and G{\\\"u}nd{\\\"u}z, Murat and Radicke, Sven and Rong, Stefan and others},\n  journal={arXiv preprint arXiv:2004.06320},\n  year={2020},\n  doi={10.48550/arXiv.2004.06320}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "semantic segmentation frames",
+        "value": 41277,
+        "unit": "frames"
+      },
+      {
+        "label": "3D bounding box frames",
+        "value": 12497,
+        "unit": "frames"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -1076,10 +1084,6 @@
     },
     "sample_count": {
       "total": 25993,
-      "splits": {
-        "total_faces": 25993,
-        "images": 21997
-      },
       "unit": "faces",
       "status": "verified"
     },
@@ -1097,7 +1101,19 @@
       ],
       "doi": "10.1109/ICCVW.2011.6130513",
       "bibtex": "@inproceedings{kostinger2011annotated,\n  title={Annotated facial landmarks in the wild: A large-scale, real-world database for facial landmark localization},\n  author={K{\\\"o}stinger, Martin and Wohlhart, Paul and Roth, Peter M and Bischof, Horst},\n  booktitle={2011 IEEE International Conference on Computer Vision Workshops (ICCV Workshops)},\n  pages={2144--2151},\n  year={2011},\n  organization={IEEE},\n  doi={10.1109/ICCVW.2011.6130513}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "annotated faces",
+        "value": 25993,
+        "unit": "faces"
+      },
+      {
+        "label": "source images",
+        "value": 21997,
+        "unit": "images"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -2898,9 +2914,6 @@
     },
     "sample_count": {
       "total": 143906,
-      "splits": {
-        "annotated_video_frames": 143906
-      },
       "unit": "frames",
       "status": "verified"
     },
@@ -2922,7 +2935,14 @@
       ],
       "doi": "10.1109/CVPRW.2018.00143",
       "bibtex": "@inproceedings{huang2018apolloscape,\n  title={The ApolloScape dataset for autonomous driving},\n  author={Huang, Xinyu and Cheng, Xinjing and Geng, Qichuan and Cao, Binbin and Zhou, Dingfu and Wang, Pengfei and Lin, Yuanqing and Yang, Ruigang},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},\n  pages={954--960},\n  year={2018},\n  doi={10.1109/CVPRW.2018.00143}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "annotated video frames",
+        "value": 143906,
+        "unit": "frames"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -7265,10 +7285,7 @@
     "sample_count": {
       "total": 20000,
       "unit": "demonstrations",
-      "status": "verified",
-      "splits": {
-        "tasks": 100
-      }
+      "status": "verified"
     },
     "dates": {
       "published": "2026-01-15",
@@ -7301,7 +7318,14 @@
       "data_sources": [
         "Original recordings by Stanford Vision and Learning Lab for the BEHAVIOR-1K 2026 Challenge"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "tasks",
+        "value": 100,
+        "unit": "tasks"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -8260,7 +8284,6 @@
     "sample_count": {
       "total": 3589,
       "splits": {
-        "original": 1000,
         "augmented_train": 2388,
         "augmented_test": 201
       },
@@ -8284,7 +8307,14 @@
       "data_sources": [
         "Camperhat, Raipur, Lakshmipur betel leaf farms"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "original unaugmented images",
+        "value": 1000,
+        "unit": "images"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -8716,10 +8746,6 @@
     },
     "sample_count": {
       "total": 590326,
-      "splits": {
-        "sentinel2_patches": 590326,
-        "corine_labels": 43
-      },
       "unit": "patches",
       "status": "verified"
     },
@@ -8737,7 +8763,19 @@
       ],
       "doi": "10.1109/IGARSS.2019.8900532",
       "bibtex": "@inproceedings{sumbul2019bigearthnet,\n  title={BigEarthNet: A large-scale benchmark archive for remote sensing image understanding},\n  author={Sumbul, Gencer and Charfuelan, Marcela and Demir, Beg{\\\"u}m and Markl, Volker},\n  booktitle={IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},\n  pages={5901--5904},\n  year={2019},\n  doi={10.1109/IGARSS.2019.8900532}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "Sentinel-2 image patches",
+        "value": 590326,
+        "unit": "patches"
+      },
+      {
+        "label": "CORINE land cover classes",
+        "value": 43,
+        "unit": "classes"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -9793,10 +9831,6 @@
     },
     "sample_count": {
       "total": 44,
-      "splits": {
-        "driving_sequences": 44,
-        "total_driving_km": 350
-      },
       "unit": "sequences",
       "status": "verified"
     },
@@ -9817,7 +9851,19 @@
       ],
       "doi": "10.1177/02783649231160195",
       "bibtex": "@article{burnett2023boreas,\n  title={Boreas: A multi-season autonomous driving dataset with Navtech radar, Velodyne LiDAR, and FLIR cameras},\n  author={Burnett, Keenan and Yoon, David J and Wu, Yuchen and Zou, Andrew Zhihao and Zhang, Haoletian and Schoellig, Angela P and Barfoot, Timothy D},\n  journal={The International Journal of Robotics Research},\n  volume={42},\n  number={10},\n  pages={876--888},\n  year={2023},\n  publisher={SAGE Publications},\n  doi={10.1177/02783649231160202}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "driving sequences",
+        "value": 44,
+        "unit": "sequences"
+      },
+      {
+        "label": "total driving distance",
+        "value": 350,
+        "unit": "km"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -10973,10 +11019,6 @@
     },
     "sample_count": {
       "total": 75,
-      "splits": {
-        "driving_sequences": 75,
-        "annotated_frames": 7000
-      },
       "unit": "sequences",
       "status": "verified"
     },
@@ -10997,7 +11039,19 @@
       ],
       "doi": "10.1177/0278364920979368",
       "bibtex": "@article{pitropov2021canadian,\n  title={Canadian Adverse Driving Conditions Dataset with everything you need to know about snow},\n  author={Pitropov, Matthew and Garcia, Danson and Rebello, Jason and Smart, Michael and Wang, Carlos and Czarnecki, Krzysztof and Waslander, Steven},\n  journal={The International Journal of Robotics Research},\n  volume={40},\n  number={4-5},\n  pages={681--690},\n  year={2021},\n  publisher={SAGE Publications},\n  doi={10.1177/0278364920930318}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "driving sequences",
+        "value": 75,
+        "unit": "sequences"
+      },
+      {
+        "label": "annotated frames",
+        "value": 7000,
+        "unit": "frames"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -11065,9 +11119,6 @@
     },
     "sample_count": {
       "total": 20640,
-      "splits": {
-        "total": 20640
-      },
       "unit": "rows",
       "status": "verified"
     },
@@ -13466,8 +13517,7 @@
       "splits": {
         "fine_train": 2975,
         "fine_val": 500,
-        "fine_test": 1525,
-        "coarse": 20000
+        "fine_test": 1525
       },
       "unit": "images",
       "status": "verified"
@@ -13491,7 +13541,14 @@
       ],
       "doi": "10.1109/CVPR.2016.350",
       "bibtex": "@inproceedings{cordts2016cityscapes,\n  title={The Cityscapes Dataset for Semantic Urban Scene Understanding},\n  author={Cordts, Marius and Omran, Mohamed and Ramos, Sebastian and Rehfeld, Timo and Enzweiler, Markus and Benenson, Rodrigo and Franke, Uwe and Roth, Stefan and Schiele, Bernt},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={3213--3223},\n  year={2016},\n  doi={10.1109/CVPR.2016.350}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "coarsely annotated images",
+        "value": 20000,
+        "unit": "images"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -14480,11 +14537,7 @@
     "sample_count": {
       "total": 2306,
       "unit": "grasps",
-      "status": "verified",
-      "splits": {
-        "participants": 50,
-        "objects": 25
-      }
+      "status": "verified"
     },
     "dates": {
       "published": "2020-07-18",
@@ -14509,7 +14562,19 @@
       "data_sources": [
         "Original recordings at Facebook Reality Labs and Georgia Institute of Technology"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "participants",
+        "value": 50,
+        "unit": "participants"
+      },
+      {
+        "label": "objects",
+        "value": 25,
+        "unit": "objects"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -15337,10 +15402,6 @@
     },
     "sample_count": {
       "total": 93607,
-      "splits": {
-        "geographical_tiles": 2279,
-        "countries": 35
-      },
       "unit": "geographic points",
       "status": "verified"
     },
@@ -15357,7 +15418,19 @@
         "Hannah Kerner"
       ],
       "bibtex": "@inproceedings{tseng2021cropharvest,\n  title={CropHarvest: A Global Dataset for Crop-Type Classification},\n  author={Tseng, Gabriel and Zvonkov, Ivan and Nakalembe, Catherine and Kerner, Hannah},\n  booktitle={Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 2)},\n  year={2021},\n  url={https://openreview.net/forum?id=JtjzUXPEaCu}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "geographical tiles",
+        "value": 2279,
+        "unit": "tiles"
+      },
+      {
+        "label": "countries",
+        "value": 35,
+        "unit": "countries"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -17182,10 +17255,6 @@
     },
     "sample_count": {
       "total": 17509,
-      "splits": {
-        "weed_classes": 8,
-        "negative_flora": 1
-      },
       "unit": "images",
       "status": "verified"
     },
@@ -17207,7 +17276,19 @@
       ],
       "doi": "10.1038/s41598-018-38343-3",
       "bibtex": "@article{olsen2019deepweeds,\n  title={DeepWeeds: A multiclass weed species image dataset for deep learning},\n  author={Olsen, Alex and Konovalov, Dmitry A and Philippa, Bronson and Ridd, Peter and Wood, Jake C and Calvert, Jamie and Azghadi, Mostafa Rahimi and Banks, Ronald D},\n  journal={Scientific Reports},\n  volume={9},\n  number={1},\n  pages={2058},\n  year={2019},\n  publisher={Nature Publishing Group},\n  doi={10.1038/s41598-018-38343-3}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "weed classes",
+        "value": 8,
+        "unit": "classes"
+      },
+      {
+        "label": "negative flora classes",
+        "value": 1,
+        "unit": "classes"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -17456,13 +17537,7 @@
     "sample_count": {
       "total": 582000,
       "unit": "frames",
-      "status": "verified",
-      "splits": {
-        "sequences": 1000,
-        "subjects": 10,
-        "objects": 20,
-        "camera_views": 8
-      }
+      "status": "verified"
     },
     "dates": {
       "published": "2021-04-09",
@@ -17492,7 +17567,29 @@
       "data_sources": [
         "Original multi-camera captures at NVIDIA Seattle Robotics Lab"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "sequences",
+        "value": 1000,
+        "unit": "sequences"
+      },
+      {
+        "label": "subjects",
+        "value": 10,
+        "unit": "subjects"
+      },
+      {
+        "label": "objects",
+        "value": 20,
+        "unit": "objects"
+      },
+      {
+        "label": "camera views",
+        "value": 8,
+        "unit": "views"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -18058,8 +18155,7 @@
       "splits": {
         "train_questions": 39463,
         "val_questions": 5349,
-        "test_questions": 5188,
-        "documents": 12707
+        "test_questions": 5188
       },
       "unit": "questions",
       "status": "verified"
@@ -18077,7 +18173,14 @@
       ],
       "doi": "10.1109/WACV48630.2021.00225",
       "bibtex": "@inproceedings{mathew2021docvqa,\n  title={DocVQA: A dataset for VQA on document images},\n  author={Mathew, Minesh and Karatzas, Dimosthenis and Jawahar, CV},\n  booktitle={IEEE Winter Conference on Applications of Computer Vision (WACV)},\n  pages={2200--2209},\n  year={2021},\n  doi={10.1109/WACV48630.2021.00225}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "source documents",
+        "value": 12707,
+        "unit": "documents"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -18956,10 +19059,6 @@
     },
     "sample_count": {
       "total": 53,
-      "splits": {
-        "driving_sequences": 53,
-        "duration_minutes": 60
-      },
       "unit": "sequences",
       "status": "verified"
     },
@@ -18977,7 +19076,19 @@
       ],
       "doi": "10.1109/LRA.2021.3068942",
       "bibtex": "@article{gehrig2021dsec,\n  title={DSEC: A stereo event camera dataset for driving scenarios},\n  author={Gehrig, Mathias and Aarents, Willem and Gehrig, Daniel and Scaramuzza, Davide},\n  journal={IEEE Robotics and Automation Letters},\n  volume={6},\n  number={3},\n  pages={4947--4954},\n  year={2021},\n  publisher={IEEE},\n  doi={10.1109/LRA.2021.3072529}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "driving sequences",
+        "value": 53,
+        "unit": "sequences"
+      },
+      {
+        "label": "recording duration",
+        "value": 60,
+        "unit": "minutes"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -19058,11 +19169,7 @@
       "splits": {
         "train_questions": 23728,
         "val_questions": 6315,
-        "test_questions": 11448,
-        "train_documents": 3010,
-        "val_documents": 749,
-        "test_documents": 1215,
-        "total_documents": 4974
+        "test_questions": 11448
       }
     },
     "dates": {
@@ -19097,7 +19204,29 @@
       "data_sources": [
         "Public corporate financial filings, technical manuals, scientific articles, and legal documents"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "train documents",
+        "value": 3010,
+        "unit": "documents"
+      },
+      {
+        "label": "validation documents",
+        "value": 749,
+        "unit": "documents"
+      },
+      {
+        "label": "test documents",
+        "value": 1215,
+        "unit": "documents"
+      },
+      {
+        "label": "total documents",
+        "value": 4974,
+        "unit": "documents"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -21288,10 +21417,6 @@
     },
     "sample_count": {
       "total": 27000,
-      "splits": {
-        "classes": 10,
-        "samples_per_class": 2700
-      },
       "unit": "patches",
       "status": "verified"
     },
@@ -21309,7 +21434,19 @@
       ],
       "doi": "10.1109/JSTARS.2019.2918242",
       "bibtex": "@article{helber2019eurosat,\n  title={EuroSAT: A novel dataset and deep learning benchmark for land use and land cover classification},\n  author={Helber, Patrick and Bischke, Benjamin and Dengel, Andreas and Borth, Damian},\n  journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},\n  volume={12},\n  number={7},\n  pages={2217--2226},\n  year={2019},\n  publisher={IEEE},\n  doi={10.1109/JSTARS.2019.2918242}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "classes",
+        "value": 10,
+        "unit": "classes"
+      },
+      {
+        "label": "samples per class",
+        "value": 2700,
+        "unit": "patches"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -23390,10 +23527,7 @@
     "sample_count": {
       "total": 5100,
       "unit": "demonstrations",
-      "status": "verified",
-      "splits": {
-        "hours": 219
-      }
+      "status": "verified"
     },
     "dates": {
       "published": "2023-05-21",
@@ -23417,7 +23551,14 @@
       "data_sources": [
         "Original real-world recordings at CLVR Lab, KAIST"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "demonstration duration",
+        "value": 219,
+        "unit": "hours"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -24289,12 +24430,7 @@
     "sample_count": {
       "total": 97280,
       "unit": "images",
-      "status": "verified",
-      "splits": {
-        "scenes": 190,
-        "grasp_annotations": 1100000000,
-        "objects": 88
-      }
+      "status": "verified"
     },
     "dates": {
       "published": "2020-05-22",
@@ -24318,7 +24454,24 @@
       "data_sources": [
         "Original recordings at Machine Vision and Intelligence Group (MVIG), SJTU"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "scenes",
+        "value": 190,
+        "unit": "scenes"
+      },
+      {
+        "label": "grasp annotations",
+        "value": 1100000000,
+        "unit": "annotations"
+      },
+      {
+        "label": "objects",
+        "value": 88,
+        "unit": "objects"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -24769,10 +24922,6 @@
     },
     "sample_count": {
       "total": 160,
-      "splits": {
-        "crowded_scenes": 160,
-        "annotated_frames": 27721
-      },
       "unit": "scenes",
       "status": "verified"
     },
@@ -24790,7 +24939,19 @@
       ],
       "doi": "10.1109/ICRA.2019.8793914",
       "bibtex": "@inproceedings{patil2019h3d,\n  title={The H3D dataset for full-surround 3D multi-object detection and tracking in crowded urban scenes},\n  author={Patil, Abhishek and Malla, Srikanth and Gang, Haiming and Choi, Chiho},\n  booktitle={2019 International Conference on Robotics and Automation (ICRA)},\n  pages={9552--9557},\n  year={2019},\n  organization={IEEE},\n  doi={10.1109/ICRA.2019.8793914}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "crowded scenes",
+        "value": 160,
+        "unit": "scenes"
+      },
+      {
+        "label": "annotated frames",
+        "value": 27721,
+        "unit": "frames"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -25980,10 +26141,6 @@
     },
     "sample_count": {
       "total": 6766,
-      "splits": {
-        "action_classes": 51,
-        "minimum_per_class": 101
-      },
       "unit": "videos",
       "status": "verified"
     },
@@ -26002,7 +26159,19 @@
       ],
       "doi": "10.1109/ICCV.2011.6126543",
       "bibtex": "@inproceedings{kuehne2011hmdb,\n  title={HMDB: a large video database for human motion recognition},\n  author={Kuehne, Hildegard and Jhuang, Hueihan and Garrote, Est{\\'\\i}baliz and Poggio, Tomaso and Serre, Thomas},\n  booktitle={2011 International Conference on Computer Vision},\n  pages={2556--2563},\n  year={2011},\n  organization={IEEE},\n  doi={10.1109/ICCV.2011.6126543}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "action classes",
+        "value": 51,
+        "unit": "classes"
+      },
+      {
+        "label": "minimum clips per class",
+        "value": 101,
+        "unit": "videos"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -26089,12 +26258,7 @@
     "sample_count": {
       "total": 5620,
       "unit": "trajectories",
-      "status": "verified",
-      "splits": {
-        "homes": 22,
-        "environments": 216,
-        "rgbd_frames": 1500000
-      }
+      "status": "verified"
     },
     "dates": {
       "published": "2023-11-21",
@@ -26121,7 +26285,24 @@
       "data_sources": [
         "Original recordings by NYU Robot Learning Lab in NYC homes"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "homes",
+        "value": 22,
+        "unit": "homes"
+      },
+      {
+        "label": "environments",
+        "value": 216,
+        "unit": "environments"
+      },
+      {
+        "label": "RGB-D frames",
+        "value": 1500000,
+        "unit": "frames"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -27066,13 +27247,6 @@
     },
     "sample_count": {
       "total": 115320,
-      "splits": {
-        "pages": 1539,
-        "sentences": 5685,
-        "lines": 13353,
-        "words": 115320,
-        "writers": 657
-      },
       "unit": "words",
       "status": "verified"
     },
@@ -27088,7 +27262,34 @@
       ],
       "doi": "10.1007/s100320200071",
       "bibtex": "@article{marti2002iam,\n  title={The IAM-database: an English sentence database for offline handwriting recognition},\n  author={Marti, Urs-Viktor and Bunke, Horst},\n  journal={International Journal on Document Analysis and Recognition},\n  volume={5},\n  number={1},\n  pages={39--46},\n  year={2002},\n  publisher={Springer},\n  doi={10.1007/s100320200071}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "scanned pages",
+        "value": 1539,
+        "unit": "pages"
+      },
+      {
+        "label": "sentences",
+        "value": 5685,
+        "unit": "sentences"
+      },
+      {
+        "label": "text lines",
+        "value": 13353,
+        "unit": "lines"
+      },
+      {
+        "label": "words",
+        "value": 115320,
+        "unit": "words"
+      },
+      {
+        "label": "writers",
+        "value": 657,
+        "unit": "writers"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -27939,8 +28140,7 @@
       "total": 2729500,
       "splits": {
         "train": 2686843,
-        "val": 100000,
-        "species": 10000
+        "val": 100000
       },
       "unit": "images",
       "status": "verified"
@@ -27961,7 +28161,14 @@
       ],
       "doi": "10.1109/CVPR.2018.00914",
       "bibtex": "@inproceedings{vanhorn2018inaturalist,\n  title={The iNaturalist species classification and detection dataset},\n  author={Van Horn, Grant and Mac Aodha, Oisin and Song, Yang and Shepard, Alexander and Hart, Adam and Perona, Pietro and Belongie, Serge},\n  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={8769--8778},\n  year={2018},\n  doi={10.1109/CVPR.2018.00914}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "taxonomic species",
+        "value": 10000,
+        "unit": "species"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -28457,11 +28664,7 @@
       "splits": {
         "train_questions": 23946,
         "val_questions": 2801,
-        "test_questions": 3288,
-        "train_images": 4406,
-        "val_images": 500,
-        "test_images": 579,
-        "total_images": 5485
+        "test_questions": 3288
       }
     },
     "dates": {
@@ -28487,7 +28690,29 @@
       "data_sources": [
         "Public domain and web-indexed infographic image collections"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "train images",
+        "value": 4406,
+        "unit": "images"
+      },
+      {
+        "label": "validation images",
+        "value": 500,
+        "unit": "images"
+      },
+      {
+        "label": "test images",
+        "value": 579,
+        "unit": "images"
+      },
+      {
+        "label": "total images",
+        "value": 5485,
+        "unit": "images"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -29026,9 +29251,6 @@
     },
     "sample_count": {
       "total": 150,
-      "splits": {
-        "total": 150
-      },
       "unit": "rows",
       "status": "verified"
     },
@@ -30251,7 +30473,6 @@
       "unit": "pages",
       "status": "verified",
       "splits": {
-        "writers": 1000,
         "train_pages": 2800,
         "val_pages": 600,
         "test_pages": 600
@@ -30282,7 +30503,14 @@
       "data_sources": [
         "Field handwriting collections in Saudi Arabia and regional Middle Eastern universities"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "contributing writers",
+        "value": 1000,
+        "unit": "writers"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -30665,11 +30893,6 @@
     },
     "sample_count": {
       "total": 320000,
-      "splits": {
-        "driving_distance_km": 73,
-        "laser_scans": 100000,
-        "camera_images": 320000
-      },
       "unit": "images",
       "status": "verified"
     },
@@ -30686,7 +30909,24 @@
       ],
       "doi": "10.1109/TPAMI.2022.3179507",
       "bibtex": "@article{liao2022kitti,\n  title={KITTI-360: A novel dataset and benchmarks for suburban scene understanding and beyond},\n  author={Liao, Yiyi and Xie, Junqing and Geiger, Andreas},\n  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  volume={45},\n  number={3},\n  pages={3238--3253},\n  year={2022},\n  publisher={IEEE},\n  doi={10.1109/TPAMI.2022.3179507}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "driving distance",
+        "value": 73,
+        "unit": "km"
+      },
+      {
+        "label": "laser scans",
+        "value": 100000,
+        "unit": "scans"
+      },
+      {
+        "label": "camera images",
+        "value": 320000,
+        "unit": "images"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -31883,10 +32123,6 @@
     },
     "sample_count": {
       "total": 13233,
-      "splits": {
-        "unique_people": 5749,
-        "people_with_2plus_images": 1680
-      },
       "unit": "images",
       "status": "verified"
     },
@@ -31903,7 +32139,19 @@
         "Erik Learned-Miller"
       ],
       "bibtex": "@techreport{huang2007labeled,\n  title={Labeled Faces in the Wild: A Database for Studying Face Recognition in Unconstrained Environments},\n  author={Huang, Gary B. and Ramesh, Manu and Berg, Tamara and Learned-Miller, Erik},\n  institution={University of Massachusetts, Amherst},\n  number={07-49},\n  year={2007}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "unique individuals",
+        "value": 5749,
+        "unit": "people"
+      },
+      {
+        "label": "individuals with 2+ images",
+        "value": 1680,
+        "unit": "people"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -34411,8 +34659,7 @@
       "splits": {
         "train": 374,
         "validation": 90,
-        "test": 500,
-        "prompt": 10
+        "test": 500
       },
       "unit": "programming-problems",
       "status": "verified"
@@ -34444,7 +34691,14 @@
     "provenance": {
       "collection_method": "Authored by software engineers to reflect typical beginner-to-intermediate Python programming tasks.",
       "curation_notes": "Each problem verified with 3 programmatic assert statements executed in an isolated sandbox."
-    }
+    },
+    "breakdown": [
+      {
+        "label": "few-shot prompt problems",
+        "value": 10,
+        "unit": "programming-problems"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -35547,10 +35801,6 @@
     },
     "sample_count": {
       "total": 10480,
-      "splits": {
-        "lesions": 5240,
-        "images": 10480
-      },
       "unit": "images",
       "status": "verified"
     },
@@ -35577,7 +35827,19 @@
       ],
       "doi": "10.1016/j.jid.2025.06.1594",
       "bibtex": "@article{tschandl2026milk10k,\n  title={MILK10k: A Hierarchical Multimodal Imaging-Learning Toolkit for Diagnosing Pigmented and Nonpigmented Skin Cancer and its Simulators},\n  author={Tschandl, Philipp and Akay, Bengu Nisa and Rosendahl, Cliff and Rotemberg, Veronica and Todorovska, Violeta and Weber, Julia and Wolber, Ann-Kathrin and M{\\\"u}ller, Christoph and Kurtansky, Noah K and Halpern, Allan and Weninger, Wolfgang and Kittler, Harald},\n  journal={Journal of Investigative Dermatology},\n  volume={146},\n  number={2},\n  pages={357--364},\n  year={2026},\n  publisher={Elsevier}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "annotated lesions",
+        "value": 5240,
+        "unit": "lesions"
+      },
+      {
+        "label": "source images",
+        "value": 10480,
+        "unit": "images"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -35740,10 +36002,6 @@
     },
     "sample_count": {
       "total": 58976,
-      "splits": {
-        "admissions": 58976,
-        "patients": 46520
-      },
       "unit": "admissions",
       "status": "verified"
     },
@@ -35768,7 +36026,19 @@
       ],
       "doi": "10.1038/sdata.2016.35",
       "bibtex": "@article{johnson2016mimic,\n  title={MIMIC-III, a freely accessible critical care database},\n  author={Johnson, Alistair EW and Pollard, Tom J and Shen, Lu and Lehman, Li-wei H and Feng, Mengling and Ghassemi, Mohammad and Moody, Benjamin and Szolovits, Peter and Celi, Leo Anthony and Mark, Roger G},\n  journal={Scientific Data},\n  volume={3},\n  number={1},\n  pages={1--9},\n  year={2016},\n  publisher={Nature Publishing Group}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "hospital admissions",
+        "value": 58976,
+        "unit": "admissions"
+      },
+      {
+        "label": "unique patients",
+        "value": 46520,
+        "unit": "patients"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -35930,10 +36200,6 @@
     },
     "sample_count": {
       "total": 800000,
-      "splits": {
-        "recordings": 800000,
-        "patients": 161244
-      },
       "unit": "recordings",
       "status": "estimated"
     },
@@ -35952,7 +36218,19 @@
       ],
       "doi": "10.1038/s41597-023-02408-x",
       "bibtex": "@article{gow2023large,\n  title={A large-scale database of 12-lead electrocardiograms linked to clinical records},\n  author={Gow, Benjamin and Pollard, Tom J and Celi, Leo Anthony and Mark, Roger G and Horng, Steven},\n  journal={Scientific Data},\n  volume={10},\n  number={1},\n  pages={554},\n  year={2023},\n  publisher={Nature Publishing Group}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "ECG recordings",
+        "value": 800000,
+        "unit": "recordings"
+      },
+      {
+        "label": "unique patients",
+        "value": 161244,
+        "unit": "patients"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -36100,10 +36378,6 @@
     },
     "sample_count": {
       "total": 425087,
-      "splits": {
-        "stays": 425087,
-        "patients": 215699
-      },
       "unit": "stays",
       "status": "verified"
     },
@@ -36126,7 +36400,19 @@
       ],
       "doi": "10.1097/CCE.0000000000000843",
       "bibtex": "@misc{johnson2023mimic_iv_ed,\n  title={MIMIC-IV-ED: Emergency Department Database (version 2.2)},\n  author={Johnson, Alistair EW and Pollard, Tom J and Horng, Steven and Celi, Leo Anthony and Mark, Roger G},\n  year={2023},\n  publisher={PhysioNet},\n  doi={10.13026/v99p-4334}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "emergency department stays",
+        "value": 425087,
+        "unit": "stays"
+      },
+      {
+        "label": "unique patients",
+        "value": 215699,
+        "unit": "patients"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -36291,10 +36577,7 @@
     "sample_count": {
       "total": 48000,
       "unit": "demonstrations",
-      "status": "verified",
-      "splits": {
-        "tasks": 12
-      }
+      "status": "verified"
     },
     "dates": {
       "published": "2023-10-26",
@@ -36322,7 +36605,14 @@
       "data_sources": [
         "Initial human demonstration seeds from robomimic and newly collected Franka demonstrations"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "tasks",
+        "value": 12,
+        "unit": "tasks"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -38530,12 +38820,7 @@
       "splits": {
         "train_questions": 36230,
         "val_questions": 5187,
-        "test_questions": 5019,
-        "train_documents": 5131,
-        "val_documents": 927,
-        "test_documents": 959,
-        "total_documents": 5929,
-        "total_pages": 47952
+        "test_questions": 5019
       }
     },
     "dates": {
@@ -38559,7 +38844,34 @@
       "data_sources": [
         "Truth Tobacco Industry Documents archive via Single Page DocVQA"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "train documents",
+        "value": 5131,
+        "unit": "documents"
+      },
+      {
+        "label": "validation documents",
+        "value": 927,
+        "unit": "documents"
+      },
+      {
+        "label": "test documents",
+        "value": 959,
+        "unit": "documents"
+      },
+      {
+        "label": "total documents",
+        "value": 5929,
+        "unit": "documents"
+      },
+      {
+        "label": "total document pages",
+        "value": 47952,
+        "unit": "pages"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -42804,11 +43116,6 @@
     },
     "sample_count": {
       "total": 56880,
-      "splits": {
-        "action_classes": 60,
-        "subjects": 40,
-        "camera_views": 80
-      },
       "unit": "sequences",
       "status": "verified"
     },
@@ -42826,7 +43133,24 @@
       ],
       "doi": "10.1109/CVPR.2016.115",
       "bibtex": "@inproceedings{shahroudy2016ntu,\n  title={NTU RGB+D: A large scale dataset for 3D human activity analysis},\n  author={Shahroudy, Amir and Liu, Jun and Ng, Tian-Tsong and Wang, Gang},\n  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={1010--1019},\n  year={2016},\n  doi={10.1109/CVPR.2016.115}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "action classes",
+        "value": 60,
+        "unit": "classes"
+      },
+      {
+        "label": "subjects",
+        "value": 40,
+        "unit": "subjects"
+      },
+      {
+        "label": "camera views",
+        "value": 80,
+        "unit": "views"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -43464,10 +43788,6 @@
     },
     "sample_count": {
       "total": 1098,
-      "splits": {
-        "mr_sessions": 2168,
-        "pet_sessions": 1608
-      },
       "unit": "participants",
       "status": "verified"
     },
@@ -43493,7 +43813,19 @@
       ],
       "doi": "10.1101/2019.12.13.19014902",
       "bibtex": "@article{lamontagne2019oasis,\n  title={OASIS-3: Longitudinal Neuroimaging, Clinical, and Cognitive Dataset for Normal Aging and Alzheimer Disease},\n  author={LaMontagne, Pamela J and Benzinger, Tyler L and Morris, John C and Keefe, Sarah and Hornbeck, Russ and Xiong, Chengjie and Grant, Elizabeth and Hassenstab, Jason and Younce, Kristine and Raichle, Marcus E and Marcus, Daniel S},\n  journal={medRxiv},\n  pages={2019--12},\n  year={2019},\n  publisher={Cold Spring Harbor Laboratory Press}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "MR sessions",
+        "value": 2168,
+        "unit": "sessions"
+      },
+      {
+        "label": "PET sessions",
+        "value": 1608,
+        "unit": "sessions"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -45824,10 +46156,6 @@
     },
     "sample_count": {
       "total": 2000,
-      "splits": {
-        "sequences": 2000,
-        "frames": 88000
-      },
       "unit": "sequences",
       "status": "verified"
     },
@@ -45854,7 +46182,19 @@
       ],
       "doi": "10.48550/arXiv.2304.10440",
       "bibtex": "@article{wang2023openlane,\n  title={OpenLane-V2: A topology reasoning benchmark for autonomous driving},\n  author={Wang, Huijie and Li, Tianyu and Li, Yang and Chen, Li and Sima, Chonghao and Liu, Zhenbo and Wang, Bangjun and Jia, Peijin and Wang, Yuting and Jiang, Shengyin and others},\n  journal={arXiv preprint arXiv:2304.10440},\n  year={2023},\n  doi={10.48550/arXiv.2304.10440}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "driving sequences",
+        "value": 2000,
+        "unit": "sequences"
+      },
+      {
+        "label": "annotated frames",
+        "value": 88000,
+        "unit": "frames"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -46447,10 +46787,6 @@
     },
     "sample_count": {
       "total": 103,
-      "splits": {
-        "driving_scenes": 103,
-        "annotated_frames": 48000
-      },
       "unit": "scenes",
       "status": "verified"
     },
@@ -46482,7 +46818,19 @@
       "data_sources": [
         "Scale AI & Hesai Technology autonomous vehicle sensor platform"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "driving scenes",
+        "value": 103,
+        "unit": "scenes"
+      },
+      {
+        "label": "annotated frames",
+        "value": 48000,
+        "unit": "frames"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -48482,10 +48830,6 @@
     },
     "sample_count": {
       "total": 2598,
-      "splits": {
-        "bounding_boxes": 8851,
-        "classes": 27
-      },
       "unit": "images",
       "status": "verified"
     },
@@ -48505,7 +48849,19 @@
       ],
       "doi": "10.1145/3371158.3371196",
       "bibtex": "@inproceedings{singh2020plantdoc,\n  title={PlantDoc: A Dataset for Visual Plant Disease Detection},\n  author={Singh, Davinder and Jain, Naman and Jain, Pranjali and Kayal, Pratik and Kumawat, Sudhakar and Batra, Nipun},\n  booktitle={Proceedings of the 7th ACM IKDD CoDS and 25th COMAD},\n  pages={249--253},\n  year={2020},\n  doi={10.1145/3371158.3371196}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "bounding boxes",
+        "value": 8851,
+        "unit": "bounding_boxes"
+      },
+      {
+        "label": "classes",
+        "value": 27,
+        "unit": "classes"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -48654,10 +49010,6 @@
     },
     "sample_count": {
       "total": 54306,
-      "splits": {
-        "classes": 38,
-        "crop_species": 14
-      },
       "unit": "images",
       "status": "verified"
     },
@@ -48674,7 +49026,19 @@
       ],
       "doi": "10.3389/fpls.2016.01419",
       "bibtex": "@article{mohanty2016using,\n  title={Using deep learning for image-based plant disease detection},\n  author={Mohanty, Sharada P and Hughes, David P and Salath{\\'e}, Marcel},\n  journal={Frontiers in Plant Science},\n  volume={7},\n  pages={1419},\n  year={2016},\n  publisher={Frontiers},\n  doi={10.3389/fpls.2016.01419}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "classes",
+        "value": 38,
+        "unit": "classes"
+      },
+      {
+        "label": "crop species",
+        "value": 14,
+        "unit": "species"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -50196,10 +50560,6 @@
     },
     "sample_count": {
       "total": 43800,
-      "splits": {
-        "annotated_radar_frames": 43800,
-        "scenarios": 3
-      },
       "unit": "frames",
       "status": "verified"
     },
@@ -50219,7 +50579,19 @@
       ],
       "doi": "10.1109/ICRA48506.2021.9561655",
       "bibtex": "@inproceedings{sheeny2021radiate,\n  title={RADIATE: A radar dataset for automotive perception in bad weather},\n  author={Sheeny, Marcel and De Pellegrin, Emanuele and Mukherjee, Saptarshi and Ahrabian, Alireza and Wang, Sen and Wallace, Andrew},\n  booktitle={2021 IEEE International Conference on Robotics and Automation (ICRA)},\n  pages={1--7},\n  year={2021},\n  organization={IEEE},\n  doi={10.1109/ICRA48506.2021.9561655}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "annotated radar frames",
+        "value": 43800,
+        "unit": "frames"
+      },
+      {
+        "label": "driving scenarios",
+        "value": 3,
+        "unit": "scenarios"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -51094,10 +51466,6 @@
     },
     "sample_count": {
       "total": 13556,
-      "splits": {
-        "lidar_scans": 13556,
-        "annotated_images": 6235
-      },
       "unit": "scans",
       "status": "verified"
     },
@@ -51115,7 +51483,19 @@
       ],
       "doi": "10.1109/ICRA48506.2021.9561251",
       "bibtex": "@article{jiang2021rellis,\n  title={RELLIS-3D: A multi-modal dataset for off-road robot navigation},\n  author={Jiang, Peng and Osteen, Philip and Wigness, Mitch and Saripalli, Srikanth},\n  journal={IEEE Robotics and Automation Letters},\n  volume={6},\n  number={3},\n  pages={2343--2350},\n  year={2021},\n  publisher={IEEE},\n  doi={10.1109/LRA.2021.3056353}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "LiDAR scans",
+        "value": 13556,
+        "unit": "scans"
+      },
+      {
+        "label": "annotated images",
+        "value": 6235,
+        "unit": "images"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -51390,13 +51770,7 @@
     "sample_count": {
       "total": 2200,
       "unit": "hours",
-      "status": "verified",
-      "splits": {
-        "human_demonstrations_hours": 600,
-        "automated_demonstrations_hours": 1600,
-        "tasks": 365,
-        "kitchen_scenes": 2500
-      }
+      "status": "verified"
     },
     "dates": {
       "published": "2026-02-18",
@@ -51421,7 +51795,29 @@
         "RoboCasa 2024 foundational environments",
         "RoboCasa365 newly generated multi-kitchen demonstrations"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "human demonstrations duration",
+        "value": 600,
+        "unit": "hours"
+      },
+      {
+        "label": "automated demonstrations duration",
+        "value": 1600,
+        "unit": "hours"
+      },
+      {
+        "label": "tasks",
+        "value": 365,
+        "unit": "tasks"
+      },
+      {
+        "label": "kitchen scenes",
+        "value": 2500,
+        "unit": "scenes"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -51616,12 +52012,7 @@
     "sample_count": {
       "total": 107000,
       "unit": "trajectories",
-      "status": "verified",
-      "splits": {
-        "tasks": 479,
-        "object_classes": 96,
-        "embodiments": 4
-      }
+      "status": "verified"
     },
     "dates": {
       "published": "2024-12-01",
@@ -51642,7 +52033,24 @@
       "data_sources": [
         "Original recordings at Beijing Innovation Center of Humanoid Robotics"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "tasks",
+        "value": 479,
+        "unit": "tasks"
+      },
+      {
+        "label": "object classes",
+        "value": 96,
+        "unit": "classes"
+      },
+      {
+        "label": "robot embodiments",
+        "value": 4,
+        "unit": "embodiments"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -51717,10 +52125,7 @@
     "sample_count": {
       "total": 162000,
       "unit": "trajectories",
-      "status": "verified",
-      "splits": {
-        "frames": 15000000
-      }
+      "status": "verified"
     },
     "dates": {
       "published": "2019-10-24",
@@ -51749,7 +52154,14 @@
       "data_sources": [
         "Self-supervised autonomous robot collection across UC Berkeley, Penn, and Stanford labs"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "video frames",
+        "value": 15000000,
+        "unit": "frames"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -53311,10 +53723,6 @@
     },
     "sample_count": {
       "total": 2988,
-      "splits": {
-        "scans": 2988,
-        "points_millions": 100
-      },
       "unit": "scans",
       "status": "verified"
     },
@@ -53334,7 +53742,19 @@
       ],
       "doi": "10.1109/IV47402.2020.9304596",
       "bibtex": "@inproceedings{pan2020semanticposs,\n  title={SemanticPOSS: A LiDAR point cloud dataset with dynamic objects in campus scenes},\n  author={Pan, Yancheng and Gao, Biao and Shen, Jizhou and Zhu, Siting and Peng, Chensheng and Zhao, Hao},\n  booktitle={2020 IEEE Intelligent Vehicles Symposium (IV)},\n  pages={1061--1067},\n  year={2020},\n  organization={IEEE},\n  doi={10.1109/IV47402.2020.9304596}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "LiDAR scans",
+        "value": 2988,
+        "unit": "scans"
+      },
+      {
+        "label": "point cloud points",
+        "value": 100,
+        "unit": "million_points"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -56491,10 +56911,6 @@
     },
     "sample_count": {
       "total": 75,
-      "splits": {
-        "recordings": 75,
-        "patients": 32
-      },
       "unit": "recordings",
       "status": "verified"
     },
@@ -56509,7 +56925,19 @@
       ],
       "doi": "10.13026/C2V88N",
       "bibtex": "@misc{incartdb_2008,\n  title={St Petersburg INCART 12-lead Arrhythmia Database (version 1.0.0)},\n  author={{St. Petersburg Institute of Cardiological Technics}},\n  year={2008},\n  publisher={PhysioNet},\n  doi={10.13026/C2V88N}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "recordings",
+        "value": 75,
+        "unit": "recordings"
+      },
+      {
+        "label": "patients",
+        "value": 32,
+        "unit": "patients"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -58829,8 +59257,7 @@
       "total": 1555,
       "splits": {
         "train": 1255,
-        "test": 300,
-        "text_instances": 11459
+        "test": 300
       },
       "unit": "images",
       "status": "verified"
@@ -58847,7 +59274,14 @@
       ],
       "doi": "10.1109/ICDAR.2017.157",
       "bibtex": "@inproceedings{chng2017total,\n  title={Total-Text: A comprehensive dataset for scene text with arbitrary shapes},\n  author={Ch'ng, Chee-Kheng and Chan, Chee-Seng},\n  booktitle={2017 14th IAPR International Conference on Document Analysis and Recognition (ICDAR)},\n  volume={1},\n  pages={935--940},\n  year={2017},\n  organization={IEEE},\n  doi={10.1109/ICDAR.2017.157}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "annotated text instances",
+        "value": 11459,
+        "unit": "instances"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -59532,10 +59966,6 @@
     },
     "sample_count": {
       "total": 13320,
-      "splits": {
-        "action_classes": 101,
-        "video_groups": 25
-      },
       "unit": "videos",
       "status": "verified"
     },
@@ -59552,7 +59982,19 @@
       ],
       "doi": "10.48550/arXiv.1212.0402",
       "bibtex": "@article{soomro2012ucf101,\n  title={UCF101: A dataset of 101 human actions classes from videos in the wild},\n  author={Soomro, Khurram and Zamir, Amir Roshan and Shah, Mubarak},\n  journal={arXiv preprint arXiv:1212.0402},\n  year={2012}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "action classes",
+        "value": 101,
+        "unit": "classes"
+      },
+      {
+        "label": "video groups",
+        "value": 25,
+        "unit": "groups"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -61071,10 +61513,6 @@
     },
     "sample_count": {
       "total": 95000,
-      "splits": {
-        "sequential_perception_frames": 95000,
-        "trajectory_forecasting_scenarios": 15000
-      },
       "unit": "frames",
       "status": "verified"
     },
@@ -61102,7 +61540,19 @@
       "data_sources": [
         "DAIR-V2X sensor vehicle and roadside infrastructure platform"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "sequential perception frames",
+        "value": 95000,
+        "unit": "frames"
+      },
+      {
+        "label": "trajectory forecasting scenarios",
+        "value": 15000,
+        "unit": "scenarios"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -63063,8 +63513,7 @@
       "splits": {
         "core_train": 798,
         "core_val": 202,
-        "core_test": 150,
-        "expanded_total": 2030
+        "core_test": 150
       },
       "unit": "segments",
       "status": "verified"
@@ -63112,7 +63561,14 @@
       "data_sources": [
         "Waymo autonomous vehicle fleet (San Francisco, Mountain View, Phoenix)"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "expanded total segments",
+        "value": 2030,
+        "unit": "segments"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -64830,14 +65286,7 @@
       "status": "verified",
       "splits": {
         "train": 1043,
-        "test": 350,
-        "chinese": 199,
-        "japanese": 199,
-        "spanish": 199,
-        "french": 199,
-        "italian": 199,
-        "german": 199,
-        "portuguese": 199
+        "test": 350
       }
     },
     "dates": {
@@ -64866,7 +65315,44 @@
       "data_sources": [
         "Multilingual business, government, and commercial forms"
       ]
-    }
+    },
+    "breakdown": [
+      {
+        "label": "Chinese form count",
+        "value": 199,
+        "unit": "forms"
+      },
+      {
+        "label": "Japanese form count",
+        "value": 199,
+        "unit": "forms"
+      },
+      {
+        "label": "Spanish form count",
+        "value": 199,
+        "unit": "forms"
+      },
+      {
+        "label": "French form count",
+        "value": 199,
+        "unit": "forms"
+      },
+      {
+        "label": "Italian form count",
+        "value": 199,
+        "unit": "forms"
+      },
+      {
+        "label": "German form count",
+        "value": 199,
+        "unit": "forms"
+      },
+      {
+        "label": "Portuguese form count",
+        "value": 199,
+        "unit": "forms"
+      }
+    ]
   },
   {
     "schema_version": "1.0.0",
@@ -65486,11 +65972,6 @@
     },
     "sample_count": {
       "total": 100000,
-      "splits": {
-        "single_frames": 100000,
-        "sequences": 1473,
-        "drives": 29
-      },
       "unit": "frames",
       "status": "verified"
     },
@@ -65514,6 +65995,23 @@
       ],
       "doi": "10.1109/CVPR52729.2023.02102",
       "bibtex": "@inproceedings{alibeigi2023zenseact,\n  title={Zenseact Open Dataset: A large-scale and diverse multimodal dataset for autonomous driving},\n  author={Alibeigi, Mina and Ljungbergh, William and Tonderski, Adam and Hess, Georg and Lilja, Adam and Lindstr{\\\"o}m, Carl and Motorniuk, Daria and Fu, Junsheng and Widahl, Jenny and Petersson, Christoffer},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={21932--21942},\n  year={2023},\n  doi={10.1109/CVPR52729.2023.02102}\n}"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "single frames",
+        "value": 100000,
+        "unit": "frames"
+      },
+      {
+        "label": "sequences",
+        "value": 1473,
+        "unit": "sequences"
+      },
+      {
+        "label": "drives",
+        "value": 29,
+        "unit": "drives"
+      }
+    ]
   }
 ]
