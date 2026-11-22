@@ -22,7 +22,7 @@ import {
   Terminal,
   Download,
 } from 'lucide-react'
-import type { DatasetMetadata } from '../types/dataset'
+import { getDatasetBreakdowns, type DatasetMetadata } from '../types/dataset'
 import { getDatasetBySlug, fetchCatalog } from '../services/catalogService'
 import { copyTextToClipboard } from '../utils/clipboard'
 import {
@@ -901,7 +901,7 @@ export const DatasetDetailPage: React.FC<DatasetDetailPageProps> = ({
 
                 {/* Quantitative Breakdown */}
                 {(() => {
-                  const breakdowns = dataset.breakdown || dataset.sample_count?.breakdown;
+                  const breakdowns = getDatasetBreakdowns(dataset);
                   if (!breakdowns || breakdowns.length === 0) return null;
                   return (
                     <div className="pt-3 border-t border-slate-100 dark:border-slate-800">

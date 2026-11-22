@@ -3,6 +3,22 @@
     "task": "Phase 1A \u2014 Sample Count Split & Breakdown Migration",
     "dry_run": false,
     "total_datasets_scanned": 725,
+    "pre_migration_baseline": {
+      "total_with_splits": 328,
+      "standard_partitions_count": 208,
+      "nonstandard_split_count": 120,
+      "safely_migrated_count": 56,
+      "needs_manual_review_count": 64,
+      "no_splits_count": 397
+    },
+    "post_migration_state": {
+      "total_datasets": 725,
+      "datasets_with_splits": 284,
+      "clean_standard_partitions": 220,
+      "remaining_manual_review_cases": 64,
+      "datasets_without_splits": 441,
+      "datasets_with_structured_breakdown": 54
+    },
     "total_with_splits": 328,
     "standard_partitions_count": 208,
     "nonstandard_split_count": 120,
@@ -16,392 +32,392 @@
       "file": "a2d2-audi-autonomous-driving.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: a2d2-audi-autonomous-driving ===\n  + Added breakdown: 'semantic segmentation frames' = 41277 (frames)\n  + Added breakdown: '3D bounding box frames' = 12497 (frames)\n  - Removed non-partition splits: {'semantic_segmentation': 41277, '3d_bounding_boxes': 12497}"
+      "diff": "=== Dataset: a2d2-audi-autonomous-driving (Already safely migrated) ==="
     },
     {
       "id": "aflw",
       "file": "aflw.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: aflw ===\n  + Added breakdown: 'annotated faces' = 25993 (faces)\n  + Added breakdown: 'source images' = 21997 (images)\n  - Removed non-partition splits: {'total_faces': 25993, 'images': 21997}"
+      "diff": "=== Dataset: aflw (Already safely migrated) ==="
     },
     {
       "id": "apolloscape",
       "file": "apolloscape.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: apolloscape ===\n  + Added breakdown: 'annotated video frames' = 143906 (frames)\n  - Removed non-partition splits: {'annotated_video_frames': 143906}"
+      "diff": "=== Dataset: apolloscape (Already safely migrated) ==="
     },
     {
       "id": "behavior-1k-2026-demos",
       "file": "behavior-1k-2026-demos.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: behavior-1k-2026-demos ===\n  + Added breakdown: 'tasks' = 100 (tasks)\n  - Removed non-partition splits: {'tasks': 100}"
+      "diff": "=== Dataset: behavior-1k-2026-demos (Already safely migrated) ==="
     },
     {
       "id": "betel-leaf-bangladesh",
       "file": "betel-leaf-bangladesh.json",
       "classification": "mixed_partitions_and_metrics",
       "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
-      "diff": "=== Migrating dataset: betel-leaf-bangladesh ===\n  + Moved 'original' to breakdown: 'original unaugmented images' = 1000 (images)\n  \u2713 Retained clean partition splits: {'augmented_train': 2388, 'augmented_test': 201}"
+      "diff": "=== Dataset: betel-leaf-bangladesh (Already safely migrated) ==="
     },
     {
       "id": "bigearthnet",
       "file": "bigearthnet.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: bigearthnet ===\n  + Added breakdown: 'Sentinel-2 image patches' = 590326 (patches)\n  + Added breakdown: 'CORINE land cover classes' = 43 (classes)\n  - Removed non-partition splits: {'sentinel2_patches': 590326, 'corine_labels': 43}"
+      "diff": "=== Dataset: bigearthnet (Already safely migrated) ==="
     },
     {
       "id": "boreas",
       "file": "boreas.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: boreas ===\n  + Added breakdown: 'driving sequences' = 44 (sequences)\n  + Added breakdown: 'total driving distance' = 350 (km)\n  - Removed non-partition splits: {'driving_sequences': 44, 'total_driving_km': 350}"
+      "diff": "=== Dataset: boreas (Already safely migrated) ==="
     },
     {
       "id": "cadc-snow",
       "file": "cadc-snow.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: cadc-snow ===\n  + Added breakdown: 'driving sequences' = 75 (sequences)\n  + Added breakdown: 'annotated frames' = 7000 (frames)\n  - Removed non-partition splits: {'driving_sequences': 75, 'annotated_frames': 7000}"
+      "diff": "=== Dataset: cadc-snow (Already safely migrated) ==="
     },
     {
       "id": "california-housing",
       "file": "california-housing.json",
       "classification": "redundant_total",
-      "reason": "Split key 'total' redundantly duplicates sample_count.total",
-      "diff": "=== Migrating dataset: california-housing ===\n  - Removed redundant splits dictionary: {'total': 20640}"
+      "reason": "Split key 'total' redundantly duplicates sample_count.total; removed from splits",
+      "diff": "=== Dataset: california-housing (Already safely migrated) ==="
     },
     {
       "id": "cityscapes",
       "file": "cityscapes.json",
       "classification": "mixed_partitions_and_metrics",
       "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
-      "diff": "=== Migrating dataset: cityscapes ===\n  + Moved 'coarse' to breakdown: 'coarsely annotated images' = 20000 (images)\n  \u2713 Retained clean partition splits: {'fine_train': 2975, 'fine_val': 500, 'fine_test': 1525}"
+      "diff": "=== Dataset: cityscapes (Already safely migrated) ==="
     },
     {
       "id": "contactpose",
       "file": "contactpose.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: contactpose ===\n  + Added breakdown: 'participants' = 50 (participants)\n  + Added breakdown: 'objects' = 25 (objects)\n  - Removed non-partition splits: {'participants': 50, 'objects': 25}"
+      "diff": "=== Dataset: contactpose (Already safely migrated) ==="
     },
     {
       "id": "cropharvest",
       "file": "cropharvest.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: cropharvest ===\n  + Added breakdown: 'geographical tiles' = 2279 (tiles)\n  + Added breakdown: 'countries' = 35 (countries)\n  - Removed non-partition splits: {'geographical_tiles': 2279, 'countries': 35}"
+      "diff": "=== Dataset: cropharvest (Already safely migrated) ==="
     },
     {
       "id": "deepweeds",
       "file": "deepweeds.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: deepweeds ===\n  + Added breakdown: 'weed classes' = 8 (classes)\n  + Added breakdown: 'negative flora classes' = 1 (classes)\n  - Removed non-partition splits: {'weed_classes': 8, 'negative_flora': 1}"
+      "diff": "=== Dataset: deepweeds (Already safely migrated) ==="
     },
     {
       "id": "dex-ycb",
       "file": "dex-ycb.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: dex-ycb ===\n  + Added breakdown: 'sequences' = 1000 (sequences)\n  + Added breakdown: 'subjects' = 10 (subjects)\n  + Added breakdown: 'objects' = 20 (objects)\n  + Added breakdown: 'camera views' = 8 (views)\n  - Removed non-partition splits: {'sequences': 1000, 'subjects': 10, 'objects': 20, 'camera_views': 8}"
+      "diff": "=== Dataset: dex-ycb (Already safely migrated) ==="
     },
     {
       "id": "docvqa",
       "file": "docvqa.json",
       "classification": "mixed_partitions_and_metrics",
       "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
-      "diff": "=== Migrating dataset: docvqa ===\n  + Moved 'documents' to breakdown: 'source documents' = 12707 (documents)\n  \u2713 Retained clean partition splits: {'train_questions': 39463, 'val_questions': 5349, 'test_questions': 5188}"
+      "diff": "=== Dataset: docvqa (Already safely migrated) ==="
     },
     {
       "id": "dsec-stereo-event",
       "file": "dsec-stereo-event.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: dsec-stereo-event ===\n  + Added breakdown: 'driving sequences' = 53 (sequences)\n  + Added breakdown: 'recording duration' = 60 (minutes)\n  - Removed non-partition splits: {'driving_sequences': 53, 'duration_minutes': 60}"
+      "diff": "=== Dataset: dsec-stereo-event (Already safely migrated) ==="
     },
     {
       "id": "dude",
       "file": "dude.json",
       "classification": "mixed_partitions_and_metrics",
       "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
-      "diff": "=== Migrating dataset: dude ===\n  + Moved 'train_documents' to breakdown: 'train documents' = 3010 (documents)\n  + Moved 'val_documents' to breakdown: 'validation documents' = 749 (documents)\n  + Moved 'test_documents' to breakdown: 'test documents' = 1215 (documents)\n  + Moved 'total_documents' to breakdown: 'total documents' = 4974 (documents)\n  \u2713 Retained clean partition splits: {'train_questions': 23728, 'val_questions': 6315, 'test_questions': 11448}"
+      "diff": "=== Dataset: dude (Already safely migrated) ==="
     },
     {
       "id": "eurosat",
       "file": "eurosat.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: eurosat ===\n  + Added breakdown: 'classes' = 10 (classes)\n  + Added breakdown: 'samples per class' = 2700 (patches)\n  - Removed non-partition splits: {'classes': 10, 'samples_per_class': 2700}"
+      "diff": "=== Dataset: eurosat (Already safely migrated) ==="
     },
     {
       "id": "furniture-bench",
       "file": "furniture-bench.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: furniture-bench ===\n  + Added breakdown: 'demonstration duration' = 219 (hours)\n  - Removed non-partition splits: {'hours': 219}"
+      "diff": "=== Dataset: furniture-bench (Already safely migrated) ==="
     },
     {
       "id": "graspnet-1billion",
       "file": "graspnet-1billion.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: graspnet-1billion ===\n  + Added breakdown: 'scenes' = 190 (scenes)\n  + Added breakdown: 'grasp annotations' = 1100000000 (annotations)\n  + Added breakdown: 'objects' = 88 (objects)\n  - Removed non-partition splits: {'scenes': 190, 'grasp_annotations': 1100000000, 'objects': 88}"
+      "diff": "=== Dataset: graspnet-1billion (Already safely migrated) ==="
     },
     {
       "id": "h3d-honda",
       "file": "h3d-honda.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: h3d-honda ===\n  + Added breakdown: 'crowded scenes' = 160 (scenes)\n  + Added breakdown: 'annotated frames' = 27721 (frames)\n  - Removed non-partition splits: {'crowded_scenes': 160, 'annotated_frames': 27721}"
+      "diff": "=== Dataset: h3d-honda (Already safely migrated) ==="
     },
     {
       "id": "hmdb51",
       "file": "hmdb51.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: hmdb51 ===\n  + Added breakdown: 'action classes' = 51 (classes)\n  + Added breakdown: 'minimum clips per class' = 101 (videos)\n  - Removed non-partition splits: {'action_classes': 51, 'minimum_per_class': 101}"
+      "diff": "=== Dataset: hmdb51 (Already safely migrated) ==="
     },
     {
       "id": "homes-of-new-york-dobb-e",
       "file": "homes-of-new-york-dobb-e.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: homes-of-new-york-dobb-e ===\n  + Added breakdown: 'homes' = 22 (homes)\n  + Added breakdown: 'environments' = 216 (environments)\n  + Added breakdown: 'RGB-D frames' = 1500000 (frames)\n  - Removed non-partition splits: {'homes': 22, 'environments': 216, 'rgbd_frames': 1500000}"
+      "diff": "=== Dataset: homes-of-new-york-dobb-e (Already safely migrated) ==="
     },
     {
       "id": "iam-handwriting",
       "file": "iam-handwriting.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: iam-handwriting ===\n  + Added breakdown: 'scanned pages' = 1539 (pages)\n  + Added breakdown: 'sentences' = 5685 (sentences)\n  + Added breakdown: 'text lines' = 13353 (lines)\n  + Added breakdown: 'words' = 115320 (words)\n  + Added breakdown: 'writers' = 657 (writers)\n  - Removed non-partition splits: {'pages': 1539, 'sentences': 5685, 'lines': 13353, 'words': 115320, 'writers': 657}"
+      "diff": "=== Dataset: iam-handwriting (Already safely migrated) ==="
     },
     {
       "id": "inaturalist-2021",
       "file": "inaturalist-2021.json",
       "classification": "mixed_partitions_and_metrics",
       "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
-      "diff": "=== Migrating dataset: inaturalist-2021 ===\n  + Moved 'species' to breakdown: 'taxonomic species' = 10000 (species)\n  \u2713 Retained clean partition splits: {'train': 2686843, 'val': 100000}"
+      "diff": "=== Dataset: inaturalist-2021 (Already safely migrated) ==="
     },
     {
       "id": "infographicvqa",
       "file": "infographicvqa.json",
       "classification": "mixed_partitions_and_metrics",
       "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
-      "diff": "=== Migrating dataset: infographicvqa ===\n  + Moved 'train_images' to breakdown: 'train images' = 4406 (images)\n  + Moved 'val_images' to breakdown: 'validation images' = 500 (images)\n  + Moved 'test_images' to breakdown: 'test images' = 579 (images)\n  + Moved 'total_images' to breakdown: 'total images' = 5485 (images)\n  \u2713 Retained clean partition splits: {'train_questions': 23946, 'val_questions': 2801, 'test_questions': 3288}"
+      "diff": "=== Dataset: infographicvqa (Already safely migrated) ==="
     },
     {
       "id": "iris",
       "file": "iris.json",
       "classification": "redundant_total",
-      "reason": "Split key 'total' redundantly duplicates sample_count.total",
-      "diff": "=== Migrating dataset: iris ===\n  - Removed redundant splits dictionary: {'total': 150}"
+      "reason": "Split key 'total' redundantly duplicates sample_count.total; removed from splits",
+      "diff": "=== Dataset: iris (Already safely migrated) ==="
     },
     {
       "id": "khatt",
       "file": "khatt.json",
       "classification": "mixed_partitions_and_metrics",
       "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
-      "diff": "=== Migrating dataset: khatt ===\n  + Moved 'writers' to breakdown: 'contributing writers' = 1000 (writers)\n  \u2713 Retained clean partition splits: {'train_pages': 2800, 'val_pages': 600, 'test_pages': 600}"
+      "diff": "=== Dataset: khatt (Already safely migrated) ==="
     },
     {
       "id": "kitti-360",
       "file": "kitti-360.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: kitti-360 ===\n  + Added breakdown: 'driving distance' = 73 (km)\n  + Added breakdown: 'laser scans' = 100000 (scans)\n  + Added breakdown: 'camera images' = 320000 (images)\n  - Removed non-partition splits: {'driving_distance_km': 73, 'laser_scans': 100000, 'camera_images': 320000}"
+      "diff": "=== Dataset: kitti-360 (Already safely migrated) ==="
     },
     {
       "id": "lfw",
       "file": "lfw.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: lfw ===\n  + Added breakdown: 'unique individuals' = 5749 (people)\n  + Added breakdown: 'individuals with 2+ images' = 1680 (people)\n  - Removed non-partition splits: {'unique_people': 5749, 'people_with_2plus_images': 1680}"
+      "diff": "=== Dataset: lfw (Already safely migrated) ==="
     },
     {
       "id": "mbpp",
       "file": "mbpp.json",
       "classification": "mixed_partitions_and_metrics",
       "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
-      "diff": "=== Migrating dataset: mbpp ===\n  + Moved 'prompt' to breakdown: 'few-shot prompt problems' = 10 (programming-problems)\n  \u2713 Retained clean partition splits: {'train': 374, 'validation': 90, 'test': 500}"
+      "diff": "=== Dataset: mbpp (Already safely migrated) ==="
     },
     {
       "id": "milk10k",
       "file": "milk10k.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: milk10k ===\n  + Added breakdown: 'annotated lesions' = 5240 (lesions)\n  + Added breakdown: 'source images' = 10480 (images)\n  - Removed non-partition splits: {'lesions': 5240, 'images': 10480}"
+      "diff": "=== Dataset: milk10k (Already safely migrated) ==="
     },
     {
       "id": "mimic-iii",
       "file": "mimic-iii.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: mimic-iii ===\n  + Added breakdown: 'hospital admissions' = 58976 (admissions)\n  + Added breakdown: 'unique patients' = 46520 (patients)\n  - Removed non-partition splits: {'admissions': 58976, 'patients': 46520}"
+      "diff": "=== Dataset: mimic-iii (Already safely migrated) ==="
     },
     {
       "id": "mimic-iv-ecg",
       "file": "mimic-iv-ecg.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: mimic-iv-ecg ===\n  + Added breakdown: 'ECG recordings' = 800000 (recordings)\n  + Added breakdown: 'unique patients' = 161244 (patients)\n  - Removed non-partition splits: {'recordings': 800000, 'patients': 161244}"
+      "diff": "=== Dataset: mimic-iv-ecg (Already safely migrated) ==="
     },
     {
       "id": "mimic-iv-ed",
       "file": "mimic-iv-ed.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: mimic-iv-ed ===\n  + Added breakdown: 'emergency department stays' = 425087 (stays)\n  + Added breakdown: 'unique patients' = 215699 (patients)\n  - Removed non-partition splits: {'stays': 425087, 'patients': 215699}"
+      "diff": "=== Dataset: mimic-iv-ed (Already safely migrated) ==="
     },
     {
       "id": "mimicgen",
       "file": "mimicgen.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: mimicgen ===\n  + Added breakdown: 'tasks' = 12 (tasks)\n  - Removed non-partition splits: {'tasks': 12}"
+      "diff": "=== Dataset: mimicgen (Already safely migrated) ==="
     },
     {
       "id": "mp-docvqa",
       "file": "mp-docvqa.json",
       "classification": "mixed_partitions_and_metrics",
       "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
-      "diff": "=== Migrating dataset: mp-docvqa ===\n  + Moved 'train_documents' to breakdown: 'train documents' = 5131 (documents)\n  + Moved 'val_documents' to breakdown: 'validation documents' = 927 (documents)\n  + Moved 'test_documents' to breakdown: 'test documents' = 959 (documents)\n  + Moved 'total_documents' to breakdown: 'total documents' = 5929 (documents)\n  + Moved 'total_pages' to breakdown: 'total document pages' = 47952 (pages)\n  \u2713 Retained clean partition splits: {'train_questions': 36230, 'val_questions': 5187, 'test_questions': 5019}"
+      "diff": "=== Dataset: mp-docvqa (Already safely migrated) ==="
     },
     {
       "id": "ntu-rgbd",
       "file": "ntu-rgbd.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: ntu-rgbd ===\n  + Added breakdown: 'action classes' = 60 (classes)\n  + Added breakdown: 'subjects' = 40 (subjects)\n  + Added breakdown: 'camera views' = 80 (views)\n  - Removed non-partition splits: {'action_classes': 60, 'subjects': 40, 'camera_views': 80}"
+      "diff": "=== Dataset: ntu-rgbd (Already safely migrated) ==="
     },
     {
       "id": "oasis-3",
       "file": "oasis-3.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: oasis-3 ===\n  + Added breakdown: 'MR sessions' = 2168 (sessions)\n  + Added breakdown: 'PET sessions' = 1608 (sessions)\n  - Removed non-partition splits: {'mr_sessions': 2168, 'pet_sessions': 1608}"
+      "diff": "=== Dataset: oasis-3 (Already safely migrated) ==="
     },
     {
       "id": "openlane-v2",
       "file": "openlane-v2.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: openlane-v2 ===\n  + Added breakdown: 'driving sequences' = 2000 (sequences)\n  + Added breakdown: 'annotated frames' = 88000 (frames)\n  - Removed non-partition splits: {'sequences': 2000, 'frames': 88000}"
+      "diff": "=== Dataset: openlane-v2 (Already safely migrated) ==="
     },
     {
       "id": "pandaset",
       "file": "pandaset.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: pandaset ===\n  + Added breakdown: 'driving scenes' = 103 (scenes)\n  + Added breakdown: 'annotated frames' = 48000 (frames)\n  - Removed non-partition splits: {'driving_scenes': 103, 'annotated_frames': 48000}"
+      "diff": "=== Dataset: pandaset (Already safely migrated) ==="
     },
     {
       "id": "plantdoc",
       "file": "plantdoc.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: plantdoc ===\n  + Added breakdown: 'bounding boxes' = 8851 (bounding_boxes)\n  + Added breakdown: 'classes' = 27 (classes)\n  - Removed non-partition splits: {'bounding_boxes': 8851, 'classes': 27}"
+      "diff": "=== Dataset: plantdoc (Already safely migrated) ==="
     },
     {
       "id": "plantvillage",
       "file": "plantvillage.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: plantvillage ===\n  + Added breakdown: 'classes' = 38 (classes)\n  + Added breakdown: 'crop species' = 14 (species)\n  - Removed non-partition splits: {'classes': 38, 'crop_species': 14}"
+      "diff": "=== Dataset: plantvillage (Already safely migrated) ==="
     },
     {
       "id": "radiate",
       "file": "radiate.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: radiate ===\n  + Added breakdown: 'annotated radar frames' = 43800 (frames)\n  + Added breakdown: 'driving scenarios' = 3 (scenarios)\n  - Removed non-partition splits: {'annotated_radar_frames': 43800, 'scenarios': 3}"
+      "diff": "=== Dataset: radiate (Already safely migrated) ==="
     },
     {
       "id": "rellis-3d",
       "file": "rellis-3d.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: rellis-3d ===\n  + Added breakdown: 'LiDAR scans' = 13556 (scans)\n  + Added breakdown: 'annotated images' = 6235 (images)\n  - Removed non-partition splits: {'lidar_scans': 13556, 'annotated_images': 6235}"
+      "diff": "=== Dataset: rellis-3d (Already safely migrated) ==="
     },
     {
       "id": "robocasa-365",
       "file": "robocasa-365.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: robocasa-365 ===\n  + Added breakdown: 'human demonstrations duration' = 600 (hours)\n  + Added breakdown: 'automated demonstrations duration' = 1600 (hours)\n  + Added breakdown: 'tasks' = 365 (tasks)\n  + Added breakdown: 'kitchen scenes' = 2500 (scenes)\n  - Removed non-partition splits: {'human_demonstrations_hours': 600, 'automated_demonstrations_hours': 1600, 'tasks': 365, 'kitchen_scenes': 2500}"
+      "diff": "=== Dataset: robocasa-365 (Already safely migrated) ==="
     },
     {
       "id": "robomind",
       "file": "robomind.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: robomind ===\n  + Added breakdown: 'tasks' = 479 (tasks)\n  + Added breakdown: 'object classes' = 96 (classes)\n  + Added breakdown: 'robot embodiments' = 4 (embodiments)\n  - Removed non-partition splits: {'tasks': 479, 'object_classes': 96, 'embodiments': 4}"
+      "diff": "=== Dataset: robomind (Already safely migrated) ==="
     },
     {
       "id": "robonet",
       "file": "robonet.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: robonet ===\n  + Added breakdown: 'video frames' = 15000000 (frames)\n  - Removed non-partition splits: {'frames': 15000000}"
+      "diff": "=== Dataset: robonet (Already safely migrated) ==="
     },
     {
       "id": "semanticposs",
       "file": "semanticposs.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: semanticposs ===\n  + Added breakdown: 'LiDAR scans' = 2988 (scans)\n  + Added breakdown: 'point cloud points' = 100 (million_points)\n  - Removed non-partition splits: {'scans': 2988, 'points_millions': 100}"
+      "diff": "=== Dataset: semanticposs (Already safely migrated) ==="
     },
     {
       "id": "st-petersburg-incart-arrhythmia",
       "file": "st-petersburg-incart-arrhythmia.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: st-petersburg-incart-arrhythmia ===\n  + Added breakdown: 'recordings' = 75 (recordings)\n  + Added breakdown: 'patients' = 32 (patients)\n  - Removed non-partition splits: {'recordings': 75, 'patients': 32}"
+      "diff": "=== Dataset: st-petersburg-incart-arrhythmia (Already safely migrated) ==="
     },
     {
       "id": "total-text",
       "file": "total-text.json",
       "classification": "mixed_partitions_and_metrics",
       "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
-      "diff": "=== Migrating dataset: total-text ===\n  + Moved 'text_instances' to breakdown: 'annotated text instances' = 11459 (instances)\n  \u2713 Retained clean partition splits: {'train': 1255, 'test': 300}"
+      "diff": "=== Dataset: total-text (Already safely migrated) ==="
     },
     {
       "id": "ucf101",
       "file": "ucf101.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: ucf101 ===\n  + Added breakdown: 'action classes' = 101 (classes)\n  + Added breakdown: 'video groups' = 25 (groups)\n  - Removed non-partition splits: {'action_classes': 101, 'video_groups': 25}"
+      "diff": "=== Dataset: ucf101 (Already safely migrated) ==="
     },
     {
       "id": "v2x-seq",
       "file": "v2x-seq.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: v2x-seq ===\n  + Added breakdown: 'sequential perception frames' = 95000 (frames)\n  + Added breakdown: 'trajectory forecasting scenarios' = 15000 (scenarios)\n  - Removed non-partition splits: {'sequential_perception_frames': 95000, 'trajectory_forecasting_scenarios': 15000}"
+      "diff": "=== Dataset: v2x-seq (Already safely migrated) ==="
     },
     {
       "id": "waymo-open-perception",
       "file": "waymo-open-perception.json",
       "classification": "mixed_partitions_and_metrics",
       "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
-      "diff": "=== Migrating dataset: waymo-open-perception ===\n  + Moved 'expanded_total' to breakdown: 'expanded total segments' = 2030 (segments)\n  \u2713 Retained clean partition splits: {'core_train': 798, 'core_val': 202, 'core_test': 150}"
+      "diff": "=== Dataset: waymo-open-perception (Already safely migrated) ==="
     },
     {
       "id": "xfund",
       "file": "xfund.json",
       "classification": "mixed_partitions_and_metrics",
       "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
-      "diff": "=== Migrating dataset: xfund ===\n  + Moved 'chinese' to breakdown: 'Chinese form count' = 199 (forms)\n  + Moved 'japanese' to breakdown: 'Japanese form count' = 199 (forms)\n  + Moved 'spanish' to breakdown: 'Spanish form count' = 199 (forms)\n  + Moved 'french' to breakdown: 'French form count' = 199 (forms)\n  + Moved 'italian' to breakdown: 'Italian form count' = 199 (forms)\n  + Moved 'german' to breakdown: 'German form count' = 199 (forms)\n  + Moved 'portuguese' to breakdown: 'Portuguese form count' = 199 (forms)\n  \u2713 Retained clean partition splits: {'train': 1043, 'test': 350}"
+      "diff": "=== Dataset: xfund (Already safely migrated) ==="
     },
     {
       "id": "zod-zenseact",
       "file": "zod-zenseact.json",
       "classification": "pure_metric_in_splits",
       "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
-      "diff": "=== Migrating dataset: zod-zenseact ===\n  + Added breakdown: 'single frames' = 100000 (frames)\n  + Added breakdown: 'sequences' = 1473 (sequences)\n  + Added breakdown: 'drives' = 29 (drives)\n  - Removed non-partition splits: {'single_frames': 100000, 'sequences': 1473, 'drives': 29}"
+      "diff": "=== Dataset: zod-zenseact (Already safely migrated) ==="
     }
   ],
   "needs_manual_review": [

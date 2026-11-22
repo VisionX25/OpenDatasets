@@ -279,6 +279,16 @@
           "type": "string",
           "enum": ["verified", "estimated", "unknown"]
         },
+        "partition_completeness": {
+          "type": "string",
+          "enum": ["complete", "partial", "unspecified"],
+          "description": "Indicates whether declared partition splits cover the entire dataset ('complete'), a released/annotated subset ('partial'), or unspecified ('unspecified')."
+        },
+        "partition_overlap": {
+          "type": "string",
+          "enum": ["disjoint", "overlapping", "unspecified"],
+          "description": "Indicates whether declared partition splits are mutually exclusive ('disjoint'), share overlapping items across tasks/subsets ('overlapping'), or unspecified ('unspecified')."
+        },
         "breakdown": {
           "type": "array",
           "description": "Structured quantitative breakdowns, sub-counts, or scientific measurements other than standard partition splits.",

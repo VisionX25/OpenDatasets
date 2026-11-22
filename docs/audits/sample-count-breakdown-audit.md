@@ -35,7 +35,7 @@ The following datasets contained non-partition physical measurements, secondary 
 | `bigearthnet` | `pure_metric_in_splits` | Splits represent physical/sensor metrics or entity counts; migrated to breakdown |
 | `boreas` | `pure_metric_in_splits` | Splits represent physical/sensor metrics or entity counts; migrated to breakdown |
 | `cadc-snow` | `pure_metric_in_splits` | Splits represent physical/sensor metrics or entity counts; migrated to breakdown |
-| `california-housing` | `redundant_total` | Split key 'total' redundantly duplicates sample_count.total |
+| `california-housing` | `redundant_total` | Split key 'total' redundantly duplicates sample_count.total; removed from splits |
 | `cityscapes` | `mixed_partitions_and_metrics` | Separated non-partition metrics to breakdown while preserving true partitions in splits |
 | `contactpose` | `pure_metric_in_splits` | Splits represent physical/sensor metrics or entity counts; migrated to breakdown |
 | `cropharvest` | `pure_metric_in_splits` | Splits represent physical/sensor metrics or entity counts; migrated to breakdown |
@@ -53,7 +53,7 @@ The following datasets contained non-partition physical measurements, secondary 
 | `iam-handwriting` | `pure_metric_in_splits` | Splits represent physical/sensor metrics or entity counts; migrated to breakdown |
 | `inaturalist-2021` | `mixed_partitions_and_metrics` | Separated non-partition metrics to breakdown while preserving true partitions in splits |
 | `infographicvqa` | `mixed_partitions_and_metrics` | Separated non-partition metrics to breakdown while preserving true partitions in splits |
-| `iris` | `redundant_total` | Split key 'total' redundantly duplicates sample_count.total |
+| `iris` | `redundant_total` | Split key 'total' redundantly duplicates sample_count.total; removed from splits |
 | `khatt` | `mixed_partitions_and_metrics` | Separated non-partition metrics to breakdown while preserving true partitions in splits |
 | `kitti-360` | `pure_metric_in_splits` | Splits represent physical/sensor metrics or entity counts; migrated to breakdown |
 | `lfw` | `pure_metric_in_splits` | Splits represent physical/sensor metrics or entity counts; migrated to breakdown |
@@ -156,6 +156,21 @@ In accordance with Phase 1A guidelines, fields whose partition semantics cannot 
 | `wadi` | `normal`, `attack` | Splits represent class label frequencies rather than train/test partitions |
 | `wavcaps` | `freesound`, `audioset_strong`, `bbc_sound_effects`, `soundbible` | Uncertain split semantics or class/subset distribution; requires primary source confirmation |
 | `wine-quality` | `red`, `white` | Uncertain split semantics or class/subset distribution; requires primary source confirmation |
+
+---
+
+## 4. Current Post-Migration State & Reconciliation
+
+The following census distinguishes historical pre-migration findings from the current active catalog state after safe migration:
+
+| Catalog Dimension | Pre-Migration Baseline | Changes Applied | Current Post-Migration State |
+| :--- | :--- | :--- | :--- |
+| **Total Datasets Scanned** | 725 | 0 (no records created/deleted) | **725** |
+| **Datasets with Splits Field** | 328 | -44 (splits removed from pure/redundant) | **284** |
+| • Clean Standard Partitions | 208 | +12 (clean partitions retained from mixed) | **220** |
+| • Remaining Unresolved Cases | 64 | 0 (preserved unchanged for manual review) | **64** |
+| **Datasets without Splits** | 397 | +44 (non-partition/redundant splits removed) | **441** |
+| **Datasets with Structured Breakdown** | 0 | +54 (migrated to structured breakdown) | **54** |
 
 ---
 

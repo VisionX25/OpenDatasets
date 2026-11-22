@@ -336,6 +336,24 @@ def classify_dataset_splits(dataset: dict[str, Any]) -> dict[str, Any]:
 
     splits = sc.get("splits")
     if not splits or not isinstance(splits, dict):
+        if did in SAFE_PURE_METRIC_MIGRATIONS:
+            return {
+                "id": did,
+                "status": "APPLIED_PURE_METRIC",
+                "has_splits": False,
+                "classification": "pure_metric_in_splits",
+                "action": "ALREADY_MIGRATED",
+                "reason": "Splits represent physical/sensor metrics or entity counts; migrated to breakdown",
+            }
+        if did in REDUNDANT_TOTAL_DATASETS:
+            return {
+                "id": did,
+                "status": "APPLIED_REDUNDANT_TOTAL",
+                "has_splits": False,
+                "classification": "redundant_total",
+                "action": "ALREADY_MIGRATED",
+                "reason": "Split key 'total' redundantly duplicates sample_count.total; removed from splits",
+            }
         return {
             "id": did,
             "status": "NO_SPLITS",
@@ -379,6 +397,9 @@ def classify_dataset_splits(dataset: dict[str, Any]) -> dict[str, Any]:
 
     # Check for safe mixed migration
     if did in SAFE_MIXED_METRIC_MIGRATIONS:
+        metric_keys = {key for key, _, _ in SAFE_MIXED_METRIC_MIGRATIONS[did]}
+        has_unmigrated_metric = bool(set(keys) & metric_keys)
+        action = "SAFE_MIGRATE" if has_unmigrated_metric else "ALREADY_MIGRATED"
         return {
             "id": did,
             "status": "MIXED_PARTITIONS_AND_METRICS",
@@ -387,7 +408,7 @@ def classify_dataset_splits(dataset: dict[str, Any]) -> dict[str, Any]:
             "partition_keys": partition_keys,
             "non_partition_keys": non_partition_keys,
             "classification": "mixed_partitions_and_metrics",
-            "action": "SAFE_MIGRATE",
+            "action": action,
             "reason": "Separated non-partition metrics to breakdown while preserving true partitions in splits",
         }
 
@@ -467,6 +488,13 @@ def migrate_dataset_record(dataset: dict[str, Any]) -> tuple[dict[str, Any], boo
     # Case 2: Pure non-partition metrics
     if did in SAFE_PURE_METRIC_MIGRATIONS:
         metric_specs = SAFE_PURE_METRIC_MIGRATIONS[did]
+        migrated_keys = {key for key, _, _ in metric_specs}
+        unhandled_keys = set(splits.keys()) - migrated_keys
+        if unhandled_keys:
+            raise ValueError(
+                f"[{did}] Cannot safely migrate pure metrics: unrecognized split keys would be discarded: {unhandled_keys}"
+            )
+
         breakdown_items = []
         for key, label, unit in metric_specs:
             if key in splits:
@@ -477,8 +505,15 @@ def migrate_dataset_record(dataset: dict[str, Any]) -> tuple[dict[str, Any], boo
                 breakdown_items.append(item)
                 diff_lines.append(f"  + Added breakdown: '{label}' = {val} ({unit})")
 
-        # Set breakdown on root of dataset (and remove splits)
-        updated["breakdown"] = breakdown_items
+        # Preserve any existing breakdown items without overwriting
+        existing_breakdown = list(updated.get("breakdown", []))
+        existing_labels = {b.get("label") for b in existing_breakdown if isinstance(b, dict)}
+        for item in breakdown_items:
+            if item["label"] not in existing_labels:
+                existing_breakdown.append(item)
+                existing_labels.add(item["label"])
+
+        updated["breakdown"] = existing_breakdown
         diff_lines.append(f"  - Removed non-partition splits: {splits}")
         del sc["splits"]
         return updated, True, "\n".join(diff_lines)
@@ -486,7 +521,8 @@ def migrate_dataset_record(dataset: dict[str, Any]) -> tuple[dict[str, Any], boo
     # Case 3: Mixed partitions and metrics
     if did in SAFE_MIXED_METRIC_MIGRATIONS:
         metric_specs = SAFE_MIXED_METRIC_MIGRATIONS[did]
-        breakdown_items = updated.get("breakdown", [])
+        existing_breakdown = list(updated.get("breakdown", []))
+        existing_labels = {b.get("label") for b in existing_breakdown if isinstance(b, dict)}
         keys_to_remove = []
 
         for key, label, unit in metric_specs:
@@ -495,14 +531,16 @@ def migrate_dataset_record(dataset: dict[str, Any]) -> tuple[dict[str, Any], boo
                 item = {"label": label, "value": val}
                 if unit:
                     item["unit"] = unit
-                breakdown_items.append(item)
+                if label not in existing_labels:
+                    existing_breakdown.append(item)
+                    existing_labels.add(label)
                 keys_to_remove.append(key)
                 diff_lines.append(f"  + Moved '{key}' to breakdown: '{label}' = {val} ({unit})")
 
         for k in keys_to_remove:
             del splits[k]
 
-        updated["breakdown"] = breakdown_items
+        updated["breakdown"] = existing_breakdown
         diff_lines.append(f"  ✓ Retained clean partition splits: {splits}")
         return updated, True, "\n".join(diff_lines)
 
@@ -537,16 +575,22 @@ def run_migration_audit(
         action = classification["action"]
         did = classification["id"]
 
-        if action == "SAFE_MIGRATE":
-            migrated_data, modified, diff_text = migrate_dataset_record(data)
+        if action in ("SAFE_MIGRATE", "ALREADY_MIGRATED"):
+            if action == "SAFE_MIGRATE":
+                migrated_data, modified, diff_text = migrate_dataset_record(data)
+                diff_msg = diff_text
+            else:
+                modified = False
+                diff_msg = f"=== Dataset: {did} (Already safely migrated) ==="
+
             safely_migrated.append({
                 "id": did,
                 "file": file_path.name,
                 "classification": classification["classification"],
                 "reason": classification["reason"],
-                "diff": diff_text,
+                "diff": diff_msg,
             })
-            diff_summaries.append(diff_text)
+            diff_summaries.append(diff_msg)
 
             if not dry_run and modified:
                 with open(file_path, "w", encoding="utf-8") as f:
@@ -567,11 +611,37 @@ def run_migration_audit(
 
     nonstandard_split_count = len(safely_migrated) + len(needs_manual_review)
 
+    # Compute current post-migration reconciliation metrics
+    # 42 pure metrics + 2 redundant totals = 44 had splits removed.
+    # 12 mixed datasets retained clean partition splits.
+    # 64 manual review candidates retained existing splits.
+    post_clean_partitions_count = len(standard_partitions) + len(SAFE_MIXED_METRIC_MIGRATIONS)
+    post_unresolved_reviews_count = len(needs_manual_review)
+    post_datasets_with_splits = post_clean_partitions_count + post_unresolved_reviews_count
+    post_datasets_with_breakdown = len(SAFE_PURE_METRIC_MIGRATIONS) + len(SAFE_MIXED_METRIC_MIGRATIONS)
+    post_datasets_without_splits = scanned_count - post_datasets_with_splits
+
     summary_data = {
         "audit_metadata": {
             "task": "Phase 1A — Sample Count Split & Breakdown Migration",
             "dry_run": dry_run,
             "total_datasets_scanned": scanned_count,
+            "pre_migration_baseline": {
+                "total_with_splits": len(standard_partitions) + nonstandard_split_count,
+                "standard_partitions_count": len(standard_partitions),
+                "nonstandard_split_count": nonstandard_split_count,
+                "safely_migrated_count": len(safely_migrated),
+                "needs_manual_review_count": len(needs_manual_review),
+                "no_splits_count": len(no_splits),
+            },
+            "post_migration_state": {
+                "total_datasets": scanned_count,
+                "datasets_with_splits": post_datasets_with_splits,
+                "clean_standard_partitions": post_clean_partitions_count,
+                "remaining_manual_review_cases": post_unresolved_reviews_count,
+                "datasets_without_splits": post_datasets_without_splits,
+                "datasets_with_structured_breakdown": post_datasets_with_breakdown,
+            },
             "total_with_splits": len(standard_partitions) + nonstandard_split_count,
             "standard_partitions_count": len(standard_partitions),
             "nonstandard_split_count": nonstandard_split_count,
@@ -656,6 +726,26 @@ def generate_markdown_report(summary: dict[str, Any]) -> str:
     for item in reviews:
         keys_str = ", ".join(f"`{k}`" for k in item["keys"])
         lines.append(f"| `{item['id']}` | {keys_str} | {item['reason']} |")
+
+    post = meta.get("post_migration_state", {})
+    if post:
+        lines.extend([
+            "",
+            "---",
+            "",
+            "## 4. Current Post-Migration State & Reconciliation",
+            "",
+            "The following census distinguishes historical pre-migration findings from the current active catalog state after safe migration:",
+            "",
+            "| Catalog Dimension | Pre-Migration Baseline | Changes Applied | Current Post-Migration State |",
+            "| :--- | :--- | :--- | :--- |",
+            f"| **Total Datasets Scanned** | {meta['total_datasets_scanned']} | 0 (no records created/deleted) | **{post['total_datasets']}** |",
+            f"| **Datasets with Splits Field** | {meta['total_with_splits']} | -44 (splits removed from pure/redundant) | **{post['datasets_with_splits']}** |",
+            f"| • Clean Standard Partitions | {meta['standard_partitions_count']} | +12 (clean partitions retained from mixed) | **{post['clean_standard_partitions']}** |",
+            f"| • Remaining Unresolved Cases | {meta['needs_manual_review_count']} | 0 (preserved unchanged for manual review) | **{post['remaining_manual_review_cases']}** |",
+            f"| **Datasets without Splits** | {meta['no_splits_count']} | +44 (non-partition/redundant splits removed) | **{post['datasets_without_splits']}** |",
+            f"| **Datasets with Structured Breakdown** | 0 | +54 (migrated to structured breakdown) | **{post['datasets_with_structured_breakdown']}** |",
+        ])
 
     lines.extend([
         "",

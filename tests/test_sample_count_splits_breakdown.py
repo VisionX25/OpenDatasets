@@ -25,6 +25,7 @@ import pytest
 from scripts.validate_datasets import (
     DEFAULT_DATA_DIR,
     DEFAULT_SCHEMA_PATH,
+    check_partition_consistency,
     load_json_file,
     load_schema,
     validate_dataset_data,
@@ -311,6 +312,162 @@ def test_migration_idempotence() -> None:
     updated, was_modified, _ = migrate_dataset_record(migrated_boreas)
     assert not was_modified
     assert updated == migrated_boreas
+
+
+def test_evidence_aware_hard_error_on_certified_partition_mismatch(minimal_dataset: dict[str, Any], validator: jsonschema.Draft7Validator) -> None:
+    """Test that when completeness='complete' and overlap='disjoint' are explicitly declared, arithmetic mismatch is a hard error."""
+    data = copy.deepcopy(minimal_dataset)
+    data["sample_count"]["total"] = 1000
+    data["sample_count"]["partition_completeness"] = "complete"
+    data["sample_count"]["partition_overlap"] = "disjoint"
+    data["sample_count"]["splits"] = {
+        "train": 700,
+        "val": 100,
+        "test": 100,  # Sum is 900 != 1000
+    }
+    errors = validate_dataset_data(data, validator, filename="test_mismatch.json")
+    assert any("Partition splits sum (900) does not equal declared total (1000)" in err for err in errors)
+
+
+def test_unspecified_partition_emits_warning_not_hard_error(minimal_dataset: dict[str, Any], validator: jsonschema.Draft7Validator) -> None:
+    """Test that when completeness is unspecified, split mismatches emit warnings, never hard errors."""
+    data = copy.deepcopy(minimal_dataset)
+    data["sample_count"]["total"] = 1000
+    # No partition_completeness declared (defaults to unspecified)
+    data["sample_count"]["splits"] = {
+        "train": 700,
+        "val": 100,  # Sum is 800 != 1000
+    }
+    errors = validate_dataset_data(data, validator, filename="test_unspecified.json")
+    assert not errors, f"Unspecified partition split mismatch must not fail validation: {errors}"
+
+    errs, warns = check_partition_consistency(data, filename="test_unspecified.json")
+    assert not errs
+    assert len(warns) == 1
+    assert "review required" in warns[0]
+
+
+def test_partial_and_overlapping_partition_declarations(minimal_dataset: dict[str, Any], validator: jsonschema.Draft7Validator) -> None:
+    """Test that explicit partial or overlapping partitions pass validation without warnings."""
+    # Explicit partial partition (e.g. released benchmark subset)
+    data_partial = copy.deepcopy(minimal_dataset)
+    data_partial["sample_count"]["total"] = 1000
+    data_partial["sample_count"]["partition_completeness"] = "partial"
+    data_partial["sample_count"]["partition_overlap"] = "disjoint"
+    data_partial["sample_count"]["splits"] = {"train": 600, "val": 200}
+    errors_p = validate_dataset_data(data_partial, validator)
+    assert not errors_p
+    errs_p, warns_p = check_partition_consistency(data_partial)
+    assert not errs_p
+    assert not warns_p
+
+    # Explicit overlapping partition (e.g. multi-task benchmark where sum > total)
+    data_overlap = copy.deepcopy(minimal_dataset)
+    data_overlap["sample_count"]["total"] = 500
+    data_overlap["sample_count"]["partition_completeness"] = "complete"
+    data_overlap["sample_count"]["partition_overlap"] = "overlapping"
+    data_overlap["sample_count"]["splits"] = {
+        "task1_train": 400,
+        "task1_test": 100,
+        "task2_train": 350,
+        "task2_test": 150,
+    }
+    errors_o = validate_dataset_data(data_overlap, validator)
+    assert not errors_o
+    errs_o, warns_o = check_partition_consistency(data_overlap)
+    assert not errs_o
+    assert not warns_o
+
+
+def test_breakdown_resolves_partition_mismatch(minimal_dataset: dict[str, Any], validator: jsonschema.Draft7Validator) -> None:
+    """Test that structured breakdown values resolve split arithmetic discrepancies."""
+    data = copy.deepcopy(minimal_dataset)
+    data["sample_count"]["total"] = 1000
+    data["sample_count"]["partition_completeness"] = "complete"
+    data["sample_count"]["partition_overlap"] = "disjoint"
+    data["sample_count"]["splits"] = {
+        "train": 700,
+        "test": 100,  # 800
+    }
+    data["breakdown"] = [
+        {"label": "unannotated reference items", "value": 200, "unit": "images"}  # 800 + 200 = 1000
+    ]
+    errors = validate_dataset_data(data, validator)
+    assert not errors
+    errs, warns = check_partition_consistency(data)
+    assert not errs
+    assert not warns
+
+
+def test_migration_failsafe_unrecognized_split_keys() -> None:
+    """Test that migration raises ValueError if an unexpected split key would be discarded."""
+    mock_bad_boreas = {
+        "id": "boreas",
+        "sample_count": {
+            "total": 44,
+            "splits": {
+                "driving_sequences": 44,
+                "total_driving_km": 350,
+                "unrecognized_unexpected_split": 999,  # Disallowed
+            },
+        },
+    }
+    with pytest.raises(ValueError, match="unrecognized split keys would be discarded"):
+        migrate_dataset_record(mock_bad_boreas)
+
+
+def test_migration_preserves_existing_breakdown_items() -> None:
+    """Test that migrating a dataset with existing breakdown items appends without overwriting."""
+    mock_dataset_with_existing_breakdown = {
+        "id": "furniture-bench",
+        "sample_count": {
+            "total": 5100,
+            "splits": {"hours": 219},
+        },
+        "breakdown": [
+            {"label": "pre-existing metric", "value": 12, "unit": "tasks"}
+        ],
+    }
+    updated, modified, _ = migrate_dataset_record(mock_dataset_with_existing_breakdown)
+    assert modified
+    labels = [b["label"] for b in updated["breakdown"]]
+    assert "pre-existing metric" in labels
+    assert "demonstration duration" in labels
+    assert len(updated["breakdown"]) == 2
+
+
+def test_migration_dry_run_immutability(tmp_path: Path) -> None:
+    """Test that dry-run mode strictly never mutates files on disk."""
+    from scripts.migrate_sample_count_breakdowns import run_migration_audit
+
+    test_file = tmp_path / "boreas.json"
+    original_content = json.dumps({
+        "schema_version": "1.0.0",
+        "id": "boreas",
+        "slug": "boreas",
+        "name": "Boreas",
+        "description": "Autonomous driving dataset.",
+        "homepage_url": "https://boreas.org",
+        "publisher": {"name": "UTIAS", "type": "academic"},
+        "modalities": ["sensor"],
+        "tasks": ["odometry"],
+        "tags": ["driving", "lidar"],
+        "license": {"status": "verified_open", "name": "CC-BY-4.0"},
+        "source_references": [{"title": "Source", "url": "https://boreas.org", "type": "official_website"}],
+        "verification": {"status": "verified", "verified_by": "Test", "verified_date": "2026-01-01"},
+        "sample_count": {
+            "total": 44,
+            "unit": "sequences",
+            "splits": {"driving_sequences": 44, "total_driving_km": 350},
+            "status": "verified",
+        },
+    }, indent=2) + "\n"
+    test_file.write_text(original_content)
+
+    summary = run_migration_audit(datasets_dir=tmp_path, dry_run=True)
+    assert summary["audit_metadata"]["safely_migrated_count"] == 1
+    # File content must remain 100% identical after dry-run
+    assert test_file.read_text() == original_content
 
 
 def test_all_catalog_datasets_valid(validator: jsonschema.Draft7Validator) -> None:

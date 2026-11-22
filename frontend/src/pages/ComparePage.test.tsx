@@ -345,4 +345,49 @@ describe('ComparePage component', () => {
     // CIFAR-10 has no breakdown, displays "None declared"
     expect(html).toContain('None declared')
   })
+
+  it('10. renders both root-level and sample_count breakdown items in comparison without hiding data', () => {
+    const datasetWithBoth: DatasetMetadata = {
+      ...mockDatasetA,
+      id: 'cityscapes-test',
+      slug: 'cityscapes-test',
+      name: 'Cityscapes Test',
+      sample_count: {
+        total: 25000,
+        unit: 'images',
+        status: 'verified',
+        breakdown: [
+          {
+            label: 'fine annotations',
+            value: 5000,
+            unit: 'images',
+          },
+        ],
+      },
+      breakdown: [
+        {
+          label: 'coarse annotations',
+          value: 20000,
+          unit: 'images',
+        },
+      ],
+    }
+
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/compare?datasets=cifar-10,cityscapes-test']}>
+        <Routes>
+          <Route
+            path="/compare"
+            element={<ComparePage initialCatalog={[mockDatasetA, datasetWithBoth]} />}
+          />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    expect(html).toContain('Quantitative Breakdown')
+    expect(html).toContain('fine annotations')
+    expect(html).toContain('5,000')
+    expect(html).toContain('coarse annotations')
+    expect(html).toContain('20,000')
+  })
 })

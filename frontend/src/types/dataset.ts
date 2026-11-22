@@ -99,6 +99,8 @@ export interface DatasetSampleCount {
   unit?: string
   status: SampleCountStatus
   breakdown?: DatasetBreakdownItem[]
+  partition_completeness?: 'complete' | 'partial' | 'unspecified'
+  partition_overlap?: 'disjoint' | 'overlapping' | 'unspecified'
 }
 
 export interface DatasetDates {
@@ -157,3 +159,28 @@ export interface CategoryDefinition {
   name: string
   description: string
 }
+
+/**
+ * Safely aggregates quantitative breakdown items from both root-level
+ * and sample_count breakdown properties without duplicates or data loss.
+ */
+export function getDatasetBreakdowns(dataset: Partial<DatasetMetadata>): DatasetBreakdownItem[] {
+  const rootItems = dataset.breakdown || []
+  const sampleCountItems = dataset.sample_count?.breakdown || []
+
+  if (rootItems.length === 0) return sampleCountItems
+  if (sampleCountItems.length === 0) return rootItems
+
+  const combined = [...rootItems]
+  const seen = new Set(rootItems.map((it) => `${it.label.toLowerCase()}::${it.value}`))
+
+  for (const item of sampleCountItems) {
+    const key = `${item.label.toLowerCase()}::${item.value}`
+    if (!seen.has(key)) {
+      seen.add(key)
+      combined.push(item)
+    }
+  }
+  return combined
+}
+

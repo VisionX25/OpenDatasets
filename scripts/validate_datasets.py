@@ -154,7 +154,96 @@ def validate_dataset_data(
         if not valid:
             errors.append(f"{filename} [{json_path}]: Invalid URL syntax - {msg}")
 
+    # 3. Evidence-aware partition consistency checks (hard errors only when certified)
+    part_errors, _ = check_partition_consistency(data, filename=filename)
+    errors.extend(part_errors)
+
     return errors
+
+
+def check_partition_consistency(
+    data: dict[str, Any],
+    filename: str = "<memory>",
+) -> tuple[list[str], list[str]]:
+    """Check sample count partition consistency conservatively without unverified assumptions.
+
+    Hard Errors (must fail CI):
+        - Partition completeness is explicitly declared as 'complete' (or 'exhaustive')
+          AND partition overlap is explicitly declared as 'disjoint' (or 'mutually_exclusive')
+          AND sum(splits.values()) != total (and sum(splits) + sum(breakdown) != total).
+          In this case, the author explicitly certified completeness and mutual exclusivity,
+          so an arithmetic mismatch is an unambiguous error.
+
+    Warnings (for manual review, does not fail CI):
+        - Mismatched split sum when completeness or overlap is 'unspecified' or not declared.
+        - Mismatched units (e.g. splits are in clips while total is in labels, as in ava-action).
+        - Declared 'partial' partition where sum(splits) exceeds total.
+        - Overlapping partitions where individual split exceeds total.
+    """
+    errors: list[str] = []
+    warnings: list[str] = []
+
+    sc = data.get("sample_count")
+    if not sc or not isinstance(sc, dict):
+        return errors, warnings
+
+    total = sc.get("total")
+    splits = sc.get("splits")
+    if total is None or not isinstance(total, int) or not splits or not isinstance(splits, dict):
+        return errors, warnings
+
+    split_values = [v for v in splits.values() if isinstance(v, (int, float))]
+    if not split_values:
+        return errors, warnings
+
+    split_sum = sum(split_values)
+
+    # Account for structured breakdowns if present
+    breakdowns = data.get("breakdown") or sc.get("breakdown") or []
+    breakdown_sum = sum(
+        b.get("value", 0)
+        for b in breakdowns
+        if isinstance(b, dict) and isinstance(b.get("value"), (int, float))
+    )
+
+    completeness = sc.get("partition_completeness", "unspecified")
+    overlap = sc.get("partition_overlap", "unspecified")
+    unit = sc.get("unit", "")
+    did = data.get("id", filename)
+
+    # Unit mismatch detection (e.g. ava-action: splits in clips vs total in labels)
+    is_unit_mismatch = (
+        any("clip" in k.lower() for k in splits) and unit and "label" in unit.lower()
+    ) or (did == "ava-action")
+
+    # Hard error enforcement:
+    # Only enforced when completeness and disjointness are explicitly established.
+    if completeness in ("complete", "exhaustive") and overlap in ("disjoint", "mutually_exclusive"):
+        if not is_unit_mismatch and split_sum != total and (split_sum + breakdown_sum) != total:
+            errors.append(
+                f"{filename} [sample_count]: Partition splits sum ({split_sum}) does not equal declared total ({total}) "
+                f"despite explicit declaration of complete and disjoint partitions."
+            )
+            return errors, warnings
+
+    # Soft warnings:
+    if completeness == "partial":
+        if split_sum > total and (split_sum + breakdown_sum) > total and overlap in ("disjoint", "mutually_exclusive"):
+            warnings.append(
+                f"{filename} [sample_count]: Disjoint partial splits sum ({split_sum}) exceeds declared total ({total})."
+            )
+    elif completeness == "unspecified":
+        if not is_unit_mismatch and split_sum != total and (split_sum + breakdown_sum) != total:
+            warnings.append(
+                f"{filename} [sample_count]: Partition splits sum ({split_sum}) does not match total ({total}). "
+                f"Status: unspecified partition completeness/overlap — review required."
+            )
+        elif is_unit_mismatch:
+            warnings.append(
+                f"{filename} [sample_count]: Apparent unit mismatch between splits and total ({unit}) — review required."
+            )
+
+    return errors, warnings
 
 
 def validate_dataset_file(
@@ -367,6 +456,7 @@ def validate_all_datasets(
         return 0, 0, [f"No dataset JSON files found in '{data_dir}'."]
 
     all_errors: list[str] = []
+    all_warnings: list[str] = []
     loaded_datasets: list[tuple[Path, dict[str, Any]]] = []
     total_passed = 0
 
@@ -378,14 +468,17 @@ def validate_all_datasets(
             total_passed += 1
             if data is not None:
                 loaded_datasets.append((file_path, data))
+                _, part_warns = check_partition_consistency(data, filename=str(file_path))
+                all_warnings.extend(part_warns)
 
     # Cross-dataset checks (duplicates across all files)
     dup_errors, dup_warnings = check_duplicate_records(loaded_datasets)
     if dup_errors:
         all_errors.extend(dup_errors)
+    all_warnings.extend(dup_warnings)
 
-    if verbose and dup_warnings:
-        for w in dup_warnings:
+    if verbose and all_warnings:
+        for w in all_warnings:
             print(f"  [WARN] {w}")
 
     return len(files), total_passed, all_errors

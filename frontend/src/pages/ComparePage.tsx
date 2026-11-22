@@ -20,7 +20,7 @@ import {
   AlertTriangle,
   Layers,
 } from 'lucide-react'
-import type { DatasetMetadata } from '../types/dataset'
+import { getDatasetBreakdowns, type DatasetMetadata } from '../types/dataset'
 import { fetchCatalog } from '../services/catalogService'
 import {
   MAX_COMPARE_COUNT,
@@ -673,7 +673,7 @@ export const ComparePage: React.FC<ComparePageProps> = ({ initialCatalog }) => {
                       Quantitative Breakdown
                     </th>
                     {datasets.map((dataset) => {
-                      const breakdowns = dataset.breakdown || dataset.sample_count?.breakdown;
+                      const breakdowns = getDatasetBreakdowns(dataset);
                       return (
                         <td
                           key={dataset.id}

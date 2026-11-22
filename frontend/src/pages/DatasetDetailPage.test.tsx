@@ -351,4 +351,46 @@ describe('DatasetDetailPage (Task 21C Dataset ID Cleanup)', () => {
     // Must not display "0 items" or "0"
     expect(html).not.toContain('<p className="text-xl font-extrabold text-slate-900 dark:text-white">0')
   })
+
+  it('12. renders both root-level and sample_count breakdown items without silently hiding data', () => {
+    const datasetWithBothBreakdowns: DatasetMetadata = {
+      ...mockDataset,
+      sample_count: {
+        total: 5000,
+        unit: 'images',
+        status: 'verified',
+        breakdown: [
+          {
+            label: 'fine annotations',
+            value: 5000,
+            unit: 'images',
+          },
+        ],
+      },
+      breakdown: [
+        {
+          label: 'coarse annotations',
+          value: 20000,
+          unit: 'images',
+        },
+      ],
+    }
+
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/dataset/cifar-10']}>
+        <Routes>
+          <Route
+            path="/dataset/:slug"
+            element={<DatasetDetailPage initialDataset={datasetWithBothBreakdowns} />}
+          />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    expect(html).toContain('Quantitative Breakdown')
+    expect(html).toContain('fine annotations')
+    expect(html).toContain('5,000')
+    expect(html).toContain('coarse annotations')
+    expect(html).toContain('20,000')
+  })
 })
