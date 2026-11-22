@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "dakshina",
+  "slug": "dakshina",
+  "name": "Dakshina: South Asian Language Latin & Native Script Benchmark",
+  "description": "The Dakshina dataset is a collection of text in both Latin script and native scripts for 12 South Asian languages, curated by Google Research. The resource contains Wikipedia text, native-to-Latin transliterations, and lexical data, designed to support Latin script text input, script normalization, machine transliteration, and language modeling.",
+  "homepage_url": "https://github.com/google-research-datasets/dakshina",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "transliteration",
+    "language-modeling",
+    "machine-translation"
+  ],
+  "tags": [
+    "transliteration",
+    "south-asian-languages",
+    "latin-script",
+    "nlp",
+    "benchmark",
+    "google-research"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset distributed under CC BY-SA 4.0 license."
+  },
+  "source_references": [
+    {
+      "title": "Google Research Dakshina Dataset Repository",
+      "url": "https://github.com/google-research-datasets/dakshina",
+      "type": "repository",
+      "notes": "Canonical repository hosting data releases and processing scripts."
+    },
+    {
+      "title": "Processing South Asian Languages Written in the Latin Script: The Dakshina Dataset",
+      "url": "https://arxiv.org/abs/2007.01176",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of LREC 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against LREC 2020 paper and Google Research GitHub repository."
+  },
+  "size": {
+    "amount": 1.8,
+    "unit": "GB",
+    "file_formats": [
+      "tsv",
+      "txt",
+      "tar.gz"
+    ],
+    "status": "estimated",
+    "notes": "Compressed archives containing lexicon, text, and transliteration splits across 12 languages."
+  },
+  "sample_count": {
+    "total": 1200000,
+    "unit": "strings-and-sentences",
+    "status": "estimated"
+  },
+  "languages": [
+    "bn",
+    "gu",
+    "hi",
+    "kn",
+    "ml",
+    "mr",
+    "pa",
+    "sd",
+    "si",
+    "ta",
+    "te",
+    "ur"
+  ],
+  "dates": {
+    "published": "2020-05-11"
+  },
+  "citation": {
+    "paper_title": "Processing South Asian Languages Written in the Latin Script: the Dakshina Dataset",
+    "paper_url": "https://arxiv.org/abs/2007.01176",
+    "authors": [
+      "Brian Roark",
+      "Lawrence Wolf-Sonkin",
+      "Christo Kirov",
+      "Sproat Richard",
+      "Czeslaw de Montgomery"
+    ],
+    "bibtex": "@inproceedings{roark2020processing,\n  title={Processing South Asian languages written in the Latin script: the Dakshina dataset},\n  author={Roark, Brian and Wolf-Sonkin, Lawrence and Kirov, Christo and Sproat, Richard and de Montgomery, Czeslaw},\n  booktitle={Proceedings of the 12th Language Resources and Evaluation Conference},\n  pages={2413--2423},\n  year={2020}\n}"
+  },
+  "provenance": {
+    "collection_method": "Native script sentences harvested from Wikipedia articles and manually transliterated into Latin script by native speakers.",
+    "curation_notes": "Multiple human transliterations collected per sentence to capture phonetic and spelling variability."
+  }
+}

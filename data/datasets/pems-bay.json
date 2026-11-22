@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pems-bay",
+  "slug": "pems-bay",
+  "name": "PEMS-BAY: California Bay Area Highway Traffic Speed Benchmark",
+  "description": "PEMS-BAY is a spatial-temporal traffic speed benchmark collected by the California Performance Measurement System (Caltrans PeMS) across the San Francisco Bay Area. Introduced for Diffusion Convolutional Recurrent Neural Network (DCRNN) evaluation, it comprises 6 months of continuous traffic speed measurements from 325 highway sensor stations sampled every 5 minutes from January 1 to June 30, 2017.",
+  "homepage_url": "https://github.com/liyaguang/DCRNN",
+  "publisher": {
+    "name": "USC / Caltrans",
+    "type": "academic",
+    "url": "https://viterbischool.usc.edu"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "traffic-forecasting",
+    "time-series-forecasting"
+  ],
+  "tags": [
+    "traffic-forecasting",
+    "spatial-temporal",
+    "sensor-network",
+    "time-series",
+    "graph-neural-networks"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Caltrans Open Data / Academic Research Agreement",
+    "url": "https://github.com/liyaguang/DCRNN/blob/master/LICENSE",
+    "commercial_use": "unknown",
+    "notes": "Traffic sensor data released for open research by Caltrans PeMS."
+  },
+  "source_references": [
+    {
+      "title": "DCRNN Official GitHub Repository",
+      "url": "https://github.com/liyaguang/DCRNN",
+      "type": "repository",
+      "notes": "Code and data download links for PEMS-BAY and sensor adjacency graphs."
+    },
+    {
+      "title": "Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting",
+      "url": "https://arxiv.org/abs/1707.01926",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of ICLR 2018."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against ICLR 2018 publication and official DCRNN benchmark repository."
+  },
+  "size": {
+    "amount": 28.0,
+    "unit": "MB",
+    "file_formats": [
+      "h5",
+      "npz",
+      "pkl"
+    ],
+    "status": "verified",
+    "notes": "Preprocessed HDF5 speed matrix and distance adjacency graph."
+  },
+  "sample_count": {
+    "total": 16934400,
+    "unit": "readings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-04-30"
+  },
+  "citation": {
+    "paper_title": "Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting",
+    "paper_url": "https://arxiv.org/abs/1707.01926",
+    "authors": [
+      "Yaguang Li",
+      "Rose Yu",
+      "Cyrus Shahabi",
+      "Yan Liu"
+    ],
+    "bibtex": "@inproceedings{li2018diffusion,\n  title={Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting},\n  author={Li, Yaguang and Yu, Rose and Shahabi, Cyrus and Liu, Yan},\n  booktitle={International Conference on Learning Representations},\n  year={2018}\n}"
+  },
+  "provenance": {
+    "collection_method": "Recorded by Caltrans highway loop detectors across District 4 (Bay Area).",
+    "curation_notes": "Aggregated into 5-minute intervals with spatial distance adjacency computed along the road network."
+  }
+}

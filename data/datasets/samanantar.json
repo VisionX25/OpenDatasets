@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "samanantar",
+  "slug": "samanantar",
+  "name": "Samanantar: Indic Parallel Corpora Collection",
+  "description": "Samanantar is the largest publicly available parallel corpora collection for 11 Indic languages (Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu) paired with English. Curated by AI4Bharat, the dataset aggregates 49.7 million sentence pairs, including newly mined web sentence pairs combined with existing repositories, serving as a landmark benchmark for Indian language machine translation.",
+  "homepage_url": "https://indicnlp.ai4bharat.org/samanantar/",
+  "publisher": {
+    "name": "AI4Bharat",
+    "type": "academic",
+    "url": "https://ai4bharat.org"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "machine-translation"
+  ],
+  "tags": [
+    "machine-translation",
+    "indic-languages",
+    "parallel-corpus",
+    "multilingual",
+    "ai4bharat",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Corpus collection released under CC BY-NC 4.0 for non-commercial research use."
+  },
+  "source_references": [
+    {
+      "title": "Samanantar: Indic Parallel Corpora Official Page",
+      "url": "https://indicnlp.ai4bharat.org/samanantar/",
+      "type": "official_website",
+      "notes": "Official release site with download links and per-language metrics."
+    },
+    {
+      "title": "Samanantar: The Largest Publicly Available Parallel Corpora Collection for 11 Indic Languages",
+      "url": "https://doi.org/10.1162/tacl_a_00452",
+      "type": "original_paper",
+      "notes": "Published in Transactions of the Association for Computational Linguistics (TACL) 2022."
+    },
+    {
+      "title": "AI4Bharat IndicTrans GitHub Repository",
+      "url": "https://github.com/AI4Bharat/indic-trans",
+      "type": "repository",
+      "notes": "Code and data access links for IndicTrans models."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against TACL 2022 publication and official AI4Bharat repository."
+  },
+  "size": {
+    "amount": 12.5,
+    "unit": "GB",
+    "file_formats": [
+      "txt",
+      "tsv",
+      "zip"
+    ],
+    "status": "estimated",
+    "notes": "Uncompressed text sentence pair archives across all 11 language pairs."
+  },
+  "sample_count": {
+    "total": 49709336,
+    "unit": "sentence-pairs",
+    "status": "verified"
+  },
+  "languages": [
+    "as",
+    "bn",
+    "gu",
+    "hi",
+    "kn",
+    "ml",
+    "mr",
+    "or",
+    "pa",
+    "ta",
+    "te",
+    "en"
+  ],
+  "dates": {
+    "published": "2022-02-15"
+  },
+  "citation": {
+    "paper_title": "Samanantar: The Largest Publicly Available Parallel Corpora Collection for 11 Indic Languages",
+    "paper_url": "https://doi.org/10.1162/tacl_a_00452",
+    "authors": [
+      "Gowtham Ramesh",
+      "Sumanth Doddapaneni",
+      "Aravinth Bheemaraj",
+      "Mayank Jobanputra",
+      "Raghavan AK",
+      "Ajitesh Sharma",
+      "Sujit Kumar",
+      "Pratyush Kumar",
+      "Mitesh M. Khapra"
+    ],
+    "doi": "10.1162/tacl_a_00452",
+    "bibtex": "@article{ramesh2022samanantar,\n  title={Samanantar: The largest publicly available parallel corpora collection for 11 indic languages},\n  author={Ramesh, Gowtham and Doddapaneni, Sumanth and Bheemaraj, Aravinth and Jobanputra, Mayank and AK, Raghavan and Sharma, Ajitesh and Kumar, Sujit and Kumar, Pratyush and Khapra, Mitesh M},\n  journal={Transactions of the Association for Computational Linguistics},\n  volume={10},\n  pages={145--162},\n  year={2022},\n  publisher={MIT Press}\n}"
+  },
+  "provenance": {
+    "collection_method": "Extracted through large-scale crawling of bilingual Indian websites, aligned via LASER/LaBSE embeddings, and merged with existing curated repositories.",
+    "curation_notes": "Filtered via language identification, length ratio checks, and semantic similarity thresholding."
+  }
+}

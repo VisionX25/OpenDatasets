@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pems08",
+  "slug": "pems08",
+  "name": "PEMS08: Caltrans District 8 Spatial-Temporal Highway Traffic Flow",
+  "description": "PEMS08 is a spatial-temporal traffic flow dataset sourced from the Caltrans Performance Measurement System (PeMS) for District 8 (San Bernardino area). Introduced alongside PEMS04 in ASTGCN (AAAI 2019), it compiles traffic measurements from 170 loop detectors recorded at 5-minute intervals from July 1 to August 31, 2016 (17,856 timestamps), measuring traffic flow, occupancy, and speed.",
+  "homepage_url": "https://github.com/Davidham3/ASTGCN",
+  "publisher": {
+    "name": "Beijing Jiaotong University / Caltrans",
+    "type": "academic",
+    "url": "https://en.bjtu.edu.cn"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "traffic-forecasting",
+    "spatial-temporal-forecasting"
+  ],
+  "tags": [
+    "traffic-flow",
+    "spatial-temporal",
+    "sensor-network",
+    "time-series",
+    "graph-neural-networks"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Caltrans Open Data / Academic Research Agreement",
+    "url": "https://github.com/Davidham3/ASTGCN",
+    "commercial_use": "unknown",
+    "notes": "Data derived from public Caltrans PeMS archives for academic traffic modeling."
+  },
+  "source_references": [
+    {
+      "title": "ASTGCN GitHub Repository",
+      "url": "https://github.com/Davidham3/ASTGCN",
+      "type": "repository",
+      "notes": "Canonical benchmark implementation repository providing PEMS04 and PEMS08."
+    },
+    {
+      "title": "Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting",
+      "url": "https://arxiv.org/abs/1901.10075",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of AAAI 2019."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against AAAI 2019 publication and ASTGCN benchmark repository."
+  },
+  "size": {
+    "amount": 12.0,
+    "unit": "MB",
+    "file_formats": [
+      "npz",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "Compressed NPZ sensor measurement arrays and detector adjacency CSV."
+  },
+  "sample_count": {
+    "total": 3035520,
+    "unit": "readings",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-01-29"
+  },
+  "citation": {
+    "paper_title": "Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting",
+    "paper_url": "https://arxiv.org/abs/1901.10075",
+    "authors": [
+      "Shengnan Guo",
+      "Youfang Lin",
+      "Ning Ning",
+      "Zheng Wang",
+      "Huaiyu Wan"
+    ],
+    "bibtex": "@inproceedings{guo2019attention,\n  title={Attention based spatial-temporal graph convolutional networks for traffic flow forecasting},\n  author={Guo, Shengnan and Lin, Youfang and Ning, Ning and Wang, Zheng and Wan, Huaiyu},\n  booktitle={Proceedings of the AAAI Conference on Human Computation and Crowdsourcing},\n  volume={33},\n  pages={922--929},\n  year={2019}\n}"
+  },
+  "provenance": {
+    "collection_method": "Extracted from Caltrans PeMS real-time loop detectors across District 8 (San Bernardino).",
+    "curation_notes": "Aggregated into 5-minute sampling windows across 170 selected highway sensor stations."
+  }
+}

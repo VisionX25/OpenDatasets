@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "hi-fi-tts",
+  "slug": "hi-fi-tts",
+  "name": "Hi-Fi TTS: High-Fidelity Multi-Speaker English Speech Synthesis",
+  "description": "Hi-Fi TTS is a high-fidelity multi-speaker English speech dataset curated by NVIDIA for text-to-speech (TTS) synthesis. It contains 291.6 hours of high-quality speech recorded at 44.1 kHz sampling rate across 10 speakers (6 female, 4 male) reading public domain books from LibriVox, providing pristine acoustic quality and expressive variety.",
+  "homepage_url": "https://www.openslr.org/109/",
+  "publisher": {
+    "name": "NVIDIA",
+    "type": "industry",
+    "url": "https://developer.nvidia.com"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "text-to-speech",
+    "speech-synthesis"
+  ],
+  "tags": [
+    "text-to-speech",
+    "speech-synthesis",
+    "tts",
+    "high-fidelity",
+    "multi-speaker",
+    "audio"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Corpus released under CC BY 4.0 on OpenSLR."
+  },
+  "source_references": [
+    {
+      "title": "OpenSLR 109: Hi-Fi Multi-Speaker English TTS Dataset",
+      "url": "https://www.openslr.org/109/",
+      "type": "official_website",
+      "notes": "Canonical OpenSLR repository entry."
+    },
+    {
+      "title": "Hi-Fi Multi-Speaker English TTS Dataset",
+      "url": "https://arxiv.org/abs/2104.01497",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of Interspeech 2021."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against OpenSLR repository record and Interspeech 2021 paper."
+  },
+  "size": {
+    "amount": 29.5,
+    "unit": "GB",
+    "file_formats": [
+      "flac",
+      "json",
+      "tar.gz"
+    ],
+    "status": "verified",
+    "notes": "High-fidelity 44.1kHz FLAC audio recordings and normalized text transcripts."
+  },
+  "sample_count": {
+    "total": 116000,
+    "unit": "audio-utterances",
+    "status": "estimated"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2021-04-03"
+  },
+  "citation": {
+    "paper_title": "Hi-Fi Multi-Speaker English TTS Dataset",
+    "paper_url": "https://arxiv.org/abs/2104.01497",
+    "authors": [
+      "Evelina Bakhturina",
+      "Vitaly Lavrukhin",
+      "Boris Ginsburg",
+      "Yang Zhang"
+    ],
+    "bibtex": "@inproceedings{bakhturina2021hi,\n  title={Hi-Fi Multi-Speaker English TTS Dataset},\n  author={Bakhturina, Evelina and Lavrukhin, Vitaly and Ginsburg, Boris and Zhang, Yang},\n  booktitle={Interspeech 2021},\n  pages={2776--2780},\n  year={2021}\n}"
+  },
+  "provenance": {
+    "collection_method": "Selected from LibriVox audiobooks using automated audio quality filtering and SNR thresholding.",
+    "curation_notes": "Audio normalized, silence trimmed, and forced-aligned with text at 44.1 kHz sampling rate."
+  }
+}

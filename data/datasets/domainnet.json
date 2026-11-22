@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "id": "domainnet",
+  "slug": "domainnet",
+  "name": "DomainNet: Multi-Source Domain Adaptation Benchmark",
+  "description": "DomainNet is an extensive dataset for multi-source domain adaptation and transfer learning in computer vision, created by Boston University. It comprises 586,575 images across 345 object categories spanning 6 distinct visual domains: Clipart, Infograph, Painting, Quickdraw, Real, and Sketch. It serves as a gold standard for evaluating model robustness across significant domain shifts.",
+  "homepage_url": "http://ai.bu.edu/M3SDA/",
+  "publisher": {
+    "name": "Boston University",
+    "type": "academic",
+    "url": "http://ai.bu.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "domain-adaptation",
+    "transfer-learning"
+  ],
+  "tags": [
+    "computer-vision",
+    "domain-adaptation",
+    "multi-domain",
+    "transfer-learning",
+    "benchmark",
+    "image-classification"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Custom Non-Commercial Academic Research Agreement",
+    "url": "http://ai.bu.edu/M3SDA/",
+    "commercial_use": "forbidden",
+    "notes": "Available strictly for non-commercial academic research use."
+  },
+  "source_references": [
+    {
+      "title": "DomainNet Project Homepage",
+      "url": "http://ai.bu.edu/M3SDA/",
+      "type": "official_website",
+      "notes": "Official benchmark documentation and download links."
+    },
+    {
+      "title": "Moment Matching for Multi-Source Domain Adaptation",
+      "url": "https://arxiv.org/abs/1905.11761",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of IEEE/CVF ICCV 2019."
+    },
+    {
+      "title": "VisionLearningGroup DomainNet Repository",
+      "url": "https://github.com/VisionLearningGroup/DomainNet",
+      "type": "repository",
+      "notes": "Baseline model code and train/test split definitions."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against ICCV 2019 publication and Boston University project page."
+  },
+  "size": {
+    "amount": 34.0,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "png",
+      "txt",
+      "zip"
+    ],
+    "status": "verified",
+    "notes": "Full compressed archive of all 6 image domains."
+  },
+  "sample_count": {
+    "total": 586575,
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-10-27"
+  },
+  "citation": {
+    "paper_title": "Moment Matching for Multi-Source Domain Adaptation",
+    "paper_url": "https://arxiv.org/abs/1905.11761",
+    "authors": [
+      "Xingchao Peng",
+      "Qinxun Bai",
+      "Xide Xia",
+      "Zijun Huang",
+      "Kate Saenko",
+      "Bo Wang"
+    ],
+    "bibtex": "@inproceedings{peng2019moment,\n  title={Moment matching for multi-source domain adaptation},\n  author={Peng, Xingchao and Bai, Qinxun and Xia, Xide and Huang, Zijun and Saenko, Kate and Wang, Bo},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},\n  pages={1406--1415},\n  year={2019}\n}"
+  },
+  "provenance": {
+    "collection_method": "Images gathered from search engines and QuickDraw datasets across 345 synchronized lexical categories.",
+    "curation_notes": "Filtered via crowd-sourced Amazon Mechanical Turk validation to remove ambiguous labels."
+  }
+}

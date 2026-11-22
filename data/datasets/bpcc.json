@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bpcc",
+  "slug": "bpcc",
+  "name": "Bharat Parallel Corpus Collection (BPCC)",
+  "description": "The Bharat Parallel Corpus Collection (BPCC) is a massive parallel corpora suite spanning English and all 22 scheduled Indian languages, created by AI4Bharat for IndicTrans2. It contains approximately 230 million sentence pairs, including 2.2 million high-quality human-translated and verified sentence pairs (BPCC-Human) and 228 million filtered mined pairs, representing the most comprehensive translation corpus for South Asian languages.",
+  "homepage_url": "https://indictrans2.ai4bharat.org",
+  "publisher": {
+    "name": "AI4Bharat",
+    "type": "academic",
+    "url": "https://ai4bharat.org"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "machine-translation"
+  ],
+  "tags": [
+    "machine-translation",
+    "indic-languages",
+    "parallel-corpus",
+    "ai4bharat",
+    "indictrans2",
+    "gold-standard"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Creative Commons Zero v1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset packaging and newly collected pairs released under CC0 1.0 Universal; human translation splits licensed under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "IndicTrans2 Official Portal",
+      "url": "https://indictrans2.ai4bharat.org",
+      "type": "official_website",
+      "notes": "Portal for IndicTrans2 translation models and BPCC dataset releases."
+    },
+    {
+      "title": "IndicTrans2: Towards High-Quality and Accessible Machine Translation for all 22 Scheduled Indian Languages",
+      "url": "https://arxiv.org/abs/2305.16307",
+      "type": "original_paper",
+      "notes": "Published in Transactions on Machine Learning Research (TMLR) 2023."
+    },
+    {
+      "title": "AI4Bharat IndicTrans2 GitHub Repository",
+      "url": "https://github.com/AI4Bharat/IndicTrans2",
+      "type": "repository",
+      "notes": "Open-source data processing code and model weights."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against TMLR 2023 publication and official AI4Bharat repository."
+  },
+  "size": {
+    "amount": 42.0,
+    "unit": "GB",
+    "file_formats": [
+      "tsv",
+      "txt",
+      "tar.gz"
+    ],
+    "status": "estimated",
+    "notes": "Full compressed archive of human and mined splits across 22 Indic languages."
+  },
+  "sample_count": {
+    "total": 230000000,
+    "unit": "sentence-pairs",
+    "status": "estimated"
+  },
+  "languages": [
+    "as",
+    "bn",
+    "brx",
+    "doi",
+    "gom",
+    "gu",
+    "hi",
+    "kn",
+    "ks",
+    "mai",
+    "ml",
+    "mni",
+    "mr",
+    "ne",
+    "or",
+    "pa",
+    "sa",
+    "sat",
+    "sd",
+    "ta",
+    "te",
+    "ur",
+    "en"
+  ],
+  "dates": {
+    "published": "2023-05-25"
+  },
+  "citation": {
+    "paper_title": "IndicTrans2: Towards High-Quality and Accessible Machine Translation for all 22 Scheduled Indian Languages",
+    "paper_url": "https://arxiv.org/abs/2305.16307",
+    "authors": [
+      "Jay Gala",
+      "Pranjal A. Chitale",
+      "Raghavan AK",
+      "Sumanth Doddapaneni",
+      "Varun Gumma",
+      "Aswanth Kumar M",
+      "Janki Nawale",
+      "Anupama Sujatha",
+      "Ratish Puduppully",
+      "Vivek Raghavan",
+      "Pratyush Kumar",
+      "Mitesh M. Khapra",
+      "Raj Dabre",
+      "Anoop Kunchukuttan"
+    ],
+    "bibtex": "@article{gala2023indictrans2,\n  title={IndicTrans2: Towards High-Quality and Accessible Machine Translation for all 22 Scheduled Indian Languages},\n  author={Gala, Jay and Chitale, Pranjal A and AK, Raghavan and Doddapaneni, Sumanth and Gumma, Varun and Kumar M, Aswanth and Nawale, Janki and Sujatha, Anupama and Puduppully, Ratish and Raghavan, Vivek and Kumar, Pratyush and Khapra, Mitesh M and Dabre, Raj and Kunchukuttan, Anoop},\n  journal={Transactions on Machine Learning Research},\n  year={2023}\n}"
+  },
+  "provenance": {
+    "collection_method": "Combines extensive human translations produced by professional translators with large-scale sentence pair mining from CCNet and Wikipedia.",
+    "curation_notes": "Filtered using dual-encoder semantic sentence embedding scoring and strict cross-lingual length penalties."
+  }
+}

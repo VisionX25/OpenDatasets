@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "id": "indicglue",
+  "slug": "indicglue",
+  "name": "IndicGLUE: Indian Language Natural Language Understanding Benchmark",
+  "description": "IndicGLUE is a comprehensive natural language understanding (NLU) benchmark suite covering 11 major Indian languages. Built by AI4Bharat, it encompasses diverse tasks including Natural Language Inference (NLI), Sentiment Analysis, Named Entity Recognition (NER), Question Answering, and Cross-Lingual Information Retrieval, serving as the standard evaluation testbed for multilingual Indic language representations.",
+  "homepage_url": "https://indicnlp.ai4bharat.org/indic-glue/",
+  "publisher": {
+    "name": "AI4Bharat",
+    "type": "academic",
+    "url": "https://ai4bharat.org"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "natural-language-inference",
+    "sentiment-analysis",
+    "named-entity-recognition",
+    "question-answering",
+    "text-classification"
+  ],
+  "tags": [
+    "evaluation-benchmark",
+    "nlu",
+    "indic-languages",
+    "indicglue",
+    "ai4bharat",
+    "cross-lingual"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Academic Research Use / MIT",
+    "url": "https://indicnlp.ai4bharat.org/indic-glue/",
+    "commercial_use": "unknown",
+    "notes": "Benchmarking suite provided for academic and scientific research evaluation."
+  },
+  "source_references": [
+    {
+      "title": "IndicGLUE Official Benchmark Page",
+      "url": "https://indicnlp.ai4bharat.org/indic-glue/",
+      "type": "official_website",
+      "notes": "Task specifications, leaderboard, and data access links."
+    },
+    {
+      "title": "IndicNLPSuite: Monolingual Corpora, Evaluation Benchmarks and Pre-trained Multilingual Language Models for Indian Languages",
+      "url": "https://arxiv.org/abs/2005.00085",
+      "type": "original_paper",
+      "notes": "Published in Findings of EMNLP 2020."
+    },
+    {
+      "title": "AI4Bharat IndicBERT Repository",
+      "url": "https://github.com/AI4Bharat/indic-bert",
+      "type": "repository",
+      "notes": "Fine-tuning scripts and benchmark datasets."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against Findings of EMNLP 2020 publication and AI4Bharat benchmark portal."
+  },
+  "size": {
+    "amount": 450,
+    "unit": "MB",
+    "file_formats": [
+      "json",
+      "tsv",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "Aggregated evaluation task datasets across all 11 languages."
+  },
+  "sample_count": {
+    "total": 320000,
+    "unit": "examples",
+    "status": "estimated"
+  },
+  "languages": [
+    "as",
+    "bn",
+    "gu",
+    "hi",
+    "kn",
+    "ml",
+    "mr",
+    "or",
+    "pa",
+    "ta",
+    "te"
+  ],
+  "dates": {
+    "published": "2020-11-16"
+  },
+  "citation": {
+    "paper_title": "IndicNLPSuite: Monolingual Corpora, Evaluation Benchmarks and Pre-trained Multilingual Language Models for Indian Languages",
+    "paper_url": "https://arxiv.org/abs/2005.00085",
+    "authors": [
+      "Divyanshu Kakwani",
+      "Anoop Kunchukuttan",
+      "Satish Golla",
+      "Gokul N.C.",
+      "Avik Bhattacharyya",
+      "Mitesh M. Khapra",
+      "Pratyush Kumar"
+    ],
+    "bibtex": "@inproceedings{kakwani2020indicnlpsuite,\n  title={IndicNLPSuite: Monolingual Corpora, Evaluation Benchmarks and Pre-trained Multilingual Language Models for Indian Languages},\n  author={Kakwani, Divyanshu and Kunchukuttan, Anoop and Golla, Satish and N.C., Gokul and Bhattacharyya, Avik and Khapra, Mitesh M. and Kumar, Pratyush},\n  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2020},\n  pages={4948--4961},\n  year={2020}\n}"
+  },
+  "provenance": {
+    "collection_method": "Harmonized from existing Indic NLP evaluation datasets and supplemented with newly translated and human-verified benchmark splits.",
+    "curation_notes": "Standardized into unified train/dev/test splits with identical metric definitions across languages."
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "multilingual-librispeech",
+  "slug": "multilingual-librispeech",
+  "name": "Multilingual LibriSpeech (MLS)",
+  "description": "Multilingual LibriSpeech (MLS) is a large-scale multilingual audio corpus derived from LibriVox audiobooks, created by Facebook AI Research. It provides approximately 50,000 hours of 16kHz read speech across 8 European languages (English, German, Dutch, French, Spanish, Italian, Portuguese, Polish), with about 44,000 hours in English and 6,000 hours across 7 other languages, providing a standard benchmark for multilingual ASR and speech representation learning.",
+  "homepage_url": "https://www.openslr.org/94/",
+  "publisher": {
+    "name": "Facebook AI Research",
+    "type": "industry",
+    "url": "https://ai.meta.com"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-recognition",
+    "asr"
+  ],
+  "tags": [
+    "speech-recognition",
+    "audio",
+    "multilingual",
+    "audiobooks",
+    "asr",
+    "openslr"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Corpus released under CC BY 4.0 on OpenSLR."
+  },
+  "source_references": [
+    {
+      "title": "OpenSLR 94: Multilingual LibriSpeech",
+      "url": "https://www.openslr.org/94/",
+      "type": "official_website",
+      "notes": "Canonical OpenSLR repository record with download URLs."
+    },
+    {
+      "title": "MLS: A Large-Scale Multilingual Dataset for Speech Research",
+      "url": "https://arxiv.org/abs/2012.03411",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of Interspeech 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against OpenSLR repository record and Interspeech 2020 publication."
+  },
+  "size": {
+    "amount": 280.0,
+    "unit": "GB",
+    "file_formats": [
+      "flac",
+      "txt",
+      "tar.gz"
+    ],
+    "status": "estimated",
+    "notes": "Compressed FLAC audio files and text transcripts across 8 languages."
+  },
+  "sample_count": {
+    "total": 50000,
+    "unit": "audio-hours",
+    "status": "estimated"
+  },
+  "languages": [
+    "en",
+    "de",
+    "nl",
+    "fr",
+    "es",
+    "it",
+    "pt",
+    "pl"
+  ],
+  "dates": {
+    "published": "2020-10-25"
+  },
+  "citation": {
+    "paper_title": "MLS: A Large-Scale Multilingual Dataset for Speech Research",
+    "paper_url": "https://arxiv.org/abs/2012.03411",
+    "authors": [
+      "Vineel Pratap",
+      "Qiantong Xu",
+      "Anuroop Sriram",
+      "Gabriel Synnaeve",
+      "Ronan Collobert"
+    ],
+    "bibtex": "@inproceedings{pratap2020mls,\n  title={MLS: A Large-Scale Multilingual Dataset for Speech Research},\n  author={Pratap, Vineel and Xu, Qiantong and Sriram, Anuroop and Synnaeve, Gabriel and Collobert, Ronan},\n  booktitle={Interspeech 2020},\n  pages={2757--2761},\n  year={2020}\n}"
+  },
+  "provenance": {
+    "collection_method": "Extracted from public domain audiobooks on LibriVox and aligned to text using acoustic models.",
+    "curation_notes": "Segmented into short utterances with clean speaker separation and standardized training/validation/test splits."
+  }
+}

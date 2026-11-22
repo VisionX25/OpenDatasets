@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "meld",
+  "slug": "meld",
+  "name": "MELD: Multimodal EmotionLines Dataset",
+  "description": "MELD (Multimodal EmotionLines Dataset) is an extension of EmotionLines for multimodal emotion recognition and sentiment analysis in conversations. Curated by Nanyang Technological University, it comprises 13,708 utterances across 1,433 dialogue segments from the TV series Friends, with each utterance annotated for emotion (Anger, Disgust, Sadness, Joy, Neutral, Surprise, Fear) and sentiment (Positive, Negative, Neutral) accompanied by synchronized audio and video clips.",
+  "homepage_url": "https://affective-meld.github.io",
+  "publisher": {
+    "name": "Nanyang Technological University",
+    "type": "academic",
+    "url": "https://www.ntu.edu.sg"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "audio",
+    "nlp"
+  ],
+  "tasks": [
+    "emotion-recognition",
+    "sentiment-analysis"
+  ],
+  "tags": [
+    "multimodal",
+    "emotion-recognition",
+    "sentiment-analysis",
+    "dialogue",
+    "conversational-ai"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Academic Research Use Agreement",
+    "url": "https://affective-meld.github.io",
+    "commercial_use": "forbidden",
+    "notes": "Available strictly for non-commercial academic research purposes."
+  },
+  "source_references": [
+    {
+      "title": "MELD Project Homepage",
+      "url": "https://affective-meld.github.io",
+      "type": "official_website",
+      "notes": "Official project portal with download links and multimodal features."
+    },
+    {
+      "title": "MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversations",
+      "url": "https://arxiv.org/abs/1810.02508",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of ACL 2019."
+    },
+    {
+      "title": "Declare Lab MELD GitHub Repository",
+      "url": "https://github.com/declare-lab/MELD",
+      "type": "repository",
+      "notes": "Baseline scripts and feature extraction pipelines."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against ACL 2019 paper and official project homepage."
+  },
+  "size": {
+    "amount": 9.8,
+    "unit": "GB",
+    "file_formats": [
+      "mp4",
+      "wav",
+      "csv",
+      "tar.gz"
+    ],
+    "status": "verified",
+    "notes": "Video clips, extracted audio WAVs, and dialogue CSV transcripts."
+  },
+  "sample_count": {
+    "total": 13708,
+    "splits": {
+      "train": 9989,
+      "dev": 1109,
+      "test": 2610
+    },
+    "unit": "utterances",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2019-07-28"
+  },
+  "citation": {
+    "paper_title": "MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversations",
+    "paper_url": "https://arxiv.org/abs/1810.02508",
+    "authors": [
+      "Soujanya Poria",
+      "Devamanyu Hazarika",
+      "Navonil Majumder",
+      "Gautam Naik",
+      "Erik Cambria",
+      "Rada Mihalcea"
+    ],
+    "bibtex": "@inproceedings{poria2019meld,\n  title={MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversations},\n  author={Poria, Soujanya and Hazarika, Devamanyu and Majumder, Navonil and Naik, Gautam and Cambria, Erik and Mihalcea, Rada},\n  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},\n  pages={527--536},\n  year={2019}\n}"
+  },
+  "provenance": {
+    "collection_method": "Extracted from dialogue scenes of the Friends television series.",
+    "curation_notes": "Utterances annotated by multiple human judges for emotion categories and three sentiment polarities."
+  }
+}

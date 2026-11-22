@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "big-bench",
+  "slug": "big-bench",
+  "name": "BIG-bench: Beyond the Imitation Game Benchmark Suite",
+  "description": "BIG-bench (Beyond the Imitation Game Benchmark) is a massive collaborative benchmark suite created by over 440 researchers across 132 institutions, organized by Google Research. Containing 204 distinct tasks, it probes large language model capabilities across reasoning, mathematics, biology, linguistics, common-sense, software development, translation, and social bias.",
+  "homepage_url": "https://github.com/google/BIG-bench",
+  "publisher": {
+    "name": "Google Research & Consortium",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "multi-task-evaluation",
+    "reasoning",
+    "language-modeling",
+    "evaluation-benchmark"
+  ],
+  "tags": [
+    "llm-evaluation",
+    "benchmark-suite",
+    "multi-task",
+    "reasoning",
+    "collaborative-benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Code and task definitions released under Apache License 2.0."
+  },
+  "source_references": [
+    {
+      "title": "BIG-bench GitHub Repository",
+      "url": "https://github.com/google/BIG-bench",
+      "type": "repository",
+      "notes": "Canonical repository hosting task JSON files, evaluation code, and Lite subsets."
+    },
+    {
+      "title": "Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models",
+      "url": "https://arxiv.org/abs/2206.04615",
+      "type": "original_paper",
+      "notes": "Published in Transactions on Machine Learning Research (TMLR) 2023."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against TMLR 2023 publication and official Google BIG-bench repository."
+  },
+  "size": {
+    "amount": 2.1,
+    "unit": "GB",
+    "file_formats": [
+      "json",
+      "py"
+    ],
+    "status": "verified",
+    "notes": "Full task JSON specifications and programmatic evaluation harnesses."
+  },
+  "sample_count": {
+    "total": 204,
+    "unit": "tasks",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2022-06-09"
+  },
+  "citation": {
+    "paper_title": "Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models",
+    "paper_url": "https://arxiv.org/abs/2206.04615",
+    "authors": [
+      "Aarohi Srivastava",
+      "Abhinav Rastogi",
+      "Abhishek Rao",
+      "Abu Awal Md Shoeb",
+      "Abubakar Abid",
+      "Adam Fisch",
+      "Adam R. Brown",
+      "Adam Santoro",
+      "Aditya Gupta",
+      "Adrià Garriga-Alonso",
+      "Jascha Sohl-Dickstein"
+    ],
+    "bibtex": "@article{srivastava2022beyond,\n  title={Beyond the imitation game: Quantifying and extrapolating the capabilities of language models},\n  author={Srivastava, Aarohi and Rastogi, Abhinav and Rao, Abhishek and Shoeb, Abu Awal Md and Abid, Abubakar and Fisch, Adam and Brown, Adam R and Santoro, Adam and Gupta, Aditya and Garriga-Alonso, Adri{\\`a} and others},\n  journal={Transactions on Machine Learning Research},\n  year={2023}\n}"
+  },
+  "provenance": {
+    "collection_method": "Collaboratively contributed by hundreds of international researchers targeting problems believed to be beyond current LLM capabilities.",
+    "curation_notes": "All tasks underwent rigorous peer review and automated validation before inclusion into the suite."
+  }
+}
