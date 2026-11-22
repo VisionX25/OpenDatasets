@@ -296,4 +296,53 @@ describe('ComparePage component', () => {
     expect(html).toContain('aria-label="Remove CIFAR-10 from comparison"')
     expect(html).toContain('aria-label="Remove MNIST from comparison"')
   })
+
+  it('9. renders Dataset Splits and Quantitative Breakdown with units', () => {
+    const datasetWithBreakdown: DatasetMetadata = {
+      ...mockDatasetA,
+      id: 'boreas',
+      slug: 'boreas',
+      name: 'Boreas',
+      sample_count: {
+        total: 44,
+        unit: 'sequences',
+        status: 'verified',
+        splits: {
+          train: 34,
+          test: 10,
+        },
+      },
+      breakdown: [
+        {
+          label: 'total driving distance',
+          value: 350,
+          unit: 'km',
+        },
+      ],
+    }
+
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/compare?datasets=cifar-10,boreas']}>
+        <Routes>
+          <Route
+            path="/compare"
+            element={<ComparePage initialCatalog={[mockDatasetA, datasetWithBreakdown]} />}
+          />
+        </Routes>
+      </MemoryRouter>,
+    )
+
+    // Heading rows present
+    expect(html).toContain('Dataset Splits')
+    expect(html).toContain('Quantitative Breakdown')
+
+    // Units clearly visible
+    expect(html).toContain('total driving distance')
+    expect(html).toContain('350')
+    expect(html).toContain('km')
+    expect(html).toContain('sequences')
+
+    // CIFAR-10 has no breakdown, displays "None declared"
+    expect(html).toContain('None declared')
+  })
 })

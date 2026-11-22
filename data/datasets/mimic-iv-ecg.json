@@ -55,10 +55,6 @@
   },
   "sample_count": {
     "total": 800000,
-    "splits": {
-      "recordings": 800000,
-      "patients": 161244
-    },
     "unit": "recordings",
     "status": "estimated"
   },
@@ -77,5 +73,17 @@
     ],
     "doi": "10.1038/s41597-023-02408-x",
     "bibtex": "@article{gow2023large,\n  title={A large-scale database of 12-lead electrocardiograms linked to clinical records},\n  author={Gow, Benjamin and Pollard, Tom J and Celi, Leo Anthony and Mark, Roger G and Horng, Steven},\n  journal={Scientific Data},\n  volume={10},\n  number={1},\n  pages={554},\n  year={2023},\n  publisher={Nature Publishing Group}\n}"
-  }
+  },
+  "breakdown": [
+    {
+      "label": "ECG recordings",
+      "value": 800000,
+      "unit": "recordings"
+    },
+    {
+      "label": "unique patients",
+      "value": 161244,
+      "unit": "patients"
+    }
+  ]
 }

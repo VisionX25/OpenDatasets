@@ -62,10 +62,6 @@
   },
   "sample_count": {
     "total": 58976,
-    "splits": {
-      "admissions": 58976,
-      "patients": 46520
-    },
     "unit": "admissions",
     "status": "verified"
   },
@@ -90,5 +86,17 @@
     ],
     "doi": "10.1038/sdata.2016.35",
     "bibtex": "@article{johnson2016mimic,\n  title={MIMIC-III, a freely accessible critical care database},\n  author={Johnson, Alistair EW and Pollard, Tom J and Shen, Lu and Lehman, Li-wei H and Feng, Mengling and Ghassemi, Mohammad and Moody, Benjamin and Szolovits, Peter and Celi, Leo Anthony and Mark, Roger G},\n  journal={Scientific Data},\n  volume={3},\n  number={1},\n  pages={1--9},\n  year={2016},\n  publisher={Nature Publishing Group}\n}"
-  }
+  },
+  "breakdown": [
+    {
+      "label": "hospital admissions",
+      "value": 58976,
+      "unit": "admissions"
+    },
+    {
+      "label": "unique patients",
+      "value": 46520,
+      "unit": "patients"
+    }
+  ]
 }

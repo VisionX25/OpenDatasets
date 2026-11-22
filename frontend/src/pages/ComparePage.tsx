@@ -630,7 +630,7 @@ export const ComparePage: React.FC<ComparePageProps> = ({ initialCatalog }) => {
                       scope="row"
                       className="sticky left-0 z-10 p-4 sm:p-5 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-500"
                     >
-                      Splits Breakdown
+                      Dataset Splits
                     </th>
                     {datasets.map((dataset) => (
                       <td
@@ -649,7 +649,10 @@ export const ComparePage: React.FC<ComparePageProps> = ({ initialCatalog }) => {
                                   {split}
                                 </span>
                                 <span className="font-semibold text-slate-900 dark:text-slate-100 font-mono">
-                                  {count.toLocaleString('en-US')}
+                                  {count.toLocaleString('en-US')}{' '}
+                                  {dataset.sample_count?.unit && (
+                                    <span className="font-normal text-slate-400 font-sans text-3xs">{dataset.sample_count.unit}</span>
+                                  )}
                                 </span>
                               </div>
                             ))}
@@ -659,6 +662,50 @@ export const ComparePage: React.FC<ComparePageProps> = ({ initialCatalog }) => {
                         )}
                       </td>
                     ))}
+                  </tr>
+
+                  {/* Quantitative Breakdown */}
+                  <tr>
+                    <th
+                      scope="row"
+                      className="sticky left-0 z-10 p-4 sm:p-5 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-500"
+                    >
+                      Quantitative Breakdown
+                    </th>
+                    {datasets.map((dataset) => {
+                      const breakdowns = dataset.breakdown || dataset.sample_count?.breakdown;
+                      return (
+                        <td
+                          key={dataset.id}
+                          className="p-4 sm:p-5 align-top border-r last:border-r-0 border-slate-200 dark:border-slate-800 text-xs"
+                        >
+                          {breakdowns && breakdowns.length > 0 ? (
+                            <div className="space-y-1">
+                              {breakdowns.map((item, idx) => (
+                                <div
+                                  key={idx}
+                                  className="flex items-center justify-between gap-2 px-2 py-0.5 rounded bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60 text-2xs"
+                                >
+                                  <span className="font-medium text-slate-600 dark:text-slate-400 capitalize">
+                                    {item.label}
+                                  </span>
+                                  <span className="font-semibold text-slate-900 dark:text-slate-100 font-mono">
+                                    {item.value !== undefined && item.value !== null
+                                      ? item.value.toLocaleString('en-US')
+                                      : 'Unspecified'}{' '}
+                                    {item.unit && (
+                                      <span className="font-normal text-slate-400 font-sans text-3xs">{item.unit}</span>
+                                    )}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <span className="text-slate-400 italic">None declared</span>
+                          )}
+                        </td>
+                      );
+                    })}
                   </tr>
 
                   {/* Download Size & Formats */}

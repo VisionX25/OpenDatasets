@@ -77,11 +77,6 @@
   },
   "sample_count": {
     "total": 320000,
-    "splits": {
-      "driving_distance_km": 73,
-      "laser_scans": 100000,
-      "camera_images": 320000
-    },
     "unit": "images",
     "status": "verified"
   },
@@ -98,5 +93,22 @@
     ],
     "doi": "10.1109/TPAMI.2022.3179507",
     "bibtex": "@article{liao2022kitti,\n  title={KITTI-360: A novel dataset and benchmarks for suburban scene understanding and beyond},\n  author={Liao, Yiyi and Xie, Junqing and Geiger, Andreas},\n  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  volume={45},\n  number={3},\n  pages={3238--3253},\n  year={2022},\n  publisher={IEEE},\n  doi={10.1109/TPAMI.2022.3179507}\n}"
-  }
+  },
+  "breakdown": [
+    {
+      "label": "driving distance",
+      "value": 73,
+      "unit": "km"
+    },
+    {
+      "label": "laser scans",
+      "value": 100000,
+      "unit": "scans"
+    },
+    {
+      "label": "camera images",
+      "value": 320000,
+      "unit": "images"
+    }
+  ]
 }

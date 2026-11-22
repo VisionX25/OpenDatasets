@@ -66,8 +66,7 @@
     "splits": {
       "train": 374,
       "validation": 90,
-      "test": 500,
-      "prompt": 10
+      "test": 500
     },
     "unit": "programming-problems",
     "status": "verified"
@@ -99,5 +98,12 @@
   "provenance": {
     "collection_method": "Authored by software engineers to reflect typical beginner-to-intermediate Python programming tasks.",
     "curation_notes": "Each problem verified with 3 programmatic assert statements executed in an isolated sandbox."
-  }
+  },
+  "breakdown": [
+    {
+      "label": "few-shot prompt problems",
+      "value": 10,
+      "unit": "programming-problems"
+    }
+  ]
 }

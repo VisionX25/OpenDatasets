@@ -75,10 +75,6 @@
   },
   "sample_count": {
     "total": 2000,
-    "splits": {
-      "sequences": 2000,
-      "frames": 88000
-    },
     "unit": "sequences",
     "status": "verified"
   },
@@ -105,5 +101,17 @@
     ],
     "doi": "10.48550/arXiv.2304.10440",
     "bibtex": "@article{wang2023openlane,\n  title={OpenLane-V2: A topology reasoning benchmark for autonomous driving},\n  author={Wang, Huijie and Li, Tianyu and Li, Yang and Chen, Li and Sima, Chonghao and Liu, Zhenbo and Wang, Bangjun and Jia, Peijin and Wang, Yuting and Jiang, Shengyin and others},\n  journal={arXiv preprint arXiv:2304.10440},\n  year={2023},\n  doi={10.48550/arXiv.2304.10440}\n}"
-  }
+  },
+  "breakdown": [
+    {
+      "label": "driving sequences",
+      "value": 2000,
+      "unit": "sequences"
+    },
+    {
+      "label": "annotated frames",
+      "value": 88000,
+      "unit": "frames"
+    }
+  ]
 }

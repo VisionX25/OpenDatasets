@@ -87,11 +87,18 @@ export interface DatasetSize {
 
 export type SampleCountStatus = 'verified' | 'estimated' | 'unknown'
 
+export interface DatasetBreakdownItem {
+  label: string
+  value: number
+  unit?: string
+}
+
 export interface DatasetSampleCount {
   total?: number
   splits?: Record<string, number>
   unit?: string
   status: SampleCountStatus
+  breakdown?: DatasetBreakdownItem[]
 }
 
 export interface DatasetDates {
@@ -134,6 +141,7 @@ export interface DatasetMetadata {
   citation?: DatasetCitation
   geographic_coverage?: string[]
   provenance?: DatasetProvenance
+  breakdown?: DatasetBreakdownItem[]
 }
 
 export type CategoryId =

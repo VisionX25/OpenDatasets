@@ -428,8 +428,10 @@ def evaluate_scientific_consistency(dataset: dict[str, Any]) -> dict[str, Any]:
 
             # Evaluate partition sum vs total
             if total_samples is not None:
-                # 1. Check if all values sum to total
+                # 1. Check if all values sum to total (incorporating structured breakdown metrics if present)
                 all_splits_sum = sum(v for v in splits.values() if isinstance(v, (int, float)))
+                breakdown = dataset.get("breakdown") or sc.get("breakdown") or []
+                breakdown_sum = sum(b.get("value", 0) for b in breakdown if isinstance(b, dict) and isinstance(b.get("value"), (int, float)))
                 
                 # 2. Check if a consistent unit suffix matches (e.g., train_questions + val_questions + test_questions)
                 matched_suffix_sum = False
@@ -450,7 +452,7 @@ def evaluate_scientific_consistency(dataset: dict[str, Any]) -> dict[str, Any]:
                 test_keys = [k for k in splits if "test" in k.lower() and not any(x in k.lower() for x in ("01", "02", "03", "document", "page", "image", "clip"))]
                 std_sum = sum(splits.get(k, 0) for k in train_keys + val_keys + test_keys if isinstance(splits.get(k), (int, float)))
 
-                if not matched_suffix_sum and all_splits_sum != total_samples:
+                if not matched_suffix_sum and all_splits_sum != total_samples and (all_splits_sum + breakdown_sum) != total_samples:
                     # Semantic classification of the discrepancy
                     if any("clip" in k.lower() for k in splits) and unit and "label" in unit.lower():
                         flags.append("split_unit_or_hierarchy_mismatch")
@@ -464,9 +466,9 @@ def evaluate_scientific_consistency(dataset: dict[str, Any]) -> dict[str, Any]:
                     elif did in ("unsw-nb15", "ms-coco"):
                         flags.append("benchmark_subset_partition")
                         issues.append(f"Splits represent official partitioned benchmark subset ({std_sum}) of larger raw archive ({total_samples})")
-                    elif (train_keys and test_keys and std_sum != total_samples) or (
-                        train_keys and val_keys and std_sum != total_samples
-                    ):
+                    elif ((train_keys and test_keys and std_sum != total_samples and (std_sum + breakdown_sum) != total_samples) or (
+                        train_keys and val_keys and std_sum != total_samples and (std_sum + breakdown_sum) != total_samples
+                    )):
                         flags.append("partition_split_count_mismatch")
                         issues.append(
                             f"Partition splits sum ({std_sum}) does not equal declared total sample count ({total_samples})"

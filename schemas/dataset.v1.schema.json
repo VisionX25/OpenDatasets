@@ -278,6 +278,33 @@
         "status": {
           "type": "string",
           "enum": ["verified", "estimated", "unknown"]
+        },
+        "breakdown": {
+          "type": "array",
+          "description": "Structured quantitative breakdowns, sub-counts, or scientific measurements other than standard partition splits.",
+          "items": {
+            "type": "object",
+            "description": "A single quantitative breakdown metric or measurement.",
+            "required": ["label", "value"],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Descriptive label for this quantitative breakdown item."
+              },
+              "value": {
+                "type": "number",
+                "minimum": 0,
+                "description": "Numeric measurement, quantity, or count."
+              },
+              "unit": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Physical, digital, or counting unit of measurement."
+              }
+            }
+          }
         }
       }
     },
@@ -344,6 +371,33 @@
         "data_sources": {
           "type": "array",
           "items": { "type": "string" }
+        }
+      }
+    },
+    "breakdown": {
+      "type": "array",
+      "description": "Structured quantitative breakdowns, sub-counts, or scientific measurements other than standard partition splits.",
+      "items": {
+        "type": "object",
+        "description": "A single quantitative breakdown metric or measurement.",
+        "required": ["label", "value"],
+        "additionalProperties": false,
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Descriptive label for this quantitative breakdown item."
+          },
+          "value": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Numeric measurement, quantity, or count."
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Physical, digital, or counting unit of measurement."
+          }
         }
       }
     }
