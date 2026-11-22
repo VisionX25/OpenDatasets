@@ -1,9 +1,9 @@
 # OpenDatasets Metadata Quality & Research Readiness Audit
 
-> **Audit Task:** Task 51 — 725-Record Metadata Quality Audit<br>
+> **Audit Task:** Task 51B — Final Metadata Corrections Audit<br>
 > **Audit Date:** 2026-11-22<br>
 > **Total Datasets Audited:** 725<br>
-> **Catalog Documentation Completeness:** 80.0%<br>
+> **Catalog Documentation Completeness:** 80.1%<br>
 > **Methodology:** Offline, evidence-based, reproducible metadata inspection across canonical JSON Schema v1 definitions.
 
 ---
@@ -14,8 +14,8 @@ This audit establishes a rigorous, evidence-based quality baseline across all 72
 
 ### Key Catalog Highlights
 - **100% Core Schema Compliance:** All 725 datasets strictly adhere to `dataset.v1.schema.json` with valid unique IDs, slugs, names, descriptions, homepages, publishers, modalities, tasks, tags, licenses, source references, and verification blocks.
-- **Catalog Documentation Completeness:** Average of **80.0%** across applicable core and optional metadata attributes.
-- **Licensing Transparency:** 374 verified open datasets, 155 verified non-commercial, 110 custom permissive, and 46 public domain datasets. Only 36 datasets are unspecified by source and 0 are unknown from source.
+- **Catalog Documentation Completeness:** Average of **80.1%** across applicable core and optional metadata attributes.
+- **Licensing Transparency:** 374 verified open datasets, 155 verified non-commercial, 111 custom permissive, and 45 public domain datasets. Only 36 datasets are unspecified by source and 0 are unknown from source.
 - **Access Requirements:** 669 datasets offer open/direct download, while **48** datasets require user registration, formal data use agreements (DUAs), or institutional credentialing (e.g. ADNI, PhysioNet, MIMIC).
 - **Academic Citation Coverage:** **717 / 725 (98.9%)** include structured academic citations. Datasets without citations represent authoritative government or institutional repositories (e.g. NOAA, NASA, Canadian Open Government).
 - **Zero Critical Fatalities:** Zero malformed DOIs, zero unbalanced BibTeX braces, and zero broken JSON syntax across the catalog.
@@ -35,12 +35,12 @@ The canonical schema defines required top-level attributes and structured option
 | **Publisher URL** (`publisher.url`) | 685 | 94.5% | Institutional/lab homepage provided |
 | **Physical Storage Size** (`size`) | 318 | 43.9% | 199 with exact bytes, 94 documented as unknown |
 | **Provenance & Lineage** (`provenance`) | 277 | 38.2% | Documented collection & curation protocols |
-| **Updated Milestone Date** (`dates.last_updated`) | 266 | 36.7% | Historical revisions or dataset maintenance dates |
+| **Updated Milestone Date** (`dates.last_updated`) | 265 | 36.6% | Historical revisions or dataset maintenance dates |
 | **Geographic Coverage** (`geographic_coverage`) | 147 | 20.3% | Applicable to remote sensing, climate, transit |
 | **Language Identifiers** (`languages`) | 133 | 18.3% | Applicable to text and speech modalities |
 
-### Mathematical Derivation of the 80.0% Completeness Value
-The catalog documentation completeness average of **80.0%** (exact: `80.0354%`) is an unweighted arithmetic mean of per-dataset completeness scores across all 725 records:
+### Mathematical Derivation of the 80.1% Completeness Value
+The catalog documentation completeness average of **80.1%** (exact: `80.1356%`) is an unweighted arithmetic mean of per-dataset completeness scores across all 725 records:
 
 - **Evaluation Attributes per Dataset:** Each record is scored against 13 core attributes plus up to 2 domain-applicable contextual attributes (`geographic_coverage` and `languages`).
 - **Denominator Distribution:**
@@ -60,11 +60,11 @@ Metadata completeness and research readiness vary naturally across disciplines d
 
 | Research Category | Total Datasets | Avg Doc Completeness (%) | Ready for Evaluation | Documented with Caveats | Needs Info Review |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **computer-vision** | 392 | 82.8% | 267 | 97 | 28 |
-| **natural-language-processing** | 180 | 80.7% | 112 | 49 | 19 |
-| **audio-speech** | 58 | 74.6% | 41 | 17 | 0 |
-| **tabular-time-series** | 199 | 77.4% | 154 | 43 | 2 |
-| **multimodal-generative** | 102 | 82.9% | 59 | 38 | 5 |
+| **computer-vision** | 392 | 82.9% | 267 | 97 | 28 |
+| **natural-language-processing** | 180 | 80.8% | 111 | 50 | 19 |
+| **audio-speech** | 58 | 75.2% | 41 | 17 | 0 |
+| **tabular-time-series** | 199 | 77.5% | 154 | 43 | 2 |
+| **multimodal-generative** | 102 | 83.1% | 59 | 38 | 5 |
 | **evaluation-benchmarks** | 318 | 82.3% | 232 | 54 | 32 |
 
 ### Multi-Category Accounting Breakdown
@@ -92,19 +92,19 @@ The sum of category totals is **1,249**, which exceeds 725 because OpenDatasets 
 ### Licensing Classification Breakdown
 - **Verified Open:** 374 datasets (51.6%)
 - **Verified Non-Commercial:** 155 datasets (21.4%)
-- **Custom Permissive:** 110 datasets (15.2%)
-- **Public Domain:** 46 datasets (6.3%)
+- **Custom Permissive:** 111 datasets (15.3%)
+- **Public Domain:** 45 datasets (6.2%)
 - **Unspecified by Source:** 36 datasets (5.0%)
 - **Proprietary:** 4 datasets (`adni`, `khatt`)
 - **Unknown:** 0 datasets
 
 ### Commercial Use Permissions
 - **Allowed:** 449 datasets
-- **Forbidden:** 197 datasets
-- **Unknown / Ambiguous:** 79 datasets
+- **Forbidden:** 196 datasets
+- **Unknown / Ambiguous:** 80 datasets
 
 ### Key Licensing Observations & False-Positive Analysis
-1. **Custom Permissive Non-Commercial Research Licenses (36 datasets):** 36 datasets marked `custom_permissive` document strict non-commercial research terms in their notes (e.g. Waymo Open Dataset, ApolloScape, levelXData, Matterport HM3D). These are **not curatorial errors**; they accurately reflect custom publisher terms that are permissive for academic research but forbid commercial redistribution. They remain categorized for potential future alignment under a unified non-commercial rubric.
+1. **Custom Permissive Non-Commercial Research Licenses (35 datasets):** 35 datasets marked `custom_permissive` document strict non-commercial research terms in their notes (e.g. Waymo Open Dataset, ApolloScape, levelXData, Matterport HM3D). These are **not curatorial errors**; they accurately reflect custom publisher terms that are permissive for academic research but forbid commercial redistribution. They remain categorized for potential future alignment under a unified non-commercial rubric.
 2. **Unspecified by Source (36 datasets):** Datasets originating from academic repositories where authors did not attach a formal license text. Commercial use is conservatively recorded as `unknown` (36). In accordance with catalog governance principles, OpenDatasets does not infer permissive rights from public availability.
 3. **Consistency Discrepancy Flag (`lfw`):** In `lfw`, the license status was historically marked `verified_non_commercial` while `commercial_use` was `unknown`. Primary-source review against UMass Technical Report 07-49 and web archives established that no formal research use agreement was published, resolving this to `unspecified_by_source`.
 
@@ -139,7 +139,7 @@ A catalog-wide census identified exactly 17 dataset records where partition spli
   - `pubmed-200k-rct`: Declared total is 195,654 abstracts (from PubMed 200k RCT), while split dictionary records sentence counts from the 20k version (`train: 180,000`, `dev: 28,712`, `test: 28,978` = 237,690 sentences).
 
 > [!IMPORTANT]
-> None of these cases are confirmed source errors. In accordance with Task 51 — 725-Record Metadata Quality Audit change control, **no metadata was modified**. Primary-source citations from benchmark publications are required before applying any adjustments.
+> None of these cases are confirmed source errors. In accordance with Task 51B — Final Metadata Corrections Audit change control, **no metadata was modified**. Primary-source citations from benchmark publications are required before applying any adjustments.
 
 ### 2. Shared URL Multi-Role References (4 datasets)
 The 4 datasets flagged for duplicate URLs represent legitimate semantic multi-role reuse rather than broken duplicate links, distinguishing dataset landing page, dataset DOI, original research publication, and repository mirror without modifying catalog metadata:
@@ -157,29 +157,29 @@ Every dataset in OpenDatasets is classified into **exactly one** of three mutual
 1. **Needs Information Review (45 datasets):**
    - *Rule:* Triggered if `license.status` is `unknown` or `unspecified_by_source`, OR if a genuine `partition_split_count_mismatch` exists.
    - *Meaning:* Requires maintainer review of source terms or split arithmetic before researchers can reliably cite or partition the dataset.
-2. **Ready for Evaluation (499 datasets):**
+2. **Ready for Evaluation (498 datasets):**
    - *Rule:* Triggered if Source Traceability is `High`, License Clarity is `High` (`verified_open`, `verified_non_commercial`, or `public_domain` with explicit commercial terms), Scale Documentation is `High` or `Medium`, Access Clarity is `Explicit_Open` or `Explicit_Gated`, and no Needs Information Review triggers are present.
    - *Meaning:* The record provides complete metadata (traceable publisher, explicit license, standardized modalities/tasks, and sample counts) enabling a researcher to immediately evaluate its applicability.
    - *Clarification:* **'Ready for Evaluation' DOES NOT imply unrestricted access, commercial permission, scientific validity, or benchmark accuracy.** It strictly evaluates documentation availability.
-3. **Documented with Caveats (181 datasets):**
+3. **Documented with Caveats (182 datasets):**
    - *Rule:* All remaining datasets that are traceable and defined, but have operational caveats (e.g. credentialed/DUA access requirements, custom permissive non-commercial licenses, or omitted physical download byte sizes).
 
 ```
-Total Audited: 499 (Ready) + 181 (Caveats) + 45 (Needs Review) = 725 datasets (100% accounted for)
+Total Audited: 498 (Ready) + 182 (Caveats) + 45 (Needs Review) = 725 datasets (100% accounted for)
 ```
 
 | Readiness Dimension | High | Medium / Explicit | Low / Ambiguous | Authoritative / N/A |
 | :--- | :--- | :--- | :--- | :--- |
 | **Source Traceability** | 685 | 40 | 0 | — |
 | **Access Clarity** | 669 (Open) | 48 (Gated) | 8 | — |
-| **License Clarity** | 573 | 116 | 36 | — |
+| **License Clarity** | 572 | 117 | 36 | — |
 | **Task & Modality Clarity** | 725 | 0 | 0 | — |
 | **Scale Documentation** | 413 | 265 | 47 | — |
-| **Citation Completeness** | 465 | 252 | 0 | 6 |
+| **Citation Completeness** | 476 | 241 | 0 | 6 |
 
 ### Catalog Readiness Tiers
-- **Ready for Evaluation (499 datasets):** Full provenance, verifiable license, unambiguous task/modality classifications, and documented sample scale. Ready for immediate experimental benchmarking.
-- **Documented with Caveats (181 datasets):** Traceable source documentation with explicit task definitions, but subject to operational caveats (e.g. credentialed/DUA access requirements, custom license clauses, or absent byte-size statistics).
+- **Ready for Evaluation (498 datasets):** Full provenance, verifiable license, unambiguous task/modality classifications, and documented sample scale. Ready for immediate experimental benchmarking.
+- **Documented with Caveats (182 datasets):** Traceable source documentation with explicit task definitions, but subject to operational caveats (e.g. credentialed/DUA access requirements, custom license clauses, or absent byte-size statistics).
 - **Needs Information Review (45 datasets):** Unspecified license from source, or mathematical partition split count discrepancy requiring primary source verification.
 
 ---
@@ -226,15 +226,15 @@ To guide future catalog curation, candidate records are grouped into prioritized
 | `mit-bih-atrial-fibrillation` | `tabular-time-series` | Consolidate duplicate source references into single canonical entry with comprehensive notes. | Verify whether duplicate URLs represent distinct endpoints or accidental redundant curation entries. |
 | `mit-bih-noise-stress-test` | `tabular-time-series` | Consolidate duplicate source references into single canonical entry with comprehensive notes. | Verify whether duplicate URLs represent distinct endpoints or accidental redundant curation entries. |
 
-### Priority 4: Custom Permissive Non-Commercial Research Licenses (36 records)
+### Priority 4: Custom Permissive Non-Commercial Research Licenses (35 records)
 | Dataset ID | Declared License | Recommended Review | Evidence Requirement |
 | :--- | :--- | :--- | :--- |
 | `anomaly-shapenet` | ShapeNet Terms of Use | Review whether custom research terms qualify for verified_non_commercial or remain custom_permissive with commercial_use forbidden. | Publisher license text stating exact permitted non-commercial scope and commercial restrictions. |
 | `apolloscape` | ApolloScape Non-Commercial Research License | Review whether custom research terms qualify for verified_non_commercial or remain custom_permissive with commercial_use forbidden. | Publisher license text stating exact permitted non-commercial scope and commercial restrictions. |
 | `bengali-hate-speech-dataset` | Research Use Only License | Review whether custom research terms qualify for verified_non_commercial or remain custom_permissive with commercial_use forbidden. | Publisher license text stating exact permitted non-commercial scope and commercial restrictions. |
 | `cic-ids2017` | CIC Academic Research License | Review whether custom research terms qualify for verified_non_commercial or remain custom_permissive with commercial_use forbidden. | Publisher license text stating exact permitted non-commercial scope and commercial restrictions. |
-| `coco-wholebody` | Custom Permissive License (Annotations CC BY 4.0 SenseTime) | Review whether custom research terms qualify for verified_non_commercial or remain custom_permissive with commercial_use forbidden. | Publisher license text stating exact permitted non-commercial scope and commercial restrictions. |
-| *...and 31 more records in report.json* | | | |
+| `deeppcb` | Custom Research-Only License | Review whether custom research terms qualify for verified_non_commercial or remain custom_permissive with commercial_use forbidden. | Publisher license text stating exact permitted non-commercial scope and commercial restrictions. |
+| *...and 30 more records in report.json* | | | |
 
 ### Priority 5: Ambiguous or Missing Sample Units (3 records)
 | Dataset ID | Declared Total | Current Unit | Recommended Action | Evidence Requirement |
@@ -262,7 +262,7 @@ To guide future catalog curation, candidate records are grouped into prioritized
 1. **Offline Review Safeguard:** This audit was conducted 100% offline using local metadata records and schema specifications. No external HTTP requests were performed during execution.
 2. **Zero Fabrication Policy:** Missing metadata was not synthesized or inferred. If a publisher omitted physical payload sizes or exact split counts, the audit records them as missing or unknown.
 3. **Completeness vs Scientific Quality Distinction:** A high documentation completeness score does not imply superior machine learning utility or benchmark validity. Authoritative governmental and institutional repositories (e.g., NOAA, NASA, PhysioNet) often lack traditional conference citations or fixed train/test splits due to their continuous monitoring nature, yet represent gold-standard scientific resources.
-4. **Change Control Integrity:** No catalog JSON files, licenses, or splits were modified during Task 51 — 725-Record Metadata Quality Audit. All identified findings are reported for transparent review and deliberate future curation.
+4. **Change Control Integrity:** No catalog JSON files, licenses, or splits were modified during Task 51B — Final Metadata Corrections Audit. All identified findings are reported for transparent review and deliberate future curation.
 
 ---
 *Report generated automatically by `scripts/audit_metadata_quality.py`.*

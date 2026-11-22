@@ -3,7 +3,7 @@
   "id": "vizwiz-vqa",
   "slug": "vizwiz-vqa",
   "name": "VizWiz-VQA: Visual Question Answering from Blind Photographers",
-  "description": "VizWiz-VQA is a visual question answering benchmark originating from real-world photos taken by blind individuals asking questions about their daily surroundings. Developed by the VizWiz Consortium, it comprises 31,173 visual questions paired with 10 crowd-sourced answers per question, featuring challenging artifacts such as motion blur, framing issues, unanswerable questions, and privacy-sensitive content.",
+  "description": "VizWiz-VQA is a visual question answering benchmark originating from real-world photos taken by blind individuals asking questions about their daily surroundings. Developed by the VizWiz Consortium, it comprises 31,173 visual questions in its initial CVPR 2018 release (subsequently expanded to 32,842 across train, validation, and test splits), each paired with 10 crowd-sourced answers, featuring challenging artifacts such as motion blur, framing issues, unanswerable questions, and privacy concerns.",
   "homepage_url": "https://vizwiz.org/tasks-and-datasets/vqa/",
   "publisher": {
     "name": "VizWiz Consortium",
@@ -88,18 +88,19 @@
   },
   "citation": {
     "paper_title": "VizWiz Grand Challenge: Answering Visual Questions from Blind People",
-    "paper_url": "https://arxiv.org/abs/1802.08218",
+    "paper_url": "https://doi.org/10.1109/CVPR.2018.00380",
     "authors": [
       "Danna Gurari",
       "Qing Li",
       "Abigale J. Stangl",
-      "Anh Nguyen",
-      "Pradeep Kumar Jayaraman",
-      "Pina Choi",
-      "Edward Zhang",
-      "Kristen Grauman"
+      "Anhong Guo",
+      "Chi Lin",
+      "Kristen Grauman",
+      "Jiebo Luo",
+      "Jeffrey P. Bigham"
     ],
-    "bibtex": "@inproceedings{gurari2018vizwiz,\n  title={VizWiz Grand Challenge: Answering Visual Questions From Blind People},\n  author={Gurari, Danna and Li, Qing and Stangl, Abigale J and Nguyen, Anh and Jayaraman, Pradeep Kumar and Choi, Pina and Zhang, Edward and Grauman, Kristen},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={3608--3617},\n  year={2018}\n}"
+    "doi": "10.1109/CVPR.2018.00380",
+    "bibtex": "@inproceedings{gurari2018vizwiz,\n  title={VizWiz Grand Challenge: Answering Visual Questions From Blind People},\n  author={Gurari, Danna and Li, Qing and Stangl, Abigale J and Guo, Anhong and Lin, Chi and Grauman, Kristen and Luo, Jiebo and Bigham, Jeffrey P},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={3608--3617},\n  year={2018}\n}"
   },
   "provenance": {
     "collection_method": "Recorded by blind users submitting cell phone photos and voice queries to a remote human assistance application.",

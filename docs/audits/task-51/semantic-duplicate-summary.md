@@ -1,6 +1,6 @@
 # OpenDatasets Cross-Dataset Semantic Duplicate Audit Summary
 
-> **Audit Task:** Task 51 — 725-Record Dataset Addition & Semantic Duplicate Audit<br>
+> **Audit Task:** Task 51B — Final Metadata Corrections & Semantic Duplicate Audit<br>
 > **Audit Date:** 2026-11-22<br>
 > **Total Records Scanned:** 725<br>
 > **Total Candidate Pairs Flagged:** 124<br>
@@ -150,7 +150,7 @@ Medium-confidence candidate pairs require manual review to establish scientific 
 | `ogbn-papers100m__ogbn-proteins` | `ogbn-papers100m` | `ogbn-proteins` | Homepage: `ogb.stanford.edu/docs/nodeprop`; DOI: `10.48550/arxiv.2005.00687`; Shared refs (2) | `graph, papers100m, proteins` | `distinct_benchmark_subsets_under_shared_project_umbrella` | `maintain_as_distinct_with_cross_reference` |
 | `ogbn-products__ogbn-proteins` | `ogbn-products` | `ogbn-proteins` | Homepage: `ogb.stanford.edu/docs/nodeprop`; DOI: `10.48550/arxiv.2005.00687`; Shared refs (2) | `products, proteins` | `distinct_benchmark_subsets_under_shared_project_umbrella` | `maintain_as_distinct_with_cross_reference` |
 | `pcqm4mv2__wikikg90mv2` | `pcqm4mv2` | `wikikg90mv2` | DOI: `10.48550/arxiv.2103.09430`; Shared refs (1) | `distinct_modalities:['3d', 'graph']_vs_['graph'], distinct_tasks:['graph-regression', 'knowledge-graph-completion', 'link-prediction', 'molecular-property-prediction', 'quantum-chemistry'], graph` | `shared_foundational_or_benchmark_suite_publication` | `maintain_as_distinct_with_cross_reference` |
-| `pems04__pems08` | `pems04` | `pems08` | Homepage: `github.com/Davidham3/ASTGCN`; Repo: `github:davidham3/astgcn`; Shared refs (2) | `4, 8` | `distinct_benchmark_subsets_under_shared_project_umbrella` | `maintain_as_distinct_with_cross_reference` |
+| `pems04__pems08` | `pems04` | `pems08` | Homepage: `github.com/Davidham3/ASTGCN`; DOI: `10.1609/aaai.v33i01.3301922`; Repo: `github:davidham3/astgcn`; Shared refs (2) | `4, 8` | `distinct_benchmark_subsets_under_shared_project_umbrella` | `maintain_as_distinct_with_cross_reference` |
 | `pku-market-pcb__pku-market-phone` | `pku-market-pcb` | `pku-market-phone` | Homepage: `robotics.pkusz.edu.cn/resources/datasetENG`; Shared refs (1) | `distinct_tasks:['defect-segmentation', 'image-classification', 'image-segmentation', 'object-detection'], pcb, phone` | `distinct_benchmark_subsets_under_shared_project_umbrella` | `maintain_as_distinct_with_cross_reference` |
 | `ucr-time-series-archive__uea-multivariate-time-series` | `ucr-time-series-archive` | `uea-multivariate-time-series` | Homepage: `timeseriesclassification.com`; Shared refs (1) | `2018, distinct_modalities:['time-series']_vs_['tabular', 'time-series']` | `distinct_benchmark_subsets_under_shared_project_umbrella` | `maintain_as_distinct_with_cross_reference` |
 | `waymo-open-end-to-end__waymo-open-perception` | `waymo-open-end-to-end` | `waymo-open-perception` | Homepage: `waymo.com/open`; Shared refs (1) | `distinct_modalities:['sensor', 'time-series', 'vision']_vs_['3d', 'multimodal', 'sensor', 'vision'], distinct_tasks:['3d-object-detection', '3d-tracking', 'end-to-end-driving', 'imitation-learning', 'motion-planning', 'object-detection', 'point-cloud-segmentation', 'trajectory-prediction']` | `distinct_benchmark_subsets_under_shared_project_umbrella` | `maintain_as_distinct_with_cross_reference` |

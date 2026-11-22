@@ -2069,7 +2069,7 @@
     },
     "citation": {
       "paper_title": "AISHELL-1: An open-source Mandarin speech corpus and a speech recognition baseline",
-      "paper_url": "https://arxiv.org/abs/1709.05522",
+      "paper_url": "https://doi.org/10.1109/icsda.2017.8384449",
       "authors": [
         "Hui Bu",
         "Jiayu Du",
@@ -2077,6 +2077,7 @@
         "Bengu Wu",
         "Hao Zheng"
       ],
+      "doi": "10.1109/icsda.2017.8384449",
       "bibtex": "@inproceedings{bu2017aishell,\n  title={AISHELL-1: An open-source Mandarin speech corpus and a speech recognition baseline},\n  author={Bu, Hui and Du, Jiayu and Na, Xingyu and Wu, Bengu and Zheng, Hao},\n  booktitle={2017 20th Conference of the Oriental COCOSDA},\n  pages={1--5},\n  year={2017},\n  organization={IEEE}\n}"
     },
     "provenance": {
@@ -9920,12 +9921,12 @@
       "gold-standard"
     ],
     "license": {
-      "status": "public_domain",
-      "name": "Creative Commons Zero v1.0 Universal",
-      "spdx_id": "CC0-1.0",
-      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "status": "custom_permissive",
+      "name": "Composite: CC BY 4.0 (Human & Test Splits) / CC0 1.0 (Mined & Packaging)",
+      "spdx_id": null,
+      "url": "https://huggingface.co/datasets/ai4bharat/BPCC#license",
       "commercial_use": "allowed",
-      "notes": "Dataset packaging and newly collected pairs released under CC0 1.0 Universal; human translation splits licensed under CC BY 4.0."
+      "notes": "BPCC is a multi-license composite collection: (1) CC BY 4.0 applies to newly added human-translated seed corpora (BPCC-H-Wiki, BPCC-H-Daily, ~2.2M pairs) and the IN-22 evaluation benchmark test sets (IN22-Gen, IN22-Conv); (2) CC0 1.0 Universal applies to the curation and packaging of mined corpora (BPCC-Mined) and back-translated data (BPCC-BT). Underlying crawled text remains subject to original source copyright."
     },
     "source_references": [
       {
@@ -9933,6 +9934,12 @@
         "url": "https://indictrans2.ai4bharat.org",
         "type": "official_website",
         "notes": "Portal for IndicTrans2 translation models and BPCC dataset releases."
+      },
+      {
+        "title": "AI4Bharat BPCC Hugging Face Dataset Card",
+        "url": "https://huggingface.co/datasets/ai4bharat/BPCC",
+        "type": "dataset_card",
+        "notes": "Official Hugging Face dataset card detailing component-level licensing and download splits."
       },
       {
         "title": "IndicTrans2: Towards High-Quality and Accessible Machine Translation for all 22 Scheduled Indian Languages",
@@ -13994,10 +14001,10 @@
     ],
     "license": {
       "status": "custom_permissive",
-      "name": "Custom Permissive License (Annotations CC BY 4.0 SenseTime)",
-      "url": "https://github.com/jin-s13/COCO-WholeBody/blob/master/LICENSE",
-      "commercial_use": "forbidden",
-      "notes": "Annotations released under CC BY 4.0 for non-commercial research use; underlying images adhere to Flickr/COCO terms."
+      "name": "Custom: Annotations CC BY 4.0 (SenseTime NC Clause) / Images Flickr Terms",
+      "url": "https://github.com/jin-s13/COCO-WholeBody#license",
+      "commercial_use": "unknown",
+      "notes": "Dual-layer licensing: (1) Annotations are authored by SenseTime Research and stated as CC BY 4.0, but the repository explicitly restricts usage to research and non-commercial purposes, requiring commercial users to seek direct permission from SenseTime; (2) Underlying images originate from MS COCO / Flickr and are governed by individual Flickr licenses and Flickr terms of use."
     },
     "source_references": [
       {
@@ -16334,9 +16341,9 @@
       },
       {
         "title": "Processing South Asian Languages Written in the Latin Script: The Dakshina Dataset",
-        "url": "https://arxiv.org/abs/2007.01176",
+        "url": "https://aclanthology.org/2020.lrec-1.294/",
         "type": "original_paper",
-        "notes": "Published in Proceedings of LREC 2020."
+        "notes": "Published in Proceedings of the 12th Language Resources and Evaluation Conference (LREC 2020)."
       }
     ],
     "verification": {
@@ -16379,16 +16386,18 @@
       "published": "2020-05-11"
     },
     "citation": {
-      "paper_title": "Processing South Asian Languages Written in the Latin Script: the Dakshina Dataset",
-      "paper_url": "https://arxiv.org/abs/2007.01176",
+      "paper_title": "Processing South Asian Languages Written in the Latin Script: The Dakshina Dataset",
+      "paper_url": "https://aclanthology.org/2020.lrec-1.294/",
       "authors": [
         "Brian Roark",
         "Lawrence Wolf-Sonkin",
         "Christo Kirov",
-        "Sproat Richard",
-        "Czeslaw de Montgomery"
+        "Sabrina J. Mielke",
+        "Cibu Johny",
+        "Işın Demirşahin",
+        "Keith Hall"
       ],
-      "bibtex": "@inproceedings{roark2020processing,\n  title={Processing South Asian languages written in the Latin script: the Dakshina dataset},\n  author={Roark, Brian and Wolf-Sonkin, Lawrence and Kirov, Christo and Sproat, Richard and de Montgomery, Czeslaw},\n  booktitle={Proceedings of the 12th Language Resources and Evaluation Conference},\n  pages={2413--2423},\n  year={2020}\n}"
+      "bibtex": "@inproceedings{roark-etal-2020-processing,\n  title={Processing {S}outh {A}sian Languages Written in the {L}atin Script: the {D}akshina Dataset},\n  author={Roark, Brian and Wolf-Sonkin, Lawrence and Kirov, Christo and Mielke, Sabrina J. and Johny, Cibu and Demir{\\c{s}}ahin, I{\\c{s}}in and Hall, Keith},\n  booktitle={Proceedings of the 12th Language Resources and Evaluation Conference},\n  pages={2413--2423},\n  year={2020},\n  publisher={European Language Resources Association}\n}"
     },
     "provenance": {
       "collection_method": "Native script sentences harvested from Wikipedia articles and manually transliterated into Latin script by native speakers.",
@@ -18281,7 +18290,7 @@
     },
     "citation": {
       "paper_title": "Moment Matching for Multi-Source Domain Adaptation",
-      "paper_url": "https://arxiv.org/abs/1905.11761",
+      "paper_url": "https://doi.org/10.1109/ICCV.2019.00149",
       "authors": [
         "Xingchao Peng",
         "Qinxun Bai",
@@ -18290,6 +18299,7 @@
         "Kate Saenko",
         "Bo Wang"
       ],
+      "doi": "10.1109/ICCV.2019.00149",
       "bibtex": "@inproceedings{peng2019moment,\n  title={Moment matching for multi-source domain adaptation},\n  author={Peng, Xingchao and Bai, Qinxun and Xia, Xide and Huang, Zijun and Saenko, Kate and Wang, Bo},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},\n  pages={1406--1415},\n  year={2019}\n}"
     },
     "provenance": {
@@ -24044,7 +24054,7 @@
     },
     "citation": {
       "paper_title": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
-      "paper_url": "https://arxiv.org/abs/2311.12022",
+      "paper_url": "https://openreview.net/forum?id=Ti67584b98",
       "authors": [
         "David Rein",
         "Betty Li Hou",
@@ -24055,7 +24065,7 @@
         "Julian Michael",
         "Samuel R. Bowman"
       ],
-      "bibtex": "@article{rein2023gpqa,\n  title={GPQA: A Graduate-Level Google-Proof Q&A Benchmark},\n  author={Rein, David and Hou, Betty Li and Stickland, Asa Cooper and Petty, Jackson and Pang, Richard Yuanzhe and Dirani, Julien and Michael, Julian and Bowman, Samuel R},\n  journal={arXiv preprint arXiv:2311.12022},\n  year={2023}\n}"
+      "bibtex": "@inproceedings{rein2024gpqa,\n  title={GPQA: A Graduate-Level Google-Proof Q&A Benchmark},\n  author={Rein, David and Hou, Betty Li and Stickland, Asa Cooper and Petty, Jackson and Pang, Richard Yuanzhe and Dirani, Julien and Michael, Julian and Bowman, Samuel R},\n  booktitle={First Conference on Language Modeling},\n  year={2024},\n  url={https://openreview.net/forum?id=Ti67584b98}\n}"
     },
     "provenance": {
       "collection_method": "Authored by PhD holders in Biology, Physics, and Chemistry, intentionally crafted so non-experts cannot answer even with web search.",
@@ -25420,13 +25430,14 @@
     },
     "citation": {
       "paper_title": "Hi-Fi Multi-Speaker English TTS Dataset",
-      "paper_url": "https://arxiv.org/abs/2104.01497",
+      "paper_url": "https://doi.org/10.21437/Interspeech.2021-1599",
       "authors": [
         "Evelina Bakhturina",
         "Vitaly Lavrukhin",
         "Boris Ginsburg",
         "Yang Zhang"
       ],
+      "doi": "10.21437/Interspeech.2021-1599",
       "bibtex": "@inproceedings{bakhturina2021hi,\n  title={Hi-Fi Multi-Speaker English TTS Dataset},\n  author={Bakhturina, Evelina and Lavrukhin, Vitaly and Ginsburg, Boris and Zhang, Yang},\n  booktitle={Interspeech 2021},\n  pages={2776--2780},\n  year={2021}\n}"
     },
     "provenance": {
@@ -28056,8 +28067,8 @@
     "schema_version": "1.0.0",
     "id": "indiccorp",
     "slug": "indiccorp",
-    "name": "IndicCorp: Large-Scale Monolingual Corpora for Indic Languages",
-    "description": "IndicCorp is an extensive web-crawled monolingual text corpus spanning 24 Indic languages. Developed by AI4Bharat across versions 1 and 2, the dataset aggregates over 20.9 billion tokens (v2) from diverse online sources, providing the foundational pre-training material for models such as IndicBERT and IndicBART.",
+    "name": "IndicCorp v2: Large-Scale Monolingual Corpora for Indic Languages",
+    "description": "IndicCorp v2 is an extensive web-crawled monolingual text corpus spanning 24 Indic languages, developed by AI4Bharat and presented at ACL 2023. Significantly expanding upon IndicCorp v1 (EMNLP 2020), version 2 contains over 20.9 billion tokens and approximately 1.1 billion sentences across 24 languages from 4 language families, providing foundational pre-training material for models such as IndicBERT v2 and IndicBART.",
     "homepage_url": "https://indicnlp.ai4bharat.org/indiccorp/",
     "publisher": {
       "name": "AI4Bharat",
@@ -28086,7 +28097,7 @@
       "spdx_id": "CC0-1.0",
       "url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "commercial_use": "allowed",
-      "notes": "IndicCorp v2 text collections are released into the public domain under CC0 1.0 Universal."
+      "notes": "Datasets created by AI4Bharat under IndicCorp v2 are released under CC0 1.0 Universal (Public Domain Dedication). Accompanying models and fine-tuning code are released under the MIT license."
     },
     "source_references": [
       {
@@ -28096,36 +28107,43 @@
         "notes": "Corpus overview, token distributions, and download links."
       },
       {
+        "title": "AI4Bharat IndicCorpV2 Hugging Face Dataset",
+        "url": "https://huggingface.co/datasets/ai4bharat/IndicCorpV2",
+        "type": "dataset_card",
+        "notes": "Official Hugging Face dataset card providing parquet and raw text configs for 24 Indic languages."
+      },
+      {
         "title": "Towards Leaving No Indic Language Behind: Building Monolingual Corpora, Benchmark and Models for Indic Languages",
-        "url": "https://arxiv.org/abs/2212.05409",
+        "url": "https://doi.org/10.18653/v1/2023.acl-long.693",
         "type": "original_paper",
-        "notes": "Published in ACL 2023 (IndicCorp v2)."
+        "notes": "Published in Proceedings of ACL 2023 (IndicCorp v2)."
       },
       {
         "title": "IndicNLPSuite: Monolingual Corpora, Evaluation Benchmarks and Pre-trained Multilingual Language Models for Indian Languages",
         "url": "https://arxiv.org/abs/2005.00085",
         "type": "original_paper",
-        "notes": "Published in Findings of EMNLP 2020 (IndicCorp v1)."
+        "notes": "Published in Findings of EMNLP 2020 (IndicCorp v1 foundational publication)."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-22",
-      "notes": "Verified against ACL 2023 and EMNLP Findings 2020 papers."
+      "notes": "Verified against ACL 2023 publication and official AI4Bharat Hugging Face repository."
     },
     "size": {
-      "amount": 96.0,
+      "amount": 275.0,
       "unit": "GB",
       "file_formats": [
         "txt",
+        "parquet",
         "tar.gz"
       ],
       "status": "estimated",
-      "notes": "Compressed text corpus across 24 Indic languages."
+      "notes": "Full text corpus and parquet configs across 24 Indic languages."
     },
     "sample_count": {
-      "total": 849000000,
+      "total": 1092000000,
       "unit": "sentences",
       "status": "estimated"
     },
@@ -28154,12 +28172,11 @@
       "ur"
     ],
     "dates": {
-      "published": "2020-11-16",
-      "last_updated": "2023-07-09"
+      "published": "2023-07-09"
     },
     "citation": {
       "paper_title": "Towards Leaving No Indic Language Behind: Building Monolingual Corpora, Benchmark and Models for Indian Languages",
-      "paper_url": "https://arxiv.org/abs/2212.05409",
+      "paper_url": "https://doi.org/10.18653/v1/2023.acl-long.693",
       "authors": [
         "Sumanth Doddapaneni",
         "Rahul Aralikatte",
@@ -28168,6 +28185,7 @@
         "Pratyush Kumar",
         "Mitesh M. Khapra"
       ],
+      "doi": "10.18653/v1/2023.acl-long.693",
       "bibtex": "@inproceedings{doddapaneni2023towards,\n  title={Towards Leaving No Indic Language Behind: Building Monolingual Corpora, Evaluation Benchmarks and Pre-trained Multilingual Language Models for Indian Languages},\n  author={Doddapaneni, Sumanth and Aralikatte, Rahul and Bakambhar, Radhika and Kunchukuttan, Anoop and Kumar, Pratyush and Khapra, Mitesh M.},\n  booktitle={Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},\n  pages={12402--12426},\n  year={2023}\n}"
     },
     "provenance": {
@@ -28272,7 +28290,7 @@
     },
     "citation": {
       "paper_title": "IndicNLPSuite: Monolingual Corpora, Evaluation Benchmarks and Pre-trained Multilingual Language Models for Indian Languages",
-      "paper_url": "https://arxiv.org/abs/2005.00085",
+      "paper_url": "https://doi.org/10.18653/v1/2020.findings-emnlp.445",
       "authors": [
         "Divyanshu Kakwani",
         "Anoop Kunchukuttan",
@@ -28282,6 +28300,7 @@
         "Mitesh M. Khapra",
         "Pratyush Kumar"
       ],
+      "doi": "10.18653/v1/2020.findings-emnlp.445",
       "bibtex": "@inproceedings{kakwani2020indicnlpsuite,\n  title={IndicNLPSuite: Monolingual Corpora, Evaluation Benchmarks and Pre-trained Multilingual Language Models for Indian Languages},\n  author={Kakwani, Divyanshu and Kunchukuttan, Anoop and Golla, Satish and N.C., Gokul and Bhattacharyya, Avik and Khapra, Mitesh M. and Kumar, Pratyush},\n  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2020},\n  pages={4948--4961},\n  year={2020}\n}"
     },
     "provenance": {
@@ -35132,7 +35151,7 @@
     },
     "citation": {
       "paper_title": "MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversations",
-      "paper_url": "https://arxiv.org/abs/1810.02508",
+      "paper_url": "https://doi.org/10.18653/v1/P19-1050",
       "authors": [
         "Soujanya Poria",
         "Devamanyu Hazarika",
@@ -35141,6 +35160,7 @@
         "Erik Cambria",
         "Rada Mihalcea"
       ],
+      "doi": "10.18653/v1/P19-1050",
       "bibtex": "@inproceedings{poria2019meld,\n  title={MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversations},\n  author={Poria, Soujanya and Hazarika, Devamanyu and Majumder, Navonil and Naik, Gautam and Cambria, Erik and Mihalcea, Rada},\n  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},\n  pages={527--536},\n  year={2019}\n}"
     },
     "provenance": {
@@ -39500,7 +39520,7 @@
     },
     "citation": {
       "paper_title": "MLS: A Large-Scale Multilingual Dataset for Speech Research",
-      "paper_url": "https://arxiv.org/abs/2012.03411",
+      "paper_url": "https://doi.org/10.21437/Interspeech.2020-2826",
       "authors": [
         "Vineel Pratap",
         "Qiantong Xu",
@@ -39508,6 +39528,7 @@
         "Gabriel Synnaeve",
         "Ronan Collobert"
       ],
+      "doi": "10.21437/Interspeech.2020-2826",
       "bibtex": "@inproceedings{pratap2020mls,\n  title={MLS: A Large-Scale Multilingual Dataset for Speech Research},\n  author={Pratap, Vineel and Xu, Qiantong and Sriram, Anuroop and Synnaeve, Gabriel and Collobert, Ronan},\n  booktitle={Interspeech 2020},\n  pages={2757--2761},\n  year={2020}\n}"
     },
     "provenance": {
@@ -47076,10 +47097,10 @@
     ],
     "license": {
       "status": "custom_permissive",
-      "name": "Caltrans Open Data / Academic Research Agreement",
+      "name": "MIT (Repository Code) / Caltrans PeMS Open Data Terms (Sensor Data)",
       "url": "https://github.com/liyaguang/DCRNN/blob/master/LICENSE",
       "commercial_use": "unknown",
-      "notes": "Traffic sensor data released for open research by Caltrans PeMS."
+      "notes": "The benchmark distribution repository code is released under the MIT License; underlying highway traffic sensor readings are open data made available by the California Department of Transportation (Caltrans) Performance Measurement System (PeMS)."
     },
     "source_references": [
       {
@@ -47169,7 +47190,7 @@
       "name": "Caltrans Open Data / Academic Research Agreement",
       "url": "https://github.com/Davidham3/ASTGCN",
       "commercial_use": "unknown",
-      "notes": "Data derived from public Caltrans PeMS archives for academic traffic modeling."
+      "notes": "Traffic flow measurements derived from California Department of Transportation (Caltrans) Performance Measurement System (PeMS) public data clearinghouse (https://pems.dot.ca.gov) for research evaluation; ASTGCN baseline repository contains no separate standalone license file."
     },
     "source_references": [
       {
@@ -47211,15 +47232,16 @@
     },
     "citation": {
       "paper_title": "Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting",
-      "paper_url": "https://arxiv.org/abs/1901.10075",
+      "paper_url": "https://doi.org/10.1609/aaai.v33i01.3301922",
       "authors": [
         "Shengnan Guo",
         "Youfang Lin",
-        "Ning Ning",
-        "Zheng Wang",
+        "Ning Feng",
+        "Chao Song",
         "Huaiyu Wan"
       ],
-      "bibtex": "@inproceedings{guo2019attention,\n  title={Attention based spatial-temporal graph convolutional networks for traffic flow forecasting},\n  author={Guo, Shengnan and Lin, Youfang and Ning, Ning and Wang, Zheng and Wan, Huaiyu},\n  booktitle={Proceedings of the AAAI Conference on Human Computation and Crowdsourcing},\n  volume={33},\n  pages={922--929},\n  year={2019}\n}"
+      "doi": "10.1609/aaai.v33i01.3301922",
+      "bibtex": "@inproceedings{guo2019attention,\n  title={Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting},\n  author={Guo, Shengnan and Lin, Youfang and Feng, Ning and Song, Chao and Wan, Huaiyu},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume={33},\n  number={01},\n  pages={922--929},\n  year={2019}\n}"
     },
     "provenance": {
       "collection_method": "Extracted from Caltrans PeMS real-time loop detectors across District 4 (Bay Area).",
@@ -47259,7 +47281,7 @@
       "name": "Caltrans Open Data / Academic Research Agreement",
       "url": "https://github.com/Davidham3/ASTGCN",
       "commercial_use": "unknown",
-      "notes": "Data derived from public Caltrans PeMS archives for academic traffic modeling."
+      "notes": "Traffic flow measurements derived from California Department of Transportation (Caltrans) Performance Measurement System (PeMS) public data clearinghouse (https://pems.dot.ca.gov) for research evaluation; ASTGCN baseline repository contains no separate standalone license file."
     },
     "source_references": [
       {
@@ -47301,15 +47323,16 @@
     },
     "citation": {
       "paper_title": "Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting",
-      "paper_url": "https://arxiv.org/abs/1901.10075",
+      "paper_url": "https://doi.org/10.1609/aaai.v33i01.3301922",
       "authors": [
         "Shengnan Guo",
         "Youfang Lin",
-        "Ning Ning",
-        "Zheng Wang",
+        "Ning Feng",
+        "Chao Song",
         "Huaiyu Wan"
       ],
-      "bibtex": "@inproceedings{guo2019attention,\n  title={Attention based spatial-temporal graph convolutional networks for traffic flow forecasting},\n  author={Guo, Shengnan and Lin, Youfang and Ning, Ning and Wang, Zheng and Wan, Huaiyu},\n  booktitle={Proceedings of the AAAI Conference on Human Computation and Crowdsourcing},\n  volume={33},\n  pages={922--929},\n  year={2019}\n}"
+      "doi": "10.1609/aaai.v33i01.3301922",
+      "bibtex": "@inproceedings{guo2019attention,\n  title={Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting},\n  author={Guo, Shengnan and Lin, Youfang and Feng, Ning and Song, Chao and Wan, Huaiyu},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume={33},\n  number={01},\n  pages={922--929},\n  year={2019}\n}"
     },
     "provenance": {
       "collection_method": "Extracted from Caltrans PeMS real-time loop detectors across District 8 (San Bernardino).",
@@ -55799,15 +55822,25 @@
       "published": "2021-04-05"
     },
     "citation": {
-      "paper_title": "SPGISpeech: 5,000 hours of transcribed financial audio for Western English speech recognition",
-      "paper_url": "https://arxiv.org/abs/2104.02014",
+      "paper_title": "SPGISpeech: 5,000 Hours of Transcribed Financial Audio for Fully Formatted End-to-End Speech Recognition",
+      "paper_url": "https://doi.org/10.21437/Interspeech.2021-1860",
       "authors": [
         "Patrick K. O'Neill",
-        "Vilas Pollet",
-        "Gaurav Kumar",
-        "Roberto Cavicchioli"
+        "Vitaly Lavrukhin",
+        "Somshubra Majumdar",
+        "Vahid Noroozi",
+        "Yuekai Zhang",
+        "Oleksii Kuchaiev",
+        "Jagadeesh Balam",
+        "Yuliya Dovzhenko",
+        "Keenan Freyberg",
+        "Michael D. Shulman",
+        "Boris Ginsburg",
+        "Shinji Watanabe",
+        "Georg Kucsko"
       ],
-      "bibtex": "@inproceedings{oneill2021spgispeech,\n  title={SPGISpeech: 5,000 hours of transcribed financial audio for Western English speech recognition},\n  author={O'Neill, Patrick K and Pollet, Vilas and Kumar, Gaurav and Cavicchioli, Roberto},\n  booktitle={Interspeech 2021},\n  pages={2771--2775},\n  year={2021}\n}"
+      "doi": "10.21437/Interspeech.2021-1860",
+      "bibtex": "@inproceedings{oneill2021spgispeech,\n  title={SPGISpeech: 5,000 Hours of Transcribed Financial Audio for Fully Formatted End-to-End Speech Recognition},\n  author={O'Neill, Patrick K and Lavrukhin, Vitaly and Majumdar, Somshubra and Noroozi, Vahid and Zhang, Yuekai and Kuchaiev, Oleksii and Balam, Jagadeesh and Dovzhenko, Yuliya and Freyberg, Keenan and Shulman, Michael D and Ginsburg, Boris and Watanabe, Shinji and Kucsko, Georg},\n  booktitle={Interspeech 2021},\n  pages={2771--2775},\n  year={2021}\n}"
     },
     "provenance": {
       "collection_method": "Extracted from public corporate earnings calls transcribed by financial transcriptionists.",
@@ -62020,7 +62053,7 @@
     "id": "vizwiz-vqa",
     "slug": "vizwiz-vqa",
     "name": "VizWiz-VQA: Visual Question Answering from Blind Photographers",
-    "description": "VizWiz-VQA is a visual question answering benchmark originating from real-world photos taken by blind individuals asking questions about their daily surroundings. Developed by the VizWiz Consortium, it comprises 31,173 visual questions paired with 10 crowd-sourced answers per question, featuring challenging artifacts such as motion blur, framing issues, unanswerable questions, and privacy-sensitive content.",
+    "description": "VizWiz-VQA is a visual question answering benchmark originating from real-world photos taken by blind individuals asking questions about their daily surroundings. Developed by the VizWiz Consortium, it comprises 31,173 visual questions in its initial CVPR 2018 release (subsequently expanded to 32,842 across train, validation, and test splits), each paired with 10 crowd-sourced answers, featuring challenging artifacts such as motion blur, framing issues, unanswerable questions, and privacy concerns.",
     "homepage_url": "https://vizwiz.org/tasks-and-datasets/vqa/",
     "publisher": {
       "name": "VizWiz Consortium",
@@ -62105,18 +62138,19 @@
     },
     "citation": {
       "paper_title": "VizWiz Grand Challenge: Answering Visual Questions from Blind People",
-      "paper_url": "https://arxiv.org/abs/1802.08218",
+      "paper_url": "https://doi.org/10.1109/CVPR.2018.00380",
       "authors": [
         "Danna Gurari",
         "Qing Li",
         "Abigale J. Stangl",
-        "Anh Nguyen",
-        "Pradeep Kumar Jayaraman",
-        "Pina Choi",
-        "Edward Zhang",
-        "Kristen Grauman"
+        "Anhong Guo",
+        "Chi Lin",
+        "Kristen Grauman",
+        "Jiebo Luo",
+        "Jeffrey P. Bigham"
       ],
-      "bibtex": "@inproceedings{gurari2018vizwiz,\n  title={VizWiz Grand Challenge: Answering Visual Questions From Blind People},\n  author={Gurari, Danna and Li, Qing and Stangl, Abigale J and Nguyen, Anh and Jayaraman, Pradeep Kumar and Choi, Pina and Zhang, Edward and Grauman, Kristen},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={3608--3617},\n  year={2018}\n}"
+      "doi": "10.1109/CVPR.2018.00380",
+      "bibtex": "@inproceedings{gurari2018vizwiz,\n  title={VizWiz Grand Challenge: Answering Visual Questions From Blind People},\n  author={Gurari, Danna and Li, Qing and Stangl, Abigale J and Guo, Anhong and Lin, Chi and Grauman, Kristen and Luo, Jiebo and Bigham, Jeffrey P},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={3608--3617},\n  year={2018}\n}"
     },
     "provenance": {
       "collection_method": "Recorded by blind users submitting cell phone photos and voice queries to a remote human assistance application.",

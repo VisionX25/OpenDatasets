@@ -2,8 +2,8 @@
   "schema_version": "1.0.0",
   "id": "indiccorp",
   "slug": "indiccorp",
-  "name": "IndicCorp: Large-Scale Monolingual Corpora for Indic Languages",
-  "description": "IndicCorp is an extensive web-crawled monolingual text corpus spanning 24 Indic languages. Developed by AI4Bharat across versions 1 and 2, the dataset aggregates over 20.9 billion tokens (v2) from diverse online sources, providing the foundational pre-training material for models such as IndicBERT and IndicBART.",
+  "name": "IndicCorp v2: Large-Scale Monolingual Corpora for Indic Languages",
+  "description": "IndicCorp v2 is an extensive web-crawled monolingual text corpus spanning 24 Indic languages, developed by AI4Bharat and presented at ACL 2023. Significantly expanding upon IndicCorp v1 (EMNLP 2020), version 2 contains over 20.9 billion tokens and approximately 1.1 billion sentences across 24 languages from 4 language families, providing foundational pre-training material for models such as IndicBERT v2 and IndicBART.",
   "homepage_url": "https://indicnlp.ai4bharat.org/indiccorp/",
   "publisher": {
     "name": "AI4Bharat",
@@ -32,7 +32,7 @@
     "spdx_id": "CC0-1.0",
     "url": "https://creativecommons.org/publicdomain/zero/1.0/",
     "commercial_use": "allowed",
-    "notes": "IndicCorp v2 text collections are released into the public domain under CC0 1.0 Universal."
+    "notes": "Datasets created by AI4Bharat under IndicCorp v2 are released under CC0 1.0 Universal (Public Domain Dedication). Accompanying models and fine-tuning code are released under the MIT license."
   },
   "source_references": [
     {
@@ -42,36 +42,43 @@
       "notes": "Corpus overview, token distributions, and download links."
     },
     {
+      "title": "AI4Bharat IndicCorpV2 Hugging Face Dataset",
+      "url": "https://huggingface.co/datasets/ai4bharat/IndicCorpV2",
+      "type": "dataset_card",
+      "notes": "Official Hugging Face dataset card providing parquet and raw text configs for 24 Indic languages."
+    },
+    {
       "title": "Towards Leaving No Indic Language Behind: Building Monolingual Corpora, Benchmark and Models for Indic Languages",
-      "url": "https://arxiv.org/abs/2212.05409",
+      "url": "https://doi.org/10.18653/v1/2023.acl-long.693",
       "type": "original_paper",
-      "notes": "Published in ACL 2023 (IndicCorp v2)."
+      "notes": "Published in Proceedings of ACL 2023 (IndicCorp v2)."
     },
     {
       "title": "IndicNLPSuite: Monolingual Corpora, Evaluation Benchmarks and Pre-trained Multilingual Language Models for Indian Languages",
       "url": "https://arxiv.org/abs/2005.00085",
       "type": "original_paper",
-      "notes": "Published in Findings of EMNLP 2020 (IndicCorp v1)."
+      "notes": "Published in Findings of EMNLP 2020 (IndicCorp v1 foundational publication)."
     }
   ],
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-22",
-    "notes": "Verified against ACL 2023 and EMNLP Findings 2020 papers."
+    "notes": "Verified against ACL 2023 publication and official AI4Bharat Hugging Face repository."
   },
   "size": {
-    "amount": 96.0,
+    "amount": 275.0,
     "unit": "GB",
     "file_formats": [
       "txt",
+      "parquet",
       "tar.gz"
     ],
     "status": "estimated",
-    "notes": "Compressed text corpus across 24 Indic languages."
+    "notes": "Full text corpus and parquet configs across 24 Indic languages."
   },
   "sample_count": {
-    "total": 849000000,
+    "total": 1092000000,
     "unit": "sentences",
     "status": "estimated"
   },
@@ -100,12 +107,11 @@
     "ur"
   ],
   "dates": {
-    "published": "2020-11-16",
-    "last_updated": "2023-07-09"
+    "published": "2023-07-09"
   },
   "citation": {
     "paper_title": "Towards Leaving No Indic Language Behind: Building Monolingual Corpora, Benchmark and Models for Indian Languages",
-    "paper_url": "https://arxiv.org/abs/2212.05409",
+    "paper_url": "https://doi.org/10.18653/v1/2023.acl-long.693",
     "authors": [
       "Sumanth Doddapaneni",
       "Rahul Aralikatte",
@@ -114,6 +120,7 @@
       "Pratyush Kumar",
       "Mitesh M. Khapra"
     ],
+    "doi": "10.18653/v1/2023.acl-long.693",
     "bibtex": "@inproceedings{doddapaneni2023towards,\n  title={Towards Leaving No Indic Language Behind: Building Monolingual Corpora, Evaluation Benchmarks and Pre-trained Multilingual Language Models for Indian Languages},\n  author={Doddapaneni, Sumanth and Aralikatte, Rahul and Bakambhar, Radhika and Kunchukuttan, Anoop and Kumar, Pratyush and Khapra, Mitesh M.},\n  booktitle={Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},\n  pages={12402--12426},\n  year={2023}\n}"
   },
   "provenance": {

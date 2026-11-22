@@ -1,16 +1,16 @@
 {
   "audit_metadata": {
-    "audit_task": "Task 51 \u2014 725-Record Metadata Quality Audit",
+    "audit_task": "Task 51B \u2014 Final Metadata Corrections Audit",
     "audit_date": "2026-11-22",
     "schema_version": "1.0.0",
     "total_datasets_audited": 725,
-    "catalog_average_documentation_completeness_pct": 80.0,
+    "catalog_average_documentation_completeness_pct": 80.1,
     "completeness_formula": "Percentage of evaluated applicable schema attributes present (documentation coverage only, not scientific quality)"
   },
   "category_summaries": {
     "computer-vision": {
       "total_datasets": 392,
-      "average_documentation_completeness_pct": 82.8,
+      "average_documentation_completeness_pct": 82.9,
       "readiness_tiers": {
         "Ready for Evaluation": 267,
         "Needs Information Review": 28,
@@ -19,16 +19,16 @@
     },
     "natural-language-processing": {
       "total_datasets": 180,
-      "average_documentation_completeness_pct": 80.7,
+      "average_documentation_completeness_pct": 80.8,
       "readiness_tiers": {
-        "Documented with Caveats": 49,
+        "Documented with Caveats": 50,
         "Needs Information Review": 19,
-        "Ready for Evaluation": 112
+        "Ready for Evaluation": 111
       }
     },
     "audio-speech": {
       "total_datasets": 58,
-      "average_documentation_completeness_pct": 74.6,
+      "average_documentation_completeness_pct": 75.2,
       "readiness_tiers": {
         "Ready for Evaluation": 41,
         "Documented with Caveats": 17
@@ -36,7 +36,7 @@
     },
     "tabular-time-series": {
       "total_datasets": 199,
-      "average_documentation_completeness_pct": 77.4,
+      "average_documentation_completeness_pct": 77.5,
       "readiness_tiers": {
         "Ready for Evaluation": 154,
         "Documented with Caveats": 43,
@@ -45,7 +45,7 @@
     },
     "multimodal-generative": {
       "total_datasets": 102,
-      "average_documentation_completeness_pct": 82.9,
+      "average_documentation_completeness_pct": 83.1,
       "readiness_tiers": {
         "Documented with Caveats": 38,
         "Ready for Evaluation": 59,
@@ -80,8 +80,8 @@
       "percentage": 96.6
     },
     "dates_last_updated": {
-      "present_count": 266,
-      "percentage": 36.7
+      "present_count": 265,
+      "percentage": 36.6
     },
     "provenance": {
       "present_count": 277,
@@ -104,14 +104,14 @@
     "status_breakdown": {
       "verified_non_commercial": 155,
       "unspecified_by_source": 36,
-      "custom_permissive": 110,
+      "custom_permissive": 111,
       "verified_open": 374,
       "proprietary": 4,
-      "public_domain": 46
+      "public_domain": 45
     },
     "commercial_use_breakdown": {
-      "forbidden": 197,
-      "unknown": 79,
+      "forbidden": 196,
+      "unknown": 80,
       "allowed": 449
     },
     "access_requirements": {
@@ -145,9 +145,9 @@
   },
   "research_readiness_summary": {
     "tier_distribution": {
-      "Ready for Evaluation": 499,
+      "Ready for Evaluation": 498,
       "Needs Information Review": 45,
-      "Documented with Caveats": 181
+      "Documented with Caveats": 182
     },
     "dimension_distributions": {
       "source_traceability": {
@@ -160,9 +160,9 @@
         "Ambiguous": 8
       },
       "license_clarity": {
-        "High": 573,
+        "High": 572,
         "Low": 36,
-        "Medium": 116
+        "Medium": 117
       },
       "task_and_modality_clarity": {
         "High": 725
@@ -173,8 +173,8 @@
         "Low": 47
       },
       "citation_completeness": {
-        "High": 465,
-        "Medium": 252,
+        "High": 476,
+        "Medium": 241,
         "Missing": 2,
         "Authoritative_Non_Academic": 6
       }
@@ -196,7 +196,7 @@
       "14": 353,
       "15": 2
     },
-    "exact_average_pct": 80.0354
+    "exact_average_pct": 80.1356
   },
   "prioritized_manual_reviews": {
     "priority_1_licensing_clarity": [
@@ -779,15 +779,6 @@
         "category": "tabular-time-series",
         "license_name": "CIC Academic Research License",
         "license_notes": "Freely available for academic, educational, and non-commercial cybersecurity research upon attribution.",
-        "recommended_action": "Review whether custom research terms qualify for verified_non_commercial or remain custom_permissive with commercial_use forbidden.",
-        "evidence_requirement": "Publisher license text stating exact permitted non-commercial scope and commercial restrictions."
-      },
-      {
-        "id": "coco-wholebody",
-        "name": "COCO-WholeBody: Whole-Body Human Pose Estimation Benchmark",
-        "category": "computer-vision",
-        "license_name": "Custom Permissive License (Annotations CC BY 4.0 SenseTime)",
-        "license_notes": "Annotations released under CC BY 4.0 for non-commercial research use; underlying images adhere to Flickr/COCO terms.",
         "recommended_action": "Review whether custom research terms qualify for verified_non_commercial or remain custom_permissive with commercial_use forbidden.",
         "evidence_requirement": "Publisher license text stating exact permitted non-commercial scope and commercial restrictions."
       },
@@ -1418,7 +1409,7 @@
     {
       "id": "aishell-1",
       "category": "audio-speech",
-      "completeness_pct": 92.9,
+      "completeness_pct": 100.0,
       "readiness_tier": "Ready for Evaluation",
       "license_status": "verified_open",
       "commercial_use": "allowed",
@@ -2420,8 +2411,8 @@
       "id": "bpcc",
       "category": "natural-language-processing",
       "completeness_pct": 85.7,
-      "readiness_tier": "Ready for Evaluation",
-      "license_status": "public_domain",
+      "readiness_tier": "Documented with Caveats",
+      "license_status": "custom_permissive",
       "commercial_use": "allowed",
       "access": "open",
       "flags": []
@@ -2936,13 +2927,13 @@
     {
       "id": "coco-wholebody",
       "category": "computer-vision",
-      "completeness_pct": 84.6,
+      "completeness_pct": 76.9,
       "readiness_tier": "Documented with Caveats",
       "license_status": "custom_permissive",
-      "commercial_use": "forbidden",
+      "commercial_use": "unknown",
       "access": "open",
       "flags": [
-        "custom_permissive_non_commercial"
+        "commercial_use_unknown"
       ]
     },
     {
@@ -3480,7 +3471,7 @@
     {
       "id": "domainnet",
       "category": "computer-vision",
-      "completeness_pct": 84.6,
+      "completeness_pct": 92.3,
       "readiness_tier": "Documented with Caveats",
       "license_status": "custom_permissive",
       "commercial_use": "forbidden",
@@ -4365,7 +4356,7 @@
     {
       "id": "hi-fi-tts",
       "category": "audio-speech",
-      "completeness_pct": 85.7,
+      "completeness_pct": 92.9,
       "readiness_tier": "Ready for Evaluation",
       "license_status": "verified_open",
       "commercial_use": "allowed",
@@ -4697,7 +4688,7 @@
     {
       "id": "indiccorp",
       "category": "natural-language-processing",
-      "completeness_pct": 85.7,
+      "completeness_pct": 92.9,
       "readiness_tier": "Ready for Evaluation",
       "license_status": "public_domain",
       "commercial_use": "allowed",
@@ -4707,7 +4698,7 @@
     {
       "id": "indicglue",
       "category": "natural-language-processing",
-      "completeness_pct": 78.6,
+      "completeness_pct": 85.7,
       "readiness_tier": "Documented with Caveats",
       "license_status": "custom_permissive",
       "commercial_use": "unknown",
@@ -5553,7 +5544,7 @@
     {
       "id": "meld",
       "category": "computer-vision",
-      "completeness_pct": 92.9,
+      "completeness_pct": 100.0,
       "readiness_tier": "Documented with Caveats",
       "license_status": "custom_permissive",
       "commercial_use": "forbidden",
@@ -6106,7 +6097,7 @@
     {
       "id": "multilingual-librispeech",
       "category": "audio-speech",
-      "completeness_pct": 85.7,
+      "completeness_pct": 92.9,
       "readiness_tier": "Ready for Evaluation",
       "license_status": "verified_open",
       "commercial_use": "allowed",
@@ -7033,7 +7024,7 @@
     {
       "id": "pems04",
       "category": "tabular-time-series",
-      "completeness_pct": 76.9,
+      "completeness_pct": 84.6,
       "readiness_tier": "Documented with Caveats",
       "license_status": "custom_permissive",
       "commercial_use": "unknown",
@@ -7045,7 +7036,7 @@
     {
       "id": "pems08",
       "category": "tabular-time-series",
-      "completeness_pct": 76.9,
+      "completeness_pct": 84.6,
       "readiness_tier": "Documented with Caveats",
       "license_status": "custom_permissive",
       "commercial_use": "unknown",
@@ -8105,7 +8096,7 @@
     {
       "id": "spgispeech",
       "category": "audio-speech",
-      "completeness_pct": 92.9,
+      "completeness_pct": 100.0,
       "readiness_tier": "Documented with Caveats",
       "license_status": "custom_permissive",
       "commercial_use": "forbidden",
@@ -8952,7 +8943,7 @@
     {
       "id": "vizwiz-vqa",
       "category": "computer-vision",
-      "completeness_pct": 85.7,
+      "completeness_pct": 92.9,
       "readiness_tier": "Ready for Evaluation",
       "license_status": "verified_open",
       "commercial_use": "allowed",

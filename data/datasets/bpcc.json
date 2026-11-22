@@ -25,12 +25,12 @@
     "gold-standard"
   ],
   "license": {
-    "status": "public_domain",
-    "name": "Creative Commons Zero v1.0 Universal",
-    "spdx_id": "CC0-1.0",
-    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "status": "custom_permissive",
+    "name": "Composite: CC BY 4.0 (Human & Test Splits) / CC0 1.0 (Mined & Packaging)",
+    "spdx_id": null,
+    "url": "https://huggingface.co/datasets/ai4bharat/BPCC#license",
     "commercial_use": "allowed",
-    "notes": "Dataset packaging and newly collected pairs released under CC0 1.0 Universal; human translation splits licensed under CC BY 4.0."
+    "notes": "BPCC is a multi-license composite collection: (1) CC BY 4.0 applies to newly added human-translated seed corpora (BPCC-H-Wiki, BPCC-H-Daily, ~2.2M pairs) and the IN-22 evaluation benchmark test sets (IN22-Gen, IN22-Conv); (2) CC0 1.0 Universal applies to the curation and packaging of mined corpora (BPCC-Mined) and back-translated data (BPCC-BT). Underlying crawled text remains subject to original source copyright."
   },
   "source_references": [
     {
@@ -38,6 +38,12 @@
       "url": "https://indictrans2.ai4bharat.org",
       "type": "official_website",
       "notes": "Portal for IndicTrans2 translation models and BPCC dataset releases."
+    },
+    {
+      "title": "AI4Bharat BPCC Hugging Face Dataset Card",
+      "url": "https://huggingface.co/datasets/ai4bharat/BPCC",
+      "type": "dataset_card",
+      "notes": "Official Hugging Face dataset card detailing component-level licensing and download splits."
     },
     {
       "title": "IndicTrans2: Towards High-Quality and Accessible Machine Translation for all 22 Scheduled Indian Languages",
