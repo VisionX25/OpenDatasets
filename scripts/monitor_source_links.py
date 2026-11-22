@@ -1431,7 +1431,12 @@ def validate_and_sanitize_inputs(
     """Validate and sanitize inputs against injection, overflow, and out-of-range bounds."""
     # 1. batch_size
     try:
-        batch_size = int(str(batch_size_raw).strip() if batch_size_raw is not None else DEFAULT_BATCH_SIZE)
+        if batch_size_raw is None or (isinstance(batch_size_raw, str) and not batch_size_raw.strip()):
+            batch_size = DEFAULT_BATCH_SIZE
+        elif isinstance(batch_size_raw, bool):
+            raise ValueError(f"Boolean value not accepted for batch_size: {batch_size_raw}")
+        else:
+            batch_size = int(str(batch_size_raw).strip())
         if not (MIN_BATCH_SIZE <= batch_size <= MAX_BATCH_SIZE):
             raise ValueError(f"batch_size must be between {MIN_BATCH_SIZE} and {MAX_BATCH_SIZE}, got {batch_size}")
     except (ValueError, TypeError) as exc:
@@ -1439,26 +1444,35 @@ def validate_and_sanitize_inputs(
 
     # 2. max_runtime
     try:
-        max_runtime = float(str(max_runtime_raw).strip() if max_runtime_raw is not None else DEFAULT_MAX_RUNTIME)
+        if max_runtime_raw is None or (isinstance(max_runtime_raw, str) and not max_runtime_raw.strip()):
+            max_runtime = DEFAULT_MAX_RUNTIME
+        elif isinstance(max_runtime_raw, bool):
+            raise ValueError(f"Boolean value not accepted for max_runtime: {max_runtime_raw}")
+        else:
+            max_runtime = float(str(max_runtime_raw).strip())
         if not (MIN_MAX_RUNTIME <= max_runtime <= MAX_MAX_RUNTIME):
             raise ValueError(f"max_runtime must be between {MIN_MAX_RUNTIME} and {MAX_MAX_RUNTIME} seconds, got {max_runtime}")
     except (ValueError, TypeError) as exc:
         raise ValueError(f"Invalid max_runtime parameter: {exc}")
 
     # 3. Booleans
-    def parse_bool(val: Any) -> bool:
+    def parse_bool(val: Any, param_name: str) -> bool:
+        if val is None:
+            return False
         if isinstance(val, bool):
             return val
         s = str(val).strip().lower()
+        if not s:
+            return False
         if s in ("true", "1", "yes"):
             return True
-        if s in ("false", "0", "no", "", "none"):
+        if s in ("false", "0", "no", "none"):
             return False
-        raise ValueError(f"Invalid boolean value: '{val}'")
+        raise ValueError(f"Invalid {param_name} parameter: Invalid boolean value: '{val}'")
 
-    offline = parse_bool(offline_raw)
-    dry_run = parse_bool(dry_run_raw)
-    reset_state = parse_bool(reset_state_raw)
+    offline = parse_bool(offline_raw, "offline")
+    dry_run = parse_bool(dry_run_raw, "dry_run")
+    reset_state = parse_bool(reset_state_raw, "reset_state")
 
     return batch_size, max_runtime, offline, dry_run, reset_state
 

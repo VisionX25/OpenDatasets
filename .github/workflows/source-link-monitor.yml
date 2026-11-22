@@ -67,7 +67,7 @@ jobs:
 
       - name: Retrieve persistent state from monitoring-state branch
         env:
-          INPUT_RESET_STATE: ${{ inputs.reset_state }}
+          INPUT_RESET_STATE: ${{ inputs.reset_state || false }}
         run: |
           mkdir -p .monitoring_state monitoring_output
           # Retrieve and validate state from dedicated branch in read-only mode without modifying worktree
@@ -78,11 +78,11 @@ jobs:
 
       - name: Execute source-link monitoring rotation
         env:
-          INPUT_BATCH_SIZE: ${{ inputs.batch_size }}
-          INPUT_MAX_RUNTIME: ${{ inputs.max_runtime }}
-          INPUT_OFFLINE: ${{ inputs.offline }}
-          INPUT_DRY_RUN: ${{ inputs.dry_run }}
-          INPUT_RESET_STATE: ${{ inputs.reset_state }}
+          INPUT_BATCH_SIZE: ${{ inputs.batch_size || '50' }}
+          INPUT_MAX_RUNTIME: ${{ inputs.max_runtime || '600' }}
+          INPUT_OFFLINE: ${{ inputs.offline || false }}
+          INPUT_DRY_RUN: ${{ inputs.dry_run || false }}
+          INPUT_RESET_STATE: ${{ inputs.reset_state || false }}
         run: |
           # Safe execution passing parameters via validated environment variables
           python3 scripts/monitor_source_links.py \
