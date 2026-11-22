@@ -1665,6 +1665,108 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ai2d",
+    "slug": "ai2d",
+    "name": "AI2D: Allen Institute for AI Diagram Dataset",
+    "description": "AI2D (Allen Institute for AI Diagrams) is a rich dataset of 4,900+ grade-school science diagrams accompanied by over 15,000 multiple-choice questions. Developed by the Allen Institute for AI, the dataset features dense parse annotations linking diagram graphical elements, arrows, text labels, and semantic relations to test multimodal diagram understanding and visual reasoning.",
+    "homepage_url": "https://prior.allenai.org/projects/diagram-understanding",
+    "publisher": {
+      "name": "Allen Institute for AI",
+      "type": "academic",
+      "url": "https://allenai.org"
+    },
+    "modalities": [
+      "vision",
+      "nlp",
+      "multimodal"
+    ],
+    "tasks": [
+      "diagram-understanding",
+      "visual-question-answering",
+      "question-answering"
+    ],
+    "tags": [
+      "diagrams",
+      "vqa",
+      "multimodal",
+      "science-qa",
+      "reasoning",
+      "allen-institute"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Annotations and questions licensed under CC BY-SA 4.0."
+    },
+    "source_references": [
+      {
+        "title": "AI2 Prior Diagram Understanding Project",
+        "url": "https://prior.allenai.org/projects/diagram-understanding",
+        "type": "official_website",
+        "notes": "Official Allen Institute for AI project overview and downloads."
+      },
+      {
+        "title": "A Diagram Is Worth a Dozen Images",
+        "url": "https://doi.org/10.1007/978-3-319-46484-8_29",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of European Conference on Computer Vision (ECCV) 2016."
+      },
+      {
+        "title": "AllenAI AI2D API Repository",
+        "url": "https://github.com/allenai/ai2d-api",
+        "type": "repository",
+        "notes": "Python tool for accessing annotations, categories, and question splits."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against ECCV 2016 publication and official Allen Institute PRIOR repository."
+    },
+    "size": {
+      "amount": 1.2,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "json",
+        "tar.gz"
+      ],
+      "status": "verified",
+      "notes": "Images and JSON diagram parse structures."
+    },
+    "sample_count": {
+      "total": 4914,
+      "unit": "diagrams",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2016-10-11"
+    },
+    "citation": {
+      "paper_title": "A Diagram Is Worth a Dozen Images",
+      "paper_url": "https://doi.org/10.1007/978-3-319-46484-8_29",
+      "authors": [
+        "Aniruddha Kembhavi",
+        "Mike Salvato",
+        "Eric Kolve",
+        "Minjoon Seo",
+        "Hannaneh Hajishirzi",
+        "Ali Farhadi"
+      ],
+      "doi": "10.1007/978-3-319-46484-8_29",
+      "bibtex": "@inproceedings{kembhavi2016diagram,\n  title={A diagram is worth a dozen images},\n  author={Kembhavi, Aniruddha and Salvato, Mike and Kolve, Eric and Seo, Minjoon and Hajishirzi, Hannaneh and Farhadi, Ali},\n  booktitle={Computer Vision--ECCV 2016: 14th European Conference, Amsterdam, The Netherlands, October 11--14, 2016, Proceedings, Part IV 14},\n  pages={490--506},\n  year={2016},\n  organization={Springer}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted from grade-school natural science textbooks and instructional web domains.",
+      "curation_notes": "Expert annotators drew constituent bounding boxes, inter-object arrows, and logical flow relationships."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ai4i-predictive-maintenance",
     "slug": "ai4i-predictive-maintenance",
     "name": "AI4I 2020 Predictive Maintenance Dataset",
@@ -1881,6 +1983,106 @@
         "Le Hoang, SON"
       ],
       "doi": "10.17632/zvkwpsw84d.5"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "aishell-1",
+    "slug": "aishell-1",
+    "name": "AISHELL-1: Open-Source Mandarin Speech Corpus",
+    "description": "AISHELL-1 is an open-source Mandarin speech corpus released by Beijing Shell Shell Technology Co. Ltd. It contains 178 hours of 16kHz audio recorded by 400 native Mandarin speakers with varying regional accents across five domains: finance, science and technology, sports, entertainment, and news, accompanied by character-level transcriptions.",
+    "homepage_url": "https://www.openslr.org/33/",
+    "publisher": {
+      "name": "Beijing Shell Shell Technology Co. Ltd.",
+      "type": "industry",
+      "url": "http://www.aishelltech.com"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-recognition",
+      "asr"
+    ],
+    "tags": [
+      "speech-recognition",
+      "mandarin-speech",
+      "asr",
+      "audio",
+      "chinese-nlp",
+      "openslr"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Corpus released under Apache 2.0 for academic and commercial use."
+    },
+    "source_references": [
+      {
+        "title": "OpenSLR 33: AISHELL-1 Corpus",
+        "url": "https://www.openslr.org/33/",
+        "type": "official_website",
+        "notes": "OpenSLR canonical release distribution page."
+      },
+      {
+        "title": "AISHELL-1: An Open-Source Mandarin Speech Corpus and a Speech Recognition Baseline",
+        "url": "https://arxiv.org/abs/1709.05522",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of 20th O-COCOSDA 2017."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against OpenSLR record and O-COCOSDA 2017 paper."
+    },
+    "size": {
+      "amount": 15.0,
+      "unit": "GB",
+      "file_formats": [
+        "wav",
+        "txt",
+        "tar.gz"
+      ],
+      "status": "verified",
+      "notes": "Complete compressed 16-bit 16kHz WAV audio archives and transcript files."
+    },
+    "sample_count": {
+      "total": 141600,
+      "splits": {
+        "train": 120098,
+        "dev": 14326,
+        "test": 7176
+      },
+      "unit": "audio-utterances",
+      "status": "verified"
+    },
+    "languages": [
+      "zh"
+    ],
+    "dates": {
+      "published": "2017-09-16"
+    },
+    "citation": {
+      "paper_title": "AISHELL-1: An open-source Mandarin speech corpus and a speech recognition baseline",
+      "paper_url": "https://doi.org/10.1109/icsda.2017.8384449",
+      "authors": [
+        "Hui Bu",
+        "Jiayu Du",
+        "Xingyu Na",
+        "Bengu Wu",
+        "Hao Zheng"
+      ],
+      "doi": "10.1109/icsda.2017.8384449",
+      "bibtex": "@inproceedings{bu2017aishell,\n  title={AISHELL-1: An open-source Mandarin speech corpus and a speech recognition baseline},\n  author={Bu, Hui and Du, Jiayu and Na, Xingyu and Wu, Bengu and Zheng, Hao},\n  booktitle={2017 20th Conference of the Oriental COCOSDA},\n  pages={1--5},\n  year={2017},\n  organization={IEEE}\n}"
+    },
+    "provenance": {
+      "collection_method": "Recorded in quiet indoor environments using high-fidelity microphones across 400 speakers.",
+      "curation_notes": "Audio manually transcribed and inspected by professional linguists with an error rate under 0.1%."
     }
   },
   {
@@ -2724,6 +2926,98 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "appliances-energy-prediction",
+    "slug": "appliances-energy-prediction",
+    "name": "Appliances Energy Prediction Dataset",
+    "description": "The Appliances Energy Prediction dataset is an empirical benchmark from the UCI Machine Learning Repository for forecasting low-energy house appliance consumption. Collected over 4.5 months at 10-minute intervals (19,735 records), it incorporates indoor environmental parameters from a ZigBee sensor network (temperature and humidity across 9 rooms) combined with local weather conditions from a nearby meteorological station.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/374/appliances+energy+prediction",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "regression",
+      "energy-prediction",
+      "time-series-forecasting"
+    ],
+    "tags": [
+      "energy-forecasting",
+      "iot-sensors",
+      "tabular",
+      "regression",
+      "smart-home",
+      "uci-machine-learning-repository"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Released under CC BY 4.0 in the UCI Machine Learning Repository."
+    },
+    "source_references": [
+      {
+        "title": "UCI Repository: Appliances Energy Prediction",
+        "url": "https://archive.ics.uci.edu/dataset/374/appliances+energy+prediction",
+        "type": "official_website",
+        "notes": "UCI Machine Learning Repository dataset landing page."
+      },
+      {
+        "title": "Data Driven Prediction Models of Energy Use of Appliances in a Low-Energy House",
+        "url": "https://doi.org/10.1016/j.enbuild.2017.01.083",
+        "type": "original_paper",
+        "notes": "Published in Energy and Buildings, Vol. 140, 2017."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against UCI repository entry and Energy and Buildings 2017 paper."
+    },
+    "size": {
+      "amount": 3.2,
+      "unit": "MB",
+      "file_formats": [
+        "csv",
+        "zip"
+      ],
+      "status": "verified",
+      "notes": "Cleaned CSV time-series records."
+    },
+    "sample_count": {
+      "total": 19735,
+      "unit": "records",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2017-02-15"
+    },
+    "citation": {
+      "paper_title": "Data driven prediction models of energy use of appliances in a low-energy house",
+      "paper_url": "https://doi.org/10.1016/j.enbuild.2017.01.083",
+      "authors": [
+        "Luis M. Candanedo",
+        "Véronique Feldheim",
+        "Dominique Deramaix"
+      ],
+      "doi": "10.1016/j.enbuild.2017.01.083",
+      "bibtex": "@article{candanedo2017data,\n  title={Data driven prediction models of energy use of appliances in a low-energy house},\n  author={Candanedo, Luis M and Feldheim, V{'e}ronique and Deramaix, Dominique},\n  journal={Energy and Buildings},\n  volume={140},\n  pages={81--97},\n  year={2017},\n  publisher={Elsevier}\n}"
+    },
+    "provenance": {
+      "collection_method": "Logged continuously via wireless ZigBee sensor nodes inside a low-energy house in Stambruges, Belgium.",
+      "curation_notes": "Logged every 10 minutes over 137 days and merged with regional weather station data."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "aptos-2019-blindness-detection",
     "slug": "aptos-2019-blindness-detection",
     "name": "APTOS 2019 Blindness Detection: Diabetic Retinopathy Benchmark",
@@ -2804,6 +3098,104 @@
       "data_sources": [
         "Aravind Eye Hospital clinical records"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "arc-agi-1",
+    "slug": "arc-agi-1",
+    "name": "ARC-AGI-1: Abstraction and Reasoning Corpus",
+    "description": "ARC-AGI-1 (Abstraction and Reasoning Corpus) is a benchmark designed by François Chollet to measure artificial general intelligence and human-like abstract reasoning without relying on language or domain-specific knowledge. It consists of 1,000 distinct grid transformation tasks (400 train, 400 evaluation, 200 secret test), where an AI system must induce abstract transformation rules from just a few demonstration pairs and generate the correct output grid for unseen test inputs.",
+    "homepage_url": "https://arcprize.org",
+    "publisher": {
+      "name": "François Chollet / ARC Prize Foundation",
+      "type": "individual",
+      "url": "https://arcprize.org"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "other"
+    ],
+    "tasks": [
+      "abstract-reasoning",
+      "few-shot-learning",
+      "program-synthesis"
+    ],
+    "tags": [
+      "abstract-reasoning",
+      "agi-benchmark",
+      "grid-transformation",
+      "visual-reasoning",
+      "few-shot-learning"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "ARC dataset and evaluation environment are open-sourced under Apache 2.0."
+    },
+    "source_references": [
+      {
+        "title": "ARC Prize Official Website",
+        "url": "https://arcprize.org",
+        "type": "official_website",
+        "notes": "Official competition platform, benchmark rules, and leaderboard."
+      },
+      {
+        "title": "ARC-AGI GitHub Repository",
+        "url": "https://github.com/fchollet/ARC-AGI",
+        "type": "repository",
+        "notes": "Canonical dataset files (JSON) and visualizer tool."
+      },
+      {
+        "title": "On the Measure of Intelligence",
+        "url": "https://arxiv.org/abs/1911.01547",
+        "type": "original_paper",
+        "notes": "Original research publication on arXiv defining ARC-AGI."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against arXiv:1911.01547 and official ARC Prize / GitHub repository."
+    },
+    "size": {
+      "amount": 3.5,
+      "unit": "MB",
+      "file_formats": [
+        "json"
+      ],
+      "status": "verified",
+      "notes": "Task JSON definitions containing demonstration grid matrices."
+    },
+    "sample_count": {
+      "total": 1000,
+      "splits": {
+        "training": 400,
+        "evaluation": 400,
+        "test": 200
+      },
+      "unit": "tasks",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-11-05"
+    },
+    "citation": {
+      "paper_title": "On the Measure of Intelligence",
+      "paper_url": "https://arxiv.org/abs/1911.01547",
+      "authors": [
+        "François Chollet"
+      ],
+      "bibtex": "@article{chollet2019measure,\n  title={On the measure of intelligence},\n  author={Chollet, Fran{\\c{c}}ois},\n  journal={arXiv preprint arXiv:1911.01547},\n  year={2019}\n}"
+    },
+    "provenance": {
+      "collection_method": "Hand-crafted by François Chollet adhering to Core Knowledge priors: objectness, goal-directedness, basic arithmetic, and elementary geometry.",
+      "curation_notes": "Split into 400 public training tasks, 400 public evaluation tasks, and 200 private test tasks for competition evaluation."
     }
   },
   {
@@ -8158,6 +8550,106 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "big-bench",
+    "slug": "big-bench",
+    "name": "BIG-bench: Beyond the Imitation Game Benchmark Suite",
+    "description": "BIG-bench (Beyond the Imitation Game Benchmark) is a massive collaborative benchmark suite created by over 440 researchers across 132 institutions, organized by Google Research. Containing 204 distinct tasks, it probes large language model capabilities across reasoning, mathematics, biology, linguistics, common-sense, software development, translation, and social bias.",
+    "homepage_url": "https://github.com/google/BIG-bench",
+    "publisher": {
+      "name": "Google Research & Consortium",
+      "type": "industry",
+      "url": "https://research.google"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "multi-task-evaluation",
+      "reasoning",
+      "language-modeling",
+      "evaluation-benchmark"
+    ],
+    "tags": [
+      "llm-evaluation",
+      "benchmark-suite",
+      "multi-task",
+      "reasoning",
+      "collaborative-benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Code and task definitions released under Apache License 2.0."
+    },
+    "source_references": [
+      {
+        "title": "BIG-bench GitHub Repository",
+        "url": "https://github.com/google/BIG-bench",
+        "type": "repository",
+        "notes": "Canonical repository hosting task JSON files, evaluation code, and Lite subsets."
+      },
+      {
+        "title": "Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models",
+        "url": "https://arxiv.org/abs/2206.04615",
+        "type": "original_paper",
+        "notes": "Published in Transactions on Machine Learning Research (TMLR) 2023."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against TMLR 2023 publication and official Google BIG-bench repository."
+    },
+    "size": {
+      "amount": 2.1,
+      "unit": "GB",
+      "file_formats": [
+        "json",
+        "py"
+      ],
+      "status": "verified",
+      "notes": "Full task JSON specifications and programmatic evaluation harnesses."
+    },
+    "sample_count": {
+      "total": 204,
+      "unit": "tasks",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2022-06-09"
+    },
+    "citation": {
+      "paper_title": "Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models",
+      "paper_url": "https://arxiv.org/abs/2206.04615",
+      "authors": [
+        "Aarohi Srivastava",
+        "Abhinav Rastogi",
+        "Abhishek Rao",
+        "Abu Awal Md Shoeb",
+        "Abubakar Abid",
+        "Adam Fisch",
+        "Adam R. Brown",
+        "Adam Santoro",
+        "Aditya Gupta",
+        "Adrià Garriga-Alonso",
+        "Jascha Sohl-Dickstein"
+      ],
+      "bibtex": "@article{srivastava2022beyond,\n  title={Beyond the imitation game: Quantifying and extrapolating the capabilities of language models},\n  author={Srivastava, Aarohi and Rastogi, Abhinav and Rao, Abhishek and Shoeb, Abu Awal Md and Abid, Abubakar and Fisch, Adam and Brown, Adam R and Santoro, Adam and Gupta, Aditya and Garriga-Alonso, Adri{\\`a} and others},\n  journal={Transactions on Machine Learning Research},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Collaboratively contributed by hundreds of international researchers targeting problems believed to be beyond current LLM capabilities.",
+      "curation_notes": "All tasks underwent rigorous peer review and automated validation before inclusion into the suite."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bigearthnet",
     "slug": "bigearthnet",
     "name": "BigEarthNet: Large-Scale Sentinel Earth Observation Archive",
@@ -9400,6 +9892,142 @@
         "Elena Sitnikova",
         "Benjamin Turnbull"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "bpcc",
+    "slug": "bpcc",
+    "name": "Bharat Parallel Corpus Collection (BPCC)",
+    "description": "The Bharat Parallel Corpus Collection (BPCC) is a massive parallel corpora suite spanning English and all 22 scheduled Indian languages, created by AI4Bharat for IndicTrans2. It contains approximately 230 million sentence pairs, including 2.2 million high-quality human-translated and verified sentence pairs (BPCC-Human) and 228 million filtered mined pairs, representing the most comprehensive translation corpus for South Asian languages.",
+    "homepage_url": "https://indictrans2.ai4bharat.org",
+    "publisher": {
+      "name": "AI4Bharat",
+      "type": "academic",
+      "url": "https://ai4bharat.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "machine-translation"
+    ],
+    "tags": [
+      "machine-translation",
+      "indic-languages",
+      "parallel-corpus",
+      "ai4bharat",
+      "indictrans2",
+      "gold-standard"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Composite: CC BY 4.0 (Human & Test Splits) / CC0 1.0 (Mined & Packaging)",
+      "spdx_id": null,
+      "url": "https://huggingface.co/datasets/ai4bharat/BPCC#license",
+      "commercial_use": "allowed",
+      "notes": "BPCC is a multi-license composite collection: (1) CC BY 4.0 applies to newly added human-translated seed corpora (BPCC-H-Wiki, BPCC-H-Daily, ~2.2M pairs) and the IN-22 evaluation benchmark test sets (IN22-Gen, IN22-Conv); (2) CC0 1.0 Universal applies to the curation and packaging of mined corpora (BPCC-Mined) and back-translated data (BPCC-BT). Underlying crawled text remains subject to original source copyright."
+    },
+    "source_references": [
+      {
+        "title": "IndicTrans2 Official Portal",
+        "url": "https://indictrans2.ai4bharat.org",
+        "type": "official_website",
+        "notes": "Portal for IndicTrans2 translation models and BPCC dataset releases."
+      },
+      {
+        "title": "AI4Bharat BPCC Hugging Face Dataset Card",
+        "url": "https://huggingface.co/datasets/ai4bharat/BPCC",
+        "type": "dataset_card",
+        "notes": "Official Hugging Face dataset card detailing component-level licensing and download splits."
+      },
+      {
+        "title": "IndicTrans2: Towards High-Quality and Accessible Machine Translation for all 22 Scheduled Indian Languages",
+        "url": "https://arxiv.org/abs/2305.16307",
+        "type": "original_paper",
+        "notes": "Published in Transactions on Machine Learning Research (TMLR) 2023."
+      },
+      {
+        "title": "AI4Bharat IndicTrans2 GitHub Repository",
+        "url": "https://github.com/AI4Bharat/IndicTrans2",
+        "type": "repository",
+        "notes": "Open-source data processing code and model weights."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against TMLR 2023 publication and official AI4Bharat repository."
+    },
+    "size": {
+      "amount": 42.0,
+      "unit": "GB",
+      "file_formats": [
+        "tsv",
+        "txt",
+        "tar.gz"
+      ],
+      "status": "estimated",
+      "notes": "Full compressed archive of human and mined splits across 22 Indic languages."
+    },
+    "sample_count": {
+      "total": 230000000,
+      "unit": "sentence-pairs",
+      "status": "estimated"
+    },
+    "languages": [
+      "as",
+      "bn",
+      "brx",
+      "doi",
+      "gom",
+      "gu",
+      "hi",
+      "kn",
+      "ks",
+      "mai",
+      "ml",
+      "mni",
+      "mr",
+      "ne",
+      "or",
+      "pa",
+      "sa",
+      "sat",
+      "sd",
+      "ta",
+      "te",
+      "ur",
+      "en"
+    ],
+    "dates": {
+      "published": "2023-05-25"
+    },
+    "citation": {
+      "paper_title": "IndicTrans2: Towards High-Quality and Accessible Machine Translation for all 22 Scheduled Indian Languages",
+      "paper_url": "https://arxiv.org/abs/2305.16307",
+      "authors": [
+        "Jay Gala",
+        "Pranjal A. Chitale",
+        "Raghavan AK",
+        "Sumanth Doddapaneni",
+        "Varun Gumma",
+        "Aswanth Kumar M",
+        "Janki Nawale",
+        "Anupama Sujatha",
+        "Ratish Puduppully",
+        "Vivek Raghavan",
+        "Pratyush Kumar",
+        "Mitesh M. Khapra",
+        "Raj Dabre",
+        "Anoop Kunchukuttan"
+      ],
+      "bibtex": "@article{gala2023indictrans2,\n  title={IndicTrans2: Towards High-Quality and Accessible Machine Translation for all 22 Scheduled Indian Languages},\n  author={Gala, Jay and Chitale, Pranjal A and AK, Raghavan and Doddapaneni, Sumanth and Gumma, Varun and Kumar M, Aswanth and Nawale, Janki and Sujatha, Anupama and Puduppully, Ratish and Raghavan, Vivek and Kumar, Pratyush and Khapra, Mitesh M and Dabre, Raj and Kunchukuttan, Anoop},\n  journal={Transactions on Machine Learning Research},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Combines extensive human translations produced by professional translators with large-scale sentence pair mining from CCNet and Wikipedia.",
+      "curation_notes": "Filtered using dual-encoder semantic sentence embedding scoring and strict cross-lingual length penalties."
     }
   },
   {
@@ -13346,6 +13974,98 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "coco-wholebody",
+    "slug": "coco-wholebody",
+    "name": "COCO-WholeBody: Whole-Body Human Pose Estimation Benchmark",
+    "description": "COCO-WholeBody is the first comprehensive benchmark for whole-body human pose estimation, annotating 133 keypoints per person (17 body, 6 foot, 68 face, and 42 hand keypoints). Built atop MS COCO 2017 images by SenseTime and CUHK, it provides unified keypoint annotations for over 250,000 human instances across 123,287 images, enabling unified detection of full human pose, expressions, and gestures.",
+    "homepage_url": "https://github.com/jin-s13/COCO-WholeBody",
+    "publisher": {
+      "name": "SenseTime & CUHK",
+      "type": "academic",
+      "url": "https://github.com/jin-s13"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "pose-estimation",
+      "keypoint-detection"
+    ],
+    "tags": [
+      "pose-estimation",
+      "keypoints",
+      "whole-body-pose",
+      "human-pose",
+      "coco",
+      "computer-vision"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Custom: Annotations CC BY 4.0 (SenseTime NC Clause) / Images Flickr Terms",
+      "url": "https://github.com/jin-s13/COCO-WholeBody#license",
+      "commercial_use": "unknown",
+      "notes": "Dual-layer licensing: (1) Annotations are authored by SenseTime Research and stated as CC BY 4.0, but the repository explicitly restricts usage to research and non-commercial purposes, requiring commercial users to seek direct permission from SenseTime; (2) Underlying images originate from MS COCO / Flickr and are governed by individual Flickr licenses and Flickr terms of use."
+    },
+    "source_references": [
+      {
+        "title": "COCO-WholeBody GitHub Repository",
+        "url": "https://github.com/jin-s13/COCO-WholeBody",
+        "type": "repository",
+        "notes": "Official repository for annotation downloads and evaluation scripts."
+      },
+      {
+        "title": "Whole-Body Human Pose Estimation in the Wild",
+        "url": "https://arxiv.org/abs/2007.11858",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of European Conference on Computer Vision (ECCV) 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against ECCV 2020 publication and official GitHub repository."
+    },
+    "size": {
+      "amount": 1.1,
+      "unit": "GB",
+      "file_formats": [
+        "json",
+        "zip"
+      ],
+      "status": "verified",
+      "notes": "Whole-body annotation JSON files (images downloaded separately from COCO 2017)."
+    },
+    "sample_count": {
+      "total": 250000,
+      "unit": "person-instances",
+      "status": "estimated"
+    },
+    "dates": {
+      "published": "2020-07-23"
+    },
+    "citation": {
+      "paper_title": "Whole-Body Human Pose Estimation in the Wild",
+      "paper_url": "https://arxiv.org/abs/2007.11858",
+      "authors": [
+        "Sheng Jin",
+        "Lumin Xu",
+        "Jin Xu",
+        "Can Wang",
+        "Wentao Liu",
+        "Chen Qian",
+        "Wanli Ouyang",
+        "Ping Luo"
+      ],
+      "bibtex": "@inproceedings{jin2020whole,\n  title={Whole-body human pose estimation in the wild},\n  author={Jin, Sheng and Xu, Lumin and Xu, Jin and Wang, Can and Liu, Wentao and Qian, Chen and Ouyang, Wanli and Luo, Ping},\n  booktitle={Computer Vision--ECCV 2020: 16th European Conference, Glasgow, UK, August 23--28, 2020, Proceedings, Part II 16},\n  pages={196--214},\n  year={2020},\n  organization={Springer}\n}"
+    },
+    "provenance": {
+      "collection_method": "Annotated manually by trained annotators on top of all person instances in the COCO 2017 dataset.",
+      "curation_notes": "Combines 17 body keypoints from COCO with 6 foot, 68 facial, and 42 hand keypoints with hierarchical visibility flags."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "cofly-weeddb",
     "slug": "cofly-weeddb",
     "name": "CoFly-WeedDB: UAV Cotton Field Weed Detection and Segmentation Dataset",
@@ -15578,6 +16298,114 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "dakshina",
+    "slug": "dakshina",
+    "name": "Dakshina: South Asian Language Latin & Native Script Benchmark",
+    "description": "The Dakshina dataset is a collection of text in both Latin script and native scripts for 12 South Asian languages, curated by Google Research. The resource contains Wikipedia text, native-to-Latin transliterations, and lexical data, designed to support Latin script text input, script normalization, machine transliteration, and language modeling.",
+    "homepage_url": "https://github.com/google-research-datasets/dakshina",
+    "publisher": {
+      "name": "Google Research",
+      "type": "industry",
+      "url": "https://research.google"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "transliteration",
+      "language-modeling",
+      "machine-translation"
+    ],
+    "tags": [
+      "transliteration",
+      "south-asian-languages",
+      "latin-script",
+      "nlp",
+      "benchmark",
+      "google-research"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset distributed under CC BY-SA 4.0 license."
+    },
+    "source_references": [
+      {
+        "title": "Google Research Dakshina Dataset Repository",
+        "url": "https://github.com/google-research-datasets/dakshina",
+        "type": "repository",
+        "notes": "Canonical repository hosting data releases and processing scripts."
+      },
+      {
+        "title": "Processing South Asian Languages Written in the Latin Script: The Dakshina Dataset",
+        "url": "https://aclanthology.org/2020.lrec-1.294/",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the 12th Language Resources and Evaluation Conference (LREC 2020)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against LREC 2020 paper and Google Research GitHub repository."
+    },
+    "size": {
+      "amount": 1.8,
+      "unit": "GB",
+      "file_formats": [
+        "tsv",
+        "txt",
+        "tar.gz"
+      ],
+      "status": "estimated",
+      "notes": "Compressed archives containing lexicon, text, and transliteration splits across 12 languages."
+    },
+    "sample_count": {
+      "total": 1200000,
+      "unit": "strings-and-sentences",
+      "status": "estimated"
+    },
+    "languages": [
+      "bn",
+      "gu",
+      "hi",
+      "kn",
+      "ml",
+      "mr",
+      "pa",
+      "sd",
+      "si",
+      "ta",
+      "te",
+      "ur"
+    ],
+    "dates": {
+      "published": "2020-05-11"
+    },
+    "citation": {
+      "paper_title": "Processing South Asian Languages Written in the Latin Script: The Dakshina Dataset",
+      "paper_url": "https://aclanthology.org/2020.lrec-1.294/",
+      "authors": [
+        "Brian Roark",
+        "Lawrence Wolf-Sonkin",
+        "Christo Kirov",
+        "Sabrina J. Mielke",
+        "Cibu Johny",
+        "Işın Demirşahin",
+        "Keith Hall"
+      ],
+      "bibtex": "@inproceedings{roark-etal-2020-processing,\n  title={Processing {S}outh {A}sian Languages Written in the {L}atin Script: the {D}akshina Dataset},\n  author={Roark, Brian and Wolf-Sonkin, Lawrence and Kirov, Christo and Mielke, Sabrina J. and Johny, Cibu and Demir{\\c{s}}ahin, I{\\c{s}}in and Hall, Keith},\n  booktitle={Proceedings of the 12th Language Resources and Evaluation Conference},\n  pages={2413--2423},\n  year={2020},\n  publisher={European Language Resources Association}\n}"
+    },
+    "provenance": {
+      "collection_method": "Native script sentences harvested from Wikipedia articles and manually transliterated into Latin script by native speakers.",
+      "curation_notes": "Multiple human transliterations collected per sentence to capture phonetic and spelling variability."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "dancetrack",
     "slug": "dancetrack",
     "name": "DanceTrack: Multi-Object Tracking in Uniform Appearance and Diverse Motion",
@@ -16758,6 +17586,99 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "dior",
+    "slug": "dior",
+    "name": "DIOR: Object Detection in Optical Remote Sensing Images",
+    "description": "DIOR is a large-scale benchmark dataset for optical remote sensing image object detection, developed by Northwestern Polytechnical University. It contains 23,463 high-resolution aerial and satellite images (800x800 pixels) with 192,472 instance bounding-box annotations across 20 common object classes, spanning diverse sensors, seasons, weather conditions, and spatial resolutions from 0.5m to 30m.",
+    "homepage_url": "http://www.escience.cn/people/gongsheng/DIOR.html",
+    "publisher": {
+      "name": "Northwestern Polytechnical University",
+      "type": "academic",
+      "url": "https://en.nwpu.edu.cn"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection"
+    ],
+    "tags": [
+      "remote-sensing",
+      "satellite-imagery",
+      "object-detection",
+      "aerial-imagery",
+      "earth-observation"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released for non-commercial academic research under CC BY-NC 4.0."
+    },
+    "source_references": [
+      {
+        "title": "DIOR Benchmark Landing Page",
+        "url": "http://www.escience.cn/people/gongsheng/DIOR.html",
+        "type": "official_website",
+        "notes": "Official repository homepage hosted by Northwestern Polytechnical University."
+      },
+      {
+        "title": "Object Detection in Optical Remote Sensing Images: A Survey and a New Benchmark",
+        "url": "https://doi.org/10.1016/j.isprsjprs.2019.11.023",
+        "type": "original_paper",
+        "notes": "Published in ISPRS Journal of Photogrammetry and Remote Sensing, Vol. 159, 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against ISPRS 2020 publication and official author distribution portal."
+    },
+    "size": {
+      "amount": 7.3,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "xml",
+        "zip"
+      ],
+      "status": "verified",
+      "notes": "Complete compressed image and XML Pascal VOC annotation archives."
+    },
+    "sample_count": {
+      "total": 23463,
+      "splits": {
+        "trainval": 11725,
+        "test": 11738
+      },
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2020-01-01"
+    },
+    "citation": {
+      "paper_title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+      "paper_url": "https://doi.org/10.1016/j.isprsjprs.2019.11.023",
+      "authors": [
+        "Ke Li",
+        "Gong Cheng",
+        "Shibu Bu",
+        "Junwei Han"
+      ],
+      "doi": "10.1016/j.isprsjprs.2019.11.023",
+      "bibtex": "@article{li2020object,\n  title={Object detection in optical remote sensing images: A survey and a new benchmark},\n  author={Li, Ke and Cheng, Gong and Bu, Shibu and Han, Junwei},\n  journal={ISPRS Journal of Photogrammetry and Remote Sensing},\n  volume={159},\n  pages={296--307},\n  year={2020},\n  publisher={Elsevier}\n}"
+    },
+    "provenance": {
+      "collection_method": "Sourced from Google Earth optical remote sensing imagery worldwide across varying atmospheric and lighting conditions.",
+      "curation_notes": "Annotated manually by remote sensing experts using horizontal bounding boxes."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "docbank",
     "slug": "docbank",
     "name": "DocBank: A Benchmark Dataset for Fine-Grained Document Layout Analysis",
@@ -17284,6 +18205,106 @@
     "provenance": {
       "collection_method": "Extracted from 7 distinct sources: Common Crawl web pages, Semantic Scholar papers, GitHub open-source code repositories, Project Gutenberg texts, Wikipedia, and Reddit discussions.",
       "curation_notes": "Filtered using language classification, PII redaction, heuristic rule-based quality filtering, toxicity blocklists, and MinHash deduplication."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "domainnet",
+    "slug": "domainnet",
+    "name": "DomainNet: Multi-Source Domain Adaptation Benchmark",
+    "description": "DomainNet is an extensive dataset for multi-source domain adaptation and transfer learning in computer vision, created by Boston University. It comprises 586,575 images across 345 object categories spanning 6 distinct visual domains: Clipart, Infograph, Painting, Quickdraw, Real, and Sketch. It serves as a gold standard for evaluating model robustness across significant domain shifts.",
+    "homepage_url": "http://ai.bu.edu/M3SDA/",
+    "publisher": {
+      "name": "Boston University",
+      "type": "academic",
+      "url": "http://ai.bu.edu"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "image-classification",
+      "domain-adaptation",
+      "transfer-learning"
+    ],
+    "tags": [
+      "computer-vision",
+      "domain-adaptation",
+      "multi-domain",
+      "transfer-learning",
+      "benchmark",
+      "image-classification"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Custom Non-Commercial Academic Research Agreement",
+      "url": "http://ai.bu.edu/M3SDA/",
+      "commercial_use": "forbidden",
+      "notes": "Available strictly for non-commercial academic research use."
+    },
+    "source_references": [
+      {
+        "title": "DomainNet Project Homepage",
+        "url": "http://ai.bu.edu/M3SDA/",
+        "type": "official_website",
+        "notes": "Official benchmark documentation and download links."
+      },
+      {
+        "title": "Moment Matching for Multi-Source Domain Adaptation",
+        "url": "https://arxiv.org/abs/1905.11761",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of IEEE/CVF ICCV 2019."
+      },
+      {
+        "title": "VisionLearningGroup DomainNet Repository",
+        "url": "https://github.com/VisionLearningGroup/DomainNet",
+        "type": "repository",
+        "notes": "Baseline model code and train/test split definitions."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against ICCV 2019 publication and Boston University project page."
+    },
+    "size": {
+      "amount": 34.0,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "png",
+        "txt",
+        "zip"
+      ],
+      "status": "verified",
+      "notes": "Full compressed archive of all 6 image domains."
+    },
+    "sample_count": {
+      "total": 586575,
+      "unit": "images",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-10-27"
+    },
+    "citation": {
+      "paper_title": "Moment Matching for Multi-Source Domain Adaptation",
+      "paper_url": "https://doi.org/10.1109/ICCV.2019.00149",
+      "authors": [
+        "Xingchao Peng",
+        "Qinxun Bai",
+        "Xide Xia",
+        "Zijun Huang",
+        "Kate Saenko",
+        "Bo Wang"
+      ],
+      "doi": "10.1109/ICCV.2019.00149",
+      "bibtex": "@inproceedings{peng2019moment,\n  title={Moment matching for multi-source domain adaptation},\n  author={Peng, Xingchao and Bai, Qinxun and Xia, Xide and Huang, Zijun and Saenko, Kate and Wang, Bo},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},\n  pages={1406--1415},\n  year={2019}\n}"
+    },
+    "provenance": {
+      "collection_method": "Images gathered from search engines and QuickDraw datasets across 345 synchronized lexical categories.",
+      "curation_notes": "Filtered via crowd-sourced Amazon Mechanical Turk validation to remove ambiguous labels."
     }
   },
   {
@@ -22957,6 +23978,102 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "gpqa",
+    "slug": "gpqa",
+    "name": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+    "description": "GPQA (Graduate-Level Google-Proof Q&A) is a challenging multiple-choice question answering benchmark written and verified by domain experts (PhD holders and candidates) in biology, physics, and chemistry. Designed to resist simple web search retrieval, non-expert human validators reach only 34% accuracy despite having unrestricted web access, making GPQA a rigorous evaluation standard for frontier AI reasoning and scalable oversight.",
+    "homepage_url": "https://github.com/idavidrein/gpqa",
+    "publisher": {
+      "name": "NYU & Anthropic",
+      "type": "academic",
+      "url": "https://www.nyu.edu"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "reasoning",
+      "evaluation-benchmark"
+    ],
+    "tags": [
+      "llm-evaluation",
+      "expert-reasoning",
+      "google-proof",
+      "question-answering",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset released under CC BY 4.0; evaluation code under MIT license."
+    },
+    "source_references": [
+      {
+        "title": "GPQA Official GitHub Repository",
+        "url": "https://github.com/idavidrein/gpqa",
+        "type": "repository",
+        "notes": "Canonical dataset files (main, diamond, extended) and evaluation harness."
+      },
+      {
+        "title": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+        "url": "https://arxiv.org/abs/2311.12022",
+        "type": "original_paper",
+        "notes": "Original research publication on arXiv."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against arXiv:2311.12022 and official NYU/Anthropic repository."
+    },
+    "size": {
+      "amount": 2.4,
+      "unit": "MB",
+      "file_formats": [
+        "csv",
+        "json"
+      ],
+      "status": "verified",
+      "notes": "CSV question tables with expert rationales and distractor explanations."
+    },
+    "sample_count": {
+      "total": 448,
+      "unit": "questions",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2023-11-20"
+    },
+    "citation": {
+      "paper_title": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+      "paper_url": "https://openreview.net/forum?id=Ti67584b98",
+      "authors": [
+        "David Rein",
+        "Betty Li Hou",
+        "Asa Cooper Stickland",
+        "Jackson Petty",
+        "Richard Yuanzhe Pang",
+        "Julien Dirani",
+        "Julian Michael",
+        "Samuel R. Bowman"
+      ],
+      "bibtex": "@inproceedings{rein2024gpqa,\n  title={GPQA: A Graduate-Level Google-Proof Q&A Benchmark},\n  author={Rein, David and Hou, Betty Li and Stickland, Asa Cooper and Petty, Jackson and Pang, Richard Yuanzhe and Dirani, Julien and Michael, Julian and Bowman, Samuel R},\n  booktitle={First Conference on Language Modeling},\n  year={2024},\n  url={https://openreview.net/forum?id=Ti67584b98}\n}"
+    },
+    "provenance": {
+      "collection_method": "Authored by PhD holders in Biology, Physics, and Chemistry, intentionally crafted so non-experts cannot answer even with web search.",
+      "curation_notes": "Validated through two rounds of independent expert peer-review; the diamond split contains only questions agreed upon by all reviewers."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "gqa",
     "slug": "gqa",
     "name": "GQA: Visual Reasoning and Compositional Question Answering",
@@ -24232,6 +25349,100 @@
         "ActivityNet Captions",
         "WikiHow"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "hi-fi-tts",
+    "slug": "hi-fi-tts",
+    "name": "Hi-Fi TTS: High-Fidelity Multi-Speaker English Speech Synthesis",
+    "description": "Hi-Fi TTS is a high-fidelity multi-speaker English speech dataset curated by NVIDIA for text-to-speech (TTS) synthesis. It contains 291.6 hours of high-quality speech recorded at 44.1 kHz sampling rate across 10 speakers (6 female, 4 male) reading public domain books from LibriVox, providing pristine acoustic quality and expressive variety.",
+    "homepage_url": "https://www.openslr.org/109/",
+    "publisher": {
+      "name": "NVIDIA",
+      "type": "industry",
+      "url": "https://developer.nvidia.com"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "text-to-speech",
+      "speech-synthesis"
+    ],
+    "tags": [
+      "text-to-speech",
+      "speech-synthesis",
+      "tts",
+      "high-fidelity",
+      "multi-speaker",
+      "audio"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Corpus released under CC BY 4.0 on OpenSLR."
+    },
+    "source_references": [
+      {
+        "title": "OpenSLR 109: Hi-Fi Multi-Speaker English TTS Dataset",
+        "url": "https://www.openslr.org/109/",
+        "type": "official_website",
+        "notes": "Canonical OpenSLR repository entry."
+      },
+      {
+        "title": "Hi-Fi Multi-Speaker English TTS Dataset",
+        "url": "https://arxiv.org/abs/2104.01497",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of Interspeech 2021."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against OpenSLR repository record and Interspeech 2021 paper."
+    },
+    "size": {
+      "amount": 29.5,
+      "unit": "GB",
+      "file_formats": [
+        "flac",
+        "json",
+        "tar.gz"
+      ],
+      "status": "verified",
+      "notes": "High-fidelity 44.1kHz FLAC audio recordings and normalized text transcripts."
+    },
+    "sample_count": {
+      "total": 116000,
+      "unit": "audio-utterances",
+      "status": "estimated"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2021-04-03"
+    },
+    "citation": {
+      "paper_title": "Hi-Fi Multi-Speaker English TTS Dataset",
+      "paper_url": "https://doi.org/10.21437/Interspeech.2021-1599",
+      "authors": [
+        "Evelina Bakhturina",
+        "Vitaly Lavrukhin",
+        "Boris Ginsburg",
+        "Yang Zhang"
+      ],
+      "doi": "10.21437/Interspeech.2021-1599",
+      "bibtex": "@inproceedings{bakhturina2021hi,\n  title={Hi-Fi Multi-Speaker English TTS Dataset},\n  author={Bakhturina, Evelina and Lavrukhin, Vitaly and Ginsburg, Boris and Zhang, Yang},\n  booktitle={Interspeech 2021},\n  pages={2776--2780},\n  year={2021}\n}"
+    },
+    "provenance": {
+      "collection_method": "Selected from LibriVox audiobooks using automated audio quality filtering and SNR thresholding.",
+      "curation_notes": "Audio normalized, silence trimmed, and forced-aligned with text at 44.1 kHz sampling rate."
     }
   },
   {
@@ -26850,6 +28061,251 @@
       "data_sources": [
         "High-resolution drone video footage"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "indiccorp",
+    "slug": "indiccorp",
+    "name": "IndicCorp v2: Large-Scale Monolingual Corpora for Indic Languages",
+    "description": "IndicCorp v2 is an extensive web-crawled monolingual text corpus spanning 24 Indic languages, developed by AI4Bharat and presented at ACL 2023. Significantly expanding upon IndicCorp v1 (EMNLP 2020), version 2 contains over 20.9 billion tokens and approximately 1.1 billion sentences across 24 languages from 4 language families, providing foundational pre-training material for models such as IndicBERT v2 and IndicBART.",
+    "homepage_url": "https://indicnlp.ai4bharat.org/indiccorp/",
+    "publisher": {
+      "name": "AI4Bharat",
+      "type": "academic",
+      "url": "https://ai4bharat.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "language-modeling",
+      "pre-training",
+      "text-generation"
+    ],
+    "tags": [
+      "monolingual-corpus",
+      "indic-languages",
+      "pre-training",
+      "nlp",
+      "ai4bharat",
+      "web-crawled"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Datasets created by AI4Bharat under IndicCorp v2 are released under CC0 1.0 Universal (Public Domain Dedication). Accompanying models and fine-tuning code are released under the MIT license."
+    },
+    "source_references": [
+      {
+        "title": "IndicCorp Official Resource Portal",
+        "url": "https://indicnlp.ai4bharat.org/indiccorp/",
+        "type": "official_website",
+        "notes": "Corpus overview, token distributions, and download links."
+      },
+      {
+        "title": "AI4Bharat IndicCorpV2 Hugging Face Dataset",
+        "url": "https://huggingface.co/datasets/ai4bharat/IndicCorpV2",
+        "type": "dataset_card",
+        "notes": "Official Hugging Face dataset card providing parquet and raw text configs for 24 Indic languages."
+      },
+      {
+        "title": "Towards Leaving No Indic Language Behind: Building Monolingual Corpora, Benchmark and Models for Indic Languages",
+        "url": "https://doi.org/10.18653/v1/2023.acl-long.693",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of ACL 2023 (IndicCorp v2)."
+      },
+      {
+        "title": "IndicNLPSuite: Monolingual Corpora, Evaluation Benchmarks and Pre-trained Multilingual Language Models for Indian Languages",
+        "url": "https://arxiv.org/abs/2005.00085",
+        "type": "original_paper",
+        "notes": "Published in Findings of EMNLP 2020 (IndicCorp v1 foundational publication)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against ACL 2023 publication and official AI4Bharat Hugging Face repository."
+    },
+    "size": {
+      "amount": 275.0,
+      "unit": "GB",
+      "file_formats": [
+        "txt",
+        "parquet",
+        "tar.gz"
+      ],
+      "status": "estimated",
+      "notes": "Full text corpus and parquet configs across 24 Indic languages."
+    },
+    "sample_count": {
+      "total": 1092000000,
+      "unit": "sentences",
+      "status": "estimated"
+    },
+    "languages": [
+      "as",
+      "bn",
+      "brx",
+      "doi",
+      "gom",
+      "gu",
+      "hi",
+      "kn",
+      "ks",
+      "mai",
+      "ml",
+      "mni",
+      "mr",
+      "ne",
+      "or",
+      "pa",
+      "sa",
+      "sat",
+      "sd",
+      "ta",
+      "te",
+      "ur"
+    ],
+    "dates": {
+      "published": "2023-07-09"
+    },
+    "citation": {
+      "paper_title": "Towards Leaving No Indic Language Behind: Building Monolingual Corpora, Benchmark and Models for Indian Languages",
+      "paper_url": "https://doi.org/10.18653/v1/2023.acl-long.693",
+      "authors": [
+        "Sumanth Doddapaneni",
+        "Rahul Aralikatte",
+        "Radhika Bakambhar",
+        "Anoop Kunchukuttan",
+        "Pratyush Kumar",
+        "Mitesh M. Khapra"
+      ],
+      "doi": "10.18653/v1/2023.acl-long.693",
+      "bibtex": "@inproceedings{doddapaneni2023towards,\n  title={Towards Leaving No Indic Language Behind: Building Monolingual Corpora, Evaluation Benchmarks and Pre-trained Multilingual Language Models for Indian Languages},\n  author={Doddapaneni, Sumanth and Aralikatte, Rahul and Bakambhar, Radhika and Kunchukuttan, Anoop and Kumar, Pratyush and Khapra, Mitesh M.},\n  booktitle={Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},\n  pages={12402--12426},\n  year={2023}\n}"
+    },
+    "provenance": {
+      "collection_method": "Harvested by crawling news portals, magazines, blogs, and public repositories for 24 languages.",
+      "curation_notes": "De-duplicated, scrubbed of boilerplate and HTML artifacts, with strict language identification filtering."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "indicglue",
+    "slug": "indicglue",
+    "name": "IndicGLUE: Indian Language Natural Language Understanding Benchmark",
+    "description": "IndicGLUE is a comprehensive natural language understanding (NLU) benchmark suite covering 11 major Indian languages. Built by AI4Bharat, it encompasses diverse tasks including Natural Language Inference (NLI), Sentiment Analysis, Named Entity Recognition (NER), Question Answering, and Cross-Lingual Information Retrieval, serving as the standard evaluation testbed for multilingual Indic language representations.",
+    "homepage_url": "https://indicnlp.ai4bharat.org/indic-glue/",
+    "publisher": {
+      "name": "AI4Bharat",
+      "type": "academic",
+      "url": "https://ai4bharat.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "natural-language-inference",
+      "sentiment-analysis",
+      "named-entity-recognition",
+      "question-answering",
+      "text-classification"
+    ],
+    "tags": [
+      "evaluation-benchmark",
+      "nlu",
+      "indic-languages",
+      "indicglue",
+      "ai4bharat",
+      "cross-lingual"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Academic Research Use / MIT",
+      "url": "https://indicnlp.ai4bharat.org/indic-glue/",
+      "commercial_use": "unknown",
+      "notes": "Benchmarking suite provided for academic and scientific research evaluation."
+    },
+    "source_references": [
+      {
+        "title": "IndicGLUE Official Benchmark Page",
+        "url": "https://indicnlp.ai4bharat.org/indic-glue/",
+        "type": "official_website",
+        "notes": "Task specifications, leaderboard, and data access links."
+      },
+      {
+        "title": "IndicNLPSuite: Monolingual Corpora, Evaluation Benchmarks and Pre-trained Multilingual Language Models for Indian Languages",
+        "url": "https://arxiv.org/abs/2005.00085",
+        "type": "original_paper",
+        "notes": "Published in Findings of EMNLP 2020."
+      },
+      {
+        "title": "AI4Bharat IndicBERT Repository",
+        "url": "https://github.com/AI4Bharat/indic-bert",
+        "type": "repository",
+        "notes": "Fine-tuning scripts and benchmark datasets."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against Findings of EMNLP 2020 publication and AI4Bharat benchmark portal."
+    },
+    "size": {
+      "amount": 450,
+      "unit": "MB",
+      "file_formats": [
+        "json",
+        "tsv",
+        "txt"
+      ],
+      "status": "estimated",
+      "notes": "Aggregated evaluation task datasets across all 11 languages."
+    },
+    "sample_count": {
+      "total": 320000,
+      "unit": "examples",
+      "status": "estimated"
+    },
+    "languages": [
+      "as",
+      "bn",
+      "gu",
+      "hi",
+      "kn",
+      "ml",
+      "mr",
+      "or",
+      "pa",
+      "ta",
+      "te"
+    ],
+    "dates": {
+      "published": "2020-11-16"
+    },
+    "citation": {
+      "paper_title": "IndicNLPSuite: Monolingual Corpora, Evaluation Benchmarks and Pre-trained Multilingual Language Models for Indian Languages",
+      "paper_url": "https://doi.org/10.18653/v1/2020.findings-emnlp.445",
+      "authors": [
+        "Divyanshu Kakwani",
+        "Anoop Kunchukuttan",
+        "Satish Golla",
+        "Gokul N.C.",
+        "Avik Bhattacharyya",
+        "Mitesh M. Khapra",
+        "Pratyush Kumar"
+      ],
+      "doi": "10.18653/v1/2020.findings-emnlp.445",
+      "bibtex": "@inproceedings{kakwani2020indicnlpsuite,\n  title={IndicNLPSuite: Monolingual Corpora, Evaluation Benchmarks and Pre-trained Multilingual Language Models for Indian Languages},\n  author={Kakwani, Divyanshu and Kunchukuttan, Anoop and Golla, Satish and N.C., Gokul and Bhattacharyya, Avik and Khapra, Mitesh M. and Kumar, Pratyush},\n  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2020},\n  pages={4948--4961},\n  year={2020}\n}"
+    },
+    "provenance": {
+      "collection_method": "Harmonized from existing Indic NLP evaluation datasets and supplemented with newly translated and human-verified benchmark splits.",
+      "curation_notes": "Standardized into unified train/dev/test splits with identical metric definitions across languages."
     }
   },
   {
@@ -32889,6 +34345,109 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "mbpp",
+    "slug": "mbpp",
+    "name": "MBPP: Mostly Basic Python Problems",
+    "description": "MBPP (Mostly Basic Python Problems) is a benchmark for evaluating code generation and program synthesis models, created by Google Research. It consists of 974 short Python programming tasks covering fundamentals, standard library algorithms, and arithmetic manipulation, each accompanied by a natural language problem description, a reference solution, and 3 automated unit tests.",
+    "homepage_url": "https://github.com/google-research/google-research/tree/master/mbpp",
+    "publisher": {
+      "name": "Google Research",
+      "type": "industry",
+      "url": "https://research.google"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "code-generation",
+      "program-synthesis"
+    ],
+    "tags": [
+      "code-generation",
+      "python",
+      "programming-benchmark",
+      "llm-evaluation",
+      "program-synthesis"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset released under CC BY 4.0; associated code under Apache 2.0."
+    },
+    "source_references": [
+      {
+        "title": "Google Research MBPP Directory",
+        "url": "https://github.com/google-research/google-research/tree/master/mbpp",
+        "type": "repository",
+        "notes": "Official repository containing mbpp.jsonl and test evaluation utilities."
+      },
+      {
+        "title": "Program Synthesis with Large Language Models",
+        "url": "https://arxiv.org/abs/2108.07732",
+        "type": "original_paper",
+        "notes": "Original research publication on arXiv introducing MBPP."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against arXiv:2108.07732 and Google Research repository."
+    },
+    "size": {
+      "amount": 2.2,
+      "unit": "MB",
+      "file_formats": [
+        "jsonl"
+      ],
+      "status": "verified",
+      "notes": "Formatted JSONL file containing tasks, tests, and code solutions."
+    },
+    "sample_count": {
+      "total": 974,
+      "splits": {
+        "train": 374,
+        "validation": 90,
+        "test": 500,
+        "prompt": 10
+      },
+      "unit": "programming-problems",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2021-08-16"
+    },
+    "citation": {
+      "paper_title": "Program Synthesis with Large Language Models",
+      "paper_url": "https://arxiv.org/abs/2108.07732",
+      "authors": [
+        "Jacob Austin",
+        "Augustus Odena",
+        "Maxwell Nye",
+        "Maarten Bosma",
+        "Henryk Michalewski",
+        "David Dohan",
+        "Ellen Jiang",
+        "Carrie Cai",
+        "Michael Terry",
+        "Quoc Le",
+        "Charles Sutton"
+      ],
+      "bibtex": "@article{austin2021program,\n  title={Program synthesis with large language models},\n  author={Austin, Jacob and Odena, Augustus and Nye, Maxwell and Bosma, Maarten and Michalewski, Henryk and Dohan, David and Jiang, Ellen and Cai, Carrie and Terry, Michael and Le, Quoc and others},\n  journal={arXiv preprint arXiv:2108.07732},\n  year={2021}\n}"
+    },
+    "provenance": {
+      "collection_method": "Authored by software engineers to reflect typical beginner-to-intermediate Python programming tasks.",
+      "curation_notes": "Each problem verified with 3 programmatic assert statements executed in an isolated sandbox."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "medequip30-multi-device-medical-equipment-det",
     "slug": "medequip30-multi-device-medical-equipment-det",
     "name": "MedEquip30: A Multi-Device Dataset for Medical Equipment Detection",
@@ -33498,6 +35057,115 @@
         "Islam, Md Muhetul"
       ],
       "doi": "10.17632/3vjbk4rw2x.1"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "meld",
+    "slug": "meld",
+    "name": "MELD: Multimodal EmotionLines Dataset",
+    "description": "MELD (Multimodal EmotionLines Dataset) is an extension of EmotionLines for multimodal emotion recognition and sentiment analysis in conversations. Curated by Nanyang Technological University, it comprises 13,708 utterances across 1,433 dialogue segments from the TV series Friends, with each utterance annotated for emotion (Anger, Disgust, Sadness, Joy, Neutral, Surprise, Fear) and sentiment (Positive, Negative, Neutral) accompanied by synchronized audio and video clips.",
+    "homepage_url": "https://affective-meld.github.io",
+    "publisher": {
+      "name": "Nanyang Technological University",
+      "type": "academic",
+      "url": "https://www.ntu.edu.sg"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "audio",
+      "nlp"
+    ],
+    "tasks": [
+      "emotion-recognition",
+      "sentiment-analysis"
+    ],
+    "tags": [
+      "multimodal",
+      "emotion-recognition",
+      "sentiment-analysis",
+      "dialogue",
+      "conversational-ai"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Academic Research Use Agreement",
+      "url": "https://affective-meld.github.io",
+      "commercial_use": "forbidden",
+      "notes": "Available strictly for non-commercial academic research purposes."
+    },
+    "source_references": [
+      {
+        "title": "MELD Project Homepage",
+        "url": "https://affective-meld.github.io",
+        "type": "official_website",
+        "notes": "Official project portal with download links and multimodal features."
+      },
+      {
+        "title": "MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversations",
+        "url": "https://arxiv.org/abs/1810.02508",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of ACL 2019."
+      },
+      {
+        "title": "Declare Lab MELD GitHub Repository",
+        "url": "https://github.com/declare-lab/MELD",
+        "type": "repository",
+        "notes": "Baseline scripts and feature extraction pipelines."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against ACL 2019 paper and official project homepage."
+    },
+    "size": {
+      "amount": 9.8,
+      "unit": "GB",
+      "file_formats": [
+        "mp4",
+        "wav",
+        "csv",
+        "tar.gz"
+      ],
+      "status": "verified",
+      "notes": "Video clips, extracted audio WAVs, and dialogue CSV transcripts."
+    },
+    "sample_count": {
+      "total": 13708,
+      "splits": {
+        "train": 9989,
+        "dev": 1109,
+        "test": 2610
+      },
+      "unit": "utterances",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2019-07-28"
+    },
+    "citation": {
+      "paper_title": "MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversations",
+      "paper_url": "https://doi.org/10.18653/v1/P19-1050",
+      "authors": [
+        "Soujanya Poria",
+        "Devamanyu Hazarika",
+        "Navonil Majumder",
+        "Gautam Naik",
+        "Erik Cambria",
+        "Rada Mihalcea"
+      ],
+      "doi": "10.18653/v1/P19-1050",
+      "bibtex": "@inproceedings{poria2019meld,\n  title={MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversations},\n  author={Poria, Soujanya and Hazarika, Devamanyu and Majumder, Navonil and Naik, Gautam and Cambria, Erik and Mihalcea, Rada},\n  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},\n  pages={527--536},\n  year={2019}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted from dialogue scenes of the Friends television series.",
+      "curation_notes": "Utterances annotated by multiple human judges for emotion categories and three sentiment polarities."
     }
   },
   {
@@ -35766,6 +37434,117 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "mmlu-pro",
+    "slug": "mmlu-pro",
+    "name": "MMLU-Pro: Massive Multitask Language Understanding Pro",
+    "description": "MMLU-Pro is an advanced reasoning-focused evaluation benchmark designed to address saturation and noise in original MMLU. Developed by TIGER-Lab, it features 12,032 challenging questions across 14 disciplines expanded from 4 to 10 multiple-choice options per question, reducing lucky guesses and requiring deeper multi-step reasoning.",
+    "homepage_url": "https://github.com/TIGER-AI-Lab/MMLU-Pro",
+    "publisher": {
+      "name": "TIGER AI Lab",
+      "type": "academic",
+      "url": "https://tiger-ai-lab.github.io"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "multi-choice-qa",
+      "reasoning",
+      "evaluation-benchmark"
+    ],
+    "tags": [
+      "llm-evaluation",
+      "multi-task-reasoning",
+      "reasoning-benchmark",
+      "academic-qa",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Code and dataset released under Apache License 2.0."
+    },
+    "source_references": [
+      {
+        "title": "MMLU-Pro GitHub Repository",
+        "url": "https://github.com/TIGER-AI-Lab/MMLU-Pro",
+        "type": "repository",
+        "notes": "Official repository with dataset files and evaluation scripts."
+      },
+      {
+        "title": "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark",
+        "url": "https://arxiv.org/abs/2406.01574",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of NeurIPS 2024."
+      },
+      {
+        "title": "TIGER-Lab MMLU-Pro Hugging Face Dataset Card",
+        "url": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro",
+        "type": "dataset_card",
+        "notes": "Hosted dataset card and parquet splits."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against NeurIPS 2024 paper and official TIGER-Lab repository."
+    },
+    "size": {
+      "amount": 25.0,
+      "unit": "MB",
+      "file_formats": [
+        "json",
+        "parquet"
+      ],
+      "status": "verified",
+      "notes": "JSON and Parquet files containing all 12,032 evaluated questions with 10 options each."
+    },
+    "sample_count": {
+      "total": 12032,
+      "unit": "questions",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2024-06-03"
+    },
+    "citation": {
+      "paper_title": "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark",
+      "paper_url": "https://arxiv.org/abs/2406.01574",
+      "authors": [
+        "Yubo Wang",
+        "Xueguang Ma",
+        "Ge Zhang",
+        "Yuan Ni",
+        "Abhranil Chandra",
+        "Shiguang Guo",
+        "Weiming Ren",
+        "Aaran Arulraj",
+        "Xuan He",
+        "Ziyan Jiang",
+        "Tianle Li",
+        "Max Ku",
+        "Kai Wang",
+        "Alex Zhuang",
+        "Rongqi Fan",
+        "Xiang Yue",
+        "Wenhu Chen"
+      ],
+      "bibtex": "@article{wang2024mmlupro,\n  title={MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark},\n  author={Wang, Yubo and Ma, Xueguang and Zhang, Ge and Ni, Yuan and Chandra, Abhranil and Guo, Shiguang and Ren, Weiming and Arulraj, Aaran and He, Xuan and Jiang, Ziyan and Li, Tianle and Ku, Max and Wang, Kai and Zhuang, Alex and Fan, Rongqi and Yue, Xiang and Chen, Wenhu},\n  journal={arXiv preprint arXiv:2406.01574},\n  year={2024}\n}"
+    },
+    "provenance": {
+      "collection_method": "Carefully selected and augmented from original MMLU and expert collegiate problem sets.",
+      "curation_notes": "Expert human reviews verified ground truths and filtered out trivial or ambiguous questions while expanding option sets to 10."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "mmmu",
     "slug": "mmmu",
     "name": "MMMU: A Massive Multi-Discipline Multimodal Understanding and Reasoning Benchmark",
@@ -37653,6 +39432,108 @@
       "verified_by": "OpenDatasets Data Curation Team",
       "verified_date": "2026-11-19",
       "notes": "Verified against Cambridge LTL repository (2023-12-15 corrected release) and TACL 2023 publication. Exactly 9,160 multi-parallel dialogues across 4 languages = 36,640 total dialogue instances (29,624 train, 3,508 val, 3,508 test). MIT license covers both code and data."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "multilingual-librispeech",
+    "slug": "multilingual-librispeech",
+    "name": "Multilingual LibriSpeech (MLS)",
+    "description": "Multilingual LibriSpeech (MLS) is a large-scale multilingual audio corpus derived from LibriVox audiobooks, created by Facebook AI Research. It provides approximately 50,000 hours of 16kHz read speech across 8 European languages (English, German, Dutch, French, Spanish, Italian, Portuguese, Polish), with about 44,000 hours in English and 6,000 hours across 7 other languages, providing a standard benchmark for multilingual ASR and speech representation learning.",
+    "homepage_url": "https://www.openslr.org/94/",
+    "publisher": {
+      "name": "Facebook AI Research",
+      "type": "industry",
+      "url": "https://ai.meta.com"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-recognition",
+      "asr"
+    ],
+    "tags": [
+      "speech-recognition",
+      "audio",
+      "multilingual",
+      "audiobooks",
+      "asr",
+      "openslr"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Corpus released under CC BY 4.0 on OpenSLR."
+    },
+    "source_references": [
+      {
+        "title": "OpenSLR 94: Multilingual LibriSpeech",
+        "url": "https://www.openslr.org/94/",
+        "type": "official_website",
+        "notes": "Canonical OpenSLR repository record with download URLs."
+      },
+      {
+        "title": "MLS: A Large-Scale Multilingual Dataset for Speech Research",
+        "url": "https://arxiv.org/abs/2012.03411",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of Interspeech 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against OpenSLR repository record and Interspeech 2020 publication."
+    },
+    "size": {
+      "amount": 280.0,
+      "unit": "GB",
+      "file_formats": [
+        "flac",
+        "txt",
+        "tar.gz"
+      ],
+      "status": "estimated",
+      "notes": "Compressed FLAC audio files and text transcripts across 8 languages."
+    },
+    "sample_count": {
+      "total": 50000,
+      "unit": "audio-hours",
+      "status": "estimated"
+    },
+    "languages": [
+      "en",
+      "de",
+      "nl",
+      "fr",
+      "es",
+      "it",
+      "pt",
+      "pl"
+    ],
+    "dates": {
+      "published": "2020-10-25"
+    },
+    "citation": {
+      "paper_title": "MLS: A Large-Scale Multilingual Dataset for Speech Research",
+      "paper_url": "https://doi.org/10.21437/Interspeech.2020-2826",
+      "authors": [
+        "Vineel Pratap",
+        "Qiantong Xu",
+        "Anuroop Sriram",
+        "Gabriel Synnaeve",
+        "Ronan Collobert"
+      ],
+      "doi": "10.21437/Interspeech.2020-2826",
+      "bibtex": "@inproceedings{pratap2020mls,\n  title={MLS: A Large-Scale Multilingual Dataset for Speech Research},\n  author={Pratap, Vineel and Xu, Qiantong and Sriram, Anuroop and Synnaeve, Gabriel and Collobert, Ronan},\n  booktitle={Interspeech 2020},\n  pages={2757--2761},\n  year={2020}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted from public domain audiobooks on LibriVox and aligned to text using acoustic models.",
+      "curation_notes": "Segmented into short utterances with clean speaker separation and standardized training/validation/test splits."
     }
   },
   {
@@ -45188,6 +47069,278 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "pems-bay",
+    "slug": "pems-bay",
+    "name": "PEMS-BAY: California Bay Area Highway Traffic Speed Benchmark",
+    "description": "PEMS-BAY is a spatial-temporal traffic speed benchmark collected by the California Performance Measurement System (Caltrans PeMS) across the San Francisco Bay Area. Introduced for Diffusion Convolutional Recurrent Neural Network (DCRNN) evaluation, it comprises 6 months of continuous traffic speed measurements from 325 highway sensor stations sampled every 5 minutes from January 1 to June 30, 2017.",
+    "homepage_url": "https://github.com/liyaguang/DCRNN",
+    "publisher": {
+      "name": "USC / Caltrans",
+      "type": "academic",
+      "url": "https://viterbischool.usc.edu"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "traffic-forecasting",
+      "time-series-forecasting"
+    ],
+    "tags": [
+      "traffic-forecasting",
+      "spatial-temporal",
+      "sensor-network",
+      "time-series",
+      "graph-neural-networks"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "MIT (Repository Code) / Caltrans PeMS Open Data Terms (Sensor Data)",
+      "url": "https://github.com/liyaguang/DCRNN/blob/master/LICENSE",
+      "commercial_use": "unknown",
+      "notes": "The benchmark distribution repository code is released under the MIT License; underlying highway traffic sensor readings are open data made available by the California Department of Transportation (Caltrans) Performance Measurement System (PeMS)."
+    },
+    "source_references": [
+      {
+        "title": "DCRNN Official GitHub Repository",
+        "url": "https://github.com/liyaguang/DCRNN",
+        "type": "repository",
+        "notes": "Code and data download links for PEMS-BAY and sensor adjacency graphs."
+      },
+      {
+        "title": "Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting",
+        "url": "https://arxiv.org/abs/1707.01926",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of ICLR 2018."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against ICLR 2018 publication and official DCRNN benchmark repository."
+    },
+    "size": {
+      "amount": 28.0,
+      "unit": "MB",
+      "file_formats": [
+        "h5",
+        "npz",
+        "pkl"
+      ],
+      "status": "verified",
+      "notes": "Preprocessed HDF5 speed matrix and distance adjacency graph."
+    },
+    "sample_count": {
+      "total": 16934400,
+      "unit": "readings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018-04-30"
+    },
+    "citation": {
+      "paper_title": "Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting",
+      "paper_url": "https://arxiv.org/abs/1707.01926",
+      "authors": [
+        "Yaguang Li",
+        "Rose Yu",
+        "Cyrus Shahabi",
+        "Yan Liu"
+      ],
+      "bibtex": "@inproceedings{li2018diffusion,\n  title={Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting},\n  author={Li, Yaguang and Yu, Rose and Shahabi, Cyrus and Liu, Yan},\n  booktitle={International Conference on Learning Representations},\n  year={2018}\n}"
+    },
+    "provenance": {
+      "collection_method": "Recorded by Caltrans highway loop detectors across District 4 (Bay Area).",
+      "curation_notes": "Aggregated into 5-minute intervals with spatial distance adjacency computed along the road network."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "pems04",
+    "slug": "pems04",
+    "name": "PEMS04: Caltrans District 4 Spatial-Temporal Highway Traffic Flow",
+    "description": "PEMS04 is a spatial-temporal traffic flow dataset sourced from the Caltrans Performance Measurement System (PeMS) for District 4 (San Francisco Bay Area). Introduced in ASTGCN (AAAI 2019), it compiles traffic measurements from 307 loop detectors recorded at 5-minute intervals from January 1 to February 28, 2018 (16,992 timestamps), featuring 3 traffic attributes: flow, occupancy, and speed.",
+    "homepage_url": "https://github.com/Davidham3/ASTGCN",
+    "publisher": {
+      "name": "Beijing Jiaotong University / Caltrans",
+      "type": "academic",
+      "url": "https://en.bjtu.edu.cn"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "traffic-forecasting",
+      "spatial-temporal-forecasting"
+    ],
+    "tags": [
+      "traffic-flow",
+      "spatial-temporal",
+      "sensor-network",
+      "time-series",
+      "graph-neural-networks"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Caltrans Open Data / Academic Research Agreement",
+      "url": "https://github.com/Davidham3/ASTGCN",
+      "commercial_use": "unknown",
+      "notes": "Traffic flow measurements derived from California Department of Transportation (Caltrans) Performance Measurement System (PeMS) public data clearinghouse (https://pems.dot.ca.gov) for research evaluation; ASTGCN baseline repository contains no separate standalone license file."
+    },
+    "source_references": [
+      {
+        "title": "ASTGCN GitHub Repository",
+        "url": "https://github.com/Davidham3/ASTGCN",
+        "type": "repository",
+        "notes": "Canonical benchmark implementation repository providing PEMS04 and PEMS08."
+      },
+      {
+        "title": "Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting",
+        "url": "https://arxiv.org/abs/1901.10075",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of AAAI 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against AAAI 2019 publication and ASTGCN benchmark repository."
+    },
+    "size": {
+      "amount": 21.0,
+      "unit": "MB",
+      "file_formats": [
+        "npz",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "Compressed NPZ sensor measurement arrays and detector adjacency CSV."
+    },
+    "sample_count": {
+      "total": 5216544,
+      "unit": "readings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-01-29"
+    },
+    "citation": {
+      "paper_title": "Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting",
+      "paper_url": "https://doi.org/10.1609/aaai.v33i01.3301922",
+      "authors": [
+        "Shengnan Guo",
+        "Youfang Lin",
+        "Ning Feng",
+        "Chao Song",
+        "Huaiyu Wan"
+      ],
+      "doi": "10.1609/aaai.v33i01.3301922",
+      "bibtex": "@inproceedings{guo2019attention,\n  title={Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting},\n  author={Guo, Shengnan and Lin, Youfang and Feng, Ning and Song, Chao and Wan, Huaiyu},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume={33},\n  number={01},\n  pages={922--929},\n  year={2019}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted from Caltrans PeMS real-time loop detectors across District 4 (Bay Area).",
+      "curation_notes": "Aggregated into 5-minute sampling windows across 307 selected highway sensor stations."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "pems08",
+    "slug": "pems08",
+    "name": "PEMS08: Caltrans District 8 Spatial-Temporal Highway Traffic Flow",
+    "description": "PEMS08 is a spatial-temporal traffic flow dataset sourced from the Caltrans Performance Measurement System (PeMS) for District 8 (San Bernardino area). Introduced alongside PEMS04 in ASTGCN (AAAI 2019), it compiles traffic measurements from 170 loop detectors recorded at 5-minute intervals from July 1 to August 31, 2016 (17,856 timestamps), measuring traffic flow, occupancy, and speed.",
+    "homepage_url": "https://github.com/Davidham3/ASTGCN",
+    "publisher": {
+      "name": "Beijing Jiaotong University / Caltrans",
+      "type": "academic",
+      "url": "https://en.bjtu.edu.cn"
+    },
+    "modalities": [
+      "tabular",
+      "time-series",
+      "sensor"
+    ],
+    "tasks": [
+      "traffic-forecasting",
+      "spatial-temporal-forecasting"
+    ],
+    "tags": [
+      "traffic-flow",
+      "spatial-temporal",
+      "sensor-network",
+      "time-series",
+      "graph-neural-networks"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Caltrans Open Data / Academic Research Agreement",
+      "url": "https://github.com/Davidham3/ASTGCN",
+      "commercial_use": "unknown",
+      "notes": "Traffic flow measurements derived from California Department of Transportation (Caltrans) Performance Measurement System (PeMS) public data clearinghouse (https://pems.dot.ca.gov) for research evaluation; ASTGCN baseline repository contains no separate standalone license file."
+    },
+    "source_references": [
+      {
+        "title": "ASTGCN GitHub Repository",
+        "url": "https://github.com/Davidham3/ASTGCN",
+        "type": "repository",
+        "notes": "Canonical benchmark implementation repository providing PEMS04 and PEMS08."
+      },
+      {
+        "title": "Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting",
+        "url": "https://arxiv.org/abs/1901.10075",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of AAAI 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against AAAI 2019 publication and ASTGCN benchmark repository."
+    },
+    "size": {
+      "amount": 12.0,
+      "unit": "MB",
+      "file_formats": [
+        "npz",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "Compressed NPZ sensor measurement arrays and detector adjacency CSV."
+    },
+    "sample_count": {
+      "total": 3035520,
+      "unit": "readings",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2019-01-29"
+    },
+    "citation": {
+      "paper_title": "Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting",
+      "paper_url": "https://doi.org/10.1609/aaai.v33i01.3301922",
+      "authors": [
+        "Shengnan Guo",
+        "Youfang Lin",
+        "Ning Feng",
+        "Chao Song",
+        "Huaiyu Wan"
+      ],
+      "doi": "10.1609/aaai.v33i01.3301922",
+      "bibtex": "@inproceedings{guo2019attention,\n  title={Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting},\n  author={Guo, Shengnan and Lin, Youfang and Feng, Ning and Song, Chao and Wan, Huaiyu},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume={33},\n  number={01},\n  pages={922--929},\n  year={2019}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted from Caltrans PeMS real-time loop detectors across District 8 (San Bernardino).",
+      "curation_notes": "Aggregated into 5-minute sampling windows across 170 selected highway sensor stations."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "phenobench",
     "slug": "phenobench",
     "name": "PhenoBench: Plant Phenotyping and Panoptic Segmentation Benchmark",
@@ -50248,6 +52401,121 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "samanantar",
+    "slug": "samanantar",
+    "name": "Samanantar: Indic Parallel Corpora Collection",
+    "description": "Samanantar is the largest publicly available parallel corpora collection for 11 Indic languages (Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu) paired with English. Curated by AI4Bharat, the dataset aggregates 49.7 million sentence pairs, including newly mined web sentence pairs combined with existing repositories, serving as a landmark benchmark for Indian language machine translation.",
+    "homepage_url": "https://indicnlp.ai4bharat.org/samanantar/",
+    "publisher": {
+      "name": "AI4Bharat",
+      "type": "academic",
+      "url": "https://ai4bharat.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "machine-translation"
+    ],
+    "tags": [
+      "machine-translation",
+      "indic-languages",
+      "parallel-corpus",
+      "multilingual",
+      "ai4bharat",
+      "nlp"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Corpus collection released under CC BY-NC 4.0 for non-commercial research use."
+    },
+    "source_references": [
+      {
+        "title": "Samanantar: Indic Parallel Corpora Official Page",
+        "url": "https://indicnlp.ai4bharat.org/samanantar/",
+        "type": "official_website",
+        "notes": "Official release site with download links and per-language metrics."
+      },
+      {
+        "title": "Samanantar: The Largest Publicly Available Parallel Corpora Collection for 11 Indic Languages",
+        "url": "https://doi.org/10.1162/tacl_a_00452",
+        "type": "original_paper",
+        "notes": "Published in Transactions of the Association for Computational Linguistics (TACL) 2022."
+      },
+      {
+        "title": "AI4Bharat IndicTrans GitHub Repository",
+        "url": "https://github.com/AI4Bharat/indic-trans",
+        "type": "repository",
+        "notes": "Code and data access links for IndicTrans models."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against TACL 2022 publication and official AI4Bharat repository."
+    },
+    "size": {
+      "amount": 12.5,
+      "unit": "GB",
+      "file_formats": [
+        "txt",
+        "tsv",
+        "zip"
+      ],
+      "status": "estimated",
+      "notes": "Uncompressed text sentence pair archives across all 11 language pairs."
+    },
+    "sample_count": {
+      "total": 49709336,
+      "unit": "sentence-pairs",
+      "status": "verified"
+    },
+    "languages": [
+      "as",
+      "bn",
+      "gu",
+      "hi",
+      "kn",
+      "ml",
+      "mr",
+      "or",
+      "pa",
+      "ta",
+      "te",
+      "en"
+    ],
+    "dates": {
+      "published": "2022-02-15"
+    },
+    "citation": {
+      "paper_title": "Samanantar: The Largest Publicly Available Parallel Corpora Collection for 11 Indic Languages",
+      "paper_url": "https://doi.org/10.1162/tacl_a_00452",
+      "authors": [
+        "Gowtham Ramesh",
+        "Sumanth Doddapaneni",
+        "Aravinth Bheemaraj",
+        "Mayank Jobanputra",
+        "Raghavan AK",
+        "Ajitesh Sharma",
+        "Sujit Kumar",
+        "Pratyush Kumar",
+        "Mitesh M. Khapra"
+      ],
+      "doi": "10.1162/tacl_a_00452",
+      "bibtex": "@article{ramesh2022samanantar,\n  title={Samanantar: The largest publicly available parallel corpora collection for 11 indic languages},\n  author={Ramesh, Gowtham and Doddapaneni, Sumanth and Bheemaraj, Aravinth and Jobanputra, Mayank and AK, Raghavan and Sharma, Ajitesh and Kumar, Sujit and Kumar, Pratyush and Khapra, Mitesh M},\n  journal={Transactions of the Association for Computational Linguistics},\n  volume={10},\n  pages={145--162},\n  year={2022},\n  publisher={MIT Press}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted through large-scale crawling of bilingual Indian websites, aligned via LASER/LaBSE embeddings, and merged with existing curated repositories.",
+      "curation_notes": "Filtered via language identification, length ratio checks, and semantic similarity thresholding."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "sb20-sugar-beet",
     "slug": "sb20-sugar-beet",
     "name": "SB20: RGB-D Crop and Weed Segmentation Dataset",
@@ -53470,6 +55738,113 @@
         "Pete Warden"
       ],
       "bibtex": "@article{warden2018speech,\n  title = {Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition},\n  author = {Warden, Pete},\n  journal = {arXiv preprint arXiv:1804.03209},\n  year = {2018}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "spgispeech",
+    "slug": "spgispeech",
+    "name": "SPGISpeech: Financial-Domain Speech Recognition Corpus",
+    "description": "SPGISpeech is a speech corpus of 5,000 hours of professionally transcribed corporate earnings calls in Western English, created by Kensho Technologies. It provides synchronized orthographic text formatted to S&P Global Capital IQ editorial standards, presenting a high-utility benchmark for automated transcription of domain-specific financial terminology, acronyms, and enterprise numbers.",
+    "homepage_url": "https://github.com/kensho-technologies/spgispeech",
+    "publisher": {
+      "name": "Kensho Technologies",
+      "type": "industry",
+      "url": "https://www.kensho.com"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-recognition",
+      "asr"
+    ],
+    "tags": [
+      "speech-recognition",
+      "financial-domain",
+      "earnings-calls",
+      "asr",
+      "audio",
+      "kensho"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Kensho Research Academic User Agreement",
+      "url": "https://github.com/kensho-technologies/spgispeech/blob/main/LICENSE",
+      "commercial_use": "forbidden",
+      "notes": "Available for non-commercial academic research under the Kensho Research Academic User Agreement."
+    },
+    "source_references": [
+      {
+        "title": "SPGISpeech Official GitHub Repository",
+        "url": "https://github.com/kensho-technologies/spgispeech",
+        "type": "repository",
+        "notes": "Documentation, download access registration, and benchmarking recipes."
+      },
+      {
+        "title": "SPGISpeech: 5,000 Hours of Transcribed Financial Audio for Western English Speech Recognition",
+        "url": "https://arxiv.org/abs/2104.02014",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of Interspeech 2021."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against Interspeech 2021 paper and Kensho Technologies repository."
+    },
+    "size": {
+      "amount": 250.0,
+      "unit": "GB",
+      "file_formats": [
+        "wav",
+        "csv",
+        "tar.gz"
+      ],
+      "status": "estimated",
+      "notes": "Audio recordings and aligned CSV metadata."
+    },
+    "sample_count": {
+      "total": 5000,
+      "splits": {
+        "train": 4900,
+        "dev": 50,
+        "test": 50
+      },
+      "unit": "audio-hours",
+      "status": "verified"
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2021-04-05"
+    },
+    "citation": {
+      "paper_title": "SPGISpeech: 5,000 Hours of Transcribed Financial Audio for Fully Formatted End-to-End Speech Recognition",
+      "paper_url": "https://doi.org/10.21437/Interspeech.2021-1860",
+      "authors": [
+        "Patrick K. O'Neill",
+        "Vitaly Lavrukhin",
+        "Somshubra Majumdar",
+        "Vahid Noroozi",
+        "Yuekai Zhang",
+        "Oleksii Kuchaiev",
+        "Jagadeesh Balam",
+        "Yuliya Dovzhenko",
+        "Keenan Freyberg",
+        "Michael D. Shulman",
+        "Boris Ginsburg",
+        "Shinji Watanabe",
+        "Georg Kucsko"
+      ],
+      "doi": "10.21437/Interspeech.2021-1860",
+      "bibtex": "@inproceedings{oneill2021spgispeech,\n  title={SPGISpeech: 5,000 Hours of Transcribed Financial Audio for Fully Formatted End-to-End Speech Recognition},\n  author={O'Neill, Patrick K and Lavrukhin, Vitaly and Majumdar, Somshubra and Noroozi, Vahid and Zhang, Yuekai and Kuchaiev, Oleksii and Balam, Jagadeesh and Dovzhenko, Yuliya and Freyberg, Keenan and Shulman, Michael D and Ginsburg, Boris and Watanabe, Shinji and Kucsko, Georg},\n  booktitle={Interspeech 2021},\n  pages={2771--2775},\n  year={2021}\n}"
+    },
+    "provenance": {
+      "collection_method": "Extracted from public corporate earnings calls transcribed by financial transcriptionists.",
+      "curation_notes": "Audio segmented at natural phrase boundaries and aligned to verbatim and formatted transcripts."
     }
   },
   {
@@ -57778,6 +60153,99 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "uea-multivariate-time-series",
+    "slug": "uea-multivariate-time-series",
+    "name": "UEA Multivariate Time Series Classification Archive (2018)",
+    "description": "The UEA Multivariate Time Series Classification Archive is a canonical benchmark repository of 30 multivariate time series datasets spanning diverse domains, including motion recognition, medical electrocardiography/EEG, audio processing, handwriting analysis, and sensor telemetry. Curated by the University of East Anglia and partners, it standardizes evaluation protocols and splits for multivariate sequence classification.",
+    "homepage_url": "https://www.timeseriesclassification.com",
+    "publisher": {
+      "name": "University of East Anglia",
+      "type": "academic",
+      "url": "https://www.uea.ac.uk"
+    },
+    "modalities": [
+      "tabular",
+      "time-series"
+    ],
+    "tasks": [
+      "time-series-classification"
+    ],
+    "tags": [
+      "time-series",
+      "multivariate-time-series",
+      "time-series-classification",
+      "benchmark",
+      "uea"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Archive compilation and standardized splits released under CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "Time Series Classification Archive Official Portal",
+        "url": "https://www.timeseriesclassification.com",
+        "type": "official_website",
+        "notes": "Online archive containing dataset definitions, downloads, and baseline results."
+      },
+      {
+        "title": "The UEA Multivariate Time Series Classification Archive, 2018",
+        "url": "https://arxiv.org/abs/1811.00075",
+        "type": "original_paper",
+        "notes": "Published reference describing the archive specifications and baseline models."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against arXiv:1811.00075 and timeseriesclassification.com portal."
+    },
+    "size": {
+      "amount": 2.5,
+      "unit": "GB",
+      "file_formats": [
+        "ts",
+        "arff",
+        "zip"
+      ],
+      "status": "verified",
+      "notes": "Standardized .ts sequence classification format files across 30 datasets."
+    },
+    "sample_count": {
+      "total": 30,
+      "unit": "datasets",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018-11-01"
+    },
+    "citation": {
+      "paper_title": "The UEA multivariate time series classification archive, 2018",
+      "paper_url": "https://arxiv.org/abs/1811.00075",
+      "authors": [
+        "Anthony Bagnall",
+        "Hoang Anh Dau",
+        "Jason Lines",
+        "Michael Flynn",
+        "James Large",
+        "Aaron Bostrom",
+        "Paul Southam",
+        "Eamonn Keogh"
+      ],
+      "bibtex": "@article{bagnall2018uea,\n  title={The UEA multivariate time series classification archive, 2018},\n  author={Bagnall, Anthony and Dau, Hoang Anh and Lines, Jason and Flynn, Michael and Large, James and Bostrom, Aaron and Southam, Paul and Keogh, Eamonn},\n  journal={arXiv preprint arXiv:1811.00075},\n  year={2018}\n}"
+    },
+    "provenance": {
+      "collection_method": "Compiled from scientific labs and previous benchmarks into uniform train/test partitions.",
+      "curation_notes": "Formatted into standardized Weka ARFF and UEA .ts format with consistent dimensionality documentation."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "uia-iot-ids-comprehensive-iot-network",
     "slug": "uia-iot-ids-comprehensive-iot-network",
     "name": "UIA-IOT-IDS dataset: Comprehensive IoT network intrusion detection and sensor-anomaly",
@@ -59578,6 +62046,115 @@
       ],
       "doi": "10.13026/czw8-9p62",
       "bibtex": "@article{lee2022vitaldb,\n  title={VitalDB, a high-fidelity multi-parameter vital signs database in surgical patients},\n  author={Lee, Hyung-Chul and Jung, Chul-Woo},\n  journal={Scientific Data},\n  volume={9},\n  number={1},\n  pages={279},\n  year={2022},\n  publisher={Nature Publishing Group UK London},\n  doi={10.13026/czw8-9p62}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "vizwiz-vqa",
+    "slug": "vizwiz-vqa",
+    "name": "VizWiz-VQA: Visual Question Answering from Blind Photographers",
+    "description": "VizWiz-VQA is a visual question answering benchmark originating from real-world photos taken by blind individuals asking questions about their daily surroundings. Developed by the VizWiz Consortium, it comprises 31,173 visual questions in its initial CVPR 2018 release (subsequently expanded to 32,842 across train, validation, and test splits), each paired with 10 crowd-sourced answers, featuring challenging artifacts such as motion blur, framing issues, unanswerable questions, and privacy concerns.",
+    "homepage_url": "https://vizwiz.org/tasks-and-datasets/vqa/",
+    "publisher": {
+      "name": "VizWiz Consortium",
+      "type": "academic",
+      "url": "https://vizwiz.org"
+    },
+    "modalities": [
+      "vision",
+      "nlp",
+      "multimodal"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "vqa",
+      "accessibility"
+    ],
+    "tags": [
+      "vqa",
+      "visual-question-answering",
+      "accessibility",
+      "assistive-technology",
+      "multimodal",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "VizWiz datasets are released under the CC BY 4.0 license."
+    },
+    "source_references": [
+      {
+        "title": "VizWiz-VQA Official Task Page",
+        "url": "https://vizwiz.org/tasks-and-datasets/vqa/",
+        "type": "official_website",
+        "notes": "Official task description, download instructions, and evaluation server."
+      },
+      {
+        "title": "VizWiz Grand Challenge: Answering Visual Questions from Blind People",
+        "url": "https://arxiv.org/abs/1802.08218",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of IEEE/CVF CVPR 2018."
+      },
+      {
+        "title": "VizWiz Python API Repository",
+        "url": "https://github.com/VizWiz-Consortium/VizWiz-API",
+        "type": "repository",
+        "notes": "Evaluation toolkit and API wrappers."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-22",
+      "notes": "Verified against CVPR 2018 publication and VizWiz Consortium official portal."
+    },
+    "size": {
+      "amount": 10.5,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "json",
+        "zip"
+      ],
+      "status": "verified",
+      "notes": "Images and JSON annotations across train, validation, and test splits."
+    },
+    "sample_count": {
+      "total": 32842,
+      "splits": {
+        "train": 20523,
+        "val": 4319,
+        "test": 8000
+      },
+      "unit": "visual-questions",
+      "status": "verified"
+    },
+    "dates": {
+      "published": "2018-06-18"
+    },
+    "citation": {
+      "paper_title": "VizWiz Grand Challenge: Answering Visual Questions from Blind People",
+      "paper_url": "https://doi.org/10.1109/CVPR.2018.00380",
+      "authors": [
+        "Danna Gurari",
+        "Qing Li",
+        "Abigale J. Stangl",
+        "Anhong Guo",
+        "Chi Lin",
+        "Kristen Grauman",
+        "Jiebo Luo",
+        "Jeffrey P. Bigham"
+      ],
+      "doi": "10.1109/CVPR.2018.00380",
+      "bibtex": "@inproceedings{gurari2018vizwiz,\n  title={VizWiz Grand Challenge: Answering Visual Questions From Blind People},\n  author={Gurari, Danna and Li, Qing and Stangl, Abigale J and Guo, Anhong and Lin, Chi and Grauman, Kristen and Luo, Jiebo and Bigham, Jeffrey P},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={3608--3617},\n  year={2018}\n}"
+    },
+    "provenance": {
+      "collection_method": "Recorded by blind users submitting cell phone photos and voice queries to a remote human assistance application.",
+      "curation_notes": "Spoken queries transcribed, anonymized for personally identifiable information, and annotated with 10 crowd-sourced answers."
     }
   },
   {

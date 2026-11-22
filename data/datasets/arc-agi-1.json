@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "id": "arc-agi-1",
+  "slug": "arc-agi-1",
+  "name": "ARC-AGI-1: Abstraction and Reasoning Corpus",
+  "description": "ARC-AGI-1 (Abstraction and Reasoning Corpus) is a benchmark designed by François Chollet to measure artificial general intelligence and human-like abstract reasoning without relying on language or domain-specific knowledge. It consists of 1,000 distinct grid transformation tasks (400 train, 400 evaluation, 200 secret test), where an AI system must induce abstract transformation rules from just a few demonstration pairs and generate the correct output grid for unseen test inputs.",
+  "homepage_url": "https://arcprize.org",
+  "publisher": {
+    "name": "François Chollet / ARC Prize Foundation",
+    "type": "individual",
+    "url": "https://arcprize.org"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "other"
+  ],
+  "tasks": [
+    "abstract-reasoning",
+    "few-shot-learning",
+    "program-synthesis"
+  ],
+  "tags": [
+    "abstract-reasoning",
+    "agi-benchmark",
+    "grid-transformation",
+    "visual-reasoning",
+    "few-shot-learning"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "ARC dataset and evaluation environment are open-sourced under Apache 2.0."
+  },
+  "source_references": [
+    {
+      "title": "ARC Prize Official Website",
+      "url": "https://arcprize.org",
+      "type": "official_website",
+      "notes": "Official competition platform, benchmark rules, and leaderboard."
+    },
+    {
+      "title": "ARC-AGI GitHub Repository",
+      "url": "https://github.com/fchollet/ARC-AGI",
+      "type": "repository",
+      "notes": "Canonical dataset files (JSON) and visualizer tool."
+    },
+    {
+      "title": "On the Measure of Intelligence",
+      "url": "https://arxiv.org/abs/1911.01547",
+      "type": "original_paper",
+      "notes": "Original research publication on arXiv defining ARC-AGI."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against arXiv:1911.01547 and official ARC Prize / GitHub repository."
+  },
+  "size": {
+    "amount": 3.5,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Task JSON definitions containing demonstration grid matrices."
+  },
+  "sample_count": {
+    "total": 1000,
+    "splits": {
+      "training": 400,
+      "evaluation": 400,
+      "test": 200
+    },
+    "unit": "tasks",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2019-11-05"
+  },
+  "citation": {
+    "paper_title": "On the Measure of Intelligence",
+    "paper_url": "https://arxiv.org/abs/1911.01547",
+    "authors": [
+      "François Chollet"
+    ],
+    "bibtex": "@article{chollet2019measure,\n  title={On the measure of intelligence},\n  author={Chollet, Fran{\\c{c}}ois},\n  journal={arXiv preprint arXiv:1911.01547},\n  year={2019}\n}"
+  },
+  "provenance": {
+    "collection_method": "Hand-crafted by François Chollet adhering to Core Knowledge priors: objectness, goal-directedness, basic arithmetic, and elementary geometry.",
+    "curation_notes": "Split into 400 public training tasks, 400 public evaluation tasks, and 200 private test tasks for competition evaluation."
+  }
+}

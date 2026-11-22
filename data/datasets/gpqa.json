@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gpqa",
+  "slug": "gpqa",
+  "name": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+  "description": "GPQA (Graduate-Level Google-Proof Q&A) is a challenging multiple-choice question answering benchmark written and verified by domain experts (PhD holders and candidates) in biology, physics, and chemistry. Designed to resist simple web search retrieval, non-expert human validators reach only 34% accuracy despite having unrestricted web access, making GPQA a rigorous evaluation standard for frontier AI reasoning and scalable oversight.",
+  "homepage_url": "https://github.com/idavidrein/gpqa",
+  "publisher": {
+    "name": "NYU & Anthropic",
+    "type": "academic",
+    "url": "https://www.nyu.edu"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "reasoning",
+    "evaluation-benchmark"
+  ],
+  "tags": [
+    "llm-evaluation",
+    "expert-reasoning",
+    "google-proof",
+    "question-answering",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under CC BY 4.0; evaluation code under MIT license."
+  },
+  "source_references": [
+    {
+      "title": "GPQA Official GitHub Repository",
+      "url": "https://github.com/idavidrein/gpqa",
+      "type": "repository",
+      "notes": "Canonical dataset files (main, diamond, extended) and evaluation harness."
+    },
+    {
+      "title": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+      "url": "https://arxiv.org/abs/2311.12022",
+      "type": "original_paper",
+      "notes": "Original research publication on arXiv."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against arXiv:2311.12022 and official NYU/Anthropic repository."
+  },
+  "size": {
+    "amount": 2.4,
+    "unit": "MB",
+    "file_formats": [
+      "csv",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "CSV question tables with expert rationales and distractor explanations."
+  },
+  "sample_count": {
+    "total": 448,
+    "unit": "questions",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2023-11-20"
+  },
+  "citation": {
+    "paper_title": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+    "paper_url": "https://openreview.net/forum?id=Ti67584b98",
+    "authors": [
+      "David Rein",
+      "Betty Li Hou",
+      "Asa Cooper Stickland",
+      "Jackson Petty",
+      "Richard Yuanzhe Pang",
+      "Julien Dirani",
+      "Julian Michael",
+      "Samuel R. Bowman"
+    ],
+    "bibtex": "@inproceedings{rein2024gpqa,\n  title={GPQA: A Graduate-Level Google-Proof Q&A Benchmark},\n  author={Rein, David and Hou, Betty Li and Stickland, Asa Cooper and Petty, Jackson and Pang, Richard Yuanzhe and Dirani, Julien and Michael, Julian and Bowman, Samuel R},\n  booktitle={First Conference on Language Modeling},\n  year={2024},\n  url={https://openreview.net/forum?id=Ti67584b98}\n}"
+  },
+  "provenance": {
+    "collection_method": "Authored by PhD holders in Biology, Physics, and Chemistry, intentionally crafted so non-experts cannot answer even with web search.",
+    "curation_notes": "Validated through two rounds of independent expert peer-review; the diamond split contains only questions agreed upon by all reviewers."
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mbpp",
+  "slug": "mbpp",
+  "name": "MBPP: Mostly Basic Python Problems",
+  "description": "MBPP (Mostly Basic Python Problems) is a benchmark for evaluating code generation and program synthesis models, created by Google Research. It consists of 974 short Python programming tasks covering fundamentals, standard library algorithms, and arithmetic manipulation, each accompanied by a natural language problem description, a reference solution, and 3 automated unit tests.",
+  "homepage_url": "https://github.com/google-research/google-research/tree/master/mbpp",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "code-generation",
+    "program-synthesis"
+  ],
+  "tags": [
+    "code-generation",
+    "python",
+    "programming-benchmark",
+    "llm-evaluation",
+    "program-synthesis"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under CC BY 4.0; associated code under Apache 2.0."
+  },
+  "source_references": [
+    {
+      "title": "Google Research MBPP Directory",
+      "url": "https://github.com/google-research/google-research/tree/master/mbpp",
+      "type": "repository",
+      "notes": "Official repository containing mbpp.jsonl and test evaluation utilities."
+    },
+    {
+      "title": "Program Synthesis with Large Language Models",
+      "url": "https://arxiv.org/abs/2108.07732",
+      "type": "original_paper",
+      "notes": "Original research publication on arXiv introducing MBPP."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against arXiv:2108.07732 and Google Research repository."
+  },
+  "size": {
+    "amount": 2.2,
+    "unit": "MB",
+    "file_formats": [
+      "jsonl"
+    ],
+    "status": "verified",
+    "notes": "Formatted JSONL file containing tasks, tests, and code solutions."
+  },
+  "sample_count": {
+    "total": 974,
+    "splits": {
+      "train": 374,
+      "validation": 90,
+      "test": 500,
+      "prompt": 10
+    },
+    "unit": "programming-problems",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2021-08-16"
+  },
+  "citation": {
+    "paper_title": "Program Synthesis with Large Language Models",
+    "paper_url": "https://arxiv.org/abs/2108.07732",
+    "authors": [
+      "Jacob Austin",
+      "Augustus Odena",
+      "Maxwell Nye",
+      "Maarten Bosma",
+      "Henryk Michalewski",
+      "David Dohan",
+      "Ellen Jiang",
+      "Carrie Cai",
+      "Michael Terry",
+      "Quoc Le",
+      "Charles Sutton"
+    ],
+    "bibtex": "@article{austin2021program,\n  title={Program synthesis with large language models},\n  author={Austin, Jacob and Odena, Augustus and Nye, Maxwell and Bosma, Maarten and Michalewski, Henryk and Dohan, David and Jiang, Ellen and Cai, Carrie and Terry, Michael and Le, Quoc and others},\n  journal={arXiv preprint arXiv:2108.07732},\n  year={2021}\n}"
+  },
+  "provenance": {
+    "collection_method": "Authored by software engineers to reflect typical beginner-to-intermediate Python programming tasks.",
+    "curation_notes": "Each problem verified with 3 programmatic assert statements executed in an isolated sandbox."
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uea-multivariate-time-series",
+  "slug": "uea-multivariate-time-series",
+  "name": "UEA Multivariate Time Series Classification Archive (2018)",
+  "description": "The UEA Multivariate Time Series Classification Archive is a canonical benchmark repository of 30 multivariate time series datasets spanning diverse domains, including motion recognition, medical electrocardiography/EEG, audio processing, handwriting analysis, and sensor telemetry. Curated by the University of East Anglia and partners, it standardizes evaluation protocols and splits for multivariate sequence classification.",
+  "homepage_url": "https://www.timeseriesclassification.com",
+  "publisher": {
+    "name": "University of East Anglia",
+    "type": "academic",
+    "url": "https://www.uea.ac.uk"
+  },
+  "modalities": [
+    "tabular",
+    "time-series"
+  ],
+  "tasks": [
+    "time-series-classification"
+  ],
+  "tags": [
+    "time-series",
+    "multivariate-time-series",
+    "time-series-classification",
+    "benchmark",
+    "uea"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Archive compilation and standardized splits released under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "Time Series Classification Archive Official Portal",
+      "url": "https://www.timeseriesclassification.com",
+      "type": "official_website",
+      "notes": "Online archive containing dataset definitions, downloads, and baseline results."
+    },
+    {
+      "title": "The UEA Multivariate Time Series Classification Archive, 2018",
+      "url": "https://arxiv.org/abs/1811.00075",
+      "type": "original_paper",
+      "notes": "Published reference describing the archive specifications and baseline models."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against arXiv:1811.00075 and timeseriesclassification.com portal."
+  },
+  "size": {
+    "amount": 2.5,
+    "unit": "GB",
+    "file_formats": [
+      "ts",
+      "arff",
+      "zip"
+    ],
+    "status": "verified",
+    "notes": "Standardized .ts sequence classification format files across 30 datasets."
+  },
+  "sample_count": {
+    "total": 30,
+    "unit": "datasets",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-11-01"
+  },
+  "citation": {
+    "paper_title": "The UEA multivariate time series classification archive, 2018",
+    "paper_url": "https://arxiv.org/abs/1811.00075",
+    "authors": [
+      "Anthony Bagnall",
+      "Hoang Anh Dau",
+      "Jason Lines",
+      "Michael Flynn",
+      "James Large",
+      "Aaron Bostrom",
+      "Paul Southam",
+      "Eamonn Keogh"
+    ],
+    "bibtex": "@article{bagnall2018uea,\n  title={The UEA multivariate time series classification archive, 2018},\n  author={Bagnall, Anthony and Dau, Hoang Anh and Lines, Jason and Flynn, Michael and Large, James and Bostrom, Aaron and Southam, Paul and Keogh, Eamonn},\n  journal={arXiv preprint arXiv:1811.00075},\n  year={2018}\n}"
+  },
+  "provenance": {
+    "collection_method": "Compiled from scientific labs and previous benchmarks into uniform train/test partitions.",
+    "curation_notes": "Formatted into standardized Weka ARFF and UEA .ts format with consistent dimensionality documentation."
+  }
+}

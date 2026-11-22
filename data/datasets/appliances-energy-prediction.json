@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "id": "appliances-energy-prediction",
+  "slug": "appliances-energy-prediction",
+  "name": "Appliances Energy Prediction Dataset",
+  "description": "The Appliances Energy Prediction dataset is an empirical benchmark from the UCI Machine Learning Repository for forecasting low-energy house appliance consumption. Collected over 4.5 months at 10-minute intervals (19,735 records), it incorporates indoor environmental parameters from a ZigBee sensor network (temperature and humidity across 9 rooms) combined with local weather conditions from a nearby meteorological station.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/374/appliances+energy+prediction",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular",
+    "time-series",
+    "sensor"
+  ],
+  "tasks": [
+    "regression",
+    "energy-prediction",
+    "time-series-forecasting"
+  ],
+  "tags": [
+    "energy-forecasting",
+    "iot-sensors",
+    "tabular",
+    "regression",
+    "smart-home",
+    "uci-machine-learning-repository"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Released under CC BY 4.0 in the UCI Machine Learning Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI Repository: Appliances Energy Prediction",
+      "url": "https://archive.ics.uci.edu/dataset/374/appliances+energy+prediction",
+      "type": "official_website",
+      "notes": "UCI Machine Learning Repository dataset landing page."
+    },
+    {
+      "title": "Data Driven Prediction Models of Energy Use of Appliances in a Low-Energy House",
+      "url": "https://doi.org/10.1016/j.enbuild.2017.01.083",
+      "type": "original_paper",
+      "notes": "Published in Energy and Buildings, Vol. 140, 2017."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against UCI repository entry and Energy and Buildings 2017 paper."
+  },
+  "size": {
+    "amount": 3.2,
+    "unit": "MB",
+    "file_formats": [
+      "csv",
+      "zip"
+    ],
+    "status": "verified",
+    "notes": "Cleaned CSV time-series records."
+  },
+  "sample_count": {
+    "total": 19735,
+    "unit": "records",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2017-02-15"
+  },
+  "citation": {
+    "paper_title": "Data driven prediction models of energy use of appliances in a low-energy house",
+    "paper_url": "https://doi.org/10.1016/j.enbuild.2017.01.083",
+    "authors": [
+      "Luis M. Candanedo",
+      "Véronique Feldheim",
+      "Dominique Deramaix"
+    ],
+    "doi": "10.1016/j.enbuild.2017.01.083",
+    "bibtex": "@article{candanedo2017data,\n  title={Data driven prediction models of energy use of appliances in a low-energy house},\n  author={Candanedo, Luis M and Feldheim, V{'e}ronique and Deramaix, Dominique},\n  journal={Energy and Buildings},\n  volume={140},\n  pages={81--97},\n  year={2017},\n  publisher={Elsevier}\n}"
+  },
+  "provenance": {
+    "collection_method": "Logged continuously via wireless ZigBee sensor nodes inside a low-energy house in Stambruges, Belgium.",
+    "curation_notes": "Logged every 10 minutes over 137 days and merged with regional weather station data."
+  }
+}

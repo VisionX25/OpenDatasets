@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "dakshina",
+  "slug": "dakshina",
+  "name": "Dakshina: South Asian Language Latin & Native Script Benchmark",
+  "description": "The Dakshina dataset is a collection of text in both Latin script and native scripts for 12 South Asian languages, curated by Google Research. The resource contains Wikipedia text, native-to-Latin transliterations, and lexical data, designed to support Latin script text input, script normalization, machine transliteration, and language modeling.",
+  "homepage_url": "https://github.com/google-research-datasets/dakshina",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "transliteration",
+    "language-modeling",
+    "machine-translation"
+  ],
+  "tags": [
+    "transliteration",
+    "south-asian-languages",
+    "latin-script",
+    "nlp",
+    "benchmark",
+    "google-research"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset distributed under CC BY-SA 4.0 license."
+  },
+  "source_references": [
+    {
+      "title": "Google Research Dakshina Dataset Repository",
+      "url": "https://github.com/google-research-datasets/dakshina",
+      "type": "repository",
+      "notes": "Canonical repository hosting data releases and processing scripts."
+    },
+    {
+      "title": "Processing South Asian Languages Written in the Latin Script: The Dakshina Dataset",
+      "url": "https://aclanthology.org/2020.lrec-1.294/",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the 12th Language Resources and Evaluation Conference (LREC 2020)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against LREC 2020 paper and Google Research GitHub repository."
+  },
+  "size": {
+    "amount": 1.8,
+    "unit": "GB",
+    "file_formats": [
+      "tsv",
+      "txt",
+      "tar.gz"
+    ],
+    "status": "estimated",
+    "notes": "Compressed archives containing lexicon, text, and transliteration splits across 12 languages."
+  },
+  "sample_count": {
+    "total": 1200000,
+    "unit": "strings-and-sentences",
+    "status": "estimated"
+  },
+  "languages": [
+    "bn",
+    "gu",
+    "hi",
+    "kn",
+    "ml",
+    "mr",
+    "pa",
+    "sd",
+    "si",
+    "ta",
+    "te",
+    "ur"
+  ],
+  "dates": {
+    "published": "2020-05-11"
+  },
+  "citation": {
+    "paper_title": "Processing South Asian Languages Written in the Latin Script: The Dakshina Dataset",
+    "paper_url": "https://aclanthology.org/2020.lrec-1.294/",
+    "authors": [
+      "Brian Roark",
+      "Lawrence Wolf-Sonkin",
+      "Christo Kirov",
+      "Sabrina J. Mielke",
+      "Cibu Johny",
+      "Işın Demirşahin",
+      "Keith Hall"
+    ],
+    "bibtex": "@inproceedings{roark-etal-2020-processing,\n  title={Processing {S}outh {A}sian Languages Written in the {L}atin Script: the {D}akshina Dataset},\n  author={Roark, Brian and Wolf-Sonkin, Lawrence and Kirov, Christo and Mielke, Sabrina J. and Johny, Cibu and Demir{\\c{s}}ahin, I{\\c{s}}in and Hall, Keith},\n  booktitle={Proceedings of the 12th Language Resources and Evaluation Conference},\n  pages={2413--2423},\n  year={2020},\n  publisher={European Language Resources Association}\n}"
+  },
+  "provenance": {
+    "collection_method": "Native script sentences harvested from Wikipedia articles and manually transliterated into Latin script by native speakers.",
+    "curation_notes": "Multiple human transliterations collected per sentence to capture phonetic and spelling variability."
+  }
+}

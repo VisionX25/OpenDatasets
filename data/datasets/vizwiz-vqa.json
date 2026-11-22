@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "id": "vizwiz-vqa",
+  "slug": "vizwiz-vqa",
+  "name": "VizWiz-VQA: Visual Question Answering from Blind Photographers",
+  "description": "VizWiz-VQA is a visual question answering benchmark originating from real-world photos taken by blind individuals asking questions about their daily surroundings. Developed by the VizWiz Consortium, it comprises 31,173 visual questions in its initial CVPR 2018 release (subsequently expanded to 32,842 across train, validation, and test splits), each paired with 10 crowd-sourced answers, featuring challenging artifacts such as motion blur, framing issues, unanswerable questions, and privacy concerns.",
+  "homepage_url": "https://vizwiz.org/tasks-and-datasets/vqa/",
+  "publisher": {
+    "name": "VizWiz Consortium",
+    "type": "academic",
+    "url": "https://vizwiz.org"
+  },
+  "modalities": [
+    "vision",
+    "nlp",
+    "multimodal"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "vqa",
+    "accessibility"
+  ],
+  "tags": [
+    "vqa",
+    "visual-question-answering",
+    "accessibility",
+    "assistive-technology",
+    "multimodal",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "VizWiz datasets are released under the CC BY 4.0 license."
+  },
+  "source_references": [
+    {
+      "title": "VizWiz-VQA Official Task Page",
+      "url": "https://vizwiz.org/tasks-and-datasets/vqa/",
+      "type": "official_website",
+      "notes": "Official task description, download instructions, and evaluation server."
+    },
+    {
+      "title": "VizWiz Grand Challenge: Answering Visual Questions from Blind People",
+      "url": "https://arxiv.org/abs/1802.08218",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of IEEE/CVF CVPR 2018."
+    },
+    {
+      "title": "VizWiz Python API Repository",
+      "url": "https://github.com/VizWiz-Consortium/VizWiz-API",
+      "type": "repository",
+      "notes": "Evaluation toolkit and API wrappers."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against CVPR 2018 publication and VizWiz Consortium official portal."
+  },
+  "size": {
+    "amount": 10.5,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "json",
+      "zip"
+    ],
+    "status": "verified",
+    "notes": "Images and JSON annotations across train, validation, and test splits."
+  },
+  "sample_count": {
+    "total": 32842,
+    "splits": {
+      "train": 20523,
+      "val": 4319,
+      "test": 8000
+    },
+    "unit": "visual-questions",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2018-06-18"
+  },
+  "citation": {
+    "paper_title": "VizWiz Grand Challenge: Answering Visual Questions from Blind People",
+    "paper_url": "https://doi.org/10.1109/CVPR.2018.00380",
+    "authors": [
+      "Danna Gurari",
+      "Qing Li",
+      "Abigale J. Stangl",
+      "Anhong Guo",
+      "Chi Lin",
+      "Kristen Grauman",
+      "Jiebo Luo",
+      "Jeffrey P. Bigham"
+    ],
+    "doi": "10.1109/CVPR.2018.00380",
+    "bibtex": "@inproceedings{gurari2018vizwiz,\n  title={VizWiz Grand Challenge: Answering Visual Questions From Blind People},\n  author={Gurari, Danna and Li, Qing and Stangl, Abigale J and Guo, Anhong and Lin, Chi and Grauman, Kristen and Luo, Jiebo and Bigham, Jeffrey P},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={3608--3617},\n  year={2018}\n}"
+  },
+  "provenance": {
+    "collection_method": "Recorded by blind users submitting cell phone photos and voice queries to a remote human assistance application.",
+    "curation_notes": "Spoken queries transcribed, anonymized for personally identifiable information, and annotated with 10 crowd-sourced answers."
+  }
+}

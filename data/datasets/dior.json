@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "dior",
+  "slug": "dior",
+  "name": "DIOR: Object Detection in Optical Remote Sensing Images",
+  "description": "DIOR is a large-scale benchmark dataset for optical remote sensing image object detection, developed by Northwestern Polytechnical University. It contains 23,463 high-resolution aerial and satellite images (800x800 pixels) with 192,472 instance bounding-box annotations across 20 common object classes, spanning diverse sensors, seasons, weather conditions, and spatial resolutions from 0.5m to 30m.",
+  "homepage_url": "http://www.escience.cn/people/gongsheng/DIOR.html",
+  "publisher": {
+    "name": "Northwestern Polytechnical University",
+    "type": "academic",
+    "url": "https://en.nwpu.edu.cn"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection"
+  ],
+  "tags": [
+    "remote-sensing",
+    "satellite-imagery",
+    "object-detection",
+    "aerial-imagery",
+    "earth-observation"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released for non-commercial academic research under CC BY-NC 4.0."
+  },
+  "source_references": [
+    {
+      "title": "DIOR Benchmark Landing Page",
+      "url": "http://www.escience.cn/people/gongsheng/DIOR.html",
+      "type": "official_website",
+      "notes": "Official repository homepage hosted by Northwestern Polytechnical University."
+    },
+    {
+      "title": "Object Detection in Optical Remote Sensing Images: A Survey and a New Benchmark",
+      "url": "https://doi.org/10.1016/j.isprsjprs.2019.11.023",
+      "type": "original_paper",
+      "notes": "Published in ISPRS Journal of Photogrammetry and Remote Sensing, Vol. 159, 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against ISPRS 2020 publication and official author distribution portal."
+  },
+  "size": {
+    "amount": 7.3,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "xml",
+      "zip"
+    ],
+    "status": "verified",
+    "notes": "Complete compressed image and XML Pascal VOC annotation archives."
+  },
+  "sample_count": {
+    "total": 23463,
+    "splits": {
+      "trainval": 11725,
+      "test": 11738
+    },
+    "unit": "images",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2020-01-01"
+  },
+  "citation": {
+    "paper_title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+    "paper_url": "https://doi.org/10.1016/j.isprsjprs.2019.11.023",
+    "authors": [
+      "Ke Li",
+      "Gong Cheng",
+      "Shibu Bu",
+      "Junwei Han"
+    ],
+    "doi": "10.1016/j.isprsjprs.2019.11.023",
+    "bibtex": "@article{li2020object,\n  title={Object detection in optical remote sensing images: A survey and a new benchmark},\n  author={Li, Ke and Cheng, Gong and Bu, Shibu and Han, Junwei},\n  journal={ISPRS Journal of Photogrammetry and Remote Sensing},\n  volume={159},\n  pages={296--307},\n  year={2020},\n  publisher={Elsevier}\n}"
+  },
+  "provenance": {
+    "collection_method": "Sourced from Google Earth optical remote sensing imagery worldwide across varying atmospheric and lighting conditions.",
+    "curation_notes": "Annotated manually by remote sensing experts using horizontal bounding boxes."
+  }
+}

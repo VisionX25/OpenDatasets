@@ -514,7 +514,7 @@ def test_catalog_split_discrepancy_census():
 
     catalog_dir = Path("data/datasets")
     records = [json.loads(p.read_text()) for p in sorted(catalog_dir.glob("*.json"))]
-    assert len(records) == 700
+    assert len(records) == 725
 
     cat_a = []  # partition_split_count_mismatch
     cat_b = []  # benchmark_subset_partition
@@ -624,7 +624,7 @@ def test_duplicate_reference_semantics():
 
 
 def test_readiness_tier_counts_reconciliation():
-    """Verify that catalog-wide readiness tiers sum to exactly 700 records."""
+    """Verify that catalog-wide readiness tiers sum to exactly 725 records."""
     import json
     from pathlib import Path
 
@@ -633,10 +633,10 @@ def test_readiness_tier_counts_reconciliation():
     audit_data = audit_catalog_metadata_quality(records)
     tier_dist = audit_data["research_readiness_summary"]["tier_distribution"]
 
-    assert tier_dist["Ready for Evaluation"] == 484
-    assert tier_dist["Documented with Caveats"] == 171
+    assert tier_dist["Ready for Evaluation"] == 498
+    assert tier_dist["Documented with Caveats"] == 182
     assert tier_dist["Needs Information Review"] == 45
-    assert sum(tier_dist.values()) == 700
+    assert sum(tier_dist.values()) == 725
 
 
 def test_audit_metadata_quality_provenance_and_dynamic_counts():
@@ -662,8 +662,8 @@ def test_audit_metadata_quality_provenance_and_dynamic_counts():
     md = generate_markdown_summary(audit_data)
     assert f"> **Audit Task:** {audit_task}" in md
     assert f"> **Audit Date:** {audit_date}" in md
-    assert "Complete across all 700 catalog records" not in md
-    assert "Documented across 675/700 catalog records (25 undated)" in md
+    assert "Complete across all 725 catalog records" not in md
+    assert "Documented across 700/725 catalog records (25 undated)" in md
     assert f"modified during {audit_task}" in md
     assert "modified during Task 40" not in md
 

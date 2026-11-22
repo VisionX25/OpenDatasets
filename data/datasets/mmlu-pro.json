@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mmlu-pro",
+  "slug": "mmlu-pro",
+  "name": "MMLU-Pro: Massive Multitask Language Understanding Pro",
+  "description": "MMLU-Pro is an advanced reasoning-focused evaluation benchmark designed to address saturation and noise in original MMLU. Developed by TIGER-Lab, it features 12,032 challenging questions across 14 disciplines expanded from 4 to 10 multiple-choice options per question, reducing lucky guesses and requiring deeper multi-step reasoning.",
+  "homepage_url": "https://github.com/TIGER-AI-Lab/MMLU-Pro",
+  "publisher": {
+    "name": "TIGER AI Lab",
+    "type": "academic",
+    "url": "https://tiger-ai-lab.github.io"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "multi-choice-qa",
+    "reasoning",
+    "evaluation-benchmark"
+  ],
+  "tags": [
+    "llm-evaluation",
+    "multi-task-reasoning",
+    "reasoning-benchmark",
+    "academic-qa",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Code and dataset released under Apache License 2.0."
+  },
+  "source_references": [
+    {
+      "title": "MMLU-Pro GitHub Repository",
+      "url": "https://github.com/TIGER-AI-Lab/MMLU-Pro",
+      "type": "repository",
+      "notes": "Official repository with dataset files and evaluation scripts."
+    },
+    {
+      "title": "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark",
+      "url": "https://arxiv.org/abs/2406.01574",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of NeurIPS 2024."
+    },
+    {
+      "title": "TIGER-Lab MMLU-Pro Hugging Face Dataset Card",
+      "url": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro",
+      "type": "dataset_card",
+      "notes": "Hosted dataset card and parquet splits."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against NeurIPS 2024 paper and official TIGER-Lab repository."
+  },
+  "size": {
+    "amount": 25.0,
+    "unit": "MB",
+    "file_formats": [
+      "json",
+      "parquet"
+    ],
+    "status": "verified",
+    "notes": "JSON and Parquet files containing all 12,032 evaluated questions with 10 options each."
+  },
+  "sample_count": {
+    "total": 12032,
+    "unit": "questions",
+    "status": "verified"
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2024-06-03"
+  },
+  "citation": {
+    "paper_title": "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark",
+    "paper_url": "https://arxiv.org/abs/2406.01574",
+    "authors": [
+      "Yubo Wang",
+      "Xueguang Ma",
+      "Ge Zhang",
+      "Yuan Ni",
+      "Abhranil Chandra",
+      "Shiguang Guo",
+      "Weiming Ren",
+      "Aaran Arulraj",
+      "Xuan He",
+      "Ziyan Jiang",
+      "Tianle Li",
+      "Max Ku",
+      "Kai Wang",
+      "Alex Zhuang",
+      "Rongqi Fan",
+      "Xiang Yue",
+      "Wenhu Chen"
+    ],
+    "bibtex": "@article{wang2024mmlupro,\n  title={MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark},\n  author={Wang, Yubo and Ma, Xueguang and Zhang, Ge and Ni, Yuan and Chandra, Abhranil and Guo, Shiguang and Ren, Weiming and Arulraj, Aaran and He, Xuan and Jiang, Ziyan and Li, Tianle and Ku, Max and Wang, Kai and Zhuang, Alex and Fan, Rongqi and Yue, Xiang and Chen, Wenhu},\n  journal={arXiv preprint arXiv:2406.01574},\n  year={2024}\n}"
+  },
+  "provenance": {
+    "collection_method": "Carefully selected and augmented from original MMLU and expert collegiate problem sets.",
+    "curation_notes": "Expert human reviews verified ground truths and filtered out trivial or ambiguous questions while expanding option sets to 10."
+  }
+}

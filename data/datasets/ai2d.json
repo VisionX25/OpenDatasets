@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ai2d",
+  "slug": "ai2d",
+  "name": "AI2D: Allen Institute for AI Diagram Dataset",
+  "description": "AI2D (Allen Institute for AI Diagrams) is a rich dataset of 4,900+ grade-school science diagrams accompanied by over 15,000 multiple-choice questions. Developed by the Allen Institute for AI, the dataset features dense parse annotations linking diagram graphical elements, arrows, text labels, and semantic relations to test multimodal diagram understanding and visual reasoning.",
+  "homepage_url": "https://prior.allenai.org/projects/diagram-understanding",
+  "publisher": {
+    "name": "Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org"
+  },
+  "modalities": [
+    "vision",
+    "nlp",
+    "multimodal"
+  ],
+  "tasks": [
+    "diagram-understanding",
+    "visual-question-answering",
+    "question-answering"
+  ],
+  "tags": [
+    "diagrams",
+    "vqa",
+    "multimodal",
+    "science-qa",
+    "reasoning",
+    "allen-institute"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Annotations and questions licensed under CC BY-SA 4.0."
+  },
+  "source_references": [
+    {
+      "title": "AI2 Prior Diagram Understanding Project",
+      "url": "https://prior.allenai.org/projects/diagram-understanding",
+      "type": "official_website",
+      "notes": "Official Allen Institute for AI project overview and downloads."
+    },
+    {
+      "title": "A Diagram Is Worth a Dozen Images",
+      "url": "https://doi.org/10.1007/978-3-319-46484-8_29",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of European Conference on Computer Vision (ECCV) 2016."
+    },
+    {
+      "title": "AllenAI AI2D API Repository",
+      "url": "https://github.com/allenai/ai2d-api",
+      "type": "repository",
+      "notes": "Python tool for accessing annotations, categories, and question splits."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-22",
+    "notes": "Verified against ECCV 2016 publication and official Allen Institute PRIOR repository."
+  },
+  "size": {
+    "amount": 1.2,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "json",
+      "tar.gz"
+    ],
+    "status": "verified",
+    "notes": "Images and JSON diagram parse structures."
+  },
+  "sample_count": {
+    "total": 4914,
+    "unit": "diagrams",
+    "status": "verified"
+  },
+  "dates": {
+    "published": "2016-10-11"
+  },
+  "citation": {
+    "paper_title": "A Diagram Is Worth a Dozen Images",
+    "paper_url": "https://doi.org/10.1007/978-3-319-46484-8_29",
+    "authors": [
+      "Aniruddha Kembhavi",
+      "Mike Salvato",
+      "Eric Kolve",
+      "Minjoon Seo",
+      "Hannaneh Hajishirzi",
+      "Ali Farhadi"
+    ],
+    "doi": "10.1007/978-3-319-46484-8_29",
+    "bibtex": "@inproceedings{kembhavi2016diagram,\n  title={A diagram is worth a dozen images},\n  author={Kembhavi, Aniruddha and Salvato, Mike and Kolve, Eric and Seo, Minjoon and Hajishirzi, Hannaneh and Farhadi, Ali},\n  booktitle={Computer Vision--ECCV 2016: 14th European Conference, Amsterdam, The Netherlands, October 11--14, 2016, Proceedings, Part IV 14},\n  pages={490--506},\n  year={2016},\n  organization={Springer}\n}"
+  },
+  "provenance": {
+    "collection_method": "Extracted from grade-school natural science textbooks and instructional web domains.",
+    "curation_notes": "Expert annotators drew constituent bounding boxes, inter-object arrows, and logical flow relationships."
+  }
+}
