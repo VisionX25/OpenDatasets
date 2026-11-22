@@ -565,6 +565,24 @@ class TestInputSanitization:
         assert dry is False
         assert res is False
 
+    def test_empty_string_inputs(self):
+        """Simulate scheduled workflow where unset inputs evaluate to empty strings."""
+        b, r, off, dry, res = validate_and_sanitize_inputs("", "", "", "", "")
+        assert b == 50
+        assert r == 600.0
+        assert off is False
+        assert dry is False
+        assert res is False
+
+    def test_whitespace_inputs(self):
+        """Ensure whitespace-only strings fall back to documented defaults."""
+        b, r, off, dry, res = validate_and_sanitize_inputs("   ", "  \t\n  ", "  ", " \t", " \n ")
+        assert b == 50
+        assert r == 600.0
+        assert off is False
+        assert dry is False
+        assert res is False
+
     def test_valid_inputs(self):
         b, r, off, dry, res = validate_and_sanitize_inputs("50", "300", "true", "false", "0")
         assert b == 50
@@ -573,17 +591,232 @@ class TestInputSanitization:
         assert dry is False
         assert res is False
 
+    def test_valid_numeric_types(self):
+        """Accept native int and float types within valid range."""
+        b, r, off, dry, res = validate_and_sanitize_inputs(25, 120.5, False, True, False)
+        assert b == 25
+        assert r == 120.5
+        assert off is False
+        assert dry is True
+        assert res is False
+
+    def test_boolean_parsing_matrix(self):
+        # Truthy
+        for t in ("true", "True", "TRUE", "1", "yes", "YES", True):
+            _, _, off, dry, res = validate_and_sanitize_inputs(50, 600, t, t, t)
+            assert off is True
+            assert dry is True
+            assert res is True
+
+        # Falsy
+        for f in ("false", "False", "FALSE", "0", "no", "NO", "none", "None", "", "   ", False, None):
+            _, _, off, dry, res = validate_and_sanitize_inputs(50, 600, f, f, f)
+            assert off is False
+            assert dry is False
+            assert res is False
+
     def test_batch_size_out_of_bounds(self):
         with pytest.raises(ValueError, match="batch_size must be between"):
             validate_and_sanitize_inputs("0", "600", False, False, False)
         with pytest.raises(ValueError, match="batch_size must be between"):
-            validate_and_sanitize_inputs("300", "600", False, False, False)
+            validate_and_sanitize_inputs("251", "600", False, False, False)
+        with pytest.raises(ValueError, match="batch_size must be between"):
+            validate_and_sanitize_inputs("-5", "600", False, False, False)
+
+    def test_batch_size_invalid_literals(self):
+        with pytest.raises(ValueError, match="Invalid batch_size parameter"):
+            validate_and_sanitize_inputs("abc", "600", False, False, False)
+        with pytest.raises(ValueError, match="Invalid batch_size parameter"):
+            validate_and_sanitize_inputs("50.5", "600", False, False, False)
+        with pytest.raises(ValueError, match="Boolean value not accepted for batch_size"):
+            validate_and_sanitize_inputs(True, "600", False, False, False)
 
     def test_max_runtime_out_of_bounds(self):
         with pytest.raises(ValueError, match="max_runtime must be between"):
             validate_and_sanitize_inputs("100", "5", False, False, False)
         with pytest.raises(ValueError, match="max_runtime must be between"):
             validate_and_sanitize_inputs("100", "5000", False, False, False)
+        with pytest.raises(ValueError, match="max_runtime must be between"):
+            validate_and_sanitize_inputs("100", "-10", False, False, False)
+
+    def test_max_runtime_invalid_literals(self):
+        with pytest.raises(ValueError, match="Invalid max_runtime parameter"):
+            validate_and_sanitize_inputs("100", "abc", False, False, False)
+        with pytest.raises(ValueError, match="Boolean value not accepted for max_runtime"):
+            validate_and_sanitize_inputs("100", False, False, False, False)
+
+    def test_boolean_invalid_values(self):
+        with pytest.raises(ValueError, match="Invalid offline parameter"):
+            validate_and_sanitize_inputs("50", "600", "invalid_bool", False, False)
+        with pytest.raises(ValueError, match="Invalid dry_run parameter"):
+            validate_and_sanitize_inputs("50", "600", False, "not_a_bool", False)
+        with pytest.raises(ValueError, match="Invalid reset_state parameter"):
+            validate_and_sanitize_inputs("50", "600", False, False, "unknown")
+
+
+class TestScheduledMonitoringExecutionRegression:
+    """Regression tests verifying scheduled GitHub Actions monitoring execution without workflow_dispatch inputs."""
+
+    def test_cli_scheduled_execution_empty_env_vars(self, mock_datasets_dir: Path, tmp_path: Path):
+        script_path = Path(__file__).resolve().parent.parent / "scripts" / "monitor_source_links.py"
+        state_file = tmp_path / "state.json"
+        output_dir = tmp_path / "output"
+
+        env = os.environ.copy()
+        # Simulate GitHub Actions schedule event where inputs are absent/empty strings
+        env["INPUT_BATCH_SIZE"] = ""
+        env["INPUT_MAX_RUNTIME"] = ""
+        env["INPUT_OFFLINE"] = ""
+        env["INPUT_DRY_RUN"] = "true"
+        env["INPUT_RESET_STATE"] = ""
+
+        res = subprocess.run(
+            [
+                sys.executable,
+                str(script_path),
+                "--data-dir",
+                str(mock_datasets_dir),
+                "--state-file",
+                str(state_file),
+                "--output-dir",
+                str(output_dir),
+                "--dry-run",
+            ],
+            env=env,
+            capture_output=True,
+            text=True,
+        )
+
+        assert res.returncode == 0
+        assert "Effective batch:   50" in res.stdout
+        assert "Max runtime limit: 600.0s" in res.stdout
+        assert "Dry-run mode:      True" in res.stdout
+        assert "Dry-run completed successfully" in res.stdout
+
+    def test_cli_scheduled_execution_whitespace_env_vars(self, mock_datasets_dir: Path, tmp_path: Path):
+        script_path = Path(__file__).resolve().parent.parent / "scripts" / "monitor_source_links.py"
+        state_file = tmp_path / "state.json"
+        output_dir = tmp_path / "output"
+
+        env = os.environ.copy()
+        env["INPUT_BATCH_SIZE"] = "   "
+        env["INPUT_MAX_RUNTIME"] = " \t\n "
+        env["INPUT_OFFLINE"] = "  "
+        env["INPUT_DRY_RUN"] = " true "
+        env["INPUT_RESET_STATE"] = "   "
+
+        res = subprocess.run(
+            [
+                sys.executable,
+                str(script_path),
+                "--data-dir",
+                str(mock_datasets_dir),
+                "--state-file",
+                str(state_file),
+                "--output-dir",
+                str(output_dir),
+            ],
+            env=env,
+            capture_output=True,
+            text=True,
+        )
+
+        assert res.returncode == 0
+        assert "Effective batch:   50" in res.stdout
+        assert "Max runtime limit: 600.0s" in res.stdout
+        assert "Dry-run completed successfully" in res.stdout
+
+    def test_cli_scheduled_execution_offline_rotation(self, mock_datasets_dir: Path, tmp_path: Path):
+        """Simulate scheduled rotation with offline execution, verifying state persistence and report output."""
+        script_path = Path(__file__).resolve().parent.parent / "scripts" / "monitor_source_links.py"
+        state_file = tmp_path / "state.json"
+        output_dir = tmp_path / "output"
+        summary_file = tmp_path / "summary.md"
+
+        env = os.environ.copy()
+        env["INPUT_BATCH_SIZE"] = ""
+        env["INPUT_MAX_RUNTIME"] = ""
+        env["INPUT_OFFLINE"] = "true"
+        env["INPUT_DRY_RUN"] = ""
+        env["INPUT_RESET_STATE"] = ""
+
+        res = subprocess.run(
+            [
+                sys.executable,
+                str(script_path),
+                "--data-dir",
+                str(mock_datasets_dir),
+                "--state-file",
+                str(state_file),
+                "--output-dir",
+                str(output_dir),
+                "--summary-file",
+                str(summary_file),
+            ],
+            env=env,
+            capture_output=True,
+            text=True,
+        )
+
+        assert res.returncode == 0
+        assert "Effective batch:   50" in res.stdout
+        assert "Offline mode:      True" in res.stdout
+        assert state_file.exists()
+        assert summary_file.exists()
+        assert (output_dir / "monitoring-report.json").exists()
+        assert (output_dir / "monitoring-report.csv").exists()
+
+    def test_cli_explicit_invalid_inputs_fail_strictly(self, mock_datasets_dir: Path, tmp_path: Path):
+        script_path = Path(__file__).resolve().parent.parent / "scripts" / "monitor_source_links.py"
+        state_file = tmp_path / "state.json"
+        output_dir = tmp_path / "output"
+
+        # Case 1: Invalid batch size string
+        env = os.environ.copy()
+        env["INPUT_BATCH_SIZE"] = "invalid"
+        res = subprocess.run(
+            [sys.executable, str(script_path), "--data-dir", str(mock_datasets_dir), "--state-file", str(state_file), "--output-dir", str(output_dir)],
+            env=env,
+            capture_output=True,
+            text=True,
+        )
+        assert res.returncode == 2
+        assert "Input validation failed: Invalid batch_size parameter" in res.stderr
+
+        # Case 2: Out-of-bounds batch size
+        env["INPUT_BATCH_SIZE"] = "0"
+        res = subprocess.run(
+            [sys.executable, str(script_path), "--data-dir", str(mock_datasets_dir), "--state-file", str(state_file), "--output-dir", str(output_dir)],
+            env=env,
+            capture_output=True,
+            text=True,
+        )
+        assert res.returncode == 2
+        assert "batch_size must be between 1 and 250" in res.stderr
+
+        # Case 3: Out-of-bounds runtime
+        env["INPUT_BATCH_SIZE"] = "50"
+        env["INPUT_MAX_RUNTIME"] = "5"
+        res = subprocess.run(
+            [sys.executable, str(script_path), "--data-dir", str(mock_datasets_dir), "--state-file", str(state_file), "--output-dir", str(output_dir)],
+            env=env,
+            capture_output=True,
+            text=True,
+        )
+        assert res.returncode == 2
+        assert "max_runtime must be between 10.0 and 1800.0" in res.stderr
+
+        # Case 4: Invalid boolean
+        env["INPUT_MAX_RUNTIME"] = "600"
+        env["INPUT_OFFLINE"] = "not_a_bool"
+        res = subprocess.run(
+            [sys.executable, str(script_path), "--data-dir", str(mock_datasets_dir), "--state-file", str(state_file), "--output-dir", str(output_dir)],
+            env=env,
+            capture_output=True,
+            text=True,
+        )
+        assert res.returncode == 2
+        assert "Invalid offline parameter" in res.stderr
 
 
 class TestGitPlumbingSync:
