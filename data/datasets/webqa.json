@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "webqa",
+  "slug": "webqa",
+  "name": "WebQA: Multimodal and Multihop Question Answering",
+  "description": "WebQA is a large-scale multimodal and multi-hop question answering benchmark designed to simulate real-world web search query answering. It comprises 46,765 questions that require retrieving and jointly reasoning over text snippets and visual images from a knowledge base of 1.15 million text passages and 400,000 images, requiring full-sentence natural language answers rather than extractive spans.",
+  "homepage_url": "https://github.com/WebQnA/WebQA",
+  "publisher": {
+    "name": "Carnegie Mellon University & Microsoft Research",
+    "type": "academic",
+    "url": "https://webqna.github.io"
+  },
+  "modalities": [
+    "multimodal",
+    "nlp",
+    "vision"
+  ],
+  "tasks": [
+    "question-answering",
+    "multimodal-reasoning"
+  ],
+  "tags": [
+    "multimodal-qa",
+    "multi-hop-reasoning",
+    "information-retrieval",
+    "web-qa",
+    "multimodal"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset annotations released under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "WebQA GitHub Repository",
+      "url": "https://github.com/WebQnA/WebQA",
+      "type": "repository",
+      "notes": "Official repository with dataset files and baseline models."
+    },
+    {
+      "title": "WebQA: Multihop and Multimodal QA (CVPR 2022)",
+      "url": "https://arxiv.org/abs/2109.00590",
+      "type": "original_paper",
+      "notes": "Published in CVPR 2022."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against CVPR 2022 paper and official GitHub repository."
+  },
+  "size": {
+    "amount": 65.0,
+    "unit": "GB",
+    "file_formats": [
+      "json",
+      "jpg",
+      "tsv"
+    ],
+    "status": "estimated",
+    "notes": "Candidate images, text knowledge passages, and QA annotations."
+  },
+  "sample_count": {
+    "total": 46765,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 34282,
+      "validation": 5000,
+      "test": 7483
+    },
+    "breakdown": [
+      {
+        "label": "knowledge_text_passages",
+        "value": 1150000,
+        "unit": "passages"
+      },
+      {
+        "label": "candidate_images",
+        "value": 400000,
+        "unit": "images"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2022-06-19"
+  },
+  "citation": {
+    "paper_title": "WebQA: Multihop and Multimodal QA",
+    "paper_url": "https://arxiv.org/abs/2109.00590",
+    "authors": [
+      "Yingshan Chang",
+      "Mrigank Raman",
+      "Zhengbao Jiang",
+      "Michael R. Lyu",
+      "Jianbing Dong"
+    ],
+    "doi": "10.1109/CVPR52688.2022.01633",
+    "bibtex": "@inproceedings{chang2022webqa,\n  title = {{WebQA}: Multihop and Multimodal {QA}},\n  author = {Chang, Yingshan and Raman, Mrigank and Jiang, Zhengbao and Lyu, Michael R. and Dong, Jianbing},\n  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2022},\n  pages = {16734--16744},\n  doi = {10.1109/CVPR52688.2022.01633}\n}"
+  }
+}

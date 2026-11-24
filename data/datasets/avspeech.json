@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "id": "avspeech",
+  "slug": "avspeech",
+  "name": "AVSpeech: Large-Scale Audio-Visual Speech Separation Dataset",
+  "description": "AVSpeech is a large-scale audio-visual dataset designed for active speaker detection, speech enhancement, and audio-visual speech separation (the 'Looking to Listen' cocktail party problem). Curated by Google Research, it contains approximately 2.4 million video segments spanning roughly 4,700 hours of speech drawn from 292,000 YouTube videos (270k train, 22k test) featuring over 150,000 unique human speakers without background music or overlapping speech interference.",
+  "homepage_url": "https://looking-to-listen.github.io/avspeech/",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "audio",
+    "vision"
+  ],
+  "tasks": [
+    "audio-visual-speech-separation",
+    "speech-enhancement"
+  ],
+  "tags": [
+    "audio-visual",
+    "speech-separation",
+    "cocktail-party",
+    "active-speaker",
+    "audio"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset annotations licensed by Google LLC under Creative Commons Attribution 4.0 International (CC BY 4.0)."
+  },
+  "source_references": [
+    {
+      "title": "AVSpeech Official Project Portal",
+      "url": "https://looking-to-listen.github.io/avspeech/",
+      "type": "official_website",
+      "notes": "Official release site with segment indices and download scripts."
+    },
+    {
+      "title": "AVSpeech Download Documentation",
+      "url": "https://looking-to-listen.github.io/avspeech/download.html",
+      "type": "documentation",
+      "notes": "Official download documentation confirming CC BY 4.0 license and train/test video distributions."
+    },
+    {
+      "title": "Looking to Listen at the Cocktail Party (ACM Transactions on Graphics 2018)",
+      "url": "https://arxiv.org/abs/1804.03619",
+      "type": "original_paper",
+      "notes": "Published in ACM TOG (SIGGRAPH 2018)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against SIGGRAPH 2018 publication and official Google Research download documentation (https://looking-to-listen.github.io/avspeech/download.html). The dataset annotations are officially licensed by Google LLC under CC BY 4.0."
+  },
+  "size": {
+    "amount": 500.0,
+    "unit": "MB",
+    "file_formats": [
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "CSV manifests specifying video IDs, timestamps, and face coordinate bounds."
+  },
+  "sample_count": {
+    "total": 2400000,
+    "unit": "video-segments",
+    "status": "estimated",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 2100000,
+      "test": 300000
+    },
+    "breakdown": [
+      {
+        "label": "youtube_videos",
+        "value": 292000,
+        "unit": "videos"
+      },
+      {
+        "label": "audio_duration_hours",
+        "value": 4700.0,
+        "unit": "hours"
+      },
+      {
+        "label": "unique_speakers",
+        "value": 150000,
+        "unit": "speakers"
+      },
+      {
+        "label": "train_videos",
+        "value": 270000,
+        "unit": "videos"
+      },
+      {
+        "label": "test_videos",
+        "value": 22000,
+        "unit": "videos"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2018-08-10"
+  },
+  "citation": {
+    "paper_title": "Looking to Listen at the Cocktail Party: A Speaker-Independent Audio-Visual Model for Speech Separation",
+    "paper_url": "https://arxiv.org/abs/1804.03619",
+    "authors": [
+      "Ariel Ephrat",
+      "Inbar Mosseri",
+      "Oran Lang",
+      "Tali Dekel",
+      "Kevin Wilson",
+      "Avinatan Hassidim",
+      "William T. Freeman",
+      "Michael Rubinstein"
+    ],
+    "doi": "10.1145/3197517.3201334",
+    "bibtex": "@article{ephrat2018looking,\n  title = {Looking to Listen at the Cocktail Party: A Speaker-Independent Audio-Visual Model for Speech Separation},\n  author = {Ephrat, Ariel and Mosseri, Inbar and Lang, Oran and Dekel, Tali and Wilson, Kevin and Hassidim, Avinatan and Freeman, William T. and Rubinstein, Michael},\n  journal = {ACM Transactions on Graphics (TOG)},\n  volume = {37},\n  number = {4},\n  pages = {1--11},\n  year = {2018},\n  doi = {10.1145/3197517.3201334}\n}"
+  }
+}

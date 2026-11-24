@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wikiqa",
+  "slug": "wikiqa",
+  "name": "WikiQA: A Challenge Dataset for Open-Domain Question Answering",
+  "description": "WikiQA is a publicly available set of question and sentence pairs designed for open-domain question answering and answer sentence selection. Curated by Microsoft Research, questions were sampled from real Bing search query logs and paired with candidate answer sentences extracted from relevant Wikipedia articles, where 1,473 sentence pairs contain verified answer content, establishing a baseline for information retrieval and answer extraction.",
+  "homepage_url": "https://www.microsoft.com/en-us/research/publication/wikiqa-a-challenge-dataset-for-open-domain-question-answering/",
+  "publisher": {
+    "name": "Microsoft Research",
+    "type": "industry",
+    "url": "https://www.microsoft.com/en-us/research/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "information-retrieval"
+  ],
+  "tags": [
+    "question-answering",
+    "answer-sentence-selection",
+    "information-retrieval",
+    "wikipedia",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Microsoft Research Data License Agreement for WikiQA Corpus",
+    "spdx_id": null,
+    "url": "https://www.microsoft.com/en-us/research/publication/wikiqa-a-challenge-dataset-for-open-domain-question-answering/",
+    "commercial_use": "forbidden",
+    "notes": "Available for non-commercial research purposes under the Microsoft Research Data License Agreement for WikiQA Corpus."
+  },
+  "source_references": [
+    {
+      "title": "Microsoft Research WikiQA Portal",
+      "url": "https://www.microsoft.com/en-us/research/publication/wikiqa-a-challenge-dataset-for-open-domain-question-answering/",
+      "type": "official_website",
+      "notes": "Official release portal hosted by Microsoft Research."
+    },
+    {
+      "title": "WikiQA: A Challenge Dataset for Open-Domain Question Answering (EMNLP 2015)",
+      "url": "https://aclanthology.org/D15-1237/",
+      "type": "original_paper",
+      "notes": "Published in EMNLP 2015."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against EMNLP 2015 publication and Microsoft Research portal."
+  },
+  "size": {
+    "amount": 7.2,
+    "unit": "MB",
+    "file_formats": [
+      "tsv",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "Tab-separated question and candidate sentence records."
+  },
+  "sample_count": {
+    "total": 3047,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 2118,
+      "validation": 296,
+      "test": 633
+    },
+    "breakdown": [
+      {
+        "label": "candidate_answer_sentences",
+        "value": 29258,
+        "unit": "sentences"
+      },
+      {
+        "label": "sentences_with_answers",
+        "value": 1473,
+        "unit": "sentences"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2015-09-17"
+  },
+  "citation": {
+    "paper_title": "WikiQA: A Challenge Dataset for Open-Domain Question Answering",
+    "paper_url": "https://aclanthology.org/D15-1237/",
+    "authors": [
+      "Yi Yang",
+      "Wen-tau Yih",
+      "Christopher Meek"
+    ],
+    "doi": "10.18653/v1/D15-1237",
+    "bibtex": "@inproceedings{yang-etal-2015-wikiqa,\n  title = {{W}iki{QA}: A Challenge Dataset for Open-Domain Question Answering},\n  author = {Yang, Yi and Yih, Wen-tau and Meek, Christopher},\n  booktitle = {Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing},\n  year = {2015},\n  pages = {2013--2018},\n  doi = {10.18653/v1/D15-1237}\n}"
+  }
+}

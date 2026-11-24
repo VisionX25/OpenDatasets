@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "id": "voices",
+  "slug": "voices",
+  "name": "VOiCES: Voices Obscured in Complex Environmental Settings",
+  "description": "The VOiCES (Voices Obscured in Complex Environmental Settings) corpus is an acoustic dataset designed to advance far-field automatic speech recognition and robust speaker verification in noise. Recorded by SRI International and Lab41 (In-Q-Tel) across four real reverberant rooms with background distractors (television, music, room babble), it plays back 3,903 clean source speech files through a motorized rotating loudspeaker recorded over twelve microphones per room, generating 120 hours of distant audio per channel across 300 speakers.",
+  "homepage_url": "https://iqtlabs.github.io/voices/",
+  "publisher": {
+    "name": "SRI International & Lab41",
+    "type": "academic",
+    "url": "https://iqtlabs.github.io/voices/"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speaker-identification",
+    "speech-recognition"
+  ],
+  "tags": [
+    "far-field-audio",
+    "noise-robustness",
+    "speaker-recognition",
+    "room-acoustics",
+    "audio"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under Creative Commons Attribution 4.0 International (CC BY 4.0), free for commercial, academic, and government use."
+  },
+  "source_references": [
+    {
+      "title": "VOiCES Corpus Official Project Portal",
+      "url": "https://iqtlabs.github.io/voices/",
+      "type": "official_website",
+      "notes": "Official release portal hosted by Lab41 and SRI International."
+    },
+    {
+      "title": "VOiCES Corpus on AWS Open Data Registry",
+      "url": "https://registry.opendata.aws/voices/",
+      "type": "repository",
+      "notes": "AWS Open Data registry hosting the public S3 archive."
+    },
+    {
+      "title": "Voices Obscured in Complex Environmental Settings (VOiCES) Corpus (Interspeech 2018)",
+      "url": "https://arxiv.org/abs/1804.05053",
+      "type": "original_paper",
+      "notes": "Published in Interspeech 2018."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against Interspeech 2018 paper, official project site (https://iqtlabs.github.io/voices/), and AWS Open Data registry. Source material consists of 3,903 audio files recorded across 12 microphones per room resulting in 120 hours of audio per channel."
+  },
+  "size": {
+    "amount": 26.5,
+    "unit": "GB",
+    "file_formats": [
+      "wav",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "16kHz 16-bit multichannel WAV audio tracks."
+  },
+  "sample_count": {
+    "total": 3903,
+    "unit": "source-audio-files",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "recorded_hours_per_microphone",
+        "value": 120.0,
+        "unit": "hours"
+      },
+      {
+        "label": "speakers",
+        "value": 300,
+        "unit": "speakers"
+      },
+      {
+        "label": "microphones_per_room",
+        "value": 12,
+        "unit": "microphones"
+      },
+      {
+        "label": "acoustic_rooms",
+        "value": 4,
+        "unit": "rooms"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-09-02"
+  },
+  "citation": {
+    "paper_title": "Voices Obscured in Complex Environmental Settings (VOiCES) Corpus",
+    "paper_url": "https://arxiv.org/abs/1804.05053",
+    "authors": [
+      "Colleen Richey",
+      "Maria A. Barrios",
+      "Zhe Armstrong",
+      "Chris Bartels",
+      "Horacio Franco",
+      "Martin Graciarena",
+      "Aaron Lawson",
+      "Manoj Kumar Mahesh",
+      "Andreas Stolcke"
+    ],
+    "doi": "10.21437/Interspeech.2018-1768",
+    "bibtex": "@inproceedings{richey2018voices,\n  title = {Voices Obscured in Complex Environmental Settings ({VOiCES}) Corpus},\n  author = {Richey, Colleen and Barrios, Maria A. and Armstrong, Zhe and Bartels, Chris and Franco, Horacio and Graciarena, Martin and Lawson, Aaron and Mahesh, Manoj Kumar and Stolcke, Andreas},\n  booktitle = {Proceedings of Interspeech 2018},\n  year = {2018},\n  pages = {1566--1570},\n  doi = {10.21437/Interspeech.2018-1768}\n}"
+  }
+}

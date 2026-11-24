@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pdbbind",
+  "slug": "pdbbind",
+  "name": "PDBbind Database: Biomolecular Binding Affinity and Structural Complex Database",
+  "description": "The PDBbind database is a comprehensive collection of experimentally determined binding affinity data ($K_d$, $K_i$, and $IC_{50}$) for biomolecular complexes deposited in the Protein Data Bank (PDB). Curated by the Institute of Organic Chemistry at the Chinese Academy of Sciences, the v2020 release contains 23,496 structural complexes across protein-ligand, nucleic acid-ligand, and protein-protein interactions, serving as the foundational benchmark for structure-based drug design, molecular docking, and scoring functions.",
+  "homepage_url": "https://www.pdbbind-plus.org.cn/",
+  "publisher": {
+    "name": "Chinese Academy of Sciences (Shanghai Institute of Organic Chemistry)",
+    "type": "academic",
+    "url": "https://www.pdbbind-plus.org.cn"
+  },
+  "modalities": [
+    "graph",
+    "tabular"
+  ],
+  "tasks": [
+    "binding-affinity-prediction"
+  ],
+  "tags": [
+    "protein-ligand",
+    "binding-affinity",
+    "molecular-docking",
+    "structural-biology",
+    "graph"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "PDBbind Academic Research License Agreement",
+    "spdx_id": null,
+    "url": "https://www.pdbbind-plus.org.cn/",
+    "commercial_use": "forbidden",
+    "notes": "Free for academic and non-commercial research use upon registration."
+  },
+  "source_references": [
+    {
+      "title": "PDBbind Database Official Portal",
+      "url": "https://www.pdbbind-plus.org.cn/",
+      "type": "official_website",
+      "notes": "Official release portal with structure downloads."
+    },
+    {
+      "title": "The PDBbind Database: Collection of Binding Affinities for Protein-Ligand Complexes (J. Med. Chem. 2004)",
+      "url": "https://doi.org/10.1021/jm030580l",
+      "type": "original_paper",
+      "notes": "Foundational paper published in Journal of Medicinal Chemistry."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against Journal of Medicinal Chemistry paper and PDBbind official portal."
+  },
+  "size": {
+    "amount": 16.5,
+    "unit": "GB",
+    "file_formats": [
+      "pdb",
+      "mol2",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "Atomic 3D structural coordinates and affinity data files."
+  },
+  "sample_count": {
+    "total": 23496,
+    "unit": "biomolecular-complexes",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "general_protein_ligand_set",
+        "value": 19443,
+        "unit": "complexes"
+      },
+      {
+        "label": "refined_set",
+        "value": 5316,
+        "unit": "complexes"
+      },
+      {
+        "label": "core_set_casf_benchmark",
+        "value": 285,
+        "unit": "complexes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2004-05-01"
+  },
+  "citation": {
+    "paper_title": "The PDBbind Database: Collection of Binding Affinities for Protein-Ligand Complexes with Known Three-Dimensional Structures",
+    "paper_url": "https://doi.org/10.1021/jm030580l",
+    "authors": [
+      "Renxiao Wang",
+      "Xueliang Fang",
+      "Yipin Lu",
+      "Chao-Yie Yang",
+      "Shaomeng Wang"
+    ],
+    "doi": "10.1021/jm030580l",
+    "bibtex": "@article{wang2004pdbbind,\n  title = {The {PDBbind} Database: Collection of Binding Affinities for Protein-Ligand Complexes with Known Three-Dimensional Structures},\n  author = {Wang, Renxiao and Fang, Xueliang and Lu, Yipin and Yang, Chao-Yie and Wang, Shaomeng},\n  journal = {Journal of Medicinal Chemistry},\n  volume = {47},\n  number = {12},\n  pages = {2977--2980},\n  year = {2004},\n  doi = {10.1021/jm030580l}\n}"
+  }
+}

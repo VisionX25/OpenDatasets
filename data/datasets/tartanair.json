@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tartanair",
+  "slug": "tartanair",
+  "name": "TartanAir: AirSim-Based Visual SLAM and Depth Estimation Dataset",
+  "description": "TartanAir is a massive photo-realistic synthetic dataset for visual SLAM, optical flow, and depth estimation collected in simulated environments using Microsoft AirSim. Curated by Carnegie Mellon University, it features 1,000 diverse simulated drone trajectories spanning over 3 million frames across 30 diverse photo-realistic indoor and outdoor scenes with ground truth stereo RGB, depth, optical flow, surface normals, and camera poses.",
+  "homepage_url": "https://theairlab.org/tartanair-dataset/",
+  "publisher": {
+    "name": "Carnegie Mellon University (AirLab)",
+    "type": "academic",
+    "url": "https://theairlab.org"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor"
+  ],
+  "tasks": [
+    "visual-slam",
+    "depth-estimation"
+  ],
+  "tags": [
+    "visual-slam",
+    "airsim",
+    "optical-flow",
+    "synthetic",
+    "robotics",
+    "vision"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under CC BY 4.0 by CMU AirLab."
+  },
+  "source_references": [
+    {
+      "title": "TartanAir Official Dataset Portal",
+      "url": "https://theairlab.org/tartanair-dataset/",
+      "type": "official_website",
+      "notes": "Official dataset website hosted by CMU AirLab."
+    },
+    {
+      "title": "TartanAir: A Dataset to Push the Limits of Visual SLAM (IROS 2020)",
+      "url": "https://arxiv.org/abs/2003.14338",
+      "type": "original_paper",
+      "notes": "Published in IROS 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against IROS 2020 paper and CMU AirLab dataset repository."
+  },
+  "size": {
+    "amount": 3.0,
+    "unit": "TB",
+    "file_formats": [
+      "png",
+      "npy",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "Stereo imagery, depth maps, flow fields, and camera trajectories."
+  },
+  "sample_count": {
+    "total": 1000,
+    "unit": "flight-trajectories",
+    "status": "estimated",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "simulated_frames",
+        "value": 3000000,
+        "unit": "frames"
+      },
+      {
+        "label": "simulated_environments",
+        "value": 30,
+        "unit": "environments"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2020-03-31"
+  },
+  "citation": {
+    "paper_title": "TartanAir: A Dataset to Push the Limits of Visual SLAM",
+    "paper_url": "https://arxiv.org/abs/2003.14338",
+    "authors": [
+      "Wenshan Wang",
+      "Delong Zhu",
+      "Linghao Wang",
+      "Yaoyu Hu",
+      "Yuheng Qiu",
+      "Chen Wang",
+      "Sebastian Scherer"
+    ],
+    "doi": "10.1109/IROS45743.2020.9341144",
+    "bibtex": "@inproceedings{wang2020tartanair,\n  title = {{TartanAir}: A Dataset to Push the Limits of Visual {SLAM}},\n  author = {Wang, Wenshan and Zhu, Delong and Wang, Linghao and Hu, Yaoyu and Qiu, Yuheng and Wang, Chen and Scherer, Sebastian},\n  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},\n  year = {2020},\n  pages = {4909--4916},\n  doi = {10.1109/IROS45743.2020.9341144}\n}"
+  }
+}

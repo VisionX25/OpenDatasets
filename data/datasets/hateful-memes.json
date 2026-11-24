@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "hateful-memes",
+  "slug": "hateful-memes",
+  "name": "The Hateful Memes Challenge Dataset",
+  "description": "The Hateful Memes Challenge dataset is a multimodal dataset created by Meta AI to benchmark hate-speech detection in memes. Containing 10,000 newly created memes combining images and text, it introduces 'multimodal confounders'—subtle paired examples where neither the image nor the text alone is hateful, but their combination creates a hateful message, making unimodal models fail and necessitating deep vision-and-language reasoning.",
+  "homepage_url": "https://ai.meta.com/tools/hatefulmemes/",
+  "publisher": {
+    "name": "Meta AI Research",
+    "type": "industry",
+    "url": "https://ai.meta.com"
+  },
+  "modalities": [
+    "vision",
+    "nlp",
+    "multimodal"
+  ],
+  "tasks": [
+    "multimodal-classification"
+  ],
+  "tags": [
+    "hate-speech-detection",
+    "multimodal-memes",
+    "vision-language",
+    "multimodal-classification",
+    "multimodal"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Meta AI Hateful Memes Research License",
+    "spdx_id": null,
+    "url": "https://ai.meta.com/tools/hatefulmemes/",
+    "commercial_use": "forbidden",
+    "notes": "Available for academic and non-commercial research use under Meta AI terms."
+  },
+  "source_references": [
+    {
+      "title": "Meta AI Hateful Memes Portal",
+      "url": "https://ai.meta.com/tools/hatefulmemes/",
+      "type": "official_website",
+      "notes": "Official challenge landing page hosted by Meta AI."
+    },
+    {
+      "title": "The Hateful Memes Challenge: Detecting Hate Speech in Multimodal Memes (NeurIPS 2020)",
+      "url": "https://arxiv.org/abs/2005.04790",
+      "type": "original_paper",
+      "notes": "Published in NeurIPS 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against NeurIPS 2020 paper and Meta AI research distribution."
+  },
+  "size": {
+    "amount": 1.6,
+    "unit": "GB",
+    "file_formats": [
+      "jsonl",
+      "png"
+    ],
+    "status": "verified",
+    "notes": "Meme PNG images and JSONL label files."
+  },
+  "sample_count": {
+    "total": 10000,
+    "unit": "multimodal-memes",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 8500,
+      "validation": 500,
+      "test": 1000
+    },
+    "breakdown": [
+      {
+        "label": "binary_classes",
+        "value": 2,
+        "unit": "classes"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2020-12-06"
+  },
+  "citation": {
+    "paper_title": "The Hateful Memes Challenge: Detecting Hate Speech in Multimodal Memes",
+    "paper_url": "https://arxiv.org/abs/2005.04790",
+    "authors": [
+      "Douwe Kiela",
+      "Hamed Firooz",
+      "Aravind Mohan",
+      "Vedanuj Goswami",
+      "Puja Singh",
+      "Pratik Ringschia",
+      "Davide Testuggine"
+    ],
+    "bibtex": "@inproceedings{kiela2020hateful,\n  title = {The Hateful Memes Challenge: Detecting Hate Speech in Multimodal Memes},\n  author = {Kiela, Douwe and Firooz, Hamed and Mohan, Aravind and Goswami, Vedanuj and Singh, Puja and Ringschia, Pratik and Testuggine, Davide},\n  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},\n  volume = {33},\n  pages = {2612--2624},\n  year = {2020}\n}"
+  }
+}

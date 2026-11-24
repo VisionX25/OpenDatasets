@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "lrs3",
+  "slug": "lrs3",
+  "name": "LRS3-TED: Large-Scale Audio-Visual and Lip Reading Dataset",
+  "description": "LRS3-TED is a large-scale multimodal speech benchmark curated by the Visual Geometry Group (VGG) at Oxford in collaboration with Google. Containing over 438 hours of spoken video across 151,338 utterances from 5,000 speakers drawn from TED and TEDx talks, it provides face track coordinates and word-level temporal alignments widely recognized as the preeminent benchmark for visual speech recognition (lip reading) and audio-visual speech processing.",
+  "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs3.html",
+  "publisher": {
+    "name": "Visual Geometry Group, University of Oxford",
+    "type": "academic",
+    "url": "https://www.robots.ox.ac.uk/~vgg/"
+  },
+  "modalities": [
+    "vision",
+    "audio",
+    "nlp"
+  ],
+  "tasks": [
+    "lip-reading",
+    "speech-recognition"
+  ],
+  "tags": [
+    "lip-reading",
+    "visual-speech-recognition",
+    "multimodal-speech",
+    "ted-talks",
+    "audio"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Oxford VGG LRS3 Academic Research Agreement",
+    "spdx_id": null,
+    "url": "https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs3.html",
+    "commercial_use": "forbidden",
+    "notes": "Available for academic research upon submission of the VGG data agreement."
+  },
+  "source_references": [
+    {
+      "title": "Oxford VGG LRS3 Project Page",
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs3.html",
+      "type": "official_website",
+      "notes": "Official dataset distribution page hosted by Oxford VGG."
+    },
+    {
+      "title": "LRS3-TED: A Large-Scale Dataset for Visual Speech Recognition",
+      "url": "https://arxiv.org/abs/1809.00496",
+      "type": "original_paper",
+      "notes": "Preprint paper introducing the benchmark."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against preprint publication and Oxford VGG distribution."
+  },
+  "size": {
+    "amount": 95.0,
+    "unit": "GB",
+    "file_formats": [
+      "mp4",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "Video segments at 25fps with synchronized text transcriptions."
+  },
+  "sample_count": {
+    "total": 151338,
+    "unit": "utterances",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "audio_duration_hours",
+        "value": 438.0,
+        "unit": "hours"
+      },
+      {
+        "label": "speakers",
+        "value": 5000,
+        "unit": "speakers"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-09-03"
+  },
+  "citation": {
+    "paper_title": "LRS3-TED: A Large-Scale Dataset for Visual Speech Recognition",
+    "paper_url": "https://arxiv.org/abs/1809.00496",
+    "authors": [
+      "Triantafyllos Afouras",
+      "Joon Son Chung",
+      "Andrew Senior",
+      "Oriol Vinyals",
+      "Andrew Zisserman"
+    ],
+    "bibtex": "@article{afouras2018lrs3,\n  title = {{LRS3-TED}: A Large-Scale Dataset for Visual Speech Recognition},\n  author = {Afouras, Triantafyllos and Chung, Joon Son and Senior, Andrew and Vinyals, Oriol and Zisserman, Andrew},\n  journal = {arXiv preprint arXiv:1809.00496},\n  year = {2018}\n}"
+  }
+}

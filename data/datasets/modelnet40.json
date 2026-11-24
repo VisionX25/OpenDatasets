@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "modelnet40",
+  "slug": "modelnet40",
+  "name": "Princeton ModelNet40: 3D CAD Object Classification Benchmark",
+  "description": "Princeton ModelNet40 is an established benchmark for 3D computer vision and CAD shape classification. Originating from the 3D ShapeNets project, ModelNet40 comprises 12,311 clean, 3D polygonal CAD models manually classified into 40 common object categories (e.g., airplane, chair, guitar, sofa, table), benchmarked extensively across point-cloud classifiers, voxel networks, and multi-view 2D rendering systems.",
+  "homepage_url": "https://modelnet.cs.princeton.edu/",
+  "publisher": {
+    "name": "Princeton University",
+    "type": "academic",
+    "url": "https://modelnet.cs.princeton.edu"
+  },
+  "modalities": [
+    "3d",
+    "vision"
+  ],
+  "tasks": [
+    "point-cloud-classification"
+  ],
+  "tags": [
+    "3d-cad",
+    "3d-classification",
+    "point-clouds",
+    "shape-recognition",
+    "3d"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Princeton ModelNet Research License",
+    "spdx_id": null,
+    "url": "https://modelnet.cs.princeton.edu/",
+    "commercial_use": "forbidden",
+    "notes": "Available freely for academic, non-commercial research and educational use."
+  },
+  "source_references": [
+    {
+      "title": "Princeton ModelNet Official Portal",
+      "url": "https://modelnet.cs.princeton.edu/",
+      "type": "official_website",
+      "notes": "Official CAD database landing page."
+    },
+    {
+      "title": "3D ShapeNets: A Deep Representation for Volumetric Shapes (CVPR 2015)",
+      "url": "https://arxiv.org/abs/1406.5670",
+      "type": "original_paper",
+      "notes": "Published in CVPR 2015."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against CVPR 2015 paper and Princeton ModelNet distribution."
+  },
+  "size": {
+    "amount": 2.1,
+    "unit": "GB",
+    "file_formats": [
+      "off",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "Object File Format (.off) 3D mesh representations."
+  },
+  "sample_count": {
+    "total": 12311,
+    "unit": "3d-cad-models",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 9843,
+      "test": 2468
+    },
+    "breakdown": [
+      {
+        "label": "categories",
+        "value": 40,
+        "unit": "classes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2015-06-07"
+  },
+  "citation": {
+    "paper_title": "3D ShapeNets: A Deep Representation for Volumetric Shapes",
+    "paper_url": "https://arxiv.org/abs/1406.5670",
+    "authors": [
+      "Zhirong Wu",
+      "Shuran Song",
+      "Aditya Khosla",
+      "Fisher Yu",
+      "Linguang Zhang",
+      "Xiaoou Tang",
+      "Jianxiong Xiao"
+    ],
+    "doi": "10.1109/CVPR.2015.7298801",
+    "bibtex": "@inproceedings{wu20153d,\n  title = {{3D} {ShapeNets}: A Deep Representation for Volumetric Shapes},\n  author = {Wu, Zhirong and Song, Shuran and Khosla, Aditya and Yu, Fisher and Zhang, Linguang and Tang, Xiaoou and Xiao, Jianxiong},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2015},\n  pages = {1912--1920},\n  doi = {10.1109/CVPR.2015.7298801}\n}"
+  }
+}
