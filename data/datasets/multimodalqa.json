@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "id": "multimodalqa",
+  "slug": "multimodalqa",
+  "name": "MultiModalQA: Complex Question Answering over Text, Tables and Images",
+  "description": "MultiModalQA is a challenging multi-hop question answering benchmark requiring joint reasoning over heterogeneous modalities: semi-structured Wikipedia infobox tables, textual Wikipedia passages, and paired images. Comprising 29,918 questions, answering each question requires synthesizing information across multiple modalities (e.g. text-image, table-text, or table-image-text), serving as a gold standard for multimodal reasoning.",
+  "homepage_url": "https://allenai.github.io/multimodalqa/",
+  "publisher": {
+    "name": "Allen Institute for AI & Tel Aviv University",
+    "type": "academic",
+    "url": "https://allenai.org"
+  },
+  "modalities": [
+    "multimodal",
+    "nlp",
+    "vision",
+    "tabular"
+  ],
+  "tasks": [
+    "question-answering"
+  ],
+  "tags": [
+    "multimodal-reasoning",
+    "question-answering",
+    "tables",
+    "images",
+    "text",
+    "multimodal"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Dataset and codebase released under Apache-2.0 by AI2."
+  },
+  "source_references": [
+    {
+      "title": "MultiModalQA Project Website",
+      "url": "https://allenai.github.io/multimodalqa/",
+      "type": "official_website",
+      "notes": "Official AI2 project site with benchmark leaderboard."
+    },
+    {
+      "title": "MultiModalQA GitHub Repository",
+      "url": "https://github.com/allenai/multimodalqa",
+      "type": "repository",
+      "notes": "Official data and model release."
+    },
+    {
+      "title": "MultiModalQA: Complex Question Answering over Text, Tables and Images (ICLR 2021)",
+      "url": "https://arxiv.org/abs/2104.06039",
+      "type": "original_paper",
+      "notes": "Published in ICLR 2021."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against ICLR 2021 publication and AI2 repository."
+  },
+  "size": {
+    "amount": 8.6,
+    "unit": "GB",
+    "file_formats": [
+      "json",
+      "tsv",
+      "jpg"
+    ],
+    "status": "verified",
+    "notes": "Images, tables, text contexts, and QA splits."
+  },
+  "sample_count": {
+    "total": 29918,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 23817,
+      "validation": 2441,
+      "test": 3660
+    },
+    "breakdown": [
+      {
+        "label": "supporting_images",
+        "value": 65584,
+        "unit": "images"
+      },
+      {
+        "label": "supporting_tables",
+        "value": 26260,
+        "unit": "tables"
+      },
+      {
+        "label": "supporting_text_passages",
+        "value": 298822,
+        "unit": "passages"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2021-04-13"
+  },
+  "citation": {
+    "paper_title": "MultiModalQA: Complex Question Answering over Text, Tables and Images",
+    "paper_url": "https://arxiv.org/abs/2104.06039",
+    "authors": [
+      "Alon Talmor",
+      "Ori Yoran",
+      "Amnon Catav",
+      "Dan Lahav",
+      "Yizhong Wang",
+      "Akari Asai",
+      "Gabriel Ilharco",
+      "Hannaneh Hajishirzi",
+      "Jonathan Berant"
+    ],
+    "bibtex": "@inproceedings{talmor2021multimodalqa,\n  title = {{MultiModalQA}: Complex Question Answering over Text, Tables and Images},\n  author = {Talmor, Alon and Yoran, Ori and Catav, Amnon and Lahav, Dan and Wang, Yizhong and Asai, Akari and Ilharco, Gabriel and Hajishirzi, Hannaneh and Berant, Jonathan},\n  booktitle = {International Conference on Learning Representations (ICLR)},\n  year = {2021}\n}"
+  }
+}

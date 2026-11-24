@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "textcaps",
+  "slug": "textcaps",
+  "name": "TextCaps: Image Captioning with Reading Comprehension",
+  "description": "TextCaps is an image captioning benchmark that requires vision-language models to read, recognize, and comprehend text present in images to generate accurate natural language descriptions. It features 28,408 real-world images from the Open Images dataset paired with 142,040 human-written captions (5 captions per image), presenting a rigorous challenge for OCR-grounded scene reasoning.",
+  "homepage_url": "https://textvqa.org/textcaps/dataset/",
+  "publisher": {
+    "name": "Facebook AI Research (FAIR)",
+    "type": "industry",
+    "url": "https://ai.meta.com"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "image-captioning",
+    "visual-question-answering"
+  ],
+  "tags": [
+    "image-captioning",
+    "ocr",
+    "scene-text",
+    "vision-language",
+    "multimodal"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Annotations released by Meta AI under CC BY 4.0; source images from Open Images (CC BY 2.0)."
+  },
+  "source_references": [
+    {
+      "title": "TextCaps Official Website",
+      "url": "https://textvqa.org/textcaps/dataset/",
+      "type": "official_website",
+      "notes": "Official dataset website hosted at textvqa.org."
+    },
+    {
+      "title": "TextCaps: a Dataset for Image Captioning with Reading Comprehension (ECCV 2020)",
+      "url": "https://arxiv.org/abs/2003.12462",
+      "type": "original_paper",
+      "notes": "Published in ECCV 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against ECCV 2020 publication and official TextCaps website."
+  },
+  "size": {
+    "amount": 7.8,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "JPEG image set and JSON annotations."
+  },
+  "sample_count": {
+    "total": 28408,
+    "unit": "images",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 21953,
+      "validation": 3166,
+      "test": 3289
+    },
+    "breakdown": [
+      {
+        "label": "crowdsourced_captions",
+        "value": 142040,
+        "unit": "captions"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2020-08-23"
+  },
+  "citation": {
+    "paper_title": "TextCaps: a Dataset for Image Captioning with Reading Comprehension",
+    "paper_url": "https://arxiv.org/abs/2003.12462",
+    "authors": [
+      "Oleksii Sidorov",
+      "Ronghang Hu",
+      "Marcus Rohrbach",
+      "Amanpreet Singh"
+    ],
+    "doi": "10.1007/978-3-030-58548-8_44",
+    "bibtex": "@inproceedings{sidorov2020textcaps,\n  title = {{TextCaps}: a Dataset for Image Captioning with Reading Comprehension},\n  author = {Sidorov, Oleksii and Hu, Ronghang and Rohrbach, Marcus and Singh, Amanpreet},\n  booktitle = {European Conference on Computer Vision (ECCV)},\n  year = {2020},\n  pages = {742--758},\n  doi = {10.1007/978-3-030-58548-8_44}\n}"
+  }
+}

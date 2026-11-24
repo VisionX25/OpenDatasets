@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tat-qa",
+  "slug": "tat-qa",
+  "name": "TAT-QA: Table And Text Question Answering in Finance",
+  "description": "TAT-QA (Table And Text Question Answering) is a specialized financial reasoning benchmark based on real financial reports from publicly traded companies. It consists of 16,552 questions paired with 2,757 hybrid contexts containing semi-structured financial tables and unstructured explanatory text, where answering requires numerical calculations (addition, subtraction, multiplication, division, ratio, percentage change) across both modalities.",
+  "homepage_url": "https://github.com/NExTplusplus/TAT-QA",
+  "publisher": {
+    "name": "National University of Singapore & Sichuan University",
+    "type": "academic",
+    "url": "https://next.comp.nus.edu.sg"
+  },
+  "modalities": [
+    "nlp",
+    "tabular",
+    "multimodal"
+  ],
+  "tasks": [
+    "question-answering"
+  ],
+  "tags": [
+    "financial-qa",
+    "table-text-qa",
+    "numerical-reasoning",
+    "tabular",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Annotations and code released under the MIT license."
+  },
+  "source_references": [
+    {
+      "title": "TAT-QA Official GitHub Repository",
+      "url": "https://github.com/NExTplusplus/TAT-QA",
+      "type": "repository",
+      "notes": "Official repository with dataset files and leaderboard."
+    },
+    {
+      "title": "TAT-QA: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance (ACL-IJCNLP 2021)",
+      "url": "https://aclanthology.org/2021.acl-long.254/",
+      "type": "original_paper",
+      "notes": "Published in ACL-IJCNLP 2021."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against ACL-IJCNLP 2021 paper and GitHub repository."
+  },
+  "size": {
+    "amount": 25.0,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Structured JSON containing financial tables, texts, and QA annotations."
+  },
+  "sample_count": {
+    "total": 16552,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 13215,
+      "development": 1668,
+      "test": 1669
+    },
+    "breakdown": [
+      {
+        "label": "hybrid_table_text_contexts",
+        "value": 2757,
+        "unit": "contexts"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2021-08-01"
+  },
+  "citation": {
+    "paper_title": "TAT-QA: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance",
+    "paper_url": "https://aclanthology.org/2021.acl-long.254/",
+    "authors": [
+      "Fengbin Zhu",
+      "Wenqiang Lei",
+      "Youcheng Huang",
+      "Chao Wang",
+      "Shuo Zhang",
+      "Jiancheng Lv",
+      "Fuli Feng",
+      "Tat-Seng Chua"
+    ],
+    "doi": "10.18653/v1/2021.acl-long.254",
+    "bibtex": "@inproceedings{zhu-etal-2021-tat,\n  title = {{TAT-QA}: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance},\n  author = {Zhu, Fengbin and Lei, Wenqiang and Huang, Youcheng and Wang, Chao and Zhang, Shuo and Lv, Jiancheng and Feng, Fuli and Chua, Tat-Seng},\n  booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},\n  year = {2021},\n  pages = {3277--3287},\n  doi = {10.18653/v1/2021.acl-long.254}\n}"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mvimgnet",
+  "slug": "mvimgnet",
+  "name": "MVImgNet: Large-scale Multi-view Image Dataset for 3D Vision",
+  "description": "MVImgNet is a massive real-world multi-view dataset designed to bridge 2D visual representation learning with 3D object understanding. It contains 219,188 multi-view video clips capturing everyday objects across 238 categories. Over 6.5 million frames were processed through Structure-from-Motion (SfM) pipelines to recover camera trajectories, sparse 3D point clouds, and dense depth estimations, supporting multi-view 3D reconstruction, novel-view synthesis, and neural radiance field modeling.",
+  "homepage_url": "https://gaplab.cuhk.edu.cn/projects/MVImgNet/",
+  "publisher": {
+    "name": "The Chinese University of Hong Kong, Shenzhen (CUHK-SZ)",
+    "type": "academic",
+    "url": "https://gaplab.cuhk.edu.cn"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "3d-reconstruction",
+    "depth-estimation"
+  ],
+  "tags": [
+    "multi-view",
+    "3d-reconstruction",
+    "sfm",
+    "point-clouds",
+    "novel-view-synthesis",
+    "vision"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "MVImgNet Terms of Use (Non-Commercial Research License)",
+    "spdx_id": null,
+    "url": "https://github.com/GAP-LAB-CUHK-SZ/MVImgNet#terms-of-use",
+    "commercial_use": "forbidden",
+    "notes": "Available for academic and non-commercial research upon agreeing to the MVImgNet terms of use."
+  },
+  "source_references": [
+    {
+      "title": "MVImgNet Project Page",
+      "url": "https://gaplab.cuhk.edu.cn/projects/MVImgNet/",
+      "type": "official_website",
+      "notes": "Official project portal with benchmarks and download instructions."
+    },
+    {
+      "title": "MVImgNet GitHub Repository",
+      "url": "https://github.com/GAP-LAB-CUHK-SZ/MVImgNet",
+      "type": "repository",
+      "notes": "Official toolkit and data access scripts."
+    },
+    {
+      "title": "MVImgNet: A Large-scale Dataset of Multi-view Images (CVPR 2023)",
+      "url": "https://arxiv.org/abs/2303.06042",
+      "type": "original_paper",
+      "notes": "Published in CVPR 2023."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against CVPR 2023 publication and official CUHK-SZ project portal."
+  },
+  "size": {
+    "amount": 1.8,
+    "unit": "TB",
+    "file_formats": [
+      "jpg",
+      "bin",
+      "txt"
+    ],
+    "status": "estimated",
+    "notes": "Extracted frames, depth maps, and camera trajectory parameters."
+  },
+  "sample_count": {
+    "total": 219188,
+    "unit": "video-clips",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "extracted_frames",
+        "value": 6500000,
+        "unit": "frames"
+      },
+      {
+        "label": "object_categories",
+        "value": 238,
+        "unit": "categories"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2023-03-10"
+  },
+  "citation": {
+    "paper_title": "MVImgNet: A Large-scale Dataset of Multi-view Images",
+    "paper_url": "https://arxiv.org/abs/2303.06042",
+    "authors": [
+      "Xianggang Yu",
+      "Mutian Xu",
+      "Yushuang Wu",
+      "Haolin Liu",
+      "Chongjie Ye",
+      "Zizheng Yan",
+      "Chenxin Li",
+      "Baoquan Chen",
+      "Xiaoguang Han"
+    ],
+    "doi": "10.1109/CVPR52729.2023.00885",
+    "bibtex": "@inproceedings{yu2023mvimgnet,\n  title = {MVImgNet: A Large-scale Dataset of Multi-view Images},\n  author = {Yu, Xianggang and Xu, Mutian and Wu, Yushuang and Liu, Haolin and Ye, Chongjie and Yan, Zizheng and Li, Chenxin and Chen, Baoquan and Han, Xiaoguang},\n  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2023},\n  pages = {9150--9161},\n  doi = {10.1109/CVPR52729.2023.00885}\n}"
+  }
+}

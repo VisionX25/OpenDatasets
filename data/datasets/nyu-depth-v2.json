@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nyu-depth-v2",
+  "slug": "nyu-depth-v2",
+  "name": "NYU Depth Dataset V2: Indoor RGB-D Segmentation and Support Inference",
+  "description": "The NYU Depth Dataset V2 is a landmark RGB-D indoor scene understanding dataset recorded across 464 diverse indoor scenes using Microsoft Kinect cameras. It contains 1,449 densely labeled pairs of aligned RGB and depth images with detailed object segmentations and structural surface support relations, alongside a comprehensive raw repository of 407,024 video frames widely adopted for monocular depth estimation and 3D semantic perception.",
+  "homepage_url": "https://cs.nyu.edu/~fergus/datasets/nyu_depth_v2.html",
+  "publisher": {
+    "name": "New York University",
+    "type": "academic",
+    "url": "https://cs.nyu.edu"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "depth-estimation",
+    "semantic-segmentation"
+  ],
+  "tags": [
+    "rgb-d",
+    "depth-estimation",
+    "indoor-scenes",
+    "semantic-segmentation",
+    "kinect",
+    "vision"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "NYU Academic Research License",
+    "spdx_id": null,
+    "url": "https://cs.nyu.edu/~fergus/datasets/nyu_depth_v2.html",
+    "commercial_use": "allowed",
+    "notes": "Freely available for academic and educational research use."
+  },
+  "source_references": [
+    {
+      "title": "NYU Depth V2 Official Portal",
+      "url": "https://cs.nyu.edu/~fergus/datasets/nyu_depth_v2.html",
+      "type": "official_website",
+      "notes": "Official dataset distribution page hosted by Fergus Lab at NYU."
+    },
+    {
+      "title": "Indoor Segmentation and Support Inference from RGBD Images (ECCV 2012)",
+      "url": "https://doi.org/10.1007/978-3-642-33715-4_54",
+      "type": "original_paper",
+      "notes": "Original ECCV 2012 publication."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against ECCV 2012 publication and NYU official website."
+  },
+  "size": {
+    "amount": 42.8,
+    "unit": "GB",
+    "file_formats": [
+      "mat",
+      "png"
+    ],
+    "status": "verified",
+    "notes": "Labeled pairs and raw frame archives in MATLAB format."
+  },
+  "sample_count": {
+    "total": 1449,
+    "unit": "labeled-rgbd-pairs",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 795,
+      "test": 654
+    },
+    "breakdown": [
+      {
+        "label": "raw_unlabeled_frames",
+        "value": 407024,
+        "unit": "frames"
+      },
+      {
+        "label": "indoor_scenes",
+        "value": 464,
+        "unit": "scenes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2012-10-07"
+  },
+  "citation": {
+    "paper_title": "Indoor Segmentation and Support Inference from RGBD Images",
+    "paper_url": "https://doi.org/10.1007/978-3-642-33715-4_54",
+    "authors": [
+      "Nathan Silberman",
+      "Derek Hoiem",
+      "Pushmeet Kohli",
+      "Rob Fergus"
+    ],
+    "doi": "10.1007/978-3-642-33715-4_54",
+    "bibtex": "@inproceedings{silberman2012indoor,\n  title = {Indoor Segmentation and Support Inference from RGBD Images},\n  author = {Silberman, Nathan and Hoiem, Derek and Kohli, Pushmeet and Fergus, Rob},\n  booktitle = {European Conference on Computer Vision (ECCV)},\n  year = {2012},\n  pages = {746--760},\n  doi = {10.1007/978-3-642-33715-4_54}\n}"
+  }
+}

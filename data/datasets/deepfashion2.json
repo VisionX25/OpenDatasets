@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "id": "deepfashion2",
+  "slug": "deepfashion2",
+  "name": "DeepFashion2: Clothing Detection, Pose Estimation, Segmentation and Retrieval Benchmark",
+  "description": "DeepFashion2 is a large-scale clothing benchmark containing 491,895 high-resolution images across diverse consumer and commercial scenarios. It provides comprehensive annotations for 801,492 clothing items, each annotated with clothing category, bounding box, per-instance segmentation mask, fine-grained landmark coordinates with visibility flags, style classification, and cross-domain commercial-consumer retrieval pairs.",
+  "homepage_url": "https://github.com/switchablenorms/DeepFashion2",
+  "publisher": {
+    "name": "The Chinese University of Hong Kong",
+    "type": "academic",
+    "url": "http://personal.ie.cuhk.edu.hk/~ccloy/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "object-detection",
+    "instance-segmentation",
+    "pose-estimation"
+  ],
+  "tags": [
+    "fashion",
+    "clothing",
+    "object-detection",
+    "instance-segmentation",
+    "pose-estimation",
+    "vision"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "DeepFashion2 Non-Commercial Research License Agreement",
+    "spdx_id": null,
+    "url": "https://github.com/switchablenorms/DeepFashion2#license",
+    "commercial_use": "forbidden",
+    "notes": "Free for non-commercial scientific research use upon agreement to the DeepFashion2 research license."
+  },
+  "source_references": [
+    {
+      "title": "DeepFashion2 GitHub Repository",
+      "url": "https://github.com/switchablenorms/DeepFashion2",
+      "type": "repository",
+      "notes": "Official repository with dataset download scripts and evaluation toolkits."
+    },
+    {
+      "title": "DeepFashion2: A Versatile Benchmark for Detection, Pose Estimation, Segmentation and Re-Identification of Clothing Images (CVPR 2019)",
+      "url": "https://arxiv.org/abs/1901.07973",
+      "type": "original_paper",
+      "notes": "Published in CVPR 2019."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against CVPR 2019 paper and official GitHub repository."
+  },
+  "size": {
+    "amount": 34.5,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "High-resolution JPEG images and JSON annotations."
+  },
+  "sample_count": {
+    "total": 491895,
+    "unit": "images",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 391280,
+      "validation": 33669,
+      "test": 66946
+    },
+    "breakdown": [
+      {
+        "label": "clothing_instances",
+        "value": 801492,
+        "unit": "instances"
+      },
+      {
+        "label": "clothing_categories",
+        "value": 13,
+        "unit": "categories"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2019-06-15"
+  },
+  "citation": {
+    "paper_title": "DeepFashion2: A Versatile Benchmark for Detection, Pose Estimation, Segmentation and Re-Identification of Clothing Images",
+    "paper_url": "https://arxiv.org/abs/1901.07973",
+    "authors": [
+      "Yuying Ge",
+      "Ruimao Zhang",
+      "Ping Luo",
+      "Xu Tang",
+      "Chen Change Loy"
+    ],
+    "doi": "10.1109/CVPR.2019.00548",
+    "bibtex": "@inproceedings{ge2019deepfashion2,\n  title = {DeepFashion2: A Versatile Benchmark for Detection, Pose Estimation, Segmentation and Re-Identification of Clothing Images},\n  author = {Ge, Yuying and Zhang, Ruimao and Luo, Ping and Tang, Xu and Loy, Chen Change},\n  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2019},\n  pages = {5337--5345},\n  doi = {10.1109/CVPR.2019.00548}\n}"
+  }
+}

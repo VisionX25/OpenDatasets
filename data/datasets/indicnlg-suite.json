@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "id": "indicnlg-suite",
+  "slug": "indicnlg-suite",
+  "name": "IndicNLG Suite: Benchmark Datasets for Diverse NLG Tasks in Indic Languages",
+  "description": "IndicNLG Suite is a comprehensive natural language generation benchmark covering 11 major Indic languages (Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, and Telugu). Curated by AI4Bharat, the suite unifies five diverse NLG tasks: biography generation (structured data-to-text), headline generation, sentence summarization, question generation, and cross-sentence paraphrasing, comprising over 8.5 million verified task instances.",
+  "homepage_url": "https://github.com/AI4Bharat/IndicNLG",
+  "publisher": {
+    "name": "AI4Bharat, IIT Madras",
+    "type": "academic",
+    "url": "https://ai4bharat.iitm.ac.in"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "summarization",
+    "text-generation"
+  ],
+  "tags": [
+    "natural-language-generation",
+    "nlg",
+    "indic-languages",
+    "summarization",
+    "paraphrasing",
+    "ai4bharat",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Released under CC BY-NC 4.0 for non-commercial academic research."
+  },
+  "source_references": [
+    {
+      "title": "IndicNLG Suite GitHub Repository",
+      "url": "https://github.com/AI4Bharat/IndicNLG",
+      "type": "repository",
+      "notes": "Official repository with dataset download scripts and model checkpoints."
+    },
+    {
+      "title": "IndicNLG Suite Paper on arXiv",
+      "url": "https://arxiv.org/abs/2203.05437",
+      "type": "original_paper",
+      "notes": "Published in Findings of EMNLP 2022."
+    },
+    {
+      "title": "IndicNLG on Hugging Face Datasets",
+      "url": "https://huggingface.co/datasets/ai4bharat/IndicNLG-Suite",
+      "type": "dataset_card",
+      "notes": "Hugging Face dataset collection."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against Findings of EMNLP 2022 publication and official AI4Bharat repository."
+  },
+  "size": {
+    "amount": 4.8,
+    "unit": "GB",
+    "file_formats": [
+      "json",
+      "csv",
+      "tar.gz"
+    ],
+    "status": "estimated",
+    "notes": "Archived task files across all 11 Indic languages."
+  },
+  "sample_count": {
+    "total": 8500000,
+    "unit": "task-examples",
+    "status": "estimated",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "nlg_tasks",
+        "value": 5,
+        "unit": "task_families"
+      },
+      {
+        "label": "languages_covered",
+        "value": 11,
+        "unit": "languages"
+      }
+    ]
+  },
+  "languages": [
+    "as",
+    "bn",
+    "gu",
+    "hi",
+    "kn",
+    "ml",
+    "mr",
+    "or",
+    "pa",
+    "ta",
+    "te"
+  ],
+  "dates": {
+    "published": "2022-12-07"
+  },
+  "citation": {
+    "paper_title": "IndicNLG Suite: Multilingual Datasets for Diverse NLG Tasks in Indic Languages",
+    "paper_url": "https://aclanthology.org/2022.findings-emnlp.592/",
+    "authors": [
+      "Aman Kumar",
+      "Himani Shrotriya",
+      "Prachi Sahu",
+      "Raj Dabre",
+      "Ratish Puduppully",
+      "Anoop Kunchukuttan",
+      "Mitesh M. Khapra",
+      "Pratyush Kumar"
+    ],
+    "doi": "10.18653/v1/2022.findings-emnlp.592",
+    "bibtex": "@inproceedings{kumar-etal-2022-indicnlg,\n  title = {{I}ndic{NLG} Suite: Multilingual Datasets for Diverse {NLG} Tasks in {I}ndic Languages},\n  author = {Kumar, Aman and Shrotriya, Himani and Sahu, Prachi and Dabre, Raj and Puduppully, Ratish and Kunchukuttan, Anoop and Khapra, Mitesh M. and Kumar, Pratyush},\n  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2022},\n  year = {2022},\n  pages = {8008--8043},\n  doi = {10.18653/v1/2022.findings-emnlp.592}\n}"
+  }
+}

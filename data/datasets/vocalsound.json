@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "id": "vocalsound",
+  "slug": "vocalsound",
+  "name": "VocalSound: A Dataset for Improving Human Vocal Sounds Recognition",
+  "description": "VocalSound is a dedicated audio dataset designed to advance non-speech human vocal sound classification and acoustic event detection. Curated by MIT CSAIL, it contains 21,024 clean audio recordings submitted by 3,365 human contributors across six fundamental non-speech vocal categories: laughter, sighs, coughs, throat-clearing, sneezes, and sniffs, collected across real-world acoustic backgrounds.",
+  "homepage_url": "https://sls.csail.mit.edu/downloads/vocalsound/",
+  "publisher": {
+    "name": "MIT Computer Science and Artificial Intelligence Laboratory (CSAIL)",
+    "type": "academic",
+    "url": "https://www.csail.mit.edu"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "audio-classification"
+  ],
+  "tags": [
+    "vocal-sounds",
+    "non-speech-audio",
+    "audio-classification",
+    "acoustic-events",
+    "audio"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under CC BY-SA 4.0 by MIT SLS group."
+  },
+  "source_references": [
+    {
+      "title": "VocalSound MIT Portal",
+      "url": "https://sls.csail.mit.edu/downloads/vocalsound/",
+      "type": "official_website",
+      "notes": "Official dataset distribution page hosted by MIT CSAIL SLS."
+    },
+    {
+      "title": "VocalSound: A Dataset for Improving Human Vocal Sounds Recognition (ICASSP 2022)",
+      "url": "https://arxiv.org/abs/2205.03433",
+      "type": "original_paper",
+      "notes": "Published in ICASSP 2022."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against ICASSP 2022 paper and MIT CSAIL download portal."
+  },
+  "size": {
+    "amount": 4.5,
+    "unit": "GB",
+    "file_formats": [
+      "wav",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "16kHz mono WAV audio clips with contributor metadata."
+  },
+  "sample_count": {
+    "total": 21024,
+    "unit": "audio-recordings",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 15000,
+      "validation": 3024,
+      "test": 3000
+    },
+    "breakdown": [
+      {
+        "label": "vocal_classes",
+        "value": 6,
+        "unit": "categories"
+      },
+      {
+        "label": "human_contributors",
+        "value": 3365,
+        "unit": "contributors"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2022-05-07"
+  },
+  "citation": {
+    "paper_title": "VocalSound: A Dataset for Improving Human Vocal Sounds Recognition",
+    "paper_url": "https://arxiv.org/abs/2205.03433",
+    "authors": [
+      "Yuan Gong",
+      "Jin Yu",
+      "James Glass"
+    ],
+    "doi": "10.1109/ICASSP43922.2022.9746401",
+    "bibtex": "@inproceedings{gong2022vocalsound,\n  title = {{VocalSound}: A Dataset for Improving Human Vocal Sounds Recognition},\n  author = {Gong, Yuan and Yu, Jin and Glass, James},\n  booktitle = {IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  year = {2022},\n  pages = {151--155},\n  doi = {10.1109/ICASSP43922.2022.9746401}\n}"
+  }
+}

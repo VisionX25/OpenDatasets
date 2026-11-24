@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tau-spatial-sound-events-2019",
+  "slug": "tau-spatial-sound-events-2019",
+  "name": "TAU Spatial Sound Events 2019",
+  "description": "TAU Spatial Sound Events 2019 is a benchmark dataset for Sound Event Localization and Detection (SELD) curated for DCASE 2019 Challenge Task 3 by Tampere University. It comprises 500 one-minute spatial audio recordings synthesizing moving and stationary sound events from 11 distinct acoustic classes within realistic reverberant indoor soundscapes, available in both first-order Ambisonics and tetrahedral microphone formats.",
+  "homepage_url": "https://dcase.community/challenge2019/task-sound-event-localization-and-detection",
+  "publisher": {
+    "name": "Tampere University Audio Research Group",
+    "type": "academic",
+    "url": "https://research.tuni.fi/arg/"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "audio-classification"
+  ],
+  "tags": [
+    "spatial-audio",
+    "sound-event-localization",
+    "seld",
+    "dcase",
+    "ambisonics",
+    "audio"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released on Zenodo under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "DCASE 2019 Task 3 Official Page",
+      "url": "https://dcase.community/challenge2019/task-sound-event-localization-and-detection",
+      "type": "official_website",
+      "notes": "Official challenge task page."
+    },
+    {
+      "title": "TAU Spatial Sound Events 2019 Zenodo Deposit",
+      "url": "https://doi.org/10.5281/zenodo.2599196",
+      "type": "archive",
+      "notes": "Authoritative dataset release on Zenodo."
+    },
+    {
+      "title": "A Dataset of Reverberant Spatial Sound Scenes with Moving and Stationary Sound Events",
+      "url": "https://arxiv.org/abs/1807.10517",
+      "type": "original_paper",
+      "notes": "Published in ICASSP 2019."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against Zenodo deposit and ICASSP 2019 publication."
+  },
+  "size": {
+    "amount": 12.0,
+    "unit": "GB",
+    "file_formats": [
+      "wav",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "48kHz 4-channel spatial WAV recordings with temporal and directional labels."
+  },
+  "sample_count": {
+    "total": 500,
+    "unit": "spatial-audio-scenes",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "development": 400,
+      "evaluation": 100
+    },
+    "breakdown": [
+      {
+        "label": "sound_event_classes",
+        "value": 11,
+        "unit": "classes"
+      },
+      {
+        "label": "total_duration_hours",
+        "value": 8.33,
+        "unit": "hours"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2019-03-20"
+  },
+  "citation": {
+    "paper_title": "A Dataset of Reverberant Spatial Sound Scenes with Moving and Stationary Sound Events",
+    "paper_url": "https://arxiv.org/abs/1807.10517",
+    "authors": [
+      "Sharath Adavanne",
+      "Archontis Politis",
+      "Tuomas Virtanen"
+    ],
+    "doi": "10.1109/ICASSP.2019.8683538",
+    "bibtex": "@inproceedings{adavanne2019dataset,\n  title = {A Dataset of Reverberant Spatial Sound Scenes with Moving and Stationary Sound Events},\n  author = {Adavanne, Sharath and Politis, Archontis and Virtanen, Tuomas},\n  booktitle = {IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  year = {2019},\n  pages = {676--680},\n  doi = {10.1109/ICASSP.2019.8683538}\n}"
+  }
+}

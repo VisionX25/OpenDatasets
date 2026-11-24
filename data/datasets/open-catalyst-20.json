@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "id": "open-catalyst-20",
+  "slug": "open-catalyst-20",
+  "name": "Open Catalyst 2020 (OC20)",
+  "description": "The Open Catalyst 2020 (OC20) dataset is a massive quantum-mechanical dataset curated by Meta AI and Carnegie Mellon University to accelerate renewable energy research and catalyst discovery. Comprising over 1.28 million molecular relaxation trajectories and 264 million density functional theory (DFT) single-point calculations across 55 chemical elements, it benchmarks machine learning models on structure-to-energy-and-forces (S2EF) and initial-structure-to-relaxed-energy (IS2RE) predictions.",
+  "homepage_url": "https://opencatalystproject.org/",
+  "publisher": {
+    "name": "Meta AI & Carnegie Mellon University",
+    "type": "academic",
+    "url": "https://opencatalystproject.org"
+  },
+  "modalities": [
+    "graph",
+    "sensor",
+    "tabular"
+  ],
+  "tasks": [
+    "molecular-simulation"
+  ],
+  "tags": [
+    "catalysis",
+    "dft",
+    "quantum-chemistry",
+    "molecular-simulation",
+    "graph-neural-networks"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Open Catalyst Project data licensed under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "Open Catalyst Project Portal",
+      "url": "https://opencatalystproject.org/",
+      "type": "official_website",
+      "notes": "Official project website with challenges and data downloads."
+    },
+    {
+      "title": "Open Catalyst GitHub Repository",
+      "url": "https://github.com/Open-Catalyst-Project/ocp",
+      "type": "repository",
+      "notes": "Official baseline models and dataloaders."
+    },
+    {
+      "title": "The Open Catalyst 2020 (OC20) Dataset and Community Challenges (ACS Catalysis)",
+      "url": "https://doi.org/10.1021/acscatal.0c04525",
+      "type": "original_paper",
+      "notes": "Published in ACS Catalysis 2021."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against ACS Catalysis publication and Open Catalyst Project repository."
+  },
+  "size": {
+    "amount": 1.1,
+    "unit": "TB",
+    "file_formats": [
+      "lmdb",
+      "extxyz"
+    ],
+    "status": "verified",
+    "notes": "Compressed LMDB trajectory and DFT calculations files."
+  },
+  "sample_count": {
+    "total": 1281040,
+    "unit": "relaxation-trajectories",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "dft_single_point_calculations",
+        "value": 264000000,
+        "unit": "calculations"
+      },
+      {
+        "label": "chemical_elements",
+        "value": 55,
+        "unit": "elements"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2020-10-20"
+  },
+  "citation": {
+    "paper_title": "The Open Catalyst 2020 (OC20) Dataset and Community Challenges",
+    "paper_url": "https://doi.org/10.1021/acscatal.0c04525",
+    "authors": [
+      "Lowik Chanussot",
+      "Abhishek Das",
+      "Siddharth Goyal",
+      "Thibaut Lavril",
+      "Muhammed Shuaibi",
+      "Morgane Riviere",
+      "Kevin Tran",
+      "Javier Heras-Domingo",
+      "Caleb Ho",
+      "Weihua Hu",
+      "Aini Palizhati",
+      "Anuroop Sriram",
+      "Brandon Wood",
+      "Junwoong Yoon",
+      "Devi Parikh",
+      "C. Lawrence Zitnick"
+    ],
+    "doi": "10.1021/acscatal.0c04525",
+    "bibtex": "@article{chanussot2021open,\n  title = {The {Open Catalyst 2020} ({OC20}) Dataset and Community Challenges},\n  author = {Chanussot, Lowik and Das, Abhishek and Goyal, Siddharth and Lavril, Thibaut and Shuaibi, Muhammed and Riviere, Morgane and Tran, Kevin and Heras-Domingo, Javier and Ho, Caleb and Hu, Weihua and Palizhati, Aini and Sriram, Anuroop and Wood, Brandon and Yoon, Junwoong and Parikh, Devi and Zitnick, C. Lawrence},\n  journal = {ACS Catalysis},\n  volume = {11},\n  number = {10},\n  pages = {6059--6072},\n  year = {2021},\n  doi = {10.1021/acscatal.0c04525}\n}"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "id": "aishell-3",
+  "slug": "aishell-3",
+  "name": "AISHELL-3: Multi-Speaker Mandarin TTS Corpus",
+  "description": "AISHELL-3 is a large-scale, multi-speaker Mandarin Chinese speech synthesis corpus designed for neural text-to-speech and voice conversion. It contains roughly 85 hours of high-fidelity 44.1kHz speech recordings totaling 88,035 utterances produced by 218 native Mandarin speakers across varied geographic accents, annotated with pinyin, tone marks, and character transcriptions.",
+  "homepage_url": "https://www.openslr.org/93/",
+  "publisher": {
+    "name": "Beijing Shell Shell Technology Co., Ltd. & Duke Kunshan University",
+    "type": "academic",
+    "url": "https://www.aishelltech.com"
+  },
+  "modalities": [
+    "audio",
+    "nlp"
+  ],
+  "tasks": [
+    "text-to-speech",
+    "speech-synthesis"
+  ],
+  "tags": [
+    "mandarin-tts",
+    "text-to-speech",
+    "speech-synthesis",
+    "multi-speaker",
+    "audio"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Released under Apache-2.0 license on OpenSLR."
+  },
+  "source_references": [
+    {
+      "title": "OpenSLR 93: AISHELL-3",
+      "url": "https://www.openslr.org/93/",
+      "type": "official_website",
+      "notes": "Official OpenSLR deposit page."
+    },
+    {
+      "title": "AISHELL-3: A Multi-speaker Mandarin TTS Corpus",
+      "url": "https://arxiv.org/abs/2010.11567",
+      "type": "original_paper",
+      "notes": "Preprint paper introducing the corpus."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against OpenSLR 93 release and publication."
+  },
+  "size": {
+    "amount": 18.5,
+    "unit": "GB",
+    "file_formats": [
+      "wav",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "44.1kHz 16-bit WAV files and phonetic transcriptions."
+  },
+  "sample_count": {
+    "total": 88035,
+    "unit": "utterances",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 63262,
+      "test": 24773
+    },
+    "breakdown": [
+      {
+        "label": "speakers",
+        "value": 218,
+        "unit": "speakers"
+      },
+      {
+        "label": "audio_duration_hours",
+        "value": 85.0,
+        "unit": "hours"
+      }
+    ]
+  },
+  "languages": [
+    "zh"
+  ],
+  "dates": {
+    "published": "2020-10-22"
+  },
+  "citation": {
+    "paper_title": "AISHELL-3: A Multi-speaker Mandarin TTS Corpus",
+    "paper_url": "https://arxiv.org/abs/2010.11567",
+    "authors": [
+      "Yao Shi",
+      "Hui Bu",
+      "Xin Xu",
+      "Shaoji Zhang",
+      "Ming Li"
+    ],
+    "bibtex": "@article{shi2020aishell,\n  title = {{AISHELL-3}: A Multi-speaker Mandarin {TTS} Corpus},\n  author = {Shi, Yao and Bu, Hui and Xu, Xin and Zhang, Shaoji and Li, Ming},\n  journal = {arXiv preprint arXiv:2010.11567},\n  year = {2020}\n}"
+  }
+}

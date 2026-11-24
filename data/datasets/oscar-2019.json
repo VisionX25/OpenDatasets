@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "id": "oscar-2019",
+  "slug": "oscar-2019",
+  "name": "OSCAR: Open Super-large Crawled ALMAnaCH Corpus (2019 Release)",
+  "description": "OSCAR (Open Super-large Crawled ALMAnaCH Corpus) 2019 is a monumental multilingual plain text corpus created by filtering and language-classifying Common Crawl web data dumps. Developed by INRIA ALMAnaCH, the original 2019 release spans 166 natural languages and over 6.3 billion lines of text (156 billion words, 6.3TB uncompressed), serving as a foundation for self-supervised pretraining, language modeling, and linguistic corpus analysis.",
+  "homepage_url": "https://oscar-project.github.io/",
+  "publisher": {
+    "name": "INRIA ALMAnaCH",
+    "type": "academic",
+    "url": "https://almanach.inria.fr"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "language-modeling"
+  ],
+  "tags": [
+    "pretraining",
+    "web-corpus",
+    "multilingual",
+    "common-crawl",
+    "language-modeling",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Zero v1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset metadata and curation scripts released under CC0 1.0; web texts subject to Common Crawl fair use terms."
+  },
+  "source_references": [
+    {
+      "title": "OSCAR Project Website",
+      "url": "https://oscar-project.github.io/",
+      "type": "official_website",
+      "notes": "Official project portal with technical reports and documentation."
+    },
+    {
+      "title": "Asynchronous Pipeline for Processing Huge Corpora (WAC 2019)",
+      "url": "https://aclanthology.org/W19-2509/",
+      "type": "original_paper",
+      "notes": "Original paper introducing the 2019 corpus construction."
+    },
+    {
+      "title": "OSCAR 2019 Release Portal",
+      "url": "https://oscar-corpus.com",
+      "type": "archive",
+      "notes": "Corpus distribution portal."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against WAC 2019 publication and official OSCAR documentation."
+  },
+  "size": {
+    "amount": 6.3,
+    "unit": "TB",
+    "file_formats": [
+      "txt",
+      "gz"
+    ],
+    "status": "verified",
+    "notes": "Uncompressed plain text size across all 166 language shards."
+  },
+  "sample_count": {
+    "total": 6300000000,
+    "unit": "lines",
+    "status": "estimated",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "languages_covered",
+        "value": 166,
+        "unit": "languages"
+      },
+      {
+        "label": "word_count",
+        "value": 156000000000,
+        "unit": "words"
+      }
+    ]
+  },
+  "languages": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "ru",
+    "zh",
+    "ar",
+    "ja",
+    "it",
+    "pt",
+    "bn",
+    "hi"
+  ],
+  "dates": {
+    "published": "2019-07-22"
+  },
+  "citation": {
+    "paper_title": "Asynchronous Pipeline for Processing Huge Corpora on Medium to Low Resource Infrastructures",
+    "paper_url": "https://aclanthology.org/W19-2509/",
+    "authors": [
+      "Pedro Javier Ortiz Suárez",
+      "Benoît Sagot",
+      "Laurent Romary"
+    ],
+    "doi": "10.18653/v1/W19-2509",
+    "bibtex": "@inproceedings{ortiz-suarez-etal-2019-asynchronous,\n  title = {Asynchronous Pipeline for Processing Huge Corpora on Medium to Low Resource Infrastructures},\n  author = {Ortiz Su{\\'a}rez, Pedro Javier and Sagot, Beno{\\^\\i}t and Romary, Laurent},\n  booktitle = {Proceedings of the 7th Workshop on the Challenges in the Management of Large Corpora (CMLC-7)},\n  year = {2019},\n  pages = {9--16},\n  doi = {10.18653/v1/W19-2509}\n}"
+  }
+}
