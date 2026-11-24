@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-abalone",
+  "slug": "uci-abalone",
+  "name": "Abalone Age Determination Benchmark Dataset",
+  "description": "The Abalone dataset predict the age of abalone (marine snails) from physical measurements without cutting the shell. Sourced from the Marine Resources Division of Tasmania, it contains 4,177 instances characterized by 8 physical attributes (sex, length, diameter, height, whole weight, shucked weight, viscera weight, shell weight) and the number of shell rings.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/1/abalone",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / Marine Resources Division",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-regression",
+    "tabular-classification",
+    "age-prediction"
+  ],
+  "tags": [
+    "abalone",
+    "uci",
+    "tabular",
+    "regression",
+    "marine-biology"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI Abalone Portal",
+      "url": "https://archive.ics.uci.edu/dataset/1/abalone",
+      "type": "official_website",
+      "notes": "UCI Machine Learning Repository dataset 1 landing page."
+    },
+    {
+      "title": "Abalone Dataset Documentation",
+      "url": "https://doi.org/10.24432/C55C7W",
+      "type": "documentation",
+      "notes": "Canonical DOI citation and donor report."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository dataset 1 (DOI: 10.24432/C55C7W) and Marine Resources Division documentation."
+  },
+  "size": {
+    "amount": 190.0,
+    "unit": "KB",
+    "file_formats": [
+      "csv",
+      "data"
+    ],
+    "status": "verified",
+    "notes": "Comma-separated records with 1 nominal feature, 7 continuous physical measurements, and integer rings."
+  },
+  "sample_count": {
+    "total": 4177,
+    "unit": "instances",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "physical_attributes",
+        "value": 8,
+        "unit": "features"
+      }
+    ]
+  },
+  "dates": {
+    "published": "1995-12-01"
+  },
+  "citation": {
+    "paper_title": "Abalone Dataset",
+    "paper_url": "https://doi.org/10.24432/C55C7W",
+    "authors": [
+      "Warwick J. Nash",
+      "Tracy L. Sellers",
+      "Simon R. Talbot",
+      "Andrew J. Cawthorn",
+      "Wes B. Ford"
+    ],
+    "doi": "10.24432/C55C7W",
+    "bibtex": "@misc{nash1995abalone,\n  title = {Abalone},\n  author = {Nash, Warwick J. and Sellers, Tracy L. and Talbot, Simon R. and Cawthorn, Andrew J. and Ford, Wes B.},\n  year = {1995},\n  publisher = {UCI Machine Learning Repository},\n  doi = {10.24432/C55C7W}\n}"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "middlebury-stereo",
+  "slug": "middlebury-stereo",
+  "name": "Middlebury Stereo 2014 Benchmark",
+  "description": "The Middlebury Stereo 2014 dataset is an established stereo vision benchmark featuring high-resolution indoor scenes captured using structured light illumination. Comprising 33 scenes (15 training scenes, 15 test scenes, and 3 additional scenes) with dense subpixel-accurate disparity maps under various exposures and lighting conditions.",
+  "homepage_url": "https://vision.middlebury.edu/stereo/data/scenes2014",
+  "publisher": {
+    "name": "Middlebury College",
+    "type": "academic",
+    "url": "https://vision.middlebury.edu"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "stereo-matching",
+    "disparity-estimation",
+    "3d-reconstruction"
+  ],
+  "tags": [
+    "stereo-vision",
+    "disparity",
+    "depth-estimation",
+    "middlebury",
+    "3d"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Custom Academic Research License",
+    "spdx_id": null,
+    "url": "https://vision.middlebury.edu/stereo/data/scenes2014/",
+    "commercial_use": "forbidden",
+    "notes": "Free for non-commercial academic research use with appropriate citation."
+  },
+  "source_references": [
+    {
+      "title": "Middlebury Stereo 2014 Dataset Portal",
+      "url": "https://vision.middlebury.edu/stereo/data/scenes2014",
+      "type": "official_website",
+      "notes": "Official Middlebury stereo evaluation portal."
+    },
+    {
+      "title": "High-Resolution Stereo Datasets with Subpixel-Accurate Ground Truth",
+      "url": "https://doi.org/10.1007/978-3-319-11752-2_34",
+      "type": "original_paper",
+      "notes": "Published in GCPR 2014 proceedings."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against GCPR 2014 publication (DOI: 10.1007/978-3-319-11752-2_34) and Middlebury Vision portal."
+  },
+  "size": {
+    "amount": 12.0,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "pfm"
+    ],
+    "status": "verified",
+    "notes": "Full, half, and quarter resolution rectified image pairs and PFM disparity maps."
+  },
+  "sample_count": {
+    "total": 33,
+    "unit": "stereo-scenes",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "training": 15,
+      "test": 15,
+      "additional": 3
+    },
+    "breakdown": [
+      {
+        "label": "lighting_conditions_per_scene",
+        "value": 3,
+        "unit": "conditions"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2014-09-02"
+  },
+  "citation": {
+    "paper_title": "High-Resolution Stereo Datasets with Subpixel-Accurate Ground Truth",
+    "paper_url": "https://doi.org/10.1007/978-3-319-11752-2_34",
+    "authors": [
+      "Daniel Scharstein",
+      "Heiko Hirschmüller",
+      "Masatoshi Okutomi",
+      "Christian Rhemann",
+      "Rastislav Sennovsky",
+      "Heiko Robbins"
+    ],
+    "doi": "10.1007/978-3-319-11752-2_34",
+    "bibtex": "@inproceedings{scharstein2014stereo,\n  title = {High-Resolution Stereo Datasets with Subpixel-Accurate Ground Truth},\n  author = {Scharstein, Daniel and Hirschm{\\\"u}ller, Heiko and Okutomi, Masatoshi and Rhemann, Christian and Sennovsky, Rastislav and Robbins, Heiko},\n  booktitle = {German Conference on Pattern Recognition (GCPR)},\n  pages = {31--42},\n  year = {2014},\n  doi = {10.1007/978-3-319-11752-2_34}\n}"
+  }
+}

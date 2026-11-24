@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "id": "visual7w",
+  "slug": "visual7w",
+  "name": "Visual7W: Grounded Question Answering in Images",
+  "description": "Visual7W is a grounded question answering dataset built on 47,300 images from Visual Genome. It introduces rich semantic question answering covering seven 'W' question categories (What, Where, When, Who, Why, How, and Which), with 327,939 total QA pairs and 1,403,730 multiple-choice answers grounded in object bounding boxes.",
+  "homepage_url": "https://ai.stanford.edu/~yukez/visual7w",
+  "publisher": {
+    "name": "Stanford University",
+    "type": "academic",
+    "url": "https://ai.stanford.edu"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "grounded-qa",
+    "object-grounding"
+  ],
+  "tags": [
+    "visual7w",
+    "grounded-vqa",
+    "vqa",
+    "multimodal",
+    "stanford"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset annotations released under CC-BY-4.0."
+  },
+  "source_references": [
+    {
+      "title": "Visual7W Project Page",
+      "url": "https://ai.stanford.edu/~yukez/visual7w",
+      "type": "official_website",
+      "notes": "Stanford AI Lab dataset and visualization page."
+    },
+    {
+      "title": "Visual7W: Grounded Question Answering in Images",
+      "url": "https://doi.org/10.1109/CVPR.2016.539",
+      "type": "original_paper",
+      "notes": "Published in CVPR 2016 proceedings."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against CVPR 2016 publication (DOI: 10.1109/CVPR.2016.539) and Stanford AI Lab dataset release."
+  },
+  "size": {
+    "amount": 85.0,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "JSON annotations containing questions, answers, and bounding-box grounds referencing Visual Genome images."
+  },
+  "sample_count": {
+    "total": 327939,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 236466,
+      "val": 51241,
+      "test": 40232
+    },
+    "breakdown": [
+      {
+        "label": "images",
+        "value": 47300,
+        "unit": "images"
+      },
+      {
+        "label": "grounded_qa_pairs",
+        "value": 139368,
+        "unit": "questions"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2016-06-27"
+  },
+  "citation": {
+    "paper_title": "Visual7W: Grounded Question Answering in Images",
+    "paper_url": "https://doi.org/10.1109/CVPR.2016.539",
+    "authors": [
+      "Yuke Zhu",
+      "Oliver Groth",
+      "Michael Bernstein",
+      "Li Fei-Fei"
+    ],
+    "doi": "10.1109/CVPR.2016.539",
+    "bibtex": "@inproceedings{zhu2016visual7w,\n  title = {{Visual7W}: Grounded Question Answering in Images},\n  author = {Zhu, Yuke and Groth, Oliver and Bernstein, Michael and Fei-Fei, Li},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages = {4995--5004},\n  year = {2016},\n  doi = {10.1109/CVPR.2016.539}\n}"
+  }
+}

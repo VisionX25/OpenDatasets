@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "daps",
+  "slug": "daps",
+  "name": "DAPS: Device and Produced Speech Dataset",
+  "description": "The Device and Produced Speech (DAPS) dataset contains speech recorded from 20 speakers (10 male, 10 female) reading excerpts in a professional recording studio, simultaneous with recordings on consumer devices (smartphones, tablets) in realistic acoustic environments (clean, room noise, office, cafeteria).",
+  "homepage_url": "https://archive.org/details/daps_dataset",
+  "publisher": {
+    "name": "Stanford University / Center for Computer Research in Music and Acoustics (CCRMA)",
+    "type": "academic",
+    "url": "https://ccrma.stanford.edu"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-enhancement",
+    "audio-quality-assessment",
+    "speech-recognition"
+  ],
+  "tags": [
+    "speech-enhancement",
+    "audio",
+    "acoustics",
+    "microphones",
+    "stanford"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under CC-BY-4.0 license."
+  },
+  "source_references": [
+    {
+      "title": "DAPS Dataset on Internet Archive",
+      "url": "https://archive.org/details/daps_dataset",
+      "type": "archive",
+      "notes": "Permanent archival mirror of the DAPS recordings."
+    },
+    {
+      "title": "Modeling and Enhancing Speech with Reverb and Environmental Noise",
+      "url": "https://doi.org/10.1109/TASLP.2014.2307275",
+      "type": "original_paper",
+      "notes": "Published in IEEE/ACM Transactions on Audio, Speech, and Language Processing."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against IEEE TASLP 2014 publication (DOI: 10.1109/TASLP.2014.2307275) and Stanford CCRMA distribution."
+  },
+  "size": {
+    "amount": 13.5,
+    "unit": "GB",
+    "file_formats": [
+      "wav"
+    ],
+    "status": "verified",
+    "notes": "44.1kHz 16-bit uncompressed WAV recordings across clean and noisy device settings."
+  },
+  "sample_count": {
+    "total": 20,
+    "unit": "speakers",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "recording_devices",
+        "value": 10,
+        "unit": "devices"
+      },
+      {
+        "label": "male_speakers",
+        "value": 10,
+        "unit": "speakers"
+      },
+      {
+        "label": "female_speakers",
+        "value": 10,
+        "unit": "speakers"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2014-04-01"
+  },
+  "citation": {
+    "paper_title": "Modeling and Enhancing Speech With Reverb and Environmental Noise Using Deep Neural Networks",
+    "paper_url": "https://doi.org/10.1109/TASLP.2014.2307275",
+    "authors": [
+      "Gautham J. Mysore"
+    ],
+    "doi": "10.1109/TASLP.2014.2307275",
+    "bibtex": "@article{mysore2014daps,\n  title = {Modeling and Enhancing Speech With Reverb and Environmental Noise Using Deep Neural Networks},\n  author = {Mysore, Gautham J.},\n  journal = {IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  volume = {23},\n  number = {4},\n  pages = {734--743},\n  year = {2014},\n  doi = {10.1109/TASLP.2014.2307275}\n}"
+  }
+}

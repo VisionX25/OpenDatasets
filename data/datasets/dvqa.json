@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "dvqa",
+  "slug": "dvqa",
+  "name": "DVQA: Understanding Data Visualizations via Question Answering",
+  "description": "DVQA is a large-scale visual question answering benchmark focused on understanding bar charts. Comprising 3,487,144 questions paired with 300,000 synthetic bar chart images, designed to test algorithms on data extraction, arithmetic reasoning, and visual perception tasks on charts.",
+  "homepage_url": "https://github.com/kushalkafle/DVQA_dataset",
+  "publisher": {
+    "name": "Rochester Institute of Technology",
+    "type": "academic",
+    "url": "https://www.rit.edu"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "chart-understanding",
+    "data-extraction"
+  ],
+  "tags": [
+    "dvqa",
+    "vqa",
+    "charts",
+    "multimodal",
+    "document-ai"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under CC-BY-4.0."
+  },
+  "source_references": [
+    {
+      "title": "DVQA GitHub Repository",
+      "url": "https://github.com/kushalkafle/DVQA_dataset",
+      "type": "repository",
+      "notes": "Official dataset and code repository."
+    },
+    {
+      "title": "DVQA: Understanding Data Visualizations via Question Answering",
+      "url": "https://doi.org/10.1109/CVPR.2018.00735",
+      "type": "original_paper",
+      "notes": "Published in CVPR 2018 proceedings."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against CVPR 2018 proceedings (DOI: 10.1109/CVPR.2018.00735) and official GitHub repository."
+  },
+  "size": {
+    "amount": 8.5,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "300,000 PNG chart images with JSON question, answer, and table ground truth annotations."
+  },
+  "sample_count": {
+    "total": 3487144,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 2325310,
+      "val_easy": 580416,
+      "val_hard": 581418
+    },
+    "breakdown": [
+      {
+        "label": "chart_images",
+        "value": 300000,
+        "unit": "images"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-06-18"
+  },
+  "citation": {
+    "paper_title": "DVQA: Understanding Data Visualizations via Question Answering",
+    "paper_url": "https://doi.org/10.1109/CVPR.2018.00735",
+    "authors": [
+      "Kushal Kafle",
+      "Brian Price",
+      "Scott Cohen",
+      "Christopher Kanan"
+    ],
+    "doi": "10.1109/CVPR.2018.00735",
+    "bibtex": "@inproceedings{kafle2018dvqa,\n  title = {{DVQA}: Understanding Data Visualizations via Question Answering},\n  author = {Kafle, Kushal and Price, Brian and Cohen, Scott and Kanan, Christopher},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages = {7036--7045},\n  year = {2018},\n  doi = {10.1109/CVPR.2018.00735}\n}"
+  }
+}

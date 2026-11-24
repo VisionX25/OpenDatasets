@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sift-flow",
+  "slug": "sift-flow",
+  "name": "SIFT Flow Scene Parsing Benchmark",
+  "description": "The SIFT Flow dataset consists of 2,688 outdoor images annotated with pixel-level semantic category labels across 33 semantic classes (such as sky, building, tree, road, car, sea, etc.) and geometric context classes, aligned via dense SIFT Flow correspondence.",
+  "homepage_url": "https://people.csail.mit.edu/celiu/SIFTflow",
+  "publisher": {
+    "name": "Massachusetts Institute of Technology",
+    "type": "academic",
+    "url": "https://web.mit.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "scene-parsing",
+    "image-alignment"
+  ],
+  "tags": [
+    "sift-flow",
+    "semantic-segmentation",
+    "scene-parsing",
+    "computer-vision",
+    "mit"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "MIT CSAIL Academic Research Use",
+    "spdx_id": null,
+    "url": "https://people.csail.mit.edu/celiu/SIFTflow/",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for educational and non-commercial research purposes."
+  },
+  "source_references": [
+    {
+      "title": "SIFT Flow Project Page",
+      "url": "https://people.csail.mit.edu/celiu/SIFTflow",
+      "type": "official_website",
+      "notes": "MIT CSAIL project portal."
+    },
+    {
+      "title": "SIFT Flow: Dense Correspondence across Scenes and Its Applications",
+      "url": "https://doi.org/10.1109/TPAMI.2010.147",
+      "type": "original_paper",
+      "notes": "Published in IEEE TPAMI."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against IEEE TPAMI 2011 publication (DOI: 10.1109/TPAMI.2010.147) and MIT CSAIL project site."
+  },
+  "size": {
+    "amount": 620.0,
+    "unit": "MB",
+    "file_formats": [
+      "mat",
+      "jpg",
+      "png"
+    ],
+    "status": "verified",
+    "notes": "256x256 color images with MAT ground-truth semantic and spatial labels."
+  },
+  "sample_count": {
+    "total": 2688,
+    "unit": "images",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 2488,
+      "test": 200
+    },
+    "breakdown": [
+      {
+        "label": "semantic_categories",
+        "value": 33,
+        "unit": "classes"
+      },
+      {
+        "label": "geometric_classes",
+        "value": 3,
+        "unit": "classes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2011-05-01"
+  },
+  "citation": {
+    "paper_title": "SIFT Flow: Dense Correspondence across Scenes and Its Applications",
+    "paper_url": "https://doi.org/10.1109/TPAMI.2010.147",
+    "authors": [
+      "Ce Liu",
+      "Jenny Yuen",
+      "Antonio Torralba"
+    ],
+    "doi": "10.1109/TPAMI.2010.147",
+    "bibtex": "@article{liu2011siftflow,\n  title = {{SIFT} Flow: Dense Correspondence across Scenes and Its Applications},\n  author = {Liu, Ce and Yuen, Jenny and Torralba, Antonio},\n  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  volume = {33},\n  number = {5},\n  pages = {978--994},\n  year = {2011},\n  doi = {10.1109/TPAMI.2010.147}\n}"
+  }
+}

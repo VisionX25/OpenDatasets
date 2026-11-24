@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "qasper",
+  "slug": "qasper",
+  "name": "QASPER: A Dataset of Question Answering on Scientific Research Papers",
+  "description": "QASPER is a question answering dataset over full-text scientific research papers in NLP and machine learning. Sourced from Open Access papers on arXiv and verified across 1,585 papers, questions were written by NLP practitioners seeking information after reading abstracts, and answers were curated by human annotators reading full papers with supporting evidence spans.",
+  "homepage_url": "https://allenai.org/data/qasper",
+  "publisher": {
+    "name": "Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "information-extraction",
+    "machine-reading-comprehension"
+  ],
+  "tags": [
+    "scientific-qa",
+    "nlp",
+    "information-extraction",
+    "allenai",
+    "arxiv"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Dataset and code released under Apache License 2.0."
+  },
+  "source_references": [
+    {
+      "title": "QASPER Official Project Page",
+      "url": "https://allenai.org/data/qasper",
+      "type": "official_website",
+      "notes": "Official Allen Institute project landing page."
+    },
+    {
+      "title": "QASPER GitHub Repository",
+      "url": "https://github.com/allenai/qasper-led-baselines",
+      "type": "repository",
+      "notes": "Benchmark code, model baselines, and data download scripts."
+    },
+    {
+      "title": "A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers",
+      "url": "https://doi.org/10.18653/v1/2021.naacl-main.41",
+      "type": "original_paper",
+      "notes": "Published in NAACL 2021 proceedings."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against NAACL 2021 proceedings (DOI: 10.18653/v1/2021.naacl-main.41) and official Allen Institute release."
+  },
+  "size": {
+    "amount": 15.0,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "JSON corpus with paper text, figures, bibliography, and question-answer-evidence annotations."
+  },
+  "sample_count": {
+    "total": 5049,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 2593,
+      "validation": 1005,
+      "test": 1451
+    },
+    "breakdown": [
+      {
+        "label": "research_papers",
+        "value": 1585,
+        "unit": "papers"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2021-05-01"
+  },
+  "citation": {
+    "paper_title": "A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers",
+    "paper_url": "https://doi.org/10.18653/v1/2021.naacl-main.41",
+    "authors": [
+      "Pradeep Dasigi",
+      "Kyle Lo",
+      "Iz Beltagy",
+      "Arman Cohan",
+      "Noah A. Smith",
+      "Matt Gardner"
+    ],
+    "doi": "10.18653/v1/2021.naacl-main.41",
+    "bibtex": "@inproceedings{dasigi-etal-2021-dataset,\n  title = {A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers},\n  author = {Dasigi, Pradeep and Lo, Kyle and Beltagy, Iz and Cohan, Arman and Smith, Noah A. and Gardner, Matt},\n  booktitle = {Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},\n  year = {2021},\n  pages = {4599--4610},\n  doi = {10.18653/v1/2021.naacl-main.41}\n}"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "scitail",
+  "slug": "scitail",
+  "name": "SciTail: A Natural Language Inference Dataset from Science Exams",
+  "description": "SciTail is a textual entailment / natural language inference benchmark created from multiple-choice school-level science exams and science texts found on the web. Consisting of 27,026 sentence pairs annotated as entails or neutral, it evaluates scientific reasoning and question-answering with natural sentence-level entailment.",
+  "homepage_url": "https://allenai.org/data/scitail",
+  "publisher": {
+    "name": "Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "natural-language-inference",
+    "text-classification",
+    "scientific-reasoning"
+  ],
+  "tags": [
+    "natural-language-inference",
+    "nli",
+    "science-qa",
+    "nlp",
+    "allenai"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Dataset and code released under Apache License 2.0."
+  },
+  "source_references": [
+    {
+      "title": "SciTail Official Dataset Page",
+      "url": "https://allenai.org/data/scitail",
+      "type": "official_website",
+      "notes": "Official Allen Institute dataset portal."
+    },
+    {
+      "title": "SciTail: A Natural Language Inference Dataset from Science Exams",
+      "url": "https://doi.org/10.1609/aaai.v32i1.12006",
+      "type": "original_paper",
+      "notes": "Published in AAAI 2018 proceedings."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against AAAI 2018 proceedings (DOI: 10.1609/aaai.v32i1.12006) and official Allen Institute repository."
+  },
+  "size": {
+    "amount": 5.5,
+    "unit": "MB",
+    "file_formats": [
+      "tsv",
+      "jsonl",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "Premise, hypothesis, and binary entailment labels in standard tab-delimited and JSONL formats."
+  },
+  "sample_count": {
+    "total": 27026,
+    "unit": "sentence-pairs",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 23596,
+      "validation": 1304,
+      "test": 2126
+    },
+    "breakdown": [
+      {
+        "label": "entails_pairs",
+        "value": 10101,
+        "unit": "pairs"
+      },
+      {
+        "label": "neutral_pairs",
+        "value": 16925,
+        "unit": "pairs"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-02-02"
+  },
+  "citation": {
+    "paper_title": "SciTail: A Natural Language Inference Dataset from Science Exams and Web Sentences",
+    "paper_url": "https://doi.org/10.1609/aaai.v32i1.12006",
+    "authors": [
+      "Tushar Khot",
+      "Ashish Sabharwal",
+      "Peter Clark"
+    ],
+    "doi": "10.1609/aaai.v32i1.12006",
+    "bibtex": "@inproceedings{khot2018scitail,\n  title = {{SciTail}: A Natural Language Inference Dataset from Science Exams and Web Sentences},\n  author = {Khot, Tushar and Sabharwal, Ashish and Clark, Peter},\n  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume = {32},\n  number = {1},\n  pages = {4836--4843},\n  year = {2018},\n  doi = {10.1609/aaai.v32i1.12006}\n}"
+  }
+}

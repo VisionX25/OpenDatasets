@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-statlog-shuttle",
+  "slug": "uci-statlog-shuttle",
+  "name": "Statlog Shuttle Radiator Position Benchmark",
+  "description": "The Statlog Shuttle dataset consists of 58,000 instances describing NASA Space Shuttle radiator thermal loop configurations across 9 numerical attributes. Featuring severe class imbalance across 7 radiator state classes, it is widely utilized for anomaly detection and imbalanced learning research.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/148/statlog+shuttle",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "anomaly-detection",
+    "multi-class-classification"
+  ],
+  "tags": [
+    "shuttle",
+    "statlog",
+    "uci",
+    "imbalanced-classification",
+    "anomaly-detection"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI Statlog Shuttle Portal",
+      "url": "https://archive.ics.uci.edu/dataset/148/statlog+shuttle",
+      "type": "official_website",
+      "notes": "UCI Machine Learning Repository dataset 148 landing page."
+    },
+    {
+      "title": "Machine Learning, Neural and Statistical Classification",
+      "url": "https://doi.org/10.24432/C5WS31",
+      "type": "documentation",
+      "notes": "Canonical DOI citation and project book."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository dataset 148 (DOI: 10.24432/C5WS31) and Statlog project documentation."
+  },
+  "size": {
+    "amount": 1.8,
+    "unit": "MB",
+    "file_formats": [
+      "csv",
+      "data"
+    ],
+    "status": "verified",
+    "notes": "Standard whitespace/comma-separated train and test partitions."
+  },
+  "sample_count": {
+    "total": 58000,
+    "unit": "instances",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 43500,
+      "test": 14500
+    },
+    "breakdown": [
+      {
+        "label": "attributes",
+        "value": 9,
+        "unit": "features"
+      },
+      {
+        "label": "radiator_classes",
+        "value": 7,
+        "unit": "classes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "1994-01-01"
+  },
+  "citation": {
+    "paper_title": "Machine Learning, Neural and Statistical Classification",
+    "paper_url": "https://doi.org/10.24432/C5WS31",
+    "authors": [
+      "D. Michie",
+      "D. J. Spiegelhalter",
+      "C. C. Taylor"
+    ],
+    "doi": "10.24432/C5WS31",
+    "bibtex": "@book{michie1994statlog,\n  title = {Machine Learning, Neural and Statistical Classification},\n  author = {Michie, D. and Spiegelhalter, D. J. and Taylor, C. C.},\n  year = {1994},\n  publisher = {Ellis Horwood},\n  address = {Upper Saddle River, NJ, USA}\n}"
+  }
+}
