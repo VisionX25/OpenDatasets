@@ -3,7 +3,7 @@
   "id": "flyingthings3d",
   "slug": "flyingthings3d",
   "name": "FlyingThings3D: Synthetic Dataset for Optical Flow and Disparity",
-  "description": "FlyingThings3D is a synthetic benchmark dataset composed of everyday 3D objects moving along randomized 3D trajectories. Part of the Scene Flow dataset suite, it delivers 25,650 stereo frame pairs with dense, ground-truth optical flow, disparity, disparity change, and object segmentation masks.",
+  "description": "FlyingThings3D is a synthetic benchmark dataset composed of everyday 3D objects moving along randomized 3D trajectories. Part of the Scene Flow dataset suite, it delivers 26,066 stereo frame pairs (21,818 train across 2,247 scenes, 4,248 test) with dense ground-truth optical flow, disparity, disparity change, and object segmentation masks.",
   "homepage_url": "https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html",
   "publisher": {
     "name": "University of Freiburg",
@@ -66,20 +66,25 @@
     "notes": "RGB stereo frames with ground truth disparity and optical flow maps."
   },
   "sample_count": {
-    "total": 25650,
+    "total": 26066,
     "unit": "stereo-frame-pairs",
     "status": "verified",
     "partition_completeness": "complete",
     "partition_overlap": "disjoint",
     "splits": {
       "train": 21818,
-      "test": 3832
+      "test": 4248
     },
     "breakdown": [
       {
-        "label": "subsets",
-        "value": 3,
-        "unit": "subsets"
+        "label": "train_scenes",
+        "value": 2247,
+        "unit": "scenes"
+      },
+      {
+        "label": "filtered_test_subset",
+        "value": 3832,
+        "unit": "stereo-frame-pairs"
       }
     ]
   },

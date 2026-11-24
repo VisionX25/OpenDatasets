@@ -9644,8 +9644,8 @@
     "id": "birdvox-full-night",
     "slug": "birdvox-full-night",
     "name": "BirdVox-full-night: Bird Flight Call Audio Detection Benchmark",
-    "description": "BirdVox-full-night contains 6 full-night audio recordings (over 62 continuous hours) of nocturnal avian flight calls captured by autonomous bioacoustic monitoring sensors in upstate New York during the autumn 2015 bird migration season, annotated with exact avian flight call timestamp stamps.",
-    "homepage_url": "https://wp.nyu.edu/birdvox",
+    "description": "BirdVox-full-night contains 6 full-night audio recordings (approximately 62 continuous hours) of nocturnal avian flight calls captured by autonomous bioacoustic monitoring sensors across 6 recording stations in upstate New York during the autumn 2015 bird migration season, annotated with avian flight call timestamps.",
+    "homepage_url": "https://wp.nyu.edu/birdvox/birdvox-full-night/",
     "publisher": {
       "name": "New York University / Cornell Lab of Ornithology",
       "type": "academic",
@@ -9673,24 +9673,24 @@
       "spdx_id": "CC-BY-4.0",
       "url": "https://creativecommons.org/licenses/by/4.0/",
       "commercial_use": "allowed",
-      "notes": "Dataset released on Zenodo under CC-BY-4.0."
+      "notes": "Dataset released on Zenodo (record 1205569) under CC-BY-4.0."
     },
     "source_references": [
       {
-        "title": "BirdVox Project Portal",
-        "url": "https://wp.nyu.edu/birdvox",
+        "title": "BirdVox-full-night Project Page",
+        "url": "https://wp.nyu.edu/birdvox/birdvox-full-night/",
         "type": "official_website",
-        "notes": "New York University BirdVox project homepage."
+        "notes": "Official dataset-specific project page."
       },
       {
         "title": "BirdVox-full-night Dataset on Zenodo",
-        "url": "https://zenodo.org/records/1205561",
+        "url": "https://zenodo.org/records/1205569",
         "type": "archive",
-        "notes": "Zenodo archival data repository release."
+        "notes": "Zenodo archival repository release (DOI: 10.5281/zenodo.1205569)."
       },
       {
-        "title": "Acoustic Detection of Flight Calls for Bird Migration Monitoring Using Deep Learning",
-        "url": "https://doi.org/10.1109/ICASSP.2018.8461323",
+        "title": "BirdVox-full-night: a dataset and benchmark for avian flight call detection",
+        "url": "https://doi.org/10.1109/ICASSP.2018.8461410",
         "type": "original_paper",
         "notes": "Published in IEEE ICASSP 2018 proceedings."
       }
@@ -9699,17 +9699,17 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against ICASSP 2018 publication (DOI: 10.1109/ICASSP.2018.8461323) and Zenodo record (DOI: 10.5281/zenodo.1205561)."
+      "notes": "Verified against ICASSP 2018 publication (DOI: 10.1109/ICASSP.2018.8461410) and Zenodo record (DOI: 10.5281/zenodo.1205569)."
     },
     "size": {
-      "amount": 33.6,
+      "amount": 5.6,
       "unit": "GB",
       "file_formats": [
-        "wav",
+        "flac",
         "csv"
       ],
       "status": "verified",
-      "notes": "Six multi-gigabyte continuous uncompressed 44.1kHz FLAC/WAV audio files and CSV call annotations."
+      "notes": "Six continuous FLAC audio recordings with CSV and JAMS avian flight call annotations."
     },
     "sample_count": {
       "total": 6,
@@ -9719,23 +9719,28 @@
       "partition_overlap": "unspecified",
       "breakdown": [
         {
-          "label": "total_duration",
+          "label": "sensor_stations",
+          "value": 6,
+          "unit": "stations"
+        },
+        {
+          "label": "estimated_total_duration",
           "value": 62,
           "unit": "hours"
         },
         {
-          "label": "sensor_stations",
-          "value": 4,
-          "unit": "stations"
+          "label": "annotated_flight_calls",
+          "value": 35402,
+          "unit": "calls"
         }
       ]
     },
     "dates": {
-      "published": "2018-04-15"
+      "published": "2018-03-22"
     },
     "citation": {
-      "paper_title": "Acoustic Detection of Flight Calls for Bird Migration Monitoring Using Deep Learning",
-      "paper_url": "https://doi.org/10.1109/ICASSP.2018.8461323",
+      "paper_title": "BirdVox-full-night: A Dataset and Benchmark for Avian Flight Call Detection",
+      "paper_url": "https://doi.org/10.1109/ICASSP.2018.8461410",
       "authors": [
         "Vincent Lostanlen",
         "Justin Salamon",
@@ -9743,8 +9748,8 @@
         "Steve Kelling",
         "Juan Pablo Bello"
       ],
-      "doi": "10.1109/ICASSP.2018.8461323",
-      "bibtex": "@inproceedings{lostanlen2018birdvox,\n  title = {Acoustic Detection of Flight Calls for Bird Migration Monitoring Using Deep Learning},\n  author = {Lostanlen, Vincent and Salamon, Justin and Farnsworth, Andrew and Kelling, Steve and Bello, Juan Pablo},\n  booktitle = {IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages = {296--300},\n  year = {2018},\n  doi = {10.1109/ICASSP.2018.8461323}\n}"
+      "doi": "10.1109/ICASSP.2018.8461410",
+      "bibtex": "@inproceedings{lostanlen2018birdvox,\n  title = {{BirdVox-full-night}: A Dataset and Benchmark for Avian Flight Call Detection},\n  author = {Lostanlen, Vincent and Salamon, Justin and Farnsworth, Andrew and Kelling, Steve and Bello, Juan Pablo},\n  booktitle = {IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages = {266--270},\n  year = {2018},\n  doi = {10.1109/ICASSP.2018.8461410}\n}"
     }
   },
   {
@@ -13508,7 +13513,7 @@
     "id": "chime-6",
     "slug": "chime-6",
     "name": "CHiME-6 Corpus: Dinner Party Conversational Speech Recognition Benchmark",
-    "description": "CHiME-6 is a conversational speech recognition benchmark dataset recorded during unconstrained dinner party gatherings in real homes. Capturing 20 multi-speaker sessions totaling 50 hours of audio using binaural microphones worn by participants and multiple four-channel array microphones placed around kitchen and dining areas.",
+    "description": "CHiME-6 is a conversational speech recognition benchmark dataset recorded during unconstrained dinner party gatherings in real homes. Evolving from CHiME-5 to address clock-drift and array synchronization across binaural and multi-channel arrays, it captures 20 multi-speaker sessions totaling 50 hours of audio across binaural and 4-channel microphone arrays.",
     "homepage_url": "https://chimechallenge.github.io/chime6",
     "publisher": {
       "name": "CHiME Challenge Consortium / University of Sheffield",
@@ -13531,12 +13536,12 @@
       "dinner-party"
     ],
     "license": {
-      "status": "verified_non_commercial",
-      "name": "CHiME-6 Data License Agreement",
-      "spdx_id": null,
-      "url": "https://chimechallenge.github.io/chime6/",
-      "commercial_use": "forbidden",
-      "notes": "Released for non-commercial research and evaluation purposes subject to the CHiME-6 license agreement."
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "CHiME-6 dataset released via OpenSLR SLR150 under CC-BY-SA-4.0."
     },
     "source_references": [
       {
@@ -13544,6 +13549,12 @@
         "url": "https://chimechallenge.github.io/chime6",
         "type": "official_website",
         "notes": "Official portal with task details, data structure, and evaluation recipes."
+      },
+      {
+        "title": "CHiME-6 on OpenSLR (SLR150)",
+        "url": "https://openslr.org/150/",
+        "type": "archive",
+        "notes": "OpenSLR SLR150 dataset release under CC-BY-SA-4.0."
       },
       {
         "title": "The CHiME-6 Challenge: Tackling Multispeaker Speech Recognition for Unsegmented Recordings",
@@ -17583,23 +17594,29 @@
     },
     "source_references": [
       {
+        "title": "DAPS Dataset on Zenodo",
+        "url": "https://zenodo.org/records/4660670",
+        "type": "archive",
+        "notes": "Zenodo archival distribution of the DAPS recordings (DOI: 10.5281/zenodo.4660670)."
+      },
+      {
         "title": "DAPS Dataset on Internet Archive",
         "url": "https://archive.org/details/daps_dataset",
         "type": "archive",
         "notes": "Permanent archival mirror of the DAPS recordings."
       },
       {
-        "title": "Modeling and Enhancing Speech with Reverb and Environmental Noise",
-        "url": "https://doi.org/10.1109/TASLP.2014.2307275",
+        "title": "Can We Automatically Transform Speech Recorded on Common Consumer Devices in Real-World Environments into Professional Production Quality Speech?",
+        "url": "https://doi.org/10.1109/LSP.2014.2379648",
         "type": "original_paper",
-        "notes": "Published in IEEE/ACM Transactions on Audio, Speech, and Language Processing."
+        "notes": "Published in IEEE Signal Processing Letters."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against IEEE TASLP 2014 publication (DOI: 10.1109/TASLP.2014.2307275) and Stanford CCRMA distribution."
+      "notes": "Verified against IEEE Signal Processing Letters publication (DOI: 10.1109/LSP.2014.2379648) and Zenodo record (DOI: 10.5281/zenodo.4660670)."
     },
     "size": {
       "amount": 13.5,
@@ -17618,9 +17635,14 @@
       "partition_overlap": "unspecified",
       "breakdown": [
         {
-          "label": "recording_devices",
-          "value": 10,
-          "unit": "devices"
+          "label": "audio_versions_per_speaker",
+          "value": 15,
+          "unit": "versions"
+        },
+        {
+          "label": "total_recordings",
+          "value": 300,
+          "unit": "recordings"
         },
         {
           "label": "male_speakers",
@@ -17641,13 +17663,13 @@
       "published": "2014-04-01"
     },
     "citation": {
-      "paper_title": "Modeling and Enhancing Speech With Reverb and Environmental Noise Using Deep Neural Networks",
-      "paper_url": "https://doi.org/10.1109/TASLP.2014.2307275",
+      "paper_title": "Can We Automatically Transform Speech Recorded on Common Consumer Devices in Real-World Environments into Professional Production Quality Speech? — A Dataset, Insights, and Challenges",
+      "paper_url": "https://doi.org/10.1109/LSP.2014.2379648",
       "authors": [
         "Gautham J. Mysore"
       ],
-      "doi": "10.1109/TASLP.2014.2307275",
-      "bibtex": "@article{mysore2014daps,\n  title = {Modeling and Enhancing Speech With Reverb and Environmental Noise Using Deep Neural Networks},\n  author = {Mysore, Gautham J.},\n  journal = {IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  volume = {23},\n  number = {4},\n  pages = {734--743},\n  year = {2014},\n  doi = {10.1109/TASLP.2014.2307275}\n}"
+      "doi": "10.1109/LSP.2014.2379648",
+      "bibtex": "@article{mysore2015can,\n  title = {Can We Automatically Transform Speech Recorded on Common Consumer Devices in Real-World Environments into Professional Production Quality Speech? -- A Dataset, Insights, and Challenges},\n  author = {Mysore, Gautham J.},\n  journal = {IEEE Signal Processing Letters},\n  volume = {22},\n  number = {8},\n  pages = {1006--1010},\n  year = {2015},\n  doi = {10.1109/LSP.2014.2379648}\n}"
     }
   },
   {
@@ -20428,7 +20450,7 @@
     "id": "dvqa",
     "slug": "dvqa",
     "name": "DVQA: Understanding Data Visualizations via Question Answering",
-    "description": "DVQA is a large-scale visual question answering benchmark focused on understanding bar charts. Comprising 3,487,144 questions paired with 300,000 synthetic bar chart images, designed to test algorithms on data extraction, arithmetic reasoning, and visual perception tasks on charts.",
+    "description": "DVQA is a large-scale visual question answering benchmark focused on understanding bar charts. Comprising 3,487,194 questions paired with 300,000 synthetic bar chart images, designed to test algorithms on data extraction, arithmetic reasoning, and visual perception tasks under both familiar and novel chart vocabulary.",
     "homepage_url": "https://github.com/kushalkafle/DVQA_dataset",
     "publisher": {
       "name": "Rochester Institute of Technology",
@@ -20491,21 +20513,36 @@
       "notes": "300,000 PNG chart images with JSON question, answer, and table ground truth annotations."
     },
     "sample_count": {
-      "total": 3487144,
+      "total": 3487194,
       "unit": "questions",
       "status": "verified",
       "partition_completeness": "complete",
       "partition_overlap": "disjoint",
       "splits": {
-        "train": 2325310,
-        "val_easy": 580416,
-        "val_hard": 581418
+        "train": 2325316,
+        "test_familiar": 580557,
+        "test_novel": 581321
       },
       "breakdown": [
         {
           "label": "chart_images",
           "value": 300000,
           "unit": "images"
+        },
+        {
+          "label": "structure_understanding_questions",
+          "value": 471108,
+          "unit": "questions"
+        },
+        {
+          "label": "data_retrieval_questions",
+          "value": 1113704,
+          "unit": "questions"
+        },
+        {
+          "label": "reasoning_questions",
+          "value": 1613974,
+          "unit": "questions"
         }
       ]
     },
@@ -23530,7 +23567,7 @@
       "spdx_id": "CC-BY-SA-3.0",
       "url": "https://creativecommons.org/licenses/by-sa/3.0/",
       "commercial_use": "allowed",
-      "notes": "Text derived from Wikipedia under CC-BY-SA-3.0 license."
+      "notes": "Dataset claims and annotations released under CC-BY-SA-3.0, inherited from and compatible with Wikipedia source text."
     },
     "source_references": [
       {
@@ -23550,7 +23587,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against NAACL 2018 publication (DOI: 10.18653/v1/N18-1074) and official FEVER challenge website."
+      "notes": "Verified against NAACL 2018 publication (DOI: 10.18653/v1/N18-1074) and official FEVER shared task release manifests."
     },
     "size": {
       "amount": 1.8,
@@ -23569,11 +23606,20 @@
       "partition_overlap": "disjoint",
       "splits": {
         "train": 145449,
-        "development": 9999,
-        "test": 9999,
+        "shared_task_dev": 19998,
         "shared_task_test": 19998
       },
       "breakdown": [
+        {
+          "label": "paper_dev_subset",
+          "value": 9999,
+          "unit": "claims"
+        },
+        {
+          "label": "paper_test_subset",
+          "value": 9999,
+          "unit": "claims"
+        },
         {
           "label": "wikipedia_pages",
           "value": 5416537,
@@ -24372,7 +24418,7 @@
     "id": "flyingthings3d",
     "slug": "flyingthings3d",
     "name": "FlyingThings3D: Synthetic Dataset for Optical Flow and Disparity",
-    "description": "FlyingThings3D is a synthetic benchmark dataset composed of everyday 3D objects moving along randomized 3D trajectories. Part of the Scene Flow dataset suite, it delivers 25,650 stereo frame pairs with dense, ground-truth optical flow, disparity, disparity change, and object segmentation masks.",
+    "description": "FlyingThings3D is a synthetic benchmark dataset composed of everyday 3D objects moving along randomized 3D trajectories. Part of the Scene Flow dataset suite, it delivers 26,066 stereo frame pairs (21,818 train across 2,247 scenes, 4,248 test) with dense ground-truth optical flow, disparity, disparity change, and object segmentation masks.",
     "homepage_url": "https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html",
     "publisher": {
       "name": "University of Freiburg",
@@ -24435,20 +24481,25 @@
       "notes": "RGB stereo frames with ground truth disparity and optical flow maps."
     },
     "sample_count": {
-      "total": 25650,
+      "total": 26066,
       "unit": "stereo-frame-pairs",
       "status": "verified",
       "partition_completeness": "complete",
       "partition_overlap": "disjoint",
       "splits": {
         "train": 21818,
-        "test": 3832
+        "test": 4248
       },
       "breakdown": [
         {
-          "label": "subsets",
-          "value": 3,
-          "unit": "subsets"
+          "label": "train_scenes",
+          "value": 2247,
+          "unit": "scenes"
+        },
+        {
+          "label": "filtered_test_subset",
+          "value": 3832,
+          "unit": "stereo-frame-pairs"
         }
       ]
     },
@@ -25035,7 +25086,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against official GitHub repository and Zenodo archive (DOI: 10.5281/zenodo.1342401)."
+      "notes": "Verified against official GitHub repository and Zenodo v1.0.8 release (DOI: 10.5281/zenodo.1342401)."
     },
     "size": {
       "amount": 25.0,
@@ -25077,12 +25128,13 @@
       "authors": [
         "Zohar Jackson",
         "César Souza",
-        "Jason Frank",
-        "Nicolas Roussel",
-        "Brian Rong"
+        "Jason Flaks",
+        "Yuxin Pan",
+        "Hereman Nicolas",
+        "Adhish Thite"
       ],
       "doi": "10.5281/zenodo.1342401",
-      "bibtex": "@misc{jackson_fsdd_2018,\n  title = {Free Spoken Digit Dataset ({FSDD})},\n  author = {Jackson, Zohar and Souza, C{\\'e}sar and Frank, Jason and Roussel, Nicolas and Rong, Brian},\n  year = {2018},\n  publisher = {Zenodo},\n  doi = {10.5281/zenodo.1342401}\n}"
+      "bibtex": "@misc{jackson_fsdd_2018,\n  title = {Free Spoken Digit Dataset ({FSDD})},\n  author = {Jackson, Zohar and Souza, C{\\'e}sar and Flaks, Jason and Pan, Yuxin and Nicolas, Hereman and Thite, Adhish},\n  year = {2018},\n  publisher = {Zenodo},\n  doi = {10.5281/zenodo.1342401}\n}"
     }
   },
   {
@@ -38360,7 +38412,7 @@
     "id": "middlebury-stereo",
     "slug": "middlebury-stereo",
     "name": "Middlebury Stereo 2014 Benchmark",
-    "description": "The Middlebury Stereo 2014 dataset is an established stereo vision benchmark featuring high-resolution indoor scenes captured using structured light illumination. Comprising 33 scenes (15 training scenes, 15 test scenes, and 3 additional scenes) with dense subpixel-accurate disparity maps under various exposures and lighting conditions.",
+    "description": "The Middlebury Stereo 2014 dataset is an established stereo vision benchmark featuring high-resolution indoor scenes captured using structured light illumination. Comprising 33 scenes (10 evaluation training scenes, 10 evaluation test scenes, and 13 additional scenes) with dense subpixel-accurate disparity maps under various exposures and lighting conditions.",
     "homepage_url": "https://vision.middlebury.edu/stereo/data/scenes2014",
     "publisher": {
       "name": "Middlebury College",
@@ -38409,7 +38461,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against GCPR 2014 publication (DOI: 10.1007/978-3-319-11752-2_34) and Middlebury Vision portal."
+      "notes": "Verified against GCPR 2014 publication (DOI: 10.1007/978-3-319-11752-2_34) and Middlebury Vision 2014 portal."
     },
     "size": {
       "amount": 12.0,
@@ -38428,15 +38480,20 @@
       "partition_completeness": "complete",
       "partition_overlap": "disjoint",
       "splits": {
-        "training": 15,
-        "test": 15,
-        "additional": 3
+        "evaluation_training": 10,
+        "evaluation_test": 10,
+        "additional": 13
       },
       "breakdown": [
         {
           "label": "lighting_conditions_per_scene",
           "value": 3,
           "unit": "conditions"
+        },
+        {
+          "label": "exposure_variations_per_scene",
+          "value": 7,
+          "unit": "exposures"
         }
       ]
     },
@@ -38449,13 +38506,14 @@
       "authors": [
         "Daniel Scharstein",
         "Heiko Hirschmüller",
-        "Masatoshi Okutomi",
-        "Christian Rhemann",
-        "Rastislav Sennovsky",
-        "Heiko Robbins"
+        "York Kitajima",
+        "Greg Krathwohl",
+        "Nera Nešić",
+        "Xi Wang",
+        "Porter Westling"
       ],
       "doi": "10.1007/978-3-319-11752-2_34",
-      "bibtex": "@inproceedings{scharstein2014stereo,\n  title = {High-Resolution Stereo Datasets with Subpixel-Accurate Ground Truth},\n  author = {Scharstein, Daniel and Hirschm{\\\"u}ller, Heiko and Okutomi, Masatoshi and Rhemann, Christian and Sennovsky, Rastislav and Robbins, Heiko},\n  booktitle = {German Conference on Pattern Recognition (GCPR)},\n  pages = {31--42},\n  year = {2014},\n  doi = {10.1007/978-3-319-11752-2_34}\n}"
+      "bibtex": "@inproceedings{scharstein2014high,\n  title = {High-Resolution Stereo Datasets with Subpixel-Accurate Ground Truth},\n  author = {Scharstein, Daniel and Hirschm{\\\"u}ller, Heiko and Kitajima, York and Krathwohl, Greg and Ne{\\v{s}}i{\\'c}, Nera and Wang, Xi and Westling, Porter},\n  booktitle = {Pattern Recognition (GCPR 2014)},\n  series = {Lecture Notes in Computer Science},\n  volume = {8753},\n  pages = {31--42},\n  year = {2014},\n  publisher = {Springer, Cham},\n  doi = {10.1007/978-3-319-11752-2_34}\n}"
     }
   },
   {
@@ -54449,11 +54507,11 @@
     ],
     "license": {
       "status": "verified_open",
-      "name": "Apache License 2.0",
-      "spdx_id": "Apache-2.0",
-      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
       "commercial_use": "allowed",
-      "notes": "Dataset and code released under Apache License 2.0."
+      "notes": "Dataset annotations released under CC-BY-4.0; companion code repository released under Apache-2.0."
     },
     "source_references": [
       {
@@ -66078,7 +66136,7 @@
     "id": "uci-abalone",
     "slug": "uci-abalone",
     "name": "Abalone Age Determination Benchmark Dataset",
-    "description": "The Abalone dataset predict the age of abalone (marine snails) from physical measurements without cutting the shell. Sourced from the Marine Resources Division of Tasmania, it contains 4,177 instances characterized by 8 physical attributes (sex, length, diameter, height, whole weight, shucked weight, viscera weight, shell weight) and the number of shell rings.",
+    "description": "The Abalone dataset predicts the age of abalone (marine snails) from physical measurements without cutting the shell. Sourced from the Marine Resources Division of Tasmania, it contains 4,177 instances characterized by 8 physical attributes (sex, length, diameter, height, whole weight, shucked weight, viscera weight, shell weight) and the number of shell rings.",
     "homepage_url": "https://archive.ics.uci.edu/dataset/1/abalone",
     "publisher": {
       "name": "UCI Machine Learning Repository / Marine Resources Division",
@@ -66573,6 +66631,12 @@
         "url": "https://archive.ics.uci.edu/dataset/59/letter+recognition",
         "type": "official_website",
         "notes": "UCI Machine Learning Repository dataset 59 landing page."
+      },
+      {
+        "title": "Letter Recognition Dataset DOI Record",
+        "url": "https://doi.org/10.24432/C5ZP40",
+        "type": "documentation",
+        "notes": "Canonical UCI dataset DOI citation (DOI: 10.24432/C5ZP40)."
       },
       {
         "title": "Letter Recognition Using Holland-Style Adaptive Classifiers",
@@ -69025,13 +69089,19 @@
         "url": "https://doi.org/10.1109/CVPR.2017.13",
         "type": "original_paper",
         "notes": "Published in CVPR 2017 proceedings."
+      },
+      {
+        "title": "Visual Dialog (TPAMI Extended Journal Publication)",
+        "url": "https://doi.org/10.1109/TPAMI.2018.2868846",
+        "type": "original_paper",
+        "notes": "Published in IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) detailing VisDial v1.0."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against CVPR 2017 publication (DOI: 10.1109/CVPR.2017.13) and Visual Dialog v1.0 specifications."
+      "notes": "Verified against CVPR 2017 (DOI: 10.1109/CVPR.2017.13) and IEEE TPAMI 2019 (DOI: 10.1109/TPAMI.2018.2868846) publications and Visual Dialog v1.0 specifications."
     },
     "size": {
       "amount": 160.0,
@@ -69357,7 +69427,7 @@
     "id": "visual7w",
     "slug": "visual7w",
     "name": "Visual7W: Grounded Question Answering in Images",
-    "description": "Visual7W is a grounded question answering dataset built on 47,300 images from Visual Genome. It introduces rich semantic question answering covering seven 'W' question categories (What, Where, When, Who, Why, How, and Which), with 327,939 total QA pairs and 1,403,730 multiple-choice answers grounded in object bounding boxes.",
+    "description": "Visual7W is a grounded question answering dataset built on 47,300 images from COCO / Visual Genome. It introduces rich semantic question answering covering seven 'W' question categories (What, Where, When, Who, Why, How, and Which), with 327,939 total QA pairs and 1,311,756 multiple-choice choices grounded in object bounding boxes.",
     "homepage_url": "https://ai.stanford.edu/~yukez/visual7w",
     "publisher": {
       "name": "Stanford University",
@@ -69431,14 +69501,19 @@
       },
       "breakdown": [
         {
-          "label": "images",
+          "label": "coco_images",
           "value": 47300,
           "unit": "images"
         },
         {
-          "label": "grounded_qa_pairs",
-          "value": 139368,
-          "unit": "questions"
+          "label": "multiple_choice_options",
+          "value": 1311756,
+          "unit": "choices"
+        },
+        {
+          "label": "object_groundings",
+          "value": 561459,
+          "unit": "groundings"
         }
       ]
     },

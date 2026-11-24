@@ -31,7 +31,7 @@
     "spdx_id": "CC-BY-SA-3.0",
     "url": "https://creativecommons.org/licenses/by-sa/3.0/",
     "commercial_use": "allowed",
-    "notes": "Text derived from Wikipedia under CC-BY-SA-3.0 license."
+    "notes": "Dataset claims and annotations released under CC-BY-SA-3.0, inherited from and compatible with Wikipedia source text."
   },
   "source_references": [
     {
@@ -51,7 +51,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against NAACL 2018 publication (DOI: 10.18653/v1/N18-1074) and official FEVER challenge website."
+    "notes": "Verified against NAACL 2018 publication (DOI: 10.18653/v1/N18-1074) and official FEVER shared task release manifests."
   },
   "size": {
     "amount": 1.8,
@@ -70,11 +70,20 @@
     "partition_overlap": "disjoint",
     "splits": {
       "train": 145449,
-      "development": 9999,
-      "test": 9999,
+      "shared_task_dev": 19998,
       "shared_task_test": 19998
     },
     "breakdown": [
+      {
+        "label": "paper_dev_subset",
+        "value": 9999,
+        "unit": "claims"
+      },
+      {
+        "label": "paper_test_subset",
+        "value": 9999,
+        "unit": "claims"
+      },
       {
         "label": "wikipedia_pages",
         "value": 5416537,
