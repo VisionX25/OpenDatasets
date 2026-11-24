@@ -3,8 +3,8 @@
   "id": "birdvox-full-night",
   "slug": "birdvox-full-night",
   "name": "BirdVox-full-night: Bird Flight Call Audio Detection Benchmark",
-  "description": "BirdVox-full-night contains 6 full-night audio recordings (over 62 continuous hours) of nocturnal avian flight calls captured by autonomous bioacoustic monitoring sensors in upstate New York during the autumn 2015 bird migration season, annotated with exact avian flight call timestamp stamps.",
-  "homepage_url": "https://wp.nyu.edu/birdvox",
+  "description": "BirdVox-full-night contains 6 full-night audio recordings (approximately 62 continuous hours) of nocturnal avian flight calls captured by autonomous bioacoustic monitoring sensors across 6 recording stations in upstate New York during the autumn 2015 bird migration season, annotated with avian flight call timestamps.",
+  "homepage_url": "https://wp.nyu.edu/birdvox/birdvox-full-night/",
   "publisher": {
     "name": "New York University / Cornell Lab of Ornithology",
     "type": "academic",
@@ -32,24 +32,24 @@
     "spdx_id": "CC-BY-4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "commercial_use": "allowed",
-    "notes": "Dataset released on Zenodo under CC-BY-4.0."
+    "notes": "Dataset released on Zenodo (record 1205569) under CC-BY-4.0."
   },
   "source_references": [
     {
-      "title": "BirdVox Project Portal",
-      "url": "https://wp.nyu.edu/birdvox",
+      "title": "BirdVox-full-night Project Page",
+      "url": "https://wp.nyu.edu/birdvox/birdvox-full-night/",
       "type": "official_website",
-      "notes": "New York University BirdVox project homepage."
+      "notes": "Official dataset-specific project page."
     },
     {
       "title": "BirdVox-full-night Dataset on Zenodo",
-      "url": "https://zenodo.org/records/1205561",
+      "url": "https://zenodo.org/records/1205569",
       "type": "archive",
-      "notes": "Zenodo archival data repository release."
+      "notes": "Zenodo archival repository release (DOI: 10.5281/zenodo.1205569)."
     },
     {
-      "title": "Acoustic Detection of Flight Calls for Bird Migration Monitoring Using Deep Learning",
-      "url": "https://doi.org/10.1109/ICASSP.2018.8461323",
+      "title": "BirdVox-full-night: a dataset and benchmark for avian flight call detection",
+      "url": "https://doi.org/10.1109/ICASSP.2018.8461410",
       "type": "original_paper",
       "notes": "Published in IEEE ICASSP 2018 proceedings."
     }
@@ -58,17 +58,17 @@
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against ICASSP 2018 publication (DOI: 10.1109/ICASSP.2018.8461323) and Zenodo record (DOI: 10.5281/zenodo.1205561)."
+    "notes": "Verified against ICASSP 2018 publication (DOI: 10.1109/ICASSP.2018.8461410) and Zenodo record (DOI: 10.5281/zenodo.1205569)."
   },
   "size": {
-    "amount": 33.6,
+    "amount": 5.6,
     "unit": "GB",
     "file_formats": [
-      "wav",
+      "flac",
       "csv"
     ],
     "status": "verified",
-    "notes": "Six multi-gigabyte continuous uncompressed 44.1kHz FLAC/WAV audio files and CSV call annotations."
+    "notes": "Six continuous FLAC audio recordings with CSV and JAMS avian flight call annotations."
   },
   "sample_count": {
     "total": 6,
@@ -78,23 +78,28 @@
     "partition_overlap": "unspecified",
     "breakdown": [
       {
-        "label": "total_duration",
+        "label": "sensor_stations",
+        "value": 6,
+        "unit": "stations"
+      },
+      {
+        "label": "estimated_total_duration",
         "value": 62,
         "unit": "hours"
       },
       {
-        "label": "sensor_stations",
-        "value": 4,
-        "unit": "stations"
+        "label": "annotated_flight_calls",
+        "value": 35402,
+        "unit": "calls"
       }
     ]
   },
   "dates": {
-    "published": "2018-04-15"
+    "published": "2018-03-22"
   },
   "citation": {
-    "paper_title": "Acoustic Detection of Flight Calls for Bird Migration Monitoring Using Deep Learning",
-    "paper_url": "https://doi.org/10.1109/ICASSP.2018.8461323",
+    "paper_title": "BirdVox-full-night: A Dataset and Benchmark for Avian Flight Call Detection",
+    "paper_url": "https://doi.org/10.1109/ICASSP.2018.8461410",
     "authors": [
       "Vincent Lostanlen",
       "Justin Salamon",
@@ -102,7 +107,7 @@
       "Steve Kelling",
       "Juan Pablo Bello"
     ],
-    "doi": "10.1109/ICASSP.2018.8461323",
-    "bibtex": "@inproceedings{lostanlen2018birdvox,\n  title = {Acoustic Detection of Flight Calls for Bird Migration Monitoring Using Deep Learning},\n  author = {Lostanlen, Vincent and Salamon, Justin and Farnsworth, Andrew and Kelling, Steve and Bello, Juan Pablo},\n  booktitle = {IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages = {296--300},\n  year = {2018},\n  doi = {10.1109/ICASSP.2018.8461323}\n}"
+    "doi": "10.1109/ICASSP.2018.8461410",
+    "bibtex": "@inproceedings{lostanlen2018birdvox,\n  title = {{BirdVox-full-night}: A Dataset and Benchmark for Avian Flight Call Detection},\n  author = {Lostanlen, Vincent and Salamon, Justin and Farnsworth, Andrew and Kelling, Steve and Bello, Juan Pablo},\n  booktitle = {IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages = {266--270},\n  year = {2018},\n  doi = {10.1109/ICASSP.2018.8461410}\n}"
   }
 }

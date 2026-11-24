@@ -35,23 +35,29 @@
   },
   "source_references": [
     {
+      "title": "DAPS Dataset on Zenodo",
+      "url": "https://zenodo.org/records/4660670",
+      "type": "archive",
+      "notes": "Zenodo archival distribution of the DAPS recordings (DOI: 10.5281/zenodo.4660670)."
+    },
+    {
       "title": "DAPS Dataset on Internet Archive",
       "url": "https://archive.org/details/daps_dataset",
       "type": "archive",
       "notes": "Permanent archival mirror of the DAPS recordings."
     },
     {
-      "title": "Modeling and Enhancing Speech with Reverb and Environmental Noise",
-      "url": "https://doi.org/10.1109/TASLP.2014.2307275",
+      "title": "Can We Automatically Transform Speech Recorded on Common Consumer Devices in Real-World Environments into Professional Production Quality Speech?",
+      "url": "https://doi.org/10.1109/LSP.2014.2379648",
       "type": "original_paper",
-      "notes": "Published in IEEE/ACM Transactions on Audio, Speech, and Language Processing."
+      "notes": "Published in IEEE Signal Processing Letters."
     }
   ],
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against IEEE TASLP 2014 publication (DOI: 10.1109/TASLP.2014.2307275) and Stanford CCRMA distribution."
+    "notes": "Verified against IEEE Signal Processing Letters publication (DOI: 10.1109/LSP.2014.2379648) and Zenodo record (DOI: 10.5281/zenodo.4660670)."
   },
   "size": {
     "amount": 13.5,
@@ -70,9 +76,14 @@
     "partition_overlap": "unspecified",
     "breakdown": [
       {
-        "label": "recording_devices",
-        "value": 10,
-        "unit": "devices"
+        "label": "audio_versions_per_speaker",
+        "value": 15,
+        "unit": "versions"
+      },
+      {
+        "label": "total_recordings",
+        "value": 300,
+        "unit": "recordings"
       },
       {
         "label": "male_speakers",
@@ -93,12 +104,12 @@
     "published": "2014-04-01"
   },
   "citation": {
-    "paper_title": "Modeling and Enhancing Speech With Reverb and Environmental Noise Using Deep Neural Networks",
-    "paper_url": "https://doi.org/10.1109/TASLP.2014.2307275",
+    "paper_title": "Can We Automatically Transform Speech Recorded on Common Consumer Devices in Real-World Environments into Professional Production Quality Speech? — A Dataset, Insights, and Challenges",
+    "paper_url": "https://doi.org/10.1109/LSP.2014.2379648",
     "authors": [
       "Gautham J. Mysore"
     ],
-    "doi": "10.1109/TASLP.2014.2307275",
-    "bibtex": "@article{mysore2014daps,\n  title = {Modeling and Enhancing Speech With Reverb and Environmental Noise Using Deep Neural Networks},\n  author = {Mysore, Gautham J.},\n  journal = {IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  volume = {23},\n  number = {4},\n  pages = {734--743},\n  year = {2014},\n  doi = {10.1109/TASLP.2014.2307275}\n}"
+    "doi": "10.1109/LSP.2014.2379648",
+    "bibtex": "@article{mysore2015can,\n  title = {Can We Automatically Transform Speech Recorded on Common Consumer Devices in Real-World Environments into Professional Production Quality Speech? -- A Dataset, Insights, and Challenges},\n  author = {Mysore, Gautham J.},\n  journal = {IEEE Signal Processing Letters},\n  volume = {22},\n  number = {8},\n  pages = {1006--1010},\n  year = {2015},\n  doi = {10.1109/LSP.2014.2379648}\n}"
   }
 }

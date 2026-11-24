@@ -3,7 +3,7 @@
   "id": "dvqa",
   "slug": "dvqa",
   "name": "DVQA: Understanding Data Visualizations via Question Answering",
-  "description": "DVQA is a large-scale visual question answering benchmark focused on understanding bar charts. Comprising 3,487,144 questions paired with 300,000 synthetic bar chart images, designed to test algorithms on data extraction, arithmetic reasoning, and visual perception tasks on charts.",
+  "description": "DVQA is a large-scale visual question answering benchmark focused on understanding bar charts. Comprising 3,487,194 questions paired with 300,000 synthetic bar chart images, designed to test algorithms on data extraction, arithmetic reasoning, and visual perception tasks under both familiar and novel chart vocabulary.",
   "homepage_url": "https://github.com/kushalkafle/DVQA_dataset",
   "publisher": {
     "name": "Rochester Institute of Technology",
@@ -66,21 +66,36 @@
     "notes": "300,000 PNG chart images with JSON question, answer, and table ground truth annotations."
   },
   "sample_count": {
-    "total": 3487144,
+    "total": 3487194,
     "unit": "questions",
     "status": "verified",
     "partition_completeness": "complete",
     "partition_overlap": "disjoint",
     "splits": {
-      "train": 2325310,
-      "val_easy": 580416,
-      "val_hard": 581418
+      "train": 2325316,
+      "test_familiar": 580557,
+      "test_novel": 581321
     },
     "breakdown": [
       {
         "label": "chart_images",
         "value": 300000,
         "unit": "images"
+      },
+      {
+        "label": "structure_understanding_questions",
+        "value": 471108,
+        "unit": "questions"
+      },
+      {
+        "label": "data_retrieval_questions",
+        "value": 1113704,
+        "unit": "questions"
+      },
+      {
+        "label": "reasoning_questions",
+        "value": 1613974,
+        "unit": "questions"
       }
     ]
   },
