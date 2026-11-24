@@ -3,7 +3,7 @@
   "id": "vcr",
   "slug": "vcr",
   "name": "Visual Commonsense Reasoning (VCR)",
-  "description": "Visual Commonsense Reasoning (VCR) is a large-scale visual reasoning dataset that challenges models to answer complex questions about movie scenes and provide valid natural language rationales justifying their answers ($Q \\to A \\to R$). Drawn from 110,000 movie frames across 290,000 questions, answering requires commonsense knowledge about social interactions, human intent, and physical scene dynamics grounded in object bounding boxes.",
+  "description": "Visual Commonsense Reasoning (VCR) is a large-scale visual reasoning benchmark that challenges models to answer complex questions about movie scenes and provide valid natural language rationales justifying their answers ($Q \\to A \\to R$). Derived from 110,000 movie frames across 264,720 partitioned questions (212,923 train, 26,534 validation, and 25,263 test), answering requires commonsense knowledge about social interactions, human intent, and physical scene dynamics grounded in 800,000 object bounding boxes. These 264,720 questions give rise to 290,000 multiple-choice problems across answer prediction ($Q \\to A$) and rationale justification ($QA \\to R$).",
   "homepage_url": "https://visualcommonsense.com/",
   "publisher": {
     "name": "University of Washington & Allen Institute for AI",
@@ -51,8 +51,8 @@
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
-    "verified_date": "2026-11-24",
-    "notes": "Verified against CVPR 2019 paper and visualcommonsense.com portal."
+    "verified_date": "2026-11-25",
+    "notes": "Verified against CVPR 2019 publication supplementary statistics and official visualcommonsense.com portal. The canonical question total is 264,720 partitioned questions (212,923 train, 26,534 validation, 25,263 test); the headline 290k scale reflects derived multiple-choice problem instances across Q->A and QA->R tasks."
   },
   "size": {
     "amount": 15.0,

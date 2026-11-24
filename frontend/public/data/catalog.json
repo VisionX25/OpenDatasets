@@ -4048,11 +4048,11 @@
     ],
     "license": {
       "status": "verified_open",
-      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
-      "spdx_id": "CC-BY-SA-4.0",
-      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://github.com/soerenab/AudioMNIST/blob/master/LICENSE",
       "commercial_use": "allowed",
-      "notes": "Dataset released under CC BY-SA 4.0."
+      "notes": "Dataset and code released under the MIT License."
     },
     "source_references": [
       {
@@ -4062,17 +4062,23 @@
         "notes": "Official repository with audio files and speaker metadata."
       },
       {
+        "title": "AudioMNIST Repository License",
+        "url": "https://github.com/soerenab/AudioMNIST/blob/master/LICENSE",
+        "type": "official_website",
+        "notes": "Official MIT license declaration."
+      },
+      {
         "title": "AudioMNIST: Exploring Explainable Artificial Intelligence for Audio Analysis",
-        "url": "https://arxiv.org/abs/1807.03418",
+        "url": "https://doi.org/10.1016/j.jfranklin.2023.11.038",
         "type": "original_paper",
-        "notes": "Preprint publication introducing AudioMNIST."
+        "notes": "Published in Journal of the Franklin Institute."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-11-24",
-      "notes": "Verified against publication and official GitHub repository."
+      "verified_date": "2026-11-25",
+      "notes": "Verified against Journal of the Franklin Institute publication (DOI: 10.1016/j.jfranklin.2023.11.038) and official MIT license in GitHub repository."
     },
     "size": {
       "amount": 1.2,
@@ -4111,7 +4117,7 @@
     },
     "citation": {
       "paper_title": "AudioMNIST: Exploring Explainable Artificial Intelligence for Audio Analysis on a Simple Benchmark",
-      "paper_url": "https://arxiv.org/abs/1807.03418",
+      "paper_url": "https://doi.org/10.1016/j.jfranklin.2023.11.038",
       "authors": [
         "Sören Becker",
         "Marcel Ackermann",
@@ -4119,7 +4125,8 @@
         "Klaus-Robert Müller",
         "Wojciech Samek"
       ],
-      "bibtex": "@article{becker2018audiomnist,\n  title = {{AudioMNIST}: Exploring Explainable Artificial Intelligence for Audio Analysis on a Simple Benchmark},\n  author = {Becker, S{\\\"o}ren and Ackermann, Marcel and Lapuschkin, Sebastian and M{\\\"u}ller, Klaus-Robert and Samek, Wojciech},\n  journal = {arXiv preprint arXiv:1807.03418},\n  year = {2018}\n}"
+      "doi": "10.1016/j.jfranklin.2023.11.038",
+      "bibtex": "@article{becker2024audiomnist,\n  title = {{AudioMNIST}: Exploring Explainable Artificial Intelligence for Audio Analysis on a Simple Benchmark},\n  author = {Becker, S{\\\"o}ren and Ackermann, Marcel and Lapuschkin, Sebastian and M{\\\"u}ller, Klaus-Robert and Samek, Wojciech},\n  journal = {Journal of the Franklin Institute},\n  volume = {361},\n  number = {4},\n  pages = {106606},\n  year = {2024},\n  doi = {10.1016/j.jfranklin.2023.11.038}\n}"
     }
   },
   {
@@ -4303,7 +4310,7 @@
     "id": "avspeech",
     "slug": "avspeech",
     "name": "AVSpeech: Large-Scale Audio-Visual Speech Separation Dataset",
-    "description": "AVSpeech is a large-scale audio-visual dataset designed for active speaker detection, speech enhancement, and audio-visual speech separation (the 'Looking to Listen' cocktail party problem). Curated by Google Research, it contains 2.4 million video segments spanning roughly 4,700 hours of speech drawn from YouTube videos featuring over 150,000 unique human speakers without background music or overlapping speech interference.",
+    "description": "AVSpeech is a large-scale audio-visual dataset designed for active speaker detection, speech enhancement, and audio-visual speech separation (the 'Looking to Listen' cocktail party problem). Curated by Google Research, it contains approximately 2.4 million video segments spanning roughly 4,700 hours of speech drawn from 292,000 YouTube videos (270k train, 22k test) featuring over 150,000 unique human speakers without background music or overlapping speech interference.",
     "homepage_url": "https://looking-to-listen.github.io/avspeech/",
     "publisher": {
       "name": "Google Research",
@@ -4326,12 +4333,12 @@
       "audio"
     ],
     "license": {
-      "status": "custom_permissive",
-      "name": "AVSpeech Data Access Agreement",
-      "spdx_id": null,
-      "url": "https://looking-to-listen.github.io/avspeech/",
-      "commercial_use": "forbidden",
-      "notes": "Available for academic non-commercial research use."
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset annotations licensed by Google LLC under Creative Commons Attribution 4.0 International (CC BY 4.0)."
     },
     "source_references": [
       {
@@ -4339,6 +4346,12 @@
         "url": "https://looking-to-listen.github.io/avspeech/",
         "type": "official_website",
         "notes": "Official release site with segment indices and download scripts."
+      },
+      {
+        "title": "AVSpeech Download Documentation",
+        "url": "https://looking-to-listen.github.io/avspeech/download.html",
+        "type": "documentation",
+        "notes": "Official download documentation confirming CC BY 4.0 license and train/test video distributions."
       },
       {
         "title": "Looking to Listen at the Cocktail Party (ACM Transactions on Graphics 2018)",
@@ -4350,8 +4363,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-11-24",
-      "notes": "Verified against SIGGRAPH 2018 paper and Google Research project portal."
+      "verified_date": "2026-11-25",
+      "notes": "Verified against SIGGRAPH 2018 publication and official Google Research download documentation (https://looking-to-listen.github.io/avspeech/download.html). The dataset annotations are officially licensed by Google LLC under CC BY 4.0."
     },
     "size": {
       "amount": 500.0,
@@ -4365,7 +4378,7 @@
     "sample_count": {
       "total": 2400000,
       "unit": "video-segments",
-      "status": "verified",
+      "status": "estimated",
       "partition_completeness": "complete",
       "partition_overlap": "disjoint",
       "splits": {
@@ -4373,6 +4386,11 @@
         "test": 300000
       },
       "breakdown": [
+        {
+          "label": "youtube_videos",
+          "value": 292000,
+          "unit": "videos"
+        },
         {
           "label": "audio_duration_hours",
           "value": 4700.0,
@@ -4382,6 +4400,16 @@
           "label": "unique_speakers",
           "value": 150000,
           "unit": "speakers"
+        },
+        {
+          "label": "train_videos",
+          "value": 270000,
+          "unit": "videos"
+        },
+        {
+          "label": "test_videos",
+          "value": 22000,
+          "unit": "videos"
         }
       ]
     },
@@ -21956,8 +21984,8 @@
     "schema_version": "1.0.0",
     "id": "eth3d",
     "slug": "eth3d",
-    "name": "ETH3D: High-Resolution Multi-View Stereo and Visual SLAM Benchmark",
-    "description": "ETH3D is a benchmark for high-resolution multi-view stereo, 3D reconstruction, and visual SLAM. Captured using calibrated DSLR cameras and high-precision survey-grade laser scanners across 43 indoor and outdoor scenes, ETH3D provides sub-millimeter accurate geometric ground truth, benchmarking both high-resolution multi-view stereo matching and continuous multi-camera visual-inertial SLAM under challenging lighting conditions.",
+    "name": "ETH3D: High-Resolution Multi-View Stereo Benchmark",
+    "description": "ETH3D High-Resolution Multi-View Stereo Benchmark is a benchmark for high-resolution 3D multi-view reconstruction and stereo matching. Captured using calibrated high-resolution (24 megapixel) DSLR cameras and millimeter-accurate laser scanner ground truth across 25 indoor and outdoor scenes (13 training, 12 test), it provides rigorous geometric ground truth for evaluating point cloud reconstruction, depth map fusion, and multi-view stereo under complex geometry and varying real-world illumination.",
     "homepage_url": "https://www.eth3d.net/",
     "publisher": {
       "name": "ETH Zurich",
@@ -21969,14 +21997,13 @@
       "3d"
     ],
     "tasks": [
-      "3d-reconstruction",
-      "visual-slam"
+      "3d-reconstruction"
     ],
     "tags": [
       "multi-view-stereo",
       "3d-reconstruction",
       "laser-scanning",
-      "slam",
+      "dslr-imaging",
       "vision"
     ],
     "license": {
@@ -21995,6 +22022,12 @@
         "notes": "Official benchmark portal with evaluation leaderboards."
       },
       {
+        "title": "ETH3D Benchmark Overview",
+        "url": "https://www.eth3d.net/overview",
+        "type": "documentation",
+        "notes": "Official overview documenting the 13 training and 12 test DSLR scene benchmark structure."
+      },
+      {
         "title": "A Multi-View Stereo Benchmark with High-Resolution Images and Multi-Camera Videos (CVPR 2017)",
         "url": "https://doi.org/10.1109/CVPR.2017.472",
         "type": "original_paper",
@@ -22004,11 +22037,11 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-11-24",
-      "notes": "Verified against CVPR 2017 paper and official ETH3D benchmark website."
+      "verified_date": "2026-11-25",
+      "notes": "Verified against CVPR 2017 paper and official ETH3D benchmark documentation (https://www.eth3d.net/overview). Scope restricted to the high-resolution multi-view stereo benchmark release (13 training and 12 test scenes)."
     },
     "size": {
-      "amount": 140.0,
+      "amount": 40.0,
       "unit": "GB",
       "file_formats": [
         "jpg",
@@ -22016,27 +22049,32 @@
         "txt"
       ],
       "status": "estimated",
-      "notes": "High-resolution DSLR images, synchronized video frames, and laser scan point clouds."
+      "notes": "High-resolution DSLR images, camera calibrations, and laser scan evaluation point clouds."
     },
     "sample_count": {
-      "total": 43,
+      "total": 25,
       "unit": "scenes",
       "status": "verified",
       "partition_completeness": "complete",
       "partition_overlap": "disjoint",
       "splits": {
         "training": 13,
-        "test": 30
+        "test": 12
       },
       "breakdown": [
         {
+          "label": "high_res_dslr_images",
+          "value": 898,
+          "unit": "images"
+        },
+        {
           "label": "indoor_scenes",
-          "value": 25,
+          "value": 16,
           "unit": "scenes"
         },
         {
           "label": "outdoor_scenes",
-          "value": 18,
+          "value": 9,
           "unit": "scenes"
         }
       ]
@@ -34535,7 +34573,7 @@
       "audio"
     ],
     "license": {
-      "status": "custom_permissive",
+      "status": "verified_non_commercial",
       "name": "Oxford VGG LRS3 Academic Research Agreement",
       "spdx_id": null,
       "url": "https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs3.html",
@@ -36404,7 +36442,7 @@
     "id": "md17",
     "slug": "md17",
     "name": "MD17: Molecular Dynamics Trajectory and Force-Field Dataset",
-    "description": "MD17 is a benchmark molecular dynamics dataset containing 830,000 ab initio molecular configurations of eight small organic molecules (benzene, uracil, naphthalene, aspirin, salicylic acid, malonaldehyde, ethanol, toluene). Generated by Stefan Chmiela and Alexandre Tkatchenko via ab initio path-integral molecular dynamics at the DFT/PBE+vdW-TS level, it provides exact atomic coordinates, total energies, and interatomic forces widely benchmarked for energy-conserving machine learning force fields.",
+    "description": "MD17 is a benchmark molecular dynamics dataset containing 3,611,118 ab initio molecular configurations of eight small organic molecules (benzene, uracil, naphthalene, aspirin, salicylic acid, malonaldehyde, ethanol, toluene). Generated by Stefan Chmiela, Alexandre Tkatchenko, and collaborators via ab initio molecular dynamics at the DFT/PBE+vdW-TS level, it provides exact atomic coordinates, total energies, and interatomic forces widely benchmarked for energy-conserving machine learning force fields.",
     "homepage_url": "http://www.sgdml.org/",
     "publisher": {
       "name": "University of Luxembourg & TU Berlin",
@@ -36451,8 +36489,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-11-24",
-      "notes": "Verified against Science Advances publication and sGDML project site."
+      "verified_date": "2026-11-25",
+      "notes": "Verified against Science Advances 2017 publication (DOI: 10.1126/sciadv.1603015) and official sGDML project distribution. Total consists of 3,611,118 configurations across all 8 molecular species."
     },
     "size": {
       "amount": 1.2,
@@ -36465,7 +36503,7 @@
       "notes": "Compressed NumPy archives containing Cartesian coordinates, energies, and atomic force vectors."
     },
     "sample_count": {
-      "total": 830000,
+      "total": 3611118,
       "unit": "molecular-configurations",
       "status": "verified",
       "partition_completeness": "unspecified",
@@ -36475,6 +36513,46 @@
           "label": "molecular_species",
           "value": 8,
           "unit": "molecules"
+        },
+        {
+          "label": "malonaldehyde_geometries",
+          "value": 993237,
+          "unit": "configurations"
+        },
+        {
+          "label": "benzene_geometries",
+          "value": 627983,
+          "unit": "configurations"
+        },
+        {
+          "label": "ethanol_geometries",
+          "value": 555092,
+          "unit": "configurations"
+        },
+        {
+          "label": "toluene_geometries",
+          "value": 442790,
+          "unit": "configurations"
+        },
+        {
+          "label": "naphthalene_geometries",
+          "value": 326250,
+          "unit": "configurations"
+        },
+        {
+          "label": "salicylic_acid_geometries",
+          "value": 320231,
+          "unit": "configurations"
+        },
+        {
+          "label": "aspirin_geometries",
+          "value": 211762,
+          "unit": "configurations"
+        },
+        {
+          "label": "uracil_geometries",
+          "value": 133770,
+          "unit": "configurations"
         }
       ]
     },
@@ -39990,7 +40068,7 @@
       "3d"
     ],
     "license": {
-      "status": "custom_permissive",
+      "status": "verified_non_commercial",
       "name": "Princeton ModelNet Research License",
       "spdx_id": null,
       "url": "https://modelnet.cs.princeton.edu/",
@@ -41184,12 +41262,12 @@
       "tabular"
     ],
     "license": {
-      "status": "custom_permissive",
+      "status": "verified_non_commercial",
       "name": "Microsoft Research Data License Agreement",
       "spdx_id": null,
       "url": "https://www.microsoft.com/en-us/research/project/mslr/",
-      "commercial_use": "allowed",
-      "notes": "Available freely for research and educational purposes under Microsoft Research terms."
+      "commercial_use": "forbidden",
+      "notes": "Available for academic research and educational purposes under the Microsoft Research Data License Agreement; commercial use and unauthorized redistribution are restricted."
     },
     "source_references": [
       {
@@ -46740,12 +46818,12 @@
       "vision"
     ],
     "license": {
-      "status": "verified_open",
-      "name": "Apache License 2.0",
-      "spdx_id": "Apache-2.0",
-      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "status": "custom_permissive",
+      "name": "Computational Use of Data Agreement v1.0",
+      "spdx_id": "C-UDA-1.0",
+      "url": "https://github.com/google-research-datasets/Objectron/blob/master/LICENSE",
       "commercial_use": "allowed",
-      "notes": "Annotations and data pipeline released under Apache 2.0; underlying media licensed under CC BY 4.0."
+      "notes": "Dataset licensed under the Computational Use of Data Agreement v1.0 (C-UDA-1.0), restricting dataset usage solely to Computational Use (analysis by a computer). Under Sections 2.2 and 5.5, downstream Results (including trained AI models) are unrestricted and freely permitted for commercial distribution. Redistribution of raw data requires attribution and binding downstream recipients to C-UDA terms. Tooling code is licensed under Apache-2.0."
     },
     "source_references": [
       {
@@ -46753,6 +46831,12 @@
         "url": "https://github.com/google-research-datasets/Objectron",
         "type": "repository",
         "notes": "Official repository with dataset access and evaluation pipelines."
+      },
+      {
+        "title": "Google Objectron Dataset License (C-UDA-1.0)",
+        "url": "https://github.com/google-research-datasets/Objectron/blob/master/LICENSE",
+        "type": "official_website",
+        "notes": "Official C-UDA v1.0 license declaration."
       },
       {
         "title": "Objectron: A Large Scale Dataset of Object-Centric Videos in the Wild (CVPR 2021)",
@@ -46765,7 +46849,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-24",
-      "notes": "Verified against CVPR 2021 publication and Google Research repository."
+      "notes": "Verified against CVPR 2021 publication, Google Research repository, and official C-UDA-1.0 dataset LICENSE."
     },
     "size": {
       "amount": 1.9,
@@ -50469,7 +50553,7 @@
       "graph"
     ],
     "license": {
-      "status": "custom_permissive",
+      "status": "verified_non_commercial",
       "name": "PDBbind Academic Research License Agreement",
       "spdx_id": null,
       "url": "https://www.pdbbind-plus.org.cn/",
@@ -53465,12 +53549,12 @@
     "id": "qmugs",
     "slug": "qmugs",
     "name": "QMugs: Quantum Mechanical Properties of Drug-like Molecules",
-    "description": "QMugs is a quantum mechanical dataset of 665,000 drug-like molecules extracted from the ChEMBL database, containing over 2 million energetically favorable 3D conformers. Computed using density functional theory (DFT wB97X-D/def2-SVP) and semi-empirical methods (GFN2-xTB), QMugs provides high-accuracy single-point energies, atomic charges, orbital energies (HOMO/LUMO), dipole moments, and vibrational frequencies for machine learning drug discovery.",
-    "homepage_url": "https://doi.org/10.1038/s41597-022-01390-7",
+    "description": "QMugs is a quantum chemistry dataset comprising 665,911 biologically active and drug-like molecules extracted from ChEMBL. Developed at ETH Zurich, each molecule includes up to three distinct 3D conformers (1,992,984 total conformers) computed at the semi-empirical GFN2-xTB and quantum-mechanical DFT (ωB97X-D/def2-SVP) levels of theory, providing comprehensive molecular geometries, wave functions, Mulliken atomic charges, orbital energies, and dipole moments for molecular machine learning.",
+    "homepage_url": "https://www.nature.com/articles/s41597-022-01390-7",
     "publisher": {
-      "name": "ETH Zurich (Schneider Lab)",
+      "name": "ETH Zurich",
       "type": "academic",
-      "url": "https://modlab.ethz.ch"
+      "url": "https://ethz.ch"
     },
     "modalities": [
       "tabular",
@@ -53481,11 +53565,11 @@
     ],
     "tags": [
       "quantum-chemistry",
-      "dft",
       "drug-discovery",
-      "molecular-conformations",
-      "tabular",
-      "graph"
+      "dft",
+      "molecular-conformers",
+      "chembl",
+      "tabular"
     ],
     "license": {
       "status": "verified_open",
@@ -53493,30 +53577,30 @@
       "spdx_id": "CC-BY-4.0",
       "url": "https://creativecommons.org/licenses/by/4.0/",
       "commercial_use": "allowed",
-      "notes": "Dataset released on Zenodo under CC BY 4.0."
+      "notes": "Dataset released under CC BY 4.0."
     },
     "source_references": [
       {
-        "title": "QMugs Zenodo Data Repository",
-        "url": "https://doi.org/10.5281/zenodo.5196991",
-        "type": "archive",
-        "notes": "Authoritative dataset deposit on Zenodo."
-      },
-      {
-        "title": "QMugs, Quantum Mechanical Properties of Drug-like Molecules (Scientific Data 2022)",
+        "title": "QMugs Scientific Data Paper",
         "url": "https://doi.org/10.1038/s41597-022-01390-7",
         "type": "original_paper",
         "notes": "Published in Nature Scientific Data 2022."
+      },
+      {
+        "title": "QMugs Zenodo Repository",
+        "url": "https://zenodo.org/record/5122112",
+        "type": "repository",
+        "notes": "Zenodo data deposit repository."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-11-24",
-      "notes": "Verified against Nature Scientific Data publication and Zenodo archive."
+      "verified_date": "2026-11-25",
+      "notes": "Verified against Scientific Data 2022 publication (DOI: 10.1038/s41597-022-01390-7). The primary corpus contains exactly 665,911 molecules across 1,992,984 quantum-mechanically optimized conformers."
     },
     "size": {
-      "amount": 28.0,
+      "amount": 250.0,
       "unit": "GB",
       "file_formats": [
         "sdf",
@@ -53524,24 +53608,24 @@
         "tar.gz"
       ],
       "status": "verified",
-      "notes": "SDF coordinate files and quantum mechanical CSV property tables."
+      "notes": "SDF files and CSV property summary tables."
     },
     "sample_count": {
-      "total": 665000,
+      "total": 665911,
       "unit": "molecules",
       "status": "verified",
       "partition_completeness": "unspecified",
       "partition_overlap": "disjoint",
       "breakdown": [
         {
-          "label": "molecular_conformers",
-          "value": 2000000,
+          "label": "conformers",
+          "value": 1992984,
           "unit": "conformers"
         }
       ]
     },
     "dates": {
-      "published": "2022-06-18"
+      "published": "2022-05-24"
     },
     "citation": {
       "paper_title": "QMugs, quantum mechanical properties of drug-like molecules",
@@ -62206,7 +62290,7 @@
     "sample_count": {
       "total": 1000,
       "unit": "flight-trajectories",
-      "status": "verified",
+      "status": "estimated",
       "partition_completeness": "unspecified",
       "partition_overlap": "disjoint",
       "breakdown": [
@@ -65731,7 +65815,7 @@
     "id": "vcr",
     "slug": "vcr",
     "name": "Visual Commonsense Reasoning (VCR)",
-    "description": "Visual Commonsense Reasoning (VCR) is a large-scale visual reasoning dataset that challenges models to answer complex questions about movie scenes and provide valid natural language rationales justifying their answers ($Q \\to A \\to R$). Drawn from 110,000 movie frames across 290,000 questions, answering requires commonsense knowledge about social interactions, human intent, and physical scene dynamics grounded in object bounding boxes.",
+    "description": "Visual Commonsense Reasoning (VCR) is a large-scale visual reasoning benchmark that challenges models to answer complex questions about movie scenes and provide valid natural language rationales justifying their answers ($Q \\to A \\to R$). Derived from 110,000 movie frames across 264,720 partitioned questions (212,923 train, 26,534 validation, and 25,263 test), answering requires commonsense knowledge about social interactions, human intent, and physical scene dynamics grounded in 800,000 object bounding boxes. These 264,720 questions give rise to 290,000 multiple-choice problems across answer prediction ($Q \\to A$) and rationale justification ($QA \\to R$).",
     "homepage_url": "https://visualcommonsense.com/",
     "publisher": {
       "name": "University of Washington & Allen Institute for AI",
@@ -65779,8 +65863,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-11-24",
-      "notes": "Verified against CVPR 2019 paper and visualcommonsense.com portal."
+      "verified_date": "2026-11-25",
+      "notes": "Verified against CVPR 2019 publication supplementary statistics and official visualcommonsense.com portal. The canonical question total is 264,720 partitioned questions (212,923 train, 26,534 validation, 25,263 test); the headline 290k scale reflects derived multiple-choice problem instances across Q->A and QA->R tasks."
     },
     "size": {
       "amount": 15.0,
@@ -67186,12 +67270,12 @@
     "id": "voices",
     "slug": "voices",
     "name": "VOiCES: Voices Obscured in Complex Environmental Settings",
-    "description": "The VOiCES (Voices Obscured in Complex Environmental Settings) corpus is an acoustic dataset designed to advance far-field automatic speech recognition and robust speaker verification in noise. Recorded by SRI International and Lab41 across four real reverberant rooms with background distractors (television, music, room babble), it contains 19,000 multi-channel audio recordings capturing 300 speakers under complex acoustic conditions.",
-    "homepage_url": "https://www.openslr.org/44/",
+    "description": "The VOiCES (Voices Obscured in Complex Environmental Settings) corpus is an acoustic dataset designed to advance far-field automatic speech recognition and robust speaker verification in noise. Recorded by SRI International and Lab41 (In-Q-Tel) across four real reverberant rooms with background distractors (television, music, room babble), it plays back 3,903 clean source speech files through a motorized rotating loudspeaker recorded over twelve microphones per room, generating 120 hours of distant audio per channel across 300 speakers.",
+    "homepage_url": "https://iqtlabs.github.io/voices/",
     "publisher": {
       "name": "SRI International & Lab41",
       "type": "academic",
-      "url": "https://www.openslr.org/44/"
+      "url": "https://iqtlabs.github.io/voices/"
     },
     "modalities": [
       "audio"
@@ -67213,14 +67297,20 @@
       "spdx_id": "CC-BY-4.0",
       "url": "https://creativecommons.org/licenses/by/4.0/",
       "commercial_use": "allowed",
-      "notes": "Dataset released on OpenSLR under CC BY 4.0."
+      "notes": "Dataset released under Creative Commons Attribution 4.0 International (CC BY 4.0), free for commercial, academic, and government use."
     },
     "source_references": [
       {
-        "title": "OpenSLR 44: VOiCES Corpus",
-        "url": "https://www.openslr.org/44/",
+        "title": "VOiCES Corpus Official Project Portal",
+        "url": "https://iqtlabs.github.io/voices/",
         "type": "official_website",
-        "notes": "Official OpenSLR deposit portal."
+        "notes": "Official release portal hosted by Lab41 and SRI International."
+      },
+      {
+        "title": "VOiCES Corpus on AWS Open Data Registry",
+        "url": "https://registry.opendata.aws/voices/",
+        "type": "repository",
+        "notes": "AWS Open Data registry hosting the public S3 archive."
       },
       {
         "title": "Voices Obscured in Complex Environmental Settings (VOiCES) Corpus (Interspeech 2018)",
@@ -67232,8 +67322,8 @@
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
-      "verified_date": "2026-11-24",
-      "notes": "Verified against Interspeech 2018 paper and OpenSLR 44 repository."
+      "verified_date": "2026-11-25",
+      "notes": "Verified against Interspeech 2018 paper, official project site (https://iqtlabs.github.io/voices/), and AWS Open Data registry. Source material consists of 3,903 audio files recorded across 12 microphones per room resulting in 120 hours of audio per channel."
     },
     "size": {
       "amount": 26.5,
@@ -67246,16 +67336,26 @@
       "notes": "16kHz 16-bit multichannel WAV audio tracks."
     },
     "sample_count": {
-      "total": 19000,
-      "unit": "audio-recordings",
+      "total": 3903,
+      "unit": "source-audio-files",
       "status": "verified",
       "partition_completeness": "unspecified",
       "partition_overlap": "disjoint",
       "breakdown": [
         {
+          "label": "recorded_hours_per_microphone",
+          "value": 120.0,
+          "unit": "hours"
+        },
+        {
           "label": "speakers",
           "value": 300,
           "unit": "speakers"
+        },
+        {
+          "label": "microphones_per_room",
+          "value": 12,
+          "unit": "microphones"
         },
         {
           "label": "acoustic_rooms",
@@ -69760,12 +69860,12 @@
       "nlp"
     ],
     "license": {
-      "status": "custom_permissive",
-      "name": "Microsoft Research Open Data License Agreement",
+      "status": "verified_non_commercial",
+      "name": "Microsoft Research Data License Agreement for WikiQA Corpus",
       "spdx_id": null,
       "url": "https://www.microsoft.com/en-us/research/publication/wikiqa-a-challenge-dataset-for-open-domain-question-answering/",
-      "commercial_use": "allowed",
-      "notes": "Available for research and educational purposes under Microsoft Research terms."
+      "commercial_use": "forbidden",
+      "notes": "Available for non-commercial research purposes under the Microsoft Research Data License Agreement for WikiQA Corpus."
     },
     "source_references": [
       {

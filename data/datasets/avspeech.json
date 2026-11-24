@@ -3,7 +3,7 @@
   "id": "avspeech",
   "slug": "avspeech",
   "name": "AVSpeech: Large-Scale Audio-Visual Speech Separation Dataset",
-  "description": "AVSpeech is a large-scale audio-visual dataset designed for active speaker detection, speech enhancement, and audio-visual speech separation (the 'Looking to Listen' cocktail party problem). Curated by Google Research, it contains 2.4 million video segments spanning roughly 4,700 hours of speech drawn from YouTube videos featuring over 150,000 unique human speakers without background music or overlapping speech interference.",
+  "description": "AVSpeech is a large-scale audio-visual dataset designed for active speaker detection, speech enhancement, and audio-visual speech separation (the 'Looking to Listen' cocktail party problem). Curated by Google Research, it contains approximately 2.4 million video segments spanning roughly 4,700 hours of speech drawn from 292,000 YouTube videos (270k train, 22k test) featuring over 150,000 unique human speakers without background music or overlapping speech interference.",
   "homepage_url": "https://looking-to-listen.github.io/avspeech/",
   "publisher": {
     "name": "Google Research",
@@ -26,12 +26,12 @@
     "audio"
   ],
   "license": {
-    "status": "custom_permissive",
-    "name": "AVSpeech Data Access Agreement",
-    "spdx_id": null,
-    "url": "https://looking-to-listen.github.io/avspeech/",
-    "commercial_use": "forbidden",
-    "notes": "Available for academic non-commercial research use."
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset annotations licensed by Google LLC under Creative Commons Attribution 4.0 International (CC BY 4.0)."
   },
   "source_references": [
     {
@@ -39,6 +39,12 @@
       "url": "https://looking-to-listen.github.io/avspeech/",
       "type": "official_website",
       "notes": "Official release site with segment indices and download scripts."
+    },
+    {
+      "title": "AVSpeech Download Documentation",
+      "url": "https://looking-to-listen.github.io/avspeech/download.html",
+      "type": "documentation",
+      "notes": "Official download documentation confirming CC BY 4.0 license and train/test video distributions."
     },
     {
       "title": "Looking to Listen at the Cocktail Party (ACM Transactions on Graphics 2018)",
@@ -50,8 +56,8 @@
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
-    "verified_date": "2026-11-24",
-    "notes": "Verified against SIGGRAPH 2018 paper and Google Research project portal."
+    "verified_date": "2026-11-25",
+    "notes": "Verified against SIGGRAPH 2018 publication and official Google Research download documentation (https://looking-to-listen.github.io/avspeech/download.html). The dataset annotations are officially licensed by Google LLC under CC BY 4.0."
   },
   "size": {
     "amount": 500.0,
@@ -65,7 +71,7 @@
   "sample_count": {
     "total": 2400000,
     "unit": "video-segments",
-    "status": "verified",
+    "status": "estimated",
     "partition_completeness": "complete",
     "partition_overlap": "disjoint",
     "splits": {
@@ -73,6 +79,11 @@
       "test": 300000
     },
     "breakdown": [
+      {
+        "label": "youtube_videos",
+        "value": 292000,
+        "unit": "videos"
+      },
       {
         "label": "audio_duration_hours",
         "value": 4700.0,
@@ -82,6 +93,16 @@
         "label": "unique_speakers",
         "value": 150000,
         "unit": "speakers"
+      },
+      {
+        "label": "train_videos",
+        "value": 270000,
+        "unit": "videos"
+      },
+      {
+        "label": "test_videos",
+        "value": 22000,
+        "unit": "videos"
       }
     ]
   },
