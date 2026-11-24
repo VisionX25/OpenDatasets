@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-glass",
+  "slug": "uci-glass",
+  "name": "Glass Identification Benchmark Dataset",
+  "description": "The Glass Identification dataset contains 214 forensic samples of glass described by refractive index and weight percentages of 8 element oxides (Na, Mg, Al, Si, K, Ca, Ba, Fe). Sourced from the Home Office Forensic Science Service to benchmark multiclass classification across building and vehicle window glass.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/42/glass+identification",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "multi-class-classification",
+    "forensic-analysis"
+  ],
+  "tags": [
+    "glass-identification",
+    "uci",
+    "tabular",
+    "forensics",
+    "classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI Glass Identification Portal",
+      "url": "https://archive.ics.uci.edu/dataset/42/glass+identification",
+      "type": "official_website",
+      "notes": "UCI Repository dataset 42 landing page."
+    },
+    {
+      "title": "Glass Identification Dataset DOI Record",
+      "url": "https://doi.org/10.24432/C5WW2P",
+      "type": "documentation",
+      "notes": "Canonical UCI persistent dataset identifier."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository dataset 42 (DOI: 10.24432/C5WW2P) and German standard forensic reference."
+  },
+  "size": {
+    "amount": 16.0,
+    "unit": "KB",
+    "file_formats": [
+      "csv",
+      "data"
+    ],
+    "status": "verified",
+    "notes": "Comma-separated text table with 9 continuous physical/chemical features and 1 integer label."
+  },
+  "sample_count": {
+    "total": 214,
+    "unit": "instances",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "chemical_attributes",
+        "value": 9,
+        "unit": "features"
+      },
+      {
+        "label": "represented_glass_classes",
+        "value": 6,
+        "unit": "classes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "1987-09-01"
+  },
+  "citation": {
+    "paper_title": "Glass Identification",
+    "paper_url": "https://doi.org/10.24432/C5WW2P",
+    "authors": [
+      "B. German"
+    ],
+    "doi": "10.24432/C5WW2P",
+    "bibtex": "@misc{german1987glass,\n  title = {Glass Identification},\n  author = {German, B.},\n  year = {1987},\n  publisher = {UCI Machine Learning Repository},\n  doi = {10.24432/C5WW2P}\n}"
+  }
+}

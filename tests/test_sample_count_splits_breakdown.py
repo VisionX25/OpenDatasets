@@ -601,7 +601,7 @@ def test_migration_dry_run_immutability(tmp_path: Path) -> None:
 def test_all_catalog_datasets_valid(validator: jsonschema.Draft7Validator) -> None:
     """Test that every dataset in data/datasets/ conforms 100% to schema."""
     dataset_files = sorted(DEFAULT_DATA_DIR.glob("*.json"))
-    assert len(dataset_files) == 800, f"Expected 800 datasets, found {len(dataset_files)}"
+    assert len(dataset_files) == 825, f"Expected 825 datasets, found {len(dataset_files)}"
 
     failures = []
     for f in dataset_files:

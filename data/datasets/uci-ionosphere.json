@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-ionosphere",
+  "slug": "uci-ionosphere",
+  "name": "Ionosphere Radar Return Benchmark Dataset",
+  "description": "The Ionosphere dataset consists of 351 radar return signals collected by a phased array antenna system in Goose Bay, Labrador. Each signal pulse is characterized by 34 continuous numerical attributes describing complex electromagnetic autocorrelation values to classify radar returns as good or bad ionospheric structures.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/52/ionosphere",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / Johns Hopkins University",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "binary-classification",
+    "radar-signal-processing"
+  ],
+  "tags": [
+    "ionosphere",
+    "radar",
+    "uci",
+    "tabular",
+    "classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI Ionosphere Portal",
+      "url": "https://archive.ics.uci.edu/dataset/52/ionosphere",
+      "type": "official_website",
+      "notes": "UCI Repository dataset 52 landing page."
+    },
+    {
+      "title": "Ionosphere Dataset DOI Record",
+      "url": "https://doi.org/10.24432/C5W01B",
+      "type": "documentation",
+      "notes": "Canonical UCI persistent dataset identifier."
+    },
+    {
+      "title": "Classification of Radar Returns from the Ionosphere Using Neural Networks",
+      "url": "https://doi.org/10.1117/12.969941",
+      "type": "original_paper",
+      "notes": "Published in Johns Hopkins APL Technical Digest."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository dataset 52 (DOI: 10.24432/C5W01B) and Sigillito et al. documentation."
+  },
+  "size": {
+    "amount": 76.0,
+    "unit": "KB",
+    "file_formats": [
+      "csv",
+      "data"
+    ],
+    "status": "verified",
+    "notes": "Comma-delimited records containing 34 real-valued autocorrelation values and 1 binary label."
+  },
+  "sample_count": {
+    "total": 351,
+    "unit": "instances",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "radar_attributes",
+        "value": 34,
+        "unit": "features"
+      },
+      {
+        "label": "good_radar_returns",
+        "value": 225,
+        "unit": "instances"
+      },
+      {
+        "label": "bad_radar_returns",
+        "value": 126,
+        "unit": "instances"
+      }
+    ]
+  },
+  "dates": {
+    "published": "1989-01-01"
+  },
+  "citation": {
+    "paper_title": "Ionosphere",
+    "paper_url": "https://doi.org/10.24432/C5W01B",
+    "authors": [
+      "Vincent Sigillito",
+      "Simon Wing",
+      "Larrie Hutton",
+      "K. Baker"
+    ],
+    "doi": "10.24432/C5W01B",
+    "bibtex": "@misc{sigillito1989ionosphere,\n  title = {Ionosphere},\n  author = {Sigillito, Vincent and Wing, Simon and Hutton, Larrie and Baker, K.},\n  year = {1989},\n  publisher = {UCI Machine Learning Repository},\n  doi = {10.24432/C5W01B}\n}"
+  }
+}

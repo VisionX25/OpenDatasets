@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-airfoil-self-noise",
+  "slug": "uci-airfoil-self-noise",
+  "name": "Airfoil Self-Noise Aerodynamic Benchmark Dataset",
+  "description": "The Airfoil Self-Noise dataset consists of 1,503 aerodynamic wind tunnel test measurements conducted by NASA on NACA 0012 airfoil blade sections. Featuring 5 continuous physical predictors (frequency, angle of attack, chord length, free-stream velocity, suction displacement thickness) to predict scaled sound pressure level in decibels.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/291/airfoil+self+noise",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / NASA",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-regression",
+    "aerodynamic-modeling",
+    "engineering-prediction"
+  ],
+  "tags": [
+    "airfoil-self-noise",
+    "nasa",
+    "aerodynamics",
+    "uci",
+    "regression"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI Airfoil Self-Noise Portal",
+      "url": "https://archive.ics.uci.edu/dataset/291/airfoil+self+noise",
+      "type": "official_website",
+      "notes": "UCI Repository dataset 291 landing page."
+    },
+    {
+      "title": "Airfoil Self-Noise Dataset DOI Record",
+      "url": "https://doi.org/10.24432/C5VW2C",
+      "type": "documentation",
+      "notes": "Canonical UCI persistent dataset identifier."
+    },
+    {
+      "title": "Airfoil Self-Noise and Prediction",
+      "url": "https://ntrs.nasa.gov/citations/19890016302",
+      "type": "documentation",
+      "notes": "NASA Reference Publication 1218 (1989)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository dataset 291 (DOI: 10.24432/C5VW2C) and NASA Reference Publication 1218."
+  },
+  "size": {
+    "amount": 60.0,
+    "unit": "KB",
+    "file_formats": [
+      "csv",
+      "dat"
+    ],
+    "status": "verified",
+    "notes": "Whitespace/tab-separated table with 5 input features and 1 continuous sound pressure level target."
+  },
+  "sample_count": {
+    "total": 1503,
+    "unit": "instances",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "aerodynamic_attributes",
+        "value": 5,
+        "unit": "features"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2014-03-04"
+  },
+  "citation": {
+    "paper_title": "Airfoil Self-Noise",
+    "paper_url": "https://doi.org/10.24432/C5VW2C",
+    "authors": [
+      "Thomas Brooks",
+      "D. Stuart Pope",
+      "Michael Marcolini"
+    ],
+    "doi": "10.24432/C5VW2C",
+    "bibtex": "@misc{brooks2014airfoil,\n  title = {Airfoil Self-Noise},\n  author = {Brooks, Thomas and Pope, D. Stuart and Marcolini, Michael},\n  year = {2014},\n  publisher = {UCI Machine Learning Repository},\n  doi = {10.24432/C5VW2C}\n}"
+  }
+}

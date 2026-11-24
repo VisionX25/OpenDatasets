@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wikihop",
+  "slug": "wikihop",
+  "name": "WikiHop: Multi-Hop Reading Comprehension Benchmark",
+  "description": "WikiHop is a multi-hop reading comprehension dataset constructed from Wikipedia articles and Wikidata relations. Requiring models to synthesize information across multiple documents to answer questions, it consists of 51,318 question-answer examples across documented training, development, and test splits.",
+  "homepage_url": "https://qangaroo.cs.ucl.ac.uk",
+  "publisher": {
+    "name": "University College London",
+    "type": "academic",
+    "url": "https://www.ucl.ac.uk"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "reading-comprehension",
+    "question-answering",
+    "multi-hop-reasoning"
+  ],
+  "tags": [
+    "wikihop",
+    "qangaroo",
+    "multi-hop-qa",
+    "reading-comprehension",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+    "spdx_id": "CC-BY-SA-3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset queries and Wikipedia source documents released under CC-BY-SA-3.0."
+  },
+  "source_references": [
+    {
+      "title": "QAngaroo WikiHop Benchmark Portal",
+      "url": "https://qangaroo.cs.ucl.ac.uk",
+      "type": "official_website",
+      "notes": "Official UCL QAngaroo project portal."
+    },
+    {
+      "title": "Constructing Datasets for Multi-hop Reading Comprehension Across Documents",
+      "url": "https://doi.org/10.1162/tacl_a_00008",
+      "type": "original_paper",
+      "notes": "Published in Transactions of the Association for Computational Linguistics (TACL 2018)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against TACL 2018 publication (DOI: 10.1162/tacl_a_00008) and official UCL QAngaroo portal."
+  },
+  "size": {
+    "amount": 160.0,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Uncompressed JSON files containing queries, candidate answers, and Wikipedia document contexts."
+  },
+  "sample_count": {
+    "total": 51318,
+    "unit": "queries",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 43738,
+      "dev": 5129,
+      "test": 2451
+    },
+    "breakdown": [
+      {
+        "label": "wikidata_relation_types",
+        "value": 37,
+        "unit": "relations"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-03-01"
+  },
+  "citation": {
+    "paper_title": "Constructing Datasets for Multi-hop Reading Comprehension Across Documents",
+    "paper_url": "https://doi.org/10.1162/tacl_a_00008",
+    "authors": [
+      "Johannes Welbl",
+      "Pontus Stenetorp",
+      "Sebastian Riedel"
+    ],
+    "doi": "10.1162/tacl_a_00008",
+    "bibtex": "@article{welbl2018constructing,\n  title = {Constructing Datasets for Multi-hop Reading Comprehension Across Documents},\n  author = {Welbl, Johannes and Stenetorp, Pontus and Riedel, Sebastian},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {6},\n  pages = {287--302},\n  year = {2018},\n  doi = {10.1162/tacl_a_00008}\n}"
+  }
+}

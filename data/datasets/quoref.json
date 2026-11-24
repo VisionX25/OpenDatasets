@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quoref",
+  "slug": "quoref",
+  "name": "Quoref: A Reading Comprehension Dataset with Coreferential Reasoning",
+  "description": "Quoref is an extractive reading comprehension benchmark consisting of 24,354 questions over 4,705 Wikipedia paragraphs. Specifically curated so that resolving coreferential ambiguities across character names and pronouns is essential to identify the correct answer span.",
+  "homepage_url": "https://allennlp.org/quoref",
+  "publisher": {
+    "name": "Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "reading-comprehension",
+    "coreference-resolution",
+    "question-answering"
+  ],
+  "tags": [
+    "quoref",
+    "reading-comprehension",
+    "coreference",
+    "nlp",
+    "allenai"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset questions and annotations released under CC-BY-4.0."
+  },
+  "source_references": [
+    {
+      "title": "Quoref Project Page",
+      "url": "https://allennlp.org/quoref",
+      "type": "official_website",
+      "notes": "Official AllenNLP dataset landing page."
+    },
+    {
+      "title": "Quoref: A Reading Comprehension Dataset with Questions Requiring Coreferential Reasoning",
+      "url": "https://doi.org/10.18653/v1/D19-1606",
+      "type": "original_paper",
+      "notes": "Published in EMNLP-IJCNLP 2019 proceedings."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against EMNLP 2019 publication (DOI: 10.18653/v1/D19-1606) and official AllenNLP distribution."
+  },
+  "size": {
+    "amount": 20.0,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "JSON files formatted with context passages, question strings, and character answer spans."
+  },
+  "sample_count": {
+    "total": 24354,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 19399,
+      "dev": 2418,
+      "test": 2537
+    },
+    "breakdown": [
+      {
+        "label": "context_paragraphs",
+        "value": 4705,
+        "unit": "paragraphs"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2019-11-03"
+  },
+  "citation": {
+    "paper_title": "Quoref: A Reading Comprehension Dataset with Questions Requiring Coreferential Reasoning",
+    "paper_url": "https://doi.org/10.18653/v1/D19-1606",
+    "authors": [
+      "Pradeep Dasigi",
+      "Nelson F. Liu",
+      "Ana Marasović",
+      "Noah A. Smith",
+      "Matt Gardner"
+    ],
+    "doi": "10.18653/v1/D19-1606",
+    "bibtex": "@inproceedings{dasigi-etal-2019-quoref,\n  title = {Quoref: A Reading Comprehension Dataset with Questions Requiring Coreferential Reasoning},\n  author = {Dasigi, Pradeep and Liu, Nelson F. and Marasovi{\\'c}, Ana and Smith, Noah A. and Gardner, Matt},\n  booktitle = {Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},\n  pages = {5925--5932},\n  year = {2019},\n  doi = {10.18653/v1/D19-1606}\n}"
+  }
+}

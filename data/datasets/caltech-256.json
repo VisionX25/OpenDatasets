@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "caltech-256",
+  "slug": "caltech-256",
+  "name": "Caltech-256 Object Category Dataset",
+  "description": "Caltech-256 is an image classification and object recognition benchmark comprising 30,607 images across 256 distinct semantic object categories plus a background clutter class. Improving on Caltech-101 with higher visual variation, no left-right orientation bias, and minimum 80 images per class.",
+  "homepage_url": "https://data.caltech.edu/records/nyy15-4j048",
+  "publisher": {
+    "name": "California Institute of Technology",
+    "type": "academic",
+    "url": "https://data.caltech.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-classification",
+    "object-recognition"
+  ],
+  "tags": [
+    "caltech-256",
+    "object-recognition",
+    "image-classification",
+    "computer-vision"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Caltech Research Data License",
+    "spdx_id": null,
+    "url": "https://data.caltech.edu/records/nyy15-4j048",
+    "commercial_use": "allowed",
+    "notes": "Freely available for educational and non-commercial research use; underlying images belong to their respective copyright holders."
+  },
+  "source_references": [
+    {
+      "title": "CaltechDATA Caltech-256 Archive",
+      "url": "https://data.caltech.edu/records/nyy15-4j048",
+      "type": "archive",
+      "notes": "Permanent institutional repository record (DOI: 10.22002/D1.20087)."
+    },
+    {
+      "title": "Caltech-256 Object Category Dataset",
+      "url": "https://authors.library.caltech.edu/7694/",
+      "type": "original_paper",
+      "notes": "California Institute of Technology Technical Report 7694 (2007)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against CaltechDATA repository archive (DOI: 10.22002/D1.20087) and Technical Report 7694."
+  },
+  "size": {
+    "amount": 1.2,
+    "unit": "GB",
+    "file_formats": [
+      "jpg"
+    ],
+    "status": "verified",
+    "notes": "30,607 JPEG images organized in 257 directory folders."
+  },
+  "sample_count": {
+    "total": 30607,
+    "unit": "images",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "object_categories",
+        "value": 256,
+        "unit": "classes"
+      },
+      {
+        "label": "clutter_class",
+        "value": 1,
+        "unit": "classes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2007-03-27"
+  },
+  "citation": {
+    "paper_title": "Caltech-256 Object Category Dataset",
+    "paper_url": "https://authors.library.caltech.edu/7694/",
+    "authors": [
+      "Gregory Griffin",
+      "Alex Holub",
+      "Pietro Perona"
+    ],
+    "doi": "10.22002/D1.20087",
+    "bibtex": "@techreport{griffin2007caltech256,\n  title = {Caltech-256 Object Category Dataset},\n  author = {Griffin, Gregory and Holub, Alex and Perona, Pietro},\n  institution = {California Institute of Technology},\n  number = {7694},\n  year = {2007},\n  doi = {10.22002/D1.20087}\n}"
+  }
+}

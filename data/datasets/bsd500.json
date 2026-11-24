@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bsd500",
+  "slug": "bsd500",
+  "name": "BSD500: The Berkeley Segmentation Dataset and Benchmark",
+  "description": "The Berkeley Segmentation Dataset 500 (BSD500) is a gold-standard computer vision benchmark for natural image boundary detection and segmentation. Consisting of 500 images explicitly partitioned into 200 train, 100 validation, and 200 test images, each annotated with multiple independent human ground truth segmentations.",
+  "homepage_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html",
+  "publisher": {
+    "name": "University of California, Berkeley",
+    "type": "academic",
+    "url": "https://berkeley.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "image-segmentation",
+    "boundary-detection",
+    "contour-detection"
+  ],
+  "tags": [
+    "bsd500",
+    "bsds500",
+    "segmentation",
+    "boundary-detection",
+    "berkeley"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "UC Berkeley Academic Research License",
+    "spdx_id": null,
+    "url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html",
+    "commercial_use": "allowed",
+    "notes": "Available for academic research and educational purposes."
+  },
+  "source_references": [
+    {
+      "title": "UC Berkeley Computer Vision Grouping Resources",
+      "url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html",
+      "type": "official_website",
+      "notes": "Official UC Berkeley dataset distribution portal."
+    },
+    {
+      "title": "Contour Detection and Hierarchical Image Segmentation",
+      "url": "https://doi.org/10.1109/TPAMI.2010.161",
+      "type": "original_paper",
+      "notes": "Published in IEEE TPAMI (Volume 33, Issue 5, 2011)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against IEEE TPAMI 2011 publication (DOI: 10.1109/TPAMI.2010.161) and UC Berkeley EECS distribution."
+  },
+  "size": {
+    "amount": 75.0,
+    "unit": "MB",
+    "file_formats": [
+      "jpg",
+      "mat"
+    ],
+    "status": "verified",
+    "notes": "JPEG photographs with MAT ground-truth human boundary and segment annotations."
+  },
+  "sample_count": {
+    "total": 500,
+    "unit": "images",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 200,
+      "val": 100,
+      "test": 200
+    },
+    "breakdown": [
+      {
+        "label": "human_subjects_per_image",
+        "value": 5,
+        "unit": "annotators"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2011-05-01"
+  },
+  "citation": {
+    "paper_title": "Contour Detection and Hierarchical Image Segmentation",
+    "paper_url": "https://doi.org/10.1109/TPAMI.2010.161",
+    "authors": [
+      "Pablo Arbeláez",
+      "Michael Maire",
+      "Charless Fowlkes",
+      "Jitendra Malik"
+    ],
+    "doi": "10.1109/TPAMI.2010.161",
+    "bibtex": "@article{arbelaez2011contour,\n  title = {Contour Detection and Hierarchical Image Segmentation},\n  author = {Arbel{\\'a}ez, Pablo and Maire, Michael and Fowlkes, Charless and Malik, Jitendra},\n  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  volume = {33},\n  number = {5},\n  pages = {898--916},\n  year = {2011},\n  doi = {10.1109/TPAMI.2010.161}\n}"
+  }
+}

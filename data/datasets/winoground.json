@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "winoground",
+  "slug": "winoground",
+  "name": "Winoground: Probing Visio-Linguistic Compositionality",
+  "description": "Winoground is an adversarial multimodal benchmark of 400 carefully curated image-caption pairs (800 images and 800 captions total) designed to evaluate whether vision-language models can understand compositionality. Given two images and two captions with identical words in different syntactic orders, models must pair each caption with its matching image.",
+  "homepage_url": "https://huggingface.co/datasets/facebook/winoground",
+  "publisher": {
+    "name": "Meta AI / University of North Carolina at Chapel Hill",
+    "type": "industry",
+    "url": "https://ai.meta.com"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "vision-language-compositionality",
+    "image-text-matching",
+    "multimodal-evaluation"
+  ],
+  "tags": [
+    "winoground",
+    "compositionality",
+    "vision-language",
+    "multimodal",
+    "meta-ai"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset annotations released under CC-BY-4.0."
+  },
+  "source_references": [
+    {
+      "title": "Winoground on Hugging Face",
+      "url": "https://huggingface.co/datasets/facebook/winoground",
+      "type": "official_website",
+      "notes": "Official Meta AI dataset release portal."
+    },
+    {
+      "title": "Winoground: Probing Vision and Language Models for Visio-Linguistic Compositionality",
+      "url": "https://doi.org/10.1109/CVPR52688.2022.00516",
+      "type": "original_paper",
+      "notes": "Published in CVPR 2022 proceedings."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against CVPR 2022 publication (DOI: 10.1109/CVPR52688.2022.00516) and official Hugging Face repository."
+  },
+  "size": {
+    "amount": 250.0,
+    "unit": "MB",
+    "file_formats": [
+      "png",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "800 PNG images with paired JSON metadata."
+  },
+  "sample_count": {
+    "total": 400,
+    "unit": "compositional-examples",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "images",
+        "value": 800,
+        "unit": "images"
+      },
+      {
+        "label": "captions",
+        "value": 800,
+        "unit": "captions"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2022-06-19"
+  },
+  "citation": {
+    "paper_title": "Winoground: Probing Vision and Language Models for Visio-Linguistic Compositionality",
+    "paper_url": "https://doi.org/10.1109/CVPR52688.2022.00516",
+    "authors": [
+      "Tristan Thrush",
+      "Ryan Jiang",
+      "Max Bartolo",
+      "Amanpreet Singh",
+      "Adina Williams",
+      "Douwe Kiela",
+      "Candace Ross"
+    ],
+    "doi": "10.1109/CVPR52688.2022.00516",
+    "bibtex": "@inproceedings{thrush2022winoground,\n  title = {{Winoground}: Probing Vision and Language Models for Visio-Linguistic Compositionality},\n  author = {Thrush, Tristan and Jiang, Ryan and Bartolo, Max and Singh, Amanpreet and Williams, Adina and Kiela, Douwe and Ross, Candace},\n  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages = {5238--5248},\n  year = {2022},\n  doi = {10.1109/CVPR52688.2022.00516}\n}"
+  }
+}

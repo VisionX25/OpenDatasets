@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cosmos-qa",
+  "slug": "cosmos-qa",
+  "name": "Cosmos QA: Contextual Commonsense Machine Reading Comprehension",
+  "description": "Cosmos QA is a large-scale dataset of 35,600 multiple-choice questions designed to evaluate machine reading comprehension requiring contextual commonsense reasoning. Focusing on reading between the lines to predict everyday events and consequences across human narrative blogs.",
+  "homepage_url": "https://github.com/wilburOne/cosmosqa",
+  "publisher": {
+    "name": "University of Washington / Allen Institute for AI",
+    "type": "academic",
+    "url": "https://www.cs.washington.edu"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "commonsense-reasoning",
+    "reading-comprehension",
+    "multiple-choice-qa"
+  ],
+  "tags": [
+    "cosmos-qa",
+    "commonsense",
+    "reading-comprehension",
+    "nlp",
+    "allenai"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under CC-BY-4.0."
+  },
+  "source_references": [
+    {
+      "title": "Cosmos QA Official GitHub Repository",
+      "url": "https://github.com/wilburOne/cosmosqa",
+      "type": "repository",
+      "notes": "Official repository with dataset splits and baseline evaluation code."
+    },
+    {
+      "title": "Cosmos QA: Machine Reading Comprehension with Contextual Commonsense Reasoning",
+      "url": "https://doi.org/10.18653/v1/D19-1243",
+      "type": "original_paper",
+      "notes": "Published in EMNLP-IJCNLP 2019 proceedings."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against EMNLP 2019 publication (DOI: 10.18653/v1/D19-1243) and official repository manifests."
+  },
+  "size": {
+    "amount": 28.0,
+    "unit": "MB",
+    "file_formats": [
+      "csv",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "CSV and JSON formatted splits with narrative context, question, 4 answer options, and labels."
+  },
+  "sample_count": {
+    "total": 35600,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 25262,
+      "dev": 2985,
+      "test": 7353
+    },
+    "breakdown": [
+      {
+        "label": "context_passages",
+        "value": 21886,
+        "unit": "passages"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2019-11-03"
+  },
+  "citation": {
+    "paper_title": "Cosmos QA: Machine Reading Comprehension with Contextual Commonsense Reasoning",
+    "paper_url": "https://doi.org/10.18653/v1/D19-1243",
+    "authors": [
+      "Lifu Huang",
+      "Ronan Le Bras",
+      "Chandra Bhagavatula",
+      "Yejin Choi"
+    ],
+    "doi": "10.18653/v1/D19-1243",
+    "bibtex": "@inproceedings{huang-etal-2019-cosmos,\n  title = {{C}osmos {QA}: Machine Reading Comprehension with Contextual Commonsense Reasoning},\n  author = {Huang, Lifu and Le Bras, Ronan and Bhagavatula, Chandra and Choi, Yejin},\n  booktitle = {Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},\n  pages = {2391--2401},\n  year = {2019},\n  doi = {10.18653/v1/D19-1243}\n}"
+  }
+}

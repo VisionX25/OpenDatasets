@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "speech-accent-archive",
+  "slug": "speech-accent-archive",
+  "name": "The Speech Accent Archive",
+  "description": "The Speech Accent Archive is a phonetic research resource established at George Mason University. It contains audio recordings and time-aligned phonetic transcriptions of 2,140 speakers from 177 countries reading the same English elicitation paragraph, enabling systematic study of non-native accents and dialect phonology.",
+  "homepage_url": "https://accent.gmu.edu",
+  "publisher": {
+    "name": "George Mason University",
+    "type": "academic",
+    "url": "https://accent.gmu.edu"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "accent-classification",
+    "phonetic-analysis",
+    "speech-recognition"
+  ],
+  "tags": [
+    "speech-accent",
+    "phonetics",
+    "audio",
+    "linguistics",
+    "george-mason"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Archive recordings made available under CC-BY-NC-SA-4.0 for educational and research use."
+  },
+  "source_references": [
+    {
+      "title": "The Speech Accent Archive Official Portal",
+      "url": "https://accent.gmu.edu",
+      "type": "official_website",
+      "notes": "George Mason University official repository and search interface."
+    },
+    {
+      "title": "The Speech Accent Archive: An Online Resource",
+      "url": "https://accent.gmu.edu/about.php",
+      "type": "documentation",
+      "notes": "Archive history, elicitation paragraph, and phonetic transcription guidelines."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against George Mason University official archive specifications."
+  },
+  "size": {
+    "amount": 5.8,
+    "unit": "GB",
+    "file_formats": [
+      "mp3",
+      "wav",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "Audio speech recordings with demographic speaker metadata and IPA phonetic transcripts."
+  },
+  "sample_count": {
+    "total": 2140,
+    "unit": "speaker-recordings",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "native_languages_represented",
+        "value": 214,
+        "unit": "languages"
+      },
+      {
+        "label": "countries_represented",
+        "value": 177,
+        "unit": "countries"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-01-01"
+  },
+  "citation": {
+    "paper_title": "The Speech Accent Archive",
+    "paper_url": "https://accent.gmu.edu",
+    "authors": [
+      "Steven H. Weinberger"
+    ],
+    "bibtex": "@misc{weinberger2018speech,\n  title = {The Speech Accent Archive},\n  author = {Weinberger, Steven H.},\n  year = {2018},\n  publisher = {George Mason University},\n  url = {https://accent.gmu.edu}\n}"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-sonar",
+  "slug": "uci-sonar",
+  "name": "Connectionist Bench Sonar Benchmark (Mines vs. Rocks)",
+  "description": "The Connectionist Bench (Sonar, Mines vs. Rocks) dataset consists of 208 sonar signal returns gathered by bouncing wideband sonar signals off metal cylinders and rocks at varying aspect angles. Each pattern comprises 60 continuous numerical energy readings in frequency bands to train neural networks to discriminate mines from rocks.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/151/connectionist+bench+sonar+mines+vs+rocks",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / Salk Institute",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "binary-classification",
+    "acoustic-signal-processing"
+  ],
+  "tags": [
+    "sonar",
+    "mines-vs-rocks",
+    "uci",
+    "tabular",
+    "neural-networks"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI Sonar Mines vs Rocks Portal",
+      "url": "https://archive.ics.uci.edu/dataset/151/connectionist+bench+sonar+mines+vs+rocks",
+      "type": "official_website",
+      "notes": "UCI Repository dataset 151 landing page."
+    },
+    {
+      "title": "Sonar Mines vs. Rocks Dataset DOI Record",
+      "url": "https://doi.org/10.24432/C5T01Q",
+      "type": "documentation",
+      "notes": "Canonical UCI persistent dataset identifier."
+    },
+    {
+      "title": "Analysis of Hidden Units in a Layered Network Trained to Classify Sonar Targets",
+      "url": "https://doi.org/10.1016/0893-6080(88)90008-0",
+      "type": "original_paper",
+      "notes": "Published in Neural Networks (Volume 1, Issue 1, 1988)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository dataset 151 (DOI: 10.24432/C5T01Q) and Gorman & Sejnowski publication."
+  },
+  "size": {
+    "amount": 87.0,
+    "unit": "KB",
+    "file_formats": [
+      "csv",
+      "data"
+    ],
+    "status": "verified",
+    "notes": "Comma-separated records with 60 spectral integration energy attributes and 1 binary label."
+  },
+  "sample_count": {
+    "total": 208,
+    "unit": "instances",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "spectral_attributes",
+        "value": 60,
+        "unit": "features"
+      },
+      {
+        "label": "mine_instances",
+        "value": 111,
+        "unit": "instances"
+      },
+      {
+        "label": "rock_instances",
+        "value": 97,
+        "unit": "instances"
+      }
+    ]
+  },
+  "dates": {
+    "published": "1988-06-01"
+  },
+  "citation": {
+    "paper_title": "Connectionist Bench (Sonar, Mines vs. Rocks)",
+    "paper_url": "https://doi.org/10.24432/C5T01Q",
+    "authors": [
+      "Terry Sejnowski",
+      "R. Paul Gorman"
+    ],
+    "doi": "10.24432/C5T01Q",
+    "bibtex": "@misc{sejnowski1988sonar,\n  title = {Connectionist Bench ({Sonar}, Mines vs. Rocks)},\n  author = {Sejnowski, Terry and Gorman, R. Paul},\n  year = {1988},\n  publisher = {UCI Machine Learning Repository},\n  doi = {10.24432/C5T01Q}\n}"
+  }
+}
