@@ -379,24 +379,152 @@ def test_partial_and_overlapping_partition_declarations(minimal_dataset: dict[st
     assert not warns_o
 
 
-def test_breakdown_resolves_partition_mismatch(minimal_dataset: dict[str, Any], validator: jsonschema.Draft7Validator) -> None:
-    """Test that structured breakdown values resolve split arithmetic discrepancies."""
+def test_complete_and_disjoint_valid_partitions(minimal_dataset: dict[str, Any], validator: jsonschema.Draft7Validator) -> None:
+    """Test that complete and disjoint partitions with compatible units and exact sum pass validation."""
     data = copy.deepcopy(minimal_dataset)
     data["sample_count"]["total"] = 1000
+    data["sample_count"]["unit"] = "images"
+    data["sample_count"]["partition_completeness"] = "complete"
+    data["sample_count"]["partition_overlap"] = "disjoint"
+    data["sample_count"]["splits"] = {
+        "train": 800,
+        "val": 100,
+        "test": 100,
+    }
+    errors = validate_dataset_data(data, validator)
+    assert not errors, f"Complete disjoint valid partitions must validate cleanly: {errors}"
+    errs, warns = check_partition_consistency(data)
+    assert not errs
+    assert not warns
+
+
+def test_complete_and_disjoint_mismatched_partitions(minimal_dataset: dict[str, Any], validator: jsonschema.Draft7Validator) -> None:
+    """Test that complete, disjoint partitions with an arithmetic mismatch fail validation with a hard error."""
+    data = copy.deepcopy(minimal_dataset)
+    data["sample_count"]["total"] = 1000
+    data["sample_count"]["unit"] = "images"
     data["sample_count"]["partition_completeness"] = "complete"
     data["sample_count"]["partition_overlap"] = "disjoint"
     data["sample_count"]["splits"] = {
         "train": 700,
-        "test": 100,  # 800
+        "val": 100,
+        "test": 100,  # Sum is 900 != 1000
     }
+    errors = validate_dataset_data(data, validator, filename="test_mismatch.json")
+    assert any("Partition splits sum (900) does not equal declared total (1000)" in err for err in errors)
+    errs, warns = check_partition_consistency(data, filename="test_mismatch.json")
+    assert len(errs) == 1
+    assert "Partition splits sum (900) does not equal declared total (1000)" in errs[0]
+
+
+def test_breakdown_values_do_not_compensate_invalid_total(minimal_dataset: dict[str, Any], validator: jsonschema.Draft7Validator) -> None:
+    """Test that breakdown values accidentally summing to the difference never make an invalid total appear correct."""
+    data = copy.deepcopy(minimal_dataset)
+    data["sample_count"]["total"] = 1000
+    data["sample_count"]["unit"] = "images"
+    data["sample_count"]["partition_completeness"] = "complete"
+    data["sample_count"]["partition_overlap"] = "disjoint"
+    data["sample_count"]["splits"] = {
+        "train": 700,
+        "test": 100,  # Sum is 800 != 1000
+    }
+    # Unrelated breakdown measurement (e.g. 200 km, or 200 secondary items)
     data["breakdown"] = [
-        {"label": "unannotated reference items", "value": 200, "unit": "images"}  # 800 + 200 = 1000
+        {"label": "driving distance", "value": 200, "unit": "km"}  # 800 + 200 == 1000, but unrelated unit
     ]
+    errors = validate_dataset_data(data, validator, filename="test_breakdown_compensation.json")
+    assert any("Partition splits sum (800) does not equal declared total (1000)" in err for err in errors)
+    errs, warns = check_partition_consistency(data, filename="test_breakdown_compensation.json")
+    assert len(errs) == 1
+    assert "Partition splits sum (800) does not equal declared total (1000)" in errs[0]
+
+
+def test_mixed_unit_sample_counts_emit_warnings_not_errors(minimal_dataset: dict[str, Any], validator: jsonschema.Draft7Validator) -> None:
+    """Test that mixed-unit sample counts report warnings or manual-review findings, never strict errors."""
+    data = copy.deepcopy(minimal_dataset)
+    data["sample_count"]["total"] = 1000
+    data["sample_count"]["unit"] = "sequences"
+    data["sample_count"]["partition_completeness"] = "complete"
+    data["sample_count"]["partition_overlap"] = "disjoint"
+    data["sample_count"]["splits"] = {
+        "train_sequences": 500,
+        "total_driving_km": 500,  # Non-partition physical measurement key in splits
+    }
+    errors = validate_dataset_data(data, validator, filename="test_mixed_units.json")
+    assert not errors, f"Mixed-unit counts must emit warnings, never hard errors: {errors}"
+    errs, warns = check_partition_consistency(data, filename="test_mixed_units.json")
+    assert not errs
+    assert len(warns) == 1
+    assert "review required" in warns[0]
+
+
+def test_partial_partitions_validation(minimal_dataset: dict[str, Any], validator: jsonschema.Draft7Validator) -> None:
+    """Test that valid partial partitions pass cleanly, while disjoint partials exceeding total emit warnings."""
+    # 1. Valid partial partition (e.g. unreleased test split where sum < total)
+    data_valid = copy.deepcopy(minimal_dataset)
+    data_valid["sample_count"]["total"] = 1000
+    data_valid["sample_count"]["unit"] = "images"
+    data_valid["sample_count"]["partition_completeness"] = "partial"
+    data_valid["sample_count"]["partition_overlap"] = "disjoint"
+    data_valid["sample_count"]["splits"] = {"train": 700, "val": 100}
+    errors = validate_dataset_data(data_valid, validator)
+    assert not errors
+    errs, warns = check_partition_consistency(data_valid)
+    assert not errs
+    assert not warns
+
+    # 2. Disjoint partial split exceeding total emits warning, not hard error
+    data_excess = copy.deepcopy(minimal_dataset)
+    data_excess["sample_count"]["total"] = 1000
+    data_excess["sample_count"]["unit"] = "images"
+    data_excess["sample_count"]["partition_completeness"] = "partial"
+    data_excess["sample_count"]["partition_overlap"] = "disjoint"
+    data_excess["sample_count"]["splits"] = {"train": 700, "val": 400}  # 1100 > 1000
+    errors_excess = validate_dataset_data(data_excess, validator)
+    assert not errors_excess
+    errs_ex, warns_ex = check_partition_consistency(data_excess)
+    assert not errs_ex
+    assert len(warns_ex) == 1
+    assert "exceeds declared total" in warns_ex[0]
+
+
+def test_overlapping_benchmarks_validation(minimal_dataset: dict[str, Any], validator: jsonschema.Draft7Validator) -> None:
+    """Test that overlapping or multi-task benchmark partitions pass validation without errors or warnings."""
+    data = copy.deepcopy(minimal_dataset)
+    data["sample_count"]["total"] = 500
+    data["sample_count"]["unit"] = "images"
+    data["sample_count"]["partition_completeness"] = "complete"
+    data["sample_count"]["partition_overlap"] = "overlapping"
+    data["sample_count"]["splits"] = {
+        "task1_train": 400,
+        "task1_test": 100,
+        "task2_train": 350,
+        "task2_test": 150,  # Sum = 1000 > 500
+    }
     errors = validate_dataset_data(data, validator)
     assert not errors
     errs, warns = check_partition_consistency(data)
     assert not errs
     assert not warns
+
+
+def test_records_without_explicit_partition_metadata(minimal_dataset: dict[str, Any], validator: jsonschema.Draft7Validator) -> None:
+    """Test that records without explicit partition metadata emit warnings rather than hard errors when sums mismatch."""
+    data = copy.deepcopy(minimal_dataset)
+    data["sample_count"]["total"] = 1000
+    data["sample_count"]["unit"] = "images"
+    # partition_completeness and partition_overlap not declared (unspecified)
+    data["sample_count"]["splits"] = {
+        "train": 700,
+        "val": 100,  # Sum is 800 != 1000
+    }
+    errors = validate_dataset_data(data, validator, filename="test_no_partition_meta.json")
+    assert not errors, f"Unspecified partition metadata must never cause hard errors: {errors}"
+    errs, warns = check_partition_consistency(data, filename="test_no_partition_meta.json")
+    assert not errs
+    assert len(warns) == 1
+    assert "review required" in warns[0]
+
 
 
 def test_migration_failsafe_unrecognized_split_keys() -> None:

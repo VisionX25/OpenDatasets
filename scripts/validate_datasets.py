@@ -41,6 +41,38 @@ from scripts.audit_semantic_duplicates import (
     is_generic_hosting_url,
     extract_discriminating_features,
 )
+from scripts.migrate_sample_count_breakdowns import (
+    KNOWN_SPECIAL_SEMANTIC_REVIEWS,
+    STANDARD_PARTITION_KEYWORDS,
+)
+
+ENTITY_STEMS = (
+    "clip",
+    "label",
+    "image",
+    "frame",
+    "scan",
+    "document",
+    "page",
+    "sentence",
+    "word",
+    "question",
+    "query",
+    "flow",
+    "session",
+    "participant",
+    "patient",
+    "subject",
+    "traversal",
+    "run",
+    "patch",
+    "box",
+    "hour",
+    "km",
+    "class",
+    "species",
+    "sequence",
+)
 
 DEFAULT_SCHEMA_PATH = (
     Path("schemas/dataset.v1.schema.json")
@@ -161,6 +193,59 @@ def validate_dataset_data(
     return errors
 
 
+def check_unit_compatibility(
+    splits: dict[str, Any],
+    sample_unit: str,
+    did: str = "",
+) -> tuple[bool, str]:
+    """Determine whether partition split units are compatible with the declared sample total.
+
+    Returns:
+        (is_compatible, diagnostic_reason)
+    """
+    if did in KNOWN_SPECIAL_SEMANTIC_REVIEWS:
+        return False, KNOWN_SPECIAL_SEMANTIC_REVIEWS[did]
+
+    clean_unit = sample_unit.strip().lower() if sample_unit else ""
+    if not clean_unit:
+        return False, "Sample unit is unspecified in sample_count"
+
+    keys = list(splits.keys())
+    if not keys:
+        return False, "No partition split keys provided"
+
+    # 1. Non-partition keys or class/entity distributions in splits
+    non_partition_keys = [
+        k for k in keys
+        if not any(p in k.lower() for p in STANDARD_PARTITION_KEYWORDS)
+    ]
+    if non_partition_keys:
+        return False, f"Splits contain non-partition or mixed-metric keys: {non_partition_keys[:3]}"
+
+    # 2. Extract entity stems present in split keys
+    split_entities = set()
+    for k in keys:
+        k_low = k.lower()
+        for stem in ENTITY_STEMS:
+            if stem in k_low:
+                split_entities.add(stem)
+
+    total_entities = {stem for stem in ENTITY_STEMS if stem in clean_unit}
+
+    # 3. Detect conflicting unit entities between splits and declared total
+    if split_entities and total_entities and not (split_entities & total_entities):
+        return (
+            False,
+            f"Unit mismatch: splits indicate {sorted(split_entities)} while total unit is '{sample_unit}'",
+        )
+
+    # 4. Detect heterogeneous/mixed entity types across split keys
+    if len(split_entities) > 1:
+        return False, f"Mixed entity types within splits: {sorted(split_entities)}"
+
+    return True, ""
+
+
 def check_partition_consistency(
     data: dict[str, Any],
     filename: str = "<memory>",
@@ -170,13 +255,16 @@ def check_partition_consistency(
     Hard Errors (must fail CI):
         - Partition completeness is explicitly declared as 'complete' (or 'exhaustive')
           AND partition overlap is explicitly declared as 'disjoint' (or 'mutually_exclusive')
-          AND sum(splits.values()) != total (and sum(splits) + sum(breakdown) != total).
-          In this case, the author explicitly certified completeness and mutual exclusivity,
+          AND compatible units are established between partition splits and declared sample total
+          AND sum(splits.values()) != total.
+          In this case, completeness, disjointness, and comparable units are established,
           so an arithmetic mismatch is an unambiguous error.
+          Note: Auxiliary breakdown items represent non-partition or secondary measurements
+          and are never added to partition splits to compensate for a mismatch.
 
     Warnings (for manual review, does not fail CI):
         - Mismatched split sum when completeness or overlap is 'unspecified' or not declared.
-        - Mismatched units (e.g. splits are in clips while total is in labels, as in ava-action).
+        - Mismatched or mixed units (e.g. splits are in clips while total is in labels, as in ava-action).
         - Declared 'partial' partition where sum(splits) exceeds total.
         - Overlapping partitions where individual split exceeds total.
     """
@@ -198,52 +286,60 @@ def check_partition_consistency(
 
     split_sum = sum(split_values)
 
-    # Account for structured breakdowns if present
-    breakdowns = data.get("breakdown") or sc.get("breakdown") or []
-    breakdown_sum = sum(
-        b.get("value", 0)
-        for b in breakdowns
-        if isinstance(b, dict) and isinstance(b.get("value"), (int, float))
-    )
-
     completeness = sc.get("partition_completeness", "unspecified")
     overlap = sc.get("partition_overlap", "unspecified")
     unit = sc.get("unit", "")
     did = data.get("id", filename)
 
-    # Unit mismatch detection (e.g. ava-action: splits in clips vs total in labels)
-    is_unit_mismatch = (
-        any("clip" in k.lower() for k in splits) and unit and "label" in unit.lower()
-    ) or (did == "ava-action")
+    is_compatible, unit_reason = check_unit_compatibility(splits, unit, did=did)
 
     # Hard error enforcement:
-    # Only enforced when completeness and disjointness are explicitly established.
+    # Only enforced when completeness, disjointness, and compatible units are established.
     if completeness in ("complete", "exhaustive") and overlap in ("disjoint", "mutually_exclusive"):
-        if not is_unit_mismatch and split_sum != total and (split_sum + breakdown_sum) != total:
-            errors.append(
-                f"{filename} [sample_count]: Partition splits sum ({split_sum}) does not equal declared total ({total}) "
-                f"despite explicit declaration of complete and disjoint partitions."
+        if is_compatible:
+            if split_sum != total:
+                errors.append(
+                    f"{filename} [sample_count]: Partition splits sum ({split_sum}) does not equal declared total ({total}) "
+                    f"despite explicit declaration of complete and disjoint partitions."
+                )
+                return errors, warnings
+        else:
+            warnings.append(
+                f"{filename} [sample_count]: Declared complete and disjoint partitions have unresolved unit compatibility "
+                f"({unit_reason}) — review required."
             )
             return errors, warnings
 
     # Soft warnings:
     if completeness == "partial":
-        if split_sum > total and (split_sum + breakdown_sum) > total and overlap in ("disjoint", "mutually_exclusive"):
+        if split_sum > total and overlap in ("disjoint", "mutually_exclusive"):
             warnings.append(
                 f"{filename} [sample_count]: Disjoint partial splits sum ({split_sum}) exceeds declared total ({total})."
             )
     elif completeness == "unspecified":
-        if not is_unit_mismatch and split_sum != total and (split_sum + breakdown_sum) != total:
+        u_display = unit or "unspecified"
+        if not is_compatible:
+            if "mismatch" in unit_reason.lower() or did in KNOWN_SPECIAL_SEMANTIC_REVIEWS:
+                warnings.append(
+                    f"{filename} [sample_count]: Apparent unit mismatch between splits and total ({u_display}) — review required."
+                )
+            elif "non-partition" in unit_reason.lower() or "mixed" in unit_reason.lower():
+                warnings.append(
+                    f"{filename} [sample_count]: Heterogeneous or non-partition split keys detected ({unit_reason}) — review required."
+                )
+            elif split_sum != total:
+                warnings.append(
+                    f"{filename} [sample_count]: Partition splits sum ({split_sum}) does not match total ({total}). "
+                    f"Status: unspecified partition completeness/overlap — review required."
+                )
+        elif split_sum != total:
             warnings.append(
                 f"{filename} [sample_count]: Partition splits sum ({split_sum}) does not match total ({total}). "
                 f"Status: unspecified partition completeness/overlap — review required."
             )
-        elif is_unit_mismatch:
-            warnings.append(
-                f"{filename} [sample_count]: Apparent unit mismatch between splits and total ({unit}) — review required."
-            )
 
     return errors, warnings
+
 
 
 def validate_dataset_file(
