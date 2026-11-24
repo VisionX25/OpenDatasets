@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "visdial",
+  "slug": "visdial",
+  "name": "Visual Dialog: Multi-Turn Conversational Visual Question Answering",
+  "description": "Visual Dialog (VisDial v1.0) is a multimodal benchmark for multi-turn visual conversation. In each dialogue, two participants converse about an image from COCO: one acts as the questioner and the other as the answerer, generating 10 multi-turn question-answer exchanges per image across 133,351 dialogues.",
+  "homepage_url": "https://visualdialog.org",
+  "publisher": {
+    "name": "Georgia Institute of Technology",
+    "type": "academic",
+    "url": "https://www.gatech.edu"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-dialog",
+    "conversational-ai",
+    "visual-question-answering"
+  ],
+  "tags": [
+    "visdial",
+    "visual-dialog",
+    "multimodal",
+    "coco",
+    "conversation"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dialog annotations released under CC-BY-4.0."
+  },
+  "source_references": [
+    {
+      "title": "Visual Dialog Official Project Portal",
+      "url": "https://visualdialog.org",
+      "type": "official_website",
+      "notes": "Official Visual Dialog challenge platform and leaderboard."
+    },
+    {
+      "title": "Visual Dialog",
+      "url": "https://doi.org/10.1109/CVPR.2017.13",
+      "type": "original_paper",
+      "notes": "Published in CVPR 2017 proceedings."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against CVPR 2017 publication (DOI: 10.1109/CVPR.2017.13) and Visual Dialog v1.0 specifications."
+  },
+  "size": {
+    "amount": 160.0,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "JSON dialog files containing question-answer rounds, 100 candidate answers per round, and image IDs."
+  },
+  "sample_count": {
+    "total": 133351,
+    "unit": "dialogues",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 123287,
+      "val": 2064,
+      "test": 8000
+    },
+    "breakdown": [
+      {
+        "label": "dialogue_turns",
+        "value": 1333510,
+        "unit": "turns"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2017-07-21"
+  },
+  "citation": {
+    "paper_title": "Visual Dialog",
+    "paper_url": "https://doi.org/10.1109/CVPR.2017.13",
+    "authors": [
+      "Abhishek Das",
+      "Satwik Kottur",
+      "Khushi Gupta",
+      "Avi Singh",
+      "Deshraj Yadav",
+      "José M. F. Moura",
+      "Devi Parikh",
+      "Dhruv Batra"
+    ],
+    "doi": "10.1109/CVPR.2017.13",
+    "bibtex": "@inproceedings{das2017visualdialog,\n  title = {Visual Dialog},\n  author = {Das, Abhishek and Kottur, Satwik and Gupta, Khushi and Singh, Avi and Yadav, Deshraj and Moura, Jos{\\'e} M. F. and Parikh, Devi and Batra, Dhruv},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages = {326--335},\n  year = {2017},\n  doi = {10.1109/CVPR.2017.13}\n}"
+  }
+}

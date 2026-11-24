@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "timit",
+  "slug": "timit",
+  "name": "TIMIT Acoustic-Phonetic Continuous Speech Corpus",
+  "description": "TIMIT is a foundational acoustic-phonetic speech corpus designed for phoneme recognition and acoustic modeling. Comprising 6,300 phonetically rich sentences spoken by 630 speakers from 8 major dialect regions of the United States, complete with time-aligned word and phonetic transcriptions.",
+  "homepage_url": "https://catalog.ldc.upenn.edu/LDC93S1",
+  "publisher": {
+    "name": "Linguistic Data Consortium (LDC) / NIST / TI / MIT",
+    "type": "academic",
+    "url": "https://www.ldc.upenn.edu"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "phoneme-recognition",
+    "speech-recognition",
+    "acoustic-modeling"
+  ],
+  "tags": [
+    "timit",
+    "speech-recognition",
+    "phonetics",
+    "audio",
+    "ldc"
+  ],
+  "license": {
+    "status": "proprietary",
+    "name": "LDC User Agreement for Non-Members",
+    "spdx_id": null,
+    "commercial_use": "forbidden",
+    "url": "https://catalog.ldc.upenn.edu/LDC93S1",
+    "notes": "Distributed by the Linguistic Data Consortium (LDC93S1, ISBN: 1-58563-019-5) under the LDC User Agreement for Non-Members. Access is restricted to LDC members or licensed for non-commercial research."
+  },
+  "source_references": [
+    {
+      "title": "LDC TIMIT Catalog Page",
+      "url": "https://catalog.ldc.upenn.edu/LDC93S1",
+      "type": "official_website",
+      "notes": "Official Linguistic Data Consortium catalog entry LDC93S1."
+    },
+    {
+      "title": "The DARPA TIMIT Acoustic-Phonetic Continuous Speech Corpus",
+      "url": "https://doi.org/10.35111/17gk-bn40",
+      "type": "documentation",
+      "notes": "LDC canonical persistent identifier documentation."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against LDC catalog entry LDC93S1 (DOI: 10.35111/17gk-bn40) and NIST standard documentation."
+  },
+  "size": {
+    "amount": 440.0,
+    "unit": "MB",
+    "file_formats": [
+      "wav",
+      "phn",
+      "wrd",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "16kHz 16-bit NIST sphere format audio files with hand-aligned phonetic (.phn) and word (.wrd) boundaries."
+  },
+  "sample_count": {
+    "total": 6300,
+    "unit": "utterances",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 4620,
+      "test": 1680
+    },
+    "breakdown": [
+      {
+        "label": "speakers",
+        "value": 630,
+        "unit": "speakers"
+      },
+      {
+        "label": "dialect_regions",
+        "value": 8,
+        "unit": "regions"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "1993-10-01"
+  },
+  "citation": {
+    "paper_title": "DARPA TIMIT Acoustic-Phonetic Continuous Speech Corpus",
+    "paper_url": "https://doi.org/10.35111/17gk-bn40",
+    "authors": [
+      "John S. Garofolo",
+      "Lori F. Lamel",
+      "William M. Fisher",
+      "Jonathan G. Fiscus",
+      "David S. Pallett",
+      "Nancy L. Dahlgren"
+    ],
+    "doi": "10.35111/17gk-bn40",
+    "bibtex": "@misc{garofolo1993timit,\n  title = {{DARPA} {TIMIT} Acoustic-Phonetic Continuous Speech Corpus},\n  author = {Garofolo, John S. and Lamel, Lori F. and Fisher, William M. and Fiscus, Jonathan G. and Pallett, David S. and Dahlgren, Nancy L.},\n  year = {1993},\n  publisher = {Linguistic Data Consortium, Philadelphia},\n  doi = {10.35111/17gk-bn40}\n}"
+  }
+}

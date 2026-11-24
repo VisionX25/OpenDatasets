@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fsdd",
+  "slug": "fsdd",
+  "name": "FSDD: Free Spoken Digit Dataset",
+  "description": "Free Spoken Digit Dataset (FSDD) is an open audio benchmark comprising 3,000 recordings of English spoken digits (0 through 9) from 6 speakers (500 recordings per speaker). Styled as an acoustic equivalent of MNIST, it serves as a standard testbed for isolated word recognition and spectrogram-based feature extraction.",
+  "homepage_url": "https://github.com/Jakobovski/free-spoken-digit-dataset",
+  "publisher": {
+    "name": "FSDD Open Source Contributors",
+    "type": "community",
+    "url": "https://github.com/Jakobovski"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-recognition",
+    "audio-classification",
+    "digit-recognition"
+  ],
+  "tags": [
+    "spoken-digits",
+    "fsdd",
+    "audio",
+    "speech-recognition",
+    "mnist"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under CC-BY-SA-4.0 license."
+  },
+  "source_references": [
+    {
+      "title": "Free Spoken Digit Dataset GitHub Repository",
+      "url": "https://github.com/Jakobovski/free-spoken-digit-dataset",
+      "type": "repository",
+      "notes": "Official repository with audio files and recording metadata."
+    },
+    {
+      "title": "FSDD Zenodo Archive",
+      "url": "https://zenodo.org/records/1342401",
+      "type": "archive",
+      "notes": "Archival release on Zenodo."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against official GitHub repository and Zenodo archive (DOI: 10.5281/zenodo.1342401)."
+  },
+  "size": {
+    "amount": 25.0,
+    "unit": "MB",
+    "file_formats": [
+      "wav"
+    ],
+    "status": "verified",
+    "notes": "8kHz 16-bit mono WAV files trimmed to remove leading and trailing silences."
+  },
+  "sample_count": {
+    "total": 3000,
+    "unit": "audio-recordings",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "speakers",
+        "value": 6,
+        "unit": "speakers"
+      },
+      {
+        "label": "digits",
+        "value": 10,
+        "unit": "classes"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-08-09"
+  },
+  "citation": {
+    "paper_title": "Free Spoken Digit Dataset (FSDD)",
+    "paper_url": "https://doi.org/10.5281/zenodo.1342401",
+    "authors": [
+      "Zohar Jackson",
+      "César Souza",
+      "Jason Frank",
+      "Nicolas Roussel",
+      "Brian Rong"
+    ],
+    "doi": "10.5281/zenodo.1342401",
+    "bibtex": "@misc{jackson_fsdd_2018,\n  title = {Free Spoken Digit Dataset ({FSDD})},\n  author = {Jackson, Zohar and Souza, C{\\'e}sar and Frank, Jason and Roussel, Nicolas and Rong, Brian},\n  year = {2018},\n  publisher = {Zenodo},\n  doi = {10.5281/zenodo.1342401}\n}"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-letter-recognition",
+  "slug": "uci-letter-recognition",
+  "name": "Letter Recognition Benchmark Dataset",
+  "description": "The Letter Recognition dataset contains 20,000 character images representing the 26 capital letters of the English alphabet generated from 20 different fonts. Each instance consists of 16 numerical statistical moments and edge attributes, serving as a classic multi-class classification benchmark.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/59/letter+recognition",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "multi-class-classification",
+    "tabular-classification",
+    "character-recognition"
+  ],
+  "tags": [
+    "letter-recognition",
+    "uci",
+    "tabular",
+    "classification",
+    "optical-character-recognition"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI Letter Recognition Portal",
+      "url": "https://archive.ics.uci.edu/dataset/59/letter+recognition",
+      "type": "official_website",
+      "notes": "UCI Machine Learning Repository dataset 59 landing page."
+    },
+    {
+      "title": "Letter Recognition Using Holland-Style Adaptive Classifiers",
+      "url": "https://doi.org/10.1007/BF00114162",
+      "type": "original_paper",
+      "notes": "Published in Machine Learning journal."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against Machine Learning journal publication (DOI: 10.1007/BF00114162) and UCI Repository ID 59."
+  },
+  "size": {
+    "amount": 712.0,
+    "unit": "KB",
+    "file_formats": [
+      "csv",
+      "data"
+    ],
+    "status": "verified",
+    "notes": "Comma-separated tabular attributes with 16 continuous features and 1 character label."
+  },
+  "sample_count": {
+    "total": 20000,
+    "unit": "instances",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 16000,
+      "test": 4000
+    },
+    "breakdown": [
+      {
+        "label": "letter_classes",
+        "value": 26,
+        "unit": "classes"
+      },
+      {
+        "label": "attributes",
+        "value": 16,
+        "unit": "features"
+      }
+    ]
+  },
+  "dates": {
+    "published": "1991-01-01"
+  },
+  "citation": {
+    "paper_title": "Letter Recognition Using Holland-Style Adaptive Classifiers",
+    "paper_url": "https://doi.org/10.1007/BF00114162",
+    "authors": [
+      "P. W. Frey",
+      "D. J. Slate"
+    ],
+    "doi": "10.1007/BF00114162",
+    "bibtex": "@article{frey1991letter,\n  title = {Letter Recognition Using Holland-Style Adaptive Classifiers},\n  author = {Frey, P. W. and Slate, D. J.},\n  journal = {Machine Learning},\n  volume = {6},\n  number = {2},\n  pages = {161--182},\n  year = {1991},\n  doi = {10.1007/BF00114162}\n}"
+  }
+}

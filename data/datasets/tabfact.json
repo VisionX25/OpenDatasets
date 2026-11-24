@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tabfact",
+  "slug": "tabfact",
+  "name": "TabFact: Large-Scale Dataset for Table-based Fact Verification",
+  "description": "TabFact is a large-scale fact verification benchmark over structured data consisting of 117,854 filtered human-annotated natural language statements (118,275 raw collected) grounded on 16,573 Wikipedia tables. Each statement is labeled as either Entailed or Refuted, challenging models with table reasoning, cell lookup, and arithmetic aggregation.",
+  "homepage_url": "https://tabfact.github.io",
+  "publisher": {
+    "name": "University of California, Santa Barbara",
+    "type": "academic",
+    "url": "https://www.ucsb.edu"
+  },
+  "modalities": [
+    "tabular",
+    "nlp"
+  ],
+  "tasks": [
+    "fact-checking",
+    "table-reasoning",
+    "natural-language-inference"
+  ],
+  "tags": [
+    "tabfact",
+    "table-reasoning",
+    "fact-verification",
+    "tabular",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+    "spdx_id": "CC-BY-SA-3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset derived from Wikipedia under CC-BY-SA-3.0."
+  },
+  "source_references": [
+    {
+      "title": "TabFact Official Project Page",
+      "url": "https://tabfact.github.io",
+      "type": "official_website",
+      "notes": "Official TabFact leaderboard and documentation portal."
+    },
+    {
+      "title": "TabFact GitHub Repository",
+      "url": "https://github.com/wenhuchen/Table-Fact-Checking",
+      "type": "repository",
+      "notes": "Data files, evaluation scripts, and baseline implementations."
+    },
+    {
+      "title": "TabFact: A Large-scale Dataset for Table-based Fact Verification",
+      "url": "https://arxiv.org/abs/1909.02164",
+      "type": "original_paper",
+      "notes": "Published in ICLR 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against ICLR 2020 paper (arXiv:1909.02164) and official GitHub repository."
+  },
+  "size": {
+    "amount": 48.0,
+    "unit": "MB",
+    "file_formats": [
+      "json",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "CSV Wikipedia tables with JSON statement-label pairs."
+  },
+  "sample_count": {
+    "total": 117854,
+    "unit": "statements",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 92283,
+      "validation": 12792,
+      "test": 12779
+    },
+    "breakdown": [
+      {
+        "label": "wikipedia_tables",
+        "value": 16573,
+        "unit": "tables"
+      },
+      {
+        "label": "raw_collected_statements",
+        "value": 118275,
+        "unit": "statements"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2020-04-26"
+  },
+  "citation": {
+    "paper_title": "TabFact: A Large-scale Dataset for Table-based Fact Verification",
+    "paper_url": "https://arxiv.org/abs/1909.02164",
+    "authors": [
+      "Wenhu Chen",
+      "Hongmin Wang",
+      "Jianshu Chen",
+      "Yunkai Zhang",
+      "Hong Wang",
+      "Shiyuan Li",
+      "Xiyou Zhou",
+      "William Yang Wang"
+    ],
+    "bibtex": "@inproceedings{chen2020tabfact,\n  title = {{TabFact}: A Large-scale Dataset for Table-based Fact Verification},\n  author = {Chen, Wenhu and Wang, Hongmin and Chen, Jianshu and Zhang, Yunkai and Wang, Hong and Li, Shiyuan and Zhou, Xiyou and Wang, William Yang},\n  booktitle = {International Conference on Learning Representations (ICLR)},\n  year = {2020}\n}"
+  }
+}

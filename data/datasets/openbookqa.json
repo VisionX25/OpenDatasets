@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "openbookqa",
+  "slug": "openbookqa",
+  "name": "OpenBookQA: Question Answering on Open Book Science Exams",
+  "description": "OpenBookQA is a question answering dataset modeled after open book exams for assessing human understanding of a subject. Composed of 5,957 4-choice multiple-choice science questions requiring an open book of 1,326 elementary science facts alongside common knowledge and multi-step reasoning.",
+  "homepage_url": "https://allenai.org/data/open-book-qa",
+  "publisher": {
+    "name": "Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "multiple-choice-qa",
+    "commonsense-reasoning"
+  ],
+  "tags": [
+    "openbookqa",
+    "science-qa",
+    "reasoning",
+    "nlp",
+    "allenai"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Dataset and code released under Apache License 2.0."
+  },
+  "source_references": [
+    {
+      "title": "OpenBookQA Official Dataset Page",
+      "url": "https://allenai.org/data/open-book-qa",
+      "type": "official_website",
+      "notes": "Official Allen Institute landing page."
+    },
+    {
+      "title": "OpenBookQA GitHub Repository",
+      "url": "https://github.com/allenai/open-book-qa",
+      "type": "repository",
+      "notes": "Dataset repository containing question sets, facts, and leaderboards."
+    },
+    {
+      "title": "Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering",
+      "url": "https://doi.org/10.18653/v1/D18-1260",
+      "type": "original_paper",
+      "notes": "Published in EMNLP 2018 proceedings."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against EMNLP 2018 publication (DOI: 10.18653/v1/D18-1260) and official Allen Institute GitHub repository."
+  },
+  "size": {
+    "amount": 1.4,
+    "unit": "MB",
+    "file_formats": [
+      "jsonl",
+      "tsv",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "Question answer options and science fact book in JSONL and TSV formats."
+  },
+  "sample_count": {
+    "total": 5957,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 4957,
+      "validation": 500,
+      "test": 500
+    },
+    "breakdown": [
+      {
+        "label": "open_book_core_facts",
+        "value": 1326,
+        "unit": "facts"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-10-31"
+  },
+  "citation": {
+    "paper_title": "Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering",
+    "paper_url": "https://doi.org/10.18653/v1/D18-1260",
+    "authors": [
+      "Todor Mihaylov",
+      "Peter Clark",
+      "Tushar Khot",
+      "Ashish Sabharwal"
+    ],
+    "doi": "10.18653/v1/D18-1260",
+    "bibtex": "@inproceedings{mihaylov-etal-2018-suit,\n  title = {Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering},\n  author = {Mihaylov, Todor and Clark, Peter and Khot, Tushar and Sabharwal, Ashish},\n  booktitle = {Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing},\n  year = {2018},\n  pages = {2381--2391},\n  doi = {10.18653/v1/D18-1260}\n}"
+  }
+}

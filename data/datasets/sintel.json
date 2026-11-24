@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "sintel",
+  "slug": "sintel",
+  "name": "MPI Sintel Optical Flow Benchmark",
+  "description": "MPI Sintel is an optical flow evaluation benchmark derived from the open-source 3D animated short film Sintel. Providing dense ground-truth optical flow, camera motion, and depth under realistic rendering conditions including specular reflections, motion blur, and non-rigid physical deformations.",
+  "homepage_url": "http://sintel.is.tue.mpg.de",
+  "publisher": {
+    "name": "Max Planck Institute for Intelligent Systems",
+    "type": "academic",
+    "url": "https://is.mpg.de"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "optical-flow-estimation",
+    "motion-estimation",
+    "depth-estimation"
+  ],
+  "tags": [
+    "optical-flow",
+    "computer-vision",
+    "sintel",
+    "motion-estimation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 3.0 Unported",
+    "spdx_id": "CC-BY-3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset derived from Blender Foundation open movie Sintel, released under CC-BY-3.0."
+  },
+  "source_references": [
+    {
+      "title": "MPI Sintel Official Benchmark Portal",
+      "url": "http://sintel.is.tue.mpg.de",
+      "type": "official_website",
+      "notes": "MPI Sintel evaluation benchmark and server."
+    },
+    {
+      "title": "A Naturalistic Open Source Movie for Optical Flow Evaluation",
+      "url": "https://doi.org/10.1007/978-3-642-33783-3_31",
+      "type": "original_paper",
+      "notes": "Published in ECCV 2012 proceedings."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against ECCV 2012 publication (DOI: 10.1007/978-3-642-33783-3_31) and MPI Sintel benchmark specifications."
+  },
+  "size": {
+    "amount": 5.2,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "flo"
+    ],
+    "status": "verified",
+    "notes": "PNG frames with Middlebury .flo flow field format files."
+  },
+  "sample_count": {
+    "total": 1593,
+    "unit": "optical-flow-pairs",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "training": 1041,
+      "test": 552
+    },
+    "breakdown": [
+      {
+        "label": "training_sequences",
+        "value": 23,
+        "unit": "sequences"
+      },
+      {
+        "label": "test_sequences",
+        "value": 12,
+        "unit": "sequences"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2012-10-07"
+  },
+  "citation": {
+    "paper_title": "A Naturalistic Open Source Movie for Optical Flow Evaluation",
+    "paper_url": "https://doi.org/10.1007/978-3-642-33783-3_31",
+    "authors": [
+      "Daniel J. Butler",
+      "Jonas Wulff",
+      "Garrett B. Stanley",
+      "Michael J. Black"
+    ],
+    "doi": "10.1007/978-3-642-33783-3_31",
+    "bibtex": "@inproceedings{butler2012sintel,\n  title = {A Naturalistic Open Source Movie for Optical Flow Evaluation},\n  author = {Butler, Daniel J. and Wulff, Jonas and Stanley, Garrett B. and Black, Michael J.},\n  booktitle = {European Conference on Computer Vision (ECCV)},\n  pages = {611--625},\n  year = {2012},\n  doi = {10.1007/978-3-642-33783-3_31}\n}"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-magic-gamma-telescope",
+  "slug": "uci-magic-gamma-telescope",
+  "name": "MAGIC Gamma Telescope Cherenkov Event Benchmark",
+  "description": "The MAGIC Gamma Telescope dataset simulates the registration of high-energy gamma rays and background hadronic showers in ground-based atmospheric Cherenkov telescopes. Comprising 19,020 Monte Carlo simulated events (12,332 gamma rays and 6,688 hadronic background events) described by 10 continuous Hillas ellipse parameters.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/159/magic+gamma+telescope",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / MAGIC Collaboration",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "binary-classification",
+    "tabular-classification",
+    "particle-identification"
+  ],
+  "tags": [
+    "magic-telescope",
+    "cherenkov",
+    "gamma-ray",
+    "astronomy",
+    "uci"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI MAGIC Gamma Telescope Portal",
+      "url": "https://archive.ics.uci.edu/dataset/159/magic+gamma+telescope",
+      "type": "official_website",
+      "notes": "UCI Machine Learning Repository dataset 159 landing page."
+    },
+    {
+      "title": "A Study of the Use of Support Vector Machines in Gamma-Hadron Separation",
+      "url": "https://doi.org/10.24432/C52C8B",
+      "type": "original_paper",
+      "notes": "Published analysis and dataset documentation."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository dataset 159 (DOI: 10.24432/C52C8B) and MAGIC collaboration documentation."
+  },
+  "size": {
+    "amount": 1.5,
+    "unit": "MB",
+    "file_formats": [
+      "csv",
+      "data"
+    ],
+    "status": "verified",
+    "notes": "Comma-delimited text records with 10 continuous Hillas parameters and class label."
+  },
+  "sample_count": {
+    "total": 19020,
+    "unit": "instances",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "gamma_events",
+        "value": 12332,
+        "unit": "events"
+      },
+      {
+        "label": "hadron_events",
+        "value": 6688,
+        "unit": "events"
+      },
+      {
+        "label": "hillas_parameters",
+        "value": 10,
+        "unit": "features"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2007-05-01"
+  },
+  "citation": {
+    "paper_title": "MAGIC Gamma Telescope Dataset",
+    "paper_url": "https://doi.org/10.24432/C52C8B",
+    "authors": [
+      "R. K. Bock",
+      "A. Chilingarian",
+      "M. Gaug",
+      "F. Hakl",
+      "Th. Hengstebeck",
+      "M. Jiřina",
+      "J. Klaschka",
+      "E. Kotrč",
+      "P. Savický",
+      "S. Towers",
+      "A. Vaiciulis",
+      "W. Wittek"
+    ],
+    "doi": "10.24432/C52C8B",
+    "bibtex": "@misc{bock2007magic,\n  title = {{MAGIC} Gamma Telescope},\n  author = {Bock, R. K. and Chilingarian, A. and Gaug, M. and Hakl, F. and Hengstebeck, Th. and Ji{\\v{r}}ina, M. and Klaschka, J. and Kotr{\\v{c}}, E. and Savick{\\'y}, P. and Towers, S. and Vaiciulis, A. and Wittek, W.},\n  year = {2007},\n  publisher = {UCI Machine Learning Repository},\n  doi = {10.24432/C52C8B}\n}"
+  }
+}

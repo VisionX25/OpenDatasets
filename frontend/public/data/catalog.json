@@ -9641,6 +9641,114 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "birdvox-full-night",
+    "slug": "birdvox-full-night",
+    "name": "BirdVox-full-night: Bird Flight Call Audio Detection Benchmark",
+    "description": "BirdVox-full-night contains 6 full-night audio recordings (over 62 continuous hours) of nocturnal avian flight calls captured by autonomous bioacoustic monitoring sensors in upstate New York during the autumn 2015 bird migration season, annotated with exact avian flight call timestamp stamps.",
+    "homepage_url": "https://wp.nyu.edu/birdvox",
+    "publisher": {
+      "name": "New York University / Cornell Lab of Ornithology",
+      "type": "academic",
+      "url": "https://wp.nyu.edu/birdvox"
+    },
+    "modalities": [
+      "audio",
+      "sensor"
+    ],
+    "tasks": [
+      "sound-event-detection",
+      "bioacoustic-monitoring",
+      "audio-classification"
+    ],
+    "tags": [
+      "bioacoustics",
+      "bird-calls",
+      "audio-detection",
+      "sensor",
+      "nyu"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset released on Zenodo under CC-BY-4.0."
+    },
+    "source_references": [
+      {
+        "title": "BirdVox Project Portal",
+        "url": "https://wp.nyu.edu/birdvox",
+        "type": "official_website",
+        "notes": "New York University BirdVox project homepage."
+      },
+      {
+        "title": "BirdVox-full-night Dataset on Zenodo",
+        "url": "https://zenodo.org/records/1205561",
+        "type": "archive",
+        "notes": "Zenodo archival data repository release."
+      },
+      {
+        "title": "Acoustic Detection of Flight Calls for Bird Migration Monitoring Using Deep Learning",
+        "url": "https://doi.org/10.1109/ICASSP.2018.8461323",
+        "type": "original_paper",
+        "notes": "Published in IEEE ICASSP 2018 proceedings."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against ICASSP 2018 publication (DOI: 10.1109/ICASSP.2018.8461323) and Zenodo record (DOI: 10.5281/zenodo.1205561)."
+    },
+    "size": {
+      "amount": 33.6,
+      "unit": "GB",
+      "file_formats": [
+        "wav",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "Six multi-gigabyte continuous uncompressed 44.1kHz FLAC/WAV audio files and CSV call annotations."
+    },
+    "sample_count": {
+      "total": 6,
+      "unit": "audio-recordings",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "total_duration",
+          "value": 62,
+          "unit": "hours"
+        },
+        {
+          "label": "sensor_stations",
+          "value": 4,
+          "unit": "stations"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2018-04-15"
+    },
+    "citation": {
+      "paper_title": "Acoustic Detection of Flight Calls for Bird Migration Monitoring Using Deep Learning",
+      "paper_url": "https://doi.org/10.1109/ICASSP.2018.8461323",
+      "authors": [
+        "Vincent Lostanlen",
+        "Justin Salamon",
+        "Andrew Farnsworth",
+        "Steve Kelling",
+        "Juan Pablo Bello"
+      ],
+      "doi": "10.1109/ICASSP.2018.8461323",
+      "bibtex": "@inproceedings{lostanlen2018birdvox,\n  title = {Acoustic Detection of Flight Calls for Bird Migration Monitoring Using Deep Learning},\n  author = {Lostanlen, Vincent and Salamon, Justin and Farnsworth, Andrew and Kelling, Steve and Bello, Juan Pablo},\n  booktitle = {IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages = {296--300},\n  year = {2018},\n  doi = {10.1109/ICASSP.2018.8461323}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "bluck",
     "slug": "bluck",
     "name": "BLUCK: A Benchmark Dataset for Bengali Linguistic Understanding and Cultural Knowledge",
@@ -13393,6 +13501,117 @@
         "WSJ0 Corpus Prompts",
         "Live In-Situ Audio Captures"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "chime-6",
+    "slug": "chime-6",
+    "name": "CHiME-6 Corpus: Dinner Party Conversational Speech Recognition Benchmark",
+    "description": "CHiME-6 is a conversational speech recognition benchmark dataset recorded during unconstrained dinner party gatherings in real homes. Capturing 20 multi-speaker sessions totaling 50 hours of audio using binaural microphones worn by participants and multiple four-channel array microphones placed around kitchen and dining areas.",
+    "homepage_url": "https://chimechallenge.github.io/chime6",
+    "publisher": {
+      "name": "CHiME Challenge Consortium / University of Sheffield",
+      "type": "academic",
+      "url": "https://chimechallenge.github.io"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-recognition",
+      "speaker-diarization",
+      "speech-separation"
+    ],
+    "tags": [
+      "chime-6",
+      "conversational-speech",
+      "asr",
+      "multi-channel-audio",
+      "dinner-party"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "CHiME-6 Data License Agreement",
+      "spdx_id": null,
+      "url": "https://chimechallenge.github.io/chime6/",
+      "commercial_use": "forbidden",
+      "notes": "Released for non-commercial research and evaluation purposes subject to the CHiME-6 license agreement."
+    },
+    "source_references": [
+      {
+        "title": "CHiME-6 Challenge Official Portal",
+        "url": "https://chimechallenge.github.io/chime6",
+        "type": "official_website",
+        "notes": "Official portal with task details, data structure, and evaluation recipes."
+      },
+      {
+        "title": "The CHiME-6 Challenge: Tackling Multispeaker Speech Recognition for Unsegmented Recordings",
+        "url": "https://arxiv.org/abs/2004.09249",
+        "type": "original_paper",
+        "notes": "Benchmark overview paper for the CHiME-6 challenge."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against arXiv:2004.09249 and official CHiME Challenge portal."
+    },
+    "size": {
+      "amount": 80.0,
+      "unit": "GB",
+      "file_formats": [
+        "wav",
+        "json"
+      ],
+      "status": "verified",
+      "notes": "Synchronized multi-channel 16kHz WAV audio recordings with JSON transcriptions and time annotations."
+    },
+    "sample_count": {
+      "total": 20,
+      "unit": "recording-sessions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 16,
+        "dev": 2,
+        "eval": 2
+      },
+      "breakdown": [
+        {
+          "label": "total_duration",
+          "value": 50,
+          "unit": "hours"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2020-04-20"
+    },
+    "citation": {
+      "paper_title": "The CHiME-6 Challenge: Tackling Multispeaker Speech Recognition for Unsegmented Recordings in Everyday Dinner Parties",
+      "paper_url": "https://arxiv.org/abs/2004.09249",
+      "authors": [
+        "Shinji Watanabe",
+        "Michael Mandel",
+        "Jon Barker",
+        "Emmanuel Vincent",
+        "Ashutosh Arora",
+        "Xuankai Chang",
+        "Sanjeev Khudanpur",
+        "Vimal Manohar",
+        "Daniel Povey",
+        "Desh Raj",
+        "David Snyder",
+        "Alexander S. Szoke",
+        "Jan Cernocky"
+      ],
+      "bibtex": "@article{watanabe2020chime6,\n  title = {The {CHiME-6} Challenge: Tackling Multispeaker Speech Recognition for Unsegmented Recordings in Everyday Dinner Parties},\n  author = {Watanabe, Shinji and Mandel, Michael and Barker, Jon and Vincent, Emmanuel and Arora, Ashutosh and Chang, Xuankai and Khudanpur, Sanjeev and Manohar, Vimal and Povey, Daniel and Raj, Desh and Snyder, David and Szoke, Alexander S. and Cernocky, Jan},\n  journal = {arXiv preprint arXiv:2004.09249},\n  year = {2020}\n}"
     }
   },
   {
@@ -17329,6 +17548,110 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "daps",
+    "slug": "daps",
+    "name": "DAPS: Device and Produced Speech Dataset",
+    "description": "The Device and Produced Speech (DAPS) dataset contains speech recorded from 20 speakers (10 male, 10 female) reading excerpts in a professional recording studio, simultaneous with recordings on consumer devices (smartphones, tablets) in realistic acoustic environments (clean, room noise, office, cafeteria).",
+    "homepage_url": "https://archive.org/details/daps_dataset",
+    "publisher": {
+      "name": "Stanford University / Center for Computer Research in Music and Acoustics (CCRMA)",
+      "type": "academic",
+      "url": "https://ccrma.stanford.edu"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-enhancement",
+      "audio-quality-assessment",
+      "speech-recognition"
+    ],
+    "tags": [
+      "speech-enhancement",
+      "audio",
+      "acoustics",
+      "microphones",
+      "stanford"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset released under CC-BY-4.0 license."
+    },
+    "source_references": [
+      {
+        "title": "DAPS Dataset on Internet Archive",
+        "url": "https://archive.org/details/daps_dataset",
+        "type": "archive",
+        "notes": "Permanent archival mirror of the DAPS recordings."
+      },
+      {
+        "title": "Modeling and Enhancing Speech with Reverb and Environmental Noise",
+        "url": "https://doi.org/10.1109/TASLP.2014.2307275",
+        "type": "original_paper",
+        "notes": "Published in IEEE/ACM Transactions on Audio, Speech, and Language Processing."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against IEEE TASLP 2014 publication (DOI: 10.1109/TASLP.2014.2307275) and Stanford CCRMA distribution."
+    },
+    "size": {
+      "amount": 13.5,
+      "unit": "GB",
+      "file_formats": [
+        "wav"
+      ],
+      "status": "verified",
+      "notes": "44.1kHz 16-bit uncompressed WAV recordings across clean and noisy device settings."
+    },
+    "sample_count": {
+      "total": 20,
+      "unit": "speakers",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "recording_devices",
+          "value": 10,
+          "unit": "devices"
+        },
+        {
+          "label": "male_speakers",
+          "value": 10,
+          "unit": "speakers"
+        },
+        {
+          "label": "female_speakers",
+          "value": 10,
+          "unit": "speakers"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2014-04-01"
+    },
+    "citation": {
+      "paper_title": "Modeling and Enhancing Speech With Reverb and Environmental Noise Using Deep Neural Networks",
+      "paper_url": "https://doi.org/10.1109/TASLP.2014.2307275",
+      "authors": [
+        "Gautham J. Mysore"
+      ],
+      "doi": "10.1109/TASLP.2014.2307275",
+      "bibtex": "@article{mysore2014daps,\n  title = {Modeling and Enhancing Speech With Reverb and Environmental Noise Using Deep Neural Networks},\n  author = {Mysore, Gautham J.},\n  journal = {IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  volume = {23},\n  number = {4},\n  pages = {734--743},\n  year = {2014},\n  doi = {10.1109/TASLP.2014.2307275}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "dart-tof-ms-spectral-fingerprint-rubroshorea",
     "slug": "dart-tof-ms-spectral-fingerprint-rubroshorea",
     "name": "DART–TOF MS Spectral Fingerprint Dataset of Rubroshorea leprosula with a Data Preparation and Processing Toolkit for Chemometric Analysis",
@@ -20099,6 +20422,111 @@
         "unit": "documents"
       }
     ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "dvqa",
+    "slug": "dvqa",
+    "name": "DVQA: Understanding Data Visualizations via Question Answering",
+    "description": "DVQA is a large-scale visual question answering benchmark focused on understanding bar charts. Comprising 3,487,144 questions paired with 300,000 synthetic bar chart images, designed to test algorithms on data extraction, arithmetic reasoning, and visual perception tasks on charts.",
+    "homepage_url": "https://github.com/kushalkafle/DVQA_dataset",
+    "publisher": {
+      "name": "Rochester Institute of Technology",
+      "type": "academic",
+      "url": "https://www.rit.edu"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "chart-understanding",
+      "data-extraction"
+    ],
+    "tags": [
+      "dvqa",
+      "vqa",
+      "charts",
+      "multimodal",
+      "document-ai"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset released under CC-BY-4.0."
+    },
+    "source_references": [
+      {
+        "title": "DVQA GitHub Repository",
+        "url": "https://github.com/kushalkafle/DVQA_dataset",
+        "type": "repository",
+        "notes": "Official dataset and code repository."
+      },
+      {
+        "title": "DVQA: Understanding Data Visualizations via Question Answering",
+        "url": "https://doi.org/10.1109/CVPR.2018.00735",
+        "type": "original_paper",
+        "notes": "Published in CVPR 2018 proceedings."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against CVPR 2018 proceedings (DOI: 10.1109/CVPR.2018.00735) and official GitHub repository."
+    },
+    "size": {
+      "amount": 8.5,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "json"
+      ],
+      "status": "verified",
+      "notes": "300,000 PNG chart images with JSON question, answer, and table ground truth annotations."
+    },
+    "sample_count": {
+      "total": 3487144,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 2325310,
+        "val_easy": 580416,
+        "val_hard": 581418
+      },
+      "breakdown": [
+        {
+          "label": "chart_images",
+          "value": 300000,
+          "unit": "images"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-06-18"
+    },
+    "citation": {
+      "paper_title": "DVQA: Understanding Data Visualizations via Question Answering",
+      "paper_url": "https://doi.org/10.1109/CVPR.2018.00735",
+      "authors": [
+        "Kushal Kafle",
+        "Brian Price",
+        "Scott Cohen",
+        "Christopher Kanan"
+      ],
+      "doi": "10.1109/CVPR.2018.00735",
+      "bibtex": "@inproceedings{kafle2018dvqa,\n  title = {{DVQA}: Understanding Data Visualizations via Question Answering},\n  author = {Kafle, Kushal and Price, Brian and Cohen, Scott and Kanan, Christopher},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages = {7036--7045},\n  year = {2018},\n  doi = {10.1109/CVPR.2018.00735}\n}"
+    }
   },
   {
     "schema_version": "1.0.0",
@@ -23071,6 +23499,109 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "fever",
+    "slug": "fever",
+    "name": "FEVER: Fact Extraction and VERification",
+    "description": "FEVER (Fact Extraction and VERification) is a benchmark dataset for automated fact checking and verification. Comprising 185,445 claims generated by altering sentences extracted from Wikipedia and subsequently verified by human annotators into Supports, Refutes, or NotEnoughInfo, along with evidence sentence annotations.",
+    "homepage_url": "https://fever.ai",
+    "publisher": {
+      "name": "University of Cambridge",
+      "type": "academic",
+      "url": "https://www.cam.ac.uk"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "fact-checking",
+      "claim-verification",
+      "information-retrieval"
+    ],
+    "tags": [
+      "fact-checking",
+      "verification",
+      "nlp",
+      "fever",
+      "wikipedia"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "spdx_id": "CC-BY-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "commercial_use": "allowed",
+      "notes": "Text derived from Wikipedia under CC-BY-SA-3.0 license."
+    },
+    "source_references": [
+      {
+        "title": "FEVER Benchmark Portal",
+        "url": "https://fever.ai",
+        "type": "official_website",
+        "notes": "Official FEVER workshop and challenge website."
+      },
+      {
+        "title": "FEVER: a Large-scale Dataset for Fact Extraction and VERification",
+        "url": "https://doi.org/10.18653/v1/N18-1074",
+        "type": "original_paper",
+        "notes": "Published in NAACL-HLT 2018 proceedings."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against NAACL 2018 publication (DOI: 10.18653/v1/N18-1074) and official FEVER challenge website."
+    },
+    "size": {
+      "amount": 1.8,
+      "unit": "GB",
+      "file_formats": [
+        "jsonl"
+      ],
+      "status": "verified",
+      "notes": "Includes claim JSONL files and pre-processed Wikipedia evidence dump."
+    },
+    "sample_count": {
+      "total": 185445,
+      "unit": "claims",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 145449,
+        "development": 9999,
+        "test": 9999,
+        "shared_task_test": 19998
+      },
+      "breakdown": [
+        {
+          "label": "wikipedia_pages",
+          "value": 5416537,
+          "unit": "pages"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-06-01"
+    },
+    "citation": {
+      "paper_title": "FEVER: a Large-scale Dataset for Fact Extraction and VERification",
+      "paper_url": "https://doi.org/10.18653/v1/N18-1074",
+      "authors": [
+        "James Thorne",
+        "Andreas Vlachos",
+        "Christos Christodoulopoulos",
+        "Arpit Mittal"
+      ],
+      "doi": "10.18653/v1/N18-1074",
+      "bibtex": "@inproceedings{thorne-etal-2018-fever,\n  title = {{FEVER}: a Large-scale Dataset for Fact Extraction and {VER}ification},\n  author = {Thorne, James and Vlachos, Andreas and Christodoulopoulos, Christos and Mittal, Arpit},\n  booktitle = {Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},\n  year = {2018},\n  pages = {809--819},\n  doi = {10.18653/v1/N18-1074}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "fgvc-aircraft",
     "slug": "fgvc-aircraft",
     "name": "FGVC Aircraft",
@@ -23838,6 +24369,110 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "flyingthings3d",
+    "slug": "flyingthings3d",
+    "name": "FlyingThings3D: Synthetic Dataset for Optical Flow and Disparity",
+    "description": "FlyingThings3D is a synthetic benchmark dataset composed of everyday 3D objects moving along randomized 3D trajectories. Part of the Scene Flow dataset suite, it delivers 25,650 stereo frame pairs with dense, ground-truth optical flow, disparity, disparity change, and object segmentation masks.",
+    "homepage_url": "https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html",
+    "publisher": {
+      "name": "University of Freiburg",
+      "type": "academic",
+      "url": "https://uni-freiburg.de"
+    },
+    "modalities": [
+      "vision",
+      "3d"
+    ],
+    "tasks": [
+      "optical-flow-estimation",
+      "stereo-matching",
+      "scene-flow-estimation"
+    ],
+    "tags": [
+      "scene-flow",
+      "optical-flow",
+      "stereo-matching",
+      "disparity",
+      "computer-vision"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Dataset provided for non-commercial research purposes under CC-BY-NC-4.0."
+    },
+    "source_references": [
+      {
+        "title": "Scene Flow Datasets Portal",
+        "url": "https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html",
+        "type": "official_website",
+        "notes": "Freiburg Pattern Recognition and Image Processing dataset distribution page."
+      },
+      {
+        "title": "A Large Dataset to Train Convolutional Networks for Disparity, Optical Flow, and Scene Flow Estimation",
+        "url": "https://doi.org/10.1109/CVPR.2016.438",
+        "type": "original_paper",
+        "notes": "Published in CVPR 2016 proceedings."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against CVPR 2016 proceedings (DOI: 10.1109/CVPR.2016.438) and University of Freiburg repository."
+    },
+    "size": {
+      "amount": 550.0,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "pfm",
+        "flo"
+      ],
+      "status": "verified",
+      "notes": "RGB stereo frames with ground truth disparity and optical flow maps."
+    },
+    "sample_count": {
+      "total": 25650,
+      "unit": "stereo-frame-pairs",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 21818,
+        "test": 3832
+      },
+      "breakdown": [
+        {
+          "label": "subsets",
+          "value": 3,
+          "unit": "subsets"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2016-06-27"
+    },
+    "citation": {
+      "paper_title": "A Large Dataset to Train Convolutional Networks for Disparity, Optical Flow, and Scene Flow Estimation",
+      "paper_url": "https://doi.org/10.1109/CVPR.2016.438",
+      "authors": [
+        "Nikolaus Mayer",
+        "Eddy Ilg",
+        "Philip Häusser",
+        "Philipp Fischer",
+        "Daniel Cremers",
+        "Alexey Dosovitskiy",
+        "Thomas Brox"
+      ],
+      "doi": "10.1109/CVPR.2016.438",
+      "bibtex": "@inproceedings{mayer2016sceneflow,\n  title = {A Large Dataset to Train Convolutional Networks for Disparity, Optical Flow, and Scene Flow Estimation},\n  author = {Mayer, Nikolaus and Ilg, Eddy and H{\\\"a}usser, Philip and Fischer, Philipp and Cremers, Daniel and Dosovitskiy, Alexey and Brox, Thomas},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages = {4040--4048},\n  year = {2016},\n  doi = {10.1109/CVPR.2016.438}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "fma",
     "slug": "fma",
     "name": "FMA: A Dataset for Music Analysis",
@@ -24345,6 +24980,109 @@
       ],
       "doi": "10.1109/TASLP.2021.3133208",
       "bibtex": "@article{fonseca2022fsd50k,\n  title = {FSD50K: An Open Dataset of Human-Labeled Sound Events},\n  author = {Fonseca, Eduardo and Favory, Xavier and Pons, Jordi and Font, Frederic and Serra, Xavier},\n  journal = {IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  volume = {30},\n  pages = {829--852},\n  year = {2022}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "fsdd",
+    "slug": "fsdd",
+    "name": "FSDD: Free Spoken Digit Dataset",
+    "description": "Free Spoken Digit Dataset (FSDD) is an open audio benchmark comprising 3,000 recordings of English spoken digits (0 through 9) from 6 speakers (500 recordings per speaker). Styled as an acoustic equivalent of MNIST, it serves as a standard testbed for isolated word recognition and spectrogram-based feature extraction.",
+    "homepage_url": "https://github.com/Jakobovski/free-spoken-digit-dataset",
+    "publisher": {
+      "name": "FSDD Open Source Contributors",
+      "type": "community",
+      "url": "https://github.com/Jakobovski"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-recognition",
+      "audio-classification",
+      "digit-recognition"
+    ],
+    "tags": [
+      "spoken-digits",
+      "fsdd",
+      "audio",
+      "speech-recognition",
+      "mnist"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset released under CC-BY-SA-4.0 license."
+    },
+    "source_references": [
+      {
+        "title": "Free Spoken Digit Dataset GitHub Repository",
+        "url": "https://github.com/Jakobovski/free-spoken-digit-dataset",
+        "type": "repository",
+        "notes": "Official repository with audio files and recording metadata."
+      },
+      {
+        "title": "FSDD Zenodo Archive",
+        "url": "https://zenodo.org/records/1342401",
+        "type": "archive",
+        "notes": "Archival release on Zenodo."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against official GitHub repository and Zenodo archive (DOI: 10.5281/zenodo.1342401)."
+    },
+    "size": {
+      "amount": 25.0,
+      "unit": "MB",
+      "file_formats": [
+        "wav"
+      ],
+      "status": "verified",
+      "notes": "8kHz 16-bit mono WAV files trimmed to remove leading and trailing silences."
+    },
+    "sample_count": {
+      "total": 3000,
+      "unit": "audio-recordings",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "disjoint",
+      "breakdown": [
+        {
+          "label": "speakers",
+          "value": 6,
+          "unit": "speakers"
+        },
+        {
+          "label": "digits",
+          "value": 10,
+          "unit": "classes"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-08-09"
+    },
+    "citation": {
+      "paper_title": "Free Spoken Digit Dataset (FSDD)",
+      "paper_url": "https://doi.org/10.5281/zenodo.1342401",
+      "authors": [
+        "Zohar Jackson",
+        "César Souza",
+        "Jason Frank",
+        "Nicolas Roussel",
+        "Brian Rong"
+      ],
+      "doi": "10.5281/zenodo.1342401",
+      "bibtex": "@misc{jackson_fsdd_2018,\n  title = {Free Spoken Digit Dataset ({FSDD})},\n  author = {Jackson, Zohar and Souza, C{\\'e}sar and Frank, Jason and Roussel, Nicolas and Rong, Brian},\n  year = {2018},\n  publisher = {Zenodo},\n  doi = {10.5281/zenodo.1342401}\n}"
     }
   },
   {
@@ -37619,6 +38357,109 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "middlebury-stereo",
+    "slug": "middlebury-stereo",
+    "name": "Middlebury Stereo 2014 Benchmark",
+    "description": "The Middlebury Stereo 2014 dataset is an established stereo vision benchmark featuring high-resolution indoor scenes captured using structured light illumination. Comprising 33 scenes (15 training scenes, 15 test scenes, and 3 additional scenes) with dense subpixel-accurate disparity maps under various exposures and lighting conditions.",
+    "homepage_url": "https://vision.middlebury.edu/stereo/data/scenes2014",
+    "publisher": {
+      "name": "Middlebury College",
+      "type": "academic",
+      "url": "https://vision.middlebury.edu"
+    },
+    "modalities": [
+      "vision",
+      "3d"
+    ],
+    "tasks": [
+      "stereo-matching",
+      "disparity-estimation",
+      "3d-reconstruction"
+    ],
+    "tags": [
+      "stereo-vision",
+      "disparity",
+      "depth-estimation",
+      "middlebury",
+      "3d"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Custom Academic Research License",
+      "spdx_id": null,
+      "url": "https://vision.middlebury.edu/stereo/data/scenes2014/",
+      "commercial_use": "forbidden",
+      "notes": "Free for non-commercial academic research use with appropriate citation."
+    },
+    "source_references": [
+      {
+        "title": "Middlebury Stereo 2014 Dataset Portal",
+        "url": "https://vision.middlebury.edu/stereo/data/scenes2014",
+        "type": "official_website",
+        "notes": "Official Middlebury stereo evaluation portal."
+      },
+      {
+        "title": "High-Resolution Stereo Datasets with Subpixel-Accurate Ground Truth",
+        "url": "https://doi.org/10.1007/978-3-319-11752-2_34",
+        "type": "original_paper",
+        "notes": "Published in GCPR 2014 proceedings."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against GCPR 2014 publication (DOI: 10.1007/978-3-319-11752-2_34) and Middlebury Vision portal."
+    },
+    "size": {
+      "amount": 12.0,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "pfm"
+      ],
+      "status": "verified",
+      "notes": "Full, half, and quarter resolution rectified image pairs and PFM disparity maps."
+    },
+    "sample_count": {
+      "total": 33,
+      "unit": "stereo-scenes",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "training": 15,
+        "test": 15,
+        "additional": 3
+      },
+      "breakdown": [
+        {
+          "label": "lighting_conditions_per_scene",
+          "value": 3,
+          "unit": "conditions"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2014-09-02"
+    },
+    "citation": {
+      "paper_title": "High-Resolution Stereo Datasets with Subpixel-Accurate Ground Truth",
+      "paper_url": "https://doi.org/10.1007/978-3-319-11752-2_34",
+      "authors": [
+        "Daniel Scharstein",
+        "Heiko Hirschmüller",
+        "Masatoshi Okutomi",
+        "Christian Rhemann",
+        "Rastislav Sennovsky",
+        "Heiko Robbins"
+      ],
+      "doi": "10.1007/978-3-319-11752-2_34",
+      "bibtex": "@inproceedings{scharstein2014stereo,\n  title = {High-Resolution Stereo Datasets with Subpixel-Accurate Ground Truth},\n  author = {Scharstein, Daniel and Hirschm{\\\"u}ller, Heiko and Okutomi, Masatoshi and Rhemann, Christian and Sennovsky, Rastislav and Robbins, Heiko},\n  booktitle = {German Conference on Pattern Recognition (GCPR)},\n  pages = {31--42},\n  year = {2014},\n  doi = {10.1007/978-3-319-11752-2_34}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "milk10k",
     "slug": "milk10k",
     "name": "MILK10k: Multimodal Imaging-Learning Toolkit for Skin Cancer",
@@ -48996,6 +49837,116 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "openbookqa",
+    "slug": "openbookqa",
+    "name": "OpenBookQA: Question Answering on Open Book Science Exams",
+    "description": "OpenBookQA is a question answering dataset modeled after open book exams for assessing human understanding of a subject. Composed of 5,957 4-choice multiple-choice science questions requiring an open book of 1,326 elementary science facts alongside common knowledge and multi-step reasoning.",
+    "homepage_url": "https://allenai.org/data/open-book-qa",
+    "publisher": {
+      "name": "Allen Institute for AI",
+      "type": "academic",
+      "url": "https://allenai.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "multiple-choice-qa",
+      "commonsense-reasoning"
+    ],
+    "tags": [
+      "openbookqa",
+      "science-qa",
+      "reasoning",
+      "nlp",
+      "allenai"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Dataset and code released under Apache License 2.0."
+    },
+    "source_references": [
+      {
+        "title": "OpenBookQA Official Dataset Page",
+        "url": "https://allenai.org/data/open-book-qa",
+        "type": "official_website",
+        "notes": "Official Allen Institute landing page."
+      },
+      {
+        "title": "OpenBookQA GitHub Repository",
+        "url": "https://github.com/allenai/open-book-qa",
+        "type": "repository",
+        "notes": "Dataset repository containing question sets, facts, and leaderboards."
+      },
+      {
+        "title": "Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering",
+        "url": "https://doi.org/10.18653/v1/D18-1260",
+        "type": "original_paper",
+        "notes": "Published in EMNLP 2018 proceedings."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against EMNLP 2018 publication (DOI: 10.18653/v1/D18-1260) and official Allen Institute GitHub repository."
+    },
+    "size": {
+      "amount": 1.4,
+      "unit": "MB",
+      "file_formats": [
+        "jsonl",
+        "tsv",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "Question answer options and science fact book in JSONL and TSV formats."
+    },
+    "sample_count": {
+      "total": 5957,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 4957,
+        "validation": 500,
+        "test": 500
+      },
+      "breakdown": [
+        {
+          "label": "open_book_core_facts",
+          "value": 1326,
+          "unit": "facts"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-10-31"
+    },
+    "citation": {
+      "paper_title": "Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering",
+      "paper_url": "https://doi.org/10.18653/v1/D18-1260",
+      "authors": [
+        "Todor Mihaylov",
+        "Peter Clark",
+        "Tushar Khot",
+        "Ashish Sabharwal"
+      ],
+      "doi": "10.18653/v1/D18-1260",
+      "bibtex": "@inproceedings{mihaylov-etal-2018-suit,\n  title = {Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering},\n  author = {Mihaylov, Todor and Clark, Peter and Khot, Tushar and Sabharwal, Ashish},\n  booktitle = {Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing},\n  year = {2018},\n  pages = {2381--2391},\n  doi = {10.18653/v1/D18-1260}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "openearthmap",
     "slug": "openearthmap",
     "name": "OpenEarthMap: Benchmark for Global High-Resolution Land Cover Mapping",
@@ -53471,6 +54422,116 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "qasper",
+    "slug": "qasper",
+    "name": "QASPER: A Dataset of Question Answering on Scientific Research Papers",
+    "description": "QASPER is a question answering dataset over full-text scientific research papers in NLP and machine learning. Sourced from Open Access papers on arXiv and verified across 1,585 papers, questions were written by NLP practitioners seeking information after reading abstracts, and answers were curated by human annotators reading full papers with supporting evidence spans.",
+    "homepage_url": "https://allenai.org/data/qasper",
+    "publisher": {
+      "name": "Allen Institute for AI",
+      "type": "academic",
+      "url": "https://allenai.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "information-extraction",
+      "machine-reading-comprehension"
+    ],
+    "tags": [
+      "scientific-qa",
+      "nlp",
+      "information-extraction",
+      "allenai",
+      "arxiv"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Dataset and code released under Apache License 2.0."
+    },
+    "source_references": [
+      {
+        "title": "QASPER Official Project Page",
+        "url": "https://allenai.org/data/qasper",
+        "type": "official_website",
+        "notes": "Official Allen Institute project landing page."
+      },
+      {
+        "title": "QASPER GitHub Repository",
+        "url": "https://github.com/allenai/qasper-led-baselines",
+        "type": "repository",
+        "notes": "Benchmark code, model baselines, and data download scripts."
+      },
+      {
+        "title": "A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers",
+        "url": "https://doi.org/10.18653/v1/2021.naacl-main.41",
+        "type": "original_paper",
+        "notes": "Published in NAACL 2021 proceedings."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against NAACL 2021 proceedings (DOI: 10.18653/v1/2021.naacl-main.41) and official Allen Institute release."
+    },
+    "size": {
+      "amount": 15.0,
+      "unit": "MB",
+      "file_formats": [
+        "json"
+      ],
+      "status": "verified",
+      "notes": "JSON corpus with paper text, figures, bibliography, and question-answer-evidence annotations."
+    },
+    "sample_count": {
+      "total": 5049,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 2593,
+        "validation": 1005,
+        "test": 1451
+      },
+      "breakdown": [
+        {
+          "label": "research_papers",
+          "value": 1585,
+          "unit": "papers"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2021-05-01"
+    },
+    "citation": {
+      "paper_title": "A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers",
+      "paper_url": "https://doi.org/10.18653/v1/2021.naacl-main.41",
+      "authors": [
+        "Pradeep Dasigi",
+        "Kyle Lo",
+        "Iz Beltagy",
+        "Arman Cohan",
+        "Noah A. Smith",
+        "Matt Gardner"
+      ],
+      "doi": "10.18653/v1/2021.naacl-main.41",
+      "bibtex": "@inproceedings{dasigi-etal-2021-dataset,\n  title = {A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers},\n  author = {Dasigi, Pradeep and Lo, Kyle and Beltagy, Iz and Cohan, Arman and Smith, Noah A. and Gardner, Matt},\n  booktitle = {Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},\n  year = {2021},\n  pages = {4599--4610},\n  doi = {10.18653/v1/2021.naacl-main.41}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "qm9",
     "slug": "qm9",
     "name": "QM9: Quantum Chemistry Structures and Properties of 134k Molecules",
@@ -56889,6 +57950,114 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "scitail",
+    "slug": "scitail",
+    "name": "SciTail: A Natural Language Inference Dataset from Science Exams",
+    "description": "SciTail is a textual entailment / natural language inference benchmark created from multiple-choice school-level science exams and science texts found on the web. Consisting of 27,026 sentence pairs annotated as entails or neutral, it evaluates scientific reasoning and question-answering with natural sentence-level entailment.",
+    "homepage_url": "https://allenai.org/data/scitail",
+    "publisher": {
+      "name": "Allen Institute for AI",
+      "type": "academic",
+      "url": "https://allenai.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "natural-language-inference",
+      "text-classification",
+      "scientific-reasoning"
+    ],
+    "tags": [
+      "natural-language-inference",
+      "nli",
+      "science-qa",
+      "nlp",
+      "allenai"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Dataset and code released under Apache License 2.0."
+    },
+    "source_references": [
+      {
+        "title": "SciTail Official Dataset Page",
+        "url": "https://allenai.org/data/scitail",
+        "type": "official_website",
+        "notes": "Official Allen Institute dataset portal."
+      },
+      {
+        "title": "SciTail: A Natural Language Inference Dataset from Science Exams",
+        "url": "https://doi.org/10.1609/aaai.v32i1.12006",
+        "type": "original_paper",
+        "notes": "Published in AAAI 2018 proceedings."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against AAAI 2018 proceedings (DOI: 10.1609/aaai.v32i1.12006) and official Allen Institute repository."
+    },
+    "size": {
+      "amount": 5.5,
+      "unit": "MB",
+      "file_formats": [
+        "tsv",
+        "jsonl",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "Premise, hypothesis, and binary entailment labels in standard tab-delimited and JSONL formats."
+    },
+    "sample_count": {
+      "total": 27026,
+      "unit": "sentence-pairs",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 23596,
+        "validation": 1304,
+        "test": 2126
+      },
+      "breakdown": [
+        {
+          "label": "entails_pairs",
+          "value": 10101,
+          "unit": "pairs"
+        },
+        {
+          "label": "neutral_pairs",
+          "value": 16925,
+          "unit": "pairs"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-02-02"
+    },
+    "citation": {
+      "paper_title": "SciTail: A Natural Language Inference Dataset from Science Exams and Web Sentences",
+      "paper_url": "https://doi.org/10.1609/aaai.v32i1.12006",
+      "authors": [
+        "Tushar Khot",
+        "Ashish Sabharwal",
+        "Peter Clark"
+      ],
+      "doi": "10.1609/aaai.v32i1.12006",
+      "bibtex": "@inproceedings{khot2018scitail,\n  title = {{SciTail}: A Natural Language Inference Dataset from Science Exams and Web Sentences},\n  author = {Khot, Tushar and Sabharwal, Ashish and Clark, Peter},\n  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume = {32},\n  number = {1},\n  pages = {4836--4843},\n  year = {2018},\n  doi = {10.1609/aaai.v32i1.12006}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "scoa-pharmaceutical-blister-image",
     "slug": "scoa-pharmaceutical-blister-image",
     "name": "SCOA Pharmaceutical Blister Image Dataset",
@@ -57837,6 +59006,111 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "shapenetcore",
+    "slug": "shapenetcore",
+    "name": "ShapeNetCore: 3D CAD Model Taxonomy Subset",
+    "description": "ShapeNetCore is a densely annotated, clean subset of the full ShapeNet 3D CAD repository covering 55 common object categories with approximately 51,300 unique 3D models. Each model features single clean 3D meshes, standardized alignments, and WordNet synset taxonomy mappings.",
+    "homepage_url": "https://shapenet.org",
+    "publisher": {
+      "name": "ShapeNet Consortium (Stanford, Princeton, Toyota TI)",
+      "type": "academic",
+      "url": "https://shapenet.org"
+    },
+    "modalities": [
+      "3d",
+      "vision"
+    ],
+    "tasks": [
+      "3d-object-classification",
+      "3d-reconstruction",
+      "shape-retrieval"
+    ],
+    "tags": [
+      "shapenet",
+      "3d-models",
+      "cad",
+      "computer-vision",
+      "stanford"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "ShapeNet Terms of Use",
+      "spdx_id": null,
+      "url": "https://shapenet.org/terms",
+      "commercial_use": "forbidden",
+      "notes": "Available for non-commercial academic research and educational purposes under the ShapeNet Terms of Use."
+    },
+    "source_references": [
+      {
+        "title": "ShapeNet Official Portal",
+        "url": "https://shapenet.org",
+        "type": "official_website",
+        "notes": "Official ShapeNet repository and explorer."
+      },
+      {
+        "title": "ShapeNet: An Information-Rich 3D Model Repository",
+        "url": "https://arxiv.org/abs/1512.03012",
+        "type": "original_paper",
+        "notes": "Foundational technical report detailing ShapeNetCore taxonomy and alignment."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against arXiv:1512.03012 and official ShapeNet portal documentation."
+    },
+    "size": {
+      "amount": 50.0,
+      "unit": "GB",
+      "file_formats": [
+        "obj",
+        "mtl",
+        "binvox"
+      ],
+      "status": "verified",
+      "notes": "Wavefront OBJ 3D meshes with materials, textures, and voxel grids."
+    },
+    "sample_count": {
+      "total": 51300,
+      "unit": "3d-cad-models",
+      "status": "estimated",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "object_categories",
+          "value": 55,
+          "unit": "categories"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2015-12-09"
+    },
+    "citation": {
+      "paper_title": "ShapeNet: An Information-Rich 3D Model Repository",
+      "paper_url": "https://arxiv.org/abs/1512.03012",
+      "authors": [
+        "Angel X. Chang",
+        "Thomas Funkhouser",
+        "Leonidas Guibas",
+        "Pat Hanrahan",
+        "Qixing Huang",
+        "Zimo Li",
+        "Silvio Savarese",
+        "Manolis Savva",
+        "Shuran Song",
+        "Hao Su",
+        "Jianxiong Xiao",
+        "Li Yi",
+        "Fisher Yu"
+      ],
+      "bibtex": "@article{chang2015shapenet,\n  title = {{ShapeNet}: An Information-Rich 3D Model Repository},\n  author = {Chang, Angel X. and Funkhouser, Thomas and Guibas, Leonidas and Hanrahan, Pat and Huang, Qixing and Li, Zimo and Savarese, Silvio and Savva, Manolis and Song, Shuran and Su, Hao and Xiao, Jianxiong and Yi, Li and Yu, Fisher},\n  journal = {arXiv preprint arXiv:1512.03012},\n  year = {2015}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "shongbad-chitro-multimodal-bangla-news-image",
     "slug": "shongbad-chitro-multimodal-bangla-news-image",
     "name": "Shongbad Chitro: A Multimodal Bangla News Image-Text Dataset",
@@ -57991,6 +59265,110 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "sift-flow",
+    "slug": "sift-flow",
+    "name": "SIFT Flow Scene Parsing Benchmark",
+    "description": "The SIFT Flow dataset consists of 2,688 outdoor images annotated with pixel-level semantic category labels across 33 semantic classes (such as sky, building, tree, road, car, sea, etc.) and geometric context classes, aligned via dense SIFT Flow correspondence.",
+    "homepage_url": "https://people.csail.mit.edu/celiu/SIFTflow",
+    "publisher": {
+      "name": "Massachusetts Institute of Technology",
+      "type": "academic",
+      "url": "https://web.mit.edu"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "scene-parsing",
+      "image-alignment"
+    ],
+    "tags": [
+      "sift-flow",
+      "semantic-segmentation",
+      "scene-parsing",
+      "computer-vision",
+      "mit"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "MIT CSAIL Academic Research Use",
+      "spdx_id": null,
+      "url": "https://people.csail.mit.edu/celiu/SIFTflow/",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for educational and non-commercial research purposes."
+    },
+    "source_references": [
+      {
+        "title": "SIFT Flow Project Page",
+        "url": "https://people.csail.mit.edu/celiu/SIFTflow",
+        "type": "official_website",
+        "notes": "MIT CSAIL project portal."
+      },
+      {
+        "title": "SIFT Flow: Dense Correspondence across Scenes and Its Applications",
+        "url": "https://doi.org/10.1109/TPAMI.2010.147",
+        "type": "original_paper",
+        "notes": "Published in IEEE TPAMI."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against IEEE TPAMI 2011 publication (DOI: 10.1109/TPAMI.2010.147) and MIT CSAIL project site."
+    },
+    "size": {
+      "amount": 620.0,
+      "unit": "MB",
+      "file_formats": [
+        "mat",
+        "jpg",
+        "png"
+      ],
+      "status": "verified",
+      "notes": "256x256 color images with MAT ground-truth semantic and spatial labels."
+    },
+    "sample_count": {
+      "total": 2688,
+      "unit": "images",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 2488,
+        "test": 200
+      },
+      "breakdown": [
+        {
+          "label": "semantic_categories",
+          "value": 33,
+          "unit": "classes"
+        },
+        {
+          "label": "geometric_classes",
+          "value": 3,
+          "unit": "classes"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2011-05-01"
+    },
+    "citation": {
+      "paper_title": "SIFT Flow: Dense Correspondence across Scenes and Its Applications",
+      "paper_url": "https://doi.org/10.1109/TPAMI.2010.147",
+      "authors": [
+        "Ce Liu",
+        "Jenny Yuen",
+        "Antonio Torralba"
+      ],
+      "doi": "10.1109/TPAMI.2010.147",
+      "bibtex": "@article{liu2011siftflow,\n  title = {{SIFT} Flow: Dense Correspondence across Scenes and Its Applications},\n  author = {Liu, Ce and Yuen, Jenny and Torralba, Antonio},\n  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  volume = {33},\n  number = {5},\n  pages = {978--994},\n  year = {2011},\n  doi = {10.1109/TPAMI.2010.147}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "siim-acr-pneumothorax",
     "slug": "siim-acr-pneumothorax",
     "name": "SIIM-ACR Pneumothorax Segmentation Dataset",
@@ -58079,6 +59457,110 @@
         "SIIM",
         "American College of Radiology"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "sintel",
+    "slug": "sintel",
+    "name": "MPI Sintel Optical Flow Benchmark",
+    "description": "MPI Sintel is an optical flow evaluation benchmark derived from the open-source 3D animated short film Sintel. Providing dense ground-truth optical flow, camera motion, and depth under realistic rendering conditions including specular reflections, motion blur, and non-rigid physical deformations.",
+    "homepage_url": "http://sintel.is.tue.mpg.de",
+    "publisher": {
+      "name": "Max Planck Institute for Intelligent Systems",
+      "type": "academic",
+      "url": "https://is.mpg.de"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "optical-flow-estimation",
+      "motion-estimation",
+      "depth-estimation"
+    ],
+    "tags": [
+      "optical-flow",
+      "computer-vision",
+      "sintel",
+      "motion-estimation",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 3.0 Unported",
+      "spdx_id": "CC-BY-3.0",
+      "url": "https://creativecommons.org/licenses/by/3.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset derived from Blender Foundation open movie Sintel, released under CC-BY-3.0."
+    },
+    "source_references": [
+      {
+        "title": "MPI Sintel Official Benchmark Portal",
+        "url": "http://sintel.is.tue.mpg.de",
+        "type": "official_website",
+        "notes": "MPI Sintel evaluation benchmark and server."
+      },
+      {
+        "title": "A Naturalistic Open Source Movie for Optical Flow Evaluation",
+        "url": "https://doi.org/10.1007/978-3-642-33783-3_31",
+        "type": "original_paper",
+        "notes": "Published in ECCV 2012 proceedings."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against ECCV 2012 publication (DOI: 10.1007/978-3-642-33783-3_31) and MPI Sintel benchmark specifications."
+    },
+    "size": {
+      "amount": 5.2,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "flo"
+      ],
+      "status": "verified",
+      "notes": "PNG frames with Middlebury .flo flow field format files."
+    },
+    "sample_count": {
+      "total": 1593,
+      "unit": "optical-flow-pairs",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "training": 1041,
+        "test": 552
+      },
+      "breakdown": [
+        {
+          "label": "training_sequences",
+          "value": 23,
+          "unit": "sequences"
+        },
+        {
+          "label": "test_sequences",
+          "value": 12,
+          "unit": "sequences"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2012-10-07"
+    },
+    "citation": {
+      "paper_title": "A Naturalistic Open Source Movie for Optical Flow Evaluation",
+      "paper_url": "https://doi.org/10.1007/978-3-642-33783-3_31",
+      "authors": [
+        "Daniel J. Butler",
+        "Jonas Wulff",
+        "Garrett B. Stanley",
+        "Michael J. Black"
+      ],
+      "doi": "10.1007/978-3-642-33783-3_31",
+      "bibtex": "@inproceedings{butler2012sintel,\n  title = {A Naturalistic Open Source Movie for Optical Flow Evaluation},\n  author = {Butler, Daniel J. and Wulff, Jonas and Stanley, Garrett B. and Black, Michael J.},\n  booktitle = {European Conference on Computer Vision (ECCV)},\n  pages = {611--625},\n  year = {2012},\n  doi = {10.1007/978-3-642-33783-3_31}\n}"
     }
   },
   {
@@ -58604,6 +60086,120 @@
         "Tom Soderstrom"
       ],
       "bibtex": "@inproceedings{hundman2018detecting,\n  title={Detecting Spacecraft Anomalies Using LSTMs and Non-Parametric Dynamic Thresholding},\n  author={Hundman, Kyle and Constantinou, Valentino and Laporte, Christopher and Colwell, Ian and Soderstrom, Tom},\n  booktitle={Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery \\& Data Mining},\n  pages={387--395},\n  year={2018},\n  doi={10.1145/3219819.3219845}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "snips",
+    "slug": "snips",
+    "name": "SNIPS Voice Platform Natural Language Understanding Benchmark",
+    "description": "SNIPS Natural Language Understanding Benchmark is a curated intent classification and slot tagging dataset designed for evaluating voice assistants. Comprising 14,484 voice commands across 7 intents (such as AddToPlaylist, BookRestaurant, GetWeather, PlayMusic, RateBook, SearchCreativeWork, SearchScreeningEvent) across 10 slot categories.",
+    "homepage_url": "https://github.com/sonos/nlu-benchmark",
+    "publisher": {
+      "name": "Snips / Sonos",
+      "type": "industry",
+      "url": "https://www.sonos.com"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "intent-classification",
+      "slot-filling",
+      "spoken-language-understanding"
+    ],
+    "tags": [
+      "snips",
+      "intent-detection",
+      "slot-filling",
+      "voice-assistant",
+      "nlp"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "The benchmark datasets in the repository are dedicated to the public domain under CC0 1.0."
+    },
+    "source_references": [
+      {
+        "title": "Snips NLU Benchmark GitHub Repository",
+        "url": "https://github.com/sonos/nlu-benchmark",
+        "type": "repository",
+        "notes": "Repository containing corpus files, slot configurations, and evaluation scripts."
+      },
+      {
+        "title": "Snips Voice Platform: an embedded Spoken Language Understanding system for private-by-design Voice Interfaces",
+        "url": "https://arxiv.org/abs/1805.10190",
+        "type": "original_paper",
+        "notes": "System paper describing the Snips NLU architecture and benchmark dataset."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against arXiv:1805.10190 and official sonos/nlu-benchmark GitHub repository."
+    },
+    "size": {
+      "amount": 4.8,
+      "unit": "MB",
+      "file_formats": [
+        "json"
+      ],
+      "status": "verified",
+      "notes": "JSON files containing utterances, intent labels, and token-level slot annotations."
+    },
+    "sample_count": {
+      "total": 14484,
+      "unit": "utterances",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 13084,
+        "validation": 700,
+        "test": 700
+      },
+      "breakdown": [
+        {
+          "label": "intent_classes",
+          "value": 7,
+          "unit": "intents"
+        },
+        {
+          "label": "slot_categories",
+          "value": 10,
+          "unit": "slots"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2018-05-25"
+    },
+    "citation": {
+      "paper_title": "Snips Voice Platform: an embedded Spoken Language Understanding system for private-by-design Voice Interfaces",
+      "paper_url": "https://arxiv.org/abs/1805.10190",
+      "authors": [
+        "Alice Coucke",
+        "Alaa Saade",
+        "Adrien Ball",
+        "Théodore Bluche",
+        "Alexandre Caulier",
+        "David Leroy",
+        "Clément Doumouro",
+        "Thibault Gisselbrecht",
+        "Francesco Caltagirone",
+        "Thibaut Lavril",
+        "Maël Primet",
+        "Joseph Dureau"
+      ],
+      "bibtex": "@article{coucke2018snips,\n  title = {Snips Voice Platform: an embedded Spoken Language Understanding system for private-by-design Voice Interfaces},\n  author = {Coucke, Alice and Saade, Alaa and Ball, Adrien and Bluche, Th{\\'e}odore and Caulier, Alexandre and Leroy, David and Doumouro, Cl{\\'e}ment and Gisselbrecht, Thibault and Caltagirone, Francesco and Lavril, Thibaut and Primet, Ma{\\\"e}l and Dureau, Joseph},\n  journal = {arXiv preprint arXiv:1805.10190},\n  year = {2018}\n}"
     }
   },
   {
@@ -61768,6 +63364,124 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "tabfact",
+    "slug": "tabfact",
+    "name": "TabFact: Large-Scale Dataset for Table-based Fact Verification",
+    "description": "TabFact is a large-scale fact verification benchmark over structured data consisting of 117,854 filtered human-annotated natural language statements (118,275 raw collected) grounded on 16,573 Wikipedia tables. Each statement is labeled as either Entailed or Refuted, challenging models with table reasoning, cell lookup, and arithmetic aggregation.",
+    "homepage_url": "https://tabfact.github.io",
+    "publisher": {
+      "name": "University of California, Santa Barbara",
+      "type": "academic",
+      "url": "https://www.ucsb.edu"
+    },
+    "modalities": [
+      "tabular",
+      "nlp"
+    ],
+    "tasks": [
+      "fact-checking",
+      "table-reasoning",
+      "natural-language-inference"
+    ],
+    "tags": [
+      "tabfact",
+      "table-reasoning",
+      "fact-verification",
+      "tabular",
+      "nlp"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "spdx_id": "CC-BY-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by/3.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset derived from Wikipedia under CC-BY-SA-3.0."
+    },
+    "source_references": [
+      {
+        "title": "TabFact Official Project Page",
+        "url": "https://tabfact.github.io",
+        "type": "official_website",
+        "notes": "Official TabFact leaderboard and documentation portal."
+      },
+      {
+        "title": "TabFact GitHub Repository",
+        "url": "https://github.com/wenhuchen/Table-Fact-Checking",
+        "type": "repository",
+        "notes": "Data files, evaluation scripts, and baseline implementations."
+      },
+      {
+        "title": "TabFact: A Large-scale Dataset for Table-based Fact Verification",
+        "url": "https://arxiv.org/abs/1909.02164",
+        "type": "original_paper",
+        "notes": "Published in ICLR 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against ICLR 2020 paper (arXiv:1909.02164) and official GitHub repository."
+    },
+    "size": {
+      "amount": 48.0,
+      "unit": "MB",
+      "file_formats": [
+        "json",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "CSV Wikipedia tables with JSON statement-label pairs."
+    },
+    "sample_count": {
+      "total": 117854,
+      "unit": "statements",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 92283,
+        "validation": 12792,
+        "test": 12779
+      },
+      "breakdown": [
+        {
+          "label": "wikipedia_tables",
+          "value": 16573,
+          "unit": "tables"
+        },
+        {
+          "label": "raw_collected_statements",
+          "value": 118275,
+          "unit": "statements"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2020-04-26"
+    },
+    "citation": {
+      "paper_title": "TabFact: A Large-scale Dataset for Table-based Fact Verification",
+      "paper_url": "https://arxiv.org/abs/1909.02164",
+      "authors": [
+        "Wenhu Chen",
+        "Hongmin Wang",
+        "Jianshu Chen",
+        "Yunkai Zhang",
+        "Hong Wang",
+        "Shiyuan Li",
+        "Xiyou Zhou",
+        "William Yang Wang"
+      ],
+      "bibtex": "@inproceedings{chen2020tabfact,\n  title = {{TabFact}: A Large-scale Dataset for Table-based Fact Verification},\n  author = {Chen, Wenhu and Wang, Hongmin and Chen, Jianshu and Zhang, Yunkai and Wang, Hong and Li, Shiyuan and Zhou, Xiyou and Wang, William Yang},\n  booktitle = {International Conference on Learning Representations (ICLR)},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "tablebank",
     "slug": "tablebank",
     "name": "TableBank: Table Benchmark for Detection and Recognition",
@@ -62988,6 +64702,114 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "textvqa",
+    "slug": "textvqa",
+    "name": "TextVQA: Visual Question Answering on Text in Images",
+    "description": "TextVQA is a visual question answering benchmark requiring reading and reasoning about text present in images. Containing 45,336 questions over 28,408 images from the Open Images dataset, where answers require optical character recognition (OCR) and reasoning on the identified text.",
+    "homepage_url": "https://textvqa.org",
+    "publisher": {
+      "name": "Meta AI / Facebook AI Research",
+      "type": "industry",
+      "url": "https://ai.meta.com"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "ocr",
+      "scene-text-recognition"
+    ],
+    "tags": [
+      "textvqa",
+      "vqa",
+      "ocr",
+      "scene-text",
+      "multimodal"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset annotations released under CC-BY-4.0."
+    },
+    "source_references": [
+      {
+        "title": "TextVQA Official Project Website",
+        "url": "https://textvqa.org",
+        "type": "official_website",
+        "notes": "Official challenge website and evaluation server."
+      },
+      {
+        "title": "Towards VQA Models That Can Read",
+        "url": "https://doi.org/10.1109/CVPR.2019.01055",
+        "type": "original_paper",
+        "notes": "Published in CVPR 2019 proceedings."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against CVPR 2019 publication (DOI: 10.1109/CVPR.2019.01055) and official TextVQA challenge specifications."
+    },
+    "size": {
+      "amount": 28.0,
+      "unit": "MB",
+      "file_formats": [
+        "json"
+      ],
+      "status": "verified",
+      "notes": "JSON annotations with question IDs, image references, and 10 human consensus answers per question."
+    },
+    "sample_count": {
+      "total": 45336,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 34602,
+        "val": 5000,
+        "test": 5734
+      },
+      "breakdown": [
+        {
+          "label": "images",
+          "value": 28408,
+          "unit": "images"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2019-06-16"
+    },
+    "citation": {
+      "paper_title": "Towards VQA Models That Can Read",
+      "paper_url": "https://doi.org/10.1109/CVPR.2019.01055",
+      "authors": [
+        "Amanpreet Singh",
+        "Vivek Natarajan",
+        "Meet Shah",
+        "Yu Jiang",
+        "Xinlei Chen",
+        "Dhruv Batra",
+        "Devi Parikh",
+        "Marcus Rohrbach"
+      ],
+      "doi": "10.1109/CVPR.2019.01055",
+      "bibtex": "@inproceedings{singh2019textvqa,\n  title = {Towards {VQA} Models That Can Read},\n  author = {Singh, Amanpreet and Natarajan, Vivek and Shah, Meet and Jiang, Yu and Chen, Xinlei and Batra, Dhruv and Parikh, Devi and Rohrbach, Marcus},\n  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages = {8317--8326},\n  year = {2019},\n  doi = {10.1109/CVPR.2019.01055}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "thermalhiddenobject-tr-thermal-imaging-concea",
     "slug": "thermalhiddenobject-tr-thermal-imaging-concea",
     "name": "ThermalHiddenObject-TR: A Thermal Imaging Dataset for Concealed Metallic Object Detection",
@@ -63048,6 +64870,117 @@
         "NOGAY, HIDIR SELCUK"
       ],
       "doi": "10.17632/6f33dzdfxh.1"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "timit",
+    "slug": "timit",
+    "name": "TIMIT Acoustic-Phonetic Continuous Speech Corpus",
+    "description": "TIMIT is a foundational acoustic-phonetic speech corpus designed for phoneme recognition and acoustic modeling. Comprising 6,300 phonetically rich sentences spoken by 630 speakers from 8 major dialect regions of the United States, complete with time-aligned word and phonetic transcriptions.",
+    "homepage_url": "https://catalog.ldc.upenn.edu/LDC93S1",
+    "publisher": {
+      "name": "Linguistic Data Consortium (LDC) / NIST / TI / MIT",
+      "type": "academic",
+      "url": "https://www.ldc.upenn.edu"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "phoneme-recognition",
+      "speech-recognition",
+      "acoustic-modeling"
+    ],
+    "tags": [
+      "timit",
+      "speech-recognition",
+      "phonetics",
+      "audio",
+      "ldc"
+    ],
+    "license": {
+      "status": "proprietary",
+      "name": "LDC User Agreement for Non-Members",
+      "spdx_id": null,
+      "commercial_use": "forbidden",
+      "url": "https://catalog.ldc.upenn.edu/LDC93S1",
+      "notes": "Distributed by the Linguistic Data Consortium (LDC93S1, ISBN: 1-58563-019-5) under the LDC User Agreement for Non-Members. Access is restricted to LDC members or licensed for non-commercial research."
+    },
+    "source_references": [
+      {
+        "title": "LDC TIMIT Catalog Page",
+        "url": "https://catalog.ldc.upenn.edu/LDC93S1",
+        "type": "official_website",
+        "notes": "Official Linguistic Data Consortium catalog entry LDC93S1."
+      },
+      {
+        "title": "The DARPA TIMIT Acoustic-Phonetic Continuous Speech Corpus",
+        "url": "https://doi.org/10.35111/17gk-bn40",
+        "type": "documentation",
+        "notes": "LDC canonical persistent identifier documentation."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against LDC catalog entry LDC93S1 (DOI: 10.35111/17gk-bn40) and NIST standard documentation."
+    },
+    "size": {
+      "amount": 440.0,
+      "unit": "MB",
+      "file_formats": [
+        "wav",
+        "phn",
+        "wrd",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "16kHz 16-bit NIST sphere format audio files with hand-aligned phonetic (.phn) and word (.wrd) boundaries."
+    },
+    "sample_count": {
+      "total": 6300,
+      "unit": "utterances",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 4620,
+        "test": 1680
+      },
+      "breakdown": [
+        {
+          "label": "speakers",
+          "value": 630,
+          "unit": "speakers"
+        },
+        {
+          "label": "dialect_regions",
+          "value": 8,
+          "unit": "regions"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "1993-10-01"
+    },
+    "citation": {
+      "paper_title": "DARPA TIMIT Acoustic-Phonetic Continuous Speech Corpus",
+      "paper_url": "https://doi.org/10.35111/17gk-bn40",
+      "authors": [
+        "John S. Garofolo",
+        "Lori F. Lamel",
+        "William M. Fisher",
+        "Jonathan G. Fiscus",
+        "David S. Pallett",
+        "Nancy L. Dahlgren"
+      ],
+      "doi": "10.35111/17gk-bn40",
+      "bibtex": "@misc{garofolo1993timit,\n  title = {{DARPA} {TIMIT} Acoustic-Phonetic Continuous Speech Corpus},\n  author = {Garofolo, John S. and Lamel, Lori F. and Fisher, William M. and Fiscus, Jonathan G. and Pallett, David S. and Dahlgren, Nancy L.},\n  year = {1993},\n  publisher = {Linguistic Data Consortium, Philadelphia},\n  doi = {10.35111/17gk-bn40}\n}"
     }
   },
   {
@@ -64142,6 +66075,102 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "uci-abalone",
+    "slug": "uci-abalone",
+    "name": "Abalone Age Determination Benchmark Dataset",
+    "description": "The Abalone dataset predict the age of abalone (marine snails) from physical measurements without cutting the shell. Sourced from the Marine Resources Division of Tasmania, it contains 4,177 instances characterized by 8 physical attributes (sex, length, diameter, height, whole weight, shucked weight, viscera weight, shell weight) and the number of shell rings.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/1/abalone",
+    "publisher": {
+      "name": "UCI Machine Learning Repository / Marine Resources Division",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-regression",
+      "tabular-classification",
+      "age-prediction"
+    ],
+    "tags": [
+      "abalone",
+      "uci",
+      "tabular",
+      "regression",
+      "marine-biology"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+    },
+    "source_references": [
+      {
+        "title": "UCI Abalone Portal",
+        "url": "https://archive.ics.uci.edu/dataset/1/abalone",
+        "type": "official_website",
+        "notes": "UCI Machine Learning Repository dataset 1 landing page."
+      },
+      {
+        "title": "Abalone Dataset Documentation",
+        "url": "https://doi.org/10.24432/C55C7W",
+        "type": "documentation",
+        "notes": "Canonical DOI citation and donor report."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against UCI Machine Learning Repository dataset 1 (DOI: 10.24432/C55C7W) and Marine Resources Division documentation."
+    },
+    "size": {
+      "amount": 190.0,
+      "unit": "KB",
+      "file_formats": [
+        "csv",
+        "data"
+      ],
+      "status": "verified",
+      "notes": "Comma-separated records with 1 nominal feature, 7 continuous physical measurements, and integer rings."
+    },
+    "sample_count": {
+      "total": 4177,
+      "unit": "instances",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "physical_attributes",
+          "value": 8,
+          "unit": "features"
+        }
+      ]
+    },
+    "dates": {
+      "published": "1995-12-01"
+    },
+    "citation": {
+      "paper_title": "Abalone Dataset",
+      "paper_url": "https://doi.org/10.24432/C55C7W",
+      "authors": [
+        "Warwick J. Nash",
+        "Tracy L. Sellers",
+        "Simon R. Talbot",
+        "Andrew J. Cawthorn",
+        "Wes B. Ford"
+      ],
+      "doi": "10.24432/C55C7W",
+      "bibtex": "@misc{nash1995abalone,\n  title = {Abalone},\n  author = {Nash, Warwick J. and Sellers, Tracy L. and Talbot, Simon R. and Cawthorn, Andrew J. and Ford, Wes B.},\n  year = {1995},\n  publisher = {UCI Machine Learning Repository},\n  doi = {10.24432/C55C7W}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "uci-cervical-cancer-risk-factors",
     "slug": "uci-cervical-cancer-risk-factors",
     "name": "Cervical Cancer (Risk Factors) Clinical Dataset",
@@ -64505,6 +66534,221 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "uci-letter-recognition",
+    "slug": "uci-letter-recognition",
+    "name": "Letter Recognition Benchmark Dataset",
+    "description": "The Letter Recognition dataset contains 20,000 character images representing the 26 capital letters of the English alphabet generated from 20 different fonts. Each instance consists of 16 numerical statistical moments and edge attributes, serving as a classic multi-class classification benchmark.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/59/letter+recognition",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "multi-class-classification",
+      "tabular-classification",
+      "character-recognition"
+    ],
+    "tags": [
+      "letter-recognition",
+      "uci",
+      "tabular",
+      "classification",
+      "optical-character-recognition"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+    },
+    "source_references": [
+      {
+        "title": "UCI Letter Recognition Portal",
+        "url": "https://archive.ics.uci.edu/dataset/59/letter+recognition",
+        "type": "official_website",
+        "notes": "UCI Machine Learning Repository dataset 59 landing page."
+      },
+      {
+        "title": "Letter Recognition Using Holland-Style Adaptive Classifiers",
+        "url": "https://doi.org/10.1007/BF00114162",
+        "type": "original_paper",
+        "notes": "Published in Machine Learning journal."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against Machine Learning journal publication (DOI: 10.1007/BF00114162) and UCI Repository ID 59."
+    },
+    "size": {
+      "amount": 712.0,
+      "unit": "KB",
+      "file_formats": [
+        "csv",
+        "data"
+      ],
+      "status": "verified",
+      "notes": "Comma-separated tabular attributes with 16 continuous features and 1 character label."
+    },
+    "sample_count": {
+      "total": 20000,
+      "unit": "instances",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 16000,
+        "test": 4000
+      },
+      "breakdown": [
+        {
+          "label": "letter_classes",
+          "value": 26,
+          "unit": "classes"
+        },
+        {
+          "label": "attributes",
+          "value": 16,
+          "unit": "features"
+        }
+      ]
+    },
+    "dates": {
+      "published": "1991-01-01"
+    },
+    "citation": {
+      "paper_title": "Letter Recognition Using Holland-Style Adaptive Classifiers",
+      "paper_url": "https://doi.org/10.1007/BF00114162",
+      "authors": [
+        "P. W. Frey",
+        "D. J. Slate"
+      ],
+      "doi": "10.1007/BF00114162",
+      "bibtex": "@article{frey1991letter,\n  title = {Letter Recognition Using Holland-Style Adaptive Classifiers},\n  author = {Frey, P. W. and Slate, D. J.},\n  journal = {Machine Learning},\n  volume = {6},\n  number = {2},\n  pages = {161--182},\n  year = {1991},\n  doi = {10.1007/BF00114162}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "uci-magic-gamma-telescope",
+    "slug": "uci-magic-gamma-telescope",
+    "name": "MAGIC Gamma Telescope Cherenkov Event Benchmark",
+    "description": "The MAGIC Gamma Telescope dataset simulates the registration of high-energy gamma rays and background hadronic showers in ground-based atmospheric Cherenkov telescopes. Comprising 19,020 Monte Carlo simulated events (12,332 gamma rays and 6,688 hadronic background events) described by 10 continuous Hillas ellipse parameters.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/159/magic+gamma+telescope",
+    "publisher": {
+      "name": "UCI Machine Learning Repository / MAGIC Collaboration",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "binary-classification",
+      "tabular-classification",
+      "particle-identification"
+    ],
+    "tags": [
+      "magic-telescope",
+      "cherenkov",
+      "gamma-ray",
+      "astronomy",
+      "uci"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+    },
+    "source_references": [
+      {
+        "title": "UCI MAGIC Gamma Telescope Portal",
+        "url": "https://archive.ics.uci.edu/dataset/159/magic+gamma+telescope",
+        "type": "official_website",
+        "notes": "UCI Machine Learning Repository dataset 159 landing page."
+      },
+      {
+        "title": "A Study of the Use of Support Vector Machines in Gamma-Hadron Separation",
+        "url": "https://doi.org/10.24432/C52C8B",
+        "type": "original_paper",
+        "notes": "Published analysis and dataset documentation."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against UCI Machine Learning Repository dataset 159 (DOI: 10.24432/C52C8B) and MAGIC collaboration documentation."
+    },
+    "size": {
+      "amount": 1.5,
+      "unit": "MB",
+      "file_formats": [
+        "csv",
+        "data"
+      ],
+      "status": "verified",
+      "notes": "Comma-delimited text records with 10 continuous Hillas parameters and class label."
+    },
+    "sample_count": {
+      "total": 19020,
+      "unit": "instances",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "gamma_events",
+          "value": 12332,
+          "unit": "events"
+        },
+        {
+          "label": "hadron_events",
+          "value": 6688,
+          "unit": "events"
+        },
+        {
+          "label": "hillas_parameters",
+          "value": 10,
+          "unit": "features"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2007-05-01"
+    },
+    "citation": {
+      "paper_title": "MAGIC Gamma Telescope Dataset",
+      "paper_url": "https://doi.org/10.24432/C52C8B",
+      "authors": [
+        "R. K. Bock",
+        "A. Chilingarian",
+        "M. Gaug",
+        "F. Hakl",
+        "Th. Hengstebeck",
+        "M. Jiřina",
+        "J. Klaschka",
+        "E. Kotrč",
+        "P. Savický",
+        "S. Towers",
+        "A. Vaiciulis",
+        "W. Wittek"
+      ],
+      "doi": "10.24432/C52C8B",
+      "bibtex": "@misc{bock2007magic,\n  title = {{MAGIC} Gamma Telescope},\n  author = {Bock, R. K. and Chilingarian, A. and Gaug, M. and Hakl, F. and Hengstebeck, Th. and Ji{\\v{r}}ina, M. and Klaschka, J. and Kotr{\\v{c}}, E. and Savick{\\'y}, P. and Towers, S. and Vaiciulis, A. and Wittek, W.},\n  year = {2007},\n  publisher = {UCI Machine Learning Repository},\n  doi = {10.24432/C52C8B}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "uci-raisin-classification",
     "slug": "uci-raisin-classification",
     "name": "Raisin: Agricultural Product Morphology Classification",
@@ -64769,6 +67013,214 @@
       "data_sources": [
         "Institute of Agrophysics, Polish Academy of Sciences"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "uci-spambase",
+    "slug": "uci-spambase",
+    "name": "Spambase Email Classification Benchmark",
+    "description": "The Spambase dataset consists of 4,601 email messages characterized by 57 continuous real-valued features reflecting word frequencies (such as 'make', 'address', 'free'), character frequencies, and run-length statistics of capital letters. It serves as a benchmark for binary spam classification.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/94/spambase",
+    "publisher": {
+      "name": "UCI Machine Learning Repository / Hewlett-Packard Labs",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "binary-classification",
+      "tabular-classification",
+      "spam-detection"
+    ],
+    "tags": [
+      "spambase",
+      "spam-detection",
+      "uci",
+      "tabular",
+      "classification"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+    },
+    "source_references": [
+      {
+        "title": "UCI Spambase Portal",
+        "url": "https://archive.ics.uci.edu/dataset/94/spambase",
+        "type": "official_website",
+        "notes": "UCI Machine Learning Repository dataset 94 landing page."
+      },
+      {
+        "title": "Spambase Dataset Documentation",
+        "url": "https://doi.org/10.24432/C53G6X",
+        "type": "documentation",
+        "notes": "Canonical DOI citation and donor documentation."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against UCI Machine Learning Repository dataset 94 (DOI: 10.24432/C53G6X) and Hewlett-Packard Labs documentation."
+    },
+    "size": {
+      "amount": 700.0,
+      "unit": "KB",
+      "file_formats": [
+        "csv",
+        "data"
+      ],
+      "status": "verified",
+      "notes": "Comma-delimited text data with 57 continuous attributes and 1 binary label."
+    },
+    "sample_count": {
+      "total": 4601,
+      "unit": "instances",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "spam_instances",
+          "value": 1813,
+          "unit": "instances"
+        },
+        {
+          "label": "non_spam_instances",
+          "value": 2788,
+          "unit": "instances"
+        },
+        {
+          "label": "attributes",
+          "value": 57,
+          "unit": "features"
+        }
+      ]
+    },
+    "dates": {
+      "published": "1999-07-01"
+    },
+    "citation": {
+      "paper_title": "Spambase Dataset",
+      "paper_url": "https://doi.org/10.24432/C53G6X",
+      "authors": [
+        "Mark Hopkins",
+        "Erik Reeber",
+        "George Forman",
+        "Jaap Suermondt"
+      ],
+      "doi": "10.24432/C53G6X",
+      "bibtex": "@misc{hopkins1999spambase,\n  title = {Spambase},\n  author = {Hopkins, Mark and Reeber, Erik and Forman, George and Suermondt, Jaap},\n  year = {1999},\n  publisher = {UCI Machine Learning Repository},\n  doi = {10.24432/C53G6X}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "uci-statlog-shuttle",
+    "slug": "uci-statlog-shuttle",
+    "name": "Statlog Shuttle Radiator Position Benchmark",
+    "description": "The Statlog Shuttle dataset consists of 58,000 instances describing NASA Space Shuttle radiator thermal loop configurations across 9 numerical attributes. Featuring severe class imbalance across 7 radiator state classes, it is widely utilized for anomaly detection and imbalanced learning research.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/148/statlog+shuttle",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "anomaly-detection",
+      "multi-class-classification"
+    ],
+    "tags": [
+      "shuttle",
+      "statlog",
+      "uci",
+      "imbalanced-classification",
+      "anomaly-detection"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+    },
+    "source_references": [
+      {
+        "title": "UCI Statlog Shuttle Portal",
+        "url": "https://archive.ics.uci.edu/dataset/148/statlog+shuttle",
+        "type": "official_website",
+        "notes": "UCI Machine Learning Repository dataset 148 landing page."
+      },
+      {
+        "title": "Machine Learning, Neural and Statistical Classification",
+        "url": "https://doi.org/10.24432/C5WS31",
+        "type": "documentation",
+        "notes": "Canonical DOI citation and project book."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against UCI Machine Learning Repository dataset 148 (DOI: 10.24432/C5WS31) and Statlog project documentation."
+    },
+    "size": {
+      "amount": 1.8,
+      "unit": "MB",
+      "file_formats": [
+        "csv",
+        "data"
+      ],
+      "status": "verified",
+      "notes": "Standard whitespace/comma-separated train and test partitions."
+    },
+    "sample_count": {
+      "total": 58000,
+      "unit": "instances",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 43500,
+        "test": 14500
+      },
+      "breakdown": [
+        {
+          "label": "attributes",
+          "value": 9,
+          "unit": "features"
+        },
+        {
+          "label": "radiator_classes",
+          "value": 7,
+          "unit": "classes"
+        }
+      ]
+    },
+    "dates": {
+      "published": "1994-01-01"
+    },
+    "citation": {
+      "paper_title": "Machine Learning, Neural and Statistical Classification",
+      "paper_url": "https://doi.org/10.24432/C5WS31",
+      "authors": [
+        "D. Michie",
+        "D. J. Spiegelhalter",
+        "C. C. Taylor"
+      ],
+      "doi": "10.24432/C5WS31",
+      "bibtex": "@book{michie1994statlog,\n  title = {Machine Learning, Neural and Statistical Classification},\n  author = {Michie, D. and Spiegelhalter, D. J. and Taylor, C. C.},\n  year = {1994},\n  publisher = {Ellis Horwood},\n  address = {Upper Saddle River, NJ, USA}\n}"
     }
   },
   {
@@ -66526,6 +68978,114 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "visdial",
+    "slug": "visdial",
+    "name": "Visual Dialog: Multi-Turn Conversational Visual Question Answering",
+    "description": "Visual Dialog (VisDial v1.0) is a multimodal benchmark for multi-turn visual conversation. In each dialogue, two participants converse about an image from COCO: one acts as the questioner and the other as the answerer, generating 10 multi-turn question-answer exchanges per image across 133,351 dialogues.",
+    "homepage_url": "https://visualdialog.org",
+    "publisher": {
+      "name": "Georgia Institute of Technology",
+      "type": "academic",
+      "url": "https://www.gatech.edu"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-dialog",
+      "conversational-ai",
+      "visual-question-answering"
+    ],
+    "tags": [
+      "visdial",
+      "visual-dialog",
+      "multimodal",
+      "coco",
+      "conversation"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dialog annotations released under CC-BY-4.0."
+    },
+    "source_references": [
+      {
+        "title": "Visual Dialog Official Project Portal",
+        "url": "https://visualdialog.org",
+        "type": "official_website",
+        "notes": "Official Visual Dialog challenge platform and leaderboard."
+      },
+      {
+        "title": "Visual Dialog",
+        "url": "https://doi.org/10.1109/CVPR.2017.13",
+        "type": "original_paper",
+        "notes": "Published in CVPR 2017 proceedings."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against CVPR 2017 publication (DOI: 10.1109/CVPR.2017.13) and Visual Dialog v1.0 specifications."
+    },
+    "size": {
+      "amount": 160.0,
+      "unit": "MB",
+      "file_formats": [
+        "json"
+      ],
+      "status": "verified",
+      "notes": "JSON dialog files containing question-answer rounds, 100 candidate answers per round, and image IDs."
+    },
+    "sample_count": {
+      "total": 133351,
+      "unit": "dialogues",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 123287,
+        "val": 2064,
+        "test": 8000
+      },
+      "breakdown": [
+        {
+          "label": "dialogue_turns",
+          "value": 1333510,
+          "unit": "turns"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2017-07-21"
+    },
+    "citation": {
+      "paper_title": "Visual Dialog",
+      "paper_url": "https://doi.org/10.1109/CVPR.2017.13",
+      "authors": [
+        "Abhishek Das",
+        "Satwik Kottur",
+        "Khushi Gupta",
+        "Avi Singh",
+        "Deshraj Yadav",
+        "José M. F. Moura",
+        "Devi Parikh",
+        "Dhruv Batra"
+      ],
+      "doi": "10.1109/CVPR.2017.13",
+      "bibtex": "@inproceedings{das2017visualdialog,\n  title = {Visual Dialog},\n  author = {Das, Abhishek and Kottur, Satwik and Gupta, Khushi and Singh, Avi and Yadav, Deshraj and Moura, Jos{\\'e} M. F. and Parikh, Devi and Batra, Dhruv},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages = {326--335},\n  year = {2017},\n  doi = {10.1109/CVPR.2017.13}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "visdrone",
     "slug": "visdrone",
     "name": "VisDrone: Visual Object Detection and Tracking from Drone Imagery",
@@ -66790,6 +69350,115 @@
         "Xue, Jinlin"
       ],
       "doi": "10.17632/jskv9f9n7w.2"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "visual7w",
+    "slug": "visual7w",
+    "name": "Visual7W: Grounded Question Answering in Images",
+    "description": "Visual7W is a grounded question answering dataset built on 47,300 images from Visual Genome. It introduces rich semantic question answering covering seven 'W' question categories (What, Where, When, Who, Why, How, and Which), with 327,939 total QA pairs and 1,403,730 multiple-choice answers grounded in object bounding boxes.",
+    "homepage_url": "https://ai.stanford.edu/~yukez/visual7w",
+    "publisher": {
+      "name": "Stanford University",
+      "type": "academic",
+      "url": "https://ai.stanford.edu"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "grounded-qa",
+      "object-grounding"
+    ],
+    "tags": [
+      "visual7w",
+      "grounded-vqa",
+      "vqa",
+      "multimodal",
+      "stanford"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset annotations released under CC-BY-4.0."
+    },
+    "source_references": [
+      {
+        "title": "Visual7W Project Page",
+        "url": "https://ai.stanford.edu/~yukez/visual7w",
+        "type": "official_website",
+        "notes": "Stanford AI Lab dataset and visualization page."
+      },
+      {
+        "title": "Visual7W: Grounded Question Answering in Images",
+        "url": "https://doi.org/10.1109/CVPR.2016.539",
+        "type": "original_paper",
+        "notes": "Published in CVPR 2016 proceedings."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against CVPR 2016 publication (DOI: 10.1109/CVPR.2016.539) and Stanford AI Lab dataset release."
+    },
+    "size": {
+      "amount": 85.0,
+      "unit": "MB",
+      "file_formats": [
+        "json"
+      ],
+      "status": "verified",
+      "notes": "JSON annotations containing questions, answers, and bounding-box grounds referencing Visual Genome images."
+    },
+    "sample_count": {
+      "total": 327939,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 236466,
+        "val": 51241,
+        "test": 40232
+      },
+      "breakdown": [
+        {
+          "label": "images",
+          "value": 47300,
+          "unit": "images"
+        },
+        {
+          "label": "grounded_qa_pairs",
+          "value": 139368,
+          "unit": "questions"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2016-06-27"
+    },
+    "citation": {
+      "paper_title": "Visual7W: Grounded Question Answering in Images",
+      "paper_url": "https://doi.org/10.1109/CVPR.2016.539",
+      "authors": [
+        "Yuke Zhu",
+        "Oliver Groth",
+        "Michael Bernstein",
+        "Li Fei-Fei"
+      ],
+      "doi": "10.1109/CVPR.2016.539",
+      "bibtex": "@inproceedings{zhu2016visual7w,\n  title = {{Visual7W}: Grounded Question Answering in Images},\n  author = {Zhu, Yuke and Groth, Oliver and Bernstein, Michael and Fei-Fei, Li},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages = {4995--5004},\n  year = {2016},\n  doi = {10.1109/CVPR.2016.539}\n}"
     }
   },
   {

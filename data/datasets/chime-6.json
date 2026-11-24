@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "chime-6",
+  "slug": "chime-6",
+  "name": "CHiME-6 Corpus: Dinner Party Conversational Speech Recognition Benchmark",
+  "description": "CHiME-6 is a conversational speech recognition benchmark dataset recorded during unconstrained dinner party gatherings in real homes. Capturing 20 multi-speaker sessions totaling 50 hours of audio using binaural microphones worn by participants and multiple four-channel array microphones placed around kitchen and dining areas.",
+  "homepage_url": "https://chimechallenge.github.io/chime6",
+  "publisher": {
+    "name": "CHiME Challenge Consortium / University of Sheffield",
+    "type": "academic",
+    "url": "https://chimechallenge.github.io"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-recognition",
+    "speaker-diarization",
+    "speech-separation"
+  ],
+  "tags": [
+    "chime-6",
+    "conversational-speech",
+    "asr",
+    "multi-channel-audio",
+    "dinner-party"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "CHiME-6 Data License Agreement",
+    "spdx_id": null,
+    "url": "https://chimechallenge.github.io/chime6/",
+    "commercial_use": "forbidden",
+    "notes": "Released for non-commercial research and evaluation purposes subject to the CHiME-6 license agreement."
+  },
+  "source_references": [
+    {
+      "title": "CHiME-6 Challenge Official Portal",
+      "url": "https://chimechallenge.github.io/chime6",
+      "type": "official_website",
+      "notes": "Official portal with task details, data structure, and evaluation recipes."
+    },
+    {
+      "title": "The CHiME-6 Challenge: Tackling Multispeaker Speech Recognition for Unsegmented Recordings",
+      "url": "https://arxiv.org/abs/2004.09249",
+      "type": "original_paper",
+      "notes": "Benchmark overview paper for the CHiME-6 challenge."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against arXiv:2004.09249 and official CHiME Challenge portal."
+  },
+  "size": {
+    "amount": 80.0,
+    "unit": "GB",
+    "file_formats": [
+      "wav",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Synchronized multi-channel 16kHz WAV audio recordings with JSON transcriptions and time annotations."
+  },
+  "sample_count": {
+    "total": 20,
+    "unit": "recording-sessions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 16,
+      "dev": 2,
+      "eval": 2
+    },
+    "breakdown": [
+      {
+        "label": "total_duration",
+        "value": 50,
+        "unit": "hours"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2020-04-20"
+  },
+  "citation": {
+    "paper_title": "The CHiME-6 Challenge: Tackling Multispeaker Speech Recognition for Unsegmented Recordings in Everyday Dinner Parties",
+    "paper_url": "https://arxiv.org/abs/2004.09249",
+    "authors": [
+      "Shinji Watanabe",
+      "Michael Mandel",
+      "Jon Barker",
+      "Emmanuel Vincent",
+      "Ashutosh Arora",
+      "Xuankai Chang",
+      "Sanjeev Khudanpur",
+      "Vimal Manohar",
+      "Daniel Povey",
+      "Desh Raj",
+      "David Snyder",
+      "Alexander S. Szoke",
+      "Jan Cernocky"
+    ],
+    "bibtex": "@article{watanabe2020chime6,\n  title = {The {CHiME-6} Challenge: Tackling Multispeaker Speech Recognition for Unsegmented Recordings in Everyday Dinner Parties},\n  author = {Watanabe, Shinji and Mandel, Michael and Barker, Jon and Vincent, Emmanuel and Arora, Ashutosh and Chang, Xuankai and Khudanpur, Sanjeev and Manohar, Vimal and Povey, Daniel and Raj, Desh and Snyder, David and Szoke, Alexander S. and Cernocky, Jan},\n  journal = {arXiv preprint arXiv:2004.09249},\n  year = {2020}\n}"
+  }
+}

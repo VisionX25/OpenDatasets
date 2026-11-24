@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "textvqa",
+  "slug": "textvqa",
+  "name": "TextVQA: Visual Question Answering on Text in Images",
+  "description": "TextVQA is a visual question answering benchmark requiring reading and reasoning about text present in images. Containing 45,336 questions over 28,408 images from the Open Images dataset, where answers require optical character recognition (OCR) and reasoning on the identified text.",
+  "homepage_url": "https://textvqa.org",
+  "publisher": {
+    "name": "Meta AI / Facebook AI Research",
+    "type": "industry",
+    "url": "https://ai.meta.com"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "ocr",
+    "scene-text-recognition"
+  ],
+  "tags": [
+    "textvqa",
+    "vqa",
+    "ocr",
+    "scene-text",
+    "multimodal"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset annotations released under CC-BY-4.0."
+  },
+  "source_references": [
+    {
+      "title": "TextVQA Official Project Website",
+      "url": "https://textvqa.org",
+      "type": "official_website",
+      "notes": "Official challenge website and evaluation server."
+    },
+    {
+      "title": "Towards VQA Models That Can Read",
+      "url": "https://doi.org/10.1109/CVPR.2019.01055",
+      "type": "original_paper",
+      "notes": "Published in CVPR 2019 proceedings."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against CVPR 2019 publication (DOI: 10.1109/CVPR.2019.01055) and official TextVQA challenge specifications."
+  },
+  "size": {
+    "amount": 28.0,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "JSON annotations with question IDs, image references, and 10 human consensus answers per question."
+  },
+  "sample_count": {
+    "total": 45336,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 34602,
+      "val": 5000,
+      "test": 5734
+    },
+    "breakdown": [
+      {
+        "label": "images",
+        "value": 28408,
+        "unit": "images"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2019-06-16"
+  },
+  "citation": {
+    "paper_title": "Towards VQA Models That Can Read",
+    "paper_url": "https://doi.org/10.1109/CVPR.2019.01055",
+    "authors": [
+      "Amanpreet Singh",
+      "Vivek Natarajan",
+      "Meet Shah",
+      "Yu Jiang",
+      "Xinlei Chen",
+      "Dhruv Batra",
+      "Devi Parikh",
+      "Marcus Rohrbach"
+    ],
+    "doi": "10.1109/CVPR.2019.01055",
+    "bibtex": "@inproceedings{singh2019textvqa,\n  title = {Towards {VQA} Models That Can Read},\n  author = {Singh, Amanpreet and Natarajan, Vivek and Shah, Meet and Jiang, Yu and Chen, Xinlei and Batra, Dhruv and Parikh, Devi and Rohrbach, Marcus},\n  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages = {8317--8326},\n  year = {2019},\n  doi = {10.1109/CVPR.2019.01055}\n}"
+  }
+}

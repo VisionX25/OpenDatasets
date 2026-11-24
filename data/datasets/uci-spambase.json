@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-spambase",
+  "slug": "uci-spambase",
+  "name": "Spambase Email Classification Benchmark",
+  "description": "The Spambase dataset consists of 4,601 email messages characterized by 57 continuous real-valued features reflecting word frequencies (such as 'make', 'address', 'free'), character frequencies, and run-length statistics of capital letters. It serves as a benchmark for binary spam classification.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/94/spambase",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / Hewlett-Packard Labs",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "binary-classification",
+    "tabular-classification",
+    "spam-detection"
+  ],
+  "tags": [
+    "spambase",
+    "spam-detection",
+    "uci",
+    "tabular",
+    "classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI Spambase Portal",
+      "url": "https://archive.ics.uci.edu/dataset/94/spambase",
+      "type": "official_website",
+      "notes": "UCI Machine Learning Repository dataset 94 landing page."
+    },
+    {
+      "title": "Spambase Dataset Documentation",
+      "url": "https://doi.org/10.24432/C53G6X",
+      "type": "documentation",
+      "notes": "Canonical DOI citation and donor documentation."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository dataset 94 (DOI: 10.24432/C53G6X) and Hewlett-Packard Labs documentation."
+  },
+  "size": {
+    "amount": 700.0,
+    "unit": "KB",
+    "file_formats": [
+      "csv",
+      "data"
+    ],
+    "status": "verified",
+    "notes": "Comma-delimited text data with 57 continuous attributes and 1 binary label."
+  },
+  "sample_count": {
+    "total": 4601,
+    "unit": "instances",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "spam_instances",
+        "value": 1813,
+        "unit": "instances"
+      },
+      {
+        "label": "non_spam_instances",
+        "value": 2788,
+        "unit": "instances"
+      },
+      {
+        "label": "attributes",
+        "value": 57,
+        "unit": "features"
+      }
+    ]
+  },
+  "dates": {
+    "published": "1999-07-01"
+  },
+  "citation": {
+    "paper_title": "Spambase Dataset",
+    "paper_url": "https://doi.org/10.24432/C53G6X",
+    "authors": [
+      "Mark Hopkins",
+      "Erik Reeber",
+      "George Forman",
+      "Jaap Suermondt"
+    ],
+    "doi": "10.24432/C53G6X",
+    "bibtex": "@misc{hopkins1999spambase,\n  title = {Spambase},\n  author = {Hopkins, Mark and Reeber, Erik and Forman, George and Suermondt, Jaap},\n  year = {1999},\n  publisher = {UCI Machine Learning Repository},\n  doi = {10.24432/C53G6X}\n}"
+  }
+}

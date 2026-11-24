@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "id": "snips",
+  "slug": "snips",
+  "name": "SNIPS Voice Platform Natural Language Understanding Benchmark",
+  "description": "SNIPS Natural Language Understanding Benchmark is a curated intent classification and slot tagging dataset designed for evaluating voice assistants. Comprising 14,484 voice commands across 7 intents (such as AddToPlaylist, BookRestaurant, GetWeather, PlayMusic, RateBook, SearchCreativeWork, SearchScreeningEvent) across 10 slot categories.",
+  "homepage_url": "https://github.com/sonos/nlu-benchmark",
+  "publisher": {
+    "name": "Snips / Sonos",
+    "type": "industry",
+    "url": "https://www.sonos.com"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "intent-classification",
+    "slot-filling",
+    "spoken-language-understanding"
+  ],
+  "tags": [
+    "snips",
+    "intent-detection",
+    "slot-filling",
+    "voice-assistant",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Zero v1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "The benchmark datasets in the repository are dedicated to the public domain under CC0 1.0."
+  },
+  "source_references": [
+    {
+      "title": "Snips NLU Benchmark GitHub Repository",
+      "url": "https://github.com/sonos/nlu-benchmark",
+      "type": "repository",
+      "notes": "Repository containing corpus files, slot configurations, and evaluation scripts."
+    },
+    {
+      "title": "Snips Voice Platform: an embedded Spoken Language Understanding system for private-by-design Voice Interfaces",
+      "url": "https://arxiv.org/abs/1805.10190",
+      "type": "original_paper",
+      "notes": "System paper describing the Snips NLU architecture and benchmark dataset."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against arXiv:1805.10190 and official sonos/nlu-benchmark GitHub repository."
+  },
+  "size": {
+    "amount": 4.8,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "JSON files containing utterances, intent labels, and token-level slot annotations."
+  },
+  "sample_count": {
+    "total": 14484,
+    "unit": "utterances",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 13084,
+      "validation": 700,
+      "test": 700
+    },
+    "breakdown": [
+      {
+        "label": "intent_classes",
+        "value": 7,
+        "unit": "intents"
+      },
+      {
+        "label": "slot_categories",
+        "value": 10,
+        "unit": "slots"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-05-25"
+  },
+  "citation": {
+    "paper_title": "Snips Voice Platform: an embedded Spoken Language Understanding system for private-by-design Voice Interfaces",
+    "paper_url": "https://arxiv.org/abs/1805.10190",
+    "authors": [
+      "Alice Coucke",
+      "Alaa Saade",
+      "Adrien Ball",
+      "Théodore Bluche",
+      "Alexandre Caulier",
+      "David Leroy",
+      "Clément Doumouro",
+      "Thibault Gisselbrecht",
+      "Francesco Caltagirone",
+      "Thibaut Lavril",
+      "Maël Primet",
+      "Joseph Dureau"
+    ],
+    "bibtex": "@article{coucke2018snips,\n  title = {Snips Voice Platform: an embedded Spoken Language Understanding system for private-by-design Voice Interfaces},\n  author = {Coucke, Alice and Saade, Alaa and Ball, Adrien and Bluche, Th{\\'e}odore and Caulier, Alexandre and Leroy, David and Doumouro, Cl{\\'e}ment and Gisselbrecht, Thibault and Caltagirone, Francesco and Lavril, Thibaut and Primet, Ma{\\\"e}l and Dureau, Joseph},\n  journal = {arXiv preprint arXiv:1805.10190},\n  year = {2018}\n}"
+  }
+}
