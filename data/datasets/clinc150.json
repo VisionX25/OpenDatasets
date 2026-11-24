@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "id": "clinc150",
+  "slug": "clinc150",
+  "name": "CLINC150: Intent Classification and Out-of-Scope Detection Dataset",
+  "description": "CLINC150 (also known as the CLINC OOS Evaluation dataset) is an intent classification benchmark comprising 23,700 conversational queries across 10 diverse domains and 150 in-scope intent categories, accompanied by a dedicated out-of-scope (OOS) query set. Designed to test real-world task-oriented dialog robustness, it benchmarks both standard intent prediction and out-of-domain rejection capabilities.",
+  "homepage_url": "https://github.com/clinc/oos-eval",
+  "publisher": {
+    "name": "Clinc & University of Michigan",
+    "type": "academic",
+    "url": "https://clinc.com"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "intent-classification",
+    "text-classification"
+  ],
+  "tags": [
+    "intent-classification",
+    "out-of-scope-detection",
+    "dialog-systems",
+    "conversational-ai",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 3.0 Unported",
+    "spdx_id": "CC-BY-3.0",
+    "url": "https://creativecommons.org/licenses/by/3.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released by Clinc under CC BY 3.0."
+  },
+  "source_references": [
+    {
+      "title": "CLINC OOS Evaluation GitHub Repository",
+      "url": "https://github.com/clinc/oos-eval",
+      "type": "repository",
+      "notes": "Official repository with dataset JSON files."
+    },
+    {
+      "title": "An Evaluation Dataset for Intent Classification and Out-of-Scope Prediction (EMNLP 2019)",
+      "url": "https://aclanthology.org/D19-1131/",
+      "type": "original_paper",
+      "notes": "Published in EMNLP-IJCNLP 2019."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against EMNLP 2019 paper and official GitHub repository."
+  },
+  "size": {
+    "amount": 4.1,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Structured JSON files containing in-scope and out-of-scope splits."
+  },
+  "sample_count": {
+    "total": 23700,
+    "unit": "utterances",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 15250,
+      "validation": 3100,
+      "test": 5350
+    },
+    "breakdown": [
+      {
+        "label": "in_scope_intents",
+        "value": 150,
+        "unit": "classes"
+      },
+      {
+        "label": "domains",
+        "value": 10,
+        "unit": "domains"
+      },
+      {
+        "label": "out_of_scope_queries",
+        "value": 1200,
+        "unit": "queries"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2019-11-03"
+  },
+  "citation": {
+    "paper_title": "An Evaluation Dataset for Intent Classification and Out-of-Scope Prediction",
+    "paper_url": "https://aclanthology.org/D19-1131/",
+    "authors": [
+      "Stefan Larson",
+      "Anish Mahendran",
+      "Joseph J. Peper",
+      "Christopher Clarke",
+      "Andrew Lee",
+      "Parker Hill",
+      "Jonathan K. Kummerfeld",
+      "Kevin Leach",
+      "Michael A. Laurenzano",
+      "Lingjia Tang",
+      "Jason Mars"
+    ],
+    "doi": "10.18653/v1/D19-1131",
+    "bibtex": "@inproceedings{larson-etal-2019-evaluation,\n  title = {An Evaluation Dataset for Intent Classification and Out-of-Scope Prediction},\n  author = {Larson, Stefan and Mahendran, Anish and Peper, Joseph J. and Clarke, Christopher and Lee, Andrew and Hill, Parker and Kummerfeld, Jonathan K. and Leach, Kevin and Laurenzano, Michael A. and Tang, Lingjia and Mars, Jason},\n  booktitle = {Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},\n  year = {2019},\n  pages = {1311--1316},\n  doi = {10.18653/v1/D19-1131}\n}"
+  }
+}

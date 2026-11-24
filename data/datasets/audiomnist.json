@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "id": "audiomnist",
+  "slug": "audiomnist",
+  "name": "AudioMNIST: Spoken Digits Audio Classification Benchmark",
+  "description": "AudioMNIST is an acoustic benchmark dataset comprising 30,000 audio recordings of spoken digits (0-9) spoken in English. Captured from 60 distinct human speakers of varying genders and accents (50 repetitions per digit per speaker), it serves as a lightweight, standardized speech recognition testbed tailored for neural audio architectures, explainable artificial intelligence (XAI), and acoustic feature visualization.",
+  "homepage_url": "https://github.com/soerenab/AudioMNIST",
+  "publisher": {
+    "name": "Technical University of Berlin",
+    "type": "academic",
+    "url": "https://www.tu.berlin"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "audio-classification",
+    "speech-recognition"
+  ],
+  "tags": [
+    "speech-recognition",
+    "spoken-digits",
+    "audio-classification",
+    "audio-mnist",
+    "audio"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under CC BY-SA 4.0."
+  },
+  "source_references": [
+    {
+      "title": "AudioMNIST GitHub Repository",
+      "url": "https://github.com/soerenab/AudioMNIST",
+      "type": "repository",
+      "notes": "Official repository with audio files and speaker metadata."
+    },
+    {
+      "title": "AudioMNIST: Exploring Explainable Artificial Intelligence for Audio Analysis",
+      "url": "https://arxiv.org/abs/1807.03418",
+      "type": "original_paper",
+      "notes": "Preprint publication introducing AudioMNIST."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against publication and official GitHub repository."
+  },
+  "size": {
+    "amount": 1.2,
+    "unit": "GB",
+    "file_formats": [
+      "wav",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "48kHz 16-bit WAV recordings with speaker demographic metadata."
+  },
+  "sample_count": {
+    "total": 30000,
+    "unit": "audio-recordings",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "speakers",
+        "value": 60,
+        "unit": "speakers"
+      },
+      {
+        "label": "digit_classes",
+        "value": 10,
+        "unit": "classes"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-07-09"
+  },
+  "citation": {
+    "paper_title": "AudioMNIST: Exploring Explainable Artificial Intelligence for Audio Analysis on a Simple Benchmark",
+    "paper_url": "https://arxiv.org/abs/1807.03418",
+    "authors": [
+      "Sören Becker",
+      "Marcel Ackermann",
+      "Sebastian Lapuschkin",
+      "Klaus-Robert Müller",
+      "Wojciech Samek"
+    ],
+    "bibtex": "@article{becker2018audiomnist,\n  title = {{AudioMNIST}: Exploring Explainable Artificial Intelligence for Audio Analysis on a Simple Benchmark},\n  author = {Becker, S{\\\"o}ren and Ackermann, Marcel and Lapuschkin, Sebastian and M{\\\"u}ller, Klaus-Robert and Samek, Wojciech},\n  journal = {arXiv preprint arXiv:1807.03418},\n  year = {2018}\n}"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tum-rgbd",
+  "slug": "tum-rgbd",
+  "name": "TUM RGB-D Benchmark: RGB-D SLAM and Odometry Dataset",
+  "description": "The TUM RGB-D Benchmark is an established visual SLAM and odometry dataset curated by the Computer Vision Group at the Technical University of Munich. Recorded using Microsoft Kinect sensors and an automated motion capture system, it provides 39 indoor sequences totaling 84,000 synchronized RGB and depth frames with sub-millimeter accurate 6-DoF ground truth trajectories, benchmarked for camera localization, odometry drift, and 3D surface reconstruction.",
+  "homepage_url": "https://cvg.cit.tum.de/data/datasets/rgbd-dataset",
+  "publisher": {
+    "name": "Technical University of Munich (TUM)",
+    "type": "academic",
+    "url": "https://cvg.cit.tum.de"
+  },
+  "modalities": [
+    "vision",
+    "3d",
+    "sensor"
+  ],
+  "tasks": [
+    "visual-slam",
+    "depth-estimation"
+  ],
+  "tags": [
+    "rgb-d",
+    "slam",
+    "visual-odometry",
+    "trajectory-estimation",
+    "kinect",
+    "3d"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released by TUM CVG under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "TUM RGB-D Dataset Portal",
+      "url": "https://cvg.cit.tum.de/data/datasets/rgbd-dataset",
+      "type": "official_website",
+      "notes": "Official benchmark portal with sequence downloads and evaluation tools."
+    },
+    {
+      "title": "A Benchmark for the Evaluation of RGB-D SLAM Systems (IROS 2012)",
+      "url": "https://doi.org/10.1109/IROS.2012.6385773",
+      "type": "original_paper",
+      "notes": "Published in IROS 2012."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against IROS 2012 publication and TUM CVG portal."
+  },
+  "size": {
+    "amount": 27.5,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "txt",
+      "tgz"
+    ],
+    "status": "verified",
+    "notes": "Synchronized RGB-D image pairs and ground truth trajectory logs."
+  },
+  "sample_count": {
+    "total": 39,
+    "unit": "recorded-sequences",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "synchronized_rgbd_frames",
+        "value": 84000,
+        "unit": "frames"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2012-10-07"
+  },
+  "citation": {
+    "paper_title": "A Benchmark for the Evaluation of RGB-D SLAM Systems",
+    "paper_url": "https://doi.org/10.1109/IROS.2012.6385773",
+    "authors": [
+      "Jürgen Sturm",
+      "Nikolas Engelhard",
+      "Felix Endres",
+      "Wolfram Burgard",
+      "Daniel Cremers"
+    ],
+    "doi": "10.1109/IROS.2012.6385773",
+    "bibtex": "@inproceedings{sturm2012benchmark,\n  title = {A Benchmark for the Evaluation of {RGB-D} {SLAM} Systems},\n  author = {Sturm, J{\\\"u}rgen and Engelhard, Nikolas and Endres, Felix and Burgard, Wolfram and Cremers, Daniel},\n  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},\n  year = {2012},\n  pages = {573--580},\n  doi = {10.1109/IROS.2012.6385773}\n}"
+  }
+}

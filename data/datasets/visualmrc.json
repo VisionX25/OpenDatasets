@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "visualmrc",
+  "slug": "visualmrc",
+  "name": "VisualMRC: Machine Reading Comprehension on Document Images",
+  "description": "VisualMRC is a machine reading comprehension benchmark requiring multimodal models to answer open-ended questions based on document screenshots. Extracted from 10,197 diverse webpage documents across 34 domains, it contains 30,562 question-answer pairs annotated with bounding-box grounded evidence regions, evaluating multimodal comprehension of web layouts, typography, charts, and contextual text.",
+  "homepage_url": "https://github.com/nttmdlab-nlp/VisualMRC",
+  "publisher": {
+    "name": "NTT Human Informatics Laboratories",
+    "type": "industry",
+    "url": "https://www.rd.ntt/e/hil/"
+  },
+  "modalities": [
+    "vision",
+    "nlp",
+    "multimodal"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "document-understanding"
+  ],
+  "tags": [
+    "document-ai",
+    "machine-reading-comprehension",
+    "webpage-vqa",
+    "document-mrc",
+    "multimodal"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Dataset released by NTT under CC BY-NC-SA 4.0."
+  },
+  "source_references": [
+    {
+      "title": "VisualMRC GitHub Repository",
+      "url": "https://github.com/nttmdlab-nlp/VisualMRC",
+      "type": "repository",
+      "notes": "Official repository with dataset JSON files and visual groundings."
+    },
+    {
+      "title": "VisualMRC: Machine Reading Comprehension on Document Images (AAAI 2021)",
+      "url": "https://doi.org/10.1609/aaai.v35i15.17642",
+      "type": "original_paper",
+      "notes": "Published in AAAI 2021."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against AAAI 2021 paper and NTT GitHub repository."
+  },
+  "size": {
+    "amount": 4.5,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Webpage document screenshots and JSON QA annotations."
+  },
+  "sample_count": {
+    "total": 30562,
+    "unit": "question-answer-pairs",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 21399,
+      "validation": 3056,
+      "test": 6107
+    },
+    "breakdown": [
+      {
+        "label": "document_images",
+        "value": 10197,
+        "unit": "images"
+      },
+      {
+        "label": "website_domains",
+        "value": 34,
+        "unit": "domains"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2021-05-18"
+  },
+  "citation": {
+    "paper_title": "VisualMRC: Machine Reading Comprehension on Document Images",
+    "paper_url": "https://doi.org/10.1609/aaai.v35i15.17642",
+    "authors": [
+      "Ryota Tanaka",
+      "Kyosuke Nishida",
+      "Sen Yoshida"
+    ],
+    "doi": "10.1609/aaai.v35i15.17642",
+    "bibtex": "@inproceedings{tanaka2021visualmrc,\n  title = {{VisualMRC}: Machine Reading Comprehension on Document Images},\n  author = {Tanaka, Ryota and Nishida, Kyosuke and Yoshida, Sen},\n  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume = {35},\n  number = {15},\n  pages = {13878--13888},\n  year = {2021},\n  doi = {10.1609/aaai.v35i15.17642}\n}"
+  }
+}

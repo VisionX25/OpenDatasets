@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-gas-sensor-array-drift",
+  "slug": "uci-gas-sensor-array-drift",
+  "name": "Gas Sensor Array Drift Dataset",
+  "description": "The Gas Sensor Array Drift dataset is a benchmark time-series and tabular sensor dataset collected by the BioCircuits Institute at UC San Diego. Recorded over a 36-month period using an array of 16 metal-oxide semiconductor gas sensors, it contains 13,910 measurements across six chemical volatile organic compounds (ethanol, ethylene, carbon monoxide, methane, acetaldehyde, toluene) to evaluate concept drift compensation and robust sensor pattern classification.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/224/gas+sensor+array+drift+dataset",
+  "publisher": {
+    "name": "University of California, San Diego (BioCircuits Institute)",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular",
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "tabular-classification"
+  ],
+  "tags": [
+    "gas-sensors",
+    "sensor-drift",
+    "concept-drift",
+    "tabular-classification",
+    "sensor"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset hosted at UCI Machine Learning Repository under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "UCI Gas Sensor Array Drift Dataset Portal",
+      "url": "https://archive.ics.uci.edu/dataset/224/gas+sensor+array+drift+dataset",
+      "type": "official_website",
+      "notes": "Official dataset deposit page at UCI ML Repository."
+    },
+    {
+      "title": "Chemical Gas Sensor Drift Compensation Using Classifier Ensembles (Sensors and Actuators B 2012)",
+      "url": "https://doi.org/10.1016/j.snb.2012.01.074",
+      "type": "original_paper",
+      "notes": "Published in Sensors and Actuators B: Chemical 2012."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against publication and UCI repository."
+  },
+  "size": {
+    "amount": 25.0,
+    "unit": "MB",
+    "file_formats": [
+      "dat",
+      "zip"
+    ],
+    "status": "verified",
+    "notes": "10 consecutive batch files containing 128 feature columns per record."
+  },
+  "sample_count": {
+    "total": 13910,
+    "unit": "sensor-measurements",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "chemical_gas_classes",
+        "value": 6,
+        "unit": "classes"
+      },
+      {
+        "label": "sensor_channels",
+        "value": 16,
+        "unit": "sensors"
+      },
+      {
+        "label": "feature_dimensions",
+        "value": 128,
+        "unit": "features"
+      },
+      {
+        "label": "chronological_batches",
+        "value": 10,
+        "unit": "batches"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2012-04-15"
+  },
+  "citation": {
+    "paper_title": "Chemical gas sensor drift compensation using classifier ensembles",
+    "paper_url": "https://doi.org/10.1016/j.snb.2012.01.074",
+    "authors": [
+      "Alexander Vergara",
+      "Sankar Vembu",
+      "Tuba Ayhan",
+      "Margaret A. Ryan",
+      "Margie L. Homer",
+      "Ramón Huerta"
+    ],
+    "doi": "10.1016/j.snb.2012.01.074",
+    "bibtex": "@article{vergara2012chemical,\n  title = {Chemical gas sensor drift compensation using classifier ensembles},\n  author = {Vergara, Alexander and Vembu, Sankar and Ayhan, Tuba and Ryan, Margaret A. and Homer, Margie L. and Huerta, Ram{\\'o}n},\n  journal = {Sensors and Actuators B: Chemical},\n  volume = {166},\n  pages = {320--329},\n  year = {2012},\n  doi = {10.1016/j.snb.2012.01.074}\n}"
+  }
+}

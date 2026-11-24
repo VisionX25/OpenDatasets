@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "libricss",
+  "slug": "libricss",
+  "name": "LibriCSS: Continuous Speech Separation Dataset",
+  "description": "LibriCSS is a dedicated continuous speech separation and multi-speaker speech recognition benchmark curated by Microsoft. Created by playing back concatenated LibriSpeech utterances in real acoustic meeting rooms with varying speaker overlap ratios (0% to 40%), it captures 10 hours of natural conversational audio using a 7-channel circular microphone array.",
+  "homepage_url": "https://github.com/chenzhuo1011/libri_css",
+  "publisher": {
+    "name": "Microsoft Corporation",
+    "type": "industry",
+    "url": "https://research.microsoft.com"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-separation",
+    "speech-recognition"
+  ],
+  "tags": [
+    "speech-separation",
+    "conversational-speech",
+    "meeting-corpus",
+    "overlapping-speech",
+    "multichannel-audio",
+    "audio"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released by Microsoft under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "LibriCSS GitHub Repository",
+      "url": "https://github.com/chenzhuo1011/libri_css",
+      "type": "repository",
+      "notes": "Official repository with dataset manifest and evaluation scripts."
+    },
+    {
+      "title": "Continuous Speech Separation: Dataset and Analysis (ICASSP 2020)",
+      "url": "https://arxiv.org/abs/2001.11482",
+      "type": "original_paper",
+      "notes": "Published in ICASSP 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against ICASSP 2020 publication and official GitHub repository."
+  },
+  "size": {
+    "amount": 4.8,
+    "unit": "GB",
+    "file_formats": [
+      "wav",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "16kHz 7-channel multichannel WAV recordings."
+  },
+  "sample_count": {
+    "total": 10,
+    "unit": "recording-sessions",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "total_duration_hours",
+        "value": 10.0,
+        "unit": "hours"
+      },
+      {
+        "label": "microphone_channels",
+        "value": 7,
+        "unit": "channels"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2020-05-04"
+  },
+  "citation": {
+    "paper_title": "Continuous Speech Separation: Dataset and Analysis",
+    "paper_url": "https://arxiv.org/abs/2001.11482",
+    "authors": [
+      "Zhuo Chen",
+      "Takuya Yoshioka",
+      "Liang Lu",
+      "Tianyan Zhou",
+      "Zhong Meng",
+      "Yi Luo",
+      "Jian Wu",
+      "Xiong Xiao",
+      "Jinyu Li"
+    ],
+    "doi": "10.1109/ICASSP40776.2020.9054452",
+    "bibtex": "@inproceedings{chen2020continuous,\n  title = {Continuous Speech Separation: Dataset and Analysis},\n  author = {Chen, Zhuo and Yoshioka, Takuya and Lu, Liang and Zhou, Tianyan and Meng, Zhong and Luo, Yi and Wu, Jian and Xiao, Xiong and Li, Jinyu},\n  booktitle = {IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  year = {2020},\n  pages = {7284--7288},\n  doi = {10.1109/ICASSP40776.2020.9054452}\n}"
+  }
+}

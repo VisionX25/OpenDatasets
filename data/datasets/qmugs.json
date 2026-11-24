@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "qmugs",
+  "slug": "qmugs",
+  "name": "QMugs: Quantum Mechanical Properties of Drug-like Molecules",
+  "description": "QMugs is a quantum mechanical dataset of 665,000 drug-like molecules extracted from the ChEMBL database, containing over 2 million energetically favorable 3D conformers. Computed using density functional theory (DFT wB97X-D/def2-SVP) and semi-empirical methods (GFN2-xTB), QMugs provides high-accuracy single-point energies, atomic charges, orbital energies (HOMO/LUMO), dipole moments, and vibrational frequencies for machine learning drug discovery.",
+  "homepage_url": "https://doi.org/10.1038/s41597-022-01390-7",
+  "publisher": {
+    "name": "ETH Zurich (Schneider Lab)",
+    "type": "academic",
+    "url": "https://modlab.ethz.ch"
+  },
+  "modalities": [
+    "tabular",
+    "graph"
+  ],
+  "tasks": [
+    "molecular-property-prediction"
+  ],
+  "tags": [
+    "quantum-chemistry",
+    "dft",
+    "drug-discovery",
+    "molecular-conformations",
+    "tabular",
+    "graph"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released on Zenodo under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "QMugs Zenodo Data Repository",
+      "url": "https://doi.org/10.5281/zenodo.5196991",
+      "type": "archive",
+      "notes": "Authoritative dataset deposit on Zenodo."
+    },
+    {
+      "title": "QMugs, Quantum Mechanical Properties of Drug-like Molecules (Scientific Data 2022)",
+      "url": "https://doi.org/10.1038/s41597-022-01390-7",
+      "type": "original_paper",
+      "notes": "Published in Nature Scientific Data 2022."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against Nature Scientific Data publication and Zenodo archive."
+  },
+  "size": {
+    "amount": 28.0,
+    "unit": "GB",
+    "file_formats": [
+      "sdf",
+      "csv",
+      "tar.gz"
+    ],
+    "status": "verified",
+    "notes": "SDF coordinate files and quantum mechanical CSV property tables."
+  },
+  "sample_count": {
+    "total": 665000,
+    "unit": "molecules",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "molecular_conformers",
+        "value": 2000000,
+        "unit": "conformers"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2022-06-18"
+  },
+  "citation": {
+    "paper_title": "QMugs, quantum mechanical properties of drug-like molecules",
+    "paper_url": "https://doi.org/10.1038/s41597-022-01390-7",
+    "authors": [
+      "Clemens Isert",
+      "Kenneth Atz",
+      "José Jiménez-Luna",
+      "Gisbert Schneider"
+    ],
+    "doi": "10.1038/s41597-022-01390-7",
+    "bibtex": "@article{isert2022qmugs,\n  title = {{QMugs}, quantum mechanical properties of drug-like molecules},\n  author = {Isert, Clemens and Atz, Kenneth and Jim{\\'e}nez-Luna, Jos{\\'e} and Schneider, Gisbert},\n  journal = {Scientific Data},\n  volume = {9},\n  number = {1},\n  pages = {273},\n  year = {2022},\n  doi = {10.1038/s41597-022-01390-7}\n}"
+  }
+}

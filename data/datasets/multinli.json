@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "id": "multinli",
+  "slug": "multinli",
+  "name": "Multi-Genre Natural Language Inference Corpus (MultiNLI)",
+  "description": "The Multi-Genre Natural Language Inference (MultiNLI) corpus is a crowd-sourced collection of 433k sentence pairs annotated with textual entailment information. Modeling both spoken and written genres of American English, MultiNLI spans ten distinct genres (fiction, letters, telephone, government, slate, facetoface, oup, oxford, travel, verbatim) to benchmark cross-genre generalization and sentence representation learning.",
+  "homepage_url": "https://cims.nyu.edu/~sbowman/multinli/",
+  "publisher": {
+    "name": "New York University",
+    "type": "academic",
+    "url": "https://cims.nyu.edu"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "natural-language-inference",
+    "text-classification"
+  ],
+  "tags": [
+    "nli",
+    "natural-language-inference",
+    "entailment",
+    "multi-genre",
+    "benchmark",
+    "nlp"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Open American National Corpus License (OANC)",
+    "spdx_id": null,
+    "url": "https://cims.nyu.edu/~sbowman/multinli/",
+    "commercial_use": "allowed",
+    "notes": "Annotations released under CC BY-SA 4.0; underlying sentences sourced from OANC."
+  },
+  "source_references": [
+    {
+      "title": "MultiNLI Official Website",
+      "url": "https://cims.nyu.edu/~sbowman/multinli/",
+      "type": "official_website",
+      "notes": "Canonical dataset distribution page hosted at NYU."
+    },
+    {
+      "title": "A Broad-Coverage Challenge Corpus for Sentence Understanding (NAACL 2018)",
+      "url": "https://aclanthology.org/N18-1101/",
+      "type": "original_paper",
+      "notes": "Published in NAACL 2018."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against NAACL 2018 publication and NYU distribution page."
+  },
+  "size": {
+    "amount": 225.0,
+    "unit": "MB",
+    "file_formats": [
+      "jsonl",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "JSONL and tab-separated sentence pair records."
+  },
+  "sample_count": {
+    "total": 432698,
+    "unit": "sentence-pairs",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 392702,
+      "validation": 19647,
+      "test": 20349
+    },
+    "breakdown": [
+      {
+        "label": "genres",
+        "value": 10,
+        "unit": "genres"
+      },
+      {
+        "label": "entailment_labels",
+        "value": 3,
+        "unit": "classes"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-06-01"
+  },
+  "citation": {
+    "paper_title": "A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference",
+    "paper_url": "https://aclanthology.org/N18-1101/",
+    "authors": [
+      "Adina Williams",
+      "Nikita Nangia",
+      "Samuel Bowman"
+    ],
+    "doi": "10.18653/v1/N18-1101",
+    "bibtex": "@inproceedings{williams-etal-2018-broad,\n  title = {A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference},\n  author = {Williams, Adina and Nangia, Nikita and Bowman, Samuel},\n  booktitle = {Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers)},\n  year = {2018},\n  pages = {1112--1122},\n  doi = {10.18653/v1/N18-1101}\n}"
+  }
+}

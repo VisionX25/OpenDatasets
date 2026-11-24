@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "id": "objectron",
+  "slug": "objectron",
+  "name": "Google Objectron: Object-Centric Video Dataset with 3D Bounding Boxes",
+  "description": "Objectron is a large-scale collection of short object-centric video clips recorded in the wild with mobile phones, accompanied by 3D oriented bounding box annotations for every frame. Developed by Google Research, the dataset comprises 14,978 video sequences containing 4 million annotated images across nine everyday object categories, featuring synchronized camera poses, sparse point clouds, and planar surface ground truth.",
+  "homepage_url": "https://github.com/google-research-datasets/Objectron",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "vision",
+    "3d"
+  ],
+  "tasks": [
+    "3d-object-detection",
+    "pose-estimation"
+  ],
+  "tags": [
+    "3d-object-detection",
+    "3d-bounding-boxes",
+    "object-pose",
+    "ar-tracking",
+    "video",
+    "vision"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Annotations and data pipeline released under Apache 2.0; underlying media licensed under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "Google Objectron GitHub Repository",
+      "url": "https://github.com/google-research-datasets/Objectron",
+      "type": "repository",
+      "notes": "Official repository with dataset access and evaluation pipelines."
+    },
+    {
+      "title": "Objectron: A Large Scale Dataset of Object-Centric Videos in the Wild (CVPR 2021)",
+      "url": "https://arxiv.org/abs/2012.09988",
+      "type": "original_paper",
+      "notes": "Published in CVPR 2021."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against CVPR 2021 publication and Google Research repository."
+  },
+  "size": {
+    "amount": 1.9,
+    "unit": "TB",
+    "file_formats": [
+      "mp4",
+      "pb",
+      "json"
+    ],
+    "status": "estimated",
+    "notes": "Video files, protobuf 3D annotations, and geometry point clouds."
+  },
+  "sample_count": {
+    "total": 14978,
+    "unit": "video-sequences",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 12000,
+      "test": 2978
+    },
+    "breakdown": [
+      {
+        "label": "annotated_frames",
+        "value": 4000000,
+        "unit": "frames"
+      },
+      {
+        "label": "object_categories",
+        "value": 9,
+        "unit": "categories"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2021-06-19"
+  },
+  "citation": {
+    "paper_title": "Objectron: A Large Scale Dataset of Object-Centric Videos in the Wild with Pose Annotations",
+    "paper_url": "https://arxiv.org/abs/2012.09988",
+    "authors": [
+      "Adel Ahmadyan",
+      "Liangkai Zhang",
+      "Artsiom Ablavatski",
+      "Jianing Wei",
+      "Matthias Grundmann"
+    ],
+    "doi": "10.1109/CVPR46437.2021.00774",
+    "bibtex": "@inproceedings{ahmadyan2021objectron,\n  title = {Objectron: A Large Scale Dataset of Object-Centric Videos in the Wild with Pose Annotations},\n  author = {Ahmadyan, Adel and Zhang, Liangkai and Ablavatski, Artsiom and Wei, Jianing and Grundmann, Matthias},\n  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2021},\n  pages = {7822--7831},\n  doi = {10.1109/CVPR46437.2021.00774}\n}"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "banking77",
+  "slug": "banking77",
+  "name": "BANKING77: Fine-Grained Banking Intent Classification Dataset",
+  "description": "BANKING77 is a fine-grained intent detection dataset composed of 13,083 customer service queries across 77 domain-specific banking intents. Collected by PolyAI, the dataset addresses single-domain conversational modeling challenges where intent classes exhibit high semantic overlap and nuanced lexical variations, serving as a standard benchmark for few-shot and intent classification models.",
+  "homepage_url": "https://github.com/PolyAI-LDN/task-specific-datasets",
+  "publisher": {
+    "name": "PolyAI Limited",
+    "type": "industry",
+    "url": "https://poly.ai"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "intent-classification",
+    "text-classification"
+  ],
+  "tags": [
+    "intent-detection",
+    "banking",
+    "customer-service",
+    "conversational-ai",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released by PolyAI under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "PolyAI Task-Specific Datasets GitHub Repository",
+      "url": "https://github.com/PolyAI-LDN/task-specific-datasets",
+      "type": "repository",
+      "notes": "Official repository containing BANKING77 splits."
+    },
+    {
+      "title": "Efficient Intent Detection with Dual Sentence Encoders",
+      "url": "https://arxiv.org/abs/2003.04807",
+      "type": "original_paper",
+      "notes": "Published in Findings of EMNLP 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against Findings of EMNLP 2020 paper and PolyAI GitHub repository."
+  },
+  "size": {
+    "amount": 2.4,
+    "unit": "MB",
+    "file_formats": [
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "CSV files containing queries and intent labels."
+  },
+  "sample_count": {
+    "total": 13083,
+    "unit": "queries",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 10003,
+      "test": 3080
+    },
+    "breakdown": [
+      {
+        "label": "banking_intents",
+        "value": 77,
+        "unit": "classes"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2020-03-10"
+  },
+  "citation": {
+    "paper_title": "Efficient Intent Detection with Dual Sentence Encoders",
+    "paper_url": "https://aclanthology.org/2020.findings-emnlp.38/",
+    "authors": [
+      "Iñigo Casanueva",
+      "Tadas Temčinas",
+      "Daniela Gerz",
+      "Matthew Henderson",
+      "Ivan Vulić"
+    ],
+    "doi": "10.18653/v1/2020.findings-emnlp.38",
+    "bibtex": "@inproceedings{casanueva-etal-2020-efficient,\n  title = {Efficient Intent Detection with Dual Sentence Encoders},\n  author = {Casanueva, I{\\~n}igo and Tem{\\v{c}}inas, Tadas and Gerz, Daniela and Henderson, Matthew and Vuli{\\'c}, Ivan},\n  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2020},\n  year = {2020},\n  pages = {38--45},\n  doi = {10.18653/v1/2020.findings-emnlp.38}\n}"
+  }
+}

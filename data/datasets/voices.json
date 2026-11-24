@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "id": "voices",
+  "slug": "voices",
+  "name": "VOiCES: Voices Obscured in Complex Environmental Settings",
+  "description": "The VOiCES (Voices Obscured in Complex Environmental Settings) corpus is an acoustic dataset designed to advance far-field automatic speech recognition and robust speaker verification in noise. Recorded by SRI International and Lab41 across four real reverberant rooms with background distractors (television, music, room babble), it contains 19,000 multi-channel audio recordings capturing 300 speakers under complex acoustic conditions.",
+  "homepage_url": "https://www.openslr.org/44/",
+  "publisher": {
+    "name": "SRI International & Lab41",
+    "type": "academic",
+    "url": "https://www.openslr.org/44/"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speaker-identification",
+    "speech-recognition"
+  ],
+  "tags": [
+    "far-field-audio",
+    "noise-robustness",
+    "speaker-recognition",
+    "room-acoustics",
+    "audio"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released on OpenSLR under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "OpenSLR 44: VOiCES Corpus",
+      "url": "https://www.openslr.org/44/",
+      "type": "official_website",
+      "notes": "Official OpenSLR deposit portal."
+    },
+    {
+      "title": "Voices Obscured in Complex Environmental Settings (VOiCES) Corpus (Interspeech 2018)",
+      "url": "https://arxiv.org/abs/1804.05053",
+      "type": "original_paper",
+      "notes": "Published in Interspeech 2018."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against Interspeech 2018 paper and OpenSLR 44 repository."
+  },
+  "size": {
+    "amount": 26.5,
+    "unit": "GB",
+    "file_formats": [
+      "wav",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "16kHz 16-bit multichannel WAV audio tracks."
+  },
+  "sample_count": {
+    "total": 19000,
+    "unit": "audio-recordings",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "speakers",
+        "value": 300,
+        "unit": "speakers"
+      },
+      {
+        "label": "acoustic_rooms",
+        "value": 4,
+        "unit": "rooms"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2018-09-02"
+  },
+  "citation": {
+    "paper_title": "Voices Obscured in Complex Environmental Settings (VOiCES) Corpus",
+    "paper_url": "https://arxiv.org/abs/1804.05053",
+    "authors": [
+      "Colleen Richey",
+      "Maria A. Barrios",
+      "Zhe Armstrong",
+      "Chris Bartels",
+      "Horacio Franco",
+      "Martin Graciarena",
+      "Aaron Lawson",
+      "Manoj Kumar Mahesh",
+      "Andreas Stolcke"
+    ],
+    "doi": "10.21437/Interspeech.2018-1768",
+    "bibtex": "@inproceedings{richey2018voices,\n  title = {Voices Obscured in Complex Environmental Settings ({VOiCES}) Corpus},\n  author = {Richey, Colleen and Barrios, Maria A. and Armstrong, Zhe and Bartels, Chris and Franco, Horacio and Graciarena, Martin and Lawson, Aaron and Mahesh, Manoj Kumar and Stolcke, Andreas},\n  booktitle = {Proceedings of Interspeech 2018},\n  year = {2018},\n  pages = {1566--1570},\n  doi = {10.21437/Interspeech.2018-1768}\n}"
+  }
+}

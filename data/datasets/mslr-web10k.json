@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mslr-web10k",
+  "slug": "mslr-web10k",
+  "name": "MSLR-WEB10K: Microsoft Learning to Rank Benchmark Dataset",
+  "description": "MSLR-WEB10K is an authoritative learning-to-rank benchmark dataset curated by Microsoft Research. Derived from search query logs of the Bing search engine, it comprises 10,000 queries and approximately 1.2 million query-document pairs. Each pair is represented by 136 numerical ranking features (e.g. BM25, PageRank, term frequencies) and annotated with human-assigned relevance labels on a 5-level grading scale (0 to 4), evaluated via 5-fold cross validation.",
+  "homepage_url": "https://www.microsoft.com/en-us/research/project/mslr/",
+  "publisher": {
+    "name": "Microsoft Research",
+    "type": "industry",
+    "url": "https://www.microsoft.com/en-us/research/"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification"
+  ],
+  "tags": [
+    "learning-to-rank",
+    "information-retrieval",
+    "search-ranking",
+    "tabular-features",
+    "tabular"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Microsoft Research Data License Agreement",
+    "spdx_id": null,
+    "url": "https://www.microsoft.com/en-us/research/project/mslr/",
+    "commercial_use": "allowed",
+    "notes": "Available freely for research and educational purposes under Microsoft Research terms."
+  },
+  "source_references": [
+    {
+      "title": "Microsoft Learning to Rank (MSLR) Portal",
+      "url": "https://www.microsoft.com/en-us/research/project/mslr/",
+      "type": "official_website",
+      "notes": "Official release portal hosted by Microsoft Research."
+    },
+    {
+      "title": "Microsoft Learning to Rank Datasets Technical Report",
+      "url": "https://arxiv.org/abs/1306.2597",
+      "type": "original_paper",
+      "notes": "Technical report (MSR-TR-2010-82) describing dataset curation."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against Microsoft Research technical report and official distribution."
+  },
+  "size": {
+    "amount": 1.4,
+    "unit": "GB",
+    "file_formats": [
+      "txt",
+      "zip"
+    ],
+    "status": "verified",
+    "notes": "SVMlight ranking format text archives for 5 cross-validation folds."
+  },
+  "sample_count": {
+    "total": 1200000,
+    "unit": "query-document-pairs",
+    "status": "estimated",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "queries",
+        "value": 10000,
+        "unit": "queries"
+      },
+      {
+        "label": "features",
+        "value": 136,
+        "unit": "features"
+      },
+      {
+        "label": "cross_validation_folds",
+        "value": 5,
+        "unit": "folds"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2010-06-01"
+  },
+  "citation": {
+    "paper_title": "Microsoft Learning to Rank Datasets",
+    "paper_url": "https://arxiv.org/abs/1306.2597",
+    "authors": [
+      "Tie-Yan Liu",
+      "Jun Xu",
+      "Tao Qin",
+      "Wenying Xiong",
+      "Hang Li"
+    ],
+    "bibtex": "@techreport{liu2010microsoft,\n  title = {Microsoft Learning to Rank Datasets},\n  author = {Liu, Tie-Yan and Xu, Jun and Qin, Tao and Xiong, Wenying and Li, Hang},\n  institution = {Microsoft Research},\n  number = {MSR-TR-2010-82},\n  year = {2010}\n}"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nlvr2",
+  "slug": "nlvr2",
+  "name": "NLVR2: Natural Language for Visual Reasoning with Paired Images",
+  "description": "NLVR2 (Natural Language for Visual Reasoning 2) is a visual reasoning benchmark requiring models to determine whether a complex natural language sentence is true or false regarding a pair of real-world photographs. Comprising 107,292 linguistically diverse examples over 133,000 photos, it challenges models on semantic compositionality, spatial relations, numerical comparisons, and hard negation without linguistic shortcuts.",
+  "homepage_url": "https://lil.nlp.cornell.edu/nlvr/",
+  "publisher": {
+    "name": "Cornell University (LIL Lab)",
+    "type": "academic",
+    "url": "https://lil.nlp.cornell.edu"
+  },
+  "modalities": [
+    "vision",
+    "nlp",
+    "multimodal"
+  ],
+  "tasks": [
+    "visual-reasoning",
+    "multimodal-classification"
+  ],
+  "tags": [
+    "visual-reasoning",
+    "compositional-reasoning",
+    "paired-images",
+    "vision-language",
+    "multimodal"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Annotations released under CC BY 4.0; underlying photographs subject to web licensing."
+  },
+  "source_references": [
+    {
+      "title": "NLVR Project Official Portal",
+      "url": "https://lil.nlp.cornell.edu/nlvr/",
+      "type": "official_website",
+      "notes": "Official release portal hosted by Cornell University."
+    },
+    {
+      "title": "A Corpus for Reasoning about Natural Language Grounded in Photographs (ACL 2019)",
+      "url": "https://aclanthology.org/P19-1061/",
+      "type": "original_paper",
+      "notes": "Published in ACL 2019."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against ACL 2019 publication and Cornell LIL repository."
+  },
+  "size": {
+    "amount": 34.0,
+    "unit": "GB",
+    "file_formats": [
+      "json",
+      "jpg"
+    ],
+    "status": "estimated",
+    "notes": "Paired JPEG images and JSON evaluation annotations."
+  },
+  "sample_count": {
+    "total": 107292,
+    "unit": "sentence-image-pair-examples",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 86373,
+      "validation": 6982,
+      "test": 13937
+    },
+    "breakdown": [
+      {
+        "label": "unique_photographs",
+        "value": 133000,
+        "unit": "images"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2019-07-28"
+  },
+  "citation": {
+    "paper_title": "A Corpus for Reasoning about Natural Language Grounded in Photographs",
+    "paper_url": "https://aclanthology.org/P19-1061/",
+    "authors": [
+      "Alane Suhr",
+      "Stephanie Zhou",
+      "Ally Zhang",
+      "Iris Bai",
+      "Joyce Chai",
+      "Yoav Artzi"
+    ],
+    "doi": "10.18653/v1/P19-1061",
+    "bibtex": "@inproceedings{suhr-etal-2019-corpus,\n  title = {A Corpus for Reasoning about Natural Language Grounded in Photographs},\n  author = {Suhr, Alane and Zhou, Stephanie and Zhang, Ally and Bai, Iris and Chai, Joyce and Artzi, Yoav},\n  booktitle = {Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},\n  year = {2019},\n  pages = {6418--6428},\n  doi = {10.18653/v1/P19-1061}\n}"
+  }
+}
