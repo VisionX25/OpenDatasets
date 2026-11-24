@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "id": "d4rl",
+  "slug": "d4rl",
+  "name": "D4RL: Datasets for Deep Data-Driven Reinforcement Learning",
+  "description": "D4RL is the standard benchmark suite for offline (data-driven) reinforcement learning. Curated by UC Berkeley, Stanford, and Google Research, it provides standardized offline datasets across continuous control environments including OpenAI Gym MuJoCo robotics tasks, AntMaze navigation, dexterous hand manipulation (Adroit), Franka Kitchen manipulation, and CARLA autonomous driving, establishing reproducible evaluation protocols without online environment interaction.",
+  "homepage_url": "https://github.com/Farama-Foundation/D4RL",
+  "publisher": {
+    "name": "Farama Foundation & UC Berkeley",
+    "type": "academic",
+    "url": "https://farama.org"
+  },
+  "modalities": [
+    "reinforcement-learning",
+    "sensor"
+  ],
+  "tasks": [
+    "reinforcement-learning"
+  ],
+  "tags": [
+    "offline-rl",
+    "reinforcement-learning",
+    "continuous-control",
+    "robotics",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Code and datasets maintained under Apache-2.0."
+  },
+  "source_references": [
+    {
+      "title": "D4RL GitHub Repository (Farama Foundation)",
+      "url": "https://github.com/Farama-Foundation/D4RL",
+      "type": "repository",
+      "notes": "Official D4RL repository hosted under Farama Foundation."
+    },
+    {
+      "title": "D4RL: Datasets for Deep Data-Driven Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2004.07219",
+      "type": "original_paper",
+      "notes": "Whitepaper introducing the D4RL benchmark suite."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against whitepaper and Farama Foundation repository."
+  },
+  "size": {
+    "amount": 28.5,
+    "unit": "GB",
+    "file_formats": [
+      "hdf5"
+    ],
+    "status": "estimated",
+    "notes": "Standardized HDF5 trajectory files across all offline environments."
+  },
+  "sample_count": {
+    "total": 100000000,
+    "unit": "transitions",
+    "status": "estimated",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "benchmark_environments",
+        "value": 45,
+        "unit": "environments"
+      },
+      {
+        "label": "benchmark_domains",
+        "value": 6,
+        "unit": "domains"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2020-04-15"
+  },
+  "citation": {
+    "paper_title": "D4RL: Datasets for Deep Data-Driven Reinforcement Learning",
+    "paper_url": "https://arxiv.org/abs/2004.07219",
+    "authors": [
+      "Justin Fu",
+      "Aviral Kumar",
+      "Ofir Nachum",
+      "George Tucker",
+      "Sergey Levine"
+    ],
+    "bibtex": "@article{fu2020d4rl,\n  title = {{D4RL}: Datasets for Deep Data-Driven Reinforcement Learning},\n  author = {Fu, Justin and Kumar, Aviral and Nachum, Ofir and Tucker, George and Levine, Sergey},\n  journal = {arXiv preprint arXiv:2004.07219},\n  year = {2020}\n}"
+  }
+}

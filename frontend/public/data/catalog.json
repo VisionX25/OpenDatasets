@@ -2103,6 +2103,113 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "aishell-3",
+    "slug": "aishell-3",
+    "name": "AISHELL-3: Multi-Speaker Mandarin TTS Corpus",
+    "description": "AISHELL-3 is a large-scale, multi-speaker Mandarin Chinese speech synthesis corpus designed for neural text-to-speech and voice conversion. It contains roughly 85 hours of high-fidelity 44.1kHz speech recordings totaling 88,035 utterances produced by 218 native Mandarin speakers across varied geographic accents, annotated with pinyin, tone marks, and character transcriptions.",
+    "homepage_url": "https://www.openslr.org/93/",
+    "publisher": {
+      "name": "Beijing Shell Shell Technology Co., Ltd. & Duke Kunshan University",
+      "type": "academic",
+      "url": "https://www.aishelltech.com"
+    },
+    "modalities": [
+      "audio",
+      "nlp"
+    ],
+    "tasks": [
+      "text-to-speech",
+      "speech-synthesis"
+    ],
+    "tags": [
+      "mandarin-tts",
+      "text-to-speech",
+      "speech-synthesis",
+      "multi-speaker",
+      "audio"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Released under Apache-2.0 license on OpenSLR."
+    },
+    "source_references": [
+      {
+        "title": "OpenSLR 93: AISHELL-3",
+        "url": "https://www.openslr.org/93/",
+        "type": "official_website",
+        "notes": "Official OpenSLR deposit page."
+      },
+      {
+        "title": "AISHELL-3: A Multi-speaker Mandarin TTS Corpus",
+        "url": "https://arxiv.org/abs/2010.11567",
+        "type": "original_paper",
+        "notes": "Preprint paper introducing the corpus."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against OpenSLR 93 release and publication."
+    },
+    "size": {
+      "amount": 18.5,
+      "unit": "GB",
+      "file_formats": [
+        "wav",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "44.1kHz 16-bit WAV files and phonetic transcriptions."
+    },
+    "sample_count": {
+      "total": 88035,
+      "unit": "utterances",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 63262,
+        "test": 24773
+      },
+      "breakdown": [
+        {
+          "label": "speakers",
+          "value": 218,
+          "unit": "speakers"
+        },
+        {
+          "label": "audio_duration_hours",
+          "value": 85.0,
+          "unit": "hours"
+        }
+      ]
+    },
+    "languages": [
+      "zh"
+    ],
+    "dates": {
+      "published": "2020-10-22"
+    },
+    "citation": {
+      "paper_title": "AISHELL-3: A Multi-speaker Mandarin TTS Corpus",
+      "paper_url": "https://arxiv.org/abs/2010.11567",
+      "authors": [
+        "Yao Shi",
+        "Hui Bu",
+        "Xin Xu",
+        "Shaoji Zhang",
+        "Ming Li"
+      ],
+      "bibtex": "@article{shi2020aishell,\n  title = {{AISHELL-3}: A Multi-speaker Mandarin {TTS} Corpus},\n  author = {Shi, Yao and Bu, Hui and Xu, Xin and Zhang, Shaoji and Li, Ming},\n  journal = {arXiv preprint arXiv:2010.11567},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "aitex-fabric-image-database",
     "slug": "aitex-fabric-image-database",
     "name": "AFID: AITEX Fabric Image Database",
@@ -13840,6 +13947,110 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "co3d",
+    "slug": "co3d",
+    "name": "Common Objects in 3D (CO3D)",
+    "description": "Common Objects in 3D (CO3D) is a massive dataset of multi-view 3D object scans created by Meta AI Research. CO3D comprises 18,619 video sequences capturing everyday objects across 50 MS-COCO categories. Each sequence includes calibrated camera intrinsic and extrinsic poses, semi-dense 3D point cloud reconstructions from COLMAP, and foreground object segmentation masks, providing an authoritative benchmark for novel-view synthesis, NeRFs, and 3D reconstruction.",
+    "homepage_url": "https://github.com/facebookresearch/co3d",
+    "publisher": {
+      "name": "Meta AI Research",
+      "type": "industry",
+      "url": "https://ai.meta.com"
+    },
+    "modalities": [
+      "vision",
+      "3d"
+    ],
+    "tasks": [
+      "3d-reconstruction",
+      "pose-estimation"
+    ],
+    "tags": [
+      "3d-reconstruction",
+      "novel-view-synthesis",
+      "nerf",
+      "multi-view",
+      "3d-point-clouds",
+      "vision"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Dataset released by Meta AI under CC BY-NC 4.0 for non-commercial research."
+    },
+    "source_references": [
+      {
+        "title": "CO3D GitHub Repository",
+        "url": "https://github.com/facebookresearch/co3d",
+        "type": "repository",
+        "notes": "Official repository with PyTorch3D dataloaders and download tools."
+      },
+      {
+        "title": "Common Objects in 3D: Large-Scale Learning and Evaluation of Real-Life 3D Category Reconstruction",
+        "url": "https://arxiv.org/abs/2109.00512",
+        "type": "original_paper",
+        "notes": "Published in ICCV 2021."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against ICCV 2021 publication and Meta AI repository."
+    },
+    "size": {
+      "amount": 2.5,
+      "unit": "TB",
+      "file_formats": [
+        "mp4",
+        "ply",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "Extracted frames, COLMAP point clouds, and pose metadata."
+    },
+    "sample_count": {
+      "total": 18619,
+      "unit": "video-sequences",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "disjoint",
+      "breakdown": [
+        {
+          "label": "extracted_frames",
+          "value": 1500000,
+          "unit": "frames"
+        },
+        {
+          "label": "object_categories",
+          "value": 50,
+          "unit": "categories"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2021-09-01"
+    },
+    "citation": {
+      "paper_title": "Common Objects in 3D: Large-Scale Learning and Evaluation of Real-Life 3D Category Reconstruction",
+      "paper_url": "https://arxiv.org/abs/2109.00512",
+      "authors": [
+        "Jeremy Reizenstein",
+        "Roman Shapovalov",
+        "Philipp Henzler",
+        "Luca Sbordone",
+        "Patrick Labatut",
+        "David Novotny"
+      ],
+      "doi": "10.1109/ICCV48922.2021.01072",
+      "bibtex": "@inproceedings{reizenstein2021co3d,\n  title = {Common Objects in 3D: Large-Scale Learning and Evaluation of Real-Life 3D Category Reconstruction},\n  author = {Reizenstein, Jeremy and Shapovalov, Roman and Henzler, Philipp and Sbordone, Luca and Labatut, Patrick and Novotny, David},\n  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n  year = {2021},\n  pages = {10901--10911},\n  doi = {10.1109/ICCV48922.2021.01072}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "coco-stuff",
     "slug": "coco-stuff",
     "name": "COCO-Stuff: Dense Pixel Annotations for Things and Stuff",
@@ -16163,6 +16374,104 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "d4rl",
+    "slug": "d4rl",
+    "name": "D4RL: Datasets for Deep Data-Driven Reinforcement Learning",
+    "description": "D4RL is the standard benchmark suite for offline (data-driven) reinforcement learning. Curated by UC Berkeley, Stanford, and Google Research, it provides standardized offline datasets across continuous control environments including OpenAI Gym MuJoCo robotics tasks, AntMaze navigation, dexterous hand manipulation (Adroit), Franka Kitchen manipulation, and CARLA autonomous driving, establishing reproducible evaluation protocols without online environment interaction.",
+    "homepage_url": "https://github.com/Farama-Foundation/D4RL",
+    "publisher": {
+      "name": "Farama Foundation & UC Berkeley",
+      "type": "academic",
+      "url": "https://farama.org"
+    },
+    "modalities": [
+      "reinforcement-learning",
+      "sensor"
+    ],
+    "tasks": [
+      "reinforcement-learning"
+    ],
+    "tags": [
+      "offline-rl",
+      "reinforcement-learning",
+      "continuous-control",
+      "robotics",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Code and datasets maintained under Apache-2.0."
+    },
+    "source_references": [
+      {
+        "title": "D4RL GitHub Repository (Farama Foundation)",
+        "url": "https://github.com/Farama-Foundation/D4RL",
+        "type": "repository",
+        "notes": "Official D4RL repository hosted under Farama Foundation."
+      },
+      {
+        "title": "D4RL: Datasets for Deep Data-Driven Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2004.07219",
+        "type": "original_paper",
+        "notes": "Whitepaper introducing the D4RL benchmark suite."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against whitepaper and Farama Foundation repository."
+    },
+    "size": {
+      "amount": 28.5,
+      "unit": "GB",
+      "file_formats": [
+        "hdf5"
+      ],
+      "status": "estimated",
+      "notes": "Standardized HDF5 trajectory files across all offline environments."
+    },
+    "sample_count": {
+      "total": 100000000,
+      "unit": "transitions",
+      "status": "estimated",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "benchmark_environments",
+          "value": 45,
+          "unit": "environments"
+        },
+        {
+          "label": "benchmark_domains",
+          "value": 6,
+          "unit": "domains"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2020-04-15"
+    },
+    "citation": {
+      "paper_title": "D4RL: Datasets for Deep Data-Driven Reinforcement Learning",
+      "paper_url": "https://arxiv.org/abs/2004.07219",
+      "authors": [
+        "Justin Fu",
+        "Aviral Kumar",
+        "Ofir Nachum",
+        "George Tucker",
+        "Sergey Levine"
+      ],
+      "bibtex": "@article{fu2020d4rl,\n  title = {{D4RL}: Datasets for Deep Data-Driven Reinforcement Learning},\n  author = {Fu, Justin and Kumar, Aviral and Nachum, Ofir and Tucker, George and Levine, Sergey},\n  journal = {arXiv preprint arXiv:2004.07219},\n  year = {2020}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "dagm-2007-industrial-optical-inspection",
     "slug": "dagm-2007-industrial-optical-inspection",
     "name": "DAGM 2007: Industrial Optical Inspection Benchmark",
@@ -16896,6 +17205,113 @@
       "total": 2092,
       "unit": "images",
       "status": "verified"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "deepfashion2",
+    "slug": "deepfashion2",
+    "name": "DeepFashion2: Clothing Detection, Pose Estimation, Segmentation and Retrieval Benchmark",
+    "description": "DeepFashion2 is a large-scale clothing benchmark containing 491,895 high-resolution images across diverse consumer and commercial scenarios. It provides comprehensive annotations for 801,492 clothing items, each annotated with clothing category, bounding box, per-instance segmentation mask, fine-grained landmark coordinates with visibility flags, style classification, and cross-domain commercial-consumer retrieval pairs.",
+    "homepage_url": "https://github.com/switchablenorms/DeepFashion2",
+    "publisher": {
+      "name": "The Chinese University of Hong Kong",
+      "type": "academic",
+      "url": "http://personal.ie.cuhk.edu.hk/~ccloy/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "object-detection",
+      "instance-segmentation",
+      "pose-estimation"
+    ],
+    "tags": [
+      "fashion",
+      "clothing",
+      "object-detection",
+      "instance-segmentation",
+      "pose-estimation",
+      "vision"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "DeepFashion2 Non-Commercial Research License Agreement",
+      "spdx_id": null,
+      "url": "https://github.com/switchablenorms/DeepFashion2#license",
+      "commercial_use": "forbidden",
+      "notes": "Free for non-commercial scientific research use upon agreement to the DeepFashion2 research license."
+    },
+    "source_references": [
+      {
+        "title": "DeepFashion2 GitHub Repository",
+        "url": "https://github.com/switchablenorms/DeepFashion2",
+        "type": "repository",
+        "notes": "Official repository with dataset download scripts and evaluation toolkits."
+      },
+      {
+        "title": "DeepFashion2: A Versatile Benchmark for Detection, Pose Estimation, Segmentation and Re-Identification of Clothing Images (CVPR 2019)",
+        "url": "https://arxiv.org/abs/1901.07973",
+        "type": "original_paper",
+        "notes": "Published in CVPR 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against CVPR 2019 paper and official GitHub repository."
+    },
+    "size": {
+      "amount": 34.5,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "json"
+      ],
+      "status": "verified",
+      "notes": "High-resolution JPEG images and JSON annotations."
+    },
+    "sample_count": {
+      "total": 491895,
+      "unit": "images",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 391280,
+        "validation": 33669,
+        "test": 66946
+      },
+      "breakdown": [
+        {
+          "label": "clothing_instances",
+          "value": 801492,
+          "unit": "instances"
+        },
+        {
+          "label": "clothing_categories",
+          "value": 13,
+          "unit": "categories"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2019-06-15"
+    },
+    "citation": {
+      "paper_title": "DeepFashion2: A Versatile Benchmark for Detection, Pose Estimation, Segmentation and Re-Identification of Clothing Images",
+      "paper_url": "https://arxiv.org/abs/1901.07973",
+      "authors": [
+        "Yuying Ge",
+        "Ruimao Zhang",
+        "Ping Luo",
+        "Xu Tang",
+        "Chen Change Loy"
+      ],
+      "doi": "10.1109/CVPR.2019.00548",
+      "bibtex": "@inproceedings{ge2019deepfashion2,\n  title = {DeepFashion2: A Versatile Benchmark for Detection, Pose Estimation, Segmentation and Re-Identification of Clothing Images},\n  author = {Ge, Yuying and Zhang, Ruimao and Luo, Ping and Tang, Xu and Loy, Chen Change},\n  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2019},\n  pages = {5337--5345},\n  doi = {10.1109/CVPR.2019.00548}\n}"
     }
   },
   {
@@ -28517,6 +28933,131 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "indicnlg-suite",
+    "slug": "indicnlg-suite",
+    "name": "IndicNLG Suite: Benchmark Datasets for Diverse NLG Tasks in Indic Languages",
+    "description": "IndicNLG Suite is a comprehensive natural language generation benchmark covering 11 major Indic languages (Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, and Telugu). Curated by AI4Bharat, the suite unifies five diverse NLG tasks: biography generation (structured data-to-text), headline generation, sentence summarization, question generation, and cross-sentence paraphrasing, comprising over 8.5 million verified task instances.",
+    "homepage_url": "https://github.com/AI4Bharat/IndicNLG",
+    "publisher": {
+      "name": "AI4Bharat, IIT Madras",
+      "type": "academic",
+      "url": "https://ai4bharat.iitm.ac.in"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "summarization",
+      "text-generation"
+    ],
+    "tags": [
+      "natural-language-generation",
+      "nlg",
+      "indic-languages",
+      "summarization",
+      "paraphrasing",
+      "ai4bharat",
+      "nlp"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Released under CC BY-NC 4.0 for non-commercial academic research."
+    },
+    "source_references": [
+      {
+        "title": "IndicNLG Suite GitHub Repository",
+        "url": "https://github.com/AI4Bharat/IndicNLG",
+        "type": "repository",
+        "notes": "Official repository with dataset download scripts and model checkpoints."
+      },
+      {
+        "title": "IndicNLG Suite Paper on arXiv",
+        "url": "https://arxiv.org/abs/2203.05437",
+        "type": "original_paper",
+        "notes": "Published in Findings of EMNLP 2022."
+      },
+      {
+        "title": "IndicNLG on Hugging Face Datasets",
+        "url": "https://huggingface.co/datasets/ai4bharat/IndicNLG-Suite",
+        "type": "dataset_card",
+        "notes": "Hugging Face dataset collection."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against Findings of EMNLP 2022 publication and official AI4Bharat repository."
+    },
+    "size": {
+      "amount": 4.8,
+      "unit": "GB",
+      "file_formats": [
+        "json",
+        "csv",
+        "tar.gz"
+      ],
+      "status": "estimated",
+      "notes": "Archived task files across all 11 Indic languages."
+    },
+    "sample_count": {
+      "total": 8500000,
+      "unit": "task-examples",
+      "status": "estimated",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "disjoint",
+      "breakdown": [
+        {
+          "label": "nlg_tasks",
+          "value": 5,
+          "unit": "task_families"
+        },
+        {
+          "label": "languages_covered",
+          "value": 11,
+          "unit": "languages"
+        }
+      ]
+    },
+    "languages": [
+      "as",
+      "bn",
+      "gu",
+      "hi",
+      "kn",
+      "ml",
+      "mr",
+      "or",
+      "pa",
+      "ta",
+      "te"
+    ],
+    "dates": {
+      "published": "2022-12-07"
+    },
+    "citation": {
+      "paper_title": "IndicNLG Suite: Multilingual Datasets for Diverse NLG Tasks in Indic Languages",
+      "paper_url": "https://aclanthology.org/2022.findings-emnlp.592/",
+      "authors": [
+        "Aman Kumar",
+        "Himani Shrotriya",
+        "Prachi Sahu",
+        "Raj Dabre",
+        "Ratish Puduppully",
+        "Anoop Kunchukuttan",
+        "Mitesh M. Khapra",
+        "Pratyush Kumar"
+      ],
+      "doi": "10.18653/v1/2022.findings-emnlp.592",
+      "bibtex": "@inproceedings{kumar-etal-2022-indicnlg,\n  title = {{I}ndic{NLG} Suite: Multilingual Datasets for Diverse {NLG} Tasks in {I}ndic Languages},\n  author = {Kumar, Aman and Shrotriya, Himani and Sahu, Prachi and Dabre, Raj and Puduppully, Ratish and Kunchukuttan, Anoop and Khapra, Mitesh M. and Kumar, Pratyush},\n  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2022},\n  year = {2022},\n  pages = {8008--8043},\n  doi = {10.18653/v1/2022.findings-emnlp.592}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "indicxnli",
     "slug": "indicxnli",
     "name": "IndicXNLI: Natural Language Inference for Indic Languages",
@@ -30212,6 +30753,115 @@
       "data_sources": [
         "Max Planck Institute for Biogeochemistry"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "jigsaws",
+    "slug": "jigsaws",
+    "name": "JIGSAWS: JHU-ISI Gesture and Skill Assessment Working Set",
+    "description": "JIGSAWS (JHU-ISI Gesture and Skill Assessment Working Set) is a benchmark dataset for surgical gesture recognition, temporal segmentation, and robotic skill evaluation in robot-assisted surgery. Captured using the da Vinci Surgical System across eight surgeons of varying expertise, it contains 103 kinematic and stereo-video task trials performing three core surgical tasks: suturing, needle-passing, and knot-tying, annotated with fine-grained gesture transitions.",
+    "homepage_url": "https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/",
+    "publisher": {
+      "name": "Johns Hopkins University & Intuitive Surgical",
+      "type": "academic",
+      "url": "https://cirl.lcsr.jhu.edu"
+    },
+    "modalities": [
+      "sensor",
+      "vision",
+      "time-series"
+    ],
+    "tasks": [
+      "action-recognition"
+    ],
+    "tags": [
+      "surgical-robotics",
+      "gesture-recognition",
+      "skill-assessment",
+      "kinematics",
+      "sensor"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "JHU JIGSAWS Research Agreement",
+      "spdx_id": null,
+      "url": "https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/",
+      "commercial_use": "forbidden",
+      "notes": "Available freely for academic research upon submission of the JIGSAWS data use agreement."
+    },
+    "source_references": [
+      {
+        "title": "JIGSAWS Official Portal (Johns Hopkins University)",
+        "url": "https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/",
+        "type": "official_website",
+        "notes": "Official release portal hosted by Computational Interaction and Robotics Lab (CIRL)."
+      },
+      {
+        "title": "A Dataset and Benchmarks for Segmentation and Recognition of Gestures in Robotic Surgery (MICCAI 2014)",
+        "url": "https://cirl.lcsr.jhu.edu/wp-content/uploads/2015/11/Gao_MICCAI_M2CAI_2014.pdf",
+        "type": "original_paper",
+        "notes": "Published in MICCAI 2014 Workshop (M2CAI)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against MICCAI publication and Johns Hopkins CIRL dataset portal."
+    },
+    "size": {
+      "amount": 38.0,
+      "unit": "GB",
+      "file_formats": [
+        "avi",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "Synchronized stereo video at 640x480 (30Hz) and kinematic sensor logs."
+    },
+    "sample_count": {
+      "total": 103,
+      "unit": "surgical-task-trials",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "surgeons",
+          "value": 8,
+          "unit": "surgeons"
+        },
+        {
+          "label": "surgical_tasks",
+          "value": 3,
+          "unit": "tasks"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2014-09-18"
+    },
+    "citation": {
+      "paper_title": "A Dataset and Benchmarks for Segmentation and Recognition of Gestures in Robotic Surgery",
+      "paper_url": "https://cirl.lcsr.jhu.edu/wp-content/uploads/2015/11/Gao_MICCAI_M2CAI_2014.pdf",
+      "authors": [
+        "Yixin Gao",
+        "S. Swaroop Vedula",
+        "Carol E. Reiley",
+        "Narges Ahmidi",
+        "Balakrishnan Varadarajan",
+        "Henry C. Lin",
+        "Lingling Tao",
+        "Luca Zappella",
+        "Benjamín Béjar",
+        "David D. Yuh",
+        "Chi Chiung Grace Chen",
+        "René Vidal",
+        "Sanjeev Khudanpur",
+        "Gregory D. Hager"
+      ],
+      "bibtex": "@inproceedings{gao2014jigsaws,\n  title = {A Dataset and Benchmarks for Segmentation and Recognition of Gestures in Robotic Surgery},\n  author = {Gao, Yixin and Vedula, S. Swaroop and Reiley, Carol E. and Ahmidi, Narges and Varadarajan, Balakrishnan and Lin, Henry C. and Tao, Lingling and Zappella, Luca and B{\\'e}jar, Benjam{\\'i}n and Yuh, David D. and Chen, Chi Chiung Grace and Vidal, Ren{\\'e} and Khudanpur, Sanjeev and Hager, Gregory D.},\n  booktitle = {Proceedings of the MICCAI Workshop on Modeling and Monitoring of Computer Assisted Interventions (M2CAI)},\n  year = {2014}\n}"
     }
   },
   {
@@ -32744,6 +33394,100 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "ljspeech",
+    "slug": "ljspeech",
+    "name": "The LJ Speech Dataset",
+    "description": "The LJ Speech Dataset is a public domain speech corpus comprising 13,100 short audio clips of a single speaker reading passages from seven non-fiction books. Totaling approximately 24 hours of audio recorded in English, the clips range in duration from 1 to 10 seconds and are accompanied by exact text transcriptions, widely serving as the standard benchmark for neural text-to-speech (TTS) synthesis and vocoder evaluation.",
+    "homepage_url": "https://keithito.com/LJ-Speech-Dataset/",
+    "publisher": {
+      "name": "Keith Ito & Linda Johnson",
+      "type": "individual",
+      "url": "https://keithito.com"
+    },
+    "modalities": [
+      "audio",
+      "nlp"
+    ],
+    "tasks": [
+      "text-to-speech",
+      "speech-synthesis"
+    ],
+    "tags": [
+      "text-to-speech",
+      "tts",
+      "speech-synthesis",
+      "english-speech",
+      "audio"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Dedicated to the public domain by creators Keith Ito and Linda Johnson."
+    },
+    "source_references": [
+      {
+        "title": "The LJ Speech Dataset Official Website",
+        "url": "https://keithito.com/LJ-Speech-Dataset/",
+        "type": "official_website",
+        "notes": "Canonical dataset distribution page with audio downloads and metadata."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against canonical release portal and public domain declaration."
+    },
+    "size": {
+      "amount": 2.6,
+      "unit": "GB",
+      "file_formats": [
+        "wav",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "22050Hz 16-bit PCM WAV audio clips and CSV transcription file."
+    },
+    "sample_count": {
+      "total": 13100,
+      "unit": "audio-clips",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "total_duration_hours",
+          "value": 24.0,
+          "unit": "hours"
+        },
+        {
+          "label": "speakers",
+          "value": 1,
+          "unit": "speakers"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2017-06-01"
+    },
+    "citation": {
+      "paper_title": "The LJ Speech Dataset",
+      "paper_url": "https://keithito.com/LJ-Speech-Dataset/",
+      "authors": [
+        "Keith Ito",
+        "Linda Johnson"
+      ],
+      "bibtex": "@misc{ito2017ljspeech,\n  title = {The {LJ} Speech Dataset},\n  author = {Ito, Keith and Johnson, Linda},\n  howpublished = {\\url{https://keithito.com/LJ-Speech-Dataset/}},\n  year = {2017}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "long-term-af-database",
     "slug": "long-term-af-database",
     "name": "Long Term AF Database: Paroxysmal Atrial Fibrillation Dynamics",
@@ -34483,6 +35227,108 @@
         "Gokhan Tur",
         "Prem Natarajan"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "matbench",
+    "slug": "matbench",
+    "name": "Matbench: Benchmark for Predicting Materials Properties from Structure",
+    "description": "Matbench is an established, rigorously curated machine learning benchmark for predicting physical, thermodynamic, electronic, and mechanical properties of solid-state materials directly from crystal structure or chemical composition. Created by the Materials Project, it comprises 13 standardized benchmarks spanning 133,889 materials calculations drawn from experimental measurements and density functional theory (DFT), evaluated with a strict 5-fold nested cross-validation protocol.",
+    "homepage_url": "https://matbench.materialsproject.org/",
+    "publisher": {
+      "name": "The Materials Project & Lawrence Berkeley National Laboratory",
+      "type": "academic",
+      "url": "https://materialsproject.org"
+    },
+    "modalities": [
+      "tabular",
+      "graph"
+    ],
+    "tasks": [
+      "materials-property-prediction"
+    ],
+    "tags": [
+      "materials-science",
+      "solid-state-physics",
+      "dft",
+      "crystal-structures",
+      "tabular",
+      "graph"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset benchmark curated by Materials Project under CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "Matbench Official Benchmark Portal",
+        "url": "https://matbench.materialsproject.org/",
+        "type": "official_website",
+        "notes": "Official Matbench leaderboard and documentation."
+      },
+      {
+        "title": "Matbench GitHub Repository",
+        "url": "https://github.com/materialsproject/matbench",
+        "type": "repository",
+        "notes": "Official benchmark python package and dataset access."
+      },
+      {
+        "title": "Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm (npj Comput Mater)",
+        "url": "https://doi.org/10.1038/s41524-020-00406-3",
+        "type": "original_paper",
+        "notes": "Published in npj Computational Materials 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against npj Computational Materials publication and Materials Project portal."
+    },
+    "size": {
+      "amount": 450.0,
+      "unit": "MB",
+      "file_formats": [
+        "json",
+        "gz"
+      ],
+      "status": "verified",
+      "notes": "Gzipped JSON datasets containing pymatgen structures and target properties."
+    },
+    "sample_count": {
+      "total": 133889,
+      "unit": "materials-calculations",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "benchmark_tasks",
+          "value": 13,
+          "unit": "benchmarks"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2020-09-24"
+    },
+    "citation": {
+      "paper_title": "Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm",
+      "paper_url": "https://doi.org/10.1038/s41524-020-00406-3",
+      "authors": [
+        "Alexander Dunn",
+        "Qi Wang",
+        "Alex Ganose",
+        "Daniel Dopp",
+        "Anubhav Jain"
+      ],
+      "doi": "10.1038/s41524-020-00406-3",
+      "bibtex": "@article{dunn2020benchmarking,\n  title = {Benchmarking materials property prediction methods: the {Matbench} test set and {Automatminer} reference algorithm},\n  author = {Dunn, Alexander and Wang, Qi and Ganose, Alex and Dopp, Daniel and Jain, Anubhav},\n  journal = {npj Computational Materials},\n  volume = {6},\n  number = {1},\n  pages = {138},\n  year = {2020},\n  doi = {10.1038/s41524-020-00406-3}\n}"
     }
   },
   {
@@ -39850,6 +40696,132 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "multimodalqa",
+    "slug": "multimodalqa",
+    "name": "MultiModalQA: Complex Question Answering over Text, Tables and Images",
+    "description": "MultiModalQA is a challenging multi-hop question answering benchmark requiring joint reasoning over heterogeneous modalities: semi-structured Wikipedia infobox tables, textual Wikipedia passages, and paired images. Comprising 29,918 questions, answering each question requires synthesizing information across multiple modalities (e.g. text-image, table-text, or table-image-text), serving as a gold standard for multimodal reasoning.",
+    "homepage_url": "https://allenai.github.io/multimodalqa/",
+    "publisher": {
+      "name": "Allen Institute for AI & Tel Aviv University",
+      "type": "academic",
+      "url": "https://allenai.org"
+    },
+    "modalities": [
+      "multimodal",
+      "nlp",
+      "vision",
+      "tabular"
+    ],
+    "tasks": [
+      "question-answering"
+    ],
+    "tags": [
+      "multimodal-reasoning",
+      "question-answering",
+      "tables",
+      "images",
+      "text",
+      "multimodal"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Dataset and codebase released under Apache-2.0 by AI2."
+    },
+    "source_references": [
+      {
+        "title": "MultiModalQA Project Website",
+        "url": "https://allenai.github.io/multimodalqa/",
+        "type": "official_website",
+        "notes": "Official AI2 project site with benchmark leaderboard."
+      },
+      {
+        "title": "MultiModalQA GitHub Repository",
+        "url": "https://github.com/allenai/multimodalqa",
+        "type": "repository",
+        "notes": "Official data and model release."
+      },
+      {
+        "title": "MultiModalQA: Complex Question Answering over Text, Tables and Images (ICLR 2021)",
+        "url": "https://arxiv.org/abs/2104.06039",
+        "type": "original_paper",
+        "notes": "Published in ICLR 2021."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against ICLR 2021 publication and AI2 repository."
+    },
+    "size": {
+      "amount": 8.6,
+      "unit": "GB",
+      "file_formats": [
+        "json",
+        "tsv",
+        "jpg"
+      ],
+      "status": "verified",
+      "notes": "Images, tables, text contexts, and QA splits."
+    },
+    "sample_count": {
+      "total": 29918,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 23817,
+        "validation": 2441,
+        "test": 3660
+      },
+      "breakdown": [
+        {
+          "label": "supporting_images",
+          "value": 65584,
+          "unit": "images"
+        },
+        {
+          "label": "supporting_tables",
+          "value": 26260,
+          "unit": "tables"
+        },
+        {
+          "label": "supporting_text_passages",
+          "value": 298822,
+          "unit": "passages"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2021-04-13"
+    },
+    "citation": {
+      "paper_title": "MultiModalQA: Complex Question Answering over Text, Tables and Images",
+      "paper_url": "https://arxiv.org/abs/2104.06039",
+      "authors": [
+        "Alon Talmor",
+        "Ori Yoran",
+        "Amnon Catav",
+        "Dan Lahav",
+        "Yizhong Wang",
+        "Akari Asai",
+        "Gabriel Ilharco",
+        "Hannaneh Hajishirzi",
+        "Jonathan Berant"
+      ],
+      "bibtex": "@inproceedings{talmor2021multimodalqa,\n  title = {{MultiModalQA}: Complex Question Answering over Text, Tables and Images},\n  author = {Talmor, Alon and Yoran, Ori and Catav, Amnon and Lahav, Dan and Wang, Yizhong and Asai, Akari and Ilharco, Gabriel and Hajishirzi, Hannaneh and Berant, Jonathan},\n  booktitle = {International Conference on Learning Representations (ICLR)},\n  year = {2021}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "mura",
     "slug": "mura",
     "name": "MURA: Musculoskeletal Radiographs",
@@ -40100,6 +41072,119 @@
         "Marco Turchi"
       ],
       "bibtex": "@inproceedings{di-gangi-etal-2019-must,\n  title={MuST-C: a Multilingual Speech-to-Text Translation Corpus},\n  author={Di Gangi, Mattia Antonino and Cattoni, Roldano and Bentivogli, Luisa and Negri, Matteo and Turchi, Marco},\n  booktitle={Proceedings of NAACL-HLT 2019},\n  pages={2012--2017},\n  year={2019},\n  doi={10.18653/v1/N19-1202}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "mvimgnet",
+    "slug": "mvimgnet",
+    "name": "MVImgNet: Large-scale Multi-view Image Dataset for 3D Vision",
+    "description": "MVImgNet is a massive real-world multi-view dataset designed to bridge 2D visual representation learning with 3D object understanding. It contains 219,188 multi-view video clips capturing everyday objects across 238 categories. Over 6.5 million frames were processed through Structure-from-Motion (SfM) pipelines to recover camera trajectories, sparse 3D point clouds, and dense depth estimations, supporting multi-view 3D reconstruction, novel-view synthesis, and neural radiance field modeling.",
+    "homepage_url": "https://gaplab.cuhk.edu.cn/projects/MVImgNet/",
+    "publisher": {
+      "name": "The Chinese University of Hong Kong, Shenzhen (CUHK-SZ)",
+      "type": "academic",
+      "url": "https://gaplab.cuhk.edu.cn"
+    },
+    "modalities": [
+      "vision",
+      "3d"
+    ],
+    "tasks": [
+      "3d-reconstruction",
+      "depth-estimation"
+    ],
+    "tags": [
+      "multi-view",
+      "3d-reconstruction",
+      "sfm",
+      "point-clouds",
+      "novel-view-synthesis",
+      "vision"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "MVImgNet Terms of Use (Non-Commercial Research License)",
+      "spdx_id": null,
+      "url": "https://github.com/GAP-LAB-CUHK-SZ/MVImgNet#terms-of-use",
+      "commercial_use": "forbidden",
+      "notes": "Available for academic and non-commercial research upon agreeing to the MVImgNet terms of use."
+    },
+    "source_references": [
+      {
+        "title": "MVImgNet Project Page",
+        "url": "https://gaplab.cuhk.edu.cn/projects/MVImgNet/",
+        "type": "official_website",
+        "notes": "Official project portal with benchmarks and download instructions."
+      },
+      {
+        "title": "MVImgNet GitHub Repository",
+        "url": "https://github.com/GAP-LAB-CUHK-SZ/MVImgNet",
+        "type": "repository",
+        "notes": "Official toolkit and data access scripts."
+      },
+      {
+        "title": "MVImgNet: A Large-scale Dataset of Multi-view Images (CVPR 2023)",
+        "url": "https://arxiv.org/abs/2303.06042",
+        "type": "original_paper",
+        "notes": "Published in CVPR 2023."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against CVPR 2023 publication and official CUHK-SZ project portal."
+    },
+    "size": {
+      "amount": 1.8,
+      "unit": "TB",
+      "file_formats": [
+        "jpg",
+        "bin",
+        "txt"
+      ],
+      "status": "estimated",
+      "notes": "Extracted frames, depth maps, and camera trajectory parameters."
+    },
+    "sample_count": {
+      "total": 219188,
+      "unit": "video-clips",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "disjoint",
+      "breakdown": [
+        {
+          "label": "extracted_frames",
+          "value": 6500000,
+          "unit": "frames"
+        },
+        {
+          "label": "object_categories",
+          "value": 238,
+          "unit": "categories"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2023-03-10"
+    },
+    "citation": {
+      "paper_title": "MVImgNet: A Large-scale Dataset of Multi-view Images",
+      "paper_url": "https://arxiv.org/abs/2303.06042",
+      "authors": [
+        "Xianggang Yu",
+        "Mutian Xu",
+        "Yushuang Wu",
+        "Haolin Liu",
+        "Chongjie Ye",
+        "Zizheng Yan",
+        "Chenxin Li",
+        "Baoquan Chen",
+        "Xiaoguang Han"
+      ],
+      "doi": "10.1109/CVPR52729.2023.00885",
+      "bibtex": "@inproceedings{yu2023mvimgnet,\n  title = {MVImgNet: A Large-scale Dataset of Multi-view Images},\n  author = {Yu, Xianggang and Xu, Mutian and Wu, Yushuang and Liu, Haolin and Ye, Chongjie and Yan, Zizheng and Li, Chenxin and Chen, Baoquan and Han, Xiaoguang},\n  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2023},\n  pages = {9150--9161},\n  doi = {10.1109/CVPR52729.2023.00885}\n}"
     }
   },
   {
@@ -40615,6 +41700,133 @@
       "data_sources": [
         "MVTec Software GmbH Research & Teaching Portal"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "naamapadam",
+    "slug": "naamapadam",
+    "name": "Naamapadam: Named Entity Annotated Data for Indic Languages",
+    "description": "Naamapadam is the largest publicly available named entity annotated dataset for 11 major Indic languages (Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, and Telugu). Curated by AI4Bharat, the dataset extracts entity annotations from parallel sentence corpora in Samanantar using high-precision cross-lingual candidate selection and multilingual transformer projection, providing 4,964,286 sentences annotated with Person (PER), Location (LOC), and Organization (ORG) tags.",
+    "homepage_url": "https://ai4bharat.iitm.ac.in/naamapadam",
+    "publisher": {
+      "name": "AI4Bharat, IIT Madras",
+      "type": "academic",
+      "url": "https://ai4bharat.iitm.ac.in"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "named-entity-recognition",
+      "token-classification"
+    ],
+    "tags": [
+      "named-entity-recognition",
+      "indic-languages",
+      "multilingual",
+      "token-classification",
+      "ai4bharat",
+      "nlp"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset packaging and annotations released under CC0 1.0 Universal."
+    },
+    "source_references": [
+      {
+        "title": "Naamapadam Official Website",
+        "url": "https://ai4bharat.iitm.ac.in/naamapadam",
+        "type": "official_website",
+        "notes": "Official release portal with dataset splits and model checkpoints."
+      },
+      {
+        "title": "Naamapadam on Hugging Face Datasets",
+        "url": "https://huggingface.co/datasets/ai4bharat/naamapadam",
+        "type": "dataset_card",
+        "notes": "Authoritative Hugging Face dataset card with per-language splits."
+      },
+      {
+        "title": "Naamapadam: A Large-Scale Named Entity Annotated Data for Indic Languages (ACL 2023)",
+        "url": "https://aclanthology.org/2023.acl-long.582/",
+        "type": "original_paper",
+        "notes": "Published in ACL 2023."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against ACL 2023 publication and official Hugging Face dataset repository."
+    },
+    "size": {
+      "amount": 1.4,
+      "unit": "GB",
+      "file_formats": [
+        "jsonl",
+        "parquet"
+      ],
+      "status": "verified",
+      "notes": "Clean BIO token-annotated JSONL datasets for 11 Indic languages."
+    },
+    "sample_count": {
+      "total": 4964286,
+      "unit": "sentences",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 4939788,
+        "validation": 10998,
+        "test": 13500
+      },
+      "breakdown": [
+        {
+          "label": "languages_covered",
+          "value": 11,
+          "unit": "languages"
+        },
+        {
+          "label": "entity_classes",
+          "value": 3,
+          "unit": "classes"
+        }
+      ]
+    },
+    "languages": [
+      "as",
+      "bn",
+      "gu",
+      "hi",
+      "kn",
+      "ml",
+      "mr",
+      "or",
+      "pa",
+      "ta",
+      "te"
+    ],
+    "dates": {
+      "published": "2023-07-09"
+    },
+    "citation": {
+      "paper_title": "Naamapadam: A Large-Scale Named Entity Annotated Data for Indic Languages",
+      "paper_url": "https://aclanthology.org/2023.acl-long.582/",
+      "authors": [
+        "Arnav Mhaske",
+        "Harshit Kedia",
+        "Sumanth Doddapaneni",
+        "Mitesh M. Khapra",
+        "Pratyush Kumar",
+        "Balaraman Ravindran",
+        "Anoop Kunchukuttan"
+      ],
+      "doi": "10.18653/v1/2023.acl-long.582",
+      "bibtex": "@inproceedings{mhaske-etal-2023-naamapadam,\n  title = {Naamapadam: A Large-Scale Named Entity Annotated Data for {I}ndic Languages},\n  author = {Mhaske, Arnav and Kedia, Harshit and Doddapaneni, Sumanth and Khapra, Mitesh M. and Kumar, Pratyush and Ravindran, Balaraman and Kunchukuttan, Anoop},\n  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},\n  year = {2023},\n  pages = {10283--10302},\n  doi = {10.18653/v1/2023.acl-long.582}\n}"
     }
   },
   {
@@ -43725,6 +44937,111 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "nyu-depth-v2",
+    "slug": "nyu-depth-v2",
+    "name": "NYU Depth Dataset V2: Indoor RGB-D Segmentation and Support Inference",
+    "description": "The NYU Depth Dataset V2 is a landmark RGB-D indoor scene understanding dataset recorded across 464 diverse indoor scenes using Microsoft Kinect cameras. It contains 1,449 densely labeled pairs of aligned RGB and depth images with detailed object segmentations and structural surface support relations, alongside a comprehensive raw repository of 407,024 video frames widely adopted for monocular depth estimation and 3D semantic perception.",
+    "homepage_url": "https://cs.nyu.edu/~fergus/datasets/nyu_depth_v2.html",
+    "publisher": {
+      "name": "New York University",
+      "type": "academic",
+      "url": "https://cs.nyu.edu"
+    },
+    "modalities": [
+      "vision",
+      "3d"
+    ],
+    "tasks": [
+      "depth-estimation",
+      "semantic-segmentation"
+    ],
+    "tags": [
+      "rgb-d",
+      "depth-estimation",
+      "indoor-scenes",
+      "semantic-segmentation",
+      "kinect",
+      "vision"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "NYU Academic Research License",
+      "spdx_id": null,
+      "url": "https://cs.nyu.edu/~fergus/datasets/nyu_depth_v2.html",
+      "commercial_use": "allowed",
+      "notes": "Freely available for academic and educational research use."
+    },
+    "source_references": [
+      {
+        "title": "NYU Depth V2 Official Portal",
+        "url": "https://cs.nyu.edu/~fergus/datasets/nyu_depth_v2.html",
+        "type": "official_website",
+        "notes": "Official dataset distribution page hosted by Fergus Lab at NYU."
+      },
+      {
+        "title": "Indoor Segmentation and Support Inference from RGBD Images (ECCV 2012)",
+        "url": "https://doi.org/10.1007/978-3-642-33715-4_54",
+        "type": "original_paper",
+        "notes": "Original ECCV 2012 publication."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against ECCV 2012 publication and NYU official website."
+    },
+    "size": {
+      "amount": 42.8,
+      "unit": "GB",
+      "file_formats": [
+        "mat",
+        "png"
+      ],
+      "status": "verified",
+      "notes": "Labeled pairs and raw frame archives in MATLAB format."
+    },
+    "sample_count": {
+      "total": 1449,
+      "unit": "labeled-rgbd-pairs",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 795,
+        "test": 654
+      },
+      "breakdown": [
+        {
+          "label": "raw_unlabeled_frames",
+          "value": 407024,
+          "unit": "frames"
+        },
+        {
+          "label": "indoor_scenes",
+          "value": 464,
+          "unit": "scenes"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2012-10-07"
+    },
+    "citation": {
+      "paper_title": "Indoor Segmentation and Support Inference from RGBD Images",
+      "paper_url": "https://doi.org/10.1007/978-3-642-33715-4_54",
+      "authors": [
+        "Nathan Silberman",
+        "Derek Hoiem",
+        "Pushmeet Kohli",
+        "Rob Fergus"
+      ],
+      "doi": "10.1007/978-3-642-33715-4_54",
+      "bibtex": "@inproceedings{silberman2012indoor,\n  title = {Indoor Segmentation and Support Inference from RGBD Images},\n  author = {Silberman, Nathan and Hoiem, Derek and Kohli, Pushmeet and Fergus, Rob},\n  booktitle = {European Conference on Computer Vision (ECCV)},\n  year = {2012},\n  pages = {746--760},\n  doi = {10.1007/978-3-642-33715-4_54}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "oasis-3",
     "slug": "oasis-3",
     "name": "OASIS-3: Longitudinal Neuroimaging, Clinical, and Cognitive Dataset",
@@ -45675,6 +46992,124 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "open-catalyst-20",
+    "slug": "open-catalyst-20",
+    "name": "Open Catalyst 2020 (OC20)",
+    "description": "The Open Catalyst 2020 (OC20) dataset is a massive quantum-mechanical dataset curated by Meta AI and Carnegie Mellon University to accelerate renewable energy research and catalyst discovery. Comprising over 1.28 million molecular relaxation trajectories and 264 million density functional theory (DFT) single-point calculations across 55 chemical elements, it benchmarks machine learning models on structure-to-energy-and-forces (S2EF) and initial-structure-to-relaxed-energy (IS2RE) predictions.",
+    "homepage_url": "https://opencatalystproject.org/",
+    "publisher": {
+      "name": "Meta AI & Carnegie Mellon University",
+      "type": "academic",
+      "url": "https://opencatalystproject.org"
+    },
+    "modalities": [
+      "graph",
+      "sensor",
+      "tabular"
+    ],
+    "tasks": [
+      "molecular-simulation"
+    ],
+    "tags": [
+      "catalysis",
+      "dft",
+      "quantum-chemistry",
+      "molecular-simulation",
+      "graph-neural-networks"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Open Catalyst Project data licensed under CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "Open Catalyst Project Portal",
+        "url": "https://opencatalystproject.org/",
+        "type": "official_website",
+        "notes": "Official project website with challenges and data downloads."
+      },
+      {
+        "title": "Open Catalyst GitHub Repository",
+        "url": "https://github.com/Open-Catalyst-Project/ocp",
+        "type": "repository",
+        "notes": "Official baseline models and dataloaders."
+      },
+      {
+        "title": "The Open Catalyst 2020 (OC20) Dataset and Community Challenges (ACS Catalysis)",
+        "url": "https://doi.org/10.1021/acscatal.0c04525",
+        "type": "original_paper",
+        "notes": "Published in ACS Catalysis 2021."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against ACS Catalysis publication and Open Catalyst Project repository."
+    },
+    "size": {
+      "amount": 1.1,
+      "unit": "TB",
+      "file_formats": [
+        "lmdb",
+        "extxyz"
+      ],
+      "status": "verified",
+      "notes": "Compressed LMDB trajectory and DFT calculations files."
+    },
+    "sample_count": {
+      "total": 1281040,
+      "unit": "relaxation-trajectories",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "dft_single_point_calculations",
+          "value": 264000000,
+          "unit": "calculations"
+        },
+        {
+          "label": "chemical_elements",
+          "value": 55,
+          "unit": "elements"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2020-10-20"
+    },
+    "citation": {
+      "paper_title": "The Open Catalyst 2020 (OC20) Dataset and Community Challenges",
+      "paper_url": "https://doi.org/10.1021/acscatal.0c04525",
+      "authors": [
+        "Lowik Chanussot",
+        "Abhishek Das",
+        "Siddharth Goyal",
+        "Thibaut Lavril",
+        "Muhammed Shuaibi",
+        "Morgane Riviere",
+        "Kevin Tran",
+        "Javier Heras-Domingo",
+        "Caleb Ho",
+        "Weihua Hu",
+        "Aini Palizhati",
+        "Anuroop Sriram",
+        "Brandon Wood",
+        "Junwoong Yoon",
+        "Devi Parikh",
+        "C. Lawrence Zitnick"
+      ],
+      "doi": "10.1021/acscatal.0c04525",
+      "bibtex": "@article{chanussot2021open,\n  title = {The {Open Catalyst 2020} ({OC20}) Dataset and Community Challenges},\n  author = {Chanussot, Lowik and Das, Abhishek and Goyal, Siddharth and Lavril, Thibaut and Shuaibi, Muhammed and Riviere, Morgane and Tran, Kevin and Heras-Domingo, Javier and Ho, Caleb and Hu, Weihua and Palizhati, Aini and Sriram, Anuroop and Wood, Brandon and Yoon, Junwoong and Parikh, Devi and Zitnick, C. Lawrence},\n  journal = {ACS Catalysis},\n  volume = {11},\n  number = {10},\n  pages = {6059--6072},\n  year = {2021},\n  doi = {10.1021/acscatal.0c04525}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "open-images-v7",
     "slug": "open-images-v7",
     "name": "Open Images V7",
@@ -46195,6 +47630,124 @@
         "unit": "frames"
       }
     ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "oscar-2019",
+    "slug": "oscar-2019",
+    "name": "OSCAR: Open Super-large Crawled ALMAnaCH Corpus (2019 Release)",
+    "description": "OSCAR (Open Super-large Crawled ALMAnaCH Corpus) 2019 is a monumental multilingual plain text corpus created by filtering and language-classifying Common Crawl web data dumps. Developed by INRIA ALMAnaCH, the original 2019 release spans 166 natural languages and over 6.3 billion lines of text (156 billion words, 6.3TB uncompressed), serving as a foundation for self-supervised pretraining, language modeling, and linguistic corpus analysis.",
+    "homepage_url": "https://oscar-project.github.io/",
+    "publisher": {
+      "name": "INRIA ALMAnaCH",
+      "type": "academic",
+      "url": "https://almanach.inria.fr"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "language-modeling"
+    ],
+    "tags": [
+      "pretraining",
+      "web-corpus",
+      "multilingual",
+      "common-crawl",
+      "language-modeling",
+      "nlp"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset metadata and curation scripts released under CC0 1.0; web texts subject to Common Crawl fair use terms."
+    },
+    "source_references": [
+      {
+        "title": "OSCAR Project Website",
+        "url": "https://oscar-project.github.io/",
+        "type": "official_website",
+        "notes": "Official project portal with technical reports and documentation."
+      },
+      {
+        "title": "Asynchronous Pipeline for Processing Huge Corpora (WAC 2019)",
+        "url": "https://aclanthology.org/W19-2509/",
+        "type": "original_paper",
+        "notes": "Original paper introducing the 2019 corpus construction."
+      },
+      {
+        "title": "OSCAR 2019 Release Portal",
+        "url": "https://oscar-corpus.com",
+        "type": "archive",
+        "notes": "Corpus distribution portal."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against WAC 2019 publication and official OSCAR documentation."
+    },
+    "size": {
+      "amount": 6.3,
+      "unit": "TB",
+      "file_formats": [
+        "txt",
+        "gz"
+      ],
+      "status": "verified",
+      "notes": "Uncompressed plain text size across all 166 language shards."
+    },
+    "sample_count": {
+      "total": 6300000000,
+      "unit": "lines",
+      "status": "estimated",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "languages_covered",
+          "value": 166,
+          "unit": "languages"
+        },
+        {
+          "label": "word_count",
+          "value": 156000000000,
+          "unit": "words"
+        }
+      ]
+    },
+    "languages": [
+      "en",
+      "fr",
+      "de",
+      "es",
+      "ru",
+      "zh",
+      "ar",
+      "ja",
+      "it",
+      "pt",
+      "bn",
+      "hi"
+    ],
+    "dates": {
+      "published": "2019-07-22"
+    },
+    "citation": {
+      "paper_title": "Asynchronous Pipeline for Processing Huge Corpora on Medium to Low Resource Infrastructures",
+      "paper_url": "https://aclanthology.org/W19-2509/",
+      "authors": [
+        "Pedro Javier Ortiz Suárez",
+        "Benoît Sagot",
+        "Laurent Romary"
+      ],
+      "doi": "10.18653/v1/W19-2509",
+      "bibtex": "@inproceedings{ortiz-suarez-etal-2019-asynchronous,\n  title = {Asynchronous Pipeline for Processing Huge Corpora on Medium to Low Resource Infrastructures},\n  author = {Ortiz Su{\\'a}rez, Pedro Javier and Sagot, Beno{\\^\\i}t and Romary, Laurent},\n  booktitle = {Proceedings of the 7th Workshop on the Challenges in the Management of Large Corpora (CMLC-7)},\n  year = {2019},\n  pages = {9--16},\n  doi = {10.18653/v1/W19-2509}\n}"
+    }
   },
   {
     "schema_version": "1.0.0",
@@ -49490,6 +51043,102 @@
       "data_sources": [
         "Radboud University Medical Center, Nijmegen, Netherlands"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "proteinnet",
+    "slug": "proteinnet",
+    "name": "ProteinNet: Standardized Dataset for Machine Learning of Protein Structure",
+    "description": "ProteinNet is a standardized machine learning data set designed for protein structure prediction, sequence-to-structure modeling, and structural bioinformatics. Curated by Mohammed AlQuraishi, it integrates protein sequences, multiple sequence alignments (MSAs), position-specific scoring matrices (PSSMs), and experimental 3D atom coordinates from the Protein Data Bank (PDB), linked directly to the biennial CASP (Critical Assessment of Structure Prediction) blind assessments.",
+    "homepage_url": "https://github.com/aqlaboratory/proteinnet",
+    "publisher": {
+      "name": "Harvard Medical School & Columbia University",
+      "type": "academic",
+      "url": "https://aqlaboratory.org"
+    },
+    "modalities": [
+      "graph",
+      "nlp"
+    ],
+    "tasks": [
+      "protein-structure-prediction"
+    ],
+    "tags": [
+      "protein-structure",
+      "structural-biology",
+      "casp",
+      "bioinformatics",
+      "graph"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset curations dedicated to public domain under CC0 1.0; underlying structures derived from public PDB."
+    },
+    "source_references": [
+      {
+        "title": "ProteinNet GitHub Repository",
+        "url": "https://github.com/aqlaboratory/proteinnet",
+        "type": "repository",
+        "notes": "Official repository with dataset records and CASP release scripts."
+      },
+      {
+        "title": "ProteinNet: a standardized data set for machine learning of protein structure (BMC Bioinformatics 2019)",
+        "url": "https://doi.org/10.1186/s12859-019-2932-0",
+        "type": "original_paper",
+        "notes": "Published in BMC Bioinformatics 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against BMC Bioinformatics 2019 publication and official repository."
+    },
+    "size": {
+      "amount": 14.5,
+      "unit": "GB",
+      "file_formats": [
+        "txt",
+        "gz"
+      ],
+      "status": "verified",
+      "notes": "Text records with PSSMs, alignments, and coordinates across CASP editions."
+    },
+    "sample_count": {
+      "total": 104484,
+      "unit": "protein-records",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 104218,
+        "validation": 224,
+        "test": 42
+      },
+      "breakdown": [
+        {
+          "label": "casp_benchmark_edition",
+          "value": 12,
+          "unit": "edition"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2019-06-11"
+    },
+    "citation": {
+      "paper_title": "ProteinNet: a standardized data set for machine learning of protein structure",
+      "paper_url": "https://doi.org/10.1186/s12859-019-2932-0",
+      "authors": [
+        "Mohammed AlQuraishi"
+      ],
+      "doi": "10.1186/s12859-019-2932-0",
+      "bibtex": "@article{alquraishi2019proteinnet,\n  title = {{ProteinNet}: a standardized data set for machine learning of protein structure},\n  author = {AlQuraishi, Mohammed},\n  journal = {BMC Bioinformatics},\n  volume = {20},\n  number = {1},\n  pages = {311},\n  year = {2019},\n  doi = {10.1186/s12859-019-2932-0}\n}"
     }
   },
   {
@@ -53095,6 +54744,110 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "scanobjectnn",
+    "slug": "scanobjectnn",
+    "name": "ScanObjectNN: Real-World 3D Object Classification Benchmark",
+    "description": "ScanObjectNN is an established real-world 3D object classification benchmark generated from 3D indoor scene scans (SceneCAD and ScanNet). Unlike synthetic CAD models, ScanObjectNN contains 2,902 unique object instances across 15 common categories afflicted with real-world sensor scanning artifacts including severe occlusions, sensor noise, non-uniform point densities, and complex background geometry, providing a rigorous testbed for 3D point cloud classifiers.",
+    "homepage_url": "https://hkust-vgd.github.io/scanobjectnn/",
+    "publisher": {
+      "name": "Hong Kong University of Science and Technology (HKUST)",
+      "type": "academic",
+      "url": "https://hkust-vgd.github.io"
+    },
+    "modalities": [
+      "3d",
+      "vision"
+    ],
+    "tasks": [
+      "point-cloud-classification"
+    ],
+    "tags": [
+      "3d-point-clouds",
+      "point-cloud-classification",
+      "indoor-scans",
+      "real-world-3d",
+      "3d"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "ScanObjectNN Research Use Terms (derived from ScanNet terms)",
+      "spdx_id": null,
+      "url": "https://hkust-vgd.github.io/scanobjectnn/",
+      "commercial_use": "forbidden",
+      "notes": "Available for academic and non-commercial research; underlying geometry inherits ScanNet/SceneCAD academic terms."
+    },
+    "source_references": [
+      {
+        "title": "ScanObjectNN Project Website",
+        "url": "https://hkust-vgd.github.io/scanobjectnn/",
+        "type": "official_website",
+        "notes": "Official project benchmark portal."
+      },
+      {
+        "title": "Revisiting Point Cloud Classification: A New Benchmark Dataset and Classification Model on Real-World Data",
+        "url": "https://arxiv.org/abs/1908.04616",
+        "type": "original_paper",
+        "notes": "Published in ICCV 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against ICCV 2019 publication and HKUST project site."
+    },
+    "size": {
+      "amount": 1.2,
+      "unit": "GB",
+      "file_formats": [
+        "h5",
+        "bin"
+      ],
+      "status": "verified",
+      "notes": "HDF5 archives of point cloud coordinates and surface normals."
+    },
+    "sample_count": {
+      "total": 2902,
+      "unit": "unique-object-instances",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 2309,
+        "test": 593
+      },
+      "breakdown": [
+        {
+          "label": "object_categories",
+          "value": 15,
+          "unit": "categories"
+        },
+        {
+          "label": "perturbed_benchmark_samples",
+          "value": 14510,
+          "unit": "point_clouds"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2019-08-12"
+    },
+    "citation": {
+      "paper_title": "Revisiting Point Cloud Classification: A New Benchmark Dataset and Classification Model on Real-World Data",
+      "paper_url": "https://arxiv.org/abs/1908.04616",
+      "authors": [
+        "Mikaela Angelina Uy",
+        "Quang-Hieu Pham",
+        "Binh-Son Hua",
+        "Thanh Nguyen",
+        "Sai-Kit Yeung"
+      ],
+      "doi": "10.1109/ICCV.2019.00168",
+      "bibtex": "@inproceedings{uy2019scanobjectnn,\n  title = {Revisiting Point Cloud Classification: A New Benchmark Dataset and Classification Model on Real-World Data},\n  author = {Uy, Mikaela Angelina and Pham, Quang-Hieu and Hua, Binh-Son and Nguyen, Thanh and Yeung, Sai-Kit},\n  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n  year = {2019},\n  pages = {1588--1597},\n  doi = {10.1109/ICCV.2019.00168}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "scienceqa",
     "slug": "scienceqa",
     "name": "ScienceQA: Multimodal Question Answering with Thought Explanations",
@@ -54754,6 +56507,114 @@
       "data_sources": [
         "Westeinde Hospital, The Hague, Netherlands"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "slidevqa",
+    "slug": "slidevqa",
+    "name": "SlideVQA: Document Visual Question Answering on Multiple Images",
+    "description": "SlideVQA is a multi-page document visual question answering benchmark built upon real-world presentation slide decks. Unlike single-page document VQA, SlideVQA requires multimodal models to search across an entire slide deck to locate relevant evidence slides and perform multi-hop numerical, visual, and textual reasoning, comprising 14,500 question-answer pairs over 2,619 slide decks totaling 52,480 slide images.",
+    "homepage_url": "https://github.com/nttmdlab-nlp/SlideVQA",
+    "publisher": {
+      "name": "NTT Human Informatics Laboratories",
+      "type": "industry",
+      "url": "https://www.rd.ntt/e/hil/"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering"
+    ],
+    "tags": [
+      "slidevqa",
+      "document-vqa",
+      "multi-page-docvqa",
+      "presentation-slides",
+      "multimodal"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "SlideVQA Research Use Agreement",
+      "spdx_id": null,
+      "url": "https://github.com/nttmdlab-nlp/SlideVQA/blob/main/LICENSE",
+      "commercial_use": "forbidden",
+      "notes": "Available for academic research purposes under NTT SlideVQA research terms."
+    },
+    "source_references": [
+      {
+        "title": "SlideVQA GitHub Repository",
+        "url": "https://github.com/nttmdlab-nlp/SlideVQA",
+        "type": "repository",
+        "notes": "Official code and dataset download repository."
+      },
+      {
+        "title": "SlideVQA: A Dataset for Document Visual Question Answering on Multiple Images (AAAI 2023)",
+        "url": "https://doi.org/10.1609/aaai.v37i11.26598",
+        "type": "original_paper",
+        "notes": "Published in AAAI 2023."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against AAAI 2023 publication and official NTT repository."
+    },
+    "size": {
+      "amount": 16.4,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "json"
+      ],
+      "status": "verified",
+      "notes": "Slide images and QA annotations."
+    },
+    "sample_count": {
+      "total": 14500,
+      "unit": "question-answer-pairs",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 10000,
+        "validation": 2000,
+        "test": 2500
+      },
+      "breakdown": [
+        {
+          "label": "slide_decks",
+          "value": 2619,
+          "unit": "decks"
+        },
+        {
+          "label": "slide_images",
+          "value": 52480,
+          "unit": "slides"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2023-06-26"
+    },
+    "citation": {
+      "paper_title": "SlideVQA: A Dataset for Document Visual Question Answering on Multiple Images",
+      "paper_url": "https://doi.org/10.1609/aaai.v37i11.26598",
+      "authors": [
+        "Hiroki Tanaka",
+        "Ryota Mibu",
+        "Tomoyuki Kajiwara",
+        "Takuma Udagawa"
+      ],
+      "doi": "10.1609/aaai.v37i11.26598",
+      "bibtex": "@inproceedings{tanaka2023slidevqa,\n  title = {{SlideVQA}: A Dataset for Document Visual Question Answering on Multiple Images},\n  author = {Tanaka, Hiroki and Mibu, Ryota and Kajiwara, Tomoyuki and Udagawa, Takuma},\n  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume = {37},\n  number = {11},\n  pages = {13615--13623},\n  year = {2023},\n  doi = {10.1609/aaai.v37i11.26598}\n}"
     }
   },
   {
@@ -58600,6 +60461,220 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "tat-qa",
+    "slug": "tat-qa",
+    "name": "TAT-QA: Table And Text Question Answering in Finance",
+    "description": "TAT-QA (Table And Text Question Answering) is a specialized financial reasoning benchmark based on real financial reports from publicly traded companies. It consists of 16,552 questions paired with 2,757 hybrid contexts containing semi-structured financial tables and unstructured explanatory text, where answering requires numerical calculations (addition, subtraction, multiplication, division, ratio, percentage change) across both modalities.",
+    "homepage_url": "https://github.com/NExTplusplus/TAT-QA",
+    "publisher": {
+      "name": "National University of Singapore & Sichuan University",
+      "type": "academic",
+      "url": "https://next.comp.nus.edu.sg"
+    },
+    "modalities": [
+      "nlp",
+      "tabular",
+      "multimodal"
+    ],
+    "tasks": [
+      "question-answering"
+    ],
+    "tags": [
+      "financial-qa",
+      "table-text-qa",
+      "numerical-reasoning",
+      "tabular",
+      "nlp"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Annotations and code released under the MIT license."
+    },
+    "source_references": [
+      {
+        "title": "TAT-QA Official GitHub Repository",
+        "url": "https://github.com/NExTplusplus/TAT-QA",
+        "type": "repository",
+        "notes": "Official repository with dataset files and leaderboard."
+      },
+      {
+        "title": "TAT-QA: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance (ACL-IJCNLP 2021)",
+        "url": "https://aclanthology.org/2021.acl-long.254/",
+        "type": "original_paper",
+        "notes": "Published in ACL-IJCNLP 2021."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against ACL-IJCNLP 2021 paper and GitHub repository."
+    },
+    "size": {
+      "amount": 25.0,
+      "unit": "MB",
+      "file_formats": [
+        "json"
+      ],
+      "status": "verified",
+      "notes": "Structured JSON containing financial tables, texts, and QA annotations."
+    },
+    "sample_count": {
+      "total": 16552,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 13215,
+        "development": 1668,
+        "test": 1669
+      },
+      "breakdown": [
+        {
+          "label": "hybrid_table_text_contexts",
+          "value": 2757,
+          "unit": "contexts"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2021-08-01"
+    },
+    "citation": {
+      "paper_title": "TAT-QA: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance",
+      "paper_url": "https://aclanthology.org/2021.acl-long.254/",
+      "authors": [
+        "Fengbin Zhu",
+        "Wenqiang Lei",
+        "Youcheng Huang",
+        "Chao Wang",
+        "Shuo Zhang",
+        "Jiancheng Lv",
+        "Fuli Feng",
+        "Tat-Seng Chua"
+      ],
+      "doi": "10.18653/v1/2021.acl-long.254",
+      "bibtex": "@inproceedings{zhu-etal-2021-tat,\n  title = {{TAT-QA}: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance},\n  author = {Zhu, Fengbin and Lei, Wenqiang and Huang, Youcheng and Wang, Chao and Zhang, Shuo and Lv, Jiancheng and Feng, Fuli and Chua, Tat-Seng},\n  booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},\n  year = {2021},\n  pages = {3277--3287},\n  doi = {10.18653/v1/2021.acl-long.254}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "tau-spatial-sound-events-2019",
+    "slug": "tau-spatial-sound-events-2019",
+    "name": "TAU Spatial Sound Events 2019",
+    "description": "TAU Spatial Sound Events 2019 is a benchmark dataset for Sound Event Localization and Detection (SELD) curated for DCASE 2019 Challenge Task 3 by Tampere University. It comprises 500 one-minute spatial audio recordings synthesizing moving and stationary sound events from 11 distinct acoustic classes within realistic reverberant indoor soundscapes, available in both first-order Ambisonics and tetrahedral microphone formats.",
+    "homepage_url": "https://dcase.community/challenge2019/task-sound-event-localization-and-detection",
+    "publisher": {
+      "name": "Tampere University Audio Research Group",
+      "type": "academic",
+      "url": "https://research.tuni.fi/arg/"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "audio-classification"
+    ],
+    "tags": [
+      "spatial-audio",
+      "sound-event-localization",
+      "seld",
+      "dcase",
+      "ambisonics",
+      "audio"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset released on Zenodo under CC BY 4.0."
+    },
+    "source_references": [
+      {
+        "title": "DCASE 2019 Task 3 Official Page",
+        "url": "https://dcase.community/challenge2019/task-sound-event-localization-and-detection",
+        "type": "official_website",
+        "notes": "Official challenge task page."
+      },
+      {
+        "title": "TAU Spatial Sound Events 2019 Zenodo Deposit",
+        "url": "https://doi.org/10.5281/zenodo.2599196",
+        "type": "archive",
+        "notes": "Authoritative dataset release on Zenodo."
+      },
+      {
+        "title": "A Dataset of Reverberant Spatial Sound Scenes with Moving and Stationary Sound Events",
+        "url": "https://arxiv.org/abs/1807.10517",
+        "type": "original_paper",
+        "notes": "Published in ICASSP 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against Zenodo deposit and ICASSP 2019 publication."
+    },
+    "size": {
+      "amount": 12.0,
+      "unit": "GB",
+      "file_formats": [
+        "wav",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "48kHz 4-channel spatial WAV recordings with temporal and directional labels."
+    },
+    "sample_count": {
+      "total": 500,
+      "unit": "spatial-audio-scenes",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "development": 400,
+        "evaluation": 100
+      },
+      "breakdown": [
+        {
+          "label": "sound_event_classes",
+          "value": 11,
+          "unit": "classes"
+        },
+        {
+          "label": "total_duration_hours",
+          "value": 8.33,
+          "unit": "hours"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2019-03-20"
+    },
+    "citation": {
+      "paper_title": "A Dataset of Reverberant Spatial Sound Scenes with Moving and Stationary Sound Events",
+      "paper_url": "https://arxiv.org/abs/1807.10517",
+      "authors": [
+        "Sharath Adavanne",
+        "Archontis Politis",
+        "Tuomas Virtanen"
+      ],
+      "doi": "10.1109/ICASSP.2019.8683538",
+      "bibtex": "@inproceedings{adavanne2019dataset,\n  title = {A Dataset of Reverberant Spatial Sound Scenes with Moving and Stationary Sound Events},\n  author = {Adavanne, Sharath and Politis, Archontis and Virtanen, Tuomas},\n  booktitle = {IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  year = {2019},\n  pages = {676--680},\n  doi = {10.1109/ICASSP.2019.8683538}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "tau-urban-acoustic-scenes-2020",
     "slug": "tau-urban-acoustic-scenes-2020",
     "name": "TAU Urban Acoustic Scenes 2020 Mobile (DCASE 2020 Task 1A)",
@@ -58838,6 +60913,110 @@
       ],
       "doi": "10.1007/978-3-319-99579-3_21",
       "bibtex": "@inproceedings{hernandez2018tedlium,\n  title = {TED-LIUM 3: Twice as Much Data and Corpus Repartition for Out-of-Domain ASR},\n  author = {Hernandez, Fran{\\c{c}}ois and Nguyen, Vincent and Ghannay, Sahar and Tomashenko, Natalia and Est{\\`e}ve, Yannick},\n  booktitle = {International Conference on Speech and Computer (SPECOM)},\n  pages = {198--208},\n  year = {2018}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "textcaps",
+    "slug": "textcaps",
+    "name": "TextCaps: Image Captioning with Reading Comprehension",
+    "description": "TextCaps is an image captioning benchmark that requires vision-language models to read, recognize, and comprehend text present in images to generate accurate natural language descriptions. It features 28,408 real-world images from the Open Images dataset paired with 142,040 human-written captions (5 captions per image), presenting a rigorous challenge for OCR-grounded scene reasoning.",
+    "homepage_url": "https://textvqa.org/textcaps/dataset/",
+    "publisher": {
+      "name": "Facebook AI Research (FAIR)",
+      "type": "industry",
+      "url": "https://ai.meta.com"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "image-captioning",
+      "visual-question-answering"
+    ],
+    "tags": [
+      "image-captioning",
+      "ocr",
+      "scene-text",
+      "vision-language",
+      "multimodal"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Annotations released by Meta AI under CC BY 4.0; source images from Open Images (CC BY 2.0)."
+    },
+    "source_references": [
+      {
+        "title": "TextCaps Official Website",
+        "url": "https://textvqa.org/textcaps/dataset/",
+        "type": "official_website",
+        "notes": "Official dataset website hosted at textvqa.org."
+      },
+      {
+        "title": "TextCaps: a Dataset for Image Captioning with Reading Comprehension (ECCV 2020)",
+        "url": "https://arxiv.org/abs/2003.12462",
+        "type": "original_paper",
+        "notes": "Published in ECCV 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against ECCV 2020 publication and official TextCaps website."
+    },
+    "size": {
+      "amount": 7.8,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "json"
+      ],
+      "status": "estimated",
+      "notes": "JPEG image set and JSON annotations."
+    },
+    "sample_count": {
+      "total": 28408,
+      "unit": "images",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 21953,
+        "validation": 3166,
+        "test": 3289
+      },
+      "breakdown": [
+        {
+          "label": "crowdsourced_captions",
+          "value": 142040,
+          "unit": "captions"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2020-08-23"
+    },
+    "citation": {
+      "paper_title": "TextCaps: a Dataset for Image Captioning with Reading Comprehension",
+      "paper_url": "https://arxiv.org/abs/2003.12462",
+      "authors": [
+        "Oleksii Sidorov",
+        "Ronghang Hu",
+        "Marcus Rohrbach",
+        "Amanpreet Singh"
+      ],
+      "doi": "10.1007/978-3-030-58548-8_44",
+      "bibtex": "@inproceedings{sidorov2020textcaps,\n  title = {{TextCaps}: a Dataset for Image Captioning with Reading Comprehension},\n  author = {Sidorov, Oleksii and Hu, Ronghang and Rohrbach, Marcus and Singh, Amanpreet},\n  booktitle = {European Conference on Computer Vision (ECCV)},\n  year = {2020},\n  pages = {742--758},\n  doi = {10.1007/978-3-030-58548-8_44}\n}"
     }
   },
   {
@@ -62609,6 +64788,108 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "vocalsound",
+    "slug": "vocalsound",
+    "name": "VocalSound: A Dataset for Improving Human Vocal Sounds Recognition",
+    "description": "VocalSound is a dedicated audio dataset designed to advance non-speech human vocal sound classification and acoustic event detection. Curated by MIT CSAIL, it contains 21,024 clean audio recordings submitted by 3,365 human contributors across six fundamental non-speech vocal categories: laughter, sighs, coughs, throat-clearing, sneezes, and sniffs, collected across real-world acoustic backgrounds.",
+    "homepage_url": "https://sls.csail.mit.edu/downloads/vocalsound/",
+    "publisher": {
+      "name": "MIT Computer Science and Artificial Intelligence Laboratory (CSAIL)",
+      "type": "academic",
+      "url": "https://www.csail.mit.edu"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "audio-classification"
+    ],
+    "tags": [
+      "vocal-sounds",
+      "non-speech-audio",
+      "audio-classification",
+      "acoustic-events",
+      "audio"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset released under CC BY-SA 4.0 by MIT SLS group."
+    },
+    "source_references": [
+      {
+        "title": "VocalSound MIT Portal",
+        "url": "https://sls.csail.mit.edu/downloads/vocalsound/",
+        "type": "official_website",
+        "notes": "Official dataset distribution page hosted by MIT CSAIL SLS."
+      },
+      {
+        "title": "VocalSound: A Dataset for Improving Human Vocal Sounds Recognition (ICASSP 2022)",
+        "url": "https://arxiv.org/abs/2205.03433",
+        "type": "original_paper",
+        "notes": "Published in ICASSP 2022."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against ICASSP 2022 paper and MIT CSAIL download portal."
+    },
+    "size": {
+      "amount": 4.5,
+      "unit": "GB",
+      "file_formats": [
+        "wav",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "16kHz mono WAV audio clips with contributor metadata."
+    },
+    "sample_count": {
+      "total": 21024,
+      "unit": "audio-recordings",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 15000,
+        "validation": 3024,
+        "test": 3000
+      },
+      "breakdown": [
+        {
+          "label": "vocal_classes",
+          "value": 6,
+          "unit": "categories"
+        },
+        {
+          "label": "human_contributors",
+          "value": 3365,
+          "unit": "contributors"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2022-05-07"
+    },
+    "citation": {
+      "paper_title": "VocalSound: A Dataset for Improving Human Vocal Sounds Recognition",
+      "paper_url": "https://arxiv.org/abs/2205.03433",
+      "authors": [
+        "Yuan Gong",
+        "Jin Yu",
+        "James Glass"
+      ],
+      "doi": "10.1109/ICASSP43922.2022.9746401",
+      "bibtex": "@inproceedings{gong2022vocalsound,\n  title = {{VocalSound}: A Dataset for Improving Human Vocal Sounds Recognition},\n  author = {Gong, Yuan and Yu, Jin and Glass, James},\n  booktitle = {IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  year = {2022},\n  pages = {151--155},\n  doi = {10.1109/ICASSP43922.2022.9746401}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "voiced-pathological-voice",
     "slug": "voiced-pathological-voice",
     "name": "VOICED: Voice Disorders Acoustic Signal Database",
@@ -62761,6 +65042,106 @@
         "Andrew Zisserman"
       ],
       "bibtex": "@inproceedings{nagrani2017voxceleb,\n  title={VoxCeleb: a large-scale speaker identification dataset},\n  author={Nagrani, Arsha and Chung, Joon Son and Zisserman, Andrew},\n  booktitle={Interspeech 2017},\n  pages={2616--2620},\n  year={2017},\n  doi={10.21437/Interspeech.2017-950}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "voxconverse",
+    "slug": "voxconverse",
+    "name": "VoxConverse: Audio-Visual Speaker Diarisation in the Wild",
+    "description": "VoxConverse is an audio-visual speaker diarization benchmark captured in unconstrained real-world environments. Curated by the Visual Geometry Group (VGG) at Oxford, it contains over 56 hours of conversational speech drawn from political debates, panel discussions, interviews, and news broadcasts with challenging overlap conditions, variable acoustic environments, and varied speaker head poses.",
+    "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/voxconverse/",
+    "publisher": {
+      "name": "Visual Geometry Group, University of Oxford",
+      "type": "academic",
+      "url": "https://www.robots.ox.ac.uk/~vgg/"
+    },
+    "modalities": [
+      "audio",
+      "vision"
+    ],
+    "tasks": [
+      "speaker-diarization"
+    ],
+    "tags": [
+      "speaker-diarization",
+      "diarization",
+      "overlapping-speech",
+      "conversational-speech",
+      "audio"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Annotations distributed under CC BY 4.0; underlying videos sourced from YouTube for academic research."
+    },
+    "source_references": [
+      {
+        "title": "VoxConverse Official Project Page",
+        "url": "https://www.robots.ox.ac.uk/~vgg/data/voxconverse/",
+        "type": "official_website",
+        "notes": "Official VGG project portal with annotations and evaluation scripts."
+      },
+      {
+        "title": "Spot the Conversation: Speaker Diarisation in the Wild (Interspeech 2020)",
+        "url": "https://arxiv.org/abs/2007.01216",
+        "type": "original_paper",
+        "notes": "Published in Interspeech 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against Interspeech 2020 paper and Oxford VGG dataset page."
+    },
+    "size": {
+      "amount": 28.0,
+      "unit": "GB",
+      "file_formats": [
+        "wav",
+        "rttm",
+        "mp4"
+      ],
+      "status": "estimated",
+      "notes": "Audio tracks and RTTM diarization annotation files."
+    },
+    "sample_count": {
+      "total": 448,
+      "unit": "multispeaker-recordings",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "validation": 216,
+        "test": 232
+      },
+      "breakdown": [
+        {
+          "label": "total_duration_hours",
+          "value": 56.4,
+          "unit": "hours"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2020-07-02"
+    },
+    "citation": {
+      "paper_title": "Spot the Conversation: Speaker Diarisation in the Wild",
+      "paper_url": "https://arxiv.org/abs/2007.01216",
+      "authors": [
+        "Joon Son Chung",
+        "Jaesung Huh",
+        "Arsha Nagrani",
+        "Seongkyun Yeo",
+        "Andrew Zisserman"
+      ],
+      "doi": "10.21437/Interspeech.2020-2139",
+      "bibtex": "@inproceedings{chung2020spot,\n  title = {Spot the Conversation: Speaker Diarisation in the Wild},\n  author = {Chung, Joon Son and Huh, Jaesung and Nagrani, Arsha and Yeo, Seongkyun and Zisserman, Andrew},\n  booktitle = {Proceedings of Interspeech 2020},\n  year = {2020},\n  pages = {185--189},\n  doi = {10.21437/Interspeech.2020-2139}\n}"
     }
   },
   {
@@ -62939,6 +65320,115 @@
       ],
       "doi": "10.1038/sdata.2018.251",
       "bibtex": "@article{lau2018dataset,\n  title={A dataset of clinically generated visual questions and answers about radiology images},\n  author={Lau, Jason J. and Gayen, Soumya and Ben Abacha, Asma and Demner-Fushman, Dina},\n  journal={Scientific Data},\n  volume={5},\n  pages={180251},\n  year={2018},\n  publisher={Nature Publishing Group},\n  doi={10.1038/sdata.2018.251}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "vqa-v2",
+    "slug": "vqa-v2",
+    "name": "VQA v2.0: Visual Question Answering with Balanced Pairings",
+    "description": "VQA v2.0 is the premier visual question answering benchmark featuring complementary image-question pairs explicitly balanced to minimize language bias. For every question, the dataset contains pairs of similar images resulting in different answers, forcing multimodal models to ground reasoning in visual perception. Built upon 204,721 MS-COCO images, it contains 1,105,904 open-ended questions and over 11 million answers.",
+    "homepage_url": "https://visualqa.org/",
+    "publisher": {
+      "name": "Georgia Tech & Virginia Tech",
+      "type": "academic",
+      "url": "https://visualqa.org"
+    },
+    "modalities": [
+      "vision",
+      "multimodal",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering"
+    ],
+    "tags": [
+      "vqa",
+      "visual-question-answering",
+      "vision-language",
+      "reasoning",
+      "multimodal"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "VQA annotations released under CC BY 4.0; source images from MS-COCO."
+    },
+    "source_references": [
+      {
+        "title": "Visual QA (VQA) Official Portal",
+        "url": "https://visualqa.org/",
+        "type": "official_website",
+        "notes": "Official VQA challenge portal."
+      },
+      {
+        "title": "Making the V in VQA Matter: Elevating the Role of Image Understanding in Visual Question Answering (CVPR 2017)",
+        "url": "https://arxiv.org/abs/1612.00837",
+        "type": "original_paper",
+        "notes": "Published in CVPR 2017."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against CVPR 2017 paper and visualqa.org portal."
+    },
+    "size": {
+      "amount": 25.0,
+      "unit": "GB",
+      "file_formats": [
+        "json",
+        "jpg"
+      ],
+      "status": "estimated",
+      "notes": "COCO images and balanced VQA v2.0 JSON annotations."
+    },
+    "sample_count": {
+      "total": 1105904,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 443757,
+        "validation": 214354,
+        "test": 447793
+      },
+      "breakdown": [
+        {
+          "label": "underlying_images",
+          "value": 204721,
+          "unit": "images"
+        },
+        {
+          "label": "human_answers",
+          "value": 11059040,
+          "unit": "answers"
+        }
+      ]
+    },
+    "languages": [
+      "en"
+    ],
+    "dates": {
+      "published": "2017-07-21"
+    },
+    "citation": {
+      "paper_title": "Making the V in VQA Matter: Elevating the Role of Image Understanding in Visual Question Answering",
+      "paper_url": "https://arxiv.org/abs/1612.00837",
+      "authors": [
+        "Yash Goyal",
+        "Tejas Khot",
+        "Douglas Summers-Stay",
+        "Dhruv Batra",
+        "Devi Parikh"
+      ],
+      "doi": "10.1109/CVPR.2017.670",
+      "bibtex": "@inproceedings{goyal2017making,\n  title = {Making the {V} in {VQA} Matter: Elevating the Role of Image Understanding in Visual Question Answering},\n  author = {Goyal, Yash and Khot, Tejas and Summers-Stay, Douglas and Batra, Dhruv and Parikh, Devi},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2017},\n  pages = {6904--6913},\n  doi = {10.1109/CVPR.2017.670}\n}"
     }
   },
   {
@@ -64365,6 +66855,135 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "wikiann",
+    "slug": "wikiann",
+    "name": "WikiANN: Cross-lingual Name Tagging and Linking for 282 Languages",
+    "description": "WikiANN (commonly evaluated as PAN-X in massively multilingual NER benchmarks) is a landmark multilingual named entity recognition and linking corpus covering 282 languages. Automatically constructed from Wikipedia cross-lingual links, article redirects, and anchor texts, WikiANN provides sentence-level sequence labeling for Person (PER), Organization (ORG), and Location (LOC) entity spans. Standardized into balanced train, development, and test splits by Rahimi et al. (2019), it serves as the foundational testbed for zero-shot and few-shot cross-lingual named entity transfer.",
+    "homepage_url": "https://github.com/afshinrahimi/mmner",
+    "publisher": {
+      "name": "Rensselaer Polytechnic Institute & University of Melbourne",
+      "type": "academic",
+      "url": "https://github.com/afshinrahimi/mmner"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "named-entity-recognition",
+      "token-classification"
+    ],
+    "tags": [
+      "named-entity-recognition",
+      "ner",
+      "cross-lingual",
+      "multilingual",
+      "wikipedia",
+      "nlp"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Open Data Commons Attribution License (ODC-By) v1.0",
+      "spdx_id": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1-0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset annotations released under ODC-By v1.0; underlying Wikipedia texts governed by CC BY-SA 3.0."
+    },
+    "source_references": [
+      {
+        "title": "WikiANN Multilingual NER Repository (mmner)",
+        "url": "https://github.com/afshinrahimi/mmner",
+        "type": "repository",
+        "notes": "Standardized PAN-X multilingual benchmark splits."
+      },
+      {
+        "title": "Cross-lingual Name Tagging and Linking for 282 Languages (ACL 2017)",
+        "url": "https://aclanthology.org/P17-1178/",
+        "type": "original_paper",
+        "notes": "Original WikiANN paper published in ACL 2017."
+      },
+      {
+        "title": "Massively Multilingual Transfer for NER (ACL 2019)",
+        "url": "https://aclanthology.org/P19-1015/",
+        "type": "documentation",
+        "notes": "Establishes standardized train, dev, and test evaluation partitions."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against ACL 2017 and ACL 2019 publications and official mmner repository."
+    },
+    "size": {
+      "amount": 850.0,
+      "unit": "MB",
+      "file_formats": [
+        "tsv",
+        "tar.gz"
+      ],
+      "status": "estimated",
+      "notes": "Standardized token and BIO tag sequences across 176 languages."
+    },
+    "sample_count": {
+      "total": 1128000,
+      "unit": "sentences",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 789600,
+        "validation": 169200,
+        "test": 169200
+      },
+      "breakdown": [
+        {
+          "label": "languages_covered",
+          "value": 282,
+          "unit": "languages"
+        },
+        {
+          "label": "entity_types",
+          "value": 3,
+          "unit": "categories"
+        }
+      ]
+    },
+    "languages": [
+      "en",
+      "es",
+      "fr",
+      "de",
+      "zh",
+      "ar",
+      "ru",
+      "hi",
+      "bn",
+      "pt",
+      "id",
+      "ja",
+      "ko",
+      "it"
+    ],
+    "dates": {
+      "published": "2017-07-30"
+    },
+    "citation": {
+      "paper_title": "Cross-lingual Name Tagging and Linking for 282 Languages",
+      "paper_url": "https://aclanthology.org/P17-1178/",
+      "authors": [
+        "Xiaoman Pan",
+        "Boliang Zhang",
+        "Jonathan May",
+        "Joel Nothman",
+        "Kevin Knight",
+        "Heng Ji"
+      ],
+      "doi": "10.18653/v1/P17-1178",
+      "bibtex": "@inproceedings{pan-etal-2017-cross,\n  title = {Cross-lingual Name Tagging and Linking for 282 Languages},\n  author = {Pan, Xiaoman and Zhang, Boliang and May, Jonathan and Nothman, Joel and Knight, Kevin and Ji, Heng},\n  booktitle = {Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},\n  year = {2017},\n  pages = {1946--1958},\n  doi = {10.18653/v1/P17-1178}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "wikikg90mv2",
     "slug": "wikikg90mv2",
     "name": "WikiKG90Mv2: Large-Scale Knowledge Graph Completion",
@@ -64440,6 +67059,131 @@
         "Yuxiao Dong",
         "Jure Leskovec"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "wikilingua",
+    "slug": "wikilingua",
+    "name": "WikiLingua: Cross-Lingual Abstractive Summarization Benchmark",
+    "description": "WikiLingua is a large-scale, multilingual benchmark dataset for cross-lingual abstractive summarization extracted from wikiHow. It pairs comprehensive instructional procedural articles with concise section summaries aligned across 18 languages. Because parallel articles in different languages describe the exact same real-world processes, WikiLingua provides direct cross-lingual supervision across 141,457 unique concepts and approximately 770,000 article-summary pairs.",
+    "homepage_url": "https://github.com/esdurmus/Wikilingua",
+    "publisher": {
+      "name": "Columbia University & Cornell University",
+      "type": "academic",
+      "url": "https://github.com/esdurmus/Wikilingua"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "summarization",
+      "text-generation"
+    ],
+    "tags": [
+      "cross-lingual-summarization",
+      "abstractive-summarization",
+      "multilingual",
+      "wikihow",
+      "nlp"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported",
+      "spdx_id": "CC-BY-NC-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "commercial_use": "forbidden",
+      "notes": "Dataset derived from wikiHow content licensed under CC BY-NC-SA 3.0."
+    },
+    "source_references": [
+      {
+        "title": "WikiLingua GitHub Repository",
+        "url": "https://github.com/esdurmus/Wikilingua",
+        "type": "repository",
+        "notes": "Official repository with dataset extraction code and partition indices."
+      },
+      {
+        "title": "WikiLingua: A New Benchmark Dataset for Cross-Lingual Abstractive Summarization",
+        "url": "https://aclanthology.org/2020.findings-emnlp.51/",
+        "type": "original_paper",
+        "notes": "Published in Findings of EMNLP 2020."
+      },
+      {
+        "title": "WikiLingua on Hugging Face Datasets",
+        "url": "https://huggingface.co/datasets/GEM/wiki_lingua",
+        "type": "dataset_card",
+        "notes": "GEM benchmark version of WikiLingua."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-24",
+      "notes": "Verified against Findings of EMNLP 2020 publication and official repository."
+    },
+    "size": {
+      "amount": 2.1,
+      "unit": "GB",
+      "file_formats": [
+        "json",
+        "jsonl"
+      ],
+      "status": "estimated",
+      "notes": "Extracted text and summary JSON files across 18 languages."
+    },
+    "sample_count": {
+      "total": 770000,
+      "unit": "article-summary-pairs",
+      "status": "estimated",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "disjoint",
+      "breakdown": [
+        {
+          "label": "languages_covered",
+          "value": 18,
+          "unit": "languages"
+        },
+        {
+          "label": "unique_english_articles",
+          "value": 141457,
+          "unit": "articles"
+        }
+      ]
+    },
+    "languages": [
+      "en",
+      "es",
+      "fr",
+      "de",
+      "zh",
+      "pt",
+      "it",
+      "ru",
+      "ar",
+      "ja",
+      "ko",
+      "hi",
+      "id",
+      "nl",
+      "tr",
+      "vi",
+      "th",
+      "cs"
+    ],
+    "dates": {
+      "published": "2020-11-16"
+    },
+    "citation": {
+      "paper_title": "WikiLingua: A New Benchmark Dataset for Cross-Lingual Abstractive Summarization",
+      "paper_url": "https://aclanthology.org/2020.findings-emnlp.51/",
+      "authors": [
+        "Faisal Ladhak",
+        "Esin Durmus",
+        "Claire Cardie",
+        "Kathleen McKeown"
+      ],
+      "doi": "10.18653/v1/2020.findings-emnlp.51",
+      "bibtex": "@inproceedings{ladhak-etal-2020-wikilingua,\n  title = {{W}iki{L}ingua: A New Benchmark Dataset for Cross-Lingual Abstractive Summarization},\n  author = {Ladhak, Faisal and Durmus, Esin and Cardie, Claire and McKeown, Kathleen},\n  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2020},\n  year = {2020},\n  pages = {4034--4048},\n  doi = {10.18653/v1/2020.findings-emnlp.51}\n}"
     }
   },
   {

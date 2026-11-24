@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "id": "naamapadam",
+  "slug": "naamapadam",
+  "name": "Naamapadam: Named Entity Annotated Data for Indic Languages",
+  "description": "Naamapadam is the largest publicly available named entity annotated dataset for 11 major Indic languages (Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, and Telugu). Curated by AI4Bharat, the dataset extracts entity annotations from parallel sentence corpora in Samanantar using high-precision cross-lingual candidate selection and multilingual transformer projection, providing 4,964,286 sentences annotated with Person (PER), Location (LOC), and Organization (ORG) tags.",
+  "homepage_url": "https://ai4bharat.iitm.ac.in/naamapadam",
+  "publisher": {
+    "name": "AI4Bharat, IIT Madras",
+    "type": "academic",
+    "url": "https://ai4bharat.iitm.ac.in"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "named-entity-recognition",
+    "token-classification"
+  ],
+  "tags": [
+    "named-entity-recognition",
+    "indic-languages",
+    "multilingual",
+    "token-classification",
+    "ai4bharat",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Zero v1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset packaging and annotations released under CC0 1.0 Universal."
+  },
+  "source_references": [
+    {
+      "title": "Naamapadam Official Website",
+      "url": "https://ai4bharat.iitm.ac.in/naamapadam",
+      "type": "official_website",
+      "notes": "Official release portal with dataset splits and model checkpoints."
+    },
+    {
+      "title": "Naamapadam on Hugging Face Datasets",
+      "url": "https://huggingface.co/datasets/ai4bharat/naamapadam",
+      "type": "dataset_card",
+      "notes": "Authoritative Hugging Face dataset card with per-language splits."
+    },
+    {
+      "title": "Naamapadam: A Large-Scale Named Entity Annotated Data for Indic Languages (ACL 2023)",
+      "url": "https://aclanthology.org/2023.acl-long.582/",
+      "type": "original_paper",
+      "notes": "Published in ACL 2023."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against ACL 2023 publication and official Hugging Face dataset repository."
+  },
+  "size": {
+    "amount": 1.4,
+    "unit": "GB",
+    "file_formats": [
+      "jsonl",
+      "parquet"
+    ],
+    "status": "verified",
+    "notes": "Clean BIO token-annotated JSONL datasets for 11 Indic languages."
+  },
+  "sample_count": {
+    "total": 4964286,
+    "unit": "sentences",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 4939788,
+      "validation": 10998,
+      "test": 13500
+    },
+    "breakdown": [
+      {
+        "label": "languages_covered",
+        "value": 11,
+        "unit": "languages"
+      },
+      {
+        "label": "entity_classes",
+        "value": 3,
+        "unit": "classes"
+      }
+    ]
+  },
+  "languages": [
+    "as",
+    "bn",
+    "gu",
+    "hi",
+    "kn",
+    "ml",
+    "mr",
+    "or",
+    "pa",
+    "ta",
+    "te"
+  ],
+  "dates": {
+    "published": "2023-07-09"
+  },
+  "citation": {
+    "paper_title": "Naamapadam: A Large-Scale Named Entity Annotated Data for Indic Languages",
+    "paper_url": "https://aclanthology.org/2023.acl-long.582/",
+    "authors": [
+      "Arnav Mhaske",
+      "Harshit Kedia",
+      "Sumanth Doddapaneni",
+      "Mitesh M. Khapra",
+      "Pratyush Kumar",
+      "Balaraman Ravindran",
+      "Anoop Kunchukuttan"
+    ],
+    "doi": "10.18653/v1/2023.acl-long.582",
+    "bibtex": "@inproceedings{mhaske-etal-2023-naamapadam,\n  title = {Naamapadam: A Large-Scale Named Entity Annotated Data for {I}ndic Languages},\n  author = {Mhaske, Arnav and Kedia, Harshit and Doddapaneni, Sumanth and Khapra, Mitesh M. and Kumar, Pratyush and Ravindran, Balaraman and Kunchukuttan, Anoop},\n  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},\n  year = {2023},\n  pages = {10283--10302},\n  doi = {10.18653/v1/2023.acl-long.582}\n}"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wikilingua",
+  "slug": "wikilingua",
+  "name": "WikiLingua: Cross-Lingual Abstractive Summarization Benchmark",
+  "description": "WikiLingua is a large-scale, multilingual benchmark dataset for cross-lingual abstractive summarization extracted from wikiHow. It pairs comprehensive instructional procedural articles with concise section summaries aligned across 18 languages. Because parallel articles in different languages describe the exact same real-world processes, WikiLingua provides direct cross-lingual supervision across 141,457 unique concepts and approximately 770,000 article-summary pairs.",
+  "homepage_url": "https://github.com/esdurmus/Wikilingua",
+  "publisher": {
+    "name": "Columbia University & Cornell University",
+    "type": "academic",
+    "url": "https://github.com/esdurmus/Wikilingua"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "summarization",
+    "text-generation"
+  ],
+  "tags": [
+    "cross-lingual-summarization",
+    "abstractive-summarization",
+    "multilingual",
+    "wikihow",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported",
+    "spdx_id": "CC-BY-NC-SA-3.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+    "commercial_use": "forbidden",
+    "notes": "Dataset derived from wikiHow content licensed under CC BY-NC-SA 3.0."
+  },
+  "source_references": [
+    {
+      "title": "WikiLingua GitHub Repository",
+      "url": "https://github.com/esdurmus/Wikilingua",
+      "type": "repository",
+      "notes": "Official repository with dataset extraction code and partition indices."
+    },
+    {
+      "title": "WikiLingua: A New Benchmark Dataset for Cross-Lingual Abstractive Summarization",
+      "url": "https://aclanthology.org/2020.findings-emnlp.51/",
+      "type": "original_paper",
+      "notes": "Published in Findings of EMNLP 2020."
+    },
+    {
+      "title": "WikiLingua on Hugging Face Datasets",
+      "url": "https://huggingface.co/datasets/GEM/wiki_lingua",
+      "type": "dataset_card",
+      "notes": "GEM benchmark version of WikiLingua."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against Findings of EMNLP 2020 publication and official repository."
+  },
+  "size": {
+    "amount": 2.1,
+    "unit": "GB",
+    "file_formats": [
+      "json",
+      "jsonl"
+    ],
+    "status": "estimated",
+    "notes": "Extracted text and summary JSON files across 18 languages."
+  },
+  "sample_count": {
+    "total": 770000,
+    "unit": "article-summary-pairs",
+    "status": "estimated",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "languages_covered",
+        "value": 18,
+        "unit": "languages"
+      },
+      {
+        "label": "unique_english_articles",
+        "value": 141457,
+        "unit": "articles"
+      }
+    ]
+  },
+  "languages": [
+    "en",
+    "es",
+    "fr",
+    "de",
+    "zh",
+    "pt",
+    "it",
+    "ru",
+    "ar",
+    "ja",
+    "ko",
+    "hi",
+    "id",
+    "nl",
+    "tr",
+    "vi",
+    "th",
+    "cs"
+  ],
+  "dates": {
+    "published": "2020-11-16"
+  },
+  "citation": {
+    "paper_title": "WikiLingua: A New Benchmark Dataset for Cross-Lingual Abstractive Summarization",
+    "paper_url": "https://aclanthology.org/2020.findings-emnlp.51/",
+    "authors": [
+      "Faisal Ladhak",
+      "Esin Durmus",
+      "Claire Cardie",
+      "Kathleen McKeown"
+    ],
+    "doi": "10.18653/v1/2020.findings-emnlp.51",
+    "bibtex": "@inproceedings{ladhak-etal-2020-wikilingua,\n  title = {{W}iki{L}ingua: A New Benchmark Dataset for Cross-Lingual Abstractive Summarization},\n  author = {Ladhak, Faisal and Durmus, Esin and Cardie, Claire and McKeown, Kathleen},\n  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2020},\n  year = {2020},\n  pages = {4034--4048},\n  doi = {10.18653/v1/2020.findings-emnlp.51}\n}"
+  }
+}

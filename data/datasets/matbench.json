@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "id": "matbench",
+  "slug": "matbench",
+  "name": "Matbench: Benchmark for Predicting Materials Properties from Structure",
+  "description": "Matbench is an established, rigorously curated machine learning benchmark for predicting physical, thermodynamic, electronic, and mechanical properties of solid-state materials directly from crystal structure or chemical composition. Created by the Materials Project, it comprises 13 standardized benchmarks spanning 133,889 materials calculations drawn from experimental measurements and density functional theory (DFT), evaluated with a strict 5-fold nested cross-validation protocol.",
+  "homepage_url": "https://matbench.materialsproject.org/",
+  "publisher": {
+    "name": "The Materials Project & Lawrence Berkeley National Laboratory",
+    "type": "academic",
+    "url": "https://materialsproject.org"
+  },
+  "modalities": [
+    "tabular",
+    "graph"
+  ],
+  "tasks": [
+    "materials-property-prediction"
+  ],
+  "tags": [
+    "materials-science",
+    "solid-state-physics",
+    "dft",
+    "crystal-structures",
+    "tabular",
+    "graph"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset benchmark curated by Materials Project under CC BY 4.0."
+  },
+  "source_references": [
+    {
+      "title": "Matbench Official Benchmark Portal",
+      "url": "https://matbench.materialsproject.org/",
+      "type": "official_website",
+      "notes": "Official Matbench leaderboard and documentation."
+    },
+    {
+      "title": "Matbench GitHub Repository",
+      "url": "https://github.com/materialsproject/matbench",
+      "type": "repository",
+      "notes": "Official benchmark python package and dataset access."
+    },
+    {
+      "title": "Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm (npj Comput Mater)",
+      "url": "https://doi.org/10.1038/s41524-020-00406-3",
+      "type": "original_paper",
+      "notes": "Published in npj Computational Materials 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against npj Computational Materials publication and Materials Project portal."
+  },
+  "size": {
+    "amount": 450.0,
+    "unit": "MB",
+    "file_formats": [
+      "json",
+      "gz"
+    ],
+    "status": "verified",
+    "notes": "Gzipped JSON datasets containing pymatgen structures and target properties."
+  },
+  "sample_count": {
+    "total": 133889,
+    "unit": "materials-calculations",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "benchmark_tasks",
+        "value": 13,
+        "unit": "benchmarks"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2020-09-24"
+  },
+  "citation": {
+    "paper_title": "Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm",
+    "paper_url": "https://doi.org/10.1038/s41524-020-00406-3",
+    "authors": [
+      "Alexander Dunn",
+      "Qi Wang",
+      "Alex Ganose",
+      "Daniel Dopp",
+      "Anubhav Jain"
+    ],
+    "doi": "10.1038/s41524-020-00406-3",
+    "bibtex": "@article{dunn2020benchmarking,\n  title = {Benchmarking materials property prediction methods: the {Matbench} test set and {Automatminer} reference algorithm},\n  author = {Dunn, Alexander and Wang, Qi and Ganose, Alex and Dopp, Daniel and Jain, Anubhav},\n  journal = {npj Computational Materials},\n  volume = {6},\n  number = {1},\n  pages = {138},\n  year = {2020},\n  doi = {10.1038/s41524-020-00406-3}\n}"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "voxconverse",
+  "slug": "voxconverse",
+  "name": "VoxConverse: Audio-Visual Speaker Diarisation in the Wild",
+  "description": "VoxConverse is an audio-visual speaker diarization benchmark captured in unconstrained real-world environments. Curated by the Visual Geometry Group (VGG) at Oxford, it contains over 56 hours of conversational speech drawn from political debates, panel discussions, interviews, and news broadcasts with challenging overlap conditions, variable acoustic environments, and varied speaker head poses.",
+  "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/voxconverse/",
+  "publisher": {
+    "name": "Visual Geometry Group, University of Oxford",
+    "type": "academic",
+    "url": "https://www.robots.ox.ac.uk/~vgg/"
+  },
+  "modalities": [
+    "audio",
+    "vision"
+  ],
+  "tasks": [
+    "speaker-diarization"
+  ],
+  "tags": [
+    "speaker-diarization",
+    "diarization",
+    "overlapping-speech",
+    "conversational-speech",
+    "audio"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Annotations distributed under CC BY 4.0; underlying videos sourced from YouTube for academic research."
+  },
+  "source_references": [
+    {
+      "title": "VoxConverse Official Project Page",
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/voxconverse/",
+      "type": "official_website",
+      "notes": "Official VGG project portal with annotations and evaluation scripts."
+    },
+    {
+      "title": "Spot the Conversation: Speaker Diarisation in the Wild (Interspeech 2020)",
+      "url": "https://arxiv.org/abs/2007.01216",
+      "type": "original_paper",
+      "notes": "Published in Interspeech 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against Interspeech 2020 paper and Oxford VGG dataset page."
+  },
+  "size": {
+    "amount": 28.0,
+    "unit": "GB",
+    "file_formats": [
+      "wav",
+      "rttm",
+      "mp4"
+    ],
+    "status": "estimated",
+    "notes": "Audio tracks and RTTM diarization annotation files."
+  },
+  "sample_count": {
+    "total": 448,
+    "unit": "multispeaker-recordings",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "validation": 216,
+      "test": 232
+    },
+    "breakdown": [
+      {
+        "label": "total_duration_hours",
+        "value": 56.4,
+        "unit": "hours"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2020-07-02"
+  },
+  "citation": {
+    "paper_title": "Spot the Conversation: Speaker Diarisation in the Wild",
+    "paper_url": "https://arxiv.org/abs/2007.01216",
+    "authors": [
+      "Joon Son Chung",
+      "Jaesung Huh",
+      "Arsha Nagrani",
+      "Seongkyun Yeo",
+      "Andrew Zisserman"
+    ],
+    "doi": "10.21437/Interspeech.2020-2139",
+    "bibtex": "@inproceedings{chung2020spot,\n  title = {Spot the Conversation: Speaker Diarisation in the Wild},\n  author = {Chung, Joon Son and Huh, Jaesung and Nagrani, Arsha and Yeo, Seongkyun and Zisserman, Andrew},\n  booktitle = {Proceedings of Interspeech 2020},\n  year = {2020},\n  pages = {185--189},\n  doi = {10.21437/Interspeech.2020-2139}\n}"
+  }
+}

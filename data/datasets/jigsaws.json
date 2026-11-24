@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "id": "jigsaws",
+  "slug": "jigsaws",
+  "name": "JIGSAWS: JHU-ISI Gesture and Skill Assessment Working Set",
+  "description": "JIGSAWS (JHU-ISI Gesture and Skill Assessment Working Set) is a benchmark dataset for surgical gesture recognition, temporal segmentation, and robotic skill evaluation in robot-assisted surgery. Captured using the da Vinci Surgical System across eight surgeons of varying expertise, it contains 103 kinematic and stereo-video task trials performing three core surgical tasks: suturing, needle-passing, and knot-tying, annotated with fine-grained gesture transitions.",
+  "homepage_url": "https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/",
+  "publisher": {
+    "name": "Johns Hopkins University & Intuitive Surgical",
+    "type": "academic",
+    "url": "https://cirl.lcsr.jhu.edu"
+  },
+  "modalities": [
+    "sensor",
+    "vision",
+    "time-series"
+  ],
+  "tasks": [
+    "action-recognition"
+  ],
+  "tags": [
+    "surgical-robotics",
+    "gesture-recognition",
+    "skill-assessment",
+    "kinematics",
+    "sensor"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "JHU JIGSAWS Research Agreement",
+    "spdx_id": null,
+    "url": "https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/",
+    "commercial_use": "forbidden",
+    "notes": "Available freely for academic research upon submission of the JIGSAWS data use agreement."
+  },
+  "source_references": [
+    {
+      "title": "JIGSAWS Official Portal (Johns Hopkins University)",
+      "url": "https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/",
+      "type": "official_website",
+      "notes": "Official release portal hosted by Computational Interaction and Robotics Lab (CIRL)."
+    },
+    {
+      "title": "A Dataset and Benchmarks for Segmentation and Recognition of Gestures in Robotic Surgery (MICCAI 2014)",
+      "url": "https://cirl.lcsr.jhu.edu/wp-content/uploads/2015/11/Gao_MICCAI_M2CAI_2014.pdf",
+      "type": "original_paper",
+      "notes": "Published in MICCAI 2014 Workshop (M2CAI)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against MICCAI publication and Johns Hopkins CIRL dataset portal."
+  },
+  "size": {
+    "amount": 38.0,
+    "unit": "GB",
+    "file_formats": [
+      "avi",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "Synchronized stereo video at 640x480 (30Hz) and kinematic sensor logs."
+  },
+  "sample_count": {
+    "total": 103,
+    "unit": "surgical-task-trials",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "surgeons",
+        "value": 8,
+        "unit": "surgeons"
+      },
+      {
+        "label": "surgical_tasks",
+        "value": 3,
+        "unit": "tasks"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2014-09-18"
+  },
+  "citation": {
+    "paper_title": "A Dataset and Benchmarks for Segmentation and Recognition of Gestures in Robotic Surgery",
+    "paper_url": "https://cirl.lcsr.jhu.edu/wp-content/uploads/2015/11/Gao_MICCAI_M2CAI_2014.pdf",
+    "authors": [
+      "Yixin Gao",
+      "S. Swaroop Vedula",
+      "Carol E. Reiley",
+      "Narges Ahmidi",
+      "Balakrishnan Varadarajan",
+      "Henry C. Lin",
+      "Lingling Tao",
+      "Luca Zappella",
+      "Benjamín Béjar",
+      "David D. Yuh",
+      "Chi Chiung Grace Chen",
+      "René Vidal",
+      "Sanjeev Khudanpur",
+      "Gregory D. Hager"
+    ],
+    "bibtex": "@inproceedings{gao2014jigsaws,\n  title = {A Dataset and Benchmarks for Segmentation and Recognition of Gestures in Robotic Surgery},\n  author = {Gao, Yixin and Vedula, S. Swaroop and Reiley, Carol E. and Ahmidi, Narges and Varadarajan, Balakrishnan and Lin, Henry C. and Tao, Lingling and Zappella, Luca and B{\\'e}jar, Benjam{\\'i}n and Yuh, David D. and Chen, Chi Chiung Grace and Vidal, Ren{\\'e} and Khudanpur, Sanjeev and Hager, Gregory D.},\n  booktitle = {Proceedings of the MICCAI Workshop on Modeling and Monitoring of Computer Assisted Interventions (M2CAI)},\n  year = {2014}\n}"
+  }
+}

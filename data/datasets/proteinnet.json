@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "proteinnet",
+  "slug": "proteinnet",
+  "name": "ProteinNet: Standardized Dataset for Machine Learning of Protein Structure",
+  "description": "ProteinNet is a standardized machine learning data set designed for protein structure prediction, sequence-to-structure modeling, and structural bioinformatics. Curated by Mohammed AlQuraishi, it integrates protein sequences, multiple sequence alignments (MSAs), position-specific scoring matrices (PSSMs), and experimental 3D atom coordinates from the Protein Data Bank (PDB), linked directly to the biennial CASP (Critical Assessment of Structure Prediction) blind assessments.",
+  "homepage_url": "https://github.com/aqlaboratory/proteinnet",
+  "publisher": {
+    "name": "Harvard Medical School & Columbia University",
+    "type": "academic",
+    "url": "https://aqlaboratory.org"
+  },
+  "modalities": [
+    "graph",
+    "nlp"
+  ],
+  "tasks": [
+    "protein-structure-prediction"
+  ],
+  "tags": [
+    "protein-structure",
+    "structural-biology",
+    "casp",
+    "bioinformatics",
+    "graph"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Creative Commons Zero v1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset curations dedicated to public domain under CC0 1.0; underlying structures derived from public PDB."
+  },
+  "source_references": [
+    {
+      "title": "ProteinNet GitHub Repository",
+      "url": "https://github.com/aqlaboratory/proteinnet",
+      "type": "repository",
+      "notes": "Official repository with dataset records and CASP release scripts."
+    },
+    {
+      "title": "ProteinNet: a standardized data set for machine learning of protein structure (BMC Bioinformatics 2019)",
+      "url": "https://doi.org/10.1186/s12859-019-2932-0",
+      "type": "original_paper",
+      "notes": "Published in BMC Bioinformatics 2019."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against BMC Bioinformatics 2019 publication and official repository."
+  },
+  "size": {
+    "amount": 14.5,
+    "unit": "GB",
+    "file_formats": [
+      "txt",
+      "gz"
+    ],
+    "status": "verified",
+    "notes": "Text records with PSSMs, alignments, and coordinates across CASP editions."
+  },
+  "sample_count": {
+    "total": 104484,
+    "unit": "protein-records",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 104218,
+      "validation": 224,
+      "test": 42
+    },
+    "breakdown": [
+      {
+        "label": "casp_benchmark_edition",
+        "value": 12,
+        "unit": "edition"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2019-06-11"
+  },
+  "citation": {
+    "paper_title": "ProteinNet: a standardized data set for machine learning of protein structure",
+    "paper_url": "https://doi.org/10.1186/s12859-019-2932-0",
+    "authors": [
+      "Mohammed AlQuraishi"
+    ],
+    "doi": "10.1186/s12859-019-2932-0",
+    "bibtex": "@article{alquraishi2019proteinnet,\n  title = {{ProteinNet}: a standardized data set for machine learning of protein structure},\n  author = {AlQuraishi, Mohammed},\n  journal = {BMC Bioinformatics},\n  volume = {20},\n  number = {1},\n  pages = {311},\n  year = {2019},\n  doi = {10.1186/s12859-019-2932-0}\n}"
+  }
+}

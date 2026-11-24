@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ljspeech",
+  "slug": "ljspeech",
+  "name": "The LJ Speech Dataset",
+  "description": "The LJ Speech Dataset is a public domain speech corpus comprising 13,100 short audio clips of a single speaker reading passages from seven non-fiction books. Totaling approximately 24 hours of audio recorded in English, the clips range in duration from 1 to 10 seconds and are accompanied by exact text transcriptions, widely serving as the standard benchmark for neural text-to-speech (TTS) synthesis and vocoder evaluation.",
+  "homepage_url": "https://keithito.com/LJ-Speech-Dataset/",
+  "publisher": {
+    "name": "Keith Ito & Linda Johnson",
+    "type": "individual",
+    "url": "https://keithito.com"
+  },
+  "modalities": [
+    "audio",
+    "nlp"
+  ],
+  "tasks": [
+    "text-to-speech",
+    "speech-synthesis"
+  ],
+  "tags": [
+    "text-to-speech",
+    "tts",
+    "speech-synthesis",
+    "english-speech",
+    "audio"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Creative Commons Zero v1.0 Universal",
+    "spdx_id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "commercial_use": "allowed",
+    "notes": "Dedicated to the public domain by creators Keith Ito and Linda Johnson."
+  },
+  "source_references": [
+    {
+      "title": "The LJ Speech Dataset Official Website",
+      "url": "https://keithito.com/LJ-Speech-Dataset/",
+      "type": "official_website",
+      "notes": "Canonical dataset distribution page with audio downloads and metadata."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against canonical release portal and public domain declaration."
+  },
+  "size": {
+    "amount": 2.6,
+    "unit": "GB",
+    "file_formats": [
+      "wav",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "22050Hz 16-bit PCM WAV audio clips and CSV transcription file."
+  },
+  "sample_count": {
+    "total": 13100,
+    "unit": "audio-clips",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "total_duration_hours",
+        "value": 24.0,
+        "unit": "hours"
+      },
+      {
+        "label": "speakers",
+        "value": 1,
+        "unit": "speakers"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2017-06-01"
+  },
+  "citation": {
+    "paper_title": "The LJ Speech Dataset",
+    "paper_url": "https://keithito.com/LJ-Speech-Dataset/",
+    "authors": [
+      "Keith Ito",
+      "Linda Johnson"
+    ],
+    "bibtex": "@misc{ito2017ljspeech,\n  title = {The {LJ} Speech Dataset},\n  author = {Ito, Keith and Johnson, Linda},\n  howpublished = {\\url{https://keithito.com/LJ-Speech-Dataset/}},\n  year = {2017}\n}"
+  }
+}

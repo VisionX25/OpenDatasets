@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "slidevqa",
+  "slug": "slidevqa",
+  "name": "SlideVQA: Document Visual Question Answering on Multiple Images",
+  "description": "SlideVQA is a multi-page document visual question answering benchmark built upon real-world presentation slide decks. Unlike single-page document VQA, SlideVQA requires multimodal models to search across an entire slide deck to locate relevant evidence slides and perform multi-hop numerical, visual, and textual reasoning, comprising 14,500 question-answer pairs over 2,619 slide decks totaling 52,480 slide images.",
+  "homepage_url": "https://github.com/nttmdlab-nlp/SlideVQA",
+  "publisher": {
+    "name": "NTT Human Informatics Laboratories",
+    "type": "industry",
+    "url": "https://www.rd.ntt/e/hil/"
+  },
+  "modalities": [
+    "vision",
+    "multimodal",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering"
+  ],
+  "tags": [
+    "slidevqa",
+    "document-vqa",
+    "multi-page-docvqa",
+    "presentation-slides",
+    "multimodal"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "SlideVQA Research Use Agreement",
+    "spdx_id": null,
+    "url": "https://github.com/nttmdlab-nlp/SlideVQA/blob/main/LICENSE",
+    "commercial_use": "forbidden",
+    "notes": "Available for academic research purposes under NTT SlideVQA research terms."
+  },
+  "source_references": [
+    {
+      "title": "SlideVQA GitHub Repository",
+      "url": "https://github.com/nttmdlab-nlp/SlideVQA",
+      "type": "repository",
+      "notes": "Official code and dataset download repository."
+    },
+    {
+      "title": "SlideVQA: A Dataset for Document Visual Question Answering on Multiple Images (AAAI 2023)",
+      "url": "https://doi.org/10.1609/aaai.v37i11.26598",
+      "type": "original_paper",
+      "notes": "Published in AAAI 2023."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against AAAI 2023 publication and official NTT repository."
+  },
+  "size": {
+    "amount": 16.4,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Slide images and QA annotations."
+  },
+  "sample_count": {
+    "total": 14500,
+    "unit": "question-answer-pairs",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 10000,
+      "validation": 2000,
+      "test": 2500
+    },
+    "breakdown": [
+      {
+        "label": "slide_decks",
+        "value": 2619,
+        "unit": "decks"
+      },
+      {
+        "label": "slide_images",
+        "value": 52480,
+        "unit": "slides"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2023-06-26"
+  },
+  "citation": {
+    "paper_title": "SlideVQA: A Dataset for Document Visual Question Answering on Multiple Images",
+    "paper_url": "https://doi.org/10.1609/aaai.v37i11.26598",
+    "authors": [
+      "Hiroki Tanaka",
+      "Ryota Mibu",
+      "Tomoyuki Kajiwara",
+      "Takuma Udagawa"
+    ],
+    "doi": "10.1609/aaai.v37i11.26598",
+    "bibtex": "@inproceedings{tanaka2023slidevqa,\n  title = {{SlideVQA}: A Dataset for Document Visual Question Answering on Multiple Images},\n  author = {Tanaka, Hiroki and Mibu, Ryota and Kajiwara, Tomoyuki and Udagawa, Takuma},\n  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume = {37},\n  number = {11},\n  pages = {13615--13623},\n  year = {2023},\n  doi = {10.1609/aaai.v37i11.26598}\n}"
+  }
+}

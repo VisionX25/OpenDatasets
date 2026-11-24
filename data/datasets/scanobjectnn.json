@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "id": "scanobjectnn",
+  "slug": "scanobjectnn",
+  "name": "ScanObjectNN: Real-World 3D Object Classification Benchmark",
+  "description": "ScanObjectNN is an established real-world 3D object classification benchmark generated from 3D indoor scene scans (SceneCAD and ScanNet). Unlike synthetic CAD models, ScanObjectNN contains 2,902 unique object instances across 15 common categories afflicted with real-world sensor scanning artifacts including severe occlusions, sensor noise, non-uniform point densities, and complex background geometry, providing a rigorous testbed for 3D point cloud classifiers.",
+  "homepage_url": "https://hkust-vgd.github.io/scanobjectnn/",
+  "publisher": {
+    "name": "Hong Kong University of Science and Technology (HKUST)",
+    "type": "academic",
+    "url": "https://hkust-vgd.github.io"
+  },
+  "modalities": [
+    "3d",
+    "vision"
+  ],
+  "tasks": [
+    "point-cloud-classification"
+  ],
+  "tags": [
+    "3d-point-clouds",
+    "point-cloud-classification",
+    "indoor-scans",
+    "real-world-3d",
+    "3d"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "ScanObjectNN Research Use Terms (derived from ScanNet terms)",
+    "spdx_id": null,
+    "url": "https://hkust-vgd.github.io/scanobjectnn/",
+    "commercial_use": "forbidden",
+    "notes": "Available for academic and non-commercial research; underlying geometry inherits ScanNet/SceneCAD academic terms."
+  },
+  "source_references": [
+    {
+      "title": "ScanObjectNN Project Website",
+      "url": "https://hkust-vgd.github.io/scanobjectnn/",
+      "type": "official_website",
+      "notes": "Official project benchmark portal."
+    },
+    {
+      "title": "Revisiting Point Cloud Classification: A New Benchmark Dataset and Classification Model on Real-World Data",
+      "url": "https://arxiv.org/abs/1908.04616",
+      "type": "original_paper",
+      "notes": "Published in ICCV 2019."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against ICCV 2019 publication and HKUST project site."
+  },
+  "size": {
+    "amount": 1.2,
+    "unit": "GB",
+    "file_formats": [
+      "h5",
+      "bin"
+    ],
+    "status": "verified",
+    "notes": "HDF5 archives of point cloud coordinates and surface normals."
+  },
+  "sample_count": {
+    "total": 2902,
+    "unit": "unique-object-instances",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 2309,
+      "test": 593
+    },
+    "breakdown": [
+      {
+        "label": "object_categories",
+        "value": 15,
+        "unit": "categories"
+      },
+      {
+        "label": "perturbed_benchmark_samples",
+        "value": 14510,
+        "unit": "point_clouds"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2019-08-12"
+  },
+  "citation": {
+    "paper_title": "Revisiting Point Cloud Classification: A New Benchmark Dataset and Classification Model on Real-World Data",
+    "paper_url": "https://arxiv.org/abs/1908.04616",
+    "authors": [
+      "Mikaela Angelina Uy",
+      "Quang-Hieu Pham",
+      "Binh-Son Hua",
+      "Thanh Nguyen",
+      "Sai-Kit Yeung"
+    ],
+    "doi": "10.1109/ICCV.2019.00168",
+    "bibtex": "@inproceedings{uy2019scanobjectnn,\n  title = {Revisiting Point Cloud Classification: A New Benchmark Dataset and Classification Model on Real-World Data},\n  author = {Uy, Mikaela Angelina and Pham, Quang-Hieu and Hua, Binh-Son and Nguyen, Thanh and Yeung, Sai-Kit},\n  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n  year = {2019},\n  pages = {1588--1597},\n  doi = {10.1109/ICCV.2019.00168}\n}"
+  }
+}

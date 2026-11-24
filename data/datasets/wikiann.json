@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wikiann",
+  "slug": "wikiann",
+  "name": "WikiANN: Cross-lingual Name Tagging and Linking for 282 Languages",
+  "description": "WikiANN (commonly evaluated as PAN-X in massively multilingual NER benchmarks) is a landmark multilingual named entity recognition and linking corpus covering 282 languages. Automatically constructed from Wikipedia cross-lingual links, article redirects, and anchor texts, WikiANN provides sentence-level sequence labeling for Person (PER), Organization (ORG), and Location (LOC) entity spans. Standardized into balanced train, development, and test splits by Rahimi et al. (2019), it serves as the foundational testbed for zero-shot and few-shot cross-lingual named entity transfer.",
+  "homepage_url": "https://github.com/afshinrahimi/mmner",
+  "publisher": {
+    "name": "Rensselaer Polytechnic Institute & University of Melbourne",
+    "type": "academic",
+    "url": "https://github.com/afshinrahimi/mmner"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "named-entity-recognition",
+    "token-classification"
+  ],
+  "tags": [
+    "named-entity-recognition",
+    "ner",
+    "cross-lingual",
+    "multilingual",
+    "wikipedia",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Open Data Commons Attribution License (ODC-By) v1.0",
+    "spdx_id": "ODC-By-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset annotations released under ODC-By v1.0; underlying Wikipedia texts governed by CC BY-SA 3.0."
+  },
+  "source_references": [
+    {
+      "title": "WikiANN Multilingual NER Repository (mmner)",
+      "url": "https://github.com/afshinrahimi/mmner",
+      "type": "repository",
+      "notes": "Standardized PAN-X multilingual benchmark splits."
+    },
+    {
+      "title": "Cross-lingual Name Tagging and Linking for 282 Languages (ACL 2017)",
+      "url": "https://aclanthology.org/P17-1178/",
+      "type": "original_paper",
+      "notes": "Original WikiANN paper published in ACL 2017."
+    },
+    {
+      "title": "Massively Multilingual Transfer for NER (ACL 2019)",
+      "url": "https://aclanthology.org/P19-1015/",
+      "type": "documentation",
+      "notes": "Establishes standardized train, dev, and test evaluation partitions."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-24",
+    "notes": "Verified against ACL 2017 and ACL 2019 publications and official mmner repository."
+  },
+  "size": {
+    "amount": 850.0,
+    "unit": "MB",
+    "file_formats": [
+      "tsv",
+      "tar.gz"
+    ],
+    "status": "estimated",
+    "notes": "Standardized token and BIO tag sequences across 176 languages."
+  },
+  "sample_count": {
+    "total": 1128000,
+    "unit": "sentences",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 789600,
+      "validation": 169200,
+      "test": 169200
+    },
+    "breakdown": [
+      {
+        "label": "languages_covered",
+        "value": 282,
+        "unit": "languages"
+      },
+      {
+        "label": "entity_types",
+        "value": 3,
+        "unit": "categories"
+      }
+    ]
+  },
+  "languages": [
+    "en",
+    "es",
+    "fr",
+    "de",
+    "zh",
+    "ar",
+    "ru",
+    "hi",
+    "bn",
+    "pt",
+    "id",
+    "ja",
+    "ko",
+    "it"
+  ],
+  "dates": {
+    "published": "2017-07-30"
+  },
+  "citation": {
+    "paper_title": "Cross-lingual Name Tagging and Linking for 282 Languages",
+    "paper_url": "https://aclanthology.org/P17-1178/",
+    "authors": [
+      "Xiaoman Pan",
+      "Boliang Zhang",
+      "Jonathan May",
+      "Joel Nothman",
+      "Kevin Knight",
+      "Heng Ji"
+    ],
+    "doi": "10.18653/v1/P17-1178",
+    "bibtex": "@inproceedings{pan-etal-2017-cross,\n  title = {Cross-lingual Name Tagging and Linking for 282 Languages},\n  author = {Pan, Xiaoman and Zhang, Boliang and May, Jonathan and Nothman, Joel and Knight, Kevin and Ji, Heng},\n  booktitle = {Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},\n  year = {2017},\n  pages = {1946--1958},\n  doi = {10.18653/v1/P17-1178}\n}"
+  }
+}
