@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-waveform",
+  "slug": "uci-waveform",
+  "name": "UCI Waveform Database Generator (Version 1)",
+  "description": "The UCI Waveform Database Generator (Version 1) is a synthetic tabular benchmark for multiclass pattern recognition. Based on the classification model introduced by Breiman et al. in CART (1984), it consists of 5,000 generated signal instances defined across 21 continuous attributes with additive standard normal noise, partitioned among three distinct triangular wave combinations.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/107/waveform+database+generator+version+1",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "multiclass-classification",
+    "pattern-recognition"
+  ],
+  "tags": [
+    "uci",
+    "waveform",
+    "synthetic",
+    "cart",
+    "classification",
+    "tabular"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset distributed by the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International (CC-BY-4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UCI Machine Learning Repository: Waveform Database Generator (Version 1)",
+      "url": "https://archive.ics.uci.edu/dataset/107/waveform+database+generator+version+1",
+      "type": "official_website",
+      "notes": "Official UCI dataset repository entry (DOI: 10.24432/C5CS3C)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository (DOI: 10.24432/C5CS3C). 5,000 synthetic signal instances defined across 21 continuous attributes with 3 target classes."
+  },
+  "size": {
+    "amount": 530.0,
+    "unit": "KB",
+    "file_formats": [
+      "data",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "waveform.data CSV tabular format."
+  },
+  "sample_count": {
+    "total": 5000,
+    "unit": "instances",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "continuous_features",
+        "value": 21,
+        "unit": "features"
+      },
+      {
+        "label": "wave_classes",
+        "value": 3,
+        "unit": "classes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "1988"
+  },
+  "citation": {
+    "paper_title": "Waveform Database Generator (Version 1)",
+    "paper_url": "https://doi.org/10.24432/C5CS3C",
+    "authors": [
+      "David Aha"
+    ],
+    "doi": "10.24432/C5CS3C",
+    "bibtex": "@misc{aha1988waveform,\n  author = {Aha, David},\n  title = {{Waveform Database Generator (Version 1)}},\n  year = {1988},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5CS3C}\n}"
+  }
+}

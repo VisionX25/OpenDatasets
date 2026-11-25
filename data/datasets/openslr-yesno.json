@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "openslr-yesno",
+  "slug": "openslr-yesno",
+  "name": "YESNO Speech Dataset",
+  "description": "The YESNO Speech Dataset (OpenSLR 1) is a compact acoustic dataset designed for introductory automatic speech recognition and speech processing experiments. It consists of 60 audio recordings of an individual speaker pronouncing sequences of eight Hebrew words representing yes (ken) or no (lo), sampled at 8 kHz.",
+  "homepage_url": "https://www.openslr.org/1/",
+  "publisher": {
+    "name": "OpenSLR",
+    "type": "community",
+    "url": "https://www.openslr.org"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "automatic-speech-recognition",
+    "keyword-spotting",
+    "speech-processing"
+  ],
+  "tags": [
+    "openslr",
+    "yesno",
+    "speech-recognition",
+    "asr",
+    "kaldi"
+  ],
+  "license": {
+    "status": "public_domain",
+    "name": "Public Domain / Free To Use For Any Purpose (No License Required)",
+    "spdx_id": null,
+    "url": "https://www.openslr.org/1/",
+    "commercial_use": "allowed",
+    "notes": "OpenSLR resource SLR1 explicitly specifies 'License: none (free to use for any purpose)'. The dataset was created for the Kaldi project by an anonymous contributor and curated on OpenSLR by Daniel Povey."
+  },
+  "source_references": [
+    {
+      "title": "YESNO on OpenSLR (SLR1)",
+      "url": "https://www.openslr.org/1/",
+      "type": "official_website",
+      "notes": "Official OpenSLR resource page and data archive download."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against OpenSLR resource SLR1 portal. 60 WAV audio recordings of 8 words each, yielding 480 spoken word instances in Hebrew."
+  },
+  "size": {
+    "amount": 4.7,
+    "unit": "MB",
+    "file_formats": [
+      "wav",
+      "tgz"
+    ],
+    "status": "verified",
+    "notes": "WAV audio files sampled at 8 kHz in waves_yesno.tar.gz archive."
+  },
+  "sample_count": {
+    "total": 60,
+    "unit": "recordings",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "words_per_recording",
+        "value": 8,
+        "unit": "words"
+      },
+      {
+        "label": "total_spoken_words",
+        "value": 480,
+        "unit": "words"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2012"
+  },
+  "citation": {
+    "paper_title": "YESNO Speech Dataset",
+    "paper_url": "https://www.openslr.org/1/",
+    "authors": [
+      "Kaldi Project Contributors",
+      "Daniel Povey"
+    ],
+    "bibtex": "@misc{kaldi2012yesno,\n  author = {{Kaldi Project Contributors} and Povey, Daniel},\n  title = {{YESNO} Speech Dataset},\n  year = {2012},\n  publisher = {OpenSLR},\n  howpublished = {\\url{https://www.openslr.org/1/}},\n  note = {OpenSLR Resource SLR1}\n}"
+  }
+}

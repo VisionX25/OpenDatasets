@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "viquae",
+  "slug": "viquae",
+  "name": "ViQuAE: Knowledge-Based Visual Question Answering",
+  "description": "ViQuAE is a visual question answering benchmark focused on named entity reasoning grounded in information retrieval. Consisting of 3,697 questions grounded in Wikimedia images and textual knowledge from Wikipedia, it requires models to retrieve external documents to recognize entities, understand multimodal contexts, and answer entity-centric queries.",
+  "homepage_url": "https://github.com/PaulLerner/ViQuAE",
+  "publisher": {
+    "name": "CEA LIST / IRIT",
+    "type": "academic",
+    "url": "https://www.irit.fr"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "information-retrieval",
+    "entity-linking"
+  ],
+  "tags": [
+    "viquae",
+    "vqa",
+    "knowledge-vqa",
+    "information-retrieval",
+    "named-entities",
+    "wikipedia"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset annotations released under Creative Commons Attribution 4.0 International (CC-BY-4.0). Underlying imagery is retrieved from Wikimedia Commons under various individual Creative Commons licenses; commercial use and redistribution of underlying images must honor individual creator attributions and terms."
+  },
+  "source_references": [
+    {
+      "title": "ViQuAE Official GitHub Repository",
+      "url": "https://github.com/PaulLerner/ViQuAE",
+      "type": "repository",
+      "notes": "Official repository with dataset annotations, image downloads, and retrieval baselines."
+    },
+    {
+      "title": "ViQuAE, a Dataset for Knowledge-based Visual Question Answering about Named Entities",
+      "url": "https://doi.org/10.1145/3477495.3531753",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '22)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against SIGIR 2022 publication (DOI: 10.1145/3477495.3531753) and official GitHub repository (PaulLerner/ViQuAE). 3,697 questions partitioned into 1,190 train, 1,250 validation, and 1,257 test questions."
+  },
+  "size": {
+    "amount": 1.8,
+    "unit": "GB",
+    "file_formats": [
+      "json",
+      "jpg"
+    ],
+    "status": "verified",
+    "notes": "JSON question and entity metadata files accompanied by JPEG Wikimedia images."
+  },
+  "sample_count": {
+    "total": 3697,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 1190,
+      "val": 1250,
+      "test": 1257
+    },
+    "breakdown": [
+      {
+        "label": "named_entity_answers",
+        "value": 3697,
+        "unit": "entities"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2022-07-11"
+  },
+  "citation": {
+    "paper_title": "ViQuAE, a Dataset for Knowledge-based Visual Question Answering about Named Entities",
+    "paper_url": "https://doi.org/10.1145/3477495.3531753",
+    "authors": [
+      "Paul Lerner",
+      "Olivier Ferret",
+      "Camille Guinaudeau",
+      "Hervé Le Borgne",
+      "Romaric Besançon",
+      "José G. Moreno",
+      "Jesús Lovón-Melgarejo"
+    ],
+    "doi": "10.1145/3477495.3531753",
+    "bibtex": "@inproceedings{lerner2022viquae,\n  title = {{ViQuAE}, a Dataset for Knowledge-based Visual Question Answering about Named Entities},\n  author = {Lerner, Paul and Ferret, Olivier and Guinaudeau, Camille and Le Borgne, Herv\\'e and Besan\\c{c}on, Romaric and Moreno, Jos\\'e G. and Lov\\'on-Melgarejo, Jes\\'us},\n  booktitle = {Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},\n  pages = {3108--3120},\n  year = {2022},\n  publisher = {Association for Computing Machinery},\n  doi = {10.1145/3477495.3531753}\n}"
+  }
+}

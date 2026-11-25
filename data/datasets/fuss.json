@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "id": "fuss",
+  "slug": "fuss",
+  "name": "FUSS: Free Universal Sound Separation Dataset",
+  "description": "FUSS (Free Universal Sound Separation) is an open audio benchmark designed for training and evaluating universal sound separation systems on arbitrary acoustic mixtures. Sourced from FSD50K pre-release audio and convolved with simulated room impulse responses, it provides 12,377 source clips used to synthesize reverberant mixtures of varying polyphony.",
+  "homepage_url": "https://sound-separation.github.io",
+  "publisher": {
+    "name": "Google Research",
+    "type": "industry",
+    "url": "https://research.google"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "sound-separation",
+    "audio-source-separation",
+    "acoustic-modeling"
+  ],
+  "tags": [
+    "fuss",
+    "sound-separation",
+    "source-separation",
+    "audio",
+    "google-research",
+    "zenodo"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Source audio recordings were selected from CC0-licensed Freesound recordings. Audio labels are derived from FSD50K under Creative Commons Attribution 4.0 International (CC-BY-4.0). Simulation software and room impulse response generation code are released under Apache License 2.0."
+  },
+  "source_references": [
+    {
+      "title": "FUSS Official Project Page",
+      "url": "https://sound-separation.github.io",
+      "type": "official_website",
+      "notes": "Official Google Research sound separation project portal."
+    },
+    {
+      "title": "FUSS Dataset on Zenodo",
+      "url": "https://zenodo.org/records/3710392",
+      "type": "archive",
+      "notes": "Archival data deposit on Zenodo (records 3710392 / 3743844, DOI: 10.5281/zenodo.3710392)."
+    },
+    {
+      "title": "What's All the FUSS About Free Universal Sound Separation Data?",
+      "url": "https://doi.org/10.1109/ICASSP39728.2021.9414774",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2021)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against ICASSP 2021 publication (DOI: 10.1109/ICASSP39728.2021.9414774) and official Zenodo archive (records 3710392 / 3743844). 12,377 source audio clips partitioned across 7,237 train, 2,883 validation, and 2,257 evaluation clips (approx. 23 hours of single-source audio across 357 sound classes), used to synthesize 20,000 train, 1,000 val, and 1,000 eval reverberant mixtures."
+  },
+  "size": {
+    "amount": 22.0,
+    "unit": "GB",
+    "file_formats": [
+      "wav",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "16-bit 16 kHz WAV audio files and room impulse response metadata."
+  },
+  "sample_count": {
+    "total": 12377,
+    "unit": "source clips",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 7237,
+      "val": 2883,
+      "eval": 2257
+    },
+    "breakdown": [
+      {
+        "label": "synthesized_mixtures",
+        "value": 22000,
+        "unit": "mixtures"
+      },
+      {
+        "label": "train_mixtures",
+        "value": 20000,
+        "unit": "mixtures"
+      },
+      {
+        "label": "val_mixtures",
+        "value": 1000,
+        "unit": "mixtures"
+      },
+      {
+        "label": "eval_mixtures",
+        "value": 1000,
+        "unit": "mixtures"
+      },
+      {
+        "label": "sound_classes",
+        "value": 357,
+        "unit": "classes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2020-04-08"
+  },
+  "citation": {
+    "paper_title": "What's All the FUSS About Free Universal Sound Separation Data?",
+    "paper_url": "https://doi.org/10.1109/ICASSP39728.2021.9414774",
+    "authors": [
+      "Scott Wisdom",
+      "Hakan Erdogan",
+      "Daniel P. W. Ellis",
+      "Romain Serizel",
+      "Nicolas Turpault",
+      "Eduardo Fonseca",
+      "Justin Salamon",
+      "Prem Seetharaman",
+      "John R. Hershey"
+    ],
+    "doi": "10.1109/ICASSP39728.2021.9414774",
+    "bibtex": "@inproceedings{wisdom2021whats,\n  title = {What's All the {FUSS} About Free Universal Sound Separation Data?},\n  author = {Wisdom, Scott and Erdogan, Hakan and Ellis, Daniel P. W. and Serizel, Romain and Turpault, Nicolas and Fonseca, Eduardo and Salamon, Justin and Seetharaman, Prem and Hershey, John R.},\n  booktitle = {ICASSP 2021 - 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages = {186--190},\n  year = {2021},\n  doi = {10.1109/ICASSP39728.2021.9414774}\n}"
+  }
+}

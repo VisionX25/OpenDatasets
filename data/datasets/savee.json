@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "savee",
+  "slug": "savee",
+  "name": "SAVEE: Surrey Audio-Visual Expressed Emotion Database",
+  "description": "SAVEE is an audio-visual database recorded for speech and facial emotion recognition research. Produced at the University of Surrey, it contains 480 British English utterances spoken by four male actors performing phonetically-balanced sentences across seven emotion categories: anger, disgust, fear, happiness, sadness, surprise, and neutral.",
+  "homepage_url": "http://kahlan.eps.surrey.ac.uk/savee/",
+  "publisher": {
+    "name": "University of Surrey",
+    "type": "academic",
+    "url": "https://www.surrey.ac.uk"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-emotion-recognition",
+    "audio-classification",
+    "acoustic-analysis"
+  ],
+  "tags": [
+    "savee",
+    "speech-emotion",
+    "emotion-recognition",
+    "audio",
+    "surrey"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "University of Surrey SAVEE Data License",
+    "spdx_id": null,
+    "url": "http://kahlan.eps.surrey.ac.uk/savee/",
+    "commercial_use": "forbidden",
+    "notes": "Dataset available free of charge for non-commercial academic research upon user registration with the University of Surrey Centre for Vision, Speech and Signal Processing (CVSSP)."
+  },
+  "source_references": [
+    {
+      "title": "SAVEE Official University of Surrey Portal",
+      "url": "http://kahlan.eps.surrey.ac.uk/savee/",
+      "type": "official_website",
+      "notes": "Official CVSSP project repository and registration gateway."
+    },
+    {
+      "title": "Speaker-Dependent Audio-Visual Emotion Recognition",
+      "url": "https://www.isca-archive.org/avsp_2009/haq09_avsp.html",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of Auditory-Visual Speech Processing (AVSP 2009)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against AVSP 2009 publication and official University of Surrey CVSSP portal. 480 utterances recorded by 4 male speakers across 7 emotion categories."
+  },
+  "size": {
+    "amount": 1.1,
+    "unit": "GB",
+    "file_formats": [
+      "wav",
+      "avi",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "WAV audio files sampled at 44.1 kHz, AVI video recordings, and text sentence prompt files."
+  },
+  "sample_count": {
+    "total": 480,
+    "unit": "utterances",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "male_speakers",
+        "value": 4,
+        "unit": "speakers"
+      },
+      {
+        "label": "emotion_categories",
+        "value": 7,
+        "unit": "classes"
+      },
+      {
+        "label": "utterances_per_speaker",
+        "value": 120,
+        "unit": "utterances"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2009-09"
+  },
+  "citation": {
+    "paper_title": "Speaker-Dependent Audio-Visual Emotion Recognition",
+    "paper_url": "https://www.isca-archive.org/avsp_2009/haq09_avsp.html",
+    "authors": [
+      "Sanaul Haq",
+      "Philip J. B. Jackson"
+    ],
+    "bibtex": "@inproceedings{haq2009speaker,\n  title = {Speaker-dependent audio-visual emotion recognition},\n  author = {Haq, Sanaul and Jackson, Philip J. B.},\n  booktitle = {Proceedings of the International Conference on Auditory-Visual Speech Processing (AVSP 2009)},\n  pages = {53--58},\n  year = {2009}\n}"
+  }
+}

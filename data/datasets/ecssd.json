@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ecssd",
+  "slug": "ecssd",
+  "name": "ECSSD: Extended Complex Scene Saliency Dataset",
+  "description": "ECSSD is a computer vision benchmark for salient object detection and foreground segmentation. It comprises 1,000 structurally complex natural images gathered from the Internet with manually annotated ground-truth pixel-level binary saliency masks provided by five independent annotators.",
+  "homepage_url": "https://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/dataset.html",
+  "publisher": {
+    "name": "The Chinese University of Hong Kong",
+    "type": "academic",
+    "url": "https://www.cuhk.edu.hk"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "salient-object-detection",
+    "image-segmentation"
+  ],
+  "tags": [
+    "ecssd",
+    "saliency",
+    "salient-object-detection",
+    "segmentation",
+    "cuhk"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "CUHK Academic Research License",
+    "spdx_id": null,
+    "url": "https://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/dataset.html",
+    "commercial_use": "forbidden",
+    "notes": "Dataset provided by CUHK strictly for non-commercial academic research and benchmarking."
+  },
+  "source_references": [
+    {
+      "title": "ECSSD Official Project Page",
+      "url": "https://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/dataset.html",
+      "type": "official_website",
+      "notes": "Official CUHK project website and dataset download links."
+    },
+    {
+      "title": "Hierarchical Image Saliency Detection on Extended CSSD",
+      "url": "https://doi.org/10.1109/TPAMI.2015.2465960",
+      "type": "original_paper",
+      "notes": "Published in IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI 2016)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against TPAMI 2016 publication (DOI: 10.1109/TPAMI.2015.2465960) and official CUHK repository. 1,000 complex natural images with human ground-truth saliency masks."
+  },
+  "size": {
+    "amount": 65.0,
+    "unit": "MB",
+    "file_formats": [
+      "jpg",
+      "png"
+    ],
+    "status": "verified",
+    "notes": "JPEG color images and corresponding binary PNG saliency masks."
+  },
+  "sample_count": {
+    "total": 1000,
+    "unit": "images",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "annotators_per_image",
+        "value": 5,
+        "unit": "annotators"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2016-04"
+  },
+  "citation": {
+    "paper_title": "Hierarchical Image Saliency Detection on Extended CSSD",
+    "paper_url": "https://doi.org/10.1109/TPAMI.2015.2465960",
+    "authors": [
+      "Jianping Shi",
+      "Qiong Yan",
+      "Li Xu",
+      "Jiaya Jia"
+    ],
+    "doi": "10.1109/TPAMI.2015.2465960",
+    "bibtex": "@article{shi2016hierarchical,\n  title = {Hierarchical Image Saliency Detection on Extended {CSSD}},\n  author = {Shi, Jianping and Yan, Qiong and Xu, Li and Jia, Jiaya},\n  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  volume = {38},\n  number = {4},\n  pages = {717--729},\n  year = {2016},\n  doi = {10.1109/TPAMI.2015.2465960}\n}"
+  }
+}

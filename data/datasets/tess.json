@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tess",
+  "slug": "tess",
+  "name": "TESS: Toronto Emotional Speech Set",
+  "description": "TESS (Toronto Emotional Speech Set) is a speech emotion recognition dataset comprising 2,800 audio recordings. Recorded by two female native English speakers (aged 26 and 64) at the University of Toronto, the dataset features 200 target carrier words spoken across seven emotion categories: anger, disgust, fear, happiness, pleasant surprise, sadness, and neutral.",
+  "homepage_url": "https://doi.org/10.5683/SP2/E8H2MF",
+  "publisher": {
+    "name": "University of Toronto",
+    "type": "academic",
+    "url": "https://www.utoronto.ca"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-emotion-recognition",
+    "audio-classification",
+    "acoustic-analysis"
+  ],
+  "tags": [
+    "tess",
+    "speech-emotion",
+    "emotion-recognition",
+    "audio",
+    "utoronto",
+    "borealis"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "spdx_id": "CC-BY-NC-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Dataset deposited in the Borealis Canadian Dataverse Repository under Creative Commons Attribution-NonCommercial 4.0 International (CC-BY-NC-4.0)."
+  },
+  "source_references": [
+    {
+      "title": "Toronto Emotional Speech Set on Borealis Dataverse",
+      "url": "https://doi.org/10.5683/SP2/E8H2MF",
+      "type": "archive",
+      "notes": "Official University of Toronto deposit on Borealis Dataverse."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against Borealis Dataverse repository deposit (DOI: 10.5683/SP2/E8H2MF). 2,800 WAV audio recordings produced by 2 speakers across 200 target words and 7 emotion classes."
+  },
+  "size": {
+    "amount": 450.0,
+    "unit": "MB",
+    "file_formats": [
+      "wav"
+    ],
+    "status": "verified",
+    "notes": "Uncompressed 16-bit WAV audio recordings sampled at 24.414 kHz."
+  },
+  "sample_count": {
+    "total": 2800,
+    "unit": "recordings",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "speakers",
+        "value": 2,
+        "unit": "speakers"
+      },
+      {
+        "label": "target_words",
+        "value": 200,
+        "unit": "words"
+      },
+      {
+        "label": "emotion_categories",
+        "value": 7,
+        "unit": "classes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2020-03-24"
+  },
+  "citation": {
+    "paper_title": "Toronto Emotional Speech Set (TESS)",
+    "paper_url": "https://doi.org/10.5683/SP2/E8H2MF",
+    "authors": [
+      "Kate Dupuis",
+      "M. Kathleen Pichora-Fuller"
+    ],
+    "doi": "10.5683/SP2/E8H2MF",
+    "bibtex": "@data{dupuis2020tess,\n  author = {Dupuis, Kate and Pichora-Fuller, M. Kathleen},\n  publisher = {Borealis},\n  title = {{Toronto emotional speech set (TESS)}},\n  year = {2020},\n  version = {V1},\n  doi = {10.5683/SP2/E8H2MF}\n}"
+  }
+}

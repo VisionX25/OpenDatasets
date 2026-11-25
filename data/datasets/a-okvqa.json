@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "a-okvqa",
+  "slug": "a-okvqa",
+  "name": "A-OKVQA: Visual Question Answering Using World Knowledge",
+  "description": "A-OKVQA (Augmented OK-VQA) is a knowledge-based visual question answering benchmark requiring world knowledge and commonsense reasoning beyond direct visual recognition. Built on 24,903 questions grounded in MS-COCO 2017 imagery, it evaluates models through both multiple-choice selection and direct open-ended generation accompanied by human-written rationales.",
+  "homepage_url": "https://allenai.org/project/a-okvqa",
+  "publisher": {
+    "name": "Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "commonsense-reasoning",
+    "knowledge-based-vqa"
+  ],
+  "tags": [
+    "a-okvqa",
+    "vqa",
+    "knowledge-vqa",
+    "commonsense",
+    "coco",
+    "allenai"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Creative Commons Attribution 4.0 International (Annotations) / Diverse Flickr Terms (Images)",
+    "spdx_id": null,
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "unknown",
+    "notes": "A-OKVQA annotations, multiple-choice options, and human-written rationales are released by AllenAI under CC-BY-4.0, with evaluation scripts under Apache-2.0. However, the questions are grounded in MS-COCO 2017 images sourced from Flickr under disparate individual Creative Commons licenses (some non-commercial). Commercial use of underlying imagery requires independent verification of individual Flickr image licenses."
+  },
+  "source_references": [
+    {
+      "title": "A-OKVQA Official Project Repository",
+      "url": "https://github.com/allenai/aokvqa",
+      "type": "repository",
+      "notes": "Official AllenAI code, annotation downloads, and evaluation scripts."
+    },
+    {
+      "title": "A-OKVQA: A Benchmark for Visual Question Answering Using World Knowledge",
+      "url": "https://doi.org/10.1007/978-3-031-19775-8_38",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the European Conference on Computer Vision (ECCV 2022)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against ECCV 2022 publication (DOI: 10.1007/978-3-031-19775-8_38) and official AllenAI repository (allenai/aokvqa). 24,903 questions partitioned into 17,056 train, 1,145 validation, and 6,702 test questions."
+  },
+  "size": {
+    "amount": 8.5,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "JSON annotation files containing multiple-choice options, direct answer annotations, and rationales."
+  },
+  "sample_count": {
+    "total": 24903,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 17056,
+      "val": 1145,
+      "test": 6702
+    },
+    "breakdown": [
+      {
+        "label": "multiple_choice_options_per_question",
+        "value": 4,
+        "unit": "options"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2022-10"
+  },
+  "citation": {
+    "paper_title": "A-OKVQA: A Benchmark for Visual Question Answering Using World Knowledge",
+    "paper_url": "https://doi.org/10.1007/978-3-031-19775-8_38",
+    "authors": [
+      "Dustin Schwenk",
+      "Apoorv Khandelwal",
+      "Christopher Clark",
+      "Kenneth Marino",
+      "Roozbeh Mottaghi"
+    ],
+    "doi": "10.1007/978-3-031-19775-8_38",
+    "bibtex": "@inproceedings{schwenk2022aokvqa,\n  title = {{A-OKVQA}: A Benchmark for Visual Question Answering Using World Knowledge},\n  author = {Schwenk, Dustin and Khandelwal, Apoorv and Clark, Christopher and Marino, Kenneth and Mottaghi, Roozbeh},\n  booktitle = {Computer Vision -- ECCV 2022},\n  pages = {653--670},\n  year = {2022},\n  publisher = {Springer, Cham},\n  doi = {10.1007/978-3-031-19775-8_38}\n}"
+  }
+}

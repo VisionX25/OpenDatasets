@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "penn-fudan",
+  "slug": "penn-fudan",
+  "name": "Penn-Fudan Database for Pedestrian Detection and Segmentation",
+  "description": "Penn-Fudan is a classic benchmark for pedestrian detection and instance segmentation. Collected from campus walkways at the University of Pennsylvania and Fudan University, it contains 170 natural images containing 345 pedestrian instances with accurate bounding box and pixel-level instance segmentation annotations.",
+  "homepage_url": "https://www.cis.upenn.edu/~jshi/ped_html/",
+  "publisher": {
+    "name": "University of Pennsylvania",
+    "type": "academic",
+    "url": "https://www.upenn.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "pedestrian-detection",
+    "instance-segmentation",
+    "object-detection"
+  ],
+  "tags": [
+    "penn-fudan",
+    "pedestrian-detection",
+    "instance-segmentation",
+    "upenn",
+    "fudan"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Penn-Fudan Non-Commercial Research License",
+    "spdx_id": null,
+    "url": "https://www.cis.upenn.edu/~jshi/ped_html/",
+    "commercial_use": "forbidden",
+    "notes": "Dataset provided by UPenn and Fudan University strictly for non-commercial academic research and benchmarking."
+  },
+  "source_references": [
+    {
+      "title": "Penn-Fudan Pedestrian Database Official Page",
+      "url": "https://www.cis.upenn.edu/~jshi/ped_html/",
+      "type": "official_website",
+      "notes": "Official UPenn GRASP lab dataset page and downloads."
+    },
+    {
+      "title": "Object Detection Combining Recognition and Segmentation",
+      "url": "https://doi.org/10.1007/978-3-540-76386-4_19",
+      "type": "original_paper",
+      "notes": "Published in Computer Vision - ACCV 2007 (Lecture Notes in Computer Science, vol 4843)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against ACCV 2007 publication (DOI: 10.1007/978-3-540-76386-4_19) and official UPenn website. 170 pedestrian images containing 345 labeled pedestrian instances."
+  },
+  "size": {
+    "amount": 53.0,
+    "unit": "MB",
+    "file_formats": [
+      "png",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "PNG RGB images, PNG instance segmentation masks, and PASperson-format TXT label files."
+  },
+  "sample_count": {
+    "total": 170,
+    "unit": "images",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "pedestrian_instances",
+        "value": 345,
+        "unit": "instances"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2007-11"
+  },
+  "citation": {
+    "paper_title": "Object Detection Combining Recognition and Segmentation",
+    "paper_url": "https://doi.org/10.1007/978-3-540-76386-4_19",
+    "authors": [
+      "Liming Wang",
+      "Jianbo Shi",
+      "Gang Song",
+      "I-fan Shen"
+    ],
+    "doi": "10.1007/978-3-540-76386-4_19",
+    "bibtex": "@inproceedings{wang2007object,\n  title = {Object Detection Combining Recognition and Segmentation},\n  author = {Wang, Liming and Shi, Jianbo and Song, Gang and Shen, I-fan},\n  booktitle = {Computer Vision -- ACCV 2007},\n  pages = {189--199},\n  year = {2007},\n  publisher = {Springer, Berlin, Heidelberg},\n  doi = {10.1007/978-3-540-76386-4_19}\n}"
+  }
+}

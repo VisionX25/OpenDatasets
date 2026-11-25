@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "id": "visualcomet",
+  "slug": "visualcomet",
+  "name": "VisualCOMET: Visual Commonsense Graphs",
+  "description": "VisualCOMET is a visual commonsense reasoning benchmark providing structured inferences about the dynamic temporal and social context of static scenes. Comprising 1,465,704 textual commonsense inferences across 59,356 complex images from movie frames, it models what happened before the picture, what characters intend at present, and what is likely to occur next.",
+  "homepage_url": "https://visualcomet.xyz",
+  "publisher": {
+    "name": "Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-commonsense-reasoning",
+    "event-inference",
+    "intent-prediction"
+  ],
+  "tags": [
+    "visualcomet",
+    "commonsense",
+    "temporal-reasoning",
+    "intent-prediction",
+    "vcr",
+    "allenai"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "AI2 VisualCOMET Research License / VCR Non-Commercial Movie Terms",
+    "spdx_id": null,
+    "url": "https://visualcomet.xyz",
+    "commercial_use": "forbidden",
+    "notes": "Commonsense graph annotations and model weights released by the Allen Institute for AI for non-commercial research use. Underlying movie frames are inherited from the Visual Commonsense Reasoning (VCR) dataset, originating from commercial films owned by copyright holders; strictly restricted to academic non-commercial research."
+  },
+  "source_references": [
+    {
+      "title": "VisualCOMET Official Project Page",
+      "url": "https://visualcomet.xyz",
+      "type": "official_website",
+      "notes": "Official AllenAI and University of Washington project website and leaderboard."
+    },
+    {
+      "title": "VisualCOMET: Reasoning About the Dynamic Context of a Still Image",
+      "url": "https://doi.org/10.1007/978-3-030-58558-7_30",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the European Conference on Computer Vision (ECCV 2020)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against ECCV 2020 publication (DOI: 10.1007/978-3-030-58558-7_30) and official project repository. 1,465,704 total inferences across 59,356 images and 139,377 distinct events (Visual Commonsense Graphs), partitioned into 1,174,063 train, 146,332 validation, and 145,309 test inferences."
+  },
+  "size": {
+    "amount": 250.0,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "Compressed JSON annotation files containing person-grounded commonsense inferences across temporal contexts."
+  },
+  "sample_count": {
+    "total": 1465704,
+    "unit": "inferences",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 1174063,
+      "val": 146332,
+      "test": 145309
+    },
+    "breakdown": [
+      {
+        "label": "unique_images",
+        "value": 59356,
+        "unit": "images"
+      },
+      {
+        "label": "events_at_present",
+        "value": 139377,
+        "unit": "events"
+      },
+      {
+        "label": "inferences_before",
+        "value": 584211,
+        "unit": "inferences"
+      },
+      {
+        "label": "intents_at_present",
+        "value": 295080,
+        "unit": "intents"
+      },
+      {
+        "label": "inferences_after",
+        "value": 586418,
+        "unit": "inferences"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2020-08"
+  },
+  "citation": {
+    "paper_title": "VisualCOMET: Reasoning About the Dynamic Context of a Still Image",
+    "paper_url": "https://doi.org/10.1007/978-3-030-58558-7_30",
+    "authors": [
+      "Jae Sung Park",
+      "Chandra Bhagavatula",
+      "Roozbeh Mottaghi",
+      "Ali Farhadi",
+      "Yejin Choi"
+    ],
+    "doi": "10.1007/978-3-030-58558-7_30",
+    "bibtex": "@inproceedings{park2020visualcomet,\n  title = {{VisualCOMET}: Reasoning About the Dynamic Context of a Still Image},\n  author = {Park, Jae Sung and Bhagavatula, Chandra and Mottaghi, Roozbeh and Farhadi, Ali and Choi, Yejin},\n  booktitle = {Computer Vision -- ECCV 2020},\n  pages = {508--524},\n  year = {2020},\n  publisher = {Springer, Cham},\n  doi = {10.1007/978-3-030-58558-7_30}\n}"
+  }
+}

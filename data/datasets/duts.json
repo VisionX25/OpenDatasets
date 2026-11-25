@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "duts",
+  "slug": "duts",
+  "name": "DUTS: Salient Object Detection Dataset",
+  "description": "DUTS is a large-scale salient object detection benchmark consisting of 15,572 natural images with pixel-level ground truth saliency masks. Partitioned into DUTS-TR (10,553 training images from ImageNet DET) and DUTS-TE (5,019 test images from ImageNet DET and SUN), it provides high-quality evaluation for salient object segmentation models.",
+  "homepage_url": "http://saliencydetection.net/duts/",
+  "publisher": {
+    "name": "Dalian University of Technology",
+    "type": "academic",
+    "url": "https://www.dlut.edu.cn"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "salient-object-detection",
+    "image-segmentation"
+  ],
+  "tags": [
+    "duts",
+    "saliency-detection",
+    "salient-object-detection",
+    "segmentation",
+    "benchmark"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Academic Research Non-Commercial License",
+    "spdx_id": null,
+    "url": "http://saliencydetection.net/duts/",
+    "commercial_use": "forbidden",
+    "notes": "Dataset provided strictly for non-commercial academic research and educational evaluation. Source imagery originates from ImageNet DET and SUN datasets."
+  },
+  "source_references": [
+    {
+      "title": "DUTS Official Project Portal",
+      "url": "http://saliencydetection.net/duts/",
+      "type": "official_website",
+      "notes": "Official author website with download links for DUTS-TR and DUTS-TE."
+    },
+    {
+      "title": "Learning to Detect Salient Objects with Image-Level Supervision",
+      "url": "https://doi.org/10.1109/CVPR.2017.22",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2017)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against CVPR 2017 publication (DOI: 10.1109/CVPR.2017.22) and official DUTS portal. 15,572 total images partitioned into 10,553 training images (DUTS-TR) and 5,019 test images (DUTS-TE)."
+  },
+  "size": {
+    "amount": 1.4,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "png"
+    ],
+    "status": "verified",
+    "notes": "JPEG natural images and single-channel PNG ground-truth binary saliency masks."
+  },
+  "sample_count": {
+    "total": 15572,
+    "unit": "images",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 10553,
+      "test": 5019
+    },
+    "breakdown": [
+      {
+        "label": "duts_tr_training_images",
+        "value": 10553,
+        "unit": "images"
+      },
+      {
+        "label": "duts_te_test_images",
+        "value": 5019,
+        "unit": "images"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2017-07"
+  },
+  "citation": {
+    "paper_title": "Learning to Detect Salient Objects with Image-Level Supervision",
+    "paper_url": "https://doi.org/10.1109/CVPR.2017.22",
+    "authors": [
+      "Lijun Wang",
+      "Huchuan Lu",
+      "Yifan Wang",
+      "Mengyang Feng",
+      "Dong Wang",
+      "Baocai Yin",
+      "Xiang Ruan"
+    ],
+    "doi": "10.1109/CVPR.2017.22",
+    "bibtex": "@inproceedings{wang2017learning,\n  title = {Learning to Detect Salient Objects with Image-Level Supervision},\n  author = {Wang, Lijun and Lu, Huchuan and Wang, Yifan and Feng, Mengyang and Wang, Dong and Yin, Baocai and Ruan, Xiang},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2017},\n  pages = {136--145},\n  doi = {10.1109/CVPR.2017.22}\n}"
+  }
+}

@@ -300,6 +300,109 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "a-okvqa",
+    "slug": "a-okvqa",
+    "name": "A-OKVQA: Visual Question Answering Using World Knowledge",
+    "description": "A-OKVQA (Augmented OK-VQA) is a knowledge-based visual question answering benchmark requiring world knowledge and commonsense reasoning beyond direct visual recognition. Built on 24,903 questions grounded in MS-COCO 2017 imagery, it evaluates models through both multiple-choice selection and direct open-ended generation accompanied by human-written rationales.",
+    "homepage_url": "https://allenai.org/project/a-okvqa",
+    "publisher": {
+      "name": "Allen Institute for AI",
+      "type": "academic",
+      "url": "https://allenai.org"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "commonsense-reasoning",
+      "knowledge-based-vqa"
+    ],
+    "tags": [
+      "a-okvqa",
+      "vqa",
+      "knowledge-vqa",
+      "commonsense",
+      "coco",
+      "allenai"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Creative Commons Attribution 4.0 International (Annotations) / Diverse Flickr Terms (Images)",
+      "spdx_id": null,
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "unknown",
+      "notes": "A-OKVQA annotations, multiple-choice options, and human-written rationales are released by AllenAI under CC-BY-4.0, with evaluation scripts under Apache-2.0. However, the questions are grounded in MS-COCO 2017 images sourced from Flickr under disparate individual Creative Commons licenses (some non-commercial). Commercial use of underlying imagery requires independent verification of individual Flickr image licenses."
+    },
+    "source_references": [
+      {
+        "title": "A-OKVQA Official Project Repository",
+        "url": "https://github.com/allenai/aokvqa",
+        "type": "repository",
+        "notes": "Official AllenAI code, annotation downloads, and evaluation scripts."
+      },
+      {
+        "title": "A-OKVQA: A Benchmark for Visual Question Answering Using World Knowledge",
+        "url": "https://doi.org/10.1007/978-3-031-19775-8_38",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the European Conference on Computer Vision (ECCV 2022)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against ECCV 2022 publication (DOI: 10.1007/978-3-031-19775-8_38) and official AllenAI repository (allenai/aokvqa). 24,903 questions partitioned into 17,056 train, 1,145 validation, and 6,702 test questions."
+    },
+    "size": {
+      "amount": 8.5,
+      "unit": "MB",
+      "file_formats": [
+        "json"
+      ],
+      "status": "verified",
+      "notes": "JSON annotation files containing multiple-choice options, direct answer annotations, and rationales."
+    },
+    "sample_count": {
+      "total": 24903,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 17056,
+        "val": 1145,
+        "test": 6702
+      },
+      "breakdown": [
+        {
+          "label": "multiple_choice_options_per_question",
+          "value": 4,
+          "unit": "options"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2022-10"
+    },
+    "citation": {
+      "paper_title": "A-OKVQA: A Benchmark for Visual Question Answering Using World Knowledge",
+      "paper_url": "https://doi.org/10.1007/978-3-031-19775-8_38",
+      "authors": [
+        "Dustin Schwenk",
+        "Apoorv Khandelwal",
+        "Christopher Clark",
+        "Kenneth Marino",
+        "Roozbeh Mottaghi"
+      ],
+      "doi": "10.1007/978-3-031-19775-8_38",
+      "bibtex": "@inproceedings{schwenk2022aokvqa,\n  title = {{A-OKVQA}: A Benchmark for Visual Question Answering Using World Knowledge},\n  author = {Schwenk, Dustin and Khandelwal, Apoorv and Clark, Christopher and Marino, Kenneth and Mottaghi, Roozbeh},\n  booktitle = {Computer Vision -- ECCV 2022},\n  pages = {653--670},\n  year = {2022},\n  publisher = {Springer, Cham},\n  doi = {10.1007/978-3-031-19775-8_38}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "a2d2-audi-autonomous-driving",
     "slug": "a2d2-audi-autonomous-driving",
     "name": "A2D2 — Audi Autonomous Driving Dataset",
@@ -9641,6 +9744,115 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "birdclef-2021",
+    "slug": "birdclef-2021",
+    "name": "BirdCLEF 2021: Avian Vocalization Benchmark",
+    "description": "BirdCLEF 2021 is a large-scale bioacoustic benchmark for automated bird call identification in continuous soundscape recordings. Organized under LifeCLEF and hosted on Kaggle, it features 62,884 focal audio recordings covering 397 bird species native to North, Central, and South America contributed via the Xeno-canto network, alongside 80 complex soundscape test recordings.",
+    "homepage_url": "https://www.kaggle.com/c/birdclef-2021",
+    "publisher": {
+      "name": "LifeCLEF / Chemnitz University of Technology",
+      "type": "academic",
+      "url": "https://www.imageclef.org/LifeCLEF2021"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "audio-classification",
+      "acoustic-event-detection",
+      "bioacoustics"
+    ],
+    "tags": [
+      "birdclef",
+      "bioacoustics",
+      "bird-song",
+      "soundscape",
+      "lifeclef",
+      "kaggle"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial (Xeno-canto Terms)",
+      "spdx_id": null,
+      "url": "https://www.kaggle.com/c/birdclef-2021/rules",
+      "commercial_use": "forbidden",
+      "notes": "Audio recordings were contributed by community recordists to Xeno-canto under individual Creative Commons licenses (chiefly CC-BY-NC-SA and CC-BY-NC). The Kaggle challenge dataset is governed by competition rules restricting use strictly to non-commercial academic research and conservation evaluation."
+    },
+    "source_references": [
+      {
+        "title": "BirdCLEF 2021 Kaggle Competition Portal",
+        "url": "https://www.kaggle.com/c/birdclef-2021",
+        "type": "official_website",
+        "notes": "Official challenge landing page, data descriptions, and rules."
+      },
+      {
+        "title": "Overview of BirdCLEF 2021: Bird Call Identification in Soundscape Recordings",
+        "url": "https://ceur-ws.org/Vol-2936/paper-123.pdf",
+        "type": "original_paper",
+        "notes": "Published in Working Notes of CLEF 2021 (CEUR Workshop Proceedings, vol 2936)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against CLEF 2021 working notes (CEUR-WS Vol-2936, pp. 1437-1450) and official Kaggle data specifications. 62,884 focal training recordings in train_short_audio across 397 bird species (with 62,874 usable recordings in downstream pre-processing pipelines after excluding 10 silent/unreadable files), alongside 80 continuous soundscape audio recordings for testing."
+    },
+    "size": {
+      "amount": 18.0,
+      "unit": "GB",
+      "file_formats": [
+        "ogg",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "OGG Vorbis short audio recordings (train_short_audio), CSV metadata annotations, and continuous soundscape audio recordings."
+    },
+    "sample_count": {
+      "total": 62884,
+      "unit": "recordings",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "avian_species",
+          "value": 397,
+          "unit": "species"
+        },
+        {
+          "label": "test_soundscapes",
+          "value": 80,
+          "unit": "recordings"
+        },
+        {
+          "label": "usable_focal_recordings",
+          "value": 62874,
+          "unit": "recordings"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2021-04-01"
+    },
+    "citation": {
+      "paper_title": "Overview of BirdCLEF 2021: Bird Call Identification in Soundscape Recordings",
+      "paper_url": "https://ceur-ws.org/Vol-2936/paper-123.pdf",
+      "authors": [
+        "Stefan Kahl",
+        "Tom Denton",
+        "Holger Klinck",
+        "Hervé Glotin",
+        "Hervé Goëau",
+        "Willem-Pier Vellinga",
+        "Robert Planqué",
+        "Alexis Joly"
+      ],
+      "bibtex": "@inproceedings{kahl2021overview,\n  title = {Overview of {BirdCLEF} 2021: Bird call identification in soundscape recordings},\n  author = {Kahl, Stefan and Denton, Tom and Klinck, Holger and Glotin, Herv\\'e and Go\\\"eau, Herv\\'e and Vellinga, Willem-Pier and Planqu\\'e, Robert and Joly, Alexis},\n  booktitle = {Proceedings of the Working Notes of CLEF 2021},\n  series = {CEUR Workshop Proceedings},\n  volume = {2936},\n  pages = {1437--1450},\n  year = {2021}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "birdvox-full-night",
     "slug": "birdvox-full-night",
     "name": "BirdVox-full-night: Bird Flight Call Audio Detection Benchmark",
@@ -10822,6 +11034,114 @@
       ],
       "doi": "10.1038/sdata.2017.117",
       "bibtex": "@article{bakas2017advancing,\n  title={Advancing The Cancer Genome Atlas glioma MRI collections with expert segmentation labels and radiomic features},\n  author={Bakas, Spyridon and Akbari, Hamed and Sotiras, Aristeidis and Bilello, Michel and Rozycki, Martin and Kirby, Justin S and Freymann, John B and Farahani, Keyvan and Davatzikos, Christos},\n  journal={Scientific Data},\n  volume={4},\n  number={1},\n  pages={170117},\n  year={2017},\n  publisher={Nature Publishing Group},\n  doi={10.1038/sdata.2017.117}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "break",
+    "slug": "break",
+    "name": "BREAK: Question Understanding Benchmark",
+    "description": "BREAK is a question understanding benchmark comprising 83,978 questions across 10 diverse conversational and semantic parsing datasets. Questions are annotated with Question Decomposition Meaning Representation (QDMR), expressing complex questions as sequences of simpler computation steps.",
+    "homepage_url": "https://allenai.github.io/Break",
+    "publisher": {
+      "name": "Allen Institute for AI",
+      "type": "academic",
+      "url": "https://allenai.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "semantic-parsing",
+      "question-decomposition"
+    ],
+    "tags": [
+      "break",
+      "qdmr",
+      "question-decomposition",
+      "semantic-parsing",
+      "allenai"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "MIT License (Code & QDMR Annotations) / Upstream Source Terms",
+      "spdx_id": null,
+      "url": "https://github.com/allenai/Break",
+      "commercial_use": "unknown",
+      "notes": "Code and QDMR annotations released under the MIT License by the Allen Institute for AI and Tel Aviv University. However, underlying questions originate from 10 diverse upstream datasets (including HotpotQA, DROP, Spider, ComplexWebQuestions, SQuAD 2.0, etc.) governed by heterogeneous open-access, share-alike, or restrictive licenses; commercial use of the aggregated benchmark is therefore subject to upstream source terms."
+    },
+    "source_references": [
+      {
+        "title": "BREAK Official Project Page",
+        "url": "https://allenai.github.io/Break",
+        "type": "official_website",
+        "notes": "Official AllenAI and TAU project portal and leaderboard."
+      },
+      {
+        "title": "Break It Down: A Question Understanding Benchmark",
+        "url": "https://aclanthology.org/2020.tacl-1.13/",
+        "type": "original_paper",
+        "notes": "Published in Transactions of the Association for Computational Linguistics (TACL 2020)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against TACL 2020 publication (DOI: 10.1162/tacl_a_00309) and official GitHub repository (allenai/Break). 83,978 total annotated questions partitioned across standard QDMR (60,150) and high-level QDMR (23,828) without double-counting; standard QDMR covers 10 source datasets while high-level QDMR addresses multi-hop databases and complex question subsets."
+    },
+    "size": {
+      "amount": 45.0,
+      "unit": "MB",
+      "file_formats": [
+        "csv",
+        "json"
+      ],
+      "status": "verified",
+      "notes": "CSV and JSON decomposition annotations."
+    },
+    "sample_count": {
+      "total": 83978,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "qdmr_standard_questions",
+          "value": 60150,
+          "unit": "questions"
+        },
+        {
+          "label": "qdmr_high_level_questions",
+          "value": 23828,
+          "unit": "questions"
+        },
+        {
+          "label": "source_datasets_represented",
+          "value": 10,
+          "unit": "datasets"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2020-04"
+    },
+    "citation": {
+      "paper_title": "Break It Down: A Question Understanding Benchmark",
+      "paper_url": "https://aclanthology.org/2020.tacl-1.13/",
+      "authors": [
+        "Tomer Wolfson",
+        "Mor Geva",
+        "Ankit Gupta",
+        "Matt Gardner",
+        "Yoav Goldberg",
+        "Daniel Deutch",
+        "Jonathan Berant"
+      ],
+      "doi": "10.1162/tacl_a_00309",
+      "bibtex": "@article{wolfson-etal-2020-break,\n  title = {Break It Down: A Question Understanding Benchmark},\n  author = {Wolfson, Tomer and Geva, Mor and Gupta, Ankit and Gardner, Matt and Goldberg, Yoav and Deutch, Daniel and Berant, Jonathan},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {8},\n  year = {2020},\n  publisher = {MIT Press},\n  url = {https://aclanthology.org/2020.tacl-1.13/},\n  doi = {10.1162/tacl_a_00309},\n  pages = {183--198}\n}"
     }
   },
   {
@@ -15393,6 +15713,105 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "commonsenseqa",
+    "slug": "commonsenseqa",
+    "name": "CommonsenseQA: Question Answering Targeting Commonsense Knowledge",
+    "description": "CommonsenseQA is a multiple-choice question answering challenge dataset designed to evaluate commonsense reasoning capabilities. Sourced from ConceptNet subgraphs and crowd-authored by human annotators, it features 12,102 five-choice questions testing diverse semantic relations and conceptual commonsense facts.",
+    "homepage_url": "https://www.tau-nlp.sites.tau.ac.il/commonsenseqa",
+    "publisher": {
+      "name": "Tel Aviv University",
+      "type": "academic",
+      "url": "https://www.tau.ac.il"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "commonsense-reasoning",
+      "multiple-choice"
+    ],
+    "tags": [
+      "commonsenseqa",
+      "commonsense",
+      "conceptnet",
+      "question-answering",
+      "tau-nlp"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Dataset and evaluation scripts released under MIT License by Tel Aviv University NLP group."
+    },
+    "source_references": [
+      {
+        "title": "CommonsenseQA Official Project Page",
+        "url": "https://www.tau-nlp.sites.tau.ac.il/commonsenseqa",
+        "type": "official_website",
+        "notes": "Official TAU NLP project homepage and benchmark leaderboard."
+      },
+      {
+        "title": "CommonsenseQA: A Question Answering Challenge Targeting Commonsense Knowledge",
+        "url": "https://aclanthology.org/N19-1421/",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of NAACL-HLT 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against NAACL 2019 publication (DOI: 10.18653/v1/N19-1421) and official TAU NLP portal. 12,102 questions partitioned across official random split: 9,741 train, 1,221 dev, and 1,140 test questions."
+    },
+    "size": {
+      "amount": 1.5,
+      "unit": "MB",
+      "file_formats": [
+        "jsonl"
+      ],
+      "status": "verified",
+      "notes": "JSONL files containing questions, ConceptNet target concepts, and 5 candidate choices."
+    },
+    "sample_count": {
+      "total": 12102,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 9741,
+        "dev": 1221,
+        "test": 1140
+      },
+      "breakdown": [
+        {
+          "label": "choices_per_question",
+          "value": 5,
+          "unit": "choices"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2019-06"
+    },
+    "citation": {
+      "paper_title": "CommonsenseQA: A Question Answering Challenge Targeting Commonsense Knowledge",
+      "paper_url": "https://aclanthology.org/N19-1421/",
+      "authors": [
+        "Alon Talmor",
+        "Jonathan Herzig",
+        "Nicholas Lourie",
+        "Jonathan Berant"
+      ],
+      "doi": "10.18653/v1/N19-1421",
+      "bibtex": "@inproceedings{talmor-etal-2019-commonsenseqa,\n  title = {Commonsense{QA}: A Question Answering Challenge Targeting Commonsense Knowledge},\n  author = {Talmor, Alon and Herzig, Jonathan and Lourie, Nicholas and Berant, Jonathan},\n  booktitle = {Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)},\n  month = jun,\n  year = {2019},\n  address = {Minneapolis, Minnesota},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/N19-1421/},\n  doi = {10.18653/v1/N19-1421},\n  pages = {4149--4158}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "comprehensive-real-world-jackfruit-leaf-disea",
     "slug": "comprehensive-real-world-jackfruit-leaf-disea",
     "name": "A Comprehensive Real-World Dataset of Jackfruit Leaf Diseases and Growth Stages for Intelligent Crop Health Monitoring",
@@ -19394,6 +19813,106 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "discofuse",
+    "slug": "discofuse",
+    "name": "DiscoFuse: Discourse-Based Sentence Fusion Dataset",
+    "description": "DiscoFuse is a large-scale dataset for discourse-based sentence fusion consisting of approximately 60.8 million sentence fusion examples. Generated by extracting discourse-connected sentence pairs from Wikipedia and sports articles, the dataset provides paired split and fused sentences annotated with discourse connectives and syntactic operations.",
+    "homepage_url": "https://github.com/google-research-datasets/discofuse",
+    "publisher": {
+      "name": "Google Research",
+      "type": "industry",
+      "url": "https://research.google"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "sentence-fusion",
+      "text-generation",
+      "discourse-analysis"
+    ],
+    "tags": [
+      "discofuse",
+      "sentence-fusion",
+      "discourse",
+      "text-generation",
+      "google-research"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "spdx_id": "CC-BY-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset released by Google Research under CC-BY-SA-3.0, consistent with Wikipedia source content licensing terms."
+    },
+    "source_references": [
+      {
+        "title": "DiscoFuse Official GitHub Repository",
+        "url": "https://github.com/google-research-datasets/discofuse",
+        "type": "repository",
+        "notes": "Official Google Research release repository with download links."
+      },
+      {
+        "title": "DiscoFuse: A Large-Scale Dataset for Discourse-Based Sentence Fusion",
+        "url": "https://aclanthology.org/N19-1348/",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of NAACL-HLT 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against NAACL 2019 publication (DOI: 10.18653/v1/N19-1348) and official Google Research dataset deposit. Total of 60,819,766 sentence fusion examples across Wikipedia (16,642,323) and sports articles (44,177,443)."
+    },
+    "size": {
+      "amount": 6.5,
+      "unit": "GB",
+      "file_formats": [
+        "tsv",
+        "tar.gz"
+      ],
+      "status": "verified",
+      "notes": "Compressed TSV archives: discofuse_v1_wikipedia.tar.gz (1.8 GB) and discofuse_v1_sports.tar.gz (4.7 GB)."
+    },
+    "sample_count": {
+      "total": 60819766,
+      "unit": "sentence fusion examples",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "breakdown": [
+        {
+          "label": "sports_articles_examples",
+          "value": 44177443,
+          "unit": "sentence fusion examples"
+        },
+        {
+          "label": "wikipedia_examples",
+          "value": 16642323,
+          "unit": "sentence fusion examples"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2019-06"
+    },
+    "citation": {
+      "paper_title": "DiscoFuse: A Large-Scale Dataset for Discourse-Based Sentence Fusion",
+      "paper_url": "https://aclanthology.org/N19-1348/",
+      "authors": [
+        "Mor Geva",
+        "Eric Malmi",
+        "Idan Szpektor",
+        "Jonathan Berant"
+      ],
+      "doi": "10.18653/v1/N19-1348",
+      "bibtex": "@inproceedings{geva-etal-2019-discofuse,\n  title = {{D}isco{F}use: A Large-Scale Dataset for Discourse-Based Sentence Fusion},\n  author = {Geva, Mor and Malmi, Eric and Szpektor, Idan and Berant, Jonathan},\n  booktitle = {Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)},\n  month = jun,\n  year = {2019},\n  address = {Minneapolis, Minnesota},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/N19-1348/},\n  doi = {10.18653/v1/N19-1348},\n  pages = {3443--3455}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "dns-challenge",
     "slug": "dns-challenge",
     "name": "DNS Challenge: Deep Noise Suppression Challenge Benchmark",
@@ -20976,6 +21495,217 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "duorc",
+    "slug": "duorc",
+    "name": "DuoRC: Paraphrased Reading Comprehension Benchmark",
+    "description": "DuoRC is a large-scale reading comprehension benchmark consisting of 186,089 question-answer pairs created from 7,680 pairs of parallel movie plots. For each movie, distinct narrative plots were collected from Wikipedia and IMDb, requiring models to reason across paraphrased narrative descriptions with minimal lexical overlap.",
+    "homepage_url": "https://duorc.github.io",
+    "publisher": {
+      "name": "IBM Research",
+      "type": "industry",
+      "url": "https://research.ibm.com"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "reading-comprehension",
+      "paraphrase-identification"
+    ],
+    "tags": [
+      "duorc",
+      "reading-comprehension",
+      "paraphrasing",
+      "question-answering",
+      "movie-plots"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "MIT License (Code) / Non-Commercial IMDb Terms / CC-BY-SA 3.0 (Wikipedia)",
+      "spdx_id": null,
+      "url": "https://github.com/duorc/duorc.github.io",
+      "commercial_use": "forbidden",
+      "notes": "Evaluation scripts released under MIT License. Underlying narrative summaries originate from Wikipedia (CC-BY-SA 3.0) and IMDb; IMDb Conditions of Use prohibit commercial exploitation without prior written consent."
+    },
+    "source_references": [
+      {
+        "title": "DuoRC Official Project Page",
+        "url": "https://duorc.github.io",
+        "type": "official_website",
+        "notes": "Official benchmark documentation and leaderboard."
+      },
+      {
+        "title": "DuoRC: Towards Complex Language Understanding with Paraphrased Reading Comprehension",
+        "url": "https://aclanthology.org/P18-1156/",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL 2018)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against ACL 2018 publication (DOI: 10.18653/v1/P18-1156) and official GitHub project portal. Sourced from 7,680 parallel movie plot pairs across SelfRC (86,241 QA pairs) and ParaphraseRC (100,972 QA pairs) tasks. The configuration sum of 187,213 exceeds the 186,089 unique question total by exactly 1,124 questions that overlap across both task configurations."
+    },
+    "size": {
+      "amount": 25.0,
+      "unit": "MB",
+      "file_formats": [
+        "json",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "Compressed JSON and CSV annotation archives."
+    },
+    "sample_count": {
+      "total": 186089,
+      "unit": "question-answer pairs",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "self_rc_questions",
+          "value": 86241,
+          "unit": "question-answer pairs"
+        },
+        {
+          "label": "paraphrase_rc_questions",
+          "value": 100972,
+          "unit": "question-answer pairs"
+        },
+        {
+          "label": "parallel_movie_plots",
+          "value": 7680,
+          "unit": "plot pairs"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2018-07"
+    },
+    "citation": {
+      "paper_title": "DuoRC: Towards Complex Language Understanding with Paraphrased Reading Comprehension",
+      "paper_url": "https://aclanthology.org/P18-1156/",
+      "authors": [
+        "Amrita Saha",
+        "Rahul Aralikatte",
+        "Mitesh M. Khapra",
+        "Karthik Sankaranarayanan"
+      ],
+      "doi": "10.18653/v1/P18-1156",
+      "bibtex": "@inproceedings{saha-etal-2018-duorc,\n  title = {{D}uo{RC}: Towards Complex Language Understanding with Paraphrased Reading Comprehension},\n  author = {Saha, Amrita and Aralikatte, Rahul and Khapra, Mitesh M. and Sankaranarayanan, Karthik},\n  booktitle = {Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},\n  month = jul,\n  year = {2018},\n  address = {Melbourne, Australia},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/P18-1156/},\n  doi = {10.18653/v1/P18-1156},\n  pages = {1683--1693}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "duts",
+    "slug": "duts",
+    "name": "DUTS: Salient Object Detection Dataset",
+    "description": "DUTS is a large-scale salient object detection benchmark consisting of 15,572 natural images with pixel-level ground truth saliency masks. Partitioned into DUTS-TR (10,553 training images from ImageNet DET) and DUTS-TE (5,019 test images from ImageNet DET and SUN), it provides high-quality evaluation for salient object segmentation models.",
+    "homepage_url": "http://saliencydetection.net/duts/",
+    "publisher": {
+      "name": "Dalian University of Technology",
+      "type": "academic",
+      "url": "https://www.dlut.edu.cn"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "salient-object-detection",
+      "image-segmentation"
+    ],
+    "tags": [
+      "duts",
+      "saliency-detection",
+      "salient-object-detection",
+      "segmentation",
+      "benchmark"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Academic Research Non-Commercial License",
+      "spdx_id": null,
+      "url": "http://saliencydetection.net/duts/",
+      "commercial_use": "forbidden",
+      "notes": "Dataset provided strictly for non-commercial academic research and educational evaluation. Source imagery originates from ImageNet DET and SUN datasets."
+    },
+    "source_references": [
+      {
+        "title": "DUTS Official Project Portal",
+        "url": "http://saliencydetection.net/duts/",
+        "type": "official_website",
+        "notes": "Official author website with download links for DUTS-TR and DUTS-TE."
+      },
+      {
+        "title": "Learning to Detect Salient Objects with Image-Level Supervision",
+        "url": "https://doi.org/10.1109/CVPR.2017.22",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2017)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against CVPR 2017 publication (DOI: 10.1109/CVPR.2017.22) and official DUTS portal. 15,572 total images partitioned into 10,553 training images (DUTS-TR) and 5,019 test images (DUTS-TE)."
+    },
+    "size": {
+      "amount": 1.4,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "png"
+      ],
+      "status": "verified",
+      "notes": "JPEG natural images and single-channel PNG ground-truth binary saliency masks."
+    },
+    "sample_count": {
+      "total": 15572,
+      "unit": "images",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 10553,
+        "test": 5019
+      },
+      "breakdown": [
+        {
+          "label": "duts_tr_training_images",
+          "value": 10553,
+          "unit": "images"
+        },
+        {
+          "label": "duts_te_test_images",
+          "value": 5019,
+          "unit": "images"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2017-07"
+    },
+    "citation": {
+      "paper_title": "Learning to Detect Salient Objects with Image-Level Supervision",
+      "paper_url": "https://doi.org/10.1109/CVPR.2017.22",
+      "authors": [
+        "Lijun Wang",
+        "Huchuan Lu",
+        "Yifan Wang",
+        "Mengyang Feng",
+        "Dong Wang",
+        "Baocai Yin",
+        "Xiang Ruan"
+      ],
+      "doi": "10.1109/CVPR.2017.22",
+      "bibtex": "@inproceedings{wang2017learning,\n  title = {Learning to Detect Salient Objects with Image-Level Supervision},\n  author = {Wang, Lijun and Lu, Huchuan and Wang, Yifan and Feng, Mengyang and Wang, Dong and Yin, Baocai and Ruan, Xiang},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2017},\n  pages = {136--145},\n  doi = {10.1109/CVPR.2017.22}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "dvqa",
     "slug": "dvqa",
     "name": "DVQA: Understanding Data Visualizations via Question Answering",
@@ -21713,6 +22443,100 @@
       "data_sources": [
         "Stanford Health Care Echocardiography Laboratory"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ecssd",
+    "slug": "ecssd",
+    "name": "ECSSD: Extended Complex Scene Saliency Dataset",
+    "description": "ECSSD is a computer vision benchmark for salient object detection and foreground segmentation. It comprises 1,000 structurally complex natural images gathered from the Internet with manually annotated ground-truth pixel-level binary saliency masks provided by five independent annotators.",
+    "homepage_url": "https://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/dataset.html",
+    "publisher": {
+      "name": "The Chinese University of Hong Kong",
+      "type": "academic",
+      "url": "https://www.cuhk.edu.hk"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "salient-object-detection",
+      "image-segmentation"
+    ],
+    "tags": [
+      "ecssd",
+      "saliency",
+      "salient-object-detection",
+      "segmentation",
+      "cuhk"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "CUHK Academic Research License",
+      "spdx_id": null,
+      "url": "https://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/dataset.html",
+      "commercial_use": "forbidden",
+      "notes": "Dataset provided by CUHK strictly for non-commercial academic research and benchmarking."
+    },
+    "source_references": [
+      {
+        "title": "ECSSD Official Project Page",
+        "url": "https://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/dataset.html",
+        "type": "official_website",
+        "notes": "Official CUHK project website and dataset download links."
+      },
+      {
+        "title": "Hierarchical Image Saliency Detection on Extended CSSD",
+        "url": "https://doi.org/10.1109/TPAMI.2015.2465960",
+        "type": "original_paper",
+        "notes": "Published in IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI 2016)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against TPAMI 2016 publication (DOI: 10.1109/TPAMI.2015.2465960) and official CUHK repository. 1,000 complex natural images with human ground-truth saliency masks."
+    },
+    "size": {
+      "amount": 65.0,
+      "unit": "MB",
+      "file_formats": [
+        "jpg",
+        "png"
+      ],
+      "status": "verified",
+      "notes": "JPEG color images and corresponding binary PNG saliency masks."
+    },
+    "sample_count": {
+      "total": 1000,
+      "unit": "images",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "annotators_per_image",
+          "value": 5,
+          "unit": "annotators"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2016-04"
+    },
+    "citation": {
+      "paper_title": "Hierarchical Image Saliency Detection on Extended CSSD",
+      "paper_url": "https://doi.org/10.1109/TPAMI.2015.2465960",
+      "authors": [
+        "Jianping Shi",
+        "Qiong Yan",
+        "Li Xu",
+        "Jiaya Jia"
+      ],
+      "doi": "10.1109/TPAMI.2015.2465960",
+      "bibtex": "@article{shi2016hierarchical,\n  title = {Hierarchical Image Saliency Detection on Extended {CSSD}},\n  author = {Shi, Jianping and Yan, Qiong and Xu, Li and Jia, Jiaya},\n  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  volume = {38},\n  number = {4},\n  pages = {717--729},\n  year = {2016},\n  doi = {10.1109/TPAMI.2015.2465960}\n}"
     }
   },
   {
@@ -26290,6 +27114,138 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "fuss",
+    "slug": "fuss",
+    "name": "FUSS: Free Universal Sound Separation Dataset",
+    "description": "FUSS (Free Universal Sound Separation) is an open audio benchmark designed for training and evaluating universal sound separation systems on arbitrary acoustic mixtures. Sourced from FSD50K pre-release audio and convolved with simulated room impulse responses, it provides 12,377 source clips used to synthesize reverberant mixtures of varying polyphony.",
+    "homepage_url": "https://sound-separation.github.io",
+    "publisher": {
+      "name": "Google Research",
+      "type": "industry",
+      "url": "https://research.google"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "sound-separation",
+      "audio-source-separation",
+      "acoustic-modeling"
+    ],
+    "tags": [
+      "fuss",
+      "sound-separation",
+      "source-separation",
+      "audio",
+      "google-research",
+      "zenodo"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Source audio recordings were selected from CC0-licensed Freesound recordings. Audio labels are derived from FSD50K under Creative Commons Attribution 4.0 International (CC-BY-4.0). Simulation software and room impulse response generation code are released under Apache License 2.0."
+    },
+    "source_references": [
+      {
+        "title": "FUSS Official Project Page",
+        "url": "https://sound-separation.github.io",
+        "type": "official_website",
+        "notes": "Official Google Research sound separation project portal."
+      },
+      {
+        "title": "FUSS Dataset on Zenodo",
+        "url": "https://zenodo.org/records/3710392",
+        "type": "archive",
+        "notes": "Archival data deposit on Zenodo (records 3710392 / 3743844, DOI: 10.5281/zenodo.3710392)."
+      },
+      {
+        "title": "What's All the FUSS About Free Universal Sound Separation Data?",
+        "url": "https://doi.org/10.1109/ICASSP39728.2021.9414774",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2021)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against ICASSP 2021 publication (DOI: 10.1109/ICASSP39728.2021.9414774) and official Zenodo archive (records 3710392 / 3743844). 12,377 source audio clips partitioned across 7,237 train, 2,883 validation, and 2,257 evaluation clips (approx. 23 hours of single-source audio across 357 sound classes), used to synthesize 20,000 train, 1,000 val, and 1,000 eval reverberant mixtures."
+    },
+    "size": {
+      "amount": 22.0,
+      "unit": "GB",
+      "file_formats": [
+        "wav",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "16-bit 16 kHz WAV audio files and room impulse response metadata."
+    },
+    "sample_count": {
+      "total": 12377,
+      "unit": "source clips",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 7237,
+        "val": 2883,
+        "eval": 2257
+      },
+      "breakdown": [
+        {
+          "label": "synthesized_mixtures",
+          "value": 22000,
+          "unit": "mixtures"
+        },
+        {
+          "label": "train_mixtures",
+          "value": 20000,
+          "unit": "mixtures"
+        },
+        {
+          "label": "val_mixtures",
+          "value": 1000,
+          "unit": "mixtures"
+        },
+        {
+          "label": "eval_mixtures",
+          "value": 1000,
+          "unit": "mixtures"
+        },
+        {
+          "label": "sound_classes",
+          "value": 357,
+          "unit": "classes"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2020-04-08"
+    },
+    "citation": {
+      "paper_title": "What's All the FUSS About Free Universal Sound Separation Data?",
+      "paper_url": "https://doi.org/10.1109/ICASSP39728.2021.9414774",
+      "authors": [
+        "Scott Wisdom",
+        "Hakan Erdogan",
+        "Daniel P. W. Ellis",
+        "Romain Serizel",
+        "Nicolas Turpault",
+        "Eduardo Fonseca",
+        "Justin Salamon",
+        "Prem Seetharaman",
+        "John R. Hershey"
+      ],
+      "doi": "10.1109/ICASSP39728.2021.9414774",
+      "bibtex": "@inproceedings{wisdom2021whats,\n  title = {What's All the {FUSS} About Free Universal Sound Separation Data?},\n  author = {Wisdom, Scott and Erdogan, Hakan and Ellis, Daniel P. W. and Serizel, Romain and Turpault, Nicolas and Fonseca, Eduardo and Salamon, Justin and Seetharaman, Prem and Hershey, John R.},\n  booktitle = {ICASSP 2021 - 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages = {186--190},\n  year = {2021},\n  doi = {10.1109/ICASSP39728.2021.9414774}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "gazetypebd-synchronized-multimodal-error-resi",
     "slug": "gazetypebd-synchronized-multimodal-error-resi",
     "name": "GazeTypeBD: A Synchronized Multimodal Dataset for Error-Resilient Webcam-Based Bilingual Eye Typing.",
@@ -29224,6 +30180,116 @@
       ],
       "doi": "10.18653/v1/D18-1259",
       "bibtex": "@inproceedings{yang-etal-2018-hotpotqa,\n  title = {HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering},\n  author = {Yang, Zhilin and Qi, Peng and Zhang, Saizheng and Bengio, Yoshua and Cohen, William W. and Salakhutdinov, Ruslan and Manning, Christopher D.},\n  booktitle = {Proceedings of EMNLP 2018},\n  pages = {2369--2380},\n  year = {2018}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "hpatches",
+    "slug": "hpatches",
+    "name": "HPatches: Benchmark for Local Descriptors",
+    "description": "HPatches (H-patches) is a benchmark for evaluating handcrafted and learned local feature descriptors under geometric and photometric changes. It comprises 116 planar scene sequences with precise ground-truth homographies, spanning 57 illumination-varying and 59 viewpoint-varying scenes with 6 images per sequence.",
+    "homepage_url": "https://hpatches.github.io",
+    "publisher": {
+      "name": "University of Oxford",
+      "type": "academic",
+      "url": "https://www.ox.ac.uk"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "feature-matching",
+      "descriptor-evaluation",
+      "image-matching"
+    ],
+    "tags": [
+      "hpatches",
+      "local-features",
+      "descriptors",
+      "homography",
+      "oxford"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "commercial_use": "allowed",
+      "notes": "Dataset and evaluation toolkit released under the MIT License."
+    },
+    "source_references": [
+      {
+        "title": "HPatches Official Project Page",
+        "url": "https://hpatches.github.io",
+        "type": "official_website",
+        "notes": "Official benchmark portal with downloads and protocol documentation."
+      },
+      {
+        "title": "HPatches: A Benchmark and Evaluation of Handcrafted and Learned Local Descriptors",
+        "url": "https://doi.org/10.1109/CVPR.2017.549",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2017)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against CVPR 2017 publication (DOI: 10.1109/CVPR.2017.549) and official GitHub repository (hpatches/hpatches-dataset). 116 image sequences: 57 illumination and 59 viewpoint sequences, totaling 696 high-resolution images."
+    },
+    "size": {
+      "amount": 4.2,
+      "unit": "GB",
+      "file_formats": [
+        "png",
+        "ppm"
+      ],
+      "status": "verified",
+      "notes": "PNG and PPM full scene images, sampled patches, and homography matrix files."
+    },
+    "sample_count": {
+      "total": 116,
+      "unit": "image sequences",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "illumination_sequences",
+          "value": 57,
+          "unit": "image sequences"
+        },
+        {
+          "label": "viewpoint_sequences",
+          "value": 59,
+          "unit": "image sequences"
+        },
+        {
+          "label": "images_per_sequence",
+          "value": 6,
+          "unit": "images"
+        },
+        {
+          "label": "full_scene_images",
+          "value": 696,
+          "unit": "images"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2017-07"
+    },
+    "citation": {
+      "paper_title": "HPatches: A Benchmark and Evaluation of Handcrafted and Learned Local Descriptors",
+      "paper_url": "https://doi.org/10.1109/CVPR.2017.549",
+      "authors": [
+        "Vassileios Balntas",
+        "Karel Lenc",
+        "Andrea Vedaldi",
+        "Krystian Mikolajczyk"
+      ],
+      "doi": "10.1109/CVPR.2017.549",
+      "bibtex": "@inproceedings{balntas2017hpatches,\n  title = {{HPatches}: A Benchmark and Evaluation of Handcrafted and Learned Local Descriptors},\n  author = {Balntas, Vassileios and Lenc, Karel and Vedaldi, Andrea and Mikolajczyk, Krystian},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2017},\n  pages = {5173--5182},\n  doi = {10.1109/CVPR.2017.549}\n}"
     }
   },
   {
@@ -51564,6 +52630,97 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "openslr-yesno",
+    "slug": "openslr-yesno",
+    "name": "YESNO Speech Dataset",
+    "description": "The YESNO Speech Dataset (OpenSLR 1) is a compact acoustic dataset designed for introductory automatic speech recognition and speech processing experiments. It consists of 60 audio recordings of an individual speaker pronouncing sequences of eight Hebrew words representing yes (ken) or no (lo), sampled at 8 kHz.",
+    "homepage_url": "https://www.openslr.org/1/",
+    "publisher": {
+      "name": "OpenSLR",
+      "type": "community",
+      "url": "https://www.openslr.org"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "automatic-speech-recognition",
+      "keyword-spotting",
+      "speech-processing"
+    ],
+    "tags": [
+      "openslr",
+      "yesno",
+      "speech-recognition",
+      "asr",
+      "kaldi"
+    ],
+    "license": {
+      "status": "public_domain",
+      "name": "Public Domain / Free To Use For Any Purpose (No License Required)",
+      "spdx_id": null,
+      "url": "https://www.openslr.org/1/",
+      "commercial_use": "allowed",
+      "notes": "OpenSLR resource SLR1 explicitly specifies 'License: none (free to use for any purpose)'. The dataset was created for the Kaldi project by an anonymous contributor and curated on OpenSLR by Daniel Povey."
+    },
+    "source_references": [
+      {
+        "title": "YESNO on OpenSLR (SLR1)",
+        "url": "https://www.openslr.org/1/",
+        "type": "official_website",
+        "notes": "Official OpenSLR resource page and data archive download."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against OpenSLR resource SLR1 portal. 60 WAV audio recordings of 8 words each, yielding 480 spoken word instances in Hebrew."
+    },
+    "size": {
+      "amount": 4.7,
+      "unit": "MB",
+      "file_formats": [
+        "wav",
+        "tgz"
+      ],
+      "status": "verified",
+      "notes": "WAV audio files sampled at 8 kHz in waves_yesno.tar.gz archive."
+    },
+    "sample_count": {
+      "total": 60,
+      "unit": "recordings",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "words_per_recording",
+          "value": 8,
+          "unit": "words"
+        },
+        {
+          "label": "total_spoken_words",
+          "value": 480,
+          "unit": "words"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2012"
+    },
+    "citation": {
+      "paper_title": "YESNO Speech Dataset",
+      "paper_url": "https://www.openslr.org/1/",
+      "authors": [
+        "Kaldi Project Contributors",
+        "Daniel Povey"
+      ],
+      "bibtex": "@misc{kaldi2012yesno,\n  author = {{Kaldi Project Contributors} and Povey, Daniel},\n  title = {{YESNO} Speech Dataset},\n  year = {2012},\n  publisher = {OpenSLR},\n  howpublished = {\\url{https://www.openslr.org/1/}},\n  note = {OpenSLR Resource SLR1}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "oscar-2019",
     "slug": "oscar-2019",
     "name": "OSCAR: Open Super-large Crawled ALMAnaCH Corpus (2019 Release)",
@@ -53275,6 +54432,101 @@
     "provenance": {
       "collection_method": "Extracted from Caltrans PeMS real-time loop detectors across District 8 (San Bernardino).",
       "curation_notes": "Aggregated into 5-minute sampling windows across 170 selected highway sensor stations."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "penn-fudan",
+    "slug": "penn-fudan",
+    "name": "Penn-Fudan Database for Pedestrian Detection and Segmentation",
+    "description": "Penn-Fudan is a classic benchmark for pedestrian detection and instance segmentation. Collected from campus walkways at the University of Pennsylvania and Fudan University, it contains 170 natural images containing 345 pedestrian instances with accurate bounding box and pixel-level instance segmentation annotations.",
+    "homepage_url": "https://www.cis.upenn.edu/~jshi/ped_html/",
+    "publisher": {
+      "name": "University of Pennsylvania",
+      "type": "academic",
+      "url": "https://www.upenn.edu"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "pedestrian-detection",
+      "instance-segmentation",
+      "object-detection"
+    ],
+    "tags": [
+      "penn-fudan",
+      "pedestrian-detection",
+      "instance-segmentation",
+      "upenn",
+      "fudan"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Penn-Fudan Non-Commercial Research License",
+      "spdx_id": null,
+      "url": "https://www.cis.upenn.edu/~jshi/ped_html/",
+      "commercial_use": "forbidden",
+      "notes": "Dataset provided by UPenn and Fudan University strictly for non-commercial academic research and benchmarking."
+    },
+    "source_references": [
+      {
+        "title": "Penn-Fudan Pedestrian Database Official Page",
+        "url": "https://www.cis.upenn.edu/~jshi/ped_html/",
+        "type": "official_website",
+        "notes": "Official UPenn GRASP lab dataset page and downloads."
+      },
+      {
+        "title": "Object Detection Combining Recognition and Segmentation",
+        "url": "https://doi.org/10.1007/978-3-540-76386-4_19",
+        "type": "original_paper",
+        "notes": "Published in Computer Vision - ACCV 2007 (Lecture Notes in Computer Science, vol 4843)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against ACCV 2007 publication (DOI: 10.1007/978-3-540-76386-4_19) and official UPenn website. 170 pedestrian images containing 345 labeled pedestrian instances."
+    },
+    "size": {
+      "amount": 53.0,
+      "unit": "MB",
+      "file_formats": [
+        "png",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "PNG RGB images, PNG instance segmentation masks, and PASperson-format TXT label files."
+    },
+    "sample_count": {
+      "total": 170,
+      "unit": "images",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "pedestrian_instances",
+          "value": 345,
+          "unit": "instances"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2007-11"
+    },
+    "citation": {
+      "paper_title": "Object Detection Combining Recognition and Segmentation",
+      "paper_url": "https://doi.org/10.1007/978-3-540-76386-4_19",
+      "authors": [
+        "Liming Wang",
+        "Jianbo Shi",
+        "Gang Song",
+        "I-fan Shen"
+      ],
+      "doi": "10.1007/978-3-540-76386-4_19",
+      "bibtex": "@inproceedings{wang2007object,\n  title = {Object Detection Combining Recognition and Segmentation},\n  author = {Wang, Liming and Shi, Jianbo and Song, Gang and Shen, I-fan},\n  booktitle = {Computer Vision -- ACCV 2007},\n  pages = {189--199},\n  year = {2007},\n  publisher = {Springer, Berlin, Heidelberg},\n  doi = {10.1007/978-3-540-76386-4_19}\n}"
     }
   },
   {
@@ -59125,6 +60377,109 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "savee",
+    "slug": "savee",
+    "name": "SAVEE: Surrey Audio-Visual Expressed Emotion Database",
+    "description": "SAVEE is an audio-visual database recorded for speech and facial emotion recognition research. Produced at the University of Surrey, it contains 480 British English utterances spoken by four male actors performing phonetically-balanced sentences across seven emotion categories: anger, disgust, fear, happiness, sadness, surprise, and neutral.",
+    "homepage_url": "http://kahlan.eps.surrey.ac.uk/savee/",
+    "publisher": {
+      "name": "University of Surrey",
+      "type": "academic",
+      "url": "https://www.surrey.ac.uk"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-emotion-recognition",
+      "audio-classification",
+      "acoustic-analysis"
+    ],
+    "tags": [
+      "savee",
+      "speech-emotion",
+      "emotion-recognition",
+      "audio",
+      "surrey"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "University of Surrey SAVEE Data License",
+      "spdx_id": null,
+      "url": "http://kahlan.eps.surrey.ac.uk/savee/",
+      "commercial_use": "forbidden",
+      "notes": "Dataset available free of charge for non-commercial academic research upon user registration with the University of Surrey Centre for Vision, Speech and Signal Processing (CVSSP)."
+    },
+    "source_references": [
+      {
+        "title": "SAVEE Official University of Surrey Portal",
+        "url": "http://kahlan.eps.surrey.ac.uk/savee/",
+        "type": "official_website",
+        "notes": "Official CVSSP project repository and registration gateway."
+      },
+      {
+        "title": "Speaker-Dependent Audio-Visual Emotion Recognition",
+        "url": "https://www.isca-archive.org/avsp_2009/haq09_avsp.html",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of Auditory-Visual Speech Processing (AVSP 2009)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against AVSP 2009 publication and official University of Surrey CVSSP portal. 480 utterances recorded by 4 male speakers across 7 emotion categories."
+    },
+    "size": {
+      "amount": 1.1,
+      "unit": "GB",
+      "file_formats": [
+        "wav",
+        "avi",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "WAV audio files sampled at 44.1 kHz, AVI video recordings, and text sentence prompt files."
+    },
+    "sample_count": {
+      "total": 480,
+      "unit": "utterances",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "male_speakers",
+          "value": 4,
+          "unit": "speakers"
+        },
+        {
+          "label": "emotion_categories",
+          "value": 7,
+          "unit": "classes"
+        },
+        {
+          "label": "utterances_per_speaker",
+          "value": 120,
+          "unit": "utterances"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2009-09"
+    },
+    "citation": {
+      "paper_title": "Speaker-Dependent Audio-Visual Emotion Recognition",
+      "paper_url": "https://www.isca-archive.org/avsp_2009/haq09_avsp.html",
+      "authors": [
+        "Sanaul Haq",
+        "Philip J. B. Jackson"
+      ],
+      "bibtex": "@inproceedings{haq2009speaker,\n  title = {Speaker-dependent audio-visual emotion recognition},\n  author = {Haq, Sanaul and Jackson, Philip J. B.},\n  booktitle = {Proceedings of the International Conference on Auditory-Visual Speech Processing (AVSP 2009)},\n  pages = {53--58},\n  year = {2009}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "sb20-sugar-beet",
     "slug": "sb20-sugar-beet",
     "name": "SB20: RGB-D Crop and Weed Segmentation Dataset",
@@ -62143,6 +63498,106 @@
         "Copernicus Sentinel-1 SAR",
         "Copernicus Sentinel-2 MSI"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "social-iqa",
+    "slug": "social-iqa",
+    "name": "Social IQa: Commonsense Reasoning about Social Interactions",
+    "description": "Social IQa is a large-scale question answering benchmark for assessing social commonsense intelligence in neural language models. It contains 37,588 multiple-choice questions focusing on emotional states, intentions, social motivations, and likely subsequent actions across diverse interpersonal scenarios.",
+    "homepage_url": "https://allenai.org/data/socialiqa",
+    "publisher": {
+      "name": "Allen Institute for AI",
+      "type": "academic",
+      "url": "https://allenai.org"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "commonsense-reasoning",
+      "multiple-choice"
+    ],
+    "tags": [
+      "social-iqa",
+      "commonsense-reasoning",
+      "social-intelligence",
+      "question-answering",
+      "allenai"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "allowed",
+      "notes": "Dataset released by the Allen Institute for AI under the Apache License 2.0."
+    },
+    "source_references": [
+      {
+        "title": "Social IQa Official Project Page",
+        "url": "https://allenai.org/data/socialiqa",
+        "type": "official_website",
+        "notes": "Official AllenAI project homepage and data downloads."
+      },
+      {
+        "title": "Social IQa: Commonsense Reasoning about Social Interactions",
+        "url": "https://aclanthology.org/D19-1454/",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of EMNLP-IJCNLP 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against EMNLP 2019 publication (DOI: 10.18653/v1/D19-1454) and official AllenAI repository. 37,588 multiple-choice questions partitioned into 33,410 train, 1,954 validation, and 2,224 test questions."
+    },
+    "size": {
+      "amount": 6.2,
+      "unit": "MB",
+      "file_formats": [
+        "jsonl"
+      ],
+      "status": "verified",
+      "notes": "JSONL files containing question contexts, candidate answers, and ground truth labels."
+    },
+    "sample_count": {
+      "total": 37588,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 33410,
+        "dev": 1954,
+        "test": 2224
+      },
+      "breakdown": [
+        {
+          "label": "answer_choices_per_question",
+          "value": 3,
+          "unit": "choices"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2019-11"
+    },
+    "citation": {
+      "paper_title": "Social IQa: Commonsense Reasoning about Social Interactions",
+      "paper_url": "https://aclanthology.org/D19-1454/",
+      "authors": [
+        "Maarten Sap",
+        "Hannah Rashkin",
+        "Derek Chen",
+        "Ronan Le Bras",
+        "Yejin Choi"
+      ],
+      "doi": "10.18653/v1/D19-1454",
+      "bibtex": "@inproceedings{sap-etal-2019-social,\n  title = {Social {IQ}a: Commonsense Reasoning about Social Interactions},\n  author = {Sap, Maarten and Rashkin, Hannah and Chen, Derek and Le Bras, Ronan and Choi, Yejin},\n  booktitle = {Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},\n  month = nov,\n  year = {2019},\n  address = {Hong Kong, China},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/D19-1454/},\n  doi = {10.18653/v1/D19-1454},\n  pages = {4463--4473}\n}"
     }
   },
   {
@@ -65759,6 +67214,107 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "tallyqa",
+    "slug": "tallyqa",
+    "name": "TallyQA: Answering Complex Counting Questions",
+    "description": "TallyQA is a large-scale visual question answering benchmark focused on object counting and spatial relational reasoning. Spanning 287,907 questions across 165,000 images sourced from MS-COCO and Visual Genome, it distinguishes between simple counting (direct detection) and complex counting requiring relationship and attribute understanding.",
+    "homepage_url": "https://github.com/manoja328/TallyQA_dataset",
+    "publisher": {
+      "name": "Rochester Institute of Technology",
+      "type": "academic",
+      "url": "https://www.rit.edu"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "visual-counting",
+      "relational-reasoning"
+    ],
+    "tags": [
+      "tallyqa",
+      "vqa",
+      "counting",
+      "relational-reasoning",
+      "rit",
+      "visual-genome"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Apache License 2.0 (Annotations & Code) / Diverse Flickr Terms (Images)",
+      "spdx_id": null,
+      "url": "https://github.com/manoja328/TallyQA_dataset/blob/master/LICENSE",
+      "commercial_use": "unknown",
+      "notes": "Dataset annotations and benchmark scripts are released under Apache License 2.0 in the official repository (manoja328/TallyQA_dataset). Underlying images originate from MS-COCO and Visual Genome under individual Flickr Creative Commons terms."
+    },
+    "source_references": [
+      {
+        "title": "TallyQA Official Project Repository",
+        "url": "https://github.com/manoja328/TallyQA_dataset",
+        "type": "repository",
+        "notes": "Official author repository with download links for train.json and test.json."
+      },
+      {
+        "title": "TallyQA: Answering Complex Counting Questions",
+        "url": "https://doi.org/10.1609/aaai.v33i01.33018076",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the AAAI Conference on Artificial Intelligence (AAAI 2019)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against AAAI 2019 publication (DOI: 10.1609/aaai.v33i01.33018076) and official GitHub repository. 287,907 counting questions across 165,000 images, including 19,000 complex human annotations."
+    },
+    "size": {
+      "amount": 45.0,
+      "unit": "MB",
+      "file_formats": [
+        "json"
+      ],
+      "status": "verified",
+      "notes": "JSON question and bounding-box reference files."
+    },
+    "sample_count": {
+      "total": 287907,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "unique_images",
+          "value": 165000,
+          "unit": "images"
+        },
+        {
+          "label": "complex_human_questions",
+          "value": 19000,
+          "unit": "questions"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2019-07-17"
+    },
+    "citation": {
+      "paper_title": "TallyQA: Answering Complex Counting Questions",
+      "paper_url": "https://doi.org/10.1609/aaai.v33i01.33018076",
+      "authors": [
+        "Manoj Acharya",
+        "Kushal Kafle",
+        "Christopher Kanan"
+      ],
+      "doi": "10.1609/aaai.v33i01.33018076",
+      "bibtex": "@inproceedings{acharya2019tallyqa,\n  title = {{TallyQA}: Answering Complex Counting Questions},\n  author = {Acharya, Manoj and Kafle, Kushal and Kanan, Christopher},\n  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume = {33},\n  number = {01},\n  pages = {8076--8084},\n  year = {2019},\n  doi = {10.1609/aaai.v33i01.33018076}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "tartanair",
     "slug": "tartanair",
     "name": "TartanAir: AirSim-Based Visual SLAM and Depth Estimation Dataset",
@@ -66317,6 +67873,103 @@
       ],
       "doi": "10.1007/978-3-319-99579-3_21",
       "bibtex": "@inproceedings{hernandez2018tedlium,\n  title = {TED-LIUM 3: Twice as Much Data and Corpus Repartition for Out-of-Domain ASR},\n  author = {Hernandez, Fran{\\c{c}}ois and Nguyen, Vincent and Ghannay, Sahar and Tomashenko, Natalia and Est{\\`e}ve, Yannick},\n  booktitle = {International Conference on Speech and Computer (SPECOM)},\n  pages = {198--208},\n  year = {2018}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "tess",
+    "slug": "tess",
+    "name": "TESS: Toronto Emotional Speech Set",
+    "description": "TESS (Toronto Emotional Speech Set) is a speech emotion recognition dataset comprising 2,800 audio recordings. Recorded by two female native English speakers (aged 26 and 64) at the University of Toronto, the dataset features 200 target carrier words spoken across seven emotion categories: anger, disgust, fear, happiness, pleasant surprise, sadness, and neutral.",
+    "homepage_url": "https://doi.org/10.5683/SP2/E8H2MF",
+    "publisher": {
+      "name": "University of Toronto",
+      "type": "academic",
+      "url": "https://www.utoronto.ca"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-emotion-recognition",
+      "audio-classification",
+      "acoustic-analysis"
+    ],
+    "tags": [
+      "tess",
+      "speech-emotion",
+      "emotion-recognition",
+      "audio",
+      "utoronto",
+      "borealis"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Dataset deposited in the Borealis Canadian Dataverse Repository under Creative Commons Attribution-NonCommercial 4.0 International (CC-BY-NC-4.0)."
+    },
+    "source_references": [
+      {
+        "title": "Toronto Emotional Speech Set on Borealis Dataverse",
+        "url": "https://doi.org/10.5683/SP2/E8H2MF",
+        "type": "archive",
+        "notes": "Official University of Toronto deposit on Borealis Dataverse."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against Borealis Dataverse repository deposit (DOI: 10.5683/SP2/E8H2MF). 2,800 WAV audio recordings produced by 2 speakers across 200 target words and 7 emotion classes."
+    },
+    "size": {
+      "amount": 450.0,
+      "unit": "MB",
+      "file_formats": [
+        "wav"
+      ],
+      "status": "verified",
+      "notes": "Uncompressed 16-bit WAV audio recordings sampled at 24.414 kHz."
+    },
+    "sample_count": {
+      "total": 2800,
+      "unit": "recordings",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "speakers",
+          "value": 2,
+          "unit": "speakers"
+        },
+        {
+          "label": "target_words",
+          "value": 200,
+          "unit": "words"
+        },
+        {
+          "label": "emotion_categories",
+          "value": 7,
+          "unit": "classes"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2020-03-24"
+    },
+    "citation": {
+      "paper_title": "Toronto Emotional Speech Set (TESS)",
+      "paper_url": "https://doi.org/10.5683/SP2/E8H2MF",
+      "authors": [
+        "Kate Dupuis",
+        "M. Kathleen Pichora-Fuller"
+      ],
+      "doi": "10.5683/SP2/E8H2MF",
+      "bibtex": "@data{dupuis2020tess,\n  author = {Dupuis, Kate and Pichora-Fuller, M. Kathleen},\n  publisher = {Borealis},\n  title = {{Toronto emotional speech set (TESS)}},\n  year = {2020},\n  version = {V1},\n  doi = {10.5683/SP2/E8H2MF}\n}"
     }
   },
   {
@@ -67463,6 +69116,111 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "tusimple",
+    "slug": "tusimple",
+    "name": "TuSimple Lane Detection Benchmark",
+    "description": "TuSimple Lane Detection is a benchmark for highway lane detection in autonomous driving perception. It consists of 6,408 one-second video clips (1280x720 resolution, 20 consecutive frames per clip) recorded under diverse weather, illumination, and traffic conditions on US highways, with polyline ground truth annotated on the final frame of each sequence.",
+    "homepage_url": "https://github.com/TuSimple/tusimple-benchmark",
+    "publisher": {
+      "name": "TuSimple",
+      "type": "industry",
+      "url": "https://www.tusimple.com"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "lane-detection",
+      "autonomous-driving",
+      "semantic-segmentation"
+    ],
+    "tags": [
+      "tusimple",
+      "lane-detection",
+      "autonomous-driving",
+      "highway-perception",
+      "benchmark"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Apache 2.0 (Evaluation Code) / TuSimple Challenge Research Terms (Dataset)",
+      "spdx_id": null,
+      "url": "https://github.com/TuSimple/tusimple-benchmark/blob/master/LICENSE",
+      "commercial_use": "forbidden",
+      "notes": "The evaluation software and benchmark scripts are licensed under Apache License 2.0. However, the driving video clips and lane annotations were provided for the CVPR 2017 Autonomous Driving Challenge under academic research evaluation terms without granted commercial rights. Commercial deployment or training requires explicit agreement from TuSimple."
+    },
+    "source_references": [
+      {
+        "title": "TuSimple Benchmark Official GitHub Repository",
+        "url": "https://github.com/TuSimple/tusimple-benchmark",
+        "type": "repository",
+        "notes": "Official challenge repository with data specifications and evaluation code."
+      },
+      {
+        "title": "TuSimple Lane Detection Challenge Documentation",
+        "url": "https://github.com/TuSimple/tusimple-benchmark/tree/master/doc/lane_detection",
+        "type": "documentation",
+        "notes": "Official lane detection annotation format and ground truth schema."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against TuSimple Lane Detection Challenge repository documentation and data manifests. 6,408 one-second driving clips (20 fps, 1280x720, total 128,160 video frames) partitioned into 3,626 training clips and 2,782 testing clips, with ground-truth polylines annotated on the final frame of each clip (6,408 annotated frames). No official standalone validation split was provided in the challenge."
+    },
+    "size": {
+      "amount": 8.5,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "json"
+      ],
+      "status": "verified",
+      "notes": "JPEG image sequences (20 frames per clip) and JSON polyline lane annotations."
+    },
+    "sample_count": {
+      "total": 6408,
+      "unit": "video clips",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 3626,
+        "test": 2782
+      },
+      "breakdown": [
+        {
+          "label": "frames_per_clip",
+          "value": 20,
+          "unit": "frames"
+        },
+        {
+          "label": "total_video_frames",
+          "value": 128160,
+          "unit": "frames"
+        },
+        {
+          "label": "annotated_frames",
+          "value": 6408,
+          "unit": "frames"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2017"
+    },
+    "citation": {
+      "paper_title": "TuSimple Benchmark for Autonomous Driving",
+      "paper_url": "https://github.com/TuSimple/tusimple-benchmark",
+      "authors": [
+        "TuSimple Benchmark Team"
+      ],
+      "bibtex": "@misc{tusimple2017benchmark,\n  author = {{TuSimple Benchmark Team}},\n  title = {{TuSimple} Lane Detection Benchmark},\n  year = {2017},\n  publisher = {GitHub},\n  howpublished = {\\url{https://github.com/TuSimple/tusimple-benchmark}}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "tweeteval",
     "slug": "tweeteval",
     "name": "TweetEval: Multi-Task Tweet Classification Benchmark",
@@ -68359,6 +70117,104 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "uci-energy-efficiency",
+    "slug": "uci-energy-efficiency",
+    "name": "UCI Energy Efficiency Dataset",
+    "description": "The UCI Energy Efficiency dataset is a tabular regression benchmark for predicting building energy performance. Created by Athanasios Tsanas and Angeliki Xifara via thermal simulations of 768 residential building shapes in Ecotect, it models heating load and cooling load requirements as functions of eight geometric and physical building parameters.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/242/energy+efficiency",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-regression",
+      "multi-output-regression",
+      "energy-prediction"
+    ],
+    "tags": [
+      "uci",
+      "energy-efficiency",
+      "building-energy",
+      "regression",
+      "tabular"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset distributed by the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International (CC-BY-4.0)."
+    },
+    "source_references": [
+      {
+        "title": "UCI Machine Learning Repository: Energy Efficiency Dataset",
+        "url": "https://archive.ics.uci.edu/dataset/242/energy+efficiency",
+        "type": "official_website",
+        "notes": "Official UCI dataset portal (DOI: 10.24432/C51307)."
+      },
+      {
+        "title": "Accurate Quantitative Estimation of Energy Performance of Residential Buildings Using Statistical Machine Learning Tools",
+        "url": "https://doi.org/10.1016/j.enbuild.2012.03.003",
+        "type": "original_paper",
+        "notes": "Published in Energy and Buildings (2012)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against UCI Machine Learning Repository (DOI: 10.24432/C51307) and Energy and Buildings 2012 publication. 768 building configuration instances with 8 input attributes and 2 continuous regression targets (heating load and cooling load)."
+    },
+    "size": {
+      "amount": 32.0,
+      "unit": "KB",
+      "file_formats": [
+        "csv",
+        "xlsx"
+      ],
+      "status": "verified",
+      "notes": "ENB2012_data CSV and XLSX spreadsheet formats."
+    },
+    "sample_count": {
+      "total": 768,
+      "unit": "building configurations",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "input_features",
+          "value": 8,
+          "unit": "features"
+        },
+        {
+          "label": "regression_targets",
+          "value": 2,
+          "unit": "targets"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2012-11"
+    },
+    "citation": {
+      "paper_title": "Energy Efficiency",
+      "paper_url": "https://doi.org/10.24432/C51307",
+      "authors": [
+        "Athanasios Tsanas",
+        "Angeliki Xifara"
+      ],
+      "doi": "10.24432/C51307",
+      "bibtex": "@misc{tsanas2012energy,\n  author = {Tsanas, Athanasios and Xifara, Angeliki},\n  title = {{Energy Efficiency}},\n  year = {2012},\n  publisher = {UCI Machine Learning Repository},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C51307}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "uci-gas-sensor-array-drift",
     "slug": "uci-gas-sensor-array-drift",
     "name": "Gas Sensor Array Drift Dataset",
@@ -68985,6 +70841,207 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "uci-mushroom",
+    "slug": "uci-mushroom",
+    "name": "UCI Mushroom Database",
+    "description": "The UCI Mushroom dataset is a classic machine learning benchmark for rule induction and binary categorical classification. Donated by Jeff Schlimmer in 1987 from the Audubon Society Field Guide to North American Mushrooms, it comprises 8,124 hypothetical mushroom samples described by 22 nominal physical attributes and classified as definitely edible or poisonous.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/73/mushroom",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "binary-classification",
+      "rule-induction"
+    ],
+    "tags": [
+      "uci",
+      "mushroom",
+      "categorical",
+      "classification",
+      "tabular"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset distributed by the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International (CC-BY-4.0)."
+    },
+    "source_references": [
+      {
+        "title": "UCI Machine Learning Repository: Mushroom Dataset",
+        "url": "https://archive.ics.uci.edu/dataset/73/mushroom",
+        "type": "official_website",
+        "notes": "Official UCI dataset landing page (DOI: 10.24432/C5959T)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against UCI Machine Learning Repository (DOI: 10.24432/C5959T). 8,124 mushroom instances described by 22 categorical attributes and binary edibility labels."
+    },
+    "size": {
+      "amount": 374.0,
+      "unit": "KB",
+      "file_formats": [
+        "data",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "Agaricus-lepiota.data CSV tabular file."
+    },
+    "sample_count": {
+      "total": 8124,
+      "unit": "instances",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "breakdown": [
+        {
+          "label": "categorical_attributes",
+          "value": 22,
+          "unit": "attributes"
+        },
+        {
+          "label": "edible_instances",
+          "value": 4208,
+          "unit": "instances"
+        },
+        {
+          "label": "poisonous_instances",
+          "value": 3916,
+          "unit": "instances"
+        }
+      ]
+    },
+    "dates": {
+      "published": "1987"
+    },
+    "citation": {
+      "paper_title": "Mushroom",
+      "paper_url": "https://doi.org/10.24432/C5959T",
+      "authors": [
+        "Jeff Schlimmer"
+      ],
+      "doi": "10.24432/C5959T",
+      "bibtex": "@misc{schlimmer1987mushroom,\n  author = {Schlimmer, Jeff},\n  title = {{Mushroom}},\n  year = {1987},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5959T}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "uci-occupancy-detection",
+    "slug": "uci-occupancy-detection",
+    "name": "UCI Occupancy Detection Dataset",
+    "description": "The UCI Occupancy Detection dataset is an experimental environmental sensing benchmark for room occupancy classification. Collected by Luis Candanedo and Vincent Feldheim at the University of Mons, it contains 20,560 one-minute sensor readings spanning temperature, humidity, light, carbon dioxide, and humidity ratio across three chronological experimental partitions.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/357/occupancy+detection",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular",
+      "sensor",
+      "time-series"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "binary-classification",
+      "occupancy-detection"
+    ],
+    "tags": [
+      "uci",
+      "occupancy-detection",
+      "environmental-sensor",
+      "time-series",
+      "smart-buildings"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset distributed by the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International (CC-BY-4.0)."
+    },
+    "source_references": [
+      {
+        "title": "UCI Machine Learning Repository: Occupancy Detection Dataset",
+        "url": "https://archive.ics.uci.edu/dataset/357/occupancy+detection",
+        "type": "official_website",
+        "notes": "Official UCI dataset portal (DOI: 10.24432/C5X01N)."
+      },
+      {
+        "title": "Accurate Occupancy Detection of an Office Room from Light, Temperature, Humidity and CO2 Measurements Using Statistical Learning Models",
+        "url": "https://doi.org/10.1016/j.enbuild.2015.11.071",
+        "type": "original_paper",
+        "notes": "Published in Energy and Buildings (2016)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against UCI Machine Learning Repository (DOI: 10.24432/C5X01N) and Energy and Buildings 2016 publication. 20,560 one-minute sensor records partitioned across datatraining.txt (8,143), datatest.txt (2,665), and datatest2.txt (9,752)."
+    },
+    "size": {
+      "amount": 1.2,
+      "unit": "MB",
+      "file_formats": [
+        "txt",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "Text tabular files containing timestamped environmental measurements and ground truth binary camera-verified occupancy."
+    },
+    "sample_count": {
+      "total": 20560,
+      "unit": "sensor measurements",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 8143,
+        "test_1": 2665,
+        "test_2": 9752
+      },
+      "breakdown": [
+        {
+          "label": "predictive_features",
+          "value": 5,
+          "unit": "features"
+        },
+        {
+          "label": "measurement_interval_minutes",
+          "value": 1,
+          "unit": "minutes"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2016-03"
+    },
+    "citation": {
+      "paper_title": "Accurate occupancy detection of an office room from light, temperature, humidity and CO2 measurements using statistical learning models",
+      "paper_url": "https://doi.org/10.1016/j.enbuild.2015.11.071",
+      "authors": [
+        "Luis M. Candanedo",
+        "Véronique Feldheim"
+      ],
+      "doi": "10.1016/j.enbuild.2015.11.071",
+      "bibtex": "@article{candanedo2016accurate,\n  title = {Accurate occupancy detection of an office room from light, temperature, humidity and {CO2} measurements using statistical learning models},\n  author = {Candanedo, Luis M. and Feldheim, V\\'eronique},\n  journal = {Energy and Buildings},\n  volume = {112},\n  pages = {28--39},\n  year = {2016},\n  doi = {10.1016/j.enbuild.2015.11.071}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "uci-raisin-classification",
     "slug": "uci-raisin-classification",
     "name": "Raisin: Agricultural Product Morphology Classification",
@@ -69566,6 +71623,196 @@
       ],
       "doi": "10.24432/C5WS31",
       "bibtex": "@book{michie1994statlog,\n  title = {Machine Learning, Neural and Statistical Classification},\n  author = {Michie, D. and Spiegelhalter, D. J. and Taylor, C. C.},\n  year = {1994},\n  publisher = {Ellis Horwood},\n  address = {Upper Saddle River, NJ, USA}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "uci-waveform",
+    "slug": "uci-waveform",
+    "name": "UCI Waveform Database Generator (Version 1)",
+    "description": "The UCI Waveform Database Generator (Version 1) is a synthetic tabular benchmark for multiclass pattern recognition. Based on the classification model introduced by Breiman et al. in CART (1984), it consists of 5,000 generated signal instances defined across 21 continuous attributes with additive standard normal noise, partitioned among three distinct triangular wave combinations.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/107/waveform+database+generator+version+1",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "multiclass-classification",
+      "pattern-recognition"
+    ],
+    "tags": [
+      "uci",
+      "waveform",
+      "synthetic",
+      "cart",
+      "classification",
+      "tabular"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset distributed by the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International (CC-BY-4.0)."
+    },
+    "source_references": [
+      {
+        "title": "UCI Machine Learning Repository: Waveform Database Generator (Version 1)",
+        "url": "https://archive.ics.uci.edu/dataset/107/waveform+database+generator+version+1",
+        "type": "official_website",
+        "notes": "Official UCI dataset repository entry (DOI: 10.24432/C5CS3C)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against UCI Machine Learning Repository (DOI: 10.24432/C5CS3C). 5,000 synthetic signal instances defined across 21 continuous attributes with 3 target classes."
+    },
+    "size": {
+      "amount": 530.0,
+      "unit": "KB",
+      "file_formats": [
+        "data",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "waveform.data CSV tabular format."
+    },
+    "sample_count": {
+      "total": 5000,
+      "unit": "instances",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "continuous_features",
+          "value": 21,
+          "unit": "features"
+        },
+        {
+          "label": "wave_classes",
+          "value": 3,
+          "unit": "classes"
+        }
+      ]
+    },
+    "dates": {
+      "published": "1988"
+    },
+    "citation": {
+      "paper_title": "Waveform Database Generator (Version 1)",
+      "paper_url": "https://doi.org/10.24432/C5CS3C",
+      "authors": [
+        "David Aha"
+      ],
+      "doi": "10.24432/C5CS3C",
+      "bibtex": "@misc{aha1988waveform,\n  author = {Aha, David},\n  title = {{Waveform Database Generator (Version 1)}},\n  year = {1988},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5CS3C}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "uci-yeast",
+    "slug": "uci-yeast",
+    "name": "UCI Yeast Database",
+    "description": "The UCI Yeast dataset is a bioinformatics benchmark for multiclass cellular localization site prediction of yeast proteins. Derived from SWISS-PROT sequences by Kenta Nakai and Minoru Kanehisa, it contains 1,484 protein instances described by eight continuous predictive features derived from sequence analysis and classified into 10 subcellular localization sites.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/110/yeast",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "tabular-classification",
+      "multiclass-classification",
+      "bioinformatics"
+    ],
+    "tags": [
+      "uci",
+      "yeast",
+      "bioinformatics",
+      "protein-localization",
+      "tabular"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset distributed by the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International (CC-BY-4.0)."
+    },
+    "source_references": [
+      {
+        "title": "UCI Machine Learning Repository: Yeast Dataset",
+        "url": "https://archive.ics.uci.edu/dataset/110/yeast",
+        "type": "official_website",
+        "notes": "Official UCI dataset portal (DOI: 10.24432/C5KG68)."
+      },
+      {
+        "title": "A Probabilistic Classification System for Predicting the Cellular Localization Sites of Proteins",
+        "url": "https://www.aaai.org/Papers/ISMB/1996/ISMB96-012.pdf",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the Fourth International Conference on Intelligent Systems for Molecular Biology (ISMB 1996)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against UCI Machine Learning Repository (DOI: 10.24432/C5KG68) and ISMB 1996 publication. 1,484 protein instances with 8 predictive numerical attributes and 10 subcellular localization target classes."
+    },
+    "size": {
+      "amount": 115.0,
+      "unit": "KB",
+      "file_formats": [
+        "data",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "Tabular text data file yeast.data."
+    },
+    "sample_count": {
+      "total": 1484,
+      "unit": "instances",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "predictive_features",
+          "value": 8,
+          "unit": "features"
+        },
+        {
+          "label": "localization_classes",
+          "value": 10,
+          "unit": "classes"
+        }
+      ]
+    },
+    "dates": {
+      "published": "1991"
+    },
+    "citation": {
+      "paper_title": "Yeast",
+      "paper_url": "https://doi.org/10.24432/C5KG68",
+      "authors": [
+        "Kenta Nakai",
+        "Paul Horton"
+      ],
+      "doi": "10.24432/C5KG68",
+      "bibtex": "@misc{nakai1996yeast,\n  author = {Nakai, Kenta and Horton, Paul},\n  title = {{Yeast}},\n  year = {1996},\n  publisher = {UCI Machine Learning Repository},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5KG68}\n}"
     }
   },
   {
@@ -71217,6 +73464,112 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "viquae",
+    "slug": "viquae",
+    "name": "ViQuAE: Knowledge-Based Visual Question Answering",
+    "description": "ViQuAE is a visual question answering benchmark focused on named entity reasoning grounded in information retrieval. Consisting of 3,697 questions grounded in Wikimedia images and textual knowledge from Wikipedia, it requires models to retrieve external documents to recognize entities, understand multimodal contexts, and answer entity-centric queries.",
+    "homepage_url": "https://github.com/PaulLerner/ViQuAE",
+    "publisher": {
+      "name": "CEA LIST / IRIT",
+      "type": "academic",
+      "url": "https://www.irit.fr"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "information-retrieval",
+      "entity-linking"
+    ],
+    "tags": [
+      "viquae",
+      "vqa",
+      "knowledge-vqa",
+      "information-retrieval",
+      "named-entities",
+      "wikipedia"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Dataset annotations released under Creative Commons Attribution 4.0 International (CC-BY-4.0). Underlying imagery is retrieved from Wikimedia Commons under various individual Creative Commons licenses; commercial use and redistribution of underlying images must honor individual creator attributions and terms."
+    },
+    "source_references": [
+      {
+        "title": "ViQuAE Official GitHub Repository",
+        "url": "https://github.com/PaulLerner/ViQuAE",
+        "type": "repository",
+        "notes": "Official repository with dataset annotations, image downloads, and retrieval baselines."
+      },
+      {
+        "title": "ViQuAE, a Dataset for Knowledge-based Visual Question Answering about Named Entities",
+        "url": "https://doi.org/10.1145/3477495.3531753",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '22)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against SIGIR 2022 publication (DOI: 10.1145/3477495.3531753) and official GitHub repository (PaulLerner/ViQuAE). 3,697 questions partitioned into 1,190 train, 1,250 validation, and 1,257 test questions."
+    },
+    "size": {
+      "amount": 1.8,
+      "unit": "GB",
+      "file_formats": [
+        "json",
+        "jpg"
+      ],
+      "status": "verified",
+      "notes": "JSON question and entity metadata files accompanied by JPEG Wikimedia images."
+    },
+    "sample_count": {
+      "total": 3697,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 1190,
+        "val": 1250,
+        "test": 1257
+      },
+      "breakdown": [
+        {
+          "label": "named_entity_answers",
+          "value": 3697,
+          "unit": "entities"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2022-07-11"
+    },
+    "citation": {
+      "paper_title": "ViQuAE, a Dataset for Knowledge-based Visual Question Answering about Named Entities",
+      "paper_url": "https://doi.org/10.1145/3477495.3531753",
+      "authors": [
+        "Paul Lerner",
+        "Olivier Ferret",
+        "Camille Guinaudeau",
+        "Hervé Le Borgne",
+        "Romaric Besançon",
+        "José G. Moreno",
+        "Jesús Lovón-Melgarejo"
+      ],
+      "doi": "10.1145/3477495.3531753",
+      "bibtex": "@inproceedings{lerner2022viquae,\n  title = {{ViQuAE}, a Dataset for Knowledge-based Visual Question Answering about Named Entities},\n  author = {Lerner, Paul and Ferret, Olivier and Guinaudeau, Camille and Le Borgne, Herv\\'e and Besan\\c{c}on, Romaric and Moreno, Jos\\'e G. and Lov\\'on-Melgarejo, Jes\\'us},\n  booktitle = {Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},\n  pages = {3108--3120},\n  year = {2022},\n  publisher = {Association for Computing Machinery},\n  doi = {10.1145/3477495.3531753}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "visa-visual-anomaly",
     "slug": "visa-visual-anomaly",
     "name": "VisA: Visual Anomaly Dataset",
@@ -71640,6 +73993,106 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "visual-spatial-reasoning",
+    "slug": "visual-spatial-reasoning",
+    "name": "Visual Spatial Reasoning (VSR)",
+    "description": "Visual Spatial Reasoning (VSR) is a vision-and-language benchmark designed to evaluate spatial relationship understanding in multimodal models. It consists of 10,972 natural image-caption pairs covering 65 spatial relations across diverse categories (topological, directional, proximity, and projective), grounded in MS-COCO images with human verification.",
+    "homepage_url": "https://github.com/cambridgeltl/visual-spatial-reasoning",
+    "publisher": {
+      "name": "University of Cambridge",
+      "type": "academic",
+      "url": "https://www.cam.ac.uk"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-spatial-reasoning",
+      "image-text-matching",
+      "multimodal-classification"
+    ],
+    "tags": [
+      "vsr",
+      "spatial-reasoning",
+      "vision-language",
+      "cambridge",
+      "coco"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Apache License 2.0 (Annotations) / Diverse Flickr Terms (Images)",
+      "spdx_id": null,
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_use": "unknown",
+      "notes": "Dataset annotations and benchmark code released by Cambridge LTL under Apache License 2.0. Underlying imagery is sourced from MS-COCO under individual Flickr Creative Commons terms."
+    },
+    "source_references": [
+      {
+        "title": "Visual Spatial Reasoning Official GitHub Repository",
+        "url": "https://github.com/cambridgeltl/visual-spatial-reasoning",
+        "type": "repository",
+        "notes": "Official Cambridge LTL code, annotations, and split files."
+      },
+      {
+        "title": "Visual Spatial Reasoning",
+        "url": "https://doi.org/10.1162/tacl_a_00566",
+        "type": "original_paper",
+        "notes": "Published in Transactions of the Association for Computational Linguistics (TACL 2023)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against TACL 2023 publication (DOI: 10.1162/tacl_a_00566) and official GitHub repository (cambridgeltl/visual-spatial-reasoning). 10,972 total image-text pairs covering 65 spatial relations. Evaluated via two official protocols: random split (7,680 train, 1,097 dev, 2,195 test) and zero-shot split (evaluating generalization on unseen relations/objects)."
+    },
+    "size": {
+      "amount": 1.6,
+      "unit": "MB",
+      "file_formats": [
+        "jsonl"
+      ],
+      "status": "verified",
+      "notes": "JSONL files containing image paths, captions, relation types, and binary correctness labels."
+    },
+    "sample_count": {
+      "total": 10972,
+      "unit": "image-text pairs",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 7680,
+        "dev": 1097,
+        "test": 2195
+      },
+      "breakdown": [
+        {
+          "label": "spatial_relation_types",
+          "value": 65,
+          "unit": "relation types"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2023-05"
+    },
+    "citation": {
+      "paper_title": "Visual Spatial Reasoning",
+      "paper_url": "https://doi.org/10.1162/tacl_a_00566",
+      "authors": [
+        "Fangyu Liu",
+        "Guy Emerson",
+        "Nigel Collier"
+      ],
+      "doi": "10.1162/tacl_a_00566",
+      "bibtex": "@article{liu-etal-2023-visual,\n  title = {Visual Spatial Reasoning},\n  author = {Liu, Fangyu and Emerson, Guy and Collier, Nigel},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {11},\n  pages = {635--651},\n  year = {2023},\n  doi = {10.1162/tacl_a_00566}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "visual-thermal-imaging-lemon-fruits-following",
     "slug": "visual-thermal-imaging-lemon-fruits-following",
     "name": "A Visual and Thermal Imaging Dataset of Lemon Fruits Following Controlled Hot-Water Treatment",
@@ -71815,6 +74268,129 @@
       ],
       "doi": "10.1109/CVPR.2016.539",
       "bibtex": "@inproceedings{zhu2016visual7w,\n  title = {{Visual7W}: Grounded Question Answering in Images},\n  author = {Zhu, Yuke and Groth, Oliver and Bernstein, Michael and Fei-Fei, Li},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages = {4995--5004},\n  year = {2016},\n  doi = {10.1109/CVPR.2016.539}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "visualcomet",
+    "slug": "visualcomet",
+    "name": "VisualCOMET: Visual Commonsense Graphs",
+    "description": "VisualCOMET is a visual commonsense reasoning benchmark providing structured inferences about the dynamic temporal and social context of static scenes. Comprising 1,465,704 textual commonsense inferences across 59,356 complex images from movie frames, it models what happened before the picture, what characters intend at present, and what is likely to occur next.",
+    "homepage_url": "https://visualcomet.xyz",
+    "publisher": {
+      "name": "Allen Institute for AI",
+      "type": "academic",
+      "url": "https://allenai.org"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-commonsense-reasoning",
+      "event-inference",
+      "intent-prediction"
+    ],
+    "tags": [
+      "visualcomet",
+      "commonsense",
+      "temporal-reasoning",
+      "intent-prediction",
+      "vcr",
+      "allenai"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "AI2 VisualCOMET Research License / VCR Non-Commercial Movie Terms",
+      "spdx_id": null,
+      "url": "https://visualcomet.xyz",
+      "commercial_use": "forbidden",
+      "notes": "Commonsense graph annotations and model weights released by the Allen Institute for AI for non-commercial research use. Underlying movie frames are inherited from the Visual Commonsense Reasoning (VCR) dataset, originating from commercial films owned by copyright holders; strictly restricted to academic non-commercial research."
+    },
+    "source_references": [
+      {
+        "title": "VisualCOMET Official Project Page",
+        "url": "https://visualcomet.xyz",
+        "type": "official_website",
+        "notes": "Official AllenAI and University of Washington project website and leaderboard."
+      },
+      {
+        "title": "VisualCOMET: Reasoning About the Dynamic Context of a Still Image",
+        "url": "https://doi.org/10.1007/978-3-030-58558-7_30",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the European Conference on Computer Vision (ECCV 2020)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against ECCV 2020 publication (DOI: 10.1007/978-3-030-58558-7_30) and official project repository. 1,465,704 total inferences across 59,356 images and 139,377 distinct events (Visual Commonsense Graphs), partitioned into 1,174,063 train, 146,332 validation, and 145,309 test inferences."
+    },
+    "size": {
+      "amount": 250.0,
+      "unit": "MB",
+      "file_formats": [
+        "json"
+      ],
+      "status": "verified",
+      "notes": "Compressed JSON annotation files containing person-grounded commonsense inferences across temporal contexts."
+    },
+    "sample_count": {
+      "total": 1465704,
+      "unit": "inferences",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 1174063,
+        "val": 146332,
+        "test": 145309
+      },
+      "breakdown": [
+        {
+          "label": "unique_images",
+          "value": 59356,
+          "unit": "images"
+        },
+        {
+          "label": "events_at_present",
+          "value": 139377,
+          "unit": "events"
+        },
+        {
+          "label": "inferences_before",
+          "value": 584211,
+          "unit": "inferences"
+        },
+        {
+          "label": "intents_at_present",
+          "value": 295080,
+          "unit": "intents"
+        },
+        {
+          "label": "inferences_after",
+          "value": 586418,
+          "unit": "inferences"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2020-08"
+    },
+    "citation": {
+      "paper_title": "VisualCOMET: Reasoning About the Dynamic Context of a Still Image",
+      "paper_url": "https://doi.org/10.1007/978-3-030-58558-7_30",
+      "authors": [
+        "Jae Sung Park",
+        "Chandra Bhagavatula",
+        "Roozbeh Mottaghi",
+        "Ali Farhadi",
+        "Yejin Choi"
+      ],
+      "doi": "10.1007/978-3-030-58558-7_30",
+      "bibtex": "@inproceedings{park2020visualcomet,\n  title = {{VisualCOMET}: Reasoning About the Dynamic Context of a Still Image},\n  author = {Park, Jae Sung and Bhagavatula, Chandra and Mottaghi, Roozbeh and Farhadi, Ali and Choi, Yejin},\n  booktitle = {Computer Vision -- ECCV 2020},\n  pages = {508--524},\n  year = {2020},\n  publisher = {Springer, Cham},\n  doi = {10.1007/978-3-030-58558-7_30}\n}"
     }
   },
   {

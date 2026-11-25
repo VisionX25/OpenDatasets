@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tusimple",
+  "slug": "tusimple",
+  "name": "TuSimple Lane Detection Benchmark",
+  "description": "TuSimple Lane Detection is a benchmark for highway lane detection in autonomous driving perception. It consists of 6,408 one-second video clips (1280x720 resolution, 20 consecutive frames per clip) recorded under diverse weather, illumination, and traffic conditions on US highways, with polyline ground truth annotated on the final frame of each sequence.",
+  "homepage_url": "https://github.com/TuSimple/tusimple-benchmark",
+  "publisher": {
+    "name": "TuSimple",
+    "type": "industry",
+    "url": "https://www.tusimple.com"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "lane-detection",
+    "autonomous-driving",
+    "semantic-segmentation"
+  ],
+  "tags": [
+    "tusimple",
+    "lane-detection",
+    "autonomous-driving",
+    "highway-perception",
+    "benchmark"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Apache 2.0 (Evaluation Code) / TuSimple Challenge Research Terms (Dataset)",
+    "spdx_id": null,
+    "url": "https://github.com/TuSimple/tusimple-benchmark/blob/master/LICENSE",
+    "commercial_use": "forbidden",
+    "notes": "The evaluation software and benchmark scripts are licensed under Apache License 2.0. However, the driving video clips and lane annotations were provided for the CVPR 2017 Autonomous Driving Challenge under academic research evaluation terms without granted commercial rights. Commercial deployment or training requires explicit agreement from TuSimple."
+  },
+  "source_references": [
+    {
+      "title": "TuSimple Benchmark Official GitHub Repository",
+      "url": "https://github.com/TuSimple/tusimple-benchmark",
+      "type": "repository",
+      "notes": "Official challenge repository with data specifications and evaluation code."
+    },
+    {
+      "title": "TuSimple Lane Detection Challenge Documentation",
+      "url": "https://github.com/TuSimple/tusimple-benchmark/tree/master/doc/lane_detection",
+      "type": "documentation",
+      "notes": "Official lane detection annotation format and ground truth schema."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against TuSimple Lane Detection Challenge repository documentation and data manifests. 6,408 one-second driving clips (20 fps, 1280x720, total 128,160 video frames) partitioned into 3,626 training clips and 2,782 testing clips, with ground-truth polylines annotated on the final frame of each clip (6,408 annotated frames). No official standalone validation split was provided in the challenge."
+  },
+  "size": {
+    "amount": 8.5,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "JPEG image sequences (20 frames per clip) and JSON polyline lane annotations."
+  },
+  "sample_count": {
+    "total": 6408,
+    "unit": "video clips",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 3626,
+      "test": 2782
+    },
+    "breakdown": [
+      {
+        "label": "frames_per_clip",
+        "value": 20,
+        "unit": "frames"
+      },
+      {
+        "label": "total_video_frames",
+        "value": 128160,
+        "unit": "frames"
+      },
+      {
+        "label": "annotated_frames",
+        "value": 6408,
+        "unit": "frames"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2017"
+  },
+  "citation": {
+    "paper_title": "TuSimple Benchmark for Autonomous Driving",
+    "paper_url": "https://github.com/TuSimple/tusimple-benchmark",
+    "authors": [
+      "TuSimple Benchmark Team"
+    ],
+    "bibtex": "@misc{tusimple2017benchmark,\n  author = {{TuSimple Benchmark Team}},\n  title = {{TuSimple} Lane Detection Benchmark},\n  year = {2017},\n  publisher = {GitHub},\n  howpublished = {\\url{https://github.com/TuSimple/tusimple-benchmark}}\n}"
+  }
+}

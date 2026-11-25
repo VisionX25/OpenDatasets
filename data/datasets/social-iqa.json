@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "social-iqa",
+  "slug": "social-iqa",
+  "name": "Social IQa: Commonsense Reasoning about Social Interactions",
+  "description": "Social IQa is a large-scale question answering benchmark for assessing social commonsense intelligence in neural language models. It contains 37,588 multiple-choice questions focusing on emotional states, intentions, social motivations, and likely subsequent actions across diverse interpersonal scenarios.",
+  "homepage_url": "https://allenai.org/data/socialiqa",
+  "publisher": {
+    "name": "Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "commonsense-reasoning",
+    "multiple-choice"
+  ],
+  "tags": [
+    "social-iqa",
+    "commonsense-reasoning",
+    "social-intelligence",
+    "question-answering",
+    "allenai"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Dataset released by the Allen Institute for AI under the Apache License 2.0."
+  },
+  "source_references": [
+    {
+      "title": "Social IQa Official Project Page",
+      "url": "https://allenai.org/data/socialiqa",
+      "type": "official_website",
+      "notes": "Official AllenAI project homepage and data downloads."
+    },
+    {
+      "title": "Social IQa: Commonsense Reasoning about Social Interactions",
+      "url": "https://aclanthology.org/D19-1454/",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of EMNLP-IJCNLP 2019."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against EMNLP 2019 publication (DOI: 10.18653/v1/D19-1454) and official AllenAI repository. 37,588 multiple-choice questions partitioned into 33,410 train, 1,954 validation, and 2,224 test questions."
+  },
+  "size": {
+    "amount": 6.2,
+    "unit": "MB",
+    "file_formats": [
+      "jsonl"
+    ],
+    "status": "verified",
+    "notes": "JSONL files containing question contexts, candidate answers, and ground truth labels."
+  },
+  "sample_count": {
+    "total": 37588,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 33410,
+      "dev": 1954,
+      "test": 2224
+    },
+    "breakdown": [
+      {
+        "label": "answer_choices_per_question",
+        "value": 3,
+        "unit": "choices"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2019-11"
+  },
+  "citation": {
+    "paper_title": "Social IQa: Commonsense Reasoning about Social Interactions",
+    "paper_url": "https://aclanthology.org/D19-1454/",
+    "authors": [
+      "Maarten Sap",
+      "Hannah Rashkin",
+      "Derek Chen",
+      "Ronan Le Bras",
+      "Yejin Choi"
+    ],
+    "doi": "10.18653/v1/D19-1454",
+    "bibtex": "@inproceedings{sap-etal-2019-social,\n  title = {Social {IQ}a: Commonsense Reasoning about Social Interactions},\n  author = {Sap, Maarten and Rashkin, Hannah and Chen, Derek and Le Bras, Ronan and Choi, Yejin},\n  booktitle = {Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},\n  month = nov,\n  year = {2019},\n  address = {Hong Kong, China},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/D19-1454/},\n  doi = {10.18653/v1/D19-1454},\n  pages = {4463--4473}\n}"
+  }
+}

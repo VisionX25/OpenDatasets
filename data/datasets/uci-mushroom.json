@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-mushroom",
+  "slug": "uci-mushroom",
+  "name": "UCI Mushroom Database",
+  "description": "The UCI Mushroom dataset is a classic machine learning benchmark for rule induction and binary categorical classification. Donated by Jeff Schlimmer in 1987 from the Audubon Society Field Guide to North American Mushrooms, it comprises 8,124 hypothetical mushroom samples described by 22 nominal physical attributes and classified as definitely edible or poisonous.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/73/mushroom",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "binary-classification",
+    "rule-induction"
+  ],
+  "tags": [
+    "uci",
+    "mushroom",
+    "categorical",
+    "classification",
+    "tabular"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset distributed by the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International (CC-BY-4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UCI Machine Learning Repository: Mushroom Dataset",
+      "url": "https://archive.ics.uci.edu/dataset/73/mushroom",
+      "type": "official_website",
+      "notes": "Official UCI dataset landing page (DOI: 10.24432/C5959T)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository (DOI: 10.24432/C5959T). 8,124 mushroom instances described by 22 categorical attributes and binary edibility labels."
+  },
+  "size": {
+    "amount": 374.0,
+    "unit": "KB",
+    "file_formats": [
+      "data",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "Agaricus-lepiota.data CSV tabular file."
+  },
+  "sample_count": {
+    "total": 8124,
+    "unit": "instances",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "breakdown": [
+      {
+        "label": "categorical_attributes",
+        "value": 22,
+        "unit": "attributes"
+      },
+      {
+        "label": "edible_instances",
+        "value": 4208,
+        "unit": "instances"
+      },
+      {
+        "label": "poisonous_instances",
+        "value": 3916,
+        "unit": "instances"
+      }
+    ]
+  },
+  "dates": {
+    "published": "1987"
+  },
+  "citation": {
+    "paper_title": "Mushroom",
+    "paper_url": "https://doi.org/10.24432/C5959T",
+    "authors": [
+      "Jeff Schlimmer"
+    ],
+    "doi": "10.24432/C5959T",
+    "bibtex": "@misc{schlimmer1987mushroom,\n  author = {Schlimmer, Jeff},\n  title = {{Mushroom}},\n  year = {1987},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5959T}\n}"
+  }
+}

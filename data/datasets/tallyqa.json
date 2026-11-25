@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tallyqa",
+  "slug": "tallyqa",
+  "name": "TallyQA: Answering Complex Counting Questions",
+  "description": "TallyQA is a large-scale visual question answering benchmark focused on object counting and spatial relational reasoning. Spanning 287,907 questions across 165,000 images sourced from MS-COCO and Visual Genome, it distinguishes between simple counting (direct detection) and complex counting requiring relationship and attribute understanding.",
+  "homepage_url": "https://github.com/manoja328/TallyQA_dataset",
+  "publisher": {
+    "name": "Rochester Institute of Technology",
+    "type": "academic",
+    "url": "https://www.rit.edu"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "visual-counting",
+    "relational-reasoning"
+  ],
+  "tags": [
+    "tallyqa",
+    "vqa",
+    "counting",
+    "relational-reasoning",
+    "rit",
+    "visual-genome"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Apache License 2.0 (Annotations & Code) / Diverse Flickr Terms (Images)",
+    "spdx_id": null,
+    "url": "https://github.com/manoja328/TallyQA_dataset/blob/master/LICENSE",
+    "commercial_use": "unknown",
+    "notes": "Dataset annotations and benchmark scripts are released under Apache License 2.0 in the official repository (manoja328/TallyQA_dataset). Underlying images originate from MS-COCO and Visual Genome under individual Flickr Creative Commons terms."
+  },
+  "source_references": [
+    {
+      "title": "TallyQA Official Project Repository",
+      "url": "https://github.com/manoja328/TallyQA_dataset",
+      "type": "repository",
+      "notes": "Official author repository with download links for train.json and test.json."
+    },
+    {
+      "title": "TallyQA: Answering Complex Counting Questions",
+      "url": "https://doi.org/10.1609/aaai.v33i01.33018076",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the AAAI Conference on Artificial Intelligence (AAAI 2019)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against AAAI 2019 publication (DOI: 10.1609/aaai.v33i01.33018076) and official GitHub repository. 287,907 counting questions across 165,000 images, including 19,000 complex human annotations."
+  },
+  "size": {
+    "amount": 45.0,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "JSON question and bounding-box reference files."
+  },
+  "sample_count": {
+    "total": 287907,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "unique_images",
+        "value": 165000,
+        "unit": "images"
+      },
+      {
+        "label": "complex_human_questions",
+        "value": 19000,
+        "unit": "questions"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2019-07-17"
+  },
+  "citation": {
+    "paper_title": "TallyQA: Answering Complex Counting Questions",
+    "paper_url": "https://doi.org/10.1609/aaai.v33i01.33018076",
+    "authors": [
+      "Manoj Acharya",
+      "Kushal Kafle",
+      "Christopher Kanan"
+    ],
+    "doi": "10.1609/aaai.v33i01.33018076",
+    "bibtex": "@inproceedings{acharya2019tallyqa,\n  title = {{TallyQA}: Answering Complex Counting Questions},\n  author = {Acharya, Manoj and Kafle, Kushal and Kanan, Christopher},\n  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume = {33},\n  number = {01},\n  pages = {8076--8084},\n  year = {2019},\n  doi = {10.1609/aaai.v33i01.33018076}\n}"
+  }
+}

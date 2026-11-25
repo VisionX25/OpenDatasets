@@ -353,14 +353,14 @@ def test_audit_catalog_deterministic_output() -> None:
     """Verify that auditing the published catalog is completely deterministic across repeated executions."""
     data_dir = DEFAULT_DATASETS_DIR
     files = sorted(data_dir.glob("*.json"))
-    assert len(files) == 825
+    assert len(files) == 850
 
     datasets = [json.loads(f.read_text(encoding="utf-8")) for f in files]
 
     res_1 = audit_catalog_semantic_duplicates(datasets)
     res_2 = audit_catalog_semantic_duplicates(datasets)
 
-    assert res_1["audit_metadata"]["total_records_scanned"] == 825
+    assert res_1["audit_metadata"]["total_records_scanned"] == 850
     assert res_1["audit_metadata"]["total_candidate_pairs"] == res_2["audit_metadata"]["total_candidate_pairs"]
     assert res_1["audit_metadata"]["confidence_distribution"] == res_2["audit_metadata"]["confidence_distribution"]
 
@@ -387,7 +387,7 @@ def test_cli_main_generates_reports(tmp_path: Path) -> None:
 
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
-    assert data["audit_metadata"]["total_records_scanned"] == 825
+    assert data["audit_metadata"]["total_records_scanned"] == 850
     assert data["audit_metadata"]["confidence_distribution"]["high"] == 0
 
 
@@ -409,14 +409,14 @@ def test_audit_semantic_duplicates_dynamic_counts_and_provenance(tmp_path: Path)
     meta = results["audit_metadata"]
     assert meta["audit_task"] == audit_task
     assert meta["audit_date"] == audit_date
-    assert meta["total_records_scanned"] == 825
-    assert meta["total_possible_pairs"] == 825 * 824 // 2  # 339,900
+    assert meta["total_records_scanned"] == 850
+    assert meta["total_possible_pairs"] == 850 * 849 // 2  # 360,825
 
     md = generate_markdown_summary(results)
     assert f"> **Audit Task:** {audit_task}" in md
     assert f"> **Audit Date:** {audit_date}" in md
-    assert "339,900" in md
-    assert "262,450" not in md
+    assert "360,825" in md
+    assert "339,900" not in md
     assert "625 dataset records" not in md
     assert "All 625 dataset records" not in md
     assert "Medium-confidence candidate pairs require manual review to establish scientific distinctness." in md

@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "hpatches",
+  "slug": "hpatches",
+  "name": "HPatches: Benchmark for Local Descriptors",
+  "description": "HPatches (H-patches) is a benchmark for evaluating handcrafted and learned local feature descriptors under geometric and photometric changes. It comprises 116 planar scene sequences with precise ground-truth homographies, spanning 57 illumination-varying and 59 viewpoint-varying scenes with 6 images per sequence.",
+  "homepage_url": "https://hpatches.github.io",
+  "publisher": {
+    "name": "University of Oxford",
+    "type": "academic",
+    "url": "https://www.ox.ac.uk"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "feature-matching",
+    "descriptor-evaluation",
+    "image-matching"
+  ],
+  "tags": [
+    "hpatches",
+    "local-features",
+    "descriptors",
+    "homography",
+    "oxford"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Dataset and evaluation toolkit released under the MIT License."
+  },
+  "source_references": [
+    {
+      "title": "HPatches Official Project Page",
+      "url": "https://hpatches.github.io",
+      "type": "official_website",
+      "notes": "Official benchmark portal with downloads and protocol documentation."
+    },
+    {
+      "title": "HPatches: A Benchmark and Evaluation of Handcrafted and Learned Local Descriptors",
+      "url": "https://doi.org/10.1109/CVPR.2017.549",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2017)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against CVPR 2017 publication (DOI: 10.1109/CVPR.2017.549) and official GitHub repository (hpatches/hpatches-dataset). 116 image sequences: 57 illumination and 59 viewpoint sequences, totaling 696 high-resolution images."
+  },
+  "size": {
+    "amount": 4.2,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "ppm"
+    ],
+    "status": "verified",
+    "notes": "PNG and PPM full scene images, sampled patches, and homography matrix files."
+  },
+  "sample_count": {
+    "total": 116,
+    "unit": "image sequences",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "illumination_sequences",
+        "value": 57,
+        "unit": "image sequences"
+      },
+      {
+        "label": "viewpoint_sequences",
+        "value": 59,
+        "unit": "image sequences"
+      },
+      {
+        "label": "images_per_sequence",
+        "value": 6,
+        "unit": "images"
+      },
+      {
+        "label": "full_scene_images",
+        "value": 696,
+        "unit": "images"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2017-07"
+  },
+  "citation": {
+    "paper_title": "HPatches: A Benchmark and Evaluation of Handcrafted and Learned Local Descriptors",
+    "paper_url": "https://doi.org/10.1109/CVPR.2017.549",
+    "authors": [
+      "Vassileios Balntas",
+      "Karel Lenc",
+      "Andrea Vedaldi",
+      "Krystian Mikolajczyk"
+    ],
+    "doi": "10.1109/CVPR.2017.549",
+    "bibtex": "@inproceedings{balntas2017hpatches,\n  title = {{HPatches}: A Benchmark and Evaluation of Handcrafted and Learned Local Descriptors},\n  author = {Balntas, Vassileios and Lenc, Karel and Vedaldi, Andrea and Mikolajczyk, Krystian},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2017},\n  pages = {5173--5182},\n  doi = {10.1109/CVPR.2017.549}\n}"
+  }
+}

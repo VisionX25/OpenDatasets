@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "visual-spatial-reasoning",
+  "slug": "visual-spatial-reasoning",
+  "name": "Visual Spatial Reasoning (VSR)",
+  "description": "Visual Spatial Reasoning (VSR) is a vision-and-language benchmark designed to evaluate spatial relationship understanding in multimodal models. It consists of 10,972 natural image-caption pairs covering 65 spatial relations across diverse categories (topological, directional, proximity, and projective), grounded in MS-COCO images with human verification.",
+  "homepage_url": "https://github.com/cambridgeltl/visual-spatial-reasoning",
+  "publisher": {
+    "name": "University of Cambridge",
+    "type": "academic",
+    "url": "https://www.cam.ac.uk"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-spatial-reasoning",
+    "image-text-matching",
+    "multimodal-classification"
+  ],
+  "tags": [
+    "vsr",
+    "spatial-reasoning",
+    "vision-language",
+    "cambridge",
+    "coco"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Apache License 2.0 (Annotations) / Diverse Flickr Terms (Images)",
+    "spdx_id": null,
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "unknown",
+    "notes": "Dataset annotations and benchmark code released by Cambridge LTL under Apache License 2.0. Underlying imagery is sourced from MS-COCO under individual Flickr Creative Commons terms."
+  },
+  "source_references": [
+    {
+      "title": "Visual Spatial Reasoning Official GitHub Repository",
+      "url": "https://github.com/cambridgeltl/visual-spatial-reasoning",
+      "type": "repository",
+      "notes": "Official Cambridge LTL code, annotations, and split files."
+    },
+    {
+      "title": "Visual Spatial Reasoning",
+      "url": "https://doi.org/10.1162/tacl_a_00566",
+      "type": "original_paper",
+      "notes": "Published in Transactions of the Association for Computational Linguistics (TACL 2023)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against TACL 2023 publication (DOI: 10.1162/tacl_a_00566) and official GitHub repository (cambridgeltl/visual-spatial-reasoning). 10,972 total image-text pairs covering 65 spatial relations. Evaluated via two official protocols: random split (7,680 train, 1,097 dev, 2,195 test) and zero-shot split (evaluating generalization on unseen relations/objects)."
+  },
+  "size": {
+    "amount": 1.6,
+    "unit": "MB",
+    "file_formats": [
+      "jsonl"
+    ],
+    "status": "verified",
+    "notes": "JSONL files containing image paths, captions, relation types, and binary correctness labels."
+  },
+  "sample_count": {
+    "total": 10972,
+    "unit": "image-text pairs",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 7680,
+      "dev": 1097,
+      "test": 2195
+    },
+    "breakdown": [
+      {
+        "label": "spatial_relation_types",
+        "value": 65,
+        "unit": "relation types"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2023-05"
+  },
+  "citation": {
+    "paper_title": "Visual Spatial Reasoning",
+    "paper_url": "https://doi.org/10.1162/tacl_a_00566",
+    "authors": [
+      "Fangyu Liu",
+      "Guy Emerson",
+      "Nigel Collier"
+    ],
+    "doi": "10.1162/tacl_a_00566",
+    "bibtex": "@article{liu-etal-2023-visual,\n  title = {Visual Spatial Reasoning},\n  author = {Liu, Fangyu and Emerson, Guy and Collier, Nigel},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {11},\n  pages = {635--651},\n  year = {2023},\n  doi = {10.1162/tacl_a_00566}\n}"
+  }
+}

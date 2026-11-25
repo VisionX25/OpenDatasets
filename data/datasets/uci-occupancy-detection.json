@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-occupancy-detection",
+  "slug": "uci-occupancy-detection",
+  "name": "UCI Occupancy Detection Dataset",
+  "description": "The UCI Occupancy Detection dataset is an experimental environmental sensing benchmark for room occupancy classification. Collected by Luis Candanedo and Vincent Feldheim at the University of Mons, it contains 20,560 one-minute sensor readings spanning temperature, humidity, light, carbon dioxide, and humidity ratio across three chronological experimental partitions.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/357/occupancy+detection",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular",
+    "sensor",
+    "time-series"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "binary-classification",
+    "occupancy-detection"
+  ],
+  "tags": [
+    "uci",
+    "occupancy-detection",
+    "environmental-sensor",
+    "time-series",
+    "smart-buildings"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset distributed by the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International (CC-BY-4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UCI Machine Learning Repository: Occupancy Detection Dataset",
+      "url": "https://archive.ics.uci.edu/dataset/357/occupancy+detection",
+      "type": "official_website",
+      "notes": "Official UCI dataset portal (DOI: 10.24432/C5X01N)."
+    },
+    {
+      "title": "Accurate Occupancy Detection of an Office Room from Light, Temperature, Humidity and CO2 Measurements Using Statistical Learning Models",
+      "url": "https://doi.org/10.1016/j.enbuild.2015.11.071",
+      "type": "original_paper",
+      "notes": "Published in Energy and Buildings (2016)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository (DOI: 10.24432/C5X01N) and Energy and Buildings 2016 publication. 20,560 one-minute sensor records partitioned across datatraining.txt (8,143), datatest.txt (2,665), and datatest2.txt (9,752)."
+  },
+  "size": {
+    "amount": 1.2,
+    "unit": "MB",
+    "file_formats": [
+      "txt",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "Text tabular files containing timestamped environmental measurements and ground truth binary camera-verified occupancy."
+  },
+  "sample_count": {
+    "total": 20560,
+    "unit": "sensor measurements",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 8143,
+      "test_1": 2665,
+      "test_2": 9752
+    },
+    "breakdown": [
+      {
+        "label": "predictive_features",
+        "value": 5,
+        "unit": "features"
+      },
+      {
+        "label": "measurement_interval_minutes",
+        "value": 1,
+        "unit": "minutes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2016-03"
+  },
+  "citation": {
+    "paper_title": "Accurate occupancy detection of an office room from light, temperature, humidity and CO2 measurements using statistical learning models",
+    "paper_url": "https://doi.org/10.1016/j.enbuild.2015.11.071",
+    "authors": [
+      "Luis M. Candanedo",
+      "Véronique Feldheim"
+    ],
+    "doi": "10.1016/j.enbuild.2015.11.071",
+    "bibtex": "@article{candanedo2016accurate,\n  title = {Accurate occupancy detection of an office room from light, temperature, humidity and {CO2} measurements using statistical learning models},\n  author = {Candanedo, Luis M. and Feldheim, V\\'eronique},\n  journal = {Energy and Buildings},\n  volume = {112},\n  pages = {28--39},\n  year = {2016},\n  doi = {10.1016/j.enbuild.2015.11.071}\n}"
+  }
+}
