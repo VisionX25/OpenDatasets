@@ -3,7 +3,7 @@
   "id": "birdclef-2021",
   "slug": "birdclef-2021",
   "name": "BirdCLEF 2021: Avian Vocalization Benchmark",
-  "description": "BirdCLEF 2021 is a large-scale bioacoustic benchmark for automated bird call identification in continuous soundscape recordings. Organized under LifeCLEF and hosted on Kaggle, it features 62,884 focal audio recordings covering 397 bird species native to North, Central, and South America contributed via the Xeno-canto network, alongside 80 complex soundscape test recordings.",
+  "description": "BirdCLEF 2021 is a large-scale bioacoustic benchmark for automated bird call identification in continuous soundscape recordings. Organized under LifeCLEF and hosted on Kaggle, it features 62,884 focal audio recordings covering 397 bird species native to North, Central, and South America contributed via the Xeno-canto network (with 62,874 usable focal recordings), alongside 80 continuous soundscape test recordings and 20 training soundscapes.",
   "homepage_url": "https://www.kaggle.com/c/birdclef-2021",
   "publisher": {
     "name": "LifeCLEF / Chemnitz University of Technology",
@@ -52,7 +52,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against CLEF 2021 working notes (CEUR-WS Vol-2936, pp. 1437-1450) and official Kaggle data specifications. 62,884 focal training recordings in train_short_audio across 397 bird species (with 62,874 usable recordings in downstream pre-processing pipelines after excluding 10 silent/unreadable files), alongside 80 continuous soundscape audio recordings for testing."
+    "notes": "Verified against CLEF 2021 working notes (CEUR-WS Vol-2936, pp. 1437-1450) and official Kaggle data specifications. `train_metadata.csv` documents exactly 62,884 focal training recordings in `train_short_audio/` covering 397 avian species. In benchmark execution, 10 recordings (e.g. unreadable/corrupted files) are excluded by standard preprocessing pipelines, leaving 62,874 usable focal recordings. An additional 80 continuous 10-minute soundscapes are provided for test evaluation alongside 20 training soundscapes."
   },
   "size": {
     "amount": 18.0,
@@ -77,13 +77,23 @@
         "unit": "species"
       },
       {
-        "label": "test_soundscapes",
-        "value": 80,
+        "label": "train_short_audio_recordings",
+        "value": 62884,
         "unit": "recordings"
       },
       {
         "label": "usable_focal_recordings",
         "value": 62874,
+        "unit": "recordings"
+      },
+      {
+        "label": "train_soundscapes",
+        "value": 20,
+        "unit": "recordings"
+      },
+      {
+        "label": "test_soundscapes",
+        "value": 80,
         "unit": "recordings"
       }
     ]

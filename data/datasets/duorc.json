@@ -3,7 +3,7 @@
   "id": "duorc",
   "slug": "duorc",
   "name": "DuoRC: Paraphrased Reading Comprehension Benchmark",
-  "description": "DuoRC is a large-scale reading comprehension benchmark consisting of 186,089 question-answer pairs created from 7,680 pairs of parallel movie plots. For each movie, distinct narrative plots were collected from Wikipedia and IMDb, requiring models to reason across paraphrased narrative descriptions with minimal lexical overlap.",
+  "description": "DuoRC is a large-scale reading comprehension benchmark consisting of 186,089 unique question-answer pairs created from 7,680 pairs of parallel movie plots. For each movie, distinct narrative plots were collected from Wikipedia and IMDb across SelfRC (86,241 QA pairs) and ParaphraseRC (100,972 QA pairs) task configurations, sharing 1,124 overlapping questions (187,213 total configuration instances).",
   "homepage_url": "https://duorc.github.io",
   "publisher": {
     "name": "IBM Research",
@@ -51,7 +51,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against ACL 2018 publication (DOI: 10.18653/v1/P18-1156) and official GitHub project portal. Sourced from 7,680 parallel movie plot pairs across SelfRC (86,241 QA pairs) and ParaphraseRC (100,972 QA pairs) tasks. The configuration sum of 187,213 exceeds the 186,089 unique question total by exactly 1,124 questions that overlap across both task configurations."
+    "notes": "Verified against ACL 2018 publication (DOI: 10.18653/v1/P18-1156) and official GitHub project portal. Sourced from 7,680 parallel movie plot pairs across SelfRC (86,241 QA pairs) and ParaphraseRC (100,972 QA pairs) tasks. The configuration sum of 187,213 exceeds the 186,089 unique question total by exactly 1,124 questions that overlap across both task configurations (86,241 + 100,972 - 1,124 = 186,089)."
   },
   "size": {
     "amount": 25.0,
@@ -67,8 +67,8 @@
     "total": 186089,
     "unit": "question-answer pairs",
     "status": "verified",
-    "partition_completeness": "unspecified",
-    "partition_overlap": "unspecified",
+    "partition_completeness": "complete",
+    "partition_overlap": "overlapping",
     "breakdown": [
       {
         "label": "self_rc_questions",
@@ -78,6 +78,11 @@
       {
         "label": "paraphrase_rc_questions",
         "value": 100972,
+        "unit": "question-answer pairs"
+      },
+      {
+        "label": "overlapping_shared_questions",
+        "value": 1124,
         "unit": "question-answer pairs"
       },
       {
