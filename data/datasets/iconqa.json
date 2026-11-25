@@ -3,7 +3,7 @@
   "id": "iconqa",
   "slug": "iconqa",
   "name": "IconQA: A Benchmark for Abstract Diagram Understanding",
-  "description": "IconQA is a visual question answering and abstract diagram reasoning benchmark comprising 107,439 questions across 33,408 icon and diagram images. Sourced from elementary school curricula, it features three core reasoning tasks: multi-image multi-choice QA, free-form image QA, and in-the-wild diagram completion.",
+  "description": "IconQA is a visual question answering and abstract diagram reasoning benchmark comprising 107,440 questions (reported as 107,439 in narrative text; exact split sum across official train 64,462, val 21,489, test 21,489 is 107,440) across 96,817 icon images. Sourced from elementary school curricula, it features three official sub-tasks: multi-image-choice (57,672), multi-text-choice (31,578), and filling-in-the-blank (18,189). Companion icon classification pretraining resources are separately released in Icon645 (645,687 icons).",
   "homepage_url": "https://iconqa.github.io",
   "publisher": {
     "name": "University of California, Los Angeles",
@@ -28,12 +28,12 @@
     "ucla"
   ],
   "license": {
-    "status": "verified_open",
-    "name": "Apache License 2.0",
-    "spdx_id": "Apache-2.0",
-    "url": "https://www.apache.org/licenses/LICENSE-2.0",
-    "commercial_use": "allowed",
-    "notes": "Dataset and evaluation repository released under Apache-2.0."
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Dataset released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA-4.0)."
   },
   "source_references": [
     {
@@ -53,34 +53,49 @@
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against NeurIPS 2021 publication (arXiv:2110.13214) and official GitHub repository."
+    "notes": "Verified against NeurIPS 2021 Datasets and Benchmarks publication (arXiv:2110.13214) and official GitHub repository (lupantech/IconQA). Total questions in paper text reported as 107,439; official split counts sum to 107,440 across train (64,462), val (21,489), and test (21,489); 96,817 icon images across 3 official subtasks."
   },
   "size": {
-    "amount": 1.8,
+    "amount": 1.85,
     "unit": "GB",
     "file_formats": [
       "png",
       "json"
     ],
     "status": "verified",
-    "notes": "33,408 PNG diagram images with JSON question, answer, and choice annotations."
+    "notes": "Compressed iconqa_data.zip archive is 1.85 GB containing PNG diagram images and JSON annotations."
   },
   "sample_count": {
-    "total": 107439,
+    "total": 107440,
     "unit": "questions",
     "status": "verified",
     "partition_completeness": "complete",
     "partition_overlap": "disjoint",
     "splits": {
-      "train": 65360,
-      "val": 19890,
-      "test": 22189
+      "train": 64462,
+      "val": 21489,
+      "test": 21489
     },
     "breakdown": [
       {
         "label": "diagram_images",
-        "value": 33408,
+        "value": 96817,
         "unit": "images"
+      },
+      {
+        "label": "multi_image_choice_questions",
+        "value": 57672,
+        "unit": "questions"
+      },
+      {
+        "label": "multi_text_choice_questions",
+        "value": 31578,
+        "unit": "questions"
+      },
+      {
+        "label": "filling_in_the_blank_questions",
+        "value": 18189,
+        "unit": "questions"
       }
     ]
   },

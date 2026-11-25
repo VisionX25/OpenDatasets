@@ -3,7 +3,7 @@
   "id": "ropes",
   "slug": "ropes",
   "name": "ROPES: Reasoning Over Paragraph Effects in Situations",
-  "description": "ROPES (Reasoning Over Paragraph Effects in Situations) is a reading comprehension benchmark comprising 14,322 questions over 1,068 science passages. It tests a system's ability to apply causal effects learned from an expository background text to a new, hypothetical situation.",
+  "description": "ROPES (Reasoning Over Paragraph Effects in Situations) is a reading comprehension benchmark comprising 14,322 questions over 588 background science passages selected by annotators. It tests a system's ability to apply causal effects learned from an expository background text to a new, hypothetical situation.",
   "homepage_url": "https://allenai.org/data/ropes",
   "publisher": {
     "name": "Allen Institute for AI",
@@ -42,16 +42,16 @@
     },
     {
       "title": "Reasoning Over Paragraph Effects in Situations",
-      "url": "https://doi.org/10.18653/v1/D19-5820",
+      "url": "https://doi.org/10.18653/v1/D19-5808",
       "type": "original_paper",
-      "notes": "Published in Proceedings of the 2nd Workshop on Machine Reading for Question Answering (MRQA 2019)."
+      "notes": "Published in Proceedings of the 2nd Workshop on Machine Reading for Question Answering (MRQA 2019), pages 58-62."
     }
   ],
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against MRQA 2019 publication (DOI: 10.18653/v1/D19-5820) and official Allen Institute portal."
+    "notes": "Verified against MRQA 2019 publication (DOI: 10.18653/v1/D19-5808, ACL Anthology: D19-5808) and official Allen Institute portal."
   },
   "size": {
     "amount": 10.5,
@@ -76,7 +76,7 @@
     "breakdown": [
       {
         "label": "background_passages",
-        "value": 1068,
+        "value": 588,
         "unit": "passages"
       }
     ]
@@ -89,14 +89,14 @@
   },
   "citation": {
     "paper_title": "Reasoning Over Paragraph Effects in Situations",
-    "paper_url": "https://doi.org/10.18653/v1/D19-5820",
+    "paper_url": "https://aclanthology.org/D19-5808/",
     "authors": [
       "Kevin Lin",
       "Oyvind Tafjord",
       "Peter Clark",
       "Matt Gardner"
     ],
-    "doi": "10.18653/v1/D19-5820",
-    "bibtex": "@inproceedings{lin-etal-2019-reasoning,\n  title = {Reasoning Over Paragraph Effects in Situations},\n  author = {Lin, Kevin and Tafjord, Oyvind and Clark, Peter and Gardner, Matt},\n  booktitle = {Proceedings of the 2nd Workshop on Machine Reading for Question Answering},\n  pages = {148--153},\n  year = {2019},\n  doi = {10.18653/v1/D19-5820}\n}"
+    "doi": "10.18653/v1/D19-5808",
+    "bibtex": "@inproceedings{lin-etal-2019-reasoning,\n  title = {Reasoning Over Paragraph Effects in Situations},\n  author = {Lin, Kevin and Tafjord, Oyvind and Clark, Peter and Gardner, Matt},\n  booktitle = {Proceedings of the 2nd Workshop on Machine Reading for Question Answering},\n  month = nov,\n  year = {2019},\n  address = {Hong Kong, China},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/D19-5808/},\n  doi = {10.18653/v1/D19-5808},\n  pages = {58--62}\n}"
   }
 }

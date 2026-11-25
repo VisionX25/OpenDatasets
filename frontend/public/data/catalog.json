@@ -11087,8 +11087,8 @@
     "schema_version": "1.0.0",
     "id": "bsd500",
     "slug": "bsd500",
-    "name": "BSD500: The Berkeley Segmentation Dataset and Benchmark",
-    "description": "The Berkeley Segmentation Dataset 500 (BSD500) is a gold-standard computer vision benchmark for natural image boundary detection and segmentation. Consisting of 500 images explicitly partitioned into 200 train, 100 validation, and 200 test images, each annotated with multiple independent human ground truth segmentations.",
+    "name": "BSDS500: The Berkeley Segmentation Dataset and Benchmark",
+    "description": "The Berkeley Segmentation Dataset and Benchmark 500 (BSDS500) is a gold-standard computer vision benchmark for natural image boundary detection and segmentation. Consisting of 500 images explicitly partitioned into 200 train, 100 validation, and 200 test images, each annotated with multiple independent human ground truth segmentations.",
     "homepage_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html",
     "publisher": {
       "name": "University of California, Berkeley",
@@ -11115,8 +11115,8 @@
       "name": "UC Berkeley Academic Research License",
       "spdx_id": null,
       "url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html",
-      "commercial_use": "allowed",
-      "notes": "Available for academic research and educational purposes."
+      "commercial_use": "forbidden",
+      "notes": "Provided by UC Berkeley for academic research and educational evaluation. Underlying photography sourced from Corel stock photo collections, retaining commercial copyright restrictions."
     },
     "source_references": [
       {
@@ -11913,11 +11913,11 @@
     ],
     "license": {
       "status": "custom_permissive",
-      "name": "Caltech Research Data License",
-      "spdx_id": null,
-      "url": "https://data.caltech.edu/records/nyy15-4j048",
-      "commercial_use": "allowed",
-      "notes": "Freely available for educational and non-commercial research use; underlying images belong to their respective copyright holders."
+      "name": "Creative Commons Attribution 4.0 International (Compilation) / Third-Party Copyright (Images)",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "unknown",
+      "notes": "Dataset compilation distributed on CaltechDATA repository under CC-BY-4.0. However, underlying images were gathered from the public web and belong to their respective copyright holders; commercial exploitation of individual images is not cleared."
     },
     "source_references": [
       {
@@ -16894,12 +16894,12 @@
       "cuhk"
     ],
     "license": {
-      "status": "custom_permissive",
-      "name": "CUHK Academic Research License",
+      "status": "verified_non_commercial",
+      "name": "CUHK Non-Commercial Research License",
       "spdx_id": null,
       "url": "https://xingangpan.github.io/projects/CULane.html",
-      "commercial_use": "allowed",
-      "notes": "Available for non-commercial academic research and benchmarking."
+      "commercial_use": "forbidden",
+      "notes": "Dataset is released strictly for non-commercial academic research and educational benchmarking."
     },
     "source_references": [
       {
@@ -16919,7 +16919,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against AAAI 2018 publication (DOI: 10.1609/aaai.v32i1.12268) and official CULane portal."
+      "notes": "Verified against AAAI 2018 publication (DOI: 10.1609/aaai.v32i1.12268) and official CULane portal. Non-commercial academic research license."
     },
     "size": {
       "amount": 45.0,
@@ -19397,7 +19397,7 @@
     "id": "dns-challenge",
     "slug": "dns-challenge",
     "name": "DNS Challenge: Deep Noise Suppression Challenge Benchmark",
-    "description": "The INTERSPEECH 2020 Deep Noise Suppression (DNS) Challenge dataset is an audio benchmark designed to train and benchmark deep learning models on real-time speech enhancement. Providing over 500 hours of clean multi-speaker speech, 180 hours of diverse environmental noise across 150 categories, and 3,000 synthetic room impulse responses.",
+    "description": "The INTERSPEECH 2020 Deep Noise Suppression (DNS) Challenge dataset (Challenge 1) is an audio benchmark designed to train and evaluate neural models on real-time single-channel speech enhancement. It provides 500 hours of clean speech from 2,150 speakers (derived from LibriVox, with approx. 441 usable hours), 180 hours of environmental noise across 150 classes (from AudioSet, Freesound, and DEMAND), and measured/synthetic room impulse responses.",
     "homepage_url": "https://github.com/microsoft/DNS-Challenge",
     "publisher": {
       "name": "Microsoft",
@@ -19420,32 +19420,32 @@
       "interspeech"
     ],
     "license": {
-      "status": "verified_open",
-      "name": "Creative Commons Attribution 4.0 International",
-      "spdx_id": "CC-BY-4.0",
-      "url": "https://creativecommons.org/licenses/by/4.0/",
-      "commercial_use": "allowed",
-      "notes": "Dataset content released under CC-BY-4.0; companion synthesis code released under MIT."
+      "status": "custom_permissive",
+      "name": "Mixed License (CC-BY-4.0 Repository / Mixed Source Audio Terms)",
+      "spdx_id": null,
+      "url": "https://github.com/microsoft/DNS-Challenge",
+      "commercial_use": "unknown",
+      "notes": "Microsoft distributes repository scripts and synthesis code under MIT, and the dataset repository under CC-BY-4.0. Underlying audio sources retain original terms: clean speech is derived from public domain LibriVox audiobooks; noise clips include YouTube audio from Google AudioSet and community audio from Freesound/DEMAND (carrying varied attribution and non-commercial terms); synthetic/measured RIRs are from Microsoft. Unrestricted commercial exploitation of all components is not cleared."
     },
     "source_references": [
       {
         "title": "Microsoft DNS Challenge Repository",
         "url": "https://github.com/microsoft/DNS-Challenge",
         "type": "repository",
-        "notes": "Official repository with dataset download scripts and baseline recipes."
+        "notes": "Official repository with dataset download scripts and baseline recipes for Challenge 1."
       },
       {
         "title": "The INTERSPEECH 2020 Deep Noise Suppression Challenge: Datasets, Subjective Testing Framework, and Challenge Results",
-        "url": "https://doi.org/10.21437/Interspeech.2020-2503",
+        "url": "https://doi.org/10.21437/Interspeech.2020-3038",
         "type": "original_paper",
-        "notes": "Published in INTERSPEECH 2020 proceedings."
+        "notes": "Official INTERSPEECH 2020 challenge overview paper in ISCA Archive (pages 2492-2496)."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against Interspeech 2020 publication (DOI: 10.21437/Interspeech.2020-2503) and official Microsoft repository."
+      "notes": "Verified against Interspeech 2020 publication (DOI: 10.21437/Interspeech.2020-3038, ISCA Archive) and official Microsoft repository. Clean speech from LibriVox (500h total, ~441h usable, 2150 speakers), noise from AudioSet/Freesound/DEMAND (~70,000 clips, 150 classes, 180h), and 3,000 room impulse responses."
     },
     "size": {
       "amount": 120.0,
@@ -19453,11 +19453,11 @@
       "file_formats": [
         "wav"
       ],
-      "status": "verified",
-      "notes": "16kHz 16-bit uncompressed WAV files of speech, environmental noise, and impulse responses."
+      "status": "estimated",
+      "notes": "16kHz 16-bit uncompressed WAV files of speech, environmental noise, and impulse responses across wideband challenge tracks."
     },
     "sample_count": {
-      "total": 65000,
+      "total": 70000,
       "unit": "noise-clips",
       "status": "estimated",
       "partition_completeness": "unspecified",
@@ -19466,6 +19466,11 @@
         {
           "label": "clean_speech_hours",
           "value": 500,
+          "unit": "hours"
+        },
+        {
+          "label": "clean_speech_usable_hours",
+          "value": 441,
           "unit": "hours"
         },
         {
@@ -19479,6 +19484,11 @@
           "unit": "classes"
         },
         {
+          "label": "noise_hours",
+          "value": 180,
+          "unit": "hours"
+        },
+        {
           "label": "room_impulse_responses",
           "value": 3000,
           "unit": "rirs"
@@ -19490,20 +19500,24 @@
     },
     "citation": {
       "paper_title": "The INTERSPEECH 2020 Deep Noise Suppression Challenge: Datasets, Subjective Testing Framework, and Challenge Results",
-      "paper_url": "https://doi.org/10.21437/Interspeech.2020-2503",
+      "paper_url": "https://doi.org/10.21437/Interspeech.2020-3038",
       "authors": [
         "Chandan K. A. Reddy",
-        "Eeshan Gopal",
+        "Vishak Gopal",
         "Ross Cutler",
-        "Ercan Kazakos",
-        "Filip Yang",
+        "Ebrahim Beyrami",
+        "Roger Cheng",
+        "Harishchandra Dubey",
+        "Sergiy Matusevych",
+        "Robert Aichner",
+        "Ashkan Aazami",
         "Sebastian Braun",
-        "Rozenn Nicol",
-        "Juha Piili",
-        "Jussi Salmela"
+        "Puneet Rana",
+        "Sriram Srinivasan",
+        "Johannes Gehrke"
       ],
-      "doi": "10.21437/Interspeech.2020-2503",
-      "bibtex": "@inproceedings{reddy2020interspeech,\n  title = {The {INTERSPEECH} 2020 Deep Noise Suppression Challenge: Datasets, Subjective Testing Framework, and Challenge Results},\n  author = {Reddy, Chandan K. A. and Gopal, Eeshan and Cutler, Ross and Kazakos, Ercan and Yang, Filip and Braun, Sebastian and Nicol, Rozenn and Piili, Juha and Salmela, Jussi},\n  booktitle = {Proceedings of INTERSPEECH 2020},\n  pages = {2492--2496},\n  year = {2020},\n  doi = {10.21437/Interspeech.2020-2503}\n}"
+      "doi": "10.21437/Interspeech.2020-3038",
+      "bibtex": "@inproceedings{reddy20_interspeech,\n  title     = {{The INTERSPEECH 2020 Deep Noise Suppression Challenge: Datasets, Subjective Testing Framework, and Challenge Results}},\n  author    = {Chandan K. A. Reddy and Vishak Gopal and Ross Cutler and Ebrahim Beyrami and Roger Cheng and Harishchandra Dubey and Sergiy Matusevych and Robert Aichner and Ashkan Aazami and Sebastian Braun and Puneet Rana and Sriram Srinivasan and Johannes Gehrke},\n  booktitle = {{Proc. Interspeech 2020}},\n  pages     = {2492--2496},\n  year      = {2020},\n  doi       = {10.21437/Interspeech.2020-3038}\n}"
     }
   },
   {
@@ -24901,12 +24915,12 @@
       "uiuc"
     ],
     "license": {
-      "status": "custom_permissive",
-      "name": "UIUC Academic Research License",
+      "status": "verified_non_commercial",
+      "name": "UIUC Non-Commercial Research License (Annotations) / Mixed Flickr CC Licenses (Images)",
       "spdx_id": null,
       "url": "https://bryanplummer.com/Flickr30kEntities/",
-      "commercial_use": "allowed",
-      "notes": "Annotations made available for non-commercial research and educational use; underlying photos subject to individual Flickr licenses."
+      "commercial_use": "forbidden",
+      "notes": "Annotations provided by UIUC strictly for non-commercial academic research. Underlying photographs were harvested from Flickr under individual photographer Creative Commons licenses, retaining non-commercial and attribution constraints."
     },
     "source_references": [
       {
@@ -24926,7 +24940,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against ICCV 2015 publication (DOI: 10.1109/ICCV.2015.432) and UIUC project specifications."
+      "notes": "Verified against ICCV 2015 publication (DOI: 10.1109/ICCV.2015.432) and UIUC project specifications. Non-commercial research licensing on bounding box annotations and underlying Flickr photos."
     },
     "size": {
       "amount": 4.5,
@@ -30228,7 +30242,7 @@
     "id": "iconqa",
     "slug": "iconqa",
     "name": "IconQA: A Benchmark for Abstract Diagram Understanding",
-    "description": "IconQA is a visual question answering and abstract diagram reasoning benchmark comprising 107,439 questions across 33,408 icon and diagram images. Sourced from elementary school curricula, it features three core reasoning tasks: multi-image multi-choice QA, free-form image QA, and in-the-wild diagram completion.",
+    "description": "IconQA is a visual question answering and abstract diagram reasoning benchmark comprising 107,440 questions (reported as 107,439 in narrative text; exact split sum across official train 64,462, val 21,489, test 21,489 is 107,440) across 96,817 icon images. Sourced from elementary school curricula, it features three official sub-tasks: multi-image-choice (57,672), multi-text-choice (31,578), and filling-in-the-blank (18,189). Companion icon classification pretraining resources are separately released in Icon645 (645,687 icons).",
     "homepage_url": "https://iconqa.github.io",
     "publisher": {
       "name": "University of California, Los Angeles",
@@ -30253,12 +30267,12 @@
       "ucla"
     ],
     "license": {
-      "status": "verified_open",
-      "name": "Apache License 2.0",
-      "spdx_id": "Apache-2.0",
-      "url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "commercial_use": "allowed",
-      "notes": "Dataset and evaluation repository released under Apache-2.0."
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Dataset released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA-4.0)."
     },
     "source_references": [
       {
@@ -30278,34 +30292,49 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against NeurIPS 2021 publication (arXiv:2110.13214) and official GitHub repository."
+      "notes": "Verified against NeurIPS 2021 Datasets and Benchmarks publication (arXiv:2110.13214) and official GitHub repository (lupantech/IconQA). Total questions in paper text reported as 107,439; official split counts sum to 107,440 across train (64,462), val (21,489), and test (21,489); 96,817 icon images across 3 official subtasks."
     },
     "size": {
-      "amount": 1.8,
+      "amount": 1.85,
       "unit": "GB",
       "file_formats": [
         "png",
         "json"
       ],
       "status": "verified",
-      "notes": "33,408 PNG diagram images with JSON question, answer, and choice annotations."
+      "notes": "Compressed iconqa_data.zip archive is 1.85 GB containing PNG diagram images and JSON annotations."
     },
     "sample_count": {
-      "total": 107439,
+      "total": 107440,
       "unit": "questions",
       "status": "verified",
       "partition_completeness": "complete",
       "partition_overlap": "disjoint",
       "splits": {
-        "train": 65360,
-        "val": 19890,
-        "test": 22189
+        "train": 64462,
+        "val": 21489,
+        "test": 21489
       },
       "breakdown": [
         {
           "label": "diagram_images",
-          "value": 33408,
+          "value": 96817,
           "unit": "images"
+        },
+        {
+          "label": "multi_image_choice_questions",
+          "value": 57672,
+          "unit": "questions"
+        },
+        {
+          "label": "multi_text_choice_questions",
+          "value": 31578,
+          "unit": "questions"
+        },
+        {
+          "label": "filling_in_the_blank_questions",
+          "value": 18189,
+          "unit": "questions"
         }
       ]
     },
@@ -34765,7 +34794,7 @@
     "id": "lakh-midi",
     "slug": "lakh-midi",
     "name": "The Lakh MIDI Dataset (LMD)",
-    "description": "The Lakh MIDI Dataset (LMD) is a collection of 176,581 unique MIDI files matched and aligned to metadata from the Million Song Dataset. Providing symbolic musical representations, score alignments, and instrument track annotations for music information retrieval and generative music modeling.",
+    "description": "The Lakh MIDI Dataset (LMD) is a large-scale collection of symbolic MIDI files designed for music information retrieval and symbolic music modeling. It comprises LMD-full (176,581 unique de-duplicated MIDI files), LMD-matched (45,129 MIDI files matched to songs in the Million Song Dataset), and LMD-aligned (45,129 MIDI files temporally aligned to 7digital audio preview clips from the MSD).",
     "homepage_url": "https://colinraffel.com/projects/lmd",
     "publisher": {
       "name": "Columbia University / Colin Raffel",
@@ -34773,7 +34802,6 @@
       "url": "https://colinraffel.com"
     },
     "modalities": [
-      "audio",
       "other"
     ],
     "tasks": [
@@ -34789,12 +34817,12 @@
       "million-song-dataset"
     ],
     "license": {
-      "status": "verified_open",
-      "name": "Creative Commons Attribution 4.0 International",
+      "status": "custom_permissive",
+      "name": "CC-BY-4.0 (Distribution) / Third-Party Copyright",
       "spdx_id": "CC-BY-4.0",
       "url": "https://creativecommons.org/licenses/by/4.0/",
-      "commercial_use": "allowed",
-      "notes": "Dataset distributed under CC-BY-4.0."
+      "commercial_use": "unknown",
+      "notes": "The dataset collection and metadata alignments are distributed by Colin Raffel under CC-BY-4.0. However, the underlying musical compositions encoded in the MIDI files are subject to individual copyright and intellectual property rights of original artists and publishers, and commercial exploitation of the underlying songs is not granted by the dataset distribution license."
     },
     "source_references": [
       {
@@ -34814,16 +34842,16 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against author project portal and Ph.D. dissertation specifications."
+      "notes": "Verified against author project portal and Ph.D. dissertation specifications. 176,581 deduplicated MIDI files in LMD-full, with 45,129 MSD-matched and aligned files."
     },
     "size": {
-      "amount": 1.6,
+      "amount": 1.65,
       "unit": "GB",
       "file_formats": [
         "mid"
       ],
       "status": "verified",
-      "notes": "Standard MIDI format files (.mid) organized into hierarchical SHA1 directories."
+      "notes": "Compressed tar archive lmd_full.tar.gz is approximately 1.65 GB, containing 176,581 unique standard MIDI format (.mid) files organized in SHA1 directory hierarchy."
     },
     "sample_count": {
       "total": 176581,
@@ -34833,19 +34861,19 @@
       "partition_overlap": "unspecified",
       "breakdown": [
         {
-          "label": "matched_million_song_entries",
+          "label": "lmd_matched_entries",
           "value": 45129,
-          "unit": "songs"
+          "unit": "midi-files"
         },
         {
-          "label": "precisely_aligned_tracks",
-          "value": 25336,
-          "unit": "tracks"
+          "label": "lmd_aligned_entries",
+          "value": 45129,
+          "unit": "midi-files"
         }
       ]
     },
     "dates": {
-      "published": "2016-05-01"
+      "published": "2016"
     },
     "citation": {
       "paper_title": "Learning-Based Methods for Comparing Sequences, with Applications to Audio-to-MIDI Alignment and Matching",
@@ -41471,12 +41499,12 @@
       "multimodal-fusion"
     ],
     "license": {
-      "status": "custom_permissive",
-      "name": "MIT License (Code) / Academic Research Use (Data)",
+      "status": "verified_non_commercial",
+      "name": "IMDb Conditions of Use (Non-Commercial Research Only) / MIT License (Code)",
       "spdx_id": null,
       "url": "https://github.com/johnarevalo/gmu-mmimdb",
-      "commercial_use": "allowed",
-      "notes": "Provided for academic and research evaluation; underlying movie metadata and posters derived from IMDb."
+      "commercial_use": "forbidden",
+      "notes": "Dataset comprises movie metadata, plot synopses, and poster images crawled from IMDb. While the repository evaluation code is MIT-licensed, IMDb Conditions of Use and studio copyright on movie posters strictly restrict data usage to non-commercial academic research and personal study."
     },
     "source_references": [
       {
@@ -41496,7 +41524,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against ICLR 2017 paper (arXiv:1702.01992) and official repository manifests."
+      "notes": "Verified against ICLR 2017 workshop paper (arXiv:1702.01992) and GitHub repository (johnarevalo/gmu-mmimdb). Data usage restricted to non-commercial academic research per IMDb Conditions of Use and studio copyright on movie artwork."
     },
     "size": {
       "amount": 2.2,
@@ -44465,7 +44493,7 @@
     "id": "musdb18",
     "slug": "musdb18",
     "name": "MUSDB18: A Corpus for Music Source Separation",
-    "description": "MUSDB18 is a multitrack music dataset comprising 150 full-length music songs (~10 hours total audio) designed for evaluating music source separation algorithms. Each track includes isolated vocals, drums, bass, and accompaniment stems alongside full stereophonic mixtures encoded in uncompressed and STEMS format.",
+    "description": "MUSDB18 is a multitrack music dataset comprising 150 full-length music songs (~10 hours total audio) designed for evaluating music source separation algorithms. Each track includes isolated vocals, drums, bass, and other accompaniment stems alongside full stereophonic mixtures encoded in Native Instruments STEMS format (.mp4). Distinct from the separate uncompressed WAV release (MUSDB18-HQ).",
     "homepage_url": "https://sigsep.github.io/datasets/musdb.html",
     "publisher": {
       "name": "Inria / Litis / Northwestern University",
@@ -44493,7 +44521,7 @@
       "spdx_id": "CC-BY-NC-SA-4.0",
       "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "commercial_use": "forbidden",
-      "notes": "Dataset compiled under CC-BY-NC-SA-4.0 strictly for non-commercial educational and academic research purposes."
+      "notes": "Dataset compiled strictly for non-commercial educational and academic research purposes under mixed Creative Commons and non-commercial contributor terms: 46 tracks from MedleyDB (CC-BY-NC-SA-4.0), 100 tracks from The 'Mixing Secrets' Free Multitrack Download Library / DSD100 (non-commercial research only), 2 tracks from The Easton Ellises (CC-BY-NC-SA-3.0), and 2 tracks from Native Instruments."
     },
     "source_references": [
       {
@@ -44513,17 +44541,16 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against Zenodo release (DOI: 10.5281/zenodo.1117372) and official SIGSEP documentation."
+      "notes": "Verified against Zenodo release (DOI: 10.5281/zenodo.1117372) and official SIGSEP documentation. 150 full-length tracks (100 train, 50 test) packaged as musdb18.zip (4.7 GB) in Native Instruments STEMS format."
     },
     "size": {
-      "amount": 4.4,
+      "amount": 4.7,
       "unit": "GB",
       "file_formats": [
-        "stem.mp4",
-        "wav"
+        "stem.mp4"
       ],
       "status": "verified",
-      "notes": "44.1kHz encoded multi-track STEMS files containing mixture and 4 isolated instruments."
+      "notes": "Original MUSDB18 release encoded as musdb18.zip (4.7 GB). Stems are Native Instruments multi-track AAC-encoded MP4 files containing 5 stereo streams (mixture, vocals, drums, bass, other) at 44.1kHz. Distinct from the separate uncompressed WAV release (MUSDB18-HQ, 22.7 GB)."
     },
     "sample_count": {
       "total": 150,
@@ -54001,8 +54028,8 @@
     "schema_version": "1.0.0",
     "id": "places365",
     "slug": "places365",
-    "name": "Places365: A Large-Scale Scene Recognition Benchmark",
-    "description": "Places365-Standard is a foundational scene recognition benchmark comprising 2,168,460 photographs across 365 scene categories. Part of the Places2 database, it evaluates visual scene perception, place categorization, and holistic image representation learning.",
+    "name": "Places365-Standard: A Large-Scale Scene Recognition Benchmark",
+    "description": "Places365-Standard is a foundational scene recognition benchmark comprising 2,168,460 photographs across 365 scene categories (distinct from the ~8M image Places365-Challenge release). Part of the MIT Places2 database, it includes 1,803,460 training images, 36,500 validation images (100/class), and 328,500 test images (900/class) to benchmark visual scene perception and place categorization.",
     "homepage_url": "http://places2.csail.mit.edu",
     "publisher": {
       "name": "MIT Computer Science and Artificial Intelligence Laboratory (CSAIL)",
@@ -54050,7 +54077,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against IEEE TPAMI publication (DOI: 10.1109/TPAMI.2017.2723009) and MIT CSAIL Places2 specifications."
+      "notes": "Verified against IEEE TPAMI publication (DOI: 10.1109/TPAMI.2017.2723009) and MIT CSAIL Places2 specifications. Models Places365-Standard (2,168,460 images across 365 scene classes)."
     },
     "size": {
       "amount": 105.0,
@@ -58426,7 +58453,7 @@
     "id": "ropes",
     "slug": "ropes",
     "name": "ROPES: Reasoning Over Paragraph Effects in Situations",
-    "description": "ROPES (Reasoning Over Paragraph Effects in Situations) is a reading comprehension benchmark comprising 14,322 questions over 1,068 science passages. It tests a system's ability to apply causal effects learned from an expository background text to a new, hypothetical situation.",
+    "description": "ROPES (Reasoning Over Paragraph Effects in Situations) is a reading comprehension benchmark comprising 14,322 questions over 588 background science passages selected by annotators. It tests a system's ability to apply causal effects learned from an expository background text to a new, hypothetical situation.",
     "homepage_url": "https://allenai.org/data/ropes",
     "publisher": {
       "name": "Allen Institute for AI",
@@ -58465,16 +58492,16 @@
       },
       {
         "title": "Reasoning Over Paragraph Effects in Situations",
-        "url": "https://doi.org/10.18653/v1/D19-5820",
+        "url": "https://doi.org/10.18653/v1/D19-5808",
         "type": "original_paper",
-        "notes": "Published in Proceedings of the 2nd Workshop on Machine Reading for Question Answering (MRQA 2019)."
+        "notes": "Published in Proceedings of the 2nd Workshop on Machine Reading for Question Answering (MRQA 2019), pages 58-62."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against MRQA 2019 publication (DOI: 10.18653/v1/D19-5820) and official Allen Institute portal."
+      "notes": "Verified against MRQA 2019 publication (DOI: 10.18653/v1/D19-5808, ACL Anthology: D19-5808) and official Allen Institute portal."
     },
     "size": {
       "amount": 10.5,
@@ -58499,7 +58526,7 @@
       "breakdown": [
         {
           "label": "background_passages",
-          "value": 1068,
+          "value": 588,
           "unit": "passages"
         }
       ]
@@ -58512,15 +58539,15 @@
     },
     "citation": {
       "paper_title": "Reasoning Over Paragraph Effects in Situations",
-      "paper_url": "https://doi.org/10.18653/v1/D19-5820",
+      "paper_url": "https://aclanthology.org/D19-5808/",
       "authors": [
         "Kevin Lin",
         "Oyvind Tafjord",
         "Peter Clark",
         "Matt Gardner"
       ],
-      "doi": "10.18653/v1/D19-5820",
-      "bibtex": "@inproceedings{lin-etal-2019-reasoning,\n  title = {Reasoning Over Paragraph Effects in Situations},\n  author = {Lin, Kevin and Tafjord, Oyvind and Clark, Peter and Gardner, Matt},\n  booktitle = {Proceedings of the 2nd Workshop on Machine Reading for Question Answering},\n  pages = {148--153},\n  year = {2019},\n  doi = {10.18653/v1/D19-5820}\n}"
+      "doi": "10.18653/v1/D19-5808",
+      "bibtex": "@inproceedings{lin-etal-2019-reasoning,\n  title = {Reasoning Over Paragraph Effects in Situations},\n  author = {Lin, Kevin and Tafjord, Oyvind and Clark, Peter and Gardner, Matt},\n  booktitle = {Proceedings of the 2nd Workshop on Machine Reading for Question Answering},\n  month = nov,\n  year = {2019},\n  address = {Hong Kong, China},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/D19-5808/},\n  doi = {10.18653/v1/D19-5808},\n  pages = {58--62}\n}"
     }
   },
   {
@@ -63054,7 +63081,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against George Mason University official archive specifications."
+      "notes": "Verified against George Mason University official archive specifications. 2,140 speech recordings across 177 countries and 214 native languages."
     },
     "size": {
       "amount": 5.8,
@@ -63086,11 +63113,8 @@
         }
       ]
     },
-    "languages": [
-      "en"
-    ],
     "dates": {
-      "published": "2018-01-01"
+      "published": "2018"
     },
     "citation": {
       "paper_title": "The Speech Accent Archive",
@@ -75486,12 +75510,12 @@
       "meta-ai"
     ],
     "license": {
-      "status": "verified_open",
-      "name": "Creative Commons Attribution 4.0 International",
+      "status": "custom_permissive",
+      "name": "Creative Commons Attribution 4.0 International (Annotations) / Research Only (Images)",
       "spdx_id": "CC-BY-4.0",
-      "url": "https://creativecommons.org/licenses/by/4.0/",
-      "commercial_use": "allowed",
-      "notes": "Dataset annotations released under CC-BY-4.0."
+      "url": "https://huggingface.co/datasets/facebook/winoground",
+      "commercial_use": "unknown",
+      "notes": "Dataset annotations released by Meta AI under CC-BY-4.0. Access to companion images requires accepting research-use terms on Hugging Face; underlying photography is licensed for non-commercial academic research and commercial rights are not conveyed."
     },
     "source_references": [
       {
@@ -75511,7 +75535,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against CVPR 2022 publication (DOI: 10.1109/CVPR52688.2022.00516) and official Hugging Face repository."
+      "notes": "Verified against CVPR 2022 publication (DOI: 10.1109/CVPR52688.2022.00516) and official Hugging Face repository terms."
     },
     "size": {
       "amount": 250.0,

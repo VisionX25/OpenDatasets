@@ -3,7 +3,7 @@
   "id": "musdb18",
   "slug": "musdb18",
   "name": "MUSDB18: A Corpus for Music Source Separation",
-  "description": "MUSDB18 is a multitrack music dataset comprising 150 full-length music songs (~10 hours total audio) designed for evaluating music source separation algorithms. Each track includes isolated vocals, drums, bass, and accompaniment stems alongside full stereophonic mixtures encoded in uncompressed and STEMS format.",
+  "description": "MUSDB18 is a multitrack music dataset comprising 150 full-length music songs (~10 hours total audio) designed for evaluating music source separation algorithms. Each track includes isolated vocals, drums, bass, and other accompaniment stems alongside full stereophonic mixtures encoded in Native Instruments STEMS format (.mp4). Distinct from the separate uncompressed WAV release (MUSDB18-HQ).",
   "homepage_url": "https://sigsep.github.io/datasets/musdb.html",
   "publisher": {
     "name": "Inria / Litis / Northwestern University",
@@ -31,7 +31,7 @@
     "spdx_id": "CC-BY-NC-SA-4.0",
     "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
     "commercial_use": "forbidden",
-    "notes": "Dataset compiled under CC-BY-NC-SA-4.0 strictly for non-commercial educational and academic research purposes."
+    "notes": "Dataset compiled strictly for non-commercial educational and academic research purposes under mixed Creative Commons and non-commercial contributor terms: 46 tracks from MedleyDB (CC-BY-NC-SA-4.0), 100 tracks from The 'Mixing Secrets' Free Multitrack Download Library / DSD100 (non-commercial research only), 2 tracks from The Easton Ellises (CC-BY-NC-SA-3.0), and 2 tracks from Native Instruments."
   },
   "source_references": [
     {
@@ -51,17 +51,16 @@
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against Zenodo release (DOI: 10.5281/zenodo.1117372) and official SIGSEP documentation."
+    "notes": "Verified against Zenodo release (DOI: 10.5281/zenodo.1117372) and official SIGSEP documentation. 150 full-length tracks (100 train, 50 test) packaged as musdb18.zip (4.7 GB) in Native Instruments STEMS format."
   },
   "size": {
-    "amount": 4.4,
+    "amount": 4.7,
     "unit": "GB",
     "file_formats": [
-      "stem.mp4",
-      "wav"
+      "stem.mp4"
     ],
     "status": "verified",
-    "notes": "44.1kHz encoded multi-track STEMS files containing mixture and 4 isolated instruments."
+    "notes": "Original MUSDB18 release encoded as musdb18.zip (4.7 GB). Stems are Native Instruments multi-track AAC-encoded MP4 files containing 5 stereo streams (mixture, vocals, drums, bass, other) at 44.1kHz. Distinct from the separate uncompressed WAV release (MUSDB18-HQ, 22.7 GB)."
   },
   "sample_count": {
     "total": 150,
