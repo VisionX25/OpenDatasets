@@ -26,12 +26,12 @@
     "benchmark"
   ],
   "license": {
-    "status": "verified_open",
-    "name": "Apache License 2.0",
-    "spdx_id": "Apache-2.0",
-    "url": "https://www.apache.org/licenses/LICENSE-2.0",
-    "commercial_use": "allowed",
-    "notes": "Benchmark dataset and evaluation toolkit released under Apache License 2.0."
+    "status": "custom_permissive",
+    "name": "Apache 2.0 (Evaluation Code) / TuSimple Challenge Research Terms (Dataset)",
+    "spdx_id": null,
+    "url": "https://github.com/TuSimple/tusimple-benchmark/blob/master/LICENSE",
+    "commercial_use": "forbidden",
+    "notes": "The evaluation software and benchmark scripts are licensed under Apache License 2.0. However, the driving video clips and lane annotations were provided for the CVPR 2017 Autonomous Driving Challenge under academic research evaluation terms without granted commercial rights. Commercial deployment or training requires explicit agreement from TuSimple."
   },
   "source_references": [
     {
@@ -51,7 +51,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against TuSimple Lane Detection Challenge repository documentation and official data manifests. 6,408 benchmark video clips partitioned into 3,626 training clips and 2,782 testing clips."
+    "notes": "Verified against TuSimple Lane Detection Challenge repository documentation and data manifests. 6,408 one-second driving clips (20 fps, 1280x720, total 128,160 video frames) partitioned into 3,626 training clips and 2,782 testing clips, with ground-truth polylines annotated on the final frame of each clip (6,408 annotated frames). No official standalone validation split was provided in the challenge."
   },
   "size": {
     "amount": 8.5,

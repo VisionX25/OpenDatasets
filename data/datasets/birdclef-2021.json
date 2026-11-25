@@ -32,7 +32,7 @@
     "spdx_id": null,
     "url": "https://www.kaggle.com/c/birdclef-2021/rules",
     "commercial_use": "forbidden",
-    "notes": "Audio files contributed via Xeno-canto under Creative Commons licenses (chiefly CC-BY-NC). Competition data is restricted to non-commercial academic research and conservation evaluation under LifeCLEF terms."
+    "notes": "Audio recordings were contributed by community recordists to Xeno-canto under individual Creative Commons licenses (chiefly CC-BY-NC-SA and CC-BY-NC). The Kaggle challenge dataset is governed by competition rules restricting use strictly to non-commercial academic research and conservation evaluation."
   },
   "source_references": [
     {
@@ -52,7 +52,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against CLEF 2021 working notes (CEUR-WS Vol-2936) and official Kaggle data specifications. 62,884 focal training recordings across 397 bird species, with 80 complex soundscape audio recordings."
+    "notes": "Verified against CLEF 2021 working notes (CEUR-WS Vol-2936, pp. 1437-1450) and official Kaggle data specifications. 62,884 focal training recordings in train_short_audio across 397 bird species (with 62,874 usable recordings in downstream pre-processing pipelines after excluding 10 silent/unreadable files), alongside 80 continuous soundscape audio recordings for testing."
   },
   "size": {
     "amount": 18.0,
@@ -79,6 +79,11 @@
       {
         "label": "test_soundscapes",
         "value": 80,
+        "unit": "recordings"
+      },
+      {
+        "label": "usable_focal_recordings",
+        "value": 62874,
         "unit": "recordings"
       }
     ]

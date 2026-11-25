@@ -28,12 +28,12 @@
     "coco"
   ],
   "license": {
-    "status": "verified_open",
-    "name": "Apache License 2.0",
-    "spdx_id": "Apache-2.0",
+    "status": "custom_permissive",
+    "name": "Apache License 2.0 (Annotations) / Diverse Flickr Terms (Images)",
+    "spdx_id": null,
     "url": "https://www.apache.org/licenses/LICENSE-2.0",
-    "commercial_use": "allowed",
-    "notes": "Dataset annotations and benchmark code released by Cambridge LTL under Apache License 2.0. Underlying imagery sourced from MS-COCO."
+    "commercial_use": "unknown",
+    "notes": "Dataset annotations and benchmark code released by Cambridge LTL under Apache License 2.0. Underlying imagery is sourced from MS-COCO under individual Flickr Creative Commons terms."
   },
   "source_references": [
     {
@@ -53,7 +53,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against TACL 2023 publication (DOI: 10.1162/tacl_a_00566) and official GitHub repository. 10,972 total image-text pairs partitioned under the official random split: 7,680 train, 1,097 dev, and 2,195 test instances."
+    "notes": "Verified against TACL 2023 publication (DOI: 10.1162/tacl_a_00566) and official GitHub repository (cambridgeltl/visual-spatial-reasoning). 10,972 total image-text pairs covering 65 spatial relations. Evaluated via two official protocols: random split (7,680 train, 1,097 dev, 2,195 test) and zero-shot split (evaluating generalization on unseen relations/objects)."
   },
   "size": {
     "amount": 1.6,

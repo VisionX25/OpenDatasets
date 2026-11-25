@@ -32,7 +32,7 @@
     "spdx_id": "CC-BY-4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
     "commercial_use": "allowed",
-    "notes": "Dataset collection released on Zenodo under Creative Commons Attribution 4.0 International (CC-BY-4.0). Code and generation scripts released under Apache License 2.0."
+    "notes": "Source audio recordings were selected from CC0-licensed Freesound recordings. Audio labels are derived from FSD50K under Creative Commons Attribution 4.0 International (CC-BY-4.0). Simulation software and room impulse response generation code are released under Apache License 2.0."
   },
   "source_references": [
     {
@@ -43,22 +43,22 @@
     },
     {
       "title": "FUSS Dataset on Zenodo",
-      "url": "https://doi.org/10.5281/zenodo.3743844",
+      "url": "https://zenodo.org/records/3710392",
       "type": "archive",
-      "notes": "Archival data deposit on Zenodo."
+      "notes": "Archival data deposit on Zenodo (records 3710392 / 3743844, DOI: 10.5281/zenodo.3710392)."
     },
     {
       "title": "What's All the FUSS About Free Universal Sound Separation Data?",
-      "url": "https://doi.org/10.1109/WASPAA52581.2021.9632735",
+      "url": "https://doi.org/10.1109/ICASSP39728.2021.9414774",
       "type": "original_paper",
-      "notes": "Published in IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA 2021)."
+      "notes": "Published in Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2021)."
     }
   ],
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against Zenodo deposit (DOI: 10.5281/zenodo.3743844) and WASPAA 2021 publication. 12,377 source audio clips partitioned across 7,237 train, 2,883 validation, and 2,257 evaluation clips."
+    "notes": "Verified against ICASSP 2021 publication (DOI: 10.1109/ICASSP39728.2021.9414774) and official Zenodo archive (records 3710392 / 3743844). 12,377 source audio clips partitioned across 7,237 train, 2,883 validation, and 2,257 evaluation clips (approx. 23 hours of single-source audio across 357 sound classes), used to synthesize 20,000 train, 1,000 val, and 1,000 eval reverberant mixtures."
   },
   "size": {
     "amount": 22.0,
@@ -114,7 +114,7 @@
   },
   "citation": {
     "paper_title": "What's All the FUSS About Free Universal Sound Separation Data?",
-    "paper_url": "https://doi.org/10.1109/WASPAA52581.2021.9632735",
+    "paper_url": "https://doi.org/10.1109/ICASSP39728.2021.9414774",
     "authors": [
       "Scott Wisdom",
       "Hakan Erdogan",
@@ -126,7 +126,7 @@
       "Prem Seetharaman",
       "John R. Hershey"
     ],
-    "doi": "10.1109/WASPAA52581.2021.9632735",
-    "bibtex": "@inproceedings{wisdom2021whats,\n  title = {What's All the {FUSS} About Free Universal Sound Separation Data?},\n  author = {Wisdom, Scott and Erdogan, Hakan and Ellis, Daniel P. W. and Serizel, Romain and Turpault, Nicolas and Fonseca, Eduardo and Salamon, Justin and Seetharaman, Prem and Hershey, John R.},\n  booktitle = {IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)},\n  pages = {186--190},\n  year = {2021},\n  doi = {10.1109/WASPAA52581.2021.9632735}\n}"
+    "doi": "10.1109/ICASSP39728.2021.9414774",
+    "bibtex": "@inproceedings{wisdom2021whats,\n  title = {What's All the {FUSS} About Free Universal Sound Separation Data?},\n  author = {Wisdom, Scott and Erdogan, Hakan and Ellis, Daniel P. W. and Serizel, Romain and Turpault, Nicolas and Fonseca, Eduardo and Salamon, Justin and Seetharaman, Prem and Hershey, John R.},\n  booktitle = {ICASSP 2021 - 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages = {186--190},\n  year = {2021},\n  doi = {10.1109/ICASSP39728.2021.9414774}\n}"
   }
 }

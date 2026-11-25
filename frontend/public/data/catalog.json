@@ -329,12 +329,12 @@
       "allenai"
     ],
     "license": {
-      "status": "verified_open",
-      "name": "Creative Commons Attribution 4.0 International",
-      "spdx_id": "CC-BY-4.0",
+      "status": "custom_permissive",
+      "name": "Creative Commons Attribution 4.0 International (Annotations) / Diverse Flickr Terms (Images)",
+      "spdx_id": null,
       "url": "https://creativecommons.org/licenses/by/4.0/",
-      "commercial_use": "allowed",
-      "notes": "Question annotations and rationales released under CC-BY-4.0 by the Allen Institute for AI. Underlying images originate from MS-COCO (Flickr CC licenses)."
+      "commercial_use": "unknown",
+      "notes": "A-OKVQA annotations, multiple-choice options, and human-written rationales are released by AllenAI under CC-BY-4.0, with evaluation scripts under Apache-2.0. However, the questions are grounded in MS-COCO 2017 images sourced from Flickr under disparate individual Creative Commons licenses (some non-commercial). Commercial use of underlying imagery requires independent verification of individual Flickr image licenses."
     },
     "source_references": [
       {
@@ -9776,7 +9776,7 @@
       "spdx_id": null,
       "url": "https://www.kaggle.com/c/birdclef-2021/rules",
       "commercial_use": "forbidden",
-      "notes": "Audio files contributed via Xeno-canto under Creative Commons licenses (chiefly CC-BY-NC). Competition data is restricted to non-commercial academic research and conservation evaluation under LifeCLEF terms."
+      "notes": "Audio recordings were contributed by community recordists to Xeno-canto under individual Creative Commons licenses (chiefly CC-BY-NC-SA and CC-BY-NC). The Kaggle challenge dataset is governed by competition rules restricting use strictly to non-commercial academic research and conservation evaluation."
     },
     "source_references": [
       {
@@ -9796,7 +9796,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against CLEF 2021 working notes (CEUR-WS Vol-2936) and official Kaggle data specifications. 62,884 focal training recordings across 397 bird species, with 80 complex soundscape audio recordings."
+      "notes": "Verified against CLEF 2021 working notes (CEUR-WS Vol-2936, pp. 1437-1450) and official Kaggle data specifications. 62,884 focal training recordings in train_short_audio across 397 bird species (with 62,874 usable recordings in downstream pre-processing pipelines after excluding 10 silent/unreadable files), alongside 80 continuous soundscape audio recordings for testing."
     },
     "size": {
       "amount": 18.0,
@@ -9823,6 +9823,11 @@
         {
           "label": "test_soundscapes",
           "value": 80,
+          "unit": "recordings"
+        },
+        {
+          "label": "usable_focal_recordings",
+          "value": 62874,
           "unit": "recordings"
         }
       ]
@@ -11060,11 +11065,11 @@
     ],
     "license": {
       "status": "custom_permissive",
-      "name": "MIT License (Annotations) / Inherited Source Benchmark Terms",
-      "spdx_id": "MIT",
+      "name": "MIT License (Code & QDMR Annotations) / Upstream Source Terms",
+      "spdx_id": null,
       "url": "https://github.com/allenai/Break",
-      "commercial_use": "allowed",
-      "notes": "Code and QDMR annotations released under MIT License by Allen Institute for AI and Tel Aviv University. Sourced from 10 existing QA datasets including HotpotQA, DROP, and Spider."
+      "commercial_use": "unknown",
+      "notes": "Code and QDMR annotations released under the MIT License by the Allen Institute for AI and Tel Aviv University. However, underlying questions originate from 10 diverse upstream datasets (including HotpotQA, DROP, Spider, ComplexWebQuestions, SQuAD 2.0, etc.) governed by heterogeneous open-access, share-alike, or restrictive licenses; commercial use of the aggregated benchmark is therefore subject to upstream source terms."
     },
     "source_references": [
       {
@@ -11084,7 +11089,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against TACL 2020 publication (DOI: 10.1162/tacl_a_00309) and official GitHub repository (allenai/Break). 83,978 total annotated questions partitioned across standard QDMR (60,150) and high-level QDMR (23,828)."
+      "notes": "Verified against TACL 2020 publication (DOI: 10.1162/tacl_a_00309) and official GitHub repository (allenai/Break). 83,978 total annotated questions partitioned across standard QDMR (60,150) and high-level QDMR (23,828) without double-counting; standard QDMR covers 10 source datasets while high-level QDMR addresses multi-hop databases and complex question subsets."
     },
     "size": {
       "amount": 45.0,
@@ -11128,15 +11133,15 @@
       "paper_url": "https://aclanthology.org/2020.tacl-1.13/",
       "authors": [
         "Tomer Wolfson",
-        "Daniel Deutch",
         "Mor Geva",
-        "Dor Gupta",
-        "Alon Moshkovich",
-        "Alon Rosenman",
+        "Ankit Gupta",
+        "Matt Gardner",
+        "Yoav Goldberg",
+        "Daniel Deutch",
         "Jonathan Berant"
       ],
       "doi": "10.1162/tacl_a_00309",
-      "bibtex": "@article{wolfson-etal-2020-break,\n  title = {Break It Down: A Question Understanding Benchmark},\n  author = {Wolfson, Tomer and Deutch, Daniel and Geva, Mor and Gupta, Dor and Moshkovich, Alon and Rosenman, Alon and Berant, Jonathan},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {8},\n  year = {2020},\n  publisher = {MIT Press},\n  url = {https://aclanthology.org/2020.tacl-1.13/},\n  doi = {10.1162/tacl_a_00309},\n  pages = {183--198}\n}"
+      "bibtex": "@article{wolfson-etal-2020-break,\n  title = {Break It Down: A Question Understanding Benchmark},\n  author = {Wolfson, Tomer and Geva, Mor and Gupta, Ankit and Gardner, Matt and Goldberg, Yoav and Deutch, Daniel and Berant, Jonathan},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {8},\n  year = {2020},\n  publisher = {MIT Press},\n  url = {https://aclanthology.org/2020.tacl-1.13/},\n  doi = {10.1162/tacl_a_00309},\n  pages = {183--198}\n}"
     }
   },
   {
@@ -19875,18 +19880,18 @@
       "total": 60819766,
       "unit": "sentence fusion examples",
       "status": "verified",
-      "partition_completeness": "unspecified",
-      "partition_overlap": "unspecified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
       "breakdown": [
         {
           "label": "sports_articles_examples",
           "value": 44177443,
-          "unit": "examples"
+          "unit": "sentence fusion examples"
         },
         {
           "label": "wikipedia_examples",
           "value": 16642323,
-          "unit": "examples"
+          "unit": "sentence fusion examples"
         }
       ]
     },
@@ -21517,11 +21522,11 @@
     ],
     "license": {
       "status": "verified_non_commercial",
-      "name": "MIT License (Code & Annotations) / Non-Commercial IMDb Terms",
+      "name": "MIT License (Code) / Non-Commercial IMDb Terms / CC-BY-SA 3.0 (Wikipedia)",
       "spdx_id": null,
       "url": "https://github.com/duorc/duorc.github.io",
       "commercial_use": "forbidden",
-      "notes": "Dataset code and annotations released under MIT License. Underlying movie plot summaries originate from Wikipedia (CC-BY-SA) and IMDb; IMDb Terms of Use prohibit unauthorized commercial exploitation of IMDb content."
+      "notes": "Evaluation scripts released under MIT License. Underlying narrative summaries originate from Wikipedia (CC-BY-SA 3.0) and IMDb; IMDb Conditions of Use prohibit commercial exploitation without prior written consent."
     },
     "source_references": [
       {
@@ -21541,7 +21546,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against ACL 2018 publication (DOI: 10.18653/v1/P18-1156) and official GitHub project portal. Sourced from 7,680 parallel movie plot pairs across SelfRC (86,241 QA pairs) and ParaphraseRC (100,972 QA pairs) sub-tasks."
+      "notes": "Verified against ACL 2018 publication (DOI: 10.18653/v1/P18-1156) and official GitHub project portal. Sourced from 7,680 parallel movie plot pairs across SelfRC (86,241 QA pairs) and ParaphraseRC (100,972 QA pairs) tasks. The configuration sum of 187,213 exceeds the 186,089 unique question total by exactly 1,124 questions that overlap across both task configurations."
     },
     "size": {
       "amount": 25.0,
@@ -27141,7 +27146,7 @@
       "spdx_id": "CC-BY-4.0",
       "url": "https://creativecommons.org/licenses/by/4.0/",
       "commercial_use": "allowed",
-      "notes": "Dataset collection released on Zenodo under Creative Commons Attribution 4.0 International (CC-BY-4.0). Code and generation scripts released under Apache License 2.0."
+      "notes": "Source audio recordings were selected from CC0-licensed Freesound recordings. Audio labels are derived from FSD50K under Creative Commons Attribution 4.0 International (CC-BY-4.0). Simulation software and room impulse response generation code are released under Apache License 2.0."
     },
     "source_references": [
       {
@@ -27152,22 +27157,22 @@
       },
       {
         "title": "FUSS Dataset on Zenodo",
-        "url": "https://doi.org/10.5281/zenodo.3743844",
+        "url": "https://zenodo.org/records/3710392",
         "type": "archive",
-        "notes": "Archival data deposit on Zenodo."
+        "notes": "Archival data deposit on Zenodo (records 3710392 / 3743844, DOI: 10.5281/zenodo.3710392)."
       },
       {
         "title": "What's All the FUSS About Free Universal Sound Separation Data?",
-        "url": "https://doi.org/10.1109/WASPAA52581.2021.9632735",
+        "url": "https://doi.org/10.1109/ICASSP39728.2021.9414774",
         "type": "original_paper",
-        "notes": "Published in IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA 2021)."
+        "notes": "Published in Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2021)."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against Zenodo deposit (DOI: 10.5281/zenodo.3743844) and WASPAA 2021 publication. 12,377 source audio clips partitioned across 7,237 train, 2,883 validation, and 2,257 evaluation clips."
+      "notes": "Verified against ICASSP 2021 publication (DOI: 10.1109/ICASSP39728.2021.9414774) and official Zenodo archive (records 3710392 / 3743844). 12,377 source audio clips partitioned across 7,237 train, 2,883 validation, and 2,257 evaluation clips (approx. 23 hours of single-source audio across 357 sound classes), used to synthesize 20,000 train, 1,000 val, and 1,000 eval reverberant mixtures."
     },
     "size": {
       "amount": 22.0,
@@ -27223,7 +27228,7 @@
     },
     "citation": {
       "paper_title": "What's All the FUSS About Free Universal Sound Separation Data?",
-      "paper_url": "https://doi.org/10.1109/WASPAA52581.2021.9632735",
+      "paper_url": "https://doi.org/10.1109/ICASSP39728.2021.9414774",
       "authors": [
         "Scott Wisdom",
         "Hakan Erdogan",
@@ -27235,8 +27240,8 @@
         "Prem Seetharaman",
         "John R. Hershey"
       ],
-      "doi": "10.1109/WASPAA52581.2021.9632735",
-      "bibtex": "@inproceedings{wisdom2021whats,\n  title = {What's All the {FUSS} About Free Universal Sound Separation Data?},\n  author = {Wisdom, Scott and Erdogan, Hakan and Ellis, Daniel P. W. and Serizel, Romain and Turpault, Nicolas and Fonseca, Eduardo and Salamon, Justin and Seetharaman, Prem and Hershey, John R.},\n  booktitle = {IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)},\n  pages = {186--190},\n  year = {2021},\n  doi = {10.1109/WASPAA52581.2021.9632735}\n}"
+      "doi": "10.1109/ICASSP39728.2021.9414774",
+      "bibtex": "@inproceedings{wisdom2021whats,\n  title = {What's All the {FUSS} About Free Universal Sound Separation Data?},\n  author = {Wisdom, Scott and Erdogan, Hakan and Ellis, Daniel P. W. and Serizel, Romain and Turpault, Nicolas and Fonseca, Eduardo and Salamon, Justin and Seetharaman, Prem and Hershey, John R.},\n  booktitle = {ICASSP 2021 - 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages = {186--190},\n  year = {2021},\n  doi = {10.1109/ICASSP39728.2021.9414774}\n}"
     }
   },
   {
@@ -30252,12 +30257,12 @@
         {
           "label": "illumination_sequences",
           "value": 57,
-          "unit": "sequences"
+          "unit": "image sequences"
         },
         {
           "label": "viewpoint_sequences",
           "value": 59,
-          "unit": "sequences"
+          "unit": "image sequences"
         },
         {
           "label": "images_per_sequence",
@@ -52652,11 +52657,11 @@
     ],
     "license": {
       "status": "public_domain",
-      "name": "Public Domain / Permissive OpenSLR License",
+      "name": "Public Domain / Free To Use For Any Purpose (No License Required)",
       "spdx_id": null,
       "url": "https://www.openslr.org/1/",
       "commercial_use": "allowed",
-      "notes": "Freely available for any purpose without restrictions as declared on OpenSLR resource SLR1."
+      "notes": "OpenSLR resource SLR1 explicitly specifies 'License: none (free to use for any purpose)'. The dataset was created for the Kaldi project by an anonymous contributor and curated on OpenSLR by Daniel Povey."
     },
     "source_references": [
       {
@@ -52708,9 +52713,10 @@
       "paper_title": "YESNO Speech Dataset",
       "paper_url": "https://www.openslr.org/1/",
       "authors": [
+        "Kaldi Project Contributors",
         "Daniel Povey"
       ],
-      "bibtex": "@misc{povey2012yesno,\n  author = {Povey, Daniel},\n  title = {{YESNO} Speech Dataset},\n  year = {2012},\n  howpublished = {\\url{https://www.openslr.org/1/}},\n  note = {OpenSLR Resource SLR1}\n}"
+      "bibtex": "@misc{kaldi2012yesno,\n  author = {{Kaldi Project Contributors} and Povey, Daniel},\n  title = {{YESNO} Speech Dataset},\n  year = {2012},\n  publisher = {OpenSLR},\n  howpublished = {\\url{https://www.openslr.org/1/}},\n  note = {OpenSLR Resource SLR1}\n}"
     }
   },
   {
@@ -67212,7 +67218,7 @@
     "slug": "tallyqa",
     "name": "TallyQA: Answering Complex Counting Questions",
     "description": "TallyQA is a large-scale visual question answering benchmark focused on object counting and spatial relational reasoning. Spanning 287,907 questions across 165,000 images sourced from MS-COCO and Visual Genome, it distinguishes between simple counting (direct detection) and complex counting requiring relationship and attribute understanding.",
-    "homepage_url": "https://github.com/manoja342/TallyQA_dataset",
+    "homepage_url": "https://github.com/manoja328/TallyQA_dataset",
     "publisher": {
       "name": "Rochester Institute of Technology",
       "type": "academic",
@@ -67237,17 +67243,17 @@
       "visual-genome"
     ],
     "license": {
-      "status": "verified_open",
-      "name": "MIT License",
-      "spdx_id": "MIT",
-      "url": "https://opensource.org/licenses/MIT",
-      "commercial_use": "allowed",
-      "notes": "Dataset annotations and evaluation code released under the MIT License. Underlying images sourced from MS-COCO and Visual Genome under Flickr Creative Commons licenses."
+      "status": "custom_permissive",
+      "name": "Apache License 2.0 (Annotations & Code) / Diverse Flickr Terms (Images)",
+      "spdx_id": null,
+      "url": "https://github.com/manoja328/TallyQA_dataset/blob/master/LICENSE",
+      "commercial_use": "unknown",
+      "notes": "Dataset annotations and benchmark scripts are released under Apache License 2.0 in the official repository (manoja328/TallyQA_dataset). Underlying images originate from MS-COCO and Visual Genome under individual Flickr Creative Commons terms."
     },
     "source_references": [
       {
         "title": "TallyQA Official Project Repository",
-        "url": "https://github.com/manoja342/TallyQA_dataset",
+        "url": "https://github.com/manoja328/TallyQA_dataset",
         "type": "repository",
         "notes": "Official author repository with download links for train.json and test.json."
       },
@@ -69136,12 +69142,12 @@
       "benchmark"
     ],
     "license": {
-      "status": "verified_open",
-      "name": "Apache License 2.0",
-      "spdx_id": "Apache-2.0",
-      "url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "commercial_use": "allowed",
-      "notes": "Benchmark dataset and evaluation toolkit released under Apache License 2.0."
+      "status": "custom_permissive",
+      "name": "Apache 2.0 (Evaluation Code) / TuSimple Challenge Research Terms (Dataset)",
+      "spdx_id": null,
+      "url": "https://github.com/TuSimple/tusimple-benchmark/blob/master/LICENSE",
+      "commercial_use": "forbidden",
+      "notes": "The evaluation software and benchmark scripts are licensed under Apache License 2.0. However, the driving video clips and lane annotations were provided for the CVPR 2017 Autonomous Driving Challenge under academic research evaluation terms without granted commercial rights. Commercial deployment or training requires explicit agreement from TuSimple."
     },
     "source_references": [
       {
@@ -69161,7 +69167,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against TuSimple Lane Detection Challenge repository documentation and official data manifests. 6,408 benchmark video clips partitioned into 3,626 training clips and 2,782 testing clips."
+      "notes": "Verified against TuSimple Lane Detection Challenge repository documentation and data manifests. 6,408 one-second driving clips (20 fps, 1280x720, total 128,160 video frames) partitioned into 3,626 training clips and 2,782 testing clips, with ground-truth polylines annotated on the final frame of each clip (6,408 annotated frames). No official standalone validation split was provided in the challenge."
     },
     "size": {
       "amount": 8.5,
@@ -70204,7 +70210,7 @@
         "Angeliki Xifara"
       ],
       "doi": "10.24432/C51307",
-      "bibtex": "@article{tsanas2012accurate,\n  title = {Accurate quantitative estimation of energy performance of residential buildings using statistical machine learning tools},\n  author = {Tsanas, Athanasios and Xifara, Angeliki},\n  journal = {Energy and Buildings},\n  volume = {49},\n  pages = {560--567},\n  year = {2012},\n  doi = {10.1016/j.enbuild.2012.03.003}\n}"
+      "bibtex": "@misc{tsanas2012energy,\n  author = {Tsanas, Athanasios and Xifara, Angeliki},\n  title = {{Energy Efficiency}},\n  year = {2012},\n  publisher = {UCI Machine Learning Repository},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C51307}\n}"
     }
   },
   {
@@ -70896,8 +70902,8 @@
       "total": 8124,
       "unit": "instances",
       "status": "verified",
-      "partition_completeness": "unspecified",
-      "partition_overlap": "unspecified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
       "breakdown": [
         {
           "label": "categorical_attributes",
@@ -71754,17 +71760,17 @@
         "notes": "Official UCI dataset portal (DOI: 10.24432/C5KG68)."
       },
       {
-        "title": "A Knowledge Base for Predicting Protein Localization Sites in Eukaryotic Cells",
-        "url": "https://doi.org/10.1016/S0888-7543(05)80111-9",
+        "title": "A Probabilistic Classification System for Predicting the Cellular Localization Sites of Proteins",
+        "url": "https://www.aaai.org/Papers/ISMB/1996/ISMB96-012.pdf",
         "type": "original_paper",
-        "notes": "Published in Genomics (1991)."
+        "notes": "Published in Proceedings of the Fourth International Conference on Intelligent Systems for Molecular Biology (ISMB 1996)."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against UCI Machine Learning Repository (DOI: 10.24432/C5KG68) and Genomics 1991 publication. 1,484 protein instances with 8 predictive numerical attributes and 10 subcellular localization target classes."
+      "notes": "Verified against UCI Machine Learning Repository (DOI: 10.24432/C5KG68) and ISMB 1996 publication. 1,484 protein instances with 8 predictive numerical attributes and 10 subcellular localization target classes."
     },
     "size": {
       "amount": 115.0,
@@ -71802,10 +71808,11 @@
       "paper_title": "Yeast",
       "paper_url": "https://doi.org/10.24432/C5KG68",
       "authors": [
-        "Kenta Nakai"
+        "Kenta Nakai",
+        "Paul Horton"
       ],
       "doi": "10.24432/C5KG68",
-      "bibtex": "@misc{nakai1991yeast,\n  author = {Nakai, Kenta},\n  title = {{Yeast}},\n  year = {1991},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5KG68}\n}"
+      "bibtex": "@misc{nakai1996yeast,\n  author = {Nakai, Kenta and Horton, Paul},\n  title = {{Yeast}},\n  year = {1996},\n  publisher = {UCI Machine Learning Repository},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5KG68}\n}"
     }
   },
   {
@@ -73491,7 +73498,7 @@
       "spdx_id": "CC-BY-4.0",
       "url": "https://creativecommons.org/licenses/by/4.0/",
       "commercial_use": "allowed",
-      "notes": "Dataset annotations and baseline evaluation code released under CC-BY-4.0. Underlying imagery sourced from Wikimedia Commons under Creative Commons licenses."
+      "notes": "Dataset annotations released under Creative Commons Attribution 4.0 International (CC-BY-4.0). Underlying imagery is retrieved from Wikimedia Commons under various individual Creative Commons licenses; commercial use and redistribution of underlying images must honor individual creator attributions and terms."
     },
     "source_references": [
       {
@@ -73502,7 +73509,7 @@
       },
       {
         "title": "ViQuAE, a Dataset for Knowledge-based Visual Question Answering about Named Entities",
-        "url": "https://doi.org/10.1145/3477495.3531735",
+        "url": "https://doi.org/10.1145/3477495.3531753",
         "type": "original_paper",
         "notes": "Published in Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '22)."
       }
@@ -73511,7 +73518,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against SIGIR 2022 publication (DOI: 10.1145/3477495.3531735) and official GitHub repository (PaulLerner/ViQuAE). 3,697 questions partitioned into 1,190 train, 1,250 validation, and 1,257 test questions."
+      "notes": "Verified against SIGIR 2022 publication (DOI: 10.1145/3477495.3531753) and official GitHub repository (PaulLerner/ViQuAE). 3,697 questions partitioned into 1,190 train, 1,250 validation, and 1,257 test questions."
     },
     "size": {
       "amount": 1.8,
@@ -73547,7 +73554,7 @@
     },
     "citation": {
       "paper_title": "ViQuAE, a Dataset for Knowledge-based Visual Question Answering about Named Entities",
-      "paper_url": "https://doi.org/10.1145/3477495.3531735",
+      "paper_url": "https://doi.org/10.1145/3477495.3531753",
       "authors": [
         "Paul Lerner",
         "Olivier Ferret",
@@ -73557,8 +73564,8 @@
         "José G. Moreno",
         "Jesús Lovón-Melgarejo"
       ],
-      "doi": "10.1145/3477495.3531735",
-      "bibtex": "@inproceedings{lerner2022viquae,\n  title = {{ViQuAE}, a Dataset for Knowledge-based Visual Question Answering about Named Entities},\n  author = {Lerner, Paul and Ferret, Olivier and Guinaudeau, Camille and Le Borgne, Herv\\'e and Besan\\c{c}on, Romaric and Moreno, Jos\\'e G. and Lov\\'on-Melgarejo, Jes\\'us},\n  booktitle = {Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},\n  pages = {3108--3120},\n  year = {2022},\n  doi = {10.1145/3477495.3531735}\n}"
+      "doi": "10.1145/3477495.3531753",
+      "bibtex": "@inproceedings{lerner2022viquae,\n  title = {{ViQuAE}, a Dataset for Knowledge-based Visual Question Answering about Named Entities},\n  author = {Lerner, Paul and Ferret, Olivier and Guinaudeau, Camille and Le Borgne, Herv\\'e and Besan\\c{c}on, Romaric and Moreno, Jos\\'e G. and Lov\\'on-Melgarejo, Jes\\'us},\n  booktitle = {Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},\n  pages = {3108--3120},\n  year = {2022},\n  publisher = {Association for Computing Machinery},\n  doi = {10.1145/3477495.3531753}\n}"
     }
   },
   {
@@ -74014,12 +74021,12 @@
       "coco"
     ],
     "license": {
-      "status": "verified_open",
-      "name": "Apache License 2.0",
-      "spdx_id": "Apache-2.0",
+      "status": "custom_permissive",
+      "name": "Apache License 2.0 (Annotations) / Diverse Flickr Terms (Images)",
+      "spdx_id": null,
       "url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "commercial_use": "allowed",
-      "notes": "Dataset annotations and benchmark code released by Cambridge LTL under Apache License 2.0. Underlying imagery sourced from MS-COCO."
+      "commercial_use": "unknown",
+      "notes": "Dataset annotations and benchmark code released by Cambridge LTL under Apache License 2.0. Underlying imagery is sourced from MS-COCO under individual Flickr Creative Commons terms."
     },
     "source_references": [
       {
@@ -74039,7 +74046,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against TACL 2023 publication (DOI: 10.1162/tacl_a_00566) and official GitHub repository. 10,972 total image-text pairs partitioned under the official random split: 7,680 train, 1,097 dev, and 2,195 test instances."
+      "notes": "Verified against TACL 2023 publication (DOI: 10.1162/tacl_a_00566) and official GitHub repository (cambridgeltl/visual-spatial-reasoning). 10,972 total image-text pairs covering 65 spatial relations. Evaluated via two official protocols: random split (7,680 train, 1,097 dev, 2,195 test) and zero-shot split (evaluating generalization on unseen relations/objects)."
     },
     "size": {
       "amount": 1.6,
@@ -74295,11 +74302,11 @@
     ],
     "license": {
       "status": "verified_non_commercial",
-      "name": "AI2 VisualCOMET License / Non-Commercial Movie Rights",
+      "name": "AI2 VisualCOMET Research License / VCR Non-Commercial Movie Terms",
       "spdx_id": null,
       "url": "https://visualcomet.xyz",
       "commercial_use": "forbidden",
-      "notes": "Commonsense graph annotations and model recipes released by the Allen Institute for AI for non-commercial research use. Underlying movie frames belong to respective film studios, restricted to academic research evaluation under fair use."
+      "notes": "Commonsense graph annotations and model weights released by the Allen Institute for AI for non-commercial research use. Underlying movie frames are inherited from the Visual Commonsense Reasoning (VCR) dataset, originating from commercial films owned by copyright holders; strictly restricted to academic non-commercial research."
     },
     "source_references": [
       {
@@ -74309,8 +74316,8 @@
         "notes": "Official AllenAI and University of Washington project website and leaderboard."
       },
       {
-        "title": "Visual Commonsense Graphs: Reasoning about the Dynamic Context of a Still Image",
-        "url": "https://doi.org/10.1007/978-3-030-58558-7_1",
+        "title": "VisualCOMET: Reasoning About the Dynamic Context of a Still Image",
+        "url": "https://doi.org/10.1007/978-3-030-58558-7_30",
         "type": "original_paper",
         "notes": "Published in Proceedings of the European Conference on Computer Vision (ECCV 2020)."
       }
@@ -74319,7 +74326,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against ECCV 2020 publication (DOI: 10.1007/978-3-030-58558-7_1) and official project repository. 1,465,704 total inferences across 59,356 images, partitioned into 1,174,063 train, 146,332 validation, and 145,309 test inferences."
+      "notes": "Verified against ECCV 2020 publication (DOI: 10.1007/978-3-030-58558-7_30) and official project repository. 1,465,704 total inferences across 59,356 images and 139,377 distinct events (Visual Commonsense Graphs), partitioned into 1,174,063 train, 146,332 validation, and 145,309 test inferences."
     },
     "size": {
       "amount": 250.0,
@@ -74373,8 +74380,8 @@
       "published": "2020-08"
     },
     "citation": {
-      "paper_title": "Visual Commonsense Graphs: Reasoning about the Dynamic Context of a Still Image",
-      "paper_url": "https://doi.org/10.1007/978-3-030-58558-7_1",
+      "paper_title": "VisualCOMET: Reasoning About the Dynamic Context of a Still Image",
+      "paper_url": "https://doi.org/10.1007/978-3-030-58558-7_30",
       "authors": [
         "Jae Sung Park",
         "Chandra Bhagavatula",
@@ -74382,8 +74389,8 @@
         "Ali Farhadi",
         "Yejin Choi"
       ],
-      "doi": "10.1007/978-3-030-58558-7_1",
-      "bibtex": "@inproceedings{park2020visualcomet,\n  title = {Visual Commonsense Graphs: Reasoning about the Dynamic Context of a Still Image},\n  author = {Park, Jae Sung and Bhagavatula, Chandra and Mottaghi, Roozbeh and Farhadi, Ali and Choi, Yejin},\n  booktitle = {Computer Vision -- ECCV 2020},\n  pages = {1--19},\n  year = {2020},\n  publisher = {Springer, Cham},\n  doi = {10.1007/978-3-030-58558-7_1}\n}"
+      "doi": "10.1007/978-3-030-58558-7_30",
+      "bibtex": "@inproceedings{park2020visualcomet,\n  title = {{VisualCOMET}: Reasoning About the Dynamic Context of a Still Image},\n  author = {Park, Jae Sung and Bhagavatula, Chandra and Mottaghi, Roozbeh and Farhadi, Ali and Choi, Yejin},\n  booktitle = {Computer Vision -- ECCV 2020},\n  pages = {508--524},\n  year = {2020},\n  publisher = {Springer, Cham},\n  doi = {10.1007/978-3-030-58558-7_30}\n}"
     }
   },
   {

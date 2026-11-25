@@ -27,11 +27,11 @@
   ],
   "license": {
     "status": "custom_permissive",
-    "name": "MIT License (Annotations) / Inherited Source Benchmark Terms",
-    "spdx_id": "MIT",
+    "name": "MIT License (Code & QDMR Annotations) / Upstream Source Terms",
+    "spdx_id": null,
     "url": "https://github.com/allenai/Break",
-    "commercial_use": "allowed",
-    "notes": "Code and QDMR annotations released under MIT License by Allen Institute for AI and Tel Aviv University. Sourced from 10 existing QA datasets including HotpotQA, DROP, and Spider."
+    "commercial_use": "unknown",
+    "notes": "Code and QDMR annotations released under the MIT License by the Allen Institute for AI and Tel Aviv University. However, underlying questions originate from 10 diverse upstream datasets (including HotpotQA, DROP, Spider, ComplexWebQuestions, SQuAD 2.0, etc.) governed by heterogeneous open-access, share-alike, or restrictive licenses; commercial use of the aggregated benchmark is therefore subject to upstream source terms."
   },
   "source_references": [
     {
@@ -51,7 +51,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against TACL 2020 publication (DOI: 10.1162/tacl_a_00309) and official GitHub repository (allenai/Break). 83,978 total annotated questions partitioned across standard QDMR (60,150) and high-level QDMR (23,828)."
+    "notes": "Verified against TACL 2020 publication (DOI: 10.1162/tacl_a_00309) and official GitHub repository (allenai/Break). 83,978 total annotated questions partitioned across standard QDMR (60,150) and high-level QDMR (23,828) without double-counting; standard QDMR covers 10 source datasets while high-level QDMR addresses multi-hop databases and complex question subsets."
   },
   "size": {
     "amount": 45.0,
@@ -95,14 +95,14 @@
     "paper_url": "https://aclanthology.org/2020.tacl-1.13/",
     "authors": [
       "Tomer Wolfson",
-      "Daniel Deutch",
       "Mor Geva",
-      "Dor Gupta",
-      "Alon Moshkovich",
-      "Alon Rosenman",
+      "Ankit Gupta",
+      "Matt Gardner",
+      "Yoav Goldberg",
+      "Daniel Deutch",
       "Jonathan Berant"
     ],
     "doi": "10.1162/tacl_a_00309",
-    "bibtex": "@article{wolfson-etal-2020-break,\n  title = {Break It Down: A Question Understanding Benchmark},\n  author = {Wolfson, Tomer and Deutch, Daniel and Geva, Mor and Gupta, Dor and Moshkovich, Alon and Rosenman, Alon and Berant, Jonathan},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {8},\n  year = {2020},\n  publisher = {MIT Press},\n  url = {https://aclanthology.org/2020.tacl-1.13/},\n  doi = {10.1162/tacl_a_00309},\n  pages = {183--198}\n}"
+    "bibtex": "@article{wolfson-etal-2020-break,\n  title = {Break It Down: A Question Understanding Benchmark},\n  author = {Wolfson, Tomer and Geva, Mor and Gupta, Ankit and Gardner, Matt and Goldberg, Yoav and Deutch, Daniel and Berant, Jonathan},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {8},\n  year = {2020},\n  publisher = {MIT Press},\n  url = {https://aclanthology.org/2020.tacl-1.13/},\n  doi = {10.1162/tacl_a_00309},\n  pages = {183--198}\n}"
   }
 }
