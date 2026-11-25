@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "id": "commonsenseqa",
+  "slug": "commonsenseqa",
+  "name": "CommonsenseQA: Question Answering Targeting Commonsense Knowledge",
+  "description": "CommonsenseQA is a multiple-choice question answering challenge dataset designed to evaluate commonsense reasoning capabilities. Sourced from ConceptNet subgraphs and crowd-authored by human annotators, it features 12,102 five-choice questions testing diverse semantic relations and conceptual commonsense facts.",
+  "homepage_url": "https://www.tau-nlp.sites.tau.ac.il/commonsenseqa",
+  "publisher": {
+    "name": "Tel Aviv University",
+    "type": "academic",
+    "url": "https://www.tau.ac.il"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "commonsense-reasoning",
+    "multiple-choice"
+  ],
+  "tags": [
+    "commonsenseqa",
+    "commonsense",
+    "conceptnet",
+    "question-answering",
+    "tau-nlp"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": "allowed",
+    "notes": "Dataset and evaluation scripts released under MIT License by Tel Aviv University NLP group."
+  },
+  "source_references": [
+    {
+      "title": "CommonsenseQA Official Project Page",
+      "url": "https://www.tau-nlp.sites.tau.ac.il/commonsenseqa",
+      "type": "official_website",
+      "notes": "Official TAU NLP project homepage and benchmark leaderboard."
+    },
+    {
+      "title": "CommonsenseQA: A Question Answering Challenge Targeting Commonsense Knowledge",
+      "url": "https://aclanthology.org/N19-1421/",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of NAACL-HLT 2019."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against NAACL 2019 publication (DOI: 10.18653/v1/N19-1421) and official TAU NLP portal. 12,102 questions partitioned across official random split: 9,741 train, 1,221 dev, and 1,140 test questions."
+  },
+  "size": {
+    "amount": 1.5,
+    "unit": "MB",
+    "file_formats": [
+      "jsonl"
+    ],
+    "status": "verified",
+    "notes": "JSONL files containing questions, ConceptNet target concepts, and 5 candidate choices."
+  },
+  "sample_count": {
+    "total": 12102,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 9741,
+      "dev": 1221,
+      "test": 1140
+    },
+    "breakdown": [
+      {
+        "label": "choices_per_question",
+        "value": 5,
+        "unit": "choices"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2019-06"
+  },
+  "citation": {
+    "paper_title": "CommonsenseQA: A Question Answering Challenge Targeting Commonsense Knowledge",
+    "paper_url": "https://aclanthology.org/N19-1421/",
+    "authors": [
+      "Alon Talmor",
+      "Jonathan Herzig",
+      "Nicholas Lourie",
+      "Jonathan Berant"
+    ],
+    "doi": "10.18653/v1/N19-1421",
+    "bibtex": "@inproceedings{talmor-etal-2019-commonsenseqa,\n  title = {Commonsense{QA}: A Question Answering Challenge Targeting Commonsense Knowledge},\n  author = {Talmor, Alon and Herzig, Jonathan and Lourie, Nicholas and Berant, Jonathan},\n  booktitle = {Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)},\n  month = jun,\n  year = {2019},\n  address = {Minneapolis, Minnesota},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/N19-1421/},\n  doi = {10.18653/v1/N19-1421},\n  pages = {4149--4158}\n}"
+  }
+}

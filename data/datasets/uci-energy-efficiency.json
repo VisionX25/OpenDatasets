@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-energy-efficiency",
+  "slug": "uci-energy-efficiency",
+  "name": "UCI Energy Efficiency Dataset",
+  "description": "The UCI Energy Efficiency dataset is a tabular regression benchmark for predicting building energy performance. Created by Athanasios Tsanas and Angeliki Xifara via thermal simulations of 768 residential building shapes in Ecotect, it models heating load and cooling load requirements as functions of eight geometric and physical building parameters.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/242/energy+efficiency",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-regression",
+    "multi-output-regression",
+    "energy-prediction"
+  ],
+  "tags": [
+    "uci",
+    "energy-efficiency",
+    "building-energy",
+    "regression",
+    "tabular"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset distributed by the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International (CC-BY-4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UCI Machine Learning Repository: Energy Efficiency Dataset",
+      "url": "https://archive.ics.uci.edu/dataset/242/energy+efficiency",
+      "type": "official_website",
+      "notes": "Official UCI dataset portal (DOI: 10.24432/C51307)."
+    },
+    {
+      "title": "Accurate Quantitative Estimation of Energy Performance of Residential Buildings Using Statistical Machine Learning Tools",
+      "url": "https://doi.org/10.1016/j.enbuild.2012.03.003",
+      "type": "original_paper",
+      "notes": "Published in Energy and Buildings (2012)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository (DOI: 10.24432/C51307) and Energy and Buildings 2012 publication. 768 building configuration instances with 8 input attributes and 2 continuous regression targets (heating load and cooling load)."
+  },
+  "size": {
+    "amount": 32.0,
+    "unit": "KB",
+    "file_formats": [
+      "csv",
+      "xlsx"
+    ],
+    "status": "verified",
+    "notes": "ENB2012_data CSV and XLSX spreadsheet formats."
+  },
+  "sample_count": {
+    "total": 768,
+    "unit": "building configurations",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "input_features",
+        "value": 8,
+        "unit": "features"
+      },
+      {
+        "label": "regression_targets",
+        "value": 2,
+        "unit": "targets"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2012-11"
+  },
+  "citation": {
+    "paper_title": "Energy Efficiency",
+    "paper_url": "https://doi.org/10.24432/C51307",
+    "authors": [
+      "Athanasios Tsanas",
+      "Angeliki Xifara"
+    ],
+    "doi": "10.24432/C51307",
+    "bibtex": "@article{tsanas2012accurate,\n  title = {Accurate quantitative estimation of energy performance of residential buildings using statistical machine learning tools},\n  author = {Tsanas, Athanasios and Xifara, Angeliki},\n  journal = {Energy and Buildings},\n  volume = {49},\n  pages = {560--567},\n  year = {2012},\n  doi = {10.1016/j.enbuild.2012.03.003}\n}"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "id": "duorc",
+  "slug": "duorc",
+  "name": "DuoRC: Paraphrased Reading Comprehension Benchmark",
+  "description": "DuoRC is a large-scale reading comprehension benchmark consisting of 186,089 question-answer pairs created from 7,680 pairs of parallel movie plots. For each movie, distinct narrative plots were collected from Wikipedia and IMDb, requiring models to reason across paraphrased narrative descriptions with minimal lexical overlap.",
+  "homepage_url": "https://duorc.github.io",
+  "publisher": {
+    "name": "IBM Research",
+    "type": "industry",
+    "url": "https://research.ibm.com"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "reading-comprehension",
+    "paraphrase-identification"
+  ],
+  "tags": [
+    "duorc",
+    "reading-comprehension",
+    "paraphrasing",
+    "question-answering",
+    "movie-plots"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "MIT License (Code & Annotations) / Non-Commercial IMDb Terms",
+    "spdx_id": null,
+    "url": "https://github.com/duorc/duorc.github.io",
+    "commercial_use": "forbidden",
+    "notes": "Dataset code and annotations released under MIT License. Underlying movie plot summaries originate from Wikipedia (CC-BY-SA) and IMDb; IMDb Terms of Use prohibit unauthorized commercial exploitation of IMDb content."
+  },
+  "source_references": [
+    {
+      "title": "DuoRC Official Project Page",
+      "url": "https://duorc.github.io",
+      "type": "official_website",
+      "notes": "Official benchmark documentation and leaderboard."
+    },
+    {
+      "title": "DuoRC: Towards Complex Language Understanding with Paraphrased Reading Comprehension",
+      "url": "https://aclanthology.org/P18-1156/",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL 2018)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against ACL 2018 publication (DOI: 10.18653/v1/P18-1156) and official GitHub project portal. Sourced from 7,680 parallel movie plot pairs across SelfRC (86,241 QA pairs) and ParaphraseRC (100,972 QA pairs) sub-tasks."
+  },
+  "size": {
+    "amount": 25.0,
+    "unit": "MB",
+    "file_formats": [
+      "json",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "Compressed JSON and CSV annotation archives."
+  },
+  "sample_count": {
+    "total": 186089,
+    "unit": "question-answer pairs",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "self_rc_questions",
+        "value": 86241,
+        "unit": "question-answer pairs"
+      },
+      {
+        "label": "paraphrase_rc_questions",
+        "value": 100972,
+        "unit": "question-answer pairs"
+      },
+      {
+        "label": "parallel_movie_plots",
+        "value": 7680,
+        "unit": "plot pairs"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2018-07"
+  },
+  "citation": {
+    "paper_title": "DuoRC: Towards Complex Language Understanding with Paraphrased Reading Comprehension",
+    "paper_url": "https://aclanthology.org/P18-1156/",
+    "authors": [
+      "Amrita Saha",
+      "Rahul Aralikatte",
+      "Mitesh M. Khapra",
+      "Karthik Sankaranarayanan"
+    ],
+    "doi": "10.18653/v1/P18-1156",
+    "bibtex": "@inproceedings{saha-etal-2018-duorc,\n  title = {{D}uo{RC}: Towards Complex Language Understanding with Paraphrased Reading Comprehension},\n  author = {Saha, Amrita and Aralikatte, Rahul and Khapra, Mitesh M. and Sankaranarayanan, Karthik},\n  booktitle = {Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},\n  month = jul,\n  year = {2018},\n  address = {Melbourne, Australia},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/P18-1156/},\n  doi = {10.18653/v1/P18-1156},\n  pages = {1683--1693}\n}"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-yeast",
+  "slug": "uci-yeast",
+  "name": "UCI Yeast Database",
+  "description": "The UCI Yeast dataset is a bioinformatics benchmark for multiclass cellular localization site prediction of yeast proteins. Derived from SWISS-PROT sequences by Kenta Nakai and Minoru Kanehisa, it contains 1,484 protein instances described by eight continuous predictive features derived from sequence analysis and classified into 10 subcellular localization sites.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/110/yeast",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-classification",
+    "multiclass-classification",
+    "bioinformatics"
+  ],
+  "tags": [
+    "uci",
+    "yeast",
+    "bioinformatics",
+    "protein-localization",
+    "tabular"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset distributed by the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International (CC-BY-4.0)."
+  },
+  "source_references": [
+    {
+      "title": "UCI Machine Learning Repository: Yeast Dataset",
+      "url": "https://archive.ics.uci.edu/dataset/110/yeast",
+      "type": "official_website",
+      "notes": "Official UCI dataset portal (DOI: 10.24432/C5KG68)."
+    },
+    {
+      "title": "A Knowledge Base for Predicting Protein Localization Sites in Eukaryotic Cells",
+      "url": "https://doi.org/10.1016/S0888-7543(05)80111-9",
+      "type": "original_paper",
+      "notes": "Published in Genomics (1991)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository (DOI: 10.24432/C5KG68) and Genomics 1991 publication. 1,484 protein instances with 8 predictive numerical attributes and 10 subcellular localization target classes."
+  },
+  "size": {
+    "amount": 115.0,
+    "unit": "KB",
+    "file_formats": [
+      "data",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "Tabular text data file yeast.data."
+  },
+  "sample_count": {
+    "total": 1484,
+    "unit": "instances",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "predictive_features",
+        "value": 8,
+        "unit": "features"
+      },
+      {
+        "label": "localization_classes",
+        "value": 10,
+        "unit": "classes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "1991"
+  },
+  "citation": {
+    "paper_title": "Yeast",
+    "paper_url": "https://doi.org/10.24432/C5KG68",
+    "authors": [
+      "Kenta Nakai"
+    ],
+    "doi": "10.24432/C5KG68",
+    "bibtex": "@misc{nakai1991yeast,\n  author = {Nakai, Kenta},\n  title = {{Yeast}},\n  year = {1991},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5KG68}\n}"
+  }
+}

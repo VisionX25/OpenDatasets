@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "break",
+  "slug": "break",
+  "name": "BREAK: Question Understanding Benchmark",
+  "description": "BREAK is a question understanding benchmark comprising 83,978 questions across 10 diverse conversational and semantic parsing datasets. Questions are annotated with Question Decomposition Meaning Representation (QDMR), expressing complex questions as sequences of simpler computation steps.",
+  "homepage_url": "https://allenai.github.io/Break",
+  "publisher": {
+    "name": "Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "semantic-parsing",
+    "question-decomposition"
+  ],
+  "tags": [
+    "break",
+    "qdmr",
+    "question-decomposition",
+    "semantic-parsing",
+    "allenai"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT License (Annotations) / Inherited Source Benchmark Terms",
+    "spdx_id": "MIT",
+    "url": "https://github.com/allenai/Break",
+    "commercial_use": "allowed",
+    "notes": "Code and QDMR annotations released under MIT License by Allen Institute for AI and Tel Aviv University. Sourced from 10 existing QA datasets including HotpotQA, DROP, and Spider."
+  },
+  "source_references": [
+    {
+      "title": "BREAK Official Project Page",
+      "url": "https://allenai.github.io/Break",
+      "type": "official_website",
+      "notes": "Official AllenAI and TAU project portal and leaderboard."
+    },
+    {
+      "title": "Break It Down: A Question Understanding Benchmark",
+      "url": "https://aclanthology.org/2020.tacl-1.13/",
+      "type": "original_paper",
+      "notes": "Published in Transactions of the Association for Computational Linguistics (TACL 2020)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against TACL 2020 publication (DOI: 10.1162/tacl_a_00309) and official GitHub repository (allenai/Break). 83,978 total annotated questions partitioned across standard QDMR (60,150) and high-level QDMR (23,828)."
+  },
+  "size": {
+    "amount": 45.0,
+    "unit": "MB",
+    "file_formats": [
+      "csv",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "CSV and JSON decomposition annotations."
+  },
+  "sample_count": {
+    "total": 83978,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "qdmr_standard_questions",
+        "value": 60150,
+        "unit": "questions"
+      },
+      {
+        "label": "qdmr_high_level_questions",
+        "value": 23828,
+        "unit": "questions"
+      },
+      {
+        "label": "source_datasets_represented",
+        "value": 10,
+        "unit": "datasets"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2020-04"
+  },
+  "citation": {
+    "paper_title": "Break It Down: A Question Understanding Benchmark",
+    "paper_url": "https://aclanthology.org/2020.tacl-1.13/",
+    "authors": [
+      "Tomer Wolfson",
+      "Daniel Deutch",
+      "Mor Geva",
+      "Dor Gupta",
+      "Alon Moshkovich",
+      "Alon Rosenman",
+      "Jonathan Berant"
+    ],
+    "doi": "10.1162/tacl_a_00309",
+    "bibtex": "@article{wolfson-etal-2020-break,\n  title = {Break It Down: A Question Understanding Benchmark},\n  author = {Wolfson, Tomer and Deutch, Daniel and Geva, Mor and Gupta, Dor and Moshkovich, Alon and Rosenman, Alon and Berant, Jonathan},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {8},\n  year = {2020},\n  publisher = {MIT Press},\n  url = {https://aclanthology.org/2020.tacl-1.13/},\n  doi = {10.1162/tacl_a_00309},\n  pages = {183--198}\n}"
+  }
+}
