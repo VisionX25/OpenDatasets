@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "musdb18",
+  "slug": "musdb18",
+  "name": "MUSDB18: A Corpus for Music Source Separation",
+  "description": "MUSDB18 is a multitrack music dataset comprising 150 full-length music songs (~10 hours total audio) designed for evaluating music source separation algorithms. Each track includes isolated vocals, drums, bass, and accompaniment stems alongside full stereophonic mixtures encoded in uncompressed and STEMS format.",
+  "homepage_url": "https://sigsep.github.io/datasets/musdb.html",
+  "publisher": {
+    "name": "Inria / Litis / Northwestern University",
+    "type": "academic",
+    "url": "https://sigsep.github.io"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "music-source-separation",
+    "audio-signal-processing",
+    "speech-separation"
+  ],
+  "tags": [
+    "musdb18",
+    "music-source-separation",
+    "stems",
+    "audio",
+    "sigsep"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Dataset compiled under CC-BY-NC-SA-4.0 strictly for non-commercial educational and academic research purposes."
+  },
+  "source_references": [
+    {
+      "title": "MUSDB18 Official Website",
+      "url": "https://sigsep.github.io/datasets/musdb.html",
+      "type": "official_website",
+      "notes": "Official SIGSEP dataset portal."
+    },
+    {
+      "title": "MUSDB18 on Zenodo",
+      "url": "https://zenodo.org/records/1117372",
+      "type": "archive",
+      "notes": "Zenodo archival release (DOI: 10.5281/zenodo.1117372)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against Zenodo release (DOI: 10.5281/zenodo.1117372) and official SIGSEP documentation."
+  },
+  "size": {
+    "amount": 4.4,
+    "unit": "GB",
+    "file_formats": [
+      "stem.mp4",
+      "wav"
+    ],
+    "status": "verified",
+    "notes": "44.1kHz encoded multi-track STEMS files containing mixture and 4 isolated instruments."
+  },
+  "sample_count": {
+    "total": 150,
+    "unit": "tracks",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 100,
+      "test": 50
+    },
+    "breakdown": [
+      {
+        "label": "stems_per_track",
+        "value": 4,
+        "unit": "stems"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2017-12-18"
+  },
+  "citation": {
+    "paper_title": "MUSDB18 — a corpus for music separation",
+    "paper_url": "https://doi.org/10.5281/zenodo.1117372",
+    "authors": [
+      "Zafar Rafii",
+      "Antoine Liutkus",
+      "Fabian-Robert Stöter",
+      "Stylianos Ioannis Mimilakis",
+      "Rachel Bittner"
+    ],
+    "doi": "10.5281/zenodo.1117372",
+    "bibtex": "@misc{rafii2017musdb18,\n  title = {{MUSDB18} -- a corpus for music separation},\n  author = {Rafii, Zafar and Liutkus, Antoine and St{\\\"o}ter, Fabian-Robert and Mimilakis, Stylianos Ioannis and Bittner, Rachel},\n  year = {2017},\n  publisher = {Zenodo},\n  doi = {10.5281/zenodo.1117372}\n}"
+  }
+}

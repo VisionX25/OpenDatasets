@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "places365",
+  "slug": "places365",
+  "name": "Places365: A Large-Scale Scene Recognition Benchmark",
+  "description": "Places365-Standard is a foundational scene recognition benchmark comprising 2,168,460 photographs across 365 scene categories. Part of the Places2 database, it evaluates visual scene perception, place categorization, and holistic image representation learning.",
+  "homepage_url": "http://places2.csail.mit.edu",
+  "publisher": {
+    "name": "MIT Computer Science and Artificial Intelligence Laboratory (CSAIL)",
+    "type": "academic",
+    "url": "https://csail.mit.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "scene-classification",
+    "image-classification",
+    "visual-representation-learning"
+  ],
+  "tags": [
+    "places365",
+    "scene-recognition",
+    "computer-vision",
+    "mit",
+    "places2"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "MIT Places Research License",
+    "spdx_id": null,
+    "url": "http://places2.csail.mit.edu",
+    "commercial_use": "forbidden",
+    "notes": "Available for non-commercial academic research and educational purposes."
+  },
+  "source_references": [
+    {
+      "title": "Places2 Official Project Portal",
+      "url": "http://places2.csail.mit.edu",
+      "type": "official_website",
+      "notes": "Official MIT CSAIL project portal."
+    },
+    {
+      "title": "Places: A 10 Million Image Database for Scene Recognition",
+      "url": "https://doi.org/10.1109/TPAMI.2017.2723009",
+      "type": "original_paper",
+      "notes": "Published in IEEE TPAMI (Volume 40, Issue 6, 2018)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against IEEE TPAMI publication (DOI: 10.1109/TPAMI.2017.2723009) and MIT CSAIL Places2 specifications."
+  },
+  "size": {
+    "amount": 105.0,
+    "unit": "GB",
+    "file_formats": [
+      "jpg"
+    ],
+    "status": "verified",
+    "notes": "High-resolution and 256x256 resized JPEG images across 365 category splits."
+  },
+  "sample_count": {
+    "total": 2168460,
+    "unit": "images",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 1803460,
+      "validation": 36500,
+      "test": 328500
+    },
+    "breakdown": [
+      {
+        "label": "scene_categories",
+        "value": 365,
+        "unit": "classes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2017-07-03"
+  },
+  "citation": {
+    "paper_title": "Places: A 10 Million Image Database for Scene Recognition",
+    "paper_url": "https://doi.org/10.1109/TPAMI.2017.2723009",
+    "authors": [
+      "Bolei Zhou",
+      "Agata Lapedriza",
+      "Aditya Khosla",
+      "Aude Oliva",
+      "Antonio Torralba"
+    ],
+    "doi": "10.1109/TPAMI.2017.2723009",
+    "bibtex": "@article{zhou2017places,\n  title = {Places: A 10 Million Image Database for Scene Recognition},\n  author = {Zhou, Bolei and Lapedriza, Agata and Khosla, Aditya and Oliva, Aude and Torralba, Antonio},\n  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  volume = {40},\n  number = {6},\n  pages = {1452--1464},\n  year = {2018},\n  doi = {10.1109/TPAMI.2017.2723009}\n}"
+  }
+}

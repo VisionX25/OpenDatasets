@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mm-imdb",
+  "slug": "mm-imdb",
+  "name": "MM-IMDb: Multimodal Movie Genre Classification Benchmark",
+  "description": "MM-IMDb (Multimodal IMDb) is a multimodal benchmark for multi-label genre classification of movies. Comprising 25,959 movie entries, each equipped with its cover poster image and textual storyline plot summary, spanning 23 movie genres to evaluate multimodal fusion architectures.",
+  "homepage_url": "https://github.com/johnarevalo/gmu-mmimdb",
+  "publisher": {
+    "name": "National University of Colombia",
+    "type": "academic",
+    "url": "https://unal.edu.co"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "multimodal-classification",
+    "multi-label-classification",
+    "multimodal-fusion"
+  ],
+  "tags": [
+    "mm-imdb",
+    "movie-posters",
+    "multimodal",
+    "genre-classification",
+    "multimodal-fusion"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT License (Code) / Academic Research Use (Data)",
+    "spdx_id": null,
+    "url": "https://github.com/johnarevalo/gmu-mmimdb",
+    "commercial_use": "allowed",
+    "notes": "Provided for academic and research evaluation; underlying movie metadata and posters derived from IMDb."
+  },
+  "source_references": [
+    {
+      "title": "MM-IMDb GitHub Repository",
+      "url": "https://github.com/johnarevalo/gmu-mmimdb",
+      "type": "repository",
+      "notes": "Official repository with dataset download scripts, poster links, and baseline models."
+    },
+    {
+      "title": "Gated Multimodal Units for Information Fusion",
+      "url": "https://arxiv.org/abs/1702.01992",
+      "type": "original_paper",
+      "notes": "Published in ICLR 2017 Workshop."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against ICLR 2017 paper (arXiv:1702.01992) and official repository manifests."
+  },
+  "size": {
+    "amount": 2.2,
+    "unit": "GB",
+    "file_formats": [
+      "jpeg",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "JPEG movie posters with companion JSON plot synopses and multi-label genre vectors."
+  },
+  "sample_count": {
+    "total": 25959,
+    "unit": "movies",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 15552,
+      "dev": 2608,
+      "test": 7799
+    },
+    "breakdown": [
+      {
+        "label": "genre_categories",
+        "value": 23,
+        "unit": "genres"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2017-02-07"
+  },
+  "citation": {
+    "paper_title": "Gated Multimodal Units for Information Fusion",
+    "paper_url": "https://arxiv.org/abs/1702.01992",
+    "authors": [
+      "John Arevalo",
+      "Thamar Solorio",
+      "Manuel Montes-y-Gómez",
+      "Fabio A. González"
+    ],
+    "bibtex": "@article{arevalo2017gated,\n  title = {Gated Multimodal Units for Information Fusion},\n  author = {Arevalo, John and Solorio, Thamar and Montes-y-G{\\'o}mez, Manuel and Gonz{\\'a}lez, Fabio A.},\n  journal = {arXiv preprint arXiv:1702.01992},\n  year = {2017}\n}"
+  }
+}

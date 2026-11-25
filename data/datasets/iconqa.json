@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "id": "iconqa",
+  "slug": "iconqa",
+  "name": "IconQA: A Benchmark for Abstract Diagram Understanding",
+  "description": "IconQA is a visual question answering and abstract diagram reasoning benchmark comprising 107,439 questions across 33,408 icon and diagram images. Sourced from elementary school curricula, it features three core reasoning tasks: multi-image multi-choice QA, free-form image QA, and in-the-wild diagram completion.",
+  "homepage_url": "https://iconqa.github.io",
+  "publisher": {
+    "name": "University of California, Los Angeles",
+    "type": "academic",
+    "url": "https://ucla.edu"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "diagram-understanding",
+    "mathematical-reasoning"
+  ],
+  "tags": [
+    "iconqa",
+    "diagram-qa",
+    "vqa",
+    "multimodal",
+    "ucla"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "commercial_use": "allowed",
+    "notes": "Dataset and evaluation repository released under Apache-2.0."
+  },
+  "source_references": [
+    {
+      "title": "IconQA Official Project Page",
+      "url": "https://iconqa.github.io",
+      "type": "official_website",
+      "notes": "Official UCLA project website and leaderboard."
+    },
+    {
+      "title": "IconQA: A New Benchmark for Abstract Diagram Understanding and Visual Language Reasoning",
+      "url": "https://arxiv.org/abs/2110.13214",
+      "type": "original_paper",
+      "notes": "Published in NeurIPS 2021 Track on Datasets and Benchmarks."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against NeurIPS 2021 publication (arXiv:2110.13214) and official GitHub repository."
+  },
+  "size": {
+    "amount": 1.8,
+    "unit": "GB",
+    "file_formats": [
+      "png",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "33,408 PNG diagram images with JSON question, answer, and choice annotations."
+  },
+  "sample_count": {
+    "total": 107439,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 65360,
+      "val": 19890,
+      "test": 22189
+    },
+    "breakdown": [
+      {
+        "label": "diagram_images",
+        "value": 33408,
+        "unit": "images"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2021-12-06"
+  },
+  "citation": {
+    "paper_title": "IconQA: A New Benchmark for Abstract Diagram Understanding and Visual Language Reasoning",
+    "paper_url": "https://arxiv.org/abs/2110.13214",
+    "authors": [
+      "Pan Lu",
+      "Liang Qiu",
+      "Jiaqi Chen",
+      "Tony Xia",
+      "Yizhou Zhao",
+      "Wei Zhang",
+      "Zhou Yu",
+      "Xiaodan Liang",
+      "Song-Chun Zhu"
+    ],
+    "bibtex": "@inproceedings{lu2021iconqa,\n  title = {{IconQA}: A New Benchmark for Abstract Diagram Understanding and Visual Language Reasoning},\n  author = {Lu, Pan and Qiu, Liang and Chen, Jiaqi and Xia, Tony and Zhao, Yizhou and Zhang, Wei and Yu, Zhou and Liang, Xiaodan and Zhu, Song-Chun},\n  booktitle = {Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year = {2021}\n}"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "winogrande",
+  "slug": "winogrande",
+  "name": "WinoGrande: An Adversarial Winograd Schema Challenge at Scale",
+  "description": "WinoGrande is a large-scale commonsense reasoning benchmark consisting of 43,872 crowd-sourced sentence-completion problems designed to formulate the classic Winograd Schema Challenge at scale. Filtered using the AFLITE algorithm to reduce dataset-specific lexical biases.",
+  "homepage_url": "https://winogrande.allenai.org",
+  "publisher": {
+    "name": "Allen Institute for AI",
+    "type": "academic",
+    "url": "https://allenai.org"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "commonsense-reasoning",
+    "coreference-resolution",
+    "natural-language-understanding"
+  ],
+  "tags": [
+    "winogrande",
+    "commonsense",
+    "winograd-schema",
+    "adversarial-filtering",
+    "allenai"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset released under CC-BY-4.0; companion code released under Apache-2.0."
+  },
+  "source_references": [
+    {
+      "title": "WinoGrande Project Page",
+      "url": "https://winogrande.allenai.org",
+      "type": "official_website",
+      "notes": "Official Allen Institute benchmark portal and leaderboard."
+    },
+    {
+      "title": "WinoGrande: An Adversarial Winograd Schema Challenge at Scale",
+      "url": "https://doi.org/10.1609/aaai.v34i05.6399",
+      "type": "original_paper",
+      "notes": "Published in AAAI 2020 proceedings."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against AAAI 2020 publication (DOI: 10.1609/aaai.v34i05.6399) and official Allen Institute repository."
+  },
+  "size": {
+    "amount": 7.5,
+    "unit": "MB",
+    "file_formats": [
+      "jsonl"
+    ],
+    "status": "verified",
+    "notes": "JSONL files containing sentence pairs, options, and binary target labels."
+  },
+  "sample_count": {
+    "total": 43872,
+    "unit": "sentence-problems",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train_xl": 40398,
+      "dev": 1267,
+      "test": 2207
+    },
+    "breakdown": [
+      {
+        "label": "train_l_subset",
+        "value": 10240,
+        "unit": "sentence-problems"
+      },
+      {
+        "label": "train_m_subset",
+        "value": 2560,
+        "unit": "sentence-problems"
+      },
+      {
+        "label": "train_s_subset",
+        "value": 640,
+        "unit": "sentence-problems"
+      },
+      {
+        "label": "train_xs_subset",
+        "value": 160,
+        "unit": "sentence-problems"
+      }
+    ]
+  },
+  "languages": [
+    "en"
+  ],
+  "dates": {
+    "published": "2020-04-03"
+  },
+  "citation": {
+    "paper_title": "WinoGrande: An Adversarial Winograd Schema Challenge at Scale",
+    "paper_url": "https://doi.org/10.1609/aaai.v34i05.6399",
+    "authors": [
+      "Keisuke Sakaguchi",
+      "Ronan Le Bras",
+      "Chandra Bhagavatula",
+      "Yejin Choi"
+    ],
+    "doi": "10.1609/aaai.v34i05.6399",
+    "bibtex": "@inproceedings{sakaguchi2020winogrande,\n  title = {{WinoGrande}: An Adversarial {Winograd} Schema Challenge at Scale},\n  author = {Sakaguchi, Keisuke and Le Bras, Ronan and Bhagavatula, Chandra and Choi, Yejin},\n  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume = {34},\n  number = {05},\n  pages = {8732--8740},\n  year = {2020},\n  doi = {10.1609/aaai.v34i05.6399}\n}"
+  }
+}

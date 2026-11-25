@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-concrete-compressive-strength",
+  "slug": "uci-concrete-compressive-strength",
+  "name": "Concrete Compressive Strength Benchmark Dataset",
+  "description": "The Concrete Compressive Strength dataset contains 1,030 experimental mixture observations describing the non-linear relationship between concrete component proportions (cement, blast furnace slag, fly ash, water, superplasticizer, coarse aggregate, fine aggregate, curing age in days) and resultant compressive strength in megapascals (MPa).",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/165/concrete+compressive+strength",
+  "publisher": {
+    "name": "UCI Machine Learning Repository / Chung-Hua University",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "tabular-regression",
+    "materials-property-prediction",
+    "civil-engineering"
+  ],
+  "tags": [
+    "concrete-strength",
+    "materials-science",
+    "uci",
+    "tabular",
+    "regression"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset provided under CC-BY-4.0 by UCI Machine Learning Repository."
+  },
+  "source_references": [
+    {
+      "title": "UCI Concrete Compressive Strength Portal",
+      "url": "https://archive.ics.uci.edu/dataset/165/concrete+compressive+strength",
+      "type": "official_website",
+      "notes": "UCI Repository dataset 165 landing page."
+    },
+    {
+      "title": "Concrete Compressive Strength Dataset DOI Record",
+      "url": "https://doi.org/10.24432/C5PK67",
+      "type": "documentation",
+      "notes": "Canonical UCI persistent dataset identifier."
+    },
+    {
+      "title": "Modeling of Strength of High-Performance Concrete Using Artificial Neural Networks",
+      "url": "https://doi.org/10.1016/S0008-8846(98)00165-3",
+      "type": "original_paper",
+      "notes": "Published in Cement and Concrete Research (Volume 28, Issue 12, 1998)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository dataset 165 (DOI: 10.24432/C5PK67) and Cement and Concrete Research publication."
+  },
+  "size": {
+    "amount": 54.0,
+    "unit": "KB",
+    "file_formats": [
+      "csv",
+      "xls"
+    ],
+    "status": "verified",
+    "notes": "Tabular records containing 8 numerical component/curing measurements and compressive strength in MPa."
+  },
+  "sample_count": {
+    "total": 1030,
+    "unit": "instances",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "mixture_attributes",
+        "value": 8,
+        "unit": "features"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2007-08-03"
+  },
+  "citation": {
+    "paper_title": "Concrete Compressive Strength",
+    "paper_url": "https://doi.org/10.24432/C5PK67",
+    "authors": [
+      "I-Cheng Yeh"
+    ],
+    "doi": "10.24432/C5PK67",
+    "bibtex": "@misc{yeh2007concrete,\n  title = {Concrete Compressive Strength},\n  author = {Yeh, I-Cheng},\n  year = {2007},\n  publisher = {UCI Machine Learning Repository},\n  doi = {10.24432/C5PK67}\n}"
+  }
+}

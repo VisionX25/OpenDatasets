@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "lakh-midi",
+  "slug": "lakh-midi",
+  "name": "The Lakh MIDI Dataset (LMD)",
+  "description": "The Lakh MIDI Dataset (LMD) is a collection of 176,581 unique MIDI files matched and aligned to metadata from the Million Song Dataset. Providing symbolic musical representations, score alignments, and instrument track annotations for music information retrieval and generative music modeling.",
+  "homepage_url": "https://colinraffel.com/projects/lmd",
+  "publisher": {
+    "name": "Columbia University / Colin Raffel",
+    "type": "academic",
+    "url": "https://colinraffel.com"
+  },
+  "modalities": [
+    "audio",
+    "other"
+  ],
+  "tasks": [
+    "symbolic-music-modeling",
+    "audio-to-midi-alignment",
+    "music-information-retrieval"
+  ],
+  "tags": [
+    "lakh-midi",
+    "midi",
+    "music",
+    "symbolic-music",
+    "million-song-dataset"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Dataset distributed under CC-BY-4.0."
+  },
+  "source_references": [
+    {
+      "title": "Lakh MIDI Dataset Official Project Page",
+      "url": "https://colinraffel.com/projects/lmd",
+      "type": "official_website",
+      "notes": "Official author website with download links and documentation."
+    },
+    {
+      "title": "Learning-Based Methods for Comparing Sequences, with Applications to Audio-to-MIDI Alignment and Matching",
+      "url": "https://colinraffel.com/publications/thesis.pdf",
+      "type": "original_paper",
+      "notes": "Ph.D. Thesis, Columbia University (2016)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against author project portal and Ph.D. dissertation specifications."
+  },
+  "size": {
+    "amount": 1.6,
+    "unit": "GB",
+    "file_formats": [
+      "mid"
+    ],
+    "status": "verified",
+    "notes": "Standard MIDI format files (.mid) organized into hierarchical SHA1 directories."
+  },
+  "sample_count": {
+    "total": 176581,
+    "unit": "midi-files",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "matched_million_song_entries",
+        "value": 45129,
+        "unit": "songs"
+      },
+      {
+        "label": "precisely_aligned_tracks",
+        "value": 25336,
+        "unit": "tracks"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2016-05-01"
+  },
+  "citation": {
+    "paper_title": "Learning-Based Methods for Comparing Sequences, with Applications to Audio-to-MIDI Alignment and Matching",
+    "paper_url": "https://colinraffel.com/publications/thesis.pdf",
+    "authors": [
+      "Colin Raffel"
+    ],
+    "bibtex": "@phdthesis{raffel2016learning,\n  title = {Learning-Based Methods for Comparing Sequences, with Applications to Audio-to-{MIDI} Alignment and Matching},\n  author = {Raffel, Colin},\n  school = {Columbia University},\n  year = {2016}\n}"
+  }
+}

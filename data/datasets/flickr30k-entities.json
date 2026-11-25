@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "flickr30k-entities",
+  "slug": "flickr30k-entities",
+  "name": "Flickr30k Entities: Grounded Phrase-to-Region Visual Benchmark",
+  "description": "Flickr30k Entities augments the 31,783 images and 158,915 natural language captions of the Flickr30k dataset with 275,775 ground-truth bounding box object annotations. Coreferencing 244,035 text phrases to corresponding image regions to benchmark referring expression grounding and phrase localization.",
+  "homepage_url": "https://bryanplummer.com/Flickr30kEntities/",
+  "publisher": {
+    "name": "University of Illinois at Urbana-Champaign",
+    "type": "academic",
+    "url": "https://illinois.edu"
+  },
+  "modalities": [
+    "multimodal",
+    "vision",
+    "nlp"
+  ],
+  "tasks": [
+    "phrase-grounding",
+    "referring-expression-comprehension",
+    "image-text-alignment"
+  ],
+  "tags": [
+    "flickr30k-entities",
+    "phrase-grounding",
+    "object-localization",
+    "multimodal",
+    "uiuc"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "UIUC Academic Research License",
+    "spdx_id": null,
+    "url": "https://bryanplummer.com/Flickr30kEntities/",
+    "commercial_use": "allowed",
+    "notes": "Annotations made available for non-commercial research and educational use; underlying photos subject to individual Flickr licenses."
+  },
+  "source_references": [
+    {
+      "title": "Flickr30k Entities Project Page",
+      "url": "https://bryanplummer.com/Flickr30kEntities/",
+      "type": "official_website",
+      "notes": "Official UIUC project portal."
+    },
+    {
+      "title": "Flickr30k Entities: Collecting Region-to-Phrase Correspondences for Richer Image-to-Sentence Models",
+      "url": "https://doi.org/10.1109/ICCV.2015.432",
+      "type": "original_paper",
+      "notes": "Published in ICCV 2015 proceedings."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against ICCV 2015 publication (DOI: 10.1109/ICCV.2015.432) and UIUC project specifications."
+  },
+  "size": {
+    "amount": 4.5,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "xml",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "JPEG photographs with XML Pascal VOC-style bounding boxes and phrase coreference chain files."
+  },
+  "sample_count": {
+    "total": 31783,
+    "unit": "images",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 29783,
+      "val": 1000,
+      "test": 1000
+    },
+    "breakdown": [
+      {
+        "label": "captions",
+        "value": 158915,
+        "unit": "captions"
+      },
+      {
+        "label": "grounded_bounding_boxes",
+        "value": 275775,
+        "unit": "boxes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2015-12-11"
+  },
+  "citation": {
+    "paper_title": "Flickr30k Entities: Collecting Region-to-Phrase Correspondences for Richer Image-to-Sentence Models",
+    "paper_url": "https://doi.org/10.1109/ICCV.2015.432",
+    "authors": [
+      "Bryan A. Plummer",
+      "Liwei Wang",
+      "Chris M. Cervantes",
+      "Juan C. Caicedo",
+      "Julia Hockenmaier",
+      "Svetlana Lazebnik"
+    ],
+    "doi": "10.1109/ICCV.2015.432",
+    "bibtex": "@inproceedings{plummer2015flickr30k,\n  title = {{Flickr30k Entities}: Collecting Region-to-Phrase Correspondences for Richer Image-to-Sentence Models},\n  author = {Plummer, Bryan A. and Wang, Liwei and Cervantes, Chris M. and Caicedo, Juan C. and Hockenmaier, Julia and Lazebnik, Svetlana},\n  booktitle = {Proceedings of the IEEE International Conference on Computer Vision (ICCV)},\n  pages = {2641--2649},\n  year = {2015},\n  doi = {10.1109/ICCV.2015.432}\n}"
+  }
+}
