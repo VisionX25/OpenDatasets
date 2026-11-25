@@ -3,7 +3,7 @@
   "id": "dns-challenge",
   "slug": "dns-challenge",
   "name": "DNS Challenge: Deep Noise Suppression Challenge Benchmark",
-  "description": "The INTERSPEECH 2020 Deep Noise Suppression (DNS) Challenge dataset is an audio benchmark designed to train and benchmark deep learning models on real-time speech enhancement. Providing over 500 hours of clean multi-speaker speech, 180 hours of diverse environmental noise across 150 categories, and 3,000 synthetic room impulse responses.",
+  "description": "The INTERSPEECH 2020 Deep Noise Suppression (DNS) Challenge dataset (Challenge 1) is an audio benchmark designed to train and evaluate neural models on real-time single-channel speech enhancement. It provides 500 hours of clean speech from 2,150 speakers (derived from LibriVox, with approx. 441 usable hours), 180 hours of environmental noise across 150 classes (from AudioSet, Freesound, and DEMAND), and measured/synthetic room impulse responses.",
   "homepage_url": "https://github.com/microsoft/DNS-Challenge",
   "publisher": {
     "name": "Microsoft",
@@ -26,32 +26,32 @@
     "interspeech"
   ],
   "license": {
-    "status": "verified_open",
-    "name": "Creative Commons Attribution 4.0 International",
-    "spdx_id": "CC-BY-4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "commercial_use": "allowed",
-    "notes": "Dataset content released under CC-BY-4.0; companion synthesis code released under MIT."
+    "status": "custom_permissive",
+    "name": "Mixed License (CC-BY-4.0 Repository / Mixed Source Audio Terms)",
+    "spdx_id": null,
+    "url": "https://github.com/microsoft/DNS-Challenge",
+    "commercial_use": "unknown",
+    "notes": "Microsoft distributes repository scripts and synthesis code under MIT, and the dataset repository under CC-BY-4.0. Underlying audio sources retain original terms: clean speech is derived from public domain LibriVox audiobooks; noise clips include YouTube audio from Google AudioSet and community audio from Freesound/DEMAND (carrying varied attribution and non-commercial terms); synthetic/measured RIRs are from Microsoft. Unrestricted commercial exploitation of all components is not cleared."
   },
   "source_references": [
     {
       "title": "Microsoft DNS Challenge Repository",
       "url": "https://github.com/microsoft/DNS-Challenge",
       "type": "repository",
-      "notes": "Official repository with dataset download scripts and baseline recipes."
+      "notes": "Official repository with dataset download scripts and baseline recipes for Challenge 1."
     },
     {
       "title": "The INTERSPEECH 2020 Deep Noise Suppression Challenge: Datasets, Subjective Testing Framework, and Challenge Results",
-      "url": "https://doi.org/10.21437/Interspeech.2020-2503",
+      "url": "https://doi.org/10.21437/Interspeech.2020-3038",
       "type": "original_paper",
-      "notes": "Published in INTERSPEECH 2020 proceedings."
+      "notes": "Official INTERSPEECH 2020 challenge overview paper in ISCA Archive (pages 2492-2496)."
     }
   ],
   "verification": {
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against Interspeech 2020 publication (DOI: 10.21437/Interspeech.2020-2503) and official Microsoft repository."
+    "notes": "Verified against Interspeech 2020 publication (DOI: 10.21437/Interspeech.2020-3038, ISCA Archive) and official Microsoft repository. Clean speech from LibriVox (500h total, ~441h usable, 2150 speakers), noise from AudioSet/Freesound/DEMAND (~70,000 clips, 150 classes, 180h), and 3,000 room impulse responses."
   },
   "size": {
     "amount": 120.0,
@@ -59,11 +59,11 @@
     "file_formats": [
       "wav"
     ],
-    "status": "verified",
-    "notes": "16kHz 16-bit uncompressed WAV files of speech, environmental noise, and impulse responses."
+    "status": "estimated",
+    "notes": "16kHz 16-bit uncompressed WAV files of speech, environmental noise, and impulse responses across wideband challenge tracks."
   },
   "sample_count": {
-    "total": 65000,
+    "total": 70000,
     "unit": "noise-clips",
     "status": "estimated",
     "partition_completeness": "unspecified",
@@ -72,6 +72,11 @@
       {
         "label": "clean_speech_hours",
         "value": 500,
+        "unit": "hours"
+      },
+      {
+        "label": "clean_speech_usable_hours",
+        "value": 441,
         "unit": "hours"
       },
       {
@@ -85,6 +90,11 @@
         "unit": "classes"
       },
       {
+        "label": "noise_hours",
+        "value": 180,
+        "unit": "hours"
+      },
+      {
         "label": "room_impulse_responses",
         "value": 3000,
         "unit": "rirs"
@@ -96,19 +106,23 @@
   },
   "citation": {
     "paper_title": "The INTERSPEECH 2020 Deep Noise Suppression Challenge: Datasets, Subjective Testing Framework, and Challenge Results",
-    "paper_url": "https://doi.org/10.21437/Interspeech.2020-2503",
+    "paper_url": "https://doi.org/10.21437/Interspeech.2020-3038",
     "authors": [
       "Chandan K. A. Reddy",
-      "Eeshan Gopal",
+      "Vishak Gopal",
       "Ross Cutler",
-      "Ercan Kazakos",
-      "Filip Yang",
+      "Ebrahim Beyrami",
+      "Roger Cheng",
+      "Harishchandra Dubey",
+      "Sergiy Matusevych",
+      "Robert Aichner",
+      "Ashkan Aazami",
       "Sebastian Braun",
-      "Rozenn Nicol",
-      "Juha Piili",
-      "Jussi Salmela"
+      "Puneet Rana",
+      "Sriram Srinivasan",
+      "Johannes Gehrke"
     ],
-    "doi": "10.21437/Interspeech.2020-2503",
-    "bibtex": "@inproceedings{reddy2020interspeech,\n  title = {The {INTERSPEECH} 2020 Deep Noise Suppression Challenge: Datasets, Subjective Testing Framework, and Challenge Results},\n  author = {Reddy, Chandan K. A. and Gopal, Eeshan and Cutler, Ross and Kazakos, Ercan and Yang, Filip and Braun, Sebastian and Nicol, Rozenn and Piili, Juha and Salmela, Jussi},\n  booktitle = {Proceedings of INTERSPEECH 2020},\n  pages = {2492--2496},\n  year = {2020},\n  doi = {10.21437/Interspeech.2020-2503}\n}"
+    "doi": "10.21437/Interspeech.2020-3038",
+    "bibtex": "@inproceedings{reddy20_interspeech,\n  title     = {{The INTERSPEECH 2020 Deep Noise Suppression Challenge: Datasets, Subjective Testing Framework, and Challenge Results}},\n  author    = {Chandan K. A. Reddy and Vishak Gopal and Ross Cutler and Ebrahim Beyrami and Roger Cheng and Harishchandra Dubey and Sergiy Matusevych and Robert Aichner and Ashkan Aazami and Sebastian Braun and Puneet Rana and Sriram Srinivasan and Johannes Gehrke},\n  booktitle = {{Proc. Interspeech 2020}},\n  pages     = {2492--2496},\n  year      = {2020},\n  doi       = {10.21437/Interspeech.2020-3038}\n}"
   }
 }

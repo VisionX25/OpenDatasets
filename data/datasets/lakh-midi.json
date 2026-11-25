@@ -3,7 +3,7 @@
   "id": "lakh-midi",
   "slug": "lakh-midi",
   "name": "The Lakh MIDI Dataset (LMD)",
-  "description": "The Lakh MIDI Dataset (LMD) is a collection of 176,581 unique MIDI files matched and aligned to metadata from the Million Song Dataset. Providing symbolic musical representations, score alignments, and instrument track annotations for music information retrieval and generative music modeling.",
+  "description": "The Lakh MIDI Dataset (LMD) is a large-scale collection of symbolic MIDI files designed for music information retrieval and symbolic music modeling. It comprises LMD-full (176,581 unique de-duplicated MIDI files), LMD-matched (45,129 MIDI files matched to songs in the Million Song Dataset), and LMD-aligned (45,129 MIDI files temporally aligned to 7digital audio preview clips from the MSD).",
   "homepage_url": "https://colinraffel.com/projects/lmd",
   "publisher": {
     "name": "Columbia University / Colin Raffel",
@@ -11,7 +11,6 @@
     "url": "https://colinraffel.com"
   },
   "modalities": [
-    "audio",
     "other"
   ],
   "tasks": [
@@ -27,12 +26,12 @@
     "million-song-dataset"
   ],
   "license": {
-    "status": "verified_open",
-    "name": "Creative Commons Attribution 4.0 International",
+    "status": "custom_permissive",
+    "name": "CC-BY-4.0 (Distribution) / Third-Party Copyright",
     "spdx_id": "CC-BY-4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",
-    "commercial_use": "allowed",
-    "notes": "Dataset distributed under CC-BY-4.0."
+    "commercial_use": "unknown",
+    "notes": "The dataset collection and metadata alignments are distributed by Colin Raffel under CC-BY-4.0. However, the underlying musical compositions encoded in the MIDI files are subject to individual copyright and intellectual property rights of original artists and publishers, and commercial exploitation of the underlying songs is not granted by the dataset distribution license."
   },
   "source_references": [
     {
@@ -52,16 +51,16 @@
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against author project portal and Ph.D. dissertation specifications."
+    "notes": "Verified against author project portal and Ph.D. dissertation specifications. 176,581 deduplicated MIDI files in LMD-full, with 45,129 MSD-matched and aligned files."
   },
   "size": {
-    "amount": 1.6,
+    "amount": 1.65,
     "unit": "GB",
     "file_formats": [
       "mid"
     ],
     "status": "verified",
-    "notes": "Standard MIDI format files (.mid) organized into hierarchical SHA1 directories."
+    "notes": "Compressed tar archive lmd_full.tar.gz is approximately 1.65 GB, containing 176,581 unique standard MIDI format (.mid) files organized in SHA1 directory hierarchy."
   },
   "sample_count": {
     "total": 176581,
@@ -71,19 +70,19 @@
     "partition_overlap": "unspecified",
     "breakdown": [
       {
-        "label": "matched_million_song_entries",
+        "label": "lmd_matched_entries",
         "value": 45129,
-        "unit": "songs"
+        "unit": "midi-files"
       },
       {
-        "label": "precisely_aligned_tracks",
-        "value": 25336,
-        "unit": "tracks"
+        "label": "lmd_aligned_entries",
+        "value": 45129,
+        "unit": "midi-files"
       }
     ]
   },
   "dates": {
-    "published": "2016-05-01"
+    "published": "2016"
   },
   "citation": {
     "paper_title": "Learning-Based Methods for Comparing Sequences, with Applications to Audio-to-MIDI Alignment and Matching",
