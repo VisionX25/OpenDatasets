@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "dream",
+  "slug": "dream",
+  "name": "DREAM: Dialogue-Based Reading Comprehension Challenge",
+  "description": "DREAM is an in-depth dialogue-based reading comprehension dataset consisting of 10,197 multiple-choice questions on 6,444 multi-turn dialogues extracted from English listening comprehension examinations.",
+  "homepage_url": "https://dataset.org/dream/",
+  "publisher": {
+    "name": "Cornell University & University of Washington",
+    "type": "academic",
+    "url": "https://cornell.edu"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "reading-comprehension",
+    "dialogue-understanding"
+  ],
+  "tags": [
+    "reading-comprehension",
+    "dialogue",
+    "multiple-choice",
+    "english",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Custom Non-Commercial Research License",
+    "spdx_id": null,
+    "url": "https://dataset.org/dream/",
+    "commercial_use": "forbidden",
+    "notes": "Distributed exclusively for research purposes under non-commercial terms as specified on the project site."
+  },
+  "source_references": [
+    {
+      "title": "DREAM Official Project Page",
+      "url": "https://dataset.org/dream/",
+      "type": "official_website",
+      "notes": "Official dataset release portal."
+    },
+    {
+      "title": "DREAM: A Challenge Data Set and Models for Dialogue-Based Reading Comprehension",
+      "url": "https://aclanthology.org/Q19-1014/",
+      "type": "original_paper",
+      "notes": "Published in Transactions of the Association for Computational Linguistics (TACL 2019)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against TACL 2019 publication (DOI: 10.1162/tacl_a_00264) and official dataset release. Total questions: 10,197 (train: 6,116, dev: 2,040, test: 2,041) across 6,444 dialogues."
+  },
+  "size": {
+    "amount": 2.0,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "JSON formatted dialogue QA splits."
+  },
+  "sample_count": {
+    "total": 10197,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 6116,
+      "validation": 2040,
+      "test": 2041
+    },
+    "breakdown": [
+      {
+        "label": "dialogues",
+        "value": 6444,
+        "unit": "dialogues"
+      },
+      {
+        "label": "questions_train",
+        "value": 6116,
+        "unit": "questions"
+      },
+      {
+        "label": "questions_validation",
+        "value": 2040,
+        "unit": "questions"
+      },
+      {
+        "label": "questions_test",
+        "value": 2041,
+        "unit": "questions"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2019-05"
+  },
+  "citation": {
+    "paper_title": "DREAM: A Challenge Data Set and Models for Dialogue-Based Reading Comprehension",
+    "paper_url": "https://aclanthology.org/Q19-1014/",
+    "authors": [
+      "Kai Sun",
+      "Dian Yu",
+      "Jianshu Chen",
+      "Dong Yu",
+      "Yejin Choi",
+      "Claire Cardie"
+    ],
+    "doi": "10.1162/tacl_a_00264",
+    "bibtex": "@article{sun-etal-2019-dream,\n  title = {DREAM: A Challenge Data Set and Models for Dialogue-Based Reading Comprehension},\n  author = {Sun, Kai and Yu, Dian and Chen, Jianshu and Yu, Dong and Choi, Yejin and Cardie, Claire},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {7},\n  year = {2019},\n  publisher = {MIT Press},\n  url = {https://aclanthology.org/Q19-1014/},\n  doi = {10.1162/tacl_a_00264},\n  pages = {217--231}\n}"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wikisql",
+  "slug": "wikisql",
+  "name": "WikiSQL: Large-Scale Text-to-SQL Benchmark",
+  "description": "WikiSQL is a foundational text-to-SQL benchmark containing 80,654 natural language question and SQL query pairs mapped over 24,241 relational tables extracted from Wikipedia.",
+  "homepage_url": "https://github.com/salesforce/WikiSQL",
+  "publisher": {
+    "name": "Salesforce Research",
+    "type": "industry",
+    "url": "https://www.salesforce.com/research/"
+  },
+  "modalities": [
+    "nlp",
+    "tabular"
+  ],
+  "tasks": [
+    "text-to-sql",
+    "semantic-parsing",
+    "table-question-answering"
+  ],
+  "tags": [
+    "text-to-sql",
+    "semantic-parsing",
+    "relational-database",
+    "nlp",
+    "salesforce"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "BSD 3-Clause License / CC-BY-SA 3.0",
+    "spdx_id": "BSD-3-Clause",
+    "url": "https://github.com/salesforce/WikiSQL/blob/master/LICENSE",
+    "commercial_use": "allowed",
+    "notes": "WikiSQL codebase and dataset annotations are distributed under the BSD-3-Clause license; underlying Wikipedia table content is licensed under CC-BY-SA 3.0."
+  },
+  "source_references": [
+    {
+      "title": "WikiSQL Official Repository",
+      "url": "https://github.com/salesforce/WikiSQL",
+      "type": "official_website",
+      "notes": "Code and dataset download repository."
+    },
+    {
+      "title": "Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning",
+      "url": "https://arxiv.org/abs/1709.00103",
+      "type": "original_paper",
+      "notes": "Foundational paper introducing WikiSQL."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against Salesforce Research release and publication (DOI: 10.48550/arXiv.1709.00103). Contains exactly 80,654 question-SQL pairs (train: 56,355, dev: 8,421, test: 15,878) across 24,241 Wikipedia tables."
+  },
+  "size": {
+    "amount": 35.0,
+    "unit": "MB",
+    "file_formats": [
+      "jsonl",
+      "db"
+    ],
+    "status": "verified",
+    "notes": "JSONL records and SQLite database tables."
+  },
+  "sample_count": {
+    "total": 80654,
+    "unit": "queries",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 56355,
+      "validation": 8421,
+      "test": 15878
+    },
+    "breakdown": [
+      {
+        "label": "tables",
+        "value": 24241,
+        "unit": "tables"
+      },
+      {
+        "label": "train_queries",
+        "value": 56355,
+        "unit": "queries"
+      },
+      {
+        "label": "dev_queries",
+        "value": 8421,
+        "unit": "queries"
+      },
+      {
+        "label": "test_queries",
+        "value": 15878,
+        "unit": "queries"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2017-09"
+  },
+  "citation": {
+    "paper_title": "Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning",
+    "paper_url": "https://arxiv.org/abs/1709.00103",
+    "authors": [
+      "Victor Zhong",
+      "Caiming Xiong",
+      "Richard Socher"
+    ],
+    "doi": "10.48550/arXiv.1709.00103",
+    "bibtex": "@article{zhong-etal-2017-seq2sql,\n  title = {Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning},\n  author = {Zhong, Victor and Xiong, Caiming and Socher, Richard},\n  journal = {arXiv preprint arXiv:1709.00103},\n  year = {2017},\n  url = {https://arxiv.org/abs/1709.00103},\n  doi = {10.48550/arXiv.1709.00103}\n}"
+  }
+}

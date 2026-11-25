@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "chime-3",
+  "slug": "chime-3",
+  "name": "CHiME-3: Third CHiME Speech Separation and Recognition Challenge",
+  "description": "CHiME-3 is a multichannel speech recognition and enhancement dataset recorded in real everyday noisy environments (cafes, buses, pedestrian areas, street corners) using a 6-channel tablet microphone array and a close-talking reference microphone across 14,658 utterances.",
+  "homepage_url": "https://spandh.dcs.shef.ac.uk/chime_challenge/chime2015/",
+  "publisher": {
+    "name": "University of Sheffield & Inria",
+    "type": "academic",
+    "url": "https://spandh.dcs.shef.ac.uk"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "speech-recognition",
+    "multichannel-speech-enhancement",
+    "acoustic-noise-suppression"
+  ],
+  "tags": [
+    "chime",
+    "multichannel-audio",
+    "speech-recognition",
+    "robust-asr",
+    "audio"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Custom Non-Commercial Challenge License",
+    "spdx_id": null,
+    "url": "https://spandh.dcs.shef.ac.uk/chime_challenge/chime2015/data.html",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for research and non-commercial evaluation purposes upon registration."
+  },
+  "source_references": [
+    {
+      "title": "CHiME-3 Challenge Official Page",
+      "url": "https://spandh.dcs.shef.ac.uk/chime_challenge/chime2015/",
+      "type": "official_website",
+      "notes": "Challenge portal and task descriptions."
+    },
+    {
+      "title": "The Third 'CHiME' Speech Separation and Recognition Challenge: Analysis and Outcomes",
+      "url": "https://www.sciencedirect.com/science/article/pii/S088523081630173X",
+      "type": "original_paper",
+      "notes": "Published in Computer Speech & Language 2017."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against Computer Speech & Language 2017 paper (DOI: 10.1016/j.csl.2016.10.005) and challenge documentation. Exactly 14,658 multichannel utterances: 8,738 training utterances (1,600 real + 7,138 simulated), 3,280 development utterances (1,640 real + 1,640 simulated), and 2,640 evaluation utterances (1,320 real + 1,320 simulated)."
+  },
+  "size": {
+    "amount": 20.0,
+    "unit": "GB",
+    "file_formats": [
+      "wav",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "Multi-channel 16 kHz 16-bit WAV files and prompt transcriptions."
+  },
+  "sample_count": {
+    "total": 14658,
+    "unit": "utterances",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 8738,
+      "development": 3280,
+      "evaluation": 2640
+    },
+    "breakdown": [
+      {
+        "label": "training_utterances",
+        "value": 8738,
+        "unit": "utterances"
+      },
+      {
+        "label": "development_utterances",
+        "value": 3280,
+        "unit": "utterances"
+      },
+      {
+        "label": "evaluation_utterances",
+        "value": 2640,
+        "unit": "utterances"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2015-12"
+  },
+  "citation": {
+    "paper_title": "The Third 'CHiME' Speech Separation and Recognition Challenge: Analysis and Outcomes",
+    "paper_url": "https://www.sciencedirect.com/science/article/pii/S088523081630173X",
+    "authors": [
+      "Jon Barker",
+      "Ricard Marxer",
+      "Emmanuel Vincent",
+      "Shinji Watanabe"
+    ],
+    "doi": "10.1016/j.csl.2016.10.005",
+    "bibtex": "@article{barker2017third,\n  title = {The Third 'CHiME' Speech Separation and Recognition Challenge: Analysis and Outcomes},\n  author = {Barker, Jon and Marxer, Ricard and Vincent, Emmanuel and Watanabe, Shinji},\n  journal = {Computer Speech \\& Language},\n  volume = {46},\n  year = {2017},\n  publisher = {Elsevier},\n  doi = {10.1016/j.csl.2016.10.005},\n  pages = {605--626}\n}"
+  }
+}

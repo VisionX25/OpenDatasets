@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "id": "medleydb",
+  "slug": "medleydb",
+  "name": "MedleyDB: Multitrack Dataset for MIR Research",
+  "description": "MedleyDB is an annotated multitrack audio dataset for music information retrieval (MIR) containing 122 multitrack musical pieces across diverse genres, providing 1,675 individual instrument and vocal stems along with melody pitch contours and instrument activation annotations.",
+  "homepage_url": "https://medleydb.weebly.com/",
+  "publisher": {
+    "name": "Music and Audio Research Laboratory (MARL), New York University",
+    "type": "academic",
+    "url": "https://marl.nyu.edu"
+  },
+  "modalities": [
+    "audio"
+  ],
+  "tasks": [
+    "melody-extraction",
+    "instrument-recognition",
+    "source-separation",
+    "music-information-retrieval"
+  ],
+  "tags": [
+    "mir",
+    "multitrack-audio",
+    "melody-extraction",
+    "music-analysis",
+    "audio"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "spdx_id": "CC-BY-NC-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "Distributed on Zenodo under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International."
+  },
+  "source_references": [
+    {
+      "title": "MedleyDB Project Website",
+      "url": "https://medleydb.weebly.com/",
+      "type": "official_website",
+      "notes": "Official dataset website."
+    },
+    {
+      "title": "MedleyDB: A Multitrack Dataset for Annotation-Intensive MIR Research",
+      "url": "https://zenodo.org/record/165889",
+      "type": "original_paper",
+      "notes": "Published in ISMIR 2014."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against ISMIR 2014 paper and Zenodo deposit (DOI: 10.5281/zenodo.165889). Consists of 122 multitrack songs with 1,675 raw instrument stems, 108 melody-annotated tracks, and 7.2 hours of audio."
+  },
+  "size": {
+    "amount": 31.0,
+    "unit": "GB",
+    "file_formats": [
+      "wav",
+      "yaml",
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "Multitrack 44.1 kHz 16-bit WAV files, YAML metadata, and CSV pitch/instrument annotations."
+  },
+  "sample_count": {
+    "total": 122,
+    "unit": "songs",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "multitrack_songs",
+        "value": 122,
+        "unit": "songs"
+      },
+      {
+        "label": "instrument_stems",
+        "value": 1675,
+        "unit": "stems"
+      },
+      {
+        "label": "melody_annotated_tracks",
+        "value": 108,
+        "unit": "tracks"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2014-10"
+  },
+  "citation": {
+    "paper_title": "MedleyDB: A Multitrack Dataset for Annotation-Intensive MIR Research",
+    "paper_url": "https://zenodo.org/record/165889",
+    "authors": [
+      "Rachel M. Bittner",
+      "Justin Salamon",
+      "Mike Tierney",
+      "Matthias Mauch",
+      "Chris Cannam",
+      "Juan P. Bello"
+    ],
+    "doi": "10.5281/zenodo.165889",
+    "bibtex": "@inproceedings{bittner2014medleydb,\n  title = {MedleyDB: A Multitrack Dataset for Annotation-Intensive MIR Research},\n  author = {Bittner, Rachel M. and Salamon, Justin and Tierney, Mike and Mauch, Matthias and Cannam, Chris and Bello, Juan P.},\n  booktitle = {Proceedings of the 15th International Society for Music Information Retrieval Conference (ISMIR)},\n  year = {2014},\n  doi = {10.5281/zenodo.165889},\n  pages = {155--160}\n}"
+  }
+}

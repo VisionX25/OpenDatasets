@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-car-evaluation",
+  "slug": "uci-car-evaluation",
+  "name": "UCI Car Evaluation Dataset",
+  "description": "The UCI Car Evaluation Dataset is a classic tabular benchmark derived from a simple hierarchical decision model, containing 1,728 instances described by 6 categorical attributes evaluating car acceptability across 4 classes.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/19/car+evaluation",
+  "publisher": {
+    "name": "UCI Machine Learning Repository & University of Maribor",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "classification",
+    "tabular-classification",
+    "decision-support"
+  ],
+  "tags": [
+    "uci",
+    "tabular",
+    "categorical-classification",
+    "decision-trees",
+    "machine-learning"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed on the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International."
+  },
+  "source_references": [
+    {
+      "title": "UCI Car Evaluation Dataset Record",
+      "url": "https://archive.ics.uci.edu/dataset/19/car+evaluation",
+      "type": "official_website",
+      "notes": "Official UCI ML repository landing page."
+    },
+    {
+      "title": "DEX: A Knowledge-Based Decision Modeling System",
+      "url": "https://doi.org/10.24432/C5JP48",
+      "type": "original_paper",
+      "notes": "Dataset citation record with DataCite DOI 10.24432/C5JP48."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository record and DataCite DOI (10.24432/C5JP48). Exactly 1,728 instances, 6 categorical attributes, and 0 missing values across 4 acceptability classes."
+  },
+  "size": {
+    "amount": 0.05,
+    "unit": "MB",
+    "file_formats": [
+      "csv",
+      "data"
+    ],
+    "status": "verified",
+    "notes": "CSV/data tabular records."
+  },
+  "sample_count": {
+    "total": 1728,
+    "unit": "samples",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "samples",
+        "value": 1728,
+        "unit": "samples"
+      },
+      {
+        "label": "features",
+        "value": 6,
+        "unit": "features"
+      },
+      {
+        "label": "classes",
+        "value": 4,
+        "unit": "classes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "1997-06"
+  },
+  "citation": {
+    "paper_title": "Car Evaluation",
+    "paper_url": "https://doi.org/10.24432/C5JP48",
+    "authors": [
+      "Marko Bohanec",
+      "Bojan Cestnik"
+    ],
+    "doi": "10.24432/C5JP48",
+    "bibtex": "@misc{bohanec1997car,\n  title = {Car Evaluation},\n  author = {Bohanec, Marko and Cestnik, Bojan},\n  year = {1997},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5JP48}\n}"
+  }
+}

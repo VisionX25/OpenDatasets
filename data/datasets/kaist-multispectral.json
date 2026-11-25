@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "id": "kaist-multispectral",
+  "slug": "kaist-multispectral",
+  "name": "KAIST Multispectral Pedestrian Detection Benchmark",
+  "description": "KAIST Multispectral Pedestrian Dataset is a comprehensive benchmark for day and night pedestrian detection, consisting of 95,328 well-aligned color (RGB) and thermal (infrared) image pairs captured from vehicle-mounted sensors in campus, street, and countryside environments.",
+  "homepage_url": "https://multispectral.kaist.ac.kr/pedestrian/data-kaist.html",
+  "publisher": {
+    "name": "KAIST (Korea Advanced Institute of Science and Technology)",
+    "type": "academic",
+    "url": "https://www.kaist.ac.kr"
+  },
+  "modalities": [
+    "vision",
+    "sensor"
+  ],
+  "tasks": [
+    "pedestrian-detection",
+    "multispectral-detection",
+    "thermal-imaging"
+  ],
+  "tags": [
+    "multispectral",
+    "pedestrian-detection",
+    "thermal-infrared",
+    "autonomous-driving",
+    "computer-vision"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Custom Non-Commercial Academic License",
+    "spdx_id": null,
+    "url": "https://multispectral.kaist.ac.kr/pedestrian/data-kaist.html",
+    "commercial_use": "forbidden",
+    "notes": "Freely available for non-commercial research and educational use upon agreement to cite the publication."
+  },
+  "source_references": [
+    {
+      "title": "KAIST Multispectral Pedestrian Benchmark",
+      "url": "https://multispectral.kaist.ac.kr/pedestrian/data-kaist.html",
+      "type": "official_website",
+      "notes": "Official portal and benchmark downloads."
+    },
+    {
+      "title": "Multispectral Pedestrian Detection: Benchmark Dataset and Baselines",
+      "url": "https://ieeexplore.ieee.org/document/7298706",
+      "type": "original_paper",
+      "notes": "Published in CVPR 2015."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against CVPR 2015 publication (DOI: 10.1109/CVPR.2015.7298706) and official KAIST portal. Exactly 95,328 aligned color-thermal image pairs (train: 50,187 pairs across set00-set05; test: 45,141 pairs across set06-set11) with 103,128 dense pedestrian bounding box annotations."
+  },
+  "size": {
+    "amount": 25.0,
+    "unit": "GB",
+    "file_formats": [
+      "jpg",
+      "png",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "RGB and thermal image sequences and text annotation files."
+  },
+  "sample_count": {
+    "total": 95328,
+    "unit": "image_pairs",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 50187,
+      "test": 45141
+    },
+    "breakdown": [
+      {
+        "label": "color_thermal_pairs_train",
+        "value": 50187,
+        "unit": "image_pairs"
+      },
+      {
+        "label": "color_thermal_pairs_test",
+        "value": 45141,
+        "unit": "image_pairs"
+      },
+      {
+        "label": "pedestrian_bounding_boxes",
+        "value": 103128,
+        "unit": "boxes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2015-06"
+  },
+  "citation": {
+    "paper_title": "Multispectral Pedestrian Detection: Benchmark Dataset and Baselines",
+    "paper_url": "https://ieeexplore.ieee.org/document/7298706",
+    "authors": [
+      "Soonmin Hwang",
+      "Jaesik Park",
+      "Namil Kim",
+      "Yukyeom Choi",
+      "In So Kweon"
+    ],
+    "doi": "10.1109/CVPR.2015.7298706",
+    "bibtex": "@inproceedings{hwang2015multispectral,\n  title = {Multispectral Pedestrian Detection: Benchmark Dataset and Baselines},\n  author = {Hwang, Soonmin and Park, Jaesik and Kim, Namil and Choi, Yukyeom and Kweon, In So},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2015},\n  doi = {10.1109/CVPR.2015.7298706},\n  pages = {1037--1045}\n}"
+  }
+}

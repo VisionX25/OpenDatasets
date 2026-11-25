@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "inria-person",
+  "slug": "inria-person",
+  "name": "INRIA Person Dataset",
+  "description": "The INRIA Person Dataset is a classic computer vision benchmark for pedestrian detection consisting of 2,573 annotated images containing standing and walking upright persons under diverse real-world illumination, orientations, and backgrounds.",
+  "homepage_url": "https://pascal.inrialpes.fr/data/human/",
+  "publisher": {
+    "name": "INRIA Rhône-Alpes",
+    "type": "academic",
+    "url": "https://www.inria.fr"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "pedestrian-detection",
+    "object-detection"
+  ],
+  "tags": [
+    "pedestrian-detection",
+    "hog",
+    "object-detection",
+    "inria",
+    "computer-vision"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Custom Non-Commercial Research License",
+    "spdx_id": null,
+    "url": "https://pascal.inrialpes.fr/data/human/",
+    "commercial_use": "forbidden",
+    "notes": "Distributed by INRIA strictly for non-commercial research and educational evaluations."
+  },
+  "source_references": [
+    {
+      "title": "INRIA Person Dataset Portal",
+      "url": "https://pascal.inrialpes.fr/data/human/",
+      "type": "official_website",
+      "notes": "Official INRIA download page."
+    },
+    {
+      "title": "Histograms of Oriented Gradients for Human Detection",
+      "url": "https://ieeexplore.ieee.org/document/1467360",
+      "type": "original_paper",
+      "notes": "Seminal CVPR 2005 paper introducing HOG and the dataset."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against CVPR 2005 publication (DOI: 10.1109/CVPR.2005.177) and official INRIA distribution. Comprises 1,832 training images (614 positive + 1,218 negative) and 741 test images (288 positive + 453 negative), totaling 2,573 images and 3,542 annotated persons."
+  },
+  "size": {
+    "amount": 970.0,
+    "unit": "MB",
+    "file_formats": [
+      "png",
+      "jpg",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "Images and text bounding box annotations."
+  },
+  "sample_count": {
+    "total": 2573,
+    "unit": "images",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 1832,
+      "test": 741
+    },
+    "breakdown": [
+      {
+        "label": "train_positive_images",
+        "value": 614,
+        "unit": "images"
+      },
+      {
+        "label": "train_negative_images",
+        "value": 1218,
+        "unit": "images"
+      },
+      {
+        "label": "test_positive_images",
+        "value": 288,
+        "unit": "images"
+      },
+      {
+        "label": "test_negative_images",
+        "value": 453,
+        "unit": "images"
+      },
+      {
+        "label": "annotated_persons",
+        "value": 3542,
+        "unit": "persons"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2005-06"
+  },
+  "citation": {
+    "paper_title": "Histograms of Oriented Gradients for Human Detection",
+    "paper_url": "https://ieeexplore.ieee.org/document/1467360",
+    "authors": [
+      "Navneet Dalal",
+      "Bill Triggs"
+    ],
+    "doi": "10.1109/CVPR.2005.177",
+    "bibtex": "@inproceedings{dalal2005histograms,\n  title = {Histograms of Oriented Gradients for Human Detection},\n  author = {Dalal, Navneet and Triggs, Bill},\n  booktitle = {Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2005},\n  doi = {10.1109/CVPR.2005.177},\n  pages = {886--893}\n}"
+  }
+}

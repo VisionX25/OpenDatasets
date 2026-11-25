@@ -13942,6 +13942,116 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "chime-3",
+    "slug": "chime-3",
+    "name": "CHiME-3: Third CHiME Speech Separation and Recognition Challenge",
+    "description": "CHiME-3 is a multichannel speech recognition and enhancement dataset recorded in real everyday noisy environments (cafes, buses, pedestrian areas, street corners) using a 6-channel tablet microphone array and a close-talking reference microphone across 14,658 utterances.",
+    "homepage_url": "https://spandh.dcs.shef.ac.uk/chime_challenge/chime2015/",
+    "publisher": {
+      "name": "University of Sheffield & Inria",
+      "type": "academic",
+      "url": "https://spandh.dcs.shef.ac.uk"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-recognition",
+      "multichannel-speech-enhancement",
+      "acoustic-noise-suppression"
+    ],
+    "tags": [
+      "chime",
+      "multichannel-audio",
+      "speech-recognition",
+      "robust-asr",
+      "audio"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Custom Non-Commercial Challenge License",
+      "spdx_id": null,
+      "url": "https://spandh.dcs.shef.ac.uk/chime_challenge/chime2015/data.html",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for research and non-commercial evaluation purposes upon registration."
+    },
+    "source_references": [
+      {
+        "title": "CHiME-3 Challenge Official Page",
+        "url": "https://spandh.dcs.shef.ac.uk/chime_challenge/chime2015/",
+        "type": "official_website",
+        "notes": "Challenge portal and task descriptions."
+      },
+      {
+        "title": "The Third 'CHiME' Speech Separation and Recognition Challenge: Analysis and Outcomes",
+        "url": "https://www.sciencedirect.com/science/article/pii/S088523081630173X",
+        "type": "original_paper",
+        "notes": "Published in Computer Speech & Language 2017."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against Computer Speech & Language 2017 paper (DOI: 10.1016/j.csl.2016.10.005) and challenge documentation. Exactly 14,658 multichannel utterances: 8,738 training utterances (1,600 real + 7,138 simulated), 3,280 development utterances (1,640 real + 1,640 simulated), and 2,640 evaluation utterances (1,320 real + 1,320 simulated)."
+    },
+    "size": {
+      "amount": 20.0,
+      "unit": "GB",
+      "file_formats": [
+        "wav",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "Multi-channel 16 kHz 16-bit WAV files and prompt transcriptions."
+    },
+    "sample_count": {
+      "total": 14658,
+      "unit": "utterances",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 8738,
+        "development": 3280,
+        "evaluation": 2640
+      },
+      "breakdown": [
+        {
+          "label": "training_utterances",
+          "value": 8738,
+          "unit": "utterances"
+        },
+        {
+          "label": "development_utterances",
+          "value": 3280,
+          "unit": "utterances"
+        },
+        {
+          "label": "evaluation_utterances",
+          "value": 2640,
+          "unit": "utterances"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2015-12"
+    },
+    "citation": {
+      "paper_title": "The Third 'CHiME' Speech Separation and Recognition Challenge: Analysis and Outcomes",
+      "paper_url": "https://www.sciencedirect.com/science/article/pii/S088523081630173X",
+      "authors": [
+        "Jon Barker",
+        "Ricard Marxer",
+        "Emmanuel Vincent",
+        "Shinji Watanabe"
+      ],
+      "doi": "10.1016/j.csl.2016.10.005",
+      "bibtex": "@article{barker2017third,\n  title = {The Third 'CHiME' Speech Separation and Recognition Challenge: Analysis and Outcomes},\n  author = {Barker, Jon and Marxer, Ricard and Vincent, Emmanuel and Watanabe, Shinji},\n  journal = {Computer Speech \\& Language},\n  volume = {46},\n  year = {2017},\n  publisher = {Elsevier},\n  doi = {10.1016/j.csl.2016.10.005},\n  pages = {605--626}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "chime-4",
     "slug": "chime-4",
     "name": "The 4th CHiME Speech Separation and Recognition Challenge",
@@ -14851,6 +14961,126 @@
       "data_sources": [
         "Blender Procedural Rendering Engine"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "clevrer",
+    "slug": "clevrer",
+    "name": "CLEVRER: Collision Events for Video Representation and Reasoning",
+    "description": "CLEVRER is a diagnostic video reasoning benchmark containing 20,000 synthetic videos of colliding geometric objects and 304,917 questions evaluating descriptive, explanatory, predictive, and counterfactual causal reasoning.",
+    "homepage_url": "http://clevrer.csail.mit.edu/",
+    "publisher": {
+      "name": "MIT CSAIL & IBM Research",
+      "type": "academic",
+      "url": "http://clevrer.csail.mit.edu"
+    },
+    "modalities": [
+      "vision",
+      "nlp",
+      "multimodal"
+    ],
+    "tasks": [
+      "video-reasoning",
+      "video-question-answering",
+      "causal-reasoning"
+    ],
+    "tags": [
+      "video-reasoning",
+      "causal-reasoning",
+      "clevr",
+      "video-qa",
+      "multimodal"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "CLEVRER videos and annotations are released under Creative Commons Attribution 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "CLEVRER Project Homepage",
+        "url": "http://clevrer.csail.mit.edu/",
+        "type": "official_website",
+        "notes": "Official CSAIL project site."
+      },
+      {
+        "title": "CLEVRER: CoLlision Events for Video REpresentation and Reasoning",
+        "url": "https://arxiv.org/abs/1910.01442",
+        "type": "original_paper",
+        "notes": "Published in ICLR 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against ICLR 2020 paper (arXiv: 1910.01442) and MIT CSAIL repository. Exactly 20,000 synthetic videos (train: 10,000, validation: 5,000, test: 5,000) with 304,917 questions across descriptive, explanatory, predictive, and counterfactual reasoning types."
+    },
+    "size": {
+      "amount": 55.0,
+      "unit": "GB",
+      "file_formats": [
+        "mp4",
+        "json"
+      ],
+      "status": "verified",
+      "notes": "MP4 synthetic videos and JSON question annotations."
+    },
+    "sample_count": {
+      "total": 20000,
+      "unit": "videos",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 10000,
+        "validation": 5000,
+        "test": 5000
+      },
+      "breakdown": [
+        {
+          "label": "training_videos",
+          "value": 10000,
+          "unit": "videos"
+        },
+        {
+          "label": "validation_videos",
+          "value": 5000,
+          "unit": "videos"
+        },
+        {
+          "label": "test_videos",
+          "value": 5000,
+          "unit": "videos"
+        },
+        {
+          "label": "reasoning_questions",
+          "value": 304917,
+          "unit": "questions"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2020-04"
+    },
+    "citation": {
+      "paper_title": "CLEVRER: CoLlision Events for Video REpresentation and Reasoning",
+      "paper_url": "https://arxiv.org/abs/1910.01442",
+      "authors": [
+        "Kexin Yi",
+        "Chuang Gan",
+        "Yunzhu Li",
+        "Pushmeet Kohli",
+        "Jiajun Wu",
+        "Antonio Torralba",
+        "Joshua B. Tenenbaum"
+      ],
+      "doi": "10.48550/arXiv.1910.01442",
+      "bibtex": "@inproceedings{yi2020clevrer,\n  title = {CLEVRER: CoLlision Events for Video REpresentation and Reasoning},\n  author = {Yi, Kexin and Gan, Chuang and Li, Yunzhu and Kohli, Pushmeet and Wu, Jiajun and Torralba, Antonio and Tenenbaum, Joshua B.},\n  booktitle = {Proceedings of the International Conference on Learning Representations (ICLR)},\n  year = {2020},\n  url = {https://arxiv.org/abs/1910.01442},\n  doi = {10.48550/arXiv.1910.01442}\n}"
     }
   },
   {
@@ -18657,6 +18887,119 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "dcase-2016-task2",
+    "slug": "dcase-2016-task2",
+    "name": "DCASE 2016 Task 2: Sound Event Detection in Synthetic Audio",
+    "description": "DCASE 2016 Task 2 is a sound event detection dataset consisting of 72 synthesized audio mixtures (18 development, 54 evaluation) generated by mixing 220 isolated sound events across 11 sound classes into continuous office room background noise.",
+    "homepage_url": "https://dcase.community/challenge2016/task-sound-event-detection-in-synthetic-audio",
+    "publisher": {
+      "name": "DCASE Community & Queen Mary University of London",
+      "type": "academic",
+      "url": "https://dcase.community"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "sound-event-detection",
+      "audio-classification",
+      "acoustic-event-recognition"
+    ],
+    "tags": [
+      "dcase",
+      "sound-event-detection",
+      "synthetic-audio",
+      "office-acoustics",
+      "audio"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed on Zenodo under Creative Commons Attribution 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "DCASE 2016 Task 2 Webpage",
+        "url": "https://dcase.community/challenge2016/task-sound-event-detection-in-synthetic-audio",
+        "type": "official_website",
+        "notes": "Official challenge task definition."
+      },
+      {
+        "title": "Sound Event Detection in Synthetic Audio: Analysis of the DCASE 2016 Task Results",
+        "url": "https://ieeexplore.ieee.org/document/8169985",
+        "type": "original_paper",
+        "notes": "Published in IEEE WASPAA 2017."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against WASPAA 2017 paper (DOI: 10.1109/WASPAA.2017.8169985) and DCASE 2016 official records. Comprises 72 synthesized audio mixture tracks (18 development, 54 evaluation) generated from 220 isolated sound events across 11 classes."
+    },
+    "size": {
+      "amount": 1400.0,
+      "unit": "MB",
+      "file_formats": [
+        "wav",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "16-bit 44.1 kHz WAV audio and text event annotations."
+    },
+    "sample_count": {
+      "total": 72,
+      "unit": "recordings",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "development": 18,
+        "evaluation": 54
+      },
+      "breakdown": [
+        {
+          "label": "development_audio_mixtures",
+          "value": 18,
+          "unit": "recordings"
+        },
+        {
+          "label": "evaluation_audio_mixtures",
+          "value": 54,
+          "unit": "recordings"
+        },
+        {
+          "label": "isolated_sound_event_clips",
+          "value": 220,
+          "unit": "clips"
+        },
+        {
+          "label": "sound_event_classes",
+          "value": 11,
+          "unit": "classes"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2016-03"
+    },
+    "citation": {
+      "paper_title": "Sound Event Detection in Synthetic Audio: Analysis of the DCASE 2016 Task Results",
+      "paper_url": "https://ieeexplore.ieee.org/document/8169985",
+      "authors": [
+        "Grégoire Lafay",
+        "Emmanouil Benetos",
+        "Mathieu Lagrange"
+      ],
+      "doi": "10.1109/WASPAA.2017.8169985",
+      "bibtex": "@inproceedings{lafay2017sound,\n  title = {Sound Event Detection in Synthetic Audio: Analysis of the DCASE 2016 Task Results},\n  author = {Lafay, Gr{\\'e}goire and Benetos, Emmanouil and Lagrange, Mathieu},\n  booktitle = {Proceedings of the IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)},\n  year = {2017},\n  doi = {10.1109/WASPAA.2017.8169985},\n  pages = {31--35}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "ddad-dense-depth",
     "slug": "ddad-dense-depth",
     "name": "DDAD: Dense Depth for Autonomous Driving",
@@ -20783,6 +21126,122 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "dream",
+    "slug": "dream",
+    "name": "DREAM: Dialogue-Based Reading Comprehension Challenge",
+    "description": "DREAM is an in-depth dialogue-based reading comprehension dataset consisting of 10,197 multiple-choice questions on 6,444 multi-turn dialogues extracted from English listening comprehension examinations.",
+    "homepage_url": "https://dataset.org/dream/",
+    "publisher": {
+      "name": "Cornell University & University of Washington",
+      "type": "academic",
+      "url": "https://cornell.edu"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "reading-comprehension",
+      "dialogue-understanding"
+    ],
+    "tags": [
+      "reading-comprehension",
+      "dialogue",
+      "multiple-choice",
+      "english",
+      "nlp"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Custom Non-Commercial Research License",
+      "spdx_id": null,
+      "url": "https://dataset.org/dream/",
+      "commercial_use": "forbidden",
+      "notes": "Distributed exclusively for research purposes under non-commercial terms as specified on the project site."
+    },
+    "source_references": [
+      {
+        "title": "DREAM Official Project Page",
+        "url": "https://dataset.org/dream/",
+        "type": "official_website",
+        "notes": "Official dataset release portal."
+      },
+      {
+        "title": "DREAM: A Challenge Data Set and Models for Dialogue-Based Reading Comprehension",
+        "url": "https://aclanthology.org/Q19-1014/",
+        "type": "original_paper",
+        "notes": "Published in Transactions of the Association for Computational Linguistics (TACL 2019)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against TACL 2019 publication (DOI: 10.1162/tacl_a_00264) and official dataset release. Total questions: 10,197 (train: 6,116, dev: 2,040, test: 2,041) across 6,444 dialogues."
+    },
+    "size": {
+      "amount": 2.0,
+      "unit": "MB",
+      "file_formats": [
+        "json"
+      ],
+      "status": "verified",
+      "notes": "JSON formatted dialogue QA splits."
+    },
+    "sample_count": {
+      "total": 10197,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 6116,
+        "validation": 2040,
+        "test": 2041
+      },
+      "breakdown": [
+        {
+          "label": "dialogues",
+          "value": 6444,
+          "unit": "dialogues"
+        },
+        {
+          "label": "questions_train",
+          "value": 6116,
+          "unit": "questions"
+        },
+        {
+          "label": "questions_validation",
+          "value": 2040,
+          "unit": "questions"
+        },
+        {
+          "label": "questions_test",
+          "value": 2041,
+          "unit": "questions"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2019-05"
+    },
+    "citation": {
+      "paper_title": "DREAM: A Challenge Data Set and Models for Dialogue-Based Reading Comprehension",
+      "paper_url": "https://aclanthology.org/Q19-1014/",
+      "authors": [
+        "Kai Sun",
+        "Dian Yu",
+        "Jianshu Chen",
+        "Dong Yu",
+        "Yejin Choi",
+        "Claire Cardie"
+      ],
+      "doi": "10.1162/tacl_a_00264",
+      "bibtex": "@article{sun-etal-2019-dream,\n  title = {DREAM: A Challenge Data Set and Models for Dialogue-Based Reading Comprehension},\n  author = {Sun, Kai and Yu, Dian and Chen, Jianshu and Yu, Dong and Choi, Yejin and Cardie, Claire},\n  journal = {Transactions of the Association for Computational Linguistics},\n  volume = {7},\n  year = {2019},\n  publisher = {MIT Press},\n  url = {https://aclanthology.org/Q19-1014/},\n  doi = {10.1162/tacl_a_00264},\n  pages = {217--231}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "drive",
     "slug": "drive",
     "name": "DRIVE: Digital Retinal Images for Vessel Extraction",
@@ -21611,6 +22070,106 @@
       ],
       "doi": "10.18653/v1/P18-1156",
       "bibtex": "@inproceedings{saha-etal-2018-duorc,\n  title = {{D}uo{RC}: Towards Complex Language Understanding with Paraphrased Reading Comprehension},\n  author = {Saha, Amrita and Aralikatte, Rahul and Khapra, Mitesh M. and Sankaranarayanan, Karthik},\n  booktitle = {Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},\n  month = jul,\n  year = {2018},\n  address = {Melbourne, Australia},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/P18-1156/},\n  doi = {10.18653/v1/P18-1156},\n  pages = {1683--1693}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "dutomron",
+    "slug": "dutomron",
+    "name": "DUT-OMRON: Salient Object Detection Dataset",
+    "description": "DUT-OMRON is a prominent salient object detection benchmark consisting of 5,168 natural images manually selected from more than 140,000 photos, each with pixel-level ground truth masks and bounding box annotations from 5 human annotators.",
+    "homepage_url": "http://saliencydetection.net/dut-omron/",
+    "publisher": {
+      "name": "Dalian University of Technology & OMRON Corporation",
+      "type": "academic",
+      "url": "http://saliencydetection.net/dut-omron/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "salient-object-detection",
+      "image-segmentation",
+      "object-detection"
+    ],
+    "tags": [
+      "saliency",
+      "salient-object-detection",
+      "segmentation",
+      "computer-vision"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Academic Research Use",
+      "spdx_id": null,
+      "url": "http://saliencydetection.net/dut-omron/",
+      "commercial_use": "unknown",
+      "notes": "Made freely available for academic research purposes on the official project page."
+    },
+    "source_references": [
+      {
+        "title": "DUT-OMRON Saliency Benchmark",
+        "url": "http://saliencydetection.net/dut-omron/",
+        "type": "official_website",
+        "notes": "Official dataset and evaluation portal."
+      },
+      {
+        "title": "Saliency Detection via Graph Analysis",
+        "url": "https://ieeexplore.ieee.org/document/6619250",
+        "type": "original_paper",
+        "notes": "Published in CVPR 2013."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against CVPR 2013 paper (DOI: 10.1109/CVPR.2013.407) and benchmark archive. Exactly 5,168 images with multiple human eye-fixation and segmentation masks."
+    },
+    "size": {
+      "amount": 1100.0,
+      "unit": "MB",
+      "file_formats": [
+        "jpg",
+        "png"
+      ],
+      "status": "verified",
+      "notes": "JPEG source images and PNG pixel ground-truth masks."
+    },
+    "sample_count": {
+      "total": 5168,
+      "unit": "images",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "images",
+          "value": 5168,
+          "unit": "images"
+        },
+        {
+          "label": "annotators_per_image",
+          "value": 5,
+          "unit": "annotators"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2013-06"
+    },
+    "citation": {
+      "paper_title": "Saliency Detection via Graph Analysis",
+      "paper_url": "https://ieeexplore.ieee.org/document/6619250",
+      "authors": [
+        "Chuan Yang",
+        "Lihe Zhang",
+        "Huchuan Lu",
+        "Xiang Ruan",
+        "Ming-Hsuan Yang"
+      ],
+      "doi": "10.1109/CVPR.2013.407",
+      "bibtex": "@inproceedings{yang2013saliency,\n  title = {Saliency Detection via Graph Analysis},\n  author = {Yang, Chuan and Zhang, Lihe and Lu, Huchuan and Ruan, Xiang and Yang, Ming-Hsuan},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2013},\n  doi = {10.1109/CVPR.2013.407},\n  pages = {3166--3173}\n}"
     }
   },
   {
@@ -25218,6 +25777,122 @@
       ],
       "doi": "10.18653/v1/N18-1074",
       "bibtex": "@inproceedings{thorne-etal-2018-fever,\n  title = {{FEVER}: a Large-scale Dataset for Fact Extraction and {VER}ification},\n  author = {Thorne, James and Vlachos, Andreas and Christodoulopoulos, Christos and Mittal, Arpit},\n  booktitle = {Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},\n  year = {2018},\n  pages = {809--819},\n  doi = {10.18653/v1/N18-1074}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "feverous",
+    "slug": "feverous",
+    "name": "FEVEROUS: Fact Verification Over Structured and Unstructured Information",
+    "description": "FEVEROUS is a fact verification benchmark consisting of 87,026 human-written claims verified against evidence combining both structured (Wikipedia tables) and unstructured (Wikipedia text sentences) knowledge.",
+    "homepage_url": "https://fever.ai/dataset/feverous.html",
+    "publisher": {
+      "name": "University of Cambridge & Amazon",
+      "type": "academic",
+      "url": "https://fever.ai"
+    },
+    "modalities": [
+      "nlp",
+      "tabular",
+      "multimodal"
+    ],
+    "tasks": [
+      "fact-verification",
+      "claim-verification",
+      "evidence-retrieval"
+    ],
+    "tags": [
+      "fact-checking",
+      "fever",
+      "tables",
+      "claim-verification",
+      "multimodal"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "spdx_id": "CC-BY-SA-3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed under Creative Commons Attribution-ShareAlike 3.0 Unported matching Wikipedia source content."
+    },
+    "source_references": [
+      {
+        "title": "FEVEROUS Official Dataset Portal",
+        "url": "https://fever.ai/dataset/feverous.html",
+        "type": "official_website",
+        "notes": "Official FEVER community portal."
+      },
+      {
+        "title": "FEVEROUS: Fact Extraction and VERification Over Unstructured and Structured information",
+        "url": "https://arxiv.org/abs/2106.05707",
+        "type": "original_paper",
+        "notes": "Published in NeurIPS 2021."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against NeurIPS 2021 publication (arXiv: 2106.05707) and fever.ai dataset distribution. Contains exactly 87,026 claims (train: 71,291, dev: 7,890, test: 7,845) classified as SUPPORTS, REFUTES, or NOT ENOUGH INFO."
+    },
+    "size": {
+      "amount": 2800.0,
+      "unit": "MB",
+      "file_formats": [
+        "jsonl",
+        "db"
+      ],
+      "status": "verified",
+      "notes": "JSONL claims and SQLite Wikipedia reference dump."
+    },
+    "sample_count": {
+      "total": 87026,
+      "unit": "claims",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 71291,
+        "validation": 7890,
+        "test": 7845
+      },
+      "breakdown": [
+        {
+          "label": "train_claims",
+          "value": 71291,
+          "unit": "claims"
+        },
+        {
+          "label": "dev_claims",
+          "value": 7890,
+          "unit": "claims"
+        },
+        {
+          "label": "test_claims",
+          "value": 7845,
+          "unit": "claims"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2021-06"
+    },
+    "citation": {
+      "paper_title": "FEVEROUS: Fact Extraction and VERification Over Unstructured and Structured information",
+      "paper_url": "https://arxiv.org/abs/2106.05707",
+      "authors": [
+        "Rami Aly",
+        "Zhijiang Guo",
+        "Michael Schlichtkrull",
+        "James Thorne",
+        "Andreas Vlachos",
+        "Christos Christodoulopoulos",
+        "Oana Cocarascu",
+        "Arpit Mittal"
+      ],
+      "doi": "10.48550/arXiv.2106.05707",
+      "bibtex": "@inproceedings{aly2021feverous,\n  title = {FEVEROUS: Fact Extraction and VERification Over Unstructured and Structured information},\n  author = {Aly, Rami and Guo, Zhijiang and Schlichtkrull, Michael and Thorne, James and Vlachos, Andreas and Christodoulopoulos, Christos and Cocarascu, Oana and Mittal, Arpit},\n  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},\n  volume = {34},\n  year = {2021},\n  url = {https://arxiv.org/abs/2106.05707},\n  doi = {10.48550/arXiv.2106.05707}\n}"
     }
   },
   {
@@ -33063,6 +33738,123 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "inria-person",
+    "slug": "inria-person",
+    "name": "INRIA Person Dataset",
+    "description": "The INRIA Person Dataset is a classic computer vision benchmark for pedestrian detection consisting of 2,573 annotated images containing standing and walking upright persons under diverse real-world illumination, orientations, and backgrounds.",
+    "homepage_url": "https://pascal.inrialpes.fr/data/human/",
+    "publisher": {
+      "name": "INRIA Rhône-Alpes",
+      "type": "academic",
+      "url": "https://www.inria.fr"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "pedestrian-detection",
+      "object-detection"
+    ],
+    "tags": [
+      "pedestrian-detection",
+      "hog",
+      "object-detection",
+      "inria",
+      "computer-vision"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Custom Non-Commercial Research License",
+      "spdx_id": null,
+      "url": "https://pascal.inrialpes.fr/data/human/",
+      "commercial_use": "forbidden",
+      "notes": "Distributed by INRIA strictly for non-commercial research and educational evaluations."
+    },
+    "source_references": [
+      {
+        "title": "INRIA Person Dataset Portal",
+        "url": "https://pascal.inrialpes.fr/data/human/",
+        "type": "official_website",
+        "notes": "Official INRIA download page."
+      },
+      {
+        "title": "Histograms of Oriented Gradients for Human Detection",
+        "url": "https://ieeexplore.ieee.org/document/1467360",
+        "type": "original_paper",
+        "notes": "Seminal CVPR 2005 paper introducing HOG and the dataset."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against CVPR 2005 publication (DOI: 10.1109/CVPR.2005.177) and official INRIA distribution. Comprises 1,832 training images (614 positive + 1,218 negative) and 741 test images (288 positive + 453 negative), totaling 2,573 images and 3,542 annotated persons."
+    },
+    "size": {
+      "amount": 970.0,
+      "unit": "MB",
+      "file_formats": [
+        "png",
+        "jpg",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "Images and text bounding box annotations."
+    },
+    "sample_count": {
+      "total": 2573,
+      "unit": "images",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 1832,
+        "test": 741
+      },
+      "breakdown": [
+        {
+          "label": "train_positive_images",
+          "value": 614,
+          "unit": "images"
+        },
+        {
+          "label": "train_negative_images",
+          "value": 1218,
+          "unit": "images"
+        },
+        {
+          "label": "test_positive_images",
+          "value": 288,
+          "unit": "images"
+        },
+        {
+          "label": "test_negative_images",
+          "value": 453,
+          "unit": "images"
+        },
+        {
+          "label": "annotated_persons",
+          "value": 3542,
+          "unit": "persons"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2005-06"
+    },
+    "citation": {
+      "paper_title": "Histograms of Oriented Gradients for Human Detection",
+      "paper_url": "https://ieeexplore.ieee.org/document/1467360",
+      "authors": [
+        "Navneet Dalal",
+        "Bill Triggs"
+      ],
+      "doi": "10.1109/CVPR.2005.177",
+      "bibtex": "@inproceedings{dalal2005histograms,\n  title = {Histograms of Oriented Gradients for Human Detection},\n  author = {Dalal, Navneet and Triggs, Bill},\n  booktitle = {Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2005},\n  doi = {10.1109/CVPR.2005.177},\n  pages = {886--893}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "interaction-dataset",
     "slug": "interaction-dataset",
     "name": "INTERACTION: Interactive Trajectories in Dense Traffic Dataset",
@@ -34669,6 +35461,118 @@
       ],
       "doi": "10.48550/arXiv.2206.08171",
       "bibtex": "@article{paek2022k,\n  title={K-Radar: 4D radar object detection for autonomous driving in various weather conditions},\n  author={Paek, Dong-Hee and Kong, Seung-Hyun and Wijaya, Kevin Tirta},\n  journal={arXiv preprint arXiv:2206.08171},\n  year={2022},\n  doi={10.48550/arXiv.2206.08171}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "kaist-multispectral",
+    "slug": "kaist-multispectral",
+    "name": "KAIST Multispectral Pedestrian Detection Benchmark",
+    "description": "KAIST Multispectral Pedestrian Dataset is a comprehensive benchmark for day and night pedestrian detection, consisting of 95,328 well-aligned color (RGB) and thermal (infrared) image pairs captured from vehicle-mounted sensors in campus, street, and countryside environments.",
+    "homepage_url": "https://multispectral.kaist.ac.kr/pedestrian/data-kaist.html",
+    "publisher": {
+      "name": "KAIST (Korea Advanced Institute of Science and Technology)",
+      "type": "academic",
+      "url": "https://www.kaist.ac.kr"
+    },
+    "modalities": [
+      "vision",
+      "sensor"
+    ],
+    "tasks": [
+      "pedestrian-detection",
+      "multispectral-detection",
+      "thermal-imaging"
+    ],
+    "tags": [
+      "multispectral",
+      "pedestrian-detection",
+      "thermal-infrared",
+      "autonomous-driving",
+      "computer-vision"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Custom Non-Commercial Academic License",
+      "spdx_id": null,
+      "url": "https://multispectral.kaist.ac.kr/pedestrian/data-kaist.html",
+      "commercial_use": "forbidden",
+      "notes": "Freely available for non-commercial research and educational use upon agreement to cite the publication."
+    },
+    "source_references": [
+      {
+        "title": "KAIST Multispectral Pedestrian Benchmark",
+        "url": "https://multispectral.kaist.ac.kr/pedestrian/data-kaist.html",
+        "type": "official_website",
+        "notes": "Official portal and benchmark downloads."
+      },
+      {
+        "title": "Multispectral Pedestrian Detection: Benchmark Dataset and Baselines",
+        "url": "https://ieeexplore.ieee.org/document/7298706",
+        "type": "original_paper",
+        "notes": "Published in CVPR 2015."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against CVPR 2015 publication (DOI: 10.1109/CVPR.2015.7298706) and official KAIST portal. Exactly 95,328 aligned color-thermal image pairs (train: 50,187 pairs across set00-set05; test: 45,141 pairs across set06-set11) with 103,128 dense pedestrian bounding box annotations."
+    },
+    "size": {
+      "amount": 25.0,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "png",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "RGB and thermal image sequences and text annotation files."
+    },
+    "sample_count": {
+      "total": 95328,
+      "unit": "image_pairs",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 50187,
+        "test": 45141
+      },
+      "breakdown": [
+        {
+          "label": "color_thermal_pairs_train",
+          "value": 50187,
+          "unit": "image_pairs"
+        },
+        {
+          "label": "color_thermal_pairs_test",
+          "value": 45141,
+          "unit": "image_pairs"
+        },
+        {
+          "label": "pedestrian_bounding_boxes",
+          "value": 103128,
+          "unit": "boxes"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2015-06"
+    },
+    "citation": {
+      "paper_title": "Multispectral Pedestrian Detection: Benchmark Dataset and Baselines",
+      "paper_url": "https://ieeexplore.ieee.org/document/7298706",
+      "authors": [
+        "Soonmin Hwang",
+        "Jaesik Park",
+        "Namil Kim",
+        "Yukyeom Choi",
+        "In So Kweon"
+      ],
+      "doi": "10.1109/CVPR.2015.7298706",
+      "bibtex": "@inproceedings{hwang2015multispectral,\n  title = {Multispectral Pedestrian Detection: Benchmark Dataset and Baselines},\n  author = {Hwang, Soonmin and Park, Jaesik and Kim, Namil and Choi, Yukyeom and Kweon, In So},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2015},\n  doi = {10.1109/CVPR.2015.7298706},\n  pages = {1037--1045}\n}"
     }
   },
   {
@@ -37581,6 +38485,130 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "lrs2",
+    "slug": "lrs2",
+    "name": "LRS2: Lip Reading Sentences 2 Benchmark",
+    "description": "LRS2 (Lip Reading Sentences 2) is a benchmark dataset for visual and audiovisual speech recognition consisting of 144,482 video utterance clips (over 224 hours of video) extracted from British television broadcasts on BBC television.",
+    "homepage_url": "https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs2.html",
+    "publisher": {
+      "name": "Visual Geometry Group, University of Oxford & BBC R&D",
+      "type": "academic",
+      "url": "https://www.robots.ox.ac.uk/~vgg/"
+    },
+    "modalities": [
+      "audio",
+      "vision",
+      "multimodal"
+    ],
+    "tasks": [
+      "lip-reading",
+      "audiovisual-speech-recognition",
+      "speech-recognition"
+    ],
+    "tags": [
+      "lip-reading",
+      "audiovisual-speech-recognition",
+      "bbc",
+      "speech",
+      "multimodal"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Custom Non-Commercial BBC Agreement",
+      "spdx_id": null,
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs2.html",
+      "commercial_use": "forbidden",
+      "notes": "Distributed exclusively for non-commercial research upon signing the BBC and University of Oxford Data Agreement."
+    },
+    "source_references": [
+      {
+        "title": "VGG LRS2 Benchmark Portal",
+        "url": "https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs2.html",
+        "type": "official_website",
+        "notes": "Official Oxford VGG portal."
+      },
+      {
+        "title": "Deep Audio-Visual Speech Recognition",
+        "url": "https://ieeexplore.ieee.org/document/8585094",
+        "type": "original_paper",
+        "notes": "Published in IEEE TPAMI 2022."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against IEEE TPAMI paper (DOI: 10.1109/TPAMI.2018.2889052) and VGG release. Total clips: 144,482 (pretrain: 96,318, train: 45,839, validation: 1,082, test: 1,243) totaling 224.5 hours of video."
+    },
+    "size": {
+      "amount": 42.0,
+      "unit": "GB",
+      "file_formats": [
+        "mp4",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "MPEG-4 video clips and word-level text transcription files."
+    },
+    "sample_count": {
+      "total": 144482,
+      "unit": "utterances",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "pretrain": 96318,
+        "train": 45839,
+        "validation": 1082,
+        "test": 1243
+      },
+      "breakdown": [
+        {
+          "label": "pretrain_clips",
+          "value": 96318,
+          "unit": "utterances"
+        },
+        {
+          "label": "train_clips",
+          "value": 45839,
+          "unit": "utterances"
+        },
+        {
+          "label": "validation_clips",
+          "value": 1082,
+          "unit": "utterances"
+        },
+        {
+          "label": "test_clips",
+          "value": 1243,
+          "unit": "utterances"
+        },
+        {
+          "label": "total_duration_hours",
+          "value": 224.5,
+          "unit": "hours"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2018-09"
+    },
+    "citation": {
+      "paper_title": "Deep Audio-Visual Speech Recognition",
+      "paper_url": "https://ieeexplore.ieee.org/document/8585094",
+      "authors": [
+        "Triantafyllos Afouras",
+        "Joon Son Chung",
+        "Andrew Senior",
+        "Oriol Vinyals",
+        "Andrew Zisserman"
+      ],
+      "doi": "10.1109/TPAMI.2018.2889052",
+      "bibtex": "@article{afouras2018deep,\n  title = {Deep Audio-Visual Speech Recognition},\n  author = {Afouras, Triantafyllos and Chung, Joon Son and Senior, Andrew and Vinyals, Oriol and Zisserman, Andrew},\n  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  volume = {44},\n  number = {12},\n  year = {2022},\n  publisher = {IEEE},\n  doi = {10.1109/TPAMI.2018.2889052},\n  pages = {8717--8727}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "lrs3",
     "slug": "lrs3",
     "name": "LRS3-TED: Large-Scale Audio-Visual and Lip Reading Dataset",
@@ -39869,6 +40897,115 @@
     "provenance": {
       "collection_method": "Captured under natural outdoor daylight in Senbag Upazila, Noakhali, Bangladesh in August 2025.",
       "curation_notes": "Expert-validated classes covering 1 healthy and 3 disease categories for each of the 3 species."
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "medleydb",
+    "slug": "medleydb",
+    "name": "MedleyDB: Multitrack Dataset for MIR Research",
+    "description": "MedleyDB is an annotated multitrack audio dataset for music information retrieval (MIR) containing 122 multitrack musical pieces across diverse genres, providing 1,675 individual instrument and vocal stems along with melody pitch contours and instrument activation annotations.",
+    "homepage_url": "https://medleydb.weebly.com/",
+    "publisher": {
+      "name": "Music and Audio Research Laboratory (MARL), New York University",
+      "type": "academic",
+      "url": "https://marl.nyu.edu"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "melody-extraction",
+      "instrument-recognition",
+      "source-separation",
+      "music-information-retrieval"
+    ],
+    "tags": [
+      "mir",
+      "multitrack-audio",
+      "melody-extraction",
+      "music-analysis",
+      "audio"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "spdx_id": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Distributed on Zenodo under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "MedleyDB Project Website",
+        "url": "https://medleydb.weebly.com/",
+        "type": "official_website",
+        "notes": "Official dataset website."
+      },
+      {
+        "title": "MedleyDB: A Multitrack Dataset for Annotation-Intensive MIR Research",
+        "url": "https://zenodo.org/record/165889",
+        "type": "original_paper",
+        "notes": "Published in ISMIR 2014."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against ISMIR 2014 paper and Zenodo deposit (DOI: 10.5281/zenodo.165889). Consists of 122 multitrack songs with 1,675 raw instrument stems, 108 melody-annotated tracks, and 7.2 hours of audio."
+    },
+    "size": {
+      "amount": 31.0,
+      "unit": "GB",
+      "file_formats": [
+        "wav",
+        "yaml",
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "Multitrack 44.1 kHz 16-bit WAV files, YAML metadata, and CSV pitch/instrument annotations."
+    },
+    "sample_count": {
+      "total": 122,
+      "unit": "songs",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "multitrack_songs",
+          "value": 122,
+          "unit": "songs"
+        },
+        {
+          "label": "instrument_stems",
+          "value": 1675,
+          "unit": "stems"
+        },
+        {
+          "label": "melody_annotated_tracks",
+          "value": 108,
+          "unit": "tracks"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2014-10"
+    },
+    "citation": {
+      "paper_title": "MedleyDB: A Multitrack Dataset for Annotation-Intensive MIR Research",
+      "paper_url": "https://zenodo.org/record/165889",
+      "authors": [
+        "Rachel M. Bittner",
+        "Justin Salamon",
+        "Mike Tierney",
+        "Matthias Mauch",
+        "Chris Cannam",
+        "Juan P. Bello"
+      ],
+      "doi": "10.5281/zenodo.165889",
+      "bibtex": "@inproceedings{bittner2014medleydb,\n  title = {MedleyDB: A Multitrack Dataset for Annotation-Intensive MIR Research},\n  author = {Bittner, Rachel M. and Salamon, Justin and Tierney, Mike and Mauch, Matthias and Cannam, Chris and Bello, Juan P.},\n  booktitle = {Proceedings of the 15th International Society for Music Information Retrieval Conference (ISMIR)},\n  year = {2014},\n  doi = {10.5281/zenodo.165889},\n  pages = {155--160}\n}"
     }
   },
   {
@@ -45759,6 +46896,116 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "mutual",
+    "slug": "mutual",
+    "name": "MuTual: Multi-Turn Dialogue Reasoning Benchmark",
+    "description": "MuTual is a reasoning-oriented dataset for multi-turn dialogue comprehension based on Chinese high school English listening comprehension tests. It contains 8,860 multi-turn dialog context-response pairs designed to test conversational reasoning including intent, attitude, and counterfactual logic.",
+    "homepage_url": "https://github.com/Nealcly/MuTual",
+    "publisher": {
+      "name": "Zhejiang University",
+      "type": "academic",
+      "url": "https://www.zju.edu.cn"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "dialogue-reasoning",
+      "response-selection",
+      "reading-comprehension"
+    ],
+    "tags": [
+      "dialogue",
+      "reasoning",
+      "multi-turn",
+      "multiple-choice",
+      "nlp"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Unspecified Academic Research Use",
+      "spdx_id": null,
+      "url": "https://github.com/Nealcly/MuTual",
+      "commercial_use": "unknown",
+      "notes": "Released publicly for academic research without explicit open license declaration."
+    },
+    "source_references": [
+      {
+        "title": "MuTual Official Repository",
+        "url": "https://github.com/Nealcly/MuTual",
+        "type": "official_website",
+        "notes": "Code and dataset repository."
+      },
+      {
+        "title": "MuTual: A Dataset for Multi-Turn Dialogue Reasoning",
+        "url": "https://aclanthology.org/2020.acl-main.130/",
+        "type": "original_paper",
+        "notes": "Published in ACL 2020."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against ACL 2020 paper (DOI: 10.18653/v1/2020.acl-main.130) and official GitHub repository (Nealcly/MuTual). Contains 8,860 context-response pairs (train: 7,088, dev: 886, test: 886). Note: repository test directory contains 887 total files including 1 hidden .DS_Store file, giving exactly 886 text instances."
+    },
+    "size": {
+      "amount": 5.0,
+      "unit": "MB",
+      "file_formats": [
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "Text dialogue instances."
+    },
+    "sample_count": {
+      "total": 8860,
+      "unit": "dialogues",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 7088,
+        "validation": 886,
+        "test": 886
+      },
+      "breakdown": [
+        {
+          "label": "train_instances",
+          "value": 7088,
+          "unit": "dialogues"
+        },
+        {
+          "label": "dev_instances",
+          "value": 886,
+          "unit": "dialogues"
+        },
+        {
+          "label": "test_instances",
+          "value": 886,
+          "unit": "dialogues"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2020-07"
+    },
+    "citation": {
+      "paper_title": "MuTual: A Dataset for Multi-Turn Dialogue Reasoning",
+      "paper_url": "https://aclanthology.org/2020.acl-main.130/",
+      "authors": [
+        "Leyang Cui",
+        "Yu Wu",
+        "Shuming Liu",
+        "Yue Zhang",
+        "Ming Zhou"
+      ],
+      "doi": "10.18653/v1/2020.acl-main.130",
+      "bibtex": "@inproceedings{cui-etal-2020-mutual,\n  title = {MuTual: A Dataset for Multi-Turn Dialogue Reasoning},\n  author = {Cui, Leyang and Wu, Yu and Liu, Shuming and Zhang, Yue and Zhou, Ming},\n  booktitle = {Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},\n  year = {2020},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/2020.acl-main.130/},\n  doi = {10.18653/v1/2020.acl-main.130},\n  pages = {1406--1416}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "mvimgnet",
     "slug": "mvimgnet",
     "name": "MVImgNet: Large-scale Multi-view Image Dataset for 3D Vision",
@@ -47847,6 +49094,129 @@
     "languages": [
       "bn"
     ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "newsqa",
+    "slug": "newsqa",
+    "name": "NewsQA: Machine Comprehension Dataset",
+    "description": "NewsQA is a machine comprehension dataset of human-generated question-answer pairs based on CNN news articles. While crowdworkers originally collected 119,633 questions on 12,744 CNN stories, the canonical evaluated machine reading benchmark comprises 102,841 validated question-answer pairs across 10,978 stories.",
+    "homepage_url": "https://github.com/Maluuba/newsqa",
+    "publisher": {
+      "name": "Maluuba / Microsoft Research",
+      "type": "industry",
+      "url": "https://www.microsoft.com/research/"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "question-answering",
+      "reading-comprehension",
+      "span-extraction"
+    ],
+    "tags": [
+      "reading-comprehension",
+      "question-answering",
+      "news",
+      "extractive-qa",
+      "nlp"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "MIT License (Annotations) / Proprietary Copyright (CNN Stories)",
+      "spdx_id": null,
+      "url": "https://github.com/Maluuba/newsqa/blob/master/LICENSE.md",
+      "commercial_use": "forbidden",
+      "notes": "Maluuba/Microsoft released questions and span annotations under the MIT License, but the underlying news articles are copyrighted by CNN; users reconstruct text using provided scripts. Commercial use is not permitted by CNN copyright terms."
+    },
+    "source_references": [
+      {
+        "title": "NewsQA GitHub Repository",
+        "url": "https://github.com/Maluuba/newsqa",
+        "type": "official_website",
+        "notes": "Dataset repository and preprocessing utilities."
+      },
+      {
+        "title": "NewsQA: A Machine Comprehension Dataset",
+        "url": "https://aclanthology.org/W17-2623/",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the 2nd Workshop on Representation Learning for NLP (RepL4NLP@ACL 2017)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against RepL4NLP 2017 publication (DOI: 10.18653/v1/W17-2623) and official dataset release. Total collection consists of 119,633 questions on 12,744 CNN stories; canonical validated benchmark partitions comprise 102,841 questions (train: 92,549, dev: 5,166, test: 5,126) across 10,978 stories."
+    },
+    "size": {
+      "amount": 25.0,
+      "unit": "MB",
+      "file_formats": [
+        "csv",
+        "json"
+      ],
+      "status": "verified",
+      "notes": "CSV/JSON question-answer annotations and character offsets."
+    },
+    "sample_count": {
+      "total": 102841,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 92549,
+        "validation": 5166,
+        "test": 5126
+      },
+      "breakdown": [
+        {
+          "label": "unfiltered_collected_questions",
+          "value": 119633,
+          "unit": "questions"
+        },
+        {
+          "label": "stories",
+          "value": 10978,
+          "unit": "articles"
+        },
+        {
+          "label": "train_filtered_questions",
+          "value": 92549,
+          "unit": "questions"
+        },
+        {
+          "label": "dev_filtered_questions",
+          "value": 5166,
+          "unit": "questions"
+        },
+        {
+          "label": "test_filtered_questions",
+          "value": 5126,
+          "unit": "questions"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2017-08"
+    },
+    "citation": {
+      "paper_title": "NewsQA: A Machine Comprehension Dataset",
+      "paper_url": "https://aclanthology.org/W17-2623/",
+      "authors": [
+        "Adam Trischler",
+        "Tong Wang",
+        "Xingdi Yuan",
+        "Justin Harris",
+        "Alessandro Sordoni",
+        "Philip Bachman",
+        "Kaheer Suleman"
+      ],
+      "doi": "10.18653/v1/W17-2623",
+      "bibtex": "@inproceedings{trischler-etal-2017-newsqa,\n  title = {NewsQA: A Machine Comprehension Dataset},\n  author = {Trischler, Adam and Wang, Tong and Yuan, Xingdi and Harris, Justin and Sordoni, Alessandro and Bachman, Philip and Suleman, Kaheer},\n  booktitle = {Proceedings of the 2nd Workshop on Representation Learning for NLP},\n  year = {2017},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/W17-2623/},\n  doi = {10.18653/v1/W17-2623},\n  pages = {191--200}\n}"
+    }
   },
   {
     "schema_version": "1.0.0",
@@ -50319,6 +51689,124 @@
         "Jing Li",
         "Jian Sun"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "ocr-vqa",
+    "slug": "ocr-vqa",
+    "name": "OCR-VQA: Visual Question Answering by Reading Text in Images",
+    "description": "OCR-VQA is a visual question answering benchmark focused on reading and comprehending embedded scene text in images, containing 1,002,141 question-answer instances across 207,572 book cover images spanning 34 genres.",
+    "homepage_url": "https://ocr-vqa.github.io/",
+    "publisher": {
+      "name": "IIIT Delhi",
+      "type": "academic",
+      "url": "https://www.iiitd.ac.kr"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "text-recognition",
+      "optical-character-recognition",
+      "document-understanding"
+    ],
+    "tags": [
+      "ocr",
+      "visual-question-answering",
+      "scene-text",
+      "book-covers",
+      "multimodal"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Academic Research Use",
+      "spdx_id": null,
+      "url": "https://ocr-vqa.github.io/",
+      "commercial_use": "unknown",
+      "notes": "Released freely for academic research purposes on the official project website."
+    },
+    "source_references": [
+      {
+        "title": "OCR-VQA Project Homepage",
+        "url": "https://ocr-vqa.github.io/",
+        "type": "official_website",
+        "notes": "Official dataset and code repository."
+      },
+      {
+        "title": "OCR-VQA: Visual Question Answering by Reading Text in Images",
+        "url": "https://ieeexplore.ieee.org/document/8977970",
+        "type": "original_paper",
+        "notes": "Published in ICDAR 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against ICDAR 2019 publication (DOI: 10.1109/ICDAR.2019.00156) and official GitHub/portal releases. Comprises 1,002,141 question-answer pairs over 207,572 book cover images partitioned 80% train (801,712 QA pairs), 10% val (100,214 QA pairs), and 10% test (100,215 QA pairs)."
+    },
+    "size": {
+      "amount": 75.0,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "json"
+      ],
+      "status": "verified",
+      "notes": "Book cover images and JSON question-answer annotations."
+    },
+    "sample_count": {
+      "total": 1002141,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 801712,
+        "validation": 100214,
+        "test": 100215
+      },
+      "breakdown": [
+        {
+          "label": "book_cover_images",
+          "value": 207572,
+          "unit": "images"
+        },
+        {
+          "label": "questions_train",
+          "value": 801712,
+          "unit": "questions"
+        },
+        {
+          "label": "questions_validation",
+          "value": 100214,
+          "unit": "questions"
+        },
+        {
+          "label": "questions_test",
+          "value": 100215,
+          "unit": "questions"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2019-09"
+    },
+    "citation": {
+      "paper_title": "OCR-VQA: Visual Question Answering by Reading Text in Images",
+      "paper_url": "https://ieeexplore.ieee.org/document/8977970",
+      "authors": [
+        "Anand Mishra",
+        "Shashank Shekhar",
+        "Ajeet Kumar Singh",
+        "Anirban Chakraborty"
+      ],
+      "doi": "10.1109/ICDAR.2019.00156",
+      "bibtex": "@inproceedings{mishra2019ocrvqa,\n  title = {OCR-VQA: Visual Question Answering by Reading Text in Images},\n  author = {Mishra, Anand and Shekhar, Shashank and Singh, Ajeet Kumar and Chakraborty, Anirban},\n  booktitle = {Proceedings of the International Conference on Document Analysis and Recognition (ICDAR)},\n  year = {2019},\n  doi = {10.1109/ICDAR.2019.00156},\n  pages = {947--952}\n}"
     }
   },
   {
@@ -53635,6 +55123,119 @@
         "K P, Peeyush"
       ],
       "doi": "10.17632/6dx67283f2.2"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "pascal-context",
+    "slug": "pascal-context",
+    "name": "PASCAL Context: Dense Full-Scene Semantic Segmentation Dataset",
+    "description": "PASCAL Context extends the PASCAL VOC 2010 detection challenge by providing pixel-wise annotations for the entire scene (both stuff and thing categories) across 10,103 images, encompassing over 400 detailed categories.",
+    "homepage_url": "https://www.cs.stanford.edu/~roozbeh/pascal-context/",
+    "publisher": {
+      "name": "Stanford University & University of California Los Angeles",
+      "type": "academic",
+      "url": "https://www.cs.stanford.edu/~roozbeh/pascal-context/"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "semantic-segmentation",
+      "scene-understanding",
+      "pixel-labeling"
+    ],
+    "tags": [
+      "semantic-segmentation",
+      "scene-parsing",
+      "pascal-voc",
+      "computer-vision"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "Custom Academic Research / Flickr Terms",
+      "spdx_id": null,
+      "url": "https://www.cs.stanford.edu/~roozbeh/pascal-context/",
+      "commercial_use": "unknown",
+      "notes": "Annotations provided freely for research by the authors; underlying images are governed by PASCAL VOC 2010 terms and Flickr user licenses."
+    },
+    "source_references": [
+      {
+        "title": "PASCAL Context Official Project Page",
+        "url": "https://www.cs.stanford.edu/~roozbeh/pascal-context/",
+        "type": "official_website",
+        "notes": "Official Stanford project site."
+      },
+      {
+        "title": "The Role of Context for Object Detection and Semantic Segmentation in the Wild",
+        "url": "https://ieeexplore.ieee.org/document/6909438",
+        "type": "original_paper",
+        "notes": "Published in CVPR 2014."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against CVPR 2014 paper (DOI: 10.1109/CVPR.2014.119) and dataset distribution. Covers 10,103 images from PASCAL VOC 2010 (train: 4,998, val: 5,105) with 59 most frequent evaluation classes plus background."
+    },
+    "size": {
+      "amount": 1600.0,
+      "unit": "MB",
+      "file_formats": [
+        "mat",
+        "jpg",
+        "png"
+      ],
+      "status": "verified",
+      "notes": "MAT annotation files and VOC JPEG images."
+    },
+    "sample_count": {
+      "total": 10103,
+      "unit": "images",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 4998,
+        "validation": 5105
+      },
+      "breakdown": [
+        {
+          "label": "train_images",
+          "value": 4998,
+          "unit": "images"
+        },
+        {
+          "label": "val_images",
+          "value": 5105,
+          "unit": "images"
+        },
+        {
+          "label": "benchmark_evaluation_classes",
+          "value": 59,
+          "unit": "classes"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2014-06"
+    },
+    "citation": {
+      "paper_title": "The Role of Context for Object Detection and Semantic Segmentation in the Wild",
+      "paper_url": "https://ieeexplore.ieee.org/document/6909438",
+      "authors": [
+        "Roozbeh Mottaghi",
+        "Xianjie Chen",
+        "Xiaobai Liu",
+        "Nam-Gyu Cho",
+        "Seong-Whan Lee",
+        "Sanja Fidler",
+        "Raquel Urtasun",
+        "Alan Yuille"
+      ],
+      "doi": "10.1109/CVPR.2014.119",
+      "bibtex": "@inproceedings{mottaghi2014role,\n  title = {The Role of Context for Object Detection and Semantic Segmentation in the Wild},\n  author = {Mottaghi, Roozbeh and Chen, Xianjie and Liu, Xiaobai and Cho, Nam-Gyu and Lee, Seong-Whan and Fidler, Sanja and Urtasun, Raquel and Yuille, Alan},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2014},\n  doi = {10.1109/CVPR.2014.119},\n  pages = {891--898}\n}"
     }
   },
   {
@@ -60392,6 +61993,115 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "samsum",
+    "slug": "samsum",
+    "name": "SAMSum: Dialogue Abstractive Summarization Corpus",
+    "description": "SAMSum is an abstractive summarization corpus containing 16,369 English messenger-like dialogues written by linguists reflecting typical mobile and online conversations, each paired with an expert human-written summary.",
+    "homepage_url": "https://huggingface.co/datasets/samsum",
+    "publisher": {
+      "name": "Samsung R&D Institute Poland",
+      "type": "industry",
+      "url": "https://research.samsung.com"
+    },
+    "modalities": [
+      "nlp"
+    ],
+    "tasks": [
+      "summarization",
+      "dialogue-summarization",
+      "abstractive-summarization"
+    ],
+    "tags": [
+      "summarization",
+      "dialogue",
+      "abstractive-summarization",
+      "conversational-ai",
+      "nlp"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution Non Commercial No Derivatives 4.0 International",
+      "spdx_id": "CC-BY-NC-ND-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "SAMSum is distributed under CC-BY-NC-ND-4.0 for non-commercial research purposes."
+    },
+    "source_references": [
+      {
+        "title": "SAMSum on Hugging Face Datasets",
+        "url": "https://huggingface.co/datasets/samsum",
+        "type": "repository",
+        "notes": "Hugging Face dataset hub entry."
+      },
+      {
+        "title": "SAMSum Corpus: A Human-annotated Dialogue Dataset for Abstractive Summarization",
+        "url": "https://aclanthology.org/D19-5409/",
+        "type": "original_paper",
+        "notes": "Published in Proceedings of the 2nd Workshop on New Frontiers in Summarization (EMNLP-IJCNLP 2019)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against EMNLP 2019 workshop paper (DOI: 10.18653/v1/D19-5409) and Hugging Face release. Exactly 16,369 dialogues partitioned into 14,732 training, 818 validation, and 819 test pairs."
+    },
+    "size": {
+      "amount": 10.0,
+      "unit": "MB",
+      "file_formats": [
+        "json"
+      ],
+      "status": "verified",
+      "notes": "JSON formatted dialogue and summary splits."
+    },
+    "sample_count": {
+      "total": 16369,
+      "unit": "dialogues",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 14732,
+        "validation": 818,
+        "test": 819
+      },
+      "breakdown": [
+        {
+          "label": "train_dialogues",
+          "value": 14732,
+          "unit": "dialogues"
+        },
+        {
+          "label": "validation_dialogues",
+          "value": 818,
+          "unit": "dialogues"
+        },
+        {
+          "label": "test_dialogues",
+          "value": 819,
+          "unit": "dialogues"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2019-11"
+    },
+    "citation": {
+      "paper_title": "SAMSum Corpus: A Human-annotated Dialogue Dataset for Abstractive Summarization",
+      "paper_url": "https://aclanthology.org/D19-5409/",
+      "authors": [
+        "Bogdan Gliwa",
+        "Iwona Mochol",
+        "Maciej Biesek",
+        "Aleksander Wawer"
+      ],
+      "doi": "10.18653/v1/D19-5409",
+      "bibtex": "@inproceedings{gliwa-etal-2019-samsum,\n  title = {SAMSum Corpus: A Human-annotated Dialogue Dataset for Abstractive Summarization},\n  author = {Gliwa, Bogdan and Mochol, Iwona and Biesek, Maciej and Wawer, Aleksander},\n  booktitle = {Proceedings of the 2nd Workshop on New Frontiers in Summarization},\n  year = {2019},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/D19-5409/},\n  doi = {10.18653/v1/D19-5409},\n  pages = {70--79}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "savee",
     "slug": "savee",
     "name": "SAVEE: Surrey Audio-Visual Expressed Emotion Database",
@@ -63392,6 +65102,123 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "snli-ve",
+    "slug": "snli-ve",
+    "name": "SNLI-VE: Visual Entailment Benchmark",
+    "description": "SNLI-VE (Visual Entailment) is a multimodal reasoning benchmark adapting the Stanford Natural Language Inference (SNLI) corpus to visual entailment, pairing Flickr30k images as premises with natural language hypotheses across 565,286 pairs labeled as Entailment, Neutral, or Contradiction.",
+    "homepage_url": "https://github.com/necla-ml/SNLI-VE",
+    "publisher": {
+      "name": "NEC Laboratories America",
+      "type": "industry",
+      "url": "https://www.nec-labs.com"
+    },
+    "modalities": [
+      "vision",
+      "nlp",
+      "multimodal"
+    ],
+    "tasks": [
+      "visual-entailment",
+      "multimodal-reasoning",
+      "visual-reasoning"
+    ],
+    "tags": [
+      "visual-entailment",
+      "snli",
+      "flickr30k",
+      "reasoning",
+      "multimodal"
+    ],
+    "license": {
+      "status": "custom_permissive",
+      "name": "MIT License / CC-BY-SA 4.0 / Flickr Terms",
+      "spdx_id": null,
+      "url": "https://github.com/necla-ml/SNLI-VE",
+      "commercial_use": "unknown",
+      "notes": "SNLI-VE dataset annotations are released under the MIT License; underlying SNLI annotations are licensed under CC-BY-SA 4.0 and image premises originate from Flickr30k subject to Flickr user licenses."
+    },
+    "source_references": [
+      {
+        "title": "SNLI-VE Official Repository",
+        "url": "https://github.com/necla-ml/SNLI-VE",
+        "type": "official_website",
+        "notes": "Official NEC Laboratories repository."
+      },
+      {
+        "title": "Visual Entailment: A Novel Task for Fine-Grained Image-Text Reasoning",
+        "url": "https://arxiv.org/abs/1901.06706",
+        "type": "original_paper",
+        "notes": "Foundational paper establishing the Visual Entailment task."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against arXiv publication (DOI: 10.48550/arXiv.1901.06706) and official NEC Laboratories release. Total 565,286 image-hypothesis pairs (train: 529,527, dev: 17,858, test: 17,901) based on 31,783 Flickr30k images."
+    },
+    "size": {
+      "amount": 25.0,
+      "unit": "MB",
+      "file_formats": [
+        "jsonl",
+        "txt"
+      ],
+      "status": "verified",
+      "notes": "JSONL/text annotation splits (premise images retrieved separately via Flickr30k)."
+    },
+    "sample_count": {
+      "total": 565286,
+      "unit": "pairs",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 529527,
+        "validation": 17858,
+        "test": 17901
+      },
+      "breakdown": [
+        {
+          "label": "flickr30k_images",
+          "value": 31783,
+          "unit": "images"
+        },
+        {
+          "label": "train_pairs",
+          "value": 529527,
+          "unit": "pairs"
+        },
+        {
+          "label": "dev_pairs",
+          "value": 17858,
+          "unit": "pairs"
+        },
+        {
+          "label": "test_pairs",
+          "value": 17901,
+          "unit": "pairs"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2019-01"
+    },
+    "citation": {
+      "paper_title": "Visual Entailment: A Novel Task for Fine-Grained Image-Text Reasoning",
+      "paper_url": "https://arxiv.org/abs/1901.06706",
+      "authors": [
+        "Ning Xie",
+        "Farley Lai",
+        "Derek Doran",
+        "Asim Kadav"
+      ],
+      "doi": "10.48550/arXiv.1901.06706",
+      "bibtex": "@article{xie2019visual,\n  title = {Visual Entailment: A Novel Task for Fine-Grained Image-Text Reasoning},\n  author = {Xie, Ning and Lai, Farley and Doran, Derek and Kadav, Asim},\n  journal = {arXiv preprint arXiv:1901.06706},\n  year = {2019},\n  url = {https://arxiv.org/abs/1901.06706},\n  doi = {10.48550/arXiv.1901.06706}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "so2sat-lcz42",
     "slug": "so2sat-lcz42",
     "name": "So2Sat LCZ42: A Benchmark Dataset for Global Local Climate Zones Classification",
@@ -65452,6 +67279,121 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "st-vqa",
+    "slug": "st-vqa",
+    "name": "ST-VQA: Scene Text Visual Question Answering Benchmark",
+    "description": "ST-VQA (Scene Text Visual Question Answering) is a benchmark dataset requiring models to recognize, read, and comprehend scene text in natural images to answer questions, comprising 31,791 question-answer pairs on 23,038 images across multiple source datasets.",
+    "homepage_url": "https://rrc.cvc.uab.es/?ch=11",
+    "publisher": {
+      "name": "Computer Vision Center (CVC), Autonomous University of Barcelona",
+      "type": "academic",
+      "url": "https://www.cvc.uab.es"
+    },
+    "modalities": [
+      "multimodal",
+      "vision",
+      "nlp"
+    ],
+    "tasks": [
+      "visual-question-answering",
+      "scene-text-recognition",
+      "multimodal-reasoning"
+    ],
+    "tags": [
+      "scene-text",
+      "visual-question-answering",
+      "vqa",
+      "ocr",
+      "multimodal"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Academic Research Use",
+      "spdx_id": null,
+      "url": "https://rrc.cvc.uab.es/?ch=11",
+      "commercial_use": "unknown",
+      "notes": "Provided for research and competition purposes under ICDAR Robust Reading Competition terms."
+    },
+    "source_references": [
+      {
+        "title": "ST-VQA Challenge Portal",
+        "url": "https://rrc.cvc.uab.es/?ch=11",
+        "type": "official_website",
+        "notes": "Official ICDAR Robust Reading Competition site."
+      },
+      {
+        "title": "Scene Text Visual Question Answering",
+        "url": "https://ieeexplore.ieee.org/document/9008779",
+        "type": "original_paper",
+        "notes": "Published in ICCV 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against ICCV 2019 publication (DOI: 10.1109/ICCV.2019.00439) and ICDAR RRC challenge metadata. Exactly 31,791 QA pairs (26,308 train, 5,483 test) across 23,038 natural scene images from 6 source datasets."
+    },
+    "size": {
+      "amount": 8.0,
+      "unit": "GB",
+      "file_formats": [
+        "jpg",
+        "json"
+      ],
+      "status": "verified",
+      "notes": "Natural scene images and JSON QA annotations."
+    },
+    "sample_count": {
+      "total": 31791,
+      "unit": "questions",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 26308,
+        "test": 5483
+      },
+      "breakdown": [
+        {
+          "label": "images",
+          "value": 23038,
+          "unit": "images"
+        },
+        {
+          "label": "train_qa_pairs",
+          "value": 26308,
+          "unit": "questions"
+        },
+        {
+          "label": "test_qa_pairs",
+          "value": 5483,
+          "unit": "questions"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2019-10"
+    },
+    "citation": {
+      "paper_title": "Scene Text Visual Question Answering",
+      "paper_url": "https://ieeexplore.ieee.org/document/9008779",
+      "authors": [
+        "Ali Furkan Biten",
+        "Ruben Tito",
+        "Andres Mafla",
+        "Lluis Gomez",
+        "Marc Rusinol",
+        "C. V. Jawahar",
+        "Ernest Valveny",
+        "Dimosthenis Karatzas"
+      ],
+      "doi": "10.1109/ICCV.2019.00439",
+      "bibtex": "@inproceedings{biten2019scene,\n  title = {Scene Text Visual Question Answering},\n  author = {Biten, Ali Furkan and Tito, Ruben and Mafla, Andres and Gomez, Lluis and Rusinol, Marc and Jawahar, C. V. and Valveny, Ernest and Karatzas, Dimosthenis},\n  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n  year = {2019},\n  doi = {10.1109/ICCV.2019.00439},\n  pages = {4290--4300}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "staff-iii-database",
     "slug": "staff-iii-database",
     "name": "STAFF III Database: Acutely Induced Myocardial Ischemia ECGs",
@@ -65526,6 +67468,115 @@
       ],
       "doi": "10.13026/C20P4H",
       "bibtex": "@article{martinez2017staff,\n  title={The STAFF III Database: ECGs recorded during acutely induced myocardial ischemia},\n  author={Mart{\\'\\i}nez, Juan Pablo and Pahlm, Olle and Ringborn, Mats and Warren, Staffan and Laguna, Pablo and S{\\\"o}rnmo, Leif},\n  journal={Computing in Cardiology},\n  volume={44},\n  pages={1--4},\n  year={2017},\n  doi={10.13026/C20P4H}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "stanford-cars",
+    "slug": "stanford-cars",
+    "name": "Stanford Cars: Fine-Grained Car Categorization Benchmark",
+    "description": "The Stanford Cars dataset is a fine-grained image categorization benchmark containing 16,185 images of 196 car classes categorized by Make, Model, and Year.",
+    "homepage_url": "https://ai.stanford.edu/~jkrause/cars/car_dataset.html",
+    "publisher": {
+      "name": "Stanford AI Lab",
+      "type": "academic",
+      "url": "https://ai.stanford.edu"
+    },
+    "modalities": [
+      "vision"
+    ],
+    "tasks": [
+      "fine-grained-image-classification",
+      "image-classification",
+      "object-detection"
+    ],
+    "tags": [
+      "fine-grained-classification",
+      "cars",
+      "vehicles",
+      "stanford",
+      "computer-vision"
+    ],
+    "license": {
+      "status": "unspecified_by_source",
+      "name": "Academic Research Use",
+      "spdx_id": null,
+      "url": "https://ai.stanford.edu/~jkrause/cars/car_dataset.html",
+      "commercial_use": "unknown",
+      "notes": "Provided for non-commercial research and educational benchmarking on fine-grained categorization."
+    },
+    "source_references": [
+      {
+        "title": "Stanford Cars Dataset Homepage",
+        "url": "https://ai.stanford.edu/~jkrause/cars/car_dataset.html",
+        "type": "official_website",
+        "notes": "Official Stanford project site."
+      },
+      {
+        "title": "3D Object Representations for Fine-Grained Categorization",
+        "url": "https://ieeexplore.ieee.org/document/6755945",
+        "type": "original_paper",
+        "notes": "Published in ICCV Workshops 2013."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against ICCVW 2013 paper (DOI: 10.1109/ICCVW.2013.77) and official Stanford download files. Total 16,185 images across 196 car categories, divided 50-50 into 8,144 training and 8,041 test images with bounding box annotations."
+    },
+    "size": {
+      "amount": 2000.0,
+      "unit": "MB",
+      "file_formats": [
+        "jpg",
+        "mat"
+      ],
+      "status": "verified",
+      "notes": "JPEG vehicle images and MAT bounding box / class annotations."
+    },
+    "sample_count": {
+      "total": 16185,
+      "unit": "images",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 8144,
+        "test": 8041
+      },
+      "breakdown": [
+        {
+          "label": "training_images",
+          "value": 8144,
+          "unit": "images"
+        },
+        {
+          "label": "testing_images",
+          "value": 8041,
+          "unit": "images"
+        },
+        {
+          "label": "car_categories",
+          "value": 196,
+          "unit": "categories"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2013-12"
+    },
+    "citation": {
+      "paper_title": "3D Object Representations for Fine-Grained Categorization",
+      "paper_url": "https://ieeexplore.ieee.org/document/6755945",
+      "authors": [
+        "Jonathan Krause",
+        "Michael Stark",
+        "Jia Deng",
+        "Li Fei-Fei"
+      ],
+      "doi": "10.1109/ICCVW.2013.77",
+      "bibtex": "@inproceedings{krause20133d,\n  title = {3D Object Representations for Fine-Grained Categorization},\n  author = {Krause, Jonathan and Stark, Michael and Deng, Jia and Fei-Fei, Li},\n  booktitle = {Proceedings of the IEEE International Conference on Computer Vision Workshops (ICCVW)},\n  year = {2013},\n  doi = {10.1109/ICCVW.2013.77},\n  pages = {554--561}\n}"
     }
   },
   {
@@ -69868,6 +71919,109 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "uci-car-evaluation",
+    "slug": "uci-car-evaluation",
+    "name": "UCI Car Evaluation Dataset",
+    "description": "The UCI Car Evaluation Dataset is a classic tabular benchmark derived from a simple hierarchical decision model, containing 1,728 instances described by 6 categorical attributes evaluating car acceptability across 4 classes.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/19/car+evaluation",
+    "publisher": {
+      "name": "UCI Machine Learning Repository & University of Maribor",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "classification",
+      "tabular-classification",
+      "decision-support"
+    ],
+    "tags": [
+      "uci",
+      "tabular",
+      "categorical-classification",
+      "decision-trees",
+      "machine-learning"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed on the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "UCI Car Evaluation Dataset Record",
+        "url": "https://archive.ics.uci.edu/dataset/19/car+evaluation",
+        "type": "official_website",
+        "notes": "Official UCI ML repository landing page."
+      },
+      {
+        "title": "DEX: A Knowledge-Based Decision Modeling System",
+        "url": "https://doi.org/10.24432/C5JP48",
+        "type": "original_paper",
+        "notes": "Dataset citation record with DataCite DOI 10.24432/C5JP48."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against UCI Machine Learning Repository record and DataCite DOI (10.24432/C5JP48). Exactly 1,728 instances, 6 categorical attributes, and 0 missing values across 4 acceptability classes."
+    },
+    "size": {
+      "amount": 0.05,
+      "unit": "MB",
+      "file_formats": [
+        "csv",
+        "data"
+      ],
+      "status": "verified",
+      "notes": "CSV/data tabular records."
+    },
+    "sample_count": {
+      "total": 1728,
+      "unit": "samples",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "samples",
+          "value": 1728,
+          "unit": "samples"
+        },
+        {
+          "label": "features",
+          "value": 6,
+          "unit": "features"
+        },
+        {
+          "label": "classes",
+          "value": 4,
+          "unit": "classes"
+        }
+      ]
+    },
+    "dates": {
+      "published": "1997-06"
+    },
+    "citation": {
+      "paper_title": "Car Evaluation",
+      "paper_url": "https://doi.org/10.24432/C5JP48",
+      "authors": [
+        "Marko Bohanec",
+        "Bojan Cestnik"
+      ],
+      "doi": "10.24432/C5JP48",
+      "bibtex": "@misc{bohanec1997car,\n  title = {Car Evaluation},\n  author = {Bohanec, Marko and Cestnik, Bojan},\n  year = {1997},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5JP48}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "uci-cervical-cancer-risk-factors",
     "slug": "uci-cervical-cancer-risk-factors",
     "name": "Cervical Cancer (Risk Factors) Clinical Dataset",
@@ -70128,6 +72282,113 @@
       ],
       "doi": "10.24432/C5PK67",
       "bibtex": "@misc{yeh2007concrete,\n  title = {Concrete Compressive Strength},\n  author = {Yeh, I-Cheng},\n  year = {2007},\n  publisher = {UCI Machine Learning Repository},\n  doi = {10.24432/C5PK67}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "uci-credit-approval",
+    "slug": "uci-credit-approval",
+    "name": "UCI Credit Approval Dataset",
+    "description": "The UCI Credit Approval Dataset is a widely studied tabular classification dataset consisting of 690 credit card application instances with 15 mixed continuous and categorical attributes, anonymized to protect personal financial privacy.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/27/credit+approval",
+    "publisher": {
+      "name": "UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "classification",
+      "tabular-classification",
+      "credit-risk-assessment"
+    ],
+    "tags": [
+      "uci",
+      "tabular",
+      "credit-scoring",
+      "finance",
+      "classification"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed on the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "UCI Credit Approval Dataset Record",
+        "url": "https://archive.ics.uci.edu/dataset/27/credit+approval",
+        "type": "official_website",
+        "notes": "Official UCI ML repository landing page."
+      },
+      {
+        "title": "Simplifying Decision Trees",
+        "url": "https://doi.org/10.24432/C5FS30",
+        "type": "original_paper",
+        "notes": "Dataset citation record with DataCite DOI 10.24432/C5FS30."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against UCI Machine Learning Repository record and DataCite DOI (10.24432/C5FS30). Exactly 690 instances, 15 anonymized attributes (6 numerical, 9 categorical), 37 instances containing missing values, and binary approval outcome (307 positive, 383 negative)."
+    },
+    "size": {
+      "amount": 0.04,
+      "unit": "MB",
+      "file_formats": [
+        "csv",
+        "data"
+      ],
+      "status": "verified",
+      "notes": "CSV/data tabular records."
+    },
+    "sample_count": {
+      "total": 690,
+      "unit": "samples",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "samples",
+          "value": 690,
+          "unit": "samples"
+        },
+        {
+          "label": "features",
+          "value": 15,
+          "unit": "features"
+        },
+        {
+          "label": "approved_applications",
+          "value": 307,
+          "unit": "samples"
+        },
+        {
+          "label": "rejected_applications",
+          "value": 383,
+          "unit": "samples"
+        }
+      ]
+    },
+    "dates": {
+      "published": "1992-03"
+    },
+    "citation": {
+      "paper_title": "Credit Approval",
+      "paper_url": "https://doi.org/10.24432/C5FS30",
+      "authors": [
+        "J. R. Quinlan"
+      ],
+      "doi": "10.24432/C5FS30",
+      "bibtex": "@misc{quinlan1992credit,\n  title = {Credit Approval},\n  author = {Quinlan, J. R.},\n  year = {1992},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5FS30}\n}"
     }
   },
   {
@@ -70520,6 +72781,117 @@
       "data_sources": [
         "Faisalabad Institute of Cardiology, Pakistan"
       ]
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "uci-htru2",
+    "slug": "uci-htru2",
+    "name": "UCI HTRU2 Pulsar Candidate Dataset",
+    "description": "HTRU2 is an astronomical tabular dataset containing 17,898 candidate pulsar observations collected during the High Time Resolution Universe Survey, described by 8 summary statistics derived from the integrated pulse profile and DM-SNR curve.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/372/htru2",
+    "publisher": {
+      "name": "University of Manchester & UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "classification",
+      "tabular-classification",
+      "anomaly-detection",
+      "imbalanced-classification"
+    ],
+    "tags": [
+      "uci",
+      "tabular",
+      "astronomy",
+      "pulsar",
+      "imbalanced-learning"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed on the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "UCI HTRU2 Dataset Record",
+        "url": "https://archive.ics.uci.edu/dataset/372/htru2",
+        "type": "official_website",
+        "notes": "Official UCI ML repository landing page."
+      },
+      {
+        "title": "Fifty Years of Pulsar Candidate Selection: From Simple Filters to a New Principled Real-Time Classification Approach",
+        "url": "https://academic.oup.com/mnras/article/459/1/1104/2608953",
+        "type": "original_paper",
+        "notes": "Published in Monthly Notices of the Royal Astronomical Society (MNRAS 2016)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against MNRAS 2016 publication (DOI: 10.1093/mnras/stw656) and DataCite DOI (10.24432/C5DK6R). Exactly 17,898 instances, 8 continuous features, 0 missing values, and binary class labels (1,639 real pulsars, 16,259 non-pulsar noise artifacts)."
+    },
+    "size": {
+      "amount": 1.5,
+      "unit": "MB",
+      "file_formats": [
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "CSV tabular numerical records."
+    },
+    "sample_count": {
+      "total": 17898,
+      "unit": "samples",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "samples",
+          "value": 17898,
+          "unit": "samples"
+        },
+        {
+          "label": "features",
+          "value": 8,
+          "unit": "features"
+        },
+        {
+          "label": "pulsar_instances",
+          "value": 1639,
+          "unit": "samples"
+        },
+        {
+          "label": "non_pulsar_instances",
+          "value": 16259,
+          "unit": "samples"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2016-04"
+    },
+    "citation": {
+      "paper_title": "Fifty Years of Pulsar Candidate Selection: From Simple Filters to a New Principled Real-Time Classification Approach",
+      "paper_url": "https://academic.oup.com/mnras/article/459/1/1104/2608953",
+      "authors": [
+        "R. J. Lyon",
+        "B. W. Stappers",
+        "S. Cooper",
+        "J. M. Brooke",
+        "J. D. Knowles"
+      ],
+      "doi": "10.1093/mnras/stw656",
+      "bibtex": "@article{lyon2016fifty,\n  title = {Fifty Years of Pulsar Candidate Selection: From Simple Filters to a New Principled Real-Time Classification Approach},\n  author = {Lyon, R. J. and Stappers, B. W. and Cooper, S. and Brooke, J. M. and Knowles, J. D.},\n  journal = {Monthly Notices of the Royal Astronomical Society},\n  volume = {459},\n  number = {1},\n  year = {2016},\n  publisher = {Oxford University Press},\n  url = {https://academic.oup.com/mnras/article/459/1/1104/2608953},\n  doi = {10.1093/mnras/stw656},\n  pages = {1104--1123}\n}"
     }
   },
   {
@@ -71053,6 +73425,116 @@
       ],
       "doi": "10.1016/j.enbuild.2015.11.071",
       "bibtex": "@article{candanedo2016accurate,\n  title = {Accurate occupancy detection of an office room from light, temperature, humidity and {CO2} measurements using statistical learning models},\n  author = {Candanedo, Luis M. and Feldheim, V\\'eronique},\n  journal = {Energy and Buildings},\n  volume = {112},\n  pages = {28--39},\n  year = {2016},\n  doi = {10.1016/j.enbuild.2015.11.071}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "uci-online-shoppers-intention",
+    "slug": "uci-online-shoppers-intention",
+    "name": "UCI Online Shoppers Purchasing Intention Dataset",
+    "description": "The UCI Online Shoppers Purchasing Intention Dataset consists of 12,330 online user shopping sessions over 1-year period, characterized by 17 administrative, informational, and website navigational metrics designed to predict purchasing intent.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset",
+    "publisher": {
+      "name": "Bogazici University & UCI Machine Learning Repository",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "classification",
+      "tabular-classification",
+      "churn-prediction",
+      "intent-prediction"
+    ],
+    "tags": [
+      "uci",
+      "tabular",
+      "e-commerce",
+      "behavior-analysis",
+      "classification"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed on the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "UCI Online Shoppers Purchasing Intention Dataset Record",
+        "url": "https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset",
+        "type": "official_website",
+        "notes": "Official UCI ML repository landing page."
+      },
+      {
+        "title": "Real-Time Prediction of Online Shoppers' Purchasing Intention Using Multilayer Perceptron and LSTM Recurrent Neural Networks",
+        "url": "https://link.springer.com/article/10.1007/s00521-018-3523-0",
+        "type": "original_paper",
+        "notes": "Published in Neural Computing and Applications (2019)."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against Neural Computing and Applications 2019 publication (DOI: 10.1007/s00521-018-3523-0) and DataCite DOI (10.24432/C5F88Q). Exactly 12,330 sessions, 17 features (10 numerical, 7 categorical), and binary Revenue label (1,908 returning purchase sessions, 10,422 negative sessions)."
+    },
+    "size": {
+      "amount": 1.8,
+      "unit": "MB",
+      "file_formats": [
+        "csv"
+      ],
+      "status": "verified",
+      "notes": "CSV tabular session records."
+    },
+    "sample_count": {
+      "total": 12330,
+      "unit": "sessions",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "sessions",
+          "value": 12330,
+          "unit": "sessions"
+        },
+        {
+          "label": "features",
+          "value": 17,
+          "unit": "features"
+        },
+        {
+          "label": "purchasing_sessions",
+          "value": 1908,
+          "unit": "sessions"
+        },
+        {
+          "label": "non_purchasing_sessions",
+          "value": 10422,
+          "unit": "sessions"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2018-08"
+    },
+    "citation": {
+      "paper_title": "Real-Time Prediction of Online Shoppers' Purchasing Intention Using Multilayer Perceptron and LSTM Recurrent Neural Networks",
+      "paper_url": "https://link.springer.com/article/10.1007/s00521-018-3523-0",
+      "authors": [
+        "C. Okan Sakar",
+        "S. Olcay Polat",
+        "Mete Katircioglu",
+        "Yomi Kastro"
+      ],
+      "doi": "10.1007/s00521-018-3523-0",
+      "bibtex": "@article{sakar2019real,\n  title = {Real-Time Prediction of Online Shoppers' Purchasing Intention Using Multilayer Perceptron and LSTM Recurrent Neural Networks},\n  author = {Sakar, C. Okan and Polat, S. Olcay and Katircioglu, Mete and Kastro, Yomi},\n  journal = {Neural Computing and Applications},\n  volume = {31},\n  number = {10},\n  year = {2019},\n  publisher = {Springer},\n  doi = {10.1007/s00521-018-3523-0},\n  pages = {6893--6908}\n}"
     }
   },
   {
@@ -71730,6 +74212,125 @@
       ],
       "doi": "10.24432/C5CS3C",
       "bibtex": "@misc{aha1988waveform,\n  author = {Aha, David},\n  title = {{Waveform Database Generator (Version 1)}},\n  year = {1988},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5CS3C}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "uci-wine",
+    "slug": "uci-wine",
+    "name": "UCI Wine Dataset",
+    "description": "The UCI Wine Dataset is a foundational pattern recognition benchmark containing 178 chemical analysis samples of Italian wines grown in the same region by three different cultivars, described by 13 continuous constituents.",
+    "homepage_url": "https://archive.ics.uci.edu/dataset/109/wine",
+    "publisher": {
+      "name": "UCI Machine Learning Repository & University of Genoa",
+      "type": "academic",
+      "url": "https://archive.ics.uci.edu"
+    },
+    "modalities": [
+      "tabular"
+    ],
+    "tasks": [
+      "classification",
+      "clustering",
+      "dimensionality-reduction",
+      "tabular-classification"
+    ],
+    "tags": [
+      "uci",
+      "tabular",
+      "chemistry",
+      "wine",
+      "classification"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "commercial_use": "allowed",
+      "notes": "Distributed on the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International."
+    },
+    "source_references": [
+      {
+        "title": "UCI Wine Dataset Record",
+        "url": "https://archive.ics.uci.edu/dataset/109/wine",
+        "type": "official_website",
+        "notes": "Official UCI ML repository landing page."
+      },
+      {
+        "title": "PARVUS: An Extendible Package for Data Exploration, Classification and Correlation",
+        "url": "https://doi.org/10.24432/C5PC7J",
+        "type": "original_paper",
+        "notes": "Published dataset record with DataCite DOI 10.24432/C5PC7J."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against UCI Machine Learning Repository record and DataCite DOI (10.24432/C5PC7J). Exactly 178 samples, 13 continuous chemical features, 0 missing values, and 3 cultivar classes (59 Class 1, 71 Class 2, 48 Class 3)."
+    },
+    "size": {
+      "amount": 0.02,
+      "unit": "MB",
+      "file_formats": [
+        "csv",
+        "data"
+      ],
+      "status": "verified",
+      "notes": "CSV/data tabular records."
+    },
+    "sample_count": {
+      "total": 178,
+      "unit": "samples",
+      "status": "verified",
+      "partition_completeness": "unspecified",
+      "partition_overlap": "unspecified",
+      "breakdown": [
+        {
+          "label": "samples",
+          "value": 178,
+          "unit": "samples"
+        },
+        {
+          "label": "features",
+          "value": 13,
+          "unit": "features"
+        },
+        {
+          "label": "classes",
+          "value": 3,
+          "unit": "classes"
+        },
+        {
+          "label": "class_1_samples",
+          "value": 59,
+          "unit": "samples"
+        },
+        {
+          "label": "class_2_samples",
+          "value": 71,
+          "unit": "samples"
+        },
+        {
+          "label": "class_3_samples",
+          "value": 48,
+          "unit": "samples"
+        }
+      ]
+    },
+    "dates": {
+      "published": "1991-07"
+    },
+    "citation": {
+      "paper_title": "Wine",
+      "paper_url": "https://doi.org/10.24432/C5PC7J",
+      "authors": [
+        "Stefan Aeberhard",
+        "M. Forina"
+      ],
+      "doi": "10.24432/C5PC7J",
+      "bibtex": "@misc{aeberhard1991wine,\n  title = {Wine},\n  author = {Aeberhard, Stefan and Forina, M.},\n  year = {1991},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5PC7J}\n}"
     }
   },
   {
@@ -76795,6 +79396,120 @@
   },
   {
     "schema_version": "1.0.0",
+    "id": "wham",
+    "slug": "wham",
+    "name": "WHAM!: WSJ0 Hipster Ambient Mixtures",
+    "description": "WHAM! (WSJ0 Hipster Ambient Mixtures) extends the WSJ0-2mix speech separation benchmark by overlaying real ambient noise recordings collected in urban public spaces (coffee shops, restaurants, parks) across 26,000 speech-and-noise mixtures.",
+    "homepage_url": "https://wham.whisper.ai/",
+    "publisher": {
+      "name": "Mitsubishi Electric Research Laboratories (MERL) & Whisper.ai",
+      "type": "industry",
+      "url": "https://wham.whisper.ai"
+    },
+    "modalities": [
+      "audio"
+    ],
+    "tasks": [
+      "speech-separation",
+      "speech-enhancement",
+      "noise-suppression"
+    ],
+    "tags": [
+      "speech-separation",
+      "speech-enhancement",
+      "ambient-noise",
+      "audio-processing",
+      "audio"
+    ],
+    "license": {
+      "status": "verified_non_commercial",
+      "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "spdx_id": "CC-BY-NC-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "commercial_use": "forbidden",
+      "notes": "Ambient noise recordings and mixing recipes released under CC-BY-NC-4.0; derived speech mixtures require WSJ0 license."
+    },
+    "source_references": [
+      {
+        "title": "WHAM! Official Website",
+        "url": "https://wham.whisper.ai/",
+        "type": "official_website",
+        "notes": "Official project website with audio download links and scripts."
+      },
+      {
+        "title": "WHAM!: Extending Speech Separation to Noisy Environments",
+        "url": "https://www.isca-speech.org/archive/Interspeech_2019/abstracts/2821.html",
+        "type": "original_paper",
+        "notes": "Published in Interspeech 2019."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against Interspeech 2019 paper (DOI: 10.21437/Interspeech.2019-2821) and official dataset release. Contains 26,000 mixtures matching WSJ0-2mix partitions: 20,000 train (30h), 3,000 validation (5h), 3,000 test (5h) at 8 kHz and 16 kHz."
+    },
+    "size": {
+      "amount": 35.0,
+      "unit": "GB",
+      "file_formats": [
+        "wav",
+        "py"
+      ],
+      "status": "verified",
+      "notes": "WAV audio files and Python generation scripts."
+    },
+    "sample_count": {
+      "total": 26000,
+      "unit": "recordings",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 20000,
+        "validation": 3000,
+        "test": 3000
+      },
+      "breakdown": [
+        {
+          "label": "train_mixtures",
+          "value": 20000,
+          "unit": "recordings"
+        },
+        {
+          "label": "validation_mixtures",
+          "value": 3000,
+          "unit": "recordings"
+        },
+        {
+          "label": "test_mixtures",
+          "value": 3000,
+          "unit": "recordings"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2019-09"
+    },
+    "citation": {
+      "paper_title": "WHAM!: Extending Speech Separation to Noisy Environments",
+      "paper_url": "https://www.isca-speech.org/archive/Interspeech_2019/abstracts/2821.html",
+      "authors": [
+        "Gordon Wichern",
+        "Joe Antognini",
+        "Michael Flynn",
+        "Licheng Richard Zhu",
+        "Emmett McQuinn",
+        "Dwight Crow",
+        "Ethan Manilow",
+        "Jonathan Le Roux"
+      ],
+      "doi": "10.21437/Interspeech.2019-2821",
+      "bibtex": "@inproceedings{wichern2019wham,\n  title = {WHAM!: Extending Speech Separation to Noisy Environments},\n  author = {Wichern, Gordon and Antognini, Joe and Flynn, Michael and Zhu, Licheng Richard and McQuinn, Emmett and Crow, Dwight and Manilow, Ethan and Le Roux, Jonathan},\n  booktitle = {Proceedings of Interspeech},\n  year = {2019},\n  doi = {10.21437/Interspeech.2019-2821},\n  pages = {1368--1372}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
     "id": "whu-building",
     "slug": "whu-building",
     "name": "WHU Building Dataset: Aerial and Satellite Building Footprint Benchmark",
@@ -77654,6 +80369,121 @@
       ],
       "doi": "10.18653/v1/D15-1237",
       "bibtex": "@inproceedings{yang-etal-2015-wikiqa,\n  title = {{W}iki{QA}: A Challenge Dataset for Open-Domain Question Answering},\n  author = {Yang, Yi and Yih, Wen-tau and Meek, Christopher},\n  booktitle = {Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing},\n  year = {2015},\n  pages = {2013--2018},\n  doi = {10.18653/v1/D15-1237}\n}"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "wikisql",
+    "slug": "wikisql",
+    "name": "WikiSQL: Large-Scale Text-to-SQL Benchmark",
+    "description": "WikiSQL is a foundational text-to-SQL benchmark containing 80,654 natural language question and SQL query pairs mapped over 24,241 relational tables extracted from Wikipedia.",
+    "homepage_url": "https://github.com/salesforce/WikiSQL",
+    "publisher": {
+      "name": "Salesforce Research",
+      "type": "industry",
+      "url": "https://www.salesforce.com/research/"
+    },
+    "modalities": [
+      "nlp",
+      "tabular"
+    ],
+    "tasks": [
+      "text-to-sql",
+      "semantic-parsing",
+      "table-question-answering"
+    ],
+    "tags": [
+      "text-to-sql",
+      "semantic-parsing",
+      "relational-database",
+      "nlp",
+      "salesforce"
+    ],
+    "license": {
+      "status": "verified_open",
+      "name": "BSD 3-Clause License / CC-BY-SA 3.0",
+      "spdx_id": "BSD-3-Clause",
+      "url": "https://github.com/salesforce/WikiSQL/blob/master/LICENSE",
+      "commercial_use": "allowed",
+      "notes": "WikiSQL codebase and dataset annotations are distributed under the BSD-3-Clause license; underlying Wikipedia table content is licensed under CC-BY-SA 3.0."
+    },
+    "source_references": [
+      {
+        "title": "WikiSQL Official Repository",
+        "url": "https://github.com/salesforce/WikiSQL",
+        "type": "official_website",
+        "notes": "Code and dataset download repository."
+      },
+      {
+        "title": "Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning",
+        "url": "https://arxiv.org/abs/1709.00103",
+        "type": "original_paper",
+        "notes": "Foundational paper introducing WikiSQL."
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "verified_by": "OpenDatasets Core Team",
+      "verified_date": "2026-11-25",
+      "notes": "Verified against Salesforce Research release and publication (DOI: 10.48550/arXiv.1709.00103). Contains exactly 80,654 question-SQL pairs (train: 56,355, dev: 8,421, test: 15,878) across 24,241 Wikipedia tables."
+    },
+    "size": {
+      "amount": 35.0,
+      "unit": "MB",
+      "file_formats": [
+        "jsonl",
+        "db"
+      ],
+      "status": "verified",
+      "notes": "JSONL records and SQLite database tables."
+    },
+    "sample_count": {
+      "total": 80654,
+      "unit": "queries",
+      "status": "verified",
+      "partition_completeness": "complete",
+      "partition_overlap": "disjoint",
+      "splits": {
+        "train": 56355,
+        "validation": 8421,
+        "test": 15878
+      },
+      "breakdown": [
+        {
+          "label": "tables",
+          "value": 24241,
+          "unit": "tables"
+        },
+        {
+          "label": "train_queries",
+          "value": 56355,
+          "unit": "queries"
+        },
+        {
+          "label": "dev_queries",
+          "value": 8421,
+          "unit": "queries"
+        },
+        {
+          "label": "test_queries",
+          "value": 15878,
+          "unit": "queries"
+        }
+      ]
+    },
+    "dates": {
+      "published": "2017-09"
+    },
+    "citation": {
+      "paper_title": "Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning",
+      "paper_url": "https://arxiv.org/abs/1709.00103",
+      "authors": [
+        "Victor Zhong",
+        "Caiming Xiong",
+        "Richard Socher"
+      ],
+      "doi": "10.48550/arXiv.1709.00103",
+      "bibtex": "@article{zhong-etal-2017-seq2sql,\n  title = {Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning},\n  author = {Zhong, Victor and Xiong, Caiming and Socher, Richard},\n  journal = {arXiv preprint arXiv:1709.00103},\n  year = {2017},\n  url = {https://arxiv.org/abs/1709.00103},\n  doi = {10.48550/arXiv.1709.00103}\n}"
     }
   },
   {

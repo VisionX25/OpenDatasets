@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "id": "stanford-cars",
+  "slug": "stanford-cars",
+  "name": "Stanford Cars: Fine-Grained Car Categorization Benchmark",
+  "description": "The Stanford Cars dataset is a fine-grained image categorization benchmark containing 16,185 images of 196 car classes categorized by Make, Model, and Year.",
+  "homepage_url": "https://ai.stanford.edu/~jkrause/cars/car_dataset.html",
+  "publisher": {
+    "name": "Stanford AI Lab",
+    "type": "academic",
+    "url": "https://ai.stanford.edu"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "fine-grained-image-classification",
+    "image-classification",
+    "object-detection"
+  ],
+  "tags": [
+    "fine-grained-classification",
+    "cars",
+    "vehicles",
+    "stanford",
+    "computer-vision"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Academic Research Use",
+    "spdx_id": null,
+    "url": "https://ai.stanford.edu/~jkrause/cars/car_dataset.html",
+    "commercial_use": "unknown",
+    "notes": "Provided for non-commercial research and educational benchmarking on fine-grained categorization."
+  },
+  "source_references": [
+    {
+      "title": "Stanford Cars Dataset Homepage",
+      "url": "https://ai.stanford.edu/~jkrause/cars/car_dataset.html",
+      "type": "official_website",
+      "notes": "Official Stanford project site."
+    },
+    {
+      "title": "3D Object Representations for Fine-Grained Categorization",
+      "url": "https://ieeexplore.ieee.org/document/6755945",
+      "type": "original_paper",
+      "notes": "Published in ICCV Workshops 2013."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against ICCVW 2013 paper (DOI: 10.1109/ICCVW.2013.77) and official Stanford download files. Total 16,185 images across 196 car categories, divided 50-50 into 8,144 training and 8,041 test images with bounding box annotations."
+  },
+  "size": {
+    "amount": 2000.0,
+    "unit": "MB",
+    "file_formats": [
+      "jpg",
+      "mat"
+    ],
+    "status": "verified",
+    "notes": "JPEG vehicle images and MAT bounding box / class annotations."
+  },
+  "sample_count": {
+    "total": 16185,
+    "unit": "images",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 8144,
+      "test": 8041
+    },
+    "breakdown": [
+      {
+        "label": "training_images",
+        "value": 8144,
+        "unit": "images"
+      },
+      {
+        "label": "testing_images",
+        "value": 8041,
+        "unit": "images"
+      },
+      {
+        "label": "car_categories",
+        "value": 196,
+        "unit": "categories"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2013-12"
+  },
+  "citation": {
+    "paper_title": "3D Object Representations for Fine-Grained Categorization",
+    "paper_url": "https://ieeexplore.ieee.org/document/6755945",
+    "authors": [
+      "Jonathan Krause",
+      "Michael Stark",
+      "Jia Deng",
+      "Li Fei-Fei"
+    ],
+    "doi": "10.1109/ICCVW.2013.77",
+    "bibtex": "@inproceedings{krause20133d,\n  title = {3D Object Representations for Fine-Grained Categorization},\n  author = {Krause, Jonathan and Stark, Michael and Deng, Jia and Fei-Fei, Li},\n  booktitle = {Proceedings of the IEEE International Conference on Computer Vision Workshops (ICCVW)},\n  year = {2013},\n  doi = {10.1109/ICCVW.2013.77},\n  pages = {554--561}\n}"
+  }
+}

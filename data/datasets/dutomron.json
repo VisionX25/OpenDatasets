@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "id": "dutomron",
+  "slug": "dutomron",
+  "name": "DUT-OMRON: Salient Object Detection Dataset",
+  "description": "DUT-OMRON is a prominent salient object detection benchmark consisting of 5,168 natural images manually selected from more than 140,000 photos, each with pixel-level ground truth masks and bounding box annotations from 5 human annotators.",
+  "homepage_url": "http://saliencydetection.net/dut-omron/",
+  "publisher": {
+    "name": "Dalian University of Technology & OMRON Corporation",
+    "type": "academic",
+    "url": "http://saliencydetection.net/dut-omron/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "salient-object-detection",
+    "image-segmentation",
+    "object-detection"
+  ],
+  "tags": [
+    "saliency",
+    "salient-object-detection",
+    "segmentation",
+    "computer-vision"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Academic Research Use",
+    "spdx_id": null,
+    "url": "http://saliencydetection.net/dut-omron/",
+    "commercial_use": "unknown",
+    "notes": "Made freely available for academic research purposes on the official project page."
+  },
+  "source_references": [
+    {
+      "title": "DUT-OMRON Saliency Benchmark",
+      "url": "http://saliencydetection.net/dut-omron/",
+      "type": "official_website",
+      "notes": "Official dataset and evaluation portal."
+    },
+    {
+      "title": "Saliency Detection via Graph Analysis",
+      "url": "https://ieeexplore.ieee.org/document/6619250",
+      "type": "original_paper",
+      "notes": "Published in CVPR 2013."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against CVPR 2013 paper (DOI: 10.1109/CVPR.2013.407) and benchmark archive. Exactly 5,168 images with multiple human eye-fixation and segmentation masks."
+  },
+  "size": {
+    "amount": 1100.0,
+    "unit": "MB",
+    "file_formats": [
+      "jpg",
+      "png"
+    ],
+    "status": "verified",
+    "notes": "JPEG source images and PNG pixel ground-truth masks."
+  },
+  "sample_count": {
+    "total": 5168,
+    "unit": "images",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "images",
+        "value": 5168,
+        "unit": "images"
+      },
+      {
+        "label": "annotators_per_image",
+        "value": 5,
+        "unit": "annotators"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2013-06"
+  },
+  "citation": {
+    "paper_title": "Saliency Detection via Graph Analysis",
+    "paper_url": "https://ieeexplore.ieee.org/document/6619250",
+    "authors": [
+      "Chuan Yang",
+      "Lihe Zhang",
+      "Huchuan Lu",
+      "Xiang Ruan",
+      "Ming-Hsuan Yang"
+    ],
+    "doi": "10.1109/CVPR.2013.407",
+    "bibtex": "@inproceedings{yang2013saliency,\n  title = {Saliency Detection via Graph Analysis},\n  author = {Yang, Chuan and Zhang, Lihe and Lu, Huchuan and Ruan, Xiang and Yang, Ming-Hsuan},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2013},\n  doi = {10.1109/CVPR.2013.407},\n  pages = {3166--3173}\n}"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mutual",
+  "slug": "mutual",
+  "name": "MuTual: Multi-Turn Dialogue Reasoning Benchmark",
+  "description": "MuTual is a reasoning-oriented dataset for multi-turn dialogue comprehension based on Chinese high school English listening comprehension tests. It contains 8,860 multi-turn dialog context-response pairs designed to test conversational reasoning including intent, attitude, and counterfactual logic.",
+  "homepage_url": "https://github.com/Nealcly/MuTual",
+  "publisher": {
+    "name": "Zhejiang University",
+    "type": "academic",
+    "url": "https://www.zju.edu.cn"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "dialogue-reasoning",
+    "response-selection",
+    "reading-comprehension"
+  ],
+  "tags": [
+    "dialogue",
+    "reasoning",
+    "multi-turn",
+    "multiple-choice",
+    "nlp"
+  ],
+  "license": {
+    "status": "unspecified_by_source",
+    "name": "Unspecified Academic Research Use",
+    "spdx_id": null,
+    "url": "https://github.com/Nealcly/MuTual",
+    "commercial_use": "unknown",
+    "notes": "Released publicly for academic research without explicit open license declaration."
+  },
+  "source_references": [
+    {
+      "title": "MuTual Official Repository",
+      "url": "https://github.com/Nealcly/MuTual",
+      "type": "official_website",
+      "notes": "Code and dataset repository."
+    },
+    {
+      "title": "MuTual: A Dataset for Multi-Turn Dialogue Reasoning",
+      "url": "https://aclanthology.org/2020.acl-main.130/",
+      "type": "original_paper",
+      "notes": "Published in ACL 2020."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against ACL 2020 paper (DOI: 10.18653/v1/2020.acl-main.130) and official GitHub repository (Nealcly/MuTual). Contains 8,860 context-response pairs (train: 7,088, dev: 886, test: 886). Note: repository test directory contains 887 total files including 1 hidden .DS_Store file, giving exactly 886 text instances."
+  },
+  "size": {
+    "amount": 5.0,
+    "unit": "MB",
+    "file_formats": [
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "Text dialogue instances."
+  },
+  "sample_count": {
+    "total": 8860,
+    "unit": "dialogues",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 7088,
+      "validation": 886,
+      "test": 886
+    },
+    "breakdown": [
+      {
+        "label": "train_instances",
+        "value": 7088,
+        "unit": "dialogues"
+      },
+      {
+        "label": "dev_instances",
+        "value": 886,
+        "unit": "dialogues"
+      },
+      {
+        "label": "test_instances",
+        "value": 886,
+        "unit": "dialogues"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2020-07"
+  },
+  "citation": {
+    "paper_title": "MuTual: A Dataset for Multi-Turn Dialogue Reasoning",
+    "paper_url": "https://aclanthology.org/2020.acl-main.130/",
+    "authors": [
+      "Leyang Cui",
+      "Yu Wu",
+      "Shuming Liu",
+      "Yue Zhang",
+      "Ming Zhou"
+    ],
+    "doi": "10.18653/v1/2020.acl-main.130",
+    "bibtex": "@inproceedings{cui-etal-2020-mutual,\n  title = {MuTual: A Dataset for Multi-Turn Dialogue Reasoning},\n  author = {Cui, Leyang and Wu, Yu and Liu, Shuming and Zhang, Yue and Zhou, Ming},\n  booktitle = {Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},\n  year = {2020},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/2020.acl-main.130/},\n  doi = {10.18653/v1/2020.acl-main.130},\n  pages = {1406--1416}\n}"
+  }
+}

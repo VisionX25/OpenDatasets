@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-htru2",
+  "slug": "uci-htru2",
+  "name": "UCI HTRU2 Pulsar Candidate Dataset",
+  "description": "HTRU2 is an astronomical tabular dataset containing 17,898 candidate pulsar observations collected during the High Time Resolution Universe Survey, described by 8 summary statistics derived from the integrated pulse profile and DM-SNR curve.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/372/htru2",
+  "publisher": {
+    "name": "University of Manchester & UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "classification",
+    "tabular-classification",
+    "anomaly-detection",
+    "imbalanced-classification"
+  ],
+  "tags": [
+    "uci",
+    "tabular",
+    "astronomy",
+    "pulsar",
+    "imbalanced-learning"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed on the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International."
+  },
+  "source_references": [
+    {
+      "title": "UCI HTRU2 Dataset Record",
+      "url": "https://archive.ics.uci.edu/dataset/372/htru2",
+      "type": "official_website",
+      "notes": "Official UCI ML repository landing page."
+    },
+    {
+      "title": "Fifty Years of Pulsar Candidate Selection: From Simple Filters to a New Principled Real-Time Classification Approach",
+      "url": "https://academic.oup.com/mnras/article/459/1/1104/2608953",
+      "type": "original_paper",
+      "notes": "Published in Monthly Notices of the Royal Astronomical Society (MNRAS 2016)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against MNRAS 2016 publication (DOI: 10.1093/mnras/stw656) and DataCite DOI (10.24432/C5DK6R). Exactly 17,898 instances, 8 continuous features, 0 missing values, and binary class labels (1,639 real pulsars, 16,259 non-pulsar noise artifacts)."
+  },
+  "size": {
+    "amount": 1.5,
+    "unit": "MB",
+    "file_formats": [
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "CSV tabular numerical records."
+  },
+  "sample_count": {
+    "total": 17898,
+    "unit": "samples",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "samples",
+        "value": 17898,
+        "unit": "samples"
+      },
+      {
+        "label": "features",
+        "value": 8,
+        "unit": "features"
+      },
+      {
+        "label": "pulsar_instances",
+        "value": 1639,
+        "unit": "samples"
+      },
+      {
+        "label": "non_pulsar_instances",
+        "value": 16259,
+        "unit": "samples"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2016-04"
+  },
+  "citation": {
+    "paper_title": "Fifty Years of Pulsar Candidate Selection: From Simple Filters to a New Principled Real-Time Classification Approach",
+    "paper_url": "https://academic.oup.com/mnras/article/459/1/1104/2608953",
+    "authors": [
+      "R. J. Lyon",
+      "B. W. Stappers",
+      "S. Cooper",
+      "J. M. Brooke",
+      "J. D. Knowles"
+    ],
+    "doi": "10.1093/mnras/stw656",
+    "bibtex": "@article{lyon2016fifty,\n  title = {Fifty Years of Pulsar Candidate Selection: From Simple Filters to a New Principled Real-Time Classification Approach},\n  author = {Lyon, R. J. and Stappers, B. W. and Cooper, S. and Brooke, J. M. and Knowles, J. D.},\n  journal = {Monthly Notices of the Royal Astronomical Society},\n  volume = {459},\n  number = {1},\n  year = {2016},\n  publisher = {Oxford University Press},\n  url = {https://academic.oup.com/mnras/article/459/1/1104/2608953},\n  doi = {10.1093/mnras/stw656},\n  pages = {1104--1123}\n}"
+  }
+}
