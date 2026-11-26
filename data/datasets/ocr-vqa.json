@@ -3,7 +3,7 @@
   "id": "ocr-vqa",
   "slug": "ocr-vqa",
   "name": "OCR-VQA: Visual Question Answering by Reading Text in Images",
-  "description": "OCR-VQA is a visual question answering benchmark focused on reading and comprehending embedded scene text in images, containing 1,002,141 question-answer instances across 207,572 book cover images spanning 34 genres.",
+  "description": "OCR-VQA is a visual question answering benchmark focused on reading and comprehending embedded scene text in images, containing 1,002,146 question-answer instances across 207,572 book cover images spanning 32 genres.",
   "homepage_url": "https://ocr-vqa.github.io/",
   "publisher": {
     "name": "IIIT Delhi",
@@ -45,7 +45,7 @@
     },
     {
       "title": "OCR-VQA: Visual Question Answering by Reading Text in Images",
-      "url": "https://ieeexplore.ieee.org/document/8977970",
+      "url": "https://ieeexplore.ieee.org/document/8978122",
       "type": "original_paper",
       "notes": "Published in ICDAR 2019."
     }
@@ -54,7 +54,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against ICDAR 2019 publication (DOI: 10.1109/ICDAR.2019.00156) and official GitHub/portal releases. License status verified as unspecified_by_source because no standard OSI/Creative Commons license grant is provided. Comprises 1,002,141 question-answer pairs over 207,572 book cover images partitioned 80% train (801,712 QA pairs), 10% val (100,214 QA pairs), and 10% test (100,215 QA pairs)."
+    "notes": "Verified against ICDAR 2019 publication (DOI: 10.1109/ICDAR.2019.00156, IEEE document 8978122) and official dataset.json release. License status verified as unspecified_by_source because no standard OSI/Creative Commons license grant is provided. Exactly 1,002,146 question-answer pairs across 207,572 book cover images partitioned into train (801,680 QA pairs, 166,043 images), validation (100,037 QA pairs, 20,732 images), and test (100,429 QA pairs, 20,797 images) across 32 genres."
   },
   "size": {
     "amount": 75.0,
@@ -67,15 +67,15 @@
     "notes": "Book cover images and JSON question-answer annotations."
   },
   "sample_count": {
-    "total": 1002141,
+    "total": 1002146,
     "unit": "questions",
     "status": "verified",
     "partition_completeness": "complete",
     "partition_overlap": "disjoint",
     "splits": {
-      "train": 801712,
-      "validation": 100214,
-      "test": 100215
+      "train": 801680,
+      "validation": 100037,
+      "test": 100429
     },
     "breakdown": [
       {
@@ -84,19 +84,39 @@
         "unit": "images"
       },
       {
+        "label": "train_images",
+        "value": 166043,
+        "unit": "images"
+      },
+      {
+        "label": "validation_images",
+        "value": 20732,
+        "unit": "images"
+      },
+      {
+        "label": "test_images",
+        "value": 20797,
+        "unit": "images"
+      },
+      {
         "label": "questions_train",
-        "value": 801712,
+        "value": 801680,
         "unit": "questions"
       },
       {
         "label": "questions_validation",
-        "value": 100214,
+        "value": 100037,
         "unit": "questions"
       },
       {
         "label": "questions_test",
-        "value": 100215,
+        "value": 100429,
         "unit": "questions"
+      },
+      {
+        "label": "unique_genres",
+        "value": 32,
+        "unit": "genres"
       }
     ]
   },
@@ -105,7 +125,7 @@
   },
   "citation": {
     "paper_title": "OCR-VQA: Visual Question Answering by Reading Text in Images",
-    "paper_url": "https://ieeexplore.ieee.org/document/8977970",
+    "paper_url": "https://ieeexplore.ieee.org/document/8978122",
     "authors": [
       "Anand Mishra",
       "Shashank Shekhar",
