@@ -41,16 +41,17 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Set up Python
+      - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
-          cache: 'pip'
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install jsonschema pytest
+          pip install -r requirements-dev.txt
 
       - name: Determine execution mode
         id: mode
@@ -84,33 +85,49 @@ jobs:
           echo "val_flag=$VAL_FLAG" >> "$GITHUB_OUTPUT"
 
       - name: Execute repository health reporter
+        id: health
         run: |
+          set +e
           python3 scripts/repo_health.py \
             --format both \
             --json-output "$RUNNER_TEMP/repo-health.json" \
             --markdown-output "$RUNNER_TEMP/repo-health.md" \
+            --max-report-bytes 2097152 \
             ${{ steps.mode.outputs.val_flag }} \
             ${{ steps.mode.outputs.tests_flag }} \
             ${{ steps.mode.outputs.benchmark_flag }}
+          HEALTH_EXIT_CODE=$?
+          echo "exit_code=$HEALTH_EXIT_CODE" >> "$GITHUB_OUTPUT"
+          exit $HEALTH_EXIT_CODE
+        continue-on-error: true
 
       - name: Enforce report size budget (<= 2 MB)
+        if: always()
         run: |
-          JSON_SIZE=$(stat -c%s "$RUNNER_TEMP/repo-health.json" 2>/dev/null || stat -f%z "$RUNNER_TEMP/repo-health.json")
-          MD_SIZE=$(stat -c%s "$RUNNER_TEMP/repo-health.md" 2>/dev/null || stat -f%z "$RUNNER_TEMP/repo-health.md")
-          TOTAL_BYTES=$((JSON_SIZE + MD_SIZE))
-          MAX_BYTES=2097152 # 2 MB
+          if [ -f "$RUNNER_TEMP/repo-health.json" ] && [ -f "$RUNNER_TEMP/repo-health.md" ]; then
+            JSON_SIZE=$(stat -c%s "$RUNNER_TEMP/repo-health.json" 2>/dev/null || stat -f%z "$RUNNER_TEMP/repo-health.json")
+            MD_SIZE=$(stat -c%s "$RUNNER_TEMP/repo-health.md" 2>/dev/null || stat -f%z "$RUNNER_TEMP/repo-health.md")
+            TOTAL_BYTES=$((JSON_SIZE + MD_SIZE))
+            MAX_BYTES=2097152 # 2 MB
 
-          echo "Report sizes: JSON=$JSON_SIZE bytes, Markdown=$MD_SIZE bytes, Total=$TOTAL_BYTES bytes (budget: $MAX_BYTES bytes)"
-          if [ "$TOTAL_BYTES" -gt "$MAX_BYTES" ]; then
-            echo "::error::Combined report size ($TOTAL_BYTES bytes) exceeds free-tier budget of 2 MB ($MAX_BYTES bytes)."
-            exit 1
+            echo "Report sizes: JSON=$JSON_SIZE bytes, Markdown=$MD_SIZE bytes, Total=$TOTAL_BYTES bytes (budget: $MAX_BYTES bytes)"
+            if [ "$TOTAL_BYTES" -gt "$MAX_BYTES" ]; then
+              echo "::error::Combined report size ($TOTAL_BYTES bytes) exceeds free-tier budget of 2 MB ($MAX_BYTES bytes)."
+              exit 1
+            fi
+          else
+            echo "::warning::Health report files were not found in $RUNNER_TEMP"
           fi
 
       - name: Publish Markdown report to step summary
+        if: always()
         run: |
-          cat "$RUNNER_TEMP/repo-health.md" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f "$RUNNER_TEMP/repo-health.md" ]; then
+            cat "$RUNNER_TEMP/repo-health.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
 
       - name: Upload health report artifacts (7-day retention)
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: repo-health-${{ github.run_id }}
@@ -118,4 +135,12 @@ jobs:
             ${{ runner.temp }}/repo-health.json
             ${{ runner.temp }}/repo-health.md
           retention-days: 7
-          if-no-files-found: error
+          if-no-files-found: warn
+
+      - name: Propagate execution failure status
+        if: always()
+        run: |
+          if [ "${{ steps.health.outputs.exit_code }}" != "0" ]; then
+            echo "::error::Repository health check failed with exit code ${{ steps.health.outputs.exit_code }}."
+            exit "${{ steps.health.outputs.exit_code }}"
+          fi

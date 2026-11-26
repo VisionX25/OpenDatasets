@@ -39,6 +39,7 @@ from scripts.repo_health import (
     collect_source_monitoring_metrics,
     collect_taxonomy_metrics,
     collect_test_metrics,
+    compact_report_for_budget,
     main,
     render_json_report,
     render_markdown_report,
@@ -554,4 +555,149 @@ def test_validation_flag_execution(tmp_path: Path):
         report = build_health_report(repo_dir, run_validation=True)
         assert report["validation"]["status"] == "passed"
         assert report["validation"]["returncode"] == 0
+
+
+def test_cli_exit_code_propagation_and_report_preservation(tmp_path: Path):
+    """Test CLI exit-code semantics: 0 on success, 1 on failure, outputs preserved on error."""
+    d = create_mock_dataset("exit-code-test")
+    repo_dir = write_fixture_repo(tmp_path, [d])
+
+    json_out = tmp_path / "diag.json"
+    md_out = tmp_path / "diag.md"
+
+    # 1. Default run with no extra flags succeeds (code 0)
+    ret_ok = main([
+        "--repo-root", str(repo_dir),
+        "--json-output", str(json_out),
+        "--markdown-output", str(md_out),
+        "--quiet",
+    ])
+    assert ret_ok == 0
+    assert json_out.exists()
+    assert md_out.exists()
+
+    # 2. Validation failure returns exit code 1 AND preserves output reports
+    with patch("subprocess.run") as mock_run:
+        mock_run.return_value = MagicMock(returncode=1, stdout="", stderr="Validation error\n")
+        scripts_dir = repo_dir / "scripts"
+        scripts_dir.mkdir(parents=True, exist_ok=True)
+        (scripts_dir / "validate_datasets.py").write_text("# mock\n")
+
+        json_fail = tmp_path / "fail_val.json"
+        md_fail = tmp_path / "fail_val.md"
+
+        ret_val_fail = main([
+            "--repo-root", str(repo_dir),
+            "--run-validation",
+            "--json-output", str(json_fail),
+            "--markdown-output", str(md_fail),
+            "--quiet",
+        ])
+        assert ret_val_fail == 1
+        assert json_fail.exists()
+        assert md_fail.exists()
+        # Ensure diagnostic reports were written and contain the failed status
+        val_data = json.loads(json_fail.read_text(encoding="utf-8"))
+        assert val_data["validation"]["status"] == "failed"
+
+    # 3. Test execution failure returns exit code 1 AND preserves output reports
+    with patch("subprocess.run") as mock_run:
+        mock_run.return_value = MagicMock(returncode=1, stdout="1 failed\n", stderr="")
+        json_test_fail = tmp_path / "fail_test.json"
+        md_test_fail = tmp_path / "fail_test.md"
+
+        ret_test_fail = main([
+            "--repo-root", str(repo_dir),
+            "--run-tests",
+            "--json-output", str(json_test_fail),
+            "--markdown-output", str(md_test_fail),
+            "--quiet",
+        ])
+        assert ret_test_fail == 1
+        assert json_test_fail.exists()
+        assert md_test_fail.exists()
+        test_data = json.loads(json_test_fail.read_text(encoding="utf-8"))
+        assert test_data["tests"]["status"] == "failed"
+
+
+def test_dynamic_markdown_recommendations_and_metrics(tmp_path: Path):
+    """Ensure Markdown recommendations dynamically reflect fixture data rather than hard-coded constants."""
+    # Fixture A: 1 missing newline, 1 HTTP URL, 2 singleton tasks, 1 license candidate
+    # sharedA in both d1 and d2; taskA and taskB in d1 only (2 singletons)
+    # commercial_use="forbidden" so CC-BY-NC-4.0 only triggers rule 1 (1 candidate)
+    d1 = create_mock_dataset("fixA-d1", tasks=["taskA", "taskB", "sharedA"], homepage_url="http://insecure1.org", license_status="verified_open", license_spdx="CC-BY-NC-4.0", commercial_use="forbidden")
+    d2 = create_mock_dataset("fixA-d2", tasks=["sharedA"], homepage_url="https://secure.org")
+    repo_A = tmp_path / "repoA"
+    write_fixture_repo(repo_A, [d1, d2], trailing_newlines={"fixA-d1": False, "fixA-d2": True})
+
+    report_A = build_health_report(repo_A)
+    md_A = render_markdown_report(report_A)
+
+    assert "Normalize 1 missing newlines, verify 1 plain HTTP URLs, harmonize 2 singleton tasks, resolve 1 license review candidates" in md_A
+    assert "39 missing newlines" not in md_A
+    assert "447 singleton tasks" not in md_A
+    assert "11 license review candidates" not in md_A
+
+    # Fixture B: 2 missing newlines, 2 HTTP URLs, 3 singleton tasks, 2 license candidates
+    d3 = create_mock_dataset("fixB-d3", tasks=["taskX", "common"], homepage_url="http://insecure2.org", license_status="verified_open", license_spdx="CC-BY-NC-4.0", commercial_use="forbidden")
+    d4 = create_mock_dataset("fixB-d4", tasks=["taskY", "common"], homepage_url="http://insecure3.org", license_status="verified_open", license_spdx="CC-BY-NC-4.0", commercial_use="forbidden")
+    d5 = create_mock_dataset("fixB-d5", tasks=["taskZ", "common"], homepage_url="https://secure.org")
+    repo_B = tmp_path / "repoB"
+    write_fixture_repo(repo_B, [d3, d4, d5], trailing_newlines={"fixB-d3": False, "fixB-d4": False, "fixB-d5": True})
+
+    report_B = build_health_report(repo_B)
+    md_B = render_markdown_report(report_B)
+
+    assert "Normalize 2 missing newlines, verify 2 plain HTTP URLs, harmonize 3 singleton tasks, resolve 2 license review candidates" in md_B
+
+
+def test_report_budget_fallback_execution(tmp_path: Path):
+    """Test bounded budget fallback when combined report size exceeds configured byte budget."""
+    d = create_mock_dataset("budget-test")
+    repo_dir = write_fixture_repo(tmp_path, [d])
+
+    json_path = tmp_path / "budget_report.json"
+    md_path = tmp_path / "budget_report.md"
+
+    # Set very small max budget (e.g. 500 bytes) to trigger compact fallback
+    exit_code = main([
+        "--repo-root", str(repo_dir),
+        "--json-output", str(json_path),
+        "--markdown-output", str(md_path),
+        "--max-report-bytes", "500",
+        "--quiet",
+    ])
+
+    assert exit_code == 0
+    assert json_path.exists()
+    assert md_path.exists()
+
+    # Verify JSON is valid and parseable
+    content = json_path.read_text(encoding="utf-8")
+    parsed = json.loads(content)
+    assert parsed["budget_fallback"]["budget_exceeded"] is True
+    assert parsed["budget_fallback"]["original_combined_bytes"] > 500
+    assert len(parsed["budget_fallback"]["omitted_details"]) > 0
+    # Core health metrics preserved
+    assert parsed["catalog"]["total_records"] == 1
+    assert parsed["report_schema_version"] == "1.0"
+
+    # Verify Markdown contains the warning banner
+    md_content = md_path.read_text(encoding="utf-8")
+    assert "> [!WARNING]" in md_content
+    assert "**Report Budget Exceeded**" in md_content
+
+
+def test_skipped_checks_classification(tmp_path: Path):
+    """Ensure skipped optional checks are explicitly marked skipped and do not cause failure."""
+    d = create_mock_dataset("skip-check-test")
+    repo_dir = write_fixture_repo(tmp_path, [d])
+
+    report = build_health_report(repo_dir, run_validation=False, run_tests=False, benchmark=False)
+    assert report["validation"]["status"] == "skipped"
+    assert report["validation"]["returncode"] is None
+    assert report["tests"]["status"] == "skipped"
+    assert report["tests"]["passed"] is None
+    assert report["tests"]["failed"] is None
+
 

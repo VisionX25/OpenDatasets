@@ -118,140 +118,140 @@ HISTORICAL_BASELINE = [
         "historical": "875",
         "current_key": "catalog_dataset_count",
         "format": "count",
-        "notes": "Verified research datasets in catalog",
+        "notes": "Verified research datasets at Issue #65 baseline",
     },
     {
         "metric": "Python unit tests (count)",
         "historical": "240",
         "current_key": "python_tests_count",
         "format": "count",
-        "notes": "Existing pytest test suite passed",
+        "notes": "Pytest suite pass count reported in Issue #65",
     },
     {
         "metric": "Python full suite runtime",
         "historical": "270 s",
         "current_key": "python_test_duration",
         "format": "seconds",
-        "notes": "Semantic duplicate tests account for ~257 s",
+        "notes": "Issue #65 observed ~257 s in duplicate audit tests",
     },
     {
         "metric": "Catalog JSON size (raw)",
         "historical": "3.38 MB",
         "current_key": "catalog_raw_size",
         "format": "size_mb",
-        "notes": "frontend/public/data/catalog.json (committed)",
+        "notes": "Committed catalog.json size reported in Issue #65",
     },
     {
         "metric": "Catalog JSON size (gzip)",
         "historical": "728 KB",
         "current_key": "catalog_gzip_size",
         "format": "size_kb",
-        "notes": "Deterministic gzip level 9",
+        "notes": "Compressed size reported in Issue #65",
     },
     {
         "metric": "Generated audit reports size",
         "historical": "4.0 MB",
         "current_key": "audit_reports_size",
         "format": "size_mb",
-        "notes": "31 files in docs/audits/ (committed)",
+        "notes": "Audit reports in docs/audits/ reported in Issue #65",
     },
     {
         "metric": "Distinct taxonomy tasks",
         "historical": "704",
         "current_key": "distinct_tasks",
         "format": "count",
-        "notes": "Distinct task labels across catalog",
+        "notes": "Distinct tasks reported in Issue #65",
     },
     {
         "metric": "Singleton taxonomy tasks",
         "historical": "447",
         "current_key": "singleton_tasks",
         "format": "count",
-        "notes": "Tasks appearing in exactly 1 dataset (63.5%)",
+        "notes": "Singletons reported in Issue #65 (63.5%)",
     },
     {
         "metric": "Distinct taxonomy tags",
         "historical": "1,981",
         "current_key": "distinct_tags",
         "format": "count",
-        "notes": "Distinct tag labels across catalog",
+        "notes": "Distinct tags reported in Issue #65",
     },
     {
         "metric": "Singleton taxonomy tags",
         "historical": "1,407",
         "current_key": "singleton_tags",
         "format": "count",
-        "notes": "Tags appearing in exactly 1 dataset (71.0%)",
+        "notes": "Singletons reported in Issue #65 (71.0%)",
     },
     {
         "metric": "Uncategorized UI datasets",
         "historical": "9",
         "current_key": "uncategorized_datasets_count",
         "format": "count",
-        "notes": "1 completely uncategorized (lakh-midi); 16 lack primary modality category",
+        "notes": "UI discovery category omissions noted in Issue #65",
     },
     {
         "metric": "Suspected truncated slugs",
         "historical": "28",
         "current_key": "truncated_slugs_count",
         "format": "count",
-        "notes": "Slugs truncated at 45-character ceiling",
+        "notes": "Truncated slugs noted in Issue #65",
     },
     {
         "metric": "Files lacking trailing newline",
         "historical": "27",
         "current_key": "missing_trailing_newline_count",
         "format": "count",
-        "notes": "39 files in data/datasets/ lack trailing newline",
+        "notes": "Files lacking trailing newline noted in Issue #65",
     },
     {
         "metric": "Plain HTTP URLs (occurrences)",
         "historical": "45 (23 unique)",
         "current_key": "plain_http_urls_summary",
         "format": "string",
-        "notes": "78 occurrences (42 unique) across all JSON strings",
+        "notes": "Structured field HTTP URLs noted in Issue #65",
     },
     {
         "metric": "Language metadata (NLP+Audio)",
         "historical": "175 / 313 (55.9%)",
         "current_key": "languages_nlp_audio_summary",
         "format": "string",
-        "notes": "175 with languages out of 313 NLP+Audio records",
+        "notes": "Language coverage ratio reported in Issue #65",
     },
     {
         "metric": "Dataset size metadata coverage",
         "historical": "468 / 875 (53.5%)",
         "current_key": "size_coverage_summary",
         "format": "string",
-        "notes": "468 records declare size (374 with bytes/amount, 94 unspecified)",
+        "notes": "Size metadata coverage reported in Issue #65",
     },
     {
         "metric": "Sample count raw sum mismatch",
         "historical": "29",
         "current_key": "raw_arithmetic_discrepancy_count",
         "format": "count",
-        "notes": "Legacy records with unspecified completeness/overlap; 0 actionable errors",
+        "notes": "Split sum discrepancies reported in Issue #65",
     },
     {
         "metric": "Non-commercial verified_open",
         "historical": "2",
         "current_key": "non_comm_verified_open_count",
         "format": "count",
-        "notes": "anli & sciq: CC-BY-NC with status verified_open",
+        "notes": "anli & sciq CC-BY-NC classified as verified_open in Issue #65",
     },
     {
         "metric": "Permissive SPDX commercial unknown",
         "historical": "11",
         "current_key": "permissive_unknown_comm_count",
         "format": "count",
-        "notes": "Permissive SPDX with commercial_use: unknown (review candidates)",
+        "notes": "Permissive SPDX with commercial_use unknown in Issue #65",
     },
     {
         "metric": "Source-link rotation cycle",
         "historical": "~52 weeks",
         "current_key": "source_monitor_cycle_weeks",
         "format": "string",
-        "notes": "50 URLs/week over 2,617 unique URLs = 52.34 weeks",
+        "notes": "Full rotation cycle estimate reported in Issue #65",
     },
 ]
 
@@ -772,7 +772,7 @@ def collect_sample_count_metrics(records: dict[str, dict[str, Any]]) -> tuple[di
                 status="measured",
                 title=f"{len(raw_arithmetic_discrepancies)} raw arithmetic partition discrepancy/discrepancies",
                 description=(
-                    "Datasets where total != sum(splits.values()). All 29 legacy instances declare unspecified partition "
+                    f"Datasets where total != sum(splits.values()). {len(raw_arithmetic_discrepancies)} instance(s) declare unspecified partition "
                     "completeness/overlap rather than contradictory complete+disjoint claims, so none fail CI validation."
                 ),
                 affected_records=[d["id"] for d in raw_arithmetic_discrepancies],
@@ -1538,30 +1538,30 @@ def build_historical_comparison(health_report: dict[str, Any]) -> list[dict[str,
     src = health_report.get("source_monitoring", {})
 
     value_lookup: dict[str, Any] = {
-        "catalog_dataset_count": str(cat.get("total_records", "875")),
+        "catalog_dataset_count": str(cat.get("total_records", 0)),
         "python_tests_count": str(tst.get("passed", "240") if tst.get("passed") is not None else "240"),
         "python_test_duration": (
             f"{tst.get('duration_seconds')} s"
             if tst.get("duration_seconds") is not None
             else "Skipped in fast default"
         ),
-        "catalog_raw_size": f"{art.get('catalog_json', {}).get('size_mb_decimal', 3.39)} MB",
-        "catalog_gzip_size": f"{art.get('catalog_json', {}).get('gzip_kb_decimal', 727.0)} KB",
-        "audit_reports_size": f"{art.get('audit_reports', {}).get('total_mb_decimal', 4.06)} MB",
-        "distinct_tasks": str(tax.get("distinct_tasks_count", 704)),
-        "singleton_tasks": str(tax.get("singleton_tasks_count", 447)),
-        "distinct_tags": f"{tax.get('distinct_tags_count', 1981):,}",
-        "singleton_tags": f"{tax.get('singleton_tags_count', 1407):,}",
-        "uncategorized_datasets_count": str(tax.get("uncategorized_datasets_count", 1)),
-        "truncated_slugs_count": str(fmt.get("suspected_truncated_slugs_count", 22)),
-        "missing_trailing_newline_count": str(fmt.get("missing_trailing_newline_count", 39)),
-        "plain_http_urls_summary": f"{fmt.get('plain_http_url_occurrences', 78)} ({fmt.get('unique_plain_http_urls', 42)} unique)",
-        "languages_nlp_audio_summary": f"{cat.get('nlp_audio_coverage', 175)} / {cat.get('nlp_audio_total', 313)} ({round(cat.get('nlp_audio_coverage', 175)/max(1, cat.get('nlp_audio_total', 313))*100, 1)}%)",
-        "size_coverage_summary": f"{cat.get('dataset_size_coverage', 468)} / {cat.get('total_records', 875)} ({round(cat.get('dataset_size_coverage', 468)/max(1, cat.get('total_records', 875))*100, 1)}%)",
-        "raw_arithmetic_discrepancy_count": str(sc.get("raw_arithmetic_discrepancy_count", 29)),
-        "non_comm_verified_open_count": "2",
-        "permissive_unknown_comm_count": str(lic.get("review_candidates_count", 11)),
-        "source_monitor_cycle_weeks": f"~{src.get('estimated_cycle_weeks', 52.34)} weeks",
+        "catalog_raw_size": f"{art.get('catalog_json', {}).get('size_mb_decimal', 0.0)} MB",
+        "catalog_gzip_size": f"{art.get('catalog_json', {}).get('gzip_kb_decimal', 0.0)} KB",
+        "audit_reports_size": f"{art.get('audit_reports', {}).get('total_mb_decimal', 0.0)} MB",
+        "distinct_tasks": str(tax.get("distinct_tasks_count", 0)),
+        "singleton_tasks": str(tax.get("singleton_tasks_count", 0)),
+        "distinct_tags": f"{tax.get('distinct_tags_count', 0):,}",
+        "singleton_tags": f"{tax.get('singleton_tags_count', 0):,}",
+        "uncategorized_datasets_count": str(tax.get("uncategorized_datasets_count", 0)),
+        "truncated_slugs_count": str(fmt.get("suspected_truncated_slugs_count", 0)),
+        "missing_trailing_newline_count": str(fmt.get("missing_trailing_newline_count", 0)),
+        "plain_http_urls_summary": f"{fmt.get('plain_http_url_occurrences', 0)} ({fmt.get('unique_plain_http_urls', 0)} unique)",
+        "languages_nlp_audio_summary": f"{cat.get('nlp_audio_coverage', 0)} / {cat.get('nlp_audio_total', 0)} ({round(cat.get('nlp_audio_coverage', 0)/max(1, cat.get('nlp_audio_total', 0))*100, 1)}%)",
+        "size_coverage_summary": f"{cat.get('dataset_size_coverage', 0)} / {cat.get('total_records', 0)} ({round(cat.get('dataset_size_coverage', 0)/max(1, cat.get('total_records', 0))*100, 1)}%)",
+        "raw_arithmetic_discrepancy_count": str(sc.get("raw_arithmetic_discrepancy_count", 0)),
+        "non_comm_verified_open_count": str(sum(1 for c in lic.get("review_candidates", []) if c.get("type") == "non_commercial_spdx_verified_open")),
+        "permissive_unknown_comm_count": str(lic.get("review_candidates_count", 0)),
+        "source_monitor_cycle_weeks": f"~{src.get('estimated_cycle_weeks', 0.0)} weeks",
     }
 
     comparison_rows = []
@@ -1730,6 +1730,21 @@ def render_markdown_report(report: dict[str, Any]) -> str:
     lines: list[str] = [
         "# OpenDatasets Repository Health Report",
         "",
+    ]
+
+    # Bounded budget fallback notification if report exceeded size limit
+    if report.get("budget_fallback", {}).get("budget_exceeded"):
+        fb = report["budget_fallback"]
+        lines.extend([
+            "> [!WARNING]",
+            f"> **Report Budget Exceeded**: The full diagnostic report ({fb['original_combined_bytes']:,} bytes) exceeded the free-tier budget of {fb['max_budget_bytes']:,} bytes.",
+            "> Detailed record listings have been compacted to preserve core repository health metrics:",
+        ])
+        for o in fb.get("omitted_details", []):
+            lines.append(f"> - {o}")
+        lines.extend(["", "---", ""])
+
+    lines.extend([
         "## Executive Summary",
         "",
         f"- **Repository:** `{repo['repository_name']}`",
@@ -1770,7 +1785,7 @@ def render_markdown_report(report: dict[str, Any]) -> str:
         "",
         "| License Status | Dataset Count | Percentage |",
         "| :--- | ---: | ---: |",
-    ]
+    ])
 
     for status, count in lic.get("status_distribution", {}).items():
         pct = round(count / max(1, cat["total_records"]) * 100, 1)
@@ -1913,6 +1928,14 @@ def render_markdown_report(report: dict[str, Any]) -> str:
     for row in history:
         lines.append(f"| {row['metric']} | {row['historical']} | {row['current']} | {row['difference']} | {row['notes']} |")
 
+    # Dynamic metrics for improvement candidates based on actual measurements
+    cat_mb = art.get("catalog_json", {}).get("size_mb_decimal", 0.0)
+    audits_mb = art.get("audit_reports", {}).get("total_mb_decimal", 0.0)
+    missing_newlines = fmt.get("missing_trailing_newline_count", 0)
+    unique_http = fmt.get("unique_plain_http_urls", 0)
+    singleton_tasks = tax.get("singleton_tasks_count", 0)
+    lic_candidates = lic.get("review_candidates_count", 0)
+
     lines.extend([
         "",
         "---",
@@ -1921,10 +1944,10 @@ def render_markdown_report(report: dict[str, Any]) -> str:
         "",
         "Based on collected measurements, candidates are sequenced across roadmap phases:",
         "",
-        "1. **Phase 1 (Artifacts & Tests):** Untrack `frontend/public/data/catalog.json` (3.39 MB), archive `docs/audits/` (4.06 MB), decouple tests from production catalog count.",
+        f"1. **Phase 1 (Artifacts & Tests):** Untrack `frontend/public/data/catalog.json` ({cat_mb} MB), archive `docs/audits/` ({audits_mb} MB), decouple tests from production catalog count.",
         "2. **Phase 2 (Validator & Ratchet):** Implement mandatory warnings in CI, enforce `sample_count.unit` requirement, establish `data/legacy-baseline.json` ratchet.",
         "3. **Phase 3 (CI Speed & Hardening):** Candidate blocking for semantic duplicates (< 30s pytest), add concurrency controls, timeout-minutes, and Dependabot.",
-        "4. **Phase 4 (Legacy Data Migration):** Normalize 39 missing newlines, verify 42 plain HTTP URLs, harmonize 447 singleton tasks, resolve 11 license review candidates.",
+        f"4. **Phase 4 (Legacy Data Migration):** Normalize {missing_newlines} missing newlines, verify {unique_http} plain HTTP URLs, harmonize {singleton_tasks} singleton tasks, resolve {lic_candidates} license review candidates.",
         "5. **Phase 6 (Automation & Monitoring):** Increase link monitor batch size to 250 (cycle <= 8 weeks), automate rolling health issue creation.",
         "6. **Phase 7 (Frontend, SEO & A11y):** Implement per-route document titles, sitemap.xml, robots.txt, Schema.org JSON-LD, and axe-core accessibility gates.",
         "",
@@ -1939,6 +1962,80 @@ def render_markdown_report(report: dict[str, Any]) -> str:
 
     lines.append("")
     return "\n".join(lines)
+
+
+# ---------------------------------------------------------------------------
+# Report Budget Compaction Fallback
+# ---------------------------------------------------------------------------
+
+def compact_report_for_budget(
+    report: dict[str, Any],
+    original_combined_bytes: int,
+    max_budget_bytes: int,
+) -> dict[str, Any]:
+    """Create a valid, compacted health report when rendered reports exceed byte budget."""
+    compacted = json.loads(json.dumps(report))
+    omitted = []
+
+    # 1. Truncate affected_records in findings
+    truncated_findings_count = 0
+    for f in compacted.get("findings", []):
+        aff = f.get("affected_records", [])
+        if len(aff) > 3:
+            f["affected_records"] = aff[:3] + [f"... and {len(aff) - 3} more records omitted for budget"]
+            truncated_findings_count += 1
+    if truncated_findings_count > 0:
+        omitted.append(f"Detailed affected_records truncated to top 3 items across {truncated_findings_count} finding(s)")
+
+    # 2. Omit detailed raw_discrepancies list in sample_counts (preserve count)
+    sc = compacted.get("sample_counts", {})
+    if sc.get("raw_discrepancies"):
+        count = len(sc["raw_discrepancies"])
+        omitted.append(f"List of {count} raw sample count discrepancies omitted from sample_counts (summary count preserved)")
+        sc["raw_discrepancies"] = []
+
+    # 3. Omit detailed review_candidates list in licenses (preserve count)
+    lic = compacted.get("licenses", {})
+    if lic.get("review_candidates"):
+        count = len(lic["review_candidates"])
+        omitted.append(f"List of {count} license review candidates omitted from licenses (summary count preserved)")
+        lic["review_candidates"] = []
+
+    # 4. Omit missing_trailing_newline_files list in formatting (preserve count)
+    fmt = compacted.get("formatting", {})
+    if fmt.get("missing_trailing_newline_files"):
+        count = len(fmt["missing_trailing_newline_files"])
+        omitted.append(f"List of {count} files lacking trailing newline omitted from formatting (summary count preserved)")
+        fmt["missing_trailing_newline_files"] = []
+
+    # 5. Omit suspected_truncated_slugs list in formatting (preserve count)
+    if fmt.get("suspected_truncated_slugs"):
+        count = len(fmt["suspected_truncated_slugs"])
+        omitted.append(f"List of {count} suspected truncated slugs omitted from formatting (summary count preserved)")
+        fmt["suspected_truncated_slugs"] = []
+
+    # 6. Omit catalog_count_dependent_assertions list in tests (preserve count)
+    tst = compacted.get("tests", {})
+    if tst.get("catalog_count_dependent_assertions"):
+        count = len(tst["catalog_count_dependent_assertions"])
+        omitted.append(f"List of {count} catalog-count-dependent test assertions omitted from tests (summary count preserved)")
+        tst["catalog_count_dependent_assertions"] = []
+
+    if not omitted:
+        omitted.append("Detailed record enumerations and diagnostic contexts compacted for report budget")
+
+    compacted["budget_fallback"] = {
+        "budget_exceeded": True,
+        "original_combined_bytes": original_combined_bytes,
+        "max_budget_bytes": max_budget_bytes,
+        "omitted_details": omitted,
+        "message": (
+            f"Full report size ({original_combined_bytes:,} bytes) exceeded the configured budget "
+            f"({max_budget_bytes:,} bytes). Detailed record listings have been omitted to preserve key health metrics."
+        ),
+    }
+
+    return compacted
 
 
 # ---------------------------------------------------------------------------
@@ -1990,6 +2087,12 @@ def main(argv: list[str] | None = None) -> int:
         help="Execute pytest with --durations=20 to benchmark slowest test execution",
     )
     parser.add_argument(
+        "--max-report-bytes",
+        type=int,
+        default=2097152,
+        help="Maximum combined byte size for generated JSON and Markdown reports before triggering compact fallback (default: 2097152 / 2 MiB)",
+    )
+    parser.add_argument(
         "--quiet",
         action="store_true",
         help="Suppress console summary output (useful in scripting)",
@@ -1998,16 +2101,32 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     repo_root = args.repo_root.resolve()
 
-    report = build_health_report(
-        repo_root=repo_root,
-        run_validation=args.run_validation,
-        run_tests=args.run_tests,
-        benchmark=args.benchmark,
-    )
+    try:
+        report = build_health_report(
+            repo_root=repo_root,
+            run_validation=args.run_validation,
+            run_tests=args.run_tests,
+            benchmark=args.benchmark,
+        )
+    except Exception as exc:
+        print(f"Fatal error while building repository health report: {exc}", file=sys.stderr)
+        return 2
 
     json_str = render_json_report(report)
     md_str = render_markdown_report(report)
+    combined_bytes = len(json_str.encode("utf-8")) + len(md_str.encode("utf-8"))
 
+    # Apply compact fallback if rendered reports exceed configured byte budget
+    if combined_bytes > args.max_report_bytes:
+        compact_report = compact_report_for_budget(
+            report=report,
+            original_combined_bytes=combined_bytes,
+            max_budget_bytes=args.max_report_bytes,
+        )
+        json_str = render_json_report(compact_report)
+        md_str = render_markdown_report(compact_report)
+
+    # Always write outputs to preserve diagnostic artifacts even if requested checks fail
     if args.json_output:
         args.json_output.parent.mkdir(parents=True, exist_ok=True)
         args.json_output.write_text(json_str, encoding="utf-8")
@@ -2031,6 +2150,30 @@ def main(argv: list[str] | None = None) -> int:
             print(f"OpenDatasets Health Summary: {cat['total_records']} records, {len(findings)} findings")
             print(f"Commit: {repo['commit_sha'][:8]} | Branch: {repo['branch']}")
             print(f"Catalog JSON: {report['generated_artifacts']['catalog_json']['size_mb_decimal']} MB ({report['generated_artifacts']['catalog_json']['gzip_kb_decimal']} KB gzip)")
+
+    # Execution status evaluation:
+    # Explicitly requested validation or test execution failures must return non-zero exit code
+    validation_failed = False
+    if args.run_validation:
+        val_status = report.get("validation", {}).get("status")
+        if val_status != "passed":
+            validation_failed = True
+
+    tests_failed = False
+    if args.run_tests or args.benchmark:
+        tst_status = report.get("tests", {}).get("status")
+        if tst_status != "passed":
+            tests_failed = True
+
+    if validation_failed or tests_failed:
+        reasons = []
+        if validation_failed:
+            reasons.append("requested dataset validation failed")
+        if tests_failed:
+            reasons.append("requested automated test execution failed")
+        if not args.quiet:
+            print(f"Repository health check failed: {', '.join(reasons)}", file=sys.stderr)
+        return 1
 
     return 0
 

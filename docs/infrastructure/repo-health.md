@@ -44,9 +44,21 @@ python3 scripts/repo_health.py --run-tests
 # Include full pytest benchmark reporting slowest tests (--durations=20)
 python3 scripts/repo_health.py --benchmark
 
+# Specify custom report byte budget threshold (triggers bounded compact fallback)
+python3 scripts/repo_health.py --max-report-bytes 2097152
+
 # Target an alternative repository root (supports temporary fixture testing)
 python3 scripts/repo_health.py --repo-root /path/to/repo
 ```
+
+### Exit-Code Semantics
+
+`scripts/repo_health.py` implements explicit execution-status semantics:
+- `0`: Successful health report generation where all requested checks succeed. Ordinary catalog findings and manual-review candidates do **not** fail the CLI.
+- `1`: Explicitly requested checks failed (either `--run-validation` detected schema errors or `--run-tests` / `--benchmark` detected test failures).
+- `2`: Fatal execution error or unhandled runtime failure.
+
+**Diagnostic Report Preservation:** When requested checks fail, diagnostic reports (`--json-output` and `--markdown-output`) are fully generated and saved to disk **before** the script exits with code 1. This ensures CI workflows can always publish diagnostic summaries and upload artifacts regardless of job failure status.
 
 ---
 
@@ -136,10 +148,12 @@ OpenDatasets relies on GitHub free-tier hosting and GitHub Pages. The health mon
 1. **Zero Generated Report Commits:** Health reports are never committed to Git. They are stored temporarily in `$RUNNER_TEMP` and uploaded as CI artifacts.
 2. **Zero Additional GitHub Pages Storage:** Generated reports are never written to `frontend/public/` or `dist/`, keeping deployment bundles slim.
 3. **Seven-Day CI Artifact Retention:** All workflow run artifacts use `retention-days: 7` to conserve GitHub Actions storage quota.
-4. **2 MB Combined Report Budget:** A strict CI gate verifies that `repo-health.json` + `repo-health.md` <= 2,097,152 bytes (actual size is ~55 KB).
-5. **Cadence Partitioning:** Lightweight offline health audits run daily (Mon-Sat, ~1.5s runtime). Heavy pytest duration benchmarks run only weekly on Sundays.
-6. **Concurrency Control:** Workflows use `concurrency: group: repo-health, cancel-in-progress: true` to prevent redundant runner execution.
-7. **Timeout Limits:** All health jobs enforce an explicit 15-minute timeout.
+4. **2 MB Combined Report Budget & Compact Fallback:** A strict CI gate verifies that `repo-health.json` + `repo-health.md` <= 2,097,152 bytes (actual size is ~55 KB). If the combined report ever exceeds the budget, `scripts/repo_health.py` automatically generates a valid compact fallback JSON and Markdown report with explicit omission tracking (`budget_fallback` metadata) rather than truncating into invalid output.
+5. **Dependency Consistency:** The nightly workflow uses the repository-defined `requirements-dev.txt` (`cache: pip`) in Python 3.11, matching standard CI environments and preventing dependency drift.
+6. **Cadence Partitioning:** Lightweight offline health audits run daily (Mon-Sat, ~0.43s runtime). Heavy pytest duration benchmarks run only weekly on Sundays.
+7. **Concurrency Control:** Workflows use `concurrency: group: repo-health, cancel-in-progress: true` to prevent redundant runner execution.
+8. **Timeout Limits:** All health jobs enforce an explicit 15-minute timeout.
+9. **Failure Propagation Without Artifact Loss:** CI steps use `continue-on-error: true` on health script execution combined with `if: always()` on summary/artifact publishing and final failure propagation, guaranteeing that failed runs upload full diagnostic reports while properly marking the GitHub Actions run as failed.
 
 ---
 
