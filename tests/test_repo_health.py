@@ -1,0 +1,557 @@
+"""Unit and integration tests for scripts/repo_health.py (Phase 0).
+
+Ensures robust metric collection, license review candidate detection, partition
+arithmetic classification, formatting detection, artifact calculation, and CLI reporting
+across temporary fixture repositories.
+
+Does NOT hard-code production catalog counts to maintain robustness under future expansions.
+Does NOT require network access or live DOI resolution.
+"""
+
+from __future__ import annotations
+
+import gzip
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+from typing import Any
+from unittest.mock import MagicMock, patch
+
+import pytest
+
+from scripts.repo_health import (
+    HISTORICAL_BASELINE,
+    SCHEMA_VERSION,
+    Finding,
+    build_health_report,
+    build_historical_comparison,
+    check_frontend_matches_category,
+    collect_automation_metrics,
+    collect_catalog_health,
+    collect_formatting_metrics,
+    collect_frontend_metrics,
+    collect_generated_artifact_metrics,
+    collect_license_metrics,
+    collect_repository_metadata,
+    collect_sample_count_metrics,
+    collect_source_monitoring_metrics,
+    collect_taxonomy_metrics,
+    collect_test_metrics,
+    main,
+    render_json_report,
+    render_markdown_report,
+)
+
+
+# ---------------------------------------------------------------------------
+# Fixture Helpers
+# ---------------------------------------------------------------------------
+
+def create_mock_dataset(
+    dataset_id: str,
+    slug: str | None = None,
+    name: str | None = None,
+    modalities: list[str] | None = None,
+    tasks: list[str] | None = None,
+    tags: list[str] | None = None,
+    license_status: str = "verified_open",
+    license_spdx: str = "MIT",
+    commercial_use: str = "allowed",
+    sample_total: int = 1000,
+    sample_unit: str = "samples",
+    splits: dict[str, int] | None = None,
+    partition_completeness: str = "complete",
+    partition_overlap: str = "disjoint",
+    missing_newline: bool = False,
+    homepage_url: str = "https://example.org/dataset",
+) -> dict[str, Any]:
+    """Generate a valid schema-compliant dataset dictionary for testing."""
+    if slug is None:
+        slug = dataset_id
+    if name is None:
+        name = f"Dataset {dataset_id}"
+    if modalities is None:
+        modalities = ["vision"]
+    if tasks is None:
+        tasks = ["image-classification"]
+    if tags is None:
+        tags = ["benchmark", "cv"]
+    if splits is None:
+        splits = {"train": 800, "test": 200}
+
+    return {
+        "schema_version": "1.0",
+        "id": dataset_id,
+        "slug": slug,
+        "name": name,
+        "description": f"Standard test description for {dataset_id}.",
+        "homepage_url": homepage_url,
+        "publisher": {
+            "name": "Test Lab",
+            "type": "academic",
+            "url": "https://example.org/lab",
+        },
+        "modalities": modalities,
+        "tasks": tasks,
+        "tags": tags,
+        "license": {
+            "name": "MIT License",
+            "status": license_status,
+            "spdx_id": license_spdx,
+            "commercial_use": commercial_use,
+            "url": "https://opensource.org/licenses/MIT",
+        },
+        "source_references": [
+            {
+                "url": "https://example.org/download",
+                "kind": "download",
+            }
+        ],
+        "verification": {
+            "status": "verified",
+            "date": "2026-01-01",
+            "verified_by": "test-curator",
+        },
+        "citation": {
+            "paper_title": f"Paper for {dataset_id}",
+            "paper_url": "https://example.org/paper",
+            "doi": "10.1000/182",
+        },
+        "dates": {
+            "published": "2024-01-01",
+        },
+        "sample_count": {
+            "total": sample_total,
+            "unit": sample_unit,
+            "splits": splits,
+            "partition_completeness": partition_completeness,
+            "partition_overlap": partition_overlap,
+        },
+        "size": {
+            "amount": 100,
+            "unit": "MB",
+        },
+    }
+
+
+def write_fixture_repo(tmp_path: Path, datasets: list[dict[str, Any]], trailing_newlines: dict[str, bool] | None = None) -> Path:
+    """Populate a temporary directory with repository layout and dataset JSON files."""
+    datasets_dir = tmp_path / "data" / "datasets"
+    datasets_dir.mkdir(parents=True, exist_ok=True)
+
+    if trailing_newlines is None:
+        trailing_newlines = {}
+
+    for idx, d in enumerate(datasets):
+        did = d["id"]
+        # Use unique filenames even if dataset IDs collide
+        file_path = datasets_dir / f"{did}_{idx}.json"
+        content = json.dumps(d, indent=2)
+        has_newline = trailing_newlines.get(did, True)
+        if has_newline:
+            content += "\n"
+        with open(file_path, "wb") as f:
+            f.write(content.encode("utf-8"))
+
+    # Create dummy catalog.json
+    cat_dir = tmp_path / "frontend" / "public" / "data"
+    cat_dir.mkdir(parents=True, exist_ok=True)
+    cat_path = cat_dir / "catalog.json"
+    cat_path.write_text(json.dumps(datasets, indent=2) + "\n", encoding="utf-8")
+
+    # Create dummy workflows
+    wf_dir = tmp_path / ".github" / "workflows"
+    wf_dir.mkdir(parents=True, exist_ok=True)
+    (wf_dir / "ci.yml").write_text("name: CI\non: push\njobs:\n  build:\n    runs-on: ubuntu-latest\n")
+
+    return tmp_path
+
+
+# ---------------------------------------------------------------------------
+# Test Cases
+# ---------------------------------------------------------------------------
+
+def test_empty_repository(tmp_path: Path):
+    """Test health reporting on an empty directory structure."""
+    report = build_health_report(tmp_path)
+    assert report["report_schema_version"] == SCHEMA_VERSION
+    assert report["catalog"]["total_records"] == 0
+    assert report["catalog"]["parsed_records"] == 0
+    assert report["sample_counts"]["sample_count_records"] == 0
+    assert report["taxonomy"]["distinct_tasks_count"] == 0
+
+
+def test_valid_dataset_parsing(tmp_path: Path):
+    """Test standard parsing and metric aggregation across valid fixture datasets."""
+    d1 = create_mock_dataset("dataset-a", modalities=["vision"], tasks=["image-classification"])
+    d2 = create_mock_dataset("dataset-b", modalities=["nlp"], tasks=["text-generation"], tags=["llm"])
+    repo_dir = write_fixture_repo(tmp_path, [d1, d2])
+
+    metrics, findings, records = collect_catalog_health(repo_dir)
+    assert metrics["total_records"] == 2
+    assert metrics["parsed_records"] == 2
+    assert metrics["invalid_json_records"] == 0
+    assert metrics["duplicate_exact_ids"] == 0
+    assert metrics["citation_coverage"] == 2
+    assert metrics["doi_coverage"] == 2
+    assert metrics["publication_date_coverage"] == 2
+    assert len(findings) == 0
+
+
+def test_invalid_json_handling(tmp_path: Path):
+    """Test detection and finding creation for malformed JSON files."""
+    datasets_dir = tmp_path / "data" / "datasets"
+    datasets_dir.mkdir(parents=True, exist_ok=True)
+    (datasets_dir / "valid.json").write_text('{"id": "valid"}\n')
+    (datasets_dir / "malformed.json").write_text('{"id": "malformed",\n')  # trailing comma, syntax error
+
+    metrics, findings, records = collect_catalog_health(tmp_path)
+    assert metrics["total_records"] == 2
+    assert metrics["parsed_records"] == 1
+    assert metrics["invalid_json_records"] == 1
+    assert "malformed.json" in metrics["invalid_json_files"]
+    assert any(f.id == "FINDING-CAT-001" and f.severity == "error" for f in findings)
+
+
+def test_duplicate_id_and_slug_detection(tmp_path: Path):
+    """Test collision detection on exact and case/punctuation normalized IDs."""
+    d1 = create_mock_dataset("dataset_one", slug="dataset-one")
+    d2 = create_mock_dataset("dataset-one", slug="dataset_one")  # Normalized collision with d1
+    d3 = create_mock_dataset("dataset_one", slug="dataset-three")  # Exact ID collision with d1
+    repo_dir = write_fixture_repo(tmp_path, [d1, d2, d3])
+
+    metrics, findings, _ = collect_catalog_health(repo_dir)
+    assert metrics["total_records"] == 3
+    assert metrics["duplicate_exact_ids"] >= 1
+    assert metrics["duplicate_normalized_ids"] >= 1
+    assert any(f.id == "FINDING-CAT-002" for f in findings)
+
+
+def test_missing_required_fields(tmp_path: Path):
+    """Test flagging of records that omit core schema v1 required fields."""
+    d = create_mock_dataset("incomplete-dataset")
+    del d["description"]
+    del d["homepage_url"]
+    repo_dir = write_fixture_repo(tmp_path, [d])
+
+    metrics, findings, _ = collect_catalog_health(repo_dir)
+    assert "description" in metrics["missing_required_fields"]
+    assert "homepage_url" in metrics["missing_required_fields"]
+    assert any("DESCRIPTION" in f.id for f in findings)
+
+
+def test_license_consistency_classification(tmp_path: Path):
+    """Test classification of verified_open vs non-commercial vs permissive unknown."""
+    # 1. Non-commercial SPDX classified as verified_open (review candidate)
+    d1 = create_mock_dataset("anli-test", license_status="verified_open", license_spdx="CC-BY-NC-4.0", commercial_use="forbidden")
+    # 2. Permissive SPDX with unknown commercial use (review candidate)
+    d2 = create_mock_dataset("desed-test", license_status="custom_permissive", license_spdx="MIT", commercial_use="unknown")
+    # 3. Clean permissive open
+    d3 = create_mock_dataset("clean-open", license_status="verified_open", license_spdx="Apache-2.0", commercial_use="allowed")
+
+    records = {"d1.json": d1, "d2.json": d2, "d3.json": d3}
+    lic_metrics, findings = collect_license_metrics(records)
+
+    assert lic_metrics["spdx_identifier_coverage"] == 3
+    assert lic_metrics["missing_spdx_count"] == 0
+    assert lic_metrics["unknown_commercial_use_count"] == 1
+    assert lic_metrics["review_candidates_count"] == 2
+
+    types = [c["type"] for c in lic_metrics["review_candidates"]]
+    assert "non_commercial_spdx_verified_open" in types
+    assert "permissive_spdx_commercial_unknown" in types
+    assert any(f.id == "FINDING-LIC-001" and f.status == "review_required" for f in findings)
+
+
+def test_sample_count_partition_consistency(tmp_path: Path):
+    """Test distinguishing raw arithmetic discrepancies vs actionable complete+disjoint errors."""
+    # Case 1: Complete and disjoint with exact sum match -> PASS
+    d1 = create_mock_dataset(
+        "exact-match",
+        sample_total=1000,
+        splits={"train": 800, "test": 200},
+        partition_completeness="complete",
+        partition_overlap="disjoint",
+    )
+    # Case 2: Unspecified completeness/overlap with mismatch -> Raw discrepancy, NOT hard error
+    d2 = create_mock_dataset(
+        "legacy-unspecified-mismatch",
+        sample_total=1000,
+        splits={"train": 700, "test": 200},
+        partition_completeness="unspecified",
+        partition_overlap="unspecified",
+    )
+    # Case 3: Complete and disjoint with mismatch -> ACTIONABLE HARD ERROR
+    d3 = create_mock_dataset(
+        "actionable-contradiction",
+        sample_total=1000,
+        splits={"train": 800, "test": 150},
+        partition_completeness="complete",
+        partition_overlap="disjoint",
+    )
+    # Case 4: Missing unit
+    d4 = create_mock_dataset("missing-unit", sample_unit="")
+
+    records = {"d1.json": d1, "d2.json": d2, "d3.json": d3, "d4.json": d4}
+    sc_metrics, findings = collect_sample_count_metrics(records)
+
+    assert sc_metrics["sample_count_records"] == 4
+    assert sc_metrics["missing_unit_count"] == 1
+    assert sc_metrics["raw_arithmetic_discrepancy_count"] == 2  # d2 and d3
+    assert sc_metrics["actionable_consistency_concerns"] == 1    # d3 only
+
+    finding_ids = [f.id for f in findings]
+    assert "FINDING-SC-001" in finding_ids  # raw discrepancy info
+    assert "FINDING-SC-002" in finding_ids  # missing unit warning
+    assert "FINDING-SC-003" in finding_ids  # actionable error
+
+
+def test_taxonomy_singletons_and_punctuation_duplicates():
+    """Test singleton counting and detection of punctuation-variant taxonomy tags."""
+    # qa appears in d1 and d2 (count 2), common-task appears in d1 and d3 (count 2)
+    # singleton-task appears only in d3 (count 1)
+    d1 = create_mock_dataset("d1", tasks=["multi-class-classification", "qa", "common-task"], tags=["multi-channel-audio", "shared-tag"])
+    d2 = create_mock_dataset("d2", tasks=["multiclass-classification", "qa"], tags=["multichannel-audio", "shared-tag"])
+    d3 = create_mock_dataset("d3", tasks=["singleton-task", "common-task"], tags=["singleton-tag", "shared-tag"])
+
+    records = {"d1.json": d1, "d2.json": d2, "d3.json": d3}
+    tax_metrics, findings = collect_taxonomy_metrics(records)
+
+    assert tax_metrics["distinct_tasks_count"] == 5
+    # singletons are: multi-class-classification (1), multiclass-classification (1), singleton-task (1) -> 3 singletons
+    assert tax_metrics["singleton_tasks_count"] == 3
+    # singletons tags are: multi-channel-audio (1), multichannel-audio (1), singleton-tag (1) -> 3 singletons
+    assert tax_metrics["singleton_tags_count"] == 3
+
+    # Punctuation duplicate candidates
+    assert "multiclassclassification" in tax_metrics["punctuation_duplicate_tasks"]
+    assert "multichannelaudio" in tax_metrics["punctuation_duplicate_tags"]
+
+
+def test_frontend_category_matching():
+    """Test mapping of datasets to frontend research discovery categories."""
+    cv_set = create_mock_dataset("cv-set", modalities=["vision"])
+    nlp_set = create_mock_dataset("nlp-set", modalities=["nlp"])
+    audio_set = create_mock_dataset("audio-set", modalities=["audio"])
+    tabular_set = create_mock_dataset("tab-set", modalities=["tabular"])
+    multi_set = create_mock_dataset("multi-set", modalities=["multimodal"])
+    bench_set = create_mock_dataset("bench-set", modalities=["other"], tags=["ogb-benchmark"], tasks=["evaluation"])
+    uncat_set = create_mock_dataset("uncat-set", modalities=["other"], tags=["music"], tasks=["generation"])
+
+    assert check_frontend_matches_category(cv_set, "computer-vision") is True
+    assert check_frontend_matches_category(nlp_set, "natural-language-processing") is True
+    assert check_frontend_matches_category(audio_set, "audio-speech") is True
+    assert check_frontend_matches_category(tabular_set, "tabular-time-series") is True
+    assert check_frontend_matches_category(multi_set, "multimodal-generative") is True
+    assert check_frontend_matches_category(bench_set, "evaluation-benchmarks") is True
+    assert check_frontend_matches_category(uncat_set, "computer-vision") is False
+    assert check_frontend_matches_category(uncat_set, "evaluation-benchmarks") is False
+
+    records = {"uncat.json": uncat_set, "cv.json": cv_set}
+    tax_metrics, findings = collect_taxonomy_metrics(records)
+    assert tax_metrics["uncategorized_datasets_count"] == 1
+    assert "uncat-set" in tax_metrics["uncategorized_datasets"]
+    assert any(f.id == "FINDING-TAX-001" for f in findings)
+
+
+def test_formatting_metrics_and_http_urls(tmp_path: Path):
+    """Test detection of missing trailing newlines, plain HTTP URLs, and 45-character slugs."""
+    # d1 has trailing newline, https URLs
+    d1 = create_mock_dataset("d1", homepage_url="https://secure.example.org")
+    # d2 lacks trailing newline, has plain http URL, and 45-character slug
+    long_slug = "a" * 45
+    d2 = create_mock_dataset("d2", slug=long_slug, homepage_url="http://insecure.example.org/dataset")
+
+    repo_dir = write_fixture_repo(tmp_path, [d1, d2], trailing_newlines={"d1": True, "d2": False})
+    records = {"d1.json": d1, "d2.json": d2}
+
+    fmt_metrics, findings = collect_formatting_metrics(repo_dir, records)
+    assert fmt_metrics["missing_trailing_newline_count"] == 1
+    assert any(fn.startswith("d2") for fn in fmt_metrics["missing_trailing_newline_files"])
+    assert fmt_metrics["plain_http_url_occurrences"] >= 1
+    assert fmt_metrics["suspected_truncated_slugs_count"] == 1
+    assert any(f.id == "FINDING-FMT-001" for f in findings)
+    assert any(f.id == "FINDING-FMT-002" for f in findings)
+    assert any(f.id == "FINDING-FMT-003" for f in findings)
+
+
+def test_generated_artifact_metrics(tmp_path: Path):
+    """Test raw size, deterministic gzip compression, and SHA-256 calculation."""
+    cat_dir = tmp_path / "frontend" / "public" / "data"
+    cat_dir.mkdir(parents=True, exist_ok=True)
+    test_json = json.dumps([{"id": "item1"}, {"id": "item2"}], indent=2)
+    cat_file = cat_dir / "catalog.json"
+    cat_file.write_text(test_json, encoding="utf-8")
+
+    art_metrics, findings = collect_generated_artifact_metrics(tmp_path)
+    cat_res = art_metrics["catalog_json"]
+    assert cat_res["exists"] is True
+    assert cat_res["size_bytes"] == len(test_json.encode("utf-8"))
+    assert cat_res["gzip_bytes"] > 0
+    assert len(cat_res["sha256"]) == 64
+
+    # Verify deterministic gzip output
+    deterministic_gz = gzip.compress(test_json.encode("utf-8"), compresslevel=9, mtime=0)
+    assert cat_res["gzip_bytes"] == len(deterministic_gz)
+
+
+def test_source_monitoring_cycle_calculation():
+    """Test URL extraction and monitoring cycle calculation based on batch size 50."""
+    d1 = create_mock_dataset(
+        "d1",
+        homepage_url="https://example.org/home1",
+    )
+    d1["source_references"] = [
+        {"url": "https://example.org/src1"},
+        {"url": "https://doi.org/10.1000/1"},
+    ]
+    records = {"d1.json": d1}
+
+    src_metrics, findings = collect_source_monitoring_metrics(Path("/nonexistent"), records)
+    assert src_metrics["unique_urls_count"] >= 3
+    assert src_metrics["batch_size"] == 50
+    assert src_metrics["frequency"] == "weekly"
+    assert src_metrics["estimated_cycle_weeks"] == round(src_metrics["unique_urls_count"] / 50, 2)
+
+
+def test_historical_comparison_builder():
+    """Test alignment of historical Issue #65 numbers with report metrics."""
+    mock_report = {
+        "catalog": {"total_records": 875},
+        "licenses": {"review_candidates_count": 11},
+        "sample_counts": {"raw_arithmetic_discrepancy_count": 29},
+        "taxonomy": {
+            "distinct_tasks_count": 704,
+            "singleton_tasks_count": 447,
+            "distinct_tags_count": 1981,
+            "singleton_tags_count": 1407,
+            "uncategorized_datasets_count": 1,
+        },
+        "formatting": {
+            "suspected_truncated_slugs_count": 22,
+            "missing_trailing_newline_count": 39,
+            "plain_http_url_occurrences": 78,
+            "unique_plain_http_urls": 42,
+        },
+        "generated_artifacts": {
+            "catalog_json": {"size_mb_decimal": 3.39, "gzip_kb_decimal": 727.0},
+            "audit_reports": {"total_mb_decimal": 4.06},
+        },
+        "tests": {"passed": 240, "duration_seconds": None},
+        "source_monitoring": {"estimated_cycle_weeks": 52.34},
+    }
+
+    rows = build_historical_comparison(mock_report)
+    assert len(rows) == len(HISTORICAL_BASELINE)
+    lookup = {r["metric"]: r for r in rows}
+
+    assert lookup["Catalog dataset count"]["current"] == "875"
+    assert lookup["Catalog dataset count"]["difference"] == "0"
+    assert lookup["Distinct taxonomy tasks"]["current"] == "704"
+    assert lookup["Distinct taxonomy tasks"]["difference"] == "0"
+    assert lookup["Sample count raw sum mismatch"]["current"] == "29"
+    assert lookup["Sample count raw sum mismatch"]["difference"] == "0"
+
+
+def test_json_and_markdown_rendering(tmp_path: Path):
+    """Test deterministic JSON serialization and Markdown section generation."""
+    d = create_mock_dataset("dataset-render")
+    repo_dir = write_fixture_repo(tmp_path, [d])
+
+    report = build_health_report(repo_dir)
+    json_output = render_json_report(report)
+    md_output = render_markdown_report(report)
+
+    # Validate JSON
+    parsed = json.loads(json_output)
+    assert parsed["report_schema_version"] == "1.0"
+    assert parsed["catalog"]["total_records"] == 1
+    assert "findings" in parsed
+    assert "limitations" in parsed
+
+    # Validate Markdown sections
+    assert "# OpenDatasets Repository Health Report" in md_output
+    assert "## Executive Summary" in md_output
+    assert "## Catalog Health" in md_output
+    assert "## Licensing Consistency" in md_output
+    assert "## Sample-Count Consistency" in md_output
+    assert "## Taxonomy Health" in md_output
+    assert "## Formatting and Metadata Hygiene" in md_output
+    assert "## Generated Artifact Sizes" in md_output
+    assert "## Comparison With Issue #65 Historical Baseline" in md_output
+    assert "## Prioritized Improvement Candidates" in md_output
+    assert "## Limitations" in md_output
+
+
+def test_cli_execution_with_output_files(tmp_path: Path):
+    """Test CLI arguments handling, exit code, and file output generation."""
+    d = create_mock_dataset("cli-test")
+    repo_dir = write_fixture_repo(tmp_path, [d])
+
+    json_path = tmp_path / "out-health.json"
+    md_path = tmp_path / "out-health.md"
+
+    exit_code = main([
+        "--repo-root", str(repo_dir),
+        "--json-output", str(json_path),
+        "--markdown-output", str(md_path),
+        "--format", "summary",
+        "--quiet",
+    ])
+
+    assert exit_code == 0
+    assert json_path.exists()
+    assert md_path.exists()
+    assert json_path.stat().st_size > 0
+    assert md_path.stat().st_size > 0
+
+
+def test_test_metrics_skipped_by_default(tmp_path: Path):
+    """Ensure expensive test checks remain skipped by default."""
+    d = create_mock_dataset("skip-test")
+    repo_dir = write_fixture_repo(tmp_path, [d])
+
+    report = build_health_report(repo_dir, run_tests=False, benchmark=False)
+    assert report["tests"]["status"] == "skipped"
+    assert report["tests"]["passed"] is None
+    assert report["tests"]["duration_seconds"] is None
+
+
+def test_subprocess_failure_handling(tmp_path: Path):
+    """Ensure metric collectors gracefully survive failed external commands (e.g. git)."""
+    with patch("subprocess.run", side_effect=OSError("Command 'git' not found")):
+        meta = collect_repository_metadata(tmp_path)
+        assert meta["commit_sha"] == "unknown"
+        assert meta["working_tree_status"] == "unknown"
+
+
+def test_findings_deterministic_ordering(tmp_path: Path):
+    """Ensure all findings are deterministically sorted by finding ID."""
+    d1 = create_mock_dataset("d1", sample_unit="")  # FINDING-SC-002
+    d2 = create_mock_dataset("d2", license_spdx="CC-BY-NC-4.0", license_status="verified_open")  # FINDING-LIC-001
+    repo_dir = write_fixture_repo(tmp_path, [d1, d2])
+
+    report = build_health_report(repo_dir)
+    findings = report["findings"]
+    ids = [f["id"] for f in findings]
+    assert ids == sorted(ids)
+
+
+def test_validation_flag_execution(tmp_path: Path):
+    """Test optional validation execution via build_health_report."""
+    d = create_mock_dataset("val-test")
+    repo_dir = write_fixture_repo(tmp_path, [d])
+
+    with patch("subprocess.run") as mock_run:
+        mock_run.return_value = MagicMock(returncode=0, stdout="All datasets valid\n", stderr="")
+        # Create a mock validate_datasets.py
+        scripts_dir = repo_dir / "scripts"
+        scripts_dir.mkdir(parents=True, exist_ok=True)
+        (scripts_dir / "validate_datasets.py").write_text("# mock\n")
+
+        report = build_health_report(repo_dir, run_validation=True)
+        assert report["validation"]["status"] == "passed"
+        assert report["validation"]["returncode"] == 0
+
