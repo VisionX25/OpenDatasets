@@ -148,7 +148,11 @@ OpenDatasets relies on GitHub free-tier hosting and GitHub Pages. The health mon
 1. **Zero Generated Report Commits:** Health reports are never committed to Git. They are stored temporarily in `$RUNNER_TEMP` and uploaded as CI artifacts.
 2. **Zero Additional GitHub Pages Storage:** Generated reports are never written to `frontend/public/` or `dist/`, keeping deployment bundles slim.
 3. **Seven-Day CI Artifact Retention:** All workflow run artifacts use `retention-days: 7` to conserve GitHub Actions storage quota.
-4. **2 MB Combined Report Budget & Compact Fallback:** A strict CI gate verifies that `repo-health.json` + `repo-health.md` <= 2,097,152 bytes (actual size is ~55 KB). If the combined report ever exceeds the budget, `scripts/repo_health.py` automatically generates a valid compact fallback JSON and Markdown report with explicit omission tracking (`budget_fallback` metadata) rather than truncating into invalid output.
+4. **2 MB Combined Report Budget & Multi-Tier Fallback:** A strict CI gate verifies that `repo-health.json` + `repo-health.md` <= 2,097,152 bytes (actual size is ~55 KB).
+   - **Tier 1 (Compact Fallback):** If reports exceed budget, `scripts/repo_health.py` omits verbose record listings while calculating and preserving all summary counts, distributions, test health metrics, and execution statuses independently.
+   - **Tier 2 (Minimal Bounded Fallback):** If the compacted report still exceeds budget, UTF-8 size is recalculated and a minimal bounded diagnostic summary (~1.2 KB) is generated.
+   - **Tier 3 (Safe Suppression):** If even the minimal report exceeds budget, the tool fails safely (exit code 2) without writing oversized artifacts to disk.
+   - **CI Upload Protection:** The GitHub Actions artifact upload step verifies `steps.budget.outputs.within_budget == 'true'` and purges oversized files if budget verification fails, preventing oversized uploads while preserving full diagnostic uploads for ordinary validation/test failures.
 5. **Dependency Consistency:** The nightly workflow uses the repository-defined `requirements-dev.txt` (`cache: pip`) in Python 3.11, matching standard CI environments and preventing dependency drift.
 6. **Cadence Partitioning:** Lightweight offline health audits run daily (Mon-Sat, ~0.43s runtime). Heavy pytest duration benchmarks run only weekly on Sundays.
 7. **Concurrency Control:** Workflows use `concurrency: group: repo-health, cancel-in-progress: true` to prevent redundant runner execution.

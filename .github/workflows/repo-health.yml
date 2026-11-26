@@ -102,20 +102,25 @@ jobs:
         continue-on-error: true
 
       - name: Enforce report size budget (<= 2 MB)
+        id: budget
         if: always()
         run: |
+          MAX_BYTES=2097152 # 2 MB
           if [ -f "$RUNNER_TEMP/repo-health.json" ] && [ -f "$RUNNER_TEMP/repo-health.md" ]; then
             JSON_SIZE=$(stat -c%s "$RUNNER_TEMP/repo-health.json" 2>/dev/null || stat -f%z "$RUNNER_TEMP/repo-health.json")
             MD_SIZE=$(stat -c%s "$RUNNER_TEMP/repo-health.md" 2>/dev/null || stat -f%z "$RUNNER_TEMP/repo-health.md")
             TOTAL_BYTES=$((JSON_SIZE + MD_SIZE))
-            MAX_BYTES=2097152 # 2 MB
 
             echo "Report sizes: JSON=$JSON_SIZE bytes, Markdown=$MD_SIZE bytes, Total=$TOTAL_BYTES bytes (budget: $MAX_BYTES bytes)"
             if [ "$TOTAL_BYTES" -gt "$MAX_BYTES" ]; then
               echo "::error::Combined report size ($TOTAL_BYTES bytes) exceeds free-tier budget of 2 MB ($MAX_BYTES bytes)."
+              rm -f "$RUNNER_TEMP/repo-health.json" "$RUNNER_TEMP/repo-health.md"
+              echo "within_budget=false" >> "$GITHUB_OUTPUT"
               exit 1
             fi
+            echo "within_budget=true" >> "$GITHUB_OUTPUT"
           else
+            echo "within_budget=false" >> "$GITHUB_OUTPUT"
             echo "::warning::Health report files were not found in $RUNNER_TEMP"
           fi
 
@@ -127,7 +132,7 @@ jobs:
           fi
 
       - name: Upload health report artifacts (7-day retention)
-        if: always()
+        if: always() && steps.budget.outputs.within_budget == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: repo-health-${{ github.run_id }}
@@ -143,4 +148,8 @@ jobs:
           if [ "${{ steps.health.outputs.exit_code }}" != "0" ]; then
             echo "::error::Repository health check failed with exit code ${{ steps.health.outputs.exit_code }}."
             exit "${{ steps.health.outputs.exit_code }}"
+          fi
+          if [ "${{ steps.budget.outputs.within_budget }}" != "true" ] && [ -n "${{ steps.budget.outputs.within_budget }}" ]; then
+            echo "::error::Repository health check failed: report size budget exceeded."
+            exit 1
           fi

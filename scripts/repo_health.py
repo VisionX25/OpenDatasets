@@ -270,6 +270,11 @@ class Finding:
     description: str
     affected_records: list[str] = field(default_factory=list)
     recommended_action: str = ""
+    affected_records_count: int = 0
+
+    def __post_init__(self) -> None:
+        if not self.affected_records_count and self.affected_records:
+            self.affected_records_count = len(self.affected_records)
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -691,6 +696,8 @@ def collect_license_metrics(records: dict[str, dict[str, Any]]) -> tuple[dict[st
         "unknown_commercial_use_count": comm_dist.get("unknown", 0),
         "non_commercial_count": status_dist.get("verified_non_commercial", 0) + comm_dist.get("forbidden", 0),
         "review_candidates_count": len(review_candidates),
+        "non_commercial_spdx_verified_open_count": sum(1 for c in review_candidates if c.get("type") == "non_commercial_spdx_verified_open"),
+        "permissive_spdx_commercial_unknown_count": sum(1 for c in review_candidates if c.get("type") == "permissive_spdx_commercial_unknown"),
         "review_candidates": review_candidates,
     }, findings
 
@@ -966,6 +973,8 @@ def collect_taxonomy_metrics(records: dict[str, dict[str, Any]]) -> tuple[dict[s
         "top_tags": tag_counts.most_common(10),
         "punctuation_duplicate_tasks": punct_task_dups,
         "punctuation_duplicate_tags": punct_tag_dups,
+        "punctuation_duplicate_tasks_count": len(punct_task_dups),
+        "punctuation_duplicate_tags_count": len(punct_tag_dups),
         "modality_distribution": dict(modality_counts.most_common()),
         "category_distribution": dict(category_counts.most_common()),
         "uncategorized_datasets_count": len(uncategorized_frontend),
@@ -1539,7 +1548,11 @@ def build_historical_comparison(health_report: dict[str, Any]) -> list[dict[str,
 
     value_lookup: dict[str, Any] = {
         "catalog_dataset_count": str(cat.get("total_records", 0)),
-        "python_tests_count": str(tst.get("passed", "240") if tst.get("passed") is not None else "240"),
+        "python_tests_count": (
+            str(tst["passed"])
+            if tst.get("passed") is not None
+            else ("Skipped in fast default" if tst.get("status") == "skipped" else "Unavailable")
+        ),
         "python_test_duration": (
             f"{tst.get('duration_seconds')} s"
             if tst.get("duration_seconds") is not None
@@ -1559,8 +1572,16 @@ def build_historical_comparison(health_report: dict[str, Any]) -> list[dict[str,
         "languages_nlp_audio_summary": f"{cat.get('nlp_audio_coverage', 0)} / {cat.get('nlp_audio_total', 0)} ({round(cat.get('nlp_audio_coverage', 0)/max(1, cat.get('nlp_audio_total', 0))*100, 1)}%)",
         "size_coverage_summary": f"{cat.get('dataset_size_coverage', 0)} / {cat.get('total_records', 0)} ({round(cat.get('dataset_size_coverage', 0)/max(1, cat.get('total_records', 0))*100, 1)}%)",
         "raw_arithmetic_discrepancy_count": str(sc.get("raw_arithmetic_discrepancy_count", 0)),
-        "non_comm_verified_open_count": str(sum(1 for c in lic.get("review_candidates", []) if c.get("type") == "non_commercial_spdx_verified_open")),
-        "permissive_unknown_comm_count": str(lic.get("review_candidates_count", 0)),
+        "non_comm_verified_open_count": str(
+            lic.get("non_commercial_spdx_verified_open_count")
+            if lic.get("non_commercial_spdx_verified_open_count") is not None
+            else sum(1 for c in lic.get("review_candidates", []) if c.get("type") == "non_commercial_spdx_verified_open")
+        ),
+        "permissive_unknown_comm_count": str(
+            lic.get("permissive_spdx_commercial_unknown_count")
+            if lic.get("permissive_spdx_commercial_unknown_count") is not None
+            else sum(1 for c in lic.get("review_candidates", []) if c.get("type") == "permissive_spdx_commercial_unknown")
+        ),
         "source_monitor_cycle_weeks": f"~{src.get('estimated_cycle_weeks', 0.0)} weeks",
     }
 
@@ -1670,6 +1691,13 @@ def build_health_report(
     # Sort findings deterministically by ID
     all_findings.sort(key=lambda f: f.id)
 
+    findings_summary = {
+        "total": len(all_findings),
+        "error": sum(1 for f in all_findings if f.severity == "error"),
+        "warning": sum(1 for f in all_findings if f.severity == "warning"),
+        "info": sum(1 for f in all_findings if f.severity == "info"),
+    }
+
     report: dict[str, Any] = {
         "report_schema_version": SCHEMA_VERSION,
         "repository": repo_meta,
@@ -1685,6 +1713,7 @@ def build_health_report(
         "automation": aut_metrics,
         "frontend": fe_metrics,
         "findings": [f.to_dict() for f in all_findings],
+        "findings_summary": findings_summary,
         "execution": {
             "duration_seconds": round(time.time() - start_time, 3),
             "flags": {
@@ -1712,6 +1741,9 @@ def render_json_report(report: dict[str, Any]) -> str:
 
 def render_markdown_report(report: dict[str, Any]) -> str:
     """Render the human-readable Markdown report matching Section 22 specification."""
+    if report.get("budget_fallback", {}).get("minimal_fallback"):
+        return render_minimal_markdown_report(report)
+
     repo = report["repository"]
     cat = report["catalog"]
     lic = report["licenses"]
@@ -1726,6 +1758,13 @@ def render_markdown_report(report: dict[str, Any]) -> str:
     findings = report.get("findings", [])
     history = report.get("historical_comparison", [])
     exec_info = report.get("execution", {})
+
+    fs = report.get("findings_summary") or {
+        "total": len(findings),
+        "error": sum(1 for f in findings if f.get("severity") == "error"),
+        "warning": sum(1 for f in findings if f.get("severity") == "warning"),
+        "info": sum(1 for f in findings if f.get("severity") == "info"),
+    }
 
     lines: list[str] = [
         "# OpenDatasets Repository Health Report",
@@ -1755,7 +1794,7 @@ def render_markdown_report(report: dict[str, Any]) -> str:
         f"- **Report Generated:** {repo['report_timestamp']}",
         f"- **Report Runtime:** {exec_info.get('duration_seconds', 0.0)} seconds",
         f"- **Validation Status:** {'Passed (0 errors)' if cat['invalid_json_records'] == 0 and sc['actionable_consistency_concerns'] == 0 else 'Issues Detected'}",
-        f"- **Total Actionable Findings:** {len(findings)} ({sum(1 for f in findings if f['severity'] == 'error')} error, {sum(1 for f in findings if f['severity'] == 'warning')} warning, {sum(1 for f in findings if f['severity'] == 'info')} info)",
+        f"- **Total Actionable Findings:** {fs['total']} ({fs['error']} error, {fs['warning']} warning, {fs['info']} info)",
         f"- **Skipped Checks:** {'Full pytest test execution and quadratic duplicate audit (fast offline default)' if tst.get('status') == 'skipped' else 'None'}",
         "",
         "---",
@@ -1830,8 +1869,8 @@ def render_markdown_report(report: dict[str, Any]) -> str:
         f"- **Singleton Tags (appear once):** {tax['singleton_tags_count']:,} ({round(tax['singleton_tags_count']/max(1, tax['distinct_tags_count'])*100, 1)}%)",
         f"- **Uncategorized Datasets in Frontend Filter:** {tax['uncategorized_datasets_count']} (`{', '.join(tax['uncategorized_datasets']) if tax['uncategorized_datasets'] else 'None'}`)",
         f"- **Datasets Outside Primary 5 Modality Categories:** {tax['modality_only_uncategorized_count']} records (rely on evaluation-benchmarks tag/task fallback)",
-        f"- **Punctuation-Normalized Duplicate Task Candidates:** {len(tax['punctuation_duplicate_tasks'])} (e.g. `multiclass-classification` vs `multi-class-classification`)",
-        f"- **Punctuation-Normalized Duplicate Tag Candidates:** {len(tax['punctuation_duplicate_tags'])} (e.g. `multi-channel-audio` vs `multichannel-audio`)",
+        f"- **Punctuation-Normalized Duplicate Task Candidates:** {tax.get('punctuation_duplicate_tasks_count', len(tax.get('punctuation_duplicate_tasks', [])))} (e.g. `multiclass-classification` vs `multi-class-classification`)",
+        f"- **Punctuation-Normalized Duplicate Tag Candidates:** {tax.get('punctuation_duplicate_tags_count', len(tax.get('punctuation_duplicate_tags', [])))} (e.g. `multi-channel-audio` vs `multichannel-audio`)",
         "",
         "---",
         "",
@@ -1977,10 +2016,12 @@ def compact_report_for_budget(
     compacted = json.loads(json.dumps(report))
     omitted = []
 
-    # 1. Truncate affected_records in findings
+    # 1. Truncate affected_records in findings (preserve true count)
     truncated_findings_count = 0
     for f in compacted.get("findings", []):
         aff = f.get("affected_records", [])
+        if "affected_records_count" not in f or f["affected_records_count"] == 0:
+            f["affected_records_count"] = len(aff)
         if len(aff) > 3:
             f["affected_records"] = aff[:3] + [f"... and {len(aff) - 3} more records omitted for budget"]
             truncated_findings_count += 1
@@ -1994,7 +2035,7 @@ def compact_report_for_budget(
         omitted.append(f"List of {count} raw sample count discrepancies omitted from sample_counts (summary count preserved)")
         sc["raw_discrepancies"] = []
 
-    # 3. Omit detailed review_candidates list in licenses (preserve count)
+    # 3. Omit detailed review_candidates list in licenses (preserve counts)
     lic = compacted.get("licenses", {})
     if lic.get("review_candidates"):
         count = len(lic["review_candidates"])
@@ -2021,6 +2062,17 @@ def compact_report_for_budget(
         omitted.append(f"List of {count} catalog-count-dependent test assertions omitted from tests (summary count preserved)")
         tst["catalog_count_dependent_assertions"] = []
 
+    # 7. Truncate punctuation duplicate candidate lists in taxonomy (preserve counts)
+    tax = compacted.get("taxonomy", {})
+    if tax.get("punctuation_duplicate_tasks"):
+        count = len(tax["punctuation_duplicate_tasks"])
+        omitted.append(f"List of {count} punctuation duplicate tasks omitted from taxonomy (summary count preserved)")
+        tax["punctuation_duplicate_tasks"] = []
+    if tax.get("punctuation_duplicate_tags"):
+        count = len(tax["punctuation_duplicate_tags"])
+        omitted.append(f"List of {count} punctuation duplicate tags omitted from taxonomy (summary count preserved)")
+        tax["punctuation_duplicate_tags"] = []
+
     if not omitted:
         omitted.append("Detailed record enumerations and diagnostic contexts compacted for report budget")
 
@@ -2036,6 +2088,99 @@ def compact_report_for_budget(
     }
 
     return compacted
+
+
+def generate_minimal_bounded_report(
+    report: dict[str, Any],
+    original_combined_bytes: int,
+    max_budget_bytes: int,
+) -> dict[str, Any]:
+    """Generate a minimal bounded diagnostic report when standard compact fallback still exceeds budget."""
+    repo = report.get("repository", {})
+    cat = report.get("catalog", {})
+    val = report.get("validation", {})
+    tst = report.get("tests", {})
+    exec_info = report.get("execution", {})
+    findings = report.get("findings", [])
+    findings_summary = report.get("findings_summary") or {
+        "total": len(findings),
+        "error": sum(1 for f in findings if f.get("severity") == "error"),
+        "warning": sum(1 for f in findings if f.get("severity") == "warning"),
+        "info": sum(1 for f in findings if f.get("severity") == "info"),
+    }
+
+    return {
+        "report_schema_version": SCHEMA_VERSION,
+        "repository": {
+            "repository_name": repo.get("repository_name", "OpenDatasets"),
+            "commit_sha": repo.get("commit_sha", ""),
+            "branch": repo.get("branch", ""),
+            "working_tree_status": repo.get("working_tree_status", "unknown"),
+            "report_timestamp": repo.get("report_timestamp", ""),
+        },
+        "catalog": {
+            "total_records": cat.get("total_records", 0),
+            "parsed_records": cat.get("parsed_records", 0),
+            "invalid_json_records": cat.get("invalid_json_records", 0),
+        },
+        "validation": {
+            "status": val.get("status", "unknown"),
+            "returncode": val.get("returncode"),
+        },
+        "tests": {
+            "status": tst.get("status", "unknown"),
+            "passed": tst.get("passed"),
+            "failed": tst.get("failed"),
+            "duration_seconds": tst.get("duration_seconds"),
+        },
+        "findings_summary": findings_summary,
+        "execution": {
+            "duration_seconds": exec_info.get("duration_seconds", 0.0),
+        },
+        "budget_fallback": {
+            "budget_exceeded": True,
+            "original_combined_bytes": original_combined_bytes,
+            "max_budget_bytes": max_budget_bytes,
+            "minimal_fallback": True,
+            "omitted_details": [
+                "All detailed metric groups, findings lists, and historical tables omitted for minimal bounded budget"
+            ],
+            "message": (
+                f"Full report ({original_combined_bytes:,} bytes) and standard compact fallback exceeded "
+                f"the configured budget ({max_budget_bytes:,} bytes). Generated minimal bounded diagnostic summary."
+            ),
+        },
+    }
+
+
+def render_minimal_markdown_report(report: dict[str, Any]) -> str:
+    """Render minimal bounded Markdown report when standard compact fallback still exceeds budget."""
+    repo = report.get("repository", {})
+    cat = report.get("catalog", {})
+    val = report.get("validation", {})
+    tst = report.get("tests", {})
+    fb = report.get("budget_fallback", {})
+    fs = report.get("findings_summary", {})
+
+    lines = [
+        "# OpenDatasets Repository Health Report (Minimal Bounded Summary)",
+        "",
+        "> [!WARNING]",
+        f"> **Report Budget Strictly Exceeded**: Both full ({fb.get('original_combined_bytes', 0):,} bytes) and compacted reports exceeded {fb.get('max_budget_bytes', 0):,} bytes.",
+        "> Generated minimal diagnostic summary to satisfy storage budget.",
+        "",
+        "## Summary",
+        "",
+        f"- **Repository:** `{repo.get('repository_name', 'OpenDatasets')}`",
+        f"- **Commit SHA:** `{repo.get('commit_sha', '')}`",
+        f"- **Branch:** `{repo.get('branch', '')}`",
+        f"- **Dataset Count:** **{cat.get('total_records', 0)}**",
+        f"- **Validation Status:** `{val.get('status', 'unknown')}`",
+        f"- **Tests Status:** `{tst.get('status', 'unknown')}`",
+        f"- **Total Actionable Findings:** {fs.get('total', 0)} ({fs.get('error', 0)} error, {fs.get('warning', 0)} warning, {fs.get('info', 0)} info)",
+        "",
+    ]
+    return "\n".join(lines)
 
 
 # ---------------------------------------------------------------------------
@@ -2116,7 +2261,7 @@ def main(argv: list[str] | None = None) -> int:
     md_str = render_markdown_report(report)
     combined_bytes = len(json_str.encode("utf-8")) + len(md_str.encode("utf-8"))
 
-    # Apply compact fallback if rendered reports exceed configured byte budget
+    # Stage 1: Apply compact fallback if rendered reports exceed configured byte budget
     if combined_bytes > args.max_report_bytes:
         compact_report = compact_report_for_budget(
             report=report,
@@ -2125,6 +2270,34 @@ def main(argv: list[str] | None = None) -> int:
         )
         json_str = render_json_report(compact_report)
         md_str = render_markdown_report(compact_report)
+        compact_combined_bytes = len(json_str.encode("utf-8")) + len(md_str.encode("utf-8"))
+
+        # Stage 2: Recalculate combined UTF-8 size; if compact fallback STILL exceeds budget, generate minimal bounded diagnostic report
+        if compact_combined_bytes > args.max_report_bytes:
+            minimal_report = generate_minimal_bounded_report(
+                report=report,
+                original_combined_bytes=combined_bytes,
+                max_budget_bytes=args.max_report_bytes,
+            )
+            json_str = render_json_report(minimal_report)
+            md_str = render_minimal_markdown_report(minimal_report)
+            minimal_combined_bytes = len(json_str.encode("utf-8")) + len(md_str.encode("utf-8"))
+
+            # Stage 3: If even minimal report STILL exceeds budget, fail safely without writing oversized artifacts
+            if minimal_combined_bytes > args.max_report_bytes:
+                # Remove pre-existing output files so oversized artifacts are never left behind
+                if args.json_output and args.json_output.exists():
+                    args.json_output.unlink(missing_ok=True)
+                if args.markdown_output and args.markdown_output.exists():
+                    args.markdown_output.unlink(missing_ok=True)
+
+                if not args.quiet:
+                    print(
+                        f"Error: Generated health reports ({minimal_combined_bytes:,} bytes) exceed configured budget "
+                        f"({args.max_report_bytes:,} bytes) even after minimal bounded fallback. Suppressed writing oversized artifacts.",
+                        file=sys.stderr,
+                    )
+                return 2
 
     # Always write outputs to preserve diagnostic artifacts even if requested checks fail
     if args.json_output:

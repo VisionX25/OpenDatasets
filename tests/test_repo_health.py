@@ -40,9 +40,11 @@ from scripts.repo_health import (
     collect_taxonomy_metrics,
     collect_test_metrics,
     compact_report_for_budget,
+    generate_minimal_bounded_report,
     main,
     render_json_report,
     render_markdown_report,
+    render_minimal_markdown_report,
 )
 
 
@@ -652,19 +654,39 @@ def test_dynamic_markdown_recommendations_and_metrics(tmp_path: Path):
 
 
 def test_report_budget_fallback_execution(tmp_path: Path):
-    """Test bounded budget fallback when combined report size exceeds configured byte budget."""
-    d = create_mock_dataset("budget-test")
-    repo_dir = write_fixture_repo(tmp_path, [d])
+    """Test bounded compact fallback when combined report size exceeds configured byte budget but fits in compact mode."""
+    # Create sufficient records so truncating affected_records and singletons achieves significant byte reduction
+    datasets = [
+        create_mock_dataset(
+            f"record-budget-compact-test-{i}",
+            tasks=[f"unique-singleton-task-identifier-{i}"],
+            homepage_url=f"http://insecure-test-host-{i}.org/resource",
+        )
+        for i in range(60)
+    ]
+    repo_dir = write_fixture_repo(tmp_path, datasets, trailing_newlines={f"record-budget-compact-test-{i}": False for i in range(60)})
+
+    # Measure actual sizes for deterministic threshold calculation
+    raw_rep = build_health_report(repo_dir)
+    full_bytes = len(render_json_report(raw_rep).encode("utf-8")) + len(render_markdown_report(raw_rep).encode("utf-8"))
+    c_rep = compact_report_for_budget(raw_rep, full_bytes, full_bytes - 500)
+    compact_bytes = len(render_json_report(c_rep).encode("utf-8")) + len(render_markdown_report(c_rep).encode("utf-8"))
+
+    # Verify that compaction reduced the byte size
+    assert compact_bytes < full_bytes
+
+    # Set budget strictly between compact_bytes and full_bytes to trigger Tier 1 compact fallback
+    target_budget = compact_bytes + 200
+    assert target_budget < full_bytes
 
     json_path = tmp_path / "budget_report.json"
     md_path = tmp_path / "budget_report.md"
 
-    # Set very small max budget (e.g. 500 bytes) to trigger compact fallback
     exit_code = main([
         "--repo-root", str(repo_dir),
         "--json-output", str(json_path),
         "--markdown-output", str(md_path),
-        "--max-report-bytes", "500",
+        "--max-report-bytes", str(target_budget),
         "--quiet",
     ])
 
@@ -676,16 +698,220 @@ def test_report_budget_fallback_execution(tmp_path: Path):
     content = json_path.read_text(encoding="utf-8")
     parsed = json.loads(content)
     assert parsed["budget_fallback"]["budget_exceeded"] is True
-    assert parsed["budget_fallback"]["original_combined_bytes"] > 500
+    assert parsed["budget_fallback"]["original_combined_bytes"] == full_bytes
     assert len(parsed["budget_fallback"]["omitted_details"]) > 0
     # Core health metrics preserved
-    assert parsed["catalog"]["total_records"] == 1
+    assert parsed["catalog"]["total_records"] == 60
     assert parsed["report_schema_version"] == "1.0"
 
     # Verify Markdown contains the warning banner
     md_content = md_path.read_text(encoding="utf-8")
     assert "> [!WARNING]" in md_content
     assert "**Report Budget Exceeded**" in md_content
+
+
+def test_budget_minimal_fallback_and_safe_suppression(tmp_path: Path):
+    """Test Tier 2 (minimal bounded fallback) and Tier 3 (safe suppression when even minimal exceeds budget)."""
+    d = create_mock_dataset("budget-tier-test")
+    repo_dir = write_fixture_repo(tmp_path, [d])
+
+    raw_rep = build_health_report(repo_dir)
+    full_bytes = len(render_json_report(raw_rep).encode("utf-8")) + len(render_markdown_report(raw_rep).encode("utf-8"))
+    c_rep = compact_report_for_budget(raw_rep, full_bytes, 1000)
+    compact_bytes = len(render_json_report(c_rep).encode("utf-8")) + len(render_markdown_report(c_rep).encode("utf-8"))
+
+    min_rep = generate_minimal_bounded_report(raw_rep, full_bytes, 1500)
+    min_bytes = len(render_json_report(min_rep).encode("utf-8")) + len(render_minimal_markdown_report(min_rep).encode("utf-8"))
+
+    # 1. Tier 2: Budget between min_bytes and compact_bytes triggers minimal bounded fallback
+    tier2_budget = min_bytes + 200
+    assert tier2_budget < compact_bytes
+
+    json_min = tmp_path / "min_report.json"
+    md_min = tmp_path / "min_report.md"
+
+    ret_tier2 = main([
+        "--repo-root", str(repo_dir),
+        "--json-output", str(json_min),
+        "--markdown-output", str(md_min),
+        "--max-report-bytes", str(tier2_budget),
+        "--quiet",
+    ])
+
+    assert ret_tier2 == 0
+    assert json_min.exists()
+    assert md_min.exists()
+
+    parsed_min = json.loads(json_min.read_text(encoding="utf-8"))
+    assert parsed_min["budget_fallback"]["minimal_fallback"] is True
+    assert parsed_min["catalog"]["total_records"] == 1
+    assert "Minimal Bounded Summary" in md_min.read_text(encoding="utf-8")
+
+    # 2. Tier 3: Budget below min_bytes fails safely (exit code 2) without writing oversized artifacts
+    json_fail = tmp_path / "fail_report.json"
+    md_fail = tmp_path / "fail_report.md"
+    json_fail.write_text("pre-existing oversized artifact\n", encoding="utf-8")
+    md_fail.write_text("pre-existing oversized artifact\n", encoding="utf-8")
+
+    ret_tier3 = main([
+        "--repo-root", str(repo_dir),
+        "--json-output", str(json_fail),
+        "--markdown-output", str(md_fail),
+        "--max-report-bytes", "50",
+        "--quiet",
+    ])
+
+    assert ret_tier3 == 2
+    # Pre-existing oversized files must be purged to prevent accidental upload
+    assert not json_fail.exists()
+    assert not md_fail.exists()
+
+
+def test_historical_comparison_pytest_count_when_tests_skipped_or_unavailable():
+    """Verify that 240 is retained exclusively as historical baseline and current is skipped/unavailable when not run."""
+    # 1. Tests skipped
+    skipped_rep = {
+        "catalog": {"total_records": 875},
+        "licenses": {"review_candidates_count": 0},
+        "sample_counts": {"raw_arithmetic_discrepancy_count": 0},
+        "taxonomy": {"distinct_tasks_count": 704, "singleton_tasks_count": 447, "distinct_tags_count": 1981, "singleton_tags_count": 1407},
+        "formatting": {"missing_trailing_newline_count": 39, "suspected_truncated_slugs_count": 22},
+        "generated_artifacts": {"catalog_json": {}, "audit_reports": {}},
+        "tests": {"status": "skipped", "passed": None, "duration_seconds": None},
+        "source_monitoring": {"estimated_cycle_weeks": 52.34},
+    }
+    rows_skip = build_historical_comparison(skipped_rep)
+    lookup_skip = {r["metric"]: r for r in rows_skip}
+    assert lookup_skip["Python unit tests (count)"]["historical"] == "240"
+    assert lookup_skip["Python unit tests (count)"]["current"] == "Skipped in fast default"
+    assert lookup_skip["Python unit tests (count)"]["difference"] == "N/A"
+
+    # 2. Tests error/unavailable
+    error_rep = dict(skipped_rep)
+    error_rep["tests"] = {"status": "error", "passed": None, "duration_seconds": None}
+    rows_err = build_historical_comparison(error_rep)
+    lookup_err = {r["metric"]: r for r in rows_err}
+    assert lookup_err["Python unit tests (count)"]["historical"] == "240"
+    assert lookup_err["Python unit tests (count)"]["current"] == "Unavailable"
+    assert lookup_err["Python unit tests (count)"]["difference"] == "N/A"
+
+    # 3. Tests executed and passed (263)
+    pass_rep = dict(skipped_rep)
+    pass_rep["tests"] = {"status": "passed", "passed": 263, "duration_seconds": 12.34}
+    rows_pass = build_historical_comparison(pass_rep)
+    lookup_pass = {r["metric"]: r for r in rows_pass}
+    assert lookup_pass["Python unit tests (count)"]["historical"] == "240"
+    assert lookup_pass["Python unit tests (count)"]["current"] == "263"
+    assert lookup_pass["Python unit tests (count)"]["difference"] == "+23"
+
+
+def test_compaction_preserves_summary_counts_and_execution_status():
+    """Ensure report compaction preserves all summary counts, execution statuses, and historical comparisons."""
+    finding_obj = Finding(
+        id="FINDING-TEST-001",
+        category="testing",
+        severity="warning",
+        status="review_required",
+        title="Test Finding",
+        description="Detailed finding description",
+        affected_records=["rec1", "rec2", "rec3", "rec4", "rec5"],
+    )
+
+    full_rep = {
+        "report_schema_version": "1.0",
+        "repository": {"repository_name": "OpenDatasets", "commit_sha": "abc1234", "branch": "main", "working_tree_status": "clean", "report_timestamp": "now", "tracked_dataset_count": 875},
+        "catalog": {"total_records": 875, "parsed_records": 875, "invalid_json_records": 0, "citation_coverage": 867, "doi_coverage": 753, "publication_date_coverage": 850, "verification_date_coverage": 875, "homepage_url_coverage": 875, "source_reference_coverage": 875, "sample_count_coverage": 834, "dataset_size_coverage": 468, "nlp_audio_coverage": 175, "nlp_audio_total": 313},
+        "licenses": {
+            "status_distribution": {"verified_open": 453},
+            "commercial_use_distribution": {"allowed": 534},
+            "spdx_identifier_coverage": 766,
+            "missing_spdx_count": 109,
+            "review_candidates_count": 2,
+            "non_commercial_spdx_verified_open_count": 1,
+            "permissive_spdx_commercial_unknown_count": 1,
+            "review_candidates": [
+                {"id": "c1", "type": "non_commercial_spdx_verified_open"},
+                {"id": "c2", "type": "permissive_spdx_commercial_unknown"},
+            ],
+        },
+        "sample_counts": {
+            "sample_count_records": 834,
+            "missing_unit_count": 25,
+            "splits_coverage": 372,
+            "breakdown_coverage": 0,
+            "completeness_distribution": {"unspecified": 743},
+            "overlap_distribution": {"unspecified": 726},
+            "raw_arithmetic_discrepancy_count": 29,
+            "actionable_consistency_concerns": 0,
+            "raw_discrepancies": [{"id": f"d{i}"} for i in range(29)],
+        },
+        "taxonomy": {
+            "distinct_tasks_count": 704,
+            "singleton_tasks_count": 447,
+            "distinct_tags_count": 1981,
+            "singleton_tags_count": 1407,
+            "uncategorized_datasets_count": 1,
+            "uncategorized_datasets": ["lakh-midi"],
+            "modality_only_uncategorized_count": 16,
+            "punctuation_duplicate_tasks": [["taskA", "task-a"]],
+            "punctuation_duplicate_tags": [["tagA", "tag-a"]],
+            "punctuation_duplicate_tasks_count": 1,
+            "punctuation_duplicate_tags_count": 1,
+        },
+        "formatting": {
+            "missing_trailing_newline_count": 39,
+            "missing_trailing_newline_files": [f"f{i}" for i in range(39)],
+            "plain_http_url_occurrences": 78,
+            "unique_plain_http_urls": 42,
+            "suspected_truncated_slugs_count": 22,
+            "suspected_truncated_slugs": [{"id": f"s{i}"} for i in range(22)],
+        },
+        "generated_artifacts": {"catalog_json": {"size_mb_decimal": 3.39, "gzip_kb_decimal": 727.0}, "audit_reports": {"total_mb_decimal": 4.06}},
+        "tests": {
+            "python_test_file_count": 9,
+            "catalog_count_dependent_assertions_count": 20,
+            "status": "passed",
+            "passed": 263,
+            "failed": 0,
+            "duration_seconds": 15.2,
+            "catalog_count_dependent_assertions": ["assert 875"],
+        },
+        "validation": {"status": "passed", "returncode": 0},
+        "source_monitoring": {"estimated_cycle_weeks": 52.34},
+        "automation": {"workflow_count": 5, "dependabot_present": False, "codeowners_present": False, "pre_commit_present": False, "python_lockfile_present": False, "npm_engines_configured": False, "nvmrc_present": False},
+        "frontend": {"per_route_titles": False, "not_found_route_present": False, "sitemap_present": False, "robots_txt_present": False, "open_graph_tags_present": False, "schema_org_json_ld_present": False},
+        "findings": [finding_obj.to_dict()],
+        "findings_summary": {"total": 1, "error": 0, "warning": 1, "info": 0},
+        "execution": {"duration_seconds": 0.45},
+    }
+
+    compacted = compact_report_for_budget(full_rep, original_combined_bytes=50000, max_budget_bytes=10000)
+
+    # Summary counts and statuses must remain identical
+    assert compacted["catalog"]["total_records"] == 875
+    assert compacted["licenses"]["review_candidates_count"] == 2
+    assert compacted["licenses"]["non_commercial_spdx_verified_open_count"] == 1
+    assert compacted["licenses"]["permissive_spdx_commercial_unknown_count"] == 1
+    assert compacted["sample_counts"]["raw_arithmetic_discrepancy_count"] == 29
+    assert compacted["taxonomy"]["distinct_tasks_count"] == 704
+    assert compacted["taxonomy"]["singleton_tasks_count"] == 447
+    assert compacted["taxonomy"]["punctuation_duplicate_tasks_count"] == 1
+    assert compacted["formatting"]["missing_trailing_newline_count"] == 39
+    assert compacted["formatting"]["suspected_truncated_slugs_count"] == 22
+    assert compacted["tests"]["catalog_count_dependent_assertions_count"] == 20
+    assert compacted["tests"]["status"] == "passed"
+    assert compacted["tests"]["passed"] == 263
+    assert compacted["validation"]["status"] == "passed"
+    assert compacted["findings_summary"] == {"total": 1, "error": 0, "warning": 1, "info": 0}
+
+    # Finding affected_records_count preserved despite list truncation
+    assert compacted["findings"][0]["affected_records_count"] == 5
+    assert len(compacted["findings"][0]["affected_records"]) == 4  # top 3 + omitted notice
+
+    # Historical comparison rows must match byte-for-byte
+    hist_full = build_historical_comparison(full_rep)
+    hist_compact = build_historical_comparison(compacted)
+    assert hist_compact == hist_full
 
 
 def test_skipped_checks_classification(tmp_path: Path):
