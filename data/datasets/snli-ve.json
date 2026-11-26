@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "snli-ve",
+  "slug": "snli-ve",
+  "name": "SNLI-VE: Visual Entailment Benchmark",
+  "description": "SNLI-VE (Visual Entailment) is a multimodal reasoning benchmark adapting the Stanford Natural Language Inference (SNLI) corpus to visual entailment, pairing Flickr30k images as premises with natural language hypotheses across 565,286 pairs labeled as Entailment, Neutral, or Contradiction.",
+  "homepage_url": "https://github.com/necla-ml/SNLI-VE",
+  "publisher": {
+    "name": "NEC Laboratories America",
+    "type": "industry",
+    "url": "https://www.nec-labs.com"
+  },
+  "modalities": [
+    "vision",
+    "nlp",
+    "multimodal"
+  ],
+  "tasks": [
+    "visual-entailment",
+    "multimodal-reasoning",
+    "visual-reasoning"
+  ],
+  "tags": [
+    "visual-entailment",
+    "snli",
+    "flickr30k",
+    "reasoning",
+    "multimodal"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT License / CC-BY-SA 4.0 / Flickr Terms",
+    "spdx_id": null,
+    "url": "https://github.com/necla-ml/SNLI-VE",
+    "commercial_use": "unknown",
+    "notes": "SNLI-VE dataset annotations are released under the MIT License; underlying SNLI annotations are licensed under CC-BY-SA 4.0 and image premises originate from Flickr30k subject to Flickr user licenses."
+  },
+  "source_references": [
+    {
+      "title": "SNLI-VE Official Repository",
+      "url": "https://github.com/necla-ml/SNLI-VE",
+      "type": "official_website",
+      "notes": "Official NEC Laboratories repository."
+    },
+    {
+      "title": "Visual Entailment: A Novel Task for Fine-Grained Image-Text Reasoning",
+      "url": "https://arxiv.org/abs/1901.06706",
+      "type": "original_paper",
+      "notes": "Foundational paper establishing the Visual Entailment task."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against arXiv publication (DOI: 10.48550/arXiv.1901.06706) and official NEC Laboratories release. Total 565,286 image-hypothesis pairs (train: 529,527, dev: 17,858, test: 17,901) based on 31,783 Flickr30k images."
+  },
+  "size": {
+    "amount": 25.0,
+    "unit": "MB",
+    "file_formats": [
+      "jsonl",
+      "txt"
+    ],
+    "status": "verified",
+    "notes": "JSONL/text annotation splits (premise images retrieved separately via Flickr30k)."
+  },
+  "sample_count": {
+    "total": 565286,
+    "unit": "pairs",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 529527,
+      "validation": 17858,
+      "test": 17901
+    },
+    "breakdown": [
+      {
+        "label": "flickr30k_images",
+        "value": 31783,
+        "unit": "images"
+      },
+      {
+        "label": "train_pairs",
+        "value": 529527,
+        "unit": "pairs"
+      },
+      {
+        "label": "dev_pairs",
+        "value": 17858,
+        "unit": "pairs"
+      },
+      {
+        "label": "test_pairs",
+        "value": 17901,
+        "unit": "pairs"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2019-01"
+  },
+  "citation": {
+    "paper_title": "Visual Entailment: A Novel Task for Fine-Grained Image-Text Reasoning",
+    "paper_url": "https://arxiv.org/abs/1901.06706",
+    "authors": [
+      "Ning Xie",
+      "Farley Lai",
+      "Derek Doran",
+      "Asim Kadav"
+    ],
+    "doi": "10.48550/arXiv.1901.06706",
+    "bibtex": "@article{xie2019visual,\n  title = {Visual Entailment: A Novel Task for Fine-Grained Image-Text Reasoning},\n  author = {Xie, Ning and Lai, Farley and Doran, Derek and Kadav, Asim},\n  journal = {arXiv preprint arXiv:1901.06706},\n  year = {2019},\n  url = {https://arxiv.org/abs/1901.06706},\n  doi = {10.48550/arXiv.1901.06706}\n}"
+  }
+}

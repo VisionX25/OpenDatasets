@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pascal-context",
+  "slug": "pascal-context",
+  "name": "PASCAL Context: Dense Full-Scene Semantic Segmentation Dataset",
+  "description": "PASCAL Context extends the PASCAL VOC 2010 detection challenge by providing pixel-wise annotations for the entire scene (both stuff and thing categories) across 10,103 images, encompassing over 400 detailed categories.",
+  "homepage_url": "https://www.cs.stanford.edu/~roozbeh/pascal-context/",
+  "publisher": {
+    "name": "Stanford University & University of California Los Angeles",
+    "type": "academic",
+    "url": "https://www.cs.stanford.edu/~roozbeh/pascal-context/"
+  },
+  "modalities": [
+    "vision"
+  ],
+  "tasks": [
+    "semantic-segmentation",
+    "scene-understanding",
+    "pixel-labeling"
+  ],
+  "tags": [
+    "semantic-segmentation",
+    "scene-parsing",
+    "pascal-voc",
+    "computer-vision"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "Custom Academic Research / Flickr Terms",
+    "spdx_id": null,
+    "url": "https://www.cs.stanford.edu/~roozbeh/pascal-context/",
+    "commercial_use": "unknown",
+    "notes": "Annotations provided freely for research by the authors; underlying images are governed by PASCAL VOC 2010 terms and Flickr user licenses."
+  },
+  "source_references": [
+    {
+      "title": "PASCAL Context Official Project Page",
+      "url": "https://www.cs.stanford.edu/~roozbeh/pascal-context/",
+      "type": "official_website",
+      "notes": "Official Stanford project site."
+    },
+    {
+      "title": "The Role of Context for Object Detection and Semantic Segmentation in the Wild",
+      "url": "https://ieeexplore.ieee.org/document/6909438",
+      "type": "original_paper",
+      "notes": "Published in CVPR 2014."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against CVPR 2014 paper (DOI: 10.1109/CVPR.2014.119) and dataset distribution. Covers 10,103 images from PASCAL VOC 2010 (train: 4,998, val: 5,105) with 59 most frequent evaluation classes plus background."
+  },
+  "size": {
+    "amount": 1600.0,
+    "unit": "MB",
+    "file_formats": [
+      "mat",
+      "jpg",
+      "png"
+    ],
+    "status": "verified",
+    "notes": "MAT annotation files and VOC JPEG images."
+  },
+  "sample_count": {
+    "total": 10103,
+    "unit": "images",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 4998,
+      "validation": 5105
+    },
+    "breakdown": [
+      {
+        "label": "train_images",
+        "value": 4998,
+        "unit": "images"
+      },
+      {
+        "label": "val_images",
+        "value": 5105,
+        "unit": "images"
+      },
+      {
+        "label": "benchmark_evaluation_classes",
+        "value": 59,
+        "unit": "classes"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2014-06"
+  },
+  "citation": {
+    "paper_title": "The Role of Context for Object Detection and Semantic Segmentation in the Wild",
+    "paper_url": "https://ieeexplore.ieee.org/document/6909438",
+    "authors": [
+      "Roozbeh Mottaghi",
+      "Xianjie Chen",
+      "Xiaobai Liu",
+      "Nam-Gyu Cho",
+      "Seong-Whan Lee",
+      "Sanja Fidler",
+      "Raquel Urtasun",
+      "Alan Yuille"
+    ],
+    "doi": "10.1109/CVPR.2014.119",
+    "bibtex": "@inproceedings{mottaghi2014role,\n  title = {The Role of Context for Object Detection and Semantic Segmentation in the Wild},\n  author = {Mottaghi, Roozbeh and Chen, Xianjie and Liu, Xiaobai and Cho, Nam-Gyu and Lee, Seong-Whan and Fidler, Sanja and Urtasun, Raquel and Yuille, Alan},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2014},\n  doi = {10.1109/CVPR.2014.119},\n  pages = {891--898}\n}"
+  }
+}

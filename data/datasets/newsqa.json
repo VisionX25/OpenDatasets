@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "id": "newsqa",
+  "slug": "newsqa",
+  "name": "NewsQA: Machine Comprehension Dataset",
+  "description": "NewsQA is a machine comprehension dataset of human-generated question-answer pairs based on CNN news articles. While crowdworkers originally collected 119,633 questions on 12,744 CNN stories, the canonical evaluated machine reading benchmark comprises 102,841 validated question-answer pairs across 10,978 stories.",
+  "homepage_url": "https://github.com/Maluuba/newsqa",
+  "publisher": {
+    "name": "Maluuba / Microsoft Research",
+    "type": "industry",
+    "url": "https://www.microsoft.com/research/"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "question-answering",
+    "reading-comprehension",
+    "span-extraction"
+  ],
+  "tags": [
+    "reading-comprehension",
+    "question-answering",
+    "news",
+    "extractive-qa",
+    "nlp"
+  ],
+  "license": {
+    "status": "custom_permissive",
+    "name": "MIT License (Annotations) / Proprietary Copyright (CNN Stories)",
+    "spdx_id": null,
+    "url": "https://github.com/Maluuba/newsqa/blob/master/LICENSE.md",
+    "commercial_use": "forbidden",
+    "notes": "Maluuba/Microsoft released questions and span annotations under the MIT License, but the underlying news articles are copyrighted by CNN; users reconstruct text using provided scripts. Commercial use is not permitted by CNN copyright terms."
+  },
+  "source_references": [
+    {
+      "title": "NewsQA GitHub Repository",
+      "url": "https://github.com/Maluuba/newsqa",
+      "type": "official_website",
+      "notes": "Dataset repository and preprocessing utilities."
+    },
+    {
+      "title": "NewsQA: A Machine Comprehension Dataset",
+      "url": "https://aclanthology.org/W17-2623/",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the 2nd Workshop on Representation Learning for NLP (RepL4NLP@ACL 2017)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against RepL4NLP 2017 publication (DOI: 10.18653/v1/W17-2623) and official dataset release. Total collection consists of 119,633 questions on 12,744 CNN stories; canonical validated benchmark partitions comprise 102,841 questions (train: 92,549, dev: 5,166, test: 5,126) across 10,978 stories."
+  },
+  "size": {
+    "amount": 25.0,
+    "unit": "MB",
+    "file_formats": [
+      "csv",
+      "json"
+    ],
+    "status": "verified",
+    "notes": "CSV/JSON question-answer annotations and character offsets."
+  },
+  "sample_count": {
+    "total": 102841,
+    "unit": "questions",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 92549,
+      "validation": 5166,
+      "test": 5126
+    },
+    "breakdown": [
+      {
+        "label": "unfiltered_collected_questions",
+        "value": 119633,
+        "unit": "questions"
+      },
+      {
+        "label": "stories",
+        "value": 10978,
+        "unit": "articles"
+      },
+      {
+        "label": "train_filtered_questions",
+        "value": 92549,
+        "unit": "questions"
+      },
+      {
+        "label": "dev_filtered_questions",
+        "value": 5166,
+        "unit": "questions"
+      },
+      {
+        "label": "test_filtered_questions",
+        "value": 5126,
+        "unit": "questions"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2017-08"
+  },
+  "citation": {
+    "paper_title": "NewsQA: A Machine Comprehension Dataset",
+    "paper_url": "https://aclanthology.org/W17-2623/",
+    "authors": [
+      "Adam Trischler",
+      "Tong Wang",
+      "Xingdi Yuan",
+      "Justin Harris",
+      "Alessandro Sordoni",
+      "Philip Bachman",
+      "Kaheer Suleman"
+    ],
+    "doi": "10.18653/v1/W17-2623",
+    "bibtex": "@inproceedings{trischler-etal-2017-newsqa,\n  title = {NewsQA: A Machine Comprehension Dataset},\n  author = {Trischler, Adam and Wang, Tong and Yuan, Xingdi and Harris, Justin and Sordoni, Alessandro and Bachman, Philip and Suleman, Kaheer},\n  booktitle = {Proceedings of the 2nd Workshop on Representation Learning for NLP},\n  year = {2017},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/W17-2623/},\n  doi = {10.18653/v1/W17-2623},\n  pages = {191--200}\n}"
+  }
+}

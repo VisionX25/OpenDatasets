@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-credit-approval",
+  "slug": "uci-credit-approval",
+  "name": "UCI Credit Approval Dataset",
+  "description": "The UCI Credit Approval Dataset is a widely studied tabular classification dataset consisting of 690 credit card application instances with 15 mixed continuous and categorical attributes, anonymized to protect personal financial privacy.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/27/credit+approval",
+  "publisher": {
+    "name": "UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "classification",
+    "tabular-classification",
+    "credit-risk-assessment"
+  ],
+  "tags": [
+    "uci",
+    "tabular",
+    "credit-scoring",
+    "finance",
+    "classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed on the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International."
+  },
+  "source_references": [
+    {
+      "title": "UCI Credit Approval Dataset Record",
+      "url": "https://archive.ics.uci.edu/dataset/27/credit+approval",
+      "type": "official_website",
+      "notes": "Official UCI ML repository landing page."
+    },
+    {
+      "title": "Simplifying Decision Trees",
+      "url": "https://doi.org/10.24432/C5FS30",
+      "type": "original_paper",
+      "notes": "Dataset citation record with DataCite DOI 10.24432/C5FS30."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository record and DataCite DOI (10.24432/C5FS30). Exactly 690 instances, 15 anonymized attributes (6 numerical, 9 categorical), 37 instances containing missing values, and binary approval outcome (307 positive, 383 negative)."
+  },
+  "size": {
+    "amount": 0.04,
+    "unit": "MB",
+    "file_formats": [
+      "csv",
+      "data"
+    ],
+    "status": "verified",
+    "notes": "CSV/data tabular records."
+  },
+  "sample_count": {
+    "total": 690,
+    "unit": "samples",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "samples",
+        "value": 690,
+        "unit": "samples"
+      },
+      {
+        "label": "features",
+        "value": 15,
+        "unit": "features"
+      },
+      {
+        "label": "approved_applications",
+        "value": 307,
+        "unit": "samples"
+      },
+      {
+        "label": "rejected_applications",
+        "value": 383,
+        "unit": "samples"
+      }
+    ]
+  },
+  "dates": {
+    "published": "1992-03"
+  },
+  "citation": {
+    "paper_title": "Credit Approval",
+    "paper_url": "https://doi.org/10.24432/C5FS30",
+    "authors": [
+      "J. R. Quinlan"
+    ],
+    "doi": "10.24432/C5FS30",
+    "bibtex": "@misc{quinlan1992credit,\n  title = {Credit Approval},\n  author = {Quinlan, J. R.},\n  year = {1992},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5FS30}\n}"
+  }
+}

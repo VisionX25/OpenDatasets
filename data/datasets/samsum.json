@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "id": "samsum",
+  "slug": "samsum",
+  "name": "SAMSum: Dialogue Abstractive Summarization Corpus",
+  "description": "SAMSum is an abstractive summarization corpus containing 16,369 English messenger-like dialogues written by linguists reflecting typical mobile and online conversations, each paired with an expert human-written summary.",
+  "homepage_url": "https://huggingface.co/datasets/samsum",
+  "publisher": {
+    "name": "Samsung R&D Institute Poland",
+    "type": "industry",
+    "url": "https://research.samsung.com"
+  },
+  "modalities": [
+    "nlp"
+  ],
+  "tasks": [
+    "summarization",
+    "dialogue-summarization",
+    "abstractive-summarization"
+  ],
+  "tags": [
+    "summarization",
+    "dialogue",
+    "abstractive-summarization",
+    "conversational-ai",
+    "nlp"
+  ],
+  "license": {
+    "status": "verified_non_commercial",
+    "name": "Creative Commons Attribution Non Commercial No Derivatives 4.0 International",
+    "spdx_id": "CC-BY-NC-ND-4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "commercial_use": "forbidden",
+    "notes": "SAMSum is distributed under CC-BY-NC-ND-4.0 for non-commercial research purposes."
+  },
+  "source_references": [
+    {
+      "title": "SAMSum on Hugging Face Datasets",
+      "url": "https://huggingface.co/datasets/samsum",
+      "type": "repository",
+      "notes": "Hugging Face dataset hub entry."
+    },
+    {
+      "title": "SAMSum Corpus: A Human-annotated Dialogue Dataset for Abstractive Summarization",
+      "url": "https://aclanthology.org/D19-5409/",
+      "type": "original_paper",
+      "notes": "Published in Proceedings of the 2nd Workshop on New Frontiers in Summarization (EMNLP-IJCNLP 2019)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against EMNLP 2019 workshop paper (DOI: 10.18653/v1/D19-5409) and Hugging Face release. Exactly 16,369 dialogues partitioned into 14,732 training, 818 validation, and 819 test pairs."
+  },
+  "size": {
+    "amount": 10.0,
+    "unit": "MB",
+    "file_formats": [
+      "json"
+    ],
+    "status": "verified",
+    "notes": "JSON formatted dialogue and summary splits."
+  },
+  "sample_count": {
+    "total": 16369,
+    "unit": "dialogues",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 14732,
+      "validation": 818,
+      "test": 819
+    },
+    "breakdown": [
+      {
+        "label": "train_dialogues",
+        "value": 14732,
+        "unit": "dialogues"
+      },
+      {
+        "label": "validation_dialogues",
+        "value": 818,
+        "unit": "dialogues"
+      },
+      {
+        "label": "test_dialogues",
+        "value": 819,
+        "unit": "dialogues"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2019-11"
+  },
+  "citation": {
+    "paper_title": "SAMSum Corpus: A Human-annotated Dialogue Dataset for Abstractive Summarization",
+    "paper_url": "https://aclanthology.org/D19-5409/",
+    "authors": [
+      "Bogdan Gliwa",
+      "Iwona Mochol",
+      "Maciej Biesek",
+      "Aleksander Wawer"
+    ],
+    "doi": "10.18653/v1/D19-5409",
+    "bibtex": "@inproceedings{gliwa-etal-2019-samsum,\n  title = {SAMSum Corpus: A Human-annotated Dialogue Dataset for Abstractive Summarization},\n  author = {Gliwa, Bogdan and Mochol, Iwona and Biesek, Maciej and Wawer, Aleksander},\n  booktitle = {Proceedings of the 2nd Workshop on New Frontiers in Summarization},\n  year = {2019},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/D19-5409/},\n  doi = {10.18653/v1/D19-5409},\n  pages = {70--79}\n}"
+  }
+}

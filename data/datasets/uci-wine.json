@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-wine",
+  "slug": "uci-wine",
+  "name": "UCI Wine Dataset",
+  "description": "The UCI Wine Dataset is a foundational pattern recognition benchmark containing 178 chemical analysis samples of Italian wines grown in the same region by three different cultivars, described by 13 continuous constituents.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/109/wine",
+  "publisher": {
+    "name": "UCI Machine Learning Repository & University of Genoa",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "classification",
+    "clustering",
+    "dimensionality-reduction",
+    "tabular-classification"
+  ],
+  "tags": [
+    "uci",
+    "tabular",
+    "chemistry",
+    "wine",
+    "classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed on the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International."
+  },
+  "source_references": [
+    {
+      "title": "UCI Wine Dataset Record",
+      "url": "https://archive.ics.uci.edu/dataset/109/wine",
+      "type": "official_website",
+      "notes": "Official UCI ML repository landing page."
+    },
+    {
+      "title": "PARVUS: An Extendible Package for Data Exploration, Classification and Correlation",
+      "url": "https://doi.org/10.24432/C5PC7J",
+      "type": "original_paper",
+      "notes": "Published dataset record with DataCite DOI 10.24432/C5PC7J."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against UCI Machine Learning Repository record and DataCite DOI (10.24432/C5PC7J). Exactly 178 samples, 13 continuous chemical features, 0 missing values, and 3 cultivar classes (59 Class 1, 71 Class 2, 48 Class 3)."
+  },
+  "size": {
+    "amount": 0.02,
+    "unit": "MB",
+    "file_formats": [
+      "csv",
+      "data"
+    ],
+    "status": "verified",
+    "notes": "CSV/data tabular records."
+  },
+  "sample_count": {
+    "total": 178,
+    "unit": "samples",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "samples",
+        "value": 178,
+        "unit": "samples"
+      },
+      {
+        "label": "features",
+        "value": 13,
+        "unit": "features"
+      },
+      {
+        "label": "classes",
+        "value": 3,
+        "unit": "classes"
+      },
+      {
+        "label": "class_1_samples",
+        "value": 59,
+        "unit": "samples"
+      },
+      {
+        "label": "class_2_samples",
+        "value": 71,
+        "unit": "samples"
+      },
+      {
+        "label": "class_3_samples",
+        "value": 48,
+        "unit": "samples"
+      }
+    ]
+  },
+  "dates": {
+    "published": "1991-07"
+  },
+  "citation": {
+    "paper_title": "Wine",
+    "paper_url": "https://doi.org/10.24432/C5PC7J",
+    "authors": [
+      "Stefan Aeberhard",
+      "M. Forina"
+    ],
+    "doi": "10.24432/C5PC7J",
+    "bibtex": "@misc{aeberhard1991wine,\n  title = {Wine},\n  author = {Aeberhard, Stefan and Forina, M.},\n  year = {1991},\n  howpublished = {UCI Machine Learning Repository},\n  doi = {10.24432/C5PC7J}\n}"
+  }
+}

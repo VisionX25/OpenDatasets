@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uci-online-shoppers-intention",
+  "slug": "uci-online-shoppers-intention",
+  "name": "UCI Online Shoppers Purchasing Intention Dataset",
+  "description": "The UCI Online Shoppers Purchasing Intention Dataset consists of 12,330 online user shopping sessions over 1-year period, characterized by 17 administrative, informational, and website navigational metrics designed to predict purchasing intent.",
+  "homepage_url": "https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset",
+  "publisher": {
+    "name": "Bogazici University & UCI Machine Learning Repository",
+    "type": "academic",
+    "url": "https://archive.ics.uci.edu"
+  },
+  "modalities": [
+    "tabular"
+  ],
+  "tasks": [
+    "classification",
+    "tabular-classification",
+    "churn-prediction",
+    "intent-prediction"
+  ],
+  "tags": [
+    "uci",
+    "tabular",
+    "e-commerce",
+    "behavior-analysis",
+    "classification"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed on the UCI Machine Learning Repository under Creative Commons Attribution 4.0 International."
+  },
+  "source_references": [
+    {
+      "title": "UCI Online Shoppers Purchasing Intention Dataset Record",
+      "url": "https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset",
+      "type": "official_website",
+      "notes": "Official UCI ML repository landing page."
+    },
+    {
+      "title": "Real-Time Prediction of Online Shoppers' Purchasing Intention Using Multilayer Perceptron and LSTM Recurrent Neural Networks",
+      "url": "https://link.springer.com/article/10.1007/s00521-018-3523-0",
+      "type": "original_paper",
+      "notes": "Published in Neural Computing and Applications (2019)."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against Neural Computing and Applications 2019 publication (DOI: 10.1007/s00521-018-3523-0) and DataCite DOI (10.24432/C5F88Q). Exactly 12,330 sessions, 17 features (10 numerical, 7 categorical), and binary Revenue label (1,908 returning purchase sessions, 10,422 negative sessions)."
+  },
+  "size": {
+    "amount": 1.8,
+    "unit": "MB",
+    "file_formats": [
+      "csv"
+    ],
+    "status": "verified",
+    "notes": "CSV tabular session records."
+  },
+  "sample_count": {
+    "total": 12330,
+    "unit": "sessions",
+    "status": "verified",
+    "partition_completeness": "unspecified",
+    "partition_overlap": "unspecified",
+    "breakdown": [
+      {
+        "label": "sessions",
+        "value": 12330,
+        "unit": "sessions"
+      },
+      {
+        "label": "features",
+        "value": 17,
+        "unit": "features"
+      },
+      {
+        "label": "purchasing_sessions",
+        "value": 1908,
+        "unit": "sessions"
+      },
+      {
+        "label": "non_purchasing_sessions",
+        "value": 10422,
+        "unit": "sessions"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2018-08"
+  },
+  "citation": {
+    "paper_title": "Real-Time Prediction of Online Shoppers' Purchasing Intention Using Multilayer Perceptron and LSTM Recurrent Neural Networks",
+    "paper_url": "https://link.springer.com/article/10.1007/s00521-018-3523-0",
+    "authors": [
+      "C. Okan Sakar",
+      "S. Olcay Polat",
+      "Mete Katircioglu",
+      "Yomi Kastro"
+    ],
+    "doi": "10.1007/s00521-018-3523-0",
+    "bibtex": "@article{sakar2019real,\n  title = {Real-Time Prediction of Online Shoppers' Purchasing Intention Using Multilayer Perceptron and LSTM Recurrent Neural Networks},\n  author = {Sakar, C. Okan and Polat, S. Olcay and Katircioglu, Mete and Kastro, Yomi},\n  journal = {Neural Computing and Applications},\n  volume = {31},\n  number = {10},\n  year = {2019},\n  publisher = {Springer},\n  doi = {10.1007/s00521-018-3523-0},\n  pages = {6893--6908}\n}"
+  }
+}

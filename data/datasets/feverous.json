@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "feverous",
+  "slug": "feverous",
+  "name": "FEVEROUS: Fact Verification Over Structured and Unstructured Information",
+  "description": "FEVEROUS is a fact verification benchmark consisting of 87,026 human-written claims verified against evidence combining both structured (Wikipedia tables) and unstructured (Wikipedia text sentences) knowledge.",
+  "homepage_url": "https://fever.ai/dataset/feverous.html",
+  "publisher": {
+    "name": "University of Cambridge & Amazon",
+    "type": "academic",
+    "url": "https://fever.ai"
+  },
+  "modalities": [
+    "nlp",
+    "tabular",
+    "multimodal"
+  ],
+  "tasks": [
+    "fact-verification",
+    "claim-verification",
+    "evidence-retrieval"
+  ],
+  "tags": [
+    "fact-checking",
+    "fever",
+    "tables",
+    "claim-verification",
+    "multimodal"
+  ],
+  "license": {
+    "status": "verified_open",
+    "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+    "spdx_id": "CC-BY-SA-3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "commercial_use": "allowed",
+    "notes": "Distributed under Creative Commons Attribution-ShareAlike 3.0 Unported matching Wikipedia source content."
+  },
+  "source_references": [
+    {
+      "title": "FEVEROUS Official Dataset Portal",
+      "url": "https://fever.ai/dataset/feverous.html",
+      "type": "official_website",
+      "notes": "Official FEVER community portal."
+    },
+    {
+      "title": "FEVEROUS: Fact Extraction and VERification Over Unstructured and Structured information",
+      "url": "https://arxiv.org/abs/2106.05707",
+      "type": "original_paper",
+      "notes": "Published in NeurIPS 2021."
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_by": "OpenDatasets Core Team",
+    "verified_date": "2026-11-25",
+    "notes": "Verified against NeurIPS 2021 publication (arXiv: 2106.05707) and fever.ai dataset distribution. Contains exactly 87,026 claims (train: 71,291, dev: 7,890, test: 7,845) classified as SUPPORTS, REFUTES, or NOT ENOUGH INFO."
+  },
+  "size": {
+    "amount": 2800.0,
+    "unit": "MB",
+    "file_formats": [
+      "jsonl",
+      "db"
+    ],
+    "status": "verified",
+    "notes": "JSONL claims and SQLite Wikipedia reference dump."
+  },
+  "sample_count": {
+    "total": 87026,
+    "unit": "claims",
+    "status": "verified",
+    "partition_completeness": "complete",
+    "partition_overlap": "disjoint",
+    "splits": {
+      "train": 71291,
+      "validation": 7890,
+      "test": 7845
+    },
+    "breakdown": [
+      {
+        "label": "train_claims",
+        "value": 71291,
+        "unit": "claims"
+      },
+      {
+        "label": "dev_claims",
+        "value": 7890,
+        "unit": "claims"
+      },
+      {
+        "label": "test_claims",
+        "value": 7845,
+        "unit": "claims"
+      }
+    ]
+  },
+  "dates": {
+    "published": "2021-06"
+  },
+  "citation": {
+    "paper_title": "FEVEROUS: Fact Extraction and VERification Over Unstructured and Structured information",
+    "paper_url": "https://arxiv.org/abs/2106.05707",
+    "authors": [
+      "Rami Aly",
+      "Zhijiang Guo",
+      "Michael Schlichtkrull",
+      "James Thorne",
+      "Andreas Vlachos",
+      "Christos Christodoulopoulos",
+      "Oana Cocarascu",
+      "Arpit Mittal"
+    ],
+    "doi": "10.48550/arXiv.2106.05707",
+    "bibtex": "@inproceedings{aly2021feverous,\n  title = {FEVEROUS: Fact Extraction and VERification Over Unstructured and Structured information},\n  author = {Aly, Rami and Guo, Zhijiang and Schlichtkrull, Michael and Thorne, James and Vlachos, Andreas and Christodoulopoulos, Christos and Cocarascu, Oana and Mittal, Arpit},\n  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},\n  volume = {34},\n  year = {2021},\n  url = {https://arxiv.org/abs/2106.05707},\n  doi = {10.48550/arXiv.2106.05707}\n}"
+  }
+}
