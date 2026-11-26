@@ -18914,11 +18914,11 @@
     ],
     "license": {
       "status": "verified_open",
-      "name": "Creative Commons Attribution 4.0 International",
-      "spdx_id": "CC-BY-4.0",
-      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "name": "Creative Commons Attribution 3.0 Unported",
+      "spdx_id": "CC-BY-3.0",
+      "url": "https://creativecommons.org/licenses/by/3.0/",
       "commercial_use": "allowed",
-      "notes": "Distributed on Zenodo under Creative Commons Attribution 4.0 International."
+      "notes": "Distributed under Creative Commons Attribution 3.0 Unported (CC-BY-3.0) via the official DCASE 2016 challenge datalist repository."
     },
     "source_references": [
       {
@@ -18932,13 +18932,19 @@
         "url": "https://ieeexplore.ieee.org/document/8169985",
         "type": "original_paper",
         "notes": "Published in IEEE WASPAA 2017."
+      },
+      {
+        "title": "Sound Event Detection in Synthetic Audio: Analysis of the DCASE 2016 Task Results (arXiv Preprint)",
+        "url": "https://arxiv.org/abs/1711.05551",
+        "type": "other",
+        "notes": "arXiv preprint corresponding to IEEE WASPAA 2017 paper."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against WASPAA 2017 paper (DOI: 10.1109/WASPAA.2017.8169985) and DCASE 2016 official records. Comprises 72 synthesized audio mixture tracks (18 development, 54 evaluation) generated from 220 isolated sound events across 11 classes."
+      "notes": "Verified against WASPAA 2017 paper (DOI: 10.1109/WASPAA.2017.8169985, pages 11-15) and DCASE 2016 official records. Comprises 72 synthesized audio mixture tracks (18 development, 54 evaluation) generated from 220 isolated sound events across 11 classes."
     },
     "size": {
       "amount": 1400.0,
@@ -18995,7 +19001,7 @@
         "Mathieu Lagrange"
       ],
       "doi": "10.1109/WASPAA.2017.8169985",
-      "bibtex": "@inproceedings{lafay2017sound,\n  title = {Sound Event Detection in Synthetic Audio: Analysis of the DCASE 2016 Task Results},\n  author = {Lafay, Gr{\\'e}goire and Benetos, Emmanouil and Lagrange, Mathieu},\n  booktitle = {Proceedings of the IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)},\n  year = {2017},\n  doi = {10.1109/WASPAA.2017.8169985},\n  pages = {31--35}\n}"
+      "bibtex": "@inproceedings{lafay2017sound,\n  title = {Sound Event Detection in Synthetic Audio: Analysis of the DCASE 2016 Task Results},\n  author = {Lafay, Gr{\\'e}goire and Benetos, Emmanouil and Lagrange, Mathieu},\n  booktitle = {Proceedings of the IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)},\n  year = {2017},\n  doi = {10.1109/WASPAA.2017.8169985},\n  pages = {11--15}\n}"
     }
   },
   {
@@ -22104,7 +22110,7 @@
       "spdx_id": null,
       "url": "http://saliencydetection.net/dut-omron/",
       "commercial_use": "unknown",
-      "notes": "Made freely available for academic research purposes on the official project page."
+      "notes": "Made freely available for academic research purposes on the official project page. Copyright is retained by the original authors ('All rights reserved by the original authors') with mandatory citation condition. No open-source or commercial license is granted by the source."
     },
     "source_references": [
       {
@@ -22114,17 +22120,23 @@
         "notes": "Official dataset and evaluation portal."
       },
       {
-        "title": "Saliency Detection via Graph Analysis",
+        "title": "Saliency Detection via Graph-Based Manifold Ranking",
         "url": "https://ieeexplore.ieee.org/document/6619250",
         "type": "original_paper",
-        "notes": "Published in CVPR 2013."
+        "notes": "Published in CVPR 2013, DOI: 10.1109/CVPR.2013.407."
+      },
+      {
+        "title": "How far we away from a perfect visual saliency detection - DUT-OMRON: a new benchmark dataset",
+        "url": "https://ieeexplore.ieee.org/document/6787948",
+        "type": "other",
+        "notes": "Published in 20th Korea-Japan Joint Workshop on Frontiers of Computer Vision (FCV 2014), DOI: 10.1109/FCV.2014.6787948."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against CVPR 2013 paper (DOI: 10.1109/CVPR.2013.407) and benchmark archive. Exactly 5,168 images with multiple human eye-fixation and segmentation masks."
+      "notes": "Verified against CVPR 2013 paper (DOI: 10.1109/CVPR.2013.407), FCV 2014 benchmark paper (DOI: 10.1109/FCV.2014.6787948), and official benchmark archive. Exactly 5,168 natural images with 5 annotator bounding boxes and eye-fixations. A 2018 update to the archive noted 4 images lacked pixel-wise ground-truth masks (leaving 5,164 pixel masks and 5,168 eye-fixations/bounding boxes)."
     },
     "size": {
       "amount": 1100.0,
@@ -22152,6 +22164,11 @@
           "label": "annotators_per_image",
           "value": 5,
           "unit": "annotators"
+        },
+        {
+          "label": "pixel_ground_truth_masks",
+          "value": 5164,
+          "unit": "masks"
         }
       ]
     },
@@ -22159,7 +22176,7 @@
       "published": "2013-06"
     },
     "citation": {
-      "paper_title": "Saliency Detection via Graph Analysis",
+      "paper_title": "Saliency Detection via Graph-Based Manifold Ranking",
       "paper_url": "https://ieeexplore.ieee.org/document/6619250",
       "authors": [
         "Chuan Yang",
@@ -22169,7 +22186,7 @@
         "Ming-Hsuan Yang"
       ],
       "doi": "10.1109/CVPR.2013.407",
-      "bibtex": "@inproceedings{yang2013saliency,\n  title = {Saliency Detection via Graph Analysis},\n  author = {Yang, Chuan and Zhang, Lihe and Lu, Huchuan and Ruan, Xiang and Yang, Ming-Hsuan},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2013},\n  doi = {10.1109/CVPR.2013.407},\n  pages = {3166--3173}\n}"
+      "bibtex": "@inproceedings{yang2013saliency,\n  title = {Saliency Detection via Graph-Based Manifold Ranking},\n  author = {Yang, Chuan and Zhang, Lihe and Lu, Huchuan and Ruan, Xiang and Yang, Ming-Hsuan},\n  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2013},\n  doi = {10.1109/CVPR.2013.407},\n  pages = {3166--3173}\n}"
     }
   },
   {
@@ -46927,7 +46944,7 @@
       "spdx_id": null,
       "url": "https://github.com/Nealcly/MuTual",
       "commercial_use": "unknown",
-      "notes": "Released publicly for academic research without explicit open license declaration."
+      "notes": "Released publicly for academic research without an explicit open-source license declaration. Authors grant research usage on GitHub, but no commercial license or standard OSI/SPDX permissive license is provided."
     },
     "source_references": [
       {
@@ -46947,7 +46964,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against ACL 2020 paper (DOI: 10.18653/v1/2020.acl-main.130) and official GitHub repository (Nealcly/MuTual). Contains 8,860 context-response pairs (train: 7,088, dev: 886, test: 886). Note: repository test directory contains 887 total files including 1 hidden .DS_Store file, giving exactly 886 text instances."
+      "notes": "Verified against ACL 2020 paper (DOI: 10.18653/v1/2020.acl-main.130) and official GitHub repository (Nealcly/MuTual). License status verified as unspecified_by_source due to absence of explicit license terms on the repository. Contains 8,860 context-response pairs (train: 7,088, dev: 886, test: 886). Note: repository test directory contains 887 total files including 1 hidden .DS_Store file, giving exactly 886 text instances."
     },
     "size": {
       "amount": 5.0,
@@ -49100,7 +49117,7 @@
     "id": "newsqa",
     "slug": "newsqa",
     "name": "NewsQA: Machine Comprehension Dataset",
-    "description": "NewsQA is a machine comprehension dataset of human-generated question-answer pairs based on CNN news articles. While crowdworkers originally collected 119,633 questions on 12,744 CNN stories, the canonical evaluated machine reading benchmark comprises 102,841 validated question-answer pairs across 10,978 stories.",
+    "description": "NewsQA is a machine comprehension dataset of human-generated question-answer pairs based on CNN news articles. Crowdworkers originally collected 119,633 questions on 12,744 CNN stories; after filtering for crowdworker agreement and answerability, the canonical evaluated benchmark comprises 102,841 validated question-answer pairs across 10,978 stories.",
     "homepage_url": "https://github.com/Maluuba/newsqa",
     "publisher": {
       "name": "Maluuba / Microsoft Research",
@@ -49148,7 +49165,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against RepL4NLP 2017 publication (DOI: 10.18653/v1/W17-2623) and official dataset release. Total collection consists of 119,633 questions on 12,744 CNN stories; canonical validated benchmark partitions comprise 102,841 questions (train: 92,549, dev: 5,166, test: 5,126) across 10,978 stories."
+      "notes": "Verified against RepL4NLP 2017 publication (DOI: 10.18653/v1/W17-2623) and official dataset release. The raw collection comprises 119,633 questions on 12,744 CNN stories. 16,792 questions (14.0%) were excluded due to lack of crowdworker agreement or ambiguous answers per Sections 3.5 & 6, leaving 102,841 validated benchmark questions (train: 92,549, dev: 5,166, test: 5,126) across 10,978 stories."
     },
     "size": {
       "amount": 25.0,
@@ -49175,6 +49192,11 @@
         {
           "label": "unfiltered_collected_questions",
           "value": 119633,
+          "unit": "questions"
+        },
+        {
+          "label": "excluded_unvalidated_questions",
+          "value": 16792,
           "unit": "questions"
         },
         {
@@ -51727,7 +51749,7 @@
       "spdx_id": null,
       "url": "https://ocr-vqa.github.io/",
       "commercial_use": "unknown",
-      "notes": "Released freely for academic research purposes on the official project website."
+      "notes": "Released freely for academic research purposes on the official project website. The website specifies academic research use but does not provide an explicit open license (e.g., CC, MIT, Apache) or commercial grant."
     },
     "source_references": [
       {
@@ -51747,7 +51769,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against ICDAR 2019 publication (DOI: 10.1109/ICDAR.2019.00156) and official GitHub/portal releases. Comprises 1,002,141 question-answer pairs over 207,572 book cover images partitioned 80% train (801,712 QA pairs), 10% val (100,214 QA pairs), and 10% test (100,215 QA pairs)."
+      "notes": "Verified against ICDAR 2019 publication (DOI: 10.1109/ICDAR.2019.00156) and official GitHub/portal releases. License status verified as unspecified_by_source because no standard OSI/Creative Commons license grant is provided. Comprises 1,002,141 question-answer pairs over 207,572 book cover images partitioned 80% train (801,712 QA pairs), 10% val (100,214 QA pairs), and 10% test (100,215 QA pairs)."
     },
     "size": {
       "amount": 75.0,
@@ -67312,7 +67334,7 @@
       "spdx_id": null,
       "url": "https://rrc.cvc.uab.es/?ch=11",
       "commercial_use": "unknown",
-      "notes": "Provided for research and competition purposes under ICDAR Robust Reading Competition terms."
+      "notes": "Provided for research and competition purposes under ICDAR Robust Reading Competition terms. No explicit open-source or commercial license is granted by the competition organizers."
     },
     "source_references": [
       {
@@ -67332,7 +67354,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against ICCV 2019 publication (DOI: 10.1109/ICCV.2019.00439) and ICDAR RRC challenge metadata. Exactly 31,791 QA pairs (26,308 train, 5,483 test) across 23,038 natural scene images from 6 source datasets."
+      "notes": "Verified against ICCV 2019 publication (DOI: 10.1109/ICCV.2019.00439) and ICDAR RRC challenge metadata. License status verified as unspecified_by_source in accordance with competition terms. Exactly 31,791 QA pairs (26,308 train, 5,483 test) across 23,038 natural scene images from 6 source datasets."
     },
     "size": {
       "amount": 8.0,
@@ -67503,7 +67525,7 @@
       "spdx_id": null,
       "url": "https://ai.stanford.edu/~jkrause/cars/car_dataset.html",
       "commercial_use": "unknown",
-      "notes": "Provided for non-commercial research and educational benchmarking on fine-grained categorization."
+      "notes": "Provided by Stanford AI Lab for non-commercial research and educational benchmarking on fine-grained categorization. No explicit open-source license or commercial use permission is granted."
     },
     "source_references": [
       {
@@ -67523,7 +67545,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against ICCVW 2013 paper (DOI: 10.1109/ICCVW.2013.77) and official Stanford download files. Total 16,185 images across 196 car categories, divided 50-50 into 8,144 training and 8,041 test images with bounding box annotations."
+      "notes": "Verified against ICCVW 2013 paper (DOI: 10.1109/ICCVW.2013.77) and official Stanford download files. License status verified as unspecified_by_source due to lack of a formal open license grant. Total 16,185 images across 196 car categories, divided 50-50 into 8,144 training and 8,041 test images with bounding box annotations."
     },
     "size": {
       "amount": 2000.0,
@@ -72830,14 +72852,14 @@
         "title": "Fifty Years of Pulsar Candidate Selection: From Simple Filters to a New Principled Real-Time Classification Approach",
         "url": "https://academic.oup.com/mnras/article/459/1/1104/2608953",
         "type": "original_paper",
-        "notes": "Published in Monthly Notices of the Royal Astronomical Society (MNRAS 2016)."
+        "notes": "Published in Monthly Notices of the Royal Astronomical Society (MNRAS 2016), DOI: 10.1093/mnras/stw656."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against MNRAS 2016 publication (DOI: 10.1093/mnras/stw656) and DataCite DOI (10.24432/C5DK6R). Exactly 17,898 instances, 8 continuous features, 0 missing values, and binary class labels (1,639 real pulsars, 16,259 non-pulsar noise artifacts)."
+      "notes": "Verified against UCI Machine Learning Repository DataCite record (DOI: 10.24432/C5DK6R) and MNRAS 2016 research publication (DOI: 10.1093/mnras/stw656). Exactly 17,898 instances, 8 continuous features, 0 missing values, and binary class labels (1,639 real pulsars, 16,259 non-pulsar noise artifacts)."
     },
     "size": {
       "amount": 1.5,
@@ -72881,17 +72903,13 @@
       "published": "2016-04"
     },
     "citation": {
-      "paper_title": "Fifty Years of Pulsar Candidate Selection: From Simple Filters to a New Principled Real-Time Classification Approach",
-      "paper_url": "https://academic.oup.com/mnras/article/459/1/1104/2608953",
+      "paper_title": "HTRU2",
+      "paper_url": "https://doi.org/10.24432/C5DK6R",
       "authors": [
-        "R. J. Lyon",
-        "B. W. Stappers",
-        "S. Cooper",
-        "J. M. Brooke",
-        "J. D. Knowles"
+        "Robert Lyon"
       ],
-      "doi": "10.1093/mnras/stw656",
-      "bibtex": "@article{lyon2016fifty,\n  title = {Fifty Years of Pulsar Candidate Selection: From Simple Filters to a New Principled Real-Time Classification Approach},\n  author = {Lyon, R. J. and Stappers, B. W. and Cooper, S. and Brooke, J. M. and Knowles, J. D.},\n  journal = {Monthly Notices of the Royal Astronomical Society},\n  volume = {459},\n  number = {1},\n  year = {2016},\n  publisher = {Oxford University Press},\n  url = {https://academic.oup.com/mnras/article/459/1/1104/2608953},\n  doi = {10.1093/mnras/stw656},\n  pages = {1104--1123}\n}"
+      "doi": "10.24432/C5DK6R",
+      "bibtex": "@misc{lyon2015htru2,\n  title = {HTRU2},\n  author = {Lyon, Robert},\n  year = {2015},\n  publisher = {UCI Machine Learning Repository},\n  doi = {10.24432/C5DK6R},\n  url = {https://archive.ics.uci.edu/dataset/372/htru2}\n}"
     }
   },
   {
@@ -73474,14 +73492,14 @@
         "title": "Real-Time Prediction of Online Shoppers' Purchasing Intention Using Multilayer Perceptron and LSTM Recurrent Neural Networks",
         "url": "https://link.springer.com/article/10.1007/s00521-018-3523-0",
         "type": "original_paper",
-        "notes": "Published in Neural Computing and Applications (2019)."
+        "notes": "Published in Neural Computing and Applications (2019), DOI: 10.1007/s00521-018-3523-0."
       }
     ],
     "verification": {
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against Neural Computing and Applications 2019 publication (DOI: 10.1007/s00521-018-3523-0) and DataCite DOI (10.24432/C5F88Q). Exactly 12,330 sessions, 17 features (10 numerical, 7 categorical), and binary Revenue label (1,908 returning purchase sessions, 10,422 negative sessions)."
+      "notes": "Verified against UCI Machine Learning Repository DataCite record (DOI: 10.24432/C5F88Q) and Neural Computing and Applications 2019 publication (DOI: 10.1007/s00521-018-3523-0). Exactly 12,330 sessions, 17 features (10 numerical, 7 categorical), and binary Revenue label (1,908 returning purchase sessions, 10,422 negative sessions)."
     },
     "size": {
       "amount": 1.8,
@@ -73525,16 +73543,14 @@
       "published": "2018-08"
     },
     "citation": {
-      "paper_title": "Real-Time Prediction of Online Shoppers' Purchasing Intention Using Multilayer Perceptron and LSTM Recurrent Neural Networks",
-      "paper_url": "https://link.springer.com/article/10.1007/s00521-018-3523-0",
+      "paper_title": "Online Shoppers Purchasing Intention Dataset",
+      "paper_url": "https://doi.org/10.24432/C5F88Q",
       "authors": [
         "C. Okan Sakar",
-        "S. Olcay Polat",
-        "Mete Katircioglu",
         "Yomi Kastro"
       ],
-      "doi": "10.1007/s00521-018-3523-0",
-      "bibtex": "@article{sakar2019real,\n  title = {Real-Time Prediction of Online Shoppers' Purchasing Intention Using Multilayer Perceptron and LSTM Recurrent Neural Networks},\n  author = {Sakar, C. Okan and Polat, S. Olcay and Katircioglu, Mete and Kastro, Yomi},\n  journal = {Neural Computing and Applications},\n  volume = {31},\n  number = {10},\n  year = {2019},\n  publisher = {Springer},\n  doi = {10.1007/s00521-018-3523-0},\n  pages = {6893--6908}\n}"
+      "doi": "10.24432/C5F88Q",
+      "bibtex": "@misc{sakar2018online,\n  title = {Online Shoppers Purchasing Intention Dataset},\n  author = {Sakar, C. Okan and Kastro, Yomi},\n  year = {2018},\n  publisher = {UCI Machine Learning Repository},\n  doi = {10.24432/C5F88Q},\n  url = {https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset}\n}"
     }
   },
   {
@@ -79399,7 +79415,7 @@
     "id": "wham",
     "slug": "wham",
     "name": "WHAM!: WSJ0 Hipster Ambient Mixtures",
-    "description": "WHAM! (WSJ0 Hipster Ambient Mixtures) extends the WSJ0-2mix speech separation benchmark by overlaying real ambient noise recordings collected in urban public spaces (coffee shops, restaurants, parks) across 26,000 speech-and-noise mixtures.",
+    "description": "WHAM! (WSJ0 Hipster Ambient Mixtures) extends the WSJ0-2mix speech separation benchmark by overlaying real ambient noise recordings collected in urban public spaces (coffee shops, restaurants, parks) across 28,000 speech-and-noise mixtures.",
     "homepage_url": "https://wham.whisper.ai/",
     "publisher": {
       "name": "Mitsubishi Electric Research Laboratories (MERL) & Whisper.ai",
@@ -79427,7 +79443,7 @@
       "spdx_id": "CC-BY-NC-4.0",
       "url": "https://creativecommons.org/licenses/by-nc/4.0/",
       "commercial_use": "forbidden",
-      "notes": "Ambient noise recordings and mixing recipes released under CC-BY-NC-4.0; derived speech mixtures require WSJ0 license."
+      "notes": "Ambient noise recordings (80h across 44 locations) are released under CC-BY-NC-4.0; data generation and mixing scripts are released under the MIT License; underlying speech mixtures are derived from WSJ0 (LDC93S6A) and require an active LDC user license. Commercial use is not permitted without separate LDC licensing."
     },
     "source_references": [
       {
@@ -79447,7 +79463,7 @@
       "status": "verified",
       "verified_by": "OpenDatasets Core Team",
       "verified_date": "2026-11-25",
-      "notes": "Verified against Interspeech 2019 paper (DOI: 10.21437/Interspeech.2019-2821) and official dataset release. Contains 26,000 mixtures matching WSJ0-2mix partitions: 20,000 train (30h), 3,000 validation (5h), 3,000 test (5h) at 8 kHz and 16 kHz."
+      "notes": "Verified against Interspeech 2019 paper (DOI: 10.21437/Interspeech.2019-2821) and official dataset release. Contains 28,000 speech-and-noise mixtures matching WSJ0-2mix partitions: 20,000 train (58.03h), 5,000 validation (14.65h), 3,000 test (9.00h) at 8 kHz and 16 kHz. Replaced VoxForge due to lack of an immutable release archive."
     },
     "size": {
       "amount": 35.0,
@@ -79460,14 +79476,14 @@
       "notes": "WAV audio files and Python generation scripts."
     },
     "sample_count": {
-      "total": 26000,
+      "total": 28000,
       "unit": "recordings",
       "status": "verified",
       "partition_completeness": "complete",
       "partition_overlap": "disjoint",
       "splits": {
         "train": 20000,
-        "validation": 3000,
+        "validation": 5000,
         "test": 3000
       },
       "breakdown": [
@@ -79478,13 +79494,23 @@
         },
         {
           "label": "validation_mixtures",
-          "value": 3000,
+          "value": 5000,
           "unit": "recordings"
         },
         {
           "label": "test_mixtures",
           "value": 3000,
           "unit": "recordings"
+        },
+        {
+          "label": "ambient_noise_hours",
+          "value": 80,
+          "unit": "hours"
+        },
+        {
+          "label": "noise_locations",
+          "value": 44,
+          "unit": "locations"
         }
       ]
     },

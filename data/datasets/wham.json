@@ -3,7 +3,7 @@
   "id": "wham",
   "slug": "wham",
   "name": "WHAM!: WSJ0 Hipster Ambient Mixtures",
-  "description": "WHAM! (WSJ0 Hipster Ambient Mixtures) extends the WSJ0-2mix speech separation benchmark by overlaying real ambient noise recordings collected in urban public spaces (coffee shops, restaurants, parks) across 26,000 speech-and-noise mixtures.",
+  "description": "WHAM! (WSJ0 Hipster Ambient Mixtures) extends the WSJ0-2mix speech separation benchmark by overlaying real ambient noise recordings collected in urban public spaces (coffee shops, restaurants, parks) across 28,000 speech-and-noise mixtures.",
   "homepage_url": "https://wham.whisper.ai/",
   "publisher": {
     "name": "Mitsubishi Electric Research Laboratories (MERL) & Whisper.ai",
@@ -31,7 +31,7 @@
     "spdx_id": "CC-BY-NC-4.0",
     "url": "https://creativecommons.org/licenses/by-nc/4.0/",
     "commercial_use": "forbidden",
-    "notes": "Ambient noise recordings and mixing recipes released under CC-BY-NC-4.0; derived speech mixtures require WSJ0 license."
+    "notes": "Ambient noise recordings (80h across 44 locations) are released under CC-BY-NC-4.0; data generation and mixing scripts are released under the MIT License; underlying speech mixtures are derived from WSJ0 (LDC93S6A) and require an active LDC user license. Commercial use is not permitted without separate LDC licensing."
   },
   "source_references": [
     {
@@ -51,7 +51,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against Interspeech 2019 paper (DOI: 10.21437/Interspeech.2019-2821) and official dataset release. Contains 26,000 mixtures matching WSJ0-2mix partitions: 20,000 train (30h), 3,000 validation (5h), 3,000 test (5h) at 8 kHz and 16 kHz."
+    "notes": "Verified against Interspeech 2019 paper (DOI: 10.21437/Interspeech.2019-2821) and official dataset release. Contains 28,000 speech-and-noise mixtures matching WSJ0-2mix partitions: 20,000 train (58.03h), 5,000 validation (14.65h), 3,000 test (9.00h) at 8 kHz and 16 kHz. Replaced VoxForge due to lack of an immutable release archive."
   },
   "size": {
     "amount": 35.0,
@@ -64,14 +64,14 @@
     "notes": "WAV audio files and Python generation scripts."
   },
   "sample_count": {
-    "total": 26000,
+    "total": 28000,
     "unit": "recordings",
     "status": "verified",
     "partition_completeness": "complete",
     "partition_overlap": "disjoint",
     "splits": {
       "train": 20000,
-      "validation": 3000,
+      "validation": 5000,
       "test": 3000
     },
     "breakdown": [
@@ -82,13 +82,23 @@
       },
       {
         "label": "validation_mixtures",
-        "value": 3000,
+        "value": 5000,
         "unit": "recordings"
       },
       {
         "label": "test_mixtures",
         "value": 3000,
         "unit": "recordings"
+      },
+      {
+        "label": "ambient_noise_hours",
+        "value": 80,
+        "unit": "hours"
+      },
+      {
+        "label": "noise_locations",
+        "value": 44,
+        "unit": "locations"
       }
     ]
   },

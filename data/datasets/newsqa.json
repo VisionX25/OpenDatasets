@@ -3,7 +3,7 @@
   "id": "newsqa",
   "slug": "newsqa",
   "name": "NewsQA: Machine Comprehension Dataset",
-  "description": "NewsQA is a machine comprehension dataset of human-generated question-answer pairs based on CNN news articles. While crowdworkers originally collected 119,633 questions on 12,744 CNN stories, the canonical evaluated machine reading benchmark comprises 102,841 validated question-answer pairs across 10,978 stories.",
+  "description": "NewsQA is a machine comprehension dataset of human-generated question-answer pairs based on CNN news articles. Crowdworkers originally collected 119,633 questions on 12,744 CNN stories; after filtering for crowdworker agreement and answerability, the canonical evaluated benchmark comprises 102,841 validated question-answer pairs across 10,978 stories.",
   "homepage_url": "https://github.com/Maluuba/newsqa",
   "publisher": {
     "name": "Maluuba / Microsoft Research",
@@ -51,7 +51,7 @@
     "status": "verified",
     "verified_by": "OpenDatasets Core Team",
     "verified_date": "2026-11-25",
-    "notes": "Verified against RepL4NLP 2017 publication (DOI: 10.18653/v1/W17-2623) and official dataset release. Total collection consists of 119,633 questions on 12,744 CNN stories; canonical validated benchmark partitions comprise 102,841 questions (train: 92,549, dev: 5,166, test: 5,126) across 10,978 stories."
+    "notes": "Verified against RepL4NLP 2017 publication (DOI: 10.18653/v1/W17-2623) and official dataset release. The raw collection comprises 119,633 questions on 12,744 CNN stories. 16,792 questions (14.0%) were excluded due to lack of crowdworker agreement or ambiguous answers per Sections 3.5 & 6, leaving 102,841 validated benchmark questions (train: 92,549, dev: 5,166, test: 5,126) across 10,978 stories."
   },
   "size": {
     "amount": 25.0,
@@ -78,6 +78,11 @@
       {
         "label": "unfiltered_collected_questions",
         "value": 119633,
+        "unit": "questions"
+      },
+      {
+        "label": "excluded_unvalidated_questions",
+        "value": 16792,
         "unit": "questions"
       },
       {
