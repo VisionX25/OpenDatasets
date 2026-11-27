@@ -18,6 +18,9 @@ Tests scripts/audit_metadata_quality.py covering:
 from __future__ import annotations
 
 import copy
+import json
+from collections import Counter
+from pathlib import Path
 from typing import Any
 import pytest
 
@@ -513,8 +516,13 @@ def test_catalog_split_discrepancy_census():
     from pathlib import Path
 
     catalog_dir = Path("data/datasets")
-    records = [json.loads(p.read_text()) for p in sorted(catalog_dir.glob("*.json"))]
-    assert len(records) >= 1
+    source_files = sorted(catalog_dir.glob("*.json"))
+    expected_count = len(source_files)
+    assert expected_count > 0
+
+    records = [json.loads(p.read_text(encoding="utf-8")) for p in source_files]
+    assert len(records) == expected_count
+    assert len(set(r["id"] for r in records)) == expected_count
 
     cat_a = []  # partition_split_count_mismatch
     cat_b = []  # benchmark_subset_partition
@@ -623,29 +631,113 @@ def test_duplicate_reference_semantics():
     assert urls == ["https://archive.ics.uci.edu/dataset/53/iris", "https://doi.org/10.1111/j.1469-1809.1936.tb02137.x"]
 
 
-def test_readiness_tier_counts_reconciliation():
-    """Verify that catalog-wide readiness tiers sum to exactly the total number of records."""
-    import json
-    from pathlib import Path
+def test_readiness_tier_controlled_fixtures():
+    """Verify exact expected classifications across all three readiness tiers using controlled fixtures."""
+    # Tier 1: Ready for Evaluation
+    fixture_ready = {
+        "id": "fixture-ready",
+        "slug": "fixture-ready",
+        "name": "Fixture Ready Dataset",
+        "description": "Controlled dataset for Tier 1 Ready for Evaluation testing.",
+        "homepage_url": "https://opendatasets.org/ready",
+        "publisher": {"name": "Lab", "url": "https://opendatasets.org"},
+        "modalities": ["vision"],
+        "tasks": ["image-classification"],
+        "tags": ["tag1", "tag2", "tag3"],
+        "license": {
+            "status": "verified_open",
+            "name": "MIT",
+            "spdx_id": "MIT",
+            "url": "https://opensource.org/licenses/MIT",
+            "commercial_use": "allowed",
+        },
+        "source_references": [{"title": "Ref", "url": "https://opendatasets.org/ref", "type": "official_website"}],
+        "sample_count": {"total": 1000, "unit": "images", "splits": {"train": 800, "test": 200}},
+        "citation": {"paper_title": "Paper Title", "doi": "10.1000/182", "bibtex": "@article{...}"},
+    }
+    comp_ready = calculate_documentation_completeness(fixture_ready)
+    lic_ready = evaluate_licensing_and_access(fixture_ready)
+    sci_ready = evaluate_scientific_consistency(fixture_ready)
+    res_ready = evaluate_research_readiness(fixture_ready, comp_ready, lic_ready, sci_ready)
+    assert res_ready["readiness_tier"] == "Ready for Evaluation"
 
+    # Tier 2: Documented with Caveats (e.g. custom terms or proprietary)
+    fixture_caveats = dict(fixture_ready)
+    fixture_caveats["id"] = "fixture-caveats"
+    fixture_caveats["license"] = {
+        "status": "custom_permissive",
+        "name": "Custom Terms",
+        "url": "https://opendatasets.org/custom-terms",
+        "commercial_use": "allowed",
+    }
+    comp_caveats = calculate_documentation_completeness(fixture_caveats)
+    lic_caveats = evaluate_licensing_and_access(fixture_caveats)
+    sci_caveats = evaluate_scientific_consistency(fixture_caveats)
+    res_caveats = evaluate_research_readiness(fixture_caveats, comp_caveats, lic_caveats, sci_caveats)
+    assert res_caveats["readiness_tier"] == "Documented with Caveats"
+
+    # Tier 3: Needs Information Review (e.g. unspecified license status)
+    fixture_review = dict(fixture_ready)
+    fixture_review["id"] = "fixture-review"
+    fixture_review["license"] = {
+        "status": "unspecified_by_source",
+        "name": "Unspecified",
+        "commercial_use": "unknown",
+    }
+    comp_review = calculate_documentation_completeness(fixture_review)
+    lic_review = evaluate_licensing_and_access(fixture_review)
+    sci_review = evaluate_scientific_consistency(fixture_review)
+    res_review = evaluate_research_readiness(fixture_review, comp_review, lic_review, sci_review)
+    assert res_review["readiness_tier"] == "Needs Information Review"
+
+
+def test_readiness_tier_counts_reconciliation():
+    """Verify that catalog-wide readiness tiers cover all tiers and reconcile exactly to total records."""
     catalog_dir = Path("data/datasets")
-    records = [json.loads(p.read_text()) for p in sorted(catalog_dir.glob("*.json"))]
+    source_files = sorted(catalog_dir.glob("*.json"))
+    expected_total = len(source_files)
+    assert expected_total > 0
+
+    records = [json.loads(p.read_text(encoding="utf-8")) for p in source_files]
+    assert len(records) == expected_total
+    assert len(set(r["id"] for r in records)) == expected_total
+
     audit_data = audit_catalog_metadata_quality(records)
     tier_dist = audit_data["research_readiness_summary"]["tier_distribution"]
 
-    assert tier_dist["Ready for Evaluation"] >= 0
-    assert tier_dist["Documented with Caveats"] >= 0
-    assert tier_dist["Needs Information Review"] >= 0
-    assert sum(tier_dist.values()) == len(records)
+    valid_tiers = {"Ready for Evaluation", "Documented with Caveats", "Needs Information Review"}
+    assert set(tier_dist.keys()) == valid_tiers
+
+    # Every tier must have non-zero representation in production data
+    for tier in valid_tiers:
+        assert tier_dist[tier] > 0, f"Expected non-zero representation for tier: {tier}"
+
+    # Confirm every dataset in the catalog receives exactly one valid classification
+    assert sum(tier_dist.values()) == expected_total
+
+    # Reconcile individual dataset records to the summary distribution
+    dataset_tiers = [d["readiness_tier"] for d in audit_data["datasets"]]
+    assert len(dataset_tiers) == expected_total
+    assert all(t in valid_tiers for t in dataset_tiers)
+    assert Counter(dataset_tiers) == tier_dist
 
 
 def test_audit_metadata_quality_provenance_and_dynamic_counts():
     """Verify custom task provenance, dynamic licensing counts, and non-contradictory dates coverage."""
-    import json
-    from pathlib import Path
-
     catalog_dir = Path("data/datasets")
-    records = [json.loads(p.read_text()) for p in sorted(catalog_dir.glob("*.json"))]
+    source_files = sorted(catalog_dir.glob("*.json"))
+    expected_total = len(source_files)
+    assert expected_total > 0
+
+    records = [json.loads(p.read_text(encoding="utf-8")) for p in source_files]
+    assert len(records) == expected_total
+    assert len(set(r["id"] for r in records)) == expected_total
+
+    # Independently derive publication milestone counts directly from source JSON records
+    expected_dated = sum(1 for r in records if bool(r.get("dates", {}).get("published")))
+    expected_undated = expected_total - expected_dated
+    assert expected_dated > 0
+    assert expected_undated >= 0
 
     audit_task = "Task 49 — 700-Record Metadata Quality Audit"
     audit_date = "2026-11-20"
@@ -658,15 +750,21 @@ def test_audit_metadata_quality_provenance_and_dynamic_counts():
     meta = audit_data["audit_metadata"]
     assert meta["audit_task"] == audit_task
     assert meta["audit_date"] == audit_date
+    assert meta["total_datasets_audited"] == expected_total
+
+    # Non-tautological verification: assert audit module matches independently computed date counts
+    opt = audit_data["optional_field_coverage"]
+    assert opt["dates_published"]["present_count"] == expected_dated
+    assert opt["dates_published"]["percentage"] == round(expected_dated / expected_total * 100, 1)
 
     md = generate_markdown_summary(audit_data)
     assert f"> **Audit Task:** {audit_task}" in md
     assert f"> **Audit Date:** {audit_date}" in md
-    assert f"Complete across all {len(records)} catalog records" not in md
-    opt = audit_data["optional_field_coverage"]
-    dated_count = opt["dates_published"]["present_count"]
-    undated_count = len(records) - dated_count
-    assert f"Documented across {dated_count}/{len(records)} catalog records ({undated_count} undated)" in md
+    if expected_undated == 0:
+        assert f"Complete across all {expected_total} catalog records" in md
+    else:
+        assert f"Documented across {expected_dated}/{expected_total} catalog records ({expected_undated} undated)" in md
+        assert f"Complete across all {expected_total} catalog records" not in md
     assert f"modified during {audit_task}" in md
     assert "modified during Task 40" not in md
 

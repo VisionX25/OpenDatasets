@@ -601,16 +601,26 @@ def test_migration_dry_run_immutability(tmp_path: Path) -> None:
 def test_all_catalog_datasets_valid(validator: jsonschema.Draft7Validator) -> None:
     """Test that every dataset in data/datasets/ conforms 100% to schema."""
     dataset_files = sorted(DEFAULT_DATA_DIR.glob("*.json"))
-    assert len(dataset_files) >= 1, f"Expected datasets in catalog, found {len(dataset_files)}"
+    expected_count = len(dataset_files)
+    assert expected_count > 0, "No dataset JSON files found in data/datasets"
 
     failures = []
+    loaded_ids = set()
     for f in dataset_files:
         data, load_errs = load_json_file(f)
         if load_errs or data is None:
             failures.append(f"{f.name}: load errors {load_errs}")
             continue
+        did = data.get("id")
+        if not did:
+            failures.append(f"{f.name}: missing dataset id")
+        elif did in loaded_ids:
+            failures.append(f"{f.name}: duplicate id {did}")
+        loaded_ids.add(did)
+
         errs = validate_dataset_data(data, validator, filename=f.name)
         if errs:
             failures.append(f"{f.name}: {errs}")
 
     assert not failures, f"Catalog validation failures:\n" + "\n".join(failures[:10])
+    assert len(loaded_ids) == expected_count, f"Expected {expected_count} unique dataset IDs, got {len(loaded_ids)}"
