@@ -1424,7 +1424,6 @@ def collect_automation_metrics(repo_root: Path) -> tuple[dict[str, Any], list[Fi
     py_lock_present = (
         (repo_root / "poetry.lock").exists()
         or (repo_root / "Pipfile.lock").exists()
-        or (repo_root / "requirements.lock").exists()
         or (repo_root / "requirements-lock.txt").exists()
     )
     nvmrc_present = (
