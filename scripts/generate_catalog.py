@@ -17,13 +17,21 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-import jsonschema
-
 # Ensure scripts directory is on sys.path for direct script execution
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
+
+try:
+    import jsonschema
+except ImportError:
+    # If jsonschema is not installed in the active environment, attempt to re-exec
+    # with the repository's local virtualenv if available.
+    venv_python = REPO_ROOT / ".venv" / "bin" / "python3"
+    if venv_python.exists() and sys.executable != str(venv_python.resolve()):
+        os.execv(str(venv_python), [str(venv_python)] + sys.argv)
+    raise
 
 from scripts.validate_datasets import (
     DEFAULT_DATA_DIR,

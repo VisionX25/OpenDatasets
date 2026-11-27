@@ -38,6 +38,9 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=Path, default=Path("frontend/dist"))
     parser.add_argument("--catalog", type=Path, default=Path("frontend/public/data/catalog.json"))
     args = parser.parse_args()
-    records = json.loads(args.catalog.read_text(encoding="utf-8"))
+    catalog_path = args.catalog
+    if not catalog_path.exists() and (args.output / "data" / "catalog.json").exists():
+        catalog_path = args.output / "data" / "catalog.json"
+    records = json.loads(catalog_path.read_text(encoding="utf-8"))
     count = prepare_pages(args.output, [record["slug"] for record in records])
     print(f"Prepared {count} deep-link entry points and 404.html in {args.output}")

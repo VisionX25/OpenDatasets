@@ -4,13 +4,18 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "prebuild": "python3 ../scripts/generate_catalog.py",
-    "predev": "python3 ../scripts/generate_catalog.py",
+    "prebuild": "python3 ../scripts/generate_catalog.py --quiet",
+    "predev": "python3 ../scripts/generate_catalog.py --quiet",
+    "pretest": "python3 ../scripts/generate_catalog.py --quiet",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "test": "vitest run",
     "preview": "vite preview"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
   },
   "dependencies": {
     "lucide-react": "^1.61.0",
