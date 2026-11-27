@@ -32,6 +32,30 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-lock.txt
 
+      - name: Check for dataset changes
+        id: dataset-changes
+        run: |
+          mkdir -p "$RUNNER_TEMP/audit-reports"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "should_audit=true" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "pull_request" ]; then
+            git fetch origin ${{ github.base_ref }} --depth=1 2>/dev/null || true
+            CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- data/datasets/ schemas/ 2>/dev/null || true)
+            if [ -n "$CHANGED" ]; then
+              echo "should_audit=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "should_audit=false" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            # Push to main or feature branch
+            CHANGED=$(git diff --name-only HEAD~1 HEAD -- data/datasets/ schemas/ 2>/dev/null || true)
+            if [ -n "$CHANGED" ] || [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+              echo "should_audit=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "should_audit=false" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
       - name: Run dataset metadata validation
         run: python3 scripts/validate_datasets.py
 
@@ -43,6 +67,42 @@ jobs:
           python3 scripts/generate_catalog.py --output /tmp/catalog.1.json --quiet
           python3 scripts/generate_catalog.py --output /tmp/catalog.2.json --quiet
           diff -u /tmp/catalog.1.json /tmp/catalog.2.json
+
+      - name: Generate dataset audit reports
+        if: always() && steps.dataset-changes.outputs.should_audit == 'true'
+        run: |
+          mkdir -p "$RUNNER_TEMP/audit-reports"
+          python3 scripts/audit_metadata_quality.py \
+            --output-json "$RUNNER_TEMP/audit-reports/metadata-quality-report.json" \
+            --output-md "$RUNNER_TEMP/audit-reports/metadata-quality-summary.md" || true
+          python3 scripts/audit_semantic_duplicates.py \
+            --output-json "$RUNNER_TEMP/audit-reports/semantic-duplicate-report.json" \
+            --output-md "$RUNNER_TEMP/audit-reports/semantic-duplicate-summary.md" \
+            --quiet || true
+
+      - name: Enforce audit artifact budget (<= 2 MB)
+        if: always() && steps.dataset-changes.outputs.should_audit == 'true'
+        run: |
+          MAX_BYTES=2097152
+          AUDIT_DIR="$RUNNER_TEMP/audit-reports"
+          if [ -d "$AUDIT_DIR" ]; then
+            TOTAL_BYTES=$(find "$AUDIT_DIR" -type f -exec stat -c%s {} + 2>/dev/null | awk '{s+=$1} END {print s+0}')
+            echo "Total audit artifact size: $TOTAL_BYTES bytes (budget: $MAX_BYTES bytes)"
+            if [ "$TOTAL_BYTES" -gt "$MAX_BYTES" ]; then
+              echo "::error::Audit artifacts size ($TOTAL_BYTES bytes) exceeds 2 MB budget ($MAX_BYTES bytes)."
+              rm -rf "$AUDIT_DIR"
+              exit 1
+            fi
+          fi
+
+      - name: Upload dataset audit artifacts (7-day retention)
+        if: always() && steps.dataset-changes.outputs.should_audit == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dataset-audits-${{ github.run_id }}
+          path: ${{ runner.temp }}/audit-reports/
+          retention-days: 7
+          if-no-files-found: ignore
 
   frontend-quality:
     name: Frontend Quality & Build
