@@ -57,19 +57,18 @@ def test_find_venv_python_absent(tmp_path: Path):
 def test_reexec_guard_prevents_recursion(tmp_path: Path):
     """Verify that when _OPENDATASETS_CATALOG_REEXEC is already set, script does not loop and exits with 1."""
     script_path = Path(__file__).resolve().parent.parent / "scripts" / "generate_catalog.py"
-    # Run with system python and empty PYTHONPATH so jsonschema fails
     env = os.environ.copy()
     env[REEXEC_ENV_VAR] = "1"
     env["PYTHONPATH"] = str(tmp_path)
 
-    # Use sys.executable (or /usr/bin/python3) with unbuffered output
+    # Use sys.executable with -S (isolated from site-packages) so jsonschema import fails deterministically
     proc = subprocess.run(
-        ["/usr/bin/python3", str(script_path), "--help"],
+        [sys.executable, "-S", str(script_path), "--help"],
         env=env,
         capture_output=True,
         text=True,
     )
-    # Since /usr/bin/python3 does not have jsonschema installed and guard is set, it must fail cleanly
+    # When jsonschema is missing and re-exec guard is set, it must fail cleanly with exit code 1
     assert proc.returncode == 1
     assert "Required dependency 'jsonschema' is not installed" in proc.stderr
     assert "pip install -r requirements-lock.txt" in proc.stderr
