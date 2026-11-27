@@ -161,14 +161,22 @@ jobs:
 
       - name: Verify catalog presence in production bundle
         run: |
-          test -f frontend/dist/data/catalog.json || test -f frontend/public/data/catalog.json
+          test -f frontend/dist/data/catalog.json
+          test -s frontend/dist/data/catalog.json
           python3 -c '
           import json
           from pathlib import Path
 
-          p = Path("frontend/dist/data/catalog.json")
-          if not p.exists():
-              p = Path("frontend/public/data/catalog.json")
-          data = json.loads(p.read_text(encoding="utf-8"))
-          assert len(data) > 0, "Generated catalog must not be empty"
+          source_files = sorted(Path("data/datasets").glob("*.json"))
+          source_ids = {json.loads(f.read_text(encoding="utf-8"))["id"] for f in source_files}
+
+          dist_catalog = Path("frontend/dist/data/catalog.json")
+          assert dist_catalog.is_file(), "Production bundle frontend/dist/data/catalog.json is missing!"
+
+          catalog_data = json.loads(dist_catalog.read_text(encoding="utf-8"))
+          catalog_ids = {d["id"] for d in catalog_data}
+
+          assert len(catalog_ids) == len(source_ids), f"Count mismatch: dist={len(catalog_ids)}, source={len(source_ids)}"
+          assert catalog_ids == source_ids, f"ID mismatch: {catalog_ids ^ source_ids}"
+          print(f"[OK] Production bundle catalog verified: {len(catalog_ids)} authoritative datasets.")
           '
