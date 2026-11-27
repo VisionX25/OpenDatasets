@@ -1634,6 +1634,36 @@ def build_historical_comparison(health_report: dict[str, Any]) -> list[dict[str,
     return comparison_rows
 
 
+def collect_quality_ratchet_metrics(repo_root: Path) -> dict[str, Any]:
+    """Collect quality ratchet baseline and rule violation metrics."""
+    baseline_path = repo_root / "data" / "legacy-baseline.json"
+    if not baseline_path.exists():
+        return {
+            "baseline_present": False,
+            "total_violations": 0,
+            "violation_counts_by_rule": {},
+            "authoritative_commit": None,
+        }
+
+    try:
+        data = json.loads(baseline_path.read_text(encoding="utf-8"))
+        return {
+            "baseline_present": True,
+            "total_violations": data.get("total_violations", 0),
+            "violation_counts_by_rule": data.get("violation_counts_by_rule", {}),
+            "authoritative_commit": data.get("generated_at_commit", "unknown"),
+            "schema_version": data.get("schema_version", "1.0"),
+        }
+    except Exception as exc:
+        return {
+            "baseline_present": False,
+            "error": str(exc),
+            "total_violations": 0,
+            "violation_counts_by_rule": {},
+            "authoritative_commit": None,
+        }
+
+
 # ---------------------------------------------------------------------------
 # Report Building & Rendering
 # ---------------------------------------------------------------------------
@@ -1678,6 +1708,8 @@ def build_health_report(
 
     fe_metrics, fe_findings = collect_frontend_metrics(repo_root)
     all_findings.extend(fe_findings)
+
+    ratchet_metrics = collect_quality_ratchet_metrics(repo_root)
 
     val_result: dict[str, Any] = {
         "status": "skipped",
@@ -1728,6 +1760,7 @@ def build_health_report(
         "source_monitoring": src_metrics,
         "automation": aut_metrics,
         "frontend": fe_metrics,
+        "quality_ratchet": ratchet_metrics,
         "findings": [f.to_dict() for f in all_findings],
         "findings_summary": findings_summary,
         "execution": {
@@ -1975,6 +2008,15 @@ def render_markdown_report(report: dict[str, Any]) -> str:
         f"- **Pre-commit Hooks:** {'Configured' if aut['pre_commit_present'] else 'Absent'}",
         f"- **Python Dependency Lockfile:** {'Present' if aut['python_lockfile_present'] else 'Absent (unlocked pip environment)'}",
         f"- **Node.js Engines / .nvmrc:** {'Configured' if aut['npm_engines_configured'] or aut['nvmrc_present'] else 'Absent'}",
+        "",
+        "---",
+        "",
+        "## Quality Ratchet & Validator Rules",
+        "",
+        f"- **Legacy Baseline Present:** {'Yes (`data/legacy-baseline.json`)' if report.get('quality_ratchet', {}).get('baseline_present') else 'No'}",
+        f"- **Baseline Violations Count:** {report.get('quality_ratchet', {}).get('total_violations', 0)}",
+        f"- **Violations By Rule:** {', '.join(f'`{k}`: {v}' for k, v in sorted(report.get('quality_ratchet', {}).get('violation_counts_by_rule', {}).items())) or 'None'}",
+        f"- **Authoritative Commit:** `{report.get('quality_ratchet', {}).get('authoritative_commit', 'unknown')}`",
         "",
         "---",
         "",
