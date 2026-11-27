@@ -29,33 +29,10 @@ DEFAULT_DATASETS_DIR = REPO_ROOT / "data" / "datasets"
 DEFAULT_REPORT_JSON = REPO_ROOT / "docs" / "audits" / "sample-count-breakdown-inventory.json"
 DEFAULT_REPORT_MD = REPO_ROOT / "docs" / "audits" / "sample-count-breakdown-audit.md"
 
-STANDARD_PARTITION_KEYWORDS = (
-    "train",
-    "training",
-    "val",
-    "valid",
-    "validation",
-    "dev",
-    "development",
-    "test",
-    "testing",
-    "eval",
-    "evaluation",
-    "fold",
-    "fine_tuning",
-    "pretraining",
-    "unsupervised",
-    "unlabeled",
-    "extra",
-    "calibration",
-    "holdout",
-    "set-a",
-    "set-b",
-    "set-c",
-    "set_a",
-    "set_b",
-    "set_c",
-    "public_eval",
+from scripts.validation_helpers import (
+    KNOWN_SPECIAL_SEMANTIC_REVIEWS,
+    STANDARD_PARTITION_KEYWORDS,
+    is_partition_key,
 )
 
 # Explicit, documented migrations for pure non-partition metrics
@@ -301,22 +278,6 @@ SAFE_MIXED_METRIC_MIGRATIONS: dict[str, list[tuple[str, str, str]]] = {
         ("original", "original unaugmented images", "images"),
     ],
 }
-
-KNOWN_SPECIAL_SEMANTIC_REVIEWS: dict[str, str] = {
-    "ava-action": "Unit mismatch: declared total is 1.62M action labels, while splits represent 430 movie clips",
-    "pubmed-200k-rct": "Unit/version mismatch: declared total is abstracts (195,654) while splits record sentences (237,690) from 20k subset",
-    "isic-2018": "Multi-task benchmark: splits represent task1, task2, and task3 subsets with overlapping sample images",
-    "btad-beantech-anomaly-detection": "Multi-subset benchmark: splits include both aggregate train/test and per-product subsets train_01..03, test_01..03",
-    "unsw-nb15": "Benchmark subset partition: splits represent official partitioned subset (257,673 flows) of raw archive (2,540,044 flows)",
-    "ms-coco": "Benchmark subset partition: splits represent 2017 detection train/val/test subset (163,957 images) of 330k raw archive",
-    "hotpotqa": "Multi-evaluation benchmark: splits include both dev_distractor and dev_fullwiki evaluation settings",
-}
-
-
-def is_partition_key(key: str) -> bool:
-    """Return True if split key represents a standard dataset partition."""
-    k_low = key.lower().strip()
-    return any(p in k_low for p in STANDARD_PARTITION_KEYWORDS)
 
 
 def classify_dataset_splits(dataset: dict[str, Any]) -> dict[str, Any]:

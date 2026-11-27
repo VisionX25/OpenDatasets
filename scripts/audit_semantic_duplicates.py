@@ -45,104 +45,21 @@ DEFAULT_OUTPUT_JSON = REPO_ROOT / "docs" / "audits" / "task-43" / "semantic-dupl
 DEFAULT_OUTPUT_MD = REPO_ROOT / "docs" / "audits" / "task-43" / "semantic-duplicate-summary.md"
 AUDIT_DATE = "2026-11-18"
 
-# Stop words ignored during title tokenization
-STOP_WORDS = {
-    "a",
-    "an",
-    "and",
-    "based",
-    "benchmark",
-    "corpus",
-    "data",
-    "database",
-    "dataset",
-    "for",
-    "in",
-    "of",
-    "on",
-    "the",
-    "using",
-    "with",
-}
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
-# Generic hosting / publisher root domains that MUST NOT trigger duplicate match on domain alone
-GENERIC_HOSTING_DOMAINS = {
-    "archive.ics.uci.edu",
-    "arxiv.org",
-    "challenge.isic-archive.com",
-    "crossref.org",
-    "data.gov",
-    "disc.gsfc.nasa.gov",
-    "doi.org",
-    "dx.doi.org",
-    "github.com",
-    "huggingface.co",
-    "isic-archive.com",
-    "kaggle.com",
-    "ncbi.nlm.nih.gov",
-    "nih.gov",
-    "openml.org",
-    "openreview.net",
-    "paperswithcode.com",
-    "physionet.org",
-    "registry.opendata.aws",
-    "rrc.cvc.uab.cat",
-    "rrc.cvc.uab.es",
-    "spacenet.ai",
-    "wikipedia.org",
-    "zenodo.org",
-}
-
-# Generic root path segments on multi-dataset hosting portals
-GENERIC_PATH_SEGMENTS = {
-    "",
-    "/",
-    "/data",
-    "/dataset",
-    "/datasets",
-    "/forum",
-    "/record",
-    "/records",
-    "/resources",
-    "/archive",
-    "/downloads",
-}
-
-# Tracking and analytics query parameters to safely strip
-TRACKING_QUERY_PARAMS = {
-    "campaign",
-    "fbclid",
-    "gclid",
-    "medium",
-    "ref",
-    "ref_src",
-    "ref_url",
-    "source",
-    "utm_campaign",
-    "utm_content",
-    "utm_medium",
-    "utm_source",
-    "utm_term",
-}
-
-# Regular expressions for discriminating tokens (version, class count, sensor, sub-product)
-DISCRIMINATING_PATTERNS = [
-    r"\bv\d+(\.\d+)?\b",
-    r"(?<=[a-z])v\d+\b",
-    r"(?<!\d)(?:19\d\d|20\d\d)(?!\d)",
-    r"\b\d{1,4}\b",
-    r"\b(?:i|ii|iii|iv|v|vi)\b",
-    r"\b(lidar|sensor|motion|camera|radar|sonar|eeg|ecg|emg|fmri|imu|gps|tabular|graph|3d|2d|audio|speech|video|image|text|nlp|pcb|phone|charity|nda|reference|global|active|cropland|note|daily|hourly|monthly|loco|perceptual|flow|depth|semantic|instance|panoptic|multimodal)\b",
-    r"\b(code2|molpcba|molhiv|moltox21|ppa|citation2|collab|wikikg2|mag|papers100m|products|proteins|mag240m|pcqm4mv2|wikikg90mv2)\b",
-]
-
-
-def normalize_title(title: str) -> str:
-    """Normalize dataset title by lowercasing and stripping non-alphanumeric characters."""
-    if not title or not isinstance(title, str):
-        return ""
-    lowered = title.lower().strip()
-    return re.sub(r"[^\w\s]", "", lowered)
+from scripts.validation_helpers import (
+    DISCRIMINATING_PATTERNS,
+    GENERIC_HOSTING_DOMAINS,
+    GENERIC_PATH_SEGMENTS,
+    STOP_WORDS,
+    TRACKING_QUERY_PARAMS,
+    extract_discriminating_features,
+    is_generic_hosting_url,
+    normalize_doi,
+    normalize_title,
+    normalize_url,
+)
 
 
 def extract_title_tokens(title: str) -> set[str]:
@@ -194,100 +111,6 @@ def extract_title_aliases(title: str, tags: list[str] | None = None) -> set[str]
                     aliases.add(normalize_title(tag_clean))
 
     return aliases
-
-
-def normalize_doi(doi: str) -> str:
-    """Normalize DOI to canonical lowercase '10.xxxx/yyyy' format without resolver prefixes."""
-    if not doi or not isinstance(doi, str):
-        return ""
-    cleaned = doi.strip()
-    match = re.search(r"10\.\d{4,9}/[-._;()/:A-Za-z0-9]+", cleaned, re.IGNORECASE)
-    if match:
-        return match.group(0).lower().rstrip(".,;)")
-    return cleaned.lower()
-
-
-def normalize_url(url: str, preserve_paper_params: bool = True) -> str:
-    """Safely canonicalize a URL for comparison.
-
-    - Strips http/https scheme and www prefix
-    - Lowercases hostname
-    - Strips default ports (:80, :443)
-    - Strips trailing slashes
-    - Removes tracking/analytics parameters while preserving functional IDs
-    - Normalizes DOI URLs to canonical resolver path
-    """
-    if not url or not isinstance(url, str):
-        return ""
-    cleaned = url.strip()
-    try:
-        parsed = urlparse(cleaned)
-        netloc = parsed.netloc.lower()
-        if netloc.startswith("www."):
-            netloc = netloc[4:]
-        if netloc.endswith(":80"):
-            netloc = netloc[:-3]
-        elif netloc.endswith(":443"):
-            netloc = netloc[:-4]
-
-        path = parsed.path.rstrip("/")
-
-        # Handle DOI URLs: normalize https://doi.org/10.xxxx/... -> doi.org/10.xxxx/...
-        if netloc in ("doi.org", "dx.doi.org"):
-            doi_extracted = normalize_doi(path)
-            if doi_extracted:
-                return f"doi.org/{doi_extracted}"
-
-        # Filter query parameters
-        kept_query: list[str] = []
-        if parsed.query:
-            for param in parsed.query.split("&"):
-                if not param:
-                    continue
-                k = param.split("=")[0].lower()
-                if k in TRACKING_QUERY_PARAMS:
-                    continue
-                # Keep functional parameters (e.g. id= on openreview, ch= on rrc)
-                if preserve_paper_params:
-                    kept_query.append(param)
-
-        canonical_query = f"?{'&'.join(sorted(kept_query))}" if kept_query else ""
-        return f"{netloc}{path}{canonical_query}"
-    except Exception:
-        return cleaned.lower().rstrip("/")
-
-
-def is_generic_hosting_url(url: str) -> bool:
-    """Determine if a URL points to a generic hosting platform root or multi-dataset directory."""
-    if not url or not isinstance(url, str):
-        return True
-    norm = normalize_url(url)
-    if not norm:
-        return True
-
-    # Split netloc and path
-    parts = norm.split("?", 1)[0].split("/")
-    host = parts[0]
-    path_segments = parts[1:]
-
-    if host in GENERIC_HOSTING_DOMAINS:
-        # Bare domain or single slash
-        if not path_segments:
-            return True
-        first_segment = f"/{path_segments[0]}"
-        if len(path_segments) == 1 and first_segment in GENERIC_PATH_SEGMENTS:
-            return True
-        # Portal listing directories like 'disc.gsfc.nasa.gov/datasets' or 'spacenet.ai/datasets'
-        if len(path_segments) == 1 and path_segments[0] in ("datasets", "dataset", "data", "resources"):
-            return True
-        # Challenge general galleries like 'challenge.isic-archive.com/data'
-        if host == "challenge.isic-archive.com" and path_segments == ["data"]:
-            return True
-        # OpenReview bare forum without paper id
-        if host == "openreview.net" and path_segments == ["forum"] and "?" not in norm:
-            return True
-
-    return False
 
 
 def extract_repository_identifier(url: str) -> str | None:
@@ -343,37 +166,6 @@ def calculate_title_fuzzy_ratio(title_a: str, title_b: str) -> float:
     if not norm_a or not norm_b:
         return 0.0
     return difflib.SequenceMatcher(None, norm_a, norm_b).ratio()
-
-
-def extract_discriminating_features(record_a: dict[str, Any], record_b: dict[str, Any]) -> list[str]:
-    """Detect presence of discriminating version, class count, or modality keywords."""
-    discriminating: list[str] = []
-
-    text_a = f"{record_a.get('id', '')} {record_a.get('name', '')}".lower()
-    text_b = f"{record_b.get('id', '')} {record_b.get('name', '')}".lower()
-
-    for pattern in DISCRIMINATING_PATTERNS:
-        matches_a = set(re.findall(pattern, text_a))
-        matches_b = set(re.findall(pattern, text_b))
-        diff = (matches_a - matches_b) | (matches_b - matches_a)
-        if diff:
-            discriminating.extend(sorted(diff))
-
-    # Modality differences
-    mods_a = set(record_a.get("modalities", []))
-    mods_b = set(record_b.get("modalities", []))
-    diff_mods = (mods_a - mods_b) | (mods_b - mods_a)
-    if diff_mods:
-        discriminating.append(f"distinct_modalities:{sorted(mods_a)}_vs_{sorted(mods_b)}")
-
-    # Task differences
-    tasks_a = set(record_a.get("tasks", []))
-    tasks_b = set(record_b.get("tasks", []))
-    diff_tasks = (tasks_a - tasks_b) | (tasks_b - tasks_a)
-    if diff_tasks:
-        discriminating.append(f"distinct_tasks:{sorted(diff_tasks)}")
-
-    return sorted(set(discriminating))
 
 
 @dataclass

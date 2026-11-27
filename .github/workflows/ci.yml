@@ -48,7 +48,14 @@ jobs:
           python3 scripts/detect_dataset_changes.py
 
       - name: Run dataset metadata validation
-        run: python3 scripts/validate_datasets.py
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          if [ -n "$BASE_REF" ]; then
+            python3 scripts/validate_datasets.py --ratchet --summary --annotations --trusted-base "origin/$BASE_REF"
+          else
+            python3 scripts/validate_datasets.py --ratchet --summary --annotations
+          fi
 
       - name: Run pytest
         run: pytest
