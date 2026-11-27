@@ -19,18 +19,33 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: pip
-          cache-dependency-path: requirements-dev.txt
+          cache-dependency-path: requirements-lock.txt
 
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements-dev.txt
+          pip install -r requirements-lock.txt
+
+      - name: Check for dataset changes
+        id: dataset-changes
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_REF: ${{ github.base_ref }}
+          HEAD_REF: ${{ github.head_ref }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.event.after }}
+        run: |
+          python3 scripts/detect_dataset_changes.py
 
       - name: Run dataset metadata validation
         run: python3 scripts/validate_datasets.py
@@ -38,11 +53,67 @@ jobs:
       - name: Run pytest
         run: pytest
 
-      - name: Verify catalog consistency
+      - name: Verify deterministic catalog generation
         run: |
-          python3 scripts/generate_catalog.py --output /tmp/catalog.generated.json
-          if ! diff -u frontend/public/data/catalog.json /tmp/catalog.generated.json; then
-            echo "::error::frontend/public/data/catalog.json is out of date! Run 'python3 scripts/generate_catalog.py' and commit the updated catalog."
+          python3 scripts/generate_catalog.py --output /tmp/catalog.1.json --quiet
+          python3 scripts/generate_catalog.py --output /tmp/catalog.2.json --quiet
+          diff -u /tmp/catalog.1.json /tmp/catalog.2.json
+
+      - name: Generate dataset audit reports
+        id: audits
+        if: always() && steps.dataset-changes.outputs.should_audit == 'true'
+        run: |
+          set +e
+          python3 scripts/run_dataset_audits.py --output-dir "$RUNNER_TEMP/audit-reports"
+          AUDIT_EXIT_CODE=$?
+          echo "exit_code=$AUDIT_EXIT_CODE" >> "$GITHUB_OUTPUT"
+          exit $AUDIT_EXIT_CODE
+        continue-on-error: true
+
+      - name: Enforce audit artifact budget (<= 2 MB)
+        id: audit-budget
+        if: always() && steps.dataset-changes.outputs.should_audit == 'true'
+        run: |
+          MAX_BYTES=2097152 # 2 MiB
+          AUDIT_DIR="$RUNNER_TEMP/audit-reports"
+          if [ -d "$AUDIT_DIR" ]; then
+            TOTAL_BYTES=$(find "$AUDIT_DIR" -type f -exec stat -c%s {} + 2>/dev/null | awk '{s+=$1} END {print s+0}')
+            FILE_COUNT=$(find "$AUDIT_DIR" -type f | wc -l)
+            echo "Audit artifacts in $AUDIT_DIR: $FILE_COUNT files, $TOTAL_BYTES bytes (budget: $MAX_BYTES bytes)"
+            if [ "$FILE_COUNT" -eq 0 ]; then
+              echo "::warning::Audit directory exists but contains no artifact files."
+              echo "within_budget=false" >> "$GITHUB_OUTPUT"
+            elif [ "$TOTAL_BYTES" -gt "$MAX_BYTES" ]; then
+              echo "::error::Audit artifacts size ($TOTAL_BYTES bytes) exceeds free-tier budget of 2 MiB ($MAX_BYTES bytes)."
+              rm -rf "$AUDIT_DIR"
+              echo "within_budget=false" >> "$GITHUB_OUTPUT"
+              exit 1
+            else
+              echo "within_budget=true" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "::warning::Audit directory $AUDIT_DIR does not exist."
+            echo "within_budget=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Upload dataset audit artifacts (7-day retention)
+        if: always() && steps.dataset-changes.outputs.should_audit == 'true' && steps.audit-budget.outputs.within_budget == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dataset-audits-${{ github.run_id }}
+          path: ${{ runner.temp }}/audit-reports/
+          retention-days: 7
+          if-no-files-found: warn
+
+      - name: Propagate audit execution status
+        if: always() && steps.dataset-changes.outputs.should_audit == 'true'
+        run: |
+          if [ "${{ steps.audits.outputs.exit_code }}" != "0" ]; then
+            echo "::error::Dataset audits or report validation failed with exit code ${{ steps.audits.outputs.exit_code }}."
+            exit "${{ steps.audits.outputs.exit_code }}"
+          fi
+          if [ "${{ steps.audit-budget.outputs.within_budget }}" != "true" ]; then
+            echo "::error::Audit artifacts failed budget check or no artifacts were produced."
             exit 1
           fi
 
@@ -56,7 +127,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: frontend/package-lock.json
 
@@ -65,12 +136,12 @@ jobs:
         with:
           python-version: '3.11'
           cache: pip
-          cache-dependency-path: requirements-dev.txt
+          cache-dependency-path: requirements-lock.txt
 
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements-dev.txt
+          pip install -r requirements-lock.txt
 
       - name: Install frontend dependencies
         working-directory: frontend
@@ -87,3 +158,25 @@ jobs:
       - name: Build frontend production bundle
         working-directory: frontend
         run: npm run build
+
+      - name: Verify catalog presence in production bundle
+        run: |
+          test -f frontend/dist/data/catalog.json
+          test -s frontend/dist/data/catalog.json
+          python3 -c '
+          import json
+          from pathlib import Path
+
+          source_files = sorted(Path("data/datasets").glob("*.json"))
+          source_ids = {json.loads(f.read_text(encoding="utf-8"))["id"] for f in source_files}
+
+          dist_catalog = Path("frontend/dist/data/catalog.json")
+          assert dist_catalog.is_file(), "Production bundle frontend/dist/data/catalog.json is missing!"
+
+          catalog_data = json.loads(dist_catalog.read_text(encoding="utf-8"))
+          catalog_ids = {d["id"] for d in catalog_data}
+
+          assert len(catalog_ids) == len(source_ids), f"Count mismatch: dist={len(catalog_ids)}, source={len(source_ids)}"
+          assert catalog_ids == source_ids, f"ID mismatch: {catalog_ids ^ source_ids}"
+          print(f"[OK] Production bundle catalog verified: {len(catalog_ids)} authoritative datasets.")
+          '

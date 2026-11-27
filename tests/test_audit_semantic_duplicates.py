@@ -353,14 +353,17 @@ def test_audit_catalog_deterministic_output() -> None:
     """Verify that auditing the published catalog is completely deterministic across repeated executions."""
     data_dir = DEFAULT_DATASETS_DIR
     files = sorted(data_dir.glob("*.json"))
-    assert len(files) == 875
+    expected_count = len(files)
+    assert expected_count > 0
 
     datasets = [json.loads(f.read_text(encoding="utf-8")) for f in files]
+    assert len(datasets) == expected_count
+    assert len(set(d["id"] for d in datasets)) == expected_count
 
     res_1 = audit_catalog_semantic_duplicates(datasets)
     res_2 = audit_catalog_semantic_duplicates(datasets)
 
-    assert res_1["audit_metadata"]["total_records_scanned"] == 875
+    assert res_1["audit_metadata"]["total_records_scanned"] == expected_count
     assert res_1["audit_metadata"]["total_candidate_pairs"] == res_2["audit_metadata"]["total_candidate_pairs"]
     assert res_1["audit_metadata"]["confidence_distribution"] == res_2["audit_metadata"]["confidence_distribution"]
 
@@ -373,6 +376,10 @@ def test_cli_main_generates_reports(tmp_path: Path) -> None:
     """Verify that running the audit CLI creates both JSON and Markdown reports with exit code 0."""
     json_path = tmp_path / "report.json"
     md_path = tmp_path / "summary.md"
+
+    source_files = sorted(DEFAULT_DATASETS_DIR.glob("*.json"))
+    expected_total = len(source_files)
+    assert expected_total > 0
 
     exit_code = main([
         "--datasets-dir", str(DEFAULT_DATASETS_DIR),
@@ -387,7 +394,7 @@ def test_cli_main_generates_reports(tmp_path: Path) -> None:
 
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
-    assert data["audit_metadata"]["total_records_scanned"] == 875
+    assert data["audit_metadata"]["total_records_scanned"] == expected_total
     assert data["audit_metadata"]["confidence_distribution"]["high"] == 0
 
 
@@ -396,7 +403,11 @@ def test_audit_semantic_duplicates_dynamic_counts_and_provenance(tmp_path: Path)
     from scripts.audit_semantic_duplicates import generate_markdown_summary
 
     files = sorted(DEFAULT_DATASETS_DIR.glob("*.json"))
+    expected_total = len(files)
+    assert expected_total > 0
     datasets = [json.loads(f.read_text(encoding="utf-8")) for f in files]
+    assert len(datasets) == expected_total
+    assert len(set(d["id"] for d in datasets)) == expected_total
 
     audit_task = "Task 49 — Cross-Dataset Semantic Duplicate Detection"
     audit_date = "2026-11-20"
@@ -409,13 +420,14 @@ def test_audit_semantic_duplicates_dynamic_counts_and_provenance(tmp_path: Path)
     meta = results["audit_metadata"]
     assert meta["audit_task"] == audit_task
     assert meta["audit_date"] == audit_date
-    assert meta["total_records_scanned"] == 875
-    assert meta["total_possible_pairs"] == 875 * 874 // 2  # 382,375
+    assert meta["total_records_scanned"] == expected_total
+    expected_pairs = expected_total * (expected_total - 1) // 2
+    assert meta["total_possible_pairs"] == expected_pairs
 
     md = generate_markdown_summary(results)
     assert f"> **Audit Task:** {audit_task}" in md
     assert f"> **Audit Date:** {audit_date}" in md
-    assert "382,375" in md
+    assert f"{expected_pairs:,}" in md
     assert "360,825" not in md
     assert "625 dataset records" not in md
     assert "All 625 dataset records" not in md

@@ -17,13 +17,73 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-import jsonschema
-
 # Ensure scripts directory is on sys.path for direct script execution
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
+
+REEXEC_ENV_VAR = "_OPENDATASETS_CATALOG_REEXEC"
+
+
+def find_venv_python(repo_root: Path) -> Path | None:
+    """Find virtual environment Python executable across POSIX and Windows."""
+    venv_dir = repo_root / ".venv"
+    if not venv_dir.is_dir():
+        return None
+    candidates = [
+        venv_dir / "bin" / "python3",
+        venv_dir / "bin" / "python",
+        venv_dir / "Scripts" / "python.exe",
+        venv_dir / "Scripts" / "python3.exe",
+    ]
+    for candidate in candidates:
+        if candidate.is_file():
+            return candidate
+    return None
+
+
+try:
+    import jsonschema
+except ImportError:
+    # Guard against recursive re-execution
+    already_reexeced = os.environ.get(REEXEC_ENV_VAR) == "1"
+    venv_py = find_venv_python(REPO_ROOT)
+
+    # Determine if we are already inside a virtualenv
+    is_in_venv = (
+        sys.prefix != sys.base_prefix
+        or (
+            venv_py is not None
+            and os.path.normcase(os.path.abspath(sys.executable))
+            == os.path.normcase(os.path.abspath(str(venv_py)))
+        )
+    )
+
+    if not already_reexeced and venv_py and not is_in_venv:
+        new_env = os.environ.copy()
+        new_env[REEXEC_ENV_VAR] = "1"
+        try:
+            if hasattr(os, "execvpe"):
+                os.execvpe(str(venv_py), [str(venv_py)] + sys.argv, new_env)
+            else:
+                import subprocess
+                ret = subprocess.call([str(venv_py)] + sys.argv, env=new_env)
+                sys.exit(ret)
+        except Exception as err:
+            print(
+                f"[WARNING] Could not execute virtualenv python at {venv_py}: {err}",
+                file=sys.stderr,
+            )
+
+    print(
+        "\n[ERROR] Required dependency 'jsonschema' is not installed in the active Python environment.\n"
+        f"Active interpreter: {sys.executable}\n"
+        "Please install the locked project dependencies:\n"
+        "    pip install -r requirements-lock.txt\n",
+        file=sys.stderr,
+    )
+    sys.exit(1)
 
 from scripts.validate_datasets import (
     DEFAULT_DATA_DIR,

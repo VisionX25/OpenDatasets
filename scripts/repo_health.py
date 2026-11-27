@@ -1137,6 +1137,7 @@ def collect_generated_artifact_metrics(repo_root: Path) -> tuple[dict[str, Any],
 
     # Calculate tracked bytes share if git is available
     total_tracked_bytes = 0
+    filenames_set: set[bytes] = set()
     try:
         res = subprocess.run(
             ["git", "ls-files", "-z"],
@@ -1146,6 +1147,7 @@ def collect_generated_artifact_metrics(repo_root: Path) -> tuple[dict[str, Any],
         )
         if res.returncode == 0:
             filenames = [f for f in res.stdout.split(b"\0") if f]
+            filenames_set = set(filenames)
             for fn in filenames:
                 fp = repo_root / fn.decode("utf-8", errors="replace")
                 if fp.is_file():
@@ -1153,14 +1155,23 @@ def collect_generated_artifact_metrics(repo_root: Path) -> tuple[dict[str, Any],
     except Exception:
         pass
 
-    generated_total_bytes = cat_size + audits_total_bytes
+    cat_tracked = b"frontend/public/data/catalog.json" in filenames_set
+
+    # Filter audit reports: identify which ones are actually tracked in Git
+    tracked_audit_files = [
+        f for f in audit_files
+        if f.relative_to(repo_root).as_posix().encode("utf-8") in filenames_set
+    ]
+    tracked_audits_total_bytes = sum(f.stat().st_size for f in tracked_audit_files)
+
+    generated_tracked_bytes = (cat_size if cat_tracked else 0) + tracked_audits_total_bytes
     generated_share_pct = (
-        round(generated_total_bytes / total_tracked_bytes * 100, 1)
+        round(generated_tracked_bytes / total_tracked_bytes * 100, 1)
         if total_tracked_bytes > 0
         else 0.0
     )
 
-    if generated_share_pct > 50.0:
+    if cat_tracked or generated_share_pct > 50.0:
         findings.append(
             Finding(
                 id="FINDING-ART-001",
@@ -1170,7 +1181,7 @@ def collect_generated_artifact_metrics(repo_root: Path) -> tuple[dict[str, Any],
                 title=f"Generated artifacts account for {generated_share_pct}% of tracked repository storage",
                 description=(
                     f"catalog.json ({round(cat_size/1_000_000, 2)} MB) and docs/audits/ "
-                    f"({round(audits_total_bytes/1_000_000, 2)} MB across {len(audit_files)} files) "
+                    f"({round(tracked_audits_total_bytes/1_000_000, 2)} MB across {len(tracked_audit_files)} files) "
                     "are committed to Git, swelling clone sizes and generating large commit diffs."
                 ),
                 affected_records=["frontend/public/data/catalog.json", "docs/audits/"],
@@ -1181,7 +1192,7 @@ def collect_generated_artifact_metrics(repo_root: Path) -> tuple[dict[str, Any],
     return {
         "catalog_json": {
             "exists": cat_exists,
-            "tracked": True,
+            "tracked": cat_tracked,
             "size_bytes": cat_size,
             "size_mb_decimal": round(cat_size / 1_000_000, 2),
             "size_mib_binary": round(cat_size / (1024 * 1024), 2),
@@ -1190,12 +1201,13 @@ def collect_generated_artifact_metrics(repo_root: Path) -> tuple[dict[str, Any],
             "sha256": cat_sha256,
         },
         "audit_reports": {
-            "count": len(audit_files),
-            "total_bytes": audits_total_bytes,
-            "total_mb_decimal": round(audits_total_bytes / 1_000_000, 2),
+            "count": len(tracked_audit_files) if filenames_set else len(audit_files),
+            "total_bytes": tracked_audits_total_bytes if filenames_set else audits_total_bytes,
+            "total_mb_decimal": round((tracked_audits_total_bytes if filenames_set else audits_total_bytes) / 1_000_000, 2),
+            "archived_manifest_present": (repo_root / "docs" / "audits" / "ARCHIVE_MANIFEST.json").exists(),
         },
         "total_tracked_bytes": total_tracked_bytes,
-        "generated_artifacts_total_bytes": generated_total_bytes,
+        "generated_artifacts_total_bytes": generated_tracked_bytes,
         "generated_artifacts_share_percentage": generated_share_pct,
     }, findings
 
@@ -1211,13 +1223,17 @@ def collect_test_metrics(
 
     python_test_files = sorted(tests_dir.glob("test_*.py")) if tests_dir.exists() else []
 
-    # Inspect tests for hard-coded record count assertions (e.g. == 875)
+    # Inspect tests for hard-coded record count assertions (e.g. == tracked_count)
+    tracked_count = len(list((repo_root / "data" / "datasets").glob("*.json")))
     catalog_count_assertions: list[dict[str, Any]] = []
     for tf in python_test_files:
+        if tf.name == "test_repo_health.py":
+            continue
         try:
             with open(tf, "r", encoding="utf-8") as f:
                 for line_num, line in enumerate(f, 1):
-                    if re.search(r"(\b875\b|len\(.*catalog.*\)\s*==)", line):
+                    if re.search(rf"\bassert\b.*==\s*\b({tracked_count}|875|725)\b", line) or \
+                       re.search(rf"\bassert\b\s*\b({tracked_count}|875|725)\b\s*==", line):
                         catalog_count_assertions.append({
                             "file": tf.name,
                             "line": line_num,
@@ -1408,7 +1424,7 @@ def collect_automation_metrics(repo_root: Path) -> tuple[dict[str, Any], list[Fi
     py_lock_present = (
         (repo_root / "poetry.lock").exists()
         or (repo_root / "Pipfile.lock").exists()
-        or (repo_root / "requirements.lock").exists()
+        or (repo_root / "requirements-lock.txt").exists()
     )
     nvmrc_present = (
         (repo_root / ".nvmrc").exists()
@@ -1883,14 +1899,30 @@ def render_markdown_report(report: dict[str, Any]) -> str:
         "",
         "---",
         "",
+    ])
+    cat_info = art.get("catalog_json", {})
+    aud_info = art.get("audit_reports", {})
+    if cat_info.get("exists"):
+        tracked_str = "tracked in Git (warning: committed artifact)" if cat_info.get("tracked") else "untracked in Git (generated on demand)"
+        cat_lines = [
+            f"- **`frontend/public/data/catalog.json`:** ({tracked_str})",
+            f"  - Raw Size: {cat_info.get('size_bytes', 0):,} bytes ({cat_info.get('size_mb_decimal', 0.0)} MB decimal / {cat_info.get('size_mib_binary', 0.0)} MiB binary)",
+            f"  - Gzip Size (level 9, mtime=0): {cat_info.get('gzip_bytes', 0):,} bytes ({cat_info.get('gzip_kb_decimal', 0.0)} KB)",
+            f"  - SHA-256: `{cat_info.get('sha256', '')}`",
+        ]
+    else:
+        cat_lines = [
+            "- **`frontend/public/data/catalog.json`:** Not generated on disk (unbuilt - generated on demand during build/test)"
+        ]
+
+    archive_note = " (historical reports archived in `ARCHIVE_MANIFEST.json`)" if aud_info.get("archived_manifest_present") else ""
+
+    lines.extend([
         "## Generated Artifact Sizes",
         "",
-        f"- **`frontend/public/data/catalog.json`:**",
-        f"  - Raw Size: {art['catalog_json']['size_bytes']:,} bytes ({art['catalog_json']['size_mb_decimal']} MB decimal / {art['catalog_json']['size_mib_binary']} MiB binary)",
-        f"  - Gzip Size (level 9, mtime=0): {art['catalog_json']['gzip_bytes']:,} bytes ({art['catalog_json']['gzip_kb_decimal']} KB)",
-        f"  - SHA-256: `{art['catalog_json']['sha256']}`",
-        f"- **`docs/audits/`:** {art['audit_reports']['count']} generated audit reports, totaling {art['audit_reports']['total_bytes']:,} bytes ({art['audit_reports']['total_mb_decimal']} MB)",
-        f"- **Combined Generated Tracked Storage:** {art['generated_artifacts_total_bytes']:,} bytes (**{art['generated_artifacts_share_percentage']}%** of total repository tracked bytes)",
+        *cat_lines,
+        f"- **`docs/audits/`:** {aud_info.get('count', 0)} tracked audit report files, totaling {aud_info.get('total_bytes', 0):,} bytes ({aud_info.get('total_mb_decimal', 0.0)} MB){archive_note}",
+        f"- **Combined Generated Tracked Storage:** {art.get('generated_artifacts_total_bytes', 0):,} bytes (**{art.get('generated_artifacts_share_percentage', 0.0)}%** of total repository tracked bytes)",
         "",
         "---",
         "",

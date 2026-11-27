@@ -10,6 +10,18 @@ build/
 *.tsbuildinfo
 drafts/
 
+# Generated catalog & artifacts (Phase 1)
+frontend/public/data/catalog.json
+frontend/public/data/.catalog.*.tmp
+data/catalog.json
+.catalog.*.tmp
+
+# Generated audit reports & inventories (Phase 1)
+docs/audits/task-*/
+docs/audits/*.json
+docs/audits/*.csv
+!docs/audits/ARCHIVE_MANIFEST.json
+
 # Environment variables & secrets
 .env
 .env.local
