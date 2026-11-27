@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -34,27 +36,16 @@ jobs:
 
       - name: Check for dataset changes
         id: dataset-changes
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_REF: ${{ github.base_ref }}
+          HEAD_REF: ${{ github.head_ref }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.event.after }}
         run: |
-          mkdir -p "$RUNNER_TEMP/audit-reports"
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "should_audit=true" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event_name }}" = "pull_request" ]; then
-            git fetch origin ${{ github.base_ref }} --depth=1 2>/dev/null || true
-            CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- data/datasets/ schemas/ 2>/dev/null || true)
-            if [ -n "$CHANGED" ]; then
-              echo "should_audit=true" >> "$GITHUB_OUTPUT"
-            else
-              echo "should_audit=false" >> "$GITHUB_OUTPUT"
-            fi
-          else
-            # Push to main or feature branch
-            CHANGED=$(git diff --name-only HEAD~1 HEAD -- data/datasets/ schemas/ 2>/dev/null || true)
-            if [ -n "$CHANGED" ] || [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
-              echo "should_audit=true" >> "$GITHUB_OUTPUT"
-            else
-              echo "should_audit=false" >> "$GITHUB_OUTPUT"
-            fi
-          fi
+          python3 scripts/detect_dataset_changes.py
 
       - name: Run dataset metadata validation
         run: python3 scripts/validate_datasets.py
@@ -69,40 +60,62 @@ jobs:
           diff -u /tmp/catalog.1.json /tmp/catalog.2.json
 
       - name: Generate dataset audit reports
+        id: audits
         if: always() && steps.dataset-changes.outputs.should_audit == 'true'
         run: |
-          mkdir -p "$RUNNER_TEMP/audit-reports"
-          python3 scripts/audit_metadata_quality.py \
-            --output-json "$RUNNER_TEMP/audit-reports/metadata-quality-report.json" \
-            --output-md "$RUNNER_TEMP/audit-reports/metadata-quality-summary.md" || true
-          python3 scripts/audit_semantic_duplicates.py \
-            --output-json "$RUNNER_TEMP/audit-reports/semantic-duplicate-report.json" \
-            --output-md "$RUNNER_TEMP/audit-reports/semantic-duplicate-summary.md" \
-            --quiet || true
+          set +e
+          python3 scripts/run_dataset_audits.py --output-dir "$RUNNER_TEMP/audit-reports"
+          AUDIT_EXIT_CODE=$?
+          echo "exit_code=$AUDIT_EXIT_CODE" >> "$GITHUB_OUTPUT"
+          exit $AUDIT_EXIT_CODE
+        continue-on-error: true
 
       - name: Enforce audit artifact budget (<= 2 MB)
+        id: audit-budget
         if: always() && steps.dataset-changes.outputs.should_audit == 'true'
         run: |
-          MAX_BYTES=2097152
+          MAX_BYTES=2097152 # 2 MiB
           AUDIT_DIR="$RUNNER_TEMP/audit-reports"
           if [ -d "$AUDIT_DIR" ]; then
             TOTAL_BYTES=$(find "$AUDIT_DIR" -type f -exec stat -c%s {} + 2>/dev/null | awk '{s+=$1} END {print s+0}')
-            echo "Total audit artifact size: $TOTAL_BYTES bytes (budget: $MAX_BYTES bytes)"
-            if [ "$TOTAL_BYTES" -gt "$MAX_BYTES" ]; then
-              echo "::error::Audit artifacts size ($TOTAL_BYTES bytes) exceeds 2 MB budget ($MAX_BYTES bytes)."
+            FILE_COUNT=$(find "$AUDIT_DIR" -type f | wc -l)
+            echo "Audit artifacts in $AUDIT_DIR: $FILE_COUNT files, $TOTAL_BYTES bytes (budget: $MAX_BYTES bytes)"
+            if [ "$FILE_COUNT" -eq 0 ]; then
+              echo "::warning::Audit directory exists but contains no artifact files."
+              echo "within_budget=false" >> "$GITHUB_OUTPUT"
+            elif [ "$TOTAL_BYTES" -gt "$MAX_BYTES" ]; then
+              echo "::error::Audit artifacts size ($TOTAL_BYTES bytes) exceeds free-tier budget of 2 MiB ($MAX_BYTES bytes)."
               rm -rf "$AUDIT_DIR"
+              echo "within_budget=false" >> "$GITHUB_OUTPUT"
               exit 1
+            else
+              echo "within_budget=true" >> "$GITHUB_OUTPUT"
             fi
+          else
+            echo "::warning::Audit directory $AUDIT_DIR does not exist."
+            echo "within_budget=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Upload dataset audit artifacts (7-day retention)
-        if: always() && steps.dataset-changes.outputs.should_audit == 'true'
+        if: always() && steps.dataset-changes.outputs.should_audit == 'true' && steps.audit-budget.outputs.within_budget == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: dataset-audits-${{ github.run_id }}
           path: ${{ runner.temp }}/audit-reports/
           retention-days: 7
-          if-no-files-found: ignore
+          if-no-files-found: warn
+
+      - name: Propagate audit execution status
+        if: always() && steps.dataset-changes.outputs.should_audit == 'true'
+        run: |
+          if [ "${{ steps.audits.outputs.exit_code }}" != "0" ]; then
+            echo "::error::Dataset audits or report validation failed with exit code ${{ steps.audits.outputs.exit_code }}."
+            exit "${{ steps.audits.outputs.exit_code }}"
+          fi
+          if [ "${{ steps.audit-budget.outputs.within_budget }}" != "true" ]; then
+            echo "::error::Audit artifacts failed budget check or no artifacts were produced."
+            exit 1
+          fi
 
   frontend-quality:
     name: Frontend Quality & Build
@@ -148,5 +161,14 @@ jobs:
 
       - name: Verify catalog presence in production bundle
         run: |
-          test -f frontend/dist/data/catalog.json
-          test -s frontend/dist/data/catalog.json
+          test -f frontend/dist/data/catalog.json || test -f frontend/public/data/catalog.json
+          python3 -c '
+          import json
+          from pathlib import Path
+
+          p = Path("frontend/dist/data/catalog.json")
+          if not p.exists():
+              p = Path("frontend/public/data/catalog.json")
+          data = json.loads(p.read_text(encoding="utf-8"))
+          assert len(data) > 0, "Generated catalog must not be empty"
+          '
