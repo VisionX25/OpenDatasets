@@ -1,0 +1,155 @@
+name: Repository Health Monitoring
+
+'on':
+  schedule:
+    # Daily at 03:00 UTC (runs lightweight health checks Mon-Sat; triggers full benchmark on Sun)
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    inputs:
+      benchmark:
+        description: 'Run weekly full performance benchmark (pytest --durations=20)'
+        required: false
+        default: false
+        type: boolean
+      run_validation:
+        description: 'Execute dataset JSON schema validator'
+        required: false
+        default: true
+        type: boolean
+      run_tests:
+        description: 'Execute full Python test suite'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: repo-health
+  cancel-in-progress: true
+
+jobs:
+  health-check:
+    name: Repository Health & Baseline Audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Determine execution mode
+        id: mode
+        run: |
+          # Day of week in UTC (1=Monday, 7=Sunday)
+          DOW=$(date -u +%u)
+          IS_DISPATCH_BENCHMARK="${{ inputs.benchmark }}"
+          IS_DISPATCH_TESTS="${{ inputs.run_tests }}"
+          IS_DISPATCH_VAL="${{ inputs.run_validation }}"
+
+          BENCHMARK_FLAG=""
+          TESTS_FLAG=""
+          VAL_FLAG="--run-validation"
+
+          if [ "$IS_DISPATCH_BENCHMARK" = "true" ] || [ "$DOW" = "7" ]; then
+            echo "mode=weekly-benchmark" >> "$GITHUB_OUTPUT"
+            BENCHMARK_FLAG="--benchmark"
+          elif [ "$IS_DISPATCH_TESTS" = "true" ]; then
+            echo "mode=test-run" >> "$GITHUB_OUTPUT"
+            TESTS_FLAG="--run-tests"
+          else
+            echo "mode=daily-lightweight" >> "$GITHUB_OUTPUT"
+          fi
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "$IS_DISPATCH_VAL" = "false" ]; then
+            VAL_FLAG=""
+          fi
+
+          echo "benchmark_flag=$BENCHMARK_FLAG" >> "$GITHUB_OUTPUT"
+          echo "tests_flag=$TESTS_FLAG" >> "$GITHUB_OUTPUT"
+          echo "val_flag=$VAL_FLAG" >> "$GITHUB_OUTPUT"
+
+      - name: Execute repository health reporter
+        id: health
+        run: |
+          set +e
+          python3 scripts/repo_health.py \
+            --format both \
+            --json-output "$RUNNER_TEMP/repo-health.json" \
+            --markdown-output "$RUNNER_TEMP/repo-health.md" \
+            --max-report-bytes 2097152 \
+            ${{ steps.mode.outputs.val_flag }} \
+            ${{ steps.mode.outputs.tests_flag }} \
+            ${{ steps.mode.outputs.benchmark_flag }}
+          HEALTH_EXIT_CODE=$?
+          echo "exit_code=$HEALTH_EXIT_CODE" >> "$GITHUB_OUTPUT"
+          exit $HEALTH_EXIT_CODE
+        continue-on-error: true
+
+      - name: Enforce report size budget (<= 2 MB)
+        id: budget
+        if: always()
+        run: |
+          MAX_BYTES=2097152 # 2 MB
+          if [ -f "$RUNNER_TEMP/repo-health.json" ] && [ -f "$RUNNER_TEMP/repo-health.md" ]; then
+            JSON_SIZE=$(stat -c%s "$RUNNER_TEMP/repo-health.json" 2>/dev/null || stat -f%z "$RUNNER_TEMP/repo-health.json")
+            MD_SIZE=$(stat -c%s "$RUNNER_TEMP/repo-health.md" 2>/dev/null || stat -f%z "$RUNNER_TEMP/repo-health.md")
+            TOTAL_BYTES=$((JSON_SIZE + MD_SIZE))
+
+            echo "Report sizes: JSON=$JSON_SIZE bytes, Markdown=$MD_SIZE bytes, Total=$TOTAL_BYTES bytes (budget: $MAX_BYTES bytes)"
+            if [ "$TOTAL_BYTES" -gt "$MAX_BYTES" ]; then
+              echo "::error::Combined report size ($TOTAL_BYTES bytes) exceeds free-tier budget of 2 MB ($MAX_BYTES bytes)."
+              rm -f "$RUNNER_TEMP/repo-health.json" "$RUNNER_TEMP/repo-health.md"
+              echo "within_budget=false" >> "$GITHUB_OUTPUT"
+              exit 1
+            fi
+            echo "within_budget=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "within_budget=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Health report files were not found in $RUNNER_TEMP"
+          fi
+
+      - name: Publish Markdown report to step summary
+        if: always()
+        run: |
+          if [ -f "$RUNNER_TEMP/repo-health.md" ]; then
+            cat "$RUNNER_TEMP/repo-health.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload health report artifacts (7-day retention)
+        if: always() && steps.budget.outputs.within_budget == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo-health-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/repo-health.json
+            ${{ runner.temp }}/repo-health.md
+          retention-days: 7
+          if-no-files-found: warn
+
+      - name: Propagate execution failure status
+        if: always()
+        run: |
+          if [ "${{ steps.health.outputs.exit_code }}" != "0" ]; then
+            echo "::error::Repository health check failed with exit code ${{ steps.health.outputs.exit_code }}."
+            exit "${{ steps.health.outputs.exit_code }}"
+          fi
+          if [ "${{ steps.budget.outputs.within_budget }}" != "true" ] && [ -n "${{ steps.budget.outputs.within_budget }}" ]; then
+            echo "::error::Repository health check failed: report size budget exceeded."
+            exit 1
+          fi
